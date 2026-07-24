@@ -1,0 +1,103 @@
+export type Position =
+  | 'governador'
+  | 'senador'
+  | 'deputado_federal'
+  | 'deputado_estadual'
+  | 'outro';
+
+export type SourceCategory = 'oficial' | 'imprensa' | 'fact_check' | 'outro';
+
+export type ClaimStatus =
+  | 'draft'
+  | 'pending_review'
+  | 'published'
+  | 'corrected'
+  | 'retracted';
+
+export type ConfidenceLevel =
+  | 'verificado'
+  | 'parcialmente_verificado'
+  | 'nao_confirmado';
+
+export interface RawDocument {
+  id: string | null;
+  source_name: string;
+  source_category: SourceCategory;
+  url: string | null;
+  fetched_at: string | null;
+}
+
+export interface Claim {
+  id: string;
+  candidate_id: string;
+  category: string;
+  content: string;
+  confidence_score: 1 | 2 | 3 | 4 | 5;
+  status: ClaimStatus;
+  source_document_id: string | null;
+  source_document: RawDocument | null;
+}
+
+export interface Candidate {
+  id: string;
+  full_name: string;
+  party: string;
+  ballot_number: string | number | null;
+  position: Position;
+  position_label: string;
+  photo_url: string | null;
+  photo_source_url: string | null;
+}
+
+export interface CandidateWithClaims extends Candidate {
+  claims: Claim[];
+}
+
+export const POSITION_ORDER: Position[] = [
+  'governador',
+  'senador',
+  'deputado_federal',
+  'deputado_estadual'
+];
+
+export const POSITION_LABEL: Record<Position, string> = {
+  governador: 'Governador',
+  senador: 'Senador',
+  deputado_federal: 'Deputado Federal',
+  deputado_estadual: 'Deputado Estadual',
+  outro: 'Outros cargos'
+};
+
+export const DOSSIER_SECTIONS = [
+  {
+    key: 'historico_politico',
+    label: 'Histórico político',
+    categoryMatchers: [
+      'historico_politico',
+      'historico',
+      'history',
+      'political_history'
+    ]
+  },
+  {
+    key: 'plataforma',
+    label: 'Plataforma',
+    categoryMatchers: [
+      'plataforma',
+      'platform',
+      'propostas',
+      'proposals'
+    ]
+  },
+  {
+    key: 'reputacao',
+    label: 'Reputação e escrutínio',
+    categoryMatchers: [
+      'reputacao',
+      'reputation',
+      'escrutinio',
+      'scrutiny',
+      'reputacao_escrutinio'
+    ]
+  }
+] as const;
