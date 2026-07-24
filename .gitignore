@@ -1,0 +1,30 @@
+node_modules/
+dist/
+.supabase/
+supabase/.temp/
+*.log
+.env
+.env.local
+.env.keys
+.env.*.local
+*.bak-import
+*.bak.*
+
+# Temp scripts that don't belong in the repo
+/get-keys.js
+/fix-env.py
+/fix-claims.cjs
+/check-bundle.py
+/seed-data.cjs
+/seed-data.mjs
+/seed-claims.cjs
+/import_credentials.py
+
+# Loose source files (original copies, before src/ organization)
+/CandidateCard.tsx
+/CandidateListPage.tsx
+/CargoSection.tsx
+/SourceReference.tsx
+/queries.ts
+/types.ts
+/theme.css

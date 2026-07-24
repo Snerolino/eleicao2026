@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --color-paper: #F5F6F1;
+  --color-ink: #1C2321;
+  --color-institutional: #2B4C3F;
+  --color-press: #3E5C76;
+  --color-factcheck: #8B5E3C;
+  --color-unverified: #8A8A83;
+
+  --font-display: 'Lora', serif;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+}
+
+/* piso de qualidade: foco de teclado sempre visível */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-institutional);
+  outline-offset: 2px;
+}
+
+/* respeita preferência de movimento reduzido, mesmo sem animação hoje */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
