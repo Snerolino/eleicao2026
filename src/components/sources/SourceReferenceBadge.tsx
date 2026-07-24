@@ -42,8 +42,12 @@ export function SourceReferenceBadge({
     '--source-color': categoryColor,
     borderLeftColor: categoryColor,
     background: isOfficial
-      ? 'color-mix(in srgb, var(--color-institutional) 7%, white)'
-      : '#FFFFFF'
+      ? 'color-mix(in srgb, var(--color-institutional) 12%, white)'
+      : '#FFFFFF',
+    ...(isOfficial && {
+      borderTopColor: 'color-mix(in srgb, var(--color-institutional) 20%, white)',
+      borderTopWidth: '1px'
+    })
   } as CSSProperties;
 
   const content = (
