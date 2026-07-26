@@ -190,28 +190,49 @@ export async function fetchAllCandidates(): Promise<
   CandidateWithClaims[]
 > {
   if (!isSupabaseConfigured) {
-    return MOCK_CANDIDATES.map((candidate) => ({
-      ...candidate,
-      claims: onlyPublished(candidate.claims)
-    }));
+    return fetchAllFromMock();
   }
 
-  return fetchAllCandidatesFromSupabase();
+  try {
+    const supabaseData = await fetchAllCandidatesFromSupabase();
+    if (supabaseData.length > 0) return supabaseData;
+  } catch {
+    // Supabase unavailable — fall through to mock
+  }
+
+  return fetchAllFromMock();
+}
+
+function fetchAllFromMock(): CandidateWithClaims[] {
+  return MOCK_CANDIDATES.map((candidate) => ({
+    ...candidate,
+    claims: onlyPublished(candidate.claims)
+  }));
 }
 
 export async function fetchCandidateById(
   id: string
 ): Promise<CandidateWithClaims | null> {
   if (!isSupabaseConfigured) {
-    const candidate = MOCK_CANDIDATES.find((item) => item.id === id);
-
-    return candidate
-      ? {
-          ...candidate,
-          claims: onlyPublished(candidate.claims)
-        }
-      : null;
+    return findInMock(id);
   }
 
-  return fetchCandidateFromSupabase(id);
+  try {
+    const candidate = await fetchCandidateFromSupabase(id);
+    if (candidate) return candidate;
+  } catch {
+    // Supabase unavailable — fall through to mock
+  }
+
+  return findInMock(id);
+}
+
+function findInMock(id: string): CandidateWithClaims | null {
+  const candidate = MOCK_CANDIDATES.find((item) => item.id === id);
+  return candidate
+    ? {
+        ...candidate,
+        claims: onlyPublished(candidate.claims)
+      }
+    : null;
 }
