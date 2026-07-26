@@ -23,7 +23,8 @@ function getCandidateUrls() {
   if (!existsSync(mockPath)) return [];
 
   const content = readFileSync(mockPath, 'utf-8');
-  const ids = [...content.matchAll(/id:\s*'([^']+)'/g)].map((m) => m[1]);
+  // Match only candidate IDs (4-space indent, not 8-space for claims/docs)
+  const ids = [...content.matchAll(/^ {4}id:\s*['"]([^'"]+)['"]/gm)].map((m) => m[1]);
   return [...new Set(ids)];
 }
 
