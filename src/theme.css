@@ -8,7 +8,7 @@
   --font-body: 'IBM Plex Sans', system-ui, sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 
-  --color-paper: #F5F6F1;
+  --color-paper: #EBECE4;
   --color-ink: #1C2321;
   --color-institutional: #2B4C3F;
   --color-press: #3E5C76;
@@ -31,7 +31,7 @@
  * --border         → border-editorial
  */
 :root {
-  --background: oklch(0.966 0.005 120);     /* paper */
+  --background: oklch(0.935 0.005 120);     /* paper */
   --foreground: oklch(0.215 0.010 160);     /* ink */
 
   --card: oklch(1 0 0);
@@ -67,7 +67,7 @@
   --chart-4: oklch(0.570 0.015 120);
   --chart-5: oklch(0.215 0.010 160);
 
-  --sidebar: oklch(0.966 0.005 120);
+  --sidebar: oklch(0.935 0.005 120);
   --sidebar-foreground: oklch(0.215 0.010 160);
   --sidebar-primary: oklch(0.380 0.045 165);
   --sidebar-primary-foreground: oklch(1 0 0);

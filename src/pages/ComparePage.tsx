@@ -104,20 +104,30 @@ export function ComparePage() {
       </Link>
 
       <h1 className="mt-6 text-3xl">Comparar candidatos</h1>
+      <p className="mt-1 font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">
+        Selecione de 2 a 4 candidatos
+      </p>
 
-      {/* Selector */}
-      {selected.length === 0 && (
-        <section className="mt-6" aria-label="Selecionar candidatos">
-          <p className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">
-            Selecione de 2 a 4 candidatos
-          </p>
-          <ul className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {candidates.map((c) => (
+      {/* Candidate selector — always visible */}
+      <section className="mt-4" aria-label="Lista de candidatos">
+        <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {candidates.map((c) => {
+            const isSelected = selectedIds.has(c.id);
+            const isMaxed = !isSelected && selectedIds.size >= 4;
+            return (
               <li key={c.id}>
                 <button
                   type="button"
-                  onClick={() => toggleCandidate(c.id)}
-                  className="flex w-full items-center gap-3 rounded-sm border border-[var(--color-border-editorial)] bg-white p-3 text-left hover:border-[var(--color-institutional)]"
+                  onClick={() => {
+                    if (!isMaxed) toggleCandidate(c.id);
+                  }}
+                  disabled={isMaxed}
+                  aria-pressed={isSelected}
+                  className={`flex w-full items-center gap-3 rounded-sm border p-3 text-left transition-colors ${
+                    isSelected
+                      ? 'border-[var(--color-institutional)] bg-[color-mix(in_srgb,var(--color-institutional)_8%,white)]'
+                      : 'border-[var(--color-border-editorial)] bg-white hover:border-[var(--color-institutional)]'
+                  } ${isMaxed ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`}
                 >
                   <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-sm bg-[var(--color-skeleton)]">
                     <CandidatePhoto
@@ -138,16 +148,21 @@ export function ComparePage() {
                         : ''}
                     </p>
                   </div>
+                  {isSelected && (
+                    <span className="shrink-0 font-mono text-sm font-bold text-[var(--color-institutional)]">
+                      ✓
+                    </span>
+                  )}
                 </button>
               </li>
-            ))}
-          </ul>
-        </section>
-      )}
+            );
+          })}
+        </ul>
+      </section>
 
       {/* Selected bar */}
-      {selected.length > 0 && (
-        <section className="mt-6 space-y-4" aria-label="Selecionados">
+      {selectedIds.size > 0 && (
+        <section className="mt-4 space-y-2" aria-label="Selecionados">
           <div className="flex flex-wrap items-center gap-3">
             {selected.map((c) => (
               <span
@@ -171,15 +186,13 @@ export function ComparePage() {
                 ? ' Selecione ao menos mais um.'
                 : ''}
             </span>
-            {selected.length >= 2 && (
-              <button
-                type="button"
-                onClick={() => setSelectedIds(new Set())}
-                className="font-mono text-xs text-[var(--color-unverified)] underline underline-offset-2"
-              >
-                Limpar
-              </button>
-            )}
+            <button
+              type="button"
+              onClick={() => setSelectedIds(new Set())}
+              className="font-mono text-xs text-[var(--color-unverified)] underline underline-offset-2"
+            >
+              Limpar tudo
+            </button>
           </div>
 
           {/* Comparison table */}
