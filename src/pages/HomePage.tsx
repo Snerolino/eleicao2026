@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import type { ReactNode } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
 import { CargoSection } from '@/components/candidates/CargoSection';
@@ -18,31 +19,26 @@ import {
 } from '@/types/election';
 import { usePageMetadata } from '@/hooks/usePageMetadata';
 
+function normalize(text: string) {
+  return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+}
+
 function filterCandidates(
   candidates: CandidateWithClaims[],
   query: string,
   cargoFilter: '' | Position,
   partyFilter: string
 ): CandidateWithClaims[] {
-  const normalized = query
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase();
+  const normalized = normalize(query);
 
   return candidates.filter((c) => {
     if (cargoFilter && c.position !== cargoFilter) return false;
     if (partyFilter && c.party !== partyFilter) return false;
     if (!normalized) return true;
 
-    const name = c.full_name
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .toLowerCase();
+    const name = normalize(c.full_name);
     const party = c.party.toLowerCase();
-    const label = c.position_label
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .toLowerCase();
+    const label = normalize(c.position_label);
     const number = c.ballot_number?.toString() ?? '';
 
     return (
@@ -136,7 +132,7 @@ export function HomePage() {
             </div>
           </div>
           {hasActiveFilter && (
-            <p className="mt-2 font-mono text-xs text-[var(--color-muted-ink)]">
+            <p aria-live="polite" className="mt-2 font-mono text-xs text-[var(--color-muted-ink)]">
               {filtered.length} de {allCandidates.length} candidatos
               {searchQuery && ` para "${searchQuery}"`}
               {cargoFilter && ` em ${POSITION_LABEL[cargoFilter as keyof typeof POSITION_LABEL]?.toLowerCase() ?? cargoFilter}`}
@@ -169,30 +165,37 @@ export function HomePage() {
         </div>
       ) : (
         <section className="mt-8 space-y-12">
-          {POSITION_ORDER.map((position) => {
-            const candidatesInPosition = filtered.filter(
-              (candidate) => candidate.position === position
-            );
-            if (candidatesInPosition.length === 0 && !hasActiveFilter) return null;
-            return (
-              <CargoSection
-                key={position}
-                position={position}
-                candidates={candidatesInPosition}
-              />
-            );
-          })}
-
-          {filtered.some(
-            (candidate) => candidate.position === 'outro'
-          ) && (
-            <CargoSection
-              position={'outro' as Position}
-              candidates={filtered.filter(
-                (candidate) => candidate.position === 'outro'
-              )}
-            />
-          )}
+          {(() => {
+            const grouped = new Map<Position, CandidateWithClaims[]>();
+            for (const c of filtered) {
+              const g = grouped.get(c.position);
+              if (g) g.push(c);
+              else grouped.set(c.position, [c]);
+            }
+            const sections: ReactNode[] = [];
+            for (const position of POSITION_ORDER) {
+              const candidatesInPosition = grouped.get(position) ?? [];
+              if (candidatesInPosition.length === 0 && !hasActiveFilter) continue;
+              sections.push(
+                <CargoSection
+                  key={position}
+                  position={position}
+                  candidates={candidatesInPosition}
+                />
+              );
+            }
+            const outros = grouped.get('outro' as Position);
+            if (outros) {
+              sections.push(
+                <CargoSection
+                  key="outro"
+                  position={'outro' as Position}
+                  candidates={outros}
+                />
+              );
+            }
+            return sections;
+          })()}
         </section>
       )}
     </main>
