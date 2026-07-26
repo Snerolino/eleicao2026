@@ -1,8 +1,9 @@
+import { useMemo, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { CargoSection } from '@/components/candidates/CargoSection';
 import { DataFreshness } from '@/components/DataFreshness';
+import { CandidateSearch } from '@/components/CandidateSearch';
 import {
-  EmptyState,
   ErrorState,
   LoadingSkeleton
 } from '@/components/states';
@@ -14,11 +15,48 @@ import {
 } from '@/types/election';
 import { usePageMetadata } from '@/hooks/usePageMetadata';
 
+function filterCandidates(
+  candidates: CandidateWithClaims[],
+  query: string,
+  cargoFilter: '' | Position
+): CandidateWithClaims[] {
+  const normalized = query
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase();
+
+  return candidates.filter((c) => {
+    if (cargoFilter && c.position !== cargoFilter) return false;
+    if (!normalized) return true;
+
+    const name = c.full_name
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase();
+    const party = c.party.toLowerCase();
+    const label = c.position_label
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase();
+    const number = c.ballot_number?.toString() ?? '';
+
+    return (
+      name.includes(normalized) ||
+      party.includes(normalized) ||
+      label.includes(normalized) ||
+      number.includes(normalized)
+    );
+  });
+}
+
 export function HomePage() {
   usePageMetadata(
     'Candidatos 2026 — Portal Transparência Eleitoral RS',
     'Lista de candidatos das eleições de 2026 no Rio Grande do Sul, com fontes e níveis de confiança.'
   );
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const [cargoFilter, setCargoFilter] = useState<'' | Position>('');
 
   const query = useQuery<CandidateWithClaims[]>({
     queryKey: ['candidates'],
@@ -27,6 +65,15 @@ export function HomePage() {
     retry: 2,
     refetchOnWindowFocus: true
   });
+
+  const allCandidates = query.data ?? [];
+
+  const filtered = useMemo(
+    () => filterCandidates(allCandidates, searchQuery, cargoFilter),
+    [allCandidates, searchQuery, cargoFilter]
+  );
+
+  const hasActiveFilter = searchQuery !== '' || cargoFilter !== '';
 
   if (query.isLoading) {
     return (
@@ -47,41 +94,76 @@ export function HomePage() {
     );
   }
 
-  const candidates = query.data ?? [];
-
   return (
     <main className="mx-auto max-w-6xl px-4 py-8">
       <DataFreshness updatedAt={query.dataUpdatedAt} />
 
-      {candidates.length === 0 ? (
-        <div className="mt-8">
-          <EmptyState>
-            Nenhum candidato está disponível no momento.
-          </EmptyState>
+      {allCandidates.length > 0 && (
+        <div className="mb-8 mt-6">
+          <CandidateSearch
+            candidates={allCandidates}
+            query={searchQuery}
+            cargoFilter={cargoFilter}
+            onQueryChange={setSearchQuery}
+            onCargoFilterChange={setCargoFilter}
+          />
+          {hasActiveFilter && (
+            <p className="mt-2 font-mono text-xs text-[var(--color-muted-ink)]">
+              {filtered.length} de {allCandidates.length} candidatos
+              {searchQuery && ` para "${searchQuery}"`}
+              {cargoFilter && ` em ${POSITION_ORDER.find((p) => p === cargoFilter) ? cargoFilter : ''}`}
+            </p>
+          )}
+        </div>
+      )}
+
+      {filtered.length === 0 ? (
+        <div className="mt-20 text-center">
+          <p className="font-mono text-sm text-[var(--color-muted-ink)]">
+            {hasActiveFilter
+              ? 'Nenhum candidato encontrado para essa busca.'
+              : 'Nenhum candidato está disponível no momento.'}
+          </p>
+          {hasActiveFilter && (
+            <button
+              type="button"
+              onClick={() => {
+                setSearchQuery('');
+                setCargoFilter('');
+              }}
+              className="mt-4 rounded-sm bg-[var(--color-institutional)] px-4 py-2 text-sm font-semibold text-white hover:opacity-90"
+            >
+              Limpar filtros
+            </button>
+          )}
         </div>
       ) : (
-        <div className="mt-8 space-y-12">
-          {POSITION_ORDER.map((position) => (
-            <CargoSection
-              key={position}
-              position={position}
-              candidates={candidates.filter(
-                (candidate) => candidate.position === position
-              )}
-            />
-          ))}
+        <section className="mt-8 space-y-12">
+          {POSITION_ORDER.map((position) => {
+            const candidatesInPosition = filtered.filter(
+              (candidate) => candidate.position === position
+            );
+            if (candidatesInPosition.length === 0 && !hasActiveFilter) return null;
+            return (
+              <CargoSection
+                key={position}
+                position={position}
+                candidates={candidatesInPosition}
+              />
+            );
+          })}
 
-          {candidates.some(
+          {filtered.some(
             (candidate) => candidate.position === 'outro'
           ) && (
             <CargoSection
               position={'outro' as Position}
-              candidates={candidates.filter(
+              candidates={filtered.filter(
                 (candidate) => candidate.position === 'outro'
               )}
             />
           )}
-        </div>
+        </section>
       )}
     </main>
   );
