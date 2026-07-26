@@ -38,6 +38,9 @@ export function SiteHeader() {
           <NavLink to="/" end className={linkClass}>
             Candidatos
           </NavLink>
+          <NavLink to="/comparar" className={linkClass}>
+            Comparar
+          </NavLink>
           <NavLink to="/metodologia" className={linkClass}>
             Metodologia
           </NavLink>

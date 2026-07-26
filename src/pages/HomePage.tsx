@@ -9,6 +9,7 @@ import {
   LoadingSkeleton
 } from '@/components/states';
 import { fetchAllCandidates } from '@/services/candidates';
+import { downloadCandidatesCSV } from '@/utils/download';
 import {
   POSITION_ORDER,
   POSITION_LABEL,
@@ -117,12 +118,22 @@ export function HomePage() {
                 onPartyFilterChange={setPartyFilter}
               />
             </div>
-            <Link
-              to="/comparar"
-              className="shrink-0 rounded-sm border border-[var(--color-border-editorial)] px-3 py-2 font-mono text-xs uppercase tracking-wider text-[var(--color-institutional)] hover:border-[var(--color-institutional)]"
-            >
-              Comparar candidatos ↗
-            </Link>
+            <div className="flex shrink-0 items-center gap-3">
+              <button
+                type="button"
+                onClick={() => downloadCandidatesCSV(allCandidates)}
+                className="rounded-sm border border-[var(--color-border-editorial)] px-3 py-2 font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)] hover:border-[var(--color-ink)]"
+                aria-label="Baixar dados como CSV"
+              >
+                ↓ CSV
+              </button>
+              <Link
+                to="/comparar"
+                className="rounded-sm border border-[var(--color-border-editorial)] px-3 py-2 font-mono text-xs uppercase tracking-wider text-[var(--color-institutional)] hover:border-[var(--color-institutional)]"
+              >
+                Comparar candidatos ↗
+              </Link>
+            </div>
           </div>
           {hasActiveFilter && (
             <p className="mt-2 font-mono text-xs text-[var(--color-muted-ink)]">
