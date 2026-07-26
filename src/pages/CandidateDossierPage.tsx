@@ -18,14 +18,10 @@ import {
 
 function claimsForSection(
   claims: Claim[],
-  matchers: readonly string[]
+  matchersSet: ReadonlySet<string>
 ): Claim[] {
-  const accepted = new Set(
-    matchers.map((matcher) => matcher.toLowerCase())
-  );
-
   return claims.filter((claim) =>
-    accepted.has(claim.category.toLowerCase())
+    matchersSet.has(claim.category.toLowerCase())
   );
 }
 
@@ -129,7 +125,7 @@ export function CandidateDossierPage() {
           {DOSSIER_SECTIONS.map((section) => {
             const claims = claimsForSection(
               candidate.claims,
-              section.categoryMatchers
+              section.categoryMatchersSet
             );
 
             return (
