@@ -6,15 +6,30 @@ export function downloadCandidatesCSV(candidates: CandidateWithClaims[]): void {
     'Nome', 'Partido', 'Número', 'Cargo', 'Total de verificações',
     'Resumo', 'Fonte principal', 'Foto'
   ];
+
+  const sanitizeCSVField = (value: string | number | undefined | null) => {
+    if (value === null || value === undefined) return '""';
+
+    let strValue = value.toString();
+
+    // Prevent CSV formula injection by checking leading characters
+    if (/^[=+\-@\t\r]/.test(strValue)) {
+      strValue = "'" + strValue;
+    }
+
+    // Escape double quotes and wrap in double quotes
+    return `"${strValue.replace(/"/g, '""')}"`;
+  };
+
   const rows = candidates.map((c) => [
-    `"${c.full_name.replace(/"/g, '""')}"`,
-    `"${c.party.replace(/"/g, '""')}"`,
-    c.ballot_number?.toString() ?? '',
-    `"${c.position_label}"`,
-    c.claims.length.toString(),
-    `"${c.claims[0]?.content?.replace(/"/g, '""') ?? ''}"`,
-    `"${c.claims[0]?.source_document?.source_name?.replace(/"/g, '""') ?? ''}"`,
-    c.photo_url ?? '',
+    sanitizeCSVField(c.full_name),
+    sanitizeCSVField(c.party),
+    sanitizeCSVField(c.ballot_number),
+    sanitizeCSVField(c.position_label),
+    sanitizeCSVField(c.claims.length),
+    sanitizeCSVField(c.claims[0]?.content),
+    sanitizeCSVField(c.claims[0]?.source_document?.source_name),
+    sanitizeCSVField(c.photo_url),
   ]);
 
   const csv = [
