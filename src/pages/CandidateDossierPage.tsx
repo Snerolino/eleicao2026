@@ -47,7 +47,13 @@ export function CandidateDossierPage() {
     candidate
       ? `${candidate.full_name} — Portal Transparência Eleitoral RS`
       : 'Dossiê do candidato — Portal Transparência Eleitoral RS',
-    'Dossiê público com informações publicadas e referências de fonte.'
+    candidate
+      ? `Dossiê público de ${candidate.full_name} (${candidate.party}) — histórico, plataforma e reputação com fontes verificadas.`
+      : 'Dossiê público com informações publicadas e referências de fonte.',
+    {
+      image: candidate?.photo_url ?? undefined,
+      url: candidate ? `${window.location.origin}/candidatos/${encodeURIComponent(candidate.id)}` : undefined
+    }
   );
 
   return (
