@@ -19,16 +19,25 @@ import {
 } from '@/types/election';
 import { usePageMetadata } from '@/hooks/usePageMetadata';
 
+interface CandidateWithSearch extends CandidateWithClaims {
+  _searchTokens: {
+    name: string;
+    party: string;
+    label: string;
+    number: string;
+  };
+}
+
 function normalize(text: string) {
   return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 }
 
 function filterCandidates(
-  candidates: CandidateWithClaims[],
+  candidates: CandidateWithSearch[],
   query: string,
   cargoFilter: '' | Position,
   partyFilter: string
-): CandidateWithClaims[] {
+): CandidateWithSearch[] {
   const normalized = normalize(query);
 
   return candidates.filter((c) => {
@@ -36,10 +45,7 @@ function filterCandidates(
     if (partyFilter && c.party !== partyFilter) return false;
     if (!normalized) return true;
 
-    const name = normalize(c.full_name);
-    const party = c.party.toLowerCase();
-    const label = normalize(c.position_label);
-    const number = c.ballot_number?.toString() ?? '';
+    const { name, party, label, number } = c._searchTokens;
 
     return (
       name.includes(normalized) ||
@@ -70,9 +76,21 @@ export function HomePage() {
 
   const allCandidates = query.data ?? [];
 
+  const candidatesWithSearch = useMemo(() => {
+    return allCandidates.map(c => ({
+      ...c,
+      _searchTokens: {
+        name: normalize(c.full_name),
+        party: c.party.toLowerCase(),
+        label: normalize(c.position_label),
+        number: c.ballot_number?.toString() ?? ''
+      }
+    }));
+  }, [allCandidates]);
+
   const filtered = useMemo(
-    () => filterCandidates(allCandidates, searchQuery, cargoFilter, partyFilter),
-    [allCandidates, searchQuery, cargoFilter, partyFilter]
+    () => filterCandidates(candidatesWithSearch, searchQuery, cargoFilter, partyFilter),
+    [candidatesWithSearch, searchQuery, cargoFilter, partyFilter]
   );
 
   const hasActiveFilter = searchQuery !== '' || cargoFilter !== '' || partyFilter !== '';
