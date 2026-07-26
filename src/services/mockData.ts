@@ -7,7 +7,7 @@ import type { CandidateWithClaims } from '@/types/election';
 // Preview: banner persistente identifica o modo de teste.
 export const MOCK_CANDIDATES: CandidateWithClaims[] = [
   {
-    id: 'gov-brizola',
+    id: 'fd812b91-00d4-530e-8489-6fa2bc230690',
     full_name: 'Juliana Brizola',
     party: 'PDT',
     ballot_number: '12',
@@ -17,39 +17,39 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     photo_source_url: null,
     claims: [
       {
-        id: 'claim-gov-brizola-history',
-        candidate_id: 'gov-brizola',
+        id: '501698b8-9fed-55a3-ade8-713b82ce4eba',
+        candidate_id: 'fd812b91-00d4-530e-8489-6fa2bc230690',
         category: 'historico_politico',
         content: 'Deputada federal pelo PDT (2019-2026). Filha de Leonel Brizola. Foi líder da bancada do PDT na Câmara dos Deputados. Candidata ao governo do RS com apoio do PT, tendo Edegar Pretto como vice.',
         confidence_score: 4,
         status: 'published',
-        source_document_id: 'src-gov-brizola-1',
-        source_document: { id: 'src-gov-brizola-1', source_name: 'Câmara dos Deputados', source_category: 'oficial', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
+        source_document_id: '125fcbc0-b2e7-57c8-9049-b6e2a707d0e7',
+        source_document: { id: '125fcbc0-b2e7-57c8-9049-b6e2a707d0e7', source_name: 'Câmara dos Deputados', source_category: 'oficial', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
       },
       {
-        id: 'claim-gov-brizola-platform',
-        candidate_id: 'gov-brizola',
+        id: '6e21fb80-080a-5269-9651-7eb0f891ede4',
+        candidate_id: 'fd812b91-00d4-530e-8489-6fa2bc230690',
         category: 'plataforma',
         content: 'Defende educação integral, reforma tributária progressiva e fortalecimento do SUS. Prioriza políticas de gênero e igualdade racial. Chapa com o PT como coligação de esquerda.',
         confidence_score: 3,
         status: 'published',
-        source_document_id: 'src-gov-brizola-2',
-        source_document: { id: 'src-gov-brizola-2', source_name: 'Zero Hora', source_category: 'imprensa', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
+        source_document_id: '908e4005-90a4-5d74-802d-bf1ebe60695d',
+        source_document: { id: '908e4005-90a4-5d74-802d-bf1ebe60695d', source_name: 'Zero Hora', source_category: 'imprensa', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
       },
       {
-        id: 'claim-gov-brizola-scrutiny',
-        candidate_id: 'gov-brizola',
+        id: '2da3a3c5-1498-5b47-88b9-388b63ce45b5',
+        candidate_id: 'fd812b91-00d4-530e-8489-6fa2bc230690',
         category: 'reputacao_escrutinio',
         content: 'Sem condenações eleitorais ou administrativas. Ficha limpa confirmada pelo TSE.',
         confidence_score: 5,
         status: 'published',
-        source_document_id: 'src-gov-brizola-3',
-        source_document: { id: 'src-gov-brizola-3', source_name: 'TSE — DivulgaCandContas', source_category: 'oficial', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
+        source_document_id: 'b9de4714-e3a7-5b8a-b353-0efe0f0b41d7',
+        source_document: { id: 'b9de4714-e3a7-5b8a-b353-0efe0f0b41d7', source_name: 'TSE — DivulgaCandContas', source_category: 'oficial', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
       }
     ]
   },
   {
-    id: 'gov-zucco',
+    id: 'f04276a6-12a7-5e0d-8555-69ad678c48a4',
     full_name: 'Luciano Zucco',
     party: 'PL',
     ballot_number: '22',
@@ -59,39 +59,39 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     photo_source_url: null,
     claims: [
       {
-        id: 'claim-gov-zucco-history',
-        candidate_id: 'gov-zucco',
+        id: '0702904a-d68b-53d6-b0ed-c807aa41a553',
+        candidate_id: 'f04276a6-12a7-5e0d-8555-69ad678c48a4',
         category: 'historico_politico',
         content: 'Deputado estadual pelo PL (2019-2026). Ligado ao bolsonarismo no RS. Construiu carreira como militar da reserva e comunicador.',
         confidence_score: 4,
         status: 'published',
-        source_document_id: 'src-gov-zucco-1',
-        source_document: { id: 'src-gov-zucco-1', source_name: 'Assembleia Legislativa RS', source_category: 'oficial', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
+        source_document_id: 'b2a7f0ff-e96d-5ac0-8888-2b5b585262ae',
+        source_document: { id: 'b2a7f0ff-e96d-5ac0-8888-2b5b585262ae', source_name: 'Assembleia Legislativa RS', source_category: 'oficial', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
       },
       {
-        id: 'claim-gov-zucco-platform',
-        candidate_id: 'gov-zucco',
+        id: '9185e36f-a539-5f58-abe4-801da990857d',
+        candidate_id: 'f04276a6-12a7-5e0d-8555-69ad678c48a4',
         category: 'plataforma',
         content: 'Defende pautas conservadoras, segurança pública com endurecimento penal, e redução da carga tributária estadual. Alinhado à direita bolsonarista.',
         confidence_score: 3,
         status: 'published',
-        source_document_id: 'src-gov-zucco-2',
-        source_document: { id: 'src-gov-zucco-2', source_name: 'GZH', source_category: 'imprensa', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
+        source_document_id: 'adaab702-bd3d-56bf-be8d-4000e9e3a090',
+        source_document: { id: 'adaab702-bd3d-56bf-be8d-4000e9e3a090', source_name: 'GZH', source_category: 'imprensa', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
       },
       {
-        id: 'claim-gov-zucco-scrutiny',
-        candidate_id: 'gov-zucco',
+        id: '91b41caf-2b78-5816-b4d9-756f9afff25d',
+        candidate_id: 'f04276a6-12a7-5e0d-8555-69ad678c48a4',
         category: 'reputacao_escrutinio',
         content: 'Sem condenações eleitorais. Ficha limpa confirmada pelo TSE.',
         confidence_score: 5,
         status: 'published',
-        source_document_id: 'src-gov-zucco-3',
-        source_document: { id: 'src-gov-zucco-3', source_name: 'TSE — DivulgaCandContas', source_category: 'oficial', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
+        source_document_id: 'd41adf1e-86f0-564a-a6dd-861d39672e87',
+        source_document: { id: 'd41adf1e-86f0-564a-a6dd-861d39672e87', source_name: 'TSE — DivulgaCandContas', source_category: 'oficial', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
       }
     ]
   },
   {
-    id: 'gov-souza',
+    id: 'dbede474-1899-5b87-a732-529be3b236d6',
     full_name: 'Gabriel Souza',
     party: 'MDB',
     ballot_number: '15',
@@ -101,39 +101,39 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     photo_source_url: null,
     claims: [
       {
-        id: 'claim-gov-souza-history',
-        candidate_id: 'gov-souza',
+        id: '81a44f9e-03a8-5a0f-9ae0-a22613ec99c1',
+        candidate_id: 'dbede474-1899-5b87-a732-529be3b236d6',
         category: 'historico_politico',
         content: 'Vice-governador do RS (2023-presente), deputado estadual (2015-2022), presidente da Assembleia Legislativa. Candidato apoiado por Eduardo Leite.',
         confidence_score: 5,
         status: 'published',
-        source_document_id: 'src-gov-souza-1',
-        source_document: { id: 'src-gov-souza-1', source_name: 'Portal da Assembleia Legislativa RS', source_category: 'oficial', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
+        source_document_id: '8cb5c7c4-927c-5412-810e-b5b538cfb3a0',
+        source_document: { id: '8cb5c7c4-927c-5412-810e-b5b538cfb3a0', source_name: 'Portal da Assembleia Legislativa RS', source_category: 'oficial', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
       },
       {
-        id: 'claim-gov-souza-platform',
-        candidate_id: 'gov-souza',
+        id: '7c22ff66-f32c-579c-b39c-1d180e596f59',
+        candidate_id: 'dbede474-1899-5b87-a732-529be3b236d6',
         category: 'plataforma',
         content: 'Propõe continuidade da gestão Leite com foco em privatizações, equilíbrio fiscal e atração de investimentos privados.',
         confidence_score: 3,
         status: 'published',
-        source_document_id: 'src-gov-souza-2',
-        source_document: { id: 'src-gov-souza-2', source_name: 'Zero Hora', source_category: 'imprensa', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
+        source_document_id: 'b21067b1-74b3-5f0a-a20c-98a81914be6b',
+        source_document: { id: 'b21067b1-74b3-5f0a-a20c-98a81914be6b', source_name: 'Zero Hora', source_category: 'imprensa', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
       },
       {
-        id: 'claim-gov-souza-scrutiny',
-        candidate_id: 'gov-souza',
+        id: 'f362a1fd-4e57-52bc-acdc-24dfc0e9201a',
+        candidate_id: 'dbede474-1899-5b87-a732-529be3b236d6',
         category: 'reputacao_escrutinio',
         content: 'Sem condenações eleitorais ou administrativas. Ficha limpa confirmada pelo TSE.',
         confidence_score: 5,
         status: 'published',
-        source_document_id: 'src-gov-souza-3',
-        source_document: { id: 'src-gov-souza-3', source_name: 'TSE — DivulgaCandContas', source_category: 'oficial', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
+        source_document_id: 'd6e45bea-0d69-5dcf-bcf4-37aaf23a1278',
+        source_document: { id: 'd6e45bea-0d69-5dcf-bcf4-37aaf23a1278', source_name: 'TSE — DivulgaCandContas', source_category: 'oficial', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
       }
     ]
   },
   {
-    id: 'gov-maranata',
+    id: '99e77e1f-1a09-559a-a208-2670d08f18f7',
     full_name: 'Marcelo Maranata',
     party: 'PSDB',
     ballot_number: null,
@@ -144,7 +144,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'gov-rejane',
+    id: '8c814bd7-2810-57c4-b76b-6b5f5e389dba',
     full_name: 'Rejane de Oliveira',
     party: 'PSTU',
     ballot_number: null,
@@ -155,7 +155,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'gov-voigt',
+    id: '827e4baa-cbc5-5d16-ba31-ffa19ad0077a',
     full_name: 'Priscila Voigt',
     party: 'UP',
     ballot_number: null,
@@ -166,7 +166,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'gov-pontes',
+    id: 'f0527ea6-7b57-5a3f-8c73-476e3495c917',
     full_name: 'César Pontes',
     party: 'PCO',
     ballot_number: null,
@@ -177,7 +177,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'vice-pretto',
+    id: '1cc37e9e-2bfc-5ebd-9537-9af2c0b5c3cb',
     full_name: 'Edegar Pretto',
     party: 'PT',
     ballot_number: null,
@@ -187,19 +187,19 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     photo_source_url: null,
     claims: [
       {
-        id: 'claim-vice-pretto-history',
-        candidate_id: 'vice-pretto',
+        id: 'cf3b40da-a6e1-5316-a16e-ee01f96e6655',
+        candidate_id: '1cc37e9e-2bfc-5ebd-9537-9af2c0b5c3cb',
         category: 'historico_politico',
         content: 'Deputado estadual pelo PT (2015-2026). Confirmado como candidato a vice-governador na chapa com Juliana Brizola (PDT). Ex-presidente da Assembleia Legislativa.',
         confidence_score: 4,
         status: 'published',
-        source_document_id: 'src-vice-pretto-1',
-        source_document: { id: 'src-vice-pretto-1', source_name: 'Jornal do Comércio', source_category: 'imprensa', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
+        source_document_id: '2b49040f-649f-58de-9840-3521339d8542',
+        source_document: { id: '2b49040f-649f-58de-9840-3521339d8542', source_name: 'Jornal do Comércio', source_category: 'imprensa', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
       }
     ]
   },
   {
-    id: 'sen-sanderson',
+    id: '3e57b4a8-ad09-5a2a-88fb-3011f246a00c',
     full_name: 'Ubiratan Sanderson',
     party: 'PL',
     ballot_number: '222',
@@ -209,19 +209,19 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     photo_source_url: null,
     claims: [
       {
-        id: 'claim-sen-sanderson-1',
-        candidate_id: 'sen-sanderson',
+        id: 'fc1294a3-799d-5b94-9cd8-32be5a19003e',
+        candidate_id: '3e57b4a8-ad09-5a2a-88fb-3011f246a00c',
         category: 'historico_politico',
         content: 'Deputado federal pelo PL (2019-2026). Ex-ministro do Trabalho (governo Bolsonaro). Delegado da Polícia Federal de carreira.',
         confidence_score: 4,
         status: 'published',
-        source_document_id: 'src-sanderson-1',
-        source_document: { id: 'src-sanderson-1', source_name: 'Câmara dos Deputados', source_category: 'oficial', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
+        source_document_id: '15e9064e-a370-5609-bbea-e9faf53c92f3',
+        source_document: { id: '15e9064e-a370-5609-bbea-e9faf53c92f3', source_name: 'Câmara dos Deputados', source_category: 'oficial', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
       }
     ]
   },
   {
-    id: 'sen-pimenta',
+    id: '411fea25-10dd-5667-9f89-54aefea36dad',
     full_name: 'Paulo Pimenta',
     party: 'PT',
     ballot_number: '131',
@@ -231,19 +231,19 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     photo_source_url: null,
     claims: [
       {
-        id: 'claim-sen-pimenta-1',
-        candidate_id: 'sen-pimenta',
+        id: 'c3d7a994-46fd-54d5-bedb-8da49bc59720',
+        candidate_id: '411fea25-10dd-5667-9f89-54aefea36dad',
         category: 'historico_politico',
         content: 'Deputado federal pelo PT (2003-2026). Ex-ministro-chefe da Secretaria de Comunicação Social (governo Lula). Natural de Santa Maria-RS.',
         confidence_score: 4,
         status: 'published',
-        source_document_id: 'src-pimenta-1',
-        source_document: { id: 'src-pimenta-1', source_name: 'Câmara dos Deputados', source_category: 'oficial', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
+        source_document_id: '27cde669-d33b-5746-ba9c-6a299171b3fb',
+        source_document: { id: '27cde669-d33b-5746-ba9c-6a299171b3fb', source_name: 'Câmara dos Deputados', source_category: 'oficial', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
       }
     ]
   },
   {
-    id: 'sen-albuquerque',
+    id: '121ec4af-4aea-5f74-a215-3e05cc7c2200',
     full_name: 'Beto Albuquerque',
     party: 'PSB',
     ballot_number: '400',
@@ -253,19 +253,19 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     photo_source_url: null,
     claims: [
       {
-        id: 'claim-sen-albuquerque-1',
-        candidate_id: 'sen-albuquerque',
+        id: 'bea257b4-150c-5bfd-8b6f-60feb88af922',
+        candidate_id: '121ec4af-4aea-5f74-a215-3e05cc7c2200',
         category: 'historico_politico',
         content: 'Deputado federal pelo PSB (2003-2019). Candidato a vice-presidente na chapa de Marina Silva em 2014. Liderança histórica do PSB no RS.',
         confidence_score: 4,
         status: 'published',
-        source_document_id: 'src-albuquerque-1',
-        source_document: { id: 'src-albuquerque-1', source_name: 'Câmara dos Deputados', source_category: 'oficial', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
+        source_document_id: 'f44e144a-c571-538f-a3d1-ecc522e9c977',
+        source_document: { id: 'f44e144a-c571-538f-a3d1-ecc522e9c977', source_name: 'Câmara dos Deputados', source_category: 'oficial', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
       }
     ]
   },
   {
-    id: 'sen-lemos',
+    id: '41913b7b-1efd-5c90-b83c-e8ca2c34746c',
     full_name: 'Ana Amélia Lemos',
     party: 'PSD',
     ballot_number: '555',
@@ -275,19 +275,19 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     photo_source_url: null,
     claims: [
       {
-        id: 'claim-sen-lemos-1',
-        candidate_id: 'sen-lemos',
+        id: 'cb5d9fa4-46b6-55d9-bbf2-d7d45478d47d',
+        candidate_id: '41913b7b-1efd-5c90-b83c-e8ca2c34746c',
         category: 'historico_politico',
         content: 'Senadora pelo PP/RS (2011-2019). Ex-primeira-dama de Passo Fundo. Foi candidata ao governo do RS em 2018. Atualmente filiada ao PSD.',
         confidence_score: 4,
         status: 'published',
-        source_document_id: 'src-lemos-1',
-        source_document: { id: 'src-lemos-1', source_name: 'Senado Federal', source_category: 'oficial', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
+        source_document_id: 'b323915e-20f0-54b1-a2cc-b9e9bd1e5bd9',
+        source_document: { id: 'b323915e-20f0-54b1-a2cc-b9e9bd1e5bd9', source_name: 'Senado Federal', source_category: 'oficial', url: null, fetched_at: '2026-07-25T00:00:00.000Z' }
       }
     ]
   },
   {
-    id: 'depfed-adriane-fonseca',
+    id: '7f019712-5e93-5cb4-896c-5eb665162778',
     full_name: 'Adriane Fonseca',
     party: 'PL',
     ballot_number: null,
@@ -298,7 +298,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-alexandre-bobadra',
+    id: '0facec74-b02d-5bf6-8ba3-c799178af35a',
     full_name: 'Alexandre Bobadra',
     party: 'PL',
     ballot_number: null,
@@ -309,7 +309,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-ana-bombom',
+    id: 'e6eddf19-f528-5a13-bd0f-9383ca2e65cb',
     full_name: 'Ana Bombom',
     party: 'PL',
     ballot_number: null,
@@ -320,7 +320,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-bibo-nunes',
+    id: 'f3e05cce-7c12-5360-97a7-ce7c90b30a7d',
     full_name: 'Bibo Nunes',
     party: 'PL',
     ballot_number: null,
@@ -331,7 +331,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-diogo-siqueira',
+    id: 'f7ab5b27-1f73-50fd-a2e8-a1fd8148f44c',
     full_name: 'Diogo Siqueira',
     party: 'PL',
     ballot_number: null,
@@ -342,7 +342,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-felipe-pedri',
+    id: '5a61125f-672a-5728-80be-a70d9b4b1315',
     full_name: 'Felipe Pedri',
     party: 'PL',
     ballot_number: null,
@@ -353,7 +353,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-fernanda-barth',
+    id: '0da891a4-e5b7-5c0a-8c7a-35d7ef7fcf41',
     full_name: 'Fernanda Barth',
     party: 'PL',
     ballot_number: null,
@@ -364,7 +364,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-giovani-cherini',
+    id: '83fa0ac1-a3ae-5fa5-a519-55a768cb963e',
     full_name: 'Giovani Cherini',
     party: 'PL',
     ballot_number: null,
@@ -375,7 +375,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-guilherme-todeschini',
+    id: '4b448c22-033c-53bd-a441-1e492d6b279d',
     full_name: 'Guilherme Todeschini',
     party: 'PL',
     ballot_number: null,
@@ -386,7 +386,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-igor-bonfanti',
+    id: 'd3cea545-1bc1-572e-a6a8-5d010457b111',
     full_name: 'Igor Bonfanti',
     party: 'PL',
     ballot_number: null,
@@ -397,7 +397,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-jane-mary',
+    id: '90535ba3-8308-5ab8-a3d6-e489aaa61829',
     full_name: 'Jane Mary',
     party: 'PL',
     ballot_number: null,
@@ -408,7 +408,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-janice-quinze',
+    id: 'a31bae97-a1cd-526a-b906-c86448c9ec8a',
     full_name: 'Policial Penal Janice Quinze',
     party: 'PL',
     ballot_number: null,
@@ -419,7 +419,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-bolacha-melo',
+    id: '8548cb72-7d5f-54d7-ba4f-79713591be1f',
     full_name: 'Bolacha Melo',
     party: 'PL',
     ballot_number: null,
@@ -430,7 +430,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-jesse-sangali',
+    id: '8e616d10-831c-5998-878d-1d65899481f5',
     full_name: 'Jessé Sangali',
     party: 'PL',
     ballot_number: null,
@@ -441,7 +441,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-katia-kaspary',
+    id: '5c253815-6ca2-5a67-918a-e5f5ef38d43a',
     full_name: 'Kátia Kaspary',
     party: 'PL',
     ballot_number: null,
@@ -452,7 +452,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-keli-dias',
+    id: 'b439cbf2-ee1a-5802-b0bc-54e69385cf49',
     full_name: 'Keli Dias',
     party: 'PL',
     ballot_number: null,
@@ -463,7 +463,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-golin',
+    id: '4b617a5e-e5dc-5cbd-acc9-befe2a8e7e72',
     full_name: 'Golin',
     party: 'PL',
     ballot_number: null,
@@ -474,7 +474,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-lisiane-becker',
+    id: '57295720-c0e4-529e-b6cc-7f34a8f429ea',
     full_name: 'Lisiane Becker',
     party: 'PL',
     ballot_number: null,
@@ -485,7 +485,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-gauchinho-deus',
+    id: '33377a29-a51f-5d5f-896b-408c10a4b35b',
     full_name: 'Gauchinho de Deus',
     party: 'PL',
     ballot_number: null,
@@ -496,7 +496,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-gauchinha-pampas',
+    id: 'a12e2f77-780e-51b9-9208-db7a2a85eb6b',
     full_name: 'Gauchinha dos Pampas',
     party: 'PL',
     ballot_number: null,
@@ -507,7 +507,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-marcelo-moraes',
+    id: '804a3267-c6eb-5f2f-90fa-7bbd38e5f5e7',
     full_name: 'Marcelo Moraes',
     party: 'PL',
     ballot_number: null,
@@ -518,7 +518,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-mauricio-marcon',
+    id: '8714f5e6-f63b-5970-856d-96d3fb8c8fe9',
     full_name: 'Mauricio Marcon',
     party: 'PL',
     ballot_number: null,
@@ -529,7 +529,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-osmar-terra',
+    id: 'ebc8b185-5134-5e63-82b8-ab952d2da0d2',
     full_name: 'Osmar Terra',
     party: 'PL',
     ballot_number: null,
@@ -540,7 +540,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-paula-marisa',
+    id: '147b8bf2-2bf4-5a76-8e2f-06941c0e5a86',
     full_name: 'Paula Marisa',
     party: 'PL',
     ballot_number: null,
@@ -551,7 +551,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-perondi',
+    id: 'b48ac37f-9e0f-5996-afb5-b9c90d60ee50',
     full_name: 'Perondi',
     party: 'PL',
     ballot_number: null,
@@ -562,7 +562,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-tchequinho',
+    id: 'ce4c9787-f2db-529c-9fec-96e6f422a6e2',
     full_name: 'Tchêquinho',
     party: 'PL',
     ballot_number: null,
@@ -573,7 +573,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-rubem-de',
+    id: '325a5cf7-6256-50d6-b20f-8d6de57715a3',
     full_name: 'Rubem de',
     party: 'PL',
     ballot_number: null,
@@ -584,7 +584,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-lindenmeyer',
+    id: '1ac91dd2-e0bd-5500-86b6-11cd0d52fd18',
     full_name: 'Alexandre Lindenmeyer',
     party: 'PT',
     ballot_number: null,
@@ -595,7 +595,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-vanazzi',
+    id: 'e51f80bd-809b-5cee-97ab-c1a76b3ca5ef',
     full_name: 'Ary Vanazzi',
     party: 'PT',
     ballot_number: null,
@@ -606,7 +606,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-bohn-gass',
+    id: '3f219166-eb68-5a98-a303-87c31d3d2757',
     full_name: 'Bohn Gass',
     party: 'PT',
     ballot_number: null,
@@ -617,7 +617,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-denise-pessoa',
+    id: 'a374d9c6-ff7c-5da5-8ab1-138a878531fe',
     full_name: 'Denise Pessôa',
     party: 'PT',
     ballot_number: null,
@@ -628,7 +628,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-julio-stobbe',
+    id: '08034386-060e-56c1-a001-398c63ebdfe0',
     full_name: 'Dr. Julio Stobbe',
     party: 'PT',
     ballot_number: null,
@@ -639,7 +639,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-manique',
+    id: 'eeae8d64-2962-581a-9b3a-f8f7407ebdea',
     full_name: 'Eduardo Manique',
     party: 'PT',
     ballot_number: null,
@@ -650,7 +650,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-cabreira',
+    id: '0feab6a7-78b3-53f8-8339-49c013f4a0f9',
     full_name: 'Elias Cabreira',
     party: 'PT',
     ballot_number: null,
@@ -661,7 +661,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-fortunati',
+    id: '4786c16e-cd4e-5280-8f1a-97cc61c29e02',
     full_name: 'Fortunati',
     party: 'PT',
     ballot_number: null,
@@ -672,7 +672,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-fufa',
+    id: '1be0012b-64bf-5df9-a31d-3aff177b32f3',
     full_name: 'Fufa',
     party: 'PT',
     ballot_number: null,
@@ -683,7 +683,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-jonas-reis',
+    id: '259a9cfd-a9b9-5cb5-89ae-1f491ab7843d',
     full_name: 'Jonas Reis',
     party: 'PT',
     ballot_number: null,
@@ -694,7 +694,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-katia-duarte',
+    id: '9045212f-ba43-5828-990a-207db0e2f4fe',
     full_name: 'Katia Duarte',
     party: 'PT',
     ballot_number: null,
@@ -705,7 +705,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-laura-sito',
+    id: 'e7ab8374-4fdf-5df0-a67e-bf7c905dc62b',
     full_name: 'Laura Sito',
     party: 'PT',
     ballot_number: null,
@@ -716,7 +716,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-marcon',
+    id: '03ac9da8-ead0-5ddf-81c9-1bd6788e7b53',
     full_name: 'Marcon',
     party: 'PT',
     ballot_number: null,
@@ -727,7 +727,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-maria-rosario',
+    id: '3a9f7cdc-8d38-5eda-856c-00858ab1bf2c',
     full_name: 'Maria do Rosário',
     party: 'PT',
     ballot_number: null,
@@ -738,7 +738,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-miriam-marroni',
+    id: 'a2ef17bc-941e-53c2-a498-673bb9ea5fcb',
     full_name: 'Miriam Marroni',
     party: 'PT',
     ballot_number: null,
@@ -749,7 +749,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-naiton-gama',
+    id: '77e676cb-7501-5577-b91c-e433284c89ee',
     full_name: 'Naiton Gama',
     party: 'PT',
     ballot_number: null,
@@ -760,7 +760,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-perola-sampaio',
+    id: 'ec2b15b3-2dc0-577d-8531-31634babacd6',
     full_name: 'Pérola Sampaio',
     party: 'PT',
     ballot_number: null,
@@ -771,7 +771,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-prof-leonel',
+    id: '8b4aed52-c403-5a8e-b524-a3e5be435660',
     full_name: 'Professor Leonel',
     party: 'PT',
     ballot_number: null,
@@ -782,7 +782,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-reginete-bispo',
+    id: '9966ab48-3616-53ec-99a4-5cbae94d13fd',
     full_name: 'Reginete Bispo',
     party: 'PT',
     ballot_number: null,
@@ -793,7 +793,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-rosane-nascimento',
+    id: '0f65c269-471a-5180-a00f-9ec49ec54f2b',
     full_name: 'Rosane Nascimento',
     party: 'PT',
     ballot_number: null,
@@ -804,7 +804,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depfed-valdeci-oliveira',
+    id: 'd3e87559-af47-5aa3-ac37-c9a3a75b52e2',
     full_name: 'Valdeci Oliveira',
     party: 'PT',
     ballot_number: null,
@@ -815,7 +815,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-adriana-lara',
+    id: 'b054baaf-9806-589e-88e5-1c032ca73eb6',
     full_name: 'Adriana Lara',
     party: 'PL',
     ballot_number: null,
@@ -826,7 +826,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-adriana-leite',
+    id: 'f80de160-ee4d-546f-af41-6e332656636a',
     full_name: 'Adriana Leite',
     party: 'PL',
     ballot_number: null,
@@ -837,7 +837,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-adri-cherini',
+    id: '88e466e8-ae8d-590a-8d99-e8559e53b3bd',
     full_name: 'Adri Cherini',
     party: 'PL',
     ballot_number: null,
@@ -848,7 +848,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-ali-klemt',
+    id: '00dd993b-309e-502f-9b32-ec0658d497ca',
     full_name: 'Ali Klemt',
     party: 'PL',
     ballot_number: null,
@@ -859,7 +859,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-camila-nunes',
+    id: 'ca2f5b62-2ca3-5960-930c-7b30f474d81c',
     full_name: 'Camila Nunes',
     party: 'PL',
     ballot_number: null,
@@ -870,7 +870,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-charles-andrade',
+    id: 'cdf91f96-4be6-51e9-8f3b-a254eca342f7',
     full_name: 'Charles Andrade',
     party: 'PL',
     ballot_number: null,
@@ -881,7 +881,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-claudio-branquieri',
+    id: '746f9684-7da5-56c9-a5ae-aea61911f72d',
     full_name: 'Professor Claudio Branquieri',
     party: 'PL',
     ballot_number: null,
@@ -892,7 +892,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-claudio-tatsch',
+    id: 'aaa4b42e-4a53-59ca-b109-10886e7d25ee',
     full_name: 'Claudio Tatsch',
     party: 'PL',
     ballot_number: null,
@@ -903,7 +903,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-comandante-nadia',
+    id: 'd7da019d-63bb-5eed-bcbd-f04e43ff06d4',
     full_name: 'Comandante Nádia',
     party: 'PL',
     ballot_number: null,
@@ -914,7 +914,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-daiane-mello',
+    id: 'fa20df2a-d6ce-5728-a802-c44221f0f5a2',
     full_name: 'Daiane Mello',
     party: 'PL',
     ballot_number: null,
@@ -925,7 +925,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-daniel-bordim',
+    id: 'f32ec1f6-2f6c-582b-968b-6996e223b075',
     full_name: 'Daniel Bordim',
     party: 'PL',
     ballot_number: null,
@@ -936,7 +936,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-daniel-borges',
+    id: '70ad772f-4b4b-5b74-9818-acd85853a511',
     full_name: 'Daniel Borges',
     party: 'PL',
     ballot_number: null,
@@ -947,7 +947,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-dirceu-quadros',
+    id: '87faca98-2df1-5821-af83-5bb1351993d4',
     full_name: 'Dirceu Quadros',
     party: 'PL',
     ballot_number: null,
@@ -958,7 +958,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-edison-arnt',
+    id: '12b8180e-1a94-54c1-89a8-c435223cfac1',
     full_name: 'Edison Arnt',
     party: 'PL',
     ballot_number: null,
@@ -969,7 +969,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-eduardo-lucas',
+    id: 'a7f979da-a62c-5771-861e-ab71b043b98e',
     full_name: 'Eduardo Lucas',
     party: 'PL',
     ballot_number: null,
@@ -980,7 +980,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-eliel-alves',
+    id: '314e9730-5a36-521c-8aab-7ce12dea0998',
     full_name: 'Eliel Alves',
     party: 'PL',
     ballot_number: null,
@@ -991,7 +991,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-eron-garcia',
+    id: 'be35a1fa-70dc-5438-9829-181f9a0310a2',
     full_name: 'Eron Garcia',
     party: 'PL',
     ballot_number: null,
@@ -1002,7 +1002,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-policial-evandro',
+    id: 'e7b3b29e-d559-56ad-943b-77a2feb6d4f4',
     full_name: 'Policial Evandro',
     party: 'PL',
     ballot_number: null,
@@ -1013,7 +1013,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-elvis-feltrin',
+    id: '23caf100-7d05-576d-90ce-d85fb58902f5',
     full_name: 'Elvis Feltrin',
     party: 'PL',
     ballot_number: null,
@@ -1024,7 +1024,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-felipe-torres',
+    id: '4a56fbb4-5127-5e1c-804d-d01ce9e86de7',
     full_name: 'Felipe Torres',
     party: 'PL',
     ballot_number: null,
@@ -1035,7 +1035,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-felipe-gil',
+    id: '067924ba-0e63-5d4d-9a2e-e384653c8077',
     full_name: 'Felipe Gil',
     party: 'PL',
     ballot_number: null,
@@ -1046,7 +1046,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-fernando-cechinato',
+    id: '5a194831-b892-5164-9ee8-25c33efacf8d',
     full_name: 'Professor Fernando Cechinato',
     party: 'PL',
     ballot_number: null,
@@ -1057,7 +1057,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-gaucho-neve',
+    id: '7d887e02-1d38-5db2-8524-92422a4c81d8',
     full_name: 'Gaúcho da Neve',
     party: 'PL',
     ballot_number: null,
@@ -1068,7 +1068,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-grazi-agro',
+    id: '6bd9331c-fd21-5b82-b0c2-62abe91a9dcd',
     full_name: 'Grazi do Agro',
     party: 'PL',
     ballot_number: null,
@@ -1079,7 +1079,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-joel-bolsonaro',
+    id: '4e1cde1d-9601-553c-893b-a2b91f2a3622',
     full_name: 'Joel Bolsonaro',
     party: 'PL',
     ballot_number: null,
@@ -1090,7 +1090,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-jonas-rodrigues',
+    id: '26be832c-d7af-57eb-a7fc-2ff88884431a',
     full_name: 'Jonas Rodrigues',
     party: 'PL',
     ballot_number: null,
@@ -1101,7 +1101,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-ze-milanez',
+    id: '076b1c8f-00a4-5473-822c-554eb9a60451',
     full_name: 'Zé Milanez',
     party: 'PL',
     ballot_number: null,
@@ -1112,7 +1112,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-juli-cuciolli',
+    id: 'f4ae2883-6b1f-5e83-900d-5a4c9880cc20',
     full_name: 'Juli Cuciolli',
     party: 'PL',
     ballot_number: null,
@@ -1123,7 +1123,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-junior-fox',
+    id: '802e4b74-1dac-5be3-ac78-a6965bb9a6ff',
     full_name: 'Junior Fox',
     party: 'PL',
     ballot_number: null,
@@ -1134,7 +1134,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-kelly-moraes',
+    id: 'e84a1177-42c0-5fa3-b56a-c1abbc3378d5',
     full_name: 'Kelly Moraes',
     party: 'PL',
     ballot_number: null,
@@ -1145,7 +1145,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-alemao-klaus',
+    id: '4c885ec0-4b44-5ac0-a186-92b2426607c5',
     full_name: 'Alemão Klaus',
     party: 'PL',
     ballot_number: null,
@@ -1156,7 +1156,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-larissa-rodrigues',
+    id: 'c6461309-aaef-5a35-92e4-24c6b345f73f',
     full_name: 'Larissa Rodrigues',
     party: 'PL',
     ballot_number: null,
@@ -1167,7 +1167,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-lucas-freitas',
+    id: '90d039c5-e806-592c-9a2d-2741641c6c27',
     full_name: 'Lucas de Freitas',
     party: 'PL',
     ballot_number: null,
@@ -1178,7 +1178,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-luis-benoitt',
+    id: '3d46c041-0f91-5cdf-9feb-c6cc2a73f76c',
     full_name: 'Luís Benoitt',
     party: 'PL',
     ballot_number: null,
@@ -1189,7 +1189,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-magdiel-bissaco',
+    id: '539b551a-4c7f-5a0c-9215-53676d597eec',
     full_name: 'Magdiel Bissaco',
     party: 'PL',
     ballot_number: null,
@@ -1200,7 +1200,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-mahmoud-amer',
+    id: '62bb1270-3bed-592e-9076-dd4b41398dc1',
     full_name: 'Mahmoud Amer',
     party: 'PL',
     ballot_number: null,
@@ -1211,7 +1211,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-marcelo-bage',
+    id: 'f0ea1e32-a83b-58f8-a027-d25e03a02a1e',
     full_name: 'Marcelo Bagé',
     party: 'PL',
     ballot_number: null,
@@ -1222,7 +1222,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-marcio-patussi',
+    id: '034f2d6a-9355-52b0-b6cd-18a5cff072d5',
     full_name: 'Marcio Patussi',
     party: 'PL',
     ballot_number: null,
@@ -1233,7 +1233,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-marco-orsi',
+    id: 'ee82d9df-be7a-52ab-a47a-5091cc8301c0',
     full_name: 'Marco Orsi',
     party: 'PL',
     ballot_number: null,
@@ -1244,7 +1244,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-scalco',
+    id: '318b7a27-cea7-596a-acb7-834e8e9e7e91',
     full_name: 'Scalco',
     party: 'PL',
     ballot_number: null,
@@ -1255,7 +1255,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-nilce',
+    id: 'f0e25f1b-3f31-5ab1-8e8b-7512d12892fb',
     full_name: 'Nilce',
     party: 'PL',
     ballot_number: null,
@@ -1266,7 +1266,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-paparico-bacchi',
+    id: '055610e1-997c-5210-b75a-60bcff2c30c9',
     full_name: 'Paparico Bacchi',
     party: 'PL',
     ballot_number: null,
@@ -1277,7 +1277,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-patricia-chagas',
+    id: 'a45d3a0f-6be7-51d6-9e5b-d5df1f9b3b4c',
     full_name: 'Patricia Chagas',
     party: 'PL',
     ballot_number: null,
@@ -1288,7 +1288,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-paulo-bastos',
+    id: 'f756a78a-5867-5cfe-a550-a96a7f2adb13',
     full_name: 'Dr. Paulo Bastos',
     party: 'PL',
     ballot_number: null,
@@ -1299,7 +1299,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-ramatis-oliveira',
+    id: '0f7abcc3-fe5b-57bf-a883-e7e3ebf08a15',
     full_name: 'Ramatis de Oliveira',
     party: 'PL',
     ballot_number: null,
@@ -1310,7 +1310,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-roberta-leitao',
+    id: '3748f939-0935-5dfd-8364-bab538911334',
     full_name: 'Roberta Leitão',
     party: 'PL',
     ballot_number: null,
@@ -1321,7 +1321,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-rodrigo-cassol',
+    id: '85c43f00-90a8-5cc5-8a5e-4126679efe18',
     full_name: 'Rodrigo Cassol Lima',
     party: 'PL',
     ballot_number: null,
@@ -1332,7 +1332,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-rubens-agronomo',
+    id: '96f8bbe7-03a3-5fb1-ab09-ebd6095c75f5',
     full_name: 'Rubens O Agrônomo do PL',
     party: 'PL',
     ballot_number: null,
@@ -1343,7 +1343,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-saionara-mondiale',
+    id: 'd2f2b016-4617-5da8-bb9c-8bc3f439f860',
     full_name: 'Saionara Mondiale',
     party: 'PL',
     ballot_number: null,
@@ -1354,7 +1354,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-soldado-arruda',
+    id: '621d5e42-c2da-5a5d-a07c-615a24c1f587',
     full_name: 'Soldado Arruda',
     party: 'PL',
     ballot_number: null,
@@ -1365,7 +1365,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-taize-nunes',
+    id: '6b6ff6d6-f64c-529f-ba91-93c89dad0483',
     full_name: 'Taize Nunes',
     party: 'PL',
     ballot_number: null,
@@ -1376,7 +1376,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-vanice-matos',
+    id: '1d731090-50e8-5223-9b28-4ce19898013a',
     full_name: 'Vanice de Matos',
     party: 'PL',
     ballot_number: null,
@@ -1387,7 +1387,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-volmar-padaria',
+    id: 'c2b02ef4-e866-57d6-b42b-f14194031aa3',
     full_name: 'Volmar Maurer Padaria',
     party: 'PL',
     ballot_number: null,
@@ -1398,7 +1398,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-wagner-galardao',
+    id: '79ac24ca-3519-5121-a858-746988c5595c',
     full_name: 'Wagner Galardão',
     party: 'PL',
     ballot_number: null,
@@ -1409,7 +1409,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-yoyo-panda',
+    id: '82f73f94-03b7-5dac-82b1-87e2c7b2356f',
     full_name: 'Yoyo Panda',
     party: 'PL',
     ballot_number: null,
@@ -1420,7 +1420,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-ziania-bolzan',
+    id: '61706278-c1c0-50ab-a4e3-74b3bc13e980',
     full_name: 'Ziania Bolzan',
     party: 'PL',
     ballot_number: null,
@@ -1431,7 +1431,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-adao-pretto',
+    id: '2f764f6b-30db-555f-a540-f21a08286824',
     full_name: 'Adão Pretto',
     party: 'PT',
     ballot_number: null,
@@ -1442,7 +1442,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-alexandre-bublitz',
+    id: '8b30cf6c-712b-551a-8e5c-9a791e168996',
     full_name: 'Alexandre Bublitz',
     party: 'PT',
     ballot_number: null,
@@ -1453,7 +1453,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-ana-affonso',
+    id: '383a310a-8685-58ca-930f-abd50dea2e8d',
     full_name: 'Ana Affonso',
     party: 'PT',
     ballot_number: null,
@@ -1464,7 +1464,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-brunno-mattos',
+    id: '4fbae983-ad02-5d1e-b057-ee60c2c75152',
     full_name: 'Brunno Mattos',
     party: 'PT',
     ballot_number: null,
@@ -1475,7 +1475,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-claudio-toralles',
+    id: '3eaa7c68-6c99-5fb0-8fee-b189f8691482',
     full_name: 'Claudio Toralles',
     party: 'PT',
     ballot_number: null,
@@ -1486,7 +1486,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-cleonice-back',
+    id: 'bec42a0e-0e58-5180-b963-e419e4450add',
     full_name: 'Cleonice Back',
     party: 'PT',
     ballot_number: null,
@@ -1497,7 +1497,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-daniel-ferreira',
+    id: 'ffb7d620-269f-5b53-9a15-75b383a862af',
     full_name: 'Daniel Ferreira',
     party: 'PT',
     ballot_number: null,
@@ -1508,7 +1508,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-dariu-garcia',
+    id: '91519dca-0d0d-5a56-9dda-579c7c7fecb5',
     full_name: 'Dariu Garcia',
     party: 'PT',
     ballot_number: null,
@@ -1519,7 +1519,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-douglas-butzke',
+    id: '2528e528-05b8-5e58-88cd-2d33863eb9b7',
     full_name: 'Douglas Butzke',
     party: 'PT',
     ballot_number: null,
@@ -1530,7 +1530,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-ericka-oliveira',
+    id: 'a284a03a-661d-525b-ae54-8a3c5bbd4413',
     full_name: 'Ericka Oliveira',
     party: 'PT',
     ballot_number: null,
@@ -1541,7 +1541,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-eva-lorenzato',
+    id: 'e009f4f1-323e-508f-8311-8e4e978ba12d',
     full_name: 'Eva Valeria Lorenzato',
     party: 'PT',
     ballot_number: null,
@@ -1552,7 +1552,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-grasselli',
+    id: '77a714a2-2bda-5791-89a8-24e7ec0e11b9',
     full_name: 'Grasselli',
     party: 'PT',
     ballot_number: null,
@@ -1563,7 +1563,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-halley',
+    id: '81d3e151-baa4-500b-ba1d-17a8e0188337',
     full_name: 'Halley',
     party: 'PT',
     ballot_number: null,
@@ -1574,7 +1574,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-helen-cabral',
+    id: 'e27d73f9-4699-54e3-be3d-77ca8eed54b8',
     full_name: 'Helen Cabral',
     party: 'PT',
     ballot_number: null,
@@ -1585,7 +1585,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-ivonete-carvalho',
+    id: '8f127f1e-673a-592c-ae9b-053c8c88d0ef',
     full_name: 'Ivonete Carvalho',
     party: 'PT',
     ballot_number: null,
@@ -1596,7 +1596,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-jeferson-fernandes',
+    id: '4f14e688-103a-5999-8225-3cee94239aa7',
     full_name: 'Jeferson Fernandes',
     party: 'PT',
     ballot_number: null,
@@ -1607,7 +1607,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-lelinho-lopes',
+    id: 'f68463f8-a47e-517e-baf8-4e816c4667bd',
     full_name: 'Lelinho Lopes',
     party: 'PT',
     ballot_number: null,
@@ -1618,7 +1618,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-leo-costa',
+    id: '48d97b46-16fa-5316-8c5c-765cb4f20697',
     full_name: 'Léo da Costa',
     party: 'PT',
     ballot_number: null,
@@ -1629,7 +1629,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-leonel-radde',
+    id: '803c1bfc-fe31-508b-9ed7-12e36a9c3e30',
     full_name: 'Leonel Radde',
     party: 'PT',
     ballot_number: null,
@@ -1640,7 +1640,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-maneco-hassen',
+    id: 'ccc9014f-0bd5-5010-9942-ec3635011d2a',
     full_name: 'Maneco Hassen',
     party: 'PT',
     ballot_number: null,
@@ -1651,7 +1651,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-marcelo-cordeiro',
+    id: '8ab20cd6-aca5-59ab-84c2-fe10e8b0041c',
     full_name: 'Marcelo Cordeiro',
     party: 'PT',
     ballot_number: null,
@@ -1662,7 +1662,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-maria-eunice',
+    id: '0e674011-bd3c-57a0-9e6a-b003621200b2',
     full_name: 'Maria Eunice',
     party: 'PT',
     ballot_number: null,
@@ -1673,7 +1673,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-marina-bernardes',
+    id: 'd146b365-447d-553b-880a-5a97067a0c50',
     full_name: 'Marina Bernardes',
     party: 'PT',
     ballot_number: null,
@@ -1684,7 +1684,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-marina-callegaro',
+    id: '4a65acf2-20b8-5f1e-b1c7-40cd8d3b4998',
     full_name: 'Marina Callegaro',
     party: 'PT',
     ballot_number: null,
@@ -1695,7 +1695,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-miguel-rossetto',
+    id: 'f3b4ebce-a251-51a7-993c-ff047af2105f',
     full_name: 'Miguel Rossetto',
     party: 'PT',
     ballot_number: null,
@@ -1706,7 +1706,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-monica',
+    id: '1aedf2b6-0039-5282-afd1-85033f56e44b',
     full_name: 'Mônica',
     party: 'PT',
     ballot_number: null,
@@ -1717,7 +1717,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-natasha',
+    id: '1293730d-3d94-5b19-86a8-39c02b978853',
     full_name: 'Natasha',
     party: 'PT',
     ballot_number: null,
@@ -1728,7 +1728,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-nelson-spolaor',
+    id: '0ae1f3b8-d0d7-5b58-a349-f2b66bddfd01',
     full_name: 'Nelson Spolaor',
     party: 'PT',
     ballot_number: null,
@@ -1739,7 +1739,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-pai-tadeu',
+    id: '9d081c60-ce2a-5e2e-b425-9f130f27f6d0',
     full_name: 'Pai Tadeu',
     party: 'PT',
     ballot_number: null,
@@ -1750,7 +1750,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-paulo-orelha',
+    id: '9948b384-d95b-5ff6-8723-8f99c2bd4a4c',
     full_name: 'Paulo Orelha',
     party: 'PT',
     ballot_number: null,
@@ -1761,7 +1761,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-pepe-vargas',
+    id: '3ce9f718-3803-5113-bf2d-9f0b73734d8f',
     full_name: 'Pepe Vargas',
     party: 'PT',
     ballot_number: null,
@@ -1772,7 +1772,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-picolotto',
+    id: 'c10a94db-8717-5e1e-94a9-d2b30479f94f',
     full_name: 'Picolotto',
     party: 'PT',
     ballot_number: null,
@@ -1783,7 +1783,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-prof-corazza',
+    id: '4012dda9-f55b-58e1-844f-2042e3253745',
     full_name: 'Professor Corazza',
     party: 'PT',
     ballot_number: null,
@@ -1794,7 +1794,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-prof-helenir',
+    id: 'b6797bd5-5ac0-52bc-96a1-6eea7c42a869',
     full_name: 'Professora Helenir',
     party: 'PT',
     ballot_number: null,
@@ -1805,7 +1805,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-prof-rita',
+    id: '6f9f456a-66a5-51a5-a65b-1c0e25996617',
     full_name: 'Professora Rita',
     party: 'PT',
     ballot_number: null,
@@ -1816,7 +1816,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-sidi-cardoso',
+    id: 'be9aafe1-adee-57ee-8880-b5b9f2ac9c46',
     full_name: 'Sidi Cardoso',
     party: 'PT',
     ballot_number: null,
@@ -1827,7 +1827,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-sofia-cavedon',
+    id: '2d126baa-996e-5801-bea7-9c77164d6de7',
     full_name: 'Sofia Cavedon',
     party: 'PT',
     ballot_number: null,
@@ -1838,7 +1838,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-stela-farias',
+    id: '6dc907b8-f448-542e-9d32-3e99b776f6b1',
     full_name: 'Stela Farias',
     party: 'PT',
     ballot_number: null,
@@ -1849,7 +1849,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-valdir-oliveira',
+    id: 'e4b919ee-f474-55bb-9145-ff37584b84e5',
     full_name: 'Valdir Oliveira',
     party: 'PT',
     ballot_number: null,
@@ -1860,7 +1860,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     claims: []
   },
   {
-    id: 'depest-ze-nunes',
+    id: 'e40eba45-eb4a-5281-876d-0d9abff413e8',
     full_name: 'Zé Nunes',
     party: 'PT',
     ballot_number: null,
