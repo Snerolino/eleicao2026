@@ -10,6 +10,7 @@ import {
 import { fetchAllCandidates } from '@/services/candidates';
 import {
   POSITION_ORDER,
+  POSITION_LABEL,
   type CandidateWithClaims,
   type Position
 } from '@/types/election';
@@ -18,7 +19,8 @@ import { usePageMetadata } from '@/hooks/usePageMetadata';
 function filterCandidates(
   candidates: CandidateWithClaims[],
   query: string,
-  cargoFilter: '' | Position
+  cargoFilter: '' | Position,
+  partyFilter: string
 ): CandidateWithClaims[] {
   const normalized = query
     .normalize('NFD')
@@ -27,6 +29,7 @@ function filterCandidates(
 
   return candidates.filter((c) => {
     if (cargoFilter && c.position !== cargoFilter) return false;
+    if (partyFilter && c.party !== partyFilter) return false;
     if (!normalized) return true;
 
     const name = c.full_name
@@ -57,6 +60,7 @@ export function HomePage() {
 
   const [searchQuery, setSearchQuery] = useState('');
   const [cargoFilter, setCargoFilter] = useState<'' | Position>('');
+  const [partyFilter, setPartyFilter] = useState('');
 
   const query = useQuery<CandidateWithClaims[]>({
     queryKey: ['candidates'],
@@ -69,15 +73,15 @@ export function HomePage() {
   const allCandidates = query.data ?? [];
 
   const filtered = useMemo(
-    () => filterCandidates(allCandidates, searchQuery, cargoFilter),
-    [allCandidates, searchQuery, cargoFilter]
+    () => filterCandidates(allCandidates, searchQuery, cargoFilter, partyFilter),
+    [allCandidates, searchQuery, cargoFilter, partyFilter]
   );
 
-  const hasActiveFilter = searchQuery !== '' || cargoFilter !== '';
+  const hasActiveFilter = searchQuery !== '' || cargoFilter !== '' || partyFilter !== '';
 
   if (query.isLoading) {
     return (
-      <main className="mx-auto max-w-6xl px-4 py-8">
+      <main id="main-content" className="mx-auto max-w-6xl px-4 py-8">
         <LoadingSkeleton label="Carregando lista de candidatos" />
       </main>
     );
@@ -85,7 +89,7 @@ export function HomePage() {
 
   if (query.isError) {
     return (
-      <main className="mx-auto max-w-6xl px-4 py-8">
+      <main id="main-content" className="mx-auto max-w-6xl px-4 py-8">
         <ErrorState
           onRetry={() => query.refetch()}
           message="Não foi possível carregar a lista de candidatos."
@@ -95,7 +99,7 @@ export function HomePage() {
   }
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-8">
+    <main id="main-content" className="mx-auto max-w-6xl px-4 py-8">
       <DataFreshness updatedAt={query.dataUpdatedAt} />
 
       {allCandidates.length > 0 && (
@@ -104,14 +108,17 @@ export function HomePage() {
             candidates={allCandidates}
             query={searchQuery}
             cargoFilter={cargoFilter}
+            partyFilter={partyFilter}
             onQueryChange={setSearchQuery}
             onCargoFilterChange={setCargoFilter}
+            onPartyFilterChange={setPartyFilter}
           />
           {hasActiveFilter && (
             <p className="mt-2 font-mono text-xs text-[var(--color-muted-ink)]">
               {filtered.length} de {allCandidates.length} candidatos
               {searchQuery && ` para "${searchQuery}"`}
-              {cargoFilter && ` em ${POSITION_ORDER.find((p) => p === cargoFilter) ? cargoFilter : ''}`}
+              {cargoFilter && ` em ${POSITION_LABEL[cargoFilter as keyof typeof POSITION_LABEL]?.toLowerCase() ?? cargoFilter}`}
+              {partyFilter && ` do ${partyFilter}`}
             </p>
           )}
         </div>
@@ -130,6 +137,7 @@ export function HomePage() {
               onClick={() => {
                 setSearchQuery('');
                 setCargoFilter('');
+                setPartyFilter('');
               }}
               className="mt-4 rounded-sm bg-[var(--color-institutional)] px-4 py-2 text-sm font-semibold text-white hover:opacity-90"
             >

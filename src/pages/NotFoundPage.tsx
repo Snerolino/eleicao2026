@@ -7,7 +7,7 @@ export function NotFoundPage() {
   );
 
   return (
-    <main className="mx-auto max-w-3xl px-4 py-16">
+    <main id="main-content" className="mx-auto max-w-3xl px-4 py-16">
       <p className="font-mono text-xs uppercase tracking-widest text-[var(--color-muted-ink)]">
         Erro 404
       </p>

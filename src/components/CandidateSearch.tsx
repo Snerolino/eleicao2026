@@ -5,32 +5,38 @@ interface CandidateSearchProps {
   candidates: CandidateWithClaims[];
   query: string;
   cargoFilter: '' | Position;
+  partyFilter: string;
   onQueryChange: (value: string) => void;
   onCargoFilterChange: (value: '' | Position) => void;
+  onPartyFilterChange: (value: string) => void;
 }
 
 export function CandidateSearch({
   candidates,
   query,
   cargoFilter,
+  partyFilter,
   onQueryChange,
   onCargoFilterChange,
+  onPartyFilterChange,
 }: CandidateSearchProps) {
   const positions = [...new Set(candidates.map((c) => c.position))].sort((a, b) => {
     const order: Position[] = ['governador', 'senador', 'deputado_federal', 'deputado_estadual'];
     return order.indexOf(a) - order.indexOf(b);
   });
 
+  const parties = [...new Set(candidates.map((c) => c.party))].sort();
+
   return (
-    <div className="flex flex-col gap-3 sm:flex-row">
-      <div className="relative flex-1">
+    <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+      <div className="relative flex-1 sm:min-w-[260px]">
         <label htmlFor="candidate-search" className="sr-only">
           Buscar candidatos
         </label>
         <input
           id="candidate-search"
           type="search"
-          placeholder="Buscar por nome, partido, nº ou cargo…"
+          placeholder="Buscar por nome, partido, nº…"
           value={query}
           onChange={(e) => onQueryChange(e.target.value)}
           className="w-full rounded-sm border border-[var(--color-border-editorial)] bg-white px-3 py-2 text-sm font-[family-name:var(--font-body)] text-[var(--color-ink)] placeholder:text-[var(--color-muted-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
@@ -58,6 +64,20 @@ export function CandidateSearch({
         {positions.map((p) => (
           <option key={p} value={p}>
             {POSITION_LABEL[p]}
+          </option>
+        ))}
+      </select>
+
+      <select
+        value={partyFilter}
+        onChange={(e) => onPartyFilterChange(e.target.value)}
+        className="cursor-pointer rounded-sm border border-[var(--color-border-editorial)] bg-white px-3 py-2 text-sm font-[family-name:var(--font-body)] text-[var(--color-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
+        aria-label="Filtrar por partido"
+      >
+        <option value="">Todos os partidos</option>
+        {parties.map((p) => (
+          <option key={p} value={p}>
+            {p}
           </option>
         ))}
       </select>

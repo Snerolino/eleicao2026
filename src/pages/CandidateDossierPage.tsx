@@ -57,7 +57,7 @@ export function CandidateDossierPage() {
   );
 
   return (
-    <main className="mx-auto max-w-4xl px-4 py-8">
+    <main id="main-content" className="mx-auto max-w-4xl px-4 py-8">
       <Link
         to="/"
         className="font-mono text-xs uppercase tracking-wider text-[var(--color-institutional)] underline-offset-4 hover:underline"
