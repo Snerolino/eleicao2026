@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AppShell } from '@/components/AppShell';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { CandidateDossierPage } from '@/pages/CandidateDossierPage';
+import { ComparePage } from '@/pages/ComparePage';
 import { HomePage } from '@/pages/HomePage';
 import { MethodologyPage } from '@/pages/MethodologyPage';
 import { NotFoundPage } from '@/pages/NotFoundPage';
@@ -16,6 +17,10 @@ export function App() {
             <Route
               path="/candidatos/:id"
               element={<CandidateDossierPage />}
+            />
+            <Route
+              path="/comparar"
+              element={<ComparePage />}
             />
             <Route
               path="/metodologia"
