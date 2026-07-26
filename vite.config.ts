@@ -24,6 +24,7 @@ export default defineConfig({
         ],
       },
       workbox: {
+        navigateFallback: '/offline.html',
         runtimeCaching: [
           {
             urlPattern: /\/rest\/v1\/candidates/,
