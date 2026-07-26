@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
+import { Link } from 'react-router-dom';
 import { CargoSection } from '@/components/candidates/CargoSection';
 import { DataFreshness } from '@/components/DataFreshness';
 import { CandidateSearch } from '@/components/CandidateSearch';
@@ -103,16 +104,26 @@ export function HomePage() {
       <DataFreshness updatedAt={query.dataUpdatedAt} />
 
       {allCandidates.length > 0 && (
-        <div className="mb-8 mt-6">
-          <CandidateSearch
-            candidates={allCandidates}
-            query={searchQuery}
-            cargoFilter={cargoFilter}
-            partyFilter={partyFilter}
-            onQueryChange={setSearchQuery}
-            onCargoFilterChange={setCargoFilter}
-            onPartyFilterChange={setPartyFilter}
-          />
+        <div className="space-y-6">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div className="flex-1 space-y-4">
+              <CandidateSearch
+                candidates={allCandidates}
+                query={searchQuery}
+                cargoFilter={cargoFilter}
+                partyFilter={partyFilter}
+                onQueryChange={setSearchQuery}
+                onCargoFilterChange={setCargoFilter}
+                onPartyFilterChange={setPartyFilter}
+              />
+            </div>
+            <Link
+              to="/comparar"
+              className="shrink-0 rounded-sm border border-[var(--color-border-editorial)] px-3 py-2 font-mono text-xs uppercase tracking-wider text-[var(--color-institutional)] hover:border-[var(--color-institutional)]"
+            >
+              Comparar candidatos ↗
+            </Link>
+          </div>
           {hasActiveFilter && (
             <p className="mt-2 font-mono text-xs text-[var(--color-muted-ink)]">
               {filtered.length} de {allCandidates.length} candidatos
