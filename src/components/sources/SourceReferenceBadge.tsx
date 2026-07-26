@@ -1,4 +1,5 @@
 import type { CSSProperties, ReactNode } from 'react';
+import { sanitizeUrl } from '@/utils/sanitizeUrl';
 import type { RawDocument } from '@/types/election';
 import {
   confidenceLevel,
@@ -92,7 +93,7 @@ export function SourceReferenceBadge({
 
   return document?.url ? (
     <a
-      href={document.url}
+      href={sanitizeUrl(document.url)}
       target="_blank"
       rel="noreferrer noopener"
       className={`${className} transition-colors hover:bg-[var(--color-paper)]`}

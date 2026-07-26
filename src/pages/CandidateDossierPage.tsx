@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { Link, useParams } from 'react-router-dom';
+import { sanitizeUrl } from '@/utils/sanitizeUrl';
 import { CandidatePhoto } from '@/components/candidates/CandidatePhoto';
 import { DataFreshness } from '@/components/DataFreshness';
 import { SourceReferenceBadge } from '@/components/sources/SourceReferenceBadge';
@@ -115,7 +116,7 @@ export function CandidateDossierPage() {
 
               {candidate.photo_source_url && (
                 <a
-                  href={candidate.photo_source_url}
+                  href={sanitizeUrl(candidate.photo_source_url)}
                   target="_blank"
                   rel="noreferrer noopener"
                   className="mt-3 inline-block font-mono text-xs text-[var(--color-institutional)] underline underline-offset-2"
