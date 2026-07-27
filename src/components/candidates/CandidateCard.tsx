@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import type { CandidateWithClaims } from '@/types/election';
 import { SourceReferenceBadge } from '@/components/sources/SourceReferenceBadge';
 import { CandidatePhoto } from './CandidatePhoto';
+import { sanitizeUrl } from '@/utils/sanitizeUrl';
 
 interface CandidateCardProps {
   candidate: CandidateWithClaims;
@@ -16,6 +17,8 @@ export function CandidateCard({
       claim.status === 'published'
   );
 
+  const safePhotoSourceUrl = sanitizeUrl(candidate.photo_source_url);
+
   return (
     <article className="flex min-h-full flex-col overflow-hidden rounded-md border border-[var(--color-border-editorial)] bg-white">
       <div className="flex gap-4 p-4">
@@ -26,9 +29,9 @@ export function CandidateCard({
             className="h-full w-full object-cover"
           />
 
-          {candidate.photo_source_url && (
+          {safePhotoSourceUrl && (
             <a
-              href={candidate.photo_source_url}
+              href={safePhotoSourceUrl}
               target="_blank"
               rel="noreferrer noopener"
               className="absolute bottom-1 right-1 rounded-sm bg-[var(--color-ink)]/85 px-1.5 py-1 font-mono text-[0.6rem] text-white"

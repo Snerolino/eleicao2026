@@ -9,6 +9,7 @@ import {
   SOURCE_CATEGORY_COLOR,
   SOURCE_CATEGORY_LABEL
 } from '@/utils/sourceCategory';
+import { sanitizeUrl } from '@/utils/sanitizeUrl';
 
 interface SourceReferenceBadgeProps {
   document: RawDocument | null;
@@ -82,7 +83,7 @@ export function SourceReferenceBadge({
       </span>
 
       <span className="text-[0.68rem]">
-        {document?.url ? 'Ver fonte original ↗' : 'URL da fonte não disponível'}
+        {document && sanitizeUrl(document.url) ? 'Ver fonte original ↗' : 'URL da fonte não disponível'}
       </span>
     </>
   );
@@ -90,9 +91,11 @@ export function SourceReferenceBadge({
   const className =
     'inline-flex w-full flex-col gap-2 rounded-sm border border-[var(--color-border-editorial)] border-l-4 px-3 py-2 font-mono text-xs text-[var(--color-ink)]';
 
-  return document?.url ? (
+  const safeUrl = document ? sanitizeUrl(document.url) : null;
+
+  return safeUrl && document ? (
     <a
-      href={document.url}
+      href={safeUrl}
       target="_blank"
       rel="noreferrer noopener"
       className={`${className} transition-colors hover:bg-[var(--color-paper)]`}

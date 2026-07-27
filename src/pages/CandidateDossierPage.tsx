@@ -10,6 +10,7 @@ import {
 } from '@/components/states';
 import { usePageMetadata } from '@/hooks/usePageMetadata';
 import { fetchCandidateById } from '@/services/candidates';
+import { sanitizeUrl } from '@/utils/sanitizeUrl';
 import {
   DOSSIER_SECTIONS,
   type CandidateWithClaims,
@@ -113,16 +114,19 @@ export function CandidateDossierPage() {
                   : ''}
               </p>
 
-              {candidate.photo_source_url && (
+              {(() => {
+                const safeUrl = sanitizeUrl(candidate.photo_source_url);
+                return safeUrl ? (
                 <a
-                  href={candidate.photo_source_url}
+                  href={safeUrl}
                   target="_blank"
                   rel="noreferrer noopener"
                   className="mt-3 inline-block font-mono text-xs text-[var(--color-institutional)] underline underline-offset-2"
                 >
                   fonte da foto ↗
                 </a>
-              )}
+              ) : null;
+              })()}
             </div>
           </header>
 
