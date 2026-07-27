@@ -1,5 +1,6 @@
-import { useMemo } from 'react';
+import { useRef } from 'react';
 import type { CandidateWithClaims, Position } from '@/types/election';
+import { useMemo } from "react";
 import { POSITION_LABEL } from '@/types/election';
 
 interface CandidateSearchProps {
@@ -21,21 +22,13 @@ export function CandidateSearch({
   onCargoFilterChange,
   onPartyFilterChange,
 }: CandidateSearchProps) {
-  const { positions, parties } = useMemo(() => {
-    const posSet = new Set<Position>();
-    const partySet = new Set<string>();
-
-    for (const c of candidates) {
-      posSet.add(c.position);
-      partySet.add(c.party);
-    }
-
+  const inputRef = useRef<HTMLInputElement>(null);
+  const positions = [...new Set(candidates.map((c) => c.position))].sort((a, b) => {
     const order: Position[] = ['governador', 'senador', 'deputado_federal', 'deputado_estadual'];
-    const sortedPositions = [...posSet].sort((a, b) => order.indexOf(a) - order.indexOf(b));
-    const sortedParties = [...partySet].sort();
+    return order.indexOf(a) - order.indexOf(b);
+  }), [candidates]);
 
-    return { positions: sortedPositions, parties: sortedParties };
-  }, [candidates]);
+  const parties = useMemo(() => [...new Set(candidates.map((c) => c.party))].sort(), [candidates]);
 
   return (
     <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -44,6 +37,7 @@ export function CandidateSearch({
           Buscar candidatos
         </label>
         <input
+          ref={inputRef}
           id="candidate-search"
           type="search"
           placeholder="Buscar por nome, partido, nº…"
@@ -55,11 +49,11 @@ export function CandidateSearch({
         {query && (
           <button
             type="button"
-            onClick={() => onQueryChange('')}
+            onClick={() => { onQueryChange(''); inputRef.current?.focus(); }}
             className="absolute right-2 top-1/2 -translate-y-1/2 text-[var(--color-muted-ink)] hover:text-[var(--color-ink)]"
             aria-label="Limpar busca"
           >
-            ✕
+            <span aria-hidden="true">✕</span>
           </button>
         )}
       </div>
