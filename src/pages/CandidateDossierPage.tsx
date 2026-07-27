@@ -9,6 +9,7 @@ import {
   LoadingSkeleton
 } from '@/components/states';
 import { usePageMetadata } from '@/hooks/usePageMetadata';
+import { sanitizeUrl } from '@/utils/sanitize';
 import { fetchCandidateById } from '@/services/candidates';
 import {
   DOSSIER_SECTIONS,
@@ -115,7 +116,7 @@ export function CandidateDossierPage() {
 
               {candidate.photo_source_url && (
                 <a
-                  href={candidate.photo_source_url}
+                  href={sanitizeUrl(candidate.photo_source_url)}
                   target="_blank"
                   rel="noreferrer noopener"
                   className="mt-3 inline-block font-mono text-xs text-[var(--color-institutional)] underline underline-offset-2"
