@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import type { CandidateWithClaims } from '@/types/election';
 import { SourceReferenceBadge } from '@/components/sources/SourceReferenceBadge';
+import { sanitizeUrl } from '@/utils/url';
 import { CandidatePhoto } from './CandidatePhoto';
 
 interface CandidateCardProps {
@@ -26,17 +27,20 @@ export function CandidateCard({
             className="h-full w-full object-cover"
           />
 
-          {candidate.photo_source_url && (
-            <a
-              href={candidate.photo_source_url}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="absolute bottom-1 right-1 rounded-sm bg-[var(--color-ink)]/85 px-1.5 py-1 font-mono text-[0.6rem] text-white"
-              aria-label={`Abrir fonte da foto de ${candidate.full_name}`}
-            >
-              fonte ↗
-            </a>
-          )}
+          {(() => {
+            const safePhotoSourceUrl = sanitizeUrl(candidate.photo_source_url);
+            return safePhotoSourceUrl ? (
+              <a
+                href={safePhotoSourceUrl}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="absolute bottom-1 right-1 rounded-sm bg-[var(--color-ink)]/85 px-1.5 py-1 font-mono text-[0.6rem] text-white"
+                aria-label={`Abrir fonte da foto de ${candidate.full_name}`}
+              >
+                fonte ↗
+              </a>
+            ) : null;
+          })()}
         </div>
 
         <div className="min-w-0 flex-1">

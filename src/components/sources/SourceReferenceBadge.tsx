@@ -11,6 +11,7 @@ import {
   SOURCE_CATEGORY_COLOR,
   SOURCE_CATEGORY_LABEL
 } from '@/utils/sourceCategory';
+import { sanitizeUrl } from '@/utils/url';
 
 interface SourceReferenceBadgeProps {
   document: RawDocument | null;
@@ -39,6 +40,7 @@ export function SourceReferenceBadge({
   const categoryColor = SOURCE_CATEGORY_COLOR[category];
   const confidenceColor = CONFIDENCE_COLOR[level];
   const isOfficial = category === 'oficial';
+  const safeUrl = sanitizeUrl(document?.url);
 
   const style = {
     '--source-color': categoryColor,
