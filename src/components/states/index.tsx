@@ -42,7 +42,7 @@ export function ErrorState({
   return (
     <section
       role="alert"
-      className="rounded-md border border-[var(--color-border-editorial)] bg-white p-6"
+      className="rounded-md border border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-6"
     >
       <h2 className="text-2xl">{title}</h2>
       <p className="mt-2 text-sm text-[var(--color-muted-ink)]">
@@ -68,7 +68,7 @@ export function EmptyState({
   children: ReactNode;
 }) {
   return (
-    <section className="rounded-md border border-dashed border-[var(--color-border-editorial)] bg-white p-6 text-sm text-[var(--color-muted-ink)]">
+    <section className="rounded-md border border-dashed border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-6 text-sm text-[var(--color-muted-ink)]">
       {children}
     </section>
   );

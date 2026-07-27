@@ -49,7 +49,7 @@ export function CandidateSearch({
           placeholder="Buscar por nome, partido, nº…"
           value={query}
           onChange={(e) => onQueryChange(e.target.value)}
-          className="w-full rounded-sm border border-[var(--color-border-editorial)] bg-white px-3 py-2 text-sm font-[family-name:var(--font-body)] text-[var(--color-ink)] placeholder:text-[var(--color-muted-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
+          className="w-full rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm font-[family-name:var(--font-body)] text-[var(--color-ink)] placeholder:text-[var(--color-muted-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
           autoComplete="off"
         />
         {query && (
@@ -67,7 +67,7 @@ export function CandidateSearch({
       <select
         value={cargoFilter}
         onChange={(e) => onCargoFilterChange(e.target.value as '' | Position)}
-        className="cursor-pointer rounded-sm border border-[var(--color-border-editorial)] bg-white px-3 py-2 text-sm font-[family-name:var(--font-body)] text-[var(--color-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
+        className="cursor-pointer rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm font-[family-name:var(--font-body)] text-[var(--color-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
         aria-label="Filtrar por cargo"
       >
         <option value="">Todos os cargos</option>
@@ -81,7 +81,7 @@ export function CandidateSearch({
       <select
         value={partyFilter}
         onChange={(e) => onPartyFilterChange(e.target.value)}
-        className="cursor-pointer rounded-sm border border-[var(--color-border-editorial)] bg-white px-3 py-2 text-sm font-[family-name:var(--font-body)] text-[var(--color-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
+        className="cursor-pointer rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm font-[family-name:var(--font-body)] text-[var(--color-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
         aria-label="Filtrar por partido"
       >
         <option value="">Todos os partidos</option>
