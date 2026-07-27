@@ -77,7 +77,13 @@ export const DOSSIER_SECTIONS = [
       'historico',
       'history',
       'political_history'
-    ]
+    ],
+    categoryMatchersSet: new Set([
+      'historico_politico',
+      'historico',
+      'history',
+      'political_history'
+    ])
   },
   {
     key: 'plataforma',
@@ -87,7 +93,13 @@ export const DOSSIER_SECTIONS = [
       'platform',
       'propostas',
       'proposals'
-    ]
+    ],
+    categoryMatchersSet: new Set([
+      'plataforma',
+      'platform',
+      'propostas',
+      'proposals'
+    ])
   },
   {
     key: 'reputacao',
@@ -98,6 +110,13 @@ export const DOSSIER_SECTIONS = [
       'escrutinio',
       'scrutiny',
       'reputacao_escrutinio'
-    ]
+    ],
+    categoryMatchersSet: new Set([
+      'reputacao',
+      'reputation',
+      'escrutinio',
+      'scrutiny',
+      'reputacao_escrutinio'
+    ])
   }
 ] as const;
