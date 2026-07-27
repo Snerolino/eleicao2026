@@ -1,7 +1,7 @@
-import { useRef } from 'react';
+import { useRef, useMemo } from 'react';
 import type { CandidateWithClaims, Position } from '@/types/election';
-import { useMemo } from "react";
 import { POSITION_LABEL } from '@/types/election';
+import { Search, X } from 'lucide-react';
 
 interface CandidateSearchProps {
   candidates: CandidateWithClaims[];
@@ -23,7 +23,7 @@ export function CandidateSearch({
   onPartyFilterChange,
 }: CandidateSearchProps) {
   const inputRef = useRef<HTMLInputElement>(null);
-  const positions = [...new Set(candidates.map((c) => c.position))].sort((a, b) => {
+  const positions = useMemo(() => [...new Set(candidates.map((c) => c.position))].sort((a, b) => {
     const order: Position[] = ['governador', 'senador', 'deputado_federal', 'deputado_estadual'];
     return order.indexOf(a) - order.indexOf(b);
   }), [candidates]);
@@ -36,6 +36,9 @@ export function CandidateSearch({
         <label htmlFor="candidate-search" className="sr-only">
           Buscar candidatos
         </label>
+        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-[var(--color-muted-ink)]">
+          <Search size={16} aria-hidden="true" />
+        </div>
         <input
           ref={inputRef}
           id="candidate-search"
@@ -43,17 +46,17 @@ export function CandidateSearch({
           placeholder="Buscar por nome, partido, nº…"
           value={query}
           onChange={(e) => onQueryChange(e.target.value)}
-          className="w-full rounded-sm border border-[var(--color-border-editorial)] bg-white px-3 py-2 text-sm font-[family-name:var(--font-body)] text-[var(--color-ink)] placeholder:text-[var(--color-muted-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
+          className="w-full rounded-sm border border-[var(--color-border-editorial)] bg-white py-2 pl-9 pr-8 text-sm font-[family-name:var(--font-body)] text-[var(--color-ink)] placeholder:text-[var(--color-muted-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
           autoComplete="off"
         />
         {query && (
           <button
             type="button"
             onClick={() => { onQueryChange(''); inputRef.current?.focus(); }}
-            className="absolute right-2 top-1/2 -translate-y-1/2 text-[var(--color-muted-ink)] hover:text-[var(--color-ink)]"
+            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-sm p-1 text-[var(--color-muted-ink)] transition-colors hover:bg-[var(--color-skeleton)] hover:text-[var(--color-ink)]"
             aria-label="Limpar busca"
           >
-            <span aria-hidden="true">✕</span>
+            <X size={14} aria-hidden="true" />
           </button>
         )}
       </div>

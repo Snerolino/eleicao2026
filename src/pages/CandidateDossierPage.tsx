@@ -62,7 +62,7 @@ export function CandidateDossierPage() {
         to="/"
         className="font-mono text-xs uppercase tracking-wider text-[var(--color-institutional)] underline-offset-4 hover:underline"
       >
-        ← Voltar à lista
+        <span aria-hidden="true" className="mr-1">←</span> Voltar à lista
       </Link>
 
       {query.isLoading && (
@@ -119,8 +119,9 @@ export function CandidateDossierPage() {
                   target="_blank"
                   rel="noreferrer noopener"
                   className="mt-3 inline-block font-mono text-xs text-[var(--color-institutional)] underline underline-offset-2"
+                  aria-label={`Abrir fonte da foto de ${candidate.full_name}`}
                 >
-                  fonte da foto ↗
+                  fonte da foto <span aria-hidden="true" className="ml-0.5">↗</span>
                 </a>
               )}
             </div>
