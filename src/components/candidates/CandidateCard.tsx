@@ -18,7 +18,7 @@ export function CandidateCard({
   );
 
   return (
-    <article className="flex min-h-full flex-col overflow-hidden rounded-md border border-[var(--color-border-editorial)] bg-card">
+    <article className="relative flex min-h-full flex-col overflow-hidden rounded-md border border-[var(--color-border-editorial)] bg-card">
       <div className="flex gap-4 p-4">
         <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-sm bg-[var(--color-skeleton)]">
           <CandidatePhoto
