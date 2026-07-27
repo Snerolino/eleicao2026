@@ -36,17 +36,17 @@ function filterCandidates(
     if (partyFilter && c.party !== partyFilter) return false;
     if (!normalized) return true;
 
-    const name = normalize(c.full_name);
-    const party = c.party.toLowerCase();
-    const label = normalize(c.position_label);
-    const number = c.ballot_number?.toString() ?? '';
+    // Short-circuit evaluations to avoid expensive `normalize` calls
+    if (c.party.toLowerCase().includes(normalized)) return true;
 
-    return (
-      name.includes(normalized) ||
-      party.includes(normalized) ||
-      label.includes(normalized) ||
-      number.includes(normalized)
-    );
+    const number = c.ballot_number?.toString() ?? '';
+    if (number.includes(normalized)) return true;
+
+    const name = normalize(c.full_name);
+    if (name.includes(normalized)) return true;
+
+    const label = normalize(c.position_label);
+    return label.includes(normalized);
   });
 }
 

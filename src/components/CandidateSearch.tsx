@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import type { CandidateWithClaims, Position } from '@/types/election';
 import { POSITION_LABEL } from '@/types/election';
 
@@ -20,12 +21,21 @@ export function CandidateSearch({
   onCargoFilterChange,
   onPartyFilterChange,
 }: CandidateSearchProps) {
-  const positions = [...new Set(candidates.map((c) => c.position))].sort((a, b) => {
-    const order: Position[] = ['governador', 'senador', 'deputado_federal', 'deputado_estadual'];
-    return order.indexOf(a) - order.indexOf(b);
-  });
+  const { positions, parties } = useMemo(() => {
+    const posSet = new Set<Position>();
+    const partySet = new Set<string>();
 
-  const parties = [...new Set(candidates.map((c) => c.party))].sort();
+    for (const c of candidates) {
+      posSet.add(c.position);
+      partySet.add(c.party);
+    }
+
+    const order: Position[] = ['governador', 'senador', 'deputado_federal', 'deputado_estadual'];
+    const sortedPositions = [...posSet].sort((a, b) => order.indexOf(a) - order.indexOf(b));
+    const sortedParties = [...partySet].sort();
+
+    return { positions: sortedPositions, parties: sortedParties };
+  }, [candidates]);
 
   return (
     <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
