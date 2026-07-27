@@ -47,12 +47,11 @@ function filterCandidates(
 
     const { name, party, label, number } = c._searchTokens;
 
-    return (
-      name.includes(normalized) ||
-      party.includes(normalized) ||
-      label.includes(normalized) ||
-      number.includes(normalized)
-    );
+    const name = normalize(c.full_name);
+    if (name.includes(normalized)) return true;
+
+    const label = normalize(c.position_label);
+    return label.includes(normalized);
   });
 }
 
