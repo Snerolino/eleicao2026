@@ -1,15 +1,15 @@
-import { isSupabaseConfigured, supabase } from '@/lib/supabase';
+import { isSupabaseConfigured, supabase } from "@/lib/supabase";
 import type {
   Candidate,
   CandidateWithClaims,
   Claim,
   ClaimStatus,
-  RawDocument
-} from '@/types/election';
-import { onlyPublished } from '@/utils/claims';
-import { normalizePosition } from '@/utils/position';
-import { normalizeSourceCategory } from '@/utils/sourceCategory';
-import { MOCK_CANDIDATES } from './mockData';
+  RawDocument,
+} from "@/types/election";
+import { onlyPublished } from "@/utils/claims";
+import { normalizePosition } from "@/utils/position";
+import { normalizeSourceCategory } from "@/utils/sourceCategory";
+import { MOCK_CANDIDATES } from "./mockData";
 
 interface CandidateRow {
   id: string;
@@ -41,12 +41,7 @@ interface ClaimRow {
 }
 
 function clampConfidence(score: number | null): 1 | 2 | 3 | 4 | 5 {
-  return Math.min(5, Math.max(1, Math.round(score ?? 1))) as
-    | 1
-    | 2
-    | 3
-    | 4
-    | 5;
+  return Math.min(5, Math.max(1, Math.round(score ?? 1))) as 1 | 2 | 3 | 4 | 5;
 }
 
 function mapCandidate(row: CandidateRow): Candidate {
@@ -60,12 +55,12 @@ function mapCandidate(row: CandidateRow): Candidate {
     position: normalized.position,
     position_label: normalized.label,
     photo_url: row.photo_url,
-    photo_source_url: row.photo_source_url
+    photo_source_url: row.photo_source_url,
   };
 }
 
 function firstDocument(
-  value: DocumentRow | DocumentRow[] | null | undefined
+  value: DocumentRow | DocumentRow[] | null | undefined,
 ): DocumentRow | null {
   if (Array.isArray(value)) return value[0] ?? null;
   return value ?? null;
@@ -76,10 +71,10 @@ function mapClaim(row: ClaimRow): Claim {
   const document: RawDocument | null = source
     ? {
         id: source.id ?? row.source_document_id,
-        source_name: source.source_name ?? 'Fonte não identificada',
+        source_name: source.source_name ?? "Fonte não identificada",
         source_category: normalizeSourceCategory(source.source_category),
         url: source.url ?? null,
-        fetched_at: source.fetched_at ?? null
+        fetched_at: source.fetched_at ?? null,
       }
     : null;
 
@@ -91,18 +86,17 @@ function mapClaim(row: ClaimRow): Claim {
     confidence_score: clampConfidence(row.confidence_score),
     status: row.status as ClaimStatus,
     source_document_id: row.source_document_id,
-    source_document: document
+    source_document: document,
   };
 }
 
-async function fetchPublishedClaims(
-  candidateIds: string[]
-): Promise<Claim[]> {
+async function fetchPublishedClaims(candidateIds: string[]): Promise<Claim[]> {
   if (!supabase || candidateIds.length === 0) return [];
 
   const { data, error } = await supabase
-    .from('claims')
-    .select(`
+    .from("claims")
+    .select(
+      `
       id,
       candidate_id,
       category,
@@ -117,34 +111,33 @@ async function fetchPublishedClaims(
         url,
         fetched_at
       )
-    `)
-    .in('candidate_id', candidateIds)
-    .eq('status', 'published');
+    `,
+    )
+    .in("candidate_id", candidateIds)
+    .eq("status", "published");
 
   if (error) throw error;
 
-  return onlyPublished(
-    ((data ?? []) as unknown as ClaimRow[]).map(mapClaim)
-  );
+  return onlyPublished(((data ?? []) as unknown as ClaimRow[]).map(mapClaim));
 }
 
 async function fetchAllCandidatesFromSupabase(): Promise<
   CandidateWithClaims[]
 > {
-  if (!supabase) throw new Error('Supabase não configurado.');
+  if (!supabase) throw new Error("Supabase não configurado.");
 
   const { data, error } = await supabase
-    .from('candidates')
+    .from("candidates")
     .select(
-      'id, full_name, party, ballot_number, position, photo_url, photo_source_url'
+      "id, full_name, party, ballot_number, position, photo_url, photo_source_url",
     )
-    .order('full_name', { ascending: true });
+    .order("full_name", { ascending: true });
 
   if (error) throw error;
 
   const candidates = ((data ?? []) as CandidateRow[]).map(mapCandidate);
   const claims = await fetchPublishedClaims(
-    candidates.map((candidate) => candidate.id)
+    candidates.map((candidate) => candidate.id),
   );
 
   const claimsByCandidate = new Map<string, Claim[]>();
@@ -157,21 +150,21 @@ async function fetchAllCandidatesFromSupabase(): Promise<
 
   return candidates.map((candidate) => ({
     ...candidate,
-    claims: claimsByCandidate.get(candidate.id) ?? []
+    claims: claimsByCandidate.get(candidate.id) ?? [],
   }));
 }
 
 async function fetchCandidateFromSupabase(
-  id: string
+  id: string,
 ): Promise<CandidateWithClaims | null> {
-  if (!supabase) throw new Error('Supabase não configurado.');
+  if (!supabase) throw new Error("Supabase não configurado.");
 
   const { data, error } = await supabase
-    .from('candidates')
+    .from("candidates")
     .select(
-      'id, full_name, party, ballot_number, position, photo_url, photo_source_url'
+      "id, full_name, party, ballot_number, position, photo_url, photo_source_url",
     )
-    .eq('id', id)
+    .eq("id", id)
     .maybeSingle();
 
   if (error) throw error;
@@ -182,13 +175,11 @@ async function fetchCandidateFromSupabase(
 
   return {
     ...candidate,
-    claims
+    claims,
   };
 }
 
-export async function fetchAllCandidates(): Promise<
-  CandidateWithClaims[]
-> {
+export async function fetchAllCandidates(): Promise<CandidateWithClaims[]> {
   if (!isSupabaseConfigured) {
     return fetchAllFromMock();
   }
@@ -206,12 +197,12 @@ export async function fetchAllCandidates(): Promise<
 function fetchAllFromMock(): CandidateWithClaims[] {
   return MOCK_CANDIDATES.map((candidate) => ({
     ...candidate,
-    claims: onlyPublished(candidate.claims)
+    claims: onlyPublished(candidate.claims),
   }));
 }
 
 export async function fetchCandidateById(
-  id: string
+  id: string,
 ): Promise<CandidateWithClaims | null> {
   if (!isSupabaseConfigured) {
     return findInMock(id);
@@ -227,12 +218,16 @@ export async function fetchCandidateById(
   return findInMock(id);
 }
 
+const mockCandidatesMap = new Map<string, (typeof MOCK_CANDIDATES)[number]>(
+  MOCK_CANDIDATES.map((c) => [c.id, c]),
+);
+
 function findInMock(id: string): CandidateWithClaims | null {
-  const candidate = MOCK_CANDIDATES.find((item) => item.id === id);
+  const candidate = mockCandidatesMap.get(id);
   return candidate
     ? {
         ...candidate,
-        claims: onlyPublished(candidate.claims)
+        claims: onlyPublished(candidate.claims),
       }
     : null;
 }
