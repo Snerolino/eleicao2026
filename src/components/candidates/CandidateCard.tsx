@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import type { CandidateWithClaims } from '@/types/election';
 import { SourceReferenceBadge } from '@/components/sources/SourceReferenceBadge';
-import { sanitizeUrl } from '@/utils/url';
 import { CandidatePhoto } from './CandidatePhoto';
 import { sanitizeUrl } from '@/utils/sanitizeUrl';
 
@@ -17,8 +16,6 @@ export function CandidateCard({
       claim.category.toLowerCase() === 'summary' &&
       claim.status === 'published'
   );
-
-  const safePhotoSourceUrl = sanitizeUrl(candidate.photo_source_url);
 
   return (
     <article className="flex min-h-full flex-col overflow-hidden rounded-md border border-[var(--color-border-editorial)] bg-white">
@@ -48,48 +45,37 @@ export function CandidateCard({
 
         <div className="min-w-0 flex-1">
           <p className="font-mono text-[0.68rem] uppercase tracking-wider text-[var(--color-muted-ink)]">
-            {candidate.position_label}
+            {candidate.party} &middot; {candidate.position_label}
           </p>
-          <h3 className="mt-1 text-xl leading-tight">
-            {candidate.full_name}
-          </h3>
-          <p className="mt-2 font-mono text-xs text-[var(--color-muted-ink)]">
-            {candidate.party}
-            {candidate.ballot_number != null
-              ? ` · nº ${candidate.ballot_number}`
-              : ''}
-          </p>
+
+          <Link
+            to={`/candidatos/${candidate.id}`}
+            className="after:absolute after:inset-0"
+          >
+            <h3 className="mt-1 font-[family-name:var(--font-display)] text-xl font-bold leading-tight text-[var(--color-ink)]">
+              {candidate.full_name}
+            </h3>
+          </Link>
+
+          {candidate.ballot_number && (
+            <p className="mt-1 font-mono text-sm text-[var(--color-muted-ink)]">
+              {candidate.ballot_number}
+            </p>
+          )}
+
+          {summary && (
+            <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-[var(--color-ink)]">
+              {summary.content}
+            </p>
+          )}
         </div>
       </div>
 
-      <div className="flex flex-1 flex-col gap-3 border-t border-[var(--color-border-editorial)] px-4 py-4">
-        {summary ? (
-          <>
-            <p className="text-sm leading-relaxed">
-              {summary.content}
-            </p>
-            <SourceReferenceBadge
-              document={summary.source_document}
-              confidenceScore={summary.confidence_score}
-            />
-          </>
-        ) : (
-          <div className="flex min-h-20 items-center">
-            <p className="font-mono text-xs uppercase tracking-wide text-[var(--color-muted-ink)]">
-              Resumo ainda não verificado
-            </p>
-          </div>
-        )}
-      </div>
-
-      <div className="border-t border-[var(--color-border-editorial)] px-4 py-3">
-        <Link
-          to={`/candidatos/${encodeURIComponent(candidate.id)}`}
-          className="inline-flex text-sm font-semibold text-[var(--color-institutional)] underline-offset-4 hover:underline"
-          aria-label={`Ver dossiê completo de ${candidate.full_name}`}
-        >
-          Ver dossiê completo <span aria-hidden="true" className="ml-1">→</span>
-        </Link>
+      <div className="mt-auto border-t border-[var(--color-border-editorial)] px-4 py-3">
+        <SourceReferenceBadge
+          document={summary?.source_document ?? null}
+          confidenceScore={summary?.confidence_score ?? 0}
+        />
       </div>
     </article>
   );

@@ -4,16 +4,13 @@ import { sanitizeUrl } from '@/utils/sanitizeUrl';
 import { CandidatePhoto } from '@/components/candidates/CandidatePhoto';
 import { DataFreshness } from '@/components/DataFreshness';
 import { SourceReferenceBadge } from '@/components/sources/SourceReferenceBadge';
-import { sanitizeUrl } from '@/utils/url';
 import {
   EmptyState,
   ErrorState,
   LoadingSkeleton
 } from '@/components/states';
 import { usePageMetadata } from '@/hooks/usePageMetadata';
-import { sanitizeUrl } from '@/utils/sanitize';
 import { fetchCandidateById } from '@/services/candidates';
-import { sanitizeUrl } from '@/utils/sanitizeUrl';
 import {
   DOSSIER_SECTIONS,
   type CandidateWithClaims,
