@@ -1,5 +1,7 @@
 import type { CSSProperties, ReactNode } from 'react';
 import type { RawDocument } from '@/types/election';
+import { getSafeUrl } from '@/utils/url';
+
 import {
   confidenceLevel,
   CONFIDENCE_COLOR,
@@ -52,6 +54,8 @@ export function SourceReferenceBadge({
     })
   } as CSSProperties;
 
+  const safeUrl = getSafeUrl(document?.url);
+
   const content = (
     <>
       <span className="flex flex-wrap items-center gap-2">
@@ -99,7 +103,7 @@ export function SourceReferenceBadge({
       rel="noreferrer noopener"
       className={`${className} transition-colors hover:bg-[var(--color-paper)]`}
       style={style}
-      aria-label={`Abrir fonte original: ${document?.source_name}`}
+      aria-label={`Abrir fonte original: ${document?.source_name ?? 'Fonte não identificada'}`}
     >
       {content}
     </a>
