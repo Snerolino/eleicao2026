@@ -18,6 +18,8 @@ export function CandidateCard({
       claim.status === 'published'
   );
 
+  const safePhotoSourceUrl = sanitizeUrl(candidate.photo_source_url);
+
   return (
     <article className="flex min-h-full flex-col overflow-hidden rounded-md border border-[var(--color-border-editorial)] bg-white">
       <div className="flex gap-4 p-4">

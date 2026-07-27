@@ -12,6 +12,7 @@ import {
 } from '@/components/states';
 import { usePageMetadata } from '@/hooks/usePageMetadata';
 import { fetchCandidateById } from '@/services/candidates';
+import { sanitizeUrl } from '@/utils/sanitizeUrl';
 import {
   DOSSIER_SECTIONS,
   type CandidateWithClaims,
