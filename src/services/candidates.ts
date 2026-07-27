@@ -186,7 +186,13 @@ export async function fetchAllCandidates(): Promise<CandidateWithClaims[]> {
 
   try {
     const supabaseData = await fetchAllCandidatesFromSupabase();
-    if (supabaseData.length > 0) return supabaseData;
+    if (supabaseData.length > 0) {
+      // Merge Supabase data + mock data (mock has president candidates, etc.)
+      const mockData = fetchAllFromMock();
+      const supabaseIds = new Set(supabaseData.map((c) => c.id));
+      const onlyFromMock = mockData.filter((c) => !supabaseIds.has(c.id));
+      return [...supabaseData, ...onlyFromMock];
+    }
   } catch {
     // Supabase unavailable — fall through to mock
   }
