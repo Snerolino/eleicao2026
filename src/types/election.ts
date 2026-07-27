@@ -1,4 +1,5 @@
 export type Position =
+  | 'presidente'
   | 'governador'
   | 'senador'
   | 'deputado_federal'
@@ -54,6 +55,7 @@ export interface CandidateWithClaims extends Candidate {
 }
 
 export const POSITION_ORDER: Position[] = [
+  'presidente',
   'governador',
   'senador',
   'deputado_federal',
@@ -61,6 +63,7 @@ export const POSITION_ORDER: Position[] = [
 ];
 
 export const POSITION_LABEL: Record<Position, string> = {
+  presidente: 'Presidente',
   governador: 'Governador',
   senador: 'Senador',
   deputado_federal: 'Deputado Federal',

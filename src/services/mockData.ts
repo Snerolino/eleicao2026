@@ -7,6 +7,160 @@ import type { CandidateWithClaims } from '@/types/election';
 // Preview: banner persistente identifica o modo de teste.
 export const MOCK_CANDIDATES: CandidateWithClaims[] = [
   {
+    id: '7452d0c1-909a-54fe-8243-7cf356fe488d',
+    full_name: 'Lula da Silva',
+    party: 'PT',
+    ballot_number: '13',
+    position: 'presidente',
+    position_label: 'Presidente',
+    photo_url: null,
+    photo_source_url: null,
+    claims: []
+  },
+  {
+    id: 'a3355575-cb83-52be-9d72-58bd50b3045d',
+    full_name: 'Flávio Bolsonaro',
+    party: 'PL',
+    ballot_number: '22',
+    position: 'presidente',
+    position_label: 'Presidente',
+    photo_url: null,
+    photo_source_url: null,
+    claims: []
+  },
+  {
+    id: '54bb09c6-91f8-57dd-b2d8-185a92cc1eec',
+    full_name: 'Ronaldo Caiado',
+    party: 'PSD',
+    ballot_number: '55',
+    position: 'presidente',
+    position_label: 'Presidente',
+    photo_url: null,
+    photo_source_url: null,
+    claims: []
+  },
+  {
+    id: '2609afda-7694-57d1-9b57-88df9168182b',
+    full_name: 'Romeu Zema',
+    party: 'Novo',
+    ballot_number: '30',
+    position: 'presidente',
+    position_label: 'Presidente',
+    photo_url: null,
+    photo_source_url: null,
+    claims: []
+  },
+  {
+    id: '501cf685-58f7-5914-975a-b3a2cc4389fe',
+    full_name: 'Renan Santos',
+    party: 'Missão',
+    ballot_number: '444',
+    position: 'presidente',
+    position_label: 'Presidente',
+    photo_url: null,
+    photo_source_url: null,
+    claims: []
+  },
+  {
+    id: 'a91b1652-3a23-5e45-b923-a51dfbe323cb',
+    full_name: 'Augusto Cury',
+    party: 'Avante',
+    ballot_number: '70',
+    position: 'presidente',
+    position_label: 'Presidente',
+    photo_url: null,
+    photo_source_url: null,
+    claims: []
+  },
+  {
+    id: 'ae76cb1b-fb31-59fe-88b2-46c340bca431',
+    full_name: 'Cabo Daciolo',
+    party: 'Mobiliza',
+    ballot_number: '90',
+    position: 'presidente',
+    position_label: 'Presidente',
+    photo_url: null,
+    photo_source_url: null,
+    claims: []
+  },
+  {
+    id: 'e1efbdfb-d553-5abf-a08d-0ffdfafb0fde',
+    full_name: 'Samara Martins',
+    party: 'UP',
+    ballot_number: '80',
+    position: 'presidente',
+    position_label: 'Presidente',
+    photo_url: null,
+    photo_source_url: null,
+    claims: []
+  },
+  {
+    id: 'c1ee0a9e-07da-5291-8cbc-9d8e820be9ca',
+    full_name: 'Hertz Dias',
+    party: 'PSTU',
+    ballot_number: '16',
+    position: 'presidente',
+    position_label: 'Presidente',
+    photo_url: null,
+    photo_source_url: null,
+    claims: []
+  },
+  {
+    id: 'ca34550f-a8c6-57e5-9f84-f1809697c7b5',
+    full_name: 'Edmilson Costa',
+    party: 'PCB',
+    ballot_number: '21',
+    position: 'presidente',
+    position_label: 'Presidente',
+    photo_url: null,
+    photo_source_url: null,
+    claims: []
+  },
+  {
+    id: 'a7283226-cb6f-5d69-819d-b5f52a1182d7',
+    full_name: 'Rui Costa Pimenta',
+    party: 'PCO',
+    ballot_number: '29',
+    position: 'presidente',
+    position_label: 'Presidente',
+    photo_url: null,
+    photo_source_url: null,
+    claims: []
+  },
+  {
+    id: 'd0f6d481-9723-5315-a229-7914c215d5b8',
+    full_name: 'Clariana Barão',
+    party: 'DC',
+    ballot_number: '27',
+    position: 'presidente',
+    position_label: 'Presidente',
+    photo_url: null,
+    photo_source_url: null,
+    claims: []
+  },
+  {
+    id: '58df7485-929d-5807-a985-dd3044efa254',
+    full_name: 'Brigadeiro Átila Maia',
+    party: 'Democrata',
+    ballot_number: '35',
+    position: 'presidente',
+    position_label: 'Presidente',
+    photo_url: null,
+    photo_source_url: null,
+    claims: []
+  },
+  {
+    id: '677b2ce5-f268-5cb1-9993-9ca6c0b871a4',
+    full_name: 'Leonardo Avalanche',
+    party: 'PRTB',
+    ballot_number: '28',
+    position: 'presidente',
+    position_label: 'Presidente',
+    photo_url: null,
+    photo_source_url: null,
+    claims: []
+  },
+  {
     id: 'fd812b91-00d4-530e-8489-6fa2bc230690',
     full_name: 'Juliana Brizola',
     party: 'PDT',
