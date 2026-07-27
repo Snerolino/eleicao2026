@@ -1,4 +1,6 @@
+import { useRef } from 'react';
 import type { CandidateWithClaims, Position } from '@/types/election';
+import { useMemo } from "react";
 import { POSITION_LABEL } from '@/types/election';
 
 interface CandidateSearchProps {
@@ -20,12 +22,13 @@ export function CandidateSearch({
   onCargoFilterChange,
   onPartyFilterChange,
 }: CandidateSearchProps) {
+  const inputRef = useRef<HTMLInputElement>(null);
   const positions = [...new Set(candidates.map((c) => c.position))].sort((a, b) => {
     const order: Position[] = ['governador', 'senador', 'deputado_federal', 'deputado_estadual'];
     return order.indexOf(a) - order.indexOf(b);
-  });
+  }), [candidates]);
 
-  const parties = [...new Set(candidates.map((c) => c.party))].sort();
+  const parties = useMemo(() => [...new Set(candidates.map((c) => c.party))].sort(), [candidates]);
 
   return (
     <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -34,6 +37,7 @@ export function CandidateSearch({
           Buscar candidatos
         </label>
         <input
+          ref={inputRef}
           id="candidate-search"
           type="search"
           placeholder="Buscar por nome, partido, nº…"
@@ -45,11 +49,11 @@ export function CandidateSearch({
         {query && (
           <button
             type="button"
-            onClick={() => onQueryChange('')}
+            onClick={() => { onQueryChange(''); inputRef.current?.focus(); }}
             className="absolute right-2 top-1/2 -translate-y-1/2 text-[var(--color-muted-ink)] hover:text-[var(--color-ink)]"
             aria-label="Limpar busca"
           >
-            ✕
+            <span aria-hidden="true">✕</span>
           </button>
         )}
       </div>

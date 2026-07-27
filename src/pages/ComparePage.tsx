@@ -14,20 +14,19 @@ import { LoadingSkeleton } from '@/components/states';
 
 function claimsForSection(
   claims: Claim[],
-  matchers: readonly string[]
+  matchersSet: ReadonlySet<string>
 ): Claim[] {
-  const accepted = new Set(matchers.map((m) => m.toLowerCase()));
-  return claims.filter((c) => accepted.has(c.category.toLowerCase()));
+  return claims.filter((c) => matchersSet.has(c.category.toLowerCase()));
 }
 
 function SectionCell({
   candidate,
-  matchers,
+  matchersSet,
 }: {
   candidate: CandidateWithClaims;
-  matchers: readonly string[];
+  matchersSet: ReadonlySet<string>;
 }) {
-  const claims = claimsForSection(candidate.claims, matchers);
+  const claims = claimsForSection(candidate.claims, matchersSet);
   if (claims.length === 0) {
     return (
       <td className="border-r border-[var(--color-border-editorial)] px-4 py-4 align-top last:border-r-0">
@@ -249,7 +248,7 @@ export function ComparePage() {
                         <SectionCell
                           key={c.id}
                           candidate={c}
-                          matchers={section.categoryMatchers}
+                          matchersSet={section.categoryMatchersSet}
                         />
                       ))}
                     </tr>
