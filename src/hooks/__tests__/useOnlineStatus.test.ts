@@ -19,7 +19,7 @@ describe('useOnlineStatus', () => {
 
   it('should update to false when offline event fires', () => {
     const { result } = renderHook(() => useOnlineStatus());
-
+    
     expect(result.current).toBe(true);
 
     act(() => {
@@ -33,7 +33,7 @@ describe('useOnlineStatus', () => {
     // Set initial state to offline
     vi.stubGlobal('navigator', { onLine: false });
     const { result } = renderHook(() => useOnlineStatus());
-
+    
     expect(result.current).toBe(false);
 
     act(() => {

@@ -19,25 +19,16 @@ import {
 } from '@/types/election';
 import { usePageMetadata } from '@/hooks/usePageMetadata';
 
-interface CandidateWithSearch extends CandidateWithClaims {
-  _searchTokens: {
-    name: string;
-    party: string;
-    label: string;
-    number: string;
-  };
-}
-
 function normalize(text: string) {
   return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 }
 
 function filterCandidates(
-  candidates: CandidateWithSearch[],
+  candidates: CandidateWithClaims[],
   query: string,
   cargoFilter: '' | Position,
   partyFilter: string
-): CandidateWithSearch[] {
+): CandidateWithClaims[] {
   const normalized = normalize(query);
 
   return candidates.filter((c) => {
@@ -45,7 +36,11 @@ function filterCandidates(
     if (partyFilter && c.party !== partyFilter) return false;
     if (!normalized) return true;
 
-    const { name, party, label, number } = c._searchTokens;
+    // Short-circuit evaluations to avoid expensive `normalize` calls
+    if (c.party.toLowerCase().includes(normalized)) return true;
+
+    const number = c.ballot_number?.toString() ?? '';
+    if (number.includes(normalized)) return true;
 
     const name = normalize(c.full_name);
     if (name.includes(normalized)) return true;
@@ -75,32 +70,10 @@ export function HomePage() {
 
   const allCandidates = query.data ?? [];
 
-  const candidatesWithSearch = useMemo(() => {
-    return allCandidates.map(c => ({
-      ...c,
-      _searchTokens: {
-        name: normalize(c.full_name),
-        party: c.party.toLowerCase(),
-        label: normalize(c.position_label),
-        number: c.ballot_number?.toString() ?? ''
-      }
-    }));
-  }, [allCandidates]);
-
   const filtered = useMemo(
-    () => filterCandidates(candidatesWithSearch, searchQuery, cargoFilter, partyFilter),
-    [candidatesWithSearch, searchQuery, cargoFilter, partyFilter]
+    () => filterCandidates(allCandidates, searchQuery, cargoFilter, partyFilter),
+    [allCandidates, searchQuery, cargoFilter, partyFilter]
   );
-
-  const groupedCandidates = useMemo(() => {
-    const grouped = new Map<Position, CandidateWithClaims[]>();
-    for (const c of filtered) {
-      const g = grouped.get(c.position);
-      if (g) g.push(c);
-      else grouped.set(c.position, [c]);
-    }
-    return grouped;
-  }, [filtered]);
 
   const hasActiveFilter = searchQuery !== '' || cargoFilter !== '' || partyFilter !== '';
 
@@ -193,9 +166,15 @@ export function HomePage() {
       ) : (
         <section className="mt-8 space-y-12">
           {(() => {
+            const grouped = new Map<Position, CandidateWithClaims[]>();
+            for (const c of filtered) {
+              const g = grouped.get(c.position);
+              if (g) g.push(c);
+              else grouped.set(c.position, [c]);
+            }
             const sections: ReactNode[] = [];
             for (const position of POSITION_ORDER) {
-              const candidatesInPosition = groupedCandidates.get(position) ?? [];
+              const candidatesInPosition = grouped.get(position) ?? [];
               if (candidatesInPosition.length === 0 && !hasActiveFilter) continue;
               sections.push(
                 <CargoSection
@@ -205,7 +184,7 @@ export function HomePage() {
                 />
               );
             }
-            const outros = groupedCandidates.get('outro' as Position);
+            const outros = grouped.get('outro' as Position);
             if (outros) {
               sections.push(
                 <CargoSection
