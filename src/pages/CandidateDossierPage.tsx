@@ -11,6 +11,7 @@ import {
   LoadingSkeleton
 } from '@/components/states';
 import { usePageMetadata } from '@/hooks/usePageMetadata';
+import { sanitizeUrl } from '@/utils/sanitize';
 import { fetchCandidateById } from '@/services/candidates';
 import { sanitizeUrl } from '@/utils/sanitizeUrl';
 import {
