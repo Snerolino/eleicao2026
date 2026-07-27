@@ -97,6 +97,17 @@
   --border: oklch(0.350 0.010 160);
   --input: oklch(0.350 0.010 160);
   --ring: oklch(0.550 0.065 165);
+
+  /* — tokens de cor do projeto (dark) — */
+  --color-paper: #1C2220;
+  --color-ink: #F0F0EC;
+  --color-institutional: #5CB87A;
+  --color-press: #7BA0C8;
+  --color-factcheck: #D4AA6E;
+  --color-unverified: #888;
+  --color-muted-ink: #B0B8B4;
+  --color-border-editorial: #3A4040;
+  --color-skeleton: #2A302E;
 }
 
 @theme inline {

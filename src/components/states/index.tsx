@@ -78,7 +78,7 @@ export function DemoBanner() {
   return (
     <div
       role="alert"
-      className="border-y-2 border-[var(--color-factcheck)] bg-[color-mix(in_srgb,var(--color-factcheck)_9%,white)] px-4 py-2 text-center font-mono text-xs font-medium uppercase tracking-widest"
+      className="border-y-2 border-[var(--color-factcheck)] bg-[color-mix(in_srgb,var(--color-factcheck)_9%,var(--color-paper))] px-4 py-2 text-center font-mono text-xs font-medium uppercase tracking-widest"
     >
       Ambiente de demonstração — dados de teste
     </div>

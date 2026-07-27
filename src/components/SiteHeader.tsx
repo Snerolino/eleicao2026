@@ -12,7 +12,7 @@ function linkClass({ isActive }: { isActive: boolean }) {
 
 export function SiteHeader() {
   return (
-    <header className="border-b border-[var(--color-border-editorial)] bg-white">
+    <header className="border-b border-[var(--color-border-editorial)] bg-[var(--color-paper)]">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-6 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <NavLink

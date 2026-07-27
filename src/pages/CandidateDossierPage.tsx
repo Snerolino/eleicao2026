@@ -156,7 +156,7 @@ export function CandidateDossierPage() {
                     {claims.map((claim) => (
                       <li
                         key={claim.id}
-                        className="space-y-4 rounded-md border border-[var(--color-border-editorial)] bg-white p-5"
+                        className="space-y-4 rounded-md border border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-5"
                       >
                         <p className="leading-relaxed">
                           {claim.content}

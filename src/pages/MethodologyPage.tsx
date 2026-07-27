@@ -30,7 +30,7 @@ function ScoreSection() {
         registradas no banco.
       </p>
 
-      <div className="mt-6 space-y-3 rounded-md border border-[var(--color-border-editorial)] bg-white p-5 font-mono text-sm">
+      <div className="mt-6 space-y-3 rounded-md border border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-5 font-mono text-sm">
         <div className="flex items-center gap-3">
           <span className="inline-flex h-6 w-6 items-center justify-center rounded-sm bg-[var(--color-institutional)] text-xs font-bold text-white">
             5
@@ -86,7 +86,7 @@ function CategoriesSection() {
       </p>
 
       <dl className="mt-4 space-y-4">
-        <div className="rounded-md border border-[var(--color-border-editorial)] bg-white p-4">
+        <div className="rounded-md border border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-4">
           <dt className="font-mono font-semibold uppercase text-[var(--color-institutional)]">
             ■ Oficial
           </dt>
@@ -96,7 +96,7 @@ function CategoriesSection() {
             Sempre que disponível, é a referência principal.
           </dd>
         </div>
-        <div className="rounded-md border border-[var(--color-border-editorial)] bg-white p-4">
+        <div className="rounded-md border border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-4">
           <dt className="font-mono font-semibold uppercase text-[var(--color-press)]">
             ■ Imprensa
           </dt>
@@ -105,7 +105,7 @@ function CategoriesSection() {
             autoria ou responsabilidade editorial.
           </dd>
         </div>
-        <div className="rounded-md border border-[var(--color-border-editorial)] bg-white p-4">
+        <div className="rounded-md border border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-4">
           <dt className="font-mono font-semibold uppercase text-[var(--color-factcheck)]">
             ■ Checagem de fatos
           </dt>
@@ -114,7 +114,7 @@ function CategoriesSection() {
             e evidências (Aos Fatos, Agência Lupa, Comprova).
           </dd>
         </div>
-        <div className="rounded-md border border-[var(--color-border-editorial)] bg-white p-4">
+        <div className="rounded-md border border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-4">
           <dt className="font-mono font-semibold uppercase text-[var(--color-unverified)]">
             ■ Outra
           </dt>
@@ -199,7 +199,7 @@ function DisputeSection() {
       {CONTACT_EMAIL_IS_PLACEHOLDER ? (
         <div
           role="note"
-          className="mt-4 rounded-md border border-[var(--color-factcheck)] bg-white p-4 font-mono text-sm"
+          className="mt-4 rounded-md border border-[var(--color-factcheck)] bg-[var(--color-paper)] p-4 font-mono text-sm"
         >
           Canal de contato ainda não configurado. Antes da
           publicação, substitua{' '}
@@ -207,7 +207,7 @@ function DisputeSection() {
           <code>src/config.ts</code>.
         </div>
       ) : (
-        <p className="mt-4 rounded-md border border-[var(--color-border-editorial)] bg-white p-4 font-mono text-sm">
+        <p className="mt-4 rounded-md border border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-4 font-mono text-sm">
           <a
             href={`mailto:${CONTACT_EMAIL}`}
             className="text-[var(--color-institutional)] underline underline-offset-2"

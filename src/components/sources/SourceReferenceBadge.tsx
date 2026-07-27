@@ -44,10 +44,10 @@ export function SourceReferenceBadge({
     '--source-color': categoryColor,
     borderLeftColor: categoryColor,
     background: isOfficial
-      ? 'color-mix(in srgb, var(--color-institutional) 12%, white)'
-      : '#FFFFFF',
+      ? 'color-mix(in srgb, var(--color-institutional) 12%, var(--color-paper))'
+      : 'var(--color-paper)',
     ...(isOfficial && {
-      borderTopColor: 'color-mix(in srgb, var(--color-institutional) 20%, white)',
+      borderTopColor: 'color-mix(in srgb, var(--color-institutional) 20%, var(--color-paper))',
       borderTopWidth: '1px'
     })
   } as CSSProperties;
@@ -99,7 +99,7 @@ export function SourceReferenceBadge({
   if (!safeUrl) {
     return (
       <div
-        className="rounded-sm border-l-4 bg-white px-3 py-2 text-xs"
+        className="rounded-sm border-l-4 bg-[var(--color-paper)] px-3 py-2 text-xs"
         style={style}
       >
         {content}
@@ -112,7 +112,7 @@ export function SourceReferenceBadge({
       href={safeUrl}
       target="_blank"
       rel="noreferrer noopener"
-      className="block rounded-sm border-l-4 bg-white px-3 py-2 text-xs transition-colors hover:opacity-80"
+      className="block rounded-sm border-l-4 bg-[var(--color-paper)] px-3 py-2 text-xs transition-colors hover:opacity-80"
       style={style}
     >
       {content}

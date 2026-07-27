@@ -124,8 +124,8 @@ export function ComparePage() {
                   aria-pressed={isSelected}
                   className={`flex w-full items-center gap-3 rounded-sm border p-3 text-left transition-colors ${
                     isSelected
-                      ? 'border-[var(--color-institutional)] bg-[color-mix(in_srgb,var(--color-institutional)_8%,white)]'
-                      : 'border-[var(--color-border-editorial)] bg-white hover:border-[var(--color-institutional)]'
+                      ? 'border-[var(--color-institutional)] bg-[color-mix(in_srgb,var(--color-institutional)_8%,var(--color-paper))]'
+                      : 'border-[var(--color-border-editorial)] bg-[var(--color-paper)] hover:border-[var(--color-institutional)]'
                   } ${isMaxed ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`}
                 >
                   <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-sm bg-[var(--color-skeleton)]">
@@ -166,7 +166,7 @@ export function ComparePage() {
             {selected.map((c) => (
               <span
                 key={c.id}
-                className="inline-flex items-center gap-2 rounded-sm bg-[color-mix(in_srgb,var(--color-institutional)_12%,white)] px-3 py-1.5 text-sm"
+                className="inline-flex items-center gap-2 rounded-sm bg-[color-mix(in_srgb,var(--color-institutional)_12%,var(--color-paper))] px-3 py-1.5 text-sm"
               >
                 <span className="truncate max-w-[180px]">{c.full_name}</span>
                 <button
@@ -197,7 +197,7 @@ export function ComparePage() {
           {/* Comparison table */}
           {selected.length >= 2 && (
             <div className="mt-4 overflow-auto rounded-sm border border-[var(--color-border-editorial)]">
-              <table className="w-full border-collapse bg-white text-sm">
+              <table className="w-full border-collapse bg-[var(--color-paper)] text-sm">
                 <thead>
                   <tr>
                     <th className="sticky top-0 min-w-[120px] bg-[var(--color-paper)] p-3 text-left font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]" />
