@@ -62,7 +62,7 @@ export function CandidateDossierPage() {
         to="/"
         className="font-mono text-xs uppercase tracking-wider text-[var(--color-institutional)] underline-offset-4 hover:underline"
       >
-        ← Voltar à lista
+        <span aria-hidden="true" className="mr-1">←</span> Voltar à lista
       </Link>
 
       {query.isLoading && (

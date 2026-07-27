@@ -86,8 +86,9 @@ export function CandidateCard({
         <Link
           to={`/candidatos/${encodeURIComponent(candidate.id)}`}
           className="inline-flex text-sm font-semibold text-[var(--color-institutional)] underline-offset-4 hover:underline"
+          aria-label={`Ver dossiê completo de ${candidate.full_name}`}
         >
-          Ver dossiê completo →
+          Ver dossiê completo <span aria-hidden="true" className="ml-1">→</span>
         </Link>
       </div>
     </article>
