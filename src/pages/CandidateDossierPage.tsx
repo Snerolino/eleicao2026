@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { Link, useParams } from 'react-router-dom';
+import { sanitizeUrl } from '@/utils/sanitizeUrl';
 import { CandidatePhoto } from '@/components/candidates/CandidatePhoto';
 import { DataFreshness } from '@/components/DataFreshness';
 import { SourceReferenceBadge } from '@/components/sources/SourceReferenceBadge';

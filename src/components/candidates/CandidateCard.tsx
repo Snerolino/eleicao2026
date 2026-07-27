@@ -3,6 +3,7 @@ import type { CandidateWithClaims } from '@/types/election';
 import { SourceReferenceBadge } from '@/components/sources/SourceReferenceBadge';
 import { sanitizeUrl } from '@/utils/url';
 import { CandidatePhoto } from './CandidatePhoto';
+import { sanitizeUrl } from '@/utils/sanitizeUrl';
 
 interface CandidateCardProps {
   candidate: CandidateWithClaims;

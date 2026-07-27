@@ -1,4 +1,5 @@
 import type { CSSProperties, ReactNode } from 'react';
+import { sanitizeUrl } from '@/utils/sanitizeUrl';
 import type { RawDocument } from '@/types/election';
 import { getSafeUrl } from '@/utils/url';
 
