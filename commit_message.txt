@@ -1,0 +1,14 @@
+🧪 Add tests for usePageMetadata hook
+
+🎯 **What:** The testing gap addressed
+The `usePageMetadata` hook was untested. It interacts with the DOM (`document.head` and `document.title`) to inject standard, Open Graph, and Twitter Card meta tags and lacks automated checks to ensure its mutations work correctly. This PR sets up testing dependencies (`@testing-library/react`, `@testing-library/jest-dom`, `jsdom`, `@types/jest`) to allow for DOM mutation testing in `vitest`.
+
+📊 **Coverage:** What scenarios are now tested
+- Validates the `document.title` is updated correctly.
+- Confirms standard meta description tags are successfully injected.
+- Verifies Open Graph (og:title, og:description, og:image, og:url) and Twitter Card tags are appropriately injected to the DOM.
+- Checks that default fallback values (like icon paths and `window.location.href`) are applied correctly when optional parameters are omitted.
+- Proves that subsequent calls update existing meta tags rather than redundantly duplicating them in the document head.
+
+✨ **Result:** The improvement in test coverage
+Test suite now covers all the branches and conditions of the `usePageMetadata` hook, protecting against future regressions in SEO and social media metadata generation. Tests successfully pass under a fast and reliable environment using `jsdom`.

@@ -1,5 +1,8 @@
 import type { CSSProperties, ReactNode } from 'react';
+import { sanitizeUrl } from '@/utils/sanitizeUrl';
 import type { RawDocument } from '@/types/election';
+import { getSafeUrl } from '@/utils/url';
+
 import {
   confidenceLevel,
   CONFIDENCE_COLOR,
@@ -9,7 +12,7 @@ import {
   SOURCE_CATEGORY_COLOR,
   SOURCE_CATEGORY_LABEL
 } from '@/utils/sourceCategory';
-import { sanitizeUrl } from '@/utils/sanitizeUrl';
+import { sanitizeUrl } from '@/utils/url';
 
 interface SourceReferenceBadgeProps {
   document: RawDocument | null;
@@ -38,6 +41,7 @@ export function SourceReferenceBadge({
   const categoryColor = SOURCE_CATEGORY_COLOR[category];
   const confidenceColor = CONFIDENCE_COLOR[level];
   const isOfficial = category === 'oficial';
+  const safeUrl = sanitizeUrl(document?.url);
 
   const style = {
     '--source-color': categoryColor,
@@ -50,6 +54,8 @@ export function SourceReferenceBadge({
       borderTopWidth: '1px'
     })
   } as CSSProperties;
+
+  const safeUrl = getSafeUrl(document?.url);
 
   const content = (
     <>
@@ -83,7 +89,7 @@ export function SourceReferenceBadge({
       </span>
 
       <span className="text-[0.68rem]">
-        {document && sanitizeUrl(document.url) ? 'Ver fonte original ↗' : 'URL da fonte não disponível'}
+        {safeUrl ? 'Ver fonte original ↗' : 'URL da fonte não disponível'}
       </span>
     </>
   );
@@ -91,16 +97,14 @@ export function SourceReferenceBadge({
   const className =
     'inline-flex w-full flex-col gap-2 rounded-sm border border-[var(--color-border-editorial)] border-l-4 px-3 py-2 font-mono text-xs text-[var(--color-ink)]';
 
-  const safeUrl = document ? sanitizeUrl(document.url) : null;
-
-  return safeUrl && document ? (
+  return safeUrl ? (
     <a
       href={safeUrl}
       target="_blank"
       rel="noreferrer noopener"
       className={`${className} transition-colors hover:bg-[var(--color-paper)]`}
       style={style}
-      aria-label={`Abrir fonte original: ${document.source_name}`}
+      aria-label={`Abrir fonte original: ${document?.source_name ?? 'Fonte não identificada'}`}
     >
       {content}
     </a>

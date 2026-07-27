@@ -1,16 +1,31 @@
-export function sanitizeUrl(url: string | null | undefined): string | null {
-  if (!url) return null;
+export function sanitizeUrl(url: string | null | undefined): string | undefined {
+  if (!url) return undefined;
 
   try {
-    const parsed = new URL(url);
-    const allowedProtocols = ['http:', 'https:', 'mailto:', 'tel:'];
+    const parsedUrl = new URL(url, window.location.origin);
 
-    if (allowedProtocols.includes(parsed.protocol)) {
-      return parsed.href;
+    // Only allow http, https, mailto, tel
+    if (['http:', 'https:', 'mailto:', 'tel:'].includes(parsedUrl.protocol)) {
+      // It's safe if it's one of the allowed protocols
+      return url;
     }
-  } catch (e) {
-    // URL parsing failed, assume unsafe or invalid
-  }
 
-  return null;
+    // For anything else, return undefined or a safe fallback
+    return 'about:blank';
+  } catch (e) {
+    // If it fails to parse as a URL, it might be a relative path like "/foo"
+    // The browser might resolve it differently, but to be absolutely safe against
+    // javascript: and data: URIs, we can do a simple prefix check for relative urls
+
+    // Remove leading/trailing whitespaces and control characters
+    const trimmedUrl = url.trim();
+
+    // Check for obvious malicious protocols if it wasn't caught by URL constructor
+    // (e.g. if environment doesn't have URL constructor or acts weirdly)
+    if (/^(?:javascript|data|vbscript):/i.test(trimmedUrl)) {
+      return 'about:blank';
+    }
+
+    return trimmedUrl;
+  }
 }
