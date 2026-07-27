@@ -82,11 +82,11 @@ export function SourceReferenceBadge({
           className="mt-1 block break-all text-xs leading-relaxed underline transition-colors hover:text-[var(--color-institutional)]"
           style={{ color: categoryColor }}
         >
-          {document!.source_name ?? 'Fonte'}
+          {document?.source_name ?? 'Fonte'}
         </a>
       ) : (
         <span className="mt-1 block text-xs leading-relaxed text-[var(--color-muted-ink)]">
-          {document!.source_name ?? 'Fonte não informada'}
+          {document?.source_name ?? 'Fonte não informada'}
         </span>
       )}
 
