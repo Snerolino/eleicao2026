@@ -13,7 +13,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: '12',
     position: 'governador',
     position_label: 'Governador',
-    photo_url: '/photos/juliana_brizola_jpg',
+    photo_url: '/photos/juliana_brizola.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: [
       {
@@ -161,7 +161,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'governador',
     position_label: 'Governador',
-    photo_url: '/photos/priscila_voigt_jpg',
+    photo_url: '/photos/priscila_voigt.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -172,7 +172,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'governador',
     position_label: 'Governador',
-    photo_url: '/photos/c_sar_pontes_jpg',
+    photo_url: '/photos/cesar_pontes.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -304,7 +304,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_federal',
     position_label: 'Deputado Federal',
-    photo_url: '/photos/alexandre_bobadra_jpg',
+    photo_url: '/photos/alexandre_bobadra.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -359,7 +359,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_federal',
     position_label: 'Deputado Federal',
-    photo_url: '/photos/fernanda_barth_jpg',
+    photo_url: '/photos/fernanda_barth.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -381,7 +381,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_federal',
     position_label: 'Deputado Federal',
-    photo_url: '/photos/guilherme_todeschini_jpg',
+    photo_url: '/photos/guilherme_todeschini.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -447,7 +447,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_federal',
     position_label: 'Deputado Federal',
-    photo_url: '/photos/k_tia_kaspary_jpg',
+    photo_url: '/photos/katia_kaspary.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -469,7 +469,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_federal',
     position_label: 'Deputado Federal',
-    photo_url: '/photos/golin_jpg',
+    photo_url: '/photos/golin.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -480,7 +480,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_federal',
     position_label: 'Deputado Federal',
-    photo_url: '/photos/lisiane_becker_jpg',
+    photo_url: '/photos/lisiane_becker.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -557,7 +557,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_federal',
     position_label: 'Deputado Federal',
-    photo_url: '/photos/perondi_jpg',
+    photo_url: '/photos/perondi.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -579,7 +579,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_federal',
     position_label: 'Deputado Federal',
-    photo_url: '/photos/rubem_de_jpg',
+    photo_url: '/photos/rubem.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -623,7 +623,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_federal',
     position_label: 'Deputado Federal',
-    photo_url: '/photos/denise_pess_a_jpg',
+    photo_url: '/photos/denise_pessoa.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -645,7 +645,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_federal',
     position_label: 'Deputado Federal',
-    photo_url: '/photos/eduardo_manique_jpg',
+    photo_url: '/photos/eduardo_manique.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -689,7 +689,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_federal',
     position_label: 'Deputado Federal',
-    photo_url: '/photos/jonas_reis_jpg',
+    photo_url: '/photos/jonas_reis.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -700,7 +700,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_federal',
     position_label: 'Deputado Federal',
-    photo_url: '/photos/katia_duarte_jpg',
+    photo_url: '/photos/katia_duarte.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -722,7 +722,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_federal',
     position_label: 'Deputado Federal',
-    photo_url: '/photos/marcon_jpg',
+    photo_url: '/photos/marcon.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -733,7 +733,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_federal',
     position_label: 'Deputado Federal',
-    photo_url: '/photos/maria_do_ros_rio_jpg',
+    photo_url: '/photos/maria_do_rosario.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -744,7 +744,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_federal',
     position_label: 'Deputado Federal',
-    photo_url: '/photos/miriam_marroni_jpeg',
+    photo_url: '/photos/miriam_marroni.jpeg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -799,7 +799,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_federal',
     position_label: 'Deputado Federal',
-    photo_url: '/photos/rosane_nascimento_jpg',
+    photo_url: '/photos/rosane_nascimento.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -810,7 +810,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_federal',
     position_label: 'Deputado Federal',
-    photo_url: '/photos/valdeci_oliveira_jpg',
+    photo_url: '/photos/valdeci_oliveira.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -821,7 +821,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/adriana_lara_jpg',
+    photo_url: '/photos/adriana_lara.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -832,7 +832,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/adriana_leite_jpg',
+    photo_url: '/photos/adriana_leite.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -876,7 +876,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/charles_andrade_jpeg',
+    photo_url: '/photos/charles_andrade.jpeg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -920,7 +920,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/daiane_mello_jpg',
+    photo_url: '/photos/daiane_mello.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -931,7 +931,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/daniel_bordim_jpg',
+    photo_url: '/photos/daniel_bordim.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -942,7 +942,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/daniel_borges_jpg',
+    photo_url: '/photos/daniel_borges.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -953,7 +953,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/dirceu_quadros_jpg',
+    photo_url: '/photos/dirceu_quadros.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -986,7 +986,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/eliel_alves_jpeg',
+    photo_url: '/photos/eliel_alves.jpeg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1096,7 +1096,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/jonas_rodrigues_jpg',
+    photo_url: '/photos/jonas_rodrigues.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1107,7 +1107,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/z__milanez_jpg',
+    photo_url: '/photos/ze_milanez.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1118,7 +1118,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/juli_cuciolli_jpg',
+    photo_url: '/photos/juli_cuciolli.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1173,7 +1173,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/lucas_de_freitas_jpg',
+    photo_url: '/photos/lucas_de_freitas.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1184,7 +1184,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/lu_s_benoitt_jpg',
+    photo_url: '/photos/luis_benoitt.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1195,7 +1195,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/magdiel_bissaco_jpg',
+    photo_url: '/photos/magdiel_bissaco.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1206,7 +1206,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/mahmoud_amer_jpg',
+    photo_url: '/photos/mahmoud_amer.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1228,7 +1228,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/marcio_patussi_jpg',
+    photo_url: '/photos/marcio_patussi.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1250,7 +1250,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/scalco_jpg',
+    photo_url: '/photos/scalco.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1261,7 +1261,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/nilce_jpg',
+    photo_url: '/photos/nilce.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1283,7 +1283,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/patricia_chagas_jpg',
+    photo_url: '/photos/patricia_chagas.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1305,7 +1305,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/ramatis_de_oliveira_jpg',
+    photo_url: '/photos/ramatis_de_oliveira.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1316,7 +1316,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/roberta_leit_o_jpg',
+    photo_url: '/photos/roberta_leitao.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1371,7 +1371,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/taize_nunes_jpeg',
+    photo_url: '/photos/taize_nunes.jpeg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1404,7 +1404,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/wagner_galard_o_jpg',
+    photo_url: '/photos/wagner_galardao.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1448,7 +1448,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/alexandre_bublitz_jpg',
+    photo_url: '/photos/alexandre_bublitz.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1470,7 +1470,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/brunno_mattos_jpg',
+    photo_url: '/photos/brunno_mattos.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1514,7 +1514,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/dariu_garcia_jpeg',
+    photo_url: '/photos/dariu_garcia.jpeg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1547,7 +1547,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/eva_valeria_lorenzato_jpg',
+    photo_url: '/photos/eva_valeria_lorenzato.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1558,7 +1558,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/grasselli_jpg',
+    photo_url: '/photos/grasselli.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1569,7 +1569,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/halley_jpg',
+    photo_url: '/photos/halley.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1580,7 +1580,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/helen_cabral_jpeg',
+    photo_url: '/photos/helen_cabral.jpeg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1624,7 +1624,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/l_o_da_costa_jpg',
+    photo_url: '/photos/leo_da_costa.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1657,7 +1657,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/marcelo_cordeiro_jpg',
+    photo_url: '/photos/marcelo_cordeiro.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1668,7 +1668,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/maria_eunice_jpg',
+    photo_url: '/photos/maria_eunice.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1679,7 +1679,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/marina_bernardes_jpg',
+    photo_url: '/photos/marina_bernardes.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1690,7 +1690,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/marina_callegaro_jpg',
+    photo_url: '/photos/marina_callegaro.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1712,7 +1712,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/m_nica_jpg',
+    photo_url: '/photos/monica.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1723,7 +1723,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/natasha_jpg',
+    photo_url: '/photos/natasha.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1734,7 +1734,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/nelson_spolaor_jpg',
+    photo_url: '/photos/nelson_spolaor.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1778,7 +1778,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/picolotto_jpeg',
+    photo_url: '/photos/picolotto.jpeg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1822,7 +1822,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/sidi_cardoso_jpg',
+    photo_url: '/photos/sidi_cardoso.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1844,7 +1844,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/stela_farias_jpg',
+    photo_url: '/photos/stela_farias.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1855,7 +1855,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/valdir_oliveira_jpg',
+    photo_url: '/photos/valdir_oliveira.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
@@ -1866,7 +1866,7 @@ export const MOCK_CANDIDATES: CandidateWithClaims[] = [
     ballot_number: null,
     position: 'deputado_estadual',
     position_label: 'Deputado Estadual',
-    photo_url: '/photos/z__nunes_jpg',
+    photo_url: '/photos/ze_nunes.jpg',
     photo_source_url: 'https://cdn.tse.jus.br/estatistica/sead/odsele/fotos_candidato/fotos_candidato_2024.zip',
     claims: []
   },
