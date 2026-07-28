@@ -1,4 +1,4 @@
-## 2026-07-27 - [XSS via URL scheme mitigation]
-**Vulnerability:** External URLs dynamically rendered into `href` tags could include malicious protocols like `javascript:` causing Cross-Site Scripting (XSS).
-**Learning:** Even static/database provided URLs should be validated against allowed protocols since external URLs could be injected via untrusted sources.
-**Prevention:** Always parse and sanitize URLs before rendering them as external links using native URL constructor checking.
+## 2026-07-28 - [Fix XSS vulnerability in URL Sanitization]
+**Vulnerability:** The `sanitizeUrl` function in `src/utils/sanitizeUrl.ts` was vulnerable to XSS due to insufficient stripping of control characters from the URL string before validating the protocol. An attacker could bypass the check by providing a URL starting with a control character (e.g. `\x01javascript:alert(1)`), which would fail the `URL` constructor but pass the subsequent regex check because the regex expected the malicious protocol to be at the start of the string, while `trim()` only removes whitespace.
+**Learning:** Always strip control characters in addition to whitespace before validating the URL protocols against a regex. When validating strings for security, be aware of what `trim()` actually removes. In JavaScript, `trim()` does not remove control characters like `\x00` - `\x1F`.
+**Prevention:** Always parse the URL safely. When falling back to string manipulation, strictly replace control characters and whitespace from the beginning of the string using `replace(/^[\s\x00-\x1F]+/, "")` before applying regex validation for protocols.

@@ -31,6 +31,7 @@ describe('sanitizeUrl', () => {
     expect(sanitizeUrl('\x01javascript:alert(1)')).toBeUndefined();
     expect(sanitizeUrl('\njavascript:alert(1)')).toBeUndefined();
     expect(sanitizeUrl('JaVaScRiPt:alert(1)')).toBeUndefined();
+    expect(sanitizeUrl('\x00javascript:alert(1)')).toBeUndefined();
   });
 
   it('blocks vbscript URLs', () => {

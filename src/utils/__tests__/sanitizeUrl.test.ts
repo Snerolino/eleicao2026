@@ -20,19 +20,19 @@ describe('sanitizeUrl', () => {
   });
 
   it('blocks javascript: URLs', () => {
-    expect(sanitizeUrl('javascript:alert(1)')).toBe('about:blank');
-    expect(sanitizeUrl('javascript:alert("XSS")')).toBe('about:blank');
-    expect(sanitizeUrl('JAVASCRIPT:alert(1)')).toBe('about:blank');
-    expect(sanitizeUrl('  javascript:alert(1)')).toBe('about:blank');
+    expect(sanitizeUrl('javascript:alert(1)')).toBeUndefined();
+    expect(sanitizeUrl('javascript:alert("XSS")')).toBeUndefined();
+    expect(sanitizeUrl('JAVASCRIPT:alert(1)')).toBeUndefined();
+    expect(sanitizeUrl('  javascript:alert(1)')).toBeUndefined();
   });
 
   it('blocks data: URLs', () => {
-    expect(sanitizeUrl('data:text/html,<script>alert(1)</script>')).toBe('about:blank');
-    expect(sanitizeUrl('DATA:text/html,<script>alert(1)</script>')).toBe('about:blank');
+    expect(sanitizeUrl('data:text/html,<script>alert(1)</script>')).toBeUndefined();
+    expect(sanitizeUrl('DATA:text/html,<script>alert(1)</script>')).toBeUndefined();
   });
 
   it('blocks vbscript: URLs', () => {
-    expect(sanitizeUrl('vbscript:msgbox(1)')).toBe('about:blank');
+    expect(sanitizeUrl('vbscript:msgbox(1)')).toBeUndefined();
   });
 
   it('handles empty or null values', () => {
