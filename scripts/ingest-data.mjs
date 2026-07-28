@@ -132,8 +132,8 @@ async function main() {
         category: c.category,
         content: c.content,
         confidence_score: c.confidence_score ?? 3,
-        status: 'published',
-        source_document_id: docIndex ? docMap[docIndex] : null,
+        status: 'pending_review',
+        source_document_id: docIndex !== null && docIndex !== undefined ? docMap[docIndex] : null,
       };
     });
     await supFetch('POST', '/claims', claimPayload);
