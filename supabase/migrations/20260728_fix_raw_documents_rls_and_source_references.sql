@@ -3,7 +3,7 @@
 
 -- 1. View pública sem raw_content (metadados de fonte)
 create or replace view public.raw_documents_metadata as
-select id, source_name, source_category, url, content_hash, fetched_at, created_at
+select id, source_name, source_category, url, content_hash, fetched_at
 from raw_documents;
 
 grant select on public.raw_documents_metadata to anon;
