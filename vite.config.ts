@@ -25,6 +25,9 @@ export default defineConfig({
       },
       workbox: {
         navigateFallback: '/offline.html',
+        cleanupOutdatedCaches: true,
+        clientsClaim: true,
+        skipWaiting: true,
         runtimeCaching: [
           {
             urlPattern: /\/rest\/v1\/candidates/,
@@ -35,10 +38,25 @@ export default defineConfig({
           },
           {
             urlPattern: /\/rest\/v1\/claims/,
-            handler: 'CacheFirst',
+            handler: 'StaleWhileRevalidate',
             options: {
               cacheName: 'supabase-claims',
-              expiration: { maxAgeSeconds: 3600 },
+              expiration: { maxAgeSeconds: 300 },
+              plugins: [
+                {
+                  cacheWillUpdate: async ({ response }) => {
+                    if (!response.ok) return null;
+                    const cloned = response.clone();
+                    const data = await cloned.json();
+                    return new Response(JSON.stringify({
+                      ...data,
+                      _sw_cached_at: Date.now()
+                    }), {
+                      headers: response.headers
+                    });
+                  }
+                }
+              ],
             },
           },
         ],
