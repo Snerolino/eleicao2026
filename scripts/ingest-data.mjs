@@ -63,17 +63,18 @@ const SAMPLE = {
     { source_name: 'Aos Fatos', source_category: 'fact_check', url: 'https://www.aosfatos.org' },
   ],
   claims: [
-    { candidate: 'Eduardo Leite', category: 'summary', content: 'Governador do RS (2023-presente), prefeito de Pelotas (2013-2018). Candidato à reeleição pelo PSDB.', confidence_score: 5, document: 0 },
-    { candidate: 'Eduardo Leite', category: 'plataforma', content: 'Defende continuidade do programa de privatizações e reforma administrativa.', confidence_score: 4, document: 3 },
-    { candidate: 'Edegar Pretto', category: 'summary', content: 'Deputado estadual (2015-2023), ex-presidente da Assembleia. Candidato apoiado pela coligação PT-PCB.', confidence_score: 4, document: 0 },
-    { candidate: 'Edegar Pretto', category: 'plataforma', content: 'Propõe ampliação de programas sociais e revisão de concessões estaduais.', confidence_score: 3, document: 3 },
-    { candidate: 'Fábio Dutra', category: 'summary', content: 'Advogado, ativista de direitos humanos. Primeira candidatura ao Senado pelo PSOL.', confidence_score: 3, document: 0 },
-    { candidate: 'Marina Silva', category: 'summary', content: 'Ex-senadora pelo Acre, ex-ministra do Meio Ambiente. Candidata ao Senado pelo RS.', confidence_score: 5, document: 0 },
-    { candidate: 'Dionilso Mateus Marcon', category: 'summary', content: 'Vereador por Porto Alegre. Candidato a Deputado Federal pelo PT.', confidence_score: 3, document: 0 },
-    { candidate: 'Marcelo Moraes', category: 'summary', content: 'Deputado estadual (2023-presente). Candidato a Deputado Federal pelo PL.', confidence_score: 4, document: 2 },
-  ],
+      { candidate: 'Eduardo Leite', category: 'summary', content: 'Governador do RS (2023-presente), prefeito de Pelotas (2013-2018). Candidato à reeleição pelo PSDB.', confidence_score: 5, document: 0, status: 'pending_review' },
+      { candidate: 'Eduardo Leite', category: 'plataforma', content: 'Defende continuidade do programa de privatizações e reforma administrativa.', confidence_score: 4, document: 3, status: 'pending_review' },
+      { candidate: 'Edegar Pretto', category: 'summary', content: 'Deputado estadual (2015-2023), ex-presidente da Assembleia. Candidato apoiado pela coligação PT-PCB.', confidence_score: 4, document: 0, status: 'pending_review' },
+      { candidate: 'Edegar Pretto', category: 'plataforma', content: 'Propõe ampliação de programas sociais e revisão de concessões estaduais.', confidence_score: 3, document: 3, status: 'pending_review' },
+      { candidate: 'Fábio Dutra', category: 'summary', content: 'Advogado, ativista de direitos humanos. Primeira candidatura ao Senado pelo PSOL.', confidence_score: 3, document: 0, status: 'pending_review' },
+      { candidate: 'Marina Silva', category: 'summary', content: 'Ex-senadora pelo Acre, ex-ministra do Meio Ambiente. Candidata ao Senado pelo RS.', confidence_score: 5, document: 0, status: 'pending_review' },
+      { candidate: 'Dionilso Mateus Marcon', category: 'summary', content: 'Vereador por Porto Alegre. Candidato a Deputado Federal pelo PT.', confidence_score: 3, document: 0, status: 'pending_review' },
+      { candidate: 'Marcelo Moraes', category: 'summary', content: 'Empresário, primeira candidatura. Candidato a Deputado Federal pelo PL.', confidence_score: 3, document: 0, status: 'pending_review' },
+      { candidate: 'Kelly Moraes', category: 'summary', content: 'Assistente social, vereadora. Candidata a Deputada Estadual pelo PT.', confidence_score: 3, document: 0, status: 'pending_review' },
+      { candidate: 'Capitão Martim', category: 'summary', content: 'Policial militar, vereador. Candidato a Deputado Estadual pelo PSDB.', confidence_score: 3, document: 0, status: 'pending_review' },
+    ],
 };
-
 async function main() {
   let data;
 
