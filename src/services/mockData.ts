@@ -1,7 +1,7 @@
 // ⚠️ ARQUIVO GERADO AUTOMATICAMENTE — NÃO EDITE MANUALMENTE
 // Gerado por: scripts/generate-mockdata.mjs
 // Fonte: ../dataset2026/candidatos/consulta_cand_2026/
-// Data: 2026-07-29T23:12:09.952Z
+// Data: 2026-07-29T23:24:12.120Z
 // Total: 69 candidatos
 
 import type { CandidateWithClaims } from '@/types/election';
