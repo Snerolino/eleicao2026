@@ -48,6 +48,11 @@ export interface Candidate {
   position_label: string;
   photo_url: string | null;
   photo_source_url: string | null;
+  ballot_name?: string | null;
+  tse_candidate_id?: string | null;
+  state?: string | null;
+  election_year?: number;
+  registration_status?: string | null;
 }
 
 export interface CandidateWithClaims extends Candidate {
