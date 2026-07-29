@@ -64,18 +64,7 @@ alter table candidates
     'mixed'
   ));
 
--- 6. Índices para queries comuns
-create index if not exists idx_candidates_election_year on candidates(election_year);
-create index if not exists idx_candidates_registration_status on candidates(registration_status);
-create index if not exists idx_candidates_candidate_type on candidates(candidate_type);
-create index if not exists idx_candidates_review_status on candidates(review_status);
-
--- 7. Atualizar position: normalizar valores existentes
-update candidates
-set position = lower(regexp_replace(position, '\s+', '_', 'g'))
-where position ~ '\s|[A-Z]';
-
--- 8. Constraint: position canônicos
+-- 6. Constraint: position canônico
 alter table candidates
   add constraint chk_candidates_position
   check (position in (
@@ -86,3 +75,30 @@ alter table candidates
     'deputado_federal',
     'deputado_estadual'
   ));
+
+-- 7. Índices para queries comuns
+create index if not exists idx_candidates_election_year on candidates(election_year);
+create index if not exists idx_candidates_registration_status on candidates(registration_status);
+create index if not exists idx_candidates_candidate_type on candidates(candidate_type);
+create index if not exists idx_candidates_review_status on candidates(review_status);
+create index if not exists idx_candidates_position on candidates(position);
+create index if not exists idx_candidates_tse_candidate_id on candidates(tse_candidate_id);
+
+-- 8. Atualizar position: normalizar valores existentes
+update candidates
+set position = lower(regexp_replace(position, '\s+', '_', 'g'))
+where position ~ '\s|[A-Z]';
+
+-- 9. Trigger para atualizar last_seen_at automaticamente
+create or replace function update_last_seen_at()
+returns trigger language plpgsql as $$
+begin
+  new.last_seen_at = now();
+  return new;
+end $$;
+
+drop trigger if exists trigger_update_last_seen_at on candidates;
+create trigger trigger_update_last_seen_at
+  before update on candidates
+  for each row
+  execute function update_last_seen_at();
