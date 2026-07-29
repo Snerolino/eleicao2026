@@ -64,7 +64,20 @@ alter table candidates
     'mixed'
   ));
 
--- 6. Constraint: position canônico
+-- 6. Índices para queries comuns
+create index if not exists idx_candidates_election_year on candidates(election_year);
+create index if not exists idx_candidates_registration_status on candidates(registration_status);
+create index if not exists idx_candidates_candidate_type on candidates(candidate_type);
+create index if not exists idx_candidates_review_status on candidates(review_status);
+create index if not exists idx_candidates_position on candidates(position);
+create index if not exists idx_candidates_tse_candidate_id on candidates(tse_candidate_id);
+
+-- 7. Normalizar position dos registros existentes (antes da constraint)
+update candidates
+set position = lower(regexp_replace(position, '\s+', '_', 'g'))
+where position ~ '\s|[A-Z]';
+
+-- 8. Constraint: position canônico (após normalização)
 alter table candidates
   add constraint chk_candidates_position
   check (position in (
@@ -73,21 +86,9 @@ alter table candidates
     'vice_governador',
     'senador',
     'deputado_federal',
-    'deputado_estadual'
+    'deputado_estadual',
+    'outro'
   ));
-
--- 7. Índices para queries comuns
-create index if not exists idx_candidates_election_year on candidates(election_year);
-create index if not exists idx_candidates_registration_status on candidates(registration_status);
-create index if not exists idx_candidates_candidate_type on candidates(candidate_type);
-create index if not exists idx_candidates_review_status on candidates(review_status);
-create index if not exists idx_candidates_position on candidates(position);
-create index if not exists idx_candidates_tse_candidate_id on candidates(tse_candidate_id);
-
--- 8. Atualizar position: normalizar valores existentes
-update candidates
-set position = lower(regexp_replace(position, '\s+', '_', 'g'))
-where position ~ '\s|[A-Z]';
 
 -- 9. Trigger para atualizar last_seen_at automaticamente
 create or replace function update_last_seen_at()
