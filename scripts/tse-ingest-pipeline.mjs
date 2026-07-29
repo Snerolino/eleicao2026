@@ -552,10 +552,33 @@ async function main() {
     }
   }
 
+  // 8. Upsert staging → candidates via RPC
+  if (!DRY_RUN) {
+    log();
+    log('🔄 Executando upsert staging → candidates...');
+    for (const uf of UFS) {
+      log(`   ${uf}: chamando rpc_upsert_candidates...`);
+      try {
+        const result = await supabaseFetch('POST', '/rpc/rpc_upsert_candidates', {
+          uf_filter: uf,
+          dry_run: false,
+        }, false);
+        const rows = result || [];
+        const newCount = rows.filter((r) => r.acao === 'inserted' || r.acao === 'unchanged').length;
+        const updatedCount = rows.filter((r) => r.acao === 'updated').length;
+        log(`   ${uf}: ${rows.length} processados (${newCount} inseridos, ${updatedCount} atualizados)`);
+      } catch (err) {
+        log(`   ⚠️  ${uf}: erro no upsert (pode ser que a migration RPC não foi aplicada ainda)`);
+        log(`      ${err.message}`);
+      }
+    }
+  }
+
   log();
   log(`✅ Pipeline pronta`);
   log(`   arquivos e relatórios: ${runDir}`);
   if (DRY_RUN) log('   nenhum write no banco (dry-run)');
+  else log('   staging populado + upsert executado');
 }
 
 main().catch((err) => {
