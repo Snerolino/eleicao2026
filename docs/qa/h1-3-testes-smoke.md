@@ -63,7 +63,7 @@ Guia: Fase 1 — H1.3
   - service worker: pronto;
   - HTTP failures online: 0;
   - console errors online: 0.
-- `npm run smoke:preview -- --url https://8c635c97.portal-transparencia-rs.pages.dev/` — OK:
+- `npm run smoke:preview -- --url https://fa5c28a2.portal-transparencia-rs.pages.dev/` — OK:
   - cards: 69;
   - busca: 1;
   - detalhe: `JOÃO BATISTA GARCIA DIAS`;
