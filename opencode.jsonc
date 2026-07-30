@@ -1,0 +1,71 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  // ===== Modelo padrão =====
+  // gpt-5.5 travou em smoke local; deepseek-v4-flash-free está funcional neste repo.
+  "model": "opencode/deepseek-v4-flash-free",
+  "agent": {
+    "build": {
+      "model": "opencode/deepseek-v4-flash-free"
+    },
+    "plan": {
+      "model": "opencode/deepseek-v4-flash-free"
+    }
+  },
+
+  // ===== LSP =====
+  "lsp": {
+    "typescript": {
+      "enabled": true,
+      "command": ["typescript-language-server", "--stdio"],
+      "extensions": [".ts", ".tsx"]
+    },
+    "javascript": {
+      "enabled": true,
+      "command": ["typescript-language-server", "--stdio"],
+      "extensions": [".js", ".jsx"]
+    },
+    "tailwindcss": {
+      "enabled": true,
+      "command": ["@tailwindcss/language-server", "--stdio"],
+      "extensions": [".jsx", ".tsx", ".html"]
+    }
+  },
+
+  // ===== MCP =====
+  "mcp": {
+    "servers": {
+      // Habilita/desabilita todos os servidores MCP
+      "enabled": true,
+
+      // Supabase (via PostgreSQL). DATABASE_URL vem do ambiente; nunca commitar valor real.
+      "supabase": {
+        "type": "local",
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-postgres"],
+        "env": {
+          "DATABASE_URL": "{env:SUPABASE_DATABASE_URL}"
+        },
+        "enabled": true
+      },
+
+      // Sistema de arquivos
+      "filesystem": {
+        "type": "local",
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-filesystem", "."],
+        "enabled": true
+      },
+
+      // OpenCode MCP (ferramentas extras)
+      "opencode": {
+        "type": "local",
+        "command": "npx",
+        "args": ["-y", "opencode-mcp"],
+        "enabled": true
+      }
+    }
+  },
+
+  // Instruções para agentes
+  "instructions": ["AGENTS.md", "README.md"]
+}
