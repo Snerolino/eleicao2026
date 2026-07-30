@@ -71,9 +71,9 @@ alter default privileges for role postgres in schema public revoke all on tables
 alter default privileges for role postgres in schema public revoke all on functions from anon, authenticated;
 alter default privileges for role postgres in schema public revoke all on sequences from anon, authenticated;
 
-alter default privileges for role supabase_admin in schema public revoke all on tables from anon, authenticated;
-alter default privileges for role supabase_admin in schema public revoke all on functions from anon, authenticated;
-alter default privileges for role supabase_admin in schema public revoke all on sequences from anon, authenticated;
+-- Não alteramos default privileges de supabase_admin aqui: o papel do deploy
+-- não é owner dessa role em todos os ambientes Supabase e isso pode bloquear
+-- a migration. Objetos atuais já foram tratados por REVOKE explícito acima.
 
 -- 6. Garantir que leituras públicas legítimas continuam explícitas.
 grant select on table public.candidates to anon, authenticated;
