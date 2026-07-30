@@ -11,6 +11,7 @@ import {
 import { usePageMetadata } from '@/hooks/usePageMetadata';
 import { ConfidenceBadge } from '@/components/sources/ConfidenceBadge';
 import { LoadingSkeleton } from '@/components/states';
+import { candidatePublicPath } from '@/utils/candidateIdentity';
 
 function claimsForSection(
   claims: Claim[],
@@ -220,7 +221,7 @@ export function ComparePage() {
                             </p>
                             <p className="font-medium leading-tight">
                               <Link
-                                to={`/candidatos/${encodeURIComponent(c.id)}`}
+                                to={candidatePublicPath(c)}
                                 className="text-[var(--color-institutional)] underline-offset-2 hover:underline"
                               >
                                 {c.full_name}

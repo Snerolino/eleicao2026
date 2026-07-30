@@ -38,7 +38,7 @@ export function App() {
           <Route element={<AppShell />}>
             <Route index element={<HomePage />} />
             <Route
-              path="/candidatos/:id"
+              path="/candidatos/:slug"
               element={
                 <Suspense fallback={<LazyFallback />}>
                   <CandidateDossierPage />

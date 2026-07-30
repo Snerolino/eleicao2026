@@ -3,6 +3,7 @@ import type { CandidateWithClaims } from '@/types/election';
 import { SourceReferenceBadge } from '@/components/sources/SourceReferenceBadge';
 import { CandidatePhoto } from './CandidatePhoto';
 import { sanitizeUrl } from '@/utils/sanitizeUrl';
+import { candidatePublicPath } from '@/utils/candidateIdentity';
 
 interface CandidateCardProps {
   candidate: CandidateWithClaims;
@@ -49,7 +50,7 @@ export function CandidateCard({
           </p>
 
           <Link
-            to={`/candidatos/${candidate.id}`}
+            to={candidatePublicPath(candidate)}
             className="after:absolute after:inset-0"
           >
             <h3 className="mt-1 font-[family-name:var(--font-display)] text-xl font-bold leading-tight text-[var(--color-ink)]">

@@ -1,89 +1,26 @@
 /**
  * Script: generate-sitemap
  *
- * Gera sitemap.xml a partir dos CSVs TSE em ../dataset2026/
- * Lê os IDs UUID diretamente do mockData.ts gerado, ou dos CSVs TSE.
+ * Gera sitemap.xml a partir do snapshot público versionado em data/public-candidates.json.
+ * O build não lê ../dataset2026 e falha se o snapshot estiver ausente ou inválido.
  *
- * Uso: node scripts/generate-sitemap.mjs [--base-url <url>]
+ * Uso: node scripts/generate-sitemap.mjs [--base-url=<url>]
  * Default: https://portal-transparencia-rs.pages.dev
  */
 
-import { readFileSync, writeFileSync, existsSync, readdirSync } from 'fs';
-import { resolve } from 'path';
-import { v5 as uuidv5 } from 'uuid';
-import { parse } from 'csv-parse/sync';
+import { writeFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { loadPublicCandidateSnapshot } from './public-candidate-snapshot.mjs';
 
 const BASE_URL = process.argv
-  .find((a) => a.startsWith('--base-url='))
+  .find((arg) => arg.startsWith('--base-url='))
   ?.split('=')[1]
   ?? 'https://portal-transparencia-rs.pages.dev';
 
 const ROOT = resolve(process.cwd());
 const DIST_DIR = resolve(ROOT, 'dist');
-const DATASET_DIR = resolve(ROOT, '../dataset2026/candidatos');
-const UUID_NAMESPACE = '6ba7b810-9dad-11d1-80b4-00c04fd430c8';
 
-function umlautToAscii(text) {
-  return text
-    .replace(/[ÀÁÂÃÄ]/g, 'A')
-    .replace(/[àáâãä]/g, 'a')
-    .replace(/[ÈÉÊË]/g, 'E')
-    .replace(/[èéêë]/g, 'e')
-    .replace(/[ÌÍÎÏ]/g, 'I')
-    .replace(/[ìíîï]/g, 'i')
-    .replace(/[ÒÓÔÕÖ]/g, 'O')
-    .replace(/[òóôõö]/g, 'o')
-    .replace(/[ÙÚÛÜ]/g, 'U')
-    .replace(/[ùúûü]/g, 'u')
-    .replace(/[Ç]/g, 'C')
-    .replace(/[ç]/g, 'c')
-    .replace(/[Ñ]/g, 'N')
-    .replace(/[ñ]/g, 'n');
-}
-
-function makeId(name, party) {
-  const raw = `${umlautToAscii(name)}-${party}`;
-  return uuidv5(raw, UUID_NAMESPACE);
-}
-
-function getCandidateIds() {
-  const candDir = resolve(DATASET_DIR, 'consulta_cand_2026');
-  if (!existsSync(candDir)) {
-    console.log('⚠️  TSE dataset não encontrado, sitemap vazio.');
-    return [];
-  }
-
-  const csvFiles = readdirSync(candDir)
-    .filter((f) => f.endsWith('.csv') && /consulta_cand_2026_/.test(f))
-    .sort();
-
-  const ids = [];
-
-  for (const csvFile of csvFiles) {
-    const csvPath = resolve(candDir, csvFile);
-    const raw = readFileSync(csvPath, 'latin1');
-    const rows = parse(raw, {
-      delimiter: ';',
-      columns: true,
-      skip_empty_lines: true,
-      trim: true,
-      relax_quotes: true,
-      relax_column_count: true,
-    });
-
-    for (const row of rows) {
-      const name = row.NM_CANDIDATO?.trim();
-      const party = row.SG_PARTIDO?.trim();
-      if (name && party && name !== '#NULO' && party !== '#NULO') {
-        ids.push(makeId(name, party));
-      }
-    }
-  }
-
-  return [...new Set(ids)];
-}
-
-function generateSitemap(ids) {
+function generateSitemap(candidates) {
   const today = new Date().toISOString().split('T')[0];
 
   const staticPages = [
@@ -91,15 +28,15 @@ function generateSitemap(ids) {
     { loc: '/metodologia', priority: '0.7', changefreq: 'monthly' },
   ];
 
-  const candidatePages = ids.map((id) => ({
-    loc: `/candidatos/${encodeURIComponent(id)}`,
+  const candidatePages = candidates.map((candidate) => ({
+    loc: `/candidatos/${encodeURIComponent(candidate.slug)}`,
     priority: '0.8',
     changefreq: 'weekly',
   }));
 
   const allPages = [...staticPages, ...candidatePages];
 
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+  return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${allPages
   .map(
@@ -112,25 +49,24 @@ ${allPages
   )
   .join('\n')}
 </urlset>`;
-
-  return xml;
 }
 
 function main() {
-  console.log('🔄 Gerando sitemap do dataset TSE 2026...');
+  console.log('🔄 Gerando sitemap do snapshot público versionado...');
 
-  const ids = getCandidateIds();
-  const sitemap = generateSitemap(ids);
+  const candidates = loadPublicCandidateSnapshot({ root: ROOT });
+  const sitemap = generateSitemap(candidates);
 
-  const sitemapPath = resolve(DIST_DIR, 'sitemap.xml');
-  writeFileSync(sitemapPath, sitemap);
-  console.log(`✅ sitemap.xml (${ids.length} candidatos + estáticas = ${ids.length + 2} URLs)`);
+  writeFileSync(resolve(DIST_DIR, 'sitemap.xml'), sitemap);
+  console.log(`✅ sitemap.xml (${candidates.length} candidatos + estáticas = ${candidates.length + 2} URLs)`);
 
-  const robotsPath = resolve(DIST_DIR, 'robots.txt');
-  writeFileSync(robotsPath, `User-agent: *
+  writeFileSync(
+    resolve(DIST_DIR, 'robots.txt'),
+    `User-agent: *
 Allow: /
 Sitemap: ${BASE_URL}/sitemap.xml
-`);
+`,
+  );
   console.log('✅ robots.txt');
 }
 

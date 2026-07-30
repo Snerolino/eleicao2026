@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react';
-import type { RawDocument } from '@/types/election';
+import type { SourceReference } from '@/types/election';
 import { getSafeUrl } from '@/utils/url';
 import {
   confidenceLevel,
@@ -12,8 +12,9 @@ import {
 } from '@/utils/sourceCategory';
 
 interface SourceReferenceBadgeProps {
-  document: RawDocument | null;
+  document: SourceReference | null;
   confidenceScore: number;
+  compact?: boolean;
 }
 
 function formatDate(value: string | null): string {

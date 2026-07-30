@@ -20,7 +20,7 @@ export type ConfidenceLevel =
   | 'parcialmente_verificado'
   | 'nao_confirmado';
 
-export interface RawDocument {
+export interface SourceReference {
   id: string | null;
   source_name: string;
   source_category: SourceCategory;
@@ -36,11 +36,12 @@ export interface Claim {
   confidence_score: 1 | 2 | 3 | 4 | 5;
   status: ClaimStatus;
   source_document_id: string | null;
-  source_document: RawDocument | null;
+  source_document: SourceReference | null;
 }
 
 export interface Candidate {
   id: string;
+  slug?: string | null;
   full_name: string;
   party: string;
   ballot_number: string | number | null;
