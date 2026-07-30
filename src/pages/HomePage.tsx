@@ -23,8 +23,15 @@ function normalize(text: string) {
   return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 }
 
+interface CandidateSearchCache {
+  partyLower: string;
+  nameNormalized: string;
+  labelNormalized: string;
+}
+
 function filterCandidates(
   candidates: CandidateWithClaims[],
+  cache: Map<string, CandidateSearchCache>,
   query: string,
   cargoFilter: '' | Position,
   partyFilter: string
@@ -36,17 +43,18 @@ function filterCandidates(
     if (partyFilter && c.party !== partyFilter) return false;
     if (!normalized) return true;
 
+    const cCache = cache.get(c.id);
+    if (!cCache) return false;
+
     // Short-circuit evaluations to avoid expensive `normalize` calls
-    if (c.party.toLowerCase().includes(normalized)) return true;
+    if (cCache.partyLower.includes(normalized)) return true;
 
     const number = c.ballot_number?.toString() ?? '';
     if (number.includes(normalized)) return true;
 
-    const name = normalize(c.full_name);
-    if (name.includes(normalized)) return true;
+    if (cCache.nameNormalized.includes(normalized)) return true;
 
-    const label = normalize(c.position_label);
-    return label.includes(normalized);
+    return cCache.labelNormalized.includes(normalized);
   });
 }
 
@@ -70,9 +78,25 @@ export function HomePage() {
 
   const allCandidates = query.data ?? [];
 
+  // ⚡ Bolt Optimization: Cache normalized search terms
+  // Why: String normalization (NFD, regex replace) is expensive.
+  // In the original code, this was called 2x per candidate, per keystroke during filtering (O(N*M) where N is candidates, M is keystrokes).
+  // Impact: By caching it once per dataset update, we avoid thousands of expensive normalize() calls on every input change, significantly reducing re-render blocking time.
+  const searchCache = useMemo(() => {
+    const map = new Map<string, CandidateSearchCache>();
+    for (const c of allCandidates) {
+      map.set(c.id, {
+        partyLower: c.party.toLowerCase(),
+        nameNormalized: normalize(c.full_name),
+        labelNormalized: normalize(c.position_label)
+      });
+    }
+    return map;
+  }, [allCandidates]);
+
   const filtered = useMemo(
-    () => filterCandidates(allCandidates, searchQuery, cargoFilter, partyFilter),
-    [allCandidates, searchQuery, cargoFilter, partyFilter]
+    () => filterCandidates(allCandidates, searchCache, searchQuery, cargoFilter, partyFilter),
+    [allCandidates, searchCache, searchQuery, cargoFilter, partyFilter]
   );
 
   const hasActiveFilter = searchQuery !== '' || cargoFilter !== '' || partyFilter !== '';
