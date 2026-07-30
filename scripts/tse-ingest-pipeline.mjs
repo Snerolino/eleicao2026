@@ -20,6 +20,10 @@ import https from 'https';
 import path from 'path';
 import crypto from 'crypto';
 import { parse } from 'csv-parse/sync';
+import {
+  buildDatasetSourceManifest,
+  isDatabaseWriteAllowed,
+} from './tse-ingest-contract.mjs';
 
 const ROOT_DIR = process.cwd();
 const LOCAL_DATASET_DIR = path.resolve(ROOT_DIR, '../dataset2026/candidatos');
@@ -38,6 +42,11 @@ const UFS = ALL_UFS
 const SUPABASE_URL = process.env.VITE_SUPABASE_URL;
 const ANON_KEY = process.env.VITE_SUPABASE_ANON_KEY;
 const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const CAN_WRITE_DATABASE = isDatabaseWriteAllowed({
+  dryRun: DRY_RUN,
+  shouldImport: SHOULD_IMPORT,
+  hasServiceRole: Boolean(SERVICE_KEY),
+});
 
 if (!SUPABASE_URL) {
   console.error('❌ Defina VITE_SUPABASE_URL');
@@ -419,13 +428,14 @@ async function insertInBatches(restPath, rows, batchSize = 500) {
   }
 }
 
-async function buildDiffReport(uf, stagingRows) {
+async function buildDiffReport(uf, stagingRows, source) {
   const existing = await supabaseFetch('GET', `/candidates?select=id,full_name,party,ballot_number,position,tse_candidate_id&limit=5000`);
   const existingBySq = new Map(existing.filter((c) => c.tse_candidate_id).map((c) => [String(c.tse_candidate_id), c]));
 
   const report = {
     uf,
     created_at: new Date().toISOString(),
+    source,
     totals: {
       staging: stagingRows.length,
       production: existing.length,
@@ -519,13 +529,22 @@ async function main() {
       const stagingRows = buildCandidateStagingRows(rows, sourceFile, fileHash);
       log(`   candidatos: ${sourceFile} -> ${stagingRows.length} linhas`);
 
-      const report = await buildDiffReport(uf, stagingRows);
+      const source = buildDatasetSourceManifest({
+        datasetKey: 'consulta_cand',
+        uf,
+        sourceKind: available.consulta_cand.source,
+        sourcePath: filePath,
+        officialUrl: DATASETS.consulta_cand.url,
+        sha256: fileHash,
+        rowCount: rows.length,
+      });
+      const report = await buildDiffReport(uf, stagingRows, source);
       const reportPath = path.join(runDir, `report-${sourceFile}.json`);
       writeFileSync(reportPath, JSON.stringify(report, null, 2));
       log(`   relatório: ${reportPath}`);
       log(`   diff: novos=${report.novos.length} atualizados=${report.atualizados.length} inalterados=${report.inalterados}`);
 
-      if (!DRY_RUN && stagingRows.length > 0) {
+      if (CAN_WRITE_DATABASE && stagingRows.length > 0) {
         await insertInBatches('/tse_candidates_staging', stagingRows);
       }
     }
@@ -534,26 +553,26 @@ async function main() {
     for (const filePath of compFiles) {
       const rows = buildComplementarRows(parseCsvFile(filePath), path.basename(filePath));
       log(`   complementar: ${path.basename(filePath)} -> ${rows.length} linhas`);
-      if (!DRY_RUN && rows.length > 0) await insertInBatches('/tse_candidates_complementar_staging', rows);
+      if (CAN_WRITE_DATABASE && rows.length > 0) await insertInBatches('/tse_candidates_complementar_staging', rows);
     }
 
     const colFiles = matchingCsvFiles(available.consulta_coligacao.dir, uf);
     for (const filePath of colFiles) {
       const rows = buildColigacaoRows(parseCsvFile(filePath), path.basename(filePath));
       log(`   coligação: ${path.basename(filePath)} -> ${rows.length} linhas`);
-      if (!DRY_RUN && rows.length > 0) await insertInBatches('/tse_coligacoes_staging', rows);
+      if (CAN_WRITE_DATABASE && rows.length > 0) await insertInBatches('/tse_coligacoes_staging', rows);
     }
 
     const vagasFiles = matchingCsvFiles(available.consulta_vagas.dir, uf);
     for (const filePath of vagasFiles) {
       const rows = buildVagasRows(parseCsvFile(filePath), path.basename(filePath));
       log(`   vagas: ${path.basename(filePath)} -> ${rows.length} linhas`);
-      if (!DRY_RUN && rows.length > 0) await insertInBatches('/tse_vagas_staging', rows);
+      if (CAN_WRITE_DATABASE && rows.length > 0) await insertInBatches('/tse_vagas_staging', rows);
     }
   }
 
   // 8. Upsert staging → candidates via RPC
-  if (!DRY_RUN) {
+  if (CAN_WRITE_DATABASE) {
     log();
     log('🔄 Executando upsert staging → candidates...');
     for (const uf of UFS) {

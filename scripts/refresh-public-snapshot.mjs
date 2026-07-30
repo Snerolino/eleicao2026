@@ -1,5 +1,5 @@
-import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { dirname, resolve } from 'node:path';
+import { existsSync, mkdirSync, readdirSync, readFileSync, unlinkSync, writeFileSync } from 'node:fs';
+import { dirname, relative, resolve } from 'node:path';
 import { createHash } from 'node:crypto';
 import { parse } from 'csv-parse/sync';
 import { v5 as uuidv5 } from 'uuid';
@@ -7,11 +7,17 @@ import {
   SNAPSHOT_RELATIVE_PATH,
   validatePublicCandidateSnapshot,
 } from './public-candidate-snapshot.mjs';
+import {
+  buildDatasetSourceManifest,
+  TSE_SOURCE_MANIFEST_RELATIVE_PATH,
+} from './tse-ingest-contract.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const DATASET_DIR = resolve(ROOT, '../dataset2026/candidatos');
 const OUTPUT = resolve(ROOT, SNAPSHOT_RELATIVE_PATH);
+const MANIFEST_OUTPUT = resolve(ROOT, TSE_SOURCE_MANIFEST_RELATIVE_PATH);
 const UUID_NAMESPACE = '6ba7b810-9dad-11d1-80b4-00c04fd430c8';
+const TSE_CONSULTA_CAND_URL = 'https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2026.zip';
 
 const POSITION_MAP = {
   'DEPUTADO FEDERAL': 'deputado_federal',
@@ -93,6 +99,20 @@ function contentHash(candidates) {
   return createHash('sha256').update(JSON.stringify(canonical)).digest('hex');
 }
 
+function sourceManifest(csvPath, rows, csvFile, createdAt) {
+  const uf = csvFile.match(/_([A-Z]{2}|BRASIL|BR)\.csv$/)?.[1] ?? 'BR';
+  return buildDatasetSourceManifest({
+    datasetKey: 'consulta_cand',
+    uf,
+    sourceKind: 'local-dir',
+    sourcePath: relative(ROOT, csvPath),
+    officialUrl: TSE_CONSULTA_CAND_URL,
+    sha256: createHash('sha256').update(readFileSync(csvPath)).digest('hex'),
+    rowCount: rows.length,
+    createdAt,
+  });
+}
+
 export function generatePublicCandidateSnapshot({ datasetDir = DATASET_DIR } = {}) {
   const candidatesDir = resolve(datasetDir, 'consulta_cand_2026');
   if (!existsSync(candidatesDir)) {
@@ -144,18 +164,39 @@ export function generatePublicCandidateSnapshot({ datasetDir = DATASET_DIR } = {
   return validatePublicCandidateSnapshot(candidates);
 }
 
+export function generateTseSourceManifest({ datasetDir = DATASET_DIR, createdAt = new Date().toISOString() } = {}) {
+  const candidatesDir = resolve(datasetDir, 'consulta_cand_2026');
+  if (!existsSync(candidatesDir)) {
+    throw new Error(`Dataset TSE ausente: ${candidatesDir}`);
+  }
+
+  return readdirSync(candidatesDir)
+    .filter((file) => file.endsWith('.csv') && /consulta_cand_2026_/.test(file))
+    .sort()
+    .map((csvFile) => {
+      const csvPath = resolve(candidatesDir, csvFile);
+      const rows = readCsv(csvPath);
+      return sourceManifest(csvPath, rows, csvFile, createdAt);
+    });
+}
+
 function main() {
   console.log('🔄 Atualizando snapshot público de candidatos TSE 2026...');
   console.log(`   Dataset: ${DATASET_DIR}`);
 
+  const createdAt = new Date().toISOString();
   const candidates = generatePublicCandidateSnapshot();
+  const manifest = generateTseSourceManifest({ createdAt });
   mkdirSync(dirname(OUTPUT), { recursive: true });
   writeFileSync(`${OUTPUT}.tmp`, `${JSON.stringify(candidates, null, 2)}\n`, 'utf8');
   writeFileSync(OUTPUT, readFileSync(`${OUTPUT}.tmp`, 'utf8'), 'utf8');
+  unlinkSync(`${OUTPUT}.tmp`);
+  writeFileSync(MANIFEST_OUTPUT, `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
 
   console.log(`✅ Snapshot público: ${OUTPUT}`);
   console.log(`   ${candidates.length} candidaturas`);
   console.log(`   sha256: ${contentHash(candidates)}`);
+  console.log(`✅ Manifesto TSE: ${MANIFEST_OUTPUT}`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
