@@ -50,7 +50,7 @@ function clampConfidence(score: number | null): 1 | 2 | 3 | 4 | 5 {
   return Math.min(5, Math.max(1, Math.round(score ?? 1))) as 1 | 2 | 3 | 4 | 5;
 }
 
-function mapCandidate(row: CandidateRow): Candidate {
+export function mapCandidate(row: CandidateRow): Candidate {
   const normalized = normalizePosition(row.position);
 
   return {
@@ -72,7 +72,7 @@ function firstDocument(
   return value ?? null;
 }
 
-function mapClaim(row: ClaimRow): Claim {
+export function mapClaim(row: ClaimRow): Claim {
   const source = firstDocument(row.source_references);
   const document: SourceReference | null = source
     ? {
@@ -96,7 +96,7 @@ function mapClaim(row: ClaimRow): Claim {
   };
 }
 
-async function fetchPublishedClaims(candidateIds: string[]): Promise<Claim[]> {
+export async function fetchPublishedClaims(candidateIds: string[]): Promise<Claim[]> {
   if (!supabase || candidateIds.length === 0) return [];
 
   const { data, error } = await supabase

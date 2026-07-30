@@ -41,6 +41,12 @@ jobs:
       - name: Build fallback artifact
         run: npm run build
 
+      - name: Install smoke browser
+        run: npx playwright install chromium
+
+      - name: Local browser smoke
+        run: npm run smoke:local
+
   deploy:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: quality
@@ -73,3 +79,8 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           command: pages deploy dist --project-name=portal-transparencia-rs --branch=main
+
+      - name: Production browser smoke
+        env:
+          SMOKE_URL: https://portal-transparencia-rs.pages.dev/
+        run: npm run smoke:preview
