@@ -63,6 +63,13 @@ Guia: Fase 1 — H1.3
   - service worker: pronto;
   - HTTP failures online: 0;
   - console errors online: 0.
+- `npm run smoke:preview -- --url https://8c635c97.portal-transparencia-rs.pages.dev/` — OK:
+  - cards: 69;
+  - busca: 1;
+  - detalhe: `JOÃO BATISTA GARCIA DIAS`;
+  - service worker: pronto;
+  - HTTP failures online: 0;
+  - console errors online: 0.
 
 ## Bug encontrado pelo H1.3
 
@@ -72,3 +79,4 @@ O smoke automatizado reproduziu uma falha de PWA: após service worker controlar
 
 - O smoke de produção só terá valor completo após merge/deploy de `main` com o novo workflow.
 - Playwright adiciona dependência de browser no CI; a instalação do Chromium foi mantida sem `install-deps` para evitar sudo local. No GitHub runner, se faltar biblioteca de sistema, ajustar para `npx playwright install --with-deps chromium`.
+- O preview Cloudflare emite ruído externo conhecido de `cloudflareinsights.com/cdn-cgi/rum`; o smoke ignora esse endpoint específico, mas continua falhando para 4xx/5xx e request failures do app/Supabase.

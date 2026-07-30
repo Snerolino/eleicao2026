@@ -28,6 +28,13 @@ function normalizeUrl(rawUrl) {
   return url.toString();
 }
 
+function isIgnoredExternalNoise(textOrUrl) {
+  return (
+    /cloudflareinsights\.com\/cdn-cgi\/rum/.test(textOrUrl) ||
+    textOrUrl === 'Failed to load resource: net::ERR_FAILED'
+  );
+}
+
 async function waitForServer(url, timeoutMs = 30_000) {
   const start = Date.now();
   let lastError;
@@ -86,19 +93,20 @@ async function main() {
   const requestFailures = [];
 
   page.on('console', (message) => {
-    if (message.type() === 'error') consoleErrors.push(message.text());
+    const text = message.text();
+    if (message.type() === 'error' && !isIgnoredExternalNoise(text)) consoleErrors.push(text);
   });
   page.on('pageerror', (error) => pageErrors.push(error.message));
   page.on('response', (response) => {
     const status = response.status();
     const url = response.url();
-    if (status >= 400 && !url.endsWith('/favicon.ico')) {
+    if (status >= 400 && !url.endsWith('/favicon.ico') && !isIgnoredExternalNoise(url)) {
       httpFailures.push({ status, url });
     }
   });
   page.on('requestfailed', (request) => {
     const url = request.url();
-    if (!url.endsWith('/favicon.ico')) {
+    if (!url.endsWith('/favicon.ico') && !isIgnoredExternalNoise(url)) {
       requestFailures.push({ url, error: request.failure()?.errorText ?? 'request failed' });
     }
   });
