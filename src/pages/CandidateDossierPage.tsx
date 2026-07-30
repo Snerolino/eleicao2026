@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { Link, useParams } from 'react-router-dom';
+import { Link, Navigate, useParams } from 'react-router-dom';
 import { sanitizeUrl } from '@/utils/sanitizeUrl';
 import { CandidatePhoto } from '@/components/candidates/CandidatePhoto';
 import { DataFreshness } from '@/components/DataFreshness';
@@ -11,6 +11,7 @@ import {
 } from '@/components/states';
 import { usePageMetadata } from '@/hooks/usePageMetadata';
 import { fetchCandidateById } from '@/services/candidates';
+import { candidatePublicId, candidatePublicPath } from '@/utils/candidateIdentity';
 import {
   DOSSIER_SECTIONS,
   type CandidateWithClaims,
@@ -27,8 +28,8 @@ function claimsForSection(
 }
 
 export function CandidateDossierPage() {
-  const { id = '' } = useParams();
-  const decodedId = decodeURIComponent(id);
+  const { slug = '' } = useParams();
+  const decodedId = decodeURIComponent(slug);
 
   const query = useQuery<CandidateWithClaims | null>({
     queryKey: ['candidate', decodedId],
@@ -49,9 +50,13 @@ export function CandidateDossierPage() {
       : 'Dossiê público com informações publicadas e referências de fonte.',
     {
       image: candidate?.photo_url ?? undefined,
-      url: candidate ? `${window.location.origin}/candidatos/${encodeURIComponent(candidate.id)}` : undefined
+      url: candidate ? `${window.location.origin}${candidatePublicPath(candidate)}` : undefined
     }
   );
+
+  if (candidate && decodedId !== candidatePublicId(candidate)) {
+    return <Navigate to={candidatePublicPath(candidate)} replace />;
+  }
 
   return (
     <main id="main-content" className="mx-auto max-w-4xl px-4 py-8">

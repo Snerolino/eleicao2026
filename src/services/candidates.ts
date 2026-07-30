@@ -7,18 +7,25 @@ import type {
   SourceReference,
 } from "@/types/election";
 import { onlyPublished } from "@/utils/claims";
+import { candidateSlugFromTse } from "@/utils/candidateIdentity";
 import { normalizePosition } from "@/utils/position";
 import { normalizeSourceCategory } from "@/utils/sourceCategory";
 import { PUBLIC_CANDIDATES } from "./publicCandidates";
 
 interface CandidateRow {
   id: string;
+  slug?: string | null;
   full_name: string;
   party: string;
   ballot_number: string | number | null;
   position: string;
   photo_url: string | null;
   photo_source_url: string | null;
+  tse_candidate_id?: string | null;
+  ballot_name?: string | null;
+  state?: string | null;
+  election_year?: number | null;
+  registration_status?: string | null;
 }
 
 interface DocumentRow {
@@ -55,6 +62,7 @@ export function mapCandidate(row: CandidateRow): Candidate {
 
   return {
     id: row.id,
+    slug: candidateSlugFromTse(row.full_name, row.tse_candidate_id) ?? row.slug ?? null,
     full_name: row.full_name,
     party: row.party,
     ballot_number: row.ballot_number,
@@ -62,7 +70,29 @@ export function mapCandidate(row: CandidateRow): Candidate {
     position_label: normalized.label,
     photo_url: row.photo_url,
     photo_source_url: row.photo_source_url,
+    tse_candidate_id: row.tse_candidate_id ?? null,
+    ballot_name: row.ballot_name ?? null,
+    state: row.state ?? null,
+    election_year: row.election_year ?? undefined,
+    registration_status: row.registration_status ?? null,
   };
+}
+
+const CANDIDATE_SELECT =
+  "id, slug, full_name, party, ballot_number, position, photo_url, photo_source_url, tse_candidate_id, ballot_name, state, election_year, registration_status";
+
+function toSafePublicId(value: string): string | null {
+  const trimmed = value.trim();
+  return /^[a-zA-Z0-9_-]+$/.test(trimmed) ? trimmed : null;
+}
+
+function candidateLookupFilter(publicId: string): string {
+  const filters = [`slug.eq.${publicId}`];
+  if (/^\d+$/.test(publicId)) filters.push(`tse_candidate_id.eq.${publicId}`);
+  if (/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/.test(publicId)) {
+    filters.push(`id.eq.${publicId}`);
+  }
+  return filters.join(',');
 }
 
 function firstDocument(
@@ -134,9 +164,7 @@ async function fetchAllCandidatesFromSupabase(): Promise<
 
   const { data, error } = await supabase
     .from("candidates")
-    .select(
-      "id, full_name, party, ballot_number, position, photo_url, photo_source_url",
-    )
+    .select(CANDIDATE_SELECT)
     .order("full_name", { ascending: true });
 
   if (error) throw error;
@@ -172,16 +200,16 @@ async function fetchAllCandidatesFromSupabase(): Promise<
 }
 
 async function fetchCandidateFromSupabase(
-  id: string,
+  publicId: string,
 ): Promise<CandidateWithClaims | null> {
   if (!supabase) throw new Error("Supabase não configurado.");
 
+  const safePublicId = toSafePublicId(publicId);
+  if (!safePublicId) return null;
   const { data, error } = await supabase
     .from("candidates")
-    .select(
-      "id, full_name, party, ballot_number, position, photo_url, photo_source_url",
-    )
-    .eq("id", id)
+    .select(CANDIDATE_SELECT)
+    .or(candidateLookupFilter(safePublicId))
     .maybeSingle();
 
   if (error) throw error;
@@ -238,7 +266,11 @@ export async function fetchCandidateById(
 }
 
 const mockCandidatesMap = new Map<string, (typeof PUBLIC_CANDIDATES)[number]>(
-  PUBLIC_CANDIDATES.map((c) => [c.id, c]),
+  PUBLIC_CANDIDATES.flatMap((candidate) =>
+    [candidate.slug, candidate.id, candidate.tse_candidate_id]
+      .filter((value): value is string => Boolean(value))
+      .map((value) => [value, candidate] as const),
+  ),
 );
 
 function findInMock(id: string): CandidateWithClaims | null {

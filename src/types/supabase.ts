@@ -16,36 +16,75 @@ export type Database = {
     Tables: {
       candidates: {
         Row: {
+          ballot_name: string | null
           ballot_number: number | null
+          candidate_type: string | null
+          coalition: string | null
           created_at: string | null
+          data_origin: string | null
+          election_year: number
+          federation: string | null
+          first_seen_at: string | null
           full_name: string
           id: string
+          last_seen_at: string | null
           party: string
           photo_source_url: string | null
           photo_url: string | null
           position: string
+          registration_status: string | null
+          registration_status_updated_at: string | null
+          review_status: string | null
+          slug: string
+          state: string | null
           tse_candidate_id: string | null
         }
         Insert: {
+          ballot_name?: string | null
           ballot_number?: number | null
+          candidate_type?: string | null
+          coalition?: string | null
           created_at?: string | null
+          data_origin?: string | null
+          election_year?: number
+          federation?: string | null
+          first_seen_at?: string | null
           full_name: string
           id?: string
+          last_seen_at?: string | null
           party: string
           photo_source_url?: string | null
           photo_url?: string | null
           position: string
+          registration_status?: string | null
+          registration_status_updated_at?: string | null
+          review_status?: string | null
+          slug?: string
+          state?: string | null
           tse_candidate_id?: string | null
         }
         Update: {
+          ballot_name?: string | null
           ballot_number?: number | null
+          candidate_type?: string | null
+          coalition?: string | null
           created_at?: string | null
+          data_origin?: string | null
+          election_year?: number
+          federation?: string | null
+          first_seen_at?: string | null
           full_name?: string
           id?: string
+          last_seen_at?: string | null
           party?: string
           photo_source_url?: string | null
           photo_url?: string | null
           position?: string
+          registration_status?: string | null
+          registration_status_updated_at?: string | null
+          review_status?: string | null
+          slug?: string
+          state?: string | null
           tse_candidate_id?: string | null
         }
         Relationships: []

@@ -18,12 +18,32 @@ describe('snapshot público de candidatos', () => {
     expect(candidates[0]).toEqual(
       expect.objectContaining({
         id: expect.any(String),
+        slug: expect.any(String),
+        tse_candidate_id: expect.any(String),
         full_name: expect.any(String),
         party: expect.any(String),
         position: expect.stringMatching(/^deputado_(federal|estadual)$/),
         claims: [],
       }),
     );
+  });
+
+  it('garante identidade pública por slug e chave natural TSE', () => {
+    const candidates = loadPublicCandidateSnapshot({ root });
+    const slugs = new Set();
+    const tseIds = new Set();
+
+    for (const candidate of candidates) {
+      expect(candidate.slug).toMatch(/^[a-z0-9_]+_[0-9]{4,}$/);
+      expect(candidate.tse_candidate_id).toMatch(/^\d+$/);
+      expect(slugs.has(candidate.slug)).toBe(false);
+      expect(tseIds.has(candidate.tse_candidate_id)).toBe(false);
+      slugs.add(candidate.slug);
+      tseIds.add(candidate.tse_candidate_id);
+    }
+
+    expect(slugs.size).toBe(69);
+    expect(tseIds.size).toBe(69);
   });
 
   it('rejeita snapshot vazio ou com campos privados', () => {

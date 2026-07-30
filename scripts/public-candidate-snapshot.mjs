@@ -31,6 +31,8 @@ const ALLOWED_POSITIONS = new Set([
 
 const REQUIRED_FIELDS = [
   'id',
+  'slug',
+  'tse_candidate_id',
   'full_name',
   'party',
   'ballot_number',
@@ -84,6 +86,7 @@ export function validatePublicCandidateSnapshot(candidates, options = {}) {
   }
 
   const ids = new Set();
+  const slugs = new Set();
   const tseIds = new Set();
 
   candidates.forEach((candidate, index) => {
@@ -105,13 +108,22 @@ export function validatePublicCandidateSnapshot(candidates, options = {}) {
     }
     ids.add(candidate.id);
 
-    if (candidate.tse_candidate_id != null) {
-      const tseId = String(candidate.tse_candidate_id);
-      if (tseIds.has(tseId)) {
-        throw new Error(`SQ_CANDIDATO duplicado no snapshot público: ${tseId}.`);
-      }
-      tseIds.add(tseId);
+    if (typeof candidate.slug !== 'string' || !/^[a-z0-9_]+$/.test(candidate.slug)) {
+      throw new Error(`Candidatura ${candidate.id} tem slug inválido.`);
     }
+    if (slugs.has(candidate.slug)) {
+      throw new Error(`Slug duplicado no snapshot público: ${candidate.slug}.`);
+    }
+    slugs.add(candidate.slug);
+
+    if (candidate.tse_candidate_id == null || !/^\d+$/.test(String(candidate.tse_candidate_id))) {
+      throw new Error(`Candidatura ${candidate.id} sem SQ_CANDIDATO válido.`);
+    }
+    const tseId = String(candidate.tse_candidate_id);
+    if (tseIds.has(tseId)) {
+      throw new Error(`SQ_CANDIDATO duplicado no snapshot público: ${tseId}.`);
+    }
+    tseIds.add(tseId);
 
     if (typeof candidate.full_name !== 'string' || candidate.full_name.trim().length < 3) {
       throw new Error(`Candidatura ${index} tem nome inválido.`);

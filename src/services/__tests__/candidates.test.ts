@@ -64,6 +64,8 @@ beforeEach(() => {
 describe('mapCandidate', () => {
   const baseRow = {
     id: 'test-id',
+    slug: 'test_candidate_1234',
+    tse_candidate_id: '210000000001',
     full_name: 'Test Candidate',
     party: 'NOVO',
     ballot_number: 1234,
@@ -102,6 +104,14 @@ describe('mapCandidate', () => {
     const { mapCandidate } = await import('../candidates');
     const result = mapCandidate({ ...baseRow, position: '' });
     expect(result.position).toBe('outro');
+  });
+
+  it('preserva slug público e SQ_CANDIDATO no domínio', async () => {
+    const { mapCandidate } = await import('../candidates');
+    const result = mapCandidate(baseRow);
+
+    expect(result.slug).toBe('test_candidate_210000000001');
+    expect(result.tse_candidate_id).toBe('210000000001');
   });
 });
 

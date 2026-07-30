@@ -29,7 +29,7 @@ function generateSitemap(candidates) {
   ];
 
   const candidatePages = candidates.map((candidate) => ({
-    loc: `/candidatos/${encodeURIComponent(candidate.id)}`,
+    loc: `/candidatos/${encodeURIComponent(candidate.slug)}`,
     priority: '0.8',
     changefreq: 'weekly',
   }));

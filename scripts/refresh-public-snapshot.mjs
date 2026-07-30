@@ -44,6 +44,20 @@ function stableId(name, party) {
   return uuidv5(`${ascii(name)}-${party}`, UUID_NAMESPACE);
 }
 
+function slugBase(text) {
+  return ascii(text)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '')
+    .replace(/_{2,}/g, '_');
+}
+
+function stableSlug(name, tseCandidateId) {
+  const suffix = String(tseCandidateId ?? '').replace(/\D/g, '');
+  const base = slugBase(name) || 'candidato';
+  return suffix ? `${base}_${suffix}` : base;
+}
+
 function toNullable(value) {
   if (value == null) return null;
   const text = String(value).trim();
@@ -105,9 +119,11 @@ export function generatePublicCandidateSnapshot({ datasetDir = DATASET_DIR } = {
 
       const position = inferPosition(row.DS_CARGO);
       const ballotNumber = toNullable(row.NR_CANDIDATO);
+      const tseCandidateId = toNullable(row.SQ_CANDIDATO);
 
       candidates.push({
         id: stableId(fullName, party),
+        slug: stableSlug(fullName, tseCandidateId),
         full_name: fullName,
         party,
         ballot_number: ballotNumber ? Number.parseInt(ballotNumber, 10) : null,
@@ -116,7 +132,7 @@ export function generatePublicCandidateSnapshot({ datasetDir = DATASET_DIR } = {
         photo_url: null,
         photo_source_url: null,
         claims: [],
-        tse_candidate_id: toNullable(row.SQ_CANDIDATO),
+        tse_candidate_id: tseCandidateId,
         registration_status: 'registration_requested',
         state: toNullable(row.SG_UF),
         election_year: 2026,

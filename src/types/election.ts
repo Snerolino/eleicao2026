@@ -41,6 +41,7 @@ export interface Claim {
 
 export interface Candidate {
   id: string;
+  slug?: string | null;
   full_name: string;
   party: string;
   ballot_number: string | number | null;
