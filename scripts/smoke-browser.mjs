@@ -1,4 +1,5 @@
 import { spawn } from 'node:child_process';
+import { pathToFileURL } from 'node:url';
 import { setTimeout as delay } from 'node:timers/promises';
 import { chromium } from 'playwright';
 import { loadPublicCandidateSnapshot } from './public-candidate-snapshot.mjs';
@@ -33,6 +34,28 @@ function isIgnoredExternalNoise(textOrUrl) {
     /cloudflareinsights\.com\/cdn-cgi\/rum/.test(textOrUrl) ||
     textOrUrl === 'Failed to load resource: net::ERR_FAILED'
   );
+}
+
+export async function assertHomeHasCandidates(page, expectedCount) {
+  const homeCount = await page.locator('main article').count();
+  const bodyText = await page.locator('body').innerText();
+  const bodyPreview = bodyText.replace(/\s+/g, ' ').trim().slice(0, 500);
+
+  if (bodyText.includes('Nenhum candidato está disponível no momento.') && expectedCount > 0) {
+    fail(
+      'Home não renderizou articles/candidatos: estado vazio apesar de snapshot com registros.',
+      `cards=${homeCount}; esperado >= ${expectedCount}; body="${bodyPreview}"`,
+    );
+  }
+
+  if (homeCount < expectedCount) {
+    fail(
+      'Home não renderizou articles/candidatos suficientes.',
+      `cards=${homeCount}; esperado >= ${expectedCount}; body="${bodyPreview}"`,
+    );
+  }
+
+  return { homeCount, bodyText };
 }
 
 async function waitForServer(url, timeoutMs = 30_000) {
@@ -113,16 +136,7 @@ async function main() {
 
   try {
     await page.goto(baseUrl, { waitUntil: 'networkidle' });
-    await page.waitForSelector('article', { timeout: 15_000 });
-
-    const homeCount = await page.locator('main article').count();
-    const bodyText = await page.locator('body').innerText();
-    if (bodyText.includes('Nenhum candidato está disponível no momento.') && expectedCount > 0) {
-      fail('Home sem filtro exibiu estado vazio apesar de snapshot com registros.');
-    }
-    if (homeCount < expectedCount) {
-      fail(`Home renderizou ${homeCount} cards; esperado >= ${expectedCount}.`);
-    }
+    const { homeCount } = await assertHomeHasCandidates(page, expectedCount);
 
     await page.getByRole('searchbox', { name: /buscar candidatos/i }).fill('ADEMAR');
     await page.waitForTimeout(250);
@@ -213,8 +227,10 @@ async function main() {
   }
 }
 
-main().catch((error) => {
-  console.error('❌ Smoke browser falhou.');
-  console.error(error?.stack ?? String(error));
-  process.exit(1);
-});
+if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((error) => {
+    console.error('❌ Smoke browser falhou.');
+    console.error(error?.stack ?? String(error));
+    process.exit(1);
+  });
+}
