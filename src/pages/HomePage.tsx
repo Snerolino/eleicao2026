@@ -9,7 +9,10 @@ import {
   ErrorState,
   LoadingSkeleton
 } from '@/components/states';
-import { fetchAllCandidates } from '@/services/candidates';
+import {
+  fetchAllCandidates,
+  wasLastClaimsFetchDegraded
+} from '@/services/candidates';
 import { downloadCandidatesCSV } from '@/utils/download';
 import {
   POSITION_ORDER,
@@ -69,6 +72,7 @@ export function HomePage() {
   });
 
   const allCandidates = query.data ?? [];
+  const claimsDegraded = query.isSuccess && wasLastClaimsFetchDegraded();
 
   const filtered = useMemo(
     () => filterCandidates(allCandidates, searchQuery, cargoFilter, partyFilter),
@@ -99,6 +103,15 @@ export function HomePage() {
   return (
     <main id="main-content" className="mx-auto max-w-6xl px-4 py-8">
       <DataFreshness updatedAt={query.dataUpdatedAt} />
+
+      {claimsDegraded && (
+        <div
+          role="status"
+          className="mb-4 rounded-sm border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-900"
+        >
+          Informações editoriais temporariamente indisponíveis. A lista oficial de candidatos continua disponível.
+        </div>
+      )}
 
       {allCandidates.length > 0 && (
         <div className="space-y-6">

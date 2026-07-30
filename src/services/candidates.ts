@@ -4,7 +4,7 @@ import type {
   CandidateWithClaims,
   Claim,
   ClaimStatus,
-  RawDocument,
+  SourceReference,
 } from "@/types/election";
 import { onlyPublished } from "@/utils/claims";
 import { normalizePosition } from "@/utils/position";
@@ -37,7 +37,13 @@ interface ClaimRow {
   confidence_score: number | null;
   status: string;
   source_document_id: string | null;
-  raw_documents?: DocumentRow | DocumentRow[] | null;
+  source_references?: DocumentRow | DocumentRow[] | null;
+}
+
+let lastClaimsFetchDegraded = false;
+
+export function wasLastClaimsFetchDegraded(): boolean {
+  return lastClaimsFetchDegraded;
 }
 
 function clampConfidence(score: number | null): 1 | 2 | 3 | 4 | 5 {
@@ -67,8 +73,8 @@ function firstDocument(
 }
 
 function mapClaim(row: ClaimRow): Claim {
-  const source = firstDocument(row.raw_documents);
-  const document: RawDocument | null = source
+  const source = firstDocument(row.source_references);
+  const document: SourceReference | null = source
     ? {
         id: source.id ?? row.source_document_id,
         source_name: source.source_name ?? "Fonte não identificada",
@@ -104,7 +110,7 @@ async function fetchPublishedClaims(candidateIds: string[]): Promise<Claim[]> {
       confidence_score,
       status,
       source_document_id,
-      raw_documents (
+      source_references (
         id,
         source_name,
         source_category,
@@ -136,9 +142,20 @@ async function fetchAllCandidatesFromSupabase(): Promise<
   if (error) throw error;
 
   const candidates = ((data ?? []) as CandidateRow[]).map(mapCandidate);
-  const claims = await fetchPublishedClaims(
-    candidates.map((candidate) => candidate.id),
-  );
+  let claims: Claim[] = [];
+  lastClaimsFetchDegraded = false;
+
+  try {
+    claims = await fetchPublishedClaims(
+      candidates.map((candidate) => candidate.id),
+    );
+  } catch (claimError) {
+    lastClaimsFetchDegraded = true;
+    console.warn(
+      "Informações editoriais temporariamente indisponíveis.",
+      claimError,
+    );
+  }
 
   const claimsByCandidate = new Map<string, Claim[]>();
 
@@ -187,11 +204,7 @@ export async function fetchAllCandidates(): Promise<CandidateWithClaims[]> {
   try {
     const supabaseData = await fetchAllCandidatesFromSupabase();
     if (supabaseData.length > 0) {
-      // Merge Supabase data + mock data (mock has president candidates, etc.)
-      const mockData = fetchAllFromMock();
-      const supabaseIds = new Set(supabaseData.map((c) => c.id));
-      const onlyFromMock = mockData.filter((c) => !supabaseIds.has(c.id));
-      return [...supabaseData, ...onlyFromMock];
+      return supabaseData;
     }
   } catch {
     // Supabase unavailable — fall through to mock
