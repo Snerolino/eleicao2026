@@ -75,21 +75,12 @@ export function SourceReferenceBadge({
         </span>
       </span>
 
-      {safeUrl ? (
-        <a
-          href={safeUrl}
-          target="_blank"
-          rel="noreferrer noopener"
-          className="mt-1 block break-all text-xs leading-relaxed underline transition-colors hover:text-[var(--color-institutional)]"
-          style={{ color: categoryColor }}
-        >
-          {document?.source_name ?? 'Fonte'}
-        </a>
-      ) : (
-        <span className="mt-1 block text-xs leading-relaxed text-[var(--color-muted-ink)]">
-          {document?.source_name ?? 'Fonte não informada'}
-        </span>
-      )}
+      <span
+        className={`mt-1 block break-all text-xs leading-relaxed ${safeUrl ? 'underline' : 'text-[var(--color-muted-ink)]'}`}
+        style={safeUrl ? { color: categoryColor } : undefined}
+      >
+        {document?.source_name ?? (safeUrl ? 'Fonte' : 'Fonte não informada')}
+      </span>
 
       <span className="mt-0.5 block text-[0.65rem] text-[var(--color-muted-ink)]">
         Atualizado em {formatDate(document?.fetched_at ?? null)}

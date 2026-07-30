@@ -1,43 +1,41 @@
 import { describe, it, expect } from 'vitest';
 import { sanitizeUrl } from '../sanitizeUrl';
+import { getSafeUrl } from '../url';
 
-describe('sanitizeUrl', () => {
-  it('allows http and https URLs', () => {
-    expect(sanitizeUrl('https://example.com')).toBe('https://example.com');
-    expect(sanitizeUrl('http://example.com')).toBe('http://example.com');
+const safeUrlFunctions = [
+  ['sanitizeUrl', sanitizeUrl],
+  ['getSafeUrl', getSafeUrl],
+] as const;
+
+describe.each(safeUrlFunctions)('%s', (_name, safeUrl) => {
+  it('permite apenas URLs públicas http e https', () => {
+    expect(safeUrl('https://example.com/fonte?x=1#trecho')).toBe('https://example.com/fonte?x=1#trecho');
+    expect(safeUrl('http://example.com/fonte')).toBe('http://example.com/fonte');
   });
 
-  it('allows mailto and tel URLs', () => {
-    expect(sanitizeUrl('mailto:test@example.com')).toBe('mailto:test@example.com');
-    expect(sanitizeUrl('tel:+1234567890')).toBe('tel:+1234567890');
+  it('bloqueia protocolos não públicos e URLs relativas', () => {
+    expect(safeUrl('mailto:test@example.com')).toBeUndefined();
+    expect(safeUrl('tel:+5551999999999')).toBeUndefined();
+    expect(safeUrl('/path/to/resource')).toBeUndefined();
+    expect(safeUrl('path/to/resource')).toBeUndefined();
+    expect(safeUrl('?query=param')).toBeUndefined();
+    expect(safeUrl('#hash')).toBeUndefined();
+    expect(safeUrl('data:text/html,<script>alert(1)</script>')).toBeUndefined();
+    expect(safeUrl('vbscript:msgbox(1)')).toBeUndefined();
   });
 
-  it('allows relative URLs', () => {
-    expect(sanitizeUrl('/path/to/resource')).toBe('/path/to/resource');
-    expect(sanitizeUrl('path/to/resource')).toBe('path/to/resource');
-    expect(sanitizeUrl('?query=param')).toBe('?query=param');
-    expect(sanitizeUrl('#hash')).toBe('#hash');
+  it('remove caracteres de controle antes do parse e bloqueia bypasses de javascript', () => {
+    expect(safeUrl('javascript:alert(1)')).toBeUndefined();
+    expect(safeUrl('JAVASCRIPT:alert(1)')).toBeUndefined();
+    expect(safeUrl('  \njavascript:alert(1)')).toBeUndefined();
+    expect(safeUrl('\u0000java\u0000script:alert(1)')).toBeUndefined();
+    expect(safeUrl('https://example.com/\u0000fonte')).toBe('https://example.com/fonte');
   });
 
-  it('blocks javascript: URLs', () => {
-    expect(sanitizeUrl('javascript:alert(1)')).toBe('about:blank');
-    expect(sanitizeUrl('javascript:alert("XSS")')).toBe('about:blank');
-    expect(sanitizeUrl('JAVASCRIPT:alert(1)')).toBe('about:blank');
-    expect(sanitizeUrl('  javascript:alert(1)')).toBe('about:blank');
-  });
-
-  it('blocks data: URLs', () => {
-    expect(sanitizeUrl('data:text/html,<script>alert(1)</script>')).toBe('about:blank');
-    expect(sanitizeUrl('DATA:text/html,<script>alert(1)</script>')).toBe('about:blank');
-  });
-
-  it('blocks vbscript: URLs', () => {
-    expect(sanitizeUrl('vbscript:msgbox(1)')).toBe('about:blank');
-  });
-
-  it('handles empty or null values', () => {
-    expect(sanitizeUrl('')).toBeUndefined();
-    expect(sanitizeUrl(null as any)).toBeUndefined();
-    expect(sanitizeUrl(undefined)).toBeUndefined();
+  it('normaliza entradas inválidas para undefined', () => {
+    expect(safeUrl('')).toBeUndefined();
+    expect(safeUrl('   ')).toBeUndefined();
+    expect(safeUrl(null)).toBeUndefined();
+    expect(safeUrl(undefined)).toBeUndefined();
   });
 });
