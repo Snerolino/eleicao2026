@@ -96,7 +96,9 @@ async function main() {
   const expectedMinCount = Number(
     getArg('--expected-min-count') ?? process.env.PUBLIC_CANDIDATES_MIN_COUNT ?? 69,
   );
-  const snapshotCount = loadPublicCandidateSnapshot({ minCount: expectedMinCount }).length;
+  const snapshotCandidates = loadPublicCandidateSnapshot({ minCount: expectedMinCount });
+  const snapshotCount = snapshotCandidates.length;
+  const [firstSnapshotCandidate] = snapshotCandidates;
   const expectedCount = Math.max(expectedMinCount, snapshotCount);
   const startLocalPreview = hasFlag('--start-preview');
 
@@ -159,6 +161,20 @@ async function main() {
     await page.waitForLoadState('networkidle');
     const detailHeading = await page.locator('main h1').first().innerText({ timeout: 10_000 });
     if (!detailHeading.trim()) fail('Detalhe abriu sem h1 de candidato.');
+    const detailUrl = page.url();
+    if (/\/candidatos\/[0-9a-f-]{36}\/?$/i.test(detailUrl)) {
+      fail(`Detalhe abriu URL legada UUID em vez de slug canônico: ${detailUrl}`);
+    }
+
+    if (firstSnapshotCandidate?.id && firstSnapshotCandidate?.slug) {
+      await page.goto(new URL(`/candidatos/${firstSnapshotCandidate.id}`, baseUrl).toString(), { waitUntil: 'networkidle' });
+      const legacyHeading = await page.locator('main h1').first().innerText({ timeout: 10_000 });
+      if (!legacyHeading.trim()) fail('Rota legada UUID abriu sem h1 de candidato.');
+      const expectedCanonicalPath = `/candidatos/${firstSnapshotCandidate.slug}`;
+      if (!new URL(page.url()).pathname.endsWith(expectedCanonicalPath)) {
+        fail(`Rota legada UUID não redirecionou para slug canônico: ${page.url()} esperado ${expectedCanonicalPath}`);
+      }
+    }
 
     await page.goto(new URL('/comparar', baseUrl).toString(), { waitUntil: 'networkidle' });
     await page.waitForFunction(
@@ -210,6 +226,7 @@ async function main() {
       expectedMinCount: expectedCount,
       searchCards: filteredCount,
       detailHeading,
+      canonicalDetailUrl: detailUrl,
       serviceWorkerReady,
       httpFailures: httpFailures.length,
       onlineConsoleErrors: 0,

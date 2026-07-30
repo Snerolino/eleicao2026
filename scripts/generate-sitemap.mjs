@@ -10,6 +10,7 @@
 
 import { writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { loadPublicCandidateSnapshot } from './public-candidate-snapshot.mjs';
 
 const BASE_URL = process.argv
@@ -20,8 +21,9 @@ const BASE_URL = process.argv
 const ROOT = resolve(process.cwd());
 const DIST_DIR = resolve(ROOT, 'dist');
 
-function generateSitemap(candidates) {
-  const today = new Date().toISOString().split('T')[0];
+export function generateSitemap(candidates, options = {}) {
+  const today = options.today ?? new Date().toISOString().split('T')[0];
+  const baseUrl = options.baseUrl ?? BASE_URL;
 
   const staticPages = [
     { loc: '/', priority: '1.0', changefreq: 'daily' },
@@ -41,7 +43,7 @@ function generateSitemap(candidates) {
 ${allPages
   .map(
     (page) => `  <url>
-    <loc>${BASE_URL}${page.loc}</loc>
+    <loc>${baseUrl}${page.loc}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
@@ -70,4 +72,6 @@ Sitemap: ${BASE_URL}/sitemap.xml
   console.log('✅ robots.txt');
 }
 
-main();
+if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main();
+}
