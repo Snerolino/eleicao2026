@@ -27,7 +27,7 @@ Cada informação mostra sua fonte, data de coleta e nível de confiança — um
 | Frontend | React 19 + TypeScript |
 | Build | Vite 6 + Tailwind CSS 4 |
 | Roteamento | React Router v6 |
-| Dados | Supabase (PostgreSQL) + mock local |
+| Dados | Supabase (PostgreSQL) + snapshot público versionado |
 | Cache/Estado | TanStack React Query |
 | PWA | vite-plugin-pwa + Workbox |
 | Deploy | Cloudflare Pages |
@@ -35,17 +35,14 @@ Cada informação mostra sua fonte, data de coleta e nível de confiança — um
 
 ## Dados
 
-Atualmente o portal conta com **156 pré-candidatos** baseados em fontes jornalísticas (G1, Jornal do Comércio, GZH, Correio do Povo — julho/2026):
+Atualmente o portal usa **69 candidaturas oficiais TSE 2026 do Rio Grande do Sul**, sanitizadas em snapshot público versionado (`data/public-candidates.json`):
 
 | Cargo | Candidatos | Partidos |
 |-------|-----------|----------|
-| Governador | 7 | PDT, PL, MDB, PSDB, PSTU, UP, PCO |
-| Vice-Governador | 1 | PT |
-| Senador | 4 | PL, PT, PSB, PSD |
-| Deputado Federal | 48 | PL (27), PT (21) |
-| Deputado Estadual | 96 | PL (56), PT (40) |
+| Deputado Federal | 29 | NOVO |
+| Deputado Estadual | 40 | NOVO |
 
-Quando o Supabase está configurado, os dados vêm do banco. Caso contrário, o fallback é o `mockData.ts` com os mesmos candidatos.
+Quando o Supabase está configurado, os dados vêm do banco. Caso contrário, o fallback lê o snapshot público versionado, sem depender de `../dataset2026` no build.
 
 ## Desenvolvimento
 
@@ -58,6 +55,12 @@ npm run dev
 
 # Build
 npm run build
+
+# Atualizar snapshot público a partir do mirror TSE local (comando explícito)
+npm run data:refresh
+
+# Validar snapshot público
+npm run data:check
 
 # Preview do build
 npm run preview
@@ -75,13 +78,16 @@ Copie `.env.example` para `.env.local` e preencha:
 | `VITE_SUPABASE_URL` | Sim (para dados reais) | URL do projeto Supabase |
 | `VITE_SUPABASE_ANON_KEY` | Sim (para dados reais) | Chave anônima do Supabase |
 
-Sem as variáveis, o site funciona em **modo de demonstração** com os dados do `mockData.ts` e exibe um banner identificando o modo de teste.
+Sem as variáveis, o site funciona em **modo de demonstração** com `data/public-candidates.json` e exibe um banner identificando o modo de teste.
 
 ### Scripts auxiliares
 
 | Script | Descrição |
 |--------|-----------|
-| `scripts/generate-sitemap.mjs` | Gera `sitemap.xml` e `robots.txt` a partir do mockData |
+| `scripts/refresh-public-snapshot.mjs` | Atualiza `data/public-candidates.json` a partir do mirror TSE local |
+| `scripts/data-check.mjs` | Valida schema, contagem mínima, unicidade e campos proibidos do snapshot |
+| `scripts/build-env-check.mjs` | Preflight de build/deploy para variáveis públicas Supabase |
+| `scripts/generate-sitemap.mjs` | Gera `sitemap.xml` e `robots.txt` a partir do snapshot público |
 | `scripts/ingest-data.mjs` | Importa dados CSV do TSE para o Supabase |
 | `scripts/editorial-workflow.mjs` | Workflow editorial para curadoria de claims |
 | `scripts/fetch-tse-photos.mjs` | Baixa fotos oficiais do TSE |
@@ -109,7 +115,7 @@ src/
 ├── hooks/            # Custom hooks (useOnlineStatus, usePageMetadata)
 ├── lib/              # Configurações (supabase, utils)
 ├── pages/            # Páginas da aplicação
-├── services/         # Serviços de dados (candidates, mockData)
+├── services/         # Serviços de dados (candidates, publicCandidates)
 ├── types/            # Definições TypeScript
 └── utils/            # Utilitários (claims, confidence, download, position)
 ```

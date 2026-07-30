@@ -26,19 +26,19 @@ describe('sanitizeUrl', () => {
   });
 
   it('blocks javascript URLs', () => {
-    expect(sanitizeUrl('javascript:alert(1)')).toBeUndefined();
-    expect(sanitizeUrl('  javascript:alert(1)')).toBeUndefined();
-    expect(sanitizeUrl('\x01javascript:alert(1)')).toBeUndefined();
-    expect(sanitizeUrl('\njavascript:alert(1)')).toBeUndefined();
-    expect(sanitizeUrl('JaVaScRiPt:alert(1)')).toBeUndefined();
+    expect(sanitizeUrl('javascript:alert(1)')).toBe('about:blank');
+    expect(sanitizeUrl('  javascript:alert(1)')).toBe('about:blank');
+    expect(sanitizeUrl('\x01javascript:alert(1)')).toBe('about:blank');
+    expect(sanitizeUrl('\njavascript:alert(1)')).toBe('about:blank');
+    expect(sanitizeUrl('JaVaScRiPt:alert(1)')).toBe('about:blank');
   });
 
   it('blocks vbscript URLs', () => {
-    expect(sanitizeUrl('vbscript:msgbox(1)')).toBeUndefined();
+    expect(sanitizeUrl('vbscript:msgbox(1)')).toBe('about:blank');
   });
 
   it('blocks data URLs', () => {
-    expect(sanitizeUrl('data:text/html,<script>alert(1)</script>')).toBeUndefined();
+    expect(sanitizeUrl('data:text/html,<script>alert(1)</script>')).toBe('about:blank');
   });
 
   it('handles null and undefined', () => {

@@ -5,10 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && node scripts/generate-mockdata.mjs && vite build && node scripts/generate-sitemap.mjs",
+    "data:refresh": "node scripts/refresh-public-snapshot.mjs",
+    "data:check": "node scripts/data-check.mjs",
+    "env:check": "node scripts/build-env-check.mjs",
+    "build": "npm run data:check && tsc -b && vite build && node scripts/generate-sitemap.mjs",
+    "build:deploy": "npm run env:check -- --require-supabase && npm run build",
     "preview": "vite preview",
-    "test": "vitest run",
-    "test:watch": "vitest"
+    "test": "NODE_ENV=test vitest run",
+    "test:watch": "NODE_ENV=test vitest"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",

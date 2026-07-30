@@ -9,7 +9,7 @@ import type {
 import { onlyPublished } from "@/utils/claims";
 import { normalizePosition } from "@/utils/position";
 import { normalizeSourceCategory } from "@/utils/sourceCategory";
-import { MOCK_CANDIDATES } from "./mockData";
+import { PUBLIC_CANDIDATES } from "./publicCandidates";
 
 interface CandidateRow {
   id: string;
@@ -214,7 +214,7 @@ export async function fetchAllCandidates(): Promise<CandidateWithClaims[]> {
 }
 
 function fetchAllFromMock(): CandidateWithClaims[] {
-  return MOCK_CANDIDATES.map((candidate) => ({
+  return PUBLIC_CANDIDATES.map((candidate) => ({
     ...candidate,
     claims: onlyPublished(candidate.claims),
   }));
@@ -237,8 +237,8 @@ export async function fetchCandidateById(
   return findInMock(id);
 }
 
-const mockCandidatesMap = new Map<string, (typeof MOCK_CANDIDATES)[number]>(
-  MOCK_CANDIDATES.map((c) => [c.id, c]),
+const mockCandidatesMap = new Map<string, (typeof PUBLIC_CANDIDATES)[number]>(
+  PUBLIC_CANDIDATES.map((c) => [c.id, c]),
 );
 
 function findInMock(id: string): CandidateWithClaims | null {
