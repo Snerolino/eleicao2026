@@ -24,6 +24,7 @@ import {
   buildDatasetSourceManifest,
   isDatabaseWriteAllowed,
 } from './tse-ingest-contract.mjs';
+import { buildCandidateDiffReport } from './tse-upsert-semantics.mjs';
 
 const ROOT_DIR = process.cwd();
 const LOCAL_DATASET_DIR = path.resolve(ROOT_DIR, '../dataset2026/candidatos');
@@ -34,6 +35,7 @@ const DOWNLOAD_MISSING = process.argv.includes('--download-missing');
 const SHOULD_IMPORT = process.argv.includes('--import');
 const DRY_RUN = process.argv.includes('--dry-run') || !SHOULD_IMPORT;
 const ALL_UFS = process.argv.includes('--all');
+const COVERAGE_COMPLETE = process.argv.includes('--coverage-complete');
 const UF_TARGET = process.argv.find((a) => a.startsWith('--uf='))?.split('=')[1] ?? 'RS';
 const UFS = ALL_UFS
   ? ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RO', 'RR', 'RS', 'SC', 'SE', 'SP', 'TO', 'BR', 'BRASIL']
@@ -176,7 +178,7 @@ function inferPosition(dsCargo) {
 
 function inferRegistrationStatus(value) {
   const raw = (toNullable(value) ?? '').toLowerCase();
-  if (!raw || raw === 'não divulgável') return 'pre_candidate';
+  if (!raw || raw === 'não divulgável') return 'registration_requested';
   if (raw.includes('deferido')) return 'approved';
   if (raw.includes('indeferido')) return 'denied';
   if (raw.includes('renúncia') || raw.includes('renuncia')) return 'withdrawn';
@@ -193,16 +195,28 @@ async function supabaseFetch(method, restPath, body, preferMinimal = false) {
     throw new Error(`Token ausente para ${method} ${restPath}`);
   }
   const url = `${SUPABASE_URL}/rest/v1${restPath}`;
-  const res = await fetch(url, {
-    method,
-    headers: {
-      apikey: token,
-      Authorization: `Bearer ${token}`,
-      'Content-Type': 'application/json',
-      Prefer: preferMinimal ? 'return=minimal' : 'return=representation',
-    },
-    body: body ? JSON.stringify(body) : undefined,
-  });
+  let res;
+  let lastError;
+  for (let attempt = 1; attempt <= 3; attempt += 1) {
+    try {
+      res = await fetch(url, {
+        method,
+        headers: {
+          apikey: ANON_KEY,
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+          Prefer: preferMinimal ? 'return=minimal' : 'return=representation',
+        },
+        body: body ? JSON.stringify(body) : undefined,
+      });
+      break;
+    } catch (error) {
+      lastError = error;
+      if (attempt === 3) throw error;
+      await new Promise((resolve) => setTimeout(resolve, attempt * 1500));
+    }
+  }
+  if (!res) throw lastError;
   const text = await res.text();
   if (!res.ok) throw new Error(`Supabase ${method} ${restPath} -> ${res.status}: ${text.slice(0, 400)}`);
   return text ? JSON.parse(text) : null;
@@ -429,63 +443,33 @@ async function insertInBatches(restPath, rows, batchSize = 500) {
 }
 
 async function buildDiffReport(uf, stagingRows, source) {
-  const existing = await supabaseFetch('GET', `/candidates?select=id,full_name,party,ballot_number,position,tse_candidate_id&limit=5000`);
-  const existingBySq = new Map(existing.filter((c) => c.tse_candidate_id).map((c) => [String(c.tse_candidate_id), c]));
+  const existing = await supabaseFetch('GET', `/candidates?select=id,full_name,ballot_name,party,ballot_number,position,state,tse_candidate_id,registration_status,federation,coalition&state=eq.${encodeURIComponent(uf)}&limit=5000`);
 
-  const report = {
+  const enrichedRows = stagingRows.map((row) => ({
+    ...row,
+    state: row.state ?? row.sg_uf,
+    position: row.position ?? inferPosition(row.ds_cargo ?? ''),
+    registration_status: row.registration_status ?? inferRegistrationStatus(row.ds_situacao_candidatura ?? ''),
+    federation: row.federation ?? (row.ds_composicao_federacao === '#NULO' ? null : row.ds_composicao_federacao),
+    coalition: row.coalition ?? (row.nm_coligacao === '#NULO' ? null : row.nm_coligacao),
+  }));
+
+  const report = buildCandidateDiffReport({
     uf,
-    created_at: new Date().toISOString(),
+    stagingRows: enrichedRows,
+    existingRows: existing,
+    coverage: { complete: COVERAGE_COMPLETE, cargos: [...new Set(enrichedRows.map((row) => row.position).filter(Boolean))] },
+  });
+
+  return {
+    ...report,
     source,
     totals: {
+      ...report.totals,
       staging: stagingRows.length,
       production: existing.length,
     },
-    novos: [],
-    atualizados: [],
-    inalterados: 0,
   };
-
-  for (const row of stagingRows) {
-    const sq = row.sq_candidato;
-    if (!sq) continue;
-    const found = existingBySq.get(String(sq));
-    const normalizedPosition = inferPosition(row.ds_cargo);
-    if (!found) {
-      report.novos.push({
-        sq_candidato: sq,
-        full_name: row.nm_candidato,
-        ballot_name: row.nm_urna_candidato,
-        party: row.sg_partido,
-        ballot_number: row.nr_candidato,
-        position: normalizedPosition,
-        registration_status: inferRegistrationStatus(row.ds_situacao_candidatura),
-      });
-      continue;
-    }
-
-    const changed =
-      found.full_name !== row.nm_candidato ||
-      found.party !== row.sg_partido ||
-      found.ballot_number !== row.nr_candidato ||
-      found.position !== normalizedPosition;
-
-    if (changed) {
-      report.atualizados.push({
-        sq_candidato: sq,
-        antes: found,
-        depois: {
-          full_name: row.nm_candidato,
-          party: row.sg_partido,
-          ballot_number: row.nr_candidato,
-          position: normalizedPosition,
-        },
-      });
-    } else {
-      report.inalterados += 1;
-    }
-  }
-
-  return report;
 }
 
 async function main() {
@@ -498,6 +482,7 @@ async function main() {
   log(`   Fonte prioritária: ${LOCAL_DATASET_DIR}`);
   log(`   UFs: ${UFS.join(', ')}`);
   log(`   Modo: ${DRY_RUN ? 'DRY-RUN' : 'IMPORT'}`);
+  log(`   Cobertura completa declarada: ${COVERAGE_COMPLETE ? 'sim' : 'não'}`);
   log(`   Run dir: ${runDir}`);
   log();
 
@@ -542,7 +527,7 @@ async function main() {
       const reportPath = path.join(runDir, `report-${sourceFile}.json`);
       writeFileSync(reportPath, JSON.stringify(report, null, 2));
       log(`   relatório: ${reportPath}`);
-      log(`   diff: novos=${report.novos.length} atualizados=${report.atualizados.length} inalterados=${report.inalterados}`);
+      log(`   diff: inserted=${report.totals.inserted} updated=${report.totals.updated} unchanged=${report.totals.unchanged} withdrawn=${report.totals.withdrawn_candidate} needs_review=${report.totals.needs_review}`);
 
       if (CAN_WRITE_DATABASE && stagingRows.length > 0) {
         await insertInBatches('/tse_candidates_staging', stagingRows);
@@ -581,11 +566,15 @@ async function main() {
         const result = await supabaseFetch('POST', '/rpc/rpc_upsert_candidates', {
           uf_filter: uf,
           dry_run: false,
+          coverage_complete: COVERAGE_COMPLETE,
         }, false);
         const rows = result || [];
-        const newCount = rows.filter((r) => r.acao === 'inserted' || r.acao === 'unchanged').length;
+        const insertedCount = rows.filter((r) => r.acao === 'inserted').length;
         const updatedCount = rows.filter((r) => r.acao === 'updated').length;
-        log(`   ${uf}: ${rows.length} processados (${newCount} inseridos, ${updatedCount} atualizados)`);
+        const unchangedCount = rows.filter((r) => r.acao === 'unchanged').length;
+        const withdrawnCount = rows.filter((r) => r.acao === 'withdrawn_candidate').length;
+        const reviewCount = rows.filter((r) => r.acao === 'needs_review').length;
+        log(`   ${uf}: ${rows.length} processados (inserted=${insertedCount}, updated=${updatedCount}, unchanged=${unchangedCount}, withdrawn=${withdrawnCount}, needs_review=${reviewCount})`);
       } catch (err) {
         log(`   ⚠️  ${uf}: erro no upsert (pode ser que a migration RPC não foi aplicada ainda)`);
         log(`      ${err.message}`);
