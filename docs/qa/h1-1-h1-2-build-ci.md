@@ -56,8 +56,10 @@ Implementado:
 - Scan `dist` por `service_role`/`SUPABASE_SERVICE_ROLE` — OK, não encontrado.
 - Build em cópia limpa sem `../dataset2026` — OK; hash de fonte/dados inalterado; log sem referência ao dataset externo.
 - Revisão OpenCode `opencode/deepseek-v4-flash-free` — sem bloqueantes.
+- PR #24 atualizado para `0a1d2e5` — Cloudflare Pages preview OK.
+- Smoke do preview `https://d6053472.portal-transparencia-rs.pages.dev/` — OK para fallback: 69 cards, 29 federal, 40 estadual, sem erros JS.
 
 ## Risco residual
 
-- Smoke de navegador pós-deploy completo continua em H1.3/H0.4 expandido.
-- O preview Cloudflare atual só será revalidado depois do push/novo deployment desta branch.
+- Preview de PR ainda mostra banner de demonstração e não faz chamadas `rest/v1`, porque a integração de preview do Cloudflare não recebe `VITE_SUPABASE_*`. Após H1.1 isso não publica lista vazia: usa o snapshot público com 69 candidaturas.
+- Smoke de navegador pós-deploy completo com Supabase real continua em H1.3/H0.4 expandido e deve rodar contra main/deploy com variáveis configuradas.
