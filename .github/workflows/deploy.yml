@@ -80,6 +80,9 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           command: pages deploy dist --project-name=portal-transparencia-rs --branch=main
 
+      - name: Install smoke browser
+        run: npx playwright install chromium
+
       - name: Production browser smoke
         env:
           SMOKE_URL: https://portal-transparencia-rs.pages.dev/
