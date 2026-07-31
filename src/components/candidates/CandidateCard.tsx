@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import type { CandidateWithClaims } from '@/types/election';
 import { SourceReferenceBadge } from '@/components/sources/SourceReferenceBadge';
@@ -9,7 +10,13 @@ interface CandidateCardProps {
   candidate: CandidateWithClaims;
 }
 
-export function CandidateCard({
+/**
+ * Performance optimization: Memoized to prevent unnecessary re-renders
+ * when typing in the search bar. Since candidate object identity remains
+ * stable from the query cache, React can safely skip re-rendering
+ * cards that remain in the filtered list.
+ */
+export const CandidateCard = memo(function CandidateCard({
   candidate
 }: CandidateCardProps) {
   const summary = candidate.claims.find(
@@ -80,4 +87,4 @@ export function CandidateCard({
       </div>
     </article>
   );
-}
+});

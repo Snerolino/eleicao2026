@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, memo } from 'react';
 
 interface CandidatePhotoProps {
   name: string;
@@ -6,7 +6,11 @@ interface CandidatePhotoProps {
   className?: string;
 }
 
-export function CandidatePhoto({
+/**
+ * Performance optimization: Memoized to prevent unnecessary image re-renders
+ * which can cause layout shifts or flicker when parent components re-render.
+ */
+export const CandidatePhoto = memo(function CandidatePhoto({
   name,
   photoUrl,
   className = ''
@@ -25,4 +29,4 @@ export function CandidatePhoto({
       className={className}
     />
   );
-}
+});
