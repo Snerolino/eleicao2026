@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { assertHomeHasCandidates } from '../smoke-browser.mjs';
+import { assertHomeHasCandidates, assertOfflineRender } from '../smoke-browser.mjs';
 
 function fakeLocator(bodyText, articleCount) {
   return (selector) => {
@@ -22,5 +22,17 @@ describe('smoke-browser diagnostics', () => {
     await expect(assertHomeHasCandidates(page, 69)).rejects.toThrow(
       /Home não renderizou articles\/candidatos.*cards=0.*esperado >= 69/s,
     );
+  });
+
+  it('falha se o modo offline não renderiza conteúdo previsível', async () => {
+    await expect(assertOfflineRender('', true)).rejects.toThrow(/offline não renderizou conteúdo/i);
+  });
+
+  it('inclui verificação de detalhe já visitado no smoke offline', async () => {
+    const source = await import('node:fs').then(({ readFileSync }) =>
+      readFileSync('scripts/smoke-browser.mjs', 'utf8'),
+    );
+
+    expect(source).toContain('offlineDetailHeading');
   });
 });

@@ -34,6 +34,8 @@ export default defineConfig({
             handler: 'StaleWhileRevalidate',
             options: {
               cacheName: 'supabase-candidates',
+              cacheableResponse: { statuses: [0, 200] },
+              expiration: { maxEntries: 80, maxAgeSeconds: 86400 },
             },
           },
           {
@@ -41,7 +43,8 @@ export default defineConfig({
             handler: 'StaleWhileRevalidate',
             options: {
               cacheName: 'supabase-claims',
-              expiration: { maxAgeSeconds: 300 },
+              cacheableResponse: { statuses: [0, 200] },
+              expiration: { maxEntries: 120, maxAgeSeconds: 300 },
             },
           },
         ],

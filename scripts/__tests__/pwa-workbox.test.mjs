@@ -17,6 +17,15 @@ describe('PWA Workbox editorial data cache', () => {
     expect(config).toContain('maxAgeSeconds: 300');
   });
 
+  it('limita caches públicos e não grava 4xx/5xx', () => {
+    expect(config).toContain("cacheName: 'supabase-candidates'");
+    expect(config).toContain("cacheName: 'supabase-claims'");
+    expect(config).toContain('maxEntries: 80');
+    expect(config).toContain('maxEntries: 120');
+    expect(config).toContain('cacheableResponse');
+    expect(config).toContain('statuses: [0, 200]');
+  });
+
   it('não muta o shape JSON das respostas de claims no service worker', () => {
     expect(config).not.toContain('_sw_cached_at');
     expect(config).not.toContain('cacheWillUpdate');
