@@ -7,7 +7,9 @@
  * Uso:
  *   node scripts/editorial-workflow.mjs list              # listar pendentes
  *   node scripts/editorial-workflow.mjs pending           # em revisão
- *   node scripts/editorial-workflow.mjs publish <claim_id> # publicar
+ *   node scripts/editorial-workflow.mjs publish <claim_id>             # publicar via RPC
+ *   node scripts/editorial-workflow.mjs correct <claim_id> <content>   # corrigir via nova versão
+ *   node scripts/editorial-workflow.mjs retract <claim_id> [notes]     # retratar mantendo histórico
  *   node scripts/editorial-workflow.mjs stats              # estatísticas
  */
 
@@ -21,6 +23,7 @@ if (!SUPABASE_URL || !SERVICE_KEY) {
 
 const ACTION = process.argv[2];
 const CLAIM_ID = process.argv[3];
+const EXTRA_ARG = process.argv.slice(4).join(' ');
 
 async function supFetch(path, opts = {}) {
   const url = `${SUPABASE_URL}/rest/v1${path}`;
@@ -67,14 +70,39 @@ async function listClaims(status) {
 }
 
 async function publishClaim(id) {
-  await supFetch(`/claims?id=eq.${id}`, {
-    method: 'PATCH',
-    body: JSON.stringify({
-      status: 'published',
-      published_at: new Date().toISOString(),
-    }),
+  await supFetch('/rpc/publish_claim', {
+    method: 'POST',
+    body: JSON.stringify({ p_claim_id: id }),
   });
   console.log(`✅ Claim ${id} publicada.`);
+}
+
+async function correctClaim(id, content) {
+  if (!content) {
+    console.log('❌ Uso: node scripts/editorial-workflow.mjs correct <claim_id> <novo_conteúdo>');
+    process.exit(1);
+  }
+
+  const claim = await supFetch('/rpc/correct_claim', {
+    method: 'POST',
+    body: JSON.stringify({
+      p_claim_id: id,
+      p_content: content,
+      p_notes: 'Correção registrada via script editorial.',
+    }),
+  });
+  console.log(`✅ Claim ${id} corrigida em nova versão ${claim?.id ?? 'desconhecida'}.`);
+}
+
+async function retractClaim(id, notes) {
+  await supFetch('/rpc/retract_claim', {
+    method: 'POST',
+    body: JSON.stringify({
+      p_claim_id: id,
+      p_notes: notes || 'Retração registrada via script editorial.',
+    }),
+  });
+  console.log(`✅ Claim ${id} retratada.`);
 }
 
 async function stats() {
@@ -109,6 +137,20 @@ async function main() {
       }
       await publishClaim(CLAIM_ID);
       break;
+    case 'correct':
+      if (!CLAIM_ID) {
+        console.log('❌ Uso: node scripts/editorial-workflow.mjs correct <claim_id> <novo_conteúdo>');
+        process.exit(1);
+      }
+      await correctClaim(CLAIM_ID, EXTRA_ARG);
+      break;
+    case 'retract':
+      if (!CLAIM_ID) {
+        console.log('❌ Uso: node scripts/editorial-workflow.mjs retract <claim_id> [motivo]');
+        process.exit(1);
+      }
+      await retractClaim(CLAIM_ID, EXTRA_ARG);
+      break;
     case 'stats':
       await stats();
       break;
@@ -119,7 +161,9 @@ Uso: node scripts/editorial-workflow.mjs <comando> [args]
 Comandos:
   list              Listar claims em rascunho (draft)
   pending           Listar claims em revisão (pending_review)
-  publish <id>      Publicar uma claim
+  publish <id>      Publicar uma claim via função transacional
+  correct <id> <t>  Corrigir como nova versão pública
+  retract <id> [m]  Retratar mantendo histórico/auditoria
   stats             Estatísticas editoriais
 `);
   }

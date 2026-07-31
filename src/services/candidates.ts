@@ -150,7 +150,7 @@ export async function fetchPublishedClaims(candidateIds: string[]): Promise<Clai
     `,
     )
     .in("candidate_id", candidateIds)
-    .eq("status", "published");
+    .in("status", ["published", "corrected"]);
 
   if (error) throw error;
 

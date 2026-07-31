@@ -47,6 +47,7 @@ function mockSupabase({
       return {
         select: vi.fn().mockReturnValue({
           in: vi.fn().mockReturnValue({
+            in: vi.fn().mockResolvedValue({ data: claims, error: claimsError }),
             eq: vi.fn().mockResolvedValue({ data: claims, error: claimsError })
           })
         })
@@ -214,9 +215,10 @@ describe('fetchPublishedClaims', () => {
         return {
           select: vi.fn().mockReturnValue({
             in: vi.fn().mockReturnValue({
-              eq: vi.fn().mockResolvedValue({
+              in: vi.fn().mockResolvedValue({
                 data: [
                   { id: 'c1', candidate_id: 'cand-1', category: 'test', content: 'Pub', confidence_score: 3, status: 'published', source_document_id: null },
+                  { id: 'c4', candidate_id: 'cand-1', category: 'test', content: 'Corr', confidence_score: 3, status: 'corrected', source_document_id: null },
                   { id: 'c2', candidate_id: 'cand-1', category: 'test', content: 'Draft', confidence_score: 3, status: 'draft', source_document_id: null },
                   { id: 'c3', candidate_id: 'cand-1', category: 'test', content: 'Pending', confidence_score: 3, status: 'pending_review', source_document_id: null },
                 ],
@@ -231,8 +233,7 @@ describe('fetchPublishedClaims', () => {
 
     const { fetchPublishedClaims } = await import('../candidates');
     const result = await fetchPublishedClaims(['cand-1']);
-    expect(result).toHaveLength(1);
-    expect(result[0].id).toBe('c1');
+    expect(result.map((claim) => claim.id)).toEqual(['c1', 'c4']);
   });
 
   it('throws on supabase error', async () => {
@@ -241,7 +242,7 @@ describe('fetchPublishedClaims', () => {
         return {
           select: vi.fn().mockReturnValue({
             in: vi.fn().mockReturnValue({
-              eq: vi.fn().mockResolvedValue({ data: null, error: { message: 'error', code: 'PGRST200' } }),
+              in: vi.fn().mockResolvedValue({ data: null, error: { message: 'error', code: 'PGRST200' } }),
             }),
           }),
         };
