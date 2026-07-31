@@ -14,10 +14,14 @@ import {
 
 const ROOT = resolve(import.meta.dirname, '..');
 const DATASET_DIR = resolve(ROOT, '../dataset2026/candidatos');
+const SIG_CANDIDATES_FILE = 'FONTE OFICIAL = sig.tse.jus.br -lista_candidatos_2026.csv';
+const DADOS_ABERTOS_CANDIDATES_FILE = 'FONTE OFICIAL  = dadosabertos.tse.jus.b = candidatos.csv';
 const OUTPUT = resolve(ROOT, SNAPSHOT_RELATIVE_PATH);
 const MANIFEST_OUTPUT = resolve(ROOT, TSE_SOURCE_MANIFEST_RELATIVE_PATH);
 const UUID_NAMESPACE = '6ba7b810-9dad-11d1-80b4-00c04fd430c8';
 const TSE_CONSULTA_CAND_URL = 'https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2026.zip';
+const TSE_SIG_CANDIDATES_URL = 'https://sig.tse.jus.br/ords/dwapr/r/seai/sig-candidaturas/lista-candidatos';
+const TSE_DADOS_ABERTOS_CANDIDATES_URL = 'https://dadosabertos.tse.jus.br/dataset/candidatos';
 
 const POSITION_MAP = {
   'DEPUTADO FEDERAL': 'deputado_federal',
@@ -26,6 +30,7 @@ const POSITION_MAP = {
   SENADOR: 'senador',
   GOVERNADOR: 'governador',
   'VICE-GOVERNADOR': 'governador',
+  'VICE GOVERNADOR': 'governador',
   PRESIDENTE: 'presidente',
 };
 
@@ -71,8 +76,15 @@ function toNullable(value) {
   return text;
 }
 
+function rowValue(row, ...keys) {
+  for (const key of keys) {
+    if (key in row) return row[key];
+  }
+  return undefined;
+}
+
 function inferPosition(value) {
-  const normalized = (toNullable(value) ?? '').toUpperCase().trim();
+  const normalized = ascii(toNullable(value) ?? '').toUpperCase().trim();
   return POSITION_MAP[normalized] ?? 'outro';
 }
 
@@ -99,6 +111,19 @@ function contentHash(candidates) {
   return createHash('sha256').update(JSON.stringify(canonical)).digest('hex');
 }
 
+function datasetSourceManifest({ csvPath, rows, datasetKey, uf, officialUrl, createdAt }) {
+  return buildDatasetSourceManifest({
+    datasetKey,
+    uf,
+    sourceKind: 'local-file',
+    sourcePath: relative(ROOT, csvPath),
+    officialUrl,
+    sha256: createHash('sha256').update(readFileSync(csvPath)).digest('hex'),
+    rowCount: rows.length,
+    createdAt,
+  });
+}
+
 function sourceManifest(csvPath, rows, csvFile, createdAt) {
   const uf = csvFile.match(/_([A-Z]{2}|BRASIL|BR)\.csv$/)?.[1] ?? 'BR';
   return buildDatasetSourceManifest({
@@ -113,7 +138,67 @@ function sourceManifest(csvPath, rows, csvFile, createdAt) {
   });
 }
 
+function buildCandidate({ fullName, party, positionValue, ballotNumberValue, tseCandidateIdValue, stateValue, ballotNameValue }) {
+  const name = toNullable(fullName);
+  const partyValue = toNullable(party);
+  if (!name || !partyValue) return null;
+
+  const position = inferPosition(positionValue);
+  const ballotNumber = toNullable(ballotNumberValue);
+  const tseCandidateId = toNullable(tseCandidateIdValue);
+
+  return {
+    id: stableId(name, partyValue),
+    slug: stableSlug(name, tseCandidateId),
+    full_name: name,
+    party: partyValue,
+    ballot_number: ballotNumber ? Number.parseInt(ballotNumber, 10) : null,
+    position,
+    position_label: POSITION_LABEL_MAP[position] ?? POSITION_LABEL_MAP.outro,
+    photo_url: null,
+    photo_source_url: null,
+    claims: [],
+    tse_candidate_id: tseCandidateId,
+    registration_status: 'registration_requested',
+    state: toNullable(stateValue),
+    election_year: 2026,
+    ballot_name: toNullable(ballotNameValue),
+  };
+}
+
+function candidateFromSigRow(row) {
+  return buildCandidate({
+    fullName: rowValue(row, 'nm_candidato'),
+    party: rowValue(row, 'sg_partido'),
+    positionValue: rowValue(row, 'ds_cargo'),
+    ballotNumberValue: rowValue(row, 'nr_candidato'),
+    tseCandidateIdValue: rowValue(row, 'sq_candidato'),
+    stateValue: rowValue(row, 'sg_uf'),
+    ballotNameValue: rowValue(row, 'nm_urna_candidato'),
+  });
+}
+
+function candidateFromConsultaCandRow(row) {
+  return buildCandidate({
+    fullName: row.NM_CANDIDATO,
+    party: row.SG_PARTIDO,
+    positionValue: row.DS_CARGO,
+    ballotNumberValue: row.NR_CANDIDATO,
+    tseCandidateIdValue: row.SQ_CANDIDATO,
+    stateValue: row.SG_UF,
+    ballotNameValue: row.NM_URNA_CANDIDATO,
+  });
+}
+
 export function generatePublicCandidateSnapshot({ datasetDir = DATASET_DIR } = {}) {
+  const sigCsvPath = resolve(datasetDir, SIG_CANDIDATES_FILE);
+  if (existsSync(sigCsvPath)) {
+    const candidates = readCsv(sigCsvPath)
+      .map(candidateFromSigRow)
+      .filter(Boolean);
+    return validatePublicCandidateSnapshot(candidates);
+  }
+
   const candidatesDir = resolve(datasetDir, 'consulta_cand_2026');
   if (!existsSync(candidatesDir)) {
     throw new Error(`Dataset TSE ausente: ${candidatesDir}`);
@@ -133,31 +218,8 @@ export function generatePublicCandidateSnapshot({ datasetDir = DATASET_DIR } = {
     const rows = readCsv(resolve(candidatesDir, csvFile));
 
     for (const row of rows) {
-      const fullName = toNullable(row.NM_CANDIDATO);
-      const party = toNullable(row.SG_PARTIDO);
-      if (!fullName || !party) continue;
-
-      const position = inferPosition(row.DS_CARGO);
-      const ballotNumber = toNullable(row.NR_CANDIDATO);
-      const tseCandidateId = toNullable(row.SQ_CANDIDATO);
-
-      candidates.push({
-        id: stableId(fullName, party),
-        slug: stableSlug(fullName, tseCandidateId),
-        full_name: fullName,
-        party,
-        ballot_number: ballotNumber ? Number.parseInt(ballotNumber, 10) : null,
-        position,
-        position_label: POSITION_LABEL_MAP[position] ?? POSITION_LABEL_MAP.outro,
-        photo_url: null,
-        photo_source_url: null,
-        claims: [],
-        tse_candidate_id: tseCandidateId,
-        registration_status: 'registration_requested',
-        state: toNullable(row.SG_UF),
-        election_year: 2026,
-        ballot_name: toNullable(row.NM_URNA_CANDIDATO),
-      });
+      const candidate = candidateFromConsultaCandRow(row);
+      if (candidate) candidates.push(candidate);
     }
   }
 
@@ -165,6 +227,40 @@ export function generatePublicCandidateSnapshot({ datasetDir = DATASET_DIR } = {
 }
 
 export function generateTseSourceManifest({ datasetDir = DATASET_DIR, createdAt = new Date().toISOString() } = {}) {
+  const sigCsvPath = resolve(datasetDir, SIG_CANDIDATES_FILE);
+  const dadosAbertosCsvPath = resolve(datasetDir, DADOS_ABERTOS_CANDIDATES_FILE);
+  if (existsSync(sigCsvPath)) {
+    const sigRows = readCsv(sigCsvPath);
+    const firstUf = toNullable(rowValue(sigRows[0] ?? {}, 'sg_uf')) ?? 'RS';
+    const manifest = [
+      datasetSourceManifest({
+        csvPath: sigCsvPath,
+        rows: sigRows,
+        datasetKey: 'sig_lista_candidatos',
+        uf: firstUf,
+        officialUrl: TSE_SIG_CANDIDATES_URL,
+        createdAt,
+      }),
+    ];
+
+    if (existsSync(dadosAbertosCsvPath)) {
+      const dadosAbertosRows = readCsv(dadosAbertosCsvPath);
+      const dadosAbertosUf = toNullable(rowValue(dadosAbertosRows[0] ?? {}, 'UF')) ?? firstUf;
+      manifest.push(
+        datasetSourceManifest({
+          csvPath: dadosAbertosCsvPath,
+          rows: dadosAbertosRows,
+          datasetKey: 'dadosabertos_candidatos',
+          uf: dadosAbertosUf,
+          officialUrl: TSE_DADOS_ABERTOS_CANDIDATES_URL,
+          createdAt,
+        }),
+      );
+    }
+
+    return manifest;
+  }
+
   const candidatesDir = resolve(datasetDir, 'consulta_cand_2026');
   if (!existsSync(candidatesDir)) {
     throw new Error(`Dataset TSE ausente: ${candidatesDir}`);

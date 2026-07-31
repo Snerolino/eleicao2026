@@ -99,6 +99,7 @@ export function mapCandidate(row: CandidateRow): Candidate {
 
 const CANDIDATE_SELECT =
   "id, slug, full_name, party, ballot_number, position, photo_url, photo_source_url, tse_candidate_id, ballot_name, state, election_year, registration_status";
+const OFFICIAL_STALE_DB_MIN_COUNT = 69;
 
 function toSafePublicId(value: string): string | null {
   const trimmed = value.trim();
@@ -252,6 +253,12 @@ export async function fetchAllCandidates(): Promise<CandidateWithClaims[]> {
   try {
     const supabaseData = await fetchAllCandidatesFromSupabase();
     if (supabaseData.length > 0) {
+      if (!lastClaimsFetchDegraded && isSupabaseSnapshotStale(supabaseData.length)) {
+        lastCandidatesFetchFromSnapshot = true;
+        lastCandidatesFetchDiagnostic = `Snapshot oficial mais completo que Supabase (${PUBLIC_CANDIDATES.length}/${supabaseData.length}).`;
+        console.warn(lastCandidatesFetchDiagnostic);
+        return fetchAllFromMock();
+      }
       lastCandidatesFetchFromSnapshot = false;
       lastCandidatesFetchDiagnostic = null;
       return supabaseData;
@@ -270,6 +277,13 @@ function fetchAllFromMock(): CandidateWithClaims[] {
     ...candidate,
     claims: onlyPublished(candidate.claims),
   }));
+}
+
+function isSupabaseSnapshotStale(supabaseCount: number): boolean {
+  return (
+    supabaseCount >= OFFICIAL_STALE_DB_MIN_COUNT &&
+    PUBLIC_CANDIDATES.length > supabaseCount
+  );
 }
 
 export async function fetchCandidateById(
