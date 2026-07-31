@@ -29,8 +29,15 @@ function normalize(text: string) {
   return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 }
 
+interface CandidateSearchCache {
+  partyLower: string;
+  nameNormalized: string;
+  labelNormalized: string;
+}
+
 function filterCandidates(
   candidates: CandidateWithClaims[],
+  cache: Map<string, CandidateSearchCache>,
   query: string,
   cargoFilter: '' | Position,
   partyFilter: string
@@ -42,17 +49,16 @@ function filterCandidates(
     if (partyFilter && c.party !== partyFilter) return false;
     if (!normalized) return true;
 
-    // Short-circuit evaluations to avoid expensive `normalize` calls
-    if (c.party.toLowerCase().includes(normalized)) return true;
+    const cached = cache.get(c.id);
+    if (!cached) return false;
+
+    if (cached.partyLower.includes(normalized)) return true;
 
     const number = c.ballot_number?.toString() ?? '';
     if (number.includes(normalized)) return true;
 
-    const name = normalize(c.full_name);
-    if (name.includes(normalized)) return true;
-
-    const label = normalize(c.position_label);
-    return label.includes(normalized);
+    if (cached.nameNormalized.includes(normalized)) return true;
+    return cached.labelNormalized.includes(normalized);
   });
 }
 
@@ -78,9 +84,21 @@ export function HomePage() {
   const claimsDegraded = query.isSuccess && wasLastClaimsFetchDegraded();
   const usingSnapshotFallback = query.isSuccess && wasLastCandidatesFetchFromSnapshot();
 
+  const searchCache = useMemo(() => {
+    const cache = new Map<string, CandidateSearchCache>();
+    for (const c of allCandidates) {
+      cache.set(c.id, {
+        partyLower: c.party.toLowerCase(),
+        nameNormalized: normalize(c.full_name),
+        labelNormalized: normalize(c.position_label),
+      });
+    }
+    return cache;
+  }, [allCandidates]);
+
   const filtered = useMemo(
-    () => filterCandidates(allCandidates, searchQuery, cargoFilter, partyFilter),
-    [allCandidates, searchQuery, cargoFilter, partyFilter]
+    () => filterCandidates(allCandidates, searchCache, searchQuery, cargoFilter, partyFilter),
+    [allCandidates, searchCache, searchQuery, cargoFilter, partyFilter]
   );
 
   const hasActiveFilter = searchQuery !== '' || cargoFilter !== '' || partyFilter !== '';

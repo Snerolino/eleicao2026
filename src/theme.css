@@ -168,7 +168,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* piso de qualidade: foco de teclado sempre visível */
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
   outline: 2px solid var(--color-institutional);
   outline-offset: 2px;
 }

@@ -5,6 +5,12 @@ import { chromium } from 'playwright';
 import { loadPublicCandidateSnapshot } from './public-candidate-snapshot.mjs';
 
 const DEFAULT_URL = 'http://127.0.0.1:4173/';
+export const SMOKE_VIEWPORTS = [
+  { width: 320, height: 640, label: 'mobile-320' },
+  { width: 390, height: 844, label: 'mobile-390' },
+  { width: 768, height: 1024, label: 'tablet' },
+  { width: 1280, height: 720, label: 'desktop' },
+];
 
 function getArg(name) {
   const prefix = `${name}=`;
@@ -157,6 +163,12 @@ async function main() {
     await page.goto(baseUrl, { waitUntil: 'networkidle' });
     const { homeCount } = await assertHomeHasCandidates(page, expectedCount);
 
+    for (const viewport of SMOKE_VIEWPORTS) {
+      await page.setViewportSize({ width: viewport.width, height: viewport.height });
+      await page.goto(baseUrl, { waitUntil: 'networkidle' });
+      await assertHomeHasCandidates(page, expectedCount);
+    }
+
     await page.getByRole('searchbox', { name: /buscar candidatos/i }).fill('ADEMAR');
     await page.waitForTimeout(250);
     const filteredCount = await page.locator('main article').count();
@@ -207,6 +219,17 @@ async function main() {
     const compareText = await page.locator('body').innerText();
     if (!compareText.includes('2 selecionados')) {
       fail('Comparação não registrou 2 candidatos selecionados.');
+    }
+    if (!page.url().includes('candidatos=')) {
+      fail(`Comparação não atualizou rota compartilhável: ${page.url()}`);
+    }
+
+    const sharedCompareUrl = page.url();
+    await page.goto(sharedCompareUrl, { waitUntil: 'networkidle' });
+    await page.waitForSelector('table', { timeout: 10_000 });
+    const sharedCompareText = await page.locator('body').innerText();
+    if (!sharedCompareText.includes('2 selecionados')) {
+      fail('Rota compartilhável de comparação não abriu com 2 selecionados.');
     }
 
     if (consoleErrors.length > 0) fail('Console errors durante smoke online.', consoleErrors.join('\n'));

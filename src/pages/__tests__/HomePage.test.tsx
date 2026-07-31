@@ -46,6 +46,18 @@ const officialCandidate: CandidateWithClaims = {
   claims: [],
 };
 
+const accentCandidate: CandidateWithClaims = {
+  ...officialCandidate,
+  id: 'candidate-2',
+  slug: 'jose_ademar_2',
+  tse_candidate_id: '2',
+  full_name: 'José Ademar',
+  party: 'PDT',
+  ballot_number: 5678,
+  position: 'deputado_estadual',
+  position_label: 'Deputado Estadual',
+};
+
 function renderHome() {
   return render(
     <MemoryRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
@@ -142,5 +154,31 @@ describe('HomePage estados honestos H5.2', () => {
 
     expect(screen.getByText(/fallback oficial validado/i)).toBeInTheDocument();
     expect(screen.getByText('Candidata Oficial')).toBeInTheDocument();
+  });
+
+  it('busca por acento, partido, número e cargo retorna resultados corretos', async () => {
+    queryState.value = {
+      ...queryState.value,
+      data: [officialCandidate, accentCandidate],
+    };
+    renderHome();
+
+    const search = screen.getByRole('searchbox', { name: /buscar candidatos/i });
+
+    fireEvent.change(search, { target: { value: 'Jose' } });
+    expect(await screen.findByText('José Ademar')).toBeInTheDocument();
+    expect(screen.queryByText('Candidata Oficial')).not.toBeInTheDocument();
+
+    fireEvent.change(search, { target: { value: 'PDT' } });
+    expect(await screen.findByText('José Ademar')).toBeInTheDocument();
+    expect(screen.queryByText('Candidata Oficial')).not.toBeInTheDocument();
+
+    fireEvent.change(search, { target: { value: '1234' } });
+    expect(await screen.findByText('Candidata Oficial')).toBeInTheDocument();
+    expect(screen.queryByText('José Ademar')).not.toBeInTheDocument();
+
+    fireEvent.change(search, { target: { value: 'estadual' } });
+    expect(await screen.findByText('José Ademar')).toBeInTheDocument();
+    expect(screen.queryByText('Candidata Oficial')).not.toBeInTheDocument();
   });
 });

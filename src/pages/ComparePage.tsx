@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useMemo } from 'react';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { fetchAllCandidates } from '@/services/candidates';
 import { CandidatePhoto } from '@/components/candidates/CandidatePhoto';
@@ -56,13 +56,32 @@ function SectionCell({
   );
 }
 
+function parseSharedCandidateIds(
+  rawIds: string | null,
+  validIds: ReadonlySet<string>
+): string[] {
+  const result: string[] = [];
+  for (const rawId of (rawIds ?? '').split(',')) {
+    const id = rawId.trim();
+    if (!id || !validIds.has(id) || result.includes(id)) continue;
+    result.push(id);
+    if (result.length === 4) break;
+  }
+  return result;
+}
+
+function serializeSelectedIds(ids: Iterable<string>): string {
+  return [...ids].join(',');
+}
+
 export function ComparePage() {
   usePageMetadata(
     'Comparar candidatos — Portal Transparência Eleitoral RS',
     'Selecione e compare candidatos lado a lado nas eleições 2026 no RS.'
   );
 
-  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
+  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
 
   const query = useQuery<CandidateWithClaims[]>({
     queryKey: ['candidates'],
@@ -72,18 +91,38 @@ export function ComparePage() {
   });
 
   const candidates = query.data ?? [];
+  const validCandidateIds = useMemo(() => new Set(candidates.map((c) => c.id)), [candidates]);
+
+  const sharedIds = useMemo(
+    () => parseSharedCandidateIds(searchParams.get('candidatos'), validCandidateIds),
+    [searchParams, validCandidateIds]
+  );
+
+  const selectedIds = useMemo(() => new Set(sharedIds), [sharedIds]);
+
+  useEffect(() => {
+    if (query.isLoading) return;
+    const sharedValue = serializeSelectedIds(sharedIds);
+    if ((searchParams.get('candidatos') ?? '') !== sharedValue) {
+      navigate({ search: sharedValue ? `?candidatos=${sharedValue}` : '' }, { replace: true });
+    }
+  }, [navigate, query.isLoading, searchParams, sharedIds]);
+
   const selected = useMemo(
     () => candidates.filter((c) => selectedIds.has(c.id)),
     [candidates, selectedIds]
   );
 
+  const updateSharedRoute = (ids: string[]) => {
+    const value = serializeSelectedIds(ids.slice(0, 4));
+    navigate({ search: value ? `?candidatos=${value}` : '' }, { replace: false });
+  };
+
   const toggleCandidate = (id: string) => {
-    setSelectedIds((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id);
-      else if (next.size < 4) next.add(id);
-      return next;
-    });
+    const next = sharedIds.includes(id)
+      ? sharedIds.filter((selectedId) => selectedId !== id)
+      : [...sharedIds, id].slice(0, 4);
+    updateSharedRoute(next);
   };
 
   if (query.isLoading) {
@@ -188,7 +227,9 @@ export function ComparePage() {
             </span>
             <button
               type="button"
-              onClick={() => setSelectedIds(new Set())}
+              onClick={() => {
+                updateSharedRoute([]);
+              }}
               className="font-mono text-xs text-[var(--color-unverified)] underline underline-offset-2"
             >
               Limpar tudo
