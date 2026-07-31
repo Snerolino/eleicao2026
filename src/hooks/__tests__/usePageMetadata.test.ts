@@ -48,6 +48,25 @@ describe('usePageMetadata', () => {
 
     const ogUrl = document.querySelector('meta[property="og:url"]');
     expect(ogUrl).toHaveAttribute('content', 'https://example.com/custom');
+
+    const canonical = document.querySelector('link[rel="canonical"]');
+    expect(canonical).toHaveAttribute('href', 'https://example.com/custom');
+  });
+
+  it('uses canonical URL separately from OG URL when provided', () => {
+    renderHook(() => usePageMetadata('Test Title', 'Test Description', {
+      url: 'https://example.com/share-url',
+      canonical: 'https://example.com/canonical-url',
+    }));
+
+    expect(document.querySelector('meta[property="og:url"]')).toHaveAttribute(
+      'content',
+      'https://example.com/share-url'
+    );
+    expect(document.querySelector('link[rel="canonical"]')).toHaveAttribute(
+      'href',
+      'https://example.com/canonical-url'
+    );
   });
 
   it('adds Twitter Card meta tags', () => {
@@ -79,6 +98,9 @@ describe('usePageMetadata', () => {
 
     const ogUrl = document.querySelector('meta[property="og:url"]');
     expect(ogUrl).toHaveAttribute('content', 'https://example.com/test');
+
+    const canonical = document.querySelector('link[rel="canonical"]');
+    expect(canonical).toHaveAttribute('href', 'https://example.com/test');
   });
 
   it('updates existing meta tags rather than creating new ones', () => {

@@ -5,6 +5,7 @@ import { chromium } from 'playwright';
 import { loadPublicCandidateSnapshot } from './public-candidate-snapshot.mjs';
 
 const DEFAULT_URL = 'http://127.0.0.1:4173/';
+const MANIFEST_PATH = 'manifest.webmanifest';
 export const SMOKE_VIEWPORTS = [
   { width: 320, height: 640, label: 'mobile-320' },
   { width: 390, height: 844, label: 'mobile-390' },
@@ -78,6 +79,35 @@ export async function assertOfflineRender(offlineBody, serviceWorkerReady) {
     !normalizedBody.includes('offline')
   ) {
     fail('Modo offline renderizou conteúdo inesperado.', `body="${normalizedBody.slice(0, 500)}"`);
+  }
+}
+
+export async function assertPwaInstallability(page) {
+  const manifest = await page.evaluate(async (manifestPath) => {
+    const link = document.querySelector('link[rel="manifest"]');
+    const href = link?.getAttribute('href');
+    if (!href) return { error: 'manifest link ausente' };
+    if (!href.endsWith(manifestPath)) return { error: `manifest inesperado: ${href}` };
+    const response = await fetch(href);
+    if (!response.ok) return { error: `manifest HTTP ${response.status}` };
+    return response.json();
+  }, MANIFEST_PATH);
+
+  if (manifest.error) fail(`Manifest PWA inválido: ${manifest.error}`);
+  if (manifest.start_url !== '/') fail(`Manifest start_url inesperado: ${manifest.start_url}`);
+  if (manifest.scope !== '/') fail(`Manifest scope inesperado: ${manifest.scope}`);
+  if (manifest.display !== 'standalone') fail(`Manifest display inesperado: ${manifest.display}`);
+
+  const icons = Array.isArray(manifest.icons) ? manifest.icons : [];
+  for (const [size, purpose] of [
+    ['192x192', 'any'],
+    ['512x512', 'any'],
+    ['192x192', 'maskable'],
+    ['512x512', 'maskable'],
+  ]) {
+    if (!icons.some((icon) => icon.sizes === size && icon.purpose === purpose)) {
+      fail(`Manifest sem ícone ${size} ${purpose}.`);
+    }
   }
 }
 
@@ -162,6 +192,7 @@ async function main() {
   try {
     await page.goto(baseUrl, { waitUntil: 'networkidle' });
     const { homeCount } = await assertHomeHasCandidates(page, expectedCount);
+    await assertPwaInstallability(page);
 
     for (const viewport of SMOKE_VIEWPORTS) {
       await page.setViewportSize({ width: viewport.width, height: viewport.height });
@@ -241,7 +272,8 @@ async function main() {
       if (!('serviceWorker' in navigator)) return false;
       try {
         await navigator.serviceWorker.ready;
-        return Boolean(navigator.serviceWorker.controller || (await navigator.serviceWorker.getRegistration()));
+        const registration = await navigator.serviceWorker.getRegistration('/');
+        return Boolean(navigator.serviceWorker.controller || registration);
       } catch {
         return false;
       }
