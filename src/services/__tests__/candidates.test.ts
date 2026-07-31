@@ -256,6 +256,19 @@ describe('fetchPublishedClaims', () => {
 });
 
 describe('fetchAllCandidates', () => {
+  function staleOfficialRows(count = 69) {
+    return Array.from({ length: count }, (_, index) => ({
+      id: `stale-db-candidate-${index}`,
+      full_name: `Candidata Defasada ${index}`,
+      party: 'TSE',
+      ballot_number: 1000 + index,
+      position: 'deputado federal',
+      photo_url: null,
+      photo_source_url: null,
+      tse_candidate_id: `2100001${String(index).padStart(5, '0')}`,
+    }));
+  }
+
   it('mantém candidatos oficiais quando claims falha', async () => {
     const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
     mockSupabase({ claimsError: { code: 'PGRST200', message: 'relationship error' } });
@@ -345,6 +358,25 @@ describe('fetchAllCandidates', () => {
     const result = await fetchAllCandidates();
 
     expect(result.length).toBeGreaterThan(1);
+  });
+
+  it('usa snapshot versionado quando Supabase está populado porém defasado frente à fonte oficial', async () => {
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    mockSupabase({ candidates: staleOfficialRows(69) });
+
+    const {
+      fetchAllCandidates,
+      getLastCandidatesFetchDiagnostic,
+      wasLastCandidatesFetchFromSnapshot,
+    } = await import('../candidates');
+    const result = await fetchAllCandidates();
+
+    expect(result).toHaveLength(213);
+    expect(result.some((candidate) => candidate.tse_candidate_id === '210002533015')).toBe(true);
+    expect(wasLastCandidatesFetchFromSnapshot()).toBe(true);
+    expect(getLastCandidatesFetchDiagnostic()).toMatch(/snapshot oficial mais completo/i);
+    expect(warnSpy).toHaveBeenCalledWith(expect.stringMatching(/Snapshot oficial mais completo/));
+    warnSpy.mockRestore();
   });
 
   it('retorna claims vazias quando endpoint de claims retorna vazio', async () => {
