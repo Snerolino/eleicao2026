@@ -325,12 +325,17 @@ describe('fetchAllCandidates', () => {
   it('usa snapshot quando supabase retorna 500', async () => {
     mockSupabase({ candidatesError: { message: 'Internal Server Error', code: '500' } });
 
-    const { fetchAllCandidates, wasLastCandidatesFetchFromSnapshot } = await import('../candidates');
+    const {
+      fetchAllCandidates,
+      getLastCandidatesFetchDiagnostic,
+      wasLastCandidatesFetchFromSnapshot,
+    } = await import('../candidates');
     const result = await fetchAllCandidates();
 
     expect(result.length).toBeGreaterThan(0);
     expect(result.some((c) => c.id === 'db-candidate-1')).toBe(false);
     expect(wasLastCandidatesFetchFromSnapshot()).toBe(true);
+    expect(getLastCandidatesFetchDiagnostic()).toMatch(/Internal Server Error/);
   });
 
   it('usa snapshot quando supabase retorna lista vazia', async () => {

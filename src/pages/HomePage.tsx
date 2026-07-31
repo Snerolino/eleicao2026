@@ -6,6 +6,7 @@ import { CargoSection } from '@/components/candidates/CargoSection';
 import { DataFreshness } from '@/components/DataFreshness';
 import { CandidateSearch } from '@/components/CandidateSearch';
 import {
+  EmptyState,
   ErrorState,
   LoadingSkeleton
 } from '@/components/states';
@@ -97,7 +98,8 @@ export function HomePage() {
       <main id="main-content" className="mx-auto max-w-6xl px-4 py-8">
         <ErrorState
           onRetry={() => query.refetch()}
-          message="Não foi possível carregar a lista de candidatos."
+          title="Indisponibilidade temporária"
+          message="Não foi possível confirmar a lista oficial agora. Tente novamente em instantes."
         />
       </main>
     );
@@ -115,6 +117,8 @@ export function HomePage() {
       {claimsDegraded && (
         <div
           role="status"
+          aria-label="Editoria indisponível"
+          aria-live="polite"
           className="mb-4 rounded-sm border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-900"
         >
           Informações editoriais temporariamente indisponíveis. A lista oficial de candidatos continua disponível.
@@ -165,11 +169,20 @@ export function HomePage() {
 
       {filtered.length === 0 ? (
         <div className="mt-20 text-center">
-          <p className="font-mono text-sm text-[var(--color-muted-ink)]">
-            {hasActiveFilter
-              ? 'Nenhum candidato encontrado para essa busca.'
-              : 'Nenhum candidato está disponível no momento.'}
-          </p>
+          {hasActiveFilter ? (
+            <p className="font-mono text-sm text-[var(--color-muted-ink)]">
+              Nenhum candidato corresponde aos filtros atuais.
+            </p>
+          ) : (
+            <EmptyState ariaLabel="Estado da lista">
+              <p>
+                Nenhuma candidatura oficial encontrada na fonte atual.
+              </p>
+              <p className="mt-2">
+                Isso indica snapshot oficial vazio, não erro de conexão. Verifique a origem dos dados no pipeline TSE.
+              </p>
+            </EmptyState>
+          )}
           {hasActiveFilter && (
             <button
               type="button"
