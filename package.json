@@ -8,11 +8,12 @@
     "data:refresh": "node scripts/refresh-public-snapshot.mjs",
     "data:check": "node scripts/data-check.mjs",
     "env:check": "node scripts/build-env-check.mjs",
-    "build": "npm run data:check && tsc -b && vite build && node scripts/generate-sitemap.mjs",
+    "build": "npm run data:check && tsc -b && vite build && node scripts/generate-sitemap.mjs && node scripts/generate-release-metadata.mjs",
     "build:deploy": "npm run env:check -- --require-supabase && npm run build",
     "preview": "vite preview",
     "smoke:local": "node scripts/smoke-browser.mjs --start-preview --url http://127.0.0.1:4173/",
     "smoke:preview": "node scripts/smoke-browser.mjs",
+    "health:preview": "node scripts/health-check.mjs",
     "test": "NODE_ENV=test vitest run",
     "test:watch": "NODE_ENV=test vitest"
   },
