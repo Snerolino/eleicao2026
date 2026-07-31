@@ -63,12 +63,19 @@ export function ErrorState({
 }
 
 export function EmptyState({
-  children
+  children,
+  ariaLabel = 'Estado vazio'
 }: {
   children: ReactNode;
+  ariaLabel?: string;
 }) {
   return (
-    <section className="rounded-md border border-dashed border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-6 text-sm text-[var(--color-muted-ink)]">
+    <section
+      role="status"
+      aria-label={ariaLabel}
+      aria-live="polite"
+      className="rounded-md border border-dashed border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-6 text-sm text-[var(--color-muted-ink)]"
+    >
       {children}
     </section>
   );

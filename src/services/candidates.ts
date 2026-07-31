@@ -49,6 +49,7 @@ interface ClaimRow {
 
 let lastClaimsFetchDegraded = false;
 let lastCandidatesFetchFromSnapshot = false;
+let lastCandidatesFetchDiagnostic: string | null = null;
 
 export function wasLastClaimsFetchDegraded(): boolean {
   return lastClaimsFetchDegraded;
@@ -56,6 +57,19 @@ export function wasLastClaimsFetchDegraded(): boolean {
 
 export function wasLastCandidatesFetchFromSnapshot(): boolean {
   return lastCandidatesFetchFromSnapshot;
+}
+
+export function getLastCandidatesFetchDiagnostic(): string | null {
+  return lastCandidatesFetchDiagnostic;
+}
+
+function technicalErrorMessage(error: unknown): string {
+  if (error instanceof Error) return error.message;
+  if (error && typeof error === "object" && "message" in error) {
+    const message = (error as { message?: unknown }).message;
+    if (typeof message === "string" && message.trim()) return message;
+  }
+  return "erro desconhecido";
 }
 
 function clampConfidence(score: number | null): 1 | 2 | 3 | 4 | 5 {
@@ -239,9 +253,11 @@ export async function fetchAllCandidates(): Promise<CandidateWithClaims[]> {
     const supabaseData = await fetchAllCandidatesFromSupabase();
     if (supabaseData.length > 0) {
       lastCandidatesFetchFromSnapshot = false;
+      lastCandidatesFetchDiagnostic = null;
       return supabaseData;
     }
-  } catch {
+  } catch (candidateError) {
+    lastCandidatesFetchDiagnostic = technicalErrorMessage(candidateError);
     // Supabase unavailable — fall through to mock
   }
 
