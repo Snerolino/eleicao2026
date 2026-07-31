@@ -26,7 +26,7 @@ describe('normalizeSourceCategory', () => {
 });
 
 describe('onlyPublished', () => {
-  it('mantém exclusivamente status published', () => {
+  it('mantém exclusivamente status published e corrected', () => {
     const values: Array<{ status: ClaimStatus }> = [
       { status: 'draft' },
       { status: 'published' },
@@ -38,6 +38,7 @@ describe('onlyPublished', () => {
 
     expect(onlyPublished(values)).toEqual([
       { status: 'published' },
+      { status: 'corrected' },
       { status: 'published' }
     ]);
   });
