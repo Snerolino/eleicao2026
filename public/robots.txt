@@ -1,2 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /editorial
+Disallow: /login
+Sitemap: https://portal-transparencia-rs.pages.dev/sitemap.xml

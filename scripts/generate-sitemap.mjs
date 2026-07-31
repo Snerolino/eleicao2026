@@ -53,6 +53,17 @@ ${allPages
 </urlset>`;
 }
 
+export function generateRobotsTxt(options = {}) {
+  const baseUrl = options.baseUrl ?? BASE_URL;
+  return `User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /editorial
+Disallow: /login
+Sitemap: ${baseUrl}/sitemap.xml
+`;
+}
+
 function main() {
   console.log('🔄 Gerando sitemap do snapshot público versionado...');
 
@@ -62,13 +73,7 @@ function main() {
   writeFileSync(resolve(DIST_DIR, 'sitemap.xml'), sitemap);
   console.log(`✅ sitemap.xml (${candidates.length} candidatos + estáticas = ${candidates.length + 2} URLs)`);
 
-  writeFileSync(
-    resolve(DIST_DIR, 'robots.txt'),
-    `User-agent: *
-Allow: /
-Sitemap: ${BASE_URL}/sitemap.xml
-`,
-  );
+  writeFileSync(resolve(DIST_DIR, 'robots.txt'), generateRobotsTxt());
   console.log('✅ robots.txt');
 }
 
