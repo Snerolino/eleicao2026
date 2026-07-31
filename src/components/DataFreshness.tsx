@@ -1,12 +1,19 @@
 import { useOnlineStatus } from '@/hooks/useOnlineStatus';
 
 export function DataFreshness({
-  updatedAt
+  updatedAt,
+  snapshotCreatedAt,
+  snapshotScope,
+  source = 'supabase'
 }: {
   updatedAt: number;
+  snapshotCreatedAt?: string | null;
+  snapshotScope?: string | null;
+  source?: 'supabase' | 'snapshot';
 }) {
   const isOnline = useOnlineStatus();
   const hasTimestamp = updatedAt > 0;
+  const hasSnapshotTimestamp = Boolean(snapshotCreatedAt);
 
   return (
     <div
@@ -24,6 +31,22 @@ export function DataFreshness({
             dateStyle: 'short',
             timeStyle: 'short'
           }).format(new Date(updatedAt))}
+        </span>
+      )}
+
+      {source === 'snapshot' && (
+        <span>
+          fallback oficial validado
+          {snapshotScope ? ` (${snapshotScope})` : ''}
+          {hasSnapshotTimestamp && (
+            <>
+              {' '}em{' '}
+              {new Intl.DateTimeFormat('pt-BR', {
+                dateStyle: 'short',
+                timeStyle: 'short'
+              }).format(new Date(snapshotCreatedAt as string))}
+            </>
+          )}
         </span>
       )}
 

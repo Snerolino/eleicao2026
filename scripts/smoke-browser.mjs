@@ -58,6 +58,23 @@ export async function assertHomeHasCandidates(page, expectedCount) {
   return { homeCount, bodyText };
 }
 
+export async function assertOfflineRender(offlineBody, serviceWorkerReady) {
+  const normalizedBody = offlineBody.replace(/\s+/g, ' ').trim();
+  if (!serviceWorkerReady) {
+    fail('Service worker não ficou pronto antes do teste offline.');
+  }
+  if (!normalizedBody) {
+    fail('Modo offline não renderizou conteúdo previsível.');
+  }
+  if (
+    !normalizedBody.includes('Portal Transparência Eleitoral RS') &&
+    !normalizedBody.includes('Candidatos') &&
+    !normalizedBody.includes('offline')
+  ) {
+    fail('Modo offline renderizou conteúdo inesperado.', `body="${normalizedBody.slice(0, 500)}"`);
+  }
+}
+
 async function waitForServer(url, timeoutMs = 30_000) {
   const start = Date.now();
   let lastError;
@@ -214,9 +231,12 @@ async function main() {
     await context.setOffline(true);
     await page.goto(baseUrl, { waitUntil: 'domcontentloaded' }).catch(() => null);
     const offlineBody = await page.locator('body').innerText({ timeout: 10_000 }).catch(() => '');
+    await page.goto(detailUrl, { waitUntil: 'domcontentloaded' }).catch(() => null);
+    const offlineDetailHeading = await page.locator('main h1').first().innerText({ timeout: 10_000 }).catch(() => '');
     await context.setOffline(false);
-    if (!serviceWorkerReady && !offlineBody) {
-      fail('Smoke offline básico não encontrou service worker nem página renderizada.');
+    await assertOfflineRender(offlineBody, serviceWorkerReady);
+    if (!offlineDetailHeading.trim()) {
+      fail('Detalhe já visitado não renderizou h1 em modo offline.');
     }
 
     console.log('✅ Smoke browser OK');
@@ -227,6 +247,7 @@ async function main() {
       searchCards: filteredCount,
       detailHeading,
       canonicalDetailUrl: detailUrl,
+      offlineDetailHeading,
       serviceWorkerReady,
       httpFailures: httpFailures.length,
       onlineConsoleErrors: 0,

@@ -48,9 +48,14 @@ interface ClaimRow {
 }
 
 let lastClaimsFetchDegraded = false;
+let lastCandidatesFetchFromSnapshot = false;
 
 export function wasLastClaimsFetchDegraded(): boolean {
   return lastClaimsFetchDegraded;
+}
+
+export function wasLastCandidatesFetchFromSnapshot(): boolean {
+  return lastCandidatesFetchFromSnapshot;
 }
 
 function clampConfidence(score: number | null): 1 | 2 | 3 | 4 | 5 {
@@ -226,18 +231,21 @@ async function fetchCandidateFromSupabase(
 
 export async function fetchAllCandidates(): Promise<CandidateWithClaims[]> {
   if (!isSupabaseConfigured) {
+    lastCandidatesFetchFromSnapshot = true;
     return fetchAllFromMock();
   }
 
   try {
     const supabaseData = await fetchAllCandidatesFromSupabase();
     if (supabaseData.length > 0) {
+      lastCandidatesFetchFromSnapshot = false;
       return supabaseData;
     }
   } catch {
     // Supabase unavailable — fall through to mock
   }
 
+  lastCandidatesFetchFromSnapshot = true;
   return fetchAllFromMock();
 }
 

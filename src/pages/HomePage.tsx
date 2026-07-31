@@ -11,8 +11,10 @@ import {
 } from '@/components/states';
 import {
   fetchAllCandidates,
+  wasLastCandidatesFetchFromSnapshot,
   wasLastClaimsFetchDegraded
 } from '@/services/candidates';
+import { PUBLIC_CANDIDATES_SNAPSHOT } from '@/services/publicCandidates';
 import { downloadCandidatesCSV } from '@/utils/download';
 import {
   POSITION_ORDER,
@@ -73,6 +75,7 @@ export function HomePage() {
 
   const allCandidates = query.data ?? [];
   const claimsDegraded = query.isSuccess && wasLastClaimsFetchDegraded();
+  const usingSnapshotFallback = query.isSuccess && wasLastCandidatesFetchFromSnapshot();
 
   const filtered = useMemo(
     () => filterCandidates(allCandidates, searchQuery, cargoFilter, partyFilter),
@@ -102,7 +105,12 @@ export function HomePage() {
 
   return (
     <main id="main-content" className="mx-auto max-w-6xl px-4 py-8">
-      <DataFreshness updatedAt={query.dataUpdatedAt} />
+      <DataFreshness
+        updatedAt={query.dataUpdatedAt}
+        source={usingSnapshotFallback ? 'snapshot' : 'supabase'}
+        snapshotCreatedAt={PUBLIC_CANDIDATES_SNAPSHOT.createdAt}
+        snapshotScope={PUBLIC_CANDIDATES_SNAPSHOT.scope}
+      />
 
       {claimsDegraded && (
         <div
