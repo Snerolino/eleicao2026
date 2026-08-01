@@ -35,14 +35,17 @@ Cada informação mostra sua fonte, data de coleta e nível de confiança — um
 
 ## Dados
 
-Atualmente o portal usa **69 candidaturas oficiais TSE 2026 do Rio Grande do Sul**, sanitizadas em snapshot público versionado (`data/public-candidates.json`):
+Atualmente o portal usa **213 candidaturas oficiais TSE 2026 do Rio Grande do Sul**, sanitizadas em snapshot público versionado (`data/public-candidates.json`) e também importadas no Supabase remoto público:
 
 | Cargo | Candidatos | Partidos |
 |-------|-----------|----------|
-| Deputado Federal | 29 | NOVO |
-| Deputado Estadual | 40 | NOVO |
+| Deputado Estadual | 111 | múltiplos |
+| Deputado Federal | 88 | múltiplos |
+| Governador | 2 | múltiplos |
+| Senador | 4 | múltiplos |
+| Outros/suplentes | 8 | múltiplos |
 
-Quando o Supabase está configurado, os dados vêm do banco. Caso contrário, o fallback lê o snapshot público versionado, sem depender de `../dataset2026` no build.
+Quando o Supabase público está saudável, os dados vêm do banco. Se a camada pública estiver indisponível ou defasada, o fallback lê o snapshot público versionado e sinaliza a degradação sem depender de `../dataset2026` no build.
 
 ## Desenvolvimento
 
@@ -78,7 +81,7 @@ Copie `.env.example` para `.env.local` e preencha:
 | `VITE_SUPABASE_URL` | Sim (para dados reais) | URL do projeto Supabase |
 | `VITE_SUPABASE_ANON_KEY` | Sim (para dados reais) | Chave anônima do Supabase |
 
-Sem as variáveis, o site funciona em **modo de demonstração** com `data/public-candidates.json` e exibe um banner identificando o modo de teste.
+Sem as variáveis, o build ainda usa `data/public-candidates.json` como snapshot oficial versionado para manter a consulta pública íntegra em desenvolvimento/local.
 
 ### Scripts auxiliares
 
@@ -88,21 +91,29 @@ Sem as variáveis, o site funciona em **modo de demonstração** com `data/publi
 | `scripts/data-check.mjs` | Valida schema, contagem mínima, unicidade e campos proibidos do snapshot |
 | `scripts/build-env-check.mjs` | Preflight de build/deploy para variáveis públicas Supabase |
 | `scripts/generate-sitemap.mjs` | Gera `sitemap.xml` e `robots.txt` a partir do snapshot público |
-| `scripts/ingest-data.mjs` | Importa dados CSV do TSE para o Supabase |
+| `scripts/tse-ingest-pipeline.mjs` | Pipeline auditável de ingestão TSE para staging/upsert Supabase |
+| `scripts/insert-fontes-oficiais.mjs` | Cria fontes/claims oficiais como `pending_review`; `--apply` exige service role explícito |
 | `scripts/editorial-workflow.mjs` | Workflow editorial para curadoria de claims |
 | `scripts/fetch-tse-photos.mjs` | Baixa fotos oficiais do TSE |
 | `scripts/tse-connector.mjs` | Conector com a API do TSE |
 
 ## Deploy
 
-O deploy é feito manualmente via wrangler:
+O deploy de produção é feito preferencialmente via GitHub Actions após merge em `main`:
+
+```bash
+git push origin main
+gh run list --branch main --workflow Deploy --limit 3
+npm run smoke:preview -- --url https://portal-transparencia-rs.pages.dev/
+npm run health:preview -- --url https://portal-transparencia-rs.pages.dev/
+```
+
+Deploy manual via wrangler fica como operação excepcional/runbook:
 
 ```bash
 npm run build
-wrangler pages deploy dist --project-name=portal-transparencia-rs --branch=main
+npx wrangler pages deploy dist --project-name=portal-transparencia-rs --branch=main
 ```
-
-Ou via CI/CD (GitHub Actions) quando `CLOUDFLARE_API_TOKEN` estiver configurado no repositório.
 
 ## Estrutura do projeto
 

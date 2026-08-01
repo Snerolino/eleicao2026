@@ -39,6 +39,12 @@
 | [`runbooks/h6-2-seguranca-headers-dependencias.md`](runbooks/h6-2-seguranca-headers-dependencias.md) | Headers, CSP report-only, auditoria de dependências e hardening editorial |
 | [`runbooks/h6-3-incidentes-recuperacao.md`](runbooks/h6-3-incidentes-recuperacao.md) | Incidentes, diagnóstico, rollback e decisões humanas obrigatórias |
 
+## Release
+
+| Arquivo | Descrição |
+|---------|-----------|
+| [`release/fase-7-checklist-mvp.md`](release/fase-7-checklist-mvp.md) | Checklist final Fase 7, evidências de MVP operacional e gates humanos restantes |
+
 ## Scripts
 
 Ver `scripts/` na raiz do projeto para scripts de build, ingestão e TSE.
