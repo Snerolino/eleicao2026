@@ -23,12 +23,14 @@ describe('downloadCandidatesCSV', () => {
       })
     } as any;
 
-    // Mock Blob
+    // Mock Blob como construtor compatível com Vitest 4/new Blob(...)
     let blobContent: string[] = [];
-    global.Blob = vi.fn().mockImplementation((content: string[], _options: any) => {
-      blobContent = content;
-      return {};
-    }) as any;
+    class MockBlob {
+      constructor(content: string[], _options: any) {
+        blobContent = content;
+      }
+    }
+    global.Blob = MockBlob as any;
 
     const candidates = [
       {

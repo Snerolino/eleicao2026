@@ -1,9 +1,17 @@
 # Security & caching headers for Cloudflare Pages
 /*
+  Content-Security-Policy-Report-Only: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; connect-src 'self' https://*.supabase.co https://*.supabase.in wss://*.supabase.co wss://*.supabase.in; img-src 'self' data: blob: https:; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; worker-src 'self' blob:; manifest-src 'self'; form-action 'self'
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), serial=(), bluetooth=(), clipboard-read=(), clipboard-write=(self)
 
 # Sitemap
 /sitemap.xml
   Cache-Control: public, max-age=3600
+
+# Manifest and release metadata must revalidate after each deploy
+/manifest.webmanifest
+  Cache-Control: public, max-age=0, must-revalidate
+/release.json
+  Cache-Control: public, max-age=0, must-revalidate
