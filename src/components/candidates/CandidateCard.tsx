@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Link } from 'react-router-dom';
 import type { CandidateWithClaims } from '@/types/election';
 import { SourceReferenceBadge } from '@/components/sources/SourceReferenceBadge';
@@ -9,7 +10,8 @@ interface CandidateCardProps {
   candidate: CandidateWithClaims;
 }
 
-export function CandidateCard({
+// ⚡ Bolt: Wrapped in React.memo() to prevent unnecessary re-renders when parent (HomePage/CargoSection) state changes (e.g., during search input typing)
+export const CandidateCard = memo(function CandidateCard({
   candidate
 }: CandidateCardProps) {
   const summary = candidate.claims.find(
@@ -80,4 +82,4 @@ export function CandidateCard({
       </div>
     </article>
   );
-}
+});

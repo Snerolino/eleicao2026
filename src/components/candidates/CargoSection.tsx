@@ -1,3 +1,4 @@
+import { memo } from "react";
 import type {
   CandidateWithClaims,
   Position
@@ -10,7 +11,8 @@ interface CargoSectionProps {
   candidates: CandidateWithClaims[];
 }
 
-export function CargoSection({
+// ⚡ Bolt: Wrapped in React.memo() to prevent unnecessary re-renders when parent (HomePage) state changes (e.g., during search input typing)
+export const CargoSection = memo(function CargoSection({
   position,
   candidates
 }: CargoSectionProps) {
@@ -50,4 +52,4 @@ export function CargoSection({
       </div>
     </section>
   );
-}
+});
