@@ -118,11 +118,11 @@ Candidatura ainda sem `summary` publicada:
 
 ## Atenções / riscos próximos
 
-1. `scripts/insert-fontes-oficiais.mjs` precisa de revisão antes de virar rotina operacional:
-   - usa `SUPABASE_SERVICE_ROLE_KEY || VITE_SUPABASE_ANON_KEY`;
-   - insere claims já como `published` diretamente;
-   - isso contorna o fluxo transacional H4.2 (`publish_claim`) se usado com privilégios de escrita;
-   - recomendação: transformar em script idempotente/admin com service role obrigatório, ou adaptar para criar claims `pending_review` + review/RPC transacional.
+1. `scripts/insert-fontes-oficiais.mjs` foi endurecido no bloco H6.2:
+   - escrita exige `SUPABASE_SERVICE_ROLE_KEY` explícito;
+   - não faz fallback de escrita para anon;
+   - cria claims somente como `pending_review`;
+   - publicação continua exigindo fluxo transacional H4.2 (`review` aprovado + `publish_claim`).
 
 2. Há `212` summaries publicados para `213` candidatos. Falta summary para `FRANCISCO MARQUES NETO`.
 
