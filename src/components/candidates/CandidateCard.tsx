@@ -1,25 +1,23 @@
-import { Link } from 'react-router-dom';
-import type { CandidateWithClaims } from '@/types/election';
-import { SourceReferenceBadge } from '@/components/sources/SourceReferenceBadge';
-import { CandidatePhoto } from './CandidatePhoto';
-import { sanitizeUrl } from '@/utils/sanitizeUrl';
-import { candidatePublicPath } from '@/utils/candidateIdentity';
+import { Link } from "react-router-dom";
+import type { CandidateWithClaims } from "@/types/election";
+import { SourceReferenceBadge } from "@/components/sources/SourceReferenceBadge";
+import { CandidatePhoto } from "./CandidatePhoto";
+import { sanitizeUrl } from "@/utils/sanitizeUrl";
+import { candidatePublicPath } from "@/utils/candidateIdentity";
 
 interface CandidateCardProps {
   candidate: CandidateWithClaims;
 }
 
-export function CandidateCard({
-  candidate
-}: CandidateCardProps) {
+export function CandidateCard({ candidate }: CandidateCardProps) {
   const summary = candidate.claims.find(
     (claim) =>
-      claim.category.toLowerCase() === 'summary' &&
-      claim.status === 'published'
+      claim.category.toLowerCase() === "summary" &&
+      claim.status === "published",
   );
 
   return (
-    <article className="relative flex min-h-full flex-col overflow-hidden rounded-md border border-[var(--color-border-editorial)] bg-card">
+    <article className="relative flex min-h-full flex-col overflow-hidden rounded-md border border-[var(--color-border-editorial)] bg-card transition-colors hover:border-[var(--color-institutional)] focus-within:border-[var(--color-institutional)] focus-within:ring-2 focus-within:ring-[var(--color-institutional)]">
       <div className="flex gap-4 p-4">
         <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-sm bg-[var(--color-skeleton)]">
           <CandidatePhoto
@@ -51,7 +49,7 @@ export function CandidateCard({
 
           <Link
             to={candidatePublicPath(candidate)}
-            className="after:absolute after:inset-0"
+            className="after:absolute after:inset-0 focus-visible:outline-none"
           >
             <h3 className="mt-1 font-[family-name:var(--font-display)] text-xl font-bold leading-tight text-[var(--color-ink)]">
               {candidate.full_name}
