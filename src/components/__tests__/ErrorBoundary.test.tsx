@@ -24,6 +24,7 @@ describe('ErrorBoundary', () => {
 
   afterEach(() => {
     vi.restoreAllMocks();
+    vi.unstubAllEnvs();
     window.location = originalLocation;
   });
 
@@ -61,5 +62,23 @@ describe('ErrorBoundary', () => {
     fireEvent.click(reloadButton);
 
     expect(window.location.reload).toHaveBeenCalledTimes(1);
+  });
+
+  it('não registra erro e component stack detalhados em produção', () => {
+    vi.stubEnv('DEV', false);
+
+    render(
+      <ErrorBoundary>
+        <Bomb shouldThrow={true} />
+      </ErrorBoundary>
+    );
+
+    const boundaryCalls = vi
+      .mocked(console.error)
+      .mock.calls.filter(
+        ([firstArg]) => typeof firstArg === 'string' && firstArg.startsWith('[ErrorBoundary]')
+      );
+
+    expect(boundaryCalls).toEqual([['[ErrorBoundary] erro capturado']]);
   });
 });

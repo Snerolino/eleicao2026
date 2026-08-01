@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 const { supabaseMock } = vi.hoisted(() => ({
   supabaseMock: {
@@ -60,6 +60,10 @@ function mockSupabase({
 
 beforeEach(() => {
   vi.clearAllMocks();
+});
+
+afterEach(() => {
+  vi.unstubAllEnvs();
 });
 
 describe('mapCandidate', () => {
@@ -286,6 +290,25 @@ describe('fetchAllCandidates', () => {
     expect(warnSpy).toHaveBeenCalledWith(
       'Informações editoriais temporariamente indisponíveis.',
       expect.anything()
+    );
+    warnSpy.mockRestore();
+  });
+
+  it('não registra detalhes técnicos da falha de claims em produção', async () => {
+    vi.stubEnv('DEV', false);
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    const claimsError = { code: 'PGRST200', message: 'relationship error' };
+    mockSupabase({ claimsError });
+
+    const { fetchAllCandidates, wasLastClaimsFetchDegraded } = await import('../candidates');
+    const result = await fetchAllCandidates();
+
+    expect(result).toHaveLength(1);
+    expect(wasLastClaimsFetchDegraded()).toBe(true);
+    expect(warnSpy).toHaveBeenCalledWith('Informações editoriais temporariamente indisponíveis.');
+    expect(warnSpy).not.toHaveBeenCalledWith(
+      'Informações editoriais temporariamente indisponíveis.',
+      claimsError
     );
     warnSpy.mockRestore();
   });
