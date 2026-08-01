@@ -24,6 +24,13 @@
 |---------|-----------|
 | [`prompt-raspador-eventos.md`](prompt-raspador-eventos.md) | Prompt para raspagem de dados do TSE |
 
+## Handoffs
+
+| Arquivo | Descrição |
+|---------|-----------|
+| [`handoff/2026-07-31-mvp-atualizado.md`](handoff/2026-07-31-mvp-atualizado.md) | Estado atualizado do MVP, dados TSE 213, Supabase, produção, riscos e próximos passos |
+| [`handoff/fase-2-chatgpt.md`](handoff/fase-2-chatgpt.md) | Handoff histórico da Fase 2 |
+
 ## Scripts
 
 Ver `scripts/` na raiz do projeto para scripts de build, ingestão e TSE.
