@@ -1,18 +1,36 @@
-## A curto prazo (alimentação):
+# Próximos passos — Fase 7 / assinatura do MVP
 
-1. **Adicionar claims pros candidatos sem** — os 7 deputados (federais e estaduais) estão sem claims. Via SQL Editor do Supabase, seguindo o `docs/seed-completo.sql` como template.
+Atualizado em 2026-08-01, após merge do checklist final do MVP.
 
-2. **Adicionar fontes de imprensa/checagem** — hoje só tem fontes oficiais. O `docs/seed-completo.sql` já inclui placeholders (Zero Hora, G1 RS, Aos Fatos, Lupa), mas o `raw_content` deles é genérico — precisa de conteúdo real extraído das fontes.
+## Gates humanos pendentes
 
-3. **Adicionar fotos** — o TSE DivulgaCandContas disponibiliza URL das fotos oficialmente. Só popular `photo_url` na tabela `candidates` e o card já exibe.
+1. **Publicação editorial** — revisar, aprovar e publicar o `summary` faltante de `FRANCISCO MARQUES NETO` pelo fluxo H4.2:
+   - claim criada como `pending_review`;
+   - fonte pública válida em `source_references`;
+   - review aprovado registrado;
+   - publicação por RPC transacional `publish_claim`.
 
-4. **Verificar se o frontend carrega** — roda `npm run dev` e abre no navegador.
+2. **CSP enforce** — decisão humana necessária. Recomendação técnica atual: manter CSP em `report-only` até observar relatórios reais sem violações relevantes.
 
-### Sobre o timeout nas queries de claims com `content`
+3. **Domínio próprio** — decidir se o lançamento final fica em `pages.dev` ou se haverá domínio customizado.
 
-Pode ser falta de índice na coluna `status`. Se continuar lento no frontend, roda no SQL Editor:
+4. **Responsáveis operacionais** — nomear quem autoriza SQL remoto, merge sensível, deploy manual e rollback.
 
-```sql
-create index if not exists idx_claims_status on claims(status);
-create index if not exists idx_claims_candidate on claims(candidate_id);
-```
+5. **Acessibilidade manual** — rodada final de teclado/contraste em navegador real antes de anúncio público amplo.
+
+## PRs abertos para avaliar
+
+1. **PR #39 — logs seguros em produção**
+   - Reaplicar só o patch de código.
+   - Não trazer `pnpm-lock.yaml`; o projeto usa `npm`/`package-lock.json`.
+
+2. **PR #40 + PR #41 — CandidateCard**
+   - Avaliar juntos porque ambos alteram `src/components/candidates/CandidateCard.tsx`.
+   - #40 é performance (`React.memo`).
+   - #41 é acessibilidade visual (`focus-within`).
+   - Avaliação local: as mudanças entram em conflito quando combinadas diretamente. A resolução segura é um PR manual único preservando o estilo atual do projeto, com `React.memo` e `focus-within` no mesmo `CandidateCard`.
+
+## Observações obsoletas substituídas
+
+- A nota antiga sobre “7 candidatos sem claims” foi superada pelo handoff atual. O estado vigente é `213` candidaturas oficiais e `1` `summary` publicado pendente: `FRANCISCO MARQUES NETO`.
+- Não usar SQL manual ou bypass editorial para publicar claims. O fluxo seguro vigente é H4.2/RPC transacional.
