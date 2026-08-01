@@ -199,10 +199,11 @@ async function fetchAllCandidatesFromSupabase(): Promise<
     );
   } catch (claimError) {
     lastClaimsFetchDegraded = true;
-    console.warn(
-      "Informações editoriais temporariamente indisponíveis.",
-      claimError,
-    );
+    if (import.meta.env.DEV) {
+      console.warn("Informações editoriais temporariamente indisponíveis.", claimError);
+    } else {
+      console.warn("Informações editoriais temporariamente indisponíveis.");
+    }
   }
 
   const claimsByCandidate = new Map<string, Claim[]>();
