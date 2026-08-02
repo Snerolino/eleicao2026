@@ -28,7 +28,7 @@ describe('H5.4 manifest, instalação e SEO', () => {
   });
 
   it('HTML base expõe canonical, manifest, theme-color e apple touch sem rotas privadas', () => {
-    expect(indexHtml).toMatch(/<link rel="canonical" href="https:\/\/portal-transparencia-rs\.pages\.dev\/"/);
+    expect(indexHtml).toMatch(/<link rel="canonical" href="https:\/\/rs\.votopraquem\.org\/"/);
     expect(indexHtml).toMatch(/<link rel="manifest" href="\/manifest\.webmanifest"/);
     expect(indexHtml).toMatch(/<meta name="theme-color" content="#2B4C3F"/);
     expect(indexHtml).toMatch(/<link rel="apple-touch-icon" href="\/icon-192\.png"/);
@@ -38,15 +38,15 @@ describe('H5.4 manifest, instalação e SEO', () => {
   it('sitemap e robots referenciam apenas URLs públicas e canônicas', () => {
     const sitemap = generateSitemap([
       { id: '7098b705-765c-56fa-b8c1-7258ab492c7f', slug: 'joao_batista_garcia_dias_210002532992' },
-    ], { baseUrl: 'https://portal-transparencia-rs.pages.dev', today: '2026-07-31' });
-    const robots = generateRobotsTxt({ baseUrl: 'https://portal-transparencia-rs.pages.dev' });
+    ], { baseUrl: 'https://rs.votopraquem.org', today: '2026-07-31' });
+    const robots = generateRobotsTxt({ baseUrl: 'https://rs.votopraquem.org' });
 
     expect(sitemap).toContain('/candidatos/joao_batista_garcia_dias_210002532992');
     expect(sitemap).not.toMatch(/7098b705-765c-56fa-b8c1-7258ab492c7f|\/admin|\/editorial|\/login/i);
-    expect(robots).toContain('Sitemap: https://portal-transparencia-rs.pages.dev/sitemap.xml');
+    expect(robots).toContain('Sitemap: https://rs.votopraquem.org/sitemap.xml');
     expect(robots).toMatch(/Disallow:\s*\/admin/);
     expect(robots).toMatch(/Disallow:\s*\/editorial/);
-    expect(publicRobots).toMatch(/Sitemap: https:\/\/portal-transparencia-rs\.pages\.dev\/sitemap\.xml/);
+    expect(publicRobots).toMatch(/Sitemap: https:\/\/rs\.votopraquem\.org\/sitemap\.xml/);
   });
 
   it('smoke de produção valida manifest e service worker no escopo correto', () => {

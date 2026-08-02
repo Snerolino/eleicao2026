@@ -5,7 +5,7 @@
  * O build não lê ../dataset2026 e falha se o snapshot estiver ausente ou inválido.
  *
  * Uso: node scripts/generate-sitemap.mjs [--base-url=<url>]
- * Default: https://portal-transparencia-rs.pages.dev
+ * Default: https://rs.votopraquem.org
  */
 
 import { writeFileSync } from 'node:fs';
@@ -16,7 +16,7 @@ import { loadPublicCandidateSnapshot } from './public-candidate-snapshot.mjs';
 const BASE_URL = process.argv
   .find((arg) => arg.startsWith('--base-url='))
   ?.split('=')[1]
-  ?? 'https://portal-transparencia-rs.pages.dev';
+  ?? 'https://rs.votopraquem.org';
 
 const ROOT = resolve(process.cwd());
 const DIST_DIR = resolve(ROOT, 'dist');

@@ -11,7 +11,7 @@ Atualizado em 2026-08-01, após decisões humanas finais, QA de acessibilidade e
 
 2. **CSP enforce** — ativar `Content-Security-Policy` bloqueante em `public/_headers`.
 
-3. **Domínio próprio** — usar `https://rs.votopraquem.org` como domínio/caminho público final. `pages.dev` segue como preview/infra técnica enquanto DNS/Cloudflare não estiver consolidado.
+3. **Domínio próprio** — usar `https://rs.votopraquem.org` como domínio/caminho público final. DNS/HTTPS já respondem; `pages.dev` segue como preview/infra técnica.
 
 4. **Responsáveis operacionais** — `admin@votopraquem.org` responde temporariamente por SQL remoto, merge sensível, deploy manual e rollback.
 

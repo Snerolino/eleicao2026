@@ -85,10 +85,10 @@ jobs:
 
       - name: Production browser smoke
         env:
-          SMOKE_URL: https://portal-transparencia-rs.pages.dev/
+          SMOKE_URL: https://rs.votopraquem.org/
         run: npm run smoke:preview
 
       - name: Production health check
         env:
-          HEALTH_URL: https://portal-transparencia-rs.pages.dev/
+          HEALTH_URL: https://rs.votopraquem.org/
         run: npm run health:preview

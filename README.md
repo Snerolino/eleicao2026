@@ -108,6 +108,8 @@ git push origin main
 gh run list --branch main --workflow Deploy --limit 3
 npm run smoke:preview -- --url https://portal-transparencia-rs.pages.dev/
 npm run health:preview -- --url https://portal-transparencia-rs.pages.dev/
+npm run smoke:preview -- --url https://rs.votopraquem.org/
+npm run health:preview -- --url https://rs.votopraquem.org/
 ```
 
 Deploy manual via wrangler fica como operação excepcional/runbook:

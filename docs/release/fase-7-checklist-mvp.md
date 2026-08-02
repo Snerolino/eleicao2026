@@ -1,14 +1,15 @@
 # Fase 7 — Checklist final de liberação do MVP
 
 Data: 2026-08-01
-Produção: https://portal-transparencia-rs.pages.dev/
+Produção pública: https://rs.votopraquem.org/
+Infra/preview Cloudflare Pages: https://portal-transparencia-rs.pages.dev/
 Release validado mais recente antes deste checklist: `5c2f392-20260801T050727215Z`
 
 ## Status executivo
 
 O portal está em estado de **MVP operacional**: dados oficiais aparecem em produção, smoke/health passam e há runbooks de observabilidade, segurança e incidentes.
 
-As decisões humanas finais foram registradas em 2026-08-01. CI, deploy, smoke/health e QA final de teclado/contraste foram validados. **Não declarar como encerrado/assinado no domínio próprio** até `https://rs.votopraquem.org` passar em HTTP, certificado, canonical/SEO, smoke e health.
+As decisões humanas finais foram registradas em 2026-08-01. CI, deploy, smoke/health e QA final de teclado/contraste foram validados. O domínio próprio `https://rs.votopraquem.org` já responde com HTTP→HTTPS, certificado Google Trust Services e smoke/health. **Não declarar como encerrado/assinado no domínio próprio** até publicar o rebuild que troca canonical/robots/sitemap de `pages.dev` para o domínio final e revalidar SEO no domínio.
 
 ## Evidência atual
 
