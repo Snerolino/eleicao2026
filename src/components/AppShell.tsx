@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { isSupabaseConfigured } from '@/lib/supabase';
 import { DemoBanner } from '@/components/states';
+import { PageJumpControls } from '@/components/PageJumpControls';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 
@@ -17,7 +18,9 @@ export function AppShell() {
       {!isSupabaseConfigured && <DemoBanner />}
       <SiteHeader />
       <Outlet />
+      <PageJumpControls />
       <SiteFooter />
+      <div id="page-end" aria-hidden="true" />
     </div>
   );
 }

@@ -23,6 +23,7 @@ const FORBIDDEN_FIELD_PATTERNS = [
 const ALLOWED_POSITIONS = new Set([
   'presidente',
   'governador',
+  'vice_governador',
   'senador',
   'deputado_federal',
   'deputado_estadual',

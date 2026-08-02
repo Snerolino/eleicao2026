@@ -394,7 +394,8 @@ describe('fetchAllCandidates', () => {
     } = await import('../candidates');
     const result = await fetchAllCandidates();
 
-    expect(result).toHaveLength(213);
+    expect(result).toHaveLength(212);
+    expect(result.some((candidate) => candidate.tse_candidate_id === '210002533050')).toBe(false);
     expect(result.some((candidate) => candidate.tse_candidate_id === '210002533015')).toBe(true);
     expect(wasLastCandidatesFetchFromSnapshot()).toBe(true);
     expect(getLastCandidatesFetchDiagnostic()).toMatch(/snapshot oficial mais completo/i);
@@ -411,6 +412,38 @@ describe('fetchAllCandidates', () => {
     const candidate = result.find((c) => c.id === 'db-candidate-1')!;
     expect(candidate.claims).toEqual([]);
     expect(wasLastClaimsFetchDegraded()).toBe(false);
+  });
+
+  it('corrige vice-governador sem reaproveitar summary de governador', async () => {
+    mockSupabase({
+      candidates: [{
+        ...dbCandidates[0],
+        id: 'vice-candidate',
+        tse_candidate_id: '210002533354',
+        full_name: 'NAFTALY PEREIRA DO NASCIMENTO',
+        party: 'UP',
+        ballot_number: 80,
+        position: 'Governador',
+      }],
+      claims: [{
+        id: 'vice-summary',
+        candidate_id: 'vice-candidate',
+        category: 'summary',
+        content: 'Candidato(a) a Governador pelo UP, número 80. Registro de candidatura protocolado na Justiça Eleitoral (fonte: TSE).',
+        confidence_score: 5,
+        status: 'published',
+        source_document_id: 'doc-1',
+        source_references: null,
+      }],
+    });
+
+    const { fetchAllCandidates } = await import('../candidates');
+    const [candidate] = await fetchAllCandidates();
+
+    expect(candidate.position).toBe('vice_governador');
+    expect(candidate.position_label).toBe('Vice-governador');
+    expect(candidate.claims[0]?.content).toContain('Vice-governador pelo UP');
+    expect(candidate.claims[0]?.content).not.toContain('a Governador pelo UP');
   });
 
   it('usa snapshot quando supabase lança exceção de rede', async () => {

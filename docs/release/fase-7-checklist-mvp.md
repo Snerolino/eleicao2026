@@ -8,15 +8,15 @@ Release validado mais recente antes deste checklist: `5c2f392-20260801T050727215
 
 O portal está em estado de **MVP operacional**: dados oficiais aparecem em produção, smoke/health passam e há runbooks de observabilidade, segurança e incidentes.
 
-**Não declarar como encerrado/assinado** até as decisões humanas finais abaixo serem confirmadas, principalmente publicação editorial restante, CSP enforce e eventual domínio próprio.
+As decisões humanas finais foram registradas em 2026-08-01. **Não declarar como encerrado/assinado** até o último PR com essas decisões passar por CI, deploy, smoke/health e rodada manual de teclado/contraste no navegador.
 
 ## Evidência atual
 
-- Snapshot público versionado: `213` candidaturas oficiais RS 2026.
-- Supabase remoto público: `213` candidaturas RS.
-- Slugs e `tse_candidate_id`: `213/213` únicos e não nulos.
-- Sitemap: `213` candidatos + páginas estáticas.
-- Smoke produção: OK, `213` cards, offline/detalhe canônico OK, `httpFailures=0`.
+- Snapshot público versionado: `212` candidaturas públicas RS 2026 (`213` linhas oficiais TSE; `FRANCISCO MARQUES NETO` removido da superfície pública por decisão humana).
+- Supabase remoto público pode manter `213` candidaturas RS; a camada pública filtra a candidatura removida.
+- Slugs e `tse_candidate_id`: `212/212` únicos e não nulos no snapshot público.
+- Sitemap esperado após este bloco: `212` candidatos + páginas estáticas.
+- Smoke produção anterior: OK, `213` cards, offline/detalhe canônico OK, `httpFailures=0`; repetir após merge para validar `212` cards públicos.
 - Health produção: OK, `status=ok`, `blocks_release=false`.
 - Release produção validado H6.3: `5c2f392-20260801T050727215Z`.
 - Runbooks: H6.1 observabilidade, H6.2 segurança/headers, H6.3 incidentes/recuperação.
@@ -29,13 +29,13 @@ O portal está em estado de **MVP operacional**: dados oficiais aparecem em prod
 - [x] RPCs editoriais privilegiadas não são executáveis por `anon`/`public`.
 - [x] Autorização editorial centralizada em `editor_roles`, não em `raw_user_meta_data`.
 - [x] `raw_documents.raw_content` não vai ao frontend público.
-- [x] Headers de segurança em produção com CSP report-only.
-- [ ] Decisão humana: ativar ou não **CSP enforce** depois de observar relatórios reais.
+- [x] Headers de segurança em produção com CSP enforce aprovado.
+- [x] Decisão humana: ativar **CSP enforce**.
 
 ### Data
 
-- [x] Contagem oficial atual: `213` candidaturas.
-- [x] Cargos validados: deputado estadual `111`, deputado federal `88`, governador `2`, senador `4`, outro/suplentes `8`.
+- [x] Contagem oficial TSE atual: `213` linhas; contagem pública versionada: `212` candidaturas.
+- [x] Cargos públicos validados: deputado estadual `110`, deputado federal `88`, governador `1`, vice-governador `1`, senador `4`, outro/suplentes `8`.
 - [x] `SQ_CANDIDATO`/`tse_candidate_id` preenchidos e distintos.
 - [x] Slugs canônicos por `nome_normalizado_<SQ_CANDIDATO>`.
 - [x] Snapshot e manifesto TSE versionados.
@@ -48,6 +48,9 @@ O portal está em estado de **MVP operacional**: dados oficiais aparecem em prod
 - [x] Detalhe canônico em `/candidatos/:slug`.
 - [x] Compatibilidade temporária de IDs antigos para redirecionamento/canonicalização.
 - [x] Comparação por `/comparar?candidatos=<id1>,<id2>`.
+- [x] Comparação aparece antes da lista completa de seleção e possui atalho direto para a tabela.
+- [x] Lista principal tem atalhos clicáveis por cargo.
+- [x] Vice-governador tem seção própria, sem ser rotulado como governador.
 - [x] CSV público da lista de candidatos.
 - [x] Fontes públicas via `source_references`.
 
@@ -71,8 +74,9 @@ O portal está em estado de **MVP operacional**: dados oficiais aparecem em prod
 - [x] Skip-to-content e foco visível global.
 - [x] `aria-live` para estados relevantes/degradação.
 - [x] Navegação por teclado nos fluxos principais coberta por smoke/testes de UI.
+- [x] Botões fixos de voltar ao topo e ir ao final adicionados para reduzir rolagem longa.
 - [x] `prefers-reduced-motion` respeitado.
-- [ ] Decisão humana recomendada: rodada manual final de teclado/contraste em navegador real antes de anúncio público amplo.
+- [ ] Rodada manual final de teclado/contraste em navegador real após deploy deste bloco.
 
 ### SEO
 
@@ -80,7 +84,7 @@ O portal está em estado de **MVP operacional**: dados oficiais aparecem em prod
 - [x] Canonical/OG coerentes.
 - [x] `robots.txt` bloqueia rotas privadas/editoriais/login.
 - [x] Manifest e metadados públicos sem rotas privadas.
-- [ ] Decisão humana: domínio próprio, se o lançamento público não for ficar em `pages.dev`.
+- [x] Decisão humana: domínio próprio final `https://rs.votopraquem.org`; `pages.dev` segue como preview/infra técnica.
 
 ### CI/CD
 
@@ -96,8 +100,8 @@ O portal está em estado de **MVP operacional**: dados oficiais aparecem em prod
 - [x] Publicação/correção/retração por RPC transacional.
 - [x] Histórico preservado; sem delete público como correção.
 - [x] `scripts/insert-fontes-oficiais.mjs` endurecido para não publicar direto.
-- [ ] Intervenção humana necessária: revisar/aprovar/publicar summary faltante de `FRANCISCO MARQUES NETO` pelo fluxo editorial.
-- [ ] Intervenção humana necessária: nomear editores/revisores iniciais e política de correção/retração operacional.
+- [x] Intervenção humana: `FRANCISCO MARQUES NETO` removido da superfície pública em vez de publicar summary faltante.
+- [x] Intervenção humana: responsável provisório `admin@votopraquem.org` nomeado para editoria/operação inicial.
 
 ### Operação
 
@@ -105,22 +109,22 @@ O portal está em estado de **MVP operacional**: dados oficiais aparecem em prod
 - [x] Logs/relatórios sem segredos, tokens ou payload bruto.
 - [x] Runbooks H6.1, H6.2 e H6.3 criados.
 - [x] Incidente comum tem diagnóstico curto e rollback.
-- [ ] Intervenção humana: confirmar responsável por autorizar SQL remoto, merge sensível, deploy manual e rollback.
+- [x] Intervenção humana: `admin@votopraquem.org` autoriza SQL remoto, merge sensível, deploy manual e rollback no momento.
 
 ### Documentação
 
-- [x] README atualizado para `213 candidaturas oficiais` e estado real atual.
+- [x] README atualizado para candidaturas públicas versionadas e estado real atual.
 - [x] Handoff atualizado com dados TSE, Supabase e riscos.
 - [x] Índice de documentação referencia runbooks e checklist final.
 - [x] Decisões humanas restantes separadas de evidência técnica.
 
 ## Gates humanos restantes
 
-1. **Publicação editorial:** criar/revisar/aprovar/publicar summary de `FRANCISCO MARQUES NETO` por fluxo H4.2.
-2. **CSP enforce:** manter report-only até observar violações reais; ativar enforce só com aprovação.
-3. **Domínio próprio:** decidir se o MVP público final usará domínio customizado ou `pages.dev`.
-4. **Responsáveis operacionais:** nomear quem autoriza SQL remoto, merge sensível, deploy manual e rollback.
-5. **Acessibilidade manual:** validação humana final de teclado/contraste em navegador real.
+1. **Publicação editorial:** decidido remover `FRANCISCO MARQUES NETO` da superfície pública, sem bypass editorial.
+2. **CSP enforce:** aprovado e configurado em `public/_headers`.
+3. **Domínio próprio:** decidido `https://rs.votopraquem.org`.
+4. **Responsáveis operacionais:** `admin@votopraquem.org` nomeado temporariamente para SQL remoto, merge sensível, deploy manual e rollback.
+5. **Acessibilidade manual:** melhorias de UX implementadas; falta rodada humana final no navegador após deploy.
 
 ## Critério de assinatura
 

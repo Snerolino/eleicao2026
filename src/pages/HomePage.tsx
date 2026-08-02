@@ -1,5 +1,4 @@
 import { useMemo, useState } from 'react';
-import type { ReactNode } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
 import { CargoSection } from '@/components/candidates/CargoSection';
@@ -101,6 +100,40 @@ export function HomePage() {
     [allCandidates, searchCache, searchQuery, cargoFilter, partyFilter]
   );
 
+  const cargoCounts = useMemo(() => {
+    const counts = new Map<Position, number>();
+    for (const candidate of allCandidates) {
+      counts.set(candidate.position, (counts.get(candidate.position) ?? 0) + 1);
+    }
+    return counts;
+  }, [allCandidates]);
+
+  const visiblePositions = useMemo(() => {
+    const ordered = POSITION_ORDER.filter((position) => cargoCounts.has(position));
+    if (cargoCounts.has('outro')) ordered.push('outro');
+    return ordered;
+  }, [cargoCounts]);
+
+  function openCargo(position: Position) {
+    setSearchQuery('');
+    setPartyFilter('');
+    setCargoFilter(position);
+
+    const scrollToCargo = () => {
+      const section = document.getElementById(`cargo-${position}`);
+      if (typeof section?.scrollIntoView !== 'function') return;
+      section.scrollIntoView({
+        block: 'start',
+        behavior: 'smooth',
+      });
+    };
+    if (typeof window.requestAnimationFrame === 'function') {
+      window.requestAnimationFrame(scrollToCargo);
+    } else {
+      window.setTimeout(scrollToCargo, 0);
+    }
+  }
+
   const hasActiveFilter = searchQuery !== '' || cargoFilter !== '' || partyFilter !== '';
 
   if (query.isLoading) {
@@ -182,6 +215,30 @@ export function HomePage() {
               {partyFilter && ` do ${partyFilter}`}
             </p>
           )}
+          {visiblePositions.length > 0 && (
+            <nav
+              aria-label="Atalhos por cargo"
+              className="flex flex-wrap gap-2 border-t border-dashed border-[var(--color-border-editorial)] pt-4"
+            >
+              {visiblePositions.map((position) => (
+                <button
+                  key={position}
+                  type="button"
+                  onClick={() => openCargo(position)}
+                  className={`rounded-sm border px-3 py-2 text-left font-mono text-xs uppercase tracking-wider transition-colors ${
+                    cargoFilter === position
+                      ? 'border-[var(--color-institutional)] bg-[color-mix(in_srgb,var(--color-institutional)_10%,var(--color-paper))] text-[var(--color-institutional)]'
+                      : 'border-[var(--color-border-editorial)] text-[var(--color-muted-ink)] hover:border-[var(--color-institutional)] hover:text-[var(--color-ink)]'
+                  }`}
+                >
+                  <span>{POSITION_LABEL[position]}</span>{' '}
+                  <span aria-label={`${cargoCounts.get(position) ?? 0} candidatos`}>
+                    {cargoCounts.get(position) ?? 0}
+                  </span>
+                </button>
+              ))}
+            </nav>
+          )}
         </div>
       )}
 
@@ -224,25 +281,16 @@ export function HomePage() {
               if (g) g.push(c);
               else grouped.set(c.position, [c]);
             }
-            const sections: ReactNode[] = [];
-            for (const position of POSITION_ORDER) {
+            const sections = [];
+            const positionsToRender = cargoFilter ? [cargoFilter] : visiblePositions;
+            for (const position of positionsToRender) {
               const candidatesInPosition = grouped.get(position) ?? [];
-              if (candidatesInPosition.length === 0 && !hasActiveFilter) continue;
+              if (candidatesInPosition.length === 0) continue;
               sections.push(
                 <CargoSection
                   key={position}
                   position={position}
                   candidates={candidatesInPosition}
-                />
-              );
-            }
-            const outros = grouped.get('outro' as Position);
-            if (outros) {
-              sections.push(
-                <CargoSection
-                  key="outro"
-                  position={'outro' as Position}
-                  candidates={outros}
                 />
               );
             }

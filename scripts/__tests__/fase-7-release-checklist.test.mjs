@@ -26,6 +26,7 @@ describe('Fase 7 checklist final de liberação MVP', () => {
       expect(checklist).toMatch(new RegExp(item, 'i'));
     }
 
+    expect(checklist).toContain('212');
     expect(checklist).toContain('213');
     expect(checklist).toMatch(/FRANCISCO MARQUES NETO/);
     expect(checklist).toMatch(/interven[cç][aã]o humana/i);
@@ -38,7 +39,8 @@ describe('Fase 7 checklist final de liberação MVP', () => {
     const readme = readFileSync(join(root, 'README.md'), 'utf8');
     const index = readFileSync(join(root, 'docs/index.md'), 'utf8');
 
-    expect(readme).toContain('213 candidaturas oficiais');
+    expect(readme).toContain('212 candidaturas públicas');
+    expect(readme).toMatch(/213`? linhas oficiais TSE/);
     expect(readme).not.toMatch(/69 candidaturas oficiais/i);
     expect(readme).not.toMatch(/modo de demonstra[cç][aã]o/i);
     expect(index).toContain('release/fase-7-checklist-mvp.md');

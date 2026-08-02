@@ -20,6 +20,11 @@ const MethodologyPage = lazy(() =>
     default: m.MethodologyPage,
   }))
 );
+const AdminPage = lazy(() =>
+  import('@/pages/AdminPage').then((m) => ({
+    default: m.AdminPage,
+  }))
+);
 const NotFoundPage = lazy(() =>
   import('@/pages/NotFoundPage').then((m) => ({
     default: m.NotFoundPage,
@@ -58,6 +63,14 @@ export function App() {
               element={
                 <Suspense fallback={<LazyFallback />}>
                   <MethodologyPage />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/admin"
+              element={
+                <Suspense fallback={<LazyFallback />}>
+                  <AdminPage />
                 </Suspense>
               }
             />

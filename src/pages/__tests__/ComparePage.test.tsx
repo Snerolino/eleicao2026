@@ -96,7 +96,22 @@ describe('ComparePage H5.3', () => {
     const selectedRegion = screen.getByRole('region', { name: /selecionados/i });
     expect(within(selectedRegion).getAllByText('Ada Cristina Munaretto').length).toBeGreaterThan(0);
     expect(within(selectedRegion).getAllByText('João Batista Garcia Dias').length).toBeGreaterThan(0);
+    expect(within(selectedRegion).getByRole('link', { name: /ver comparação/i })).toHaveAttribute(
+      'href',
+      '#comparacao'
+    );
     expect(screen.getByRole('table')).toBeInTheDocument();
+  });
+
+  it('mostra o resumo e a tabela de comparação antes da lista completa de seleção', () => {
+    renderCompare('/comparar?candidatos=tse-1,tse-2');
+
+    const selectedRegion = screen.getByRole('region', { name: /selecionados/i });
+    const selectorRegion = screen.getByRole('region', { name: /lista de candidatos/i });
+
+    expect(
+      selectedRegion.compareDocumentPosition(selectorRegion) & Node.DOCUMENT_POSITION_FOLLOWING
+    ).toBeTruthy();
   });
 
   it('atualiza a rota compartilhável ao selecionar candidaturas', async () => {

@@ -20,6 +20,9 @@ export function normalizePosition(raw: string | null | undefined): {
   const aliases: Partial<Record<string, Exclude<Position, 'outro'>>> = {
     governador: 'governador',
     governor: 'governador',
+    vice_governador: 'vice_governador',
+    vicegovernador: 'vice_governador',
+    vice_governor: 'vice_governador',
     senador: 'senador',
     senator: 'senador',
     deputado_federal: 'deputado_federal',
