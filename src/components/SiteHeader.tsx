@@ -3,7 +3,7 @@ import { ThemeToggle } from './ThemeToggle';
 
 function linkClass({ isActive }: { isActive: boolean }) {
   return [
-    'font-mono text-xs uppercase tracking-wider underline-offset-4 hover:underline',
+    'font-mono text-xs uppercase tracking-wider underline-offset-4 hover:underline rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-institutional)]',
     isActive
       ? 'font-semibold text-[var(--color-institutional)] underline'
       : 'text-[var(--color-ink)]'
@@ -17,7 +17,7 @@ export function SiteHeader() {
         <div>
           <NavLink
             to="/"
-            className="block text-2xl leading-tight sm:text-3xl"
+            className="block text-2xl leading-tight sm:text-3xl rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-institutional)]"
           >
             Portal Transparência Eleitoral{' '}
             <span className="text-[var(--color-institutional)]">
