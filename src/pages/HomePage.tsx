@@ -158,6 +158,18 @@ export function HomePage() {
 
   return (
     <main id="main-content" className="mx-auto max-w-6xl px-4 py-8">
+      <section className="mb-6 max-w-3xl">
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-muted-ink)]">
+          Eleições 2026 · Rio Grande do Sul
+        </p>
+        <h1 className="mt-2 text-3xl sm:text-4xl">
+          Candidatos 2026 no Rio Grande do Sul
+        </h1>
+        <p className="mt-3 leading-relaxed text-[var(--color-muted-ink)]">
+          Consulta pública com candidaturas oficiais, fontes visíveis e estados de dados auditáveis.
+        </p>
+      </section>
+
       <DataFreshness
         updatedAt={query.dataUpdatedAt}
         source={usingSnapshotFallback ? 'snapshot' : 'supabase'}
