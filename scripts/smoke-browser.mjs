@@ -44,6 +44,16 @@ function isIgnoredExternalNoise(textOrUrl) {
 }
 
 export async function assertHomeHasCandidates(page, expectedCount) {
+  if (typeof page.waitForFunction === 'function') {
+    await page.waitForFunction(
+      (count) =>
+        document.querySelectorAll('main article').length >= count ||
+        !document.body.innerText.includes('Carregando lista de candidatos'),
+      expectedCount,
+      { timeout: 20_000 },
+    ).catch(() => {});
+  }
+
   const homeCount = await page.locator('main article').count();
   const bodyText = await page.locator('body').innerText();
   const bodyPreview = bodyText.replace(/\s+/g, ' ').trim().slice(0, 500);
