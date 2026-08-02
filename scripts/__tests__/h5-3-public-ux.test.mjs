@@ -4,7 +4,9 @@ import { describe, expect, it } from 'vitest';
 
 const theme = readFileSync(join(process.cwd(), 'src/theme.css'), 'utf8');
 const home = readFileSync(join(process.cwd(), 'src/pages/HomePage.tsx'), 'utf8');
+const compare = readFileSync(join(process.cwd(), 'src/pages/ComparePage.tsx'), 'utf8');
 const smoke = readFileSync(join(process.cwd(), 'scripts/smoke-browser.mjs'), 'utf8');
+const root = process.cwd();
 
 describe('H5.3 acessibilidade, busca e viewports', () => {
   it('mantém foco visível global em links, botões, inputs e selects', () => {
@@ -35,5 +37,13 @@ describe('H5.3 acessibilidade, busca e viewports', () => {
       expect(smoke).toContain(`width: ${width}`);
       expect(smoke).toContain(`height: ${height}`);
     }
+    expect(compare).toMatch(/navigate\(\{ search: value \? `\?candidatos=\$\{value\}` : '' \}/);
+  });
+
+  it('mantém contexto acessível em links repetidos de fonte da foto no dossiê', () => {
+    const dossier = readFileSync(join(root, 'src/pages/CandidateDossierPage.tsx'), 'utf8');
+
+    expect(dossier).toMatch(/aria-label=\{`Abrir fonte da foto de \$\{candidate\.full_name\}`\}/);
+    expect(dossier).toMatch(/<span aria-hidden="true">↗<\/span>/);
   });
 });

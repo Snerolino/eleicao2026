@@ -1,6 +1,6 @@
 # Próximos passos — Fase 7 / assinatura do MVP
 
-Atualizado em 2026-08-01, após decisões humanas finais e início do bloco UX/admin.
+Atualizado em 2026-08-01, após decisões humanas finais, QA de acessibilidade e triagem dos PRs de bots.
 
 ## Gates humanos decididos
 
@@ -24,15 +24,23 @@ Atualizado em 2026-08-01, após decisões humanas finais e início do bloco UX/a
 
 ## PRs abertos para avaliar
 
+0. **PR #47 — lazy normalization de busca**
+   - Validado contra `main`, mergeado e publicado em produção.
+   - Produção pós-merge: smoke/health OK com `212` cards.
+
 1. **PR #39 — logs seguros em produção**
    - Reaplicar só o patch de código.
    - Não trazer `pnpm-lock.yaml`; o projeto usa `npm`/`package-lock.json`.
 
 2. **PR #40 + PR #41 — CandidateCard**
-   - Avaliar juntos porque ambos alteram `src/components/candidates/CandidateCard.tsx`.
+   - Reimplementados manualmente no bloco `candidate-card-a11y-perf`, sem trazer `.jules/`/`.Jules/`.
    - #40 é performance (`React.memo`).
    - #41 é acessibilidade visual (`focus-within`).
-   - Avaliação local: as mudanças entram em conflito quando combinadas diretamente. A resolução segura é um PR manual único preservando o estilo atual do projeto, com `React.memo` e `focus-within` no mesmo `CandidateCard`.
+   - Resolução segura: PR manual único preservando o estilo atual do projeto, com `React.memo`, `focus-within`, link de fonte da foto acima do link esticado e testes.
+
+3. **PR #30 — contexto da fonte da foto no dossiê**
+   - Reimplementado manualmente no mesmo bloco `candidate-card-a11y-perf`.
+   - Link repetido `fonte da foto` recebeu `aria-label` com o nome do candidato e seta decorativa com `aria-hidden`.
 
 ## Observações obsoletas substituídas
 

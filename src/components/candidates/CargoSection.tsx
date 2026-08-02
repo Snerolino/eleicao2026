@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import type {
   CandidateWithClaims,
   Position
@@ -10,7 +11,7 @@ interface CargoSectionProps {
   candidates: CandidateWithClaims[];
 }
 
-export function CargoSection({
+export const CargoSection = memo(function CargoSection({
   position,
   candidates
 }: CargoSectionProps) {
@@ -50,4 +51,4 @@ export function CargoSection({
       </div>
     </section>
   );
-}
+});
