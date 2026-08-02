@@ -41,8 +41,14 @@ jobs:
       - name: Build fallback artifact
         run: npm run build
 
-      - name: Install smoke browser
-        run: npx playwright install chromium
+      - name: Configure smoke browser
+        run: |
+          BROWSER_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          if [ -n "$BROWSER_PATH" ]; then
+            echo "PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=$BROWSER_PATH" >> "$GITHUB_ENV"
+          else
+            npx playwright install chromium
+          fi
 
       - name: Local browser smoke
         run: npm run smoke:local
@@ -80,8 +86,14 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           command: pages deploy dist --project-name=portal-transparencia-rs --branch=main
 
-      - name: Install smoke browser
-        run: npx playwright install chromium
+      - name: Configure smoke browser
+        run: |
+          BROWSER_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          if [ -n "$BROWSER_PATH" ]; then
+            echo "PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=$BROWSER_PATH" >> "$GITHUB_ENV"
+          else
+            npx playwright install chromium
+          fi
 
       - name: Production browser smoke
         env:
