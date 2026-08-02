@@ -105,6 +105,9 @@ export function mapCandidate(row: CandidateRow): Candidate {
 const CANDIDATE_SELECT =
   "id, slug, full_name, party, ballot_number, position, photo_url, photo_source_url, tse_candidate_id, ballot_name, state, election_year, registration_status";
 const OFFICIAL_STALE_DB_MIN_COUNT = 69;
+const PUBLIC_CANDIDATES_WITH_PHOTOS = PUBLIC_CANDIDATES.filter(
+  (candidate) => candidate.photo_url,
+).length;
 
 function toSafePublicId(value: string): string | null {
   const trimmed = value.trim();
@@ -271,6 +274,12 @@ export async function fetchAllCandidates(): Promise<CandidateWithClaims[]> {
         console.warn(lastCandidatesFetchDiagnostic);
         return fetchAllFromMock();
       }
+      if (!lastClaimsFetchDegraded && isSupabaseSnapshotRicherForPhotos(supabaseData)) {
+        lastCandidatesFetchFromSnapshot = true;
+        lastCandidatesFetchDiagnostic = `Snapshot oficial tem fotos TSE mais completo que Supabase (${PUBLIC_CANDIDATES_WITH_PHOTOS}/${supabaseData.filter((candidate) => candidate.photo_url).length}).`;
+        console.warn(lastCandidatesFetchDiagnostic);
+        return fetchAllFromMock();
+      }
       lastCandidatesFetchFromSnapshot = false;
       lastCandidatesFetchDiagnostic = null;
       return supabaseData;
@@ -298,6 +307,14 @@ function isSupabaseSnapshotStale(supabaseCount: number): boolean {
   );
 }
 
+function isSupabaseSnapshotRicherForPhotos(
+  supabaseData: CandidateWithClaims[],
+): boolean {
+  if (supabaseData.length < OFFICIAL_STALE_DB_MIN_COUNT) return false;
+  const supabasePhotos = supabaseData.filter((candidate) => candidate.photo_url).length;
+  return PUBLIC_CANDIDATES_WITH_PHOTOS > supabasePhotos;
+}
+
 export async function fetchCandidateById(
   id: string,
 ): Promise<CandidateWithClaims | null> {
@@ -307,7 +324,17 @@ export async function fetchCandidateById(
 
   try {
     const candidate = await fetchCandidateFromSupabase(id);
-    if (candidate) return candidate;
+    if (candidate) {
+      const snapshotCandidate = findInMock(id);
+      if (!candidate.photo_url && snapshotCandidate?.photo_url) {
+        return {
+          ...candidate,
+          photo_url: snapshotCandidate.photo_url,
+          photo_source_url: snapshotCandidate.photo_source_url,
+        };
+      }
+      return candidate;
+    }
   } catch {
     // Supabase unavailable — fall through to mock
   }

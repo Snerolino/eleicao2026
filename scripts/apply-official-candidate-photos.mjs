@@ -11,9 +11,10 @@
  *
  * Uso:
  *   node scripts/apply-official-candidate-photos.mjs \
- *     --source-dir=/home/lourenco/Projetos/jsoneleicao/foto_cand2024_RS_div
+ *     --source-dir=/home/lourenco/Projetos/dataset2026/foto_cand2024_RS_div
  */
 
+import { createHash } from 'node:crypto';
 import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { basename, extname, resolve } from 'node:path';
 
@@ -24,8 +25,12 @@ const REPORT_PATH = resolve(ROOT, 'data/public-candidate-photo-matches.json');
 const OFFICIAL_SOURCE_URL = 'https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2024/fotos/foto_cand2024_RS_div.zip';
 
 const sourceDirArg = process.argv.find((arg) => arg.startsWith('--source-dir='));
+const metadataDirArg = process.argv.find((arg) => arg.startsWith('--metadata-dir='));
 const SOURCE_DIR = resolve(
-  sourceDirArg?.split('=')[1] ?? '../jsoneleicao/foto_cand2024_RS_div',
+  sourceDirArg?.split('=')[1] ?? '../dataset2026/foto_cand2024_RS_div',
+);
+const METADATA_DIR = resolve(
+  metadataDirArg?.split('=')[1] ?? '../jsoneleicao/foto_cand2024_RS_div',
 );
 
 function normalize(value) {
@@ -56,6 +61,57 @@ function parsePhotoFilename(fileName) {
   };
 }
 
+function sha256(path) {
+  return createHash('sha256').update(readFileSync(path)).digest('hex');
+}
+
+function photoFiles(dir) {
+  return readdirSync(dir, { withFileTypes: true })
+    .filter((entry) => entry.isFile() && /\.(jpe?g)$/i.test(entry.name))
+    .map((entry) => ({
+      fileName: entry.name,
+      path: resolve(dir, entry.name),
+    }));
+}
+
+function loadPhotos() {
+  const sourceFiles = photoFiles(SOURCE_DIR);
+  const parsedSourceFiles = sourceFiles
+    .map((file) => {
+      const metadata = parsePhotoFilename(file.fileName);
+      return metadata ? { ...metadata, ...file, sourceFileName: file.fileName } : null;
+    })
+    .filter(Boolean);
+
+  if (parsedSourceFiles.length > 0) {
+    return { photos: parsedSourceFiles, metadataDirUsed: null };
+  }
+
+  if (!existsSync(METADATA_DIR)) {
+    throw new Error(
+      `Diretório TSE usa nomes técnicos sem metadados; informe --metadata-dir com arquivos nomeados: ${SOURCE_DIR}`,
+    );
+  }
+
+  const officialByHash = new Map(sourceFiles.map((file) => [sha256(file.path), file]));
+  const photos = photoFiles(METADATA_DIR)
+    .map((file) => {
+      const metadata = parsePhotoFilename(file.fileName);
+      if (!metadata) return null;
+      const officialFile = officialByHash.get(sha256(file.path));
+      if (!officialFile) return null;
+      return {
+        ...metadata,
+        fileName: file.fileName,
+        sourceFileName: officialFile.fileName,
+        path: officialFile.path,
+      };
+    })
+    .filter(Boolean);
+
+  return { photos, metadataDirUsed: METADATA_DIR };
+}
+
 function publicPhotoFileName(candidate, ext) {
   return `${candidate.slug}.${ext}`;
 }
@@ -84,14 +140,7 @@ function main() {
   }
 
   const candidates = JSON.parse(readFileSync(SNAPSHOT_PATH, 'utf8'));
-  const photos = readdirSync(SOURCE_DIR, { withFileTypes: true })
-    .filter((entry) => entry.isFile())
-    .map((entry) => {
-      const metadata = parsePhotoFilename(entry.name);
-      if (!metadata) return null;
-      return { ...metadata, fileName: entry.name, path: resolve(SOURCE_DIR, entry.name) };
-    })
-    .filter(Boolean);
+  const { photos, metadataDirUsed } = loadPhotos();
 
   rmSync(OUT_DIR, { recursive: true, force: true });
   mkdirSync(OUT_DIR, { recursive: true });
@@ -149,6 +198,7 @@ function main() {
       photo_url: candidate.photo_url,
       photo_source_url: candidate.photo_source_url,
       source_file: basename(match.photo.fileName),
+      official_file: basename(match.photo.sourceFileName),
       official_source: OFFICIAL_SOURCE_URL,
       match_reason: match.reason,
       previous_position: match.photo.previousPosition,
@@ -161,6 +211,7 @@ function main() {
     generated_at: new Date().toISOString(),
     source_url: OFFICIAL_SOURCE_URL,
     source_dir: SOURCE_DIR,
+    metadata_dir: metadataDirUsed,
     strategy: '2026 public candidates matched against official TSE 2024 publishable RS photos by normalized name + party; ambiguous matches are left without photo.',
     total_candidates: candidates.length,
     matched: matches.length,

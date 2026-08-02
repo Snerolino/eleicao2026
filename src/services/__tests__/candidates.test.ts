@@ -403,6 +403,24 @@ describe('fetchAllCandidates', () => {
     warnSpy.mockRestore();
   });
 
+  it('usa snapshot quando Supabase ainda não tem fotos oficiais TSE', async () => {
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    mockSupabase({ candidates: staleOfficialRows(213) });
+
+    const {
+      fetchAllCandidates,
+      getLastCandidatesFetchDiagnostic,
+      wasLastCandidatesFetchFromSnapshot,
+    } = await import('../candidates');
+    const result = await fetchAllCandidates();
+
+    expect(result.filter((candidate) => candidate.photo_url)).toHaveLength(72);
+    expect(wasLastCandidatesFetchFromSnapshot()).toBe(true);
+    expect(getLastCandidatesFetchDiagnostic()).toMatch(/fotos TSE mais completo/i);
+    expect(warnSpy).toHaveBeenCalledWith(expect.stringMatching(/fotos TSE mais completo/));
+    warnSpy.mockRestore();
+  });
+
   it('retorna claims vazias quando endpoint de claims retorna vazio', async () => {
     mockSupabase({ claims: [] });
 
