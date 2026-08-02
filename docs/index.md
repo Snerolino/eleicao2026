@@ -50,7 +50,7 @@
 
 | Arquivo | Descrição |
 |---------|-----------|
-| [`release/fase-7-checklist-mvp.md`](release/fase-7-checklist-mvp.md) | Checklist final Fase 7, evidências de MVP operacional e gates humanos restantes |
+| [`release/fase-7-checklist-mvp.md`](release/fase-7-checklist-mvp.md) | Checklist final Fase 7, evidências de MVP operacional e gates humanos decididos |
 
 ## Scripts
 

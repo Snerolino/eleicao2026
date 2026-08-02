@@ -93,10 +93,10 @@ Resultados:
 ## Limites
 
 - A validação visual foi automatizada/headless, não substitui uma inspeção humana subjetiva de percepção estética.
-- O domínio `https://rs.votopraquem.org` ainda precisa validação própria quando HTTP/certificado estiverem prontos.
-- Produção `pages.dev` ainda não contém o `h1` da Home até este bloco ser mergeado/deployado.
+- O domínio `https://rs.votopraquem.org` foi validado após DNS/TLS/certificado Google CA, com smoke/health e QA a11y próprios.
+- `pages.dev` segue como preview/infra técnica; o domínio público final é `https://rs.votopraquem.org`.
 
 ## Status
 
-Gate de teclado/contraste em `pages.dev`/build local: **fechado tecnicamente**.  
-Gate de domínio próprio: **aguardando HTTP/certificado Google CA**.
+Gate de teclado/contraste em `pages.dev`/build local e no domínio próprio: **fechado tecnicamente**.
+Gate de domínio próprio: **fechado tecnicamente** em `https://rs.votopraquem.org`.

@@ -9,7 +9,7 @@ Release validado mais recente antes deste checklist: `5c2f392-20260801T050727215
 
 O portal está em estado de **MVP operacional**: dados oficiais aparecem em produção, smoke/health passam e há runbooks de observabilidade, segurança e incidentes.
 
-As decisões humanas finais foram registradas em 2026-08-01. CI, deploy, smoke/health e QA final de teclado/contraste foram validados. O domínio próprio `https://rs.votopraquem.org` já responde com HTTP→HTTPS, certificado Google Trust Services e smoke/health. **Não declarar como encerrado/assinado no domínio próprio** até publicar o rebuild que troca canonical/robots/sitemap de `pages.dev` para o domínio final e revalidar SEO no domínio.
+As decisões humanas finais foram registradas em 2026-08-01. CI, deploy, smoke/health e QA final de teclado/contraste foram validados. O domínio próprio `https://rs.votopraquem.org` responde com HTTP→HTTPS, certificado Google Trust Services, canonical/OG, robots/sitemap, smoke, health e QA final. A implantação técnica do MVP está assinável.
 
 ## Evidência atual
 
@@ -119,19 +119,19 @@ As decisões humanas finais foram registradas em 2026-08-01. CI, deploy, smoke/h
 - [x] Índice de documentação referencia runbooks e checklist final.
 - [x] Decisões humanas restantes separadas de evidência técnica.
 
-## Gates humanos restantes
+## Gates humanos decididos
 
 1. **Publicação editorial:** decidido remover `FRANCISCO MARQUES NETO` da superfície pública, sem bypass editorial.
 2. **CSP enforce:** aprovado e configurado em `public/_headers`.
 3. **Domínio próprio:** decidido `https://rs.votopraquem.org`.
 4. **Responsáveis operacionais:** `admin@votopraquem.org` nomeado temporariamente para SQL remoto, merge sensível, deploy manual e rollback.
-5. **Acessibilidade manual:** melhorias de UX implementadas; falta rodada humana final no navegador após deploy.
+5. **Acessibilidade/usabilidade:** rodada final técnica concluída no domínio próprio; melhorias de UX implementadas e publicadas.
 
 ## Critério de assinatura
 
-O MVP pode ser assinado quando:
+O MVP está tecnicamente assinável porque:
 
-- todos os checks técnicos acima permanecerem verdes em produção;
-- gates humanos forem marcados como decididos;
-- nenhuma publicação editorial pendente for tratada por bypass;
-- smoke produção e health produção seguirem OK após o último merge.
+- todos os checks técnicos acima permaneceram verdes em produção;
+- gates humanos foram marcados como decididos;
+- nenhuma publicação editorial pendente foi tratada por bypass;
+- smoke produção, health produção, headers, canonical/SEO e QA a11y passaram no domínio `https://rs.votopraquem.org` após o último merge.

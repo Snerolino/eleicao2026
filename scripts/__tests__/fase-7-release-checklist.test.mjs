@@ -46,7 +46,7 @@ describe('Fase 7 checklist final de liberação MVP', () => {
     expect(index).toContain('release/fase-7-checklist-mvp.md');
   });
 
-  it('mantém evidências de validação e gates restantes separados de status pronto', () => {
+  it('mantém evidências de validação e gates decididos no status assinável', () => {
     const checklist = readFileSync(join(root, checklistPath), 'utf8');
 
     expect(checklist).toMatch(/smoke produ[cç][aã]o/i);
@@ -54,6 +54,8 @@ describe('Fase 7 checklist final de liberação MVP', () => {
     expect(checklist).toMatch(/status=ok/);
     expect(checklist).toMatch(/blocks_release=false/);
     expect(checklist).toMatch(/MVP operacional/i);
-    expect(checklist).toMatch(/N[aã]o declarar como encerrado/i);
+    expect(checklist).toMatch(/Gates humanos decididos/i);
+    expect(checklist).toMatch(/tecnicamente assin[aá]vel/i);
+    expect(checklist).toMatch(/rs\.votopraquem\.org/i);
   });
 });
