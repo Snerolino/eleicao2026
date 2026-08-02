@@ -1,6 +1,6 @@
 // @vitest-environment node
 
-import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { tmpdir } from 'node:os';
 import { describe, expect, it } from 'vitest';
@@ -76,6 +76,21 @@ describe('snapshot público de candidatos', () => {
     expect(tseIds.size).toBe(212);
     expect(tseIds.has('210002533050')).toBe(false);
     expect(candidates.some((candidate) => candidate.position === 'vice_governador')).toBe(true);
+  });
+
+  it('mantém fotos oficiais rastreáveis e com asset público existente', () => {
+    const candidates = loadPublicCandidateSnapshot({ root });
+    const withPhotos = candidates.filter((candidate) => candidate.photo_url);
+
+    expect(withPhotos).toHaveLength(72);
+
+    for (const candidate of withPhotos) {
+      expect(candidate.photo_url).toMatch(/^\/photos\/tse-2024-rs\/[a-z0-9_]+_\d+\.jpe?g$/);
+      expect(candidate.photo_source_url).toBe(
+        'https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2024/fotos/foto_cand2024_RS_div.zip',
+      );
+      expect(existsSync(resolve(root, 'public', candidate.photo_url.slice(1)))).toBe(true);
+    }
   });
 
   it('rejeita snapshot vazio ou com campos privados', () => {

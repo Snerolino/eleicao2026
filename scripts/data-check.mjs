@@ -21,6 +21,7 @@ function main() {
 
   console.log('✅ Snapshot público válido');
   console.log(`   candidaturas: ${candidates.length}`);
+  console.log(`   fotos oficiais: ${candidates.filter((candidate) => candidate.photo_url).length}`);
   console.log(
     `   cargos: ${Object.entries(byPosition)
       .sort(([a], [b]) => a.localeCompare(b))

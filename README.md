@@ -89,14 +89,13 @@ Sem as variáveis, o build ainda usa `data/public-candidates.json` como snapshot
 
 | Script | Descrição |
 |--------|-----------|
-| `scripts/refresh-public-snapshot.mjs` | Atualiza `data/public-candidates.json` a partir do mirror TSE local |
-| `scripts/data-check.mjs` | Valida schema, contagem mínima, unicidade e campos proibidos do snapshot |
+| `scripts/refresh-public-snapshot.mjs` | Atualiza `data/public-candidates.json` a partir do espelho oficial local |
+| `scripts/data-check.mjs` | Valida snapshot público, manifesto TSE e contagem de fotos oficiais antes do build |
 | `scripts/build-env-check.mjs` | Preflight de build/deploy para variáveis públicas Supabase |
-| `scripts/generate-sitemap.mjs` | Gera `sitemap.xml` e `robots.txt` a partir do snapshot público |
-| `scripts/tse-ingest-pipeline.mjs` | Pipeline auditável de ingestão TSE para staging/upsert Supabase |
+| `scripts/apply-official-candidate-photos.mjs` | Aplica fotos oficiais rastreáveis do TSE por match conservador nome+partido |
 | `scripts/insert-fontes-oficiais.mjs` | Cria fontes/claims oficiais como `pending_review`; `--apply` exige service role explícito |
 | `scripts/editorial-workflow.mjs` | Workflow editorial para curadoria de claims |
-| `scripts/fetch-tse-photos.mjs` | Baixa fotos oficiais do TSE |
+| `scripts/fetch-tse-photos.mjs` | Tentativa via API DivulgaCandContas quando fotos 2026 estiverem publicáveis |
 | `scripts/tse-connector.mjs` | Conector com a API do TSE |
 
 ## Deploy
@@ -106,8 +105,6 @@ O deploy de produção é feito preferencialmente via GitHub Actions após merge
 ```bash
 git push origin main
 gh run list --branch main --workflow Deploy --limit 3
-npm run smoke:preview -- --url https://portal-transparencia-rs.pages.dev/
-npm run health:preview -- --url https://portal-transparencia-rs.pages.dev/
 npm run smoke:preview -- --url https://rs.votopraquem.org/
 npm run health:preview -- --url https://rs.votopraquem.org/
 ```
