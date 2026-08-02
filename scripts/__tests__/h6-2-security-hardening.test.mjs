@@ -13,13 +13,16 @@ function headerValue(name) {
 }
 
 describe('H6.2 headers, dependências e hardening editorial', () => {
-  it('public/_headers aplica políticas seguras compatíveis com PWA em modo CSP report-only', () => {
-    expect(headerValue('Content-Security-Policy-Report-Only')).toContain("default-src 'self'");
-    expect(headerValue('Content-Security-Policy-Report-Only')).toContain('https://*.supabase.co');
-    expect(headerValue('Content-Security-Policy-Report-Only')).toContain('https://*.supabase.in');
-    expect(headerValue('Content-Security-Policy-Report-Only')).toContain('worker-src');
-    expect(headerValue('Content-Security-Policy-Report-Only')).toContain('manifest-src');
-    expect(headerValue('Content-Security-Policy-Report-Only')).not.toContain('upgrade-insecure-requests');
+  it('public/_headers aplica políticas seguras compatíveis com PWA em modo CSP enforce', () => {
+    expect(headerValue('Content-Security-Policy')).toContain("default-src 'self'");
+    expect(headerValue('Content-Security-Policy')).toContain('https://*.supabase.co');
+    expect(headerValue('Content-Security-Policy')).toContain('https://*.supabase.in');
+    expect(headerValue('Content-Security-Policy')).toContain('https://cloudflareinsights.com');
+    expect(headerValue('Content-Security-Policy')).toContain('https://*.cloudflareinsights.com');
+    expect(headerValue('Content-Security-Policy')).toContain('worker-src');
+    expect(headerValue('Content-Security-Policy')).toContain('manifest-src');
+    expect(headerValue('Content-Security-Policy')).not.toContain('upgrade-insecure-requests');
+    expect(headerValue('Content-Security-Policy-Report-Only')).toBe('');
     expect(headerValue('X-Content-Type-Options')).toBe('nosniff');
     expect(headerValue('Referrer-Policy')).toBe('strict-origin-when-cross-origin');
     expect(headerValue('X-Frame-Options')).toBe('DENY');
@@ -42,9 +45,10 @@ describe('H6.2 headers, dependências e hardening editorial', () => {
     expect(sourceScript).toMatch(/status:\s*['"]pending_review['"]/);
   });
 
-  it('documenta H6.2, CSP report-only e pendência humana de publicação editorial', () => {
+  it('documenta H6.2, CSP enforce e pendência humana de publicação editorial', () => {
     const qa = readFileSync(join(root, 'docs/qa/h6-2-seguranca-headers-editorial.md'), 'utf8');
-    expect(qa).toMatch(/Content-Security-Policy-Report-Only/);
+    expect(qa).toMatch(/Content-Security-Policy/);
+    expect(qa).toMatch(/enforce/i);
     expect(qa).toMatch(/npm run security:audit/);
     expect(qa).toMatch(/pending_review/);
     expect(qa).toMatch(/interven[cç][aã]o humana/i);

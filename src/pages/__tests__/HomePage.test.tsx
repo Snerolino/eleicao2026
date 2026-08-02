@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { CandidateWithClaims } from '@/types/election';
@@ -56,6 +56,18 @@ const accentCandidate: CandidateWithClaims = {
   ballot_number: 5678,
   position: 'deputado_estadual',
   position_label: 'Deputado Estadual',
+};
+
+const viceGovernorCandidate: CandidateWithClaims = {
+  ...officialCandidate,
+  id: 'candidate-3',
+  slug: 'vice_teste_3',
+  tse_candidate_id: '3',
+  full_name: 'Vice Teste',
+  party: 'UP',
+  ballot_number: 80,
+  position: 'vice_governador',
+  position_label: 'Vice-governador',
 };
 
 function renderHome() {
@@ -179,6 +191,23 @@ describe('HomePage estados honestos H5.2', () => {
 
     fireEvent.change(search, { target: { value: 'estadual' } });
     expect(await screen.findByText('José Ademar')).toBeInTheDocument();
+    expect(screen.queryByText('Candidata Oficial')).not.toBeInTheDocument();
+  });
+
+  it('oferece atalhos de cargo clicáveis e seção própria de vice-governador', async () => {
+    queryState.value = {
+      ...queryState.value,
+      data: [officialCandidate, accentCandidate, viceGovernorCandidate],
+    };
+    renderHome();
+
+    const nav = screen.getByRole('navigation', { name: /atalhos por cargo/i });
+    expect(within(nav).getByRole('button', { name: /vice-governador/i })).toHaveTextContent('1');
+
+    fireEvent.click(within(nav).getByRole('button', { name: /vice-governador/i }));
+
+    expect(await screen.findByText('Vice Teste')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /vice-governador/i })).toBeInTheDocument();
     expect(screen.queryByText('Candidata Oficial')).not.toBeInTheDocument();
   });
 });

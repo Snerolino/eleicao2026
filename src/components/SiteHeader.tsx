@@ -45,6 +45,9 @@ export function SiteHeader() {
           <NavLink to="/metodologia" className={linkClass}>
             Metodologia
           </NavLink>
+          <NavLink to="/admin" className={linkClass}>
+            Admin
+          </NavLink>
           <span className="ml-2">
             <ThemeToggle />
           </span>

@@ -18,6 +18,7 @@ const SIG_CANDIDATES_FILE = 'FONTE OFICIAL = sig.tse.jus.br -lista_candidatos_20
 const DADOS_ABERTOS_CANDIDATES_FILE = 'FONTE OFICIAL  = dadosabertos.tse.jus.b = candidatos.csv';
 const OUTPUT = resolve(ROOT, SNAPSHOT_RELATIVE_PATH);
 const MANIFEST_OUTPUT = resolve(ROOT, TSE_SOURCE_MANIFEST_RELATIVE_PATH);
+const PUBLIC_OVERRIDES_PATH = resolve(ROOT, 'data/public-candidate-overrides.json');
 const UUID_NAMESPACE = '6ba7b810-9dad-11d1-80b4-00c04fd430c8';
 const TSE_CONSULTA_CAND_URL = 'https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2026.zip';
 const TSE_SIG_CANDIDATES_URL = 'https://sig.tse.jus.br/ords/dwapr/r/seai/sig-candidaturas/lista-candidatos';
@@ -29,19 +30,45 @@ const POSITION_MAP = {
   'DEPUTADO DISTRITAL': 'deputado_estadual',
   SENADOR: 'senador',
   GOVERNADOR: 'governador',
-  'VICE-GOVERNADOR': 'governador',
-  'VICE GOVERNADOR': 'governador',
+  'VICE-GOVERNADOR': 'vice_governador',
+  'VICE GOVERNADOR': 'vice_governador',
   PRESIDENTE: 'presidente',
 };
 
 const POSITION_LABEL_MAP = {
   presidente: 'Presidente',
   governador: 'Governador',
+  vice_governador: 'Vice-governador',
   senador: 'Senador',
   deputado_federal: 'Deputado Federal',
   deputado_estadual: 'Deputado Estadual',
   outro: 'Outros cargos',
 };
+
+function loadPublicOverrides() {
+  if (!existsSync(PUBLIC_OVERRIDES_PATH)) {
+    return { excluded_tse_candidate_ids: [], position_overrides: {} };
+  }
+  return JSON.parse(readFileSync(PUBLIC_OVERRIDES_PATH, 'utf8'));
+}
+
+function applyPublicOverrides(candidates) {
+  const overrides = loadPublicOverrides();
+  const excludedIds = new Set(overrides.excluded_tse_candidate_ids ?? []);
+  const positionOverrides = overrides.position_overrides ?? {};
+
+  return candidates
+    .filter((candidate) => !excludedIds.has(String(candidate.tse_candidate_id ?? '')))
+    .map((candidate) => {
+      const override = positionOverrides[String(candidate.tse_candidate_id ?? '')];
+      if (!override) return candidate;
+      return {
+        ...candidate,
+        position: override.position ?? candidate.position,
+        position_label: override.position_label ?? candidate.position_label,
+      };
+    });
+}
 
 function ascii(text) {
   return String(text)
@@ -193,9 +220,9 @@ function candidateFromConsultaCandRow(row) {
 export function generatePublicCandidateSnapshot({ datasetDir = DATASET_DIR } = {}) {
   const sigCsvPath = resolve(datasetDir, SIG_CANDIDATES_FILE);
   if (existsSync(sigCsvPath)) {
-    const candidates = readCsv(sigCsvPath)
+    const candidates = applyPublicOverrides(readCsv(sigCsvPath)
       .map(candidateFromSigRow)
-      .filter(Boolean);
+      .filter(Boolean));
     return validatePublicCandidateSnapshot(candidates);
   }
 
@@ -223,7 +250,7 @@ export function generatePublicCandidateSnapshot({ datasetDir = DATASET_DIR } = {
     }
   }
 
-  return validatePublicCandidateSnapshot(candidates);
+  return validatePublicCandidateSnapshot(applyPublicOverrides(candidates));
 }
 
 export function generateTseSourceManifest({ datasetDir = DATASET_DIR, createdAt = new Date().toISOString() } = {}) {

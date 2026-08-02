@@ -9,6 +9,11 @@ import type {
 import { onlyPublished } from "@/utils/claims";
 import { candidateSlugFromTse } from "@/utils/candidateIdentity";
 import { normalizePosition } from "@/utils/position";
+import {
+  applyPublicCandidateOverrides,
+  applyPublicCandidateWithClaimsOverrides,
+  isPublicCandidateVisible,
+} from "@/utils/publicCandidateOverrides";
 import { normalizeSourceCategory } from "@/utils/sourceCategory";
 import { PUBLIC_CANDIDATES } from "./publicCandidates";
 
@@ -79,7 +84,7 @@ function clampConfidence(score: number | null): 1 | 2 | 3 | 4 | 5 {
 export function mapCandidate(row: CandidateRow): Candidate {
   const normalized = normalizePosition(row.position);
 
-  return {
+  return applyPublicCandidateOverrides({
     id: row.id,
     slug: candidateSlugFromTse(row.full_name, row.tse_candidate_id) ?? row.slug ?? null,
     full_name: row.full_name,
@@ -94,7 +99,7 @@ export function mapCandidate(row: CandidateRow): Candidate {
     state: row.state ?? null,
     election_year: row.election_year ?? undefined,
     registration_status: row.registration_status ?? null,
-  };
+  });
 }
 
 const CANDIDATE_SELECT =
@@ -189,7 +194,9 @@ async function fetchAllCandidatesFromSupabase(): Promise<
 
   if (error) throw error;
 
-  const candidates = ((data ?? []) as CandidateRow[]).map(mapCandidate);
+  const candidates = ((data ?? []) as CandidateRow[])
+    .map(mapCandidate)
+    .filter(isPublicCandidateVisible);
   let claims: Claim[] = [];
   lastClaimsFetchDegraded = false;
 
@@ -217,7 +224,7 @@ async function fetchAllCandidatesFromSupabase(): Promise<
     claimsByCandidate.set(claim.candidate_id, current);
   }
 
-  return candidates.map((candidate) => ({
+  return candidates.map((candidate) => applyPublicCandidateWithClaimsOverrides({
     ...candidate,
     claims: claimsByCandidate.get(candidate.id) ?? [],
   }));
@@ -240,12 +247,13 @@ async function fetchCandidateFromSupabase(
   if (!data) return null;
 
   const candidate = mapCandidate(data as CandidateRow);
+  if (!isPublicCandidateVisible(candidate)) return null;
   const claims = await fetchPublishedClaims([candidate.id]);
 
-  return {
+  return applyPublicCandidateWithClaimsOverrides({
     ...candidate,
     claims,
-  };
+  });
 }
 
 export async function fetchAllCandidates(): Promise<CandidateWithClaims[]> {
@@ -277,7 +285,7 @@ export async function fetchAllCandidates(): Promise<CandidateWithClaims[]> {
 }
 
 function fetchAllFromMock(): CandidateWithClaims[] {
-  return PUBLIC_CANDIDATES.map((candidate) => ({
+  return PUBLIC_CANDIDATES.map((candidate) => applyPublicCandidateWithClaimsOverrides({
     ...candidate,
     claims: onlyPublished(candidate.claims),
   }));

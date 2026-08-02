@@ -44,7 +44,7 @@ describe('snapshot público de candidatos', () => {
   it('carrega o snapshot versionado com o mínimo esperado de candidaturas', () => {
     const candidates = loadPublicCandidateSnapshot({ root });
 
-    expect(candidates).toHaveLength(213);
+    expect(candidates).toHaveLength(212);
     expect(candidates[0]).toEqual(
       expect.objectContaining({
         id: expect.any(String),
@@ -52,7 +52,7 @@ describe('snapshot público de candidatos', () => {
         tse_candidate_id: expect.any(String),
         full_name: expect.any(String),
         party: expect.any(String),
-        position: expect.stringMatching(/^(governador|senador|deputado_federal|deputado_estadual|outro)$/),
+        position: expect.stringMatching(/^(governador|vice_governador|senador|deputado_federal|deputado_estadual|outro)$/),
         claims: [],
       }),
     );
@@ -72,8 +72,10 @@ describe('snapshot público de candidatos', () => {
       tseIds.add(candidate.tse_candidate_id);
     }
 
-    expect(slugs.size).toBe(213);
-    expect(tseIds.size).toBe(213);
+    expect(slugs.size).toBe(212);
+    expect(tseIds.size).toBe(212);
+    expect(tseIds.has('210002533050')).toBe(false);
+    expect(candidates.some((candidate) => candidate.position === 'vice_governador')).toBe(true);
   });
 
   it('rejeita snapshot vazio ou com campos privados', () => {

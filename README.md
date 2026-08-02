@@ -6,7 +6,8 @@
 **Consulta pública a candidatos das eleições de 2026 no Rio Grande do Sul.**  
 Cada informação mostra sua fonte, data de coleta e nível de confiança — um dossiê público para o eleitor decidir com transparência.
 
-🌐 **Site:** https://portal-transparencia-rs.pages.dev
+🌐 **Site final decidido:** https://rs.votopraquem.org  
+🔎 **Preview/infra Cloudflare Pages:** https://portal-transparencia-rs.pages.dev
 
 ---
 
@@ -35,13 +36,14 @@ Cada informação mostra sua fonte, data de coleta e nível de confiança — um
 
 ## Dados
 
-Atualmente o portal usa **213 candidaturas oficiais TSE 2026 do Rio Grande do Sul**, sanitizadas em snapshot público versionado (`data/public-candidates.json`) e também importadas no Supabase remoto público:
+Atualmente o portal usa **212 candidaturas públicas TSE 2026 do Rio Grande do Sul**, sanitizadas em snapshot público versionado (`data/public-candidates.json`). O manifesto preserva `213` linhas oficiais TSE; `FRANCISCO MARQUES NETO` foi removido da superfície pública por decisão humana registrada na Fase 7.
 
 | Cargo | Candidatos | Partidos |
 |-------|-----------|----------|
-| Deputado Estadual | 111 | múltiplos |
+| Deputado Estadual | 110 | múltiplos |
 | Deputado Federal | 88 | múltiplos |
-| Governador | 2 | múltiplos |
+| Governador | 1 | múltiplos |
+| Vice-governador | 1 | múltiplos |
 | Senador | 4 | múltiplos |
 | Outros/suplentes | 8 | múltiplos |
 

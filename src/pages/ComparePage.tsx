@@ -147,61 +147,9 @@ export function ComparePage() {
         Selecione de 2 a 4 candidatos
       </p>
 
-      {/* Candidate selector — always visible */}
-      <section className="mt-4" aria-label="Lista de candidatos">
-        <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {candidates.map((c) => {
-            const isSelected = selectedIds.has(c.id);
-            const isMaxed = !isSelected && selectedIds.size >= 4;
-            return (
-              <li key={c.id}>
-                <button
-                  type="button"
-                  onClick={() => {
-                    if (!isMaxed) toggleCandidate(c.id);
-                  }}
-                  disabled={isMaxed}
-                  aria-pressed={isSelected}
-                  className={`flex w-full items-center gap-3 rounded-sm border p-3 text-left transition-colors ${
-                    isSelected
-                      ? 'border-[var(--color-institutional)] bg-[color-mix(in_srgb,var(--color-institutional)_8%,var(--color-paper))]'
-                      : 'border-[var(--color-border-editorial)] bg-[var(--color-paper)] hover:border-[var(--color-institutional)]'
-                  } ${isMaxed ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`}
-                >
-                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-sm bg-[var(--color-skeleton)]">
-                    <CandidatePhoto
-                      name={c.full_name}
-                      photoUrl={c.photo_url}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="font-mono text-[0.65rem] uppercase tracking-wider text-[var(--color-muted-ink)]">
-                      {c.position_label}
-                    </p>
-                    <p className="truncate font-semibold">{c.full_name}</p>
-                    <p className="font-mono text-xs text-[var(--color-muted-ink)]">
-                      {c.party}
-                      {c.ballot_number != null
-                        ? ` · nº ${c.ballot_number}`
-                        : ''}
-                    </p>
-                  </div>
-                  {isSelected && (
-                    <span className="shrink-0 font-mono text-sm font-bold text-[var(--color-institutional)]">
-                      ✓
-                    </span>
-                  )}
-                </button>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
-
       {/* Selected bar */}
       {selectedIds.size > 0 && (
-        <section className="mt-4 space-y-2" aria-label="Selecionados">
+        <section className="mt-6 space-y-4" aria-label="Selecionados">
           <div className="flex flex-wrap items-center gap-3">
             {selected.map((c) => (
               <span
@@ -234,11 +182,22 @@ export function ComparePage() {
             >
               Limpar tudo
             </button>
+            {selected.length >= 2 && (
+              <a
+                href="#comparacao"
+                className="rounded-sm bg-[var(--color-institutional)] px-3 py-1.5 font-mono text-xs uppercase tracking-wider text-white hover:opacity-90"
+              >
+                Ver comparação
+              </a>
+            )}
           </div>
 
           {/* Comparison table */}
           {selected.length >= 2 && (
-            <div className="mt-4 overflow-auto rounded-sm border border-[var(--color-border-editorial)]">
+            <div
+              id="comparacao"
+              className="mt-4 scroll-mt-6 overflow-auto rounded-sm border border-[var(--color-border-editorial)]"
+            >
               <table className="w-full border-collapse bg-[var(--color-paper)] text-sm">
                 <thead>
                   <tr>
@@ -301,6 +260,59 @@ export function ComparePage() {
           )}
         </section>
       )}
+
+      {/* Candidate selector — always visible */}
+      <section className="mt-8" aria-label="Lista de candidatos">
+        <h2 className="mb-3 text-xl">Adicionar à comparação</h2>
+        <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {candidates.map((c) => {
+            const isSelected = selectedIds.has(c.id);
+            const isMaxed = !isSelected && selectedIds.size >= 4;
+            return (
+              <li key={c.id}>
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (!isMaxed) toggleCandidate(c.id);
+                  }}
+                  disabled={isMaxed}
+                  aria-pressed={isSelected}
+                  className={`flex w-full items-center gap-3 rounded-sm border p-3 text-left transition-colors ${
+                    isSelected
+                      ? 'border-[var(--color-institutional)] bg-[color-mix(in_srgb,var(--color-institutional)_8%,var(--color-paper))]'
+                      : 'border-[var(--color-border-editorial)] bg-[var(--color-paper)] hover:border-[var(--color-institutional)]'
+                  } ${isMaxed ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`}
+                >
+                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-sm bg-[var(--color-skeleton)]">
+                    <CandidatePhoto
+                      name={c.full_name}
+                      photoUrl={c.photo_url}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="font-mono text-[0.65rem] uppercase tracking-wider text-[var(--color-muted-ink)]">
+                      {c.position_label}
+                    </p>
+                    <p className="truncate font-semibold">{c.full_name}</p>
+                    <p className="font-mono text-xs text-[var(--color-muted-ink)]">
+                      {c.party}
+                      {c.ballot_number != null
+                        ? ` · nº ${c.ballot_number}`
+                        : ''}
+                    </p>
+                  </div>
+                  {isSelected && (
+                    <span className="shrink-0 font-mono text-sm font-bold text-[var(--color-institutional)]">
+                      ✓
+                    </span>
+                  )}
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
     </main>
   );
 }

@@ -1,22 +1,26 @@
 # Próximos passos — Fase 7 / assinatura do MVP
 
-Atualizado em 2026-08-01, após merge do checklist final do MVP.
+Atualizado em 2026-08-01, após decisões humanas finais e início do bloco UX/admin.
 
-## Gates humanos pendentes
+## Gates humanos decididos
 
-1. **Publicação editorial** — revisar, aprovar e publicar o `summary` faltante de `FRANCISCO MARQUES NETO` pelo fluxo H4.2:
-   - claim criada como `pending_review`;
-   - fonte pública válida em `source_references`;
-   - review aprovado registrado;
-   - publicação por RPC transacional `publish_claim`.
+1. **Publicação editorial** — não publicar summary faltante de `FRANCISCO MARQUES NETO`; remover a candidatura da superfície pública por decisão humana.
+   - override versionado em `data/public-candidate-overrides.json`;
+   - fonte TSE permanece no manifesto com `213` linhas oficiais;
+   - snapshot público passa a expor `212` candidaturas.
 
-2. **CSP enforce** — decisão humana necessária. Recomendação técnica atual: manter CSP em `report-only` até observar relatórios reais sem violações relevantes.
+2. **CSP enforce** — ativar `Content-Security-Policy` bloqueante em `public/_headers`.
 
-3. **Domínio próprio** — decidir se o lançamento final fica em `pages.dev` ou se haverá domínio customizado.
+3. **Domínio próprio** — usar `https://rs.votopraquem.org` como domínio/caminho público final. `pages.dev` segue como preview/infra técnica enquanto DNS/Cloudflare não estiver consolidado.
 
-4. **Responsáveis operacionais** — nomear quem autoriza SQL remoto, merge sensível, deploy manual e rollback.
+4. **Responsáveis operacionais** — `admin@votopraquem.org` responde temporariamente por SQL remoto, merge sensível, deploy manual e rollback.
 
-5. **Acessibilidade manual** — rodada final de teclado/contraste em navegador real antes de anúncio público amplo.
+5. **Acessibilidade/usabilidade** — incluir antes da assinatura final:
+   - botões fixos para voltar ao topo e ir ao final;
+   - atalhos de cargos clicáveis na lista principal;
+   - comparação visível no topo da página `/comparar`, sem exigir rolagem até o final;
+   - seção própria para `Vice-governador`;
+   - página `/admin` segura, sem `service_role` no navegador, para orientar ajustes/atualizações futuras.
 
 ## PRs abertos para avaliar
 
@@ -32,5 +36,6 @@ Atualizado em 2026-08-01, após merge do checklist final do MVP.
 
 ## Observações obsoletas substituídas
 
-- A nota antiga sobre “7 candidatos sem claims” foi superada pelo handoff atual. O estado vigente é `213` candidaturas oficiais e `1` `summary` publicado pendente: `FRANCISCO MARQUES NETO`.
+- A nota antiga sobre “7 candidatos sem claims” foi superada pelo handoff atual.
+- O summary faltante de `FRANCISCO MARQUES NETO` não é mais pendência editorial de publicação: a decisão vigente é removê-lo da lista pública.
 - Não usar SQL manual ou bypass editorial para publicar claims. O fluxo seguro vigente é H4.2/RPC transacional.

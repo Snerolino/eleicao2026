@@ -11,12 +11,12 @@ Reduzir superfície de ataque sem quebrar Supabase, PWA, manifest, assets ou ser
 
 1. Teste RED criado em `scripts/__tests__/h6-2-security-hardening.test.mjs` antes das alterações.
 2. `public/_headers` recebeu headers globais com:
-   - `Content-Security-Policy-Report-Only`, não enforce;
+   - `Content-Security-Policy` em enforce, após decisão humana de 2026-08-01;
    - `X-Content-Type-Options: nosniff`;
    - `X-Frame-Options: DENY`;
    - `Referrer-Policy: strict-origin-when-cross-origin`;
    - `Permissions-Policy` restritiva.
-3. CSP permanece em modo report-only para observar violações reais antes de bloquear produção.
+3. CSP saiu de report-only para enforce por decisão humana registrada na Fase 7.
 4. `package.json` recebeu `npm run security:audit` como auditoria sem correção automática.
 5. `scripts/insert-fontes-oficiais.mjs` foi endurecido para não burlar o fluxo editorial:
    - escrita exige `SUPABASE_SERVICE_ROLE_KEY` explícito;
@@ -25,12 +25,12 @@ Reduzir superfície de ataque sem quebrar Supabase, PWA, manifest, assets ou ser
    - cria somente `pending_review`;
    - publicação continua exigindo intervenção humana: review aprovado + RPC transacional H4.2.
 
-## CSP report-only atual
+## CSP enforce atual
 
 A política permite apenas o necessário para o app estático/PWA e Supabase:
 
 - `default-src 'self'`
-- `connect-src 'self' https://*.supabase.co https://*.supabase.in wss://*.supabase.co wss://*.supabase.in`
+- `connect-src 'self' https://*.supabase.co https://*.supabase.in wss://*.supabase.co wss://*.supabase.in https://cloudflareinsights.com https://*.cloudflareinsights.com`
 - `script-src 'self' https://static.cloudflareinsights.com`
 - `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com`
 - `font-src 'self' data: https://fonts.gstatic.com`
@@ -65,8 +65,8 @@ npm run health:preview -- --url https://portal-transparencia-rs.pages.dev/ --cor
 - Build: OK, snapshot `213`, sitemap `215` URLs.
 - Smoke local: OK, `213` cards, service worker pronto, `0` HTTP failures.
 
-## Intervenção humana necessária
+## Intervenção humana registrada
 
-Não transformar CSP em enforce ainda. Próxima decisão humana: observar violações reais do `Content-Security-Policy-Report-Only` em produção/preview e só depois aprovar CSP bloqueante.
+CSP enforce aprovado para o MVP por decisão humana em 2026-08-01. Monitorar smoke/health e violações reais após deploy; se bloquear navegação crítica, seguir rollback do runbook H6.3.
 
 Também não publicar automaticamente claims editoriais. Claims criadas por script administrativo ficam em `pending_review` até review aprovado e publicação via RPC.
