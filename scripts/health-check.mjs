@@ -144,7 +144,11 @@ async function fetchJson(url) {
 }
 
 async function runBrowserProbe({ baseUrl, expectedMinCount }) {
-  const browser = await chromium.launch({ headless: true });
+  const executablePath = process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH;
+  const browser = await chromium.launch({
+    headless: true,
+    ...(executablePath ? { executablePath } : {}),
+  });
   const context = await browser.newContext();
   const page = await context.newPage();
   const httpFailures = [];
