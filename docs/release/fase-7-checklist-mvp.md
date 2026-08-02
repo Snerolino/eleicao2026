@@ -8,7 +8,7 @@ Release validado mais recente antes deste checklist: `5c2f392-20260801T050727215
 
 O portal está em estado de **MVP operacional**: dados oficiais aparecem em produção, smoke/health passam e há runbooks de observabilidade, segurança e incidentes.
 
-As decisões humanas finais foram registradas em 2026-08-01. **Não declarar como encerrado/assinado** até o último PR com essas decisões passar por CI, deploy, smoke/health e rodada manual de teclado/contraste no navegador.
+As decisões humanas finais foram registradas em 2026-08-01. CI, deploy, smoke/health e QA final de teclado/contraste foram validados. **Não declarar como encerrado/assinado no domínio próprio** até `https://rs.votopraquem.org` passar em HTTP, certificado, canonical/SEO, smoke e health.
 
 ## Evidência atual
 
@@ -76,7 +76,7 @@ As decisões humanas finais foram registradas em 2026-08-01. **Não declarar com
 - [x] Navegação por teclado nos fluxos principais coberta por smoke/testes de UI.
 - [x] Botões fixos de voltar ao topo e ir ao final adicionados para reduzir rolagem longa.
 - [x] `prefers-reduced-motion` respeitado.
-- [ ] Rodada manual final de teclado/contraste em navegador real após deploy deste bloco.
+- [x] Rodada final de teclado/headings/contraste em navegador real/headless concluída em `pages.dev` + build local; evidência em `docs/qa/fase-7-acessibilidade-contraste-final.md`.
 
 ### SEO
 

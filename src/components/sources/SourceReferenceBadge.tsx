@@ -57,8 +57,8 @@ export function SourceReferenceBadge({
     <>
       <span className="flex flex-wrap items-center gap-2">
         <span
-          className="inline-flex items-center gap-1 rounded-sm px-2 py-1 text-[0.68rem] font-medium uppercase tracking-wider text-white"
-          style={{ backgroundColor: categoryColor }}
+          className="inline-flex items-center gap-1 rounded-sm px-2 py-1 text-[0.68rem] font-medium uppercase tracking-wider"
+          style={{ backgroundColor: categoryColor, color: 'var(--color-paper)' }}
         >
           <span aria-hidden="true">■</span>
           {SOURCE_CATEGORY_LABEL[category]}

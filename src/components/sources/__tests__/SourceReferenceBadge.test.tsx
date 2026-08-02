@@ -37,4 +37,15 @@ describe('SourceReferenceBadge', () => {
     expect(container.querySelector('a')).toBeNull();
     expect(screen.getByText('TSE Divulgação de Candidaturas')).toBeInTheDocument();
   });
+
+  it('não força texto branco em badges de fonte, preservando contraste por tema', () => {
+    const { container } = render(
+      <SourceReferenceBadge document={null} confidenceScore={1} />,
+    );
+
+    const categoryBadge = screen.getByText('Outra fonte').closest('span');
+    expect(categoryBadge).not.toHaveClass('text-white');
+    expect(categoryBadge).toHaveStyle({ color: 'var(--color-paper)' });
+    expect(container).toHaveTextContent(/não confirmado/i);
+  });
 });

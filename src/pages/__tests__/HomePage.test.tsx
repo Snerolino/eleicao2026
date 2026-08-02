@@ -92,6 +92,14 @@ beforeEach(() => {
 });
 
 describe('HomePage estados honestos H5.2', () => {
+  it('expõe um h1 público para navegação por headings', () => {
+    renderHome();
+
+    expect(
+      screen.getByRole('heading', { level: 1, name: /candidatos 2026 no rio grande do sul/i })
+    ).toBeInTheDocument();
+  });
+
   it('mostra fatal-error sem mensagem de lista vazia quando a consulta falha', () => {
     queryState.value = {
       data: undefined,
