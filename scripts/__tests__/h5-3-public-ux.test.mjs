@@ -18,9 +18,9 @@ describe('H5.3 acessibilidade, busca e viewports', () => {
 
   it('cacheia normalização de busca sem mudar os critérios por acento, partido, número e cargo', () => {
     expect(home).toMatch(/interface CandidateSearchCache/);
-    expect(home).toMatch(/nameNormalized:\s*normalize\(c\.full_name\)/);
-    expect(home).toMatch(/labelNormalized:\s*normalize\(c\.position_label\)/);
-    expect(home).toMatch(/partyLower:\s*c\.party\.toLowerCase\(\)/);
+    expect(home).toMatch(/nameNormalized\s*[=:]\s*normalize\(c\.full_name\)/);
+    expect(home).toMatch(/labelNormalized\s*[=:]\s*normalize\(c\.position_label\)/);
+    expect(home).toMatch(/partyLower\s*[=:]\s*c\.party\.toLowerCase\(\)/);
     expect(home).toMatch(/ballot_number\?\.toString\(\)/);
     expect(home).not.toMatch(/Bolt Optimization|expensive normalize|O\(N\*M\)/);
   });
