@@ -101,7 +101,7 @@ jobs:
           SMOKE_URL: ${{ steps.deploy.outputs.deployment-url }}
         run: npm run smoke:preview
 
-      - name: Production health check
+      - name: Deployment health check
         env:
-          HEALTH_URL: https://rs.votopraquem.org/
+          HEALTH_URL: ${{ steps.deploy.outputs.deployment-url }}
         run: npm run health:preview
