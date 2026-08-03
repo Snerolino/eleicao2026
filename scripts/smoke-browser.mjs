@@ -154,6 +154,10 @@ function startPreview(url) {
   return child;
 }
 
+async function gotoApp(page, url) {
+  await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45_000 });
+}
+
 async function main() {
   const baseUrl = normalizeUrl(getArg('--url') ?? process.env.SMOKE_URL ?? DEFAULT_URL);
   const expectedMinCount = Number(
@@ -204,13 +208,13 @@ async function main() {
   });
 
   try {
-    await page.goto(baseUrl, { waitUntil: 'networkidle' });
+    await gotoApp(page, baseUrl);
     const { homeCount } = await assertHomeHasCandidates(page, expectedCount);
     await assertPwaInstallability(page);
 
     for (const viewport of SMOKE_VIEWPORTS) {
       await page.setViewportSize({ width: viewport.width, height: viewport.height });
-      await page.goto(baseUrl, { waitUntil: 'networkidle' });
+      await gotoApp(page, baseUrl);
       await assertHomeHasCandidates(page, expectedCount);
     }
 
@@ -241,7 +245,7 @@ async function main() {
     }
 
     if (firstSnapshotCandidate?.id && firstSnapshotCandidate?.slug) {
-      await page.goto(new URL(`/candidatos/${firstSnapshotCandidate.id}`, baseUrl).toString(), { waitUntil: 'networkidle' });
+      await gotoApp(page, new URL(`/candidatos/${firstSnapshotCandidate.id}`, baseUrl).toString());
       const legacyHeading = await page.locator('main h1').first().innerText({ timeout: 10_000 });
       if (!legacyHeading.trim()) fail('Rota legada UUID abriu sem h1 de candidato.');
       const expectedCanonicalPath = `/candidatos/${firstSnapshotCandidate.slug}`;
@@ -250,7 +254,7 @@ async function main() {
       }
     }
 
-    await page.goto(new URL('/comparar', baseUrl).toString(), { waitUntil: 'networkidle' });
+    await gotoApp(page, new URL('/comparar', baseUrl).toString());
     await page.waitForFunction(
       () => document.querySelectorAll('button[aria-pressed]').length >= 2,
       null,
@@ -270,7 +274,7 @@ async function main() {
     }
 
     const sharedCompareUrl = page.url();
-    await page.goto(sharedCompareUrl, { waitUntil: 'networkidle' });
+    await gotoApp(page, sharedCompareUrl);
     await page.waitForSelector('table', { timeout: 10_000 });
     const sharedCompareText = await page.locator('body').innerText();
     if (!sharedCompareText.includes('2 selecionados')) {
