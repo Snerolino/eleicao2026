@@ -8,7 +8,7 @@ Status após fechamento do E0 majoritário.
 |---|---:|---:|---:|---:|
 | Governador / vice-governador | 2 | 2 | 2 | 100% |
 | Senador | 4 | 4 | 4 | 100% |
-| Deputado federal | 88 | 1 publicado | 0 publicados / 1 pendente | lote inicial pendente |
+| Deputado federal | 88 | 1 publicado / 1 pendente | 1 publicado / 1 pendente | 1 dossiê completo publicado |
 | Deputado estadual | 111 | 0 | 0 | 0% |
 | Outros | 8 | 0 | 0 | 0% |
 
@@ -19,8 +19,10 @@ Observação: o snapshot público versionado tem 212 candidaturas; o Supabase re
 | Cargo | Categoria | Status | Total |
 |---|---|---|---:|
 | deputado_estadual | summary | published | 110 |
+| deputado_federal | historico_politico | pending_review | 1 |
 | deputado_federal | historico_politico | published | 1 |
 | deputado_federal | plataforma | pending_review | 1 |
+| deputado_federal | plataforma | published | 1 |
 | deputado_federal | summary | published | 88 |
 | governador | historico_politico | published | 2 |
 | governador | plataforma | published | 2 |
@@ -30,22 +32,30 @@ Observação: o snapshot público versionado tem 212 candidaturas; o Supabase re
 | senador | plataforma | published | 4 |
 | senador | summary | published | 4 |
 
-## Próximo lote editorial iniciado
+## Lote federal iniciado
 
 O plano pós-review prioriza deputados federais em exercício. Cruzamento conservador entre a Câmara dos Deputados (UF=RS) e o snapshot público encontrou correspondência direta apenas para:
 
 | Prioridade | Candidato no snapshot | Partido | TSE candidate id | Fonte oficial inicial | Status |
 |---:|---|---|---|---|---|
-| 1 | Fernanda Melchionna e Silva | PSOL | `210002533902` | Câmara dos Deputados — `https://www.camara.leg.br/deputados/204407`; Radar do Congresso — `https://radar.congressoemfoco.com.br/parlamentar/1204407/discursos` | `historico_politico` publicado; `plataforma` em `pending_review` |
+| 1 | Fernanda Melchionna e Silva | PSOL | `210002533902` | Câmara dos Deputados — `https://www.camara.leg.br/deputados/204407`; Radar do Congresso — `https://radar.congressoemfoco.com.br/parlamentar/1204407/discursos` | dossiê mínimo publicado: `historico_politico` + `plataforma` |
+| 2 | Fábio Ostermann | NOVO | `210002533006` | Site oficial — `https://www.fabioostermann.com.br/` | `historico_politico` + `plataforma` em `pending_review` |
 
-Motivo: é a única deputada federal em exercício encontrada no snapshot atual por correspondência direta de nome/urna. O restante da bancada federal do RS não aparece neste snapshot público parcial pelos mesmos partidos/nomes, então não deve ser forçado.
+Motivo do item 1: Fernanda foi a única deputada federal em exercício encontrada no snapshot atual por correspondência direta de nome/urna. O restante da bancada federal do RS não aparece neste snapshot público parcial pelos mesmos partidos/nomes, então não deve ser forçado.
+
+Motivo do item 2: Fábio Ostermann aparece no snapshot como candidato a deputado federal pelo NOVO e possui site oficial de campanha com biografia e pautas; entra como próximo dossiê federal, sem publicação direta.
 
 ## Gate do próximo lote
 
 Para a Fernanda Melchionna:
 
-1. revisar no `/admin` a claim `plataforma` criada como `pending_review` usando Radar do Congresso;
+1. dossiê mínimo federal publicado e validado na UI pública;
+2. manter monitoramento para fontes eleitorais oficiais posteriores.
+
+Para Fábio Ostermann:
+
+1. revisar no `/admin` as claims `historico_politico` e `plataforma` criadas como `pending_review` usando o site oficial;
 2. publicar via RPC se a revisão editorial aceitar a fonte, ou pedir ajuste caso prefira aguardar programa eleitoral oficial;
-3. validar UI pública do dossiê.
+3. validar UI pública do dossiê após aprovação.
 
 Sem publicação direta via `service_role`.
