@@ -1,7 +1,8 @@
 # E0 — Cobertura mínima majoritária
 
-Data: 2026-08-03  
+Data: 2026-08-03
 Escopo: 6 candidaturas majoritárias do snapshot público.
+Status: **fechado em produção** após revisão humana no `/admin`.
 
 ## Critério E0
 
@@ -12,35 +13,25 @@ Cada candidatura majoritária deve ter pelo menos:
 - `source_document_id` apontando para `source_references` pública;
 - publicação somente por revisão humana + RPC `publish_claim()`.
 
-## Estado atual no Supabase remoto
+## Estado confirmado no Supabase remoto
 
-| Candidatura | Cargo | Histórico | Plataforma | Observação |
+| Candidatura | Cargo | Histórico | Plataforma | Fonte principal |
 |---|---|---|---|---|
-| PRISCILA VOIGT SEVERIANO | governador | `published` | `published` | dossiê mínimo já visível |
-| NAFTALY PEREIRA DO NASCIMENTO | vice-governador | `published` | `pending_review` | aprovar plataforma de chapa no `/admin` se revisão editorial concordar |
-| MANUELA PINTO VIEIRA D'ÁVILA | senador | `pending_review` | `published` | aprovar histórico com fonte Câmara |
-| PAULO ROBERTO SEVERO PIMENTA | senador | `published` | `pending_review` | plataforma tem fonte audiovisual e confiança 2; revisar com atenção |
-| LUCIANO SCHAFER | senador | `published` | `pending_review` | aprovar plataforma de chapa no `/admin` se revisão editorial concordar |
-| TANIA MARA SANTORO PERES | senador | `pending_review` | `pending_review` | histórico é candidatura/integração à chapa; biografia própria ainda pendente |
+| PRISCILA VOIGT SEVERIANO | governador | `published` | `published` | Sul21 |
+| NAFTALY PEREIRA DO NASCIMENTO | vice-governador | `published` | `published` | Sul21 |
+| MANUELA PINTO VIEIRA D'ÁVILA | senador | `published` | `published` | Câmara / Revista Movimento |
+| PAULO ROBERTO SEVERO PIMENTA | senador | `published` | `published` | Câmara / YouTube |
+| LUCIANO SCHAFER | senador | `published` | `published` | GZH / Sul21 |
+| TANIA MARA SANTORO PERES | senador | `published` | `published` | Sul21 |
 
 Resumo:
 
-- 12/12 categorias E0 existem no banco como `published` ou `pending_review`.
-- 6/12 já estão `published`.
-- 6/12 aguardam revisão humana no `/admin`.
+- 12/12 categorias E0 existem no banco como `published`.
+- 6/6 candidaturas majoritárias têm histórico + plataforma publicados.
 - 0/12 sem fonte pública.
-- 0/12 inseridas diretamente como `published` neste bloco.
+- 0/12 publicadas por bypass/service role neste bloco: as publicações pendentes foram aprovadas pela revisão humana no `/admin` e publicadas via RPC.
 
-## Claims aguardando aprovação humana
-
-1. Naf Nascimento — `plataforma` — Sul21/UP, plataforma de chapa.
-2. Manuela D'Ávila — `historico_politico` — Câmara dos Deputados.
-3. Paulo Pimenta — `plataforma` — YouTube/material audiovisual sobre reconstrução do RS; revisar fonte antes de aprovar.
-4. Luciano do MLB — `plataforma` — Sul21/UP, plataforma de chapa.
-5. Tânia Peres — `historico_politico` — Sul21/UP, candidatura na chapa.
-6. Tânia Peres — `plataforma` — Sul21/UP, plataforma de chapa.
-
-## Evidência de consulta
+## Evidência de consulta Supabase
 
 Consulta usada:
 
@@ -73,14 +64,21 @@ left join public.source_references sr on sr.id = cl.source_document_id
 order by m.position, m.full_name, w.category;
 ```
 
-## Próximo gate
+Resultado validado: todas as 12 linhas retornaram `status = 'published'`.
 
-E0 só fecha completamente após o administrador revisar e aprovar no `/admin` as 6 claims pendentes. Depois disso, rodar:
+## Evidência de UI pública
 
-```bash
-npm run data:refresh
-npm run data:check
-npm run smoke:local
-```
+Validação Playwright em produção (`https://rs.votopraquem.org/`) abriu os 6 dossiês majoritários e verificou que as seções **Histórico político** e **Plataforma** têm pelo menos 1 claim e não exibem “Ainda não verificado”:
 
-e validar publicamente 6/6 dossiês majoritários visíveis.
+- `priscila_voigt_severiano_210002533355` — OK
+- `naftaly_pereira_do_nascimento_210002533354` — OK
+- `manuela_pinto_vieira_d_avila_210002533581` — OK
+- `paulo_roberto_severo_pimenta_210002533584` — OK
+- `luciano_schafer_210002533435` — OK
+- `tania_mara_santoro_peres_210002533434` — OK
+
+## Gate E0
+
+**Fechado.**
+
+Próximo passo do planejamento: ampliar relatório/checklist de cobertura editorial e seguir para fotos sem match ou expansão para deputados federais em exercício.

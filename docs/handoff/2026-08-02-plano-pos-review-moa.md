@@ -43,10 +43,13 @@ Registro desta incorporação:
 |---|---|---|---|---|
 | 2026-08-02 | Sintetizar review + MOA em plano operacional | `google/gemini-flash-latest` via OpenCode Plan | sucesso | leitura/planejamento apenas; sem mutação pelo OpenCode |
 | 2026-08-02 | Revisão crítica read-only de admin/login/editorial seed | `openai/gpt-5.5` via OpenCode Plan | sucesso parcial | advisory; apontou tipos Supabase defasados para `source_references`, corrigidos localmente; sem mutação pelo OpenCode; houve erro de stream não bloqueante e tentativa de leitura fora do escopo rejeitada |
+| 2026-08-03 | Fechamento E0 após revisão humana no `/admin` | Hermes/local | sucesso | 6/6 majoritários com `historico_politico` + `plataforma` publicados; evidência em `docs/qa/e0-cobertura-majoritarios.md` |
 
 ## 3. Gates novos que substituem a visão puramente técnica
 
 ### Gate Editorial E0 — cobertura mínima majoritária
+
+Status em 2026-08-03: **fechado em produção**. Evidência: `docs/qa/e0-cobertura-majoritarios.md`.
 
 Antes de chamar o portal de “fechado para RS”, deve haver dossiê mínimo publicado para cargos majoritários:
 
