@@ -24,11 +24,19 @@
 |---------|-----------|
 | [`prompt-raspador-eventos.md`](prompt-raspador-eventos.md) | Prompt para raspagem de dados do TSE |
 
+## Editorial
+
+| Arquivo | Descrição |
+|---------|-----------|
+| [`editorial/2026-08-02-majoritarios-p0.md`](editorial/2026-08-02-majoritarios-p0.md) | Draft seguro da carga editorial mínima dos 6 majoritários; sem publicação automática |
+| [`editorial/2026-08-02-majoritarios-p0-rascunho-claims.md`](editorial/2026-08-02-majoritarios-p0-rascunho-claims.md) | Rascunho local de claims e fontes dos 6 majoritários; itens pendentes não devem ser inseridos |
+
 ## Handoffs
 
 | Arquivo | Descrição |
 |---------|-----------|
 | [`handoff/2026-08-01-fase7-decisoes-ux-node.md`](handoff/2026-08-01-fase7-decisoes-ux-node.md) | Estado atual da branch `fase-7-decisoes-ux-node`, snapshot 212 local, produção 213 e riscos antes do PR |
+| [`handoff/2026-08-02-plano-pos-review-moa.md`](handoff/2026-08-02-plano-pos-review-moa.md) | Plano pós-review incorporando o relatório externo de 02/08 e o padrão MOA Hermes + OpenCode até 15/08 |
 | [`handoff/2026-07-31-mvp-atualizado.md`](handoff/2026-07-31-mvp-atualizado.md) | Estado atualizado do MVP, dados TSE 213, Supabase, produção, riscos e próximos passos |
 | [`handoff/fase-2-chatgpt.md`](handoff/fase-2-chatgpt.md) | Handoff histórico da Fase 2 |
 

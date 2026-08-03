@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router';
 import { isSupabaseConfigured } from '@/lib/supabase';
 import { DemoBanner } from '@/components/states';
 import { PageJumpControls } from '@/components/PageJumpControls';

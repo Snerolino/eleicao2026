@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router';
 import { ThemeToggle } from './ThemeToggle';
 
 function linkClass({ isActive }: { isActive: boolean }) {
@@ -44,9 +44,6 @@ export function SiteHeader() {
           </NavLink>
           <NavLink to="/metodologia" className={linkClass}>
             Metodologia
-          </NavLink>
-          <NavLink to="/admin" className={linkClass}>
-            Admin
           </NavLink>
           <span className="ml-2">
             <ThemeToggle />

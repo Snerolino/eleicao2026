@@ -148,7 +148,7 @@ export type Database = {
             foreignKeyName: "claims_source_document_id_fkey"
             columns: ["source_document_id"]
             isOneToOne: false
-            referencedRelation: "raw_documents"
+            referencedRelation: "source_references"
             referencedColumns: ["id"]
           },
         ]
@@ -230,6 +230,39 @@ export type Database = {
         }
         Relationships: []
       }
+      source_references: {
+        Row: {
+          content_hash: string
+          fetched_at: string
+          id: string
+          published_at: string | null
+          source_category: string
+          source_name: string
+          title: string | null
+          url: string | null
+        }
+        Insert: {
+          content_hash: string
+          fetched_at?: string
+          id?: string
+          published_at?: string | null
+          source_category: string
+          source_name: string
+          title?: string | null
+          url?: string | null
+        }
+        Update: {
+          content_hash?: string
+          fetched_at?: string
+          id?: string
+          published_at?: string | null
+          source_category?: string
+          source_name?: string
+          title?: string | null
+          url?: string | null
+        }
+        Relationships: []
+      }
       raw_documents: {
         Row: {
           content_hash: string
@@ -265,7 +298,26 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      publish_claim: {
+        Args: { p_claim_id: string }
+        Returns: Database["public"]["Tables"]["claims"]["Row"]
+      }
+      correct_claim: {
+        Args: { p_claim_id: string; p_content: string; p_notes?: string | null }
+        Returns: Database["public"]["Tables"]["claims"]["Row"]
+      }
+      retract_claim: {
+        Args: { p_claim_id: string; p_notes?: string | null }
+        Returns: Database["public"]["Tables"]["claims"]["Row"]
+      }
+      has_editor_role: {
+        Args: { uid?: string }
+        Returns: boolean
+      }
+      has_admin_role: {
+        Args: { uid?: string }
+        Returns: boolean
+      }
     }
     Enums: {
       [_ in never]: never

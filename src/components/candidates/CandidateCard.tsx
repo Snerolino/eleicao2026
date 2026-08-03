@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import type { CandidateWithClaims } from '@/types/election';
 import { SourceReferenceBadge } from '@/components/sources/SourceReferenceBadge';
 import { CandidatePhoto } from './CandidatePhoto';

@@ -40,7 +40,9 @@ Um evento de campanha é qualquer ocorrência pública que atenda a pelo menos u
 
 ## Formato de saída
 
-Cada evento vira uma `claim` com `category = 'agenda'` vinculada a um `raw_document`:
+Cada evento vira uma `claim` com `category = 'agenda'` vinculada a uma fonte. A inserção automatizada **nunca publica direto**: cria rascunho editorial com `status = 'pending_review'`; publicação pública ocorre somente depois de revisão aprovada e chamada da RPC `publish_claim()`.
+
+Use `raw_documents` para conteúdo bruto interno quando necessário. A superfície pública de fonte deve ser `source_references`/`source_document_id`, sem expor `raw_content` no frontend.
 
 ### raw_document
 ```json
@@ -61,13 +63,13 @@ Cada evento vira uma `claim` com `category = 'agenda'` vinculada a um `raw_docum
   "content": "Descrição factual do evento (data, local, tipo, frase-chave do candidato se houver)",
   "source_document_id": "uuid-do-raw_document",
   "confidence_score": 5,
-  "status": "published"
+  "status": "pending_review"
 }
 ```
 
 ## Regras
 
-1. **Desambiguação obrigatória** — o nome do candidato no texto deve bater com `full_name` + `party` na tabela `candidates`. Se houver homonímia, marcar como `pending_review`.
+1. **Desambiguação obrigatória** — o nome do candidato no texto deve bater com `full_name` + `party` na tabela `candidates`. Se houver homonímia, manter como `pending_review` e sinalizar para revisão humana.
 
 2. **Filtro de estado** — ignorar eventos de fora do RS (salvo menção direta a candidato gaúcho).
 
@@ -79,10 +81,12 @@ Cada evento vira uma `claim` com `category = 'agenda'` vinculada a um `raw_docum
 
 6. **Integridade** — `raw_content` é o texto COMPLETO, não resumo. Se a página tiver mais de 50KB, extrair só o article/main e truncar com aviso.
 
+7. **Workflow editorial obrigatório** — toda claim coletada por automação entra como `pending_review`. Para virar pública, precisa de `source_document_id` válido, `editorial_review` aprovada e publicação pela RPC `publish_claim()`. Não usar `service_role` para contornar esta regra.
+
 ## Estrutura técnica
 
 ### Pré-requisitos
-- `SUPABASE_SERVICE_ROLE_KEY` no ambiente (para bypass de RLS)
+- `SUPABASE_SERVICE_ROLE_KEY` no ambiente somente para inserção controlada de staging/rascunho; não usar para publicar claims direto
 - `VITE_SUPABASE_URL` no ambiente
 - `@supabase/supabase-js` ou `supabase-py`
 - `cheerio` (se Node) ou `BeautifulSoup` (se Python) para parsing HTML
@@ -91,8 +95,9 @@ Cada evento vira uma `claim` com `category = 'agenda'` vinculada a um `raw_docum
 1. Buscar lista de candidatos ativos do banco
 2. Para cada candidato, buscar eventos nas fontes (limitado a 1x/dia por candidato)
 3. Extrair e estruturar cada evento encontrado
-4. Inserir `raw_document` + `claim` no Supabase
-5. Log de execução: quantos candidatos varridos, quantos eventos novos, quantos ignorados (duplicata)
+4. Inserir `raw_document`/`source_reference` + `claim` com `status='pending_review'` no Supabase
+5. Log de execução: quantos candidatos varridos, quantos eventos novos, quantos ignorados (duplicata), quantos ficaram pendentes de revisão
+6. Publicação posterior: revisão humana aprovada + RPC `publish_claim()`
 
 ## Exemplo de saída
 
@@ -125,6 +130,6 @@ Para executar periodicamente, salvar como skill e agendar cron:
 hermes cron create \
   --name "raspador-eventos" \
   --schedule "every 30m" \
-  --prompt "Roda o raspador de eventos de campanha. Verifica fontes (G1, ZH, TSE) em busca de novos eventos para os candidatos do RS 2026. Insere raw_documents e claims no Supabase." \
+  --prompt "Roda o raspador de eventos de campanha. Verifica fontes (G1, ZH, TSE) em busca de novos eventos para os candidatos do RS 2026. Insere fontes e claims no Supabase sempre como pending_review; não publica direto." \
   --skills "raspador-eventos"
 ```

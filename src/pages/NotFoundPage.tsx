@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { usePageMetadata } from '@/hooks/usePageMetadata';
 
 export function NotFoundPage() {

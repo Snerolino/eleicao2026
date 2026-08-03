@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { CargoSection } from '@/components/candidates/CargoSection';
 import { DataFreshness } from '@/components/DataFreshness';
 import { CandidateSearch } from '@/components/CandidateSearch';

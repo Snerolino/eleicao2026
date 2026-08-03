@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 export function SiteFooter() {
   return (
@@ -25,12 +25,6 @@ export function SiteFooter() {
             className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)] underline-offset-4 hover:text-[var(--color-ink)] hover:underline"
           >
             Metodologia
-          </Link>
-          <Link
-            to="/admin"
-            className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)] underline-offset-4 hover:text-[var(--color-ink)] hover:underline"
-          >
-            Admin
           </Link>
         </nav>
         <p className="mt-3 max-w-xl font-mono text-xs leading-relaxed text-[var(--color-muted-ink)]">
