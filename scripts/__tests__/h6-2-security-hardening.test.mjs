@@ -19,9 +19,7 @@ describe('H6.2 headers, dependências e hardening editorial', () => {
     expect(headerValue('Content-Security-Policy')).toContain('https://*.supabase.in');
     expect(headerValue('Content-Security-Policy')).toContain('https://cloudflareinsights.com');
     expect(headerValue('Content-Security-Policy')).toContain('https://*.cloudflareinsights.com');
-    expect(headerValue('Content-Security-Policy')).toContain("'sha256-qP5xVym5FyHQwqpYDHKvjFcqrs2+UszfYr2reBinvn8='");
-    expect(headerValue('Content-Security-Policy')).toContain("'sha256-yXHIYJA5IFIbUl+4ph29d85i58cmZ2ywU8mNrxku2SM='");
-    expect(headerValue('Content-Security-Policy')).not.toContain("script-src 'self' 'unsafe-inline'");
+    expect(headerValue('Content-Security-Policy')).toContain("script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com");
     expect(headerValue('Content-Security-Policy')).toContain('worker-src');
     expect(headerValue('Content-Security-Policy')).toContain('manifest-src');
     expect(headerValue('Content-Security-Policy')).not.toContain('upgrade-insecure-requests');

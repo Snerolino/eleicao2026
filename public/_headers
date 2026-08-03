@@ -1,6 +1,6 @@
 # Security & caching headers for Cloudflare Pages
 /*
-  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; connect-src 'self' https://*.supabase.co https://*.supabase.in wss://*.supabase.co wss://*.supabase.in https://cloudflareinsights.com https://*.cloudflareinsights.com; img-src 'self' data: blob: https:; script-src 'self' https://static.cloudflareinsights.com 'sha256-qP5xVym5FyHQwqpYDHKvjFcqrs2+UszfYr2reBinvn8=' 'sha256-yXHIYJA5IFIbUl+4ph29d85i58cmZ2ywU8mNrxku2SM='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; worker-src 'self' blob:; manifest-src 'self'; form-action 'self'
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; connect-src 'self' https://*.supabase.co https://*.supabase.in wss://*.supabase.co wss://*.supabase.in https://cloudflareinsights.com https://*.cloudflareinsights.com; img-src 'self' data: blob: https:; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; worker-src 'self' blob:; manifest-src 'self'; form-action 'self'
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
