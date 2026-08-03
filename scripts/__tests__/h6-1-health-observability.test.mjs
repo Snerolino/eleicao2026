@@ -121,7 +121,8 @@ describe('H6.1 release metadata e health-check', () => {
   it('publica release.json no build e executa health check no deploy', () => {
     expect(packageJson.scripts.build).toContain('generate-release-metadata.mjs');
     expect(packageJson.scripts['health:preview']).toBe('node scripts/health-check.mjs');
-    expect(deployWorkflow).toContain('Production health check');
+    expect(deployWorkflow).toContain('Deployment health check');
+    expect(deployWorkflow).toContain('steps.deploy.outputs.deployment-url');
     expect(deployWorkflow).toContain('npm run health:preview');
   });
 });
