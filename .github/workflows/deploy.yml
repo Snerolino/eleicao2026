@@ -81,6 +81,7 @@ jobs:
         run: npm run build:deploy
 
       - name: Deploy to Cloudflare Pages
+        id: deploy
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -95,9 +96,9 @@ jobs:
             npx playwright install chromium
           fi
 
-      - name: Production browser smoke
+      - name: Deployment browser smoke
         env:
-          SMOKE_URL: https://rs.votopraquem.org/
+          SMOKE_URL: ${{ steps.deploy.outputs.deployment-url }}
         run: npm run smoke:preview
 
       - name: Production health check
