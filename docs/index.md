@@ -54,6 +54,7 @@
 |---------|-----------|
 | [`qa/fase-7-acessibilidade-contraste-final.md`](qa/fase-7-acessibilidade-contraste-final.md) | Rodada final de teclado, headings e contraste em mobile/desktop; registra correção de `h1` da Home |
 | [`qa/fotos-candidatos-fontes-oficiais.md`](qa/fotos-candidatos-fontes-oficiais.md) | Fontes, método e cobertura das fotos oficiais TSE aplicadas ao snapshot público |
+| [`qa/e0-cobertura-majoritarios.md`](qa/e0-cobertura-majoritarios.md) | Evidência do gate E0: claims dos 6 majoritários por categoria, status e pendências de revisão |
 
 ## Release
 
