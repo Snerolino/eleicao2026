@@ -31,7 +31,7 @@ A política permite apenas o necessário para o app estático/PWA e Supabase:
 
 - `default-src 'self'`
 - `connect-src 'self' https://*.supabase.co https://*.supabase.in wss://*.supabase.co wss://*.supabase.in https://cloudflareinsights.com https://*.cloudflareinsights.com`
-- `script-src 'self' https://static.cloudflareinsights.com`
+- `script-src 'self' https://static.cloudflareinsights.com` com hashes explícitos para inline scripts injetados pelo Cloudflare Web Analytics em produção; sem `unsafe-inline` para scripts
 - `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com`
 - `font-src 'self' data: https://fonts.gstatic.com`
 - `worker-src 'self' blob:`
