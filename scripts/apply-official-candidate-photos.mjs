@@ -2,15 +2,15 @@
 /**
  * Aplica fotos oficiais de candidatos a partir de um diretório TSE já extraído.
  *
- * Fonte esperada: ZIP oficial TSE 2024 RS de fotos publicáveis:
- * https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2024/fotos/foto_cand2024_RS_div.zip
+ * Fonte primária: ZIP oficial TSE 2026 RS de fotos publicáveis:
+ * https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_RS_div.zip
  *
- * O TSE 2026 ainda pode retornar fotoUrlPublicavel=false/null no DivulgaCandContas.
- * Enquanto isso, este script usa somente matches conservadores por nome + partido
- * contra fotos oficiais publicáveis da eleição municipal de 2024.
+ * Fallback temporário: ZIP oficial TSE 2024 RS por match conservador nome + partido,
+ * usado somente se uma candidatura 2026 não tiver arquivo FRS{SQ_CANDIDATO}_div.
  *
  * Uso:
  *   node scripts/apply-official-candidate-photos.mjs \
+ *     --source-dir-2026=/home/lourenco/Projetos/dataset2026/foto_cand2026_RS_div
  *     --source-dir=/home/lourenco/Projetos/dataset2026/foto_cand2024_RS_div
  */
 
@@ -21,11 +21,17 @@ import { basename, extname, resolve } from 'node:path';
 const ROOT = resolve(process.cwd());
 const SNAPSHOT_PATH = resolve(ROOT, 'data/public-candidates.json');
 const OUT_DIR = resolve(ROOT, 'public/photos/tse-2024-rs');
+const OUT_DIR_2026 = resolve(ROOT, 'public/photos/tse-2026-rs');
 const REPORT_PATH = resolve(ROOT, 'data/public-candidate-photo-matches.json');
 const OFFICIAL_SOURCE_URL = 'https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2024/fotos/foto_cand2024_RS_div.zip';
+const OFFICIAL_SOURCE_URL_2026 = 'https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_RS_div.zip';
 
 const sourceDirArg = process.argv.find((arg) => arg.startsWith('--source-dir='));
+const sourceDir2026Arg = process.argv.find((arg) => arg.startsWith('--source-dir-2026='));
 const metadataDirArg = process.argv.find((arg) => arg.startsWith('--metadata-dir='));
+const SOURCE_DIR_2026 = resolve(
+  sourceDir2026Arg?.split('=')[1] ?? '../dataset2026/foto_cand2026_RS_div',
+);
 const SOURCE_DIR = resolve(
   sourceDirArg?.split('=')[1] ?? '../dataset2026/foto_cand2024_RS_div',
 );
@@ -72,6 +78,20 @@ function photoFiles(dir) {
       fileName: entry.name,
       path: resolve(dir, entry.name),
     }));
+}
+
+function loadExact2026Photos() {
+  if (!existsSync(SOURCE_DIR_2026)) return new Map();
+
+  return new Map(
+    photoFiles(SOURCE_DIR_2026)
+      .map((file) => {
+        const match = /^FRS(\d+)_div\.(jpe?g)$/i.exec(file.fileName);
+        if (!match) return null;
+        return [match[1], file];
+      })
+      .filter(Boolean),
+  );
 }
 
 function loadPhotos() {
@@ -135,20 +155,47 @@ function scoreCandidatePhoto(candidate, photo) {
 }
 
 function main() {
-  if (!existsSync(SOURCE_DIR)) {
+  if (!existsSync(SOURCE_DIR_2026) && !existsSync(SOURCE_DIR)) {
     throw new Error(`Diretório de fotos TSE não encontrado: ${SOURCE_DIR}`);
   }
 
   const candidates = JSON.parse(readFileSync(SNAPSHOT_PATH, 'utf8'));
+  const exact2026Photos = loadExact2026Photos();
   const { photos, metadataDirUsed } = loadPhotos();
 
   rmSync(OUT_DIR, { recursive: true, force: true });
+  rmSync(OUT_DIR_2026, { recursive: true, force: true });
   mkdirSync(OUT_DIR, { recursive: true });
+  mkdirSync(OUT_DIR_2026, { recursive: true });
 
   const matches = [];
   const ambiguous = [];
+  const fallbackMatches = [];
 
   for (const candidate of candidates) {
+    const exact2026Photo = exact2026Photos.get(String(candidate.tse_candidate_id));
+    if (exact2026Photo) {
+      const ext = extname(exact2026Photo.fileName).slice(1).toLowerCase();
+      const targetFile = publicPhotoFileName(candidate, ext);
+      copyFileSync(exact2026Photo.path, resolve(OUT_DIR_2026, targetFile));
+
+      candidate.photo_url = `/photos/tse-2026-rs/${targetFile}`;
+      candidate.photo_source_url = OFFICIAL_SOURCE_URL_2026;
+      matches.push({
+        tse_candidate_id: candidate.tse_candidate_id,
+        slug: candidate.slug,
+        full_name: candidate.full_name,
+        party: candidate.party,
+        photo_url: candidate.photo_url,
+        photo_source_url: candidate.photo_source_url,
+        source_file: basename(exact2026Photo.fileName),
+        official_file: basename(exact2026Photo.fileName),
+        official_source: OFFICIAL_SOURCE_URL_2026,
+        match_reason: 'tse_candidate_id_exact_2026',
+      });
+      continue;
+    }
+
     const scored = photos
       .map((photo) => {
         const result = scoreCandidatePhoto(candidate, photo);
@@ -204,17 +251,22 @@ function main() {
       previous_position: match.photo.previousPosition,
       previous_municipality: match.photo.municipality,
     });
+    fallbackMatches.push(candidate.tse_candidate_id);
   }
 
   writeFileSync(SNAPSHOT_PATH, `${JSON.stringify(candidates, null, 2)}\n`);
   writeFileSync(REPORT_PATH, `${JSON.stringify({
     generated_at: new Date().toISOString(),
-    source_url: OFFICIAL_SOURCE_URL,
+    source_url: OFFICIAL_SOURCE_URL_2026,
+    fallback_source_url: OFFICIAL_SOURCE_URL,
+    source_dir_2026: SOURCE_DIR_2026,
     source_dir: SOURCE_DIR,
     metadata_dir: metadataDirUsed,
-    strategy: '2026 public candidates matched against official TSE 2024 publishable RS photos by normalized name + party; ambiguous matches are left without photo.',
+    strategy: '2026 public candidates matched first by exact TSE SQ_CANDIDATO against official TSE 2026 publishable RS photos; fallback uses official TSE 2024 publishable RS photos by normalized name + party; ambiguous matches are left without photo.',
     total_candidates: candidates.length,
     matched: matches.length,
+    matched_2026_exact: matches.length - fallbackMatches.length,
+    matched_2024_fallback: fallbackMatches.length,
     ambiguous: ambiguous.length,
     unmatched: candidates.length - matches.length - ambiguous.length,
     matches,
@@ -222,9 +274,12 @@ function main() {
   }, null, 2)}\n`);
 
   console.log(`✅ Fotos oficiais aplicadas: ${matches.length}`);
+  console.log(`   2026 por SQ_CANDIDATO: ${matches.length - fallbackMatches.length}`);
+  console.log(`   fallback 2024: ${fallbackMatches.length}`);
   console.log(`⚠️ Ambíguas ignoradas: ${ambiguous.length}`);
   console.log(`Sem match: ${candidates.length - matches.length - ambiguous.length}`);
-  console.log(`Arquivos: ${OUT_DIR}`);
+  console.log(`Arquivos 2026: ${OUT_DIR_2026}`);
+  if (fallbackMatches.length > 0) console.log(`Arquivos fallback 2024: ${OUT_DIR}`);
   console.log(`Relatório: ${REPORT_PATH}`);
 }
 

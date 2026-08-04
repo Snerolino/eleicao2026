@@ -96,12 +96,12 @@ describe('snapshot público de candidatos', () => {
     const candidates = loadPublicCandidateSnapshot({ root });
     const withPhotos = candidates.filter((candidate) => candidate.photo_url);
 
-    expect(withPhotos).toHaveLength(72);
+    expect(withPhotos).toHaveLength(212);
 
     for (const candidate of withPhotos) {
-      expect(candidate.photo_url).toMatch(/^\/photos\/tse-2024-rs\/[a-z0-9_]+_\d+\.jpe?g$/);
+      expect(candidate.photo_url).toMatch(/^\/photos\/tse-2026-rs\/[a-z0-9_]+_\d+\.jpe?g$/);
       expect(candidate.photo_source_url).toBe(
-        'https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2024/fotos/foto_cand2024_RS_div.zip',
+        'https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_RS_div.zip',
       );
       expect(existsSync(resolve(root, 'public', candidate.photo_url.slice(1)))).toBe(true);
     }

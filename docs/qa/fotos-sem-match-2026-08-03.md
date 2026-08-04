@@ -1,60 +1,29 @@
-# Fotos sem match conservador — 2026-08-03
+# Fotos oficiais de candidaturas — atualização 2026
 
-Fonte de fotos usada: ZIP oficial TSE 2024, `foto_cand2024_RS_div`.  
-Regra: só aplicar foto com match conservador por nome/partido e origem TSE rastreável.
+Fonte primária usada: ZIP oficial TSE 2026, `foto_cand2026_RS_div`.
+
+- URL: https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_RS_div.zip
+- Diretório local: `/home/lourenco/Projetos/dataset2026/foto_cand2026_RS_div`
+- Regra: aplicar somente arquivo oficial com correspondência exata `FRS{SQ_CANDIDATO}_div` ↔ `tse_candidate_id` do snapshot público.
+- Fallback disponível no script: ZIP oficial TSE 2024 por match conservador nome + partido, usado apenas se faltar arquivo 2026.
 
 ## Resultado atual
 
 | Métrica | Total |
 |---|---:|
 | Candidaturas no snapshot público | 212 |
-| Fotos oficiais aplicadas | 72 |
-| Caso ambíguo | 1 |
-| Sem match conservador | 139 |
+| Fotos oficiais aplicadas | 212 |
+| Match exato TSE 2026 por `SQ_CANDIDATO` | 212 |
+| Fallback TSE 2024 usado | 0 |
+| Caso ambíguo | 0 |
+| Sem match | 0 |
 
-## Sem match por cargo
+## Decisão
 
-| Cargo | Sem foto |
-|---|---:|
-| deputado_federal | 58 |
-| deputado_estadual | 70 |
-| outro | 7 |
-| senador | 3 |
-| vice_governador | 1 |
+As fotos 2024 temporárias foram substituídas por fotos oficiais TSE 2026 quando houve match exato por `SQ_CANDIDATO`. Não houve escolha manual nem resolução por semelhança visual.
 
-## Sem match por cargo/partido
+## Verificação
 
-| Cargo | Partido | Sem foto |
-|---|---|---:|
-| deputado_estadual | NOVO | 22 |
-| deputado_estadual | PODE | 34 |
-| deputado_estadual | PSOL | 10 |
-| deputado_estadual | REDE | 2 |
-| deputado_estadual | UP | 2 |
-| deputado_federal | NOVO | 18 |
-| deputado_federal | PODE | 24 |
-| deputado_federal | PSOL | 12 |
-| deputado_federal | REDE | 1 |
-| deputado_federal | UP | 3 |
-| outro | PDT | 1 |
-| outro | PT | 2 |
-| outro | UP | 4 |
-| senador | PSOL | 1 |
-| senador | PT | 1 |
-| senador | UP | 1 |
-| vice_governador | UP | 1 |
-
-## Caso ambíguo
-
-| Candidato | Partido | Motivo |
-|---|---|---|
-| ANETTE SCHIEMANN PEGAS (`210002533073`) | NOVO | duas fotos oficiais TSE 2024 com mesmo nome/partido: vereador e vice-prefeito em Santa Cruz do Sul |
-
-Decisão: manter sem foto até haver critério adicional seguro. Não escolher manualmente uma das duas imagens sem evidência de que corresponde à candidatura correta.
-
-## Próximo passo seguro
-
-1. Não aplicar fotos novas sem fonte TSE/rastreável.
-2. Aguardar fonte TSE 2026 (`fotoUrlPublicavel=true` ou ZIP oficial 2026).
-3. Quando houver fonte 2026, priorizar match por `SQ_CANDIDATO`/`tse_candidate_id`.
-4. Se revisar 2024 manualmente, registrar evidência por candidato antes de alterar `photo_url`.
+- `npm run data:photos` aplicou 212 fotos.
+- `data/public-candidate-photo-matches.json` registra `matched_2026_exact = 212`, `matched_2024_fallback = 0`, `unmatched = 0`.
+- `scripts/__tests__/public-snapshot.test.mjs` exige 212 assets públicos em `/photos/tse-2026-rs/` com fonte TSE 2026.
