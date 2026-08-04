@@ -15,6 +15,11 @@
 - `../dataset2026` só deve ser lido por comandos explícitos de ingestão/refresh, nunca silenciosamente no build.
 - Campos raw/PII/documentos crus não podem ir para snapshot público.
 - Claims novas entram como `pending_review`; UI pública usa somente `published`.
+- `docs/context-export/` é o contrato curado exposto ao raspador por MCP. Quando
+  migrations alterarem schema, FKs, status, grants ou RLS relevantes, atualizar
+  `docs/context-export/SCHEMA.md` e `CHANGELOG.md` no mesmo trabalho.
+- Nunca colocar credenciais, `.env`, payloads brutos ou PII em
+  `docs/context-export/`.
 
 ## Fluxo de implementação
 

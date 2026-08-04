@@ -48,11 +48,11 @@
         "enabled": true
       },
 
-      // Sistema de arquivos
+      // Sistema de arquivos curado para ponte com o raspador: nunca apontar para ".".
       "filesystem": {
         "type": "local",
         "command": "npx",
-        "args": ["-y", "@modelcontextprotocol/server-filesystem", "."],
+        "args": ["-y", "@modelcontextprotocol/server-filesystem", "docs/context-export"],
         "enabled": true
       },
 
