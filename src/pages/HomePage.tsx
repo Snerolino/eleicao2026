@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useDeferredValue } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router';
 import { CargoSection } from '@/components/candidates/CargoSection';
@@ -81,6 +81,7 @@ export function HomePage() {
   );
 
   const [searchQuery, setSearchQuery] = useState('');
+  const deferredSearchQuery = useDeferredValue(searchQuery);
   const [cargoFilter, setCargoFilter] = useState<'' | Position>('');
   const [partyFilter, setPartyFilter] = useState('');
 
@@ -99,8 +100,8 @@ export function HomePage() {
   const searchCache = useMemo(() => new Map<string, CandidateSearchCache>(), [allCandidates]);
 
   const filtered = useMemo(
-    () => filterCandidates(allCandidates, searchCache, searchQuery, cargoFilter, partyFilter),
-    [allCandidates, searchCache, searchQuery, cargoFilter, partyFilter]
+    () => filterCandidates(allCandidates, searchCache, deferredSearchQuery, cargoFilter, partyFilter),
+    [allCandidates, searchCache, deferredSearchQuery, cargoFilter, partyFilter]
   );
 
   const cargoCounts = useMemo(() => {
