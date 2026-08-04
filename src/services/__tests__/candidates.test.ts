@@ -414,7 +414,7 @@ describe('fetchAllCandidates', () => {
     } = await import('../candidates');
     const result = await fetchAllCandidates();
 
-    expect(result.filter((candidate) => candidate.photo_url)).toHaveLength(72);
+    expect(result.filter((candidate) => candidate.photo_url)).toHaveLength(212);
     expect(wasLastCandidatesFetchFromSnapshot()).toBe(true);
     expect(getLastCandidatesFetchDiagnostic()).toMatch(/fotos TSE mais completo/i);
     expect(warnSpy).toHaveBeenCalledWith(expect.stringMatching(/fotos TSE mais completo/));
