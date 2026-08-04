@@ -55,6 +55,9 @@ export interface Candidate {
   state?: string | null;
   election_year?: number;
   registration_status?: string | null;
+  gender?: string | null;
+  race?: string | null;
+  indigenous_ethnicity?: string | null;
 }
 
 export interface CandidateWithClaims extends Candidate {

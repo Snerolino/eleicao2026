@@ -7,9 +7,24 @@ interface CandidateSearchProps {
   query: string;
   cargoFilter: '' | Position;
   partyFilter: string;
+  womenOnly: boolean;
+  raceFilter: string;
   onQueryChange: (value: string) => void;
   onCargoFilterChange: (value: '' | Position) => void;
   onPartyFilterChange: (value: string) => void;
+  onWomenOnlyChange: (value: boolean) => void;
+  onRaceFilterChange: (value: string) => void;
+}
+
+const OFFICIAL_RACE_FILTERS = ['AMARELA', 'BRANCA', 'INDÍGENA', 'PARDA', 'PRETA', 'NÃO INFORMADO'] as const;
+
+function candidateRaceFilterValue(candidate: CandidateWithClaims): string {
+  return candidate.race ?? 'NÃO INFORMADO';
+}
+
+function raceFilterLabel(value: string): string {
+  if (value === 'NÃO INFORMADO') return 'Não informado';
+  return value.charAt(0) + value.slice(1).toLowerCase();
 }
 
 export function CandidateSearch({
@@ -17,24 +32,34 @@ export function CandidateSearch({
   query,
   cargoFilter,
   partyFilter,
+  womenOnly,
+  raceFilter,
   onQueryChange,
   onCargoFilterChange,
   onPartyFilterChange,
+  onWomenOnlyChange,
+  onRaceFilterChange,
 }: CandidateSearchProps) {
-  const { positions, parties } = useMemo(() => {
+  const { positions, parties, races } = useMemo(() => {
     const posSet = new Set<Position>();
     const partySet = new Set<string>();
+    const raceSet = new Set<string>(OFFICIAL_RACE_FILTERS);
 
     for (const c of candidates) {
       posSet.add(c.position);
       partySet.add(c.party);
+      raceSet.add(candidateRaceFilterValue(c));
     }
 
     const order: Position[] = ['governador', 'senador', 'deputado_federal', 'deputado_estadual'];
     const sortedPositions = [...posSet].sort((a, b) => order.indexOf(a) - order.indexOf(b));
     const sortedParties = [...partySet].sort();
+    const sortedRaces = [...raceSet].sort(
+      (a, b) => OFFICIAL_RACE_FILTERS.indexOf(a as (typeof OFFICIAL_RACE_FILTERS)[number])
+        - OFFICIAL_RACE_FILTERS.indexOf(b as (typeof OFFICIAL_RACE_FILTERS)[number]),
+    );
 
-    return { positions: sortedPositions, parties: sortedParties };
+    return { positions: sortedPositions, parties: sortedParties, races: sortedRaces };
   }, [candidates]);
 
   return (
@@ -88,6 +113,31 @@ export function CandidateSearch({
         {parties.map((p) => (
           <option key={p} value={p}>
             {p}
+          </option>
+        ))}
+      </select>
+
+      <label className="inline-flex cursor-pointer items-center gap-2 rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)] focus-within:border-[var(--color-institutional)]">
+        <input
+          type="checkbox"
+          checked={womenOnly}
+          onChange={(e) => onWomenOnlyChange(e.target.checked)}
+          className="accent-[var(--color-institutional)]"
+        />
+        Mostrar somente mulheres
+      </label>
+
+      <select
+        value={raceFilter}
+        onChange={(e) => onRaceFilterChange(e.target.value)}
+        className="cursor-pointer rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm font-[family-name:var(--font-body)] text-[var(--color-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
+        aria-label="Filtrar por cor/raça"
+        title="Filtro baseado em autodeclaração oficial TSE/IBGE. Etnia indígena será detalhada quando houver cadastro específico."
+      >
+        <option value="">Todas as cores/raças</option>
+        {races.map((race) => (
+          <option key={race} value={race}>
+            {raceFilterLabel(race)}
           </option>
         ))}
       </select>

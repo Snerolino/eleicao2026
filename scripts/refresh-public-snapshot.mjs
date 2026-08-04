@@ -16,6 +16,7 @@ const ROOT = resolve(import.meta.dirname, '..');
 const DATASET_DIR = resolve(ROOT, '../dataset2026/candidatos');
 const SIG_CANDIDATES_FILE = 'FONTE OFICIAL = sig.tse.jus.br -lista_candidatos_2026.csv';
 const DADOS_ABERTOS_CANDIDATES_FILE = 'FONTE OFICIAL  = dadosabertos.tse.jus.b = candidatos.csv';
+const CONSULTA_CANDIDATES_FILE = 'consulta_cand_2026/consulta_cand_2026_RS.csv';
 const OUTPUT = resolve(ROOT, SNAPSHOT_RELATIVE_PATH);
 const MANIFEST_OUTPUT = resolve(ROOT, TSE_SOURCE_MANIFEST_RELATIVE_PATH);
 const PUBLIC_OVERRIDES_PATH = resolve(ROOT, 'data/public-candidate-overrides.json');
@@ -103,6 +104,10 @@ function toNullable(value) {
   return text;
 }
 
+function normalizePublicClassifier(value) {
+  return toNullable(value)?.toUpperCase() ?? null;
+}
+
 function rowValue(row, ...keys) {
   for (const key of keys) {
     if (key in row) return row[key];
@@ -165,7 +170,7 @@ function sourceManifest(csvPath, rows, csvFile, createdAt) {
   });
 }
 
-function buildCandidate({ fullName, party, positionValue, ballotNumberValue, tseCandidateIdValue, stateValue, ballotNameValue }) {
+function buildCandidate({ fullName, party, positionValue, ballotNumberValue, tseCandidateIdValue, stateValue, ballotNameValue, genderValue, raceValue, indigenousEthnicityValue }) {
   const name = toNullable(fullName);
   const partyValue = toNullable(party);
   if (!name || !partyValue) return null;
@@ -190,6 +195,9 @@ function buildCandidate({ fullName, party, positionValue, ballotNumberValue, tse
     state: toNullable(stateValue),
     election_year: 2026,
     ballot_name: toNullable(ballotNameValue),
+    gender: normalizePublicClassifier(genderValue),
+    race: normalizePublicClassifier(raceValue),
+    indigenous_ethnicity: toNullable(indigenousEthnicityValue),
   };
 }
 
@@ -202,6 +210,9 @@ function candidateFromSigRow(row) {
     tseCandidateIdValue: rowValue(row, 'sq_candidato'),
     stateValue: rowValue(row, 'sg_uf'),
     ballotNameValue: rowValue(row, 'nm_urna_candidato'),
+    genderValue: rowValue(row, 'ds_genero'),
+    raceValue: rowValue(row, 'ds_cor_raca'),
+    indigenousEthnicityValue: rowValue(row, 'ds_etnia_indigena'),
   });
 }
 
@@ -214,15 +225,52 @@ function candidateFromConsultaCandRow(row) {
     tseCandidateIdValue: row.SQ_CANDIDATO,
     stateValue: row.SG_UF,
     ballotNameValue: row.NM_URNA_CANDIDATO,
+    genderValue: row.DS_GENERO,
+    raceValue: row.DS_COR_RACA,
+    indigenousEthnicityValue: row.DS_ETNIA_INDIGENA,
+  });
+}
+
+function consultaClassifiersByTseId(datasetDir) {
+  const csvPath = resolve(datasetDir, CONSULTA_CANDIDATES_FILE);
+  if (!existsSync(csvPath)) return new Map();
+
+  return new Map(
+    readCsv(csvPath)
+      .map((row) => [
+        toNullable(row.SQ_CANDIDATO),
+        {
+          gender: normalizePublicClassifier(row.DS_GENERO),
+          race: normalizePublicClassifier(row.DS_COR_RACA),
+          indigenous_ethnicity: toNullable(row.DS_ETNIA_INDIGENA),
+        },
+      ])
+      .filter(([tseCandidateId]) => tseCandidateId),
+  );
+}
+
+function enrichPublicClassifiers(candidates, datasetDir) {
+  const classifiers = consultaClassifiersByTseId(datasetDir);
+  if (classifiers.size === 0) return candidates;
+
+  return candidates.map((candidate) => {
+    const classifier = classifiers.get(String(candidate.tse_candidate_id ?? ''));
+    if (!classifier) return candidate;
+    return {
+      ...candidate,
+      gender: candidate.gender ?? classifier.gender,
+      race: candidate.race ?? classifier.race,
+      indigenous_ethnicity: candidate.indigenous_ethnicity ?? classifier.indigenous_ethnicity,
+    };
   });
 }
 
 export function generatePublicCandidateSnapshot({ datasetDir = DATASET_DIR } = {}) {
   const sigCsvPath = resolve(datasetDir, SIG_CANDIDATES_FILE);
   if (existsSync(sigCsvPath)) {
-    const candidates = applyPublicOverrides(readCsv(sigCsvPath)
+    const candidates = enrichPublicClassifiers(applyPublicOverrides(readCsv(sigCsvPath)
       .map(candidateFromSigRow)
-      .filter(Boolean));
+      .filter(Boolean)), datasetDir);
     return validatePublicCandidateSnapshot(candidates);
   }
 

@@ -39,13 +39,17 @@ function filterCandidates(
   cache: Map<string, CandidateSearchCache>,
   query: string,
   cargoFilter: '' | Position,
-  partyFilter: string
+  partyFilter: string,
+  womenOnly: boolean,
+  raceFilter: string
 ): CandidateWithClaims[] {
   const normalized = normalize(query);
 
   return candidates.filter((c) => {
     if (cargoFilter && c.position !== cargoFilter) return false;
     if (partyFilter && c.party !== partyFilter) return false;
+    if (womenOnly && c.gender !== 'FEMININO') return false;
+    if (raceFilter && (c.race ?? 'NÃO INFORMADO') !== raceFilter) return false;
     if (!normalized) return true;
 
     let cached = cache.get(c.id);
@@ -83,6 +87,8 @@ export function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [cargoFilter, setCargoFilter] = useState<'' | Position>('');
   const [partyFilter, setPartyFilter] = useState('');
+  const [womenOnly, setWomenOnly] = useState(false);
+  const [raceFilter, setRaceFilter] = useState('');
 
   const query = useQuery<CandidateWithClaims[]>({
     queryKey: ['candidates'],
@@ -99,8 +105,8 @@ export function HomePage() {
   const searchCache = useMemo(() => new Map<string, CandidateSearchCache>(), [allCandidates]);
 
   const filtered = useMemo(
-    () => filterCandidates(allCandidates, searchCache, searchQuery, cargoFilter, partyFilter),
-    [allCandidates, searchCache, searchQuery, cargoFilter, partyFilter]
+    () => filterCandidates(allCandidates, searchCache, searchQuery, cargoFilter, partyFilter, womenOnly, raceFilter),
+    [allCandidates, searchCache, searchQuery, cargoFilter, partyFilter, womenOnly, raceFilter]
   );
 
   const cargoCounts = useMemo(() => {
@@ -120,6 +126,8 @@ export function HomePage() {
   function openCargo(position: Position) {
     setSearchQuery('');
     setPartyFilter('');
+    setWomenOnly(false);
+    setRaceFilter('');
     setCargoFilter(position);
 
     const scrollToCargo = () => {
@@ -137,7 +145,7 @@ export function HomePage() {
     }
   }
 
-  const hasActiveFilter = searchQuery !== '' || cargoFilter !== '' || partyFilter !== '';
+  const hasActiveFilter = searchQuery !== '' || cargoFilter !== '' || partyFilter !== '' || womenOnly || raceFilter !== '';
 
   if (query.isLoading) {
     return (
@@ -200,9 +208,13 @@ export function HomePage() {
                 query={searchQuery}
                 cargoFilter={cargoFilter}
                 partyFilter={partyFilter}
+                womenOnly={womenOnly}
+                raceFilter={raceFilter}
                 onQueryChange={setSearchQuery}
                 onCargoFilterChange={setCargoFilter}
                 onPartyFilterChange={setPartyFilter}
+                onWomenOnlyChange={setWomenOnly}
+                onRaceFilterChange={setRaceFilter}
               />
             </div>
             <div className="flex shrink-0 items-center gap-3">
@@ -228,6 +240,8 @@ export function HomePage() {
               {searchQuery && ` para "${searchQuery}"`}
               {cargoFilter && ` em ${POSITION_LABEL[cargoFilter as keyof typeof POSITION_LABEL]?.toLowerCase() ?? cargoFilter}`}
               {partyFilter && ` do ${partyFilter}`}
+              {womenOnly && ' · mulheres'}
+              {raceFilter && ` · cor/raça ${raceFilter.toLowerCase()}`}
             </p>
           )}
           {visiblePositions.length > 0 && (
@@ -280,6 +294,8 @@ export function HomePage() {
                 setSearchQuery('');
                 setCargoFilter('');
                 setPartyFilter('');
+                setWomenOnly(false);
+                setRaceFilter('');
               }}
               className="mt-4 rounded-sm bg-[var(--color-institutional)] px-4 py-2 text-sm font-semibold text-white hover:opacity-90"
             >

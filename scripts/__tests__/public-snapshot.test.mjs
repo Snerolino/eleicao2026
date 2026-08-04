@@ -1,6 +1,6 @@
 // @vitest-environment node
 
-import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { tmpdir } from 'node:os';
 import { describe, expect, it } from 'vitest';
@@ -37,6 +37,18 @@ function writeOfficialSourceFixtures() {
     `${dadosAbertosHeader}\n${dadosAbertosRows.join('\n')}\n`,
     'latin1',
   );
+
+  mkdirSync(resolve(dir, 'consulta_cand_2026'), { recursive: true });
+  const consultaHeader = 'SQ_CANDIDATO;DS_GENERO;DS_COR_RACA';
+  const consultaRows = Array.from({ length: 213 }, (_, index) => {
+    const sq = 210002530000 + index;
+    return `${sq};${index % 2 === 0 ? 'FEMININO' : 'MASCULINO'};${index % 3 === 0 ? 'PRETA' : 'BRANCA'}`;
+  });
+  writeFileSync(
+    resolve(dir, 'consulta_cand_2026/consulta_cand_2026_RS.csv'),
+    `${consultaHeader}\n${consultaRows.join('\n')}\n`,
+    'latin1',
+  );
   return dir;
 }
 
@@ -52,6 +64,8 @@ describe('snapshot público de candidatos', () => {
         tse_candidate_id: expect.any(String),
         full_name: expect.any(String),
         party: expect.any(String),
+        gender: expect.stringMatching(/^(FEMININO|MASCULINO|NÃO DIVULGÁVEL|NÃO INFORMADO)$/),
+        race: expect.any(String),
         position: expect.stringMatching(/^(governador|vice_governador|senador|deputado_federal|deputado_estadual|outro)$/),
         claims: [],
       }),
@@ -134,6 +148,9 @@ describe('snapshot público de candidatos', () => {
 
     expect(candidates).toHaveLength(213);
     expect(candidates.some((candidate) => candidate.tse_candidate_id === '210002530000')).toBe(true);
+    expect(candidates.find((candidate) => candidate.tse_candidate_id === '210002530000')).toEqual(
+      expect.objectContaining({ gender: 'FEMININO', race: 'PRETA' }),
+    );
     expect(candidates.some((candidate) => candidate.position === 'senador')).toBe(true);
     expect(candidates.some((candidate) => candidate.position === 'governador')).toBe(true);
     expect(candidates.some((candidate) => candidate.position === 'outro')).toBe(true);

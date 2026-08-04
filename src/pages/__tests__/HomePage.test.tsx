@@ -43,6 +43,8 @@ const officialCandidate: CandidateWithClaims = {
   state: 'RS',
   election_year: 2026,
   registration_status: 'registration_requested',
+  gender: 'FEMININO',
+  race: 'BRANCA',
   claims: [],
 };
 
@@ -56,6 +58,8 @@ const accentCandidate: CandidateWithClaims = {
   ballot_number: 5678,
   position: 'deputado_estadual',
   position_label: 'Deputado Estadual',
+  gender: 'MASCULINO',
+  race: 'PARDA',
 };
 
 const viceGovernorCandidate: CandidateWithClaims = {
@@ -68,6 +72,8 @@ const viceGovernorCandidate: CandidateWithClaims = {
   ballot_number: 80,
   position: 'vice_governador',
   position_label: 'Vice-governador',
+  gender: 'FEMININO',
+  race: 'PRETA',
 };
 
 function renderHome() {
@@ -217,5 +223,36 @@ describe('HomePage estados honestos H5.2', () => {
     expect(await screen.findByText('Vice Teste')).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /vice-governador/i })).toBeInTheDocument();
     expect(screen.queryByText('Candidata Oficial')).not.toBeInTheDocument();
+  });
+
+  it('filtra por partido, mulheres e cor/raça oficial sem perder a contagem pública', async () => {
+    queryState.value = {
+      ...queryState.value,
+      data: [officialCandidate, accentCandidate, viceGovernorCandidate],
+    };
+    renderHome();
+
+    fireEvent.change(screen.getByRole('combobox', { name: /filtrar por partido/i }), {
+      target: { value: 'PDT' },
+    });
+    expect(await screen.findByText('José Ademar')).toBeInTheDocument();
+    expect(screen.queryByText('Candidata Oficial')).not.toBeInTheDocument();
+
+    fireEvent.change(screen.getByRole('combobox', { name: /filtrar por partido/i }), {
+      target: { value: '' },
+    });
+    fireEvent.click(screen.getByRole('checkbox', { name: /mostrar somente mulheres/i }));
+    expect(await screen.findByText('Candidata Oficial')).toBeInTheDocument();
+    expect(screen.getByText('Vice Teste')).toBeInTheDocument();
+    expect(screen.queryByText('José Ademar')).not.toBeInTheDocument();
+
+    fireEvent.change(screen.getByRole('combobox', { name: /filtrar por cor\/raça/i }), {
+      target: { value: 'PRETA' },
+    });
+    expect(await screen.findByText('Vice Teste')).toBeInTheDocument();
+    expect(screen.queryByText('Candidata Oficial')).not.toBeInTheDocument();
+    expect(screen.getByText(/1 de 3 candidatos/i)).toHaveTextContent(/mulheres/i);
+    expect(screen.getByText(/1 de 3 candidatos/i)).toHaveTextContent(/cor\/raça preta/i);
+    expect(screen.getByRole('option', { name: 'Não informado' })).toBeInTheDocument();
   });
 });

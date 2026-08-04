@@ -22,7 +22,14 @@ vi.mock('@/hooks/usePageMetadata', () => ({
   usePageMetadata: vi.fn(),
 }));
 
-function candidate(id: string, name: string, party: string, number: number): CandidateWithClaims {
+function candidate(
+  id: string,
+  name: string,
+  party: string,
+  number: number,
+  gender = 'MASCULINO',
+  race = 'BRANCA',
+): CandidateWithClaims {
   return {
     id,
     slug: `${name.toLowerCase().replace(/\s+/g, '_')}_${id}`,
@@ -38,14 +45,16 @@ function candidate(id: string, name: string, party: string, number: number): Can
     state: 'RS',
     election_year: 2026,
     registration_status: 'registration_requested',
+    gender,
+    race,
     claims: [],
   };
 }
 
 const candidates = [
-  candidate('tse-1', 'Ada Cristina Munaretto', 'PDT', 1234),
-  candidate('tse-2', 'João Batista Garcia Dias', 'PT', 5678),
-  candidate('tse-3', 'Ademar Silva', 'MDB', 9012),
+  candidate('tse-1', 'Ada Cristina Munaretto', 'PDT', 1234, 'FEMININO', 'BRANCA'),
+  candidate('tse-2', 'João Batista Garcia Dias', 'PT', 5678, 'MASCULINO', 'PARDA'),
+  candidate('tse-3', 'Ademar Silva', 'MDB', 9012, 'MASCULINO', 'PRETA'),
 ];
 
 function LocationProbe() {
@@ -129,5 +138,30 @@ describe('ComparePage H5.3', () => {
 
     expect(screen.getByText(/3 selecionados/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/url atual/i)).toHaveTextContent('/comparar?candidatos=tse-1,tse-2,tse-3');
+  });
+
+  it('filtra a lista de seleção por partido, mulheres e cor/raça sem remover selecionados da rota', () => {
+    renderCompare('/comparar?candidatos=tse-1,tse-2');
+
+    fireEvent.change(screen.getByRole('combobox', { name: /filtrar por partido/i }), {
+      target: { value: 'MDB' },
+    });
+    const selectorRegion = screen.getByRole('region', { name: /lista de candidatos/i });
+    expect(within(selectorRegion).getByText('Ademar Silva')).toBeInTheDocument();
+    expect(within(selectorRegion).queryByText('Ada Cristina Munaretto')).not.toBeInTheDocument();
+
+    fireEvent.change(screen.getByRole('combobox', { name: /filtrar por partido/i }), {
+      target: { value: '' },
+    });
+    fireEvent.click(screen.getByRole('checkbox', { name: /mostrar somente mulheres/i }));
+    expect(within(selectorRegion).getByText('Ada Cristina Munaretto')).toBeInTheDocument();
+    expect(within(selectorRegion).queryByText('João Batista Garcia Dias')).not.toBeInTheDocument();
+
+    fireEvent.change(screen.getByRole('combobox', { name: /filtrar por cor\/raça/i }), {
+      target: { value: 'BRANCA' },
+    });
+    expect(screen.getByLabelText(/url atual/i)).toHaveTextContent('/comparar?candidatos=tse-1,tse-2');
+    expect(screen.getByText(/1 de 3 candidatos disponíveis/i)).toHaveTextContent(/mulheres/i);
+    expect(screen.getByRole('option', { name: 'Não informado' })).toBeInTheDocument();
   });
 });

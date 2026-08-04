@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router';
 import { useQuery } from '@tanstack/react-query';
 import { fetchAllCandidates } from '@/services/candidates';
@@ -74,6 +74,17 @@ function serializeSelectedIds(ids: Iterable<string>): string {
   return [...ids].join(',');
 }
 
+const OFFICIAL_RACE_FILTERS = ['AMARELA', 'BRANCA', 'INDÍGENA', 'PARDA', 'PRETA', 'NÃO INFORMADO'] as const;
+
+function candidateRaceFilterValue(candidate: CandidateWithClaims): string {
+  return candidate.race ?? 'NÃO INFORMADO';
+}
+
+function raceFilterLabel(value: string): string {
+  if (value === 'NÃO INFORMADO') return 'Não informado';
+  return value.charAt(0) + value.slice(1).toLowerCase();
+}
+
 export function ComparePage() {
   usePageMetadata(
     'Comparar candidatos — Portal Transparência Eleitoral RS',
@@ -82,6 +93,9 @@ export function ComparePage() {
 
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
+  const [partyFilter, setPartyFilter] = useState('');
+  const [womenOnly, setWomenOnly] = useState(false);
+  const [raceFilter, setRaceFilter] = useState('');
 
   const query = useQuery<CandidateWithClaims[]>({
     queryKey: ['candidates'],
@@ -92,6 +106,28 @@ export function ComparePage() {
 
   const candidates = query.data ?? [];
   const validCandidateIds = useMemo(() => new Set(candidates.map((c) => c.id)), [candidates]);
+  const { parties, races } = useMemo(() => {
+    const partySet = new Set<string>();
+    const raceSet = new Set<string>(OFFICIAL_RACE_FILTERS);
+    for (const candidate of candidates) {
+      partySet.add(candidate.party);
+      raceSet.add(candidateRaceFilterValue(candidate));
+    }
+    return {
+      parties: [...partySet].sort(),
+      races: [...raceSet].sort(
+        (a, b) => OFFICIAL_RACE_FILTERS.indexOf(a as (typeof OFFICIAL_RACE_FILTERS)[number])
+          - OFFICIAL_RACE_FILTERS.indexOf(b as (typeof OFFICIAL_RACE_FILTERS)[number]),
+      ),
+    };
+  }, [candidates]);
+
+  const filteredCandidates = useMemo(() => candidates.filter((candidate) => {
+    if (partyFilter && candidate.party !== partyFilter) return false;
+    if (womenOnly && candidate.gender !== 'FEMININO') return false;
+    if (raceFilter && candidateRaceFilterValue(candidate) !== raceFilter) return false;
+    return true;
+  }), [candidates, partyFilter, womenOnly, raceFilter]);
 
   const sharedIds = useMemo(
     () => parseSharedCandidateIds(searchParams.get('candidatos'), validCandidateIds),
@@ -263,9 +299,53 @@ export function ComparePage() {
 
       {/* Candidate selector — always visible */}
       <section className="mt-8" aria-label="Lista de candidatos">
-        <h2 className="mb-3 text-xl">Adicionar à comparação</h2>
+        <div className="mb-4 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
+            <h2 className="text-xl">Adicionar à comparação</h2>
+            <p aria-live="polite" className="mt-1 font-mono text-xs text-[var(--color-muted-ink)]">
+              {filteredCandidates.length} de {candidates.length} candidatos disponíveis
+              {partyFilter && ` do ${partyFilter}`}
+              {womenOnly && ' · mulheres'}
+              {raceFilter && ` · cor/raça ${raceFilter.toLowerCase()}`}
+            </p>
+          </div>
+          <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+            <select
+              value={partyFilter}
+              onChange={(event) => setPartyFilter(event.target.value)}
+              className="cursor-pointer rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
+              aria-label="Filtrar por partido"
+            >
+              <option value="">Todos os partidos</option>
+              {parties.map((party) => (
+                <option key={party} value={party}>{party}</option>
+              ))}
+            </select>
+            <label className="inline-flex cursor-pointer items-center gap-2 rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)] focus-within:border-[var(--color-institutional)]">
+              <input
+                type="checkbox"
+                checked={womenOnly}
+                onChange={(event) => setWomenOnly(event.target.checked)}
+                className="accent-[var(--color-institutional)]"
+              />
+              Mostrar somente mulheres
+            </label>
+            <select
+              value={raceFilter}
+              onChange={(event) => setRaceFilter(event.target.value)}
+              className="cursor-pointer rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
+              aria-label="Filtrar por cor/raça"
+              title="Filtro baseado em autodeclaração oficial TSE/IBGE. Etnia indígena será detalhada quando houver cadastro específico."
+            >
+              <option value="">Todas as cores/raças</option>
+              {races.map((race) => (
+                <option key={race} value={race}>{raceFilterLabel(race)}</option>
+              ))}
+            </select>
+          </div>
+        </div>
         <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {candidates.map((c) => {
+          {filteredCandidates.map((c) => {
             const isSelected = selectedIds.has(c.id);
             const isMaxed = !isSelected && selectedIds.size >= 4;
             return (

@@ -31,6 +31,9 @@ interface CandidateRow {
   state?: string | null;
   election_year?: number | null;
   registration_status?: string | null;
+  gender?: string | null;
+  race?: string | null;
+  indigenous_ethnicity?: string | null;
 }
 
 interface DocumentRow {
@@ -83,6 +86,9 @@ function clampConfidence(score: number | null): 1 | 2 | 3 | 4 | 5 {
 
 export function mapCandidate(row: CandidateRow): Candidate {
   const normalized = normalizePosition(row.position);
+  const publicCandidate = row.tse_candidate_id
+    ? PUBLIC_CANDIDATES.find((candidate) => candidate.tse_candidate_id === row.tse_candidate_id)
+    : undefined;
 
   return applyPublicCandidateOverrides({
     id: row.id,
@@ -99,6 +105,9 @@ export function mapCandidate(row: CandidateRow): Candidate {
     state: row.state ?? null,
     election_year: row.election_year ?? undefined,
     registration_status: row.registration_status ?? null,
+    gender: row.gender ?? publicCandidate?.gender ?? null,
+    race: row.race ?? publicCandidate?.race ?? null,
+    indigenous_ethnicity: row.indigenous_ethnicity ?? publicCandidate?.indigenous_ethnicity ?? null,
   });
 }
 
