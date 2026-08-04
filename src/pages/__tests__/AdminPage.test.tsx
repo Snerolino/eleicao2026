@@ -43,6 +43,20 @@ function pendingClaimsQuery() {
           source_document_id: 'source-1',
           candidates: { full_name: 'PRISCILA VOIGT SEVERIANO', party: 'UP', position: 'governador' },
           source_references: { source_name: 'Sul21', url: 'https://sul21.com.br' },
+          editorial_reviews: [],
+        },
+        {
+          id: 'claim-rejected',
+          category: 'plataforma',
+          content: 'Claim rejeitada arquivada',
+          confidence_score: 2,
+          candidate_id: 'candidate-2',
+          source_document_id: 'source-2',
+          candidates: { full_name: 'CANDIDATO JÁ REVISADO', party: 'TSE', position: 'senador' },
+          source_references: { source_name: 'Arquivo', url: null },
+          editorial_reviews: [
+            { decision: 'rejected', reviewed_at: '2026-08-04T07:00:00Z', notes: 'Rejeitado no painel.' },
+          ],
         },
       ],
       error: null,
@@ -108,12 +122,50 @@ describe('AdminPage', () => {
     fireEvent.click(screen.getByRole('button', { name: /entrar/i }));
 
     expect(await screen.findByText(/claim em revisão/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /arquivo de claims revisadas/i })).toBeInTheDocument();
+    expect(screen.getByText(/1 claim arquivada/i)).toBeInTheDocument();
+    expect(screen.getByText(/claim rejeitada arquivada/i)).toBeInTheDocument();
+    expect(screen.getAllByRole('button', { name: /^rejeitar$/i })).toHaveLength(1);
 
     fireEvent.click(screen.getByRole('button', { name: /aprovar e publicar/i }));
 
     await waitFor(() => {
       expect(mocks.from).toHaveBeenCalledWith('editorial_reviews');
       expect(mocks.rpc).toHaveBeenCalledWith('publish_claim', { p_claim_id: 'claim-1' });
+    });
+  });
+
+  it('rejeita claim, registra no arquivo de revisões e limpa da fila sem publicar', async () => {
+    const reviewInsert = vi.fn().mockResolvedValue({ error: null });
+    mocks.from.mockImplementation((table: string) => {
+      if (table === 'editor_roles') return editorRoleQuery();
+      if (table === 'claims') return pendingClaimsQuery();
+      if (table === 'editorial_reviews') return { insert: reviewInsert };
+      throw new Error(`Tabela inesperada: ${table}`);
+    });
+
+    renderAdmin();
+
+    fireEvent.change(await screen.findByLabelText(/e-mail/i), {
+      target: { value: 'admin@votopraquem.org' },
+    });
+    fireEvent.change(screen.getByLabelText(/senha/i), {
+      target: { value: 'senha-local' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: /entrar/i }));
+
+    expect(await screen.findByText(/claim em revisão/i)).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: /^rejeitar$/i }));
+
+    await waitFor(() => {
+      expect(reviewInsert).toHaveBeenCalledWith(expect.objectContaining({
+        claim_id: 'claim-1',
+        decision: 'rejected',
+      }));
+      expect(mocks.rpc).not.toHaveBeenCalled();
+      expect(screen.getByText(/nenhuma claim em/i)).toBeInTheDocument();
+      expect(screen.queryByRole('button', { name: /^rejeitar$/i })).not.toBeInTheDocument();
+      expect(screen.getByText(/claim arquivada como rejeitada/i)).toBeInTheDocument();
     });
   });
 });

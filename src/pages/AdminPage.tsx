@@ -24,6 +24,15 @@ type PendingClaim = {
     source_name: string;
     url: string | null;
   } | null;
+  editorial_reviews?: EditorialReview[] | null;
+};
+
+type EditorialDecision = 'approved' | 'needs_changes' | 'rejected';
+
+type EditorialReview = {
+  decision: EditorialDecision;
+  notes: string | null;
+  reviewed_at: string | null;
 };
 
 type LoadState = 'idle' | 'loading' | 'ready' | 'error';
@@ -38,6 +47,7 @@ export function AdminPage() {
   const [user, setUser] = useState<User | null>(null);
   const [role, setRole] = useState<EditorialRole | null>(null);
   const [claims, setClaims] = useState<PendingClaim[]>([]);
+  const [reviewedClaims, setReviewedClaims] = useState<PendingClaim[]>([]);
   const [status, setStatus] = useState<LoadState>('idle');
   const [message, setMessage] = useState<string | null>(null);
   const [busyClaimId, setBusyClaimId] = useState<string | null>(null);
@@ -62,6 +72,7 @@ export function AdminPage() {
     if (roleError || !roleData || !['editor', 'admin'].includes(String(roleData.role))) {
       setRole(null);
       setClaims([]);
+      setReviewedClaims([]);
       setStatus('error');
       setMessage('Usuário autenticado sem papel editorial. Peça inclusão em editor_roles.');
       return;
@@ -79,19 +90,27 @@ export function AdminPage() {
         candidate_id,
         source_document_id,
         candidates(full_name, party, position),
-        source_references(source_name, url)
+        source_references(source_name, url),
+        editorial_reviews(decision, notes, reviewed_at)
       `)
       .eq('status', 'pending_review')
       .order('created_at', { ascending: true });
 
     if (error) {
       setClaims([]);
+      setReviewedClaims([]);
       setStatus('error');
       setMessage('Falha ao carregar claims pendentes. Verifique RLS, relação source_references e papel editorial.');
       return;
     }
 
-    setClaims((data ?? []) as unknown as PendingClaim[]);
+    const loadedClaims = (data ?? []) as unknown as PendingClaim[];
+    setClaims(loadedClaims.filter((claim) => (claim.editorial_reviews ?? []).length === 0));
+    setReviewedClaims(
+      loadedClaims.filter((claim) =>
+        (claim.editorial_reviews ?? []).some((review) => ['rejected', 'needs_changes'].includes(review.decision))
+      )
+    );
     setStatus('ready');
   }
 
@@ -139,21 +158,24 @@ export function AdminPage() {
     setUser(null);
     setRole(null);
     setClaims([]);
+    setReviewedClaims([]);
     setStatus('idle');
     setMessage(null);
     setPassword('');
   }
 
-  async function reviewClaim(claim: PendingClaim, decision: 'approved' | 'needs_changes' | 'rejected') {
+  async function reviewClaim(claim: PendingClaim, decision: EditorialDecision) {
     if (!supabase || !user) return;
 
     setBusyClaimId(claim.id);
     setMessage(null);
 
-    const notes =
-      decision === 'approved'
-        ? 'Aprovado pelo painel administrativo. Publicação feita via RPC publish_claim().'
-        : 'Revisão registrada pelo painel administrativo; claim não publicada.';
+    const notesByDecision: Record<EditorialDecision, string> = {
+      approved: 'Aprovado pelo painel administrativo. Publicação feita via RPC publish_claim().',
+      needs_changes: 'Arquivado pelo painel administrativo para ajustes; claim removida da fila pendente.',
+      rejected: 'Arquivado pelo painel administrativo como rejeitado; claim removida da fila pendente.',
+    };
+    const notes = notesByDecision[decision];
 
     const { error: reviewError } = await supabase.from('editorial_reviews').insert({
       claim_id: claim.id,
@@ -178,8 +200,17 @@ export function AdminPage() {
     }
 
     setClaims((current) => current.filter((item) => item.id !== claim.id));
+    if (decision !== 'approved') {
+      setReviewedClaims((current) => [
+        {
+          ...claim,
+          editorial_reviews: [{ decision, notes, reviewed_at: new Date().toISOString() }],
+        },
+        ...current.filter((item) => item.id !== claim.id),
+      ]);
+    }
     setBusyClaimId(null);
-    setMessage(decision === 'approved' ? 'Claim aprovada e publicada.' : 'Revisão registrada; claim segue fora da superfície pública.');
+    setMessage(decision === 'approved' ? 'Claim aprovada e publicada.' : `Claim arquivada como ${decision === 'rejected' ? 'rejeitada' : 'ajustes necessários'}.`);
   }
 
   return (
@@ -333,6 +364,31 @@ export function AdminPage() {
               </article>
             ))}
           </div>
+
+          {reviewedClaims.length > 0 ? (
+            <section
+              className="mt-8 rounded-sm border border-dashed border-[var(--color-border-editorial)] p-4"
+              aria-label="Arquivo de claims revisadas"
+            >
+              <h3 className="text-xl">Arquivo de claims revisadas</h3>
+              <p className="mt-1 font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">
+                {reviewedClaims.length} {reviewedClaims.length === 1 ? 'claim arquivada' : 'claims arquivadas'} fora da fila pendente.
+              </p>
+              <ul className="mt-3 space-y-3">
+                {reviewedClaims.map((claim) => {
+                  const lastReview = claim.editorial_reviews?.[0];
+                  return (
+                    <li key={claim.id} className="rounded-sm border border-[var(--color-border-editorial)] p-3 text-sm">
+                      <p className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">
+                        {claim.candidates?.full_name ?? 'Candidato não identificado'} · {lastReview?.decision === 'rejected' ? 'rejeitada' : 'ajustes necessários'}
+                      </p>
+                      <p className="mt-2 leading-relaxed">{claim.content}</p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
+          ) : null}
         </section>
       ) : null}
     </main>
