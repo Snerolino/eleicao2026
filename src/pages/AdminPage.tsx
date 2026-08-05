@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import type { User } from '@supabase/supabase-js';
 import { usePageMetadata } from '@/hooks/usePageMetadata';
 import { isSupabaseConfigured, supabase } from '@/lib/supabase';
+import { sanitizeUrl } from '@/utils/sanitizeUrl';
 
 const adminOwner = 'admin@votopraquem.org';
 
@@ -358,18 +359,21 @@ export function AdminPage() {
                       {claim.candidates?.party ?? '—'} · {claim.candidates?.position ?? '—'} · {formatCategory(claim.category)} · confiança {claim.confidence_score}
                     </p>
                   </div>
-                  {claim.source_references?.url ? (
-                    <a
-                      href={claim.source_references.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="font-mono text-xs uppercase tracking-wider text-[var(--color-institutional)] underline-offset-4 hover:underline"
-                    >
-                      Fonte: {claim.source_references.source_name}
-                    </a>
-                  ) : (
-                    <span className="font-mono text-xs uppercase tracking-wider text-red-700">Sem fonte pública</span>
-                  )}
+                  {(() => {
+                    const safeUrl = sanitizeUrl(claim.source_references?.url);
+                    return safeUrl ? (
+                      <a
+                        href={safeUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="font-mono text-xs uppercase tracking-wider text-[var(--color-institutional)] underline-offset-4 hover:underline"
+                      >
+                        Fonte: {claim.source_references?.source_name}
+                      </a>
+                    ) : (
+                      <span className="font-mono text-xs uppercase tracking-wider text-red-700">Sem fonte pública</span>
+                    );
+                  })()}
                 </div>
                 <p className="mt-3 leading-relaxed">{claim.content}</p>
                 {editingClaimId === claim.id ? (
