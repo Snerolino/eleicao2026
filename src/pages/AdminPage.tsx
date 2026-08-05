@@ -51,6 +51,8 @@ export function AdminPage() {
   const [status, setStatus] = useState<LoadState>('idle');
   const [message, setMessage] = useState<string | null>(null);
   const [busyClaimId, setBusyClaimId] = useState<string | null>(null);
+  const [editingClaimId, setEditingClaimId] = useState<string | null>(null);
+  const [editingContent, setEditingContent] = useState('');
 
   usePageMetadata(
     'Administração — Portal Transparência Eleitoral RS',
@@ -200,6 +202,7 @@ export function AdminPage() {
     }
 
     setClaims((current) => current.filter((item) => item.id !== claim.id));
+    setReviewedClaims((current) => current.filter((item) => item.id !== claim.id));
     if (decision !== 'approved') {
       setReviewedClaims((current) => [
         {
@@ -209,8 +212,42 @@ export function AdminPage() {
         ...current.filter((item) => item.id !== claim.id),
       ]);
     }
+    setEditingClaimId(null);
     setBusyClaimId(null);
     setMessage(decision === 'approved' ? 'Claim aprovada e publicada.' : `Claim arquivada como ${decision === 'rejected' ? 'rejeitada' : 'ajustes necessários'}.`);
+  }
+
+  function startEditing(claim: PendingClaim) {
+    setEditingClaimId(claim.id);
+    setEditingContent(claim.content);
+    setMessage(null);
+  }
+
+  async function saveEditing(claim: PendingClaim) {
+    if (!supabase || editingClaimId !== claim.id) return;
+
+    const nextContent = editingContent.trim();
+    if (!nextContent) {
+      setMessage('Conteúdo não pode ficar vazio. A edição não foi salva.');
+      return;
+    }
+
+    setBusyClaimId(claim.id);
+    setMessage(null);
+
+    const { error } = await supabase.from('claims').update({ content: nextContent }).eq('id', claim.id);
+    if (error) {
+      setBusyClaimId(null);
+      setMessage('Falha ao salvar edição da claim. Nada foi alterado.');
+      return;
+    }
+
+    const updatedClaim = { ...claim, content: nextContent };
+    setClaims((current) => current.map((item) => (item.id === claim.id ? updatedClaim : item)));
+    setReviewedClaims((current) => current.map((item) => (item.id === claim.id ? updatedClaim : item)));
+    setEditingClaimId(null);
+    setBusyClaimId(null);
+    setMessage('Edição salva. A claim segue aguardando revisão/publicação.');
   }
 
   return (
@@ -335,10 +372,41 @@ export function AdminPage() {
                   )}
                 </div>
                 <p className="mt-3 leading-relaxed">{claim.content}</p>
+                {editingClaimId === claim.id ? (
+                  <label className="mt-3 grid gap-1 text-sm">
+                    <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">
+                      Editar conteúdo da {claim.content}
+                    </span>
+                    <textarea
+                      value={editingContent}
+                      onChange={(event) => setEditingContent(event.target.value)}
+                      rows={5}
+                      className="rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 leading-relaxed"
+                    />
+                  </label>
+                ) : null}
                 <div className="mt-4 flex flex-wrap gap-2">
                   <button
                     type="button"
-                    disabled={busyClaimId === claim.id || !claim.source_document_id}
+                    disabled={busyClaimId === claim.id || editingClaimId !== null}
+                    onClick={() => startEditing(claim)}
+                    className="rounded-sm border border-[var(--color-border-editorial)] px-3 py-2 font-mono text-xs uppercase tracking-wider disabled:cursor-not-allowed disabled:opacity-60"
+                  >
+                    Editar
+                  </button>
+                  {editingClaimId === claim.id ? (
+                    <button
+                      type="button"
+                      disabled={busyClaimId === claim.id}
+                      onClick={() => void saveEditing(claim)}
+                      className="rounded-sm border border-blue-700 px-3 py-2 font-mono text-xs uppercase tracking-wider text-blue-800 disabled:cursor-not-allowed disabled:opacity-60"
+                    >
+                      Salvar edição
+                    </button>
+                  ) : null}
+                  <button
+                    type="button"
+                    disabled={busyClaimId === claim.id || !claim.source_document_id || editingClaimId !== null}
                     onClick={() => void reviewClaim(claim, 'approved')}
                     className="rounded-sm border border-green-700 px-3 py-2 font-mono text-xs uppercase tracking-wider text-green-800 disabled:cursor-not-allowed disabled:opacity-60"
                   >
@@ -346,7 +414,7 @@ export function AdminPage() {
                   </button>
                   <button
                     type="button"
-                    disabled={busyClaimId === claim.id}
+                    disabled={busyClaimId === claim.id || editingClaimId !== null}
                     onClick={() => void reviewClaim(claim, 'needs_changes')}
                     className="rounded-sm border border-amber-700 px-3 py-2 font-mono text-xs uppercase tracking-wider text-amber-800 disabled:cursor-not-allowed disabled:opacity-60"
                   >
@@ -354,7 +422,7 @@ export function AdminPage() {
                   </button>
                   <button
                     type="button"
-                    disabled={busyClaimId === claim.id}
+                    disabled={busyClaimId === claim.id || editingClaimId !== null}
                     onClick={() => void reviewClaim(claim, 'rejected')}
                     className="rounded-sm border border-red-700 px-3 py-2 font-mono text-xs uppercase tracking-wider text-red-800 disabled:cursor-not-allowed disabled:opacity-60"
                   >
@@ -379,10 +447,53 @@ export function AdminPage() {
                   const lastReview = claim.editorial_reviews?.[0];
                   return (
                     <li key={claim.id} className="rounded-sm border border-[var(--color-border-editorial)] p-3 text-sm">
-                      <p className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">
-                        {claim.candidates?.full_name ?? 'Candidato não identificado'} · {lastReview?.decision === 'rejected' ? 'rejeitada' : 'ajustes necessários'}
-                      </p>
+                      <div className="flex flex-col gap-2 sm:flex-row sm:justify-between">
+                        <p className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">
+                          {claim.candidates?.full_name ?? 'Candidato não identificado'} · {lastReview?.decision === 'rejected' ? 'rejeitada' : 'ajustes necessários'}
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          <button
+                            type="button"
+                            disabled={busyClaimId === claim.id || editingClaimId !== null}
+                            onClick={() => startEditing(claim)}
+                            className="rounded-sm border border-[var(--color-border-editorial)] px-2 py-1 font-mono text-xs uppercase tracking-wider disabled:cursor-not-allowed disabled:opacity-60"
+                          >
+                            Editar
+                          </button>
+                          {editingClaimId === claim.id ? (
+                            <button
+                              type="button"
+                              disabled={busyClaimId === claim.id}
+                              onClick={() => void saveEditing(claim)}
+                              className="rounded-sm border border-blue-700 px-2 py-1 font-mono text-xs uppercase tracking-wider text-blue-800 disabled:cursor-not-allowed disabled:opacity-60"
+                            >
+                              Salvar edição
+                            </button>
+                          ) : null}
+                          <button
+                            type="button"
+                            disabled={busyClaimId === claim.id || !claim.source_document_id || editingClaimId !== null}
+                            onClick={() => void reviewClaim(claim, 'approved')}
+                            className="rounded-sm border border-green-700 px-2 py-1 font-mono text-xs uppercase tracking-wider text-green-800 disabled:cursor-not-allowed disabled:opacity-60"
+                          >
+                            Publicar claim arquivada
+                          </button>
+                        </div>
+                      </div>
                       <p className="mt-2 leading-relaxed">{claim.content}</p>
+                      {editingClaimId === claim.id ? (
+                        <label className="mt-3 grid gap-1">
+                          <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">
+                            Editar conteúdo da {claim.content}
+                          </span>
+                          <textarea
+                            value={editingContent}
+                            onChange={(event) => setEditingContent(event.target.value)}
+                            rows={5}
+                            className="rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 leading-relaxed"
+                          />
+                        </label>
+                      ) : null}
                     </li>
                   );
                 })}

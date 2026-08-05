@@ -168,4 +168,78 @@ describe('AdminPage', () => {
       expect(screen.getByText(/claim arquivada como rejeitada/i)).toBeInTheDocument();
     });
   });
+
+  it('edita conteúdo de uma claim pendente antes de publicar', async () => {
+    const updateQuery = vi.fn(() => ({ eq: vi.fn().mockResolvedValue({ error: null }) }));
+    mocks.from.mockImplementation((table: string) => {
+      if (table === 'editor_roles') return editorRoleQuery();
+      if (table === 'claims') return { ...pendingClaimsQuery(), update: updateQuery };
+      if (table === 'editorial_reviews') return reviewInsertQuery();
+      throw new Error(`Tabela inesperada: ${table}`);
+    });
+
+    renderAdmin();
+
+    fireEvent.change(await screen.findByLabelText(/e-mail/i), { target: { value: 'admin@votopraquem.org' } });
+    fireEvent.change(screen.getByLabelText(/senha/i), { target: { value: 'senha-local' } });
+    fireEvent.click(screen.getByRole('button', { name: /entrar/i }));
+
+    expect(await screen.findByText(/claim em revisão/i)).toBeInTheDocument();
+
+    // abrir edição e alterar o texto
+    fireEvent.click(screen.getAllByRole('button', { name: /^editar$/i })[0]);
+    const textarea = await screen.findByLabelText(/editar conteúdo da claim em revisão/i);
+    fireEvent.change(textarea, { target: { value: 'Conteúdo corrigido pelo editor' } });
+    fireEvent.click(screen.getByRole('button', { name: /salvar edição/i }));
+
+    await waitFor(() => {
+      expect(updateQuery).toHaveBeenCalledWith({ content: 'Conteúdo corrigido pelo editor' });
+    });
+    expect(screen.getByText(/conteúdo corrigido pelo editor/i)).toBeInTheDocument();
+
+    // ainda pendente e publicável
+    fireEvent.click(screen.getByRole('button', { name: /aprovar e publicar/i }));
+    await waitFor(() => {
+      expect(mocks.rpc).toHaveBeenCalledWith('publish_claim', { p_claim_id: 'claim-1' });
+    });
+  });
+
+  it('edita e publica uma claim do arquivo de revisadas sem passar pela fila pendente', async () => {
+    const updateQuery = vi.fn(() => ({ eq: vi.fn().mockResolvedValue({ error: null }) }));
+    const reviewInsert = vi.fn().mockResolvedValue({ error: null });
+    mocks.from.mockImplementation((table: string) => {
+      if (table === 'editor_roles') return editorRoleQuery();
+      if (table === 'claims') return { ...pendingClaimsQuery(), update: updateQuery };
+      if (table === 'editorial_reviews') return { insert: reviewInsert };
+      throw new Error(`Tabela inesperada: ${table}`);
+    });
+
+    renderAdmin();
+
+    fireEvent.change(await screen.findByLabelText(/e-mail/i), { target: { value: 'admin@votopraquem.org' } });
+    fireEvent.change(screen.getByLabelText(/senha/i), { target: { value: 'senha-local' } });
+    fireEvent.click(screen.getByRole('button', { name: /entrar/i }));
+
+    expect(await screen.findByText(/claim rejeitada arquivada/i)).toBeInTheDocument();
+
+    // a claim arquivada tem botão editar
+    fireEvent.click(screen.getAllByRole('button', { name: /^editar$/i }).pop()!);
+    const textarea = await screen.findByLabelText(/editar conteúdo da claim rejeitada arquivada/i);
+    fireEvent.change(textarea, { target: { value: 'Plataforma reformulada pelo editor' } });
+    fireEvent.click(screen.getByRole('button', { name: /salvar edição/i }));
+
+    await waitFor(() => {
+      expect(updateQuery).toHaveBeenCalledWith({ content: 'Plataforma reformulada pelo editor' });
+    });
+
+    // publica a partir do arquivo: review aprovado + rpc
+    fireEvent.click(screen.getByRole('button', { name: /publicar claim arquivada/i }));
+    await waitFor(() => {
+      expect(reviewInsert).toHaveBeenCalledWith(expect.objectContaining({
+        claim_id: 'claim-rejected',
+        decision: 'approved',
+      }));
+      expect(mocks.rpc).toHaveBeenCalledWith('publish_claim', { p_claim_id: 'claim-rejected' });
+    });
+  });
 });
