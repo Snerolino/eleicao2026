@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useDeferredValue, useMemo, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router';
 import { CargoSection } from '@/components/candidates/CargoSection';
@@ -85,6 +85,7 @@ export function HomePage() {
   );
 
   const [searchQuery, setSearchQuery] = useState('');
+  const deferredSearchQuery = useDeferredValue(searchQuery);
   const [cargoFilter, setCargoFilter] = useState<'' | Position>('');
   const [partyFilter, setPartyFilter] = useState('');
   const [womenOnly, setWomenOnly] = useState(false);
@@ -105,8 +106,8 @@ export function HomePage() {
   const searchCache = useMemo(() => new Map<string, CandidateSearchCache>(), [allCandidates]);
 
   const filtered = useMemo(
-    () => filterCandidates(allCandidates, searchCache, searchQuery, cargoFilter, partyFilter, womenOnly, raceFilter),
-    [allCandidates, searchCache, searchQuery, cargoFilter, partyFilter, womenOnly, raceFilter]
+    () => filterCandidates(allCandidates, searchCache, deferredSearchQuery, cargoFilter, partyFilter, womenOnly, raceFilter),
+    [allCandidates, searchCache, deferredSearchQuery, cargoFilter, partyFilter, womenOnly, raceFilter]
   );
 
   const cargoCounts = useMemo(() => {
@@ -122,6 +123,16 @@ export function HomePage() {
     if (cargoCounts.has('outro')) ordered.push('outro');
     return ordered;
   }, [cargoCounts]);
+
+  const groupedCandidates = useMemo(() => {
+    const grouped = new Map<Position, CandidateWithClaims[]>();
+    for (const c of filtered) {
+      const g = grouped.get(c.position);
+      if (g) g.push(c);
+      else grouped.set(c.position, [c]);
+    }
+    return grouped;
+  }, [filtered]);
 
   function openCargo(position: Position) {
     setSearchQuery('');
@@ -237,7 +248,7 @@ export function HomePage() {
           {hasActiveFilter && (
             <p aria-live="polite" className="mt-2 font-mono text-xs text-[var(--color-muted-ink)]">
               {filtered.length} de {allCandidates.length} candidatos
-              {searchQuery && ` para "${searchQuery}"`}
+              {deferredSearchQuery && ` para "${deferredSearchQuery}"`}
               {cargoFilter && ` em ${POSITION_LABEL[cargoFilter as keyof typeof POSITION_LABEL]?.toLowerCase() ?? cargoFilter}`}
               {partyFilter && ` do ${partyFilter}`}
               {womenOnly && ' · mulheres'}
@@ -306,16 +317,10 @@ export function HomePage() {
       ) : (
         <section className="mt-8 space-y-12">
           {(() => {
-            const grouped = new Map<Position, CandidateWithClaims[]>();
-            for (const c of filtered) {
-              const g = grouped.get(c.position);
-              if (g) g.push(c);
-              else grouped.set(c.position, [c]);
-            }
             const sections = [];
             const positionsToRender = cargoFilter ? [cargoFilter] : visiblePositions;
             for (const position of positionsToRender) {
-              const candidatesInPosition = grouped.get(position) ?? [];
+              const candidatesInPosition = groupedCandidates.get(position) ?? [];
               if (candidatesInPosition.length === 0) continue;
               sections.push(
                 <CargoSection
