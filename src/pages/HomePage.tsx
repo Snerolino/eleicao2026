@@ -221,14 +221,14 @@ export function HomePage() {
               <button
                 type="button"
                 onClick={() => downloadCandidatesCSV(allCandidates)}
-                className="rounded-sm border border-[var(--color-border-editorial)] px-3 py-2 font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)] hover:border-[var(--color-ink)]"
+                className="rounded-sm border border-[var(--color-border-editorial)] px-3 py-2 font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)] hover:border-[var(--color-ink)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-institutional)]"
                 aria-label="Baixar dados como CSV"
               >
                 ↓ CSV
               </button>
               <Link
                 to="/comparar"
-                className="rounded-sm border border-[var(--color-border-editorial)] px-3 py-2 font-mono text-xs uppercase tracking-wider text-[var(--color-institutional)] hover:border-[var(--color-institutional)]"
+                className="rounded-sm border border-[var(--color-border-editorial)] px-3 py-2 font-mono text-xs uppercase tracking-wider text-[var(--color-institutional)] hover:border-[var(--color-institutional)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-institutional)]"
               >
                 Comparar candidatos ↗
               </Link>
@@ -254,7 +254,7 @@ export function HomePage() {
                   key={position}
                   type="button"
                   onClick={() => openCargo(position)}
-                  className={`rounded-sm border px-3 py-2 text-left font-mono text-xs uppercase tracking-wider transition-colors ${
+                  className={`rounded-sm border px-3 py-2 text-left font-mono text-xs uppercase tracking-wider transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-institutional)] ${
                     cargoFilter === position
                       ? 'border-[var(--color-institutional)] bg-[color-mix(in_srgb,var(--color-institutional)_10%,var(--color-paper))] text-[var(--color-institutional)]'
                       : 'border-[var(--color-border-editorial)] text-[var(--color-muted-ink)] hover:border-[var(--color-institutional)] hover:text-[var(--color-ink)]'
@@ -297,7 +297,7 @@ export function HomePage() {
                 setWomenOnly(false);
                 setRaceFilter('');
               }}
-              className="mt-4 rounded-sm bg-[var(--color-institutional)] px-4 py-2 text-sm font-semibold text-white hover:opacity-90"
+                className="mt-4 rounded-sm bg-[var(--color-institutional)] px-4 py-2 text-sm font-semibold text-white hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-institutional)]"
             >
               Limpar filtros
             </button>

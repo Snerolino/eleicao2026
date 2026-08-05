@@ -10,19 +10,19 @@ export function SiteFooter() {
         >
           <Link
             to="/"
-            className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)] underline-offset-4 hover:text-[var(--color-ink)] hover:underline"
+            className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)] underline-offset-4 hover:text-[var(--color-ink)] hover:underline rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-institutional)]"
           >
             Candidatos
           </Link>
           <Link
             to="/comparar"
-            className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)] underline-offset-4 hover:text-[var(--color-ink)] hover:underline"
+            className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)] underline-offset-4 hover:text-[var(--color-ink)] hover:underline rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-institutional)]"
           >
             Comparar
           </Link>
           <Link
             to="/metodologia"
-            className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)] underline-offset-4 hover:text-[var(--color-ink)] hover:underline"
+            className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)] underline-offset-4 hover:text-[var(--color-ink)] hover:underline rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-institutional)]"
           >
             Metodologia
           </Link>
