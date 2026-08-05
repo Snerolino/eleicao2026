@@ -40,15 +40,16 @@ O plano pós-review prioriza deputados federais em exercício. Cruzamento conser
 |---:|---|---|---|---|---|
 | 1 | Fernanda Melchionna e Silva | PSOL | `210002533902` | Câmara dos Deputados — `https://www.camara.leg.br/deputados/204407`; Radar do Congresso — `https://radar.congressoemfoco.com.br/parlamentar/1204407/discursos` | dossiê mínimo publicado: `historico_politico` + `plataforma` |
 | 2 | Fábio Ostermann | NOVO | `210002533006` | Site oficial — `https://www.fabioostermann.com.br/` | `historico_politico` + `summary` publicados; `plataforma` arquivada (`rejected`/`needs_changes`) |
-| 3 | Maurício Dziedricki | PODE | `210002534272` | Câmara dos Deputados — `https://www.camara.leg.br/deputados/75431/biografia`; site oficial de campanha — `https://www.depmauriciors.com.br/` | `historico_politico` + `plataforma` em `pending_review` |
+| 3 | Maurício Dziedricki | PODE | `210002534272` | Câmara dos Deputados — `https://www.camara.leg.br/deputados/75431/biografia`; site oficial de campanha — `https://www.depmauriciors.com.br/` | dossiê mínimo publicado: `historico_politico` + `plataforma` |
+| 4 | Marcelo Brum | PODE | `210002534292` | Câmara dos Deputados — `https://www.camara.leg.br/deputados/205863/biografia` | `historico_politico` em `pending_review` |
 
 Motivo do item 1: Fernanda foi a única deputada federal em exercício encontrada no snapshot atual por correspondência direta de nome/urna. O restante da bancada federal do RS não aparece neste snapshot público parcial pelos mesmos partidos/nomes, então não deve ser forçado.
 
 Motivo do item 2: Fábio Ostermann aparece no snapshot como candidato a deputado federal pelo NOVO e possui site oficial de campanha com biografia e pautas; a claim de plataforma baseada em material de campanha foi avaliada e arquivada (não publicada) por decisão editorial — só `historico_politico` e `summary` foram publicados.
 
-Motivo do item 3: Maurício Dziedricki (PODE) tem perfil institucional rastreável na Câmara dos Deputados (`75431`) e coincidência de partido com o snapshot, além de site oficial de campanha; entrou como próximo dossiê federal, sem publicação direta.
+Motivo do item 3: Maurício Dziedricki (PODE) tem perfil institucional rastreável na Câmara dos Deputados (`75431`) e coincidência de partido com o snapshot, além de site oficial de campanha; entrou como próximo dossiê federal e foi aprovado no `/admin` em 2026-08-05 (`historico_politico` + `plataforma` publicados via RPC).
 
-> **Não-forçado (ambiguidade documentada):** Marcicleio "Marcelo Brum da Costa" (PODE 2026 no snapshot, `210002534292`) tem fonte institucional da Câmara (`205863`) que o registra filiado ao Republicanos/2022, indicando troca de partido. Por haver divergência de legenda entre fonte oficial e registro atual, a plataforma não foi inferida para evitar conflito; o histórico poderia ser montado da biografia da Câmara em lote posterior, com verificação de filiação atual.
+Motivo do item 4: Marcelo Brum é candidato federal pelo PODE em 2026 (confirmado por fontes de convenção/campanha, em linha com o snapshot PODE `210002534292`). A `historico_politico` foi montada da biografia institucional da Câmara (`205863`, mandato 2019-2023). A `plataforma` **não** foi inferida: a página de partido encontrada é de legenda anterior (Republicanos/2022) e não há fonte de campanha PODE rastreável sólida — mantém-se pendente de fonte.
 
 ## Gate do próximo lote
 
@@ -68,5 +69,11 @@ Para Maurício Dziedricki:
 1. revisar no `/admin` as claims `historico_politico` e `plataforma` criadas como `pending_review` usando fontes Câmara + site oficial de campanha;
 2. publicar via RPC se a revisão editorial aceitar a fonte;
 3. validar UI pública do dossiê após aprovação.
+
+Para Marcelo Brum:
+
+1. revisar no `/admin` o `historico_politico` criado como `pending_review` a partir da biografia institucional da Câmara;
+2. publicar via RPC se a revisão editorial aceitar a fonte;
+3. a `plataforma` permanece pendente de fonte — buscar e adicionar apenas se surgir fonte de campanha PODE rastreável (convenção/site/imprensa oficial), sem inferir de biografia.
 
 Sem publicação direta via `service_role`.
