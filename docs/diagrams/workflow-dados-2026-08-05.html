@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VotoPraQuem RS — Fluxo de Dados até Publicação</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'JetBrains Mono', monospace; background: #020617; min-height: 100vh; padding: 2rem; color: white; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .header { margin-bottom: 2rem; }
+    .header-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+    .pulse-dot { width: 12px; height: 12px; background: #22d3ee; border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.025em; }
+    .subtitle { color: #94a3b8; font-size: 0.875rem; margin-left: 1.75rem; }
+    .diagram-container { background: rgba(15, 23, 42, 0.5); border-radius: 1rem; border: 1px solid #1e293b; padding: 1.5rem; overflow-x: auto; }
+    svg { width: 100%; min-width: 1000px; display: block; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 2rem; }
+    .card { background: rgba(15, 23, 42, 0.5); border-radius: 0.75rem; border: 1px solid #1e293b; padding: 1.25rem; }
+    .card-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; }
+    .card-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .card-dot.cyan { background: #22d3ee; }
+    .card-dot.emerald { background: #34d399; }
+    .card-dot.violet { background: #a78bfa; }
+    .card-dot.amber { background: #fbbf24; }
+    .card-dot.rose { background: #fb7185; }
+    .card h3 { font-size: 0.875rem; font-weight: 600; }
+    .card ul { list-style: none; color: #94a3b8; font-size: 0.75rem; }
+    .card li { margin-bottom: 0.375rem; }
+    .footer { text-align: center; margin-top: 1.5rem; color: #475569; font-size: 0.75rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-row">
+        <div class="pulse-dot"></div>
+        <h1>VotoPraQuem RS — Workflow de Dados (2026)</h1>
+      </div>
+      <p class="subtitle">Fonte oficial → coleta local → snapshot → Supabase → aprovação editorial → deploy Cloudflare → superfície pública</p>
+    </div>
+
+    <div class="diagram-container">
+      <svg viewBox="0 0 1080 1000">
+        <defs>
+          <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+          </marker>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+
+        <rect width="100%" height="100%" fill="url(#grid)" />
+
+        <!-- ===================== ARROWS (behind boxes) ===================== -->
+
+        <!-- FONTES -> COLETA -->
+        <line x1="180" y1="150" x2="180" y2="205" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <text x="190" y="183" fill="#94a3b8" font-size="8">download + extrai</text>
+
+        <line x1="560" y1="150" x2="560" y2="205" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <text x="570" y="183" fill="#94a3b8" font-size="8">download ZIP + extrai</text>
+
+        <line x1="920" y1="150" x2="920" y2="205" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <text x="930" y="183" fill="#94a3b8" font-size="8">web_extract / leitura</text>
+
+        <!-- COLETA -> SNAPSHOT (pipeline) -->
+        <line x1="180" y1="300" x2="180" y2="345" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <line x1="560" y1="300" x2="560" y2="345" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <line x1="920" y1="300" x2="920" y2="345" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <text x="110" y="325" fill="#22d3ee" font-size="8">npm run data:refresh</text>
+        <text x="500" y="325" fill="#22d3ee" font-size="8">npm run data:photos</text>
+
+        <!-- SNAPSHOT -> SUPABASE (migrations/upsert) -->
+        <line x1="460" y1="445" x2="460" y2="500" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <text x="390" y="478" fill="#a78bfa" font-size="8">migrations SQL</text>
+
+        <!-- ADMIN -> SUPABASE RPC publish -->
+        <path d="M 320 690 L 320 750 Q 320 770 340 770 L 700 770 Q 720 770 720 752 L 720 640" fill="none" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <text x="380" y="762" fill="#a78bfa" font-size="8">approve / review</text>
+
+        <!-- SUPABASE claims -> BUILD (claims publicados servidas por anon) -->
+        <line x1="720" y1="600" x2="720" y2="790" stroke="#22d3ee" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrowhead)"/>
+        <text x="735" y="700" fill="#22d3ee" font-size="8">anon read (claims published)</text>
+
+        <!-- BUILD -> CLOUDFLARE -->
+        <line x1="540" y1="855" x2="540" y2="900" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <line x1="720" y1="855" x2="720" y2="900" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+        <!-- CLOUDFLARE -> PÚBLICO -->
+        <line x1="560" y1="955" x2="560" y2="900" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <line x1="780" y1="955" x2="780" y2="900" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+        <!-- ===================== ETAPA 1 — FONTES OFICIAIS ===================== -->
+        <text x="30" y="45" fill="white" font-size="11" font-weight="600">1 · Fontes oficiais</text>
+
+        <rect x="80" y="60" width="200" height="55" rx="6" fill="rgba(30, 41, 59, 0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+        <text x="180" y="80" fill="white" font-size="10" font-weight="600" text-anchor="middle">TSE — Candidaturas</text>
+        <text x="180" y="96" fill="#94a3b8" font-size="8" text-anchor="middle">consulta_cand_2026_RS.csv</text>
+        <text x="180" y="108" fill="#94a3b8" font-size="7" text-anchor="middle">SIG · dadosabertos · sq_candidato</text>
+
+        <rect x="460" y="60" width="200" height="55" rx="6" fill="rgba(30, 41, 59, 0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+        <text x="560" y="80" fill="white" font-size="10" font-weight="600" text-anchor="middle">TSE — Fotos 2026</text>
+        <text x="560" y="96" fill="#94a3b8" font-size="8" text-anchor="middle">foto_cand2026_RS_div.zip</text>
+        <text x="560" y="108" fill="#94a3b8" font-size="7" text-anchor="middle">FRS{SQ_CANDIDATO}_div.jpg</text>
+
+        <rect x="820" y="60" width="200" height="55" rx="6" fill="rgba(30, 41, 59, 0.5)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="920" y="80" fill="white" font-size="10" font-weight="600" text-anchor="middle">Institucional / Campanha</text>
+        <text x="920" y="96" fill="#94a3b8" font-size="8" text-anchor="middle">Câmara dos Deputados</text>
+        <text x="920" y="108" fill="#94a3b8" font-size="7" text-anchor="middle">sites oficiais de campanha</text>
+
+        <!-- ===================== ETAPA 2 — COLETA LOCAL ===================== -->
+        <text x="30" y="230" fill="white" font-size="11" font-weight="600">2 · Coleta local (mirror ../dataset2026)</text>
+
+        <rect x="80" y="245" width="200" height="55" rx="6" fill="rgba(30, 41, 59, 0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+        <text x="180" y="265" fill="white" font-size="10" font-weight="600" text-anchor="middle">CSV TSE (latin1, ';')</text>
+        <text x="180" y="281" fill="#94a3b8" font-size="8" text-anchor="middle">consulta_cand_2026/</text>
+        <text x="180" y="293" fill="#94a3b8" font-size="7" text-anchor="middle">nome, partido, cargo, cor/raça</text>
+
+        <rect x="460" y="245" width="200" height="55" rx="6" fill="rgba(30, 41, 59, 0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+        <text x="560" y="265" fill="white" font-size="10" font-weight="600" text-anchor="middle">Fotos ZIP extraídas</text>
+        <text x="560" y="281" fill="#94a3b8" font-size="8" text-anchor="middle">foto_cand2026_RS_div/</text>
+        <text x="560" y="293" fill="#94a3b8" font-size="7" text-anchor="middle">foto_cand2024_RS_div (fallback)</text>
+
+        <rect x="820" y="245" width="200" height="55" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="920" y="265" fill="white" font-size="10" font-weight="600" text-anchor="middle">Claims (dossiês)</text>
+        <text x="920" y="281" fill="#94a3b8" font-size="8" text-anchor="middle">historico_politico</text>
+        <text x="920" y="293" fill="#94a3b8" font-size="7" text-anchor="middle">plataforma / sumário</text>
+
+        <!-- ===================== ETAPA 3 — SNAPSHOT / MODELO ===================== -->
+        <text x="30" y="360" fill="white" font-size="11" font-weight="600">3 · Modelo / Snapshot versionado (pipeline scripts)</text>
+
+        <rect x="80" y="375" width="200" height="70" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="180" y="395" fill="white" font-size="10" font-weight="600" text-anchor="middle">data/public-candidates.json</text>
+        <text x="180" y="412" fill="#94a3b8" font-size="8" text-anchor="middle">212 candidatos</text>
+        <text x="180" y="424" fill="#94a3b8" font-size="8" text-anchor="middle">photo_url · race · gender</text>
+        <text x="180" y="436" fill="#22d3ee" font-size="7" text-anchor="middle">refresh-public-snapshot.mjs</text>
+
+        <rect x="460" y="375" width="200" height="70" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="560" y="395" fill="white" font-size="10" font-weight="600" text-anchor="middle">public/photos/tse-2026-rs/</text>
+        <text x="560" y="412" fill="#94a3b8" font-size="8" text-anchor="middle">212 fotos oficiais</text>
+        <text x="560" y="424" fill="#94a3b8" font-size="8" text-anchor="middle">match FRS ↔ sq_candidato</text>
+        <text x="560" y="436" fill="#22d3ee" font-size="7" text-anchor="middle">apply-official-candidate-photos.mjs</text>
+
+        <rect x="820" y="375" width="200" height="70" rx="6" fill="rgba(30, 41, 59, 0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+        <text x="920" y="395" fill="white" font-size="10" font-weight="600" text-anchor="middle">Manifestos + QA</text>
+        <text x="920" y="412" fill="#94a3b8" font-size="8" text-anchor="middle">manifesto fonte · sha256</text>
+        <text x="920" y="424" fill="#94a3b8" font-size="8" text-anchor="middle">relatórios docs/qa/</text>
+        <text x="920" y="436" fill="#22d3ee" font-size="7" text-anchor="middle">data-check</text>
+
+        <!-- ===================== ETAPA 4 — SUPABASE ===================== -->
+        <text x="30" y="500" fill="white" font-size="11" font-weight="600">4 · Supabase (PostgreSQL + RLS)</text>
+
+        <rect x="80" y="515" width="640" height="130" rx="12" fill="rgba(251, 191, 36, 0.05)" stroke="#fbbf24" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="95" y="533" fill="#fbbf24" font-size="9" font-weight="600">Camada de dados confiável (anon read-only · editor/service_role escrita)</text>
+
+        <rect x="100" y="545" width="120" height="42" rx="6" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="160" y="563" fill="white" font-size="9" font-weight="600" text-anchor="middle">candidates</text>
+        <text x="160" y="578" fill="#94a3b8" font-size="7" text-anchor="middle">slug · foto 2026</text>
+
+        <rect x="235" y="545" width="120" height="42" rx="6" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="295" y="563" fill="white" font-size="9" font-weight="600" text-anchor="middle">claims</text>
+        <text x="295" y="578" fill="#94a3b8" font-size="7" text-anchor="middle">status→published</text>
+
+        <rect x="370" y="545" width="120" height="42" rx="6" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="430" y="563" fill="white" font-size="9" font-weight="600" text-anchor="middle">source_refs</text>
+        <text x="430" y="578" fill="#94a3b8" font-size="7" text-anchor="middle">fonte pública</text>
+
+        <rect x="505" y="545" width="88" height="42" rx="6" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="549" y="563" fill="white" font-size="9" font-weight="600" text-anchor="middle">editorial_</text>
+        <text x="549" y="578" fill="#94a3b8" font-size="7" text-anchor="middle">reviews</text>
+
+        <rect x="605" y="545" width="90" height="42" rx="6" fill="rgba(136, 19, 55, 0.4)" stroke="#fb7185" stroke-width="1.5"/>
+        <text x="650" y="563" fill="white" font-size="9" font-weight="600" text-anchor="middle">editor_roles</text>
+        <text x="650" y="578" fill="#94a3b8" font-size="7" text-anchor="middle">admin/editor</text>
+
+        <rect x="100" y="600" width="250" height="32" rx="6" fill="rgba(136, 19, 55, 0.4)" stroke="#fb7185" stroke-width="1.5"/>
+        <text x="225" y="620" fill="white" font-size="9" font-weight="600" text-anchor="middle">RPC: publish / correct / retract</text>
+
+        <rect x="370" y="600" width="250" height="32" rx="6" fill="rgba(136, 19, 55, 0.4)" stroke="#fb7185" stroke-width="1.5"/>
+        <text x="495" y="620" fill="white" font-size="9" font-weight="600" text-anchor="middle">claim só publica com review aprovada</text>
+
+        <!-- ===================== ETAPA 5 — ADMIN EDITORIAL ===================== -->
+        <text x="30" y="680" fill="green" font-size="11" font-weight="600">5 · Aprovação editorial (painel /admin)</text>
+
+        <rect x="80" y="695" width="260" height="90" rx="8" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="210" y="715" fill="white" font-size="11" font-weight="600" text-anchor="middle">AdminPage (React)</text>
+        <text x="210" y="733" fill="#94a3b8" font-size="9" text-anchor="middle">Supabase Auth + editor_roles</text>
+        <text x="210" y="748" fill="#94a3b8" font-size="9" text-anchor="middle">fila pending_review</text>
+        <text x="210" y="762" fill="#22d3ee" font-size="8" text-anchor="middle">Editar → Aprovar → publish_claim()</text>
+
+        <rect x="400" y="695" width="260" height="90" rx="8" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="530" y="715" fill="white" font-size="11" font-weight="600" text-anchor="middle">Arquivo de revisadas</text>
+        <text x="530" y="733" fill="#94a3b8" font-size="9" text-anchor="middle">rejected / needs_changes</text>
+        <text x="530" y="748" fill="#94a3b8" font-size="9" text-anchor="middle">Editar conteúdo</text>
+        <text x="530" y="762" fill="#22d3ee" font-size="8" text-anchor="middle">→ Publicar claim arquivada</text>
+
+        <!-- ===================== ETAPA 6 — BUILD / DEPLOY ===================== -->
+        <text x="30" y="830" fill="white" font-size="11" font-weight="600">6 · Build & deploy (GitHub Actions)</text>
+
+        <rect x="380" y="845" width="320" height="55" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="540" y="865" fill="white" font-size="10" font-weight="600" text-anchor="middle">Build</text>
+        <text x="540" y="881" fill="#94a3b8" font-size="8" text-anchor="middle">data:check · tsc · vite build · sitemap · release</text>
+        <text x="540" y="893" fill="#34d399" font-size="7" text-anchor="middle">smoke local/preview · health check</text>
+
+        <rect x="760" y="845" width="240" height="55" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="880" y="865" fill="white" font-size="10" font-weight="600" text-anchor="middle">Cloudflare Pages</text>
+        <text x="880" y="881" fill="#94a3b8" font-size="8" text-anchor="middle">portal-transparencia-rs</text>
+        <text x="880" y="893" fill="#fbbf24" font-size="7" text-anchor="middle">wrangler deploy</text>
+
+        <!-- ===================== ETAPA 7 — PÚBLICO ===================== -->
+        <text x="30" y="925" fill="white" font-size="11" font-weight="600">7 · Superfície pública</text>
+
+        <rect x="460" y="900" width="200" height="55" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="560" y="920" fill="white" font-size="10" font-weight="600" text-anchor="middle">rs.votopraquem.org</text>
+        <text x="560" y="936" fill="#94a3b8" font-size="8" text-anchor="middle">Home · Compare · /candidatos/:slug</text>
+        <text x="560" y="948" fill="#22d3ee" font-size="7" text-anchor="middle">snapshot + claims published</text>
+
+        <!-- ===================== LEGEND ===================== -->
+        <text x="30" y="985" fill="white" font-size="10" font-weight="600">Legend</text>
+        <rect x="110" y="975" width="14" height="10" rx="2" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1"/>
+        <text x="130" y="983" fill="#94a3b8" font-size="8">Frontend / Snapshot</text>
+        <rect x="240" y="975" width="14" height="10" rx="2" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1"/>
+        <text x="260" y="983" fill="#94a3b8" font-size="8">Backend / pipeline</text>
+        <rect x="380" y="975" width="14" height="10" rx="2" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1"/>
+        <text x="400" y="983" fill="#94a3b8" font-size="8">Database</text>
+        <rect x="500" y="975" width="14" height="10" rx="2" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1"/>
+        <text x="520" y="983" fill="#94a3b8" font-size="8">Cloud / Deploy</text>
+        <rect x="630" y="975" width="14" height="10" rx="2" fill="rgba(136, 19, 55, 0.4)" stroke="#fb7185" stroke-width="1"/>
+        <text x="650" y="983" fill="#94a3b8" font-size="8">Security / gate editorial</text>
+      </svg>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-dot cyan"></div>
+          <h3>Origem & modelo</h3>
+        </div>
+        <ul>
+          <li>• TSE consulta_cand 2026, SIG e dadosabertos → CSV latin1 ';'</li>
+          <li>• Fotos: ZIP oficial TSE 2026 (FRS{sq}_div) ↔ tse_candidate_id</li>
+          <li>• Dossiês: Câmara dos Deputados + site oficial de campanha</li>
+          <li>• Identidade estável: uuidv5(nome+partido), slug = nome_{sq}</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-dot violet"></div>
+          <h3>Pipeline → Supabase</h3>
+        </div>
+        <ul>
+          <li>• data:refresh (csv-parse) → snapshot 212 candidatos</li>
+          <li>• data:photos → 212 fotos em public/photos/tse-2026-rs/</li>
+          <li>• migrations SQL aplicadas via npx supabase db query</li>
+          <li>• tabelas candidates · claims · source_references · editorial_reviews · editor_roles</li>
+          <li>• claims entram como pending_review · nunca publicação direta via script</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-dot rose"></div>
+          <h3>Gate editorial & público</h3>
+        </div>
+        <ul>
+          <li>• /admin: fila pending_review → editar → aprovar (publish_claim RPC)</li>
+          <li>• Arquivo de revisadas → editar → publicar claim arquivada</li>
+          <li>• RLS: anon só lê status published/corrected</li>
+          <li>• build → deploy Cloudflare Pages → rs.votopraquem.org</li>
+          <li>• GI: data:check · tsc · tests · smoke · health em cada push</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer">
+      VotoPraQuem RS · Portal Transparência Eleitoral RS · snapshot 2026-08-05 · 212 candidaturas / 212 fotos
+    </p>
+  </div>
+</body>
+</html>
