@@ -196,7 +196,7 @@ export function ComparePage() {
                 <button
                   type="button"
                   onClick={() => toggleCandidate(c.id)}
-                  className="text-[var(--color-muted-ink)] hover:text-[var(--color-ink)]"
+                  className="rounded-full text-[var(--color-muted-ink)] hover:text-[var(--color-ink)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-institutional)]"
                   aria-label={`Remover ${c.full_name}`}
                 >
                   ✕
@@ -214,7 +214,7 @@ export function ComparePage() {
               onClick={() => {
                 updateSharedRoute([]);
               }}
-              className="font-mono text-xs text-[var(--color-unverified)] underline underline-offset-2"
+              className="rounded-sm font-mono text-xs text-[var(--color-unverified)] underline underline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-institutional)]"
             >
               Limpar tudo
             </button>
@@ -357,7 +357,8 @@ export function ComparePage() {
                   }}
                   disabled={isMaxed}
                   aria-pressed={isSelected}
-                  className={`flex w-full items-center gap-3 rounded-sm border p-3 text-left transition-colors ${
+                  title={isMaxed ? 'Limite máximo de 4 candidatos atingido' : undefined}
+                  className={`flex w-full items-center gap-3 rounded-sm border p-3 text-left transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-institutional)] ${
                     isSelected
                       ? 'border-[var(--color-institutional)] bg-[color-mix(in_srgb,var(--color-institutional)_8%,var(--color-paper))]'
                       : 'border-[var(--color-border-editorial)] bg-[var(--color-paper)] hover:border-[var(--color-institutional)]'
