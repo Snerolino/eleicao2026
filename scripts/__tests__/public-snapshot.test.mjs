@@ -96,7 +96,8 @@ describe('snapshot público de candidatos', () => {
     const candidates = loadPublicCandidateSnapshot({ root });
     const withPhotos = candidates.filter((candidate) => candidate.photo_url);
 
-    expect(withPhotos).toHaveLength(212);
+    expect(withPhotos.length).toBeGreaterThanOrEqual(212);
+    expect(withPhotos).toHaveLength(candidates.length);
 
     for (const candidate of withPhotos) {
       expect(candidate.photo_url).toMatch(/^\/photos\/tse-2026-rs\/[a-z0-9_]+_\d+\.jpe?g$/);
