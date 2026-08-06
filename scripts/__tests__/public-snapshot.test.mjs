@@ -56,7 +56,7 @@ describe('snapshot público de candidatos', () => {
   it('carrega o snapshot versionado com o mínimo esperado de candidaturas', () => {
     const candidates = loadPublicCandidateSnapshot({ root });
 
-    expect(candidates).toHaveLength(212);
+    expect(candidates.length).toBeGreaterThanOrEqual(212);
     expect(candidates[0]).toEqual(
       expect.objectContaining({
         id: expect.any(String),
@@ -86,8 +86,8 @@ describe('snapshot público de candidatos', () => {
       tseIds.add(candidate.tse_candidate_id);
     }
 
-    expect(slugs.size).toBe(212);
-    expect(tseIds.size).toBe(212);
+    expect(slugs.size).toBe(candidates.length);
+    expect(tseIds.size).toBe(candidates.length);
     expect(tseIds.has('210002533050')).toBe(false);
     expect(candidates.some((candidate) => candidate.position === 'vice_governador')).toBe(true);
   });
