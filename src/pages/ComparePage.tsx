@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, memo, useCallback, useRef } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router';
 import { useQuery } from '@tanstack/react-query';
 import { fetchAllCandidates } from '@/services/candidates';
@@ -85,6 +85,66 @@ function raceFilterLabel(value: string): string {
   return value.charAt(0) + value.slice(1).toLowerCase();
 }
 
+
+// ⚡ Bolt: Performance optimization
+// Extracts inline mapping into a memoized component.
+// Expected Impact: Prevents O(N) re-renders for the entire candidate grid
+// when a single candidate is selected/toggled.
+const CandidateListItem = memo(function CandidateListItem({
+  c,
+  isSelected,
+  isMaxed,
+  onToggle
+}: {
+  c: CandidateWithClaims;
+  isSelected: boolean;
+  isMaxed: boolean;
+  onToggle: (id: string) => void;
+}) {
+  return (
+    <li>
+      <button
+        type="button"
+        onClick={() => {
+          if (!isMaxed) onToggle(c.id);
+        }}
+        disabled={isMaxed}
+        aria-pressed={isSelected}
+        className={`flex w-full items-center gap-3 rounded-sm border p-3 text-left transition-colors ${
+          isSelected
+            ? 'border-[var(--color-institutional)] bg-[color-mix(in_srgb,var(--color-institutional)_8%,var(--color-paper))]'
+            : 'border-[var(--color-border-editorial)] bg-[var(--color-paper)] hover:border-[var(--color-institutional)]'
+        } ${isMaxed ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`}
+      >
+        <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-sm bg-[var(--color-skeleton)]">
+          <CandidatePhoto
+            name={c.full_name}
+            photoUrl={c.photo_url}
+            className="h-full w-full object-cover"
+          />
+        </div>
+        <div className="min-w-0 flex-1">
+          <p className="font-mono text-[0.65rem] uppercase tracking-wider text-[var(--color-muted-ink)]">
+            {c.position_label}
+          </p>
+          <p className="truncate font-semibold">{c.full_name}</p>
+          <p className="font-mono text-xs text-[var(--color-muted-ink)]">
+            {c.party}
+            {c.ballot_number != null
+              ? ` · nº ${c.ballot_number}`
+              : ''}
+          </p>
+        </div>
+        {isSelected && (
+          <span className="shrink-0 font-mono text-sm font-bold text-[var(--color-institutional)]">
+            ✓
+          </span>
+        )}
+      </button>
+    </li>
+  );
+});
+
 export function ComparePage() {
   usePageMetadata(
     'Comparar candidatos — Portal Transparência Eleitoral RS',
@@ -136,6 +196,12 @@ export function ComparePage() {
 
   const selectedIds = useMemo(() => new Set(sharedIds), [sharedIds]);
 
+  const sharedIdsRef = useRef(sharedIds);
+  useEffect(() => {
+    sharedIdsRef.current = sharedIds;
+  }, [sharedIds]);
+
+
   useEffect(() => {
     if (query.isLoading) return;
     const sharedValue = serializeSelectedIds(sharedIds);
@@ -149,17 +215,25 @@ export function ComparePage() {
     [candidates, selectedIds]
   );
 
-  const updateSharedRoute = (ids: string[]) => {
+
+
+  const updateSharedRoute = useCallback((ids: string[]) => {
     const value = serializeSelectedIds(ids.slice(0, 4));
     navigate({ search: value ? `?candidatos=${value}` : '' }, { replace: false });
-  };
+  }, [navigate]);
 
-  const toggleCandidate = (id: string) => {
-    const next = sharedIds.includes(id)
-      ? sharedIds.filter((selectedId) => selectedId !== id)
-      : [...sharedIds, id].slice(0, 4);
+  // ⚡ Bolt: Stable callback optimization
+  // Uses a mutable ref to store sharedIds and access it inside the callback
+  // without including it in the dependency array.
+  // Expected Impact: Maintains a single function identity for toggleCandidate,
+  // preventing memoized CandidateListItem children from unnecessarily re-rendering.
+  const toggleCandidate = useCallback((id: string) => {
+    const currentSharedIds = sharedIdsRef.current;
+    const next = currentSharedIds.includes(id)
+      ? currentSharedIds.filter((selectedId) => selectedId !== id)
+      : [...currentSharedIds, id].slice(0, 4);
     updateSharedRoute(next);
-  };
+  }, [updateSharedRoute]);
 
   if (query.isLoading) {
     return (
@@ -345,52 +419,15 @@ export function ComparePage() {
           </div>
         </div>
         <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {filteredCandidates.map((c) => {
-            const isSelected = selectedIds.has(c.id);
-            const isMaxed = !isSelected && selectedIds.size >= 4;
-            return (
-              <li key={c.id}>
-                <button
-                  type="button"
-                  onClick={() => {
-                    if (!isMaxed) toggleCandidate(c.id);
-                  }}
-                  disabled={isMaxed}
-                  aria-pressed={isSelected}
-                  className={`flex w-full items-center gap-3 rounded-sm border p-3 text-left transition-colors ${
-                    isSelected
-                      ? 'border-[var(--color-institutional)] bg-[color-mix(in_srgb,var(--color-institutional)_8%,var(--color-paper))]'
-                      : 'border-[var(--color-border-editorial)] bg-[var(--color-paper)] hover:border-[var(--color-institutional)]'
-                  } ${isMaxed ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`}
-                >
-                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-sm bg-[var(--color-skeleton)]">
-                    <CandidatePhoto
-                      name={c.full_name}
-                      photoUrl={c.photo_url}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="font-mono text-[0.65rem] uppercase tracking-wider text-[var(--color-muted-ink)]">
-                      {c.position_label}
-                    </p>
-                    <p className="truncate font-semibold">{c.full_name}</p>
-                    <p className="font-mono text-xs text-[var(--color-muted-ink)]">
-                      {c.party}
-                      {c.ballot_number != null
-                        ? ` · nº ${c.ballot_number}`
-                        : ''}
-                    </p>
-                  </div>
-                  {isSelected && (
-                    <span className="shrink-0 font-mono text-sm font-bold text-[var(--color-institutional)]">
-                      ✓
-                    </span>
-                  )}
-                </button>
-              </li>
-            );
-          })}
+          {filteredCandidates.map((c) => (
+            <CandidateListItem
+              key={c.id}
+              c={c}
+              isSelected={selectedIds.has(c.id)}
+              isMaxed={!selectedIds.has(c.id) && selectedIds.size >= 4}
+              onToggle={toggleCandidate}
+            />
+          ))}
         </ul>
       </section>
     </main>
