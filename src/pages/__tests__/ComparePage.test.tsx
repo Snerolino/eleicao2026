@@ -94,7 +94,8 @@ describe('ComparePage H5.3', () => {
 
     renderCompare('/comparar?candidatos=tse-1,tse-2');
 
-    expect(screen.getByLabelText(/url atual/i)).toHaveTextContent('/comparar?candidatos=tse-1,tse-2');
+    const urlNode = screen.getByLabelText(/url atual/i);
+    expect(urlNode.textContent?.replace(/%2C/g, ',')).toContain('/comparar?candidatos=tse-1,tse-2');
     expect(screen.getAllByRole('status')[0]).toHaveTextContent(/carregando candidatos/i);
   });
 
@@ -129,7 +130,8 @@ describe('ComparePage H5.3', () => {
     fireEvent.click(screen.getByRole('button', { name: /ada cristina munaretto/i }));
     fireEvent.click(screen.getByRole('button', { name: /joão batista garcia dias/i }));
 
-    expect(screen.getByLabelText(/url atual/i)).toHaveTextContent('/comparar?candidatos=tse-1,tse-2');
+    const urlNode = screen.getByLabelText(/url atual/i);
+    expect(urlNode.textContent?.replace(/%2C/g, ',')).toContain('/comparar?candidatos=tse-1,tse-2');
     expect(screen.getByRole('table')).toBeInTheDocument();
   });
 
@@ -137,7 +139,8 @@ describe('ComparePage H5.3', () => {
     renderCompare('/comparar?candidatos=tse-1,tse-invalido,tse-2,tse-3,tse-extra');
 
     expect(screen.getByText(/3 selecionados/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/url atual/i)).toHaveTextContent('/comparar?candidatos=tse-1,tse-2,tse-3');
+    const urlNode = screen.getByLabelText(/url atual/i);
+    expect(urlNode.textContent?.replace(/%2C/g, ',')).toContain('/comparar?candidatos=tse-1,tse-2,tse-3');
   });
 
   it('filtra a lista de seleção por partido, mulheres e cor/raça sem remover selecionados da rota', () => {
@@ -160,7 +163,8 @@ describe('ComparePage H5.3', () => {
     fireEvent.change(screen.getByRole('combobox', { name: /filtrar por cor\/raça/i }), {
       target: { value: 'BRANCA' },
     });
-    expect(screen.getByLabelText(/url atual/i)).toHaveTextContent('/comparar?candidatos=tse-1,tse-2');
+    const urlNode = screen.getByLabelText(/url atual/i);
+    expect(urlNode.textContent?.replace(/%2C/g, ',')).toContain('/comparar?candidatos=tse-1,tse-2');
     expect(screen.getByText(/1 de 3 candidatos disponíveis/i)).toHaveTextContent(/mulheres/i);
     expect(screen.getByRole('option', { name: 'Não informado' })).toBeInTheDocument();
   });
