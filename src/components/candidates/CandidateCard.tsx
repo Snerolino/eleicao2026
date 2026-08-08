@@ -74,10 +74,16 @@ export const CandidateCard = memo(function CandidateCard({
       </div>
 
       <div className="mt-auto border-t border-[var(--color-border-editorial)] px-4 py-3">
-        <SourceReferenceBadge
-          document={summary?.source_document ?? null}
-          confidenceScore={summary?.confidence_score ?? 0}
-        />
+        {summary ? (
+          <SourceReferenceBadge
+            document={summary.source_document ?? null}
+            confidenceScore={summary.confidence_score}
+          />
+        ) : (
+          <p className="text-xs italic leading-relaxed text-[var(--color-muted-ink)]">
+            Sem dados publicados — aguarde a verificação editorial.
+          </p>
+        )}
       </div>
     </article>
   );
