@@ -4,3 +4,6 @@
 ## 2024-05-19 - [Deferred Search Input]
 **Learning:** Using `useDeferredValue` for a search query that filters a large list (`filterCandidates` on all candidates) improves typing responsiveness. Crucially, any downstream grouping or mapping logic that depends on the filtered results should be wrapped in `useMemo` so it doesn't unnecessarily re-compute on every single keystroke.
 **Action:** When filtering complex lists, wrap the query passed to the filter function with `useDeferredValue` and use `useMemo` for any derived computations based on the filtered output. Ensure UI elements showing counts sync with the deferred query to prevent visual mismatches.
+## 2023-10-27 - [ComparePage List Rendering Bottleneck]
+**Learning:** In a large list of candidates where each candidate can be selected/toggled, using inline callbacks and rendering complex UI without `React.memo` causes the entire list (O(N)) to re-render whenever the selection state changes.
+**Action:** Always extract individual list items into a `React.memo` wrapped component and pass stable callbacks (via `useCallback` or ref-backed functions) when interacting with lists of selectable items, reducing the re-render complexity to O(1).
