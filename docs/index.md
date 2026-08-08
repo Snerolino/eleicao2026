@@ -56,6 +56,7 @@
 | [`qa/fotos-candidatos-fontes-oficiais.md`](qa/fotos-candidatos-fontes-oficiais.md) | Fontes, método e cobertura das fotos oficiais TSE aplicadas ao snapshot público |
 | [`qa/dossie-lote1-novo-2026.md`](qa/dossie-lote1-novo-2026.md) | Importação do dossiê Lote 1 (NOVO/DF) como claims `pending_review` — critérios e rastreabilidade |
 | [`qa/dossie-lote2-novo-2026.md`](qa/dossie-lote2-novo-2026.md) | Importação do dossiê Lote 2 (NOVO/DF+DE) como claims `pending_review` — Ramiro e Everton |
+| [`qa/dossie-lote3-novo-2026.md`](qa/dossie-lote3-novo-2026.md) | Importação do dossiê Lote 3/consolidado como claims `pending_review` — Kalkmann, Riesgo e Albrecht |
 | [`qa/e0-cobertura-majoritarios.md`](qa/e0-cobertura-majoritarios.md) | Evidência do gate E0: claims dos 6 majoritários por categoria, status e pendências de revisão |
 | [`qa/cobertura-editorial-2026-08-03.md`](qa/cobertura-editorial-2026-08-03.md) | Cobertura editorial atual por cargo/categoria e próximo lote recomendado |
 | [`qa/fotos-sem-match-2026-08-03.md`](qa/fotos-sem-match-2026-08-03.md) | Distribuição dos 139 candidatos sem foto e do caso ambíguo por cargo/partido |
