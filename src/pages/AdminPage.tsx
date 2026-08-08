@@ -365,7 +365,7 @@ export function AdminPage() {
                       <a
                         href={safeUrl}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noreferrer noopener"
                         className="font-mono text-xs uppercase tracking-wider text-[var(--color-institutional)] underline-offset-4 hover:underline"
                       >
                         Fonte: {claim.source_references?.source_name}
