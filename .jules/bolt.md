@@ -4,3 +4,7 @@
 ## 2024-05-19 - [Deferred Search Input]
 **Learning:** Using `useDeferredValue` for a search query that filters a large list (`filterCandidates` on all candidates) improves typing responsiveness. Crucially, any downstream grouping or mapping logic that depends on the filtered results should be wrapped in `useMemo` so it doesn't unnecessarily re-compute on every single keystroke.
 **Action:** When filtering complex lists, wrap the query passed to the filter function with `useDeferredValue` and use `useMemo` for any derived computations based on the filtered output. Ensure UI elements showing counts sync with the deferred query to prevent visual mismatches.
+
+## 2024-05-24 - [Stable Callbacks for URL-derived state]
+**Learning:** When a list is rendered from a URL-derived state (like searchParams), updating the selection updates the URL, which generates a new array reference. Simply extracting to `React.memo` is insufficient if the callback relies on the URL state directly because its reference will change, breaking memoization for ALL items.
+**Action:** Use a mutable ref (`useRef`) synchronized via `useEffect` to hold the URL-derived state so the toggle callback can access the latest state without including it in its dependency array. This maintains a stable function identity and preserves `React.memo` optimization.
