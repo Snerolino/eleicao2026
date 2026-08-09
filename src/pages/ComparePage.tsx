@@ -357,6 +357,7 @@ export function ComparePage() {
                   }}
                   disabled={isMaxed}
                   aria-pressed={isSelected}
+                  title={isMaxed ? 'Limite máximo de 4 candidatos atingido' : undefined}
                   className={`flex w-full items-center gap-3 rounded-sm border p-3 text-left transition-colors ${
                     isSelected
                       ? 'border-[var(--color-institutional)] bg-[color-mix(in_srgb,var(--color-institutional)_8%,var(--color-paper))]'
