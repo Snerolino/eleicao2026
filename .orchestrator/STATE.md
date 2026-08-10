@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-10 11:54 -03
-Status: `ORCHESTRATOR_V1_VALIDATED_REGRESSION_PENDING`
+Atualizado: 2026-08-10 12:23 -03
+Status: `ORCHESTRATOR_V1_REGRESSION_GREEN_PR_READY`
 
 > Este é um checkpoint, não uma fonte eterna. Ao retomar, Hermes deve conferir
 > Git, ambiente e serviços antes de confiar em SHAs, contagens ou disponibilidade.
@@ -15,23 +15,56 @@ Status: `ORCHESTRATOR_V1_VALIDATED_REGRESSION_PENDING`
 - Checkpoint herdado da feature: `565116619de6c36cde99c3d159e8540f18530386`.
 - A feature estava 5 commits à frente e 0 atrás de `main` no início desta migração.
 - Branch da arquitetura: `chore/hermes-orchestrator-v1`, criada a partir de `5651166`.
-- HEAD validado antes deste checkpoint: `2015fc8a5545`.
+- Comparação final contra `5651166`: 65 commits à frente, 0 atrás.
+- O volume de commits é consequência da edição incremental via Contents API; preparar PR com squash. Não fazer merge automático.
 
-## Aplicação
+## Escopo final da branch de arquitetura
 
-- Produção declarada verde com 792 candidaturas públicas e fotos TSE.
-- Stack preservada: React + Vite + TypeScript + Tailwind + Supabase + Cloudflare Pages + PWA.
-- GitHub Actions é o caminho normal de deploy após merge autorizado em `main`.
-- O `package.json` exige Node `>=24 <25`.
-- Shell do projeto confirmado em 2026-08-10 com Node `v24.19.0` em `/home/lourenco/.nvm/versions/node/v24.19.0/bin/node`.
-- Gateway Hermes do perfil `eleicao2026` confirmado usando o mesmo Node `v24.19.0` via drop-in `70-eleicao2026-node24.conf`.
+A comparação contra `5651166` mostra alterações apenas em:
+
+- `.orchestrator/`;
+- `.agents/`;
+- `.gemini/` e `.geminiignore`;
+- `scripts/orchestrator/`;
+- `AGENTS.md`;
+- `opencode.jsonc`;
+- `.gitignore`;
+- documentação em `docs/`;
+- scripts `orch:*` em `package.json`.
+
+Não há alteração em:
+
+- `src/`;
+- migrations além das já herdadas da feature;
+- `.github/workflows/deploy.yml`;
+- `package-lock.json`;
+- dependências ou devDependencies.
+
+O `package.json` mantém Node `>=24 <25`, npm `>=10` e as mesmas versões de dependências; a branch apenas adiciona scripts de orquestração.
+
+## Aplicação — REGRESSÃO VERDE
+
+Validação local em Node `v24.19.0` em 2026-08-10:
+
+- `npm test`: 180 arquivos de teste aprovados, 888 testes aprovados;
+- `npx tsc --noEmit`: sem erro reportado no ciclo;
+- `npm run build`: concluído com sucesso;
+- snapshot público: 792 candidaturas válidas e 792 fotos oficiais;
+- distribuição por cargos: deputado_estadual=458, deputado_federal=310, governador=3, outro=12, senador=6, vice_governador=3;
+- Vite transformou 215 módulos e concluiu o build;
+- PWA gerou `sw.js` e `workbox-1320db52.js`;
+- sitemap gerado com 794 URLs (792 candidatos + páginas estáticas);
+- `release.json` gerado;
+- `node scripts/validate-impact-schema.mjs`: checkpoint OK; fixtures válidas foram aceitas e fixtures inválidas foram rejeitadas como esperado.
+
+O Vite emitiu warning de chunk acima de 500 kB (`index` ~1,043 kB antes de gzip). Esse warning não é atribuído à migração de orquestração: a branch não altera `src/`, dependências, lockfile ou configuração de build. Tratar otimização de bundle separadamente, sem carona nesta PR.
 
 ## Matriz de Impacto Populacional v1
 
 - Fase 0 concluída: contrato, metodologia, governança, schemas e fixtures.
 - Fase 1 concluída: domínio, testes e 5 migrations locais.
-- Checkpoint validado antes do stand-by: 222 testes, TypeScript limpo, build OK e RPC de aprovação validada localmente.
-- As migrations `20260810090000` a `20260810090400` NÃO estavam aplicadas no Supabase remoto no início desta migração de arquitetura.
+- As migrations `20260810090000` a `20260810090400` permanecem sem autorização de aplicação no Supabase remoto.
+- A regressão atual comprovou novamente o contrato dos schemas de impacto.
 
 ## Supabase remoto
 
@@ -46,6 +79,7 @@ Status: `ORCHESTRATOR_V1_VALIDATED_REGRESSION_PENDING`
 - Produção: `https://rs.votopraquem.org`.
 - Projeto Pages versionado no workflow: `portal-transparencia-rs`.
 - Deploy normal: GitHub Actions `deploy.yml`, somente push em `main`, usando secret `CLOUDFLARE_API_TOKEN` no GitHub.
+- A branch de arquitetura não alterou o workflow de deploy.
 - Não copiar esse token para Hermes ou para executores apenas para permitir rotina de desenvolvimento.
 
 ## Hermes control plane — VALIDADO
@@ -75,14 +109,14 @@ Em 2026-08-10, `npm run orch:doctor -- --smoke` retornou:
 
 Smokes comprovados no mesmo ciclo:
 
-- OpenCode/DeepSeek: saída não vazia em snapshot sanitizado;
+- OpenCode/DeepSeek: execução sobre snapshot sanitizado retornou saída não vazia;
 - Antigravity/Google: leitura real de `AGENTS.md`, retornando o título esperado `Instruções para agentes — Portal Transparência Eleitoral RS`;
 - Codex exec fallback: saída estruturada conforme contrato.
 
 Warnings remanescentes e classificação:
 
 1. Gemini CLI disponível apenas como rota legacy/API-key; esperado e não bloqueante.
-2. `TERMINAL_ENV` legado ainda detectado no `.env` do perfil; saneamento local recomendado antes de considerar o perfil limpo, embora `terminal: local` esteja confirmado operacionalmente.
+2. `TERMINAL_ENV` legado foi detectado no ciclo anterior; se ainda existir, sanear localmente antes da operação contínua. `terminal: local` já foi comprovado funcionalmente.
 3. Ollama presente sem `gpt-oss:20b`; fallback local opcional permanece desabilitado e não bloqueia a arquitetura principal.
 
 ## Executores e credenciais
@@ -110,7 +144,7 @@ Warnings remanescentes e classificação:
 
 - OpenCode está disponível e auth local existe.
 - Rota usa snapshot sanitizado e agente `plan`.
-- Smoke do doctor retornou saída não vazia.
+- MCP desabilitado no executor econômico.
 - Modelo econômico permanece sujeito à disponibilidade atual do catálogo; Hermes deve aplicar circuit breaker se a rota gratuita deixar de existir ou ficar indisponível.
 
 ### Gemini CLI legacy
@@ -122,11 +156,11 @@ Warnings remanescentes e classificação:
 - Ollama está instalado.
 - `gpt-oss:20b` ausente; fallback local opcional não está elegível ainda.
 
-## Próximos gates antes da retomada funcional
+## Próximo gate
 
-1. Sanear `TERMINAL_ENV` legado no perfil Hermes e revalidar `terminal: local`.
-2. Rodar regressão da aplicação em Node 24: `npm test`, `npx tsc --noEmit`, `npm run build`, `node scripts/validate-impact-schema.mjs`.
-3. Se a regressão permanecer verde, revisar o diff final da branch de arquitetura contra `5651166` e preparar PR/squash sem merge automático.
+1. Puxar este checkpoint localmente.
+2. Confirmar/remover `TERMINAL_ENV` legado caso ainda exista; não repetir toda a regressão por isso.
+3. Revisar o diff final da branch de arquitetura e abrir PR em modo draft/ready conforme processo do projeto, configurando squash no merge. Não fazer merge automático.
 4. Após revisão humana da arquitetura, retomar a Fase 2 da Matriz de Impacto: importador dry-run de proposições/votos e desenho da persistência de score.
 5. Tratar separadamente os dois bugs encontrados pelo Codex em `src/services/candidates.ts` e `src/pages/AdminPage.tsx`.
 6. Somente depois de revisão humana, decidir aplicação remota das migrations de impacto.
