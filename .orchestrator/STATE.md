@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-10 12:23 -03
-Status: `ORCHESTRATOR_V1_REGRESSION_GREEN_PR_READY`
+Atualizado: 2026-08-10 12:49 -03
+Status: `ORCHESTRATOR_V1_REVIEW_HARDENED_RETEST_PENDING`
 
 > Este é um checkpoint, não uma fonte eterna. Ao retomar, Hermes deve conferir
 > Git, ambiente e serviços antes de confiar em SHAs, contagens ou disponibilidade.
@@ -13,12 +13,12 @@ Status: `ORCHESTRATOR_V1_REGRESSION_GREEN_PR_READY`
 - `main` no início desta migração: `a252fb0f77f58694a1133a24f5c136985025a7ad`.
 - Feature em stand-by: `feat/matriz-impacto-populacional-v1`.
 - Checkpoint herdado da feature: `565116619de6c36cde99c3d159e8540f18530386`.
-- A feature estava 5 commits à frente e 0 atrás de `main` no início desta migração.
 - Branch da arquitetura: `chore/hermes-orchestrator-v1`, criada a partir de `5651166`.
-- Comparação final contra `5651166`: 65 commits à frente, 0 atrás.
-- O volume de commits é consequência da edição incremental via Contents API; preparar PR com squash. Não fazer merge automático.
+- Comparação após review: branch continua 0 commits atrás do checkpoint base e altera somente 33 arquivos de orquestração/configuração/documentação.
+- O volume de commits é consequência da edição incremental via Contents API; integrar somente por squash após o gate final. Não fazer merge automático.
+- Draft PR aberto: `#70`, base `feat/matriz-impacto-populacional-v1`, sem merge.
 
-## Escopo final da branch de arquitetura
+## Escopo da branch de arquitetura
 
 A comparação contra `5651166` mostra alterações apenas em:
 
@@ -44,27 +44,27 @@ O `package.json` mantém Node `>=24 <25`, npm `>=10` e as mesmas versões de dep
 
 ## Aplicação — REGRESSÃO VERDE
 
-Validação local em Node `v24.19.0` em 2026-08-10:
+Validação local em Node `v24.19.0` antes do hardening final da infraestrutura:
 
 - `npm test`: 180 arquivos de teste aprovados, 888 testes aprovados;
 - `npx tsc --noEmit`: sem erro reportado no ciclo;
 - `npm run build`: concluído com sucesso;
 - snapshot público: 792 candidaturas válidas e 792 fotos oficiais;
 - distribuição por cargos: deputado_estadual=458, deputado_federal=310, governador=3, outro=12, senador=6, vice_governador=3;
-- Vite transformou 215 módulos e concluiu o build;
-- PWA gerou `sw.js` e `workbox-1320db52.js`;
-- sitemap gerado com 794 URLs (792 candidatos + páginas estáticas);
-- `release.json` gerado;
-- `node scripts/validate-impact-schema.mjs`: checkpoint OK; fixtures válidas foram aceitas e fixtures inválidas foram rejeitadas como esperado.
+- PWA gerada;
+- sitemap gerado com 794 URLs;
+- `node scripts/validate-impact-schema.mjs`: checkpoint OK; fixtures válidas aceitas e inválidas rejeitadas como esperado.
 
-O Vite emitiu warning de chunk acima de 500 kB (`index` ~1,043 kB antes de gzip). Esse warning não é atribuído à migração de orquestração: a branch não altera `src/`, dependências, lockfile ou configuração de build. Tratar otimização de bundle separadamente, sem carona nesta PR.
+Depois dessa regressão, o review alterou somente scripts/docs/configuração do orquestrador, sem tocar em aplicação, dependências, migrations ou build. Portanto não há motivo para repetir os 888 testes antes de integrar; o gate pendente é específico da infraestrutura de orquestração.
+
+O warning de chunk acima de 500 kB permanece dívida separada e fora desta PR.
 
 ## Matriz de Impacto Populacional v1
 
 - Fase 0 concluída: contrato, metodologia, governança, schemas e fixtures.
 - Fase 1 concluída: domínio, testes e 5 migrations locais.
 - As migrations `20260810090000` a `20260810090400` permanecem sem autorização de aplicação no Supabase remoto.
-- A regressão atual comprovou novamente o contrato dos schemas de impacto.
+- Fase 2 continua pendente até a integração/revisão desta arquitetura.
 
 ## Supabase remoto
 
@@ -72,102 +72,99 @@ O Vite emitiu warning de chunk acima de 500 kB (`index` ~1,043 kB antes de gzip)
 - Estado observado em 2026-08-10: `ACTIVE_HEALTHY`.
 - `public.candidates`: 793 linhas no banco remoto; superfície pública versionada: 792.
 - Nenhuma Edge Function ativa observada.
-- Débitos separados da migração de agentes: advisors indicam funções com `search_path` mutável, RPCs `SECURITY DEFINER` executáveis por `authenticated`, além de alertas de performance/RLS. Não corrigir por carona; abrir trabalho próprio.
+- Débitos separados: advisors de `search_path`, RPCs `SECURITY DEFINER` para `authenticated`, performance/RLS. Não corrigir por carona.
 
 ## Cloudflare
 
 - Produção: `https://rs.votopraquem.org`.
 - Projeto Pages versionado no workflow: `portal-transparencia-rs`.
-- Deploy normal: GitHub Actions `deploy.yml`, somente push em `main`, usando secret `CLOUDFLARE_API_TOKEN` no GitHub.
-- A branch de arquitetura não alterou o workflow de deploy.
-- Não copiar esse token para Hermes ou para executores apenas para permitir rotina de desenvolvimento.
+- Deploy normal permanece GitHub Actions após merge autorizado em `main`.
+- A branch de arquitetura não altera workflow de deploy nem recebe token Cloudflare de produção.
 
-## Hermes control plane — VALIDADO
+## Hermes control plane — BASE VALIDADA
 
-Validação real em 2026-08-10:
+Validação real anterior ao hardening final:
 
-- perfil `eleicao2026` existe;
-- gateway systemd do perfil está ativo e com linger habilitado;
-- provider do Hermes: `openai-codex`;
-- modelo do Hermes: `gpt-5.6-luna`;
-- terminal backend: `local`;
+- perfil `eleicao2026` ativo;
+- provider `openai-codex`, modelo `gpt-5.6-luna`;
+- terminal backend `local`;
 - Node do gateway alinhado ao projeto: `v24.19.0`;
 - skill `eleicao2026-orchestrator` instalada;
-- MCP `codex` aparece habilitado como `codex mcp-server`;
-- `codex mcp-server` sobe e permanece disponível por stdio;
-- smoke direto do Hermes respondeu `HERMES_CODEX_OK`;
-- smoke Hermes → MCP Codex fez chamada real `mcp__codex__codex`, leu `AGENTS.md` em modo read-only e retornou `HERMES_CODEX_MCP_OK`;
-- portanto a espinha dorsal `Hermes -> Codex MCP -> repositório` está validada ponta a ponta.
+- MCP `codex` habilitado como `codex mcp-server`;
+- smoke direto `HERMES_CODEX_OK`;
+- chamada real Hermes → MCP Codex em read-only retornou `HERMES_CODEX_MCP_OK`.
 
-## Doctor do orquestrador — VALIDADO
+Esses fatos não foram invalidados pelo review, mas o doctor/snapshots/wrappers mudaram e precisam de um smoke curto no novo HEAD.
 
-Em 2026-08-10, `npm run orch:doctor -- --smoke` retornou:
+## Review técnico do PR #70 — HARDENING APLICADO
 
-- `OK=45`;
-- `WARN=3`;
-- `FAIL=0`.
+O review encontrou e corrigiu problemas reais antes da integração:
 
-Smokes comprovados no mesmo ciclo:
+1. **Portabilidade:** wrappers não usam mais `/home/lourenco` como default versionado; resolvem o home real via `getent`, mantendo `HERMES_REAL_HOME` como override.
+2. **OpenCode smoke:** deixou de aceitar apenas stdout não vazio; agora exige o título real de `AGENTS.md`, igual ao gate do Antigravity.
+3. **Worktree:** doctor agora detecta também arquivos untracked, não só diffs tracked.
+4. **Snapshot path traversal:** `prepare-snapshot.sh` valida o identificador antes de `rm -rf` e rejeita nomes que possam escapar de `runtime/snapshots/`.
+5. **Symlink escape:** snapshots sanitizados falham fechados se contiverem symlink rastreado, evitando leitura indireta fora do snapshot.
+6. **Gemini legacy:** rota opcional passou a rodar também sobre `git archive HEAD`, não sobre a worktree viva.
+7. **Antigravity:** `AGENTS.md`, arquitetura e runbook foram alinhados ao contrato real: `orch:configure-google`, `--add-dir`, custom reader, `--mode=plan`, sandbox, `read_file` estreito, `write_file` negado e sem `--dangerously-skip-permissions`.
+8. **Codex MCP docs:** removida referência incorreta a `hermes mcp test codex`; gate documentado é preflight + chamada Hermes → MCP real.
+9. **Context authority:** `.orchestrator/README.md` agora segue a mesma ordem canônica de `AGENTS.md`.
+10. **Handoff contract:** `HANDOFF.json` passou a ser válido por construção em relação ao `minLength` obrigatório de `summary`.
 
-- OpenCode/DeepSeek: execução sobre snapshot sanitizado retornou saída não vazia;
-- Antigravity/Google: leitura real de `AGENTS.md`, retornando o título esperado `Instruções para agentes — Portal Transparência Eleitoral RS`;
-- Codex exec fallback: saída estruturada conforme contrato.
+Nenhuma dessas correções amplia autoridade de escrita ou toca serviços remotos.
 
-Warnings remanescentes e classificação:
+## Executores
 
-1. Gemini CLI disponível apenas como rota legacy/API-key; esperado e não bloqueante.
-2. `TERMINAL_ENV` legado foi detectado no ciclo anterior; se ainda existir, sanear localmente antes da operação contínua. `terminal: local` já foi comprovado funcionalmente.
-3. Ollama presente sem `gpt-oss:20b`; fallback local opcional permanece desabilitado e não bloqueia a arquitetura principal.
+### Codex
 
-## Executores e credenciais
+- CLI autenticado via ChatGPT e MCP validado ponta a ponta antes do review.
+- MCP é writer técnico preferido; `codex exec` permanece fallback read-only estruturado.
 
-### Codex — VALIDADO
+### Google Antigravity
 
-- Codex CLI `0.147.0`.
-- `codex login status`: autenticado via ChatGPT.
-- `codex doctor --summary`: 17 OK, 0 WARN, 0 FAIL; websocket HTTP 101 e endpoints ativos alcançáveis.
-- `gpt-5.6-luna` respondeu em `codex exec` read-only.
-- Codex MCP integrado ao Hermes e validado ponta a ponta.
+- `agy` 1.1.11 autenticado.
+- Headless usa snapshot sanitizado + `--add-dir` + custom reader + `--mode=plan` + sandbox.
+- Política local permite leitura apenas do snapshot e nega escrita nele.
+- Subagentes/background collaboration são bloqueados no caminho headless síncrono.
 
-### Google Antigravity — VALIDADO COMO READER HEADLESS
+### OpenCode / DeepSeek Free
 
-- `agy` `1.1.11` instalado e autenticado.
-- Executor roda sobre snapshot criado por `git archive HEAD`.
-- Snapshot é explicitamente ligado ao workspace headless via `--add-dir`.
-- Política local permite `read_file` apenas no snapshot e nega `write_file` no mesmo caminho.
-- Custom agent `eleicao2026-reader` limita o papel a leitura/consulta.
-- Wrapper usa `--mode=plan`, `--sandbox` e rejeita estado intermediário de subagente como sucesso.
-- Smoke real leu `AGENTS.md` e devolveu o título inicial exato.
-- Não foi usado `--dangerously-skip-permissions`.
-
-### OpenCode / DeepSeek Free — VALIDADO COMO READER ECONÔMICO
-
-- OpenCode está disponível e auth local existe.
-- Rota usa snapshot sanitizado e agente `plan`.
-- MCP desabilitado no executor econômico.
-- Modelo econômico permanece sujeito à disponibilidade atual do catálogo; Hermes deve aplicar circuit breaker se a rota gratuita deixar de existir ou ficar indisponível.
+- Reader econômico sobre snapshot sanitizado, `agent plan`, MCP desligado.
+- Novo doctor exige prova semântica de leitura do `AGENTS.md`.
 
 ### Gemini CLI legacy
 
-- permanece somente como compatibilidade para API key/enterprise, não é a rota normal da assinatura Google AI Pro individual nesta arquitetura.
+- Compatibilidade API-key/enterprise somente quando explicitamente configurada.
+- Agora também opera sobre snapshot sanitizado, não worktree viva.
 
 ### Ollama local
 
-- Ollama está instalado.
-- `gpt-oss:20b` ausente; fallback local opcional não está elegível ainda.
+- Ollama instalado; `gpt-oss:20b` ausente no último doctor. Continua opcional e não bloqueante.
 
-## Próximo gate
+## Próximo gate — RETESTE CURTO
 
-1. Puxar este checkpoint localmente.
-2. Confirmar/remover `TERMINAL_ENV` legado caso ainda exista; não repetir toda a regressão por isso.
-3. Revisar o diff final da branch de arquitetura e abrir PR em modo draft/ready conforme processo do projeto, configurando squash no merge. Não fazer merge automático.
-4. Após revisão humana da arquitetura, retomar a Fase 2 da Matriz de Impacto: importador dry-run de proposições/votos e desenho da persistência de score.
-5. Tratar separadamente os dois bugs encontrados pelo Codex em `src/services/candidates.ts` e `src/pages/AdminPage.tsx`.
-6. Somente depois de revisão humana, decidir aplicação remota das migrations de impacto.
+Depois de `git pull --ff-only` no novo HEAD:
+
+```bash
+bash -n scripts/orchestrator/*.sh
+npm run orch:doctor -- --smoke
+```
+
+Critérios:
+
+- `bash -n`: zero erro;
+- doctor: `FAIL=0`;
+- OpenCode/DeepSeek comprova leitura de `AGENTS.md` pelo título esperado;
+- Antigravity comprova a mesma leitura;
+- Codex exec fallback retorna saída estruturada;
+- warning de Gemini legacy e Ollama opcional pode permanecer;
+- `TERMINAL_ENV`, se ainda presente, deve ser saneado como configuração local separada.
+
+Se esse gate passar, atualizar o checkpoint para `ORCHESTRATOR_V1_REVIEW_APPROVED_PR_READY`, revisar metadados do PR #70 e manter draft/sem merge até decisão humana de squash.
 
 ## Gates permanentes
 
 - Apenas um writer por worktree.
 - Modelos externos econômicos: somente repositório público/sanitizado, nunca secrets/PII/raw documents.
 - Nenhum agente faz merge em `main`, deploy de produção, migration remota, mudança de RLS/RPC, rotação de secret ou mutação Cloudflare/Supabase sem autorização humana explícita.
-- Se o executor mutável perder quota, interromper escrita e produzir handoff read-only; não continuar a mutação automaticamente num modelo gratuito.
+- Se o executor mutável perder quota, interromper escrita e produzir handoff read-only; não continuar mutação automaticamente num modelo gratuito.
