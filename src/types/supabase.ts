@@ -172,9 +172,13 @@ export type Database = {
           category: string
           confidence_score: number
           content: string
+          content_hash: string | null
           created_at: string | null
+          external_id: string | null
+          generated_by_ai: boolean
           id: string
           previous_version_id: string | null
+          prompt_version: string | null
           published_at: string | null
           source_char_offset: number | null
           source_document_id: string | null
@@ -185,9 +189,13 @@ export type Database = {
           category: string
           confidence_score: number
           content: string
+          content_hash?: string | null
           created_at?: string | null
+          external_id?: string | null
+          generated_by_ai?: boolean
           id?: string
           previous_version_id?: string | null
+          prompt_version?: string | null
           published_at?: string | null
           source_char_offset?: number | null
           source_document_id?: string | null
@@ -198,9 +206,13 @@ export type Database = {
           category?: string
           confidence_score?: number
           content?: string
+          content_hash?: string | null
           created_at?: string | null
+          external_id?: string | null
+          generated_by_ai?: boolean
           id?: string
           previous_version_id?: string | null
+          prompt_version?: string | null
           published_at?: string | null
           source_char_offset?: number | null
           source_document_id?: string | null
