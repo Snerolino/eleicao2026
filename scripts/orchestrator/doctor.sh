@@ -3,6 +3,7 @@ set -uo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 REAL_HOME="${HERMES_REAL_HOME:-/home/lourenco}"
+PROFILE="${HERMES_ORCH_PROFILE:-eleicao2026}"
 SMOKE=false
 [[ "${1:-}" == "--smoke" ]] && SMOKE=true
 
@@ -24,7 +25,8 @@ has_cmd() {
 
 printf '=== eleicao2026 orchestrator doctor ===\n'
 printf 'root=%s\n' "$ROOT"
-printf 'real_home=%s\n\n' "$REAL_HOME"
+printf 'real_home=%s\n' "$REAL_HOME"
+printf 'hermes_profile=%s\n\n' "$PROFILE"
 
 for cmd in git node npm hermes codex agy opencode timeout flock tar; do
   has_cmd "$cmd"
@@ -33,7 +35,7 @@ done
 command -v gemini >/dev/null 2>&1 && warn "gemini disponível apenas como rota legacy/API-key; Google AI Pro usa agy" || ok "Gemini CLI legacy ausente (não obrigatório)"
 command -v gh >/dev/null 2>&1 && ok "gh disponível" || warn "gh ausente"
 command -v npx >/dev/null 2>&1 && ok "npx disponível" || fail "npx ausente"
-command -v ollama >/dev/null 2>&1 && ok "ollama disponível (fallback local elegível para smoke separado)" || warn "ollama ausente; fallback local desabilitado"
+command -v ollama >/dev/null 2>&1 && ok "ollama disponível (fallback local pode ser elegível)" || warn "ollama ausente; fallback local desabilitado"
 
 [[ -s "$REAL_HOME/.codex/auth.json" ]] && ok "Codex auth presente (conteúdo não lido)" || warn "Codex auth não encontrado em ~/.codex/auth.json"
 [[ -d "$REAL_HOME/.gemini/antigravity-cli" ]] && ok "Antigravity home presente (conteúdo secreto não lido)" || warn "Antigravity ainda não inicializado/autenticado"
@@ -68,17 +70,33 @@ else
   fail "snapshot Git sanitizado falhou"
 fi
 
-if hermes config check >/dev/null 2>&1; then
-  ok "hermes config check"
+if hermes profile show "$PROFILE" >/dev/null 2>&1; then
+  ok "perfil Hermes $PROFILE existe"
+  if hermes -p "$PROFILE" config check >/dev/null 2>&1; then
+    ok "Hermes config check ($PROFILE)"
+  else
+    warn "Hermes config check sinalizou configuração pendente no perfil $PROFILE"
+  fi
+
+  if hermes -p "$PROFILE" mcp list 2>/dev/null | grep -qi 'codex'; then
+    ok "Codex MCP aparece na configuração do perfil $PROFILE"
+  else
+    warn "Codex MCP ainda não aparece no perfil $PROFILE"
+  fi
 else
-  warn "hermes config check sinalizou configuração pendente"
+  warn "perfil Hermes $PROFILE ainda não existe"
 fi
 
-if hermes mcp list 2>/dev/null | grep -qi 'codex'; then
-  ok "Codex MCP aparece na configuração do Hermes"
-  if hermes mcp test codex >/dev/null 2>&1; then ok "Codex MCP conecta"; else warn "Codex MCP configurado, mas teste falhou"; fi
+# O CLI atual do Hermes não documenta um subcomando `mcp test`. Testamos o
+# servidor diretamente: um MCP stdio saudável permanece aberto aguardando stdin.
+MCP_ERR="/tmp/eleicao2026-codex-mcp-launch.err"
+env HOME="$REAL_HOME" CODEX_HOME="$REAL_HOME/.codex" \
+  timeout 3s codex mcp-server >/dev/null 2>"$MCP_ERR"
+MCP_STATUS=$?
+if [[ $MCP_STATUS -eq 124 || $MCP_STATUS -eq 0 ]]; then
+  ok "codex mcp-server inicia e permanece disponível por stdio"
 else
-  warn "Codex MCP ainda não está configurado no Hermes"
+  warn "codex mcp-server falhou ao iniciar; veja $MCP_ERR"
 fi
 
 if command -v gh >/dev/null 2>&1; then
@@ -90,31 +108,53 @@ if command -v npx >/dev/null 2>&1; then
   npx --yes wrangler --version >/dev/null 2>&1 && ok "Wrangler executável" || warn "Wrangler não respondeu"
 fi
 
+if command -v ollama >/dev/null 2>&1; then
+  if ollama list 2>/dev/null | awk 'NR>1 {print $1}' | grep -Fxq 'gpt-oss:20b'; then
+    ok "Ollama gpt-oss:20b disponível"
+  else
+    warn "Ollama presente, mas gpt-oss:20b ausente; fallback local desabilitado"
+  fi
+fi
+
 if $SMOKE; then
   printf '\n=== smoke dos executores consultivos/read-only ===\n'
 
+  OC_OUT="/tmp/eleicao2026-opencode-smoke.json"
   if bash scripts/orchestrator/run-opencode.sh \
     'Tarefa DOCTOR. Apenas confirme que consegue ler AGENTS.md neste snapshot e cite o caminho. Não execute ações externas.' \
-    >/tmp/eleicao2026-opencode-smoke.json 2>/tmp/eleicao2026-opencode-smoke.err; then
-    ok "OpenCode/DeepSeek smoke"
+    >"$OC_OUT" 2>/tmp/eleicao2026-opencode-smoke.err && [[ -s "$OC_OUT" ]]; then
+    ok "OpenCode/DeepSeek smoke com saída não vazia"
   else
-    warn "OpenCode/DeepSeek smoke falhou; veja /tmp/eleicao2026-opencode-smoke.err"
+    warn "OpenCode/DeepSeek smoke falhou ou retornou vazio; veja /tmp/eleicao2026-opencode-smoke.err"
   fi
 
+  AGY_OUT="/tmp/eleicao2026-antigravity-smoke.txt"
   if bash scripts/orchestrator/run-antigravity.sh \
     'Tarefa DOCTOR. Apenas confirme que consegue ler AGENTS.md neste snapshot e cite o caminho.' \
-    >/tmp/eleicao2026-antigravity-smoke.txt 2>/tmp/eleicao2026-antigravity-smoke.err; then
-    ok "Antigravity/Google smoke"
+    >"$AGY_OUT" 2>/tmp/eleicao2026-antigravity-smoke.err && [[ -s "$AGY_OUT" ]]; then
+    ok "Antigravity/Google smoke com saída não vazia"
   else
-    warn "Antigravity/Google smoke falhou; veja /tmp/eleicao2026-antigravity-smoke.err"
+    warn "Antigravity/Google smoke falhou ou retornou vazio; veja /tmp/eleicao2026-antigravity-smoke.err"
   fi
 
   CODEX_PROMPT='Retorne JSON válido conforme o schema. task_id="DOCTOR-CODEX", status="ok", summary="Codex operacional", findings=[], evidence=[], files_changed=[], tests=[], risks=[], recommended_action="nenhuma", human_review_required=false. Não leia ou altere arquivos.'
+  CX_OUT="/tmp/eleicao2026-codex-smoke.json"
   if printf '%s' "$CODEX_PROMPT" | bash scripts/orchestrator/run-codex-readonly.sh \
-    >/tmp/eleicao2026-codex-smoke.json 2>/tmp/eleicao2026-codex-smoke.err; then
-    ok "Codex exec fallback smoke"
+    >"$CX_OUT" 2>/tmp/eleicao2026-codex-smoke.err && [[ -s "$CX_OUT" ]]; then
+    ok "Codex exec fallback smoke com saída estruturada"
   else
-    warn "Codex exec fallback smoke falhou; veja /tmp/eleicao2026-codex-smoke.err"
+    warn "Codex exec fallback smoke falhou ou retornou vazio; veja /tmp/eleicao2026-codex-smoke.err"
+  fi
+
+  if command -v ollama >/dev/null 2>&1 && ollama list 2>/dev/null | awk 'NR>1 {print $1}' | grep -Fxq 'gpt-oss:20b'; then
+    LOCAL_OUT="/tmp/eleicao2026-local-smoke.txt"
+    if bash scripts/orchestrator/run-local-fallback.sh \
+      'Leia AGENTS.md e responda apenas: LOCAL_OK' \
+      >"$LOCAL_OUT" 2>/tmp/eleicao2026-local-smoke.err && [[ -s "$LOCAL_OUT" ]]; then
+      ok "fallback local Ollama smoke"
+    else
+      warn "fallback local Ollama falhou; veja /tmp/eleicao2026-local-smoke.err"
+    fi
   fi
 fi
 
