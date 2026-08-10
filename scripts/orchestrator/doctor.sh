@@ -37,7 +37,7 @@ printf 'root=%s\n' "$ROOT"
 printf 'real_home=%s\n' "$REAL_HOME"
 printf 'hermes_profile=%s\n\n' "$PROFILE"
 
-for cmd in git node npm hermes codex agy opencode timeout flock tar; do
+for cmd in git node npm hermes codex agy opencode timeout flock tar find; do
   has_cmd "$cmd"
 done
 
@@ -65,10 +65,11 @@ BRANCH="$(git branch --show-current 2>/dev/null || true)"
 SHA="$(git rev-parse --short=12 HEAD 2>/dev/null || true)"
 [[ -n "$SHA" ]] && ok "Git HEAD $SHA em ${BRANCH:-detached}" || fail "não foi possível ler Git HEAD"
 
-if git diff --quiet && git diff --cached --quiet; then
-  ok "working tree sem alterações tracked"
+GIT_STATUS="$(git status --porcelain 2>/dev/null || true)"
+if [[ -z "$GIT_STATUS" ]]; then
+  ok "working tree limpa (tracked + untracked)"
 else
-  warn "working tree possui alterações tracked; leitores econômicos verão somente HEAD, não o diff vivo"
+  warn "working tree possui alterações ou arquivos untracked; leitores econômicos verão somente o HEAD rastreado"
 fi
 
 for f in \
@@ -86,9 +87,15 @@ for f in \
   [[ -f "$f" ]] && ok "$f presente" || fail "$f ausente"
 done
 
+if bash scripts/orchestrator/prepare-snapshot.sh '../escape' >/dev/null 2>&1; then
+  fail "prepare-snapshot aceitou nome com path traversal"
+else
+  ok "prepare-snapshot rejeita nomes com path traversal"
+fi
+
 SNAP="$(bash scripts/orchestrator/prepare-snapshot.sh doctor 2>/dev/null || true)"
 if [[ -n "$SNAP" && -f "$SNAP/AGENTS.md" && -f "$SNAP/.agents/agents/eleicao2026-reader/agent.md" && ! -e "$SNAP/.env" ]]; then
-  ok "snapshot Git sanitizado contém reader Google e não contém .env"
+  ok "snapshot Git sanitizado contém reader Google, rejeita symlinks e não contém .env"
 else
   fail "snapshot Git sanitizado/reader Google falhou"
 fi
