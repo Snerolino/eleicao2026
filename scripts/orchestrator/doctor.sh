@@ -2,14 +2,15 @@
 set -uo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-REAL_HOME="${HERMES_REAL_HOME:-/home/lourenco}"
+REAL_HOME="${HERMES_REAL_HOME:-$(getent passwd "$(id -un)" | cut -d: -f6)}"
 PROFILE="${HERMES_ORCH_PROFILE:-eleicao2026}"
 SERVICE="hermes-gateway-${PROFILE}.service"
 SMOKE=false
 [[ "${1:-}" == "--smoke" ]] && SMOKE=true
 
-if [[ ! -d "$REAL_HOME" ]]; then
-  REAL_HOME="$(getent passwd "$(id -un)" | cut -d: -f6)"
+if [[ -z "$REAL_HOME" || ! -d "$REAL_HOME" ]]; then
+  echo "FAIL home real não resolvido" >&2
+  exit 2
 fi
 
 BASE_HOME="${HERMES_BASE_HOME:-$REAL_HOME/.hermes}"
@@ -182,12 +183,16 @@ if $SMOKE; then
   printf '\n=== smoke dos executores consultivos/read-only ===\n'
 
   OC_OUT="/tmp/eleicao2026-opencode-smoke.json"
+  OC_EXPECTED_TITLE="$(sed -n '1s/^# //p' AGENTS.md)"
   if bash scripts/orchestrator/run-opencode.sh \
-    'Tarefa DOCTOR. Apenas confirme que consegue ler AGENTS.md neste snapshot e cite o caminho. Não execute ações externas.' \
-    >"$OC_OUT" 2>/tmp/eleicao2026-opencode-smoke.err && [[ -s "$OC_OUT" ]]; then
-    ok "OpenCode/DeepSeek smoke com saída não vazia"
+    'Tarefa DOCTOR. Leia AGENTS.md na raiz do snapshot e devolva o título inicial exato. Não execute ações externas.' \
+    >"$OC_OUT" 2>/tmp/eleicao2026-opencode-smoke.err \
+    && [[ -s "$OC_OUT" ]] \
+    && [[ -n "$OC_EXPECTED_TITLE" ]] \
+    && grep -Fq "$OC_EXPECTED_TITLE" "$OC_OUT"; then
+    ok "OpenCode/DeepSeek comprovou leitura do AGENTS.md pelo título esperado"
   else
-    warn "OpenCode/DeepSeek smoke falhou ou retornou vazio; veja /tmp/eleicao2026-opencode-smoke.err"
+    warn "OpenCode/DeepSeek não comprovou leitura do AGENTS.md; veja /tmp/eleicao2026-opencode-smoke.{json,err}"
   fi
 
   AGY_OUT="/tmp/eleicao2026-antigravity-smoke.txt"
