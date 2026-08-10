@@ -29,17 +29,27 @@ executors:
       - raw_documents
       - pii
 
-  gemini:
+  google_antigravity:
     transport: cli
-    wrapper: scripts/orchestrator/run-gemini.sh
-    model: provider_default
-    authority: read-only
+    wrapper: scripts/orchestrator/run-antigravity.sh
+    auth: google_oauth_subscription
+    model: Gemini 3.5 Flash (Low)
+    authority: read-only_sandboxed
     best_for:
       - large_context
       - repository_mapping
       - documentation_synthesis
       - broad_comparison
       - research_plan
+
+  gemini_legacy:
+    transport: cli
+    wrapper: scripts/orchestrator/run-gemini.sh
+    auth: api_key_or_enterprise_only
+    authority: read-only
+    enabled_when: explicitly_configured
+    best_for:
+      - compatibility
 
   codex:
     transport: mcp_stdio
@@ -74,19 +84,19 @@ executors:
 routes:
   cheap_analysis:
     - opencode_free
-    - gemini
+    - google_antigravity
     - codex_exec_fallback
     - local_fallback
 
   large_context:
-    - gemini
+    - google_antigravity
     - opencode_free
     - codex_exec_fallback
     - local_fallback
 
   simple_public_repo_task:
     - opencode_free
-    - gemini
+    - google_antigravity
     - codex_exec_fallback
     - local_fallback
 
