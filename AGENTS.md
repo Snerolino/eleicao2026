@@ -32,7 +32,7 @@ receber o histórico completo.
 Executores disponíveis:
 
 - **OpenCode + DeepSeek gratuito**: triagem barata, inventário, revisão simples e segunda opinião. Caminho orquestrado é `read-only`, sem MCP e roda sobre snapshot Git sanitizado.
-- **Google Antigravity CLI**: rota da assinatura Google AI Pro para leitura ampla, mapeamento, síntese e contexto grande. Roda em `-p`, dentro de snapshot Git sanitizado; pode alterar apenas o snapshot descartável, nunca a worktree viva.
+- **Google Antigravity CLI**: rota da assinatura Google AI Pro para leitura ampla, mapeamento, síntese e contexto grande. Roda em `-p`, dentro de snapshot Git sanitizado, com leitura explicitamente permitida e `write_file` negado no snapshot.
 - **Gemini CLI legacy**: somente compatibilidade quando houver API key/conta enterprise explicitamente configurada. Não é rota da assinatura Google AI Pro individual.
 - **Codex MCP stdio**: executor técnico preferido para implementação, debugging, testes e revisão final. Começar em Luna e escalar para Terra/Sol somente quando houver evidência.
 - **Codex exec**: fallback read-only se o MCP estiver indisponível.
