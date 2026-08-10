@@ -1,6 +1,6 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-10 09:56 -03
+Atualizado: 2026-08-10 10:16 -03
 Status: `ORCHESTRATOR_CORE_VERIFIED_EXECUTORS_PENDING`
 
 > Este é um checkpoint, não uma fonte eterna. Ao retomar, Hermes deve conferir
@@ -15,14 +15,15 @@ Status: `ORCHESTRATOR_CORE_VERIFIED_EXECUTORS_PENDING`
 - Checkpoint herdado da feature: `565116619de6c36cde99c3d159e8540f18530386`.
 - A feature estava 5 commits à frente e 0 atrás de `main` no início desta migração.
 - Branch da arquitetura: `chore/hermes-orchestrator-v1`, criada a partir de `5651166`.
-- HEAD local validado antes deste checkpoint: `3e270ac66b92`.
 
 ## Aplicação
 
 - Produção declarada verde com 792 candidaturas públicas e fotos TSE.
 - Stack preservada: React + Vite + TypeScript + Tailwind + Supabase + Cloudflare Pages + PWA.
 - GitHub Actions é o caminho normal de deploy após merge autorizado em `main`.
-- O `package.json` exige Node `>=24 <25`; o gateway Hermes observado em 2026-08-10 ainda mantinha subprocessos Node 22 em seu ambiente systemd. Antes de revalidar build/testes da aplicação, confirmar Node 24 no shell do projeto e não assumir que o PATH do serviço equivale ao shell interativo.
+- O `package.json` exige Node `>=24 <25`.
+- Shell do projeto confirmado em 2026-08-10 com Node `v24.19.0` em `/home/lourenco/.nvm/versions/node/v24.19.0/bin/node`.
+- O gateway Hermes ainda carregava no unit systemd um PATH com Node `v22.22.2`; foi versionado `npm run orch:sync-gateway-node` para criar drop-in específico do perfil, reiniciar o gateway e alinhar o PATH ao Node 24 corrente.
 
 ## Matriz de Impacto Populacional v1
 
@@ -62,9 +63,9 @@ Validação real em 2026-08-10:
 - smoke Hermes → MCP Codex fez chamada real `mcp__codex__codex`, leu `AGENTS.md` em modo read-only e retornou `HERMES_CODEX_MCP_OK`;
 - portanto a espinha dorsal `Hermes -> Codex MCP -> repositório` está validada ponta a ponta.
 
-O doctor estrutural retornou `OK=36 WARN=3 FAIL=0` antes deste checkpoint.
+O doctor estrutural retornou `OK=36 WARN=3 FAIL=0` antes do ajuste Node/reader.
 
-Warnings observados nesse doctor:
+Warnings daquele doctor:
 
 1. Gemini CLI existe apenas como rota legacy; esperado.
 2. `TERMINAL_ENV` legado ainda foi detectado no `.env` do perfil; confirmar remoção/revalidação antes de considerar o ambiente totalmente saneado.
@@ -80,11 +81,14 @@ Warnings observados nesse doctor:
 - `gpt-5.6-luna` respondeu em `codex exec` read-only.
 - Codex MCP integrado ao Hermes e validado ponta a ponta.
 
-### Google Antigravity — INSTALADO, SMOKE PENDENTE
+### Google Antigravity — READER VERSIONADO, RETESTE PENDENTE
 
-- `agy` está disponível no PATH.
-- home/autenticação Antigravity existe localmente segundo o doctor.
-- ainda falta validar `agy models`, o wrapper em snapshot e o smoke consultivo real.
+- `agy` está disponível no PATH e home/autenticação existe localmente.
+- Primeiro smoke headless falhou com `jetski: no output produced` porque o agente default tentou a permissão `command`, que não pode pedir confirmação em modo headless.
+- Não foi usado `--dangerously-skip-permissions` e nenhuma permissão global foi ampliada.
+- Correção versionada: `.agents/agents/eleicao2026-reader/agent.md`, custom agent com somente `view_file` e `grep_search`, `commandExecutionPolicy: off`, sem MCP e sem ferramentas de escrita.
+- `run-antigravity.sh` agora seleciona explicitamente `--agent eleicao2026-reader` sobre o snapshot Git sanitizado.
+- Falta puxar a branch local e repetir `npm run orch:google`.
 
 ### OpenCode / DeepSeek Free — INSTALADO, SMOKE PENDENTE
 
@@ -103,15 +107,16 @@ Warnings observados nesse doctor:
 
 ## Próximos gates antes da retomada funcional
 
-1. Confirmar Node 24 no shell do projeto.
-2. Confirmar que `TERMINAL_ENV` legado foi removido ou não interfere no perfil.
-3. Validar Google Antigravity em snapshot (`orch:google`).
-4. Validar OpenCode/DeepSeek em snapshot (`orch:opencode`).
-5. Rodar `npm run orch:doctor -- --smoke`.
-6. Revalidar testes, TypeScript, build e schema de impacto.
-7. Só então retomar a Fase 2 da Matriz de Impacto: importador dry-run de proposições/votos e desenho da persistência de score.
-8. Tratar separadamente os dois bugs encontrados pelo Codex em `src/services/candidates.ts` e `src/pages/AdminPage.tsx`.
-9. Somente depois de revisão humana, decidir aplicação remota das migrations de impacto.
+1. `git pull --ff-only` para receber reader Antigravity + sync do gateway Node.
+2. Rodar `npm run orch:sync-gateway-node` e confirmar que o gateway usa Node 24.
+3. Confirmar que `TERMINAL_ENV` legado foi removido ou não interfere no perfil.
+4. Repetir Google Antigravity em snapshot (`orch:google`) usando o custom reader sem shell.
+5. Validar OpenCode/DeepSeek em snapshot (`orch:opencode`).
+6. Rodar `npm run orch:doctor -- --smoke`.
+7. Revalidar testes, TypeScript, build e schema de impacto.
+8. Só então retomar a Fase 2 da Matriz de Impacto: importador dry-run de proposições/votos e desenho da persistência de score.
+9. Tratar separadamente os dois bugs encontrados pelo Codex em `src/services/candidates.ts` e `src/pages/AdminPage.tsx`.
+10. Somente depois de revisão humana, decidir aplicação remota das migrations de impacto.
 
 ## Gates permanentes
 
