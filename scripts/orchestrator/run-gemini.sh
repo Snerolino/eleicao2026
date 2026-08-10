@@ -31,7 +31,11 @@ if [[ -n "${GEMINI_AGENT_MODEL:-}" ]]; then
   ARGS+=(--model "$GEMINI_AGENT_MODEL")
 fi
 
-cd "$ROOT"
+# Mesmo sendo uma rota legacy, ela permanece consultiva e não recebe a
+# worktree viva. O snapshot contém somente arquivos rastreados do HEAD.
+SNAPSHOT="$(bash "$ROOT/scripts/orchestrator/prepare-snapshot.sh" gemini-legacy)"
+cd "$SNAPSHOT"
+
 exec env HOME="$REAL_HOME" \
   timeout "${TIMEOUT_SECONDS}s" \
   gemini "${ARGS[@]}" -p "$PROMPT"
