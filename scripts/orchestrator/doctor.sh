@@ -4,6 +4,7 @@ set -uo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 REAL_HOME="${HERMES_REAL_HOME:-/home/lourenco}"
 PROFILE="${HERMES_ORCH_PROFILE:-eleicao2026}"
+SERVICE="hermes-gateway-${PROFILE}.service"
 SMOKE=false
 [[ "${1:-}" == "--smoke" ]] && SMOKE=true
 
@@ -39,6 +40,15 @@ for cmd in git node npm hermes codex agy opencode timeout flock tar; do
   has_cmd "$cmd"
 done
 
+if command -v node >/dev/null 2>&1; then
+  NODE_VERSION="$(node -v 2>/dev/null || true)"
+  NODE_MAJOR="$(node -p 'process.versions.node.split(".")[0]' 2>/dev/null || true)"
+  NODE_DIR="$(dirname "$(readlink -f "$(command -v node)")")"
+  [[ "$NODE_MAJOR" == "24" ]] && ok "Node do shell compatível: $NODE_VERSION" || fail "projeto exige Node 24; shell usa ${NODE_VERSION:-desconhecido}"
+else
+  NODE_DIR=""
+fi
+
 command -v gemini >/dev/null 2>&1 && warn "gemini disponível apenas como rota legacy/API-key; Google AI Pro usa agy" || ok "Gemini CLI legacy ausente (não obrigatório)"
 command -v gh >/dev/null 2>&1 && ok "gh disponível" || warn "gh ausente"
 command -v npx >/dev/null 2>&1 && ok "npx disponível" || fail "npx ausente"
@@ -65,18 +75,20 @@ for f in \
   .orchestrator/routing.yaml \
   .orchestrator/schemas/executor-result.schema.json \
   .orchestrator/hermes-skill/SKILL.md \
+  .agents/agents/eleicao2026-reader/agent.md \
   scripts/orchestrator/prepare-snapshot.sh \
   scripts/orchestrator/install-hermes-skill.sh \
+  scripts/orchestrator/sync-gateway-node.sh \
   supabase/migrations/20260810090000_create_legislative_core.sql \
   supabase/migrations/20260810090400_create_impact_rls_and_approval.sql; do
   [[ -f "$f" ]] && ok "$f presente" || fail "$f ausente"
 done
 
 SNAP="$(bash scripts/orchestrator/prepare-snapshot.sh doctor 2>/dev/null || true)"
-if [[ -n "$SNAP" && -f "$SNAP/AGENTS.md" && ! -e "$SNAP/.env" ]]; then
-  ok "snapshot Git sanitizado funciona e não contém .env"
+if [[ -n "$SNAP" && -f "$SNAP/AGENTS.md" && -f "$SNAP/.agents/agents/eleicao2026-reader/agent.md" && ! -e "$SNAP/.env" ]]; then
+  ok "snapshot Git sanitizado contém reader Google e não contém .env"
 else
-  fail "snapshot Git sanitizado falhou"
+  fail "snapshot Git sanitizado/reader Google falhou"
 fi
 
 if hermes profile show "$PROFILE" >/dev/null 2>&1; then
@@ -85,8 +97,6 @@ if hermes profile show "$PROFILE" >/dev/null 2>&1; then
   SKILL_PATH="$PROFILE_HOME/skills/software-development/eleicao2026-orchestrator/SKILL.md"
   [[ -s "$SKILL_PATH" ]] && ok "skill eleicao2026-orchestrator instalada no perfil" || warn "skill do projeto ainda não instalada; rode npm run orch:install-skill"
 
-  # Check silencioso: não imprime nem lê valores secretos. Um TERMINAL_ENV legado
-  # pode sobrepor terminal.backend em instalações antigas do Hermes.
   if [[ -f "$PROFILE_HOME/.env" ]] && grep -q '^TERMINAL_ENV=' "$PROFILE_HOME/.env" 2>/dev/null; then
     warn "perfil contém TERMINAL_ENV legado em .env; revise/remova esse override se backend local não for respeitado"
   else
@@ -108,8 +118,15 @@ else
   warn "perfil Hermes $PROFILE ainda não existe"
 fi
 
-# O CLI atual do Hermes não documenta um subcomando `mcp test`. Testamos o
-# servidor diretamente: um MCP stdio saudável permanece aberto aguardando stdin.
+if systemctl --user cat "$SERVICE" >/dev/null 2>&1; then
+  GATEWAY_ENV="$(systemctl --user show "$SERVICE" -p Environment --value 2>/dev/null || true)"
+  if [[ -n "$NODE_DIR" && "$GATEWAY_ENV" == *"$NODE_DIR"* ]]; then
+    ok "gateway Hermes usa o Node do shell ($NODE_DIR)"
+  else
+    warn "gateway Hermes usa PATH diferente do Node 24 atual; rode npm run orch:sync-gateway-node"
+  fi
+fi
+
 MCP_ERR="/tmp/eleicao2026-codex-mcp-launch.err"
 env HOME="$REAL_HOME" CODEX_HOME="$REAL_HOME/.codex" \
   timeout 3s codex mcp-server >/dev/null 2>"$MCP_ERR"
@@ -151,11 +168,11 @@ if $SMOKE; then
 
   AGY_OUT="/tmp/eleicao2026-antigravity-smoke.txt"
   if bash scripts/orchestrator/run-antigravity.sh \
-    'Tarefa DOCTOR. Apenas confirme que consegue ler AGENTS.md neste snapshot e cite o caminho.' \
+    'Tarefa DOCTOR. Use somente view_file/grep_search. Confirme que consegue ler AGENTS.md neste snapshot e cite o caminho.' \
     >"$AGY_OUT" 2>/tmp/eleicao2026-antigravity-smoke.err && [[ -s "$AGY_OUT" ]]; then
-    ok "Antigravity/Google smoke com saída não vazia"
+    ok "Antigravity/Google reader smoke com saída não vazia"
   else
-    warn "Antigravity/Google smoke falhou ou retornou vazio; veja /tmp/eleicao2026-antigravity-smoke.err"
+    warn "Antigravity/Google reader falhou ou retornou vazio; veja /tmp/eleicao2026-antigravity-smoke.err"
   fi
 
   CODEX_PROMPT='Retorne JSON válido conforme o schema. task_id="DOCTOR-CODEX", status="ok", summary="Codex operacional", findings=[], evidence=[], files_changed=[], tests=[], risks=[], recommended_action="nenhuma", human_review_required=false. Não leia ou altere arquivos.'
