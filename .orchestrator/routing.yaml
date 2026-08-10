@@ -1,0 +1,136 @@
+version: 1
+project: eleicao2026
+control_plane: hermes
+
+policy:
+  single_writer_per_worktree: true
+  remote_mutation_requires_human: true
+  max_failures_same_executor: 2
+  context_strategy: task_packet_plus_files
+  never_forward_full_conversation: true
+  free_models_data_class: public_repo_only
+
+executors:
+  opencode_free:
+    transport: cli
+    wrapper: scripts/orchestrator/run-opencode.sh
+    model: opencode/deepseek-v4-flash-free
+    authority: read-only
+    best_for:
+      - cheap_analysis
+      - grep_and_inventory
+      - simple_review
+      - log_summary
+      - second_opinion
+    forbidden_data:
+      - secrets
+      - env_files
+      - service_role
+      - raw_documents
+      - pii
+
+  gemini:
+    transport: cli
+    wrapper: scripts/orchestrator/run-gemini.sh
+    model: provider_default
+    authority: read-only
+    best_for:
+      - large_context
+      - repository_mapping
+      - documentation_synthesis
+      - broad_comparison
+      - research_plan
+
+  codex:
+    transport: mcp_stdio
+    server: codex
+    command: codex mcp-server
+    authority: read-only_or_workspace-write_when_authorized
+    models:
+      cheap: gpt-5.6-luna
+      normal: gpt-5.6-terra
+      hard: gpt-5.6-sol
+    best_for:
+      - implementation
+      - debugging
+      - tests
+      - refactoring
+      - final_technical_review
+
+  codex_exec_fallback:
+    transport: cli
+    wrapper: scripts/orchestrator/run-codex-readonly.sh
+    model: gpt-5.6-luna
+    authority: read-only
+    enabled_when: codex_mcp_unavailable
+
+  local_fallback:
+    transport: local_model
+    provider: ollama
+    model: gpt-oss:20b
+    authority: read-only
+    enabled_when: doctor_confirms_available
+
+routes:
+  cheap_analysis:
+    - opencode_free
+    - gemini
+    - codex_exec_fallback
+    - local_fallback
+
+  large_context:
+    - gemini
+    - opencode_free
+    - codex_exec_fallback
+    - local_fallback
+
+  simple_public_repo_task:
+    - opencode_free
+    - gemini
+    - codex_exec_fallback
+    - local_fallback
+
+  code_change:
+    - codex
+
+  difficult_debug:
+    - codex
+
+  critical_change:
+    - codex
+
+codex_escalation:
+  start: gpt-5.6-luna
+  escalate_to_terra_when:
+    - luna_result_incomplete
+    - multi_file_implementation
+    - tests_still_failing
+    - material_uncertainty
+  escalate_to_sol_when:
+    - terra_result_incomplete
+    - architecture_high_impact
+    - difficult_regression
+    - security_critical_reasoning
+  on_model_change: new_thread_with_compact_handoff
+
+fallback_rules:
+  - on: [rate_limit, quota_exhausted, timeout, auth_error, provider_down]
+    action: mark_circuit_open_and_try_next_eligible_executor
+  - on: mutation_executor_unavailable
+    action: stop_writes_and_delegate_read_only_handoff_only
+  - on: two_model_disagreement_on_sensitive_change
+    action: human_review
+  - on: remote_supabase_or_cloudflare_or_deploy
+    action: human_review
+
+context:
+  stable:
+    - AGENTS.md
+    - README.md
+    - docs/context-export/SCHEMA.md
+  operational:
+    - .orchestrator/STATE.md
+  per_task:
+    - .orchestrator/templates/TASK_PACKET.md
+  executor_return_schema:
+    - .orchestrator/schemas/executor-result.schema.json
