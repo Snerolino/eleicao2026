@@ -37,7 +37,7 @@ hermes --version
 ```
 
 Não rode `hermes doctor --fix` no automático. Primeiro leia o que ele pretende
-mudar. Agentes também conseguem apertar o botão errado com convicção admirável.
+mudar.
 
 ## 3. Criar perfil isolado
 
@@ -72,8 +72,7 @@ No menu:
 3. escolha um modelo Codex econômico para coordenação, não Sol como default.
 
 Esse caminho não exige `OPENAI_API_KEY`. A autenticação do Hermes fica no auth
-store do perfil. A contabilização exata da cota do plano ChatGPT quando Hermes
-usa diretamente esse provider é tratada como não documentada.
+store do perfil.
 
 Valide sem mostrar secrets:
 
@@ -99,8 +98,7 @@ codex logout 2>/dev/null || true
 codex login
 ```
 
-Escolha **Sign in with ChatGPT** com a conta Plus. Não exporte
-`OPENAI_API_KEY` para essa rota.
+Escolha **Sign in with ChatGPT**. Não exporte `OPENAI_API_KEY` para essa rota.
 
 Smoke:
 
@@ -127,15 +125,12 @@ else
 fi
 
 hermes -p eleicao2026 mcp list
-```
-
-O preset oficial configura `codex mcp-server` por stdio. A referência atual do
-Hermes não documenta um `hermes mcp test`, por isso o doctor do repositório faz
-um preflight direto do processo MCP.
-
-```bash
 npm run orch:doctor
 ```
+
+O preset configura `codex mcp-server` por stdio. Não dependa de um subcomando
+`hermes mcp test`: o doctor faz preflight do servidor e o gate real deve ser uma
+chamada Hermes → MCP Codex em read-only.
 
 Com `terminal.home_mode=real`, Codex, `gh` e demais CLIs locais enxergam suas
 credenciais normais do usuário.
@@ -143,7 +138,7 @@ credenciais normais do usuário.
 ## 7. Google Antigravity para Google AI Pro
 
 Para conta individual Google AI Pro/Ultra, use Antigravity CLI como executor
-Google desta arquitetura. Gemini CLI é apenas rota legacy/API-key/enterprise.
+Google desta arquitetura. Gemini CLI permanece rota legacy/API-key/enterprise.
 
 ```bash
 if command -v agy >/dev/null 2>&1; then
@@ -163,34 +158,35 @@ Primeiro login:
 agy
 ```
 
-Escolha **Google OAuth**, autentique com a conta Google AI Pro e, em `/config`,
-prefira:
+Escolha Google OAuth e conclua a autenticação. Depois saia da TUI.
 
-- `Tool Permission`: `strict`;
-- `Non-Workspace Access`: `off`;
-- Sandbox habilitado quando aplicável.
+### Configurar somente a leitura do snapshot
 
-### Confiar somente no snapshot do executor
+A rota headless validada não concede permissões amplas. Rode uma vez:
 
 ```bash
 cd "$PROJECT_ROOT"
-SNAP="$(bash scripts/orchestrator/prepare-snapshot.sh antigravity)"
-printf 'snapshot=%s\n' "$SNAP"
-cd "$SNAP"
-agy
+npm run orch:configure-google
 ```
 
-Se pedir trust, confie apenas nesse caminho de snapshot. Depois saia:
+O configurador:
 
-```bash
-cd "$PROJECT_ROOT"
-```
+- cria/atualiza o snapshot `.orchestrator/runtime/snapshots/antigravity`;
+- faz backup de `~/.gemini/antigravity-cli/settings.json`;
+- permite `read_file(<snapshot>)`;
+- nega `write_file(<snapshot>)`;
+- não adiciona `command(*)`, `mcp(*)` ou `write_file(*)` amplo.
 
-O wrapper usa `agy -p --sandbox`, mas o isolamento decisivo é o snapshot
-`git archive HEAD`: o executor não recebe a worktree viva.
+O wrapper `orch:google` usa o custom agent versionado
+`.agents/agents/eleicao2026-reader/agent.md`, liga explicitamente o snapshot ao
+workspace com `--add-dir`, usa `--mode=plan` e `--sandbox`, e bloqueia
+subagentes/background collaboration no fluxo headless para exigir resposta final
+síncrona.
 
-O modelo padrão é `Gemini 3.5 Flash (Low)`. Confirme que ele aparece em
-`agy models`; se o catálogo da conta usar outro nome:
+Nunca use `--dangerously-skip-permissions` nesta arquitetura.
+
+O modelo padrão é `Gemini 3.5 Flash (Low)`. Confirme que aparece em `agy models`;
+se o catálogo usar outro nome:
 
 ```bash
 export ANTIGRAVITY_AGENT_MODEL='NOME EXATO MOSTRADO POR agy models'
@@ -200,8 +196,11 @@ Teste:
 
 ```bash
 npm run orch:google -- \
-  'Leia AGENTS.md neste snapshot e informe em duas frases o papel do Hermes.'
+  'Leia AGENTS.md na raiz deste workspace. Não altere nada. Responda somente com o título inicial exato do arquivo.'
 ```
+
+Resultado esperado: o título inicial real de `AGENTS.md`. Respostas intermediárias
+como “lancei o subagente research” não contam como sucesso.
 
 ## 8. OpenCode + DeepSeek gratuito
 
@@ -234,7 +233,7 @@ Teste:
 
 ```bash
 npm run orch:opencode -- \
-  'Leia AGENTS.md e informe, sem editar nada, qual é a fonte de verdade número 1.'
+  'Leia AGENTS.md na raiz do snapshot e devolva o título inicial exato. Não execute ações externas.'
 ```
 
 O caminho orquestrado usa `agent plan`, sem MCP e sobre snapshot. DeepSeek V4
@@ -335,9 +334,10 @@ Com smokes reais:
 npm run orch:doctor -- --smoke
 ```
 
-Arquivos de smoke ficam em `/tmp/eleicao2026-*-smoke.*`. `WARN` pode significar
-executor opcional indisponível; `FAIL` estrutural deve ser resolvido antes da
-retomada.
+Os smokes do OpenCode e Antigravity só passam quando comprovam leitura do
+`AGENTS.md` pelo título esperado. Arquivos de smoke ficam em
+`/tmp/eleicao2026-*-smoke.*`. `WARN` pode significar executor opcional
+indisponível; `FAIL` estrutural deve ser resolvido antes da retomada.
 
 ## 15. Revalidar checkpoint funcional
 
@@ -362,7 +362,7 @@ cd "$PROJECT_ROOT"
 h-eleicao2026 chat -q "$(cat .orchestrator/BOOTSTRAP_PROMPT.md)"
 ```
 
-Sem alias:
+Se o perfil já usa outro alias customizado, use esse alias. Sem alias:
 
 ```bash
 cd "$PROJECT_ROOT"
