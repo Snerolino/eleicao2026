@@ -79,6 +79,7 @@ for f in \
   scripts/orchestrator/prepare-snapshot.sh \
   scripts/orchestrator/install-hermes-skill.sh \
   scripts/orchestrator/sync-gateway-node.sh \
+  scripts/orchestrator/configure-antigravity-readonly.sh \
   supabase/migrations/20260810090000_create_legislative_core.sql \
   supabase/migrations/20260810090400_create_impact_rls_and_approval.sql; do
   [[ -f "$f" ]] && ok "$f presente" || fail "$f ausente"
@@ -89,6 +90,29 @@ if [[ -n "$SNAP" && -f "$SNAP/AGENTS.md" && -f "$SNAP/.agents/agents/eleicao2026
   ok "snapshot Git sanitizado contém reader Google e não contém .env"
 else
   fail "snapshot Git sanitizado/reader Google falhou"
+fi
+
+AGY_SNAPSHOT="$(bash scripts/orchestrator/prepare-snapshot.sh antigravity 2>/dev/null || true)"
+AGY_SETTINGS="$REAL_HOME/.gemini/antigravity-cli/settings.json"
+if [[ -n "$AGY_SNAPSHOT" && -f "$AGY_SETTINGS" ]]; then
+  if SNAPSHOT="$AGY_SNAPSHOT" SETTINGS="$AGY_SETTINGS" node <<'NODE' >/dev/null 2>&1
+import fs from 'node:fs';
+const snapshot = process.env.SNAPSHOT;
+const cfg = JSON.parse(fs.readFileSync(process.env.SETTINGS, 'utf8') || '{}');
+const allow = cfg?.permissions?.allow ?? [];
+const deny = cfg?.permissions?.deny ?? [];
+const ask = cfg?.permissions?.ask ?? [];
+if (ask.includes('read_file(*)')) process.exit(2);
+if (!allow.includes(`read_file(${snapshot})`)) process.exit(3);
+if (!deny.includes(`write_file(${snapshot})`)) process.exit(4);
+NODE
+  then
+    ok "Antigravity possui allow read_file + deny write_file no snapshot sanitizado"
+  else
+    warn "Antigravity sem política read-only do snapshot; rode npm run orch:configure-google"
+  fi
+else
+  warn "não foi possível validar settings do Antigravity"
 fi
 
 if hermes profile show "$PROFILE" >/dev/null 2>&1; then
