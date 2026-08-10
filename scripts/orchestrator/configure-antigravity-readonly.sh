@@ -2,14 +2,14 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-REAL_HOME="${HERMES_REAL_HOME:-/home/lourenco}"
-SETTINGS="$REAL_HOME/.gemini/antigravity-cli/settings.json"
+REAL_HOME="${HERMES_REAL_HOME:-$(getent passwd "$(id -un)" | cut -d: -f6)}"
 
-if [[ ! -d "$REAL_HOME" ]]; then
-  REAL_HOME="$(getent passwd "$(id -un)" | cut -d: -f6)"
-  SETTINGS="$REAL_HOME/.gemini/antigravity-cli/settings.json"
+if [[ -z "$REAL_HOME" || ! -d "$REAL_HOME" ]]; then
+  echo 'home real não resolvido' >&2
+  exit 41
 fi
 
+SETTINGS="$REAL_HOME/.gemini/antigravity-cli/settings.json"
 SNAPSHOT="$(bash "$ROOT/scripts/orchestrator/prepare-snapshot.sh" antigravity)"
 mkdir -p "$(dirname "$SETTINGS")"
 
