@@ -21,7 +21,11 @@
     "health:preview": "node scripts/health-check.mjs",
     "security:audit": "bash -lc 'npm audit --omit=dev --audit-level=high'",
     "test": "NODE_ENV=test vitest run",
-    "test:watch": "NODE_ENV=test vitest"
+    "test:watch": "NODE_ENV=test vitest",
+    "orch:doctor": "bash scripts/orchestrator/doctor.sh",
+    "orch:opencode": "bash scripts/orchestrator/run-opencode.sh",
+    "orch:gemini": "bash scripts/orchestrator/run-gemini.sh",
+    "orch:codex": "bash scripts/orchestrator/run-codex-readonly.sh"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",
@@ -46,7 +50,7 @@
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "@vitejs/plugin-react": "^4.3.4",
-    "jsdom": "^29.1.1",
+    "jsdom": "^29.1.0",
     "playwright": "^1.62.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.7.2",
