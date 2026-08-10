@@ -1,16 +1,16 @@
 # Arquitetura Hermes Multi-CLI v1 — eleicao2026
 
 Data: 2026-08-10
-Status: implementação de controle/roteamento; sem mutação de produção
+Status: implementada na branch de arquitetura; sem mutação de produção
 
 ## 1. Objetivo
 
 Transformar Hermes no plano de controle persistente do projeto e usar CLIs
-especializados como executores intercambiáveis, reduzindo consumo da conta
-ChatGPT Plus sem sacrificar contexto, rastreabilidade ou gates de segurança.
+especializados como executores intercambiáveis, reduzindo consumo de modelos
+caros sem sacrificar contexto, rastreabilidade ou gates de segurança.
 
 A arquitetura não compartilha uma conversa gigante entre modelos. Compartilha
-**estado curto, arquivos canônicos, task packets e handoffs**.
+**estado curto, arquivos canônicos, task packets, snapshots e handoffs**.
 
 ## 2. Decisão principal
 
@@ -25,9 +25,9 @@ Hermes permanece no **runtime padrão** e mantém:
 - decisão sobre próximo passo.
 
 Codex é integrado como **MCP stdio** (`codex mcp-server`) e atua como executor
-de engenharia. Não habilitamos Codex App-Server como runtime global nesta v1,
-pois isso transferiria o loop de ferramentas para Codex e reduziria justamente
-a superfície de memória/delegação que queremos manter no Hermes.
+de engenharia. Não habilitamos Codex App-Server como runtime global nesta v1:
+o objetivo é preservar o tool loop, memória e delegação do Hermes e usar Codex
+como ferramenta especializada.
 
 ## 3. Executores
 
@@ -35,180 +35,132 @@ a superfície de memória/delegação que queremos manter no Hermes.
 
 Papel: volume barato e tarefas simples sobre conteúdo público do repositório.
 
-Usar para:
-
-- inventário de arquivos/símbolos;
-- revisão simples;
-- classificação;
-- resumo de logs sanitizados;
-- segunda opinião;
-- diagnóstico inicial de baixo risco.
-
-Caminho orquestrado:
+Caminho:
 
 ```bash
 bash scripts/orchestrator/run-opencode.sh "<task packet curto>"
 ```
 
-O wrapper força `agent plan`, modelo gratuito e `OPENCODE_DISABLE_MCP=true`.
-`opencode.jsonc` também nega edição, shell, diretórios externos e leitura de
-arquivos `.env*` no agent plan.
+O wrapper:
 
-Nunca enviar a este executor:
+- cria `.orchestrator/runtime/snapshots/opencode` com `git archive HEAD`;
+- executa apenas sobre esse snapshot;
+- força `agent plan`;
+- usa `opencode/deepseek-v4-flash-free` por padrão;
+- desliga MCP;
+- `opencode.jsonc` nega edição, shell, ferramentas externas e leitura de `.env*`.
 
-- secrets/tokens;
-- `.env*`;
-- service role;
-- documentos brutos;
-- PII;
-- conteúdo privado fora do workspace sanitizado.
+O modelo gratuito não vê a worktree viva, arquivos não rastreados, secrets,
+dataset externo ou estado local. Se a tarefa depende de diff não commitado,
+use Codex na worktree viva ou crie checkpoint autorizado.
 
-### Gemini CLI
+### Google Antigravity CLI
 
-Papel: contexto amplo, mapeamento, comparação e síntese.
+Papel: contexto amplo, mapeamento, comparação e síntese usando a conta Google AI
+Pro via Google OAuth.
 
-Usar para:
-
-- mapear muitos arquivos;
-- resumir documentação extensa;
-- comparar módulos/contratos;
-- preparar plano de investigação;
-- leitura ampla antes de uma implementação.
-
-Caminho orquestrado:
+Caminho:
 
 ```bash
-bash scripts/orchestrator/run-gemini.sh "<task packet curto>"
+bash scripts/orchestrator/run-antigravity.sh "<task packet curto>"
 ```
 
-O wrapper usa `--approval-mode=plan`, `--output-format json` e a autenticação
-local já cacheada. O modelo pode ser escolhido por `GEMINI_AGENT_MODEL`; sem a
-variável, o CLI usa seu default atual.
+O wrapper cria um snapshot Git separado e executa `agy -p` nele com sandbox de
+terminal. Essa barreira é deliberada: em modo agente, a proteção principal não
+é uma promessa textual de read-only, e sim não entregar a worktree mutável ao
+executor consultivo.
 
-Gemini não é writer nesta v1. O objetivo é aproveitar a cota da assinatura
-Google AI Pro em tarefas que custariam contexto do Codex.
+Modelo padrão inicial: `Gemini 3.5 Flash (Low)`, sempre confirmado localmente
+com `agy models`. Alterar por `ANTIGRAVITY_AGENT_MODEL` quando necessário.
+
+### Gemini CLI legacy
+
+`run-gemini.sh` permanece somente por compatibilidade com API key/ambiente
+enterprise explicitamente configurado. Não é a rota padrão da assinatura Google
+AI Pro individual nesta arquitetura.
 
 ### Codex MCP
 
 Papel: engenharia e mutações locais controladas.
 
-Integração Hermes:
-
 ```bash
-hermes mcp add codex --preset codex
-hermes mcp test codex
+hermes -p eleicao2026 mcp add codex --preset codex
+hermes -p eleicao2026 mcp test codex
 ```
 
-No computador deste projeto o servidor precisa herdar o HOME real usado pela
-autenticação Codex. A configuração local deve passar explicitamente:
+O preset oficial inicia `codex mcp-server` por stdio. O backend local do Hermes
+deve preservar o HOME real, permitindo ao subprocesso usar `~/.codex/auth.json`.
 
-```yaml
-mcp_servers:
-  codex:
-    command: codex
-    args: [mcp-server]
-    env:
-      HOME: /home/lourenco
-      CODEX_HOME: /home/lourenco/.codex
-    supports_parallel_tool_calls: false
-```
+Níveis:
 
-Modelos:
+- `gpt-5.6-luna`: padrão para implementação/diagnóstico comum;
+- `gpt-5.6-terra`: tarefa multi-arquivo, incerteza material ou Luna insuficiente;
+- `gpt-5.6-sol`: arquitetura, segurança ou regressão realmente difícil.
 
-- `gpt-5.6-luna`: padrão para implementação/diagnóstico comum de menor custo;
-- `gpt-5.6-terra`: multi-arquivo, incerteza material, Luna insuficiente;
-- `gpt-5.6-sol`: arquitetura/segurança/regressão realmente difícil.
-
-Ao mudar de nível, abrir nova thread com handoff compacto. Não carregar uma
-thread longa de Luna para Sol apenas por comodidade.
+Ao mudar de nível, abrir nova thread com handoff compacto.
 
 ### Codex exec read-only
 
-Fallback caso o MCP esteja temporariamente indisponível:
+Fallback do MCP:
 
 ```bash
 printf '%s' "$PROMPT" | bash scripts/orchestrator/run-codex-readonly.sh
 ```
 
-Usa `--output-schema` versionado e a conta ChatGPT/Codex local.
+Usa `--output-schema` versionado e autenticação local do Codex.
 
-### Ollama local
+### Ollama local via Codex OSS
 
-Fallback opcional sem dependência de cota externa. Só entra na rota quando
-`orch:doctor` confirmar que o daemon/modelo existem e um smoke separado passar.
-Não é writer automático.
+Último fallback sem quota externa, se `ollama` e `gpt-oss:20b` estiverem
+presentes:
+
+```bash
+bash scripts/orchestrator/run-local-fallback.sh "<tarefa>"
+```
+
+Também opera sobre snapshot e nunca herda autoridade de escrita.
 
 ## 4. Roteamento
 
-A política executável/documental está em `.orchestrator/routing.yaml`.
-
-Resumo:
+A política declarativa está em `.orchestrator/routing.yaml`.
 
 | Classe | Primário | Fallback |
 |---|---|---|
-| triagem barata | OpenCode/DeepSeek free | Gemini → Codex Luna → local |
-| contexto grande | Gemini | OpenCode free → Codex Luna → local |
-| tarefa simples pública | OpenCode free | Gemini → Codex Luna → local |
+| triagem barata | OpenCode/DeepSeek free | Antigravity → Codex Luna → local |
+| contexto grande | Antigravity | OpenCode free → Codex Luna → local |
+| tarefa simples pública | OpenCode free | Antigravity → Codex Luna → local |
 | mudança de código | Codex MCP Luna | Terra → Sol conforme evidência |
-| debug difícil | Codex MCP Terra | Sol |
-| mudança crítica | Codex MCP Sol/Terra conforme plano | pausa humana se indisponível |
+| debug difícil | Codex MCP | Terra/Sol conforme evidência |
+| mudança crítica | Codex MCP | pausa humana se writer confiável estiver indisponível |
 
-O fallback de **capacidade** não concede automaticamente fallback de
-**autoridade**. Se Codex estiver escrevendo e perder quota, o próximo executor
-free pode analisar e produzir handoff, mas não continuar a mutação.
+Fallback de **capacidade** não concede fallback de **autoridade**. Se Codex
+estiver escrevendo e perder quota, um executor gratuito pode analisar e criar
+handoff, mas não continua a mutação automaticamente.
 
 ## 5. Barramento de contexto
-
-Arquivos:
 
 ```text
 .orchestrator/
 ├── README.md
 ├── STATE.md
 ├── routing.yaml
+├── BOOTSTRAP_PROMPT.md
 ├── schemas/
 │   └── executor-result.schema.json
 ├── templates/
 │   ├── TASK_PACKET.md
 │   └── HANDOFF.json
 └── runtime/               # ignorado pelo Git
+    └── snapshots/         # cópias descartáveis do HEAD para leitores externos
 ```
 
-### STATE.md
-
-Checkpoint curto do projeto. Não substitui Git nem serviço remoto. Hermes deve
-revalidar informações voláteis ao iniciar uma sessão de retomada.
-
-### Task packet
-
-Contém apenas:
-
-- objetivo;
-- modo;
-- paths relevantes;
-- evidência confirmada;
-- constraints;
-- critérios de aceite.
-
-Evitar transcript completo, brainstorming anterior e explicações que o executor
-pode obter lendo um arquivo indicado.
-
-### Handoff
-
-Se um executor falhar ou a tarefa trocar de nível, transmitir somente:
-
-- estado;
-- resumo;
-- achados;
-- evidências;
-- arquivos alterados;
-- testes;
-- riscos;
-- próxima ação.
+`STATE.md` é checkpoint, não substituto do Git. Task packet contém só objetivo,
+modo, paths, evidência e aceite. Handoff contém apenas estado, achados,
+evidências, arquivos alterados, testes, riscos e próxima ação.
 
 ## 6. Circuit breaker
 
-Estados recomendados por executor:
+Estados:
 
 - `OK`;
 - `RATE_LIMITED`;
@@ -217,57 +169,55 @@ Estados recomendados por executor:
 - `AUTH_ERROR`;
 - `DOWN`.
 
-Após duas falhas consecutivas na mesma rota, Hermes não repete o mesmo prompt.
-Marca o executor indisponível no runtime local e tenta o próximo executor
-**elegível para a mesma autoridade**.
+Após duas falhas consecutivas, Hermes não repete o mesmo prompt: abre o circuito
+e tenta o próximo executor elegível para a mesma autoridade.
 
 ## 7. Escrita e worktrees
 
-Regra: um writer por worktree.
+Regra: **um writer por worktree**. Codex é o writer técnico preferido. Leitores
+externos trabalham em snapshots. Implementações independentes devem usar
+worktrees e task IDs separados.
 
-Leitores podem revisar em paralelo somente quando não disputarem estado mutável.
-Codex MCP fica com `supports_parallel_tool_calls: false` no projeto principal.
-
-Para implementações independentes, criar worktrees separadas e task IDs
-separados. O Hermes mantém a relação `task -> worktree -> writer`.
-
-## 8. Credenciais e onde elas vivem
+## 8. Credenciais
 
 | Ferramenta | Credencial | Local correto | Commit? |
 |---|---|---|---|
-| Hermes/OpenAI Codex | ChatGPT OAuth | `~/.hermes/auth.json` | nunca |
+| Hermes/OpenAI Codex | ChatGPT OAuth | auth store do perfil Hermes | nunca |
 | Codex CLI/MCP | ChatGPT OAuth | `~/.codex/auth.json` | nunca |
-| Gemini CLI | Google OAuth da conta AI Pro | `~/.gemini/` | nunca |
-| OpenCode | provider auth | `~/.local/share/opencode/auth.json` | nunca |
+| Antigravity | Google OAuth | estado local do `agy` | nunca |
+| Gemini legacy | API key/enterprise | ambiente local apropriado | nunca |
+| OpenCode | OpenCode Zen/provider auth | `~/.local/share/opencode/auth.json` | nunca |
 | Supabase CLI | login/link local | home + `supabase/.temp` ignorado | nunca secret |
 | GitHub CLI | OAuth/token do `gh` | keyring/config local | nunca |
 | Cloudflare deploy | `CLOUDFLARE_API_TOKEN` | GitHub Actions Secret | nunca |
 
-A chave OpenAI API criada separadamente pode permanecer como contingência, mas
-não é necessária para Codex autenticado via ChatGPT Plus.
+A chave OpenAI API separada é contingência, não requisito do caminho Codex.
+
+Importante: o Codex CLI autenticado com ChatGPT é oficialmente uma superfície
+do plano ChatGPT. O Hermes também aceita OpenAI Codex via ChatGPT OAuth, mas a
+forma exata como o uso direto do Hermes contabiliza a cota do plano não deve ser
+presumida; monitorar e manter o roteamento barato.
 
 ## 9. Supabase
 
-Estado remoto é separado do estado local. No checkpoint desta arquitetura:
+No checkpoint da arquitetura:
 
-- projeto remoto está saudável;
-- schema de impacto ainda é somente local/versionado;
+- projeto remoto saudável;
+- migrations da Matriz de Impacto ainda não aplicadas remotamente;
 - nenhuma Edge Function ativa;
-- advisors existentes têm débito técnico próprio.
+- advisors de segurança/performance existentes são dívida técnica separada.
 
-Hermes pode fazer diagnóstico local/read-only. Aplicação remota de migration,
-RLS/RPC/Auth/Storage ou branches remotas exige gate humano.
+Diagnóstico local/read-only é permitido. Migration remota, RLS/RPC/Auth/Storage
+ou mudança de branch remota exige gate humano.
 
 ## 10. Cloudflare e GitHub Actions
 
-O projeto já possui uma separação saudável:
+Fluxo preservado:
 
 ```text
 merge autorizado em main
         ↓
-GitHub Actions quality
-        ↓
-build com vars públicas Supabase
+GitHub Actions quality/build
         ↓
 wrangler-action
         ↓
@@ -276,21 +226,22 @@ Cloudflare Pages
 smoke + health
 ```
 
-A nova arquitetura preserva esse caminho. Hermes não precisa possuir o token de
-produção Cloudflare para desenvolver. Quando houver deploy autorizado, a ação
-normal é acionar/observar GitHub Actions, não copiar secrets para mais um agente.
+Hermes não recebe token Cloudflare de produção só para desenvolver. O secret
+continua no GitHub Actions.
 
 ## 11. Retomada funcional
 
-Depois que `npm run orch:doctor -- --smoke` estiver verde:
+Depois de `npm run orch:doctor -- --smoke` verde:
 
-1. Hermes lê `AGENTS.md`, `.orchestrator/STATE.md` e `routing.yaml`.
-2. Revalida Git/Supabase/preview relevantes.
+1. Hermes lê `AGENTS.md`, `STATE.md` e `routing.yaml`.
+2. Revalida Git, Supabase e preview necessários.
 3. Cria task packet da Fase 2 da Matriz de Impacto.
-4. Gemini pode fazer leitura ampla da Fase 0–1.
-5. OpenCode free pode revisar contratos/fixtures e procurar inconsistências simples.
+4. Antigravity faz leitura ampla quando contexto grande ajudar.
+5. OpenCode free faz checks mecânicos baratos sobre o snapshot.
 6. Codex MCP implementa o menor chunk autorizado.
-7. Ferramentas locais executam testes/build.
+7. Testes/build locais validam o resultado.
 8. Hermes atualiza handoff/STATE somente em checkpoint real.
 
 A aplicação remota das migrations de impacto continua um gate separado.
+
+Runbook de instalação/credenciais: `docs/runbooks/hermes-orchestrator-setup.md`.
