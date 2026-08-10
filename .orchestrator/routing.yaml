@@ -55,7 +55,7 @@ executors:
     transport: mcp_stdio
     server: codex
     command: codex mcp-server
-    authority: read-only_or_workspace-write_when_authorized
+    authority: read-only_or_workspace_write_when_authorized
     models:
       cheap: gpt-5.6-luna
       normal: gpt-5.6-terra
@@ -75,7 +75,8 @@ executors:
     enabled_when: codex_mcp_unavailable
 
   local_fallback:
-    transport: local_model
+    transport: codex_oss_cli
+    wrapper: scripts/orchestrator/run-local-fallback.sh
     provider: ollama
     model: gpt-oss:20b
     authority: read-only
