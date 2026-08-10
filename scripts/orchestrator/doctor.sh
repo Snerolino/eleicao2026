@@ -26,16 +26,17 @@ printf '=== eleicao2026 orchestrator doctor ===\n'
 printf 'root=%s\n' "$ROOT"
 printf 'real_home=%s\n\n' "$REAL_HOME"
 
-for cmd in git node npm hermes codex gemini opencode timeout; do
+for cmd in git node npm hermes codex agy opencode timeout flock tar; do
   has_cmd "$cmd"
 done
 
+command -v gemini >/dev/null 2>&1 && warn "gemini disponível apenas como rota legacy/API-key; Google AI Pro usa agy" || ok "Gemini CLI legacy ausente (não obrigatório)"
 command -v gh >/dev/null 2>&1 && ok "gh disponível" || warn "gh ausente"
 command -v npx >/dev/null 2>&1 && ok "npx disponível" || fail "npx ausente"
 command -v ollama >/dev/null 2>&1 && ok "ollama disponível (fallback local elegível para smoke separado)" || warn "ollama ausente; fallback local desabilitado"
 
 [[ -s "$REAL_HOME/.codex/auth.json" ]] && ok "Codex auth presente (conteúdo não lido)" || warn "Codex auth não encontrado em ~/.codex/auth.json"
-[[ -d "$REAL_HOME/.gemini" ]] && ok "Gemini home presente (conteúdo secreto não lido)" || warn "Gemini home não encontrado"
+[[ -d "$REAL_HOME/.gemini/antigravity-cli" ]] && ok "Antigravity home presente (conteúdo secreto não lido)" || warn "Antigravity ainda não inicializado/autenticado"
 [[ -s "$REAL_HOME/.local/share/opencode/auth.json" ]] && ok "OpenCode auth presente (conteúdo não lido)" || warn "OpenCode auth não encontrado"
 [[ -d "$REAL_HOME/.hermes" ]] && ok "Hermes home presente" || fail "Hermes home não encontrado"
 
@@ -47,17 +48,25 @@ SHA="$(git rev-parse --short=12 HEAD 2>/dev/null || true)"
 if git diff --quiet && git diff --cached --quiet; then
   ok "working tree sem alterações tracked"
 else
-  warn "working tree possui alterações tracked; Hermes deve classificá-las antes de qualquer escrita"
+  warn "working tree possui alterações tracked; leitores econômicos verão somente HEAD, não o diff vivo"
 fi
 
 for f in \
   .orchestrator/STATE.md \
   .orchestrator/routing.yaml \
   .orchestrator/schemas/executor-result.schema.json \
+  scripts/orchestrator/prepare-snapshot.sh \
   supabase/migrations/20260810090000_create_legislative_core.sql \
   supabase/migrations/20260810090400_create_impact_rls_and_approval.sql; do
   [[ -f "$f" ]] && ok "$f presente" || fail "$f ausente"
 done
+
+SNAP="$(bash scripts/orchestrator/prepare-snapshot.sh doctor 2>/dev/null || true)"
+if [[ -n "$SNAP" && -f "$SNAP/AGENTS.md" && ! -e "$SNAP/.env" ]]; then
+  ok "snapshot Git sanitizado funciona e não contém .env"
+else
+  fail "snapshot Git sanitizado falhou"
+fi
 
 if hermes config check >/dev/null 2>&1; then
   ok "hermes config check"
@@ -82,22 +91,22 @@ if command -v npx >/dev/null 2>&1; then
 fi
 
 if $SMOKE; then
-  printf '\n=== smoke dos executores read-only ===\n'
+  printf '\n=== smoke dos executores consultivos/read-only ===\n'
 
   if bash scripts/orchestrator/run-opencode.sh \
-    'Tarefa DOCTOR. Não leia secrets nem edite nada. Responda apenas que o executor OpenCode está operacional.' \
+    'Tarefa DOCTOR. Apenas confirme que consegue ler AGENTS.md neste snapshot e cite o caminho. Não execute ações externas.' \
     >/tmp/eleicao2026-opencode-smoke.json 2>/tmp/eleicao2026-opencode-smoke.err; then
     ok "OpenCode/DeepSeek smoke"
   else
     warn "OpenCode/DeepSeek smoke falhou; veja /tmp/eleicao2026-opencode-smoke.err"
   fi
 
-  if bash scripts/orchestrator/run-gemini.sh \
-    'Tarefa DOCTOR. Não edite arquivos. Responda apenas que o executor Gemini está operacional.' \
-    >/tmp/eleicao2026-gemini-smoke.json 2>/tmp/eleicao2026-gemini-smoke.err; then
-    ok "Gemini smoke"
+  if bash scripts/orchestrator/run-antigravity.sh \
+    'Tarefa DOCTOR. Apenas confirme que consegue ler AGENTS.md neste snapshot e cite o caminho.' \
+    >/tmp/eleicao2026-antigravity-smoke.txt 2>/tmp/eleicao2026-antigravity-smoke.err; then
+    ok "Antigravity/Google smoke"
   else
-    warn "Gemini smoke falhou; veja /tmp/eleicao2026-gemini-smoke.err"
+    warn "Antigravity/Google smoke falhou; veja /tmp/eleicao2026-antigravity-smoke.err"
   fi
 
   CODEX_PROMPT='Retorne JSON válido conforme o schema. task_id="DOCTOR-CODEX", status="ok", summary="Codex operacional", findings=[], evidence=[], files_changed=[], tests=[], risks=[], recommended_action="nenhuma", human_review_required=false. Não leia ou altere arquivos.'
