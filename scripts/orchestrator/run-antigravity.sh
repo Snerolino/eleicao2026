@@ -24,11 +24,18 @@ fi
 
 SNAPSHOT="$(bash "$ROOT/scripts/orchestrator/prepare-snapshot.sh" antigravity)"
 AGENT_FILE="$SNAPSHOT/.agents/agents/$AGENT/agent.md"
+HOOKS_FILE="$SNAPSHOT/.agents/hooks.json"
+HOOK_GUARD="$SNAPSHOT/.agents/hooks/deny-async-subagents.sh"
 SETTINGS="$REAL_HOME/.gemini/antigravity-cli/settings.json"
 
 if [[ ! -s "$AGENT_FILE" ]]; then
   echo "agente Antigravity read-only ausente no snapshot: $AGENT_FILE" >&2
   exit 43
+fi
+
+if [[ ! -s "$HOOKS_FILE" || ! -s "$HOOK_GUARD" ]]; then
+  echo "guard síncrono do Antigravity ausente no snapshot" >&2
+  exit 45
 fi
 
 # O Antigravity 1.1.x trata o snapshot como externo ao default-cli-project.
@@ -57,12 +64,17 @@ fi
 cd "$SNAPSHOT"
 
 # O executor Google recebe somente um snapshot dos arquivos rastreados do HEAD.
-# O custom agent versionado expõe apenas view_file + grep_search e desliga shell.
-# --mode=plan é obrigatório no headless. --sandbox é defesa adicional.
-# Nunca usar --dangerously-skip-permissions.
-SAFE_PROMPT="Trabalhe somente no snapshot atual e siga integralmente o agente read-only selecionado. Não use terminal, shell ou command. Use apenas ferramentas de leitura disponibilizadas pelo agente. Tarefa: ${PROMPT}"
+# O custom agent expõe apenas ferramentas de leitura e um PreToolUse workspace
+# bloqueia colaboração/subagentes assíncronos. Isso é necessário porque agy -p
+# precisa devolver uma resposta final síncrona ao Hermes.
+SAFE_PROMPT="Trabalhe somente no snapshot atual e siga integralmente o agente read-only selecionado. Resolva esta tarefa diretamente neste agente e devolva a resposta final no mesmo turno. Não invoque subagentes, research, self, background agents ou mensageria entre agentes. Não use terminal, shell ou command. Use apenas ferramentas de leitura disponibilizadas pelo agente. Tarefa: ${PROMPT}"
 
-exec env HOME="$REAL_HOME" \
+OUT="$(mktemp /tmp/eleicao2026-agy-out.XXXXXX)"
+ERR="$(mktemp /tmp/eleicao2026-agy-err.XXXXXX)"
+trap 'rm -f "$OUT" "$ERR"' EXIT
+
+set +e
+env HOME="$REAL_HOME" \
   timeout "${TIMEOUT_SECONDS}s" \
   agy \
     --agent "$AGENT" \
@@ -70,4 +82,27 @@ exec env HOME="$REAL_HOME" \
     --sandbox \
     --print-timeout "${TIMEOUT_SECONDS}s" \
     --model "$MODEL" \
-    -p "$SAFE_PROMPT"
+    -p "$SAFE_PROMPT" \
+    >"$OUT" 2>"$ERR"
+STATUS=$?
+set -e
+
+[[ -s "$ERR" ]] && cat "$ERR" >&2
+
+if [[ $STATUS -ne 0 ]]; then
+  [[ -s "$OUT" ]] && cat "$OUT" >&2
+  exit "$STATUS"
+fi
+
+if [[ ! -s "$OUT" ]]; then
+  echo "Antigravity encerrou sem resposta final." >&2
+  exit 46
+fi
+
+if grep -Eqi 'launched .*subagent|launch(ed|ing) the .*subagent|awaiting (its|the) response|waiting for .*subagent' "$OUT"; then
+  cat "$OUT" >&2
+  echo "Antigravity devolveu estado intermediário de subagente; smoke rejeitado." >&2
+  exit 47
+fi
+
+cat "$OUT"
