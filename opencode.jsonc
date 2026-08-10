@@ -1,39 +1,64 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  // ===== Modelo padrão =====
-  // MOA (2026-08-08): prioridade paga→grátis→local.
-  // Pagedos (credenciados primeiro), deps pois exigem billing não estão na
-  // chain default. Gratuitos do OpenCode Zen + ollama local como backup offline.
-  "model": "openai/gpt-5.5",
+
+  // OpenCode deixa de ser o writer principal. O caminho orquestrado usa o
+  // agent plan com modelos gratuitos para triagem/revisão de conteúdo público.
+  "model": "opencode/deepseek-v4-flash-free",
+
   "agent": {
-    "build": {
-      "model": "openai/gpt-5.5",
-      "fallback": [
-        "google/gemini-3.5-flash",
-        "cloudflare-ai-gateway/openai/gpt-4o-mini",
-        "opencode/deepseek-v4-flash-free",
-        "opencode/nemotron-3-ultra-free",
-        "opencode/laguna-s-2.1-free",
-        "opencode/ling-3.0-tiny-free",
-        "opencode/mimo-v2.5-free",
-        "ollama/gpt-oss:20b"
-      ]
-    },
     "plan": {
       "model": "opencode/deepseek-v4-flash-free",
       "fallback": [
         "opencode/nemotron-3-ultra-free",
-        "google/gemini-3.5-flash",
-        "cloudflare-ai-gateway/openai/gpt-4o-mini",
         "opencode/laguna-s-2.1-free",
         "opencode/ling-3.0-tiny-free",
         "opencode/mimo-v2.5-free",
         "ollama/gpt-oss:20b"
-      ]
+      ],
+      "permission": {
+        "edit": "deny",
+        "bash": "deny",
+        "external_directory": "deny",
+        "task": "deny",
+        "webfetch": "deny",
+        "websearch": "deny",
+        "read": {
+          "*": "allow",
+          "*.env": "deny",
+          "*.env.*": "deny",
+          "**/.env": "deny",
+          "**/.env.*": "deny",
+          "data/tse-archive/**": "deny"
+        }
+      }
+    },
+
+    // Compatibilidade manual somente. A arquitetura v1 não roteia escrita para
+    // este agent automaticamente; Codex MCP é o writer técnico preferido.
+    "build": {
+      "model": "openai/gpt-5.5",
+      "fallback": [
+        "opencode/deepseek-v4-flash-free",
+        "opencode/nemotron-3-ultra-free",
+        "ollama/gpt-oss:20b"
+      ],
+      "permission": {
+        "edit": "ask",
+        "bash": {
+          "*": "ask",
+          "git push *": "deny",
+          "git commit *": "deny",
+          "git merge *": "deny",
+          "gh pr merge *": "deny",
+          "npx supabase db push *": "deny",
+          "npx supabase migration up *": "deny",
+          "npx wrangler pages deploy *": "deny"
+        },
+        "external_directory": "deny"
+      }
     }
   },
 
-  // ===== LSP =====
   "lsp": {
     "typescript": {
       "enabled": true,
@@ -52,13 +77,12 @@
     }
   },
 
-  // ===== MCP =====
+  // MCP do OpenCode não participa do caminho gratuito orquestrado
+  // (`OPENCODE_DISABLE_MCP=true` no wrapper). Mantemos apenas o filesystem
+  // curado disponível para uso interativo; banco remoto e opencode-mcp ficam off.
   "mcp": {
     "servers": {
-      // Habilita/desabilita todos os servidores MCP
       "enabled": true,
-
-      // Supabase (via PostgreSQL). DATABASE_URL vem do ambiente; nunca commitar valor real.
       "supabase": {
         "type": "local",
         "command": "npx",
@@ -66,27 +90,27 @@
         "env": {
           "DATABASE_URL": "{env:SUPABASE_DATABASE_URL}"
         },
-        "enabled": true
+        "enabled": false
       },
-
-      // Sistema de arquivos curado para ponte com o raspador: nunca apontar para ".".
       "filesystem": {
         "type": "local",
         "command": "npx",
         "args": ["-y", "@modelcontextprotocol/server-filesystem", "docs/context-export"],
         "enabled": true
       },
-
-      // OpenCode MCP (ferramentas extras)
       "opencode": {
         "type": "local",
         "command": "npx",
         "args": ["-y", "opencode-mcp"],
-        "enabled": true
+        "enabled": false
       }
     }
   },
 
-  // Instruções para agentes
-  "instructions": ["AGENTS.md", "README.md"]
+  "instructions": [
+    "AGENTS.md",
+    ".orchestrator/README.md",
+    ".orchestrator/STATE.md",
+    "README.md"
+  ]
 }
