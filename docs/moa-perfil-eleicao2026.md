@@ -98,3 +98,39 @@ cadeia — o OpenCode usa internamente quando o modelo primário falha, sem wrap
 
 Exemplo: quando GPT-5.5 travar no smoke de um PR, o wrapper cai pro Gemini/free e
 o build segue — sem interromper o fluxo até o final.
+
+## Codex CLI — camada de análise/consulta (validado 2026-08-10)
+
+O Codex CLI **não compete** com a cadeia acima para geração; ele é a camada de
+**consulta/análise estruturada** com a conta ChatGPT Plus (auth `chatgpt`,
+sem API key).
+
+| Modelo | Nível | Uso |
+|---|---|---|
+| `gpt-5.6-luna` | barato/rápido | triagem, análises curtas, alto volume |
+| `gpt-5.6-terra` | médio | implementação/revisão normal |
+| `gpt-5.6-sol` | difícil | arquitetura, problemas difíceis (default no config) |
+
+Ambiente necessário (sandbox Hermes): `CODEX_HOME=/home/lourenco/.codex HOME=/home/lourenco`.
+
+Comando validado (resposta final limpa no stdout):
+
+```bash
+OUT=$(mktemp)
+codex exec -m gpt-5.6-luna --sandbox read-only --ephemeral --color never \
+  -o "$OUT" "tarefa" >/dev/null
+cat "$OUT"; rm -f "$OUT"
+```
+
+- Prompt via `stdin` com `-` (prompts grandes).
+- `--output-schema <schema.json>` valida a resposta final (retorno JSON
+  determinístico: `status|summary|findings|recommended_action|human_review_required`).
+- `codex mcp-server` disponível (MCP via stdio) — candidato para integração
+  profunda com o orquestrador.
+- Teste real: `-m gpt-5.6-luna` + `--output-schema` identificou 2 bugs reais em
+  `src/` (cardinalidade em `candidates.ts` e atomicidade em `AdminPage.tsx`).
+
+Detalhes e estado completo: `docs/handoff/2026-08-10-analise-externa-arquitetura-codex.md`.
+
+Decisão em aberto (análise externa): wrapper `codex-agent` e superfície
+`codex exec` (subprocesso) vs `codex mcp-server` (MCP).

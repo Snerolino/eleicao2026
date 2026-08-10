@@ -35,6 +35,7 @@
 
 | Arquivo | Descrição |
 |---------|-----------|
+| [`handoff/2026-08-10-analise-externa-arquitetura-codex.md`](handoff/2026-08-10-analise-externa-arquitetura-codex.md) | Estado atual (Fases 0–1 da Matriz de Impacto) + integração Codex CLI validada, para análise externa da nova arquitetura |
 | [`handoff/2026-08-01-fase7-decisoes-ux-node.md`](handoff/2026-08-01-fase7-decisoes-ux-node.md) | Estado atual da branch `fase-7-decisoes-ux-node`, snapshot 212 local, produção 213 e riscos antes do PR |
 | [`handoff/2026-08-02-plano-pos-review-moa.md`](handoff/2026-08-02-plano-pos-review-moa.md) | Plano pós-review incorporando o relatório externo de 02/08 e o padrão MOA Hermes + OpenCode até 15/08 |
 | [`handoff/2026-07-31-mvp-atualizado.md`](handoff/2026-07-31-mvp-atualizado.md) | Estado atualizado do MVP, dados TSE 213, Supabase, produção, riscos e próximos passos |
