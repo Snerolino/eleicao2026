@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-10
-Status: `STANDBY_READY_FOR_ORCHESTRATOR_V1`
+Atualizado: 2026-08-10 09:56 -03
+Status: `ORCHESTRATOR_CORE_VERIFIED_EXECUTORS_PENDING`
 
 > Este é um checkpoint, não uma fonte eterna. Ao retomar, Hermes deve conferir
 > Git, ambiente e serviços antes de confiar em SHAs, contagens ou disponibilidade.
@@ -15,12 +15,14 @@ Status: `STANDBY_READY_FOR_ORCHESTRATOR_V1`
 - Checkpoint herdado da feature: `565116619de6c36cde99c3d159e8540f18530386`.
 - A feature estava 5 commits à frente e 0 atrás de `main` no início desta migração.
 - Branch da arquitetura: `chore/hermes-orchestrator-v1`, criada a partir de `5651166`.
+- HEAD local validado antes deste checkpoint: `3e270ac66b92`.
 
 ## Aplicação
 
 - Produção declarada verde com 792 candidaturas públicas e fotos TSE.
 - Stack preservada: React + Vite + TypeScript + Tailwind + Supabase + Cloudflare Pages + PWA.
 - GitHub Actions é o caminho normal de deploy após merge autorizado em `main`.
+- O `package.json` exige Node `>=24 <25`; o gateway Hermes observado em 2026-08-10 ainda mantinha subprocessos Node 22 em seu ambiente systemd. Antes de revalidar build/testes da aplicação, confirmar Node 24 no shell do projeto e não assumir que o PATH do serviço equivale ao shell interativo.
 
 ## Matriz de Impacto Populacional v1
 
@@ -44,30 +46,72 @@ Status: `STANDBY_READY_FOR_ORCHESTRATOR_V1`
 - Deploy normal: GitHub Actions `deploy.yml`, somente push em `main`, usando secret `CLOUDFLARE_API_TOKEN` no GitHub.
 - Não copiar esse token para Hermes ou para executores apenas para permitir rotina de desenvolvimento.
 
+## Hermes control plane — VALIDADO
+
+Validação real em 2026-08-10:
+
+- perfil `eleicao2026` existe;
+- gateway systemd do perfil está ativo e com linger habilitado;
+- provider do Hermes: `openai-codex`;
+- modelo do Hermes: `gpt-5.6-luna`;
+- terminal backend: `local`;
+- skill `eleicao2026-orchestrator` instalada;
+- MCP `codex` aparece habilitado como `codex mcp-server`;
+- `codex mcp-server` sobe e permanece disponível por stdio;
+- smoke direto do Hermes respondeu `HERMES_CODEX_OK`;
+- smoke Hermes → MCP Codex fez chamada real `mcp__codex__codex`, leu `AGENTS.md` em modo read-only e retornou `HERMES_CODEX_MCP_OK`;
+- portanto a espinha dorsal `Hermes -> Codex MCP -> repositório` está validada ponta a ponta.
+
+O doctor estrutural retornou `OK=36 WARN=3 FAIL=0` antes deste checkpoint.
+
+Warnings observados nesse doctor:
+
+1. Gemini CLI existe apenas como rota legacy; esperado.
+2. `TERMINAL_ENV` legado ainda foi detectado no `.env` do perfil; confirmar remoção/revalidação antes de considerar o ambiente totalmente saneado.
+3. Ollama existe, mas `gpt-oss:20b` não está instalado; fallback local permanece opcional/desabilitado.
+
 ## Executores e credenciais
 
-### Confirmado no checkpoint anterior
+### Codex — VALIDADO
 
-- Codex CLI `0.147.0`, auth ChatGPT Plus, sem `OPENAI_API_KEY` para a rota Codex.
-- Codex `gpt-5.6-luna/terra/sol` disponíveis; `codex exec` estruturado validado.
-- OpenCode `1.18.15`; `opencode/deepseek-v4-flash-free` já respondeu em testes anteriores.
+- Codex CLI `0.147.0`.
+- `codex login status`: autenticado via ChatGPT.
+- `codex doctor --summary`: 17 OK, 0 WARN, 0 FAIL; websocket HTTP 101 e endpoints ativos alcançáveis.
+- `gpt-5.6-luna` respondeu em `codex exec` read-only.
+- Codex MCP integrado ao Hermes e validado ponta a ponta.
 
-### Revalidação obrigatória nesta arquitetura
+### Google Antigravity — INSTALADO, SMOKE PENDENTE
 
-- Hermes deve ser atualizado e receber um perfil isolado `eleicao2026`.
-- Codex MCP deve ser instalado no perfil pelo preset oficial e testado.
-- Google AI Pro individual passa a usar **Antigravity CLI (`agy`) + Google OAuth**. A autenticação Gemini CLI individual do checkpoint anterior não é tomada como rota atual da assinatura.
-- `run-gemini.sh` permanece somente como compatibilidade para API key/enterprise.
-- OpenCode e Antigravity consultivos devem rodar sobre snapshots `git archive HEAD`, nunca sobre a worktree viva.
-- Ollama/`gpt-oss:20b` é fallback local opcional e só entra se o doctor confirmar disponibilidade.
+- `agy` está disponível no PATH.
+- home/autenticação Antigravity existe localmente segundo o doctor.
+- ainda falta validar `agy models`, o wrapper em snapshot e o smoke consultivo real.
 
-## Próximo trabalho funcional após concluir a arquitetura local
+### OpenCode / DeepSeek Free — INSTALADO, SMOKE PENDENTE
 
-1. Validar executores com `npm run orch:doctor -- --smoke`.
-2. Revalidar testes, TypeScript, build e schema de impacto.
-3. Retomar a Fase 2 da Matriz de Impacto: importador dry-run de proposições/votos e desenho da persistência de score.
-4. Tratar separadamente os dois bugs encontrados pelo Codex em `src/services/candidates.ts` e `src/pages/AdminPage.tsx`.
-5. Somente depois de revisão humana, decidir aplicação remota das migrations de impacto.
+- OpenCode está disponível e auth local existe segundo o doctor.
+- `opencode/deepseek-v4-flash-free` havia respondido em testes anteriores.
+- ainda falta revalidar catálogo atual e o wrapper read-only sobre snapshot.
+
+### Gemini CLI legacy
+
+- permanece somente como compatibilidade para API key/enterprise, não é a rota normal da assinatura Google AI Pro individual nesta arquitetura.
+
+### Ollama local
+
+- Ollama está instalado.
+- `gpt-oss:20b` ausente no doctor; fallback local opcional não está elegível ainda.
+
+## Próximos gates antes da retomada funcional
+
+1. Confirmar Node 24 no shell do projeto.
+2. Confirmar que `TERMINAL_ENV` legado foi removido ou não interfere no perfil.
+3. Validar Google Antigravity em snapshot (`orch:google`).
+4. Validar OpenCode/DeepSeek em snapshot (`orch:opencode`).
+5. Rodar `npm run orch:doctor -- --smoke`.
+6. Revalidar testes, TypeScript, build e schema de impacto.
+7. Só então retomar a Fase 2 da Matriz de Impacto: importador dry-run de proposições/votos e desenho da persistência de score.
+8. Tratar separadamente os dois bugs encontrados pelo Codex em `src/services/candidates.ts` e `src/pages/AdminPage.tsx`.
+9. Somente depois de revisão humana, decidir aplicação remota das migrations de impacto.
 
 ## Gates permanentes
 
