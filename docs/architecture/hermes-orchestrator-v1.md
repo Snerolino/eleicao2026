@@ -59,16 +59,40 @@ use Codex na worktree viva ou crie checkpoint autorizado.
 Papel: contexto amplo, mapeamento, comparação e síntese usando a conta Google AI
 Pro via Google OAuth.
 
-Caminho:
+Preparação local, uma vez por workstation/perfil:
+
+```bash
+npm run orch:configure-google
+```
+
+Esse configurador faz backup de `~/.gemini/antigravity-cli/settings.json` e
+adiciona somente duas regras estreitas para o snapshot sanitizado:
+
+- permite `read_file(<snapshot-antigravity>)`;
+- nega `write_file(<snapshot-antigravity>)`.
+
+Não adiciona `command(*)`, `mcp(*)`, `write_file(*)` amplo nem usa
+`--dangerously-skip-permissions`.
+
+Execução:
 
 ```bash
 bash scripts/orchestrator/run-antigravity.sh "<task packet curto>"
 ```
 
-O wrapper cria um snapshot Git separado e executa `agy -p` nele com sandbox de
-terminal. Essa barreira é deliberada: em modo agente, a proteção principal não
-é uma promessa textual de read-only, e sim não entregar a worktree mutável ao
-executor consultivo.
+O wrapper:
+
+- cria `.orchestrator/runtime/snapshots/antigravity` com `git archive HEAD`;
+- liga explicitamente esse snapshot ao workspace da sessão com `--add-dir`;
+- seleciona o custom agent `eleicao2026-reader`;
+- usa `--mode=plan` e `--sandbox`;
+- limita o papel do custom agent a leitura;
+- usa hook workspace-local para negar subagentes/background collaboration no caminho headless;
+- rejeita como erro respostas intermediárias do tipo “lancei um subagente e estou aguardando”.
+
+A rota foi desenhada assim porque `agy -p` precisa devolver uma resposta final
+síncrona para o Hermes. A barreira decisiva continua sendo o snapshot rastreado:
+o executor não recebe a worktree mutável nem arquivos não commitados.
 
 Modelo padrão inicial: `Gemini 3.5 Flash (Low)`, sempre confirmado localmente
 com `agy models`. Alterar por `ANTIGRAVITY_AGENT_MODEL` quando necessário.
@@ -85,11 +109,17 @@ Papel: engenharia e mutações locais controladas.
 
 ```bash
 hermes -p eleicao2026 mcp add codex --preset codex
-hermes -p eleicao2026 mcp test codex
+hermes -p eleicao2026 mcp list
+npm run orch:doctor
 ```
 
-O preset oficial inicia `codex mcp-server` por stdio. O backend local do Hermes
-deve preservar o HOME real, permitindo ao subprocesso usar `~/.codex/auth.json`.
+O preset inicia `codex mcp-server` por stdio. O CLI atual do Hermes não é
+tratado como se tivesse um subcomando `mcp test`; o doctor do repositório faz um
+preflight direto do servidor stdio, e o gate ponta a ponta é validado por uma
+chamada real Hermes → MCP Codex em modo read-only.
+
+O backend local do Hermes deve preservar o HOME real, permitindo ao subprocesso
+usar `~/.codex/auth.json`.
 
 Níveis:
 
@@ -107,7 +137,8 @@ Fallback do MCP:
 printf '%s' "$PROMPT" | bash scripts/orchestrator/run-codex-readonly.sh
 ```
 
-Usa `--output-schema` versionado e autenticação local do Codex.
+Usa `--output-schema` versionado, sandbox read-only, sessão efêmera e
+autenticação local do Codex.
 
 ### Ollama local via Codex OSS
 
@@ -154,6 +185,10 @@ handoff, mas não continua a mutação automaticamente.
     └── snapshots/         # cópias descartáveis do HEAD para leitores externos
 ```
 
+A ordem de autoridade segue `AGENTS.md`: código/Git atuais; regras e contratos
+versionados; README/documentação aplicável; contrato curado de dados;
+`STATE.md`; task packet/handoff; histórico somente como apoio.
+
 `STATE.md` é checkpoint, não substituto do Git. Task packet contém só objetivo,
 modo, paths, evidência e aceite. Handoff contém apenas estado, achados,
 evidências, arquivos alterados, testes, riscos e próxima ação.
@@ -192,11 +227,6 @@ worktrees e task IDs separados.
 | Cloudflare deploy | `CLOUDFLARE_API_TOKEN` | GitHub Actions Secret | nunca |
 
 A chave OpenAI API separada é contingência, não requisito do caminho Codex.
-
-Importante: o Codex CLI autenticado com ChatGPT é oficialmente uma superfície
-do plano ChatGPT. O Hermes também aceita OpenAI Codex via ChatGPT OAuth, mas a
-forma exata como o uso direto do Hermes contabiliza a cota do plano não deve ser
-presumida; monitorar e manter o roteamento barato.
 
 ## 9. Supabase
 
