@@ -48,7 +48,8 @@ Fontes: migrations versionadas em `supabase/migrations` e tipos gerados em
 
 ## `claims`
 
-- Campos: `id`, `candidate_id`, `category`, `content`, `source_document_id`,
+- Campos: `id`, `candidate_id`, `category`, `content`, `external_id`,
+  `content_hash`, `generated_by_ai`, `prompt_version`, `source_document_id`,
   `source_char_offset`, `confidence_score`, `status`, `previous_version_id`,
   `created_at`, `published_at`.
 - `category` e texto livre. O valor proposto para este coletor deve ser aprovado
@@ -63,6 +64,12 @@ Fontes: migrations versionadas em `supabase/migrations` e tipos gerados em
   editorial/evidencia e nunca pode virar nota, ranking ou recomendacao de
   candidato. A Fase 0 deve definir o mapeamento a partir dos niveis A/B/C.
 - `previous_version_id` referencia `claims.id` e suporta cadeia de versoes.
+- `external_id` e o identificador estavel do fato no coletor.
+- `content_hash` guarda o SHA-256 do conteudo canonico para idempotencia.
+- `generated_by_ai` e booleano obrigatorio com default `false`.
+- `prompt_version` registra a versao do contrato/prompt que gerou a claim.
+- O indice unico `claims_collector_identity_version_uq` protege
+  (`candidate_id`, `category`, `external_id`, `content_hash`).
 - Claim publica exige candidato, referencia publica de fonte e `published_at`.
 - Leitura anonima inclui apenas `published` e `corrected`; `retracted` nao e
   publica.
