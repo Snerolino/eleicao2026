@@ -24,7 +24,8 @@
     "test:watch": "NODE_ENV=test vitest",
     "orch:doctor": "bash scripts/orchestrator/doctor.sh",
     "orch:opencode": "bash scripts/orchestrator/run-opencode.sh",
-    "orch:gemini": "bash scripts/orchestrator/run-gemini.sh",
+    "orch:google": "bash scripts/orchestrator/run-antigravity.sh",
+    "orch:gemini-legacy": "bash scripts/orchestrator/run-gemini.sh",
     "orch:codex": "bash scripts/orchestrator/run-codex-readonly.sh"
   },
   "dependencies": {
