@@ -6,12 +6,15 @@ reconstruir o projeto a partir de uma conversa longa.
 
 ## Autoridade
 
+A ordem canônica é a mesma de `AGENTS.md`:
+
 1. código e Git atuais;
-2. `AGENTS.md` e contratos versionados;
-3. `.orchestrator/STATE.md`;
-4. task packet ativo;
-5. handoff do executor;
-6. histórico de conversas, somente como apoio.
+2. `AGENTS.md` e contratos/schemas versionados;
+3. `README.md` e documentação aplicável;
+4. `docs/context-export/` para o contrato curado de dados;
+5. `.orchestrator/STATE.md` como checkpoint operacional, sempre revalidando fatos voláteis;
+6. task packet/handoff atual;
+7. histórico de conversas, somente como apoio.
 
 O Hermes é o único dono do contexto global e do roteamento. Executores recebem
 apenas o contexto necessário para a tarefa atual.
