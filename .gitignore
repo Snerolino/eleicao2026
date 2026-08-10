@@ -15,3 +15,7 @@ data/tse-archive/
 
 # Supabase CLI local state
 supabase/.branches/
+
+# Hermes orchestrator runtime: logs, circuit breaker e sessões locais
+.orchestrator/runtime/
+.orchestrator/*.local.*
