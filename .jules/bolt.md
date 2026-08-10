@@ -4,3 +4,6 @@
 ## 2024-05-19 - [Deferred Search Input]
 **Learning:** Using `useDeferredValue` for a search query that filters a large list (`filterCandidates` on all candidates) improves typing responsiveness. Crucially, any downstream grouping or mapping logic that depends on the filtered results should be wrapped in `useMemo` so it doesn't unnecessarily re-compute on every single keystroke.
 **Action:** When filtering complex lists, wrap the query passed to the filter function with `useDeferredValue` and use `useMemo` for any derived computations based on the filtered output. Ensure UI elements showing counts sync with the deferred query to prevent visual mismatches.
+## 2026-08-10 - [Stable Search Params & URL Encoding in Tests]
+**Learning:** When using `setSearchParams(prev => ...)` to ensure stable callbacks for `React.memo` lists, mutating the `prev` instance directly might not trigger re-renders or correctly encode/decode URL strings in tests. Furthermore, `URLSearchParams.set` percent-encodes commas as `%2C`, which can cause test assertions (e.g., matching `/comparar?candidatos=1,2`) to fail.
+**Action:** Always create a new `URLSearchParams(prev)` instance inside the functional update. In tests, use `decodeURIComponent` on the URL string before asserting to handle percent-encoded characters like commas correctly.
