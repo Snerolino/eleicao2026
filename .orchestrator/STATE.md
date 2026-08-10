@@ -44,23 +44,34 @@ Status: `STANDBY_READY_FOR_ORCHESTRATOR_V1`
 - Deploy normal: GitHub Actions `deploy.yml`, somente push em `main`, usando secret `CLOUDFLARE_API_TOKEN` no GitHub.
 - Não copiar esse token para Hermes ou para executores apenas para permitir rotina de desenvolvimento.
 
-## Executores já validados antes desta migração
+## Executores e credenciais
+
+### Confirmado no checkpoint anterior
 
 - Codex CLI `0.147.0`, auth ChatGPT Plus, sem `OPENAI_API_KEY` para a rota Codex.
 - Codex `gpt-5.6-luna/terra/sol` disponíveis; `codex exec` estruturado validado.
 - OpenCode `1.18.15`; `opencode/deepseek-v4-flash-free` já respondeu em testes anteriores.
-- Gemini CLI autenticado localmente e utilizável, porém foi lento como agente de edição. Nesta arquitetura passa a ser executor consultivo/read-only.
 
-## Próximo trabalho funcional após concluir a arquitetura
+### Revalidação obrigatória nesta arquitetura
 
-1. Validar todos os executores com `npm run orch:doctor -- --smoke`.
-2. Retomar a Fase 2 da Matriz de Impacto: importador dry-run de proposições/votos e desenho da persistência de score.
-3. Tratar separadamente os dois bugs encontrados pelo Codex em `src/services/candidates.ts` e `src/pages/AdminPage.tsx`.
-4. Somente depois de revisão humana, decidir aplicação remota das migrations de impacto.
+- Hermes deve ser atualizado e receber um perfil isolado `eleicao2026`.
+- Codex MCP deve ser instalado no perfil pelo preset oficial e testado.
+- Google AI Pro individual passa a usar **Antigravity CLI (`agy`) + Google OAuth**. A autenticação Gemini CLI individual do checkpoint anterior não é tomada como rota atual da assinatura.
+- `run-gemini.sh` permanece somente como compatibilidade para API key/enterprise.
+- OpenCode e Antigravity consultivos devem rodar sobre snapshots `git archive HEAD`, nunca sobre a worktree viva.
+- Ollama/`gpt-oss:20b` é fallback local opcional e só entra se o doctor confirmar disponibilidade.
+
+## Próximo trabalho funcional após concluir a arquitetura local
+
+1. Validar executores com `npm run orch:doctor -- --smoke`.
+2. Revalidar testes, TypeScript, build e schema de impacto.
+3. Retomar a Fase 2 da Matriz de Impacto: importador dry-run de proposições/votos e desenho da persistência de score.
+4. Tratar separadamente os dois bugs encontrados pelo Codex em `src/services/candidates.ts` e `src/pages/AdminPage.tsx`.
+5. Somente depois de revisão humana, decidir aplicação remota das migrations de impacto.
 
 ## Gates permanentes
 
 - Apenas um writer por worktree.
-- Modelos gratuitos: somente repositório público/sanitizado, nunca secrets/PII/raw documents.
+- Modelos externos econômicos: somente repositório público/sanitizado, nunca secrets/PII/raw documents.
 - Nenhum agente faz merge em `main`, deploy de produção, migration remota, mudança de RLS/RPC, rotação de secret ou mutação Cloudflare/Supabase sem autorização humana explícita.
 - Se o executor mutável perder quota, interromper escrita e produzir handoff read-only; não continuar a mutação automaticamente num modelo gratuito.
