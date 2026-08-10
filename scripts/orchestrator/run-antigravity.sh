@@ -4,6 +4,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 REAL_HOME="${HERMES_REAL_HOME:-/home/lourenco}"
 MODEL="${ANTIGRAVITY_AGENT_MODEL:-Gemini 3.5 Flash (Low)}"
+AGENT="${ANTIGRAVITY_AGENT_NAME:-eleicao2026-reader}"
 TIMEOUT_SECONDS="${ORCH_EXECUTOR_TIMEOUT:-480}"
 
 if [[ ! -d "$REAL_HOME" ]]; then
@@ -22,15 +23,24 @@ if [[ -z "${PROMPT//[[:space:]]/}" ]]; then
 fi
 
 SNAPSHOT="$(bash "$ROOT/scripts/orchestrator/prepare-snapshot.sh" antigravity)"
+AGENT_FILE="$SNAPSHOT/.agents/agents/$AGENT/agent.md"
+
+if [[ ! -s "$AGENT_FILE" ]]; then
+  echo "agente Antigravity read-only ausente no snapshot: $AGENT_FILE" >&2
+  exit 43
+fi
+
 cd "$SNAPSHOT"
 
 # O executor Google recebe somente um snapshot dos arquivos rastreados do HEAD.
-# --sandbox adiciona isolamento de terminal; nunca usar --dangerously-skip-permissions.
-SAFE_PROMPT="Você é um executor consultivo read-only do projeto eleicao2026. Não edite arquivos, não faça deploy e não altere Git, Supabase ou Cloudflare. Trabalhe somente neste snapshot rastreado e devolva achados objetivos com evidências de caminhos. Tarefa: ${PROMPT}"
+# O custom agent versionado expõe apenas view_file + grep_search e desliga shell.
+# --sandbox permanece como defesa adicional. Nunca usar --dangerously-skip-permissions.
+SAFE_PROMPT="Trabalhe somente no snapshot atual e siga integralmente o agente read-only selecionado. Tarefa: ${PROMPT}"
 
 exec env HOME="$REAL_HOME" \
   timeout "${TIMEOUT_SECONDS}s" \
   agy \
+    --agent "$AGENT" \
     --sandbox \
     --print-timeout "${TIMEOUT_SECONDS}s" \
     --model "$MODEL" \
