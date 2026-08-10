@@ -21,12 +21,12 @@ if [[ -z "${PROMPT//[[:space:]]/}" ]]; then
   exit 42
 fi
 
-cd "$ROOT"
+SNAPSHOT="$(bash "$ROOT/scripts/orchestrator/prepare-snapshot.sh" antigravity)"
+cd "$SNAPSHOT"
 
-# Antigravity é usado como consultor. --sandbox mantém a execução de terminal
-# isolada do host; a instrução proíbe edits/ações externas. Não use
-# --dangerously-skip-permissions neste wrapper.
-SAFE_PROMPT="Você é um executor consultivo read-only do projeto eleicao2026. Não edite arquivos, não escreva no host, não faça deploy, não altere Git, Supabase ou Cloudflare, não leia .env*, tokens, secrets, service role, PII ou documentos brutos. Leia apenas o necessário no workspace público/sanitizado e devolva achados objetivos com evidências de caminhos. Tarefa: ${PROMPT}"
+# O executor Google recebe somente um snapshot dos arquivos rastreados do HEAD.
+# --sandbox adiciona isolamento de terminal; nunca usar --dangerously-skip-permissions.
+SAFE_PROMPT="Você é um executor consultivo read-only do projeto eleicao2026. Não edite arquivos, não faça deploy e não altere Git, Supabase ou Cloudflare. Trabalhe somente neste snapshot rastreado e devolva achados objetivos com evidências de caminhos. Tarefa: ${PROMPT}"
 
 exec env HOME="$REAL_HOME" \
   timeout "${TIMEOUT_SECONDS}s" \
