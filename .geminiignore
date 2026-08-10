@@ -1,0 +1,16 @@
+# Segredos e estado local
+.env
+.env.*
+**/.env
+**/.env.*
+.orchestrator/runtime/**
+supabase/.temp/**
+
+# Dados brutos não necessários para tarefas consultivas
+data/tse-archive/**
+
+# Artefatos gerados
+node_modules/**
+dist/**
+coverage/**
+.worktrees/**
