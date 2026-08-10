@@ -21,10 +21,12 @@ if [[ -z "${PROMPT//[[:space:]]/}" ]]; then
   exit 42
 fi
 
-cd "$ROOT"
+SNAPSHOT="$(bash "$ROOT/scripts/orchestrator/prepare-snapshot.sh" opencode)"
+cd "$SNAPSHOT"
 
-# MCP é desabilitado deliberadamente para o executor gratuito. Ele recebe apenas
-# o workspace público/sanitizado e as permissões read-only do agent plan.
+# Snapshot contém somente arquivos rastreados do HEAD. MCP é desligado e o agent
+# plan nega edição/shell. Assim o executor barato não enxerga secrets, arquivos
+# locais nem a worktree mutável.
 exec env \
   HOME="$REAL_HOME" \
   OPENCODE_DISABLE_MCP=true \
