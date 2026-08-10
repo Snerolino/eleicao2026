@@ -13,11 +13,11 @@ As decisões humanas finais foram registradas em 2026-08-01. CI, deploy, smoke/h
 
 ## Evidência atual
 
-- Snapshot público versionado: `212` candidaturas públicas RS 2026 (`213` linhas oficiais TSE; `FRANCISCO MARQUES NETO` removido da superfície pública por decisão humana).
-- Supabase remoto público pode manter `213` candidaturas RS; a camada pública filtra a candidatura removida.
-- Slugs e `tse_candidate_id`: `212/212` únicos e não nulos no snapshot público.
-- Sitemap esperado após este bloco: `212` candidatos + páginas estáticas.
-- Smoke produção anterior: OK, `213` cards, offline/detalhe canônico OK, `httpFailures=0`; repetir após merge para validar `212` cards públicos.
+- Snapshot público versionado (08/08/2026): `792` candidaturas públicas RS 2026 a partir do `consulta_cand_2026_RS.csv` oficial do TSE (`FRANCISCO MARQUES NETO` removido da superfície pública por decisão humana).
+- Supabase remoto público pode manter a candidatura removida; a camada pública filtra a candidatura removida.
+- Slugs e `tse_candidate_id`: `792/792` únicos e não nulos no snapshot público.
+- Sitemap esperado após este bloco: `792` candidatos + páginas estáticas.
+- Smoke produção anterior: OK, `464` cards; repetir após merge para validar `792` cards públicos.
 - Health produção: OK, `status=ok`, `blocks_release=false`.
 - Release produção validado H6.3: `5c2f392-20260801T050727215Z`.
 - Runbooks: H6.1 observabilidade, H6.2 segurança/headers, H6.3 incidentes/recuperação.
@@ -35,8 +35,8 @@ As decisões humanas finais foram registradas em 2026-08-01. CI, deploy, smoke/h
 
 ### Data
 
-- [x] Contagem oficial TSE atual: `213` linhas; contagem pública versionada: `212` candidaturas.
-- [x] Cargos públicos validados: deputado estadual `110`, deputado federal `88`, governador `1`, vice-governador `1`, senador `4`, outro/suplentes `8`.
+- [x] Contagem oficial TSE atual (08/08/2026): `793` registros; contagem pública versionada: `792` candidaturas.
+- [x] Cargos públicos validados: deputado estadual `458`, deputado federal `310`, governador `3`, vice-governador `3`, senador `6`, outro/suplentes `12`.
 - [x] `SQ_CANDIDATO`/`tse_candidate_id` preenchidos e distintos.
 - [x] Slugs canônicos por `nome_normalizado_<SQ_CANDIDATO>`.
 - [x] Snapshot e manifesto TSE versionados.

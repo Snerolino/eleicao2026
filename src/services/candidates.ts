@@ -163,13 +163,29 @@ export function mapClaim(row: ClaimRow): Claim {
   };
 }
 
+const CLAIM_ID_CHUNK_SIZE = 100;
+
+function chunkBy<T>(items: T[], size: number): T[][] {
+  const chunks: T[][] = [];
+  for (let i = 0; i < items.length; i += size) {
+    chunks.push(items.slice(i, i + size));
+  }
+  return chunks;
+}
+
 export async function fetchPublishedClaims(candidateIds: string[]): Promise<Claim[]> {
   if (!supabase || candidateIds.length === 0) return [];
 
-  const { data, error } = await supabase
-    .from("claims")
-    .select(
-      `
+  // Separa em lotes para nao estourar o limite de tamanho de URL do gateway
+  // REST do Supabase quando ha muitos candidatos (`.in()` com centenas de UUIDs).
+  const chunks = chunkBy(candidateIds, CLAIM_ID_CHUNK_SIZE);
+  const allClaims: Claim[] = [];
+
+  for (const chunk of chunks) {
+    const { data, error } = await supabase
+      .from("claims")
+      .select(
+        `
       id,
       candidate_id,
       category,
@@ -185,13 +201,18 @@ export async function fetchPublishedClaims(candidateIds: string[]): Promise<Clai
         fetched_at
       )
     `,
-    )
-    .in("candidate_id", candidateIds)
-    .in("status", ["published", "corrected"]);
+      )
+      .in("candidate_id", chunk)
+      .in("status", ["published", "corrected"]);
 
-  if (error) throw error;
+    if (error) throw error;
 
-  return onlyPublished(((data ?? []) as unknown as ClaimRow[]).map(mapClaim));
+    allClaims.push(
+      ...((data ?? []) as unknown as ClaimRow[]).map(mapClaim),
+    );
+  }
+
+  return onlyPublished(allClaims);
 }
 
 async function fetchAllCandidatesFromSupabase(): Promise<

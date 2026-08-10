@@ -1,24 +1,13 @@
 [
   {
-    "dataset_key": "sig_lista_candidatos",
+    "dataset_key": "consulta_cand",
     "uf": "RS",
-    "scope": "sig_lista_candidatos/2026/RS",
-    "source_kind": "local-file",
-    "source_path": "../dataset2026/candidatos/FONTE OFICIAL = sig.tse.jus.br -lista_candidatos_2026.csv",
-    "official_url": "https://sig.tse.jus.br/ords/dwapr/r/seai/sig-candidaturas/lista-candidatos",
-    "sha256": "1947093636b1d01aadb4d310e0f365b975858a782b835d822be165a2e4c5a1d4",
-    "row_count": 213,
-    "created_at": "2026-08-04T06:57:40.747Z"
-  },
-  {
-    "dataset_key": "dadosabertos_candidatos",
-    "uf": "RS",
-    "scope": "dadosabertos_candidatos/2026/RS",
-    "source_kind": "local-file",
-    "source_path": "../dataset2026/candidatos/FONTE OFICIAL  = dadosabertos.tse.jus.b = candidatos.csv",
-    "official_url": "https://dadosabertos.tse.jus.br/dataset/candidatos",
-    "sha256": "180f14e98569982e90b392c39e499c53a71309d1c6dbc010106586fae0487292",
-    "row_count": 211,
-    "created_at": "2026-08-04T06:57:40.747Z"
+    "scope": "consulta_cand/2026/RS",
+    "source_kind": "local-dir",
+    "source_path": "../dataset2026/candidatos/consulta_cand_2026/consulta_cand_2026_RS.csv",
+    "official_url": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2026.zip",
+    "sha256": "41ea90f3fcc0f6bd8c60067dce3dc84f455a2b18821b98ad460b99543a1ffacf",
+    "row_count": 793,
+    "created_at": "2026-08-08T10:14:52.182Z"
   }
 ]
