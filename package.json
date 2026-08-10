@@ -26,6 +26,7 @@
     "orch:doctor": "bash scripts/orchestrator/doctor.sh",
     "orch:install-skill": "bash scripts/orchestrator/install-hermes-skill.sh",
     "orch:sync-gateway-node": "bash scripts/orchestrator/sync-gateway-node.sh",
+    "orch:configure-google": "bash scripts/orchestrator/configure-antigravity-readonly.sh",
     "orch:opencode": "bash scripts/orchestrator/run-opencode.sh",
     "orch:google": "bash scripts/orchestrator/run-antigravity.sh",
     "orch:gemini-legacy": "bash scripts/orchestrator/run-gemini.sh",
