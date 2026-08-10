@@ -38,10 +38,11 @@ if [[ ! -s "$HOOKS_FILE" || ! -s "$HOOK_GUARD" ]]; then
   exit 45
 fi
 
-# O Antigravity 1.1.x trata o snapshot como externo ao default-cli-project.
-# Para headless, a leitura precisa estar explicitamente allowlisted. A escrita
-# no mesmo snapshot deve estar explicitamente negada. O configurador faz backup
-# e adiciona somente essas duas regras estreitas.
+# O Antigravity 1.1.x usa default-cli-project quando nenhum projeto é indicado;
+# portanto `cd` sozinho não torna o snapshot parte do workspace. --add-dir liga
+# explicitamente o snapshot sanitizado ao workspace desta sessão headless.
+# A leitura também precisa estar allowlisted, e a escrita no mesmo snapshot
+# permanece explicitamente negada.
 if ! SNAPSHOT="$SNAPSHOT" SETTINGS="$SETTINGS" node <<'NODE'
 import fs from 'node:fs';
 const settingsPath = process.env.SETTINGS;
@@ -63,11 +64,11 @@ fi
 
 cd "$SNAPSHOT"
 
-# O executor Google recebe somente um snapshot dos arquivos rastreados do HEAD.
-# O custom agent expõe apenas ferramentas de leitura e um PreToolUse workspace
-# bloqueia colaboração/subagentes assíncronos. Isso é necessário porque agy -p
-# precisa devolver uma resposta final síncrona ao Hermes.
-SAFE_PROMPT="Trabalhe somente no snapshot atual e siga integralmente o agente read-only selecionado. Resolva esta tarefa diretamente neste agente e devolva a resposta final no mesmo turno. Não invoque subagentes, research, self, background agents ou mensageria entre agentes. Não use terminal, shell ou command. Use apenas ferramentas de leitura disponibilizadas pelo agente. Tarefa: ${PROMPT}"
+# O custom agent expõe apenas ferramentas de leitura e o PreToolUse workspace
+# bloqueia colaboração/subagentes assíncronos. /goal força a execução a buscar
+# uma resposta final no mesmo turno. --add-dir torna o snapshot um workspace
+# explícito, pois o project resolver do agy não usa cwd como fonte de verdade.
+SAFE_PROMPT="/goal Trabalhe somente no workspace explicitamente adicionado em ${SNAPSHOT}. O arquivo AGENTS.md alvo está na raiz desse workspace: ${SNAPSHOT}/AGENTS.md. Resolva esta tarefa diretamente neste agente e devolva a resposta final no mesmo turno. Não procure em HOME, customizations globais, scratch ou outros projetos. Não invoque subagentes, research, self, background agents ou mensageria entre agentes. Não use terminal, shell ou command. Use apenas ferramentas de leitura disponibilizadas pelo agente. Tarefa: ${PROMPT}"
 
 OUT="$(mktemp /tmp/eleicao2026-agy-out.XXXXXX)"
 ERR="$(mktemp /tmp/eleicao2026-agy-err.XXXXXX)"
@@ -77,6 +78,7 @@ set +e
 env HOME="$REAL_HOME" \
   timeout "${TIMEOUT_SECONDS}s" \
   agy \
+    --add-dir "$SNAPSHOT" \
     --agent "$AGENT" \
     --mode=plan \
     --sandbox \
