@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-10T02:49:40.484Z",
+  "generated_at": "2026-08-10T06:34:36.014Z",
   "source_url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_RS_div.zip",
   "fallback_source_url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2024/fotos/foto_cand2024_RS_div.zip",
   "source_dir_2026": "/home/lourenco/Projetos/dataset2026/_originais/foto_cand2026_RS_div",
-  "source_dir": "/tmp/empty-dir",
-  "metadata_dir": "/tmp/empty-dir",
+  "source_dir": "/home/lourenco/Projetos/dataset2026/jsoneleicao/foto_cand2024_RS_div",
+  "metadata_dir": null,
   "strategy": "2026 public candidates matched first by exact TSE SQ_CANDIDATO against official TSE 2026 publishable RS photos; fallback uses official TSE 2024 publishable RS photos by normalized name + party; ambiguous matches are left without photo.",
   "total_candidates": 792,
   "matched": 792,
