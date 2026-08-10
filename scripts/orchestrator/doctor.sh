@@ -191,12 +191,16 @@ if $SMOKE; then
   fi
 
   AGY_OUT="/tmp/eleicao2026-antigravity-smoke.txt"
+  AGY_EXPECTED_TITLE="$(sed -n '1s/^# //p' AGENTS.md)"
   if bash scripts/orchestrator/run-antigravity.sh \
-    'Tarefa DOCTOR. Use somente view_file/grep_search. Confirme que consegue ler AGENTS.md neste snapshot e cite o caminho.' \
-    >"$AGY_OUT" 2>/tmp/eleicao2026-antigravity-smoke.err && [[ -s "$AGY_OUT" ]]; then
-    ok "Antigravity/Google reader smoke com saída não vazia"
+    'Tarefa DOCTOR. Use somente ferramentas de leitura. Leia AGENTS.md na raiz do workspace e devolva o título inicial exato.' \
+    >"$AGY_OUT" 2>/tmp/eleicao2026-antigravity-smoke.err \
+    && [[ -s "$AGY_OUT" ]] \
+    && [[ -n "$AGY_EXPECTED_TITLE" ]] \
+    && grep -Fq "$AGY_EXPECTED_TITLE" "$AGY_OUT"; then
+    ok "Antigravity/Google comprovou leitura do AGENTS.md pelo título esperado"
   else
-    warn "Antigravity/Google reader falhou ou retornou vazio; veja /tmp/eleicao2026-antigravity-smoke.err"
+    warn "Antigravity/Google não comprovou leitura do AGENTS.md; veja /tmp/eleicao2026-antigravity-smoke.{txt,err}"
   fi
 
   CODEX_PROMPT='Retorne JSON válido conforme o schema. task_id="DOCTOR-CODEX", status="ok", summary="Codex operacional", findings=[], evidence=[], files_changed=[], tests=[], risks=[], recommended_action="nenhuma", human_review_required=false. Não leia ou altere arquivos.'
