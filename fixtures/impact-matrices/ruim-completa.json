@@ -1,0 +1,24 @@
+{
+  "schema_version": "2.9",
+  "methodology_version": "1.0.0",
+  "severity": 7,
+  "structural_type": "structural",
+  "assessments": [
+    {
+      "group": "aposentado_legal",
+      "defending_vote": "talvez",
+      "impact_direction": "mais_ou_menos",
+      "rationale": "",
+      "confidence": 1.4,
+      "sources": ["javascript:alert(1)"],
+      "reviewed": [
+        {
+          "reviewer_type": "dono_da_verdade",
+          "reviewed_at": "nao-e-data",
+          "reviewer_id": ""
+        }
+      ]
+    }
+  ],
+  "review_status": "approved"
+}

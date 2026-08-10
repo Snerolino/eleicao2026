@@ -1,0 +1,407 @@
+{
+  "$id": "https://rs.votopraquem.org/schemas/impact-matrix-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Impact Matrix v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "methodology_version",
+    "severity",
+    "structural_type",
+    "assessments",
+    "review_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "$ref": "#/$defs/semver"
+    },
+    "methodology_version": {
+      "$ref": "#/$defs/semver"
+    },
+    "severity": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "structural_type": {
+      "type": "string",
+      "enum": ["structural", "budgetary", "symbolic"]
+    },
+    "assessments": {
+      "type": "array",
+      "minItems": 0,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/assessment"
+      }
+    },
+    "review_status": {
+      "type": "string",
+      "enum": ["rascunho", "pending_review", "approved", "contested"]
+    }
+  },
+  "allOf": [
+    { "$ref": "#/$defs/maxOnePovosIndigenas" },
+    { "$ref": "#/$defs/maxOneComunidadesQuilombolas" },
+    { "$ref": "#/$defs/maxOnePopulacaoNegraPeriferica" },
+    { "$ref": "#/$defs/maxOneMulheres" },
+    { "$ref": "#/$defs/maxOneLgbtqia" },
+    { "$ref": "#/$defs/maxOnePessoasComDeficiencia" },
+    { "$ref": "#/$defs/maxOnePopulacaoRua" },
+    { "$ref": "#/$defs/maxOnePopulacaoCarceraria" },
+    { "$ref": "#/$defs/maxOneCriancasAdolescentesVulnerabilidade" },
+    { "$ref": "#/$defs/maxOnePessoasIdosasDependentes" },
+    { "$ref": "#/$defs/maxOneTrabalhadoresInformais" },
+    { "$ref": "#/$defs/maxOneAgriculturaFamiliarSemTerra" },
+    { "$ref": "#/$defs/maxOnePovosDeTerreiro" },
+    { "$ref": "#/$defs/maxOneImigrantesRefugiados" }
+  ],
+  "$defs": {
+    "semver": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "beneficiaryGroup": {
+      "type": "string",
+      "enum": [
+        "povos_indigenas",
+        "comunidades_quilombolas",
+        "populacao_negra_periferica",
+        "mulheres",
+        "lgbtqia",
+        "pessoas_com_deficiencia",
+        "populacao_rua",
+        "populacao_carceraria",
+        "criancas_adolescentes_vulnerabilidade",
+        "pessoas_idosas_dependentes",
+        "trabalhadores_informais",
+        "agricultura_familiar_sem_terra",
+        "povos_de_terreiro",
+        "imigrantes_refugiados"
+      ]
+    },
+    "defendingVote": {
+      "anyOf": [
+        { "enum": ["sim", "nao"] },
+        { "type": "null" }
+      ]
+    },
+    "assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["group", "impact_direction", "confidence", "rationale", "sources"],
+      "properties": {
+        "group": {
+          "$ref": "#/$defs/beneficiaryGroup"
+        },
+        "impact_direction": {
+          "type": "string",
+          "enum": ["positive", "negative", "mixed", "unclear"]
+        },
+        "defending_vote": {
+          "$ref": "#/$defs/defendingVote"
+        },
+        "confidence": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 20
+        },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https?://"
+          }
+        },
+        "reviewed": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["reviewer_type", "reviewed_at", "reviewer_id"],
+            "properties": {
+              "reviewer_type": {
+                "type": "string",
+                "enum": ["curadoria_interna", "painel_externo"]
+              },
+              "reviewed_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "reviewer_id": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": ["impact_direction"],
+            "properties": {
+              "impact_direction": {
+                "enum": ["positive", "negative"]
+              }
+            }
+          },
+          "then": {
+            "required": ["defending_vote"],
+            "properties": {
+              "defending_vote": {
+                "enum": ["sim", "nao"]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "required": ["impact_direction"],
+            "properties": {
+              "impact_direction": {
+                "const": "unclear"
+              }
+            }
+          },
+          "then": {
+            "required": ["defending_vote"],
+            "properties": {
+              "defending_vote": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "required": ["impact_direction"],
+            "properties": {
+              "impact_direction": {
+                "const": "mixed"
+              }
+            }
+          },
+          "then": {
+            "required": ["rationale"],
+            "properties": {
+              "defending_vote": {
+                "$ref": "#/$defs/defendingVote"
+              },
+              "rationale": {
+                "type": "string",
+                "minLength": 20
+              }
+            }
+          }
+        }
+      ]
+    },
+    "groupContainsPovosIndigenas": {
+      "type": "object",
+      "required": ["group"],
+      "properties": { "group": { "const": "povos_indigenas" } }
+    },
+    "groupContainsComunidadesQuilombolas": {
+      "type": "object",
+      "required": ["group"],
+      "properties": { "group": { "const": "comunidades_quilombolas" } }
+    },
+    "groupContainsPopulacaoNegraPeriferica": {
+      "type": "object",
+      "required": ["group"],
+      "properties": { "group": { "const": "populacao_negra_periferica" } }
+    },
+    "groupContainsMulheres": {
+      "type": "object",
+      "required": ["group"],
+      "properties": { "group": { "const": "mulheres" } }
+    },
+    "groupContainsLgbtqia": {
+      "type": "object",
+      "required": ["group"],
+      "properties": { "group": { "const": "lgbtqia" } }
+    },
+    "groupContainsPessoasComDeficiencia": {
+      "type": "object",
+      "required": ["group"],
+      "properties": { "group": { "const": "pessoas_com_deficiencia" } }
+    },
+    "groupContainsPopulacaoRua": {
+      "type": "object",
+      "required": ["group"],
+      "properties": { "group": { "const": "populacao_rua" } }
+    },
+    "groupContainsPopulacaoCarceraria": {
+      "type": "object",
+      "required": ["group"],
+      "properties": { "group": { "const": "populacao_carceraria" } }
+    },
+    "groupContainsCriancasAdolescentesVulnerabilidade": {
+      "type": "object",
+      "required": ["group"],
+      "properties": { "group": { "const": "criancas_adolescentes_vulnerabilidade" } }
+    },
+    "groupContainsPessoasIdosasDependentes": {
+      "type": "object",
+      "required": ["group"],
+      "properties": { "group": { "const": "pessoas_idosas_dependentes" } }
+    },
+    "groupContainsTrabalhadoresInformais": {
+      "type": "object",
+      "required": ["group"],
+      "properties": { "group": { "const": "trabalhadores_informais" } }
+    },
+    "groupContainsAgriculturaFamiliarSemTerra": {
+      "type": "object",
+      "required": ["group"],
+      "properties": { "group": { "const": "agricultura_familiar_sem_terra" } }
+    },
+    "groupContainsPovosDeTerreiro": {
+      "type": "object",
+      "required": ["group"],
+      "properties": { "group": { "const": "povos_de_terreiro" } }
+    },
+    "groupContainsImigrantesRefugiados": {
+      "type": "object",
+      "required": ["group"],
+      "properties": { "group": { "const": "imigrantes_refugiados" } }
+    },
+    "maxOnePovosIndigenas": {
+      "properties": {
+        "assessments": {
+          "contains": { "$ref": "#/$defs/groupContainsPovosIndigenas" },
+          "minContains": 0,
+          "maxContains": 1
+        }
+      }
+    },
+    "maxOneComunidadesQuilombolas": {
+      "properties": {
+        "assessments": {
+          "contains": { "$ref": "#/$defs/groupContainsComunidadesQuilombolas" },
+          "minContains": 0,
+          "maxContains": 1
+        }
+      }
+    },
+    "maxOnePopulacaoNegraPeriferica": {
+      "properties": {
+        "assessments": {
+          "contains": { "$ref": "#/$defs/groupContainsPopulacaoNegraPeriferica" },
+          "minContains": 0,
+          "maxContains": 1
+        }
+      }
+    },
+    "maxOneMulheres": {
+      "properties": {
+        "assessments": {
+          "contains": { "$ref": "#/$defs/groupContainsMulheres" },
+          "minContains": 0,
+          "maxContains": 1
+        }
+      }
+    },
+    "maxOneLgbtqia": {
+      "properties": {
+        "assessments": {
+          "contains": { "$ref": "#/$defs/groupContainsLgbtqia" },
+          "minContains": 0,
+          "maxContains": 1
+        }
+      }
+    },
+    "maxOnePessoasComDeficiencia": {
+      "properties": {
+        "assessments": {
+          "contains": { "$ref": "#/$defs/groupContainsPessoasComDeficiencia" },
+          "minContains": 0,
+          "maxContains": 1
+        }
+      }
+    },
+    "maxOnePopulacaoRua": {
+      "properties": {
+        "assessments": {
+          "contains": { "$ref": "#/$defs/groupContainsPopulacaoRua" },
+          "minContains": 0,
+          "maxContains": 1
+        }
+      }
+    },
+    "maxOnePopulacaoCarceraria": {
+      "properties": {
+        "assessments": {
+          "contains": { "$ref": "#/$defs/groupContainsPopulacaoCarceraria" },
+          "minContains": 0,
+          "maxContains": 1
+        }
+      }
+    },
+    "maxOneCriancasAdolescentesVulnerabilidade": {
+      "properties": {
+        "assessments": {
+          "contains": { "$ref": "#/$defs/groupContainsCriancasAdolescentesVulnerabilidade" },
+          "minContains": 0,
+          "maxContains": 1
+        }
+      }
+    },
+    "maxOnePessoasIdosasDependentes": {
+      "properties": {
+        "assessments": {
+          "contains": { "$ref": "#/$defs/groupContainsPessoasIdosasDependentes" },
+          "minContains": 0,
+          "maxContains": 1
+        }
+      }
+    },
+    "maxOneTrabalhadoresInformais": {
+      "properties": {
+        "assessments": {
+          "contains": { "$ref": "#/$defs/groupContainsTrabalhadoresInformais" },
+          "minContains": 0,
+          "maxContains": 1
+        }
+      }
+    },
+    "maxOneAgriculturaFamiliarSemTerra": {
+      "properties": {
+        "assessments": {
+          "contains": { "$ref": "#/$defs/groupContainsAgriculturaFamiliarSemTerra" },
+          "minContains": 0,
+          "maxContains": 1
+        }
+      }
+    },
+    "maxOnePovosDeTerreiro": {
+      "properties": {
+        "assessments": {
+          "contains": { "$ref": "#/$defs/groupContainsPovosDeTerreiro" },
+          "minContains": 0,
+          "maxContains": 1
+        }
+      }
+    },
+    "maxOneImigrantesRefugiados": {
+      "properties": {
+        "assessments": {
+          "contains": { "$ref": "#/$defs/groupContainsImigrantesRefugiados" },
+          "minContains": 0,
+          "maxContains": 1
+        }
+      }
+    }
+  }
+}

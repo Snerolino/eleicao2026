@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "methodology_version": "1.0.0",
+  "severity": 4,
+  "structural_type": "structural",
+  "assessments": [
+    {
+      "group": "populacao_negra_periferica",
+      "defending_vote": "nao",
+      "impact_direction": "negative",
+      "rationale": "Amplia competencia federal em seguranca publica sem contrapartida de controle de letalidade policial, cujo historico de uso desproporcional recai sobre jovens negros perifericos.",
+      "confidence": 0.7,
+      "sources": ["https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2300000"],
+      "reviewed": [
+        {
+          "reviewer_type": "curadoria_interna",
+          "reviewed_at": "2026-08-10T03:00:00Z",
+          "reviewer_id": "curadoria-01"
+        }
+      ]
+    }
+  ],
+  "review_status": "pending_review"
+}

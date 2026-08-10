@@ -1,5 +1,9 @@
 # Changelog do contexto exportado
 
+## 2026-08-10
+
+- Fase 0 Matriz de Impacto Populacional v1 iniciada: contrato/metodologia/governança/JSON Schema definidos em branch feat/matriz-impacto-populacional-v1; nenhuma migration; nenhuma alteração remota.
+
 ## 2026-08-04
 
 - Criada a superficie curada `docs/context-export`.

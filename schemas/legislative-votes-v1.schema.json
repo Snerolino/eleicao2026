@@ -1,0 +1,75 @@
+{
+  "$id": "https://rs.votopraquem.org/schemas/legislative-votes-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Legislative Votes v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["deputy_id", "proposition_version_id", "value", "recorded_at", "source"],
+  "properties": {
+    "deputy_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "proposition_version_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "value": {
+      "type": "string",
+      "enum": ["sim", "nao", "abstencao", "ausente", "obstrucao"]
+    },
+    "absence_type": {
+      "anyOf": [
+        { "type": "null" },
+        { "enum": ["estrategica", "obstrucao_coordenada", "justificada"] }
+      ]
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": ["value"],
+        "properties": {
+          "value": {
+            "enum": ["sim", "nao", "abstencao"]
+          }
+        }
+      },
+      "then": {
+        "required": ["absence_type"],
+        "properties": {
+          "absence_type": {
+            "const": null
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": ["value"],
+        "properties": {
+          "value": {
+            "enum": ["ausente", "obstrucao"]
+          }
+        }
+      },
+      "then": {
+        "required": ["absence_type"],
+        "properties": {
+          "absence_type": {
+            "enum": ["estrategica", "obstrucao_coordenada", "justificada"]
+          }
+        }
+      }
+    }
+  ]
+}
