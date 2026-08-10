@@ -2,13 +2,14 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-REAL_HOME="${HERMES_REAL_HOME:-/home/lourenco}"
+REAL_HOME="${HERMES_REAL_HOME:-$(getent passwd "$(id -un)" | cut -d: -f6)}"
 MODEL="${ANTIGRAVITY_AGENT_MODEL:-Gemini 3.5 Flash (Low)}"
 AGENT="${ANTIGRAVITY_AGENT_NAME:-eleicao2026-reader}"
 TIMEOUT_SECONDS="${ORCH_EXECUTOR_TIMEOUT:-480}"
 
-if [[ ! -d "$REAL_HOME" ]]; then
-  REAL_HOME="$(getent passwd "$(id -un)" | cut -d: -f6)"
+if [[ -z "$REAL_HOME" || ! -d "$REAL_HOME" ]]; then
+  echo 'home real não resolvido' >&2
+  exit 41
 fi
 
 if [[ $# -gt 0 ]]; then
