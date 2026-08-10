@@ -26,7 +26,8 @@
     "orch:opencode": "bash scripts/orchestrator/run-opencode.sh",
     "orch:google": "bash scripts/orchestrator/run-antigravity.sh",
     "orch:gemini-legacy": "bash scripts/orchestrator/run-gemini.sh",
-    "orch:codex": "bash scripts/orchestrator/run-codex-readonly.sh"
+    "orch:codex": "bash scripts/orchestrator/run-codex-readonly.sh",
+    "orch:local": "bash scripts/orchestrator/run-local-fallback.sh"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",
