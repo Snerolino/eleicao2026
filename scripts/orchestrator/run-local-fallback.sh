@@ -2,14 +2,15 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-REAL_HOME="${HERMES_REAL_HOME:-/home/lourenco}"
+REAL_HOME="${HERMES_REAL_HOME:-$(getent passwd "$(id -un)" | cut -d: -f6)}"
 MODEL="${LOCAL_AGENT_MODEL:-gpt-oss:20b}"
 TIMEOUT_SECONDS="${ORCH_EXECUTOR_TIMEOUT:-600}"
 OUT="$(mktemp)"
 trap 'rm -f "$OUT"' EXIT
 
-if [[ ! -d "$REAL_HOME" ]]; then
-  REAL_HOME="$(getent passwd "$(id -un)" | cut -d: -f6)"
+if [[ -z "$REAL_HOME" || ! -d "$REAL_HOME" ]]; then
+  echo 'home real não resolvido' >&2
+  exit 41
 fi
 
 if [[ $# -gt 0 ]]; then
