@@ -11,6 +11,13 @@ if [[ ! -d "$REAL_HOME" ]]; then
   REAL_HOME="$(getent passwd "$(id -un)" | cut -d: -f6)"
 fi
 
+BASE_HOME="${HERMES_BASE_HOME:-$REAL_HOME/.hermes}"
+if [[ "$PROFILE" == "default" ]]; then
+  PROFILE_HOME="$BASE_HOME"
+else
+  PROFILE_HOME="$BASE_HOME/profiles/$PROFILE"
+fi
+
 PASS=0
 WARN=0
 FAIL=0
@@ -40,7 +47,7 @@ command -v ollama >/dev/null 2>&1 && ok "ollama disponível (fallback local pode
 [[ -s "$REAL_HOME/.codex/auth.json" ]] && ok "Codex auth presente (conteúdo não lido)" || warn "Codex auth não encontrado em ~/.codex/auth.json"
 [[ -d "$REAL_HOME/.gemini/antigravity-cli" ]] && ok "Antigravity home presente (conteúdo secreto não lido)" || warn "Antigravity ainda não inicializado/autenticado"
 [[ -s "$REAL_HOME/.local/share/opencode/auth.json" ]] && ok "OpenCode auth presente (conteúdo não lido)" || warn "OpenCode auth não encontrado"
-[[ -d "$REAL_HOME/.hermes" ]] && ok "Hermes home presente" || fail "Hermes home não encontrado"
+[[ -d "$BASE_HOME" ]] && ok "Hermes home presente" || fail "Hermes home não encontrado"
 
 cd "$ROOT" || exit 1
 BRANCH="$(git branch --show-current 2>/dev/null || true)"
@@ -57,7 +64,9 @@ for f in \
   .orchestrator/STATE.md \
   .orchestrator/routing.yaml \
   .orchestrator/schemas/executor-result.schema.json \
+  .orchestrator/hermes-skill/SKILL.md \
   scripts/orchestrator/prepare-snapshot.sh \
+  scripts/orchestrator/install-hermes-skill.sh \
   supabase/migrations/20260810090000_create_legislative_core.sql \
   supabase/migrations/20260810090400_create_impact_rls_and_approval.sql; do
   [[ -f "$f" ]] && ok "$f presente" || fail "$f ausente"
@@ -72,6 +81,18 @@ fi
 
 if hermes profile show "$PROFILE" >/dev/null 2>&1; then
   ok "perfil Hermes $PROFILE existe"
+
+  SKILL_PATH="$PROFILE_HOME/skills/software-development/eleicao2026-orchestrator/SKILL.md"
+  [[ -s "$SKILL_PATH" ]] && ok "skill eleicao2026-orchestrator instalada no perfil" || warn "skill do projeto ainda não instalada; rode npm run orch:install-skill"
+
+  # Check silencioso: não imprime nem lê valores secretos. Um TERMINAL_ENV legado
+  # pode sobrepor terminal.backend em instalações antigas do Hermes.
+  if [[ -f "$PROFILE_HOME/.env" ]] && grep -q '^TERMINAL_ENV=' "$PROFILE_HOME/.env" 2>/dev/null; then
+    warn "perfil contém TERMINAL_ENV legado em .env; revise/remova esse override se backend local não for respeitado"
+  else
+    ok "nenhum TERMINAL_ENV legado detectado no perfil"
+  fi
+
   if hermes -p "$PROFILE" config check >/dev/null 2>&1; then
     ok "Hermes config check ($PROFILE)"
   else
