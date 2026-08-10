@@ -2,7 +2,10 @@
 
 ## 2026-08-10
 
-- Fase 0 Matriz de Impacto Populacional v1 iniciada: contrato/metodologia/governança/JSON Schema definidos em branch feat/matriz-impacto-populacional-v1; nenhuma migration; nenhuma alteração remota.
+- Fase 0 Matriz de Impacto Populacional v1: contrato/metodologia/governança/JSON Schema definidos em branch feat/matriz-impacto-populacional-v1.
+- Fase 1: testes (42) + `src/domain/impact/` (contract, alignment, score, review-gates).
+- Migrations 2026081009xxxx aplicadas: núcleo legislativo, vocabulário, matriz, revisão e RLS/RPC — schema expandido (ver SCHEMA.md).
+- Nenhuma alteração remota; tudo local/na branch.
 
 ## 2026-08-04
 

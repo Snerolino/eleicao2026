@@ -1,6 +1,6 @@
 # Contrato de schema para o coletor de candidatos
 
-Fotografia em: 2026-08-04
+Fotografia em: 2026-08-10 (Fase 1 da Matriz de Impacto Populacional v1)
 
 Fontes: migrations versionadas em `supabase/migrations` e tipos gerados em
 `src/types/supabase.ts`. Este resumo nao contem credenciais nem dados de producao.
@@ -79,6 +79,35 @@ Fontes: migrations versionadas em `supabase/migrations` e tipos gerados em
 - `retract_claim` muda a claim publica para `retracted`.
 - O coletor nao chama as RPCs de publicacao, correcao ou retracao.
 
+## Tabelas de impacto (Fase 1, migrations 2026081009xxxx)
+
+Novas tabelas da Matriz de Impacto Populacional v1 (todas com RLS habilitado):
+
+- `legislative_propositions` — identidade logica da proposicao (`house`, `number`, `year`, `external_id` unico por casa).
+- `proposition_versions` — texto votado imutavel (`version_key`, `text_hash`, `effective_from`; unico por proposicao+versao).
+- `voting_events` — evento de votacao ligado a versao votada.
+- `legislative_votes` — SOMENTE fato: `value` (`sim|nao|abstencao|ausente|obstrucao`) e `absence_type` condicionado (`sim/nao/abstencao` → null; `ausente/obstrucao` → `estrategica|obstrucao_coordenada|justificada`). Nunca armazena impacto/alinhamento/grupo/score.
+- `beneficiary_groups` — catalogo versionado (14 slugs v1). Slugs nunca renomeados; evolucao via `deprecated_at` + `replacement_slug`. `geral` nao e grupo pontuavel.
+- `beneficiary_group_aliases` — variantes de grafia.
+- `impact_matrices` — matriz por `proposition_version_id` + `methodology_version` (unico); `severity` 1..5; `structural_type` (`structural|budgetary|symbolic`); `review_status` (`rascunho|pending_review|approved|contested`).
+- `impact_assessments` — por grupo: `defending_vote` (`sim|nao`), `impact_direction` (`positive|negative|mixed|unclear`), `rationale` (>= 20 chars), `confidence` (0..1]; unico por matriz+grupo. Trigger garante: positive/negative → defending_vote obrigatorio; unclear → null.
+- `impact_assessment_sources` — ligacao N:N assessment ↔ `source_references`.
+- `impact_reviews` — revisao propria da matriz (`curadoria_interna|painel_externo`; `approved|rejected|needs_changes`).
+- `impact_contestations` — contestacao publica (`open|under_review|resolved|rejected`); justificativa original nunca apagada.
+
+RPC `approve_impact_matrix(uuid)` — aprovacao transacional que exige:
+1. matriz em `pending_review`;
+2. assessment valido com fontes e confidence na faixa;
+3. defending_vote conforme metodologia;
+4. revisao interna aprovada de editor (`has_editor_role`);
+5. severity >= 4 OU qualquer confidence < 0.6 → revisao externa (`painel_externo`) aprovada;
+6. sem contestacao bloqueante (`open|under_review`).
+Aprovado → `review_status='approved'` + `approved_at=now()`.
+
+Helpers internos: `impact_matrix_has_internal_approval`, `impact_matrix_has_external_approval`, `impact_matrix_has_blocking_contestation`, `impact_assessment_defending_ok` (trigger).
+
+RLS: publico le somente `approved|contested` de matriz/assessments/fontes; `impact_reviews` so editores; `impact_contestations` publico le `open|under_review|resolved`. Grants: `approve_impact_matrix` somente `authenticated` (revogado de `anon`).
+
 ## RLS e credenciais
 
 - `candidates`: leitura publica dos dados basicos.
@@ -89,15 +118,15 @@ Fontes: migrations versionadas em `supabase/migrations` e tipos gerados em
 - Uma migration do coletor deve preservar RLS e grants; nao criar caminho anonimo
   para dados pendentes.
 
-## Pontos que a Fase 0 ainda precisa decidir
+## Pontos ainda em aberto (Fase 1)
 
 - Estrutura da fila/jobs por candidato; nao existe tabela dedicada no contrato
   resumido acima.
-- Categoria final das claims de historico.
-- Mapeamento A/B/C para `confidence_score` 1..5 sem produzir score de candidato.
-- Estrategia idempotente para versoes identicas por `sq_candidato` e
-  `id_registro`, pois `claims` ainda nao tem `id_registro` dedicado.
-- Representacao pesquisavel do JSON do dossie: hoje `claims.content` e `text`.
-- Vinculo atomico entre cada bruto privado e sua `source_references` publica.
+- Importador de votos e proposicoes (dry-run) ainda nao implementado; schema
+  pronto em `legislative_*`.
+- Vincular `legislator_id`/`candidate_id` de `legislative_votes` ao cadastro
+  local de candidatos (hoje `candidate_id` e FK opcional).
+- Persistir o score calculado por parlamentar (funcao pura pronta em
+  `src/domain/impact/score.ts`; ainda sem tabela/RPC de persistencia).
 
-Nao criar migration para esses pontos antes da revisao humana da Fase 0.
+Nao criar migration para esses pontos antes da revisao humana.
