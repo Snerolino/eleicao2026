@@ -31,8 +31,9 @@ receber o histórico completo.
 
 Executores disponíveis:
 
-- **OpenCode + modelo gratuito**: triagem barata, inventário, revisão simples e segunda opinião. Caminho orquestrado é `read-only` e sem MCP.
-- **Gemini CLI**: leitura ampla, mapeamento de repositório, síntese de documentação e contexto grande. Caminho orquestrado usa Plan Mode/read-only.
+- **OpenCode + DeepSeek gratuito**: triagem barata, inventário, revisão simples e segunda opinião. Caminho orquestrado é `read-only`, sem MCP e roda sobre snapshot Git sanitizado.
+- **Google Antigravity CLI**: rota da assinatura Google AI Pro para leitura ampla, mapeamento, síntese e contexto grande. Roda em `-p`, dentro de snapshot Git sanitizado; pode alterar apenas o snapshot descartável, nunca a worktree viva.
+- **Gemini CLI legacy**: somente compatibilidade quando houver API key/conta enterprise explicitamente configurada. Não é rota da assinatura Google AI Pro individual.
 - **Codex MCP stdio**: executor técnico preferido para implementação, debugging, testes e revisão final. Começar em Luna e escalar para Terra/Sol somente quando houver evidência.
 - **Codex exec**: fallback read-only se o MCP estiver indisponível.
 - **Ollama local**: fallback opcional somente se o doctor confirmar disponibilidade.
@@ -47,12 +48,14 @@ Regras:
 6. Apenas um executor por vez pode escrever em uma mesma worktree.
 7. Se o writer perder quota/timeout, parar a mutação; um fallback gratuito pode analisar e preparar handoff, mas não assumir automaticamente a escrita.
 8. O runtime global do Hermes permanece o padrão. Não ativar Codex App-Server como runtime global sem decisão específica, pois Hermes deve preservar suas próprias ferramentas de memória/delegação.
+9. OpenCode/Antigravity trabalham sobre `git archive HEAD`. Se a tarefa depende de alterações ainda não commitadas, não fingir que esses executores as enxergam: usar Codex na worktree viva ou criar checkpoint autorizado.
 
 ## Regras de dados e segurança
 
 - Nunca commitar `.env*`, tokens, service role, Cloudflare/GitHub tokens, connection strings ou segredos.
 - `service_role` nunca entra em `VITE_*`, build, frontend ou logs.
-- Modelos gratuitos recebem apenas conteúdo público/sanitizado do repositório. Nunca enviar `.env*`, raw documents, PII, tokens, secrets ou service role.
+- Modelos gratuitos/por assinatura de terceiros recebem apenas conteúdo público/sanitizado do repositório. Nunca enviar `.env*`, raw documents, PII, tokens, secrets ou service role.
+- OpenCode e Antigravity orquestrados recebem um snapshot composto exclusivamente por arquivos rastreados do `HEAD`.
 - Dados públicos do frontend devem vir de Supabase anon/publishable ou `data/public-candidates.json`.
 - `../dataset2026` só deve ser lido por comandos explícitos de ingestão/refresh, nunca silenciosamente no build.
 - Campos raw/PII/documentos crus não podem ir para snapshot público.
