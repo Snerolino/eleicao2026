@@ -34,13 +34,16 @@ cd "$SNAPSHOT"
 
 # O executor Google recebe somente um snapshot dos arquivos rastreados do HEAD.
 # O custom agent versionado expõe apenas view_file + grep_search e desliga shell.
+# --mode=plan é obrigatório no headless: é a superfície oficial do agy para
+# investigação com ferramentas de leitura antes de qualquer alteração.
 # --sandbox permanece como defesa adicional. Nunca usar --dangerously-skip-permissions.
-SAFE_PROMPT="Trabalhe somente no snapshot atual e siga integralmente o agente read-only selecionado. Tarefa: ${PROMPT}"
+SAFE_PROMPT="Trabalhe somente no snapshot atual e siga integralmente o agente read-only selecionado. Não use terminal, shell ou command. Use apenas ferramentas de leitura disponibilizadas pelo agente. Tarefa: ${PROMPT}"
 
 exec env HOME="$REAL_HOME" \
   timeout "${TIMEOUT_SECONDS}s" \
   agy \
     --agent "$AGENT" \
+    --mode=plan \
     --sandbox \
     --print-timeout "${TIMEOUT_SECONDS}s" \
     --model "$MODEL" \
