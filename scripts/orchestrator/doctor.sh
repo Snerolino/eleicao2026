@@ -246,19 +246,107 @@ fi
 if $SMOKE; then
   printf '\n=== smoke dos executores e rota obrigatória ===\n'
 
-  # O modo --smoke é o gate autoritativo de retomada. Além dos preflights acima,
-  # exercita a rota configurada Hermes -> MCP Codex em uma tarefa read-only.
+  # O gate E2E não confia no texto final do modelo. A sessão one-shot é
+  # persistida pelo Hermes em state.db; abaixo validamos tool_call + tool result
+  # estruturados associados a um probe único desta execução.
+  HERMES_MCP_PROBE="ORCH_MCP_${$}_$(date +%s)"
   HERMES_MCP_OUT="$DIAG_DIR/hermes-codex-mcp-smoke.out"
   HERMES_MCP_ERR="$DIAG_DIR/hermes-codex-mcp-smoke.err"
-  HERMES_MCP_PROMPT='Tarefa DOCTOR. Use obrigatoriamente o servidor MCP nomeado codex para executar uma tarefa read-only no projeto atual. Pelo MCP Codex, leia somente o título inicial de AGENTS.md. Não altere arquivos e não use terminal ou ferramentas de arquivo do próprio Hermes. Se a chamada MCP funcionar, responda ao final exatamente HERMES_CODEX_MCP_OK. Se não conseguir usar o servidor codex, responda MCP_FAIL.'
-  if env HOME="$REAL_HOME" \
-      timeout 120s hermes -p "$PROFILE" chat -v -q "$HERMES_MCP_PROMPT" \
-      >"$HERMES_MCP_OUT" 2>"$HERMES_MCP_ERR" \
-    && grep -Fq 'HERMES_CODEX_MCP_OK' "$HERMES_MCP_OUT" \
-    && cat "$HERMES_MCP_OUT" "$HERMES_MCP_ERR" | grep -Eqi 'mcp[^[:alnum:]]*codex|codex[^[:alnum:]]*mcp'; then
-    ok "Hermes -> Codex MCP comprovado ponta a ponta em read-only"
+  HERMES_MCP_EXPECTED_TITLE="$(sed -n '1s/^# //p' AGENTS.md)"
+  HERMES_MCP_PROMPT="Tarefa DOCTOR probe ${HERMES_MCP_PROBE}. Use obrigatoriamente o servidor MCP nomeado codex para uma tarefa read-only no projeto atual. Pelo MCP Codex, leia somente AGENTS.md e peça que devolva o título inicial exato do arquivo. Não altere arquivos e não use terminal ou ferramentas de arquivo do próprio Hermes."
+
+  env HOME="$REAL_HOME" \
+    timeout 120s hermes -p "$PROFILE" chat -q "$HERMES_MCP_PROMPT" \
+    >"$HERMES_MCP_OUT" 2>"$HERMES_MCP_ERR"
+  HERMES_MCP_STATUS=$?
+
+  if [[ $HERMES_MCP_STATUS -eq 0 \
+    && -n "$HERMES_MCP_EXPECTED_TITLE" \
+    && -f "$PROFILE_HOME/state.db" \
+    && $(command -v python3 >/dev/null 2>&1; echo $?) -eq 0 ]] \
+    && PROFILE_DB="$PROFILE_HOME/state.db" \
+       PROBE_ID="$HERMES_MCP_PROBE" \
+       EXPECTED_TITLE="$HERMES_MCP_EXPECTED_TITLE" \
+       python3 <<'PY'
+import json
+import os
+import re
+import sqlite3
+import sys
+
+path = os.environ["PROFILE_DB"]
+probe = os.environ["PROBE_ID"]
+expected = os.environ["EXPECTED_TITLE"]
+name_re = re.compile(r"^mcp(?:__|_)codex(?:__|_)", re.I)
+
+try:
+    conn = sqlite3.connect(f"file:{path}?mode=ro", uri=True, timeout=5)
+    row = conn.execute(
+        """
+        SELECT session_id
+        FROM messages
+        WHERE role = 'user' AND content LIKE ?
+        ORDER BY id DESC
+        LIMIT 1
+        """,
+        (f"%{probe}%",),
+    ).fetchone()
+    if not row:
+        sys.exit(2)
+
+    session_id = row[0]
+    rows = conn.execute(
+        """
+        SELECT role, content, tool_call_id, tool_calls, tool_name
+        FROM messages
+        WHERE session_id = ?
+        ORDER BY id
+        """,
+        (session_id,),
+    ).fetchall()
+finally:
+    try:
+        conn.close()
+    except Exception:
+        pass
+
+call_names = {}
+saw_codex_call = False
+saw_valid_result = False
+
+for role, content, tool_call_id, tool_calls, tool_name in rows:
+    if tool_calls:
+        try:
+            calls = json.loads(tool_calls)
+        except Exception:
+            calls = []
+        if isinstance(calls, dict):
+            calls = [calls]
+        for call in calls if isinstance(calls, list) else []:
+            if not isinstance(call, dict):
+                continue
+            fn = call.get("function") or {}
+            name = fn.get("name") if isinstance(fn, dict) else None
+            name = name or call.get("name") or ""
+            call_id = call.get("id") or ""
+            if call_id:
+                call_names[call_id] = name
+            if name_re.search(name):
+                saw_codex_call = True
+
+    if role == "tool":
+        resolved_name = tool_name or call_names.get(tool_call_id or "", "")
+        if name_re.search(resolved_name or ""):
+            saw_codex_call = True
+            if expected in (content or ""):
+                saw_valid_result = True
+
+sys.exit(0 if saw_codex_call and saw_valid_result else 3)
+PY
+  then
+    ok "Hermes -> Codex MCP comprovado por tool_call + resultado estruturados em read-only"
   else
-    fail "Hermes não comprovou a rota MCP Codex configurada"
+    fail "Hermes não comprovou a rota MCP Codex por evidência estruturada"
     [[ -s "$HERMES_MCP_ERR" ]] && sed -n '1,30p' "$HERMES_MCP_ERR" >&2
   fi
 
