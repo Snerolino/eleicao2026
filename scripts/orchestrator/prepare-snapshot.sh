@@ -59,10 +59,25 @@ if [[ -n "$SYMLINK" ]]; then
   exit 43
 fi
 
-# Última barreira antes de liberar o snapshot. Procure apenas padrões de alta
-# confiança e reporte SOMENTE o caminho, nunca a linha/conteúdo encontrado.
-SECRET_PATTERN='Authorization:[[:space:]]*Bearer[[:space:]]+[A-Za-z0-9._~+/-]{24,}|(CLOUDFLARE_API_TOKEN|OPENAI_API_KEY|SUPABASE_SERVICE_ROLE_KEY|AWS_SECRET_ACCESS_KEY)[[:space:]]*=[[:space:]]*[^[:space:]#]{20,}|github_pat_[A-Za-z0-9_]{20,}|gh[pousr]_[A-Za-z0-9]{20,}|-----BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY-----'
-SECRET_LEAK="$(grep -RIlE --binary-files=without-match -- "$SECRET_PATTERN" "$TARGET" 2>/dev/null | head -n1 || true)"
+# Última barreira antes de liberar o snapshot. Procure apenas formatos de alta
+# confiança, para que regexes/fixtures sintéticas de testes não sejam tratadas
+# como credenciais reais. Reporte SOMENTE o caminho, nunca linha ou conteúdo.
+SECRET_PATTERNS=(
+  'Authorization:[[:space:]]*Bearer[[:space:]]+[A-Za-z0-9._~+/-]{24,}'
+  "CLOUDFLARE_API_TOKEN[[:space:]]*=[[:space:]]*[\"']?[A-Za-z0-9_-]{30,}[\"']?"
+  "OPENAI_API_KEY[[:space:]]*=[[:space:]]*[\"']?sk-(proj-)?[A-Za-z0-9_-]{20,}[\"']?"
+  "SUPABASE_SERVICE_ROLE_KEY[[:space:]]*=[[:space:]]*[\"']?eyJ[A-Za-z0-9_-]{10,}\\.[A-Za-z0-9_-]{10,}\\.[A-Za-z0-9_-]{10,}[\"']?"
+  "AWS_SECRET_ACCESS_KEY[[:space:]]*=[[:space:]]*[\"']?[A-Za-z0-9/+=]{40}[\"']?"
+  'github_pat_[A-Za-z0-9_]{20,}'
+  'gh[pousr]_[A-Za-z0-9]{20,}'
+  '-----BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY-----'
+)
+GREP_SECRET_ARGS=()
+for pattern in "${SECRET_PATTERNS[@]}"; do
+  GREP_SECRET_ARGS+=( -e "$pattern" )
+done
+
+SECRET_LEAK="$(grep -RIlE --binary-files=without-match "${GREP_SECRET_ARGS[@]}" -- "$TARGET" 2>/dev/null | head -n1 || true)"
 if [[ -n "$SECRET_LEAK" ]]; then
   rm -rf -- "$TARGET"
   echo "snapshot rejeitado: material secreto rastreado detectado em ${SECRET_LEAK#$TARGET/}" >&2
