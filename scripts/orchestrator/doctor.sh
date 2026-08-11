@@ -125,15 +125,16 @@ const cfg = JSON.parse(fs.readFileSync(process.env.SETTINGS, 'utf8') || '{}');
 const allow = cfg?.permissions?.allow ?? [];
 const deny = cfg?.permissions?.deny ?? [];
 const ask = cfg?.permissions?.ask ?? [];
-if (ask.includes('read_file(*)')) process.exit(5);
-if (allow.some((rule) => /^read_file\(.*\*.*\)$/.test(rule))) process.exit(6);
-if (!allow.includes(`read_file(${snapshot})`)) process.exit(3);
+const allowRule = `read_file(${snapshot})`;
+if (allow.some((rule) => /^read_file\(/.test(rule) && rule !== allowRule)) process.exit(6);
+if (ask.some((rule) => /^read_file\(/.test(rule))) process.exit(7);
+if (!allow.includes(allowRule)) process.exit(3);
 if (!deny.includes(`write_file(${snapshot})`)) process.exit(4);
 NODE
   AGY_POLICY_STATUS=$?
   case "$AGY_POLICY_STATUS" in
     0) ok "Antigravity possui allow read_file + deny write_file estreitos no snapshot" ;;
-    5|6) fail "Antigravity possui permissão read_file ampla; remova-a antes de usar a rota Google" ;;
+    6|7) fail "Antigravity possui permissão read_file fora do snapshot; remova-a antes de usar a rota Google" ;;
     *) warn "Antigravity sem policy completa do snapshot; rode npm run orch:configure-google" ;;
   esac
 else
@@ -171,7 +172,7 @@ if hermes profile show "$PROFILE" >/dev/null 2>&1; then
     warn "Codex MCP ainda não aparece no perfil $PROFILE"
   fi
 else
-  warn "perfil Hermes $PROFILE ainda não existe"
+  fail "perfil Hermes $PROFILE ainda não existe"
 fi
 
 if command -v systemctl >/dev/null 2>&1 && systemctl --user cat "$SERVICE" >/dev/null 2>&1; then
