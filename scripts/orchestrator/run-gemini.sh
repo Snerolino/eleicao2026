@@ -42,5 +42,5 @@ SNAPSHOT="$(ORCH_SNAPSHOT_LOCK_HELD=1 bash "$ROOT/scripts/orchestrator/prepare-s
 cd "$SNAPSHOT"
 
 exec env HOME="$REAL_HOME" \
-  timeout "${TIMEOUT_SECONDS}s" \
+  timeout --signal=TERM --kill-after=10s "${TIMEOUT_SECONDS}s" \
   gemini "${ARGS[@]}" -p "$PROMPT"
