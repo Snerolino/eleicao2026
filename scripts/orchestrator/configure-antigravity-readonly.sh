@@ -10,7 +10,12 @@ if [[ -z "$REAL_HOME" || ! -d "$REAL_HOME" ]]; then
 fi
 
 SETTINGS="$REAL_HOME/.gemini/antigravity-cli/settings.json"
-SNAPSHOT="$(bash "$ROOT/scripts/orchestrator/prepare-snapshot.sh" antigravity)"
+RUNTIME="$ROOT/.orchestrator/runtime"
+mkdir -p "$RUNTIME/locks"
+exec 8>"$RUNTIME/locks/snapshot-antigravity.lock"
+flock 8
+
+SNAPSHOT="$(ORCH_SNAPSHOT_LOCK_HELD=1 bash "$ROOT/scripts/orchestrator/prepare-snapshot.sh" antigravity)"
 mkdir -p "$(dirname "$SETTINGS")"
 
 if [[ -f "$SETTINGS" ]]; then
@@ -39,9 +44,14 @@ for (const key of ['allow', 'deny', 'ask']) {
 }
 
 const broadAsk = cfg.permissions.ask.includes('read_file(*)');
-if (broadAsk) {
-  console.error('ERRO: settings.json contém ask read_file(*), que tem precedência sobre allow.');
-  console.error('Remova ou restrinja essa regra interativamente em /permissions antes de continuar.');
+const broadAllows = cfg.permissions.allow.filter(
+  (rule) => /^read_file\(.*\*.*\)$/.test(rule),
+);
+
+if (broadAsk || broadAllows.length > 0) {
+  console.error('ERRO: settings.json contém permissão ampla de read_file que quebra o isolamento do snapshot.');
+  if (broadAllows.length > 0) console.error(`ALLOW amplo: ${broadAllows.join(', ')}`);
+  console.error('Remova/restrinja a regra em /permissions antes de continuar.');
   process.exit(2);
 }
 
@@ -56,7 +66,7 @@ fs.writeFileSync(settingsPath, JSON.stringify(cfg, null, 2) + '\n', { mode: 0o60
 
 console.log(`ALLOW ${allowRule}`);
 console.log(`DENY  ${denyWriteRule}`);
-console.log('Nenhuma permissão command(*), mcp(*) ou write_file(*) foi adicionada.');
+console.log('Nenhuma permissão ampla read_file(*), command(*), mcp(*) ou write_file(*) foi adicionada.');
 NODE
 
 printf '\nConfiguração Antigravity read-only aplicada somente ao snapshot sanitizado.\n'
