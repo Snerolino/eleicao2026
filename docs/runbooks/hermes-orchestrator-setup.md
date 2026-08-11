@@ -132,9 +132,10 @@ hermes -p eleicao2026 mcp list
 npm run orch:doctor
 ```
 
-O preset configura `codex mcp-server` por stdio. Não dependa de um subcomando
-`hermes mcp test`: o doctor faz preflight do servidor e o gate real deve ser uma
-chamada Hermes → MCP Codex em read-only.
+O preset configura `codex mcp-server` por stdio. O doctor rápido valida registro
+e inicialização do servidor. O gate autoritativo é `orch:doctor -- --smoke`, que
+faz também uma chamada real Hermes → MCP Codex em read-only e exige evidência
+do uso da rota configurada.
 
 Com `terminal.home_mode=real`, Codex, `gh` e demais CLIs locais enxergam suas
 credenciais normais do usuário.
@@ -315,7 +316,9 @@ else
 fi
 ```
 
-O doctor não baixa modelos. Se `gpt-oss:20b` já estiver listado:
+O doctor não baixa modelos nem instala Supabase/Wrangler via `npx`; essas CLIs
+só são sondadas quando já existem globalmente ou em `node_modules/.bin`. Se
+`gpt-oss:20b` já estiver listado:
 
 ```bash
 npm run orch:local -- \
@@ -326,22 +329,28 @@ Esse caminho usa Codex OSS + Ollama, read-only e snapshot.
 
 ## 14. Doctor completo
 
-Sem chamadas de modelo:
+Sem chamadas de modelo, apenas preflights locais:
 
 ```bash
 npm run orch:doctor
 ```
 
-Com smokes reais:
+Gate completo com smokes reais:
 
 ```bash
 npm run orch:doctor -- --smoke
 ```
 
-Os smokes do OpenCode e Antigravity só passam quando comprovam leitura do
-`AGENTS.md` pelo título esperado. Arquivos de smoke ficam em
-`/tmp/eleicao2026-*-smoke.*`. `WARN` pode significar executor opcional
-indisponível; `FAIL` estrutural deve ser resolvido antes da retomada.
+O `--smoke` exercita obrigatoriamente Hermes → MCP Codex ponta a ponta em
+read-only e exige o marcador `HERMES_CODEX_MCP_OK`. OpenCode e Antigravity são
+consultivos/opcionais; quando disponíveis, seus smokes só passam quando
+comprovam leitura do `AGENTS.md` pelo título esperado. O fallback `codex exec`
+também é testado de forma estruturada.
+
+Arquivos diagnósticos são criados em diretório temporário exclusivo via
+`mktemp` e removidos automaticamente ao final. O doctor não usa nomes fixos em
+`/tmp`. `WARN` pode significar executor opcional indisponível; `FAIL` estrutural
+ou do MCP Codex obrigatório deve ser resolvido antes da retomada.
 
 ## 15. Revalidar checkpoint funcional
 
