@@ -43,15 +43,18 @@ for (const key of ['allow', 'deny', 'ask']) {
   if (!Array.isArray(cfg.permissions[key])) cfg.permissions[key] = [];
 }
 
-const broadAsk = cfg.permissions.ask.includes('read_file(*)');
-const broadAllows = cfg.permissions.allow.filter(
-  (rule) => /^read_file\(.*\*.*\)$/.test(rule),
+const foreignReadAllows = cfg.permissions.allow.filter(
+  (rule) => /^read_file\(/.test(rule) && rule !== allowRule,
+);
+const dynamicReadAsks = cfg.permissions.ask.filter(
+  (rule) => /^read_file\(/.test(rule),
 );
 
-if (broadAsk || broadAllows.length > 0) {
-  console.error('ERRO: settings.json contém permissão ampla de read_file que quebra o isolamento do snapshot.');
-  if (broadAllows.length > 0) console.error(`ALLOW amplo: ${broadAllows.join(', ')}`);
-  console.error('Remova/restrinja a regra em /permissions antes de continuar.');
+if (foreignReadAllows.length > 0 || dynamicReadAsks.length > 0) {
+  console.error('ERRO: settings.json permite ou solicita read_file fora do snapshot sanitizado.');
+  if (foreignReadAllows.length > 0) console.error(`ALLOW externo: ${foreignReadAllows.join(', ')}`);
+  if (dynamicReadAsks.length > 0) console.error(`ASK de leitura: ${dynamicReadAsks.join(', ')}`);
+  console.error('Remova/restrinja essas regras em /permissions antes de continuar.');
   process.exit(2);
 }
 
@@ -66,7 +69,7 @@ fs.writeFileSync(settingsPath, JSON.stringify(cfg, null, 2) + '\n', { mode: 0o60
 
 console.log(`ALLOW ${allowRule}`);
 console.log(`DENY  ${denyWriteRule}`);
-console.log('Nenhuma permissão ampla read_file(*), command(*), mcp(*) ou write_file(*) foi adicionada.');
+console.log('Nenhuma leitura fora do snapshot, command(*), mcp(*) ou write_file(*) foi adicionada.');
 NODE
 
 printf '\nConfiguração Antigravity read-only aplicada somente ao snapshot sanitizado.\n'
