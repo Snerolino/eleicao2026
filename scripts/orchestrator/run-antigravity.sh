@@ -23,7 +23,12 @@ if [[ -z "${PROMPT//[[:space:]]/}" ]]; then
   exit 42
 fi
 
-SNAPSHOT="$(bash "$ROOT/scripts/orchestrator/prepare-snapshot.sh" antigravity)"
+RUNTIME="$ROOT/.orchestrator/runtime"
+mkdir -p "$RUNTIME/locks"
+exec 8>"$RUNTIME/locks/snapshot-antigravity.lock"
+flock 8
+
+SNAPSHOT="$(ORCH_SNAPSHOT_LOCK_HELD=1 bash "$ROOT/scripts/orchestrator/prepare-snapshot.sh" antigravity)"
 AGENT_FILE="$SNAPSHOT/.agents/agents/$AGENT/agent.md"
 HOOKS_FILE="$SNAPSHOT/.agents/hooks.json"
 HOOK_GUARD="$SNAPSHOT/.agents/hooks/deny-async-subagents.sh"
@@ -39,11 +44,9 @@ if [[ ! -s "$HOOKS_FILE" || ! -s "$HOOK_GUARD" ]]; then
   exit 45
 fi
 
-# O Antigravity 1.1.x usa default-cli-project quando nenhum projeto é indicado;
-# portanto `cd` sozinho não torna o snapshot parte do workspace. --add-dir liga
-# explicitamente o snapshot sanitizado ao workspace desta sessão headless.
-# A leitura também precisa estar allowlisted, e a escrita no mesmo snapshot
-# permanece explicitamente negada.
+# O lock do snapshot permanece aberto durante toda a execução. Assim outra
+# chamada não consegue recriar/apagar o workspace enquanto este reader o usa.
+# A política local também deve ser estreita: broad read_file(*) é rejeitado.
 if ! SNAPSHOT="$SNAPSHOT" SETTINGS="$SETTINGS" node <<'NODE'
 import fs from 'node:fs';
 const settingsPath = process.env.SETTINGS;
@@ -54,21 +57,18 @@ const allow = cfg?.permissions?.allow ?? [];
 const deny = cfg?.permissions?.deny ?? [];
 const ask = cfg?.permissions?.ask ?? [];
 if (ask.includes('read_file(*)')) process.exit(3);
+if (allow.some((rule) => /^read_file\(.*\*.*\)$/.test(rule))) process.exit(6);
 if (!allow.includes(`read_file(${snapshot})`)) process.exit(4);
 if (!deny.includes(`write_file(${snapshot})`)) process.exit(5);
 NODE
 then
-  echo "Antigravity ainda não possui a política read-only do snapshot." >&2
-  echo "Rode: npm run orch:configure-google" >&2
+  echo "Antigravity não possui uma política read-only estreita para o snapshot." >&2
+  echo "Remova permissões broad read_file(*) se existirem e rode: npm run orch:configure-google" >&2
   exit 44
 fi
 
 cd "$SNAPSHOT"
 
-# O custom agent expõe apenas ferramentas de leitura e o PreToolUse workspace
-# bloqueia colaboração/subagentes assíncronos. /goal força a execução a buscar
-# uma resposta final no mesmo turno. --add-dir torna o snapshot um workspace
-# explícito, pois o project resolver do agy não usa cwd como fonte de verdade.
 SAFE_PROMPT="/goal Trabalhe somente no workspace explicitamente adicionado em ${SNAPSHOT}. O arquivo AGENTS.md alvo está na raiz desse workspace: ${SNAPSHOT}/AGENTS.md. Resolva esta tarefa diretamente neste agente e devolva a resposta final no mesmo turno. Não procure em HOME, customizations globais, scratch ou outros projetos. Não invoque subagentes, research, self, background agents ou mensageria entre agentes. Não use terminal, shell ou command. Use apenas ferramentas de leitura disponibilizadas pelo agente. Tarefa: ${PROMPT}"
 
 OUT="$(mktemp /tmp/eleicao2026-agy-out.XXXXXX)"
