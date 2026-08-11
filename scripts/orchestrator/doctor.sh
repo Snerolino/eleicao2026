@@ -148,7 +148,7 @@ else
   warn "não foi possível validar settings do Antigravity"
 fi
 
-if hermes profile show "$PROFILE" >/dev/null 2>&1; then
+if env HOME="$REAL_HOME" hermes profile show "$PROFILE" >/dev/null 2>&1; then
   ok "perfil Hermes $PROFILE existe"
 
   SKILL_SOURCE="$ROOT/.orchestrator/hermes-skill/SKILL.md"
@@ -167,13 +167,13 @@ if hermes profile show "$PROFILE" >/dev/null 2>&1; then
     ok "nenhum TERMINAL_ENV legado detectado no perfil"
   fi
 
-  if hermes -p "$PROFILE" config check >/dev/null 2>&1; then
+  if env HOME="$REAL_HOME" hermes -p "$PROFILE" config check >/dev/null 2>&1; then
     ok "Hermes config check ($PROFILE)"
   else
     warn "Hermes config check sinalizou configuração pendente no perfil $PROFILE"
   fi
 
-  if hermes -p "$PROFILE" mcp list 2>/dev/null | grep -qi 'codex'; then
+  if env HOME="$REAL_HOME" hermes -p "$PROFILE" mcp list 2>/dev/null | grep -qi 'codex'; then
     ok "Codex MCP aparece na configuração do perfil $PROFILE"
   else
     fail "Codex MCP obrigatório não aparece no perfil $PROFILE"
@@ -405,11 +405,12 @@ for role, content, tool_call_id, tool_calls, tool_name in rows:
         if not meta:
             continue
 
-        resolved_name = tool_name or meta.get("name") or ""
-
+        # O tool_call_id já vincula este resultado à chamada interna
+        # Codex previamente validada com sandbox=read-only. O Hermes pode
+        # persistir tool_name externo como "tool_call", então não revalide
+        # o envelope pelo nome externo.
         if (
             meta.get("readonly_codex")
-            and name_re.search(resolved_name)
             and expected in (content or "")
         ):
             saw_valid_result = True

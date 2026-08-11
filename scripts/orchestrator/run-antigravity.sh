@@ -81,7 +81,7 @@ trap 'rm -f "$OUT" "$ERR"' EXIT
 
 set +e
 env HOME="$REAL_HOME" \
-  timeout "${TIMEOUT_SECONDS}s" \
+  timeout --signal=TERM --kill-after=10s "${TIMEOUT_SECONDS}s" \
   agy \
     --add-dir "$SNAPSHOT" \
     --agent "$AGENT" \
