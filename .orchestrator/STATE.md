@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-10 21:15 -03
-Status: `ORCHESTRATOR_V1_FINAL_REVIEW_HARDENED_RETEST_PENDING`
+Atualizado: 2026-08-11 01:05 -03
+Status: `ORCHESTRATOR_V1_FINAL_REVIEW_RETEST_GREEN`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
@@ -15,11 +15,11 @@ Status: `ORCHESTRATOR_V1_FINAL_REVIEW_HARDENED_RETEST_PENDING`
 - PR `#70`: ready for review, ainda sem merge; integrar somente por **squash** após gate final.
 - PR `#71`: merged por squash; restaurou `20260804081607_claims_collector_idempotency.sql` sem executar SQL remoto.
 - PR `#72`: merged por squash; sincronizou contrato/tipos de `claims`, inclusive retornos RPC.
-- Antes do hardening final, o diff do #70 continuava restrito a 33 arquivos de orquestração/config/docs, sem `src/`, migrations, workflow de deploy ou lockfile.
+- O diff do #70 permanece restrito a 33 arquivos de orquestração/config/docs, sem `src/`, migrations, workflow de deploy ou lockfile.
 
 ## Aplicação / dados
 
-- Regressão consolidada anterior: 180 arquivos / 888 testes verdes, TypeScript verde, build verde.
+- Regressão consolidada: 180 arquivos / 888 testes verdes, TypeScript verde, build verde.
 - Snapshot público: 792 candidaturas + 792 fotos; sitemap 794 URLs; PWA gerada.
 - Impact schema checkpoint verde.
 - Fases 0–1 da Matriz de Impacto concluídas localmente.
@@ -27,81 +27,66 @@ Status: `ORCHESTRATOR_V1_FINAL_REVIEW_HARDENED_RETEST_PENDING`
 - Último `supabase db push --dry-run` listou somente essas cinco como pendentes.
 - Nenhum `db push` real ou `migration repair` executado neste arco.
 
-## Hermes / executores
+## Hermes / executores — RETESTE FINAL VERDE
 
-Último reteste local anterior ao review final:
+Reteste local concluído no workstation real em Node `v24.19.0`:
 
 ```text
 bash -n scripts/orchestrator/*.sh  -> sem erro
-npm run orch:doctor -- --smoke    -> OK=48 WARN=2 FAIL=0
+npm run orch:doctor -- --smoke    -> OK=48 WARN=3 FAIL=0
 ```
 
-Validados anteriormente:
+Comprovado no reteste:
 
-- Hermes profile `eleicao2026`, Node shell/gateway 24.19.0, Codex MCP ponta a ponta;
-- OpenCode/DeepSeek e Antigravity com smoke semântico de `AGENTS.md`;
-- Codex exec fallback estruturado;
-- `TERMINAL_ENV` legado removido.
+- Node do shell `v24.19.0`;
+- Hermes profile `eleicao2026` existe;
+- skill `eleicao2026-orchestrator` instalada e byte-a-byte sincronizada com o Git;
+- Codex MCP registrado no perfil e `codex mcp-server` disponível por stdio;
+- gateway Hermes resolve efetivamente o mesmo Node 24 pelo ambiente real do processo systemd;
+- snapshot rejeita path traversal/symlinks e remove `.env*`/dados brutos;
+- policy Antigravity restrita ao snapshot;
+- OpenCode/DeepSeek leu semanticamente `AGENTS.md`;
+- Antigravity/Google leu semanticamente `AGENTS.md`;
+- Codex exec fallback retornou saída estruturada;
+- `TERMINAL_ENV` legado ausente.
 
-Warnings esperados anteriores: Gemini legacy e Ollama sem `gpt-oss:20b`.
+Warnings não bloqueantes observados:
 
-## Review final do Codex em `747f530`
+1. Gemini CLI é rota legacy/API-key; Google AI Pro usa `agy`.
+2. worktree local ainda possuía resíduos tracked do arco #72, mas readers enxergam somente o HEAD sanitizado.
+3. Ollama está instalado sem `gpt-oss:20b`; fallback local opcional permanece desabilitado.
 
-O review final encontrou sete gaps legítimos e bloqueou o merge:
+## Hardening consolidado do PR #70
 
-1. `.env.example` ainda entrava fisicamente no `git archive` dos leitores.
-2. snapshots de nome fixo podiam ser recriados enquanto um reader ainda os usava.
-3. `agy`/`opencode` opcionais eram tratados como FAIL no doctor durante setup gradual.
-4. agente `build` do OpenCode herdava DeepSeek Free na worktree viva.
-5. doctor aceitava skill Hermes instalada porém desatualizada.
-6. Antigravity aceitava `permissions.allow: read_file(*)` amplo.
-7. validação do gateway checava presença do diretório Node no PATH, não o binário efetivamente resolvido.
+- HOME hardcoded removido; resolução usa real home com override explícito.
+- Snapshots removem fisicamente `.env*`, `data/tse-archive` e `supabase/.temp`.
+- Snapshots rejeitam path traversal e symlinks rastreados.
+- Wrappers seguram `flock` do snapshot por toda a execução para impedir corrida/recriação concorrente.
+- OpenCode/DeepSeek Free fica consultivo/read-only sobre snapshot; build não tem ferramentas na worktree viva.
+- Antigravity usa snapshot sanitizado, `--add-dir`, custom reader, plan/sandbox e rejeita qualquer `read_file(...)` externo ao snapshot.
+- Prompt enviado ao Google não inclui caminho absoluto/identidade local.
+- Skill Hermes stale vira FAIL e instalador usa `HERMES_REAL_HOME` resolvido.
+- Runbook instala a skill versionada logo após criar/configurar o perfil e antes de usar o doctor como gate.
+- Perfil Hermes ausente vira FAIL.
+- Codex MCP ausente vira FAIL, pois é a rota writer obrigatória.
+- `agy` e `opencode` ausentes continuam WARN por serem executores consultivos opcionais.
+- Gateway valida o binário Node efetivamente resolvido pelo processo systemd, não apenas presença de diretório no PATH.
+- Doctor exige prova semântica dos readers e verifica tracked + untracked da worktree.
 
-## Hardening aplicado após o review final
+## CI / review
 
-- `prepare-snapshot.sh` remove fisicamente todos os `.env*`, `data/tse-archive` e `supabase/.temp` antes de devolver o snapshot; continua rejeitando path traversal e symlinks.
-- Wrappers OpenCode, Antigravity, Gemini legacy e fallback local seguram o mesmo `flock` do snapshot por toda a execução; outra preparação com o mesmo nome não pode apagar o workspace em uso.
-- `configure-antigravity-readonly.sh` e `run-antigravity.sh` rejeitam permissões `read_file(...)` com wildcard amplo.
-- `opencode.jsonc`: `build` fica sem ferramentas (`permission.* = deny`); OpenCode deixa de ser writer na worktree viva. Codex MCP permanece writer técnico.
-- `doctor.sh`: `agy` e `opencode` ausentes viram WARN; smoke é pulado quando executor opcional não existe.
-- `doctor.sh`: snapshot só passa se não houver nenhum `.env*` nem dados brutos proibidos.
-- `doctor.sh`: skill instalada é comparada byte a byte com a versão Git; cópia stale vira FAIL com instrução de reinstalação.
-- `doctor.sh`: policy Antigravity broad vira FAIL.
-- `sync-gateway-node.sh` coloca o Node 24 do projeto no início do PATH e valida o Node efetivo usando o ambiente real do processo systemd em `/proc/<pid>/environ`.
-- `doctor.sh` faz a mesma validação efetiva do Node do gateway.
-
-## Gate atual
-
-O código do hardening final foi versionado, mas **ainda precisa do reteste local curto no workstation real**, pois envolve Hermes, systemd, Antigravity e OpenCode locais:
-
-```bash
-bash -n scripts/orchestrator/*.sh
-npm run orch:install-skill
-npm run orch:sync-gateway-node
-npm run orch:doctor -- --smoke
-```
-
-Critério para liberar novo Codex re-review e squash do #70:
-
-- `bash -n` sem saída/erro;
-- skill sincronizada;
-- gateway resolve efetivamente Node 24;
-- snapshot reporta remoção de `.env*`/dados brutos;
-- policy Antigravity estreita;
-- smokes dos executores disponíveis passam;
-- `FAIL=0`.
-
-Não repetir os 888 testes localmente só por este hardening; o workflow do PR cobre a regressão da aplicação novamente.
+- CI remoto do head anterior ao último ajuste documental/gate ficou verde em data check, preflight, TypeScript, testes, build e browser smoke; job de deploy de produção ficou `skipped`.
+- Reteste local final está concluído e não deve ser repetido sem nova alteração material nos scripts/runtime.
+- Threads dos reviews anteriores foram resolvidos após as correções correspondentes.
+- Gate restante: CI + re-review do Codex no head final que contém o gate obrigatório do Codex MCP e este checkpoint atualizado.
 
 ## Próximo passo após gate verde
 
-1. CI do head atual verde.
-2. Reteste local acima com `FAIL=0`.
-3. Solicitar novo `@codex review` no head atual.
-4. Resolver threads anteriores quando confirmadas corrigidas.
-5. Sob a autorização humana já concedida para este arco, fazer **squash-merge do #70 na feature**, nunca em `main`.
-6. Atualizar worktree local da feature e iniciar Hermes por `.orchestrator/BOOTSTRAP_PROMPT.md`.
-7. Retomar Fase 2 da Matriz, mantendo migrations remotas bloqueadas.
+1. Confirmar CI do head final verde.
+2. Confirmar re-review do Codex sem novo achado material.
+3. Sob a autorização humana já concedida para este arco, fazer **squash-merge do #70 na feature**, nunca em `main`.
+4. Atualizar worktree local da feature e iniciar Hermes por `.orchestrator/BOOTSTRAP_PROMPT.md`.
+5. Retomar Fase 2 da Matriz, mantendo migrations remotas bloqueadas.
 
 ## Gates permanentes
 
