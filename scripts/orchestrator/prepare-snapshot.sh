@@ -36,6 +36,13 @@ git -C "$ROOT" archive --format=tar HEAD | tar -xf - -C "$TARGET"
 find "$TARGET" -depth -name '.env*' -exec rm -rf -- {} +
 rm -rf -- "$TARGET/data/tse-archive" "$TARGET/supabase/.temp"
 
+# Estes utilitários legados contêm material de autenticação rastreado e nunca
+# devem sair para leitores externos. A remoção do segredo no Git/rotação do
+# provedor é um incidente separado; aqui o contrato do snapshot é fail-closed.
+rm -f -- \
+  "$TARGET/scripts/create-token.sh" \
+  "$TARGET/scripts/find-permissions.sh"
+
 ENV_LEAK="$(find "$TARGET" -name '.env*' -print -quit)"
 if [[ -n "$ENV_LEAK" ]]; then
   rm -rf -- "$TARGET"
@@ -50,6 +57,16 @@ if [[ -n "$SYMLINK" ]]; then
   rm -rf -- "$TARGET"
   echo "snapshot rejeitado: symlink rastreado detectado ($SYMLINK)" >&2
   exit 43
+fi
+
+# Última barreira antes de liberar o snapshot. Procure apenas padrões de alta
+# confiança e reporte SOMENTE o caminho, nunca a linha/conteúdo encontrado.
+SECRET_PATTERN='Authorization:[[:space:]]*Bearer[[:space:]]+[A-Za-z0-9._~+/-]{24,}|(CLOUDFLARE_API_TOKEN|OPENAI_API_KEY|SUPABASE_SERVICE_ROLE_KEY|AWS_SECRET_ACCESS_KEY)[[:space:]]*=[[:space:]]*[^[:space:]#]{20,}|github_pat_[A-Za-z0-9_]{20,}|gh[pousr]_[A-Za-z0-9]{20,}|-----BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY-----'
+SECRET_LEAK="$(grep -RIlE --binary-files=without-match -- "$SECRET_PATTERN" "$TARGET" 2>/dev/null | head -n1 || true)"
+if [[ -n "$SECRET_LEAK" ]]; then
+  rm -rf -- "$TARGET"
+  echo "snapshot rejeitado: material secreto rastreado detectado em ${SECRET_LEAK#$TARGET/}" >&2
+  exit 45
 fi
 
 printf '%s\n' "$TARGET"
