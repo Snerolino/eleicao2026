@@ -6,6 +6,11 @@ SERVICE="hermes-gateway-${PROFILE}.service"
 REAL_HOME="${HERMES_REAL_HOME:-$(getent passwd "$(id -un)" | cut -d: -f6)}"
 HERMES_AGENT_HOME="${HERMES_AGENT_HOME:-$REAL_HOME/.hermes/hermes-agent}"
 
+if [[ -z "$REAL_HOME" || ! -d "$REAL_HOME" ]]; then
+  echo "home real não resolvido" >&2
+  exit 9
+fi
+
 if ! command -v node >/dev/null 2>&1; then
   echo "node não encontrado no PATH do shell" >&2
   exit 10
@@ -38,7 +43,7 @@ Environment="PATH=$NODE_DIR:$HERMES_AGENT_HOME/venv/bin:$HERMES_AGENT_HOME/node_
 EOF
 
 systemctl --user daemon-reload
-hermes -p "$PROFILE" gateway restart >/dev/null
+env HOME="$REAL_HOME" hermes -p "$PROFILE" gateway restart >/dev/null
 
 MAIN_PID="$(systemctl --user show "$SERVICE" -p MainPID --value)"
 if [[ ! "$MAIN_PID" =~ ^[1-9][0-9]*$ || ! -r "/proc/$MAIN_PID/environ" ]]; then
