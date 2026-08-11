@@ -53,6 +53,10 @@ hermes profile alias eleicao2026 --name h-eleicao2026
 hermes -p eleicao2026 config set terminal.backend local
 hermes -p eleicao2026 config set terminal.home_mode real
 hermes -p eleicao2026 config check
+
+# A skill versionada é parte obrigatória do control plane. Instale-a antes de
+# qualquer doctor usado como gate de retomada.
+npm run orch:install-skill
 ```
 
 No backend local, inicie Hermes **a partir da raiz do repositório**. Não dependa
