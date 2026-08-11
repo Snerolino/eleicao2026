@@ -27,22 +27,12 @@
       }
     },
 
-    // Compatibilidade para uso humano interativo. A arquitetura Hermes v1 não
-    // roteia mutações automaticamente para OpenCode; Codex MCP é o writer.
+    // OpenCode não é writer nesta arquitetura. Se alguém selecionar build
+    // interativamente na worktree viva, nenhuma ferramenta é concedida ao
+    // modelo gratuito. Mutações locais pertencem ao Codex MCP autorizado.
     "build": {
       "permission": {
-        "edit": "ask",
-        "bash": {
-          "*": "ask",
-          "git push *": "deny",
-          "git commit *": "deny",
-          "git merge *": "deny",
-          "gh pr merge *": "deny",
-          "npx supabase db push *": "deny",
-          "npx supabase migration up *": "deny",
-          "npx wrangler pages deploy *": "deny"
-        },
-        "external_directory": "deny"
+        "*": "deny"
       }
     }
   },
