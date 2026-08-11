@@ -3,7 +3,14 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 PROFILE="${HERMES_ORCH_PROFILE:-eleicao2026}"
-BASE_HOME="${HERMES_BASE_HOME:-$HOME/.hermes}"
+REAL_HOME="${HERMES_REAL_HOME:-$(getent passwd "$(id -un)" | cut -d: -f6)}"
+
+if [[ -z "$REAL_HOME" || ! -d "$REAL_HOME" ]]; then
+  echo "home real não resolvido" >&2
+  exit 41
+fi
+
+BASE_HOME="${HERMES_BASE_HOME:-$REAL_HOME/.hermes}"
 SOURCE="$ROOT/.orchestrator/hermes-skill/SKILL.md"
 
 if [[ "$PROFILE" == "default" ]]; then
