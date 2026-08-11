@@ -169,7 +169,7 @@ if hermes profile show "$PROFILE" >/dev/null 2>&1; then
   if hermes -p "$PROFILE" mcp list 2>/dev/null | grep -qi 'codex'; then
     ok "Codex MCP aparece na configuração do perfil $PROFILE"
   else
-    warn "Codex MCP ainda não aparece no perfil $PROFILE"
+    fail "Codex MCP obrigatório não aparece no perfil $PROFILE"
   fi
 else
   fail "perfil Hermes $PROFILE ainda não existe"
