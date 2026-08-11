@@ -134,8 +134,8 @@ npm run orch:doctor
 
 O preset configura `codex mcp-server` por stdio. O doctor rápido valida registro
 e inicialização do servidor. O gate autoritativo é `orch:doctor -- --smoke`, que
-faz também uma chamada real Hermes → MCP Codex em read-only e exige evidência
-do uso da rota configurada.
+faz também uma chamada real Hermes → MCP Codex em read-only e valida a tool call
+e o resultado estruturados persistidos pelo Hermes.
 
 Com `terminal.home_mode=real`, Codex, `gh` e demais CLIs locais enxergam suas
 credenciais normais do usuário.
@@ -342,10 +342,13 @@ npm run orch:doctor -- --smoke
 ```
 
 O `--smoke` exercita obrigatoriamente Hermes → MCP Codex ponta a ponta em
-read-only e exige o marcador `HERMES_CODEX_MCP_OK`. OpenCode e Antigravity são
-consultivos/opcionais; quando disponíveis, seus smokes só passam quando
-comprovam leitura do `AGENTS.md` pelo título esperado. O fallback `codex exec`
-também é testado de forma estruturada.
+read-only. A aprovação não depende de texto emitido pelo modelo: o doctor usa um
+probe único para localizar a sessão no `state.db` do perfil e exige uma
+`tool_call` pertencente ao servidor `codex` mais o respectivo resultado contendo
+o título real de `AGENTS.md`. OpenCode e Antigravity são consultivos/opcionais;
+quando disponíveis, seus smokes só passam quando comprovam leitura do
+`AGENTS.md` pelo título esperado. O fallback `codex exec` também é testado de
+forma estruturada.
 
 Arquivos diagnósticos são criados em diretório temporário exclusivo via
 `mktemp` e removidos automaticamente ao final. O doctor não usa nomes fixos em
