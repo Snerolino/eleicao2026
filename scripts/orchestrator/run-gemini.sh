@@ -31,9 +31,14 @@ if [[ -n "${GEMINI_AGENT_MODEL:-}" ]]; then
   ARGS+=(--model "$GEMINI_AGENT_MODEL")
 fi
 
-# Mesmo sendo uma rota legacy, ela permanece consultiva e não recebe a
-# worktree viva. O snapshot contém somente arquivos rastreados do HEAD.
-SNAPSHOT="$(bash "$ROOT/scripts/orchestrator/prepare-snapshot.sh" gemini-legacy)"
+RUNTIME="$ROOT/.orchestrator/runtime"
+mkdir -p "$RUNTIME/locks"
+exec 8>"$RUNTIME/locks/snapshot-gemini-legacy.lock"
+flock 8
+
+# Mesmo sendo rota legacy, o lock permanece aberto durante todo o processo para
+# impedir que outra preparação apague o snapshot que este reader está usando.
+SNAPSHOT="$(ORCH_SNAPSHOT_LOCK_HELD=1 bash "$ROOT/scripts/orchestrator/prepare-snapshot.sh" gemini-legacy)"
 cd "$SNAPSHOT"
 
 exec env HOME="$REAL_HOME" \
