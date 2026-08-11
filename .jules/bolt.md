@@ -4,3 +4,6 @@
 ## 2024-05-19 - [Deferred Search Input]
 **Learning:** Using `useDeferredValue` for a search query that filters a large list (`filterCandidates` on all candidates) improves typing responsiveness. Crucially, any downstream grouping or mapping logic that depends on the filtered results should be wrapped in `useMemo` so it doesn't unnecessarily re-compute on every single keystroke.
 **Action:** When filtering complex lists, wrap the query passed to the filter function with `useDeferredValue` and use `useMemo` for any derived computations based on the filtered output. Ensure UI elements showing counts sync with the deferred query to prevent visual mismatches.
+## 2024-05-19 - [Stable SearchParams callback]
+**Learning:** `useSearchParams` from `react-router` re-renders and provides a new reference to `searchParams` on every URL query update. If `searchParams` is read inside a `useCallback` that is passed down to a memoized list item, this will break memoization and cause an O(N) re-render of the entire list.
+**Action:** Always use the functional updater pattern `setSearchParams((prev) => ...)` inside `useCallback` to modify query parameters, avoiding `searchParams` as a dependency. This ensures the callback remains stable across URL changes and preserves list item memoization.
