@@ -81,4 +81,18 @@ describe('ErrorBoundary', () => {
 
     expect(boundaryCalls).toEqual([['[ErrorBoundary] erro capturado']]);
   });
+
+  it('não vaza a mensagem de erro original na interface em produção', () => {
+    vi.stubEnv('PROD', 'true');
+    vi.stubEnv('DEV', '');
+
+    render(
+      <ErrorBoundary>
+        <Bomb shouldThrow={true} />
+      </ErrorBoundary>
+    );
+
+    expect(screen.queryByText('Kaboom')).not.toBeInTheDocument();
+    expect(screen.getByText('Um erro inesperado ocorreu.')).toBeInTheDocument();
+  });
 });
