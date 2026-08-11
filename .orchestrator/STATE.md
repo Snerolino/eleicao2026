@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-11 02:34 -03
-Status: `ORCHESTRATOR_V1_MCP_E2E_RETEST_PENDING`
+Atualizado: 2026-08-11 19:54 -03
+Status: `ORCHESTRATOR_V1_FINAL_REVIEW_PENDING`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
@@ -27,34 +27,36 @@ Status: `ORCHESTRATOR_V1_MCP_E2E_RETEST_PENDING`
 - Último `supabase db push --dry-run` listou somente essas cinco como pendentes.
 - Nenhum `db push` real ou `migration repair` executado neste arco.
 
-## Hermes / executores — BASE LOCAL VERDE
+## Hermes / executores — GATE LOCAL FINAL VERDE
 
-Reteste local concluído no workstation real antes da adição do smoke E2E automático, em Node `v24.19.0`:
+Reteste final do runtime concluído no workstation real sobre o commit `cef7f89`, em Node `v24.19.0`:
 
 ```text
-bash -n scripts/orchestrator/*.sh  -> sem erro
-npm run orch:doctor -- --smoke    -> OK=48 WARN=3 FAIL=0
+ORCH_EXECUTOR_TIMEOUT=60 npm run orch:doctor -- --smoke
+OK=50 WARN=4 FAIL=0
 ```
 
 Comprovado nesse reteste:
 
 - Node do shell `v24.19.0`;
-- Hermes profile `eleicao2026` existe;
+- Hermes profile `eleicao2026` existe no real home;
 - skill `eleicao2026-orchestrator` instalada e byte-a-byte sincronizada com o Git;
 - Codex MCP registrado no perfil e `codex mcp-server` disponível por stdio;
 - gateway Hermes resolve efetivamente o mesmo Node 24 pelo ambiente real do processo systemd;
 - snapshot rejeita path traversal/symlinks e remove `.env*`/dados brutos;
 - policy Antigravity restrita ao snapshot;
+- Hermes → Codex MCP comprovado por `tool_call` estruturada, `sandbox == "read-only"`, mesma `tool_call_id` e resultado contendo o título real de `AGENTS.md`;
 - OpenCode/DeepSeek leu semanticamente `AGENTS.md`;
 - Antigravity/Google leu semanticamente `AGENTS.md`;
 - Codex exec fallback retornou saída estruturada;
 - `TERMINAL_ENV` legado ausente.
 
-Warnings não bloqueantes observados:
+Warnings não bloqueantes desse reteste:
 
 1. Gemini CLI é rota legacy/API-key; Google AI Pro usa `agy`.
-2. worktree local ainda possuía resíduos tracked do arco #72, mas readers enxergam somente o HEAD sanitizado.
-3. Ollama está instalado sem `gpt-oss:20b`; fallback local opcional permanece desabilitado.
+2. worktree estava suja porque o próprio patch final ainda não havia sido commitado no momento do smoke.
+3. Supabase CLI não estava instalada localmente fora de `npx`; o doctor deliberadamente não baixa pacote remoto durante diagnóstico.
+4. Ollama está instalado sem `gpt-oss:20b`; fallback local opcional permanece desabilitado.
 
 ## Hardening consolidado do PR #70
 
@@ -65,11 +67,14 @@ Warnings não bloqueantes observados:
 - OpenCode/DeepSeek Free fica consultivo/read-only sobre snapshot; build não tem ferramentas na worktree viva.
 - Antigravity usa snapshot sanitizado, `--add-dir`, custom reader, plan/sandbox e rejeita qualquer `read_file(...)` externo ao snapshot.
 - Prompt enviado ao Google não inclui caminho absoluto/identidade local.
+- `run-antigravity.sh` usa timeout com `TERM` seguido de hard kill após 10s; um `agy` suspenso por job control não pode mais deixar o smoke preso indefinidamente.
 - Skill Hermes ausente ou stale vira FAIL e instalador usa `HERMES_REAL_HOME` resolvido.
 - Runbook instala a skill versionada logo após criar/configurar o perfil e antes de usar o doctor como gate.
 - Perfil Hermes ausente vira FAIL.
+- Checks `profile show`, `config check` e `mcp list` usam `HOME="$REAL_HOME"` de forma consistente.
 - Codex MCP ausente ou `codex mcp-server` incapaz de iniciar vira FAIL, pois é a rota writer obrigatória.
 - `doctor --smoke` exercita a rota **Hermes → MCP Codex** e valida no `state.db` da sessão uma `tool_call` pertencente ao servidor `codex`, os argumentos estruturados dessa chamada com `sandbox == "read-only"`, e o resultado ligado à mesma `tool_call_id` contendo o título real de `AGENTS.md`; não confia em texto/marker produzido pelo modelo.
+- O parser reconhece o envelope real do Hermes (`tool_call` externo com ferramenta MCP interna) e associa o resultado pelo `tool_call_id`, sem exigir que o `tool_name` externo repita o nome MCP já validado.
 - `doctor` não instala CLIs durante diagnóstico: Supabase/Wrangler só são executados se já estiverem instalados globalmente ou em `node_modules/.bin`.
 - Arquivos temporários do doctor usam diretório exclusivo criado com `mktemp` e removido no `trap`, evitando paths previsíveis em `/tmp`.
 - `agy` e `opencode` ausentes continuam WARN por serem executores consultivos opcionais.
@@ -78,33 +83,34 @@ Warnings não bloqueantes observados:
 
 ## CI / review
 
-- CI remoto dos heads anteriores ficou verde em data check, preflight, TypeScript, testes, build e browser smoke; job de deploy de produção ficou `skipped`.
+- CI remoto do commit runtime `cef7f89` ficou verde em data check, preflight, TypeScript, testes, build e browser smoke; job de deploy de produção ficou `skipped`.
 - Threads anteriores foram resolvidos após as correções correspondentes.
 - O review de `c2c35df` encontrou três P2 válidos: exercitar a rota MCP configurada; não baixar CLIs com `npx --yes` durante diagnóstico; usar temporários seguros.
 - O review de `f16c726` apontou corretamente que texto/marker do modelo não era evidência suficiente; o gate foi trocado por inspeção estruturada da sessão persistida pelo Hermes.
-- O review de `a2355de` apontou corretamente que a prova estruturada ainda não verificava o sandbox da chamada; o parser agora exige `sandbox == "read-only"` na tool call Codex e associa o resultado pela mesma `tool_call_id`.
+- O review de `a2355de` apontou corretamente que a prova estruturada ainda não verificava o sandbox da chamada; o parser passou a exigir `sandbox == "read-only"`.
+- O review de `0c44cb3` apontou dois P2 finais: aceitar resultado do envelope wrapped pela mesma `tool_call_id` e executar checks de perfil com o real home. Ambos foram corrigidos em `cef7f89` e cobertos pelo smoke final verde.
+- Durante o reteste foi identificado um hang real do Antigravity: processos `agy` suspensos em estado `T/Tl` podiam sobreviver ao `timeout`. O wrapper agora usa hard kill após o grace period e o reteste com timeout de 60s concluiu normalmente.
 
 ## Gate atual
 
-Como o último hardening alterou novamente a validação E2E real Hermes → Codex MCP dentro de `doctor --smoke`, há uma mudança material de runtime desde o reteste `OK=48 WARN=3 FAIL=0`.
+O runtime do orquestrador está validado localmente e no CI. Esta atualização de `STATE.md` é somente documental e não altera scripts/runtime.
 
-Não repetir a regressão de 888 testes localmente. O único reteste local necessário, **depois de sincronizar a branch com o head remoto final**, é:
+Gate restante:
 
-```bash
-bash -n scripts/orchestrator/*.sh
-npm run orch:doctor -- --smoke
-```
-
-Critério: `FAIL=0` e linha `OK Hermes -> Codex MCP comprovado por tool_call read-only + resultado estruturados`.
-
-## Próximo passo após gate verde
-
-1. Confirmar CI do head final verde.
-2. Confirmar re-review do Codex sem novo achado material.
-3. Sincronizar a worktree local com o head remoto e executar o reteste curto acima.
+1. CI do head documental final verde.
+2. Re-review final do Codex sem novo achado material.
+3. Confirmar novamente escopo de 33 arquivos e ausência de caminhos proibidos.
 4. Sob a autorização humana já concedida para este arco, fazer **squash-merge do #70 na feature**, nunca em `main`.
-5. Atualizar worktree local da feature e iniciar Hermes por `.orchestrator/BOOTSTRAP_PROMPT.md`.
-6. Retomar Fase 2 da Matriz, mantendo migrations remotas bloqueadas.
+
+Não repetir o smoke local nem a regressão de 888 testes sem nova mudança de runtime.
+
+## Próximo passo após squash
+
+1. Atualizar a worktree local da `feat/matriz-impacto-populacional-v1`.
+2. Tratar separadamente o stash local do arco #72, comparando antes de restaurar qualquer arquivo.
+3. Iniciar Hermes por `.orchestrator/BOOTSTRAP_PROMPT.md`.
+4. Retomar Fase 2 da Matriz: importer dry-run de propositions/votes + desenho de persistência do score.
+5. Manter migrations remotas bloqueadas até autorização humana explícita própria.
 
 ## Gates permanentes
 
