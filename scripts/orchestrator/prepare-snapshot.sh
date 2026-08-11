@@ -17,13 +17,31 @@ LOCK="$RUNTIME/locks/snapshot-$NAME.lock"
 
 mkdir -p "$RUNTIME/snapshots" "$RUNTIME/locks"
 
-exec 9>"$LOCK"
-flock 9
+# Chamadas manuais seguram o lock durante a preparação. Os wrappers oficiais
+# seguram o MESMO lock por toda a vida do reader e avisam isso via env para não
+# deadlockar ao chamar este helper.
+if [[ "${ORCH_SNAPSHOT_LOCK_HELD:-0}" != "1" ]]; then
+  exec 9>"$LOCK"
+  flock 9
+fi
 
 rm -rf -- "$TARGET"
 mkdir -p "$TARGET"
 
 git -C "$ROOT" archive --format=tar HEAD | tar -xf - -C "$TARGET"
+
+# O snapshot enviado a leitores externos não contém nenhum .env*, nem mesmo
+# exemplos rastreados. Dados brutos explicitamente proibidos também são
+# removidos fisicamente em vez de depender apenas de ignore/config do executor.
+find "$TARGET" -depth -name '.env*' -exec rm -rf -- {} +
+rm -rf -- "$TARGET/data/tse-archive" "$TARGET/supabase/.temp"
+
+ENV_LEAK="$(find "$TARGET" -name '.env*' -print -quit)"
+if [[ -n "$ENV_LEAK" ]]; then
+  rm -rf -- "$TARGET"
+  echo "snapshot rejeitado: arquivo .env* permaneceu após sanitização ($ENV_LEAK)" >&2
+  exit 44
+fi
 
 # Symlinks rastreados poderiam apontar para fora do snapshot e furar o contrato
 # de isolamento se um reader os seguisse. A v1 prefere falhar fechado.
