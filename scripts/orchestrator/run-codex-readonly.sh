@@ -29,7 +29,7 @@ cd "$ROOT"
 printf '%s' "$PROMPT" | env \
   HOME="$REAL_HOME" \
   CODEX_HOME="$REAL_HOME/.codex" \
-  timeout "${TIMEOUT_SECONDS}s" \
+  timeout --signal=TERM --kill-after=10s "${TIMEOUT_SECONDS}s" \
   codex exec \
     -m "$MODEL" \
     --sandbox read-only \
