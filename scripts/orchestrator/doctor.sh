@@ -235,8 +235,14 @@ check_local_cli() {
 check_local_cli supabase
 check_local_cli wrangler
 
+OLLAMA_MODEL_AVAILABLE=false
 if command -v ollama >/dev/null 2>&1; then
-  if ollama list 2>/dev/null | awk 'NR>1 {print $1}' | grep -Fxq 'gpt-oss:20b'; then
+  OLLAMA_LIST="$(timeout --signal=TERM --kill-after=5s 10s ollama list 2>/dev/null)"
+  OLLAMA_STATUS=$?
+  if [[ $OLLAMA_STATUS -ne 0 ]]; then
+    warn "Ollama não respondeu ao preflight dentro do prazo; fallback local desabilitado"
+  elif printf '%s\n' "$OLLAMA_LIST" | awk 'NR>1 {print $1}' | grep -Fxq 'gpt-oss:20b'; then
+    OLLAMA_MODEL_AVAILABLE=true
     ok "Ollama gpt-oss:20b disponível"
   else
     warn "Ollama presente, mas gpt-oss:20b ausente; fallback local desabilitado"
@@ -438,7 +444,7 @@ PY
     [[ -s "$CX_ERR" ]] && sed -n '1,20p' "$CX_ERR" >&2
   fi
 
-  if command -v ollama >/dev/null 2>&1 && ollama list 2>/dev/null | awk 'NR>1 {print $1}' | grep -Fxq 'gpt-oss:20b'; then
+  if $OLLAMA_MODEL_AVAILABLE; then
     LOCAL_OUT="$DIAG_DIR/local-smoke.txt"
     LOCAL_ERR="$DIAG_DIR/local-smoke.err"
     if bash scripts/orchestrator/run-local-fallback.sh \
