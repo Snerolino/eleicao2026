@@ -36,7 +36,7 @@ cd "$SNAPSHOT"
 exec env \
   HOME="$REAL_HOME" \
   OPENCODE_DISABLE_MCP=true \
-  timeout "${TIMEOUT_SECONDS}s" \
+  timeout --signal=TERM --kill-after=10s "${TIMEOUT_SECONDS}s" \
   opencode run \
     --agent plan \
     -m "$MODEL" \
