@@ -201,7 +201,7 @@ fi
 
 MCP_ERR="$DIAG_DIR/codex-mcp-launch.err"
 env HOME="$REAL_HOME" CODEX_HOME="$REAL_HOME/.codex" \
-  timeout 3s codex mcp-server >/dev/null 2>"$MCP_ERR"
+  timeout --signal=TERM --kill-after=10s 3s codex mcp-server >/dev/null 2>"$MCP_ERR"
 MCP_STATUS=$?
 if [[ $MCP_STATUS -eq 124 || $MCP_STATUS -eq 0 ]]; then
   ok "codex mcp-server inicia e permanece disponível por stdio"
@@ -224,7 +224,7 @@ check_local_cli() {
   fi
 
   if [[ -n "$bin" ]]; then
-    timeout 10s "$bin" --version >/dev/null 2>&1 \
+    timeout --signal=TERM --kill-after=5s 10s "$bin" --version >/dev/null 2>&1 \
       && ok "$name CLI instalada localmente e executável" \
       || warn "$name CLI local não respondeu ao --version"
   else
@@ -257,7 +257,7 @@ if $SMOKE; then
   HERMES_MCP_PROMPT="Tarefa DOCTOR probe ${HERMES_MCP_PROBE}. Use obrigatoriamente o servidor MCP nomeado codex para uma tarefa read-only no projeto atual. Ao chamar a ferramenta Codex, defina explicitamente sandbox=read-only. Pelo MCP Codex, leia somente AGENTS.md e peça que devolva o título inicial exato do arquivo. Não altere arquivos e não use terminal ou ferramentas de arquivo do próprio Hermes."
 
   env HOME="$REAL_HOME" \
-    timeout 120s hermes -p "$PROFILE" chat -q "$HERMES_MCP_PROMPT" \
+    timeout --signal=TERM --kill-after=10s 120s hermes -p "$PROFILE" chat -q "$HERMES_MCP_PROMPT" \
     >"$HERMES_MCP_OUT" 2>"$HERMES_MCP_ERR"
   HERMES_MCP_STATUS=$?
 
@@ -322,7 +322,6 @@ def parse_object(value):
         return parsed if isinstance(parsed, dict) else {}
     return {}
 
-
 call_meta = {}
 saw_readonly_codex_call = False
 saw_valid_result = False
@@ -342,30 +341,14 @@ for role, content, tool_call_id, tool_calls, tool_name in rows:
                 continue
 
             fn = call.get("function") or {}
-            outer_name = (
-                fn.get("name")
-                if isinstance(fn, dict)
-                else None
-            )
+            outer_name = fn.get("name") if isinstance(fn, dict) else None
             outer_name = outer_name or call.get("name") or ""
 
-            raw_args = (
-                fn.get("arguments")
-                if isinstance(fn, dict)
-                else None
-            )
+            raw_args = fn.get("arguments") if isinstance(fn, dict) else None
             if raw_args is None:
                 raw_args = call.get("arguments")
 
             outer_args = parse_object(raw_args)
-
-            # Hermes encapsula ferramentas descobertas dinamicamente
-            # em uma chamada genérica `tool_call`:
-            #
-            # tool_call({
-            #   "name": "mcp__codex__codex",
-            #   "arguments": {...}
-            # })
             effective_name = outer_name
             effective_args = outer_args
 
@@ -373,22 +356,11 @@ for role, content, tool_call_id, tool_calls, tool_name in rows:
                 wrapped_name = outer_args.get("name")
                 if isinstance(wrapped_name, str):
                     effective_name = wrapped_name
-                effective_args = parse_object(
-                    outer_args.get("arguments")
-                )
+                effective_args = parse_object(outer_args.get("arguments"))
 
-            call_id = (
-                call.get("id")
-                or call.get("call_id")
-                or ""
-            )
-
+            call_id = call.get("id") or call.get("call_id") or ""
             sandbox = effective_args.get("sandbox")
-
-            is_readonly_codex = (
-                bool(name_re.search(effective_name))
-                and sandbox == "read-only"
-            )
+            is_readonly_codex = bool(name_re.search(effective_name)) and sandbox == "read-only"
 
             if call_id:
                 call_meta[call_id] = {
@@ -405,21 +377,10 @@ for role, content, tool_call_id, tool_calls, tool_name in rows:
         if not meta:
             continue
 
-        # O tool_call_id já vincula este resultado à chamada interna
-        # Codex previamente validada com sandbox=read-only. O Hermes pode
-        # persistir tool_name externo como "tool_call", então não revalide
-        # o envelope pelo nome externo.
-        if (
-            meta.get("readonly_codex")
-            and expected in (content or "")
-        ):
+        if meta.get("readonly_codex") and expected in (content or ""):
             saw_valid_result = True
 
-sys.exit(
-    0
-    if saw_readonly_codex_call and saw_valid_result
-    else 3
-)
+sys.exit(0 if saw_readonly_codex_call and saw_valid_result else 3)
 PY
   then
     ok "Hermes -> Codex MCP comprovado por tool_call read-only + resultado estruturados"
