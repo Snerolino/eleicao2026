@@ -37,17 +37,23 @@ printf 'root=%s\n' "$ROOT"
 printf 'real_home=%s\n' "$REAL_HOME"
 printf 'hermes_profile=%s\n\n' "$PROFILE"
 
-for cmd in git node npm hermes codex agy opencode timeout flock tar find; do
+# Núcleo obrigatório. Executores consultivos opcionais não tornam o control
+# plane inviável quando existe Hermes + Codex como rota segura.
+for cmd in git node npm hermes codex timeout flock tar find cmp; do
   has_cmd "$cmd"
 done
 
+command -v agy >/dev/null 2>&1 && ok "agy disponível: $(command -v agy)" || warn "agy ausente; rota Google Antigravity indisponível"
+command -v opencode >/dev/null 2>&1 && ok "opencode disponível: $(command -v opencode)" || warn "opencode ausente; rota DeepSeek gratuita indisponível"
+
+NODE_BIN=""
+NODE_DIR=""
 if command -v node >/dev/null 2>&1; then
   NODE_VERSION="$(node -v 2>/dev/null || true)"
   NODE_MAJOR="$(node -p 'process.versions.node.split(".")[0]' 2>/dev/null || true)"
-  NODE_DIR="$(dirname "$(readlink -f "$(command -v node)")")"
+  NODE_BIN="$(readlink -f "$(command -v node)" 2>/dev/null || true)"
+  NODE_DIR="$(dirname "$NODE_BIN")"
   [[ "$NODE_MAJOR" == "24" ]] && ok "Node do shell compatível: $NODE_VERSION" || fail "projeto exige Node 24; shell usa ${NODE_VERSION:-desconhecido}"
-else
-  NODE_DIR=""
 fi
 
 command -v gemini >/dev/null 2>&1 && warn "gemini disponível apenas como rota legacy/API-key; Google AI Pro usa agy" || ok "Gemini CLI legacy ausente (não obrigatório)"
@@ -94,31 +100,42 @@ else
 fi
 
 SNAP="$(bash scripts/orchestrator/prepare-snapshot.sh doctor 2>/dev/null || true)"
-if [[ -n "$SNAP" && -f "$SNAP/AGENTS.md" && -f "$SNAP/.agents/agents/eleicao2026-reader/agent.md" && ! -e "$SNAP/.env" ]]; then
-  ok "snapshot Git sanitizado contém reader Google, rejeita symlinks e não contém .env"
+SNAP_ENV_LEAK=""
+[[ -n "$SNAP" && -d "$SNAP" ]] && SNAP_ENV_LEAK="$(find "$SNAP" -name '.env*' -print -quit 2>/dev/null || true)"
+if [[ -n "$SNAP" \
+  && -f "$SNAP/AGENTS.md" \
+  && -f "$SNAP/.agents/agents/eleicao2026-reader/agent.md" \
+  && -z "$SNAP_ENV_LEAK" \
+  && ! -e "$SNAP/data/tse-archive" ]]; then
+  ok "snapshot Git sanitizado contém reader, rejeita symlinks e remove .env*/dados brutos"
 else
-  fail "snapshot Git sanitizado/reader Google falhou"
+  fail "snapshot Git sanitizado/reader falhou ou contém conteúdo proibido"
 fi
 
-AGY_SNAPSHOT="$(bash scripts/orchestrator/prepare-snapshot.sh antigravity 2>/dev/null || true)"
+# Não recrie o snapshot Antigravity só para inspecionar policy: uma execução real
+# pode estar usando esse workspace sob lock. O caminho é estável e suficiente
+# para validar as regras registradas.
+AGY_SNAPSHOT="$ROOT/.orchestrator/runtime/snapshots/antigravity"
 AGY_SETTINGS="$REAL_HOME/.gemini/antigravity-cli/settings.json"
-if [[ -n "$AGY_SNAPSHOT" && -f "$AGY_SETTINGS" ]]; then
-  if SNAPSHOT="$AGY_SNAPSHOT" SETTINGS="$AGY_SETTINGS" node <<'NODE' >/dev/null 2>&1
+if [[ -f "$AGY_SETTINGS" ]]; then
+  SNAPSHOT="$AGY_SNAPSHOT" SETTINGS="$AGY_SETTINGS" node <<'NODE' >/dev/null 2>&1
 import fs from 'node:fs';
 const snapshot = process.env.SNAPSHOT;
 const cfg = JSON.parse(fs.readFileSync(process.env.SETTINGS, 'utf8') || '{}');
 const allow = cfg?.permissions?.allow ?? [];
 const deny = cfg?.permissions?.deny ?? [];
 const ask = cfg?.permissions?.ask ?? [];
-if (ask.includes('read_file(*)')) process.exit(2);
+if (ask.includes('read_file(*)')) process.exit(5);
+if (allow.some((rule) => /^read_file\(.*\*.*\)$/.test(rule))) process.exit(6);
 if (!allow.includes(`read_file(${snapshot})`)) process.exit(3);
 if (!deny.includes(`write_file(${snapshot})`)) process.exit(4);
 NODE
-  then
-    ok "Antigravity possui allow read_file + deny write_file no snapshot sanitizado"
-  else
-    warn "Antigravity sem política read-only do snapshot; rode npm run orch:configure-google"
-  fi
+  AGY_POLICY_STATUS=$?
+  case "$AGY_POLICY_STATUS" in
+    0) ok "Antigravity possui allow read_file + deny write_file estreitos no snapshot" ;;
+    5|6) fail "Antigravity possui permissão read_file ampla; remova-a antes de usar a rota Google" ;;
+    *) warn "Antigravity sem policy completa do snapshot; rode npm run orch:configure-google" ;;
+  esac
 else
   warn "não foi possível validar settings do Antigravity"
 fi
@@ -126,8 +143,15 @@ fi
 if hermes profile show "$PROFILE" >/dev/null 2>&1; then
   ok "perfil Hermes $PROFILE existe"
 
+  SKILL_SOURCE="$ROOT/.orchestrator/hermes-skill/SKILL.md"
   SKILL_PATH="$PROFILE_HOME/skills/software-development/eleicao2026-orchestrator/SKILL.md"
-  [[ -s "$SKILL_PATH" ]] && ok "skill eleicao2026-orchestrator instalada no perfil" || warn "skill do projeto ainda não instalada; rode npm run orch:install-skill"
+  if [[ ! -s "$SKILL_PATH" ]]; then
+    warn "skill do projeto ainda não instalada; rode npm run orch:install-skill"
+  elif cmp -s "$SKILL_SOURCE" "$SKILL_PATH"; then
+    ok "skill eleicao2026-orchestrator instalada e sincronizada com o Git"
+  else
+    fail "skill eleicao2026-orchestrator instalada está desatualizada; rode npm run orch:install-skill"
+  fi
 
   if [[ -f "$PROFILE_HOME/.env" ]] && grep -q '^TERMINAL_ENV=' "$PROFILE_HOME/.env" 2>/dev/null; then
     warn "perfil contém TERMINAL_ENV legado em .env; revise/remova esse override se backend local não for respeitado"
@@ -150,12 +174,20 @@ else
   warn "perfil Hermes $PROFILE ainda não existe"
 fi
 
-if systemctl --user cat "$SERVICE" >/dev/null 2>&1; then
-  GATEWAY_ENV="$(systemctl --user show "$SERVICE" -p Environment --value 2>/dev/null || true)"
-  if [[ -n "$NODE_DIR" && "$GATEWAY_ENV" == *"$NODE_DIR"* ]]; then
-    ok "gateway Hermes usa o Node do shell ($NODE_DIR)"
+if command -v systemctl >/dev/null 2>&1 && systemctl --user cat "$SERVICE" >/dev/null 2>&1; then
+  MAIN_PID="$(systemctl --user show "$SERVICE" -p MainPID --value 2>/dev/null || true)"
+  if [[ "$MAIN_PID" =~ ^[1-9][0-9]*$ && -r "/proc/$MAIN_PID/environ" && -n "$NODE_BIN" ]]; then
+    SERVICE_PATH="$(tr '\0' '\n' < "/proc/$MAIN_PID/environ" | sed -n 's/^PATH=//p' | head -n1)"
+    GATEWAY_NODE="$(env PATH="$SERVICE_PATH" sh -c 'command -v node' 2>/dev/null || true)"
+    GATEWAY_NODE_REAL="$(readlink -f "$GATEWAY_NODE" 2>/dev/null || true)"
+    GATEWAY_NODE_VERSION="$(env PATH="$SERVICE_PATH" node -v 2>/dev/null || true)"
+    if [[ "$GATEWAY_NODE_REAL" == "$NODE_BIN" && "$GATEWAY_NODE_VERSION" == v24.* ]]; then
+      ok "gateway Hermes resolve efetivamente o Node do shell ($GATEWAY_NODE_REAL, $GATEWAY_NODE_VERSION)"
+    else
+      warn "gateway Hermes resolve Node diferente; rode npm run orch:sync-gateway-node"
+    fi
   else
-    warn "gateway Hermes usa PATH diferente do Node 24 atual; rode npm run orch:sync-gateway-node"
+    warn "não foi possível validar o Node efetivo do processo gateway"
   fi
 fi
 
@@ -189,30 +221,38 @@ fi
 if $SMOKE; then
   printf '\n=== smoke dos executores consultivos/read-only ===\n'
 
-  OC_OUT="/tmp/eleicao2026-opencode-smoke.json"
-  OC_EXPECTED_TITLE="$(sed -n '1s/^# //p' AGENTS.md)"
-  if bash scripts/orchestrator/run-opencode.sh \
-    'Tarefa DOCTOR. Leia AGENTS.md na raiz do snapshot e devolva o título inicial exato. Não execute ações externas.' \
-    >"$OC_OUT" 2>/tmp/eleicao2026-opencode-smoke.err \
-    && [[ -s "$OC_OUT" ]] \
-    && [[ -n "$OC_EXPECTED_TITLE" ]] \
-    && grep -Fq "$OC_EXPECTED_TITLE" "$OC_OUT"; then
-    ok "OpenCode/DeepSeek comprovou leitura do AGENTS.md pelo título esperado"
+  if command -v opencode >/dev/null 2>&1; then
+    OC_OUT="/tmp/eleicao2026-opencode-smoke.json"
+    OC_EXPECTED_TITLE="$(sed -n '1s/^# //p' AGENTS.md)"
+    if bash scripts/orchestrator/run-opencode.sh \
+      'Tarefa DOCTOR. Leia AGENTS.md na raiz do snapshot e devolva o título inicial exato. Não execute ações externas.' \
+      >"$OC_OUT" 2>/tmp/eleicao2026-opencode-smoke.err \
+      && [[ -s "$OC_OUT" ]] \
+      && [[ -n "$OC_EXPECTED_TITLE" ]] \
+      && grep -Fq "$OC_EXPECTED_TITLE" "$OC_OUT"; then
+      ok "OpenCode/DeepSeek comprovou leitura do AGENTS.md pelo título esperado"
+    else
+      warn "OpenCode/DeepSeek não comprovou leitura do AGENTS.md; veja /tmp/eleicao2026-opencode-smoke.{json,err}"
+    fi
   else
-    warn "OpenCode/DeepSeek não comprovou leitura do AGENTS.md; veja /tmp/eleicao2026-opencode-smoke.{json,err}"
+    warn "smoke OpenCode ignorado porque executor opcional está ausente"
   fi
 
-  AGY_OUT="/tmp/eleicao2026-antigravity-smoke.txt"
-  AGY_EXPECTED_TITLE="$(sed -n '1s/^# //p' AGENTS.md)"
-  if bash scripts/orchestrator/run-antigravity.sh \
-    'Tarefa DOCTOR. Use somente ferramentas de leitura. Leia AGENTS.md na raiz do workspace e devolva o título inicial exato.' \
-    >"$AGY_OUT" 2>/tmp/eleicao2026-antigravity-smoke.err \
-    && [[ -s "$AGY_OUT" ]] \
-    && [[ -n "$AGY_EXPECTED_TITLE" ]] \
-    && grep -Fq "$AGY_EXPECTED_TITLE" "$AGY_OUT"; then
-    ok "Antigravity/Google comprovou leitura do AGENTS.md pelo título esperado"
+  if command -v agy >/dev/null 2>&1; then
+    AGY_OUT="/tmp/eleicao2026-antigravity-smoke.txt"
+    AGY_EXPECTED_TITLE="$(sed -n '1s/^# //p' AGENTS.md)"
+    if bash scripts/orchestrator/run-antigravity.sh \
+      'Tarefa DOCTOR. Use somente ferramentas de leitura. Leia AGENTS.md na raiz do workspace e devolva o título inicial exato.' \
+      >"$AGY_OUT" 2>/tmp/eleicao2026-antigravity-smoke.err \
+      && [[ -s "$AGY_OUT" ]] \
+      && [[ -n "$AGY_EXPECTED_TITLE" ]] \
+      && grep -Fq "$AGY_EXPECTED_TITLE" "$AGY_OUT"; then
+      ok "Antigravity/Google comprovou leitura do AGENTS.md pelo título esperado"
+    else
+      warn "Antigravity/Google não comprovou leitura do AGENTS.md; veja /tmp/eleicao2026-antigravity-smoke.{txt,err}"
+    fi
   else
-    warn "Antigravity/Google não comprovou leitura do AGENTS.md; veja /tmp/eleicao2026-antigravity-smoke.{txt,err}"
+    warn "smoke Antigravity ignorado porque executor opcional está ausente"
   fi
 
   CODEX_PROMPT='Retorne JSON válido conforme o schema. task_id="DOCTOR-CODEX", status="ok", summary="Codex operacional", findings=[], evidence=[], files_changed=[], tests=[], risks=[], recommended_action="nenhuma", human_review_required=false. Não leia ou altere arquivos.'
