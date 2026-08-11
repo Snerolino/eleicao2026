@@ -311,6 +311,18 @@ finally:
     except Exception:
         pass
 
+def parse_object(value):
+    if isinstance(value, dict):
+        return value
+    if isinstance(value, str):
+        try:
+            parsed = json.loads(value)
+        except Exception:
+            return {}
+        return parsed if isinstance(parsed, dict) else {}
+    return {}
+
+
 call_meta = {}
 saw_readonly_codex_call = False
 saw_valid_result = False
@@ -321,35 +333,70 @@ for role, content, tool_call_id, tool_calls, tool_name in rows:
             calls = json.loads(tool_calls)
         except Exception:
             calls = []
+
         if isinstance(calls, dict):
             calls = [calls]
+
         for call in calls if isinstance(calls, list) else []:
             if not isinstance(call, dict):
                 continue
+
             fn = call.get("function") or {}
-            name = fn.get("name") if isinstance(fn, dict) else None
-            name = name or call.get("name") or ""
-            call_id = call.get("id") or ""
-            raw_args = fn.get("arguments") if isinstance(fn, dict) else None
+            outer_name = (
+                fn.get("name")
+                if isinstance(fn, dict)
+                else None
+            )
+            outer_name = outer_name or call.get("name") or ""
+
+            raw_args = (
+                fn.get("arguments")
+                if isinstance(fn, dict)
+                else None
+            )
             if raw_args is None:
                 raw_args = call.get("arguments")
-            if isinstance(raw_args, str):
-                try:
-                    args = json.loads(raw_args)
-                except Exception:
-                    args = {}
-            elif isinstance(raw_args, dict):
-                args = raw_args
-            else:
-                args = {}
-            sandbox = args.get("sandbox")
-            is_readonly_codex = bool(name_re.search(name)) and sandbox == "read-only"
+
+            outer_args = parse_object(raw_args)
+
+            # Hermes encapsula ferramentas descobertas dinamicamente
+            # em uma chamada genérica `tool_call`:
+            #
+            # tool_call({
+            #   "name": "mcp__codex__codex",
+            #   "arguments": {...}
+            # })
+            effective_name = outer_name
+            effective_args = outer_args
+
+            if outer_name == "tool_call":
+                wrapped_name = outer_args.get("name")
+                if isinstance(wrapped_name, str):
+                    effective_name = wrapped_name
+                effective_args = parse_object(
+                    outer_args.get("arguments")
+                )
+
+            call_id = (
+                call.get("id")
+                or call.get("call_id")
+                or ""
+            )
+
+            sandbox = effective_args.get("sandbox")
+
+            is_readonly_codex = (
+                bool(name_re.search(effective_name))
+                and sandbox == "read-only"
+            )
+
             if call_id:
                 call_meta[call_id] = {
-                    "name": name,
+                    "name": effective_name,
                     "sandbox": sandbox,
                     "readonly_codex": is_readonly_codex,
                 }
+
             if is_readonly_codex:
                 saw_readonly_codex_call = True
 
@@ -357,12 +404,21 @@ for role, content, tool_call_id, tool_calls, tool_name in rows:
         meta = call_meta.get(tool_call_id)
         if not meta:
             continue
-        resolved_name = tool_name or meta.get("name") or ""
-        if meta.get("readonly_codex") and name_re.search(resolved_name):
-            if expected in (content or ""):
-                saw_valid_result = True
 
-sys.exit(0 if saw_readonly_codex_call and saw_valid_result else 3)
+        resolved_name = tool_name or meta.get("name") or ""
+
+        if (
+            meta.get("readonly_codex")
+            and name_re.search(resolved_name)
+            and expected in (content or "")
+        ):
+            saw_valid_result = True
+
+sys.exit(
+    0
+    if saw_readonly_codex_call and saw_valid_result
+    else 3
+)
 PY
   then
     ok "Hermes -> Codex MCP comprovado por tool_call read-only + resultado estruturados"
