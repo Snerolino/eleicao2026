@@ -45,12 +45,13 @@ cd "$SNAPSHOT"
 printf '%s' "$PROMPT" | env \
   HOME="$REAL_HOME" \
   CODEX_HOME="$REAL_HOME/.codex" \
-  timeout "${TIMEOUT_SECONDS}s" \
+  timeout --signal=TERM --kill-after=10s "${TIMEOUT_SECONDS}s" \
   codex exec \
     --oss \
     --local-provider ollama \
     -m "$MODEL" \
     --sandbox read-only \
+    --skip-git-repo-check \
     --ephemeral \
     --color never \
     -o "$OUT" \
