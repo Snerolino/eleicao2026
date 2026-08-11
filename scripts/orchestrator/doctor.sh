@@ -39,9 +39,16 @@ printf 'hermes_profile=%s\n\n' "$PROFILE"
 
 # Núcleo obrigatório. Executores consultivos opcionais não tornam o control
 # plane inviável quando existe Hermes + Codex como rota segura.
-for cmd in git node npm hermes codex timeout flock tar find cmp; do
+for cmd in git node npm hermes codex timeout flock tar find cmp mktemp; do
   has_cmd "$cmd"
 done
+
+DIAG_DIR="$(mktemp -d "${TMPDIR:-/tmp}/eleicao2026-orch-doctor.XXXXXX" 2>/dev/null || true)"
+if [[ -z "$DIAG_DIR" || ! -d "$DIAG_DIR" ]]; then
+  echo "FAIL não foi possível criar diretório temporário seguro para diagnósticos" >&2
+  exit 3
+fi
+trap 'rm -rf -- "$DIAG_DIR"' EXIT
 
 command -v agy >/dev/null 2>&1 && ok "agy disponível: $(command -v agy)" || warn "agy ausente; rota Google Antigravity indisponível"
 command -v opencode >/dev/null 2>&1 && ok "opencode disponível: $(command -v opencode)" || warn "opencode ausente; rota DeepSeek gratuita indisponível"
@@ -147,7 +154,7 @@ if hermes profile show "$PROFILE" >/dev/null 2>&1; then
   SKILL_SOURCE="$ROOT/.orchestrator/hermes-skill/SKILL.md"
   SKILL_PATH="$PROFILE_HOME/skills/software-development/eleicao2026-orchestrator/SKILL.md"
   if [[ ! -s "$SKILL_PATH" ]]; then
-    warn "skill do projeto ainda não instalada; rode npm run orch:install-skill"
+    fail "skill obrigatória eleicao2026-orchestrator ausente; rode npm run orch:install-skill"
   elif cmp -s "$SKILL_SOURCE" "$SKILL_PATH"; then
     ok "skill eleicao2026-orchestrator instalada e sincronizada com o Git"
   else
@@ -192,24 +199,41 @@ if command -v systemctl >/dev/null 2>&1 && systemctl --user cat "$SERVICE" >/dev
   fi
 fi
 
-MCP_ERR="/tmp/eleicao2026-codex-mcp-launch.err"
+MCP_ERR="$DIAG_DIR/codex-mcp-launch.err"
 env HOME="$REAL_HOME" CODEX_HOME="$REAL_HOME/.codex" \
   timeout 3s codex mcp-server >/dev/null 2>"$MCP_ERR"
 MCP_STATUS=$?
 if [[ $MCP_STATUS -eq 124 || $MCP_STATUS -eq 0 ]]; then
   ok "codex mcp-server inicia e permanece disponível por stdio"
 else
-  fail "codex mcp-server obrigatório falhou ao iniciar; veja $MCP_ERR"
+  fail "codex mcp-server obrigatório falhou ao iniciar"
+  [[ -s "$MCP_ERR" ]] && sed -n '1,20p' "$MCP_ERR" >&2
 fi
 
 if command -v gh >/dev/null 2>&1; then
   gh auth status >/dev/null 2>&1 && ok "GitHub CLI autenticado" || warn "GitHub CLI sem autenticação válida"
 fi
 
-if command -v npx >/dev/null 2>&1; then
-  npx --yes supabase --version >/dev/null 2>&1 && ok "Supabase CLI executável" || warn "Supabase CLI não respondeu"
-  npx --yes wrangler --version >/dev/null 2>&1 && ok "Wrangler executável" || warn "Wrangler não respondeu"
-fi
+check_local_cli() {
+  local name="$1"
+  local bin=""
+  if command -v "$name" >/dev/null 2>&1; then
+    bin="$(command -v "$name")"
+  elif [[ -x "$ROOT/node_modules/.bin/$name" ]]; then
+    bin="$ROOT/node_modules/.bin/$name"
+  fi
+
+  if [[ -n "$bin" ]]; then
+    timeout 10s "$bin" --version >/dev/null 2>&1 \
+      && ok "$name CLI instalada localmente e executável" \
+      || warn "$name CLI local não respondeu ao --version"
+  else
+    warn "$name CLI não instalada localmente; doctor não baixa/executa pacote remoto via npx"
+  fi
+}
+
+check_local_cli supabase
+check_local_cli wrangler
 
 if command -v ollama >/dev/null 2>&1; then
   if ollama list 2>/dev/null | awk 'NR>1 {print $1}' | grep -Fxq 'gpt-oss:20b'; then
@@ -220,61 +244,87 @@ if command -v ollama >/dev/null 2>&1; then
 fi
 
 if $SMOKE; then
-  printf '\n=== smoke dos executores consultivos/read-only ===\n'
+  printf '\n=== smoke dos executores e rota obrigatória ===\n'
+
+  # O modo --smoke é o gate autoritativo de retomada. Além dos preflights acima,
+  # exercita a rota configurada Hermes -> MCP Codex em uma tarefa read-only.
+  HERMES_MCP_OUT="$DIAG_DIR/hermes-codex-mcp-smoke.out"
+  HERMES_MCP_ERR="$DIAG_DIR/hermes-codex-mcp-smoke.err"
+  HERMES_MCP_PROMPT='Tarefa DOCTOR. Use obrigatoriamente o servidor MCP nomeado codex para executar uma tarefa read-only no projeto atual. Pelo MCP Codex, leia somente o título inicial de AGENTS.md. Não altere arquivos e não use terminal ou ferramentas de arquivo do próprio Hermes. Se a chamada MCP funcionar, responda ao final exatamente HERMES_CODEX_MCP_OK. Se não conseguir usar o servidor codex, responda MCP_FAIL.'
+  if env HOME="$REAL_HOME" \
+      timeout 120s hermes -p "$PROFILE" chat -v -q "$HERMES_MCP_PROMPT" \
+      >"$HERMES_MCP_OUT" 2>"$HERMES_MCP_ERR" \
+    && grep -Fq 'HERMES_CODEX_MCP_OK' "$HERMES_MCP_OUT" \
+    && cat "$HERMES_MCP_OUT" "$HERMES_MCP_ERR" | grep -Eqi 'mcp[^[:alnum:]]*codex|codex[^[:alnum:]]*mcp'; then
+    ok "Hermes -> Codex MCP comprovado ponta a ponta em read-only"
+  else
+    fail "Hermes não comprovou a rota MCP Codex configurada"
+    [[ -s "$HERMES_MCP_ERR" ]] && sed -n '1,30p' "$HERMES_MCP_ERR" >&2
+  fi
 
   if command -v opencode >/dev/null 2>&1; then
-    OC_OUT="/tmp/eleicao2026-opencode-smoke.json"
+    OC_OUT="$DIAG_DIR/opencode-smoke.json"
+    OC_ERR="$DIAG_DIR/opencode-smoke.err"
     OC_EXPECTED_TITLE="$(sed -n '1s/^# //p' AGENTS.md)"
     if bash scripts/orchestrator/run-opencode.sh \
       'Tarefa DOCTOR. Leia AGENTS.md na raiz do snapshot e devolva o título inicial exato. Não execute ações externas.' \
-      >"$OC_OUT" 2>/tmp/eleicao2026-opencode-smoke.err \
+      >"$OC_OUT" 2>"$OC_ERR" \
       && [[ -s "$OC_OUT" ]] \
       && [[ -n "$OC_EXPECTED_TITLE" ]] \
       && grep -Fq "$OC_EXPECTED_TITLE" "$OC_OUT"; then
       ok "OpenCode/DeepSeek comprovou leitura do AGENTS.md pelo título esperado"
     else
-      warn "OpenCode/DeepSeek não comprovou leitura do AGENTS.md; veja /tmp/eleicao2026-opencode-smoke.{json,err}"
+      warn "OpenCode/DeepSeek não comprovou leitura do AGENTS.md"
+      [[ -s "$OC_ERR" ]] && sed -n '1,20p' "$OC_ERR" >&2
     fi
   else
     warn "smoke OpenCode ignorado porque executor opcional está ausente"
   fi
 
   if command -v agy >/dev/null 2>&1; then
-    AGY_OUT="/tmp/eleicao2026-antigravity-smoke.txt"
+    AGY_OUT="$DIAG_DIR/antigravity-smoke.txt"
+    AGY_ERR="$DIAG_DIR/antigravity-smoke.err"
     AGY_EXPECTED_TITLE="$(sed -n '1s/^# //p' AGENTS.md)"
     if bash scripts/orchestrator/run-antigravity.sh \
       'Tarefa DOCTOR. Use somente ferramentas de leitura. Leia AGENTS.md na raiz do workspace e devolva o título inicial exato.' \
-      >"$AGY_OUT" 2>/tmp/eleicao2026-antigravity-smoke.err \
+      >"$AGY_OUT" 2>"$AGY_ERR" \
       && [[ -s "$AGY_OUT" ]] \
       && [[ -n "$AGY_EXPECTED_TITLE" ]] \
       && grep -Fq "$AGY_EXPECTED_TITLE" "$AGY_OUT"; then
       ok "Antigravity/Google comprovou leitura do AGENTS.md pelo título esperado"
     else
-      warn "Antigravity/Google não comprovou leitura do AGENTS.md; veja /tmp/eleicao2026-antigravity-smoke.{txt,err}"
+      warn "Antigravity/Google não comprovou leitura do AGENTS.md"
+      [[ -s "$AGY_ERR" ]] && sed -n '1,20p' "$AGY_ERR" >&2
     fi
   else
     warn "smoke Antigravity ignorado porque executor opcional está ausente"
   fi
 
   CODEX_PROMPT='Retorne JSON válido conforme o schema. task_id="DOCTOR-CODEX", status="ok", summary="Codex operacional", findings=[], evidence=[], files_changed=[], tests=[], risks=[], recommended_action="nenhuma", human_review_required=false. Não leia ou altere arquivos.'
-  CX_OUT="/tmp/eleicao2026-codex-smoke.json"
+  CX_OUT="$DIAG_DIR/codex-smoke.json"
+  CX_ERR="$DIAG_DIR/codex-smoke.err"
   if printf '%s' "$CODEX_PROMPT" | bash scripts/orchestrator/run-codex-readonly.sh \
-    >"$CX_OUT" 2>/tmp/eleicao2026-codex-smoke.err && [[ -s "$CX_OUT" ]]; then
+    >"$CX_OUT" 2>"$CX_ERR" && [[ -s "$CX_OUT" ]]; then
     ok "Codex exec fallback smoke com saída estruturada"
   else
-    warn "Codex exec fallback smoke falhou ou retornou vazio; veja /tmp/eleicao2026-codex-smoke.err"
+    warn "Codex exec fallback smoke falhou ou retornou vazio"
+    [[ -s "$CX_ERR" ]] && sed -n '1,20p' "$CX_ERR" >&2
   fi
 
   if command -v ollama >/dev/null 2>&1 && ollama list 2>/dev/null | awk 'NR>1 {print $1}' | grep -Fxq 'gpt-oss:20b'; then
-    LOCAL_OUT="/tmp/eleicao2026-local-smoke.txt"
+    LOCAL_OUT="$DIAG_DIR/local-smoke.txt"
+    LOCAL_ERR="$DIAG_DIR/local-smoke.err"
     if bash scripts/orchestrator/run-local-fallback.sh \
       'Leia AGENTS.md e responda apenas: LOCAL_OK' \
-      >"$LOCAL_OUT" 2>/tmp/eleicao2026-local-smoke.err && [[ -s "$LOCAL_OUT" ]]; then
+      >"$LOCAL_OUT" 2>"$LOCAL_ERR" && [[ -s "$LOCAL_OUT" ]]; then
       ok "fallback local Ollama smoke"
     else
-      warn "fallback local Ollama falhou; veja /tmp/eleicao2026-local-smoke.err"
+      warn "fallback local Ollama falhou"
+      [[ -s "$LOCAL_ERR" ]] && sed -n '1,20p' "$LOCAL_ERR" >&2
     fi
   fi
+else
+  warn "rota Hermes -> Codex MCP não foi exercitada no modo rápido; use --smoke para o gate final"
 fi
 
 printf '\n=== resultado ===\n'
