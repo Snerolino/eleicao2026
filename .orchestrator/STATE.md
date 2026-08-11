@@ -1,6 +1,6 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-11 01:25 -03
+Atualizado: 2026-08-11 01:35 -03
 Status: `ORCHESTRATOR_V1_MCP_E2E_RETEST_PENDING`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
@@ -69,7 +69,7 @@ Warnings não bloqueantes observados:
 - Runbook instala a skill versionada logo após criar/configurar o perfil e antes de usar o doctor como gate.
 - Perfil Hermes ausente vira FAIL.
 - Codex MCP ausente ou `codex mcp-server` incapaz de iniciar vira FAIL, pois é a rota writer obrigatória.
-- `doctor --smoke` agora exercita a rota **Hermes → MCP Codex** ponta a ponta em read-only e exige evidência do uso do MCP + marcador `HERMES_CODEX_MCP_OK`.
+- `doctor --smoke` exercita a rota **Hermes → MCP Codex** em read-only e valida no `state.db` da sessão uma `tool_call` pertencente ao servidor `codex` mais o respectivo resultado contendo o título real de `AGENTS.md`; não confia em texto/marker produzido pelo modelo.
 - `doctor` não instala CLIs durante diagnóstico: Supabase/Wrangler só são executados se já estiverem instalados globalmente ou em `node_modules/.bin`.
 - Arquivos temporários do doctor usam diretório exclusivo criado com `mktemp` e removido no `trap`, evitando paths previsíveis em `/tmp`.
 - `agy` e `opencode` ausentes continuam WARN por serem executores consultivos opcionais.
@@ -81,11 +81,11 @@ Warnings não bloqueantes observados:
 - CI remoto dos heads anteriores ficou verde em data check, preflight, TypeScript, testes, build e browser smoke; job de deploy de produção ficou `skipped`.
 - Threads anteriores foram resolvidos após as correções correspondentes.
 - O review de `c2c35df` encontrou três P2 adicionais e válidos: exercitar a rota MCP configurada; não baixar CLIs com `npx --yes` durante diagnóstico; usar temporários seguros.
-- Esses três pontos foram corrigidos no head posterior.
+- O review seguinte apontou corretamente que texto/marker do modelo não era evidência suficiente para o MCP E2E; o gate foi trocado por inspeção estruturada da sessão persistida pelo Hermes.
 
 ## Gate atual
 
-Como o último hardening adicionou uma **nova chamada E2E real Hermes → Codex MCP dentro de `doctor --smoke`**, há uma mudança material de runtime desde o reteste `OK=48 WARN=3 FAIL=0`.
+Como o último hardening adicionou uma **nova validação E2E real Hermes → Codex MCP dentro de `doctor --smoke`**, há uma mudança material de runtime desde o reteste `OK=48 WARN=3 FAIL=0`.
 
 Não repetir a regressão de 888 testes localmente. O único reteste local necessário é:
 
@@ -94,7 +94,7 @@ bash -n scripts/orchestrator/*.sh
 npm run orch:doctor -- --smoke
 ```
 
-Critério: `FAIL=0` e linha `OK Hermes -> Codex MCP comprovado ponta a ponta em read-only`.
+Critério: `FAIL=0` e linha `OK Hermes -> Codex MCP comprovado por tool_call + resultado estruturados em read-only`.
 
 ## Próximo passo após gate verde
 
