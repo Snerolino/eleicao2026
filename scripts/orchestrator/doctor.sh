@@ -39,7 +39,7 @@ printf 'hermes_profile=%s\n\n' "$PROFILE"
 
 # Núcleo obrigatório. Executores consultivos opcionais não tornam o control
 # plane inviável quando existe Hermes + Codex como rota segura.
-for cmd in git node npm hermes codex timeout flock tar find cmp mktemp; do
+for cmd in git node npm hermes codex timeout flock tar find cmp mktemp python3; do
   has_cmd "$cmd"
 done
 
@@ -248,12 +248,13 @@ if $SMOKE; then
 
   # O gate E2E não confia no texto final do modelo. A sessão one-shot é
   # persistida pelo Hermes em state.db; abaixo validamos tool_call + tool result
-  # estruturados associados a um probe único desta execução.
+  # estruturados associados a um probe único desta execução, inclusive o
+  # sandbox read-only explícito nos argumentos da chamada Codex.
   HERMES_MCP_PROBE="ORCH_MCP_${$}_$(date +%s)"
   HERMES_MCP_OUT="$DIAG_DIR/hermes-codex-mcp-smoke.out"
   HERMES_MCP_ERR="$DIAG_DIR/hermes-codex-mcp-smoke.err"
   HERMES_MCP_EXPECTED_TITLE="$(sed -n '1s/^# //p' AGENTS.md)"
-  HERMES_MCP_PROMPT="Tarefa DOCTOR probe ${HERMES_MCP_PROBE}. Use obrigatoriamente o servidor MCP nomeado codex para uma tarefa read-only no projeto atual. Pelo MCP Codex, leia somente AGENTS.md e peça que devolva o título inicial exato do arquivo. Não altere arquivos e não use terminal ou ferramentas de arquivo do próprio Hermes."
+  HERMES_MCP_PROMPT="Tarefa DOCTOR probe ${HERMES_MCP_PROBE}. Use obrigatoriamente o servidor MCP nomeado codex para uma tarefa read-only no projeto atual. Ao chamar a ferramenta Codex, defina explicitamente sandbox=read-only. Pelo MCP Codex, leia somente AGENTS.md e peça que devolva o título inicial exato do arquivo. Não altere arquivos e não use terminal ou ferramentas de arquivo do próprio Hermes."
 
   env HOME="$REAL_HOME" \
     timeout 120s hermes -p "$PROFILE" chat -q "$HERMES_MCP_PROMPT" \
@@ -310,8 +311,8 @@ finally:
     except Exception:
         pass
 
-call_names = {}
-saw_codex_call = False
+call_meta = {}
+saw_readonly_codex_call = False
 saw_valid_result = False
 
 for role, content, tool_call_id, tool_calls, tool_name in rows:
@@ -329,24 +330,44 @@ for role, content, tool_call_id, tool_calls, tool_name in rows:
             name = fn.get("name") if isinstance(fn, dict) else None
             name = name or call.get("name") or ""
             call_id = call.get("id") or ""
+            raw_args = fn.get("arguments") if isinstance(fn, dict) else None
+            if raw_args is None:
+                raw_args = call.get("arguments")
+            if isinstance(raw_args, str):
+                try:
+                    args = json.loads(raw_args)
+                except Exception:
+                    args = {}
+            elif isinstance(raw_args, dict):
+                args = raw_args
+            else:
+                args = {}
+            sandbox = args.get("sandbox")
+            is_readonly_codex = bool(name_re.search(name)) and sandbox == "read-only"
             if call_id:
-                call_names[call_id] = name
-            if name_re.search(name):
-                saw_codex_call = True
+                call_meta[call_id] = {
+                    "name": name,
+                    "sandbox": sandbox,
+                    "readonly_codex": is_readonly_codex,
+                }
+            if is_readonly_codex:
+                saw_readonly_codex_call = True
 
-    if role == "tool":
-        resolved_name = tool_name or call_names.get(tool_call_id or "", "")
-        if name_re.search(resolved_name or ""):
-            saw_codex_call = True
+    if role == "tool" and tool_call_id:
+        meta = call_meta.get(tool_call_id)
+        if not meta:
+            continue
+        resolved_name = tool_name or meta.get("name") or ""
+        if meta.get("readonly_codex") and name_re.search(resolved_name):
             if expected in (content or ""):
                 saw_valid_result = True
 
-sys.exit(0 if saw_codex_call and saw_valid_result else 3)
+sys.exit(0 if saw_readonly_codex_call and saw_valid_result else 3)
 PY
   then
-    ok "Hermes -> Codex MCP comprovado por tool_call + resultado estruturados em read-only"
+    ok "Hermes -> Codex MCP comprovado por tool_call read-only + resultado estruturados"
   else
-    fail "Hermes não comprovou a rota MCP Codex por evidência estruturada"
+    fail "Hermes não comprovou a rota MCP Codex read-only por evidência estruturada"
     [[ -s "$HERMES_MCP_ERR" ]] && sed -n '1,30p' "$HERMES_MCP_ERR" >&2
   fi
 
