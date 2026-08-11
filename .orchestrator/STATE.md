@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-11 01:05 -03
-Status: `ORCHESTRATOR_V1_FINAL_REVIEW_RETEST_GREEN`
+Atualizado: 2026-08-11 01:25 -03
+Status: `ORCHESTRATOR_V1_MCP_E2E_RETEST_PENDING`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
@@ -27,16 +27,16 @@ Status: `ORCHESTRATOR_V1_FINAL_REVIEW_RETEST_GREEN`
 - Último `supabase db push --dry-run` listou somente essas cinco como pendentes.
 - Nenhum `db push` real ou `migration repair` executado neste arco.
 
-## Hermes / executores — RETESTE FINAL VERDE
+## Hermes / executores — BASE LOCAL VERDE
 
-Reteste local concluído no workstation real em Node `v24.19.0`:
+Reteste local concluído no workstation real antes da adição do smoke E2E automático, em Node `v24.19.0`:
 
 ```text
 bash -n scripts/orchestrator/*.sh  -> sem erro
 npm run orch:doctor -- --smoke    -> OK=48 WARN=3 FAIL=0
 ```
 
-Comprovado no reteste:
+Comprovado nesse reteste:
 
 - Node do shell `v24.19.0`;
 - Hermes profile `eleicao2026` existe;
@@ -65,28 +65,45 @@ Warnings não bloqueantes observados:
 - OpenCode/DeepSeek Free fica consultivo/read-only sobre snapshot; build não tem ferramentas na worktree viva.
 - Antigravity usa snapshot sanitizado, `--add-dir`, custom reader, plan/sandbox e rejeita qualquer `read_file(...)` externo ao snapshot.
 - Prompt enviado ao Google não inclui caminho absoluto/identidade local.
-- Skill Hermes stale vira FAIL e instalador usa `HERMES_REAL_HOME` resolvido.
+- Skill Hermes ausente ou stale vira FAIL e instalador usa `HERMES_REAL_HOME` resolvido.
 - Runbook instala a skill versionada logo após criar/configurar o perfil e antes de usar o doctor como gate.
 - Perfil Hermes ausente vira FAIL.
-- Codex MCP ausente vira FAIL, pois é a rota writer obrigatória.
+- Codex MCP ausente ou `codex mcp-server` incapaz de iniciar vira FAIL, pois é a rota writer obrigatória.
+- `doctor --smoke` agora exercita a rota **Hermes → MCP Codex** ponta a ponta em read-only e exige evidência do uso do MCP + marcador `HERMES_CODEX_MCP_OK`.
+- `doctor` não instala CLIs durante diagnóstico: Supabase/Wrangler só são executados se já estiverem instalados globalmente ou em `node_modules/.bin`.
+- Arquivos temporários do doctor usam diretório exclusivo criado com `mktemp` e removido no `trap`, evitando paths previsíveis em `/tmp`.
 - `agy` e `opencode` ausentes continuam WARN por serem executores consultivos opcionais.
 - Gateway valida o binário Node efetivamente resolvido pelo processo systemd, não apenas presença de diretório no PATH.
 - Doctor exige prova semântica dos readers e verifica tracked + untracked da worktree.
 
 ## CI / review
 
-- CI remoto do head anterior ao último ajuste documental/gate ficou verde em data check, preflight, TypeScript, testes, build e browser smoke; job de deploy de produção ficou `skipped`.
-- Reteste local final está concluído e não deve ser repetido sem nova alteração material nos scripts/runtime.
-- Threads dos reviews anteriores foram resolvidos após as correções correspondentes.
-- Gate restante: CI + re-review do Codex no head final que contém o gate obrigatório do Codex MCP e este checkpoint atualizado.
+- CI remoto dos heads anteriores ficou verde em data check, preflight, TypeScript, testes, build e browser smoke; job de deploy de produção ficou `skipped`.
+- Threads anteriores foram resolvidos após as correções correspondentes.
+- O review de `c2c35df` encontrou três P2 adicionais e válidos: exercitar a rota MCP configurada; não baixar CLIs com `npx --yes` durante diagnóstico; usar temporários seguros.
+- Esses três pontos foram corrigidos no head posterior.
+
+## Gate atual
+
+Como o último hardening adicionou uma **nova chamada E2E real Hermes → Codex MCP dentro de `doctor --smoke`**, há uma mudança material de runtime desde o reteste `OK=48 WARN=3 FAIL=0`.
+
+Não repetir a regressão de 888 testes localmente. O único reteste local necessário é:
+
+```bash
+bash -n scripts/orchestrator/*.sh
+npm run orch:doctor -- --smoke
+```
+
+Critério: `FAIL=0` e linha `OK Hermes -> Codex MCP comprovado ponta a ponta em read-only`.
 
 ## Próximo passo após gate verde
 
 1. Confirmar CI do head final verde.
 2. Confirmar re-review do Codex sem novo achado material.
-3. Sob a autorização humana já concedida para este arco, fazer **squash-merge do #70 na feature**, nunca em `main`.
-4. Atualizar worktree local da feature e iniciar Hermes por `.orchestrator/BOOTSTRAP_PROMPT.md`.
-5. Retomar Fase 2 da Matriz, mantendo migrations remotas bloqueadas.
+3. Executar o reteste local curto acima e obter `FAIL=0`.
+4. Sob a autorização humana já concedida para este arco, fazer **squash-merge do #70 na feature**, nunca em `main`.
+5. Atualizar worktree local da feature e iniciar Hermes por `.orchestrator/BOOTSTRAP_PROMPT.md`.
+6. Retomar Fase 2 da Matriz, mantendo migrations remotas bloqueadas.
 
 ## Gates permanentes
 
