@@ -34,7 +34,12 @@ if ! ollama list 2>/dev/null | awk 'NR>1 {print $1}' | grep -Fxq "$MODEL"; then
   exit 69
 fi
 
-SNAPSHOT="$(bash "$ROOT/scripts/orchestrator/prepare-snapshot.sh" local)"
+RUNTIME="$ROOT/.orchestrator/runtime"
+mkdir -p "$RUNTIME/locks"
+exec 8>"$RUNTIME/locks/snapshot-local.lock"
+flock 8
+
+SNAPSHOT="$(ORCH_SNAPSHOT_LOCK_HELD=1 bash "$ROOT/scripts/orchestrator/prepare-snapshot.sh" local)"
 cd "$SNAPSHOT"
 
 printf '%s' "$PROMPT" | env \
