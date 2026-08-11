@@ -199,7 +199,7 @@ MCP_STATUS=$?
 if [[ $MCP_STATUS -eq 124 || $MCP_STATUS -eq 0 ]]; then
   ok "codex mcp-server inicia e permanece disponível por stdio"
 else
-  warn "codex mcp-server falhou ao iniciar; veja $MCP_ERR"
+  fail "codex mcp-server obrigatório falhou ao iniciar; veja $MCP_ERR"
 fi
 
 if command -v gh >/dev/null 2>&1; then
