@@ -22,12 +22,17 @@ if [[ -z "${PROMPT//[[:space:]]/}" ]]; then
   exit 42
 fi
 
-SNAPSHOT="$(bash "$ROOT/scripts/orchestrator/prepare-snapshot.sh" opencode)"
+RUNTIME="$ROOT/.orchestrator/runtime"
+mkdir -p "$RUNTIME/locks"
+exec 8>"$RUNTIME/locks/snapshot-opencode.lock"
+flock 8
+
+SNAPSHOT="$(ORCH_SNAPSHOT_LOCK_HELD=1 bash "$ROOT/scripts/orchestrator/prepare-snapshot.sh" opencode)"
 cd "$SNAPSHOT"
 
-# Snapshot contém somente arquivos rastreados do HEAD. MCP é desligado e o agent
-# plan nega edição/shell. Assim o executor barato não enxerga secrets, arquivos
-# locais nem a worktree mutável.
+# O lock acima permanece aberto durante todo o processo OpenCode, impedindo que
+# outra preparação com o mesmo nome apague o workspace de um reader em curso.
+# O snapshot já foi sanitizado fisicamente e contém somente conteúdo permitido.
 exec env \
   HOME="$REAL_HOME" \
   OPENCODE_DISABLE_MCP=true \
