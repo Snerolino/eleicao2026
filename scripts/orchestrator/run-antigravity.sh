@@ -46,7 +46,7 @@ fi
 
 # O lock do snapshot permanece aberto durante toda a execução. Assim outra
 # chamada não consegue recriar/apagar o workspace enquanto este reader o usa.
-# A política local também deve ser estreita: broad read_file(*) é rejeitado.
+# A política local é fail-closed: nenhuma leitura fora do snapshot é aceita.
 if ! SNAPSHOT="$SNAPSHOT" SETTINGS="$SETTINGS" node <<'NODE'
 import fs from 'node:fs';
 const settingsPath = process.env.SETTINGS;
@@ -56,20 +56,24 @@ const cfg = JSON.parse(fs.readFileSync(settingsPath, 'utf8') || '{}');
 const allow = cfg?.permissions?.allow ?? [];
 const deny = cfg?.permissions?.deny ?? [];
 const ask = cfg?.permissions?.ask ?? [];
-if (ask.includes('read_file(*)')) process.exit(3);
-if (allow.some((rule) => /^read_file\(.*\*.*\)$/.test(rule))) process.exit(6);
-if (!allow.includes(`read_file(${snapshot})`)) process.exit(4);
+const allowRule = `read_file(${snapshot})`;
+if (allow.some((rule) => /^read_file\(/.test(rule) && rule !== allowRule)) process.exit(6);
+if (ask.some((rule) => /^read_file\(/.test(rule))) process.exit(7);
+if (!allow.includes(allowRule)) process.exit(4);
 if (!deny.includes(`write_file(${snapshot})`)) process.exit(5);
 NODE
 then
-  echo "Antigravity não possui uma política read-only estreita para o snapshot." >&2
-  echo "Remova permissões broad read_file(*) se existirem e rode: npm run orch:configure-google" >&2
+  echo "Antigravity não possui uma política read-only exclusiva para o snapshot." >&2
+  echo "Remova permissões read_file externas/dinâmicas e rode: npm run orch:configure-google" >&2
   exit 44
 fi
 
 cd "$SNAPSHOT"
 
-SAFE_PROMPT="/goal Trabalhe somente no workspace explicitamente adicionado em ${SNAPSHOT}. O arquivo AGENTS.md alvo está na raiz desse workspace: ${SNAPSHOT}/AGENTS.md. Resolva esta tarefa diretamente neste agente e devolva a resposta final no mesmo turno. Não procure em HOME, customizations globais, scratch ou outros projetos. Não invoque subagentes, research, self, background agents ou mensageria entre agentes. Não use terminal, shell ou command. Use apenas ferramentas de leitura disponibilizadas pelo agente. Tarefa: ${PROMPT}"
+# Não inclua paths absolutos no texto enviado ao provedor externo. O workspace
+# já foi adicionado localmente por --add-dir; o modelo só precisa de referências
+# relativas ao workspace sanitizado.
+SAFE_PROMPT="/goal Trabalhe somente no workspace explicitamente adicionado. O arquivo AGENTS.md alvo está na raiz desse workspace. Resolva esta tarefa diretamente neste agente e devolva a resposta final no mesmo turno. Não procure em HOME, customizations globais, scratch ou outros projetos. Não invoque subagentes, research, self, background agents ou mensageria entre agentes. Não use terminal, shell ou command. Use apenas ferramentas de leitura disponibilizadas pelo agente. Tarefa: ${PROMPT}"
 
 OUT="$(mktemp /tmp/eleicao2026-agy-out.XXXXXX)"
 ERR="$(mktemp /tmp/eleicao2026-agy-err.XXXXXX)"
