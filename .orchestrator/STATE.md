@@ -22,12 +22,12 @@ Status: `FASE2_FECHADA_PRODUCAO_VERDE`
 
 - Repositório: `Snerolino/eleicao2026`.
 - Branch de produção: `main`.
-- HEAD/produção atual: `3064761 docs(qa): registra fotos pendentes TSE 2026`.
-- Release produção validado: `3064761-20260812T160735671Z`.
+- HEAD/produção atual: `a5eb62f docs(handoff): fecha Fase 2 e prepara próxima sessão`.
+- Release produção validado: `a5eb62f-20260812T163506342Z`.
 - Domínio final: https://rs.votopraquem.org
 - Cloudflare Pages project: `portal-transparencia-rs`.
-- Último deploy manual validado: `62207c66`.
-- GitHub Actions `Deploy` no commit `3064761`: verde.
+- Últimos deploys validados: manual `7b7b7ba7` e GitHub Actions/produção `9826a149`.
+- GitHub Actions `Deploy` no commit `a5eb62f`: verde.
 
 ## Dados públicos atuais
 

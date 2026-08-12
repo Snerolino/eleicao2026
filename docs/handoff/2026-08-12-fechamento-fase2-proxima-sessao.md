@@ -17,12 +17,12 @@ registrando a cobertura real de fotos oficiais/rastreáveis.
 ## Estado Git / produção
 
 - Branch ativa: `main`
-- Commit de produção atual: `3064761`
-- Release de produção: `3064761-20260812T160735671Z`
+- Commit de produção atual: `a5eb62f`
+- Release de produção: `a5eb62f-20260812T163506342Z`
 - Domínio final: https://rs.votopraquem.org
 - Cloudflare Pages project: `portal-transparencia-rs`
-- Último deploy manual validado: `62207c66`
-- GitHub Actions `Deploy` do commit `3064761`: verde
+- Últimos deploys validados: manual `7b7b7ba7` e GitHub Actions/produção `9826a149`
+- GitHub Actions `Deploy` do commit `a5eb62f`: verde
 
 ## Fase 2 — fechado
 
@@ -143,4 +143,5 @@ Não retomar como pendente:
 - Atualizar candidatos oficiais TSE para o snapshot atual de 938.
 - Investigar existência das 32 fotos pendentes atuais.
 
-Esses pontos estão fechados/documentados no commit `3064761` e neste handoff.
+Esses pontos estão fechados/documentados no commit `a5eb62f`, neste handoff e no guia
+`docs/handoff/2026-08-12-nova-sessao-pos-fase2.md`.

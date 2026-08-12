@@ -46,6 +46,7 @@
 |---------|-----------|
 | [`handoff/2026-08-10-analise-externa-arquitetura-codex.md`](handoff/2026-08-10-analise-externa-arquitetura-codex.md) | Estado herdado: Fases 0–1 da Matriz de Impacto + validação Codex antes da arquitetura v1 |
 | [`handoff/2026-08-12-fechamento-fase2-proxima-sessao.md`](handoff/2026-08-12-fechamento-fase2-proxima-sessao.md) | Fechamento definitivo da Fase 2 em produção e bootstrap da próxima sessão `eleicao2026-pos-fase2-matrizes-reais` |
+| [`handoff/2026-08-12-nova-sessao-pos-fase2.md`](handoff/2026-08-12-nova-sessao-pos-fase2.md) | Guia compacto para iniciar a nova sessão Hermes com o que já foi implementado e próximos passos do app |
 | [`handoff/2026-08-01-fase7-decisoes-ux-node.md`](handoff/2026-08-01-fase7-decisoes-ux-node.md) | Estado da branch `fase-7-decisoes-ux-node`, snapshot 212 local, produção 213 e riscos antes do PR |
 | [`handoff/2026-08-02-plano-pos-review-moa.md`](handoff/2026-08-02-plano-pos-review-moa.md) | Plano histórico pós-review/MOA; consultar apenas como histórico |
 | [`handoff/2026-07-31-mvp-atualizado.md`](handoff/2026-07-31-mvp-atualizado.md) | Estado histórico do MVP, dados TSE, Supabase, produção e riscos |
