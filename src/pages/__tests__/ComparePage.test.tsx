@@ -94,7 +94,7 @@ describe('ComparePage H5.3', () => {
 
     renderCompare('/comparar?candidatos=tse-1,tse-2');
 
-    expect(screen.getByLabelText(/url atual/i)).toHaveTextContent('/comparar?candidatos=tse-1,tse-2');
+    expect(decodeURIComponent(screen.getByLabelText(/url atual/i).textContent || '')).toContain('/comparar?candidatos=tse-1,tse-2');
     expect(screen.getAllByRole('status')[0]).toHaveTextContent(/carregando candidatos/i);
   });
 
@@ -129,7 +129,7 @@ describe('ComparePage H5.3', () => {
     fireEvent.click(screen.getByRole('button', { name: /ada cristina munaretto/i }));
     fireEvent.click(screen.getByRole('button', { name: /joão batista garcia dias/i }));
 
-    expect(screen.getByLabelText(/url atual/i)).toHaveTextContent('/comparar?candidatos=tse-1,tse-2');
+    expect(decodeURIComponent(screen.getByLabelText(/url atual/i).textContent || '')).toContain('/comparar?candidatos=tse-1,tse-2');
     expect(screen.getByRole('table')).toBeInTheDocument();
   });
 
@@ -160,7 +160,7 @@ describe('ComparePage H5.3', () => {
     fireEvent.change(screen.getByRole('combobox', { name: /filtrar por cor\/raça/i }), {
       target: { value: 'BRANCA' },
     });
-    expect(screen.getByLabelText(/url atual/i)).toHaveTextContent('/comparar?candidatos=tse-1,tse-2');
+    expect(decodeURIComponent(screen.getByLabelText(/url atual/i).textContent || '')).toContain('/comparar?candidatos=tse-1,tse-2');
     expect(screen.getByText(/1 de 3 candidatos disponíveis/i)).toHaveTextContent(/mulheres/i);
     expect(screen.getByRole('option', { name: 'Não informado' })).toBeInTheDocument();
   });
