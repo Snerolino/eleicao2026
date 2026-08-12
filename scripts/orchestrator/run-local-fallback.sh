@@ -7,7 +7,8 @@ MODEL="${LOCAL_AGENT_MODEL:-gpt-oss:20b}"
 TIMEOUT_SECONDS="${ORCH_EXECUTOR_TIMEOUT:-600}"
 PREFLIGHT_TIMEOUT_SECONDS="${ORCH_PREFLIGHT_TIMEOUT:-10}"
 OUT="$(mktemp)"
-trap 'rm -f "$OUT"' EXIT
+CODEX_ISOLATED_HOME="$(mktemp -d "${TMPDIR:-/tmp}/eleicao2026-codex-local.XXXXXX")"
+trap 'rm -f "$OUT"; rm -rf -- "$CODEX_ISOLATED_HOME"' EXIT
 
 if [[ -z "$REAL_HOME" || ! -d "$REAL_HOME" ]]; then
   echo 'home real não resolvido' >&2
@@ -52,9 +53,11 @@ flock 8
 SNAPSHOT="$(ORCH_SNAPSHOT_LOCK_HELD=1 bash "$ROOT/scripts/orchestrator/prepare-snapshot.sh" local)"
 cd "$SNAPSHOT"
 
+# O fallback OSS usa somente o provider local e não deve herdar config.toml,
+# MCPs ou credenciais MCP do CODEX_HOME real.
 printf '%s' "$PROMPT" | env \
   HOME="$REAL_HOME" \
-  CODEX_HOME="$REAL_HOME/.codex" \
+  CODEX_HOME="$CODEX_ISOLATED_HOME" \
   timeout --signal=TERM --kill-after=10s "${TIMEOUT_SECONDS}s" \
   codex exec \
     --oss \
