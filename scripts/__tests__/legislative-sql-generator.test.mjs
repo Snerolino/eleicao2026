@@ -119,4 +119,24 @@ describe('legislative-sql-generator', () => {
     });
     expect(planToSql(empty.plan ?? EMPTY_PLAN)).toContain('-- Nenhuma operação a gerar.');
   });
+
+  it('com catálogo, resolve UUID real em vez de null comentado', () => {
+    const plan = planLegislativeImport(ENVELOPE);
+    const catalogs = {
+      legislatorsToCandidateId: { 'deputy-rs-001': '11111111-1111-1111-1111-111111111111' },
+      sourceReferenceByKey: {
+        'https://www.camara.leg.br/votacoes/123': '33333333-3333-3333-3333-333333333333',
+      },
+    };
+    const sql = planToSql(plan.plan ?? EMPTY_PLAN, catalogs);
+    expect(sql).toContain("'11111111-1111-1111-1111-111111111111', null, 'ausente'");
+    expect(sql).not.toContain("null /* 'legislators:deputy-rs-001' */");
+    expect(sql).toContain("'33333333-3333-3333-3333-333333333333'");
+  });
+
+  it('sem catálogo, FK de apoio vira null comentado (não fabrica UUID)', () => {
+    const plan = planLegislativeImport(ENVELOPE);
+    const sql = planToSql(plan.plan ?? EMPTY_PLAN);
+    expect(sql).toContain("null /* 'legislators:deputy-rs-001' */");
+  });
 });

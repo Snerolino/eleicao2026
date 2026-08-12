@@ -21,6 +21,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { planLegislativeImport } from '../src/domain/impact/legislative-importer.ts';
 import { planToSql } from '../src/domain/impact/legislative-sql-generator.ts';
+import { collectSupportRefs, resolveSupportRefs } from '../src/domain/impact/legislative-support-resolver.ts';
 
 const REDACT = /(apikey|Authorization|Bearer|service_role|token)=?\s*[^\s,}]+/gi;
 
@@ -49,31 +50,39 @@ export function renderPlan(plan) {
   return lines.join('\n');
 }
 
-/** Gera o bloco SQL (string) a partir do plano. */
-export function renderSql(plan) {
-  return planToSql(plan ?? EMPTY_PLAN);
+/** Gera o bloco SQL (string) a partir do plano, com resolução de FKs de apoio. */
+export function renderSql(plan, catalogs = null) {
+  return planToSql(plan ?? EMPTY_PLAN, catalogs ?? undefined);
 }
 
 async function main() {
   const args = process.argv.slice(2);
   if (args.length === 0) {
-    console.error('Uso: node scripts/import-legislative-dry-run.mjs [--emit-sql] <envelope.json>');
+    console.error('Uso: node scripts/import-legislative-dry-run.mjs [--emit-sql] [--catalog <cat.json>] <envelope.json>');
     process.exit(1);
   }
   const emitSql = args.includes('--emit-sql');
-  const positional = args.filter((arg) => !arg.startsWith('--'));
-  const flag = args.find((arg) => arg.startsWith('--') && arg !== '--emit-sql');
+  const catalogIdx = args.indexOf('--catalog');
+  const catalogArg = catalogIdx >= 0 ? args[catalogIdx + 1] : null;
+  const positional = args.filter((arg, i) => !arg.startsWith('--') && !(args[i - 1] === '--catalog'));
+  const flag = args.find(
+    (arg) => arg.startsWith('--') && arg !== '--emit-sql' && arg !== '--catalog' && arg !== catalogArg,
+  );
   if (flag) {
     console.error(`❌ Flag não suportada: ${flag}. Este CLI é somente dry-run (sem --apply).`);
     process.exit(1);
   }
   if (positional.length !== 1) {
-    console.error('Uso: node scripts/import-legislative-dry-run.mjs [--emit-sql] <envelope.json>');
+    console.error('Uso: node scripts/import-legislative-dry-run.mjs [--emit-sql] [--catalog <cat.json>] <envelope.json>');
     process.exit(1);
   }
   const input = positional[0];
   if (!existsSync(input)) {
     console.error(`❌ Arquivo não encontrado: ${input}`);
+    process.exit(1);
+  }
+  if (catalogArg && !existsSync(catalogArg)) {
+    console.error(`❌ Catálogo não encontrado: ${catalogArg}`);
     process.exit(1);
   }
 
@@ -85,6 +94,16 @@ async function main() {
     process.exit(1);
   }
 
+  let catalogs = null;
+  if (catalogArg) {
+    try {
+      catalogs = JSON.parse(readFileSync(catalogArg, 'utf-8'));
+    } catch (error) {
+      console.error(`❌ Catálogo JSON inválido: ${String(error?.message ?? error)}`);
+      process.exit(1);
+    }
+  }
+
   const result = planLegislativeImport(envelope);
   if (!result.ok || !result.plan) {
     console.error(`❌ Validação do envelope falhou (${result.errors.length}):`);
@@ -93,7 +112,7 @@ async function main() {
   }
 
   if (emitSql) {
-    process.stdout.write(renderSql(result.plan));
+    process.stdout.write(renderSql(result.plan, catalogs));
     return;
   }
   console.log(renderPlan(result.plan));

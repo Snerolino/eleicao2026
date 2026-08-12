@@ -9,6 +9,7 @@ import { planLegislativeImport } from '../../src/domain/impact/legislative-impor
 
 const CLI = resolve('scripts/import-legislative-dry-run.mjs');
 const FIXTURE = resolve('fixtures/legislative-import/boa-minima.json');
+const CATALOG = resolve('fixtures/legislative-import/catalogo-exemplo.json');
 
 function runCli(args) {
   return spawnSync(process.execPath, [CLI, ...args], { encoding: 'utf8' });
@@ -79,5 +80,24 @@ describe('legislative importer CLI dry-run', () => {
     const result = runCli(['--emit-sql', '--apply', FIXTURE]);
     expect(result.status).toBe(1);
     expect(result.stderr).toMatch(/não suportada/);
+  });
+
+  it('--catalog ausente gera null comentado para FK de apoio', () => {
+    const result = runCli(['--emit-sql', FIXTURE]);
+    expect(result.status).toBe(0);
+    expect(result.stdout).toContain("null /* 'legislators:deputy-rs-001' */");
+  });
+
+  it('--catalog presente resolve UUID real no SQL', () => {
+    const result = runCli(['--emit-sql', '--catalog', CATALOG, FIXTURE]);
+    expect(result.status).toBe(0);
+    expect(result.stdout).toContain("'11111111-1111-1111-1111-111111111111'");
+    expect(result.stdout).not.toContain("null /* 'legislators:deputy-rs-001' */");
+  });
+
+  it('--catalog com arquivo inexistente erra com exit 1', () => {
+    const result = runCli(['--emit-sql', '--catalog', 'nao-existe.json', FIXTURE]);
+    expect(result.status).toBe(1);
+    expect(result.stderr).toMatch(/Catálogo não encontrado/);
   });
 });
