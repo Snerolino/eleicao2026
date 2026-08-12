@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-12 01:06 -03
-Status: `ORCHESTRATOR_V1_READY_FOR_SQUASH`
+Atualizado: 2026-08-12 08:20 -03
+Status: `MATRIZ_IMPACTO_FASE2_DONE_REMOTE_APPLIED`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
@@ -19,13 +19,19 @@ Status: `ORCHESTRATOR_V1_READY_FOR_SQUASH`
 
 ## Aplicação / dados
 
-- Regressão consolidada: 180 arquivos / 888 testes verdes, TypeScript verde, build verde.
-- Snapshot público: 792 candidaturas + 792 fotos; sitemap 794 URLs; PWA gerada.
+- Regressão consolidada neste checkpoint: 186 arquivos / 935 testes verdes, TypeScript verde, build verde.
+- Snapshot público: 792 candidaturas; sitemap 794 URLs; PWA gerada.
 - Impact schema checkpoint verde.
-- Fases 0–1 da Matriz de Impacto concluídas localmente.
-- `20260810090000` a `20260810090400` continuam **não aplicadas** no Supabase remoto.
-- Último `supabase db push --dry-run` listou somente essas cinco como pendentes.
-- Nenhum `db push` real ou `migration repair` executado neste arco.
+- Fase 2 da Matriz de Impacto concluída na branch:
+  - contrato operacional `propositions[]`/`votes[]` documentado;
+  - importer legislativo dry-run implementado;
+  - CLI `impact:dryrun` e `impact:sql` implementados;
+  - gerador SQL puro implementado;
+  - resolução de FKs de apoio via catálogo implementada;
+  - desenho de persistência de score/alinhamento documentado.
+- Migrations `20260810090000` a `20260810090400` foram aplicadas no Supabase remoto `eleicao2026` (`hhqxhxcfkoijevxyzfky`).
+- Correção `20260812000000_grant_public_read.sql` aplicada no remoto após prova REST anon de erro 42501 por policy RLS sem GRANT base.
+- Prova REST anon pós-correção: `beneficiary_groups` retorna 14 grupos, `impact_matrices` retorna `[]` por RLS, `legislative_propositions` retorna HTTP 200 `[]`, RPC `approve_impact_matrix` retorna HTTP 401 para anon.
 
 ## Hermes / executores — GATE LOCAL FINAL VERDE
 
@@ -108,13 +114,12 @@ Esta atualização de `STATE.md` e a correção correspondente do runbook são s
 
 Não repetir o smoke local nem a regressão de 888 testes sem nova mudança de runtime.
 
-## Próximo passo após squash
+## Próximo passo
 
-1. Atualizar a worktree local da `feat/matriz-impacto-populacional-v1`.
-2. Tratar separadamente o stash local do arco #72, comparando antes de restaurar qualquer arquivo.
-3. Iniciar Hermes por `.orchestrator/BOOTSTRAP_PROMPT.md`.
-4. Retomar Fase 2 da Matriz: importer dry-run de propositions/votes + desenho de persistência do score.
-5. Manter migrations remotas bloqueadas até autorização humana explícita própria.
+1. Abrir/atualizar PR da `feat/matriz-impacto-populacional-v1` com os commits já enviados ao `origin`.
+2. Rodar CI remoto e smoke de preview.
+3. Se CI/smoke verdes, preparar merge/deploy conforme gate humano.
+4. Próximo arco funcional pós-Fase 2: criação assistida/revisão pública de matrizes reais (`impact_matrices`) com dados curados; não inserir matriz publicada sem revisão humana e fontes.
 
 ## Gates permanentes
 

@@ -1,5 +1,21 @@
 # Changelog do contexto exportado
 
+## 2026-08-12
+
+- Fase 2 da Matriz de Impacto Populacional v1 concluída na branch
+  `feat/matriz-impacto-populacional-v1`: contrato operacional
+  `propositions[]`/`votes[]`, importer dry-run, CLI `impact:dryrun`, gerador
+  SQL puro e resolução de FKs de apoio por catálogo.
+- Migrations `20260810090000` a `20260810090400` aplicadas no Supabase remoto
+  `eleicao2026` (`hhqxhxcfkoijevxyzfky`).
+- Corrigido bug de RLS sem privilégio base: `20260812000000_grant_public_read.sql`
+  concede `SELECT` a `anon/authenticated` nas tabelas publicáveis e ajusta
+  default privileges. Verificação REST anon: `beneficiary_groups` retorna 14
+  grupos, `impact_matrices` retorna `[]` por RLS, `legislative_propositions`
+  retorna HTTP 200 `[]`, e `approve_impact_matrix` retorna HTTP 401 para anon.
+- `src/types/supabase.ts` já contém `impact_matrices`, `legislative_propositions`,
+  `beneficiary_groups` e RPC `approve_impact_matrix`.
+
 ## 2026-08-10
 
 - Fase 0 Matriz de Impacto Populacional v1: contrato/metodologia/governança/JSON Schema definidos em branch feat/matriz-impacto-populacional-v1.

@@ -1,6 +1,6 @@
 # Contrato de schema para o coletor de candidatos
 
-Fotografia em: 2026-08-10 (Fase 1 da Matriz de Impacto Populacional v1)
+Fotografia em: 2026-08-12 (Fase 2 da Matriz de Impacto Populacional v1)
 
 Fontes: migrations versionadas em `supabase/migrations` e tipos gerados em
 `src/types/supabase.ts`. Este resumo nao contem credenciais nem dados de producao.
@@ -86,7 +86,7 @@ Fontes: migrations versionadas em `supabase/migrations` e tipos gerados em
 - `retract_claim` muda a claim publica para `retracted`.
 - O coletor nao chama as RPCs de publicacao, correcao ou retracao.
 
-## Tabelas de impacto (Fase 1, migrations 2026081009xxxx)
+## Tabelas de impacto (Fase 1 aplicada; importer Fase 2 pronto)
 
 Novas tabelas da Matriz de Impacto Populacional v1 (todas com RLS habilitado):
 
@@ -113,7 +113,15 @@ Aprovado → `review_status='approved'` + `approved_at=now()`.
 
 Helpers internos: `impact_matrix_has_internal_approval`, `impact_matrix_has_external_approval`, `impact_matrix_has_blocking_contestation`, `impact_assessment_defending_ok` (trigger).
 
-RLS: publico le somente `approved|contested` de matriz/assessments/fontes; `impact_reviews` so editores; `impact_contestations` publico le `open|under_review|resolved`. Grants: `approve_impact_matrix` somente `authenticated` (revogado de `anon`).
+RLS: publico le somente `approved|contested` de matriz/assessments/fontes; `impact_reviews` so editores; `impact_contestations` publico le `open|under_review|resolved`. Grants: leitura anon/authenticated concedida nas tabelas publicaveis; `approve_impact_matrix` somente `authenticated` (revogado de `anon`). Correção remota `20260812000000_grant_public_read.sql` aplicada após erro 42501 por policy sem GRANT base.
+
+Importer Fase 2:
+
+- `src/domain/impact/legislative-importer.ts` valida e normaliza envelope publico com `propositions[]`/`votes[]`.
+- `scripts/import-legislative-dry-run.mjs` expõe `npm run impact:dryrun` e `npm run impact:sql`; `--apply` permanece bloqueado.
+- `src/domain/impact/legislative-sql-generator.ts` gera SQL deterministico sem rede; FKs principais resolvem por subselect de chaves naturais.
+- `src/domain/impact/legislative-support-resolver.ts` resolve FKs de apoio via catálogo (`legislators`/`candidates`/`source_references`) sem heurística e sem fabricar UUID.
+- `fixtures/legislative-import/boa-minima.json` e `catalogo-exemplo.json` cobrem o contrato minimo.
 
 ## RLS e credenciais
 
@@ -125,14 +133,14 @@ RLS: publico le somente `approved|contested` de matriz/assessments/fontes; `impa
 - Uma migration do coletor deve preservar RLS e grants; nao criar caminho anonimo
   para dados pendentes.
 
-## Pontos ainda em aberto (Fase 1)
+## Pontos ainda em aberto (pós-Fase 2)
 
 - Estrutura da fila/jobs por candidato; nao existe tabela dedicada no contrato
   resumido acima.
-- Importador de votos e proposicoes (dry-run) ainda nao implementado; schema
-  pronto em `legislative_*`.
-- Vincular `legislator_id`/`candidate_id` de `legislative_votes` ao cadastro
-  local de candidatos (hoje `candidate_id` e FK opcional).
+- Aplicar SQL de votos/proposicoes reais via service_role a partir de arquivo
+  publico validado pelo dry-run; ainda nao ha carga real versionada neste repo.
+- Catálogo real para resolver `legislator_id`/`candidate_id` e `source_references`
+  deve ser curado antes de qualquer carga real.
 - Persistir o score calculado por parlamentar (funcao pura pronta em
   `src/domain/impact/score.ts`; ainda sem tabela/RPC de persistencia).
 
