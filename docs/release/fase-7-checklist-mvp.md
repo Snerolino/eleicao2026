@@ -3,7 +3,7 @@
 Data: 2026-08-01
 Produção pública: https://rs.votopraquem.org/
 Infra/preview Cloudflare Pages: https://portal-transparencia-rs.pages.dev/
-Release validado mais recente antes deste checklist: `5c2f392-20260801T050727215Z`
+Release validado mais recente após Fase 6/Fase 2 impacto: `b6ca66d-20260812T120043701Z`
 
 ## Status executivo
 
@@ -17,9 +17,9 @@ As decisões humanas finais foram registradas em 2026-08-01. CI, deploy, smoke/h
 - Supabase remoto público pode manter a candidatura removida; a camada pública filtra a candidatura removida.
 - Slugs e `tse_candidate_id`: `792/792` únicos e não nulos no snapshot público.
 - Sitemap esperado após este bloco: `792` candidatos + páginas estáticas.
-- Smoke produção anterior: OK, `464` cards; repetir após merge para validar `792` cards públicos.
-- Health produção: OK, `status=ok`, `blocks_release=false`.
-- Release produção validado H6.3: `5c2f392-20260801T050727215Z`.
+- Smoke produção atual: OK, `792` cards públicos, canonical/offline/SW sem falhas HTTP.
+- Health produção atual: OK, `status=ok`, `blocks_release=false`, `correlation_id=fase6-final-b6ca66d`.
+- Release produção validado H6.3: `b6ca66d-20260812T120043701Z`.
 - Runbooks: H6.1 observabilidade, H6.2 segurança/headers, H6.3 incidentes/recuperação.
 
 ## Checklist final
