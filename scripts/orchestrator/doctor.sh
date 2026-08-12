@@ -259,21 +259,32 @@ if $SMOKE; then
   HERMES_MCP_PROBE="ORCH_MCP_${$}_$(date +%s)"
   HERMES_MCP_OUT="$DIAG_DIR/hermes-codex-mcp-smoke.out"
   HERMES_MCP_ERR="$DIAG_DIR/hermes-codex-mcp-smoke.err"
-  HERMES_MCP_EXPECTED_TITLE="$(sed -n '1s/^# //p' AGENTS.md)"
-  HERMES_MCP_PROMPT="Tarefa DOCTOR probe ${HERMES_MCP_PROBE}. Use obrigatoriamente o servidor MCP nomeado codex para uma tarefa read-only no projeto atual. Ao chamar a ferramenta Codex, defina explicitamente sandbox=read-only. Pelo MCP Codex, leia somente AGENTS.md e peça que devolva o título inicial exato do arquivo. Não altere arquivos e não use terminal ou ferramentas de arquivo do próprio Hermes."
+
+  # O valor esperado não aparece no prompt. Assim, o Hermes só consegue
+  # responder corretamente se realmente invocar o MCP Codex e ler o arquivo.
+  mkdir -p "$ROOT/.orchestrator/runtime/probes"
+  HERMES_MCP_EXPECTED_NONCE="$(python3 -c 'import secrets; print(secrets.token_hex(24))')"
+  HERMES_MCP_NONCE_FILE="$ROOT/.orchestrator/runtime/probes/${HERMES_MCP_PROBE}.txt"
+  printf '%s\n' "$HERMES_MCP_EXPECTED_NONCE" >"$HERMES_MCP_NONCE_FILE"
+  chmod 600 "$HERMES_MCP_NONCE_FILE"
+  HERMES_MCP_NONCE_REL="${HERMES_MCP_NONCE_FILE#$ROOT/}"
+
+  HERMES_MCP_PROMPT="Tarefa DOCTOR probe ${HERMES_MCP_PROBE}. Execute obrigatoriamente uma chamada real ao servidor MCP Codex. Se a ferramenta Codex MCP ainda não estiver carregada, use tool_search para localizar codex e tool_describe se necessário. Execute tool_call para mcp__codex__codex. Na chamada Codex, defina explicitamente sandbox=read-only. Pelo MCP Codex, leia SOMENTE o arquivo relativo ${HERMES_MCP_NONCE_REL} e peça que devolva exatamente seu conteúdo. O conteúdo do arquivo NÃO está neste prompt: não tente adivinhar. Não use terminal nem ferramentas de arquivo do próprio Hermes."
 
   env HOME="$REAL_HOME" \
     timeout --signal=TERM --kill-after=10s 120s hermes -p "$PROFILE" chat -q "$HERMES_MCP_PROMPT" \
     >"$HERMES_MCP_OUT" 2>"$HERMES_MCP_ERR"
   HERMES_MCP_STATUS=$?
 
+  rm -f -- "$HERMES_MCP_NONCE_FILE"
+
   if [[ $HERMES_MCP_STATUS -eq 0 \
-    && -n "$HERMES_MCP_EXPECTED_TITLE" \
+    && -n "$HERMES_MCP_EXPECTED_NONCE" \
     && -f "$PROFILE_HOME/state.db" \
     && $(command -v python3 >/dev/null 2>&1; echo $?) -eq 0 ]] \
     && PROFILE_DB="$PROFILE_HOME/state.db" \
        PROBE_ID="$HERMES_MCP_PROBE" \
-       EXPECTED_TITLE="$HERMES_MCP_EXPECTED_TITLE" \
+       EXPECTED_NONCE="$HERMES_MCP_EXPECTED_NONCE" \
        python3 <<'PY'
 import json
 import os
@@ -283,7 +294,7 @@ import sys
 
 path = os.environ["PROFILE_DB"]
 probe = os.environ["PROBE_ID"]
-expected = os.environ["EXPECTED_TITLE"]
+expected = os.environ["EXPECTED_NONCE"]
 name_re = re.compile(r"^mcp(?:__|_)codex(?:__|_)", re.I)
 
 try:
