@@ -78,11 +78,29 @@ for pattern in "${SECRET_PATTERNS[@]}"; do
   GREP_SECRET_ARGS+=( -e "$pattern" )
 done
 
-SECRET_LEAK="$(grep -RIlEi --binary-files=without-match "${GREP_SECRET_ARGS[@]}" -- "$TARGET" 2>/dev/null | head -n1 || true)"
-if [[ -n "$SECRET_LEAK" ]]; then
-  rm -rf -- "$TARGET"
-  echo "snapshot rejeitado: material secreto rastreado detectado em ${SECRET_LEAK#$TARGET/}" >&2
-  exit 45
-fi
+SECRET_SCAN="$(mktemp "$RUNTIME/secret-scan.XXXXXX")"
+set +e
+grep -RIlEi --binary-files=without-match "${GREP_SECRET_ARGS[@]}" -- "$TARGET" >"$SECRET_SCAN" 2>/dev/null
+SECRET_SCAN_STATUS=$?
+set -e
+
+case "$SECRET_SCAN_STATUS" in
+  0)
+    SECRET_LEAK="$(head -n1 "$SECRET_SCAN")"
+    rm -f -- "$SECRET_SCAN"
+    rm -rf -- "$TARGET"
+    echo "snapshot rejeitado: material secreto rastreado detectado em ${SECRET_LEAK#$TARGET/}" >&2
+    exit 45
+    ;;
+  1)
+    rm -f -- "$SECRET_SCAN"
+    ;;
+  *)
+    rm -f -- "$SECRET_SCAN"
+    rm -rf -- "$TARGET"
+    echo "snapshot rejeitado: scanner de segredos falhou (status $SECRET_SCAN_STATUS)" >&2
+    exit 46
+    ;;
+esac
 
 printf '%s\n' "$TARGET"
