@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, memo, useCallback } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router';
 import { useQuery } from '@tanstack/react-query';
 import { fetchAllCandidates } from '@/services/candidates';
@@ -85,13 +85,74 @@ function raceFilterLabel(value: string): string {
   return value.charAt(0) + value.slice(1).toLowerCase();
 }
 
+
+
+
+// ⚡ Bolt Optimization: Extract grid items and wrap in React.memo
+// This prevents O(N) re-renders of the large filtered candidate grid whenever the
+// selectedIds state changes.
+const CandidateGridItem = memo(function CandidateGridItem({
+  candidate,
+  isSelected,
+  isMaxed,
+  onToggle,
+}: {
+  candidate: CandidateWithClaims;
+  isSelected: boolean;
+  isMaxed: boolean;
+  onToggle: (id: string) => void;
+}) {
+  return (
+    <li>
+      <button
+        type="button"
+        onClick={() => {
+          if (!isMaxed) onToggle(candidate.id);
+        }}
+        disabled={isMaxed}
+        aria-pressed={isSelected}
+        className={`flex w-full items-center gap-3 rounded-sm border p-3 text-left transition-colors ${
+          isSelected
+            ? 'border-[var(--color-institutional)] bg-[color-mix(in_srgb,var(--color-institutional)_8%,var(--color-paper))]'
+            : 'border-[var(--color-border-editorial)] bg-[var(--color-paper)] hover:border-[var(--color-institutional)]'
+        } ${isMaxed ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`}
+      >
+        <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-sm bg-[var(--color-skeleton)]">
+          <CandidatePhoto
+            name={candidate.full_name}
+            photoUrl={candidate.photo_url}
+            className="h-full w-full object-cover"
+          />
+        </div>
+        <div className="min-w-0 flex-1">
+          <p className="font-mono text-[0.65rem] uppercase tracking-wider text-[var(--color-muted-ink)]">
+            {candidate.position_label}
+          </p>
+          <p className="truncate font-semibold">{candidate.full_name}</p>
+          <p className="font-mono text-xs text-[var(--color-muted-ink)]">
+            {candidate.party}
+            {candidate.ballot_number != null
+              ? ` · nº ${candidate.ballot_number}`
+              : ''}
+          </p>
+        </div>
+        {isSelected && (
+          <span className="shrink-0 font-mono text-sm font-bold text-[var(--color-institutional)]">
+            ✓
+          </span>
+        )}
+      </button>
+    </li>
+  );
+});
+
 export function ComparePage() {
   usePageMetadata(
     'Comparar candidatos — Portal Transparência Eleitoral RS',
     'Selecione e compare candidatos lado a lado nas eleições 2026 no RS.'
   );
 
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
   const [partyFilter, setPartyFilter] = useState('');
   const [womenOnly, setWomenOnly] = useState(false);
@@ -149,17 +210,34 @@ export function ComparePage() {
     [candidates, selectedIds]
   );
 
-  const updateSharedRoute = (ids: string[]) => {
-    const value = serializeSelectedIds(ids.slice(0, 4));
-    navigate({ search: value ? `?candidatos=${value}` : '' }, { replace: false });
-  };
+    // ⚡ Bolt Optimization: Use functional updates and useCallback for URL parameters
+  // This guarantees stable callback references for React.memo children without
+  // depending on searchParams instance.
+  const toggleCandidate = useCallback((id: string) => {
+    setSearchParams(prev => {
+      const currentIds = parseSharedCandidateIds(prev.get('candidatos'), validCandidateIds);
+      const next = currentIds.includes(id)
+        ? currentIds.filter((selectedId) => selectedId !== id)
+        : [...currentIds, id].slice(0, 4);
 
-  const toggleCandidate = (id: string) => {
-    const next = sharedIds.includes(id)
-      ? sharedIds.filter((selectedId) => selectedId !== id)
-      : [...sharedIds, id].slice(0, 4);
-    updateSharedRoute(next);
-  };
+      const value = serializeSelectedIds(next);
+      const newParams = new URLSearchParams(prev);
+      if (value) {
+        newParams.set('candidatos', value);
+      } else {
+        newParams.delete('candidatos');
+      }
+      return newParams;
+    });
+  }, [setSearchParams, validCandidateIds]);
+
+  const clearSelection = useCallback(() => {
+    setSearchParams(prev => {
+      const newParams = new URLSearchParams(prev);
+      newParams.delete('candidatos');
+      return newParams;
+    });
+  }, [setSearchParams]);
 
   if (query.isLoading) {
     return (
@@ -211,9 +289,7 @@ export function ComparePage() {
             </span>
             <button
               type="button"
-              onClick={() => {
-                updateSharedRoute([]);
-              }}
+              onClick={clearSelection}
               className="font-mono text-xs text-[var(--color-unverified)] underline underline-offset-2"
             >
               Limpar tudo
@@ -349,46 +425,13 @@ export function ComparePage() {
             const isSelected = selectedIds.has(c.id);
             const isMaxed = !isSelected && selectedIds.size >= 4;
             return (
-              <li key={c.id}>
-                <button
-                  type="button"
-                  onClick={() => {
-                    if (!isMaxed) toggleCandidate(c.id);
-                  }}
-                  disabled={isMaxed}
-                  aria-pressed={isSelected}
-                  className={`flex w-full items-center gap-3 rounded-sm border p-3 text-left transition-colors ${
-                    isSelected
-                      ? 'border-[var(--color-institutional)] bg-[color-mix(in_srgb,var(--color-institutional)_8%,var(--color-paper))]'
-                      : 'border-[var(--color-border-editorial)] bg-[var(--color-paper)] hover:border-[var(--color-institutional)]'
-                  } ${isMaxed ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`}
-                >
-                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-sm bg-[var(--color-skeleton)]">
-                    <CandidatePhoto
-                      name={c.full_name}
-                      photoUrl={c.photo_url}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="font-mono text-[0.65rem] uppercase tracking-wider text-[var(--color-muted-ink)]">
-                      {c.position_label}
-                    </p>
-                    <p className="truncate font-semibold">{c.full_name}</p>
-                    <p className="font-mono text-xs text-[var(--color-muted-ink)]">
-                      {c.party}
-                      {c.ballot_number != null
-                        ? ` · nº ${c.ballot_number}`
-                        : ''}
-                    </p>
-                  </div>
-                  {isSelected && (
-                    <span className="shrink-0 font-mono text-sm font-bold text-[var(--color-institutional)]">
-                      ✓
-                    </span>
-                  )}
-                </button>
-              </li>
+              <CandidateGridItem
+                key={c.id}
+                candidate={c}
+                isSelected={isSelected}
+                isMaxed={isMaxed}
+                onToggle={toggleCandidate}
+              />
             );
           })}
         </ul>
