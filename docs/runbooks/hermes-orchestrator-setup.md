@@ -342,10 +342,12 @@ npm run orch:doctor -- --smoke
 ```
 
 O `--smoke` exercita obrigatoriamente Hermes → MCP Codex ponta a ponta em
-read-only. A aprovação não depende de texto emitido pelo modelo: o doctor usa um
-probe único para localizar a sessão no `state.db` do perfil e exige uma
-`tool_call` pertencente ao servidor `codex` mais o respectivo resultado contendo
-o título real de `AGENTS.md`. OpenCode e Antigravity são consultivos/opcionais;
+read-only. A aprovação não depende de texto emitido pelo modelo: o doctor cria
+um nonce efêmero cujo valor não aparece no prompt, pede ao Codex MCP para ler o
+arquivo temporário que contém esse nonce e localiza a sessão pelo probe único no
+`state.db`. O gate exige uma `tool_call` pertencente ao servidor `codex`,
+`sandbox == "read-only"`, resultado associado à mesma `tool_call_id` e o nonce
+real devolvido nesse resultado. OpenCode e Antigravity são consultivos/opcionais;
 quando disponíveis, seus smokes só passam quando comprovam leitura do
 `AGENTS.md` pelo título esperado. O fallback `codex exec` também é testado de
 forma estruturada.
