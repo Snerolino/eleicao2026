@@ -56,6 +56,32 @@ Em `votes[]`, o voto legislativo factual aceita `absence_type` como extensão ad
 - Para `value` igual a `ausente` ou `obstrucao`, `absence_type` deve ser `estrategica`, `obstrucao_coordenada` ou `justificada`.
 - Votos continuam sendo fatos; não armazenam impacto, alinhamento, grupo, score, ideologia ou recomendação.
 
+### Envelope operacional do importer local v1
+
+O contrato histórico não define os campos de `propositions[]` necessários para
+planejar as quatro tabelas legislativas. O importer local fecha essa lacuna com
+um envelope `schema_version = "1.0.0"`, implementado em
+`src/domain/impact/legislative-importer.ts`:
+
+- `propositions[]` exige `external_id`, `house`, `proposition_type`, `number`,
+  `year`, `title` e `versions[]`;
+- cada versão exige `version_key`, `version_label`, `text_hash`,
+  `effective_from` e `voting_events[]`; `impact_matrix` permanece opcional e é
+  validado pelo schema v1 existente;
+- cada evento exige `external_id`, `house` e `occurred_at`, e pode declarar
+  sessão, rodada e fonte;
+- `votes[]` mantém os campos factuais do schema de votos e acrescenta apenas
+  `voting_event_id` para preservar a FK lógica no envelope;
+- `proposition_version_id` e `voting_event_id` são referências lógicas
+  (`proposition_versions:<house>:<external_id>:<version_key>` e
+  `voting_events:<house>:<external_id>`), não UUIDs.
+
+O planner emite operações na ordem proposição → versão → evento → voto. Os
+campos UUID e `source_reference_id` são placeholders `logical_ref` no dry-run;
+nenhuma resolução de `legislator_id`/`candidate_id`, geração de UUID, rede ou
+persistência ocorre nesta fase. Duplicidades idênticas podem ser deduplicadas
+pela chave idempotente; duplicidades com conteúdo diferente são rejeitadas.
+
 ## Parte 3: versionamento, usos e referências
 
 `schema_version` e `methodology_version` respondem perguntas diferentes:

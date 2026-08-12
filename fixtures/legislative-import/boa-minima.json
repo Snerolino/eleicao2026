@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "country": "BR",
+  "state": "RS",
+  "election_year": 2026,
+  "propositions": [
+    {
+      "external_id": "pl-123-2026",
+      "house": "camara",
+      "proposition_type": "pl",
+      "number": 123,
+      "year": 2026,
+      "title": "Política pública de proteção social",
+      "summary": "Texto público para teste do importer.",
+      "official_url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?id=123",
+      "versions": [
+        {
+          "version_key": "substitutivo-1",
+          "version_label": "Substitutivo 1",
+          "text_hash": "sha256:texto-publico-123",
+          "effective_from": "2026-08-01T12:00:00Z",
+          "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=123",
+          "impact_matrix": {
+            "schema_version": "1.0.0",
+            "methodology_version": "1.0.0",
+            "severity": 3,
+            "structural_type": "structural",
+            "assessments": [],
+            "review_status": "pending_review"
+          },
+          "voting_events": [
+            {
+              "external_id": "votacao-123-1",
+              "house": "camara",
+              "session_id": "sessao-2026-08-02",
+              "vote_round": "nominal",
+              "occurred_at": "2026-08-02T15:30:00-03:00",
+              "source": "https://www.camara.leg.br/votacoes/123"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "votes": [
+    {
+      "voting_event_id": "voting_events:camara:votacao-123-1",
+      "deputy_id": "deputy-rs-001",
+      "proposition_version_id": "proposition_versions:camara:pl-123-2026:substitutivo-1",
+      "value": "ausente",
+      "absence_type": "justificada",
+      "recorded_at": "2026-08-02T15:35:00Z",
+      "source": "https://www.camara.leg.br/votacoes/123"
+    }
+  ]
+}

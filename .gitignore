@@ -13,6 +13,9 @@ coverage/
 data/tse-archive/
 .refs-fase0/
 
+# Build cache (TypeScript incremental)
+*.tsbuildinfo
+
 # Supabase CLI local state
 supabase/.branches/
 
