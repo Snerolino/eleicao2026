@@ -103,7 +103,7 @@ O deploy normal permanece GitHub Actions após merge autorizado em `main`. Não 
 
 ## Gates relevantes
 
-- A contagem pública atual deve ser validada por `npm run data:check`; no checkpoint de 2026-08-10 eram 792 candidaturas públicas, não usar números históricos como 69/212/464 como gate atual.
+- A contagem pública atual deve ser validada por `npm run data:check`; no checkpoint de 2026-08-12 são 938 candidaturas públicas e 906 fotos oficiais rastreáveis, não usar números históricos como 69/212/464/792 como gate atual.
 - `tse_candidate_id` único e não nulo; `slug` único, estável e não vazio; rotas `/candidatos/:slug`; URLs antigas por UUID preservadas durante transição; sitemap usa a mesma coleção de slugs.
 - Matriz de Impacto: Fases 0–1 estão localmente validadas no checkpoint; migrations `20260810090000` a `20260810090400` não devem ser presumidas no Supabase remoto até confirmação/aplicação autorizada.
 
