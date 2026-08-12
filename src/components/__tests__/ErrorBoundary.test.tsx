@@ -39,6 +39,8 @@ describe('ErrorBoundary', () => {
   });
 
   it('renders fallback UI when a child throws an error', () => {
+    vi.stubEnv('DEV', 'true');
+
     render(
       <ErrorBoundary>
         <Bomb shouldThrow={true} />
@@ -65,7 +67,8 @@ describe('ErrorBoundary', () => {
   });
 
   it('não registra erro e component stack detalhados em produção', () => {
-    vi.stubEnv('DEV', false);
+    vi.stubEnv('DEV', '');
+    vi.stubEnv('PROD', 'true');
 
     render(
       <ErrorBoundary>
@@ -80,5 +83,7 @@ describe('ErrorBoundary', () => {
       );
 
     expect(boundaryCalls).toEqual([['[ErrorBoundary] erro capturado']]);
+    expect(screen.queryByText('Kaboom')).not.toBeInTheDocument();
+    expect(screen.getByText('Um erro inesperado ocorreu.')).toBeInTheDocument();
   });
 });
