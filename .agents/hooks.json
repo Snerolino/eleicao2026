@@ -1,0 +1,16 @@
+{
+  "eleicao2026-headless-sync-guard": {
+    "PreToolUse": [
+      {
+        "matcher": "invoke_subagent|define_subagent|send_message|manage_subagents",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .agents/hooks/deny-async-subagents.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

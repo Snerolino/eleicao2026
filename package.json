@@ -21,7 +21,17 @@
     "health:preview": "node scripts/health-check.mjs",
     "security:audit": "bash -lc 'npm audit --omit=dev --audit-level=high'",
     "test": "NODE_ENV=test vitest run",
-    "test:watch": "NODE_ENV=test vitest"
+    "test:watch": "NODE_ENV=test vitest",
+    "orch:setup": "bash scripts/orchestrator/setup-local.sh",
+    "orch:doctor": "bash scripts/orchestrator/doctor.sh",
+    "orch:install-skill": "bash scripts/orchestrator/install-hermes-skill.sh",
+    "orch:sync-gateway-node": "bash scripts/orchestrator/sync-gateway-node.sh",
+    "orch:configure-google": "bash scripts/orchestrator/configure-antigravity-readonly.sh",
+    "orch:opencode": "bash scripts/orchestrator/run-opencode.sh",
+    "orch:google": "bash scripts/orchestrator/run-antigravity.sh",
+    "orch:gemini-legacy": "bash scripts/orchestrator/run-gemini.sh",
+    "orch:codex": "bash scripts/orchestrator/run-codex-readonly.sh",
+    "orch:local": "bash scripts/orchestrator/run-local-fallback.sh"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",

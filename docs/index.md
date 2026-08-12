@@ -9,6 +9,15 @@
 | [`migracao-lovable-2026-07-24.md`](migracao-lovable-2026-07-24.md) | Migração do ambiente Lovable para standalone |
 | [`proximos-passos.md`](proximos-passos.md) | Roadmap e próximos passos |
 
+## Arquitetura de agentes
+
+| Arquivo | Descrição |
+|---------|-----------|
+| [`architecture/hermes-orchestrator-v1.md`](architecture/hermes-orchestrator-v1.md) | Arquitetura atual: Hermes control plane, Codex MCP, Antigravity, OpenCode free, snapshots, handoffs e fallback local |
+| [`../.orchestrator/STATE.md`](../.orchestrator/STATE.md) | Checkpoint operacional curto para retomada do Hermes |
+| [`../.orchestrator/routing.yaml`](../.orchestrator/routing.yaml) | Política declarativa de roteamento, escalonamento e autoridade |
+| [`templates/HERMES_OPENCODE_ROUTING.template.md`](templates/HERMES_OPENCODE_ROUTING.template.md) | Template antigo preservado como legado; não usar como política atual |
+
 ## Banco de dados
 
 | Arquivo | Descrição |
@@ -35,16 +44,17 @@
 
 | Arquivo | Descrição |
 |---------|-----------|
-| [`handoff/2026-08-10-analise-externa-arquitetura-codex.md`](handoff/2026-08-10-analise-externa-arquitetura-codex.md) | Estado atual (Fases 0–1 da Matriz de Impacto) + integração Codex CLI validada, para análise externa da nova arquitetura |
-| [`handoff/2026-08-01-fase7-decisoes-ux-node.md`](handoff/2026-08-01-fase7-decisoes-ux-node.md) | Estado atual da branch `fase-7-decisoes-ux-node`, snapshot 212 local, produção 213 e riscos antes do PR |
-| [`handoff/2026-08-02-plano-pos-review-moa.md`](handoff/2026-08-02-plano-pos-review-moa.md) | Plano pós-review incorporando o relatório externo de 02/08 e o padrão MOA Hermes + OpenCode até 15/08 |
-| [`handoff/2026-07-31-mvp-atualizado.md`](handoff/2026-07-31-mvp-atualizado.md) | Estado atualizado do MVP, dados TSE 213, Supabase, produção, riscos e próximos passos |
+| [`handoff/2026-08-10-analise-externa-arquitetura-codex.md`](handoff/2026-08-10-analise-externa-arquitetura-codex.md) | Estado herdado: Fases 0–1 da Matriz de Impacto + validação Codex antes da arquitetura v1 |
+| [`handoff/2026-08-01-fase7-decisoes-ux-node.md`](handoff/2026-08-01-fase7-decisoes-ux-node.md) | Estado da branch `fase-7-decisoes-ux-node`, snapshot 212 local, produção 213 e riscos antes do PR |
+| [`handoff/2026-08-02-plano-pos-review-moa.md`](handoff/2026-08-02-plano-pos-review-moa.md) | Plano histórico pós-review/MOA; consultar apenas como histórico |
+| [`handoff/2026-07-31-mvp-atualizado.md`](handoff/2026-07-31-mvp-atualizado.md) | Estado histórico do MVP, dados TSE, Supabase, produção e riscos |
 | [`handoff/fase-2-chatgpt.md`](handoff/fase-2-chatgpt.md) | Handoff histórico da Fase 2 |
 
 ## Runbooks
 
 | Arquivo | Descrição |
 |---------|-----------|
+| [`runbooks/hermes-orchestrator-setup.md`](runbooks/hermes-orchestrator-setup.md) | Setup local completo: Hermes profile, Codex MCP/OAuth, Antigravity, OpenCode, Supabase, GitHub Actions e smokes |
 | [`runbooks/h6-1-observabilidade.md`](runbooks/h6-1-observabilidade.md) | Health check, smoke, interpretação de componentes e rollback operacional |
 | [`runbooks/h6-2-seguranca-headers-dependencias.md`](runbooks/h6-2-seguranca-headers-dependencias.md) | Headers, CSP report-only, auditoria de dependências e hardening editorial |
 | [`runbooks/h6-3-incidentes-recuperacao.md`](runbooks/h6-3-incidentes-recuperacao.md) | Incidentes, diagnóstico, rollback e decisões humanas obrigatórias |
@@ -55,13 +65,13 @@
 |---------|-----------|
 | [`qa/fase-7-acessibilidade-contraste-final.md`](qa/fase-7-acessibilidade-contraste-final.md) | Rodada final de teclado, headings e contraste em mobile/desktop; registra correção de `h1` da Home |
 | [`qa/fotos-candidatos-fontes-oficiais.md`](qa/fotos-candidatos-fontes-oficiais.md) | Fontes, método e cobertura das fotos oficiais TSE aplicadas ao snapshot público |
-| [`qa/dossie-lote1-novo-2026.md`](qa/dossie-lote1-novo-2026.md) | Importação do dossiê Lote 1 (NOVO/DF) como claims `pending_review` — critérios e rastreabilidade |
-| [`qa/dossie-lote2-novo-2026.md`](qa/dossie-lote2-novo-2026.md) | Importação do dossiê Lote 2 (NOVO/DF+DE) como claims `pending_review` — Ramiro e Everton |
-| [`qa/dossie-lote3-novo-2026.md`](qa/dossie-lote3-novo-2026.md) | Importação do dossiê Lote 3/consolidado como claims `pending_review` — Kalkmann, Riesgo e Albrecht |
-| [`qa/card-sem-summary-estado-honesto.md`](qa/card-sem-summary-estado-honesto.md) | Correção do badge enganoso "Outra fonte / Não confirmado" em cards sem summary publicado |
-| [`qa/e0-cobertura-majoritarios.md`](qa/e0-cobertura-majoritarios.md) | Evidência do gate E0: claims dos 6 majoritários por categoria, status e pendências de revisão |
-| [`qa/cobertura-editorial-2026-08-03.md`](qa/cobertura-editorial-2026-08-03.md) | Cobertura editorial atual por cargo/categoria e próximo lote recomendado |
-| [`qa/fotos-sem-match-2026-08-03.md`](qa/fotos-sem-match-2026-08-03.md) | Distribuição dos 139 candidatos sem foto e do caso ambíguo por cargo/partido |
+| [`qa/dossie-lote1-novo-2026.md`](qa/dossie-lote1-novo-2026.md) | Importação do dossiê Lote 1 como claims `pending_review` |
+| [`qa/dossie-lote2-novo-2026.md`](qa/dossie-lote2-novo-2026.md) | Importação do dossiê Lote 2 como claims `pending_review` |
+| [`qa/dossie-lote3-novo-2026.md`](qa/dossie-lote3-novo-2026.md) | Importação do dossiê Lote 3/consolidado como claims `pending_review` |
+| [`qa/card-sem-summary-estado-honesto.md`](qa/card-sem-summary-estado-honesto.md) | Correção do badge enganoso em cards sem summary publicado |
+| [`qa/e0-cobertura-majoritarios.md`](qa/e0-cobertura-majoritarios.md) | Evidência do gate E0 dos majoritários |
+| [`qa/cobertura-editorial-2026-08-03.md`](qa/cobertura-editorial-2026-08-03.md) | Cobertura editorial atual por cargo/categoria |
+| [`qa/fotos-sem-match-2026-08-03.md`](qa/fotos-sem-match-2026-08-03.md) | Distribuição dos candidatos sem foto e caso ambíguo |
 
 ## Release
 
@@ -71,4 +81,4 @@
 
 ## Scripts
 
-Ver `scripts/` na raiz do projeto para scripts de build, ingestão e TSE.
+Ver `scripts/` na raiz do projeto para build, ingestão, TSE e `scripts/orchestrator/` para executores multi-CLI.

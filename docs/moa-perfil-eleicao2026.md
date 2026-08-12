@@ -1,136 +1,89 @@
-# MOA do perfil eleicao2026 — cadeia de modelos com salvaguardas
+# MOA do perfil eleicao2026 — registro histórico
 
-Data: 2026-08-08
-Status: validado ao vivo
+Data original: 2026-08-08
+Status atual: **LEGADO / SUPERADO em 2026-08-10**
 
-## Objetivo
+Este documento registra a cadeia MOA anterior (`scripts/moa-run.mjs`) e os
+experimentos que levaram à arquitetura atual. Ele **não é mais a política de
+roteamento default** do projeto.
 
-Execução contínua de tarefas **sem interrupção** por impedimento de um único
-provedor. A cadeia tenta primeiro modelos **pagos/mais potentes** (OpenAI,
-Google, Cloudflare Workers AI — contas já credenciadas) e, quando algum estiver
-exaurido, rate-limited, blocked ou offline, cai automaticamente para os
-**modelos gratuitos** validados.
+## Fonte operacional atual
 
-**Nenhum modelo é excluído da cadeia** — até mesmo os que podem ficar exauridos
-são reativados depois de um tempo, por isso permanecem.
+1. `AGENTS.md`;
+2. `.orchestrator/routing.yaml`;
+3. `.orchestrator/STATE.md`;
+4. `docs/architecture/hermes-orchestrator-v1.md`;
+5. `docs/runbooks/hermes-orchestrator-setup.md`.
 
-## Cadência de fallback validada (2026-08-08)
+## Por que o MOA antigo foi substituído
 
-### Pagos (credenciados) — tentado primeiro
+A política anterior tentava, em ordem, modelos pagos/mais potentes e só depois
+modelos gratuitos. Isso tinha três problemas para o estado atual do projeto:
 
-| # | Modelo                          | Provider            | Disponível        | Teste real |
-|---|---------------------------------|---------------------|-------------------|------------|
-| 1 | `openai/gpt-5.5`                | OpenAI (oauth)      | ✅ credencial     | OK (latência alta) |
-| 2 | `google/gemini-3.5-flash`       | Google API          | ✅ GOOGLE_API_KEY | ✅ OK |
-| 3 | `cloudflare-ai-gateway/openai/gpt-4o-mini` | Cloudflare Workers AI | ✅ credencial/CF key | ✅ OK |
+- gastava recursos caros em tarefas mecânicas que podem ser delegadas;
+- misturava fallback de **capacidade** com fallback de **autoridade**;
+- mantinha uma segunda cadeia de fallback dentro do OpenCode, concorrendo com a
+  decisão do Hermes.
 
-> GitHub Models (`github-models`) credential existe mas modelos enumerados não retornaram
-> no smoke de teste — mantido no auth, não na cadeia default ativa. Reativar se preciso.
-> `google/gemini-2.5-flash` — erro "no longer available to new users", fora da cadeia.
+A arquitetura v1 muda o princípio para:
 
-### Gratuitos / backup — sempre ativo
+> **executor mais barato adequado à classe da tarefa**, com Hermes como único
+> control plane e um writer por worktree.
 
-| # | Modelo                       | Provider     | Observação |
-|---|------------------------------|--------------|------------|
-| 4 | `opencode/deepseek-v4-flash-free` | OpenCode Zen | fallback sempre ativo |
-| 5 | `opencode/nemotron-3-ultra-free`  | OpenCode Zen |             |
-| 6 | `opencode/laguna-s-2.1-free`      | OpenCode Zen |             |
-| 7 | `opencode/ling-3.0-tiny-free`     | OpenCode Zen | leve/rápido |
-| 8 | `opencode/mimo-v2.5-free`         | OpenCode Zen | multimodal  |
-| 9 | `ollama/gpt-oss:20b`              | local (ollama) | sempre disponível (sem rede) |
+## Cadeia histórica validada em 2026-08-08
 
-### Regra de priorização
+Foi validada uma cadeia que incluía:
 
-**Pago → Grátis → Local sempre disponível.**
-Assim, se OpenAI, Google e Cloudflare caírem ou ficarem exauridos, os modelos
-gratuitos do Zen entram de imediato, e `ollama/gpt-oss:20b` (local) é o teto
-final: zero dependência de rede/serviço externo.
+- OpenAI via OpenCode;
+- Google via API;
+- Cloudflare AI Gateway;
+- modelos gratuitos OpenCode Zen;
+- `ollama/gpt-oss:20b` local.
 
-## Como usar
-
-### Wrapper automático (recomendado)
+O wrapper histórico permanece em:
 
 ```bash
-node scripts/moa-run.mjs "tarefa em PT"                      # cadeia default
-node scripts/moa-run.mjs "tarefa" --agent=plan               # modo plan
-node scripts/moa-run.mjs "tarefa" --agent=build --files=src/a.ts,src/b.ts
-node scripts/moa-run.mjs "tarefa" --once                       # só o 1º modelo
-MOA_MODELS="m1,m2" node scripts/moa-run.mjs "tarefa"         # cadeia custom
+node scripts/moa-run.mjs "tarefa"
 ```
 
-Comportamento:
-- tenta cada modelo em ordem;
-- falha fatal (rate limit/quota/billing/timeout/rede/429/401/402/403/5xx) → pula pro próximo;
-- sucesso → imprime o resultado com o nome do modelo vencedor;
-- todos falharem → exit 1 com diagnóstico.
+Use-o somente para reprodução/diagnóstico histórico ou quando houver decisão
+explícita de fazê-lo. Não o invoque como fallback automático do Hermes v1.
 
-### Fallback embutido no OpenCode (`opencode.jsonc`)
+## Codex validado em 2026-08-10
 
-`opencode.jsonc` contém `fallback[]` no `agent.build` e `agent.plan` com a mesma
-cadeia — o OpenCode usa internamente quando o modelo primário falha, sem wrapper.
+Antes da nova arquitetura, o Codex CLI foi validado com autenticação ChatGPT,
+sem `OPENAI_API_KEY`, incluindo:
 
-## Failover real validado
+- `gpt-5.6-luna`;
+- `gpt-5.6-terra`;
+- `gpt-5.6-sol`;
+- `codex exec` read-only;
+- prompt via stdin;
+- `--output-schema`;
+- `codex mcp-server`.
 
-- `opencode/grok-4.5` (sem billing, pagar) → falhou → caiu para `deepseek-v4-flash-free` → ✅ OK
-- `google/gemini-2.5-flash` (modelo deprecated) → falhou → caiu para chain → ✅ OK
-- `--once` com `openai/gpt-5.5` → OK (mas latência alta > 5min — o wrapper timeout de 900s cobre)
-- Cadeia default rodando; free chain toda responderia
+O teste estruturado encontrou dois bugs reais em `src/services/candidates.ts` e
+`src/pages/AdminPage.tsx`. Esses achados continuam pendentes como trabalho
+separado; a decisão de integração, porém, já foi tomada: **Codex MCP stdio é o
+executor técnico preferido do Hermes**.
 
-## Persistência / exaurimento
+## Arquitetura sucessora
 
-- Modelos gratuitos do OpenCode Zen: **não excluídos** — reativam após cooldown.
-- GPT-5.5: latência alta em smoke simples (pode exceder 300s). Recomendado só para
-  tarefas que realmente precisam de potência; triagem/volume usa free.
+Resumo atual:
 
-## Salvaguarda offline (sempre disponível)
-
-`ollama/gpt-oss:20b` (via `ollama-launch` provider em Hermes config: `http://127.0.0.1:11434`)
-é o teto final: não depende de rede, funciona se todos os provedores caírem.
-
-## Gates do MOA
-
-- Read-only (plan/review): qualquer modelo da cadeia.
-- Mutações: **apenas** modelo selecionado por humano + revisão de diff (gate H4 do projeto).
-- Supabase/Cloudflare/deploy/secrets/migrations/commit/push/PR/merge: Hermes/humano após confirmação.
-- Registrar modelo usado + status em cada bloco.
-
-## Uso na continuidade
-
-Exemplo: quando GPT-5.5 travar no smoke de um PR, o wrapper cai pro Gemini/free e
-o build segue — sem interromper o fluxo até o final.
-
-## Codex CLI — camada de análise/consulta (validado 2026-08-10)
-
-O Codex CLI **não compete** com a cadeia acima para geração; ele é a camada de
-**consulta/análise estruturada** com a conta ChatGPT Plus (auth `chatgpt`,
-sem API key).
-
-| Modelo | Nível | Uso |
-|---|---|---|
-| `gpt-5.6-luna` | barato/rápido | triagem, análises curtas, alto volume |
-| `gpt-5.6-terra` | médio | implementação/revisão normal |
-| `gpt-5.6-sol` | difícil | arquitetura, problemas difíceis (default no config) |
-
-Ambiente necessário (sandbox Hermes): `CODEX_HOME=/home/lourenco/.codex HOME=/home/lourenco`.
-
-Comando validado (resposta final limpa no stdout):
-
-```bash
-OUT=$(mktemp)
-codex exec -m gpt-5.6-luna --sandbox read-only --ephemeral --color never \
-  -o "$OUT" "tarefa" >/dev/null
-cat "$OUT"; rm -f "$OUT"
+```text
+Hermes control plane
+├── OpenCode + DeepSeek free -> triagem barata, snapshot HEAD
+├── Google Antigravity       -> contexto amplo, snapshot HEAD
+├── Codex MCP                -> implementação/debug/testes
+│   └── Luna -> Terra -> Sol por evidência
+├── Codex exec               -> fallback read-only do MCP
+└── Codex OSS + Ollama       -> último fallback local opcional
 ```
 
-- Prompt via `stdin` com `-` (prompts grandes).
-- `--output-schema <schema.json>` valida a resposta final (retorno JSON
-  determinístico: `status|summary|findings|recommended_action|human_review_required`).
-- `codex mcp-server` disponível (MCP via stdio) — candidato para integração
-  profunda com o orquestrador.
-- Teste real: `-m gpt-5.6-luna` + `--output-schema` identificou 2 bugs reais em
-  `src/` (cardinalidade em `candidates.ts` e atomicidade em `AdminPage.tsx`).
+As credenciais de produção Cloudflare/Supabase não são distribuídas para essa
+cadeia. Migrations remotas, RLS/RPC, deploy, secrets e merge continuam gates
+humanos.
 
-Detalhes e estado completo: `docs/handoff/2026-08-10-analise-externa-arquitetura-codex.md`.
-
-Decisão em aberto (análise externa): wrapper `codex-agent` e superfície
-`codex exec` (subprocesso) vs `codex mcp-server` (MCP).
+Handoff que originou a migração:
+`docs/handoff/2026-08-10-analise-externa-arquitetura-codex.md`.

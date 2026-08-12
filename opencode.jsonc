@@ -1,39 +1,42 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  // ===== Modelo padrão =====
-  // MOA (2026-08-08): prioridade paga→grátis→local.
-  // Pagedos (credenciados primeiro), deps pois exigem billing não estão na
-  // chain default. Gratuitos do OpenCode Zen + ollama local como backup offline.
-  "model": "openai/gpt-5.5",
+
+  // O caminho orquestrado usa OpenCode somente como leitor/analista barato.
+  // Fallback entre provedores pertence ao Hermes, não a uma segunda cadeia aqui.
+  "model": "opencode/deepseek-v4-flash-free",
+  "default_agent": "plan",
+  "share": "disabled",
+
   "agent": {
-    "build": {
-      "model": "openai/gpt-5.5",
-      "fallback": [
-        "google/gemini-3.5-flash",
-        "cloudflare-ai-gateway/openai/gpt-4o-mini",
-        "opencode/deepseek-v4-flash-free",
-        "opencode/nemotron-3-ultra-free",
-        "opencode/laguna-s-2.1-free",
-        "opencode/ling-3.0-tiny-free",
-        "opencode/mimo-v2.5-free",
-        "ollama/gpt-oss:20b"
-      ]
-    },
     "plan": {
-      "model": "opencode/deepseek-v4-flash-free",
-      "fallback": [
-        "opencode/nemotron-3-ultra-free",
-        "google/gemini-3.5-flash",
-        "cloudflare-ai-gateway/openai/gpt-4o-mini",
-        "opencode/laguna-s-2.1-free",
-        "opencode/ling-3.0-tiny-free",
-        "opencode/mimo-v2.5-free",
-        "ollama/gpt-oss:20b"
-      ]
+      "permission": {
+        "edit": "deny",
+        "bash": "deny",
+        "external_directory": "deny",
+        "task": "deny",
+        "webfetch": "deny",
+        "websearch": "deny",
+        "read": {
+          "*": "allow",
+          "*.env": "deny",
+          "*.env.*": "deny",
+          "**/.env": "deny",
+          "**/.env.*": "deny",
+          "data/tse-archive/**": "deny"
+        }
+      }
+    },
+
+    // OpenCode não é writer nesta arquitetura. Se alguém selecionar build
+    // interativamente na worktree viva, nenhuma ferramenta é concedida ao
+    // modelo gratuito. Mutações locais pertencem ao Codex MCP autorizado.
+    "build": {
+      "permission": {
+        "*": "deny"
+      }
     }
   },
 
-  // ===== LSP =====
   "lsp": {
     "typescript": {
       "enabled": true,
@@ -52,41 +55,14 @@
     }
   },
 
-  // ===== MCP =====
-  "mcp": {
-    "servers": {
-      // Habilita/desabilita todos os servidores MCP
-      "enabled": true,
+  // Sem MCP no OpenCode desta arquitetura. Menos ferramentas = menos contexto,
+  // menos superfície de segredo e um comportamento read-only previsível.
+  "mcp": {},
 
-      // Supabase (via PostgreSQL). DATABASE_URL vem do ambiente; nunca commitar valor real.
-      "supabase": {
-        "type": "local",
-        "command": "npx",
-        "args": ["-y", "@modelcontextprotocol/server-postgres"],
-        "env": {
-          "DATABASE_URL": "{env:SUPABASE_DATABASE_URL}"
-        },
-        "enabled": true
-      },
-
-      // Sistema de arquivos curado para ponte com o raspador: nunca apontar para ".".
-      "filesystem": {
-        "type": "local",
-        "command": "npx",
-        "args": ["-y", "@modelcontextprotocol/server-filesystem", "docs/context-export"],
-        "enabled": true
-      },
-
-      // OpenCode MCP (ferramentas extras)
-      "opencode": {
-        "type": "local",
-        "command": "npx",
-        "args": ["-y", "opencode-mcp"],
-        "enabled": true
-      }
-    }
-  },
-
-  // Instruções para agentes
-  "instructions": ["AGENTS.md", "README.md"]
+  "instructions": [
+    "AGENTS.md",
+    ".orchestrator/README.md",
+    ".orchestrator/STATE.md",
+    "README.md"
+  ]
 }

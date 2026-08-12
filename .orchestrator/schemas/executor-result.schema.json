@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://votopraquem.org/schemas/orchestrator-executor-result-v1.json",
+  "title": "Executor Result v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "task_id": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "status": { "type": "string", "enum": ["ok", "blocked", "error"] },
+    "summary": { "type": "string", "minLength": 1, "maxLength": 2000 },
+    "findings": {
+      "type": "array",
+      "maxItems": 10,
+      "items": { "type": "string", "maxLength": 1000 }
+    },
+    "evidence": {
+      "type": "array",
+      "maxItems": 12,
+      "items": { "type": "string", "maxLength": 1000 }
+    },
+    "files_changed": {
+      "type": "array",
+      "maxItems": 30,
+      "items": { "type": "string", "maxLength": 300 }
+    },
+    "tests": {
+      "type": "array",
+      "maxItems": 20,
+      "items": { "type": "string", "maxLength": 1000 }
+    },
+    "risks": {
+      "type": "array",
+      "maxItems": 10,
+      "items": { "type": "string", "maxLength": 1000 }
+    },
+    "recommended_action": { "type": "string", "maxLength": 1500 },
+    "human_review_required": { "type": "boolean" }
+  },
+  "required": [
+    "task_id",
+    "status",
+    "summary",
+    "findings",
+    "evidence",
+    "files_changed",
+    "tests",
+    "risks",
+    "recommended_action",
+    "human_review_required"
+  ]
+}
