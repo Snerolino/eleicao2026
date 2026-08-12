@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-11 21:40 -03
-Status: `ORCHESTRATOR_V1_FINAL_REVIEW_PENDING`
+Atualizado: 2026-08-12 01:06 -03
+Status: `ORCHESTRATOR_V1_READY_FOR_SQUASH`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
@@ -12,7 +12,7 @@ Status: `ORCHESTRATOR_V1_FINAL_REVIEW_PENDING`
 - Feature funcional: `feat/matriz-impacto-populacional-v1`.
 - Base atual da feature após #71/#72: `da2f00cf0d55c351e3d19093941088e9da894b19`.
 - Branch da arquitetura: `chore/hermes-orchestrator-v1`.
-- PR `#70`: ready for review, ainda sem merge; integrar somente por **squash** após gate final.
+- PR `#70`: pronto para squash na feature após CI desta atualização documental; nunca integrar diretamente em `main`.
 - PR `#71`: merged por squash; restaurou `20260804081607_claims_collector_idempotency.sql` sem executar SQL remoto.
 - PR `#72`: merged por squash; sincronizou contrato/tipos de `claims`, inclusive retornos RPC.
 - O diff do #70 permanece restrito a 33 arquivos de orquestração/config/docs, sem `src/`, migrations, workflow de deploy ou lockfile.
@@ -29,14 +29,13 @@ Status: `ORCHESTRATOR_V1_FINAL_REVIEW_PENDING`
 
 ## Hermes / executores — GATE LOCAL FINAL VERDE
 
-Reteste final do runtime concluído no workstation real com Node `v24.19.0`, após atualizar a branch até `5dccef8` e com a alteração do `doctor.sh` que foi imediatamente commitada como `0ed71d8` já presente na worktree:
+Reteste final do runtime concluído no workstation real sobre o head `a3323212045bc1b5f786412893242f2eec12d236`, em Node `v24.19.0`, com working tree limpa e após todos os hardenings de snapshot/Codex fallback:
 
 ```text
+bash -n scripts/orchestrator/*.sh
 ORCH_EXECUTOR_TIMEOUT=60 npm run orch:doctor -- --smoke
-OK=50 WARN=4 FAIL=0
+OK=51 WARN=3 FAIL=0
 ```
-
-O diff local testado de `doctor.sh` foi commitado sem alteração adicional em `0ed71d8df7716e1255cdfd94c9c46fa45e8c89d5` (`fix(orchestrator): tornar smoke MCP deterministico`). Portanto, os bytes de runtime exercitados no smoke correspondem ao runtime do commit final.
 
 Comprovado nesse reteste:
 
@@ -45,27 +44,29 @@ Comprovado nesse reteste:
 - skill `eleicao2026-orchestrator` instalada e byte-a-byte sincronizada com o Git;
 - Codex MCP registrado no perfil e `codex mcp-server` disponível por stdio;
 - gateway Hermes resolve efetivamente o mesmo Node 24 pelo ambiente real do processo systemd;
-- snapshot rejeita path traversal/symlinks, remove `.env*`/dados brutos e aplica barreira fail-closed para material secreto plausível;
+- snapshot rejeita path traversal/symlinks, remove `.env*`/dados brutos/utilitários legados com credencial e aplica barreira fail-closed para material secreto plausível;
+- falha operacional do scanner de segredos também bloqueia o snapshot, em vez de ser convertida em falso negativo;
 - policy Antigravity restrita ao snapshot;
 - Hermes → Codex MCP comprovado por probe nonce efêmero: `tool_search`/`tool_describe`, chamada `mcp__codex__codex`, `sandbox == "read-only"`, resultado associado à mesma `tool_call_id` e nonce retornado pelo Codex;
-- o nonce não aparece no prompt, eliminando o falso verde por memória/contexto do Hermes;
+- o nonce não aparece no prompt, eliminando falso verde por memória/contexto do Hermes;
 - OpenCode/DeepSeek leu semanticamente `AGENTS.md`;
 - Antigravity/Google leu semanticamente `AGENTS.md`;
 - Codex exec fallback retornou saída estruturada;
+- fallbacks Codex usam `CODEX_HOME` temporário isolado, sem herdar `config.toml`/MCPs do usuário; a rota remota copia somente `auth.json` necessário à autenticação;
 - `TERMINAL_ENV` legado ausente.
 
 Warnings não bloqueantes desse reteste:
 
 1. Gemini CLI é rota legacy/API-key; Google AI Pro usa `agy`.
-2. worktree aparecia suja porque o patch determinístico do `doctor.sh` estava sendo validado antes do commit `0ed71d8`; o patch foi commitado sem mudança adicional.
-3. Supabase CLI não estava instalada localmente fora de `npx`; o doctor deliberadamente não baixa pacote remoto durante diagnóstico.
-4. Ollama não respondeu ao preflight no prazo; fallback local opcional permaneceu desabilitado.
+2. Supabase CLI não estava instalada localmente fora de `npx`; o doctor deliberadamente não baixa pacote remoto durante diagnóstico.
+3. Ollama não respondeu ao preflight no prazo; fallback local opcional permaneceu desabilitado.
 
 ## Hardening consolidado do PR #70
 
 - HOME hardcoded removido; resolução usa real home com override explícito.
 - Snapshots removem fisicamente `.env*`, `data/tse-archive`, `supabase/.temp` e utilitários legados conhecidos com credencial rastreada.
 - Snapshot aplica varredura fail-closed para formatos plausíveis de credenciais, incluindo headers `Authorization: Bearer`, shell/env e chaves estruturadas JSON/YAML, sem imprimir o segredo detectado.
+- Erros operacionais do scanner não são tratados como “nenhum segredo encontrado”.
 - Snapshots rejeitam path traversal e symlinks rastreados.
 - Wrappers seguram `flock` do snapshot por toda a execução para impedir corrida/recriação concorrente.
 - OpenCode/DeepSeek Free fica consultivo/read-only sobre snapshot; build não tem ferramentas na worktree viva.
@@ -83,28 +84,26 @@ Warnings não bloqueantes desse reteste:
 - Arquivos temporários do doctor usam diretório exclusivo criado com `mktemp` e removido no `trap`, evitando paths previsíveis em `/tmp`.
 - `agy` e `opencode` ausentes continuam WARN por serem executores consultivos opcionais.
 - Gateway valida o binário Node efetivamente resolvido pelo processo systemd, não apenas presença de diretório no PATH.
+- Fallbacks Codex consultivos usam home isolado para não carregar MCPs remotos mutáveis da configuração pessoal.
 - Doctor exige prova semântica dos readers e verifica tracked + untracked da worktree.
 
 ## CI / review
 
-- CI remoto do commit runtime final `0ed71d8df7716e1255cdfd94c9c46fa45e8c89d5` ficou verde em data check, preflight, TypeScript, testes, build e browser smoke; job de deploy de produção ficou `skipped`.
-- Threads anteriores foram resolvidos após as correções correspondentes, exceto os achados de snapshot/STATE ainda aguardando confirmação do re-review final.
-- O review de `c2c35df` encontrou três P2 válidos: exercitar a rota MCP configurada; não baixar CLIs com `npx --yes` durante diagnóstico; usar temporários seguros.
-- O review de `f16c726` apontou corretamente que texto/marker do modelo não era evidência suficiente; o gate foi trocado por inspeção estruturada da sessão persistida pelo Hermes.
-- O review de `a2355de` apontou corretamente que a prova estruturada ainda não verificava o sandbox da chamada; o parser passou a exigir `sandbox == "read-only"`.
-- O review de `0c44cb3` apontou dois P2: aceitar resultado do envelope wrapped pela mesma `tool_call_id` e executar checks de perfil com o real home; ambos foram corrigidos.
-- Reviews posteriores fecharam a classe de hangs com hard-kill, consistência de `REAL_HOME`, fallback em snapshot sem `.git`, timeout de Ollama e sanitização de snapshots contra credenciais rastreadas.
-- O review de `4891fd2` apontou corretamente duas lacunas finais: formas estruturadas/lowercase de credencial no scanner e ausência de reteste do runtime atual. O scanner foi corrigido em `5dccef8`; o runtime foi retestado com nonce determinístico e terminou `OK=50 WARN=4 FAIL=0`, sendo commitado como `0ed71d8` sem mudança adicional.
+- CI remoto do runtime final `a3323212045bc1b5f786412893242f2eec12d236` ficou verde em data check, preflight, TypeScript, testes, build e browser smoke; job de deploy de produção ficou `skipped`.
+- O review final do Codex no mesmo `a332321` não trouxe novo P1/P2 de runtime. O único P2 foi registrar o reteste atual no checkpoint, coberto por este `STATE.md`.
+- O mesmo review trouxe dois P3: atualizar o runbook para descrever o nonce e alinhar a expectativa dos smokes OpenCode/Antigravity ao `HEAD` quando a worktree estiver suja. O runbook é corrigido no mesmo checkpoint documental; o segundo é ergonomia de falso negativo em worktree suja e fica como dívida separada, pois o gate final foi executado com working tree limpa.
+- Reviews anteriores fecharam: rota MCP real, evidência estruturada, sandbox read-only, envelope wrapped, real home, hard-kill de timeouts, snapshot sem secrets, scanner estruturado/lowercase, fallback Ollama em snapshot e isolamento de MCPs do Codex fallback.
+- A credencial Cloudflare literal encontrada em scripts legados permanece incidente separado para revogação/rotação e remoção histórica; os snapshots atuais a excluem e falham fechado para segredos plausíveis. Nenhuma rotação foi executada neste arco.
 
 ## Gate atual
 
-O runtime do orquestrador está validado localmente e no CI. Esta atualização de `STATE.md` é somente documental e não altera scripts/runtime.
+O runtime do orquestrador está validado localmente e no CI no head `a3323212045b`.
 
-Gate restante:
+Esta atualização de `STATE.md` e a correção correspondente do runbook são somente documentais e não alteram runtime. Gate restante:
 
 1. CI do head documental final verde.
-2. Re-review final do Codex sem novo achado material.
-3. Confirmar novamente escopo de 33 arquivos e ausência de caminhos proibidos.
+2. Confirmar novamente escopo de 33 arquivos e ausência de caminhos proibidos.
+3. Resolver os threads já cobertos e registrar o P3 ergonômico como follow-up.
 4. Sob a autorização humana já concedida para este arco, fazer **squash-merge do #70 na feature**, nunca em `main`.
 
 Não repetir o smoke local nem a regressão de 888 testes sem nova mudança de runtime.
