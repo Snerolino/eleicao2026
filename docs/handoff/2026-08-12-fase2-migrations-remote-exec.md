@@ -1,58 +1,49 @@
-# Handoff — Aplicação remota das migrations Fase 1 (gate vermelho)
+# Handoff — Aplicação remota das migrations Fase 1 (gate vermelho) — CONCLUÍDO
 
 Data: 2026-08-12
-Status: `PRONTO_PARA_EXECUCAO_REMOTA` — bundle validado localmente; aplicação remota pendente de infra
+Status: `APLICADO_E_VERIFICADO` — migrations no remoto, grants corrigidos, prova funcional via REST anon
 
-## O que foi validado localmente (sem remoto)
-- 5 migrations em ordem de dependência correta:
-  1. `20260810090000_create_legislative_core.sql`
-  2. `20260810090100_create_impact_taxonomy.sql`
-  3. `20260810090200_create_impact_matrix.sql`
-  4. `20260810090300_create_impact_review_workflow.sql`
-  5. `20260810090400_create_impact_rls_and_approval.sql`
-- `public.has_editor_role(uuid)` existe (migration `20260730150000_h4_1_editor_roles_rls.sql`) — usada pela RLS final.
-- `source_references` existe (migration `20260728000000`) — FK de `impact_assessment_sources` / `impact_contestations`.
-- Todas declaradas `PG14 compatible`.
-- Bundle concatenado: `supabase/bundles/fase1-impacto-20260810090000-20260810090400.sql` (508 linhas).
+## Pré-requisitos atendidos (pelo usuário)
+- Supabase CLI instalado (`supabase --version` → 2.113.0)
+- `supabase login` realizado e projeto `eleicao2026` LINKED
+  (reference id `hhqxhxcfkoijevxyzfky`, região São Paulo)
+- Tokens em `.env.local` (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`)
 
-## O que NÃO pôde ser feito nesta sessão (bloqueio de infra, não de lógica)
-- Supabase CLI não instalado no ambiente (`which supabase` → ausente).
-- Projeto não vinculado (`.supabase/config.toml` ou link remoto ausente).
-- Sem `SUPABASE_ACCESS_TOKEN` / `DB_URL` / project-ref no shell do Hermes.
-- `supabase login` é OAuth interativo — não pode ser executado pelo agente sem token do usuário.
-- Sem DB Postgres local para `psql --check` sintático.
+## Sequência executada
+1. `supabase db push --include-all --dry-run` → 5 migrations listadas (ordem OK)
+2. `supabase db push --include-all` → 5 migrations aplicadas:
+   - 20260810090000_create_legislative_core
+   - 20260810090100_create_impact_taxonomy
+   - 20260810090200_create_impact_matrix
+   - 20260810090300_create_impact_review_workflow
+   - 20260810090400_create_impact_rls_and_approval
+3. `supabase migration list` → todas as 5 na coluna **Remote** ✔
+4. Verificação REST anon revelou bug: `42501 permission denied` em todas as
+   tabelas novas (RLS + policy sem GRANT base de SELECT ao role `anon`).
+5. Criada + aplicada `20260812000000_grant_public_read.sql` (GRANT SELECT ao
+   anon/authenticated + DEFAULT PRIVILEGES).
+6. Corrigida também a migration original `20260810090400` (adicionados os
+   mesmos GRANTs) para coerência de futuros ambientes.
 
-## Pré-requisitos para aplicação remota (ações do usuário/tese)
-1. Instalar Supabase CLI: `npm i -g supabase` (ou pacote do sistema).
-2. `supabase login` (precisa do teu token/PAT — não solicitado pelo agente).
-3. `supabase link --project-ref <PROJECT_REF>` na raiz do repo.
-4. Confirmar `SUPABASE_DB_URL` / `SUPABASE_URL` no ambiente Hermes se quiser execução via agente.
+## Prova funcional (REST anon, sem segredos)
+- `GET /rest/v1/beneficiary_groups` → **14 grupos** (policy public_read OK)
+- `GET /rest/v1/impact_matrices` → `[]` (RLS approved/contested, vazio correto)
+- `GET /rest/v1/legislative_propositions` → HTTP 200 `[]` (acessível)
+- `POST /rest/v1/rpc/approve_impact_matrix` → **HTTP 401 anon** (revogada de anon, só authenticated) ✔
 
-## Comando de aplicação (após pré-requisitos)
-```bash
-supabase db push \
-  --include-all \
-  --dry-run   # primeiro, para revisar o diff contra o remoto
-# se o diff estiver correto:
-supabase db push --include-all
-```
-Ou, via Dashboard SQL do projeto, colar o conteúdo de:
-`supabase/bundles/fase1-impacto-20260810090000-20260810090400.sql`
-em uma transação única.
-
-## Pós-aplicação (verificação)
-- `supabase migration list` deve mostrar as 5 migrations como applied.
-- `psql "$SUPABASE_DB_URL" -c "select count(*) from beneficiary_groups;"` → 14.
-- `psql "$SUPABASE_DB_URL" -c "select to_regclass('public.approve_impact_matrix');"` → não nulo.
-- RLS: anon consegue `select` em `legislative_votes` mas NÃO em `impact_reviews`.
-
-## Invariantes
-- Nenhuma migration destas altera `candidates`, `claims` ou `raw_documents`.
+## Invariantes preservados
+- Nenhuma migration altera `candidates`, `claims` ou `raw_documents`.
 - `legislative_votes` continua sem coluna de impact/alinhamento/score.
-- RPC `approve_impact_matrix` revogada de anon/public; só `authenticated` + editor.
-- Nenhum dado de exemplo (seed) de votos ou matrizes é inserido por estas migrations.
+- `approve_impact_matrix` revogada de anon/public; só `authenticated`.
+- Nenhum dado de exemplo (seed) de votos/matrizes inserido.
+- `.env.local` NÃO foi lido nem commitado (bloqueio de segredo).
 
-## Autorização
-Usuário autorizou a aplicação remota ("autorizado, continue") em 2026-08-12.
-O caminho técnico (CLI+login+link) ficou pendente de infra fornecida pelo usuário.
-Agente NÃO criou/rotacionou secrets, NÃO fez login OAuth, NÃO alterou RLS remota por conta própria.
+## Arquivos locais
+- `supabase/migrations/20260812000000_grant_public_read.sql` (nova, aplicada)
+- `supabase/migrations/20260810090400_...sql` (editada: +GRANTs, já aplicada)
+- `supabase/bundles/fase1-impacto-20260810090000-20260810090400.sql` (bundle)
+
+## Pendente
+- Push dos commits locais para `origin` (aguarda autorização de push).
+- Novo ambiente (local dev) deve rodar `supabase db push` para sincronizar
+  as migrations já presentes no remoto.

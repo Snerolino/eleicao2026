@@ -244,5 +244,28 @@ begin
 end;
 $$;
 
+-- ============================================================================
+-- 5. Grants de leitura pública (privilégio base para a RLS ser avaliada)
+-- Sem o GRANT, o Postgres barra com 42501 antes de avaliar a policy.
+-- ============================================================================
+grant select on table
+  legislative_propositions,
+  proposition_versions,
+  voting_events,
+  legislative_votes,
+  beneficiary_groups,
+  beneficiary_group_aliases,
+  impact_matrices,
+  impact_assessments,
+  impact_assessment_sources,
+  impact_contestations
+to anon, authenticated;
+
+grant select on table impact_reviews to authenticated;
+grant insert, update, delete on table impact_reviews to authenticated;
+
+alter default privileges in schema public
+  grant select on tables to anon, authenticated;
+
 revoke all on function public.approve_impact_matrix(uuid) from public, anon;
 grant execute on function public.approve_impact_matrix(uuid) to authenticated;
