@@ -1,6 +1,6 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-11 19:54 -03
+Atualizado: 2026-08-11 21:40 -03
 Status: `ORCHESTRATOR_V1_FINAL_REVIEW_PENDING`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
@@ -29,12 +29,14 @@ Status: `ORCHESTRATOR_V1_FINAL_REVIEW_PENDING`
 
 ## Hermes / executores — GATE LOCAL FINAL VERDE
 
-Reteste final do runtime concluído no workstation real sobre o commit `cef7f89`, em Node `v24.19.0`:
+Reteste final do runtime concluído no workstation real com Node `v24.19.0`, após atualizar a branch até `5dccef8` e com a alteração do `doctor.sh` que foi imediatamente commitada como `0ed71d8` já presente na worktree:
 
 ```text
 ORCH_EXECUTOR_TIMEOUT=60 npm run orch:doctor -- --smoke
 OK=50 WARN=4 FAIL=0
 ```
+
+O diff local testado de `doctor.sh` foi commitado sem alteração adicional em `0ed71d8df7716e1255cdfd94c9c46fa45e8c89d5` (`fix(orchestrator): tornar smoke MCP deterministico`). Portanto, os bytes de runtime exercitados no smoke correspondem ao runtime do commit final.
 
 Comprovado nesse reteste:
 
@@ -43,9 +45,10 @@ Comprovado nesse reteste:
 - skill `eleicao2026-orchestrator` instalada e byte-a-byte sincronizada com o Git;
 - Codex MCP registrado no perfil e `codex mcp-server` disponível por stdio;
 - gateway Hermes resolve efetivamente o mesmo Node 24 pelo ambiente real do processo systemd;
-- snapshot rejeita path traversal/symlinks e remove `.env*`/dados brutos;
+- snapshot rejeita path traversal/symlinks, remove `.env*`/dados brutos e aplica barreira fail-closed para material secreto plausível;
 - policy Antigravity restrita ao snapshot;
-- Hermes → Codex MCP comprovado por `tool_call` estruturada, `sandbox == "read-only"`, mesma `tool_call_id` e resultado contendo o título real de `AGENTS.md`;
+- Hermes → Codex MCP comprovado por probe nonce efêmero: `tool_search`/`tool_describe`, chamada `mcp__codex__codex`, `sandbox == "read-only"`, resultado associado à mesma `tool_call_id` e nonce retornado pelo Codex;
+- o nonce não aparece no prompt, eliminando o falso verde por memória/contexto do Hermes;
 - OpenCode/DeepSeek leu semanticamente `AGENTS.md`;
 - Antigravity/Google leu semanticamente `AGENTS.md`;
 - Codex exec fallback retornou saída estruturada;
@@ -54,26 +57,27 @@ Comprovado nesse reteste:
 Warnings não bloqueantes desse reteste:
 
 1. Gemini CLI é rota legacy/API-key; Google AI Pro usa `agy`.
-2. worktree estava suja porque o próprio patch final ainda não havia sido commitado no momento do smoke.
+2. worktree aparecia suja porque o patch determinístico do `doctor.sh` estava sendo validado antes do commit `0ed71d8`; o patch foi commitado sem mudança adicional.
 3. Supabase CLI não estava instalada localmente fora de `npx`; o doctor deliberadamente não baixa pacote remoto durante diagnóstico.
-4. Ollama está instalado sem `gpt-oss:20b`; fallback local opcional permanece desabilitado.
+4. Ollama não respondeu ao preflight no prazo; fallback local opcional permaneceu desabilitado.
 
 ## Hardening consolidado do PR #70
 
 - HOME hardcoded removido; resolução usa real home com override explícito.
-- Snapshots removem fisicamente `.env*`, `data/tse-archive` e `supabase/.temp`.
+- Snapshots removem fisicamente `.env*`, `data/tse-archive`, `supabase/.temp` e utilitários legados conhecidos com credencial rastreada.
+- Snapshot aplica varredura fail-closed para formatos plausíveis de credenciais, incluindo headers `Authorization: Bearer`, shell/env e chaves estruturadas JSON/YAML, sem imprimir o segredo detectado.
 - Snapshots rejeitam path traversal e symlinks rastreados.
 - Wrappers seguram `flock` do snapshot por toda a execução para impedir corrida/recriação concorrente.
 - OpenCode/DeepSeek Free fica consultivo/read-only sobre snapshot; build não tem ferramentas na worktree viva.
 - Antigravity usa snapshot sanitizado, `--add-dir`, custom reader, plan/sandbox e rejeita qualquer `read_file(...)` externo ao snapshot.
 - Prompt enviado ao Google não inclui caminho absoluto/identidade local.
-- `run-antigravity.sh` usa timeout com `TERM` seguido de hard kill após 10s; um `agy` suspenso por job control não pode mais deixar o smoke preso indefinidamente.
+- Wrappers de executores e timeouts internos críticos usam `TERM` seguido de hard kill após grace period; processos suspensos não podem mais deixar o smoke preso indefinidamente.
 - Skill Hermes ausente ou stale vira FAIL e instalador usa `HERMES_REAL_HOME` resolvido.
 - Runbook instala a skill versionada logo após criar/configurar o perfil e antes de usar o doctor como gate.
 - Perfil Hermes ausente vira FAIL.
 - Checks `profile show`, `config check` e `mcp list` usam `HOME="$REAL_HOME"` de forma consistente.
 - Codex MCP ausente ou `codex mcp-server` incapaz de iniciar vira FAIL, pois é a rota writer obrigatória.
-- `doctor --smoke` exercita a rota **Hermes → MCP Codex** e valida no `state.db` da sessão uma `tool_call` pertencente ao servidor `codex`, os argumentos estruturados dessa chamada com `sandbox == "read-only"`, e o resultado ligado à mesma `tool_call_id` contendo o título real de `AGENTS.md`; não confia em texto/marker produzido pelo modelo.
+- `doctor --smoke` exercita a rota **Hermes → MCP Codex** com nonce efêmero desconhecido do Hermes e valida no `state.db` uma `tool_call` do servidor `codex`, `sandbox == "read-only"`, resultado ligado à mesma `tool_call_id` e nonce retornado; não confia em texto/marker produzido pelo modelo nem em conteúdo já conhecido como `AGENTS.md`.
 - O parser reconhece o envelope real do Hermes (`tool_call` externo com ferramenta MCP interna) e associa o resultado pelo `tool_call_id`, sem exigir que o `tool_name` externo repita o nome MCP já validado.
 - `doctor` não instala CLIs durante diagnóstico: Supabase/Wrangler só são executados se já estiverem instalados globalmente ou em `node_modules/.bin`.
 - Arquivos temporários do doctor usam diretório exclusivo criado com `mktemp` e removido no `trap`, evitando paths previsíveis em `/tmp`.
@@ -83,13 +87,14 @@ Warnings não bloqueantes desse reteste:
 
 ## CI / review
 
-- CI remoto do commit runtime `cef7f89` ficou verde em data check, preflight, TypeScript, testes, build e browser smoke; job de deploy de produção ficou `skipped`.
-- Threads anteriores foram resolvidos após as correções correspondentes.
+- CI remoto do commit runtime final `0ed71d8df7716e1255cdfd94c9c46fa45e8c89d5` ficou verde em data check, preflight, TypeScript, testes, build e browser smoke; job de deploy de produção ficou `skipped`.
+- Threads anteriores foram resolvidos após as correções correspondentes, exceto os achados de snapshot/STATE ainda aguardando confirmação do re-review final.
 - O review de `c2c35df` encontrou três P2 válidos: exercitar a rota MCP configurada; não baixar CLIs com `npx --yes` durante diagnóstico; usar temporários seguros.
 - O review de `f16c726` apontou corretamente que texto/marker do modelo não era evidência suficiente; o gate foi trocado por inspeção estruturada da sessão persistida pelo Hermes.
 - O review de `a2355de` apontou corretamente que a prova estruturada ainda não verificava o sandbox da chamada; o parser passou a exigir `sandbox == "read-only"`.
-- O review de `0c44cb3` apontou dois P2 finais: aceitar resultado do envelope wrapped pela mesma `tool_call_id` e executar checks de perfil com o real home. Ambos foram corrigidos em `cef7f89` e cobertos pelo smoke final verde.
-- Durante o reteste foi identificado um hang real do Antigravity: processos `agy` suspensos em estado `T/Tl` podiam sobreviver ao `timeout`. O wrapper agora usa hard kill após o grace period e o reteste com timeout de 60s concluiu normalmente.
+- O review de `0c44cb3` apontou dois P2: aceitar resultado do envelope wrapped pela mesma `tool_call_id` e executar checks de perfil com o real home; ambos foram corrigidos.
+- Reviews posteriores fecharam a classe de hangs com hard-kill, consistência de `REAL_HOME`, fallback em snapshot sem `.git`, timeout de Ollama e sanitização de snapshots contra credenciais rastreadas.
+- O review de `4891fd2` apontou corretamente duas lacunas finais: formas estruturadas/lowercase de credencial no scanner e ausência de reteste do runtime atual. O scanner foi corrigido em `5dccef8`; o runtime foi retestado com nonce determinístico e terminou `OK=50 WARN=4 FAIL=0`, sendo commitado como `0ed71d8` sem mudança adicional.
 
 ## Gate atual
 
