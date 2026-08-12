@@ -36,16 +36,16 @@ Cada informação mostra sua fonte, data de coleta e nível de confiança — um
 
 ## Dados
 
-Atualmente o portal usa **792 candidaturas públicas TSE 2026 do Rio Grande do Sul**, sanitizadas em snapshot público versionado (`data/public-candidates.json`), atualizado em 08/08/2026 a partir do `consulta_cand_2026_RS.csv` oficial. O manifesto preserva `793` linhas oficiais TSE; `FRANCISCO MARQUES NETO` foi removido da superfície pública por decisão humana registrada na Fase 7.
+Atualmente o portal usa **938 candidaturas públicas TSE 2026 do Rio Grande do Sul**, sanitizadas em snapshot público versionado (`data/public-candidates.json`), atualizado em 12/08/2026 a partir do `consulta_cand_2026_RS.csv` oficial. O manifesto preserva `939` linhas oficiais TSE; `FRANCISCO MARQUES NETO` foi removido da superfície pública por decisão humana registrada na Fase 7. A cobertura de fotos rastreáveis está em `906/938` candidaturas públicas: `879` matches exatos por `SQ_CANDIDATO` no ZIP oficial TSE 2026 e `27` fallbacks conservadores de fonte oficial TSE 2024.
 
 | Cargo | Candidatos | Partidos |
 |-------|-----------|----------|
-| Deputado Estadual | 110 | múltiplos |
-| Deputado Federal | 88 | múltiplos |
-| Governador | 1 | múltiplos |
-| Vice-governador | 1 | múltiplos |
-| Senador | 4 | múltiplos |
-| Outros/suplentes | 8 | múltiplos |
+| Deputado Estadual | 517 | múltiplos |
+| Deputado Federal | 375 | múltiplos |
+| Governador | 5 | múltiplos |
+| Vice-governador | 5 | múltiplos |
+| Senador | 12 | múltiplos |
+| Outros/suplentes | 24 | múltiplos |
 
 Quando o Supabase público está saudável, os dados vêm do banco. Se a camada pública estiver indisponível ou defasada, o fallback lê o snapshot público versionado e sinaliza a degradação sem depender de `../dataset2026` no build.
 
