@@ -1,6 +1,6 @@
 # Contrato de schema para o coletor de candidatos
 
-Fotografia em: 2026-08-12 (Fase 2 da Matriz de Impacto Populacional v1)
+Fotografia em: 2026-08-12 (Fase 2 da Matriz de Impacto Populacional v1 fechada em produção)
 
 Fontes: migrations versionadas em `supabase/migrations` e tipos gerados em
 `src/types/supabase.ts`. Este resumo nao contem credenciais nem dados de producao.
@@ -86,7 +86,7 @@ Fontes: migrations versionadas em `supabase/migrations` e tipos gerados em
 - `retract_claim` muda a claim publica para `retracted`.
 - O coletor nao chama as RPCs de publicacao, correcao ou retracao.
 
-## Tabelas de impacto (Fase 1 aplicada; importer Fase 2 pronto)
+## Tabelas de impacto (Fase 2 fechada; schema remoto aplicado)
 
 Novas tabelas da Matriz de Impacto Populacional v1 (todas com RLS habilitado):
 
@@ -115,13 +115,20 @@ Helpers internos: `impact_matrix_has_internal_approval`, `impact_matrix_has_exte
 
 RLS: publico le somente `approved|contested` de matriz/assessments/fontes; `impact_reviews` so editores; `impact_contestations` publico le `open|under_review|resolved`. Grants: leitura anon/authenticated concedida nas tabelas publicaveis; `approve_impact_matrix` somente `authenticated` (revogado de `anon`). Correção remota `20260812000000_grant_public_read.sql` aplicada após erro 42501 por policy sem GRANT base.
 
-Importer Fase 2:
+Importer Fase 2 fechado:
 
 - `src/domain/impact/legislative-importer.ts` valida e normaliza envelope publico com `propositions[]`/`votes[]`.
 - `scripts/import-legislative-dry-run.mjs` expõe `npm run impact:dryrun` e `npm run impact:sql`; `--apply` permanece bloqueado.
 - `src/domain/impact/legislative-sql-generator.ts` gera SQL deterministico sem rede; FKs principais resolvem por subselect de chaves naturais.
 - `src/domain/impact/legislative-support-resolver.ts` resolve FKs de apoio via catálogo (`legislators`/`candidates`/`source_references`) sem heurística e sem fabricar UUID.
 - `fixtures/legislative-import/boa-minima.json` e `catalogo-exemplo.json` cobrem o contrato minimo.
+
+Estado operacional em produção no fechamento:
+
+- Migrations `20260810090000` a `20260810090400` aplicadas no Supabase remoto `eleicao2026` (`hhqxhxcfkoijevxyzfky`).
+- Migration `20260812000000_grant_public_read.sql` aplicada para corrigir privilégio base sob RLS.
+- Prova REST anon: `beneficiary_groups` retorna 14 grupos; `impact_matrices` retorna `[]` por RLS; `legislative_propositions` retorna HTTP 200 `[]`; `approve_impact_matrix` retorna HTTP 401 para anon.
+- Produção Cloudflare validada no release `3064761-20260812T160735671Z`.
 
 ## RLS e credenciais
 

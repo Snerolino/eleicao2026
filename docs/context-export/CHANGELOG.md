@@ -2,6 +2,15 @@
 
 ## 2026-08-12
 
+- Fase 2 marcada como fechada em produção no release
+  `3064761-20260812T160735671Z`: `main` sincronizada, Cloudflare Pages
+  atualizado, GitHub Actions verde, smoke/health de produção verdes e handoff de
+  retomada criado em
+  `docs/handoff/2026-08-12-fechamento-fase2-proxima-sessao.md`.
+- Snapshot público TSE RS 2026 atualizado no mesmo checkpoint operacional:
+  manifesto com 939 registros oficiais, 938 candidaturas públicas e 906 fotos
+  rastreáveis. Relatórios de fotos pendentes versionados em `docs/qa/`.
+
 - Fase 2 da Matriz de Impacto Populacional v1 concluída na branch
   `feat/matriz-impacto-populacional-v1`: contrato operacional
   `propositions[]`/`votes[]`, importer dry-run, CLI `impact:dryrun`, gerador

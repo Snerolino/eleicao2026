@@ -157,15 +157,20 @@ em `main`.
 
 ## Checkpoint atual esperado
 
-No checkpoint inicial da arquitetura v1:
+No checkpoint pós-2026-08-12:
 
-- Fases 0–1 da Matriz de Impacto estão concluídas localmente;
-- Fase 2 está pendente;
-- migrations `20260810090000` a `20260810090400` ainda não estão aplicadas no Supabase remoto;
-- bugs previamente encontrados em `src/services/candidates.ts` e `src/pages/AdminPage.tsx` permanecem trabalho separado.
+- A Fase 2 da Matriz de Impacto está fechada em produção.
+- Migrations `20260810090000` a `20260810090400` e
+  `20260812000000_grant_public_read.sql` foram aplicadas no Supabase remoto.
+- Produção Cloudflare validada no release `3064761-20260812T160735671Z`.
+- Snapshot público atual: 938 candidaturas públicas; 906 fotos rastreáveis;
+  manifesto TSE com 939 registros oficiais.
+- Próximo arco recomendado: `eleicao2026-pos-fase2-matrizes-reais`, preparando
+  a primeira carga real de proposições/votos e catálogo real de FKs em
+  dry-run/SQL, sem publicar nada automaticamente.
 
-Sempre confirme esses fatos antes de agir, pois `STATE.md` é checkpoint, não
-oráculo eterno.
+Sempre confirme esses fatos em `.orchestrator/STATE.md` antes de agir, pois
+`STATE.md` é checkpoint, não oráculo eterno.
 
 ## Verificação
 
