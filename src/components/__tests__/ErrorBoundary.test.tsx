@@ -39,6 +39,7 @@ describe('ErrorBoundary', () => {
   });
 
   it('renders fallback UI when a child throws an error', () => {
+    vi.stubEnv('DEV', 'true');
     render(
       <ErrorBoundary>
         <Bomb shouldThrow={true} />
@@ -48,6 +49,22 @@ describe('ErrorBoundary', () => {
     expect(screen.getByText('Erro inesperado')).toBeInTheDocument();
     expect(screen.getByText('Algo deu errado')).toBeInTheDocument();
     expect(screen.getByText('Kaboom')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /recarregar/i })).toBeInTheDocument();
+  });
+
+  it('does not leak error details in production', () => {
+    vi.stubEnv('PROD', 'true');
+    vi.stubEnv('DEV', '');
+    render(
+      <ErrorBoundary>
+        <Bomb shouldThrow={true} />
+      </ErrorBoundary>
+    );
+
+    expect(screen.getByText('Erro inesperado')).toBeInTheDocument();
+    expect(screen.getByText('Algo deu errado')).toBeInTheDocument();
+    expect(screen.queryByText('Kaboom')).not.toBeInTheDocument();
+    expect(screen.getByText('Um erro inesperado ocorreu.')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /recarregar/i })).toBeInTheDocument();
   });
 
