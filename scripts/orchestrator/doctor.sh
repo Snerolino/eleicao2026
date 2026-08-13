@@ -92,6 +92,7 @@ for f in \
   .orchestrator/hermes-skill/SKILL.md \
   .agents/agents/eleicao2026-reader/agent.md \
   scripts/orchestrator/prepare-snapshot.sh \
+  scripts/orchestrator/run-free-pool.sh \
   scripts/orchestrator/install-hermes-skill.sh \
   scripts/orchestrator/sync-gateway-node.sh \
   scripts/orchestrator/configure-antigravity-readonly.sh \
@@ -99,6 +100,16 @@ for f in \
   supabase/migrations/20260810090400_create_impact_rls_and_approval.sql; do
   [[ -f "$f" ]] && ok "$f presente" || fail "$f ausente"
 done
+
+if grep -q 'opencode_free_pool:' .orchestrator/routing.yaml \
+  && grep -q 'run-free-pool.sh' .orchestrator/routing.yaml \
+  && grep -q 'opencode/deepseek-v4-flash-free' .orchestrator/routing.yaml \
+  && grep -q 'opencode/mimo-v2.5-free' .orchestrator/routing.yaml \
+  && grep -q '"orch:free"' package.json; then
+  ok "free provider pool registrado no roteamento e package.json"
+else
+  fail "free provider pool incompleto; confira routing.yaml, package.json e run-free-pool.sh"
+fi
 
 if bash scripts/orchestrator/prepare-snapshot.sh '../escape' >/dev/null 2>&1; then
   fail "prepare-snapshot aceitou nome com path traversal"

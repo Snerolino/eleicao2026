@@ -1,11 +1,13 @@
 # MOA do perfil eleicao2026 — registro histórico
 
 Data original: 2026-08-08
-Status atual: **LEGADO / SUPERADO em 2026-08-10**
+Status atual: **LEGADO COMO CADEIA PAGA→GRÁTIS; REUSADO COMO FREE POOL em 2026-08-12**
 
 Este documento registra a cadeia MOA anterior (`scripts/moa-run.mjs`) e os
-experimentos que levaram à arquitetura atual. Ele **não é mais a política de
-roteamento default** do projeto.
+experimentos que levaram à arquitetura atual. A cadeia paga→grátis continua
+histórica; a implementação foi reaproveitada de forma segura pelo wrapper
+`scripts/orchestrator/run-free-pool.sh`, que injeta somente modelos gratuitos via
+`MOA_MODELS` e roda em snapshot sanitizado/read-only.
 
 ## Fonte operacional atual
 
@@ -46,8 +48,15 @@ O wrapper histórico permanece em:
 node scripts/moa-run.mjs "tarefa"
 ```
 
-Use-o somente para reprodução/diagnóstico histórico ou quando houver decisão
-explícita de fazê-lo. Não o invoque como fallback automático do Hermes v1.
+Uso seguro atual para fallback gratuito consultivo:
+
+```bash
+npm run orch:free -- "tarefa"
+```
+
+Esse caminho não usa os modelos pagos da cadeia histórica. Ele força
+`ORCH_FREE_MODELS`/`MOA_MODELS` com os modelos gratuitos OpenCode, desliga MCP e
+roda em `agent plan` sobre snapshot `git archive HEAD`.
 
 ## Codex validado em 2026-08-10
 
@@ -74,6 +83,7 @@ Resumo atual:
 ```text
 Hermes control plane
 ├── OpenCode + DeepSeek free -> triagem barata, snapshot HEAD
+├── OpenCode free pool       -> fallback grátis sequencial, snapshot HEAD
 ├── Google Antigravity       -> contexto amplo, snapshot HEAD
 ├── Codex MCP                -> implementação/debug/testes
 │   └── Luna -> Terra -> Sol por evidência

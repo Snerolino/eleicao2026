@@ -54,6 +54,38 @@ O modelo gratuito não vê a worktree viva, arquivos não rastreados, secrets,
 dataset externo ou estado local. Se a tarefa depende de diff não commitado,
 use Codex na worktree viva ou crie checkpoint autorizado.
 
+### OpenCode free pool — fallback gratuito sequencial
+
+Papel: garantir que a esteira consultiva não pare quando um modelo gratuito cair,
+rate-limitar ou sair do ar.
+
+Execução:
+
+```bash
+npm run orch:free -- "<task packet curto>"
+```
+
+O wrapper `scripts/orchestrator/run-free-pool.sh` também cria snapshot sanitizado
+via `git archive HEAD`, força OpenCode em `agent plan`, desliga MCP e delega a
+cadeia para `scripts/moa-run.mjs` por `MOA_MODELS`.
+
+Cadeia gratuita padrão:
+
+1. `opencode/deepseek-v4-flash-free`
+2. `opencode/nemotron-3-ultra-free`
+3. `opencode/laguna-s-2.1-free`
+4. `opencode/ling-3.0-tiny-free`
+5. `opencode/mimo-v2.5-free`
+
+Variável de override:
+
+```bash
+ORCH_FREE_MODELS="modelo1,modelo2" npm run orch:free -- "..."
+```
+
+O free pool é **read-only** e consultivo. Ele pode destravar triagem, inventário,
+resumo de log e segunda opinião; não herda autoridade de escrita se Codex falhar.
+
 ### Google Antigravity CLI
 
 Papel: contexto amplo, mapeamento, comparação e síntese usando a conta Google AI
@@ -157,9 +189,9 @@ A política declarativa está em `.orchestrator/routing.yaml`.
 
 | Classe | Primário | Fallback |
 |---|---|---|
-| triagem barata | OpenCode/DeepSeek free | Antigravity → Codex Luna → local |
+| triagem barata | OpenCode/DeepSeek free | Free pool OpenCode → Antigravity → Codex Luna → local |
 | contexto grande | Antigravity | OpenCode free → Codex Luna → local |
-| tarefa simples pública | OpenCode free | Antigravity → Codex Luna → local |
+| tarefa simples pública | OpenCode free | Free pool OpenCode → Antigravity → Codex Luna → local |
 | mudança de código | Codex MCP Luna | Terra → Sol conforme evidência |
 | debug difícil | Codex MCP | Terra/Sol conforme evidência |
 | mudança crítica | Codex MCP | pausa humana se writer confiável estiver indisponível |
@@ -265,9 +297,9 @@ Depois de `npm run orch:doctor -- --smoke` verde:
 
 1. Hermes lê `AGENTS.md`, `STATE.md` e `routing.yaml`.
 2. Revalida Git, Supabase e preview necessários.
-3. Cria task packet da Fase 2 da Matriz de Impacto.
+3. Cria task packet do arco atual.
 4. Antigravity faz leitura ampla quando contexto grande ajudar.
-5. OpenCode free faz checks mecânicos baratos sobre o snapshot.
+5. OpenCode free e o free pool fazem checks mecânicos baratos sobre snapshot.
 6. Codex MCP implementa o menor chunk autorizado.
 7. Testes/build locais validam o resultado.
 8. Hermes atualiza handoff/STATE somente em checkpoint real.

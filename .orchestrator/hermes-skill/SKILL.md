@@ -36,12 +36,17 @@ Não use para substituir `AGENTS.md`: esta skill define **como orquestrar**;
 Preferir:
 
 1. `npm run orch:opencode -- '<task packet>'`;
-2. `npm run orch:google -- '<task packet>'`;
-3. `npm run orch:codex -- '<task packet>'`;
-4. `npm run orch:local -- '<task packet>'`, se disponível.
+2. `npm run orch:free -- '<task packet>'`;
+3. `npm run orch:google -- '<task packet>'`;
+4. `npm run orch:codex -- '<task packet>'`;
+5. `npm run orch:local -- '<task packet>'`, se disponível.
 
 OpenCode e Google operam sobre snapshot rastreado do `HEAD`. Nunca afirmar que
 viram mudanças não commitadas.
+
+`orch:free` é o pool gratuito sequencial (`deepseek → nemotron → laguna → ling →
+mimo`) e também opera em snapshot sanitizado/read-only, com MCP desligado e
+somente `agent plan`.
 
 ### large_context
 

@@ -227,6 +227,7 @@ Não retomar como pendente:
 - OpenCode/Antigravity só recebem snapshot sanitizado do `HEAD`.
 - Um writer por worktree.
 - Se Codex MCP falhar por 401, registrar e continuar localmente ou pedir ajuste de ambiente; não mascarar como sucesso.
+- Para análise consultiva barata, usar primeiro `npm run orch:opencode -- "..."`; se rate-limitar/cair, usar `npm run orch:free -- "..."`, que tenta a cadeia gratuita `deepseek → nemotron → laguna → ling → mimo` em snapshot sanitizado/read-only.
 
 ## Definition of Done do próximo arco
 

@@ -6,8 +6,11 @@ import { describe, expect, it } from 'vitest';
 
 const root = resolve(import.meta.dirname, '..', '..');
 const script = readFileSync(resolve(root, 'scripts/moa-run.mjs'), 'utf8');
+const freePoolScript = readFileSync(resolve(root, 'scripts/orchestrator/run-free-pool.sh'), 'utf8');
 const opencodeJsonc = readFileSync(resolve(root, 'opencode.jsonc'), 'utf8');
 const doc = readFileSync(resolve(root, 'docs/moa-perfil-eleicao2026.md'), 'utf8');
+const routing = readFileSync(resolve(root, '.orchestrator/routing.yaml'), 'utf8');
+const packageJson = readFileSync(resolve(root, 'package.json'), 'utf8');
 
 const PAID_MODELS = ['openai/gpt-5.5', 'google/gemini-3.5-flash', 'cloudflare-ai-gateway/openai/gpt-4o-mini'];
 const FREE_MODELS = [
@@ -39,6 +42,17 @@ describe('MOA do perfil eleicao2026 — fallback com pagos + grátis', () => {
     expect(script).toContain('opencode/ling-3.0-tiny-free');
     expect(script).toContain('opencode/mimo-v2.5-free');
     expect(script).toContain('ollama/gpt-oss:20b');
+  });
+
+  it('expõe um free pool orquestrado, read-only e baseado em snapshot sanitizado', () => {
+    expect(packageJson).toContain('"orch:free"');
+    expect(routing).toContain('opencode_free_pool:');
+    expect(routing).toContain('scripts/orchestrator/run-free-pool.sh');
+    expect(routing).toContain('sequential_failover');
+    expect(freePoolScript).toContain('prepare-snapshot.sh');
+    expect(freePoolScript).toContain('OPENCODE_DISABLE_MCP=true');
+    expect(freePoolScript).toContain('MOA_MODELS="$FREE_MODELS"');
+    expect(freePoolScript).toContain('--agent=plan');
   });
 
   it('implementa failover: falha fatal pula para o próximo modelo', () => {

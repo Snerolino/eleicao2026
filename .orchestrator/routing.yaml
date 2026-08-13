@@ -29,6 +29,31 @@ executors:
       - raw_documents
       - pii
 
+  opencode_free_pool:
+    transport: cli
+    wrapper: scripts/orchestrator/run-free-pool.sh
+    authority: read-only
+    data_class: public_repo_snapshot_only
+    strategy: sequential_failover
+    models:
+      - opencode/deepseek-v4-flash-free
+      - opencode/nemotron-3-ultra-free
+      - opencode/laguna-s-2.1-free
+      - opencode/ling-3.0-tiny-free
+      - opencode/mimo-v2.5-free
+    override_env: ORCH_FREE_MODELS
+    best_for:
+      - never_stop_free_fallback
+      - cheap_analysis
+      - second_opinion
+      - log_summary
+    forbidden_data:
+      - secrets
+      - env_files
+      - service_role
+      - raw_documents
+      - pii
+
   google_antigravity:
     transport: cli
     wrapper: scripts/orchestrator/run-antigravity.sh
@@ -85,18 +110,21 @@ executors:
 routes:
   cheap_analysis:
     - opencode_free
+    - opencode_free_pool
     - google_antigravity
     - codex_exec_fallback
     - local_fallback
 
   large_context:
     - google_antigravity
+    - opencode_free_pool
     - opencode_free
     - codex_exec_fallback
     - local_fallback
 
   simple_public_repo_task:
     - opencode_free
+    - opencode_free_pool
     - google_antigravity
     - codex_exec_fallback
     - local_fallback
@@ -125,6 +153,8 @@ codex_escalation:
   on_model_change: new_thread_with_compact_handoff
 
 fallback_rules:
+  - on: [free_model_unavailable, free_model_rate_limited, free_model_quota_exhausted]
+    action: continue_inside_opencode_free_pool_before_trying_paid_or_codex_routes
   - on: [rate_limit, quota_exhausted, timeout, auth_error, provider_down]
     action: mark_circuit_open_and_try_next_eligible_executor
   - on: mutation_executor_unavailable

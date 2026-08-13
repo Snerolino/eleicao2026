@@ -28,6 +28,22 @@ apenas o contexto necessário para a tarefa atual.
 - `templates/HANDOFF.json`: handoff compacto entre executores.
 - `runtime/`: estado transitório local, ignorado pelo Git.
 
+## Free pool
+
+O caminho `npm run orch:free -- "<task packet>"` usa
+`scripts/orchestrator/run-free-pool.sh` para tentar uma cadeia sequencial de
+modelos gratuitos OpenCode sobre snapshot sanitizado/read-only:
+
+1. `opencode/deepseek-v4-flash-free`
+2. `opencode/nemotron-3-ultra-free`
+3. `opencode/laguna-s-2.1-free`
+4. `opencode/ling-3.0-tiny-free`
+5. `opencode/mimo-v2.5-free`
+
+Override local permitido: `ORCH_FREE_MODELS="m1,m2" npm run orch:free -- "..."`.
+Esse pool nunca escreve na worktree e nunca recebe `.env*`, service role,
+documentos brutos ou PII.
+
 ## Regra de contexto
 
 Não encaminhar conversas inteiras para outro modelo. Para uma delegação, enviar:
