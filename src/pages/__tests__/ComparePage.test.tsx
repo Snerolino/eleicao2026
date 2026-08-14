@@ -129,7 +129,9 @@ describe('ComparePage H5.3', () => {
     fireEvent.click(screen.getByRole('button', { name: /ada cristina munaretto/i }));
     fireEvent.click(screen.getByRole('button', { name: /joão batista garcia dias/i }));
 
-    expect(screen.getByLabelText(/url atual/i)).toHaveTextContent('/comparar?candidatos=tse-1,tse-2');
+    const urlLabel = screen.getByLabelText(/url atual/i).textContent;
+    // URLSearchParams.set percent-encodes commas as %2C. Decode before assertion.
+    expect(decodeURIComponent(urlLabel || '')).toBe('/comparar?candidatos=tse-1,tse-2');
     expect(screen.getByRole('table')).toBeInTheDocument();
   });
 
