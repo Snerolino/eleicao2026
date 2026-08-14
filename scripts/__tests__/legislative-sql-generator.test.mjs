@@ -99,7 +99,7 @@ describe('legislative-sql-generator', () => {
     const plan = planLegislativeImport(ENVELOPE);
     const sql = planToSql(plan.plan ?? EMPTY_PLAN);
     expect(sql).toContain('deputy-rs-001');
-    expect(sql).toContain("'ausente', 'justificada'");
+    expect(sql).toContain("null /* 'legislators:deputy-rs-001' */, 'ausente', 'justificada'");
   });
 
   it('source_reference_id (tabela de apoio) vira null comentado', () => {
@@ -129,7 +129,7 @@ describe('legislative-sql-generator', () => {
       },
     };
     const sql = planToSql(plan.plan ?? EMPTY_PLAN, catalogs);
-    expect(sql).toContain("'11111111-1111-1111-1111-111111111111', null, 'ausente'");
+    expect(sql).toContain("null, '11111111-1111-1111-1111-111111111111', 'ausente'");
     expect(sql).not.toContain("null /* 'legislators:deputy-rs-001' */");
     expect(sql).toContain("'33333333-3333-3333-3333-333333333333'");
   });

@@ -518,8 +518,8 @@ export function planLegislativeImport(input: unknown): DryRunResult {
       legislator_ref: vote.deputy_id,
     }, {
       voting_event_id: logicalRef('voting_events', vote.voting_event_id.replace(/^voting_events:/, '')),
-      legislator_id: logicalRef('legislators', vote.deputy_id),
-      candidate_id: null,
+      legislator_id: null,
+      candidate_id: logicalRef('legislators', vote.deputy_id),
       value: vote.value,
       absence_type: vote.absence_type,
       recorded_at: vote.recorded_at,

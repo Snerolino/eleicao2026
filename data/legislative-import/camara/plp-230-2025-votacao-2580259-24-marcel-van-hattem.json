@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "country": "BR",
+  "state": "RS",
+  "election_year": 2026,
+  "propositions": [
+    {
+      "external_id": "camara-proposicao-2580259-plp-230-2025",
+      "house": "camara",
+      "proposition_type": "plp",
+      "number": 230,
+      "year": 2025,
+      "title": "PLP 230/2025 — vedação de limitação de empenho de despesas do FUST",
+      "summary": "Altera a Lei Complementar nº 101, de 4 de maio de 2000, para vedar a limitação de empenho e movimentação financeira das despesas relativas ao Fundo de Universalização dos Serviços de Telecomunicações, e a Lei nº 9.998, de 17 de agosto de 2000, para os fins que especifica.",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2580259",
+      "versions": [
+        {
+          "version_key": "sbt-1-plen-2026-08-12",
+          "version_label": "Substitutivo 1 PLEN apresentado em 2026-08-12",
+          "text_hash": "sha256:31af44e79eb97220e4d9c8736161fb871a0cd7a4baeb4bac6fe91b28e2da8aa9",
+          "effective_from": "2026-08-12T19:36:00-03:00",
+          "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3170169",
+          "voting_events": [
+            {
+              "external_id": "camara-votacao-2580259-24",
+              "house": "camara",
+              "session_id": "evento-camara-82876",
+              "vote_round": "nominal",
+              "occurred_at": "2026-08-12T19:48:20-03:00",
+              "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2580259-24"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "votes": [
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2580259-24",
+      "deputy_id": "camara-deputado-156190",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2580259-plp-230-2025:sbt-1-plen-2026-08-12",
+      "value": "nao",
+      "recorded_at": "2026-08-12T19:35:13-03:00",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2580259-24/votos"
+    }
+  ]
+}

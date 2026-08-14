@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
 Atualizado: 2026-08-13 02:20 -03
-Status: `FASE2_FECHADA_PRODUCAO_VERDE`
+Status: `POS_FASE2_PRIMEIRO_DRYRUN_REAL_VERDE`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
@@ -100,11 +100,23 @@ Entregas concluídas e publicadas:
 
 `eleicao2026-pos-fase2-matrizes-reais`:
 
-1. Preparar o primeiro pacote real de proposições/votos.
-2. Curar catálogo real de apoio para FKs (`legislators`/`candidates`/`source_references`).
-3. Rodar `impact:dryrun` e `impact:sql` sem `--apply`.
-4. Gerar handoff/evidência para revisão humana.
-5. Só depois de autorização explícita de Lourenço, considerar escrita remota.
+Checkpoint já realizado:
+
+- Primeiro pacote real Câmara criado para `PLP 230/2025` / votação `2580259-24`.
+- Voto factual de Marcel van Hattem (`candidate.id` `abdfe5f9-52ab-561f-aec5-afe475423fb9`) registrado como `nao` em dry-run.
+- Arquivos:
+  - `data/legislative-import/camara/plp-230-2025-votacao-2580259-24-marcel-van-hattem.json`
+  - `data/legislative-import/camara/plp-230-2025-votacao-2580259-24-catalog.json`
+  - `docs/handoff/2026-08-14-primeiro-pacote-real-impacto-dryrun.md`
+- `impact:dryrun`, `impact:sql` e testes focados verdes.
+- Correção local: resolução de deputado→candidato agora preenche `candidate_id`; `legislator_id` permanece `null` enquanto não houver tabela própria de legisladores.
+
+Próximos passos:
+
+1. Curar catálogo real de `source_references` para as URLs oficiais do pacote.
+2. Rodar `impact:sql` novamente com `source_reference_id` resolvido.
+3. Gerar handoff/evidência para revisão humana.
+4. Só depois de autorização explícita de Lourenço, considerar escrita remota.
 
 Não inserir matriz publicada automaticamente. O estado inicial de qualquer matriz real deve ser `pending_review` e com fontes.
 Lourenço autoriza/decide/revisa evidências; não precisa executar SQL nem escrever
