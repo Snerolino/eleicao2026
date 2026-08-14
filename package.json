@@ -24,6 +24,7 @@
     "test:watch": "NODE_ENV=test vitest",
     "impact:dryrun": "node scripts/import-legislative-dry-run.mjs",
     "impact:sql": "node scripts/import-legislative-dry-run.mjs --emit-sql",
+    "impact:sources": "node scripts/build-legislative-source-catalog.mjs",
     "orch:setup": "bash scripts/orchestrator/setup-local.sh",
     "orch:doctor": "bash scripts/orchestrator/doctor.sh",
     "orch:install-skill": "bash scripts/orchestrator/install-hermes-skill.sh",

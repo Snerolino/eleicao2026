@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-13 02:20 -03
-Status: `POS_FASE2_PRIMEIRO_DRYRUN_REAL_VERDE`
+Atualizado: 2026-08-14 06:00 -03
+Status: `POS_FASE2_SOURCE_REFS_PRONTAS_PARA_GATE`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
@@ -110,13 +110,21 @@ Checkpoint já realizado:
   - `docs/handoff/2026-08-14-primeiro-pacote-real-impacto-dryrun.md`
 - `impact:dryrun`, `impact:sql` e testes focados verdes.
 - Correção local: resolução de deputado→candidato agora preenche `candidate_id`; `legislator_id` permanece `null` enquanto não houver tabela própria de legisladores.
+- Source references oficiais do pacote PLP 230/2025 inventariadas em:
+  - `data/legislative-import/camara/plp-230-2025-votacao-2580259-24-sources.json`
+- CLI local criada:
+  - `npm run impact:sources -- <sources.json>` gera catálogo local sem UUID inventado.
+  - `npm run impact:sources -- --emit-sql <sources.json>` gera SQL revisável para `source_references` sem executar Supabase.
+  - `npm run impact:sources -- --resolve-from-file /tmp/source-reference-ids.json <sources.json>` resolve catálogo a partir de IDs retornados por Hermes/CLI depois de autorização.
+- Handoff de gate remoto criado:
+  - `docs/handoff/2026-08-14-source-references-plp-230-pronto-para-gate.md`
 
 Próximos passos:
 
-1. Curar catálogo real de `source_references` para as URLs oficiais do pacote.
-2. Rodar `impact:sql` novamente com `source_reference_id` resolvido.
-3. Gerar handoff/evidência para revisão humana.
-4. Só depois de autorização explícita de Lourenço, considerar escrita remota.
+1. Se Lourenço autorizar novo gate remoto, Hermes executa upsert das quatro `source_references` oficiais, captura `id/content_hash` e gera `/tmp/source-reference-ids.json`.
+2. Rodar `impact:sources -- --resolve-from-file ...` e mesclar `sourceReferenceByKey` resolvido no catálogo do pacote.
+3. Rodar `impact:sql` novamente com `source_reference_id` resolvido.
+4. Só depois de autorização explícita adicional, considerar escrita remota do SQL factual legislativo.
 
 Não inserir matriz publicada automaticamente. O estado inicial de qualquer matriz real deve ser `pending_review` e com fontes.
 Lourenço autoriza/decide/revisa evidências; não precisa executar SQL nem escrever

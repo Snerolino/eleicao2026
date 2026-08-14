@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "source_hash_policy": "canonical-json-v1 para endpoints JSON oficiais; raw-bytes-v1 para inteiro teor HTML/PDF retornado pela Câmara",
+  "sources": [
+    {
+      "key": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2580259",
+      "source_name": "Câmara dos Deputados — Dados Abertos",
+      "source_category": "oficial",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2580259",
+      "title": "PLP 230/2025 — Proposição 2580259",
+      "kind": "camara_api_proposicao",
+      "hash_method": "canonical-json-v1",
+      "content_hash": "sha256:d7ae8159cf6f0e238f5d1b88ffa438383f8db99fe4380968e81806a317472a25"
+    },
+    {
+      "key": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3170169",
+      "source_name": "Câmara dos Deputados — Inteiro Teor",
+      "source_category": "oficial",
+      "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3170169",
+      "title": "PLP 230/2025 — Substitutivo 1 PLEN — Inteiro teor",
+      "kind": "camara_inteiro_teor",
+      "hash_method": "raw-bytes-v1",
+      "content_hash": "sha256:f40a924f3eb603a307d8a7436b33713fd267cf335594b054e128162962417b5c"
+    },
+    {
+      "key": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2580259-24",
+      "source_name": "Câmara dos Deputados — Dados Abertos",
+      "source_category": "oficial",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2580259-24",
+      "title": "PLP 230/2025 — Votação 2580259-24",
+      "kind": "camara_api_votacao",
+      "hash_method": "canonical-json-v1",
+      "content_hash": "sha256:f0a77d919b46f801fb4fe86bd9900c93fd0d6317c31326f48579c1beccddc112"
+    },
+    {
+      "key": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2580259-24/votos",
+      "source_name": "Câmara dos Deputados — Dados Abertos",
+      "source_category": "oficial",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2580259-24/votos",
+      "title": "PLP 230/2025 — Votação 2580259-24 — Votos nominais",
+      "kind": "camara_api_votos",
+      "hash_method": "canonical-json-v1",
+      "content_hash": "sha256:3dd6bb755324f51e652058147b5354eb433e53884c3bd4460401f0836a372531"
+    }
+  ]
+}

@@ -48,6 +48,7 @@
 | [`handoff/2026-08-12-fechamento-fase2-proxima-sessao.md`](handoff/2026-08-12-fechamento-fase2-proxima-sessao.md) | Fechamento definitivo da Fase 2 em produção e bootstrap da próxima sessão `eleicao2026-pos-fase2-matrizes-reais` |
 | [`handoff/2026-08-12-nova-sessao-pos-fase2.md`](handoff/2026-08-12-nova-sessao-pos-fase2.md) | Guia compacto para iniciar a nova sessão Hermes com o que já foi implementado e próximos passos do app |
 | [`handoff/2026-08-14-primeiro-pacote-real-impacto-dryrun.md`](handoff/2026-08-14-primeiro-pacote-real-impacto-dryrun.md) | Primeiro pacote real Câmara/Marcel van Hattem para `impact:dryrun`, sem escrita remota |
+| [`handoff/2026-08-14-source-references-plp-230-pronto-para-gate.md`](handoff/2026-08-14-source-references-plp-230-pronto-para-gate.md) | Source references oficiais do PLP 230/2025 prontas para gate remoto, sem execução Supabase |
 | [`handoff/2026-08-01-fase7-decisoes-ux-node.md`](handoff/2026-08-01-fase7-decisoes-ux-node.md) | Estado da branch `fase-7-decisoes-ux-node`, snapshot 212 local, produção 213 e riscos antes do PR |
 | [`handoff/2026-08-02-plano-pos-review-moa.md`](handoff/2026-08-02-plano-pos-review-moa.md) | Plano histórico pós-review/MOA; consultar apenas como histórico |
 | [`handoff/2026-07-31-mvp-atualizado.md`](handoff/2026-07-31-mvp-atualizado.md) | Estado histórico do MVP, dados TSE, Supabase, produção e riscos |
