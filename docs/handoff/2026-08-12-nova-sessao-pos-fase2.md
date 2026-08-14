@@ -202,7 +202,10 @@ Antes de qualquer escrita remota, produzir:
 
 ### 6. Só depois considerar escrita remota
 
-Escrita remota Supabase exige autorização explícita nova.
+Escrita remota Supabase exige autorização explícita nova de Lourenço, mas
+Lourenço **não** precisa executar SQL nem escrever no Supabase. Quando houver
+autorização, a execução operacional é responsabilidade do Hermes/CLI, com logs,
+validação e rollback/handoff.
 
 Mesmo com autorização, a primeira carga deve entrar como staging/dados base e
 matrizes em `pending_review`, nunca como publicadas.
@@ -223,6 +226,8 @@ Não retomar como pendente:
 - `service_role` nunca em `VITE_*`, frontend, logs ou docs.
 - Não ler `.env.local` salvo necessidade operacional explícita; nunca exibir valores.
 - Não publicar matriz sem revisão humana.
+- Obrigações de Lourenço: decidir escopo, aprovar gates sensíveis e revisar
+  evidência. Não é obrigação de Lourenço operar Supabase/SQL manualmente.
 - Não usar número histórico 69/212/464/792 como gate atual.
 - OpenCode/Antigravity só recebem snapshot sanitizado do `HEAD`.
 - Um writer por worktree.

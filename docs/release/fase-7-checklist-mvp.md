@@ -110,7 +110,10 @@ As decisões humanas finais foram registradas em 2026-08-01. CI, deploy, smoke/h
 - [x] Logs/relatórios sem segredos, tokens ou payload bruto.
 - [x] Runbooks H6.1, H6.2 e H6.3 criados.
 - [x] Incidente comum tem diagnóstico curto e rollback.
-- [x] Intervenção humana: `admin@votopraquem.org` autoriza SQL remoto, merge sensível, deploy manual e rollback no momento.
+- [x] Intervenção humana: `admin@votopraquem.org` decide/autoriza SQL remoto,
+  merge sensível, deploy manual e rollback. A execução operacional, quando
+  autorizada, fica a cargo do Hermes/CLI; Lourenço não precisa escrever no
+  Supabase manualmente.
 
 ### Documentação
 

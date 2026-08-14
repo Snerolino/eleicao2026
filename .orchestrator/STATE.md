@@ -1,6 +1,6 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-12 13:10 -03
+Atualizado: 2026-08-13 02:20 -03
 Status: `FASE2_FECHADA_PRODUCAO_VERDE`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
@@ -22,12 +22,12 @@ Status: `FASE2_FECHADA_PRODUCAO_VERDE`
 
 - Repositório: `Snerolino/eleicao2026`.
 - Branch de produção: `main`.
-- HEAD/produção atual: `a5eb62f docs(handoff): fecha Fase 2 e prepara próxima sessão`.
-- Release produção validado: `a5eb62f-20260812T163506342Z`.
+- HEAD/produção atual: `161cfec feat(orchestrator): adiciona pool gratuito de fallback`.
+- Release produção validado: `161cfec-20260813T051304087Z`.
 - Domínio final: https://rs.votopraquem.org
 - Cloudflare Pages project: `portal-transparencia-rs`.
-- Últimos deploys validados: manual `7b7b7ba7` e GitHub Actions/produção `9826a149`.
-- GitHub Actions `Deploy` no commit `a5eb62f`: verde.
+- Último deploy manual validado: `e8cbe3a8`.
+- GitHub Actions `Deploy` no commit `161cfec`: verde.
 
 ## Dados públicos atuais
 
@@ -104,9 +104,12 @@ Entregas concluídas e publicadas:
 2. Curar catálogo real de apoio para FKs (`legislators`/`candidates`/`source_references`).
 3. Rodar `impact:dryrun` e `impact:sql` sem `--apply`.
 4. Gerar handoff/evidência para revisão humana.
-5. Só depois de autorização explícita, considerar escrita remota.
+5. Só depois de autorização explícita de Lourenço, considerar escrita remota.
 
 Não inserir matriz publicada automaticamente. O estado inicial de qualquer matriz real deve ser `pending_review` e com fontes.
+Lourenço autoriza/decide/revisa evidências; não precisa executar SQL nem escrever
+no Supabase. Execução remota autorizada fica a cargo do Hermes/CLI, com logs e
+validação.
 
 ## Fora do escopo já fechado
 
@@ -123,8 +126,8 @@ Não retomar como pendente:
 - Hermes continua sendo o control plane.
 - Codex MCP historicamente teve bloqueio 401 em parte da sessão; se necessário,
   revalidar antes de delegar escrita.
-- OpenCode/Antigravity trabalham apenas sobre snapshot `git archive HEAD`, sem
-  secrets, raw docs ou PII.
+- OpenCode/Antigravity/free pool trabalham apenas sobre snapshot `git archive HEAD`,
+  sem secrets, raw docs ou PII.
 - Um writer por worktree.
 
 ## Gates permanentes
