@@ -5,10 +5,10 @@ import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 
 const root = resolve(import.meta.dirname, '..', '..');
-const matrixPath = resolve(root, 'data/impact-matrices/plp-230-2025-sbt-1-pending-review.json');
+const matrixPath = resolve(root, 'data/impact-matrices/plp-230-2025-sbt-1-approved.json');
 
 describe('primeira matriz real PLP 230/2025', () => {
-  it('permanece em pending_review e não declara direção forte sem revisão humana', () => {
+  it('foi aprovada sem declarar direção forte além das fontes oficiais revisadas', () => {
     const matrix = JSON.parse(readFileSync(matrixPath, 'utf8'));
 
     expect(matrix).toMatchObject({
@@ -16,7 +16,7 @@ describe('primeira matriz real PLP 230/2025', () => {
       methodology_version: '1.0.0',
       severity: 2,
       structural_type: 'budgetary',
-      review_status: 'pending_review',
+      review_status: 'approved',
     });
     expect(matrix.assessments).toHaveLength(1);
     expect(matrix.assessments[0]).toMatchObject({
@@ -25,6 +25,12 @@ describe('primeira matriz real PLP 230/2025', () => {
       defending_vote: null,
     });
     expect(matrix.assessments[0].confidence).toBeLessThanOrEqual(0.6);
+    expect(matrix.assessments[0].reviewed).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ reviewer_type: 'curadoria_interna' }),
+        expect.objectContaining({ reviewer_type: 'painel_externo' }),
+      ]),
+    );
     expect(matrix.assessments[0].sources).toEqual(
       expect.arrayContaining([
         'https://dadosabertos.camara.leg.br/api/v2/proposicoes/2580259',

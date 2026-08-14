@@ -1,7 +1,7 @@
 # Handoff — Primeira matriz real criada em pending_review
 
 Data: 2026-08-14
-Status: `PRIMEIRA_MATRIZ_REAL_PENDING_REVIEW`
+Status: `SUPERADO_POR_APPROVED_PUBLICADA`
 Arco: `eleicao2026-pos-fase2-matrizes-reais`
 
 ## Resumo
@@ -11,6 +11,10 @@ votada `sbt-1-plen-2026-08-12` do `PLP 230/2025`, já com dados factuais
 legislativos aplicados no Supabase.
 
 A matriz nasceu como `pending_review`, sem aprovação e sem publicação automática.
+Depois, com autorização explícita, ela foi revisada, aprovada e tornou-se publicável.
+Checkpoint sucessor:
+
+- `docs/handoff/2026-08-14-primeira-matriz-real-approved-publicada.md`
 
 Lourenço não escreveu manualmente no Supabase; Hermes executou e validou.
 

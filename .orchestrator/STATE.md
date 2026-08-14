@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-14 08:50 -03
-Status: `POS_FASE2_CANDIDATES_REMOTO_SINCRONIZADO_MATRIZ_PENDING_REVIEW`
+Atualizado: 2026-08-14 14:35 -03
+Status: `POS_FASE2_PRIMEIRA_MATRIZ_REAL_APPROVED_PUBLICADA`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
@@ -155,13 +155,22 @@ Checkpoint já realizado:
   - `MARCEL VAN HATTEM` segue presente (`tse_candidate_id=210002547819`).
 - Atalho adicionado: `npm run data:sync:supabase -- --apply`.
 - Handoff: `docs/handoff/2026-08-14-sync-candidatos-remotos-snapshot-publico.md`.
+- Primeira matriz real revisada/aprovada/publicada por RLS:
+  - `impact_matrices.id`: `4c8eaec1-8ee4-4027-939c-2d391b8f9cbe`;
+  - `review_status`: `approved`;
+  - `approved_at`: `2026-08-14 17:30:34.389823+00`;
+  - reviews remotos: 2 (`curadoria_interna=approved`, `painel_externo=approved`);
+  - assessment público anon: 1;
+  - reviews continuam ocultos para anon (`42501`).
+- Arquivo versionado atual da matriz: `data/impact-matrices/plp-230-2025-sbt-1-approved.json`.
+- Handoff: `docs/handoff/2026-08-14-primeira-matriz-real-approved-publicada.md`.
 
 Próximos passos:
 
-1. Criar gate de revisão humana/curadoria para a matriz `4c8eaec1-8ee4-4027-939c-2d391b8f9cbe`.
-2. Revisar se o assessment deve permanecer `unclear` para `pessoas_com_deficiencia` ou se há base suficiente para outro grupo/direção.
+1. Expor/consumir a matriz aprovada na UI pública, se ainda não houver componente para isso.
+2. Criar relatório QA da primeira publicação de matriz real.
 3. Decidir separadamente o destino do registro remoto extra `210002533050` (não público); não remover sem gate específico.
-4. Só depois criar `impact_review`; aprovação/publicação segue exigindo gate separado.
+4. Planejar próximo pacote legislativo real mantendo o fluxo validado: fontes → factual → matriz pending → reviews → approve RPC.
 
 Não inserir matriz publicada automaticamente. O estado inicial de qualquer matriz real deve ser `pending_review` e com fontes.
 Lourenço autoriza/decide/revisa evidências; não precisa executar SQL nem escrever
