@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-14 06:45 -03
-Status: `POS_FASE2_SQL_FACTUAL_BLOQUEADO_CANDIDATO_REMOTO_AUSENTE`
+Atualizado: 2026-08-14 07:05 -03
+Status: `POS_FASE2_PACOTE_FACTUAL_PLP230_APLICADO_SEM_MATRIZ`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
@@ -127,13 +127,20 @@ Checkpoint já realizado:
 - Diagnóstico remoto: `candidates` tem 793 linhas; snapshot público versionado tem 938 candidaturas públicas.
 - Handoff do bloqueio:
   - `docs/handoff/2026-08-14-gate-legislativo-bloqueado-candidato-remoto-ausente.md`
+- Gate autorizado 1–6 executado depois do bloqueio:
+  - candidato `MARCEL VAN HATTEM` sincronizado/upsertado remotamente por `tse_candidate_id=210002547819`;
+  - total remoto `candidates`: 794;
+  - SQL factual legislativo do pacote PLP 230/2025 aplicado;
+  - validação remota: `candidate=1`, `legislative_propositions=1`, `proposition_versions=1`, `voting_events=1`, `legislative_votes=1`;
+  - `impact_matrices_total=0`, `impact_matrices_approved=0`.
+- Handoff do sucesso:
+  - `docs/handoff/2026-08-14-gate-factual-plp-230-aplicado.md`
 
 Próximos passos:
 
-1. Se Lourenço autorizar novo gate remoto, Hermes sincroniza/upserta o candidato `MARCEL VAN HATTEM` por `tse_candidate_id=210002547819` na tabela remota `candidates`, sem exigir escrita manual de Lourenço.
-2. Hermes consulta o UUID remoto real, atualiza o catálogo do pacote e regenera o SQL factual legislativo.
-3. Reexecutar o SQL factual legislativo resolvido e validar inserção por SELECT/REST; nenhuma matriz publicada.
-4. Só depois planejar/criar matriz real em `pending_review`.
+1. Planejar/criar a primeira matriz real em `pending_review` para a versão `sbt-1-plen-2026-08-12`, com fontes.
+2. Validar gates de revisão; não publicar/aprovar automaticamente.
+3. Se houver novo gate remoto, Hermes executa; Lourenço não precisa escrever manualmente no Supabase.
 
 Não inserir matriz publicada automaticamente. O estado inicial de qualquer matriz real deve ser `pending_review` e com fontes.
 Lourenço autoriza/decide/revisa evidências; não precisa executar SQL nem escrever
