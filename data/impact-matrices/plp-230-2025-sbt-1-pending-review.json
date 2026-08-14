@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "methodology_version": "1.0.0",
+  "severity": 2,
+  "structural_type": "budgetary",
+  "assessments": [
+    {
+      "group": "pessoas_com_deficiencia",
+      "defending_vote": null,
+      "impact_direction": "unclear",
+      "rationale": "O PLP 230/2025 trata do Fundo de Universalização dos Serviços de Telecomunicações e pode afetar políticas de conectividade relevantes para acessibilidade e inclusão digital, mas o texto oficial votado não segmenta explicitamente pessoas com deficiência; por isso a direção do impacto deve permanecer pendente de revisão humana antes de qualquer publicação.",
+      "confidence": 0.55,
+      "sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2580259",
+        "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3170169",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2580259-24/votos"
+      ],
+      "reviewed": [
+        {
+          "reviewer_type": "curadoria_interna",
+          "reviewed_at": "2026-08-14T10:30:00Z",
+          "reviewer_id": "hermes-dryrun"
+        }
+      ]
+    }
+  ],
+  "review_status": "pending_review"
+}

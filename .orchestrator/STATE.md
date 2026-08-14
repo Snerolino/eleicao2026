@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-14 07:05 -03
-Status: `POS_FASE2_PACOTE_FACTUAL_PLP230_APLICADO_SEM_MATRIZ`
+Atualizado: 2026-08-14 08:25 -03
+Status: `POS_FASE2_PRIMEIRA_MATRIZ_REAL_PENDING_REVIEW`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
@@ -135,12 +135,24 @@ Checkpoint já realizado:
   - `impact_matrices_total=0`, `impact_matrices_approved=0`.
 - Handoff do sucesso:
   - `docs/handoff/2026-08-14-gate-factual-plp-230-aplicado.md`
+- Primeira matriz real criada:
+  - `impact_matrices.id`: `4c8eaec1-8ee4-4027-939c-2d391b8f9cbe`
+  - proposição: `camara-proposicao-2580259-plp-230-2025`
+  - versão: `sbt-1-plen-2026-08-12`
+  - `review_status`: `pending_review`
+  - `severity`: 2
+  - `structural_type`: `budgetary`
+  - assessment: `pessoas_com_deficiencia`, `impact_direction=unclear`, `confidence=0.55`, 3 fontes.
+  - `impact_reviews_count=0`, `approved_count=0`.
+- Arquivos:
+  - `data/impact-matrices/plp-230-2025-sbt-1-pending-review.json`
+  - `docs/handoff/2026-08-14-primeira-matriz-real-pending-review.md`
 
 Próximos passos:
 
-1. Planejar/criar a primeira matriz real em `pending_review` para a versão `sbt-1-plen-2026-08-12`, com fontes.
-2. Validar gates de revisão; não publicar/aprovar automaticamente.
-3. Se houver novo gate remoto, Hermes executa; Lourenço não precisa escrever manualmente no Supabase.
+1. Criar gate de revisão humana/curadoria para a matriz `4c8eaec1-8ee4-4027-939c-2d391b8f9cbe`.
+2. Revisar se o assessment deve permanecer `unclear` para `pessoas_com_deficiencia` ou se há base suficiente para outro grupo/direção.
+3. Só depois criar `impact_review`; aprovação/publicação segue exigindo gate separado.
 
 Não inserir matriz publicada automaticamente. O estado inicial de qualquer matriz real deve ser `pending_review` e com fontes.
 Lourenço autoriza/decide/revisa evidências; não precisa executar SQL nem escrever
