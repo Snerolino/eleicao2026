@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-14 06:30 -03
-Status: `POS_FASE2_SOURCE_REFS_REMOTAS_SQL_LEGISLATIVO_RESOLVIDO`
+Atualizado: 2026-08-14 06:45 -03
+Status: `POS_FASE2_SQL_FACTUAL_BLOQUEADO_CANDIDATO_REMOTO_AUSENTE`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
@@ -122,12 +122,18 @@ Checkpoint já realizado:
   oficiais no Supabase remoto, validação anon `source_references=4`.
 - Catálogo do pacote atualizado com UUIDs reais em `sourceReferenceByKey`.
 - SQL legislativo final regenerado em `/tmp/plp-230-legislative-import-resolved-sources.sql`, sem `null /* source_references */` e sem executar.
+- Tentativa autorizada de aplicar SQL factual legislativo falhou com FK `legislative_votes_candidate_id_fkey`, porque `candidates` remoto ainda não contém `tse_candidate_id=210002547819` (`MARCEL VAN HATTEM`).
+- Verificação pós-erro confirmou inserção parcial zero: `legislative_propositions=0`, `proposition_versions=0`, `voting_events=0`, `legislative_votes=0` para o pacote.
+- Diagnóstico remoto: `candidates` tem 793 linhas; snapshot público versionado tem 938 candidaturas públicas.
+- Handoff do bloqueio:
+  - `docs/handoff/2026-08-14-gate-legislativo-bloqueado-candidato-remoto-ausente.md`
 
 Próximos passos:
 
-1. Se Lourenço autorizar novo gate remoto, Hermes executa o SQL factual legislativo resolvido do pacote PLP 230/2025 (`legislative_propositions`, `proposition_versions`, `voting_events`, `legislative_votes`).
-2. Validar inserção factual por SELECT/REST; nenhuma matriz publicada.
-3. Só depois planejar/criar matriz real em `pending_review`.
+1. Se Lourenço autorizar novo gate remoto, Hermes sincroniza/upserta o candidato `MARCEL VAN HATTEM` por `tse_candidate_id=210002547819` na tabela remota `candidates`, sem exigir escrita manual de Lourenço.
+2. Hermes consulta o UUID remoto real, atualiza o catálogo do pacote e regenera o SQL factual legislativo.
+3. Reexecutar o SQL factual legislativo resolvido e validar inserção por SELECT/REST; nenhuma matriz publicada.
+4. Só depois planejar/criar matriz real em `pending_review`.
 
 Não inserir matriz publicada automaticamente. O estado inicial de qualquer matriz real deve ser `pending_review` e com fontes.
 Lourenço autoriza/decide/revisa evidências; não precisa executar SQL nem escrever
