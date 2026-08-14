@@ -52,6 +52,7 @@
 | [`handoff/2026-08-14-gate-legislativo-bloqueado-candidato-remoto-ausente.md`](handoff/2026-08-14-gate-legislativo-bloqueado-candidato-remoto-ausente.md) | Tentativa de SQL factual bloqueada sem parcialidade porque `MARCEL VAN HATTEM` ainda não existe em `candidates` remoto |
 | [`handoff/2026-08-14-gate-factual-plp-230-aplicado.md`](handoff/2026-08-14-gate-factual-plp-230-aplicado.md) | Candidato remoto sincronizado e pacote factual PLP 230/2025 aplicado sem criar matriz |
 | [`handoff/2026-08-14-primeira-matriz-real-pending-review.md`](handoff/2026-08-14-primeira-matriz-real-pending-review.md) | Primeira matriz real criada em `pending_review`, vinculada ao PLP 230/2025, sem aprovação/publicação |
+| [`handoff/2026-08-14-sync-candidatos-remotos-snapshot-publico.md`](handoff/2026-08-14-sync-candidatos-remotos-snapshot-publico.md) | Supabase `candidates` sincronizado com o snapshot público de 938 candidaturas, preservando registro remoto extra |
 | [`handoff/2026-08-01-fase7-decisoes-ux-node.md`](handoff/2026-08-01-fase7-decisoes-ux-node.md) | Estado da branch `fase-7-decisoes-ux-node`, snapshot 212 local, produção 213 e riscos antes do PR |
 | [`handoff/2026-08-02-plano-pos-review-moa.md`](handoff/2026-08-02-plano-pos-review-moa.md) | Plano histórico pós-review/MOA; consultar apenas como histórico |
 | [`handoff/2026-07-31-mvp-atualizado.md`](handoff/2026-07-31-mvp-atualizado.md) | Estado histórico do MVP, dados TSE, Supabase, produção e riscos |

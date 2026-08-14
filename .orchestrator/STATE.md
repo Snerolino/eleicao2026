@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-14 08:25 -03
-Status: `POS_FASE2_PRIMEIRA_MATRIZ_REAL_PENDING_REVIEW`
+Atualizado: 2026-08-14 08:50 -03
+Status: `POS_FASE2_CANDIDATES_REMOTO_SINCRONIZADO_MATRIZ_PENDING_REVIEW`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
@@ -147,12 +147,21 @@ Checkpoint já realizado:
 - Arquivos:
   - `data/impact-matrices/plp-230-2025-sbt-1-pending-review.json`
   - `docs/handoff/2026-08-14-primeira-matriz-real-pending-review.md`
+- Candidatos remotos sincronizados com o snapshot público via `scripts/sync-candidates-snapshot.mjs --apply`:
+  - snapshot público: 938 candidaturas;
+  - remoto `candidates`: 939 linhas;
+  - faltantes do snapshot no remoto: 0;
+  - extra remoto preservado/fora do snapshot: `210002533050`;
+  - `MARCEL VAN HATTEM` segue presente (`tse_candidate_id=210002547819`).
+- Atalho adicionado: `npm run data:sync:supabase -- --apply`.
+- Handoff: `docs/handoff/2026-08-14-sync-candidatos-remotos-snapshot-publico.md`.
 
 Próximos passos:
 
 1. Criar gate de revisão humana/curadoria para a matriz `4c8eaec1-8ee4-4027-939c-2d391b8f9cbe`.
 2. Revisar se o assessment deve permanecer `unclear` para `pessoas_com_deficiencia` ou se há base suficiente para outro grupo/direção.
-3. Só depois criar `impact_review`; aprovação/publicação segue exigindo gate separado.
+3. Decidir separadamente o destino do registro remoto extra `210002533050` (não público); não remover sem gate específico.
+4. Só depois criar `impact_review`; aprovação/publicação segue exigindo gate separado.
 
 Não inserir matriz publicada automaticamente. O estado inicial de qualquer matriz real deve ser `pending_review` e com fontes.
 Lourenço autoriza/decide/revisa evidências; não precisa executar SQL nem escrever
