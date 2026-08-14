@@ -1,18 +1,20 @@
 # Handoff — Source references PLP 230/2025 prontas para gate remoto
 
 Data: 2026-08-14
-Status: `SOURCE_REFS_SQL_PRONTO_SEM_ESCRITA_REMOTA`
+Status: `SOURCE_REFS_REMOTAS_APLICADAS_SQL_LEGISLATIVO_RESOLVIDO`
 Arco: `eleicao2026-pos-fase2-matrizes-reais`
 Pacote factual: `PLP 230/2025` / votação Câmara `2580259-24` / Marcel van Hattem
 
 ## Resumo
 
-Foram concluídos os passos 1–7 do planejamento local para resolver
-`source_references` do primeiro pacote real da Matriz de Impacto, sem executar
-escrita no Supabase.
+Foram concluídos os passos 1–7 do planejamento para resolver `source_references`
+do primeiro pacote real da Matriz de Impacto. Após autorização explícita de
+Lourenço, Hermes executou apenas o upsert remoto das quatro `source_references`
+oficiais, consultou os UUIDs reais e regenerou o SQL legislativo final com
+`source_reference_id` resolvido.
 
-Lourenço não precisa escrever no Supabase. Se autorizar o gate remoto, Hermes/CLI
-executa os comandos, captura logs, consulta UUIDs reais e valida o resultado.
+Lourenço não escreveu no Supabase. Hermes executou via CLI/processo local com
+credenciais protegidas e sem imprimir `.env.local` ou service role.
 
 ## Arquivos criados/alterados
 
@@ -21,6 +23,8 @@ executa os comandos, captura logs, consulta UUIDs reais e valida o resultado.
 - `scripts/__tests__/legislative-source-references.test.mjs`
 - `scripts/__tests__/legislative-source-catalog.test.mjs`
 - `package.json` (`impact:sources`)
+- `data/legislative-import/camara/plp-230-2025-votacao-2580259-24-catalog.json`
+  agora contém `sourceReferenceByKey` resolvido com UUIDs reais.
 
 ## Fontes oficiais inventariadas
 
@@ -53,8 +57,27 @@ Gerados em `/tmp`, não versionados:
   - SHA-256: `85ff63beabaf4f8b55fecceda0089122c6e9f841c48da71ea1ba9ce4ef8ff13f`
 - `/tmp/plp-230-legislative-import-unresolved-sources.sql`
   - SHA-256: `1c04c4e95d06e96f8642a448a401d1ff438484d0e757831ca99bb8567a80a5a9`
+- `/tmp/source-reference-ids.json`
+  - SHA-256: `e9d46dde03225e02bb7c6730bed1618b44bc260946bb2d3d4ad2e9b15cba98c4`
+- `/tmp/plp-230-source-catalog-resolved.json`
+  - SHA-256: `758267b2f4c2dd1dd1c309c5b21a0e0b521916245cb30c3057109e604cdaa0ee`
+- `/tmp/plp-230-legislative-import-resolved-sources.sql`
+  - SHA-256: `665e473ef9e024ff0b1fbda1a94c43455d927d114c18354ac5b5b9dc7b3c30e2`
 
-Checagem de segredos nesses artefatos: `NO_SECRETS_OK`.
+Checagem de segredos nesses artefatos: `NO_SECRETS_OK` / `LEGISLATIVE_SQL_RESOLVED_OK`.
+
+## Escrita remota executada neste gate
+
+Escopo autorizado e executado: somente upsert de quatro linhas em
+`source_references`, por `content_hash`.
+
+Resultado:
+
+- `upserted`: 4
+- `/tmp/source-reference-ids.json` gerado com `content_hash -> id`
+- leitura pública anon validada: `anon_read_ok=true`, `source_references=4`
+
+Nada além de `source_references` foi escrito neste gate.
 
 ## Comandos locais já disponíveis
 
@@ -83,50 +106,43 @@ npm run impact:sources -- \
 
 ## Estado do passo 6
 
-A integração do catálogo resolvido ao pacote real está preparada, mas não foi
-aplicada ao arquivo principal porque ainda não existem UUIDs reais de
-`source_references` para essas quatro fontes no contexto local.
+A integração do catálogo resolvido foi aplicada ao arquivo principal:
 
-Regra preservada: não fabricar UUID.
+`data/legislative-import/camara/plp-230-2025-votacao-2580259-24-catalog.json`
 
-Enquanto não houver UUID real, o SQL legislativo segue com comentários seguros:
+Regra preservada: nenhum UUID foi fabricado; todos vieram do retorno remoto de
+`source_references`.
 
-```sql
-null /* 'source_references:<url-oficial>' */
-```
+O SQL legislativo final foi regenerado em:
 
-Depois do gate remoto, Hermes deve:
+`/tmp/plp-230-legislative-import-resolved-sources.sql`
 
-1. executar upsert das quatro `source_references`;
-2. consultar `id, content_hash` retornados;
-3. gerar `/tmp/source-reference-ids.json`;
-4. rodar `impact:sources -- --resolve-from-file ...`;
-5. mesclar `sourceReferenceByKey` resolvido no catálogo do pacote;
-6. gerar `impact:sql` final sem `null /* 'source_references:`;
-7. só então aplicar SQL legislativo, se essa segunda aplicação também estiver autorizada.
+Validação:
 
-## Comando que Hermes executará se Lourenço autorizar escrita remota de fontes
+- não contém `null /* 'source_references:`;
+- não contém padrões de segredo (`service_role`, `apikey`, `Authorization`, `Bearer`);
+- mantém `candidate_id = abdfe5f9-52ab-561f-aec5-afe475423fb9` para Marcel van Hattem.
 
-> Não executado neste bloco.
+## Comando executado por Hermes após autorização
 
-Comando conceitual seguro, a ser materializado por Hermes com credenciais locais
-sem imprimir `.env.local`:
+Hermes executou o equivalente seguro abaixo, carregando credenciais protegidas em
+processo local sem imprimir valores:
 
 ```bash
 node scripts/build-legislative-source-catalog.mjs --emit-sql \
   data/legislative-import/camara/plp-230-2025-votacao-2580259-24-sources.json \
   > /tmp/plp-230-source-references-upsert.sql
 
-# Depois, Hermes executa o SQL via Supabase CLI/psql autorizado,
-# captura o retorno id/content_hash e grava /tmp/source-reference-ids.json.
+# Depois, Hermes executou upsert via Supabase JS/service role,
+# capturou id/content_hash e gravou /tmp/source-reference-ids.json.
 ```
 
-## O que será escrito no Supabase se autorizado
+## O que foi escrito no Supabase
 
 Somente registros em `source_references` para as quatro URLs oficiais listadas
-acima. Nenhuma matriz será publicada por este passo.
+acima. Nenhuma matriz foi publicada por este passo.
 
-Depois disso, uma segunda autorização pode cobrir o SQL factual legislativo:
+Uma segunda autorização pode cobrir o SQL factual legislativo:
 
 - `legislative_propositions`
 - `proposition_versions`
@@ -155,9 +171,9 @@ Resultado: catálogo/SQL gerados, sem segredos.
 
 Pergunta para Lourenço, quando quiser avançar para escrita remota:
 
-> Autoriza Hermes a executar apenas o upsert remoto das quatro `source_references`
-> oficiais do pacote PLP 230/2025, consultar os UUIDs retornados e regenerar o SQL
-> legislativo final? Nenhuma matriz será publicada.
+> Autoriza Hermes a executar o SQL factual legislativo resolvido do pacote
+> PLP 230/2025 (`legislative_propositions`, `proposition_versions`,
+> `voting_events`, `legislative_votes`)? Nenhuma matriz será publicada.
 
 Se autorizado, Lourenço continua sem escrever manualmente no Supabase; Hermes
 executa e valida.

@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-14 06:00 -03
-Status: `POS_FASE2_SOURCE_REFS_PRONTAS_PARA_GATE`
+Atualizado: 2026-08-14 06:30 -03
+Status: `POS_FASE2_SOURCE_REFS_REMOTAS_SQL_LEGISLATIVO_RESOLVIDO`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
@@ -118,13 +118,16 @@ Checkpoint já realizado:
   - `npm run impact:sources -- --resolve-from-file /tmp/source-reference-ids.json <sources.json>` resolve catálogo a partir de IDs retornados por Hermes/CLI depois de autorização.
 - Handoff de gate remoto criado:
   - `docs/handoff/2026-08-14-source-references-plp-230-pronto-para-gate.md`
+- Gate remoto parcial autorizado/executado: upsert de 4 `source_references`
+  oficiais no Supabase remoto, validação anon `source_references=4`.
+- Catálogo do pacote atualizado com UUIDs reais em `sourceReferenceByKey`.
+- SQL legislativo final regenerado em `/tmp/plp-230-legislative-import-resolved-sources.sql`, sem `null /* source_references */` e sem executar.
 
 Próximos passos:
 
-1. Se Lourenço autorizar novo gate remoto, Hermes executa upsert das quatro `source_references` oficiais, captura `id/content_hash` e gera `/tmp/source-reference-ids.json`.
-2. Rodar `impact:sources -- --resolve-from-file ...` e mesclar `sourceReferenceByKey` resolvido no catálogo do pacote.
-3. Rodar `impact:sql` novamente com `source_reference_id` resolvido.
-4. Só depois de autorização explícita adicional, considerar escrita remota do SQL factual legislativo.
+1. Se Lourenço autorizar novo gate remoto, Hermes executa o SQL factual legislativo resolvido do pacote PLP 230/2025 (`legislative_propositions`, `proposition_versions`, `voting_events`, `legislative_votes`).
+2. Validar inserção factual por SELECT/REST; nenhuma matriz publicada.
+3. Só depois planejar/criar matriz real em `pending_review`.
 
 Não inserir matriz publicada automaticamente. O estado inicial de qualquer matriz real deve ser `pending_review` e com fontes.
 Lourenço autoriza/decide/revisa evidências; não precisa executar SQL nem escrever

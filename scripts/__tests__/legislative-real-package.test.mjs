@@ -30,14 +30,15 @@ describe('pacote real Câmara PLP 230/2025 — Marcel van Hattem', () => {
     });
   });
 
-  it('gera SQL revisável com candidate_id resolvido e source_reference_id ainda pendente', () => {
+  it('gera SQL revisável com candidate_id e source_reference_id resolvidos', () => {
     const envelope = JSON.parse(readFileSync(envelopePath, 'utf8'));
     const catalog = JSON.parse(readFileSync(catalogPath, 'utf8'));
     const result = planLegislativeImport(envelope);
     const sql = planToSql(result.plan, catalog);
 
     expect(sql).toContain("'abdfe5f9-52ab-561f-aec5-afe475423fb9', 'nao'");
-    expect(sql).toContain("null /* 'source_references:https://dadosabertos.camara.leg.br/api/v2/votacoes/2580259-24/votos' */");
+    expect(sql).not.toContain("null /* 'source_references:");
+    expect(sql).toMatch(/[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}/i);
     expect(sql).toContain('camara-votacao-2580259-24');
     expect(sql).not.toMatch(/service_role|apikey|Authorization|Bearer/i);
   });
