@@ -10,14 +10,17 @@
  * Se um modelo falhar (rate limit, quota, timeout, auth, billing, 5xx, rede),
  * segue automaticamente para o próximo — o fluxo NUNCA é interrompido.
  *
- * Cadência de fallback (validada 2026-08-08):
- *   Pagedos (credenciados)     Gratuitos / backup
- *   1) openai/gpt-5.5          5) opencode/deepseek-v4-flash-free
- *   2) google/gemini-3.5-flash 6) opencode/nemotron-3-ultra-free
- *   3) cloudflare-ai-gateway/openai/gpt-4o-mini       7) opencode/laguna-s-2.1-free
- *                                    8) opencode/ling-3.0-tiny-free
- *                                    9) opencode/mimo-v2.5-free
- *                                   10) ollama/gpt-oss:20b (local, sempre ativo)
+ * Cadência de fallback (Google AI Pro via Antigravity CLI `agy` read-only):
+ *   Pagedos (credenciados)           Gratuitos / backup
+ *   1) openai/gpt-5.5                6) opencode/deepseek-v4-flash-free
+ *   2) agy google-ai-pro read-only   7) opencode/nemotron-3-ultra-free
+ *      (snapshot git archive HEAD)       8) opencode/laguna-s-2.1-free
+ *   3) cloudflare-ai-gateway/gpt-4o-mini 9) opencode/ling-3.0-tiny-free
+ *                                    10) opencode/mimo-v2.5-free
+ *                                    11) ollama/gpt-oss:20b (local)
+ *
+ * NOTA: `agy` (Antigravity CLI v1.1.12) roda read-only sobre git archive HEAD —
+ * falhas dele NÃO param a orquestração (Codex/OpenCode/MCP-Supabase no fallback).
  *
  * Uso:
  *   node scripts/moa-run.mjs "tarefa" [--agent=plan|build] [--files=a.ts,b.ts]
@@ -37,10 +40,10 @@ const OPENCODE_BIN = existsSync(resolve(process.env.HOME, '.opencode/bin/opencod
   : 'opencode';
 
 const DEFAULT_CHAIN = [
-  'openai/gpt-5.5',                              // 1) pago, mais potente primeiro
-  'google/gemini-3.5-flash',                     // 2) Google API (credencial existente)
-  'cloudflare-ai-gateway/openai/gpt-4o-mini',    // 3) Cloudflare Workers AI (pago)
-  'opencode/deepseek-v4-flash-free',             // 4) grátis Zen (fallback sempre ativo)
+  'openai/gpt-5.5',                              // 1) pago, mais potente (OpenAI Chat)
+  'agy:google-ai-pro',                           // 2) Google AI Pro via Antigravity read-only (snapshot)
+  'cloudflare-ai-gateway/openai/gpt-4o-mini',    // 3) Cloudflare Workers AI
+  'opencode/deepseek-v4-flash-free',             // 4) grátis Zen
   'opencode/nemotron-3-ultra-free',              // 5) grátis Zen
   'opencode/laguna-s-2.1-free',                  // 6) grátis
   'opencode/ling-3.0-tiny-free',                 // 7) grátis, leve/rápido

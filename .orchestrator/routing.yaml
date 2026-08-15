@@ -57,8 +57,8 @@ executors:
   google_antigravity:
     transport: cli
     wrapper: scripts/orchestrator/run-antigravity.sh
-    auth: google_oauth_subscription
-    model: Gemini 3.5 Flash (Low)
+    auth: google_ai_pro_subscription
+    model: google-gemini-1.5-pro (via agy read-only, snapshot git archive HEAD)
     authority: read-only_sandboxed
     best_for:
       - large_context
@@ -66,6 +66,9 @@ executors:
       - documentation_synthesis
       - broad_comparison
       - research_plan
+    data_scope:
+      - public_repo_snapshot_only
+      - never_raw_documents_or_secrets
 
   gemini_legacy:
     transport: cli

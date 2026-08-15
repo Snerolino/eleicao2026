@@ -12,7 +12,7 @@ const doc = readFileSync(resolve(root, 'docs/moa-perfil-eleicao2026.md'), 'utf8'
 const routing = readFileSync(resolve(root, '.orchestrator/routing.yaml'), 'utf8');
 const packageJson = readFileSync(resolve(root, 'package.json'), 'utf8');
 
-const PAID_MODELS = ['openai/gpt-5.5', 'google/gemini-3.5-flash', 'cloudflare-ai-gateway/openai/gpt-4o-mini'];
+const PAID_MODELS = ['openai/gpt-5.5', 'agy:google-ai-pro', 'cloudflare-ai-gateway/openai/gpt-4o-mini'];
 const FREE_MODELS = [
   'opencode/deepseek-v4-flash-free',
   'opencode/nemotron-3-ultra-free',

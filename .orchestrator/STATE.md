@@ -1,7 +1,15 @@
 # STATE — eleicao2026
 
 Atualizado: 2026-08-15 05:29 -03
-Status: `SCRAPE_1002_MCP_SUPABASE_SELO_VERSAO_PUBLICADOS`
+Status: `F3_INICIADA_ELECTION_RESULTS_PROFILE_CLAIMS_246`
+
+## Fase 3 (iniciada 2026-08-15)
+- Schema: migration `20260815030000_candidate_profiles_and_election_results.sql` aplicada (db push) → tabelas `election_results`, `candidate_profiles` no remote ✅
+- ETL `import-candidate-profiles.mjs`: 246 claims `pending_review` aplicados (49 bens declarados + 197 redes sociais) via service_role idempotente (dedupeAndInsert, sem depender unique constraint)
+- Dados originais: bem_candidato (188 rows/49 candidatos), rede_social (197 URLs/69 candidatos), deepseek_json (22 perfis profundos) — do mirror `../dataset2026/`
+- ⚠️ votos/resultados: ainda NÃO publicados pelo TSE (eleição outubro). Tabela `election_results` preparada; ETL `import-election-results.mjs` pra criar pós-resultados
+- 📊 cobertura: 281 published (anon visível) + 246 pending (editor visível)
+- Drift conhecido: `claims.content_hash` NOT unique no remote (local tem constraint; ETL usa lookup prévio pra idempotência — não bloqueia)
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
