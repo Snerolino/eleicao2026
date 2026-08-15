@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router';
 import { ThemeToggle } from './ThemeToggle';
+import { VersionBadge } from './VersionBadge';
 
 function linkClass({ isActive }: { isActive: boolean }) {
   return [
@@ -47,6 +48,9 @@ export function SiteHeader() {
           </NavLink>
           <span className="ml-2">
             <ThemeToggle />
+          </span>
+          <span className="ml-3 flex items-center">
+            <VersionBadge />
           </span>
         </nav>
       </div>

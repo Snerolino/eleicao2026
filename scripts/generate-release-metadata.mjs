@@ -44,11 +44,23 @@ export function buildReleaseMetadata({
       }
     : null;
 
+  // Versão incremental baseada no contador de commits (0.2.{count}).
+  // Avança a cada commit para permitir ao público acompanhar novidades
+  // pela tag "Versão xx.xxx" no canto superior direito.
+  const commitCount = (() => {
+    try {
+      return Number.parseInt(execFileSync('git', ['rev-list', '--count', 'HEAD'], { encoding: 'utf8' }).trim(), 10);
+    } catch {
+      return 0;
+    }
+  })();
+  const incrementalVersion = commitCount ? `0.2.${commitCount}` : (packageVersion ?? '0.2.0');
+
   return {
     release_id: releaseIdFrom(gitSha, builtAt),
     sha: gitSha,
     short_sha: safeString(gitSha).slice(0, 7),
-    version: packageVersion ?? '0.0.0',
+    version: incrementalVersion,
     built_at: builtAt,
     snapshot,
   };

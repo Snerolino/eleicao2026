@@ -25,10 +25,10 @@ describe('H6.1 release metadata e health-check', () => {
       snapshotManifest,
     });
 
+    expect(metadata.version).toMatch(/^0\.2\.\d+$/);
     expect(metadata).toMatchObject({
       release_id: 'ef97d7f-20260731T100000000Z',
       sha: 'ef97d7f1234567890abcdef1234567890abcdef',
-      version: '0.2.0',
       built_at: '2026-07-31T10:00:00.000Z',
       snapshot: {
         scope: 'consulta_cand/2026/RS',
