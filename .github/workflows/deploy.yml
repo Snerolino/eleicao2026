@@ -61,6 +61,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
+        with:
+          # fetch-depth:0 = histórico completo; generate-release-metadata usa git rev-list --count HEAD
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
@@ -78,6 +81,7 @@ jobs:
         env:
           VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL || secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_ANON_KEY || secrets.VITE_SUPABASE_ANON_KEY }}
+          GITHUB_RUN_NUMBER: ${{ github.run_number }}
         run: npm run build:deploy
 
       - name: Deploy to Cloudflare Pages
