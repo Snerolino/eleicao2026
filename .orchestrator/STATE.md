@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-15 05:12 -03
-Status: `SCRAPE_POS_INSCRICAO_1002_SELOS_VERSAO_PUBLICADOS`
+Atualizado: 2026-08-15 05:29 -03
+Status: `SCRAPE_1002_MCP_SUPABASE_SELO_VERSAO_PUBLICADOS`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
