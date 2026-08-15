@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-14 14:35 -03
-Status: `POS_FASE2_PRIMEIRA_MATRIZ_REAL_APPROVED_PUBLICADA`
+Atualizado: 2026-08-15 02:45 -03
+Status: `POS_DEPLOY_PAGINA_IMPACTO_MAIN_PUBLICADA`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
@@ -22,12 +22,12 @@ Status: `POS_FASE2_PRIMEIRA_MATRIZ_REAL_APPROVED_PUBLICADA`
 
 - Repositório: `Snerolino/eleicao2026`.
 - Branch de produção: `main`.
-- HEAD/produção atual: `161cfec feat(orchestrator): adiciona pool gratuito de fallback`.
-- Release produção validado: `161cfec-20260813T051304087Z`.
+- HEAD/produção atual: `e1699a8 fix: restaurar declarações lazy das páginas no App.tsx (quebra de tsc)`.
+- Release produção validado: `e1699a8-20260815T024000000Z` (estimativa; ver `dist/release.json`).
 - Domínio final: https://rs.votopraquem.org
 - Cloudflare Pages project: `portal-transparencia-rs`.
-- Último deploy manual validado: `e8cbe3a8`.
-- GitHub Actions `Deploy` no commit `161cfec`: verde.
+- GitHub Actions `Deploy` no commit `e1699a8`: verde (14 passos, incluindo smoke + health).
+- Página `/impacto` publicada: exibe matriz `plp-230-2025-sbt-1-approved.json` (severity 2, budgetary).
 
 ## Dados públicos atuais
 
@@ -167,10 +167,11 @@ Checkpoint já realizado:
 
 Próximos passos:
 
-1. Expor/consumir a matriz aprovada na UI pública, se ainda não houver componente para isso.
-2. Criar relatório QA da primeira publicação de matriz real.
+1. ~~Expor/consumir a matriz aprovada na UI pública~~ — CONCLUÍDO: página `/impacto` em produção.
+2. Criar relatório QA da primeira publicação de matriz real — EM ANDAMENTO.
 3. Decidir separadamente o destino do registro remoto extra `210002533050` (não público); não remover sem gate específico.
 4. Planejar próximo pacote legislativo real mantendo o fluxo validado: fontes → factual → matriz pending → reviews → approve RPC.
+5. Análises dos candidatos (claims): revisar `pending_review` via `editorial-workflow.mjs` e publicar via RPC `publish_claim`. **Bloqueio**: exige `SUPABASE_SERVICE_ROLE_KEY` no shell (ausente nesta sessão); só anon/leitura pública disponível.
 
 Não inserir matriz publicada automaticamente. O estado inicial de qualquer matriz real deve ser `pending_review` e com fontes.
 Lourenço autoriza/decide/revisa evidências; não precisa executar SQL nem escrever
