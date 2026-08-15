@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-15 03:15 -03
-Status: `GOV_FOTOS_OFICIAIS_TSE_ATUALIZADAS_PUBLICADAS`
+Atualizado: 2026-08-15 03:40 -03
+Status: `MAJORITARIOS_GOV_SEN_SELOS_OFICIAIS_PUBLICADOS`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
@@ -22,13 +22,11 @@ Status: `GOV_FOTOS_OFICIAIS_TSE_ATUALIZADAS_PUBLICADAS`
 
 - Repositório: `Snerolino/eleicao2026`.
 - Branch de produção: `main`.
-- HEAD/produção atual: `6aff834 feat(data): fotos oficiais TSE dos 5 governadores RS 2026`.
-- Release produção validado: ver `dist/release.json` (build `6aff834`).
-- Domínio final: https://rs.votopraquem.org
-- Cloudflare Pages project: `portal-transparencia-rs`.
-- Deploy desta sessão: via `wrangler pages deploy` (rápido) + push `main` via PAT clássico disparou GitHub Actions `Deploy` (run `31861164849`, verde, 14 passos).
+- HEAD/produção atual: `88ed476 feat(data): selos fonte oficial TSE para 17 majoritários (5 gov + 12 sen)`.
+- Deploy desta sessão: `wrangler pages deploy` + push `main` via PAT (`x-access-token` format) disparou GitHub Actions `Deploy` (run `31862523681`, verde).
 - Página `/impacto` publicada: exibe matriz `plp-230-2025-sbt-1-approved.json`.
-- Fotos dos 5 governadores: Priscila/Maranata/Rejane/Gabriel com foto oficial TSE 2026 + `photo_source_url`; Zucco sem foto (TSE não publicou — `photo_source_url` oficial marcado,sem fabricar imagem).
+- **Majoritários RS 2026 (17)**: todos com `photo_source_url` oficial TSE 2026 (selo `SourceReferenceBadge` 'oficial', link CDN TSE). 14/17 com foto; 3 sem foto no TSE (Zucco, Sanderson, Van Hattem) — mantidos sem fabricar.
+- Claims: 281 publicadas, 0 pendentes (revisão/publicação já concluída em sessões anteriores).
 
 ## Dados públicos atuais
 
