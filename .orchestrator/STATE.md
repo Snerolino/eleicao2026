@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-15 02:45 -03
-Status: `POS_DEPLOY_PAGINA_IMPACTO_MAIN_PUBLICADA`
+Atualizado: 2026-08-15 03:15 -03
+Status: `GOV_FOTOS_OFICIAIS_TSE_ATUALIZADAS_PUBLICADAS`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
@@ -22,12 +22,13 @@ Status: `POS_DEPLOY_PAGINA_IMPACTO_MAIN_PUBLICADA`
 
 - Repositório: `Snerolino/eleicao2026`.
 - Branch de produção: `main`.
-- HEAD/produção atual: `e1699a8 fix: restaurar declarações lazy das páginas no App.tsx (quebra de tsc)`.
-- Release produção validado: `e1699a8-20260815T024000000Z` (estimativa; ver `dist/release.json`).
+- HEAD/produção atual: `6aff834 feat(data): fotos oficiais TSE dos 5 governadores RS 2026`.
+- Release produção validado: ver `dist/release.json` (build `6aff834`).
 - Domínio final: https://rs.votopraquem.org
 - Cloudflare Pages project: `portal-transparencia-rs`.
-- GitHub Actions `Deploy` no commit `e1699a8`: verde (14 passos, incluindo smoke + health).
-- Página `/impacto` publicada: exibe matriz `plp-230-2025-sbt-1-approved.json` (severity 2, budgetary).
+- Deploy desta sessão: via `wrangler pages deploy` (rápido) + push `main` via PAT clássico disparou GitHub Actions `Deploy` (run `31861164849`, verde, 14 passos).
+- Página `/impacto` publicada: exibe matriz `plp-230-2025-sbt-1-approved.json`.
+- Fotos dos 5 governadores: Priscila/Maranata/Rejane/Gabriel com foto oficial TSE 2026 + `photo_source_url`; Zucco sem foto (TSE não publicou — `photo_source_url` oficial marcado,sem fabricar imagem).
 
 ## Dados públicos atuais
 
@@ -171,7 +172,7 @@ Próximos passos:
 2. Criar relatório QA da primeira publicação de matriz real — EM ANDAMENTO.
 3. Decidir separadamente o destino do registro remoto extra `210002533050` (não público); não remover sem gate específico.
 4. Planejar próximo pacote legislativo real mantendo o fluxo validado: fontes → factual → matriz pending → reviews → approve RPC.
-5. Análises dos candidatos (claims): revisar `pending_review` via `editorial-workflow.mjs` e publicar via RPC `publish_claim`. **Bloqueio**: exige `SUPABASE_SERVICE_ROLE_KEY` no shell (ausente nesta sessão); só anon/leitura pública disponível.
+5. Análises dos candidatos (claims): revisar `pending_review` via `editorial-workflow.mjs` e publicar via RPC `publish_claim`. Service role disponível como `SUPABASE_SECRET_KEY` (perfil eleicao2026 `.env`); usar com cautela, só o necessário.
 
 Não inserir matriz publicada automaticamente. O estado inicial de qualquer matriz real deve ser `pending_review` e com fontes.
 Lourenço autoriza/decide/revisa evidências; não precisa executar SQL nem escrever
