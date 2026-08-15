@@ -1,15 +1,26 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-15 05:29 -03
+Atualizado: 2026-08-15 07:35 -03
 Status: `F3_INICIADA_ELECTION_RESULTS_PROFILE_CLAIMS_246`
 
 ## Fase 3 (iniciada 2026-08-15)
 - Schema: migration `20260815030000_candidate_profiles_and_election_results.sql` aplicada (db push) → tabelas `election_results`, `candidate_profiles` no remote ✅
-- ETL `import-candidate-profiles.mjs`: 246 claims `pending_review` aplicados (49 bens declarados + 197 redes sociais) via service_role idempotente (dedupeAndInsert, sem depender unique constraint)
+- ETL `scripts/import-candidate-profiles.mjs`: 246 claims `pending_review` aplicados (49 bens declarados + 197 redes sociais) via service_role idempotente (dedupeAndInsert). Visible pra editors; anon vê só 281 published ✅
 - Dados originais: bem_candidato (188 rows/49 candidatos), rede_social (197 URLs/69 candidatos), deepseek_json (22 perfis profundos) — do mirror `../dataset2026/`
 - ⚠️ votos/resultados: ainda NÃO publicados pelo TSE (eleição outubro). Tabela `election_results` preparada; ETL `import-election-results.mjs` pra criar pós-resultados
-- 📊 cobertura: 281 published (anon visível) + 246 pending (editor visível)
-- Drift conhecido: `claims.content_hash` NOT unique no remote (local tem constraint; ETL usa lookup prévio pra idempotência — não bloqueia)
+- 📊 cobertura perfil: 49/49 bens, 68/69 redes sociais mapeadas pro snapshot (1 social SQ_CANDIDATO não no snapshot — fora do array)
+- Drift: `claims.content_hash` NOT unique no remote (local tem constraint; ETL usa lookup prévio — não bloqueia)
+
+## Orquestração MOA v2 (a partir de 2026-08-15)
+- `scripts/moa-run.mjs` DEFAULT_CHAIN: openai/gpt-5.5 → `agy google-ai-pro` (read-only snapshot) → cf-ai-gateway/gpt-4o-mini → free pool → ollama
+- Antigravity CLI `agy 1.1.12` autorizado como executor paralelo read-only sobre `git archive HEAD` (falhas não param Hermes). Teste ad-hoc: inspecionou data/ JSONs sem mutar.
+- Removidas refs a `google/gemini-3.5-flash` read-only chain (substituída por `agy:google-ai-pro`). gemini CLI legacy mantido só pra account enterprise explícita.
+- routing.yaml atualizado: `google_antigravity` com data_scope (snapshot + never secrets)
+
+## Selo de versão (produção)
+- `/release.json`: version `0.2.240`, short_sha `9a359dd`, row_count 1003
+- Header canto superior direito: **Versão 0.2.240** (0.2.{git rev-list count}; CI fix com fetch-depth:0 + GITHUB_RUN_NUMBER)
+- Fix: CI shallow checkout via actions/checkout@v7 fazia git-rev-list count=1 → fallback 0.2.0. fetch-depth:0 + GITHUB_RUN_NUMBER exportados.
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
