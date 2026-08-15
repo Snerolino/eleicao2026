@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-15 01:40 -03
-Status: `SCRAPE_POS_INSCRICAO_1002_CANDIDATURAS_SELADAS`
+Atualizado: 2026-08-15 05:12 -03
+Status: `SCRAPE_POS_INSCRICAO_1002_SELOS_VERSAO_PUBLICADOS`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
@@ -32,15 +32,16 @@ Status: `SCRAPE_POS_INSCRICAO_1002_CANDIDATURAS_SELADAS`
 
 ## Dados públicos atuais
 
-- Fonte oficial TSE RS 2026 atualizada em **2026-08-15** (scrape pós-fim de inscrições).
+- Fonte oficial TSE RS 2026 atualizada em **2026-08-15** via scrape pós-fim de inscrições.
 - Manifesto TSE: 1002 registros oficiais (RS).
-- Snapshot público: **1002 candidaturas**.
-- Exclusão humana preservada: `FRANCISCO MARQUES NETO`.
+- Snapshot público: **1002 candidaturas** (era 938 no checkpoint 2026-08-12).
+- Exclusão humana preservada: `FRANCISCO MARQUES NETO` e extras sem correspondência.
 - Fotos rastreáveis: **988/1002**.
   - 984 matches exatos no ZIP oficial TSE 2026 por `SQ_CANDIDATO`.
   - 4 fallbacks conservadores de fonte oficial TSE 2024.
-  - 14 sem match (dep federais tardios faixa 2100025519xx — TSE não publicou foto).
-- Relatórios QA:
+  - 14 sem match (dep federais tardios faixa 210002548xxx/5519xx, SOLIDARIEDADE/PRD — TSE não publicou).
+- Selos oficiais (fonte TSE 2026): **1002/1002 candidaturas** com `photo_source_url`.
+- Selo de versão pública: `0.2.{N}` (contador de commits / GITHUB_RUN_NUMBER no CI), exibido como "Versão 0.2.298" no canto superior direito do header (`/release.json`).
   - `docs/qa/fotos-candidatos-fontes-oficiais.md`
   - `docs/qa/fotos-pendentes-2026-08-12.md`
   - `docs/qa/fotos-pendentes-2026-08-12.json`
