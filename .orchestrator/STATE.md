@@ -1,7 +1,7 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-15 03:40 -03
-Status: `MAJORITARIOS_GOV_SEN_SELOS_OFICIAIS_PUBLICADOS`
+Atualizado: 2026-08-15 01:40 -03
+Status: `SCRAPE_POS_INSCRICAO_1002_CANDIDATURAS_SELADAS`
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
@@ -22,23 +22,24 @@ Status: `MAJORITARIOS_GOV_SEN_SELOS_OFICIAIS_PUBLICADOS`
 
 - Repositório: `Snerolino/eleicao2026`.
 - Branch de produção: `main`.
-- HEAD/produção atual: `88ed476 feat(data): selos fonte oficial TSE para 17 majoritários (5 gov + 12 sen)`.
-- Deploy desta sessão: `wrangler pages deploy` + push `main` via PAT (`x-access-token` format) disparou GitHub Actions `Deploy` (run `31862523681`, verde).
+- HEAD/produção atual: `a78e00e test: ajustar snapshot p/ fonte oficial TSE 2026 unificada (erani melo escapou)`.
+- Deploy desta sessão: wrangler pendente + push via fine-grained PAT (rede sandbox bloqueou github.com no shell; usuário fez push manual).
 - Página `/impacto` publicada: exibe matriz `plp-230-2025-sbt-1-approved.json`.
-- **Majoritários RS 2026 (17)**: todos com `photo_source_url` oficial TSE 2026 (selo `SourceReferenceBadge` 'oficial', link CDN TSE). 14/17 com foto; 3 sem foto no TSE (Zucco, Sanderson, Van Hattem) — mantidos sem fabricar.
-- Claims: 281 publicadas, 0 pendentes (revisão/publicação já concluída em sessões anteriores).
+- **Scrape pós-inscrição (2026-08-15)**: `consulta_cand_2026.zip` + `foto_cand2026_RS_div.zip` baixados do TSE oficial. Snapshot: **1002 candidaturas** (era 938). Novos: gov 6 (+1), vice-gov 6 (+1), dep fed 434 (+59), dep est 520 (+3), outro 24, sen 12.
+- Fotos: 988/1002 oficiais TSE 2026; 14 sem foto (dep federais tardios faixa 2100025519xx, SOLIDARIEDADE/PRD — TSE não publicou, sem fabricar).
+- Selos oficiais: 1002/1002 com `photo_source_url` TSE 2026 no snapshot; 1000/1002 no Supabase (extra 210002533050 preservado sem fonte 2026 por decisão anterior).
+- Claims: 281 publicadas, 0 pendentes.
 
 ## Dados públicos atuais
 
-- Fonte oficial TSE RS 2026 atualizada em 2026-08-12.
-- Manifesto TSE: 939 registros oficiais.
-- Snapshot público: 938 candidaturas.
+- Fonte oficial TSE RS 2026 atualizada em **2026-08-15** (scrape pós-fim de inscrições).
+- Manifesto TSE: 1002 registros oficiais (RS).
+- Snapshot público: **1002 candidaturas**.
 - Exclusão humana preservada: `FRANCISCO MARQUES NETO`.
-- Fotos rastreáveis: 906/938.
-  - 879 matches exatos no ZIP oficial TSE 2026 por `SQ_CANDIDATO`.
-  - 27 fallbacks conservadores de fonte oficial TSE 2024.
-  - 31 sem match.
-  - 1 caso ambíguo mantido sem foto.
+- Fotos rastreáveis: **988/1002**.
+  - 984 matches exatos no ZIP oficial TSE 2026 por `SQ_CANDIDATO`.
+  - 4 fallbacks conservadores de fonte oficial TSE 2024.
+  - 14 sem match (dep federais tardios faixa 2100025519xx — TSE não publicou foto).
 - Relatórios QA:
   - `docs/qa/fotos-candidatos-fontes-oficiais.md`
   - `docs/qa/fotos-pendentes-2026-08-12.md`
