@@ -44,17 +44,26 @@ export function buildReleaseMetadata({
       }
     : null;
 
-  // Versão incremental baseada no contador de commits (0.2.{count}).
-  // Avança a cada commit para permitir ao público acompanhar novidades
-  // pela tag "Versão xx.xxx" no canto superior direito.
+  // Versão incremental para acompanhar novidades via "Versão xx.xxx".
+  // No CI (checkout shallow), `git rev-list --count` = 1 — usa
+  // GITHUB_RUN_NUMBER (sequencial por push) como fallback determinístico.
+  // Localmente, usa o contador real de commits.
+  const ciRunNumber = process.env.GITHUB_RUN_NUMBER;
   const commitCount = (() => {
     try {
-      return Number.parseInt(execFileSync('git', ['rev-list', '--count', 'HEAD'], { encoding: 'utf8' }).trim(), 10);
+      const count = Number.parseInt(
+        execFileSync('git', ['rev-list', '--count', 'HEAD'], { encoding: 'utf8' }).trim(),
+        10,
+      );
+      // checkout shallow no CI retorna 1 — trata como "não disponível"
+      return count > 1 ? count : (ciRunNumber ? Number.parseInt(ciRunNumber, 10) : 0);
     } catch {
-      return 0;
+      return ciRunNumber ? Number.parseInt(ciRunNumber, 10) : 0;
     }
   })();
-  const incrementalVersion = commitCount ? `0.2.${commitCount}` : (packageVersion ?? '0.2.0');
+  const incrementalVersion = commitCount
+    ? `0.2.${commitCount}`
+    : (packageVersion ?? '0.2.0');
 
   return {
     release_id: releaseIdFrom(gitSha, builtAt),
