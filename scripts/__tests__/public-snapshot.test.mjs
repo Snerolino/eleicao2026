@@ -110,7 +110,7 @@ describe('snapshot público de candidatos', () => {
       } else {
         expect(candidate.photo_url).toMatch(/^\/photos\/tse-2024-rs\/[a-z0-9_]+_\d+\.jpe?g$/);
         expect(candidate.photo_source_url).toBe(
-          'https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2024/fotos/foto_cand2024_RS_div.zip',
+          'https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_RS_div.zip',
         );
       }
       expect(existsSync(resolve(root, 'public', candidate.photo_url.slice(1)))).toBe(true);
