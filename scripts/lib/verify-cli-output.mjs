@@ -30,8 +30,12 @@ export const SENATOR_CLAIMS_CONTRACT = {
   expectArray: true,
   item: (rec) => {
     const errors = [];
-    if (typeof rec?.candidate_remote_id !== 'string' && typeof rec?.tse_candidate_id !== 'string') {
-      errors.push({ field: 'candidate_remote_id/tse_candidate_id', reason: 'nem remote UUID nem TSE informado', layer: LAYER.CONTRACT });
+    if (
+      typeof rec?.candidate_remote_id !== 'string' &&
+      typeof rec?.tse_candidate_id !== 'string' &&
+      typeof rec?.nome !== 'string'
+    ) {
+      errors.push({ field: 'candidate_remote_id/tse_candidate_id/nome', reason: 'nenhum identificador de candidato informado', layer: LAYER.CONTRACT });
     }
     if (typeof rec?.category !== 'string' || rec.category.trim() === '') {
       errors.push({ field: 'category', reason: 'category ausente', layer: LAYER.CONTRACT });
