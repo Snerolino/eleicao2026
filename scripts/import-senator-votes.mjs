@@ -36,7 +36,7 @@ const url = process.env.VITE_SUPABASE_URL;
 const key = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
 if (!url || !key) { console.error('Faltam credenciais.'); process.exit(1); }
 const apply = process.argv.includes('--apply');
-const file = process.argv.find((a) => !a.startsWith('--'));
+const file = process.argv.slice(2).find((a) => a.endsWith('.json') || (!a.startsWith('--') && !a.includes('node') && !a.includes('import-senator-votes')));
 if (!file) { console.error('Uso: node scripts/import-senator-votes.mjs <arquivo.json> [--apply]'); process.exit(2); }
 
 const sb = createClient(url, key, { auth: { persist: false } });
@@ -49,11 +49,35 @@ async function resolveCandidateId(tseId) {
 
 async function upsertSource(text, url) {
   if (!text && !url) return null;
+  if (url) {
+    const { data: existing } = await sb.from('source_references').select('id').eq('url', url).maybeSingle();
+    if (existing) return existing.id;
+  } else {
+    const { data: existing } = await sb.from('source_references').select('id').eq('source_name', text).maybeSingle();
+    if (existing) return existing.id;
+  }
   const { data, error } = await sb
     .from('source_references')
-    .upsert({ source_name: text || 'Fonte oficial', source_category: 'oficial', url: url || null }, { onConflict: 'url,source_name' })
+    .insert({ source_name: text || 'Fonte oficial', source_category: 'oficial', url: url || null })
     .select('id').single();
-  if (error) throw error;
+  if (error) {
+    const { data: again } = await sb.from('source_references').select('id').eq('url', url ?? '').maybeSingle();
+    if (again) return again.id;
+    throw error;
+  }
+  return data.id;
+}
+
+async function findOrCreate(table, where, row) {
+  const { data: existing } = await sb.from(table).select('id').match(where).maybeSingle();
+  if (existing) return existing.id;
+  const { data, error } = await sb.from(table).insert(row).select('id').single();
+  if (error) {
+    // corrida: pode ter sido criado entre select e insert
+    const { data: again } = await sb.from(table).select('id').match(where).maybeSingle();
+    if (again) return again.id;
+    throw error;
+  }
   return data.id;
 }
 
@@ -64,27 +88,20 @@ async function main() {
   }
   console.log(`Envelope: ${envelope.propositions.length} props, ${envelope.events.length} events, ${envelope.votes.length} votos | ${apply ? 'APLICAR' : 'DRY-RUN'}`);
 
-  // 1) propositions + versions + events
+  // 1) propositions + versions + events (idempotente, sem depender de unique constraint)
   const eventIdMap = new Map(); // external_id -> uuid
   for (const prop of envelope.propositions) {
-    const { data: p, error } = await sb
-      .from('legislative_propositions')
-      .upsert({ external_id: prop.external_id, house: prop.house, proposition_type: prop.type, number: prop.number, year: prop.year, title: prop.title, official_url: prop.official_url || null }, { onConflict: 'house,external_id' })
-      .select('id').single();
-    if (error) throw error;
-    const { data: ver, error: e2 } = await sb
-      .from('proposition_versions')
-      .upsert({ proposition_id: p.id, version_key: prop.version_key || 'texto-base', version_label: prop.version_label || 'Texto-base', text_hash: prop.text_hash || 'pending', effective_from: prop.effective_from || new Date().toISOString() }, { onConflict: 'proposition_id,version_key' })
-      .select('id').single();
-    if (e2) throw e2;
+    const pid = await findOrCreate('legislative_propositions', { house: prop.house, external_id: prop.external_id }, {
+      external_id: prop.external_id, house: prop.house, proposition_type: prop.type, number: prop.number, year: prop.year, title: prop.title, official_url: prop.official_url || null,
+    });
+    const verId = await findOrCreate('proposition_versions', { proposition_id: pid, version_key: prop.version_key || 'texto-base' }, {
+      proposition_id: pid, version_key: prop.version_key || 'texto-base', version_label: prop.version_label || 'Texto-base', text_hash: prop.text_hash || 'pending', effective_from: prop.effective_from || new Date().toISOString(),
+    });
     for (const ev of envelope.events.filter((e) => e.proposition_external_id === prop.external_id)) {
-      if (!VOTE_VALUES.includes(ev.value)) {} // noop
-      const { data: vev, error: e3 } = await sb
-        .from('voting_events')
-        .upsert({ proposition_version_id: ver.id, external_id: ev.external_id, house: ev.house, occurred_at: ev.occurred_at }, { onConflict: 'house,external_id' })
-        .select('id').single();
-      if (e3) throw e3;
-      eventIdMap.set(ev.external_id, vev.id);
+      const vevId = await findOrCreate('voting_events', { house: ev.house, external_id: ev.external_id }, {
+        proposition_version_id: verId, external_id: ev.external_id, house: ev.house, occurred_at: ev.occurred_at,
+      });
+      eventIdMap.set(ev.external_id, vevId);
     }
   }
 
@@ -98,10 +115,9 @@ async function main() {
     if (!eventId) { console.error(`Evento ${v.event_external_id} não encontrado — voto ignorado`); continue; }
     const srcId = await upsertSource(v.source_text, v.source_url);
     if (!apply) { inserted++; continue; }
-    const { error } = await sb.from('legislative_votes').upsert({
+    await findOrCreate('legislative_votes', { voting_event_id: eventId, candidate_id: candidateId }, {
       voting_event_id: eventId, candidate_id: candidateId, value: v.value, recorded_at: v.recorded_at, source_reference_id: srcId,
-    }, { onConflict: 'voting_event_id,candidate_id' });
-    if (error) throw error;
+    });
     inserted++;
   }
   console.log(`Votos processados: ${inserted}`);
