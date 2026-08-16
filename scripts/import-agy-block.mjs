@@ -18,6 +18,7 @@ import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
+import { verifyCliOutput, AGY_CONTRACT } from './lib/verify-cli-output.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const CANDIDATES_JSON_PATH = resolve(__dirname, '../data/public-candidates.json');
@@ -153,6 +154,28 @@ async function insertBlock(supabase, localCandidates, blockIndex, apply) {
   if (!output || !Array.isArray(output)) {
     throw new Error(`Arquivo ${jsonPath} não é um JSON de array válido.`);
   }
+
+  // === VERIFICAÇÃO INDEPENDENTE DA CHAMADA AO CLI (revisão antes da entrega) ===
+  // Não atribuímos a culpa ao executor (AGY) sem evidência: o verificador
+  // descreve exatamente o que falhou e em qual camada. Fail-closed: se não
+  // passar, NADA é inserido.
+  const { ok, code, report } = verifyCliOutput(raw, AGY_CONTRACT);
+  if (!ok) {
+    console.error('\n=== REVISÃO DA SAÍDA DO CLI REPROVADA ===');
+    console.error(`Camada: ${report.layer} | Code: ${code}`);
+    console.error(
+      `Itens: ${report.totalItems} | Claims: ${report.totalClaims} | Aprovadas: ${report.approvedClaims} | Rejeitadas: ${report.rejectedClaims}`,
+    );
+    for (const r of report.rejections.slice(0, 30)) {
+      console.error(`  [${r.layer}] ${r.item != null ? `item ${r.item} · ` : ''}${r.field ?? ''}: ${r.reason}`);
+    }
+    throw new Error(
+      `Saída do CLI não passou na verificação independente (code ${code}). Nenhuma claim inserida.`,
+    );
+  }
+  console.log(
+    `Verificação da saída do CLI: APROVADA (${report.totalItems} itens, ${report.approvedClaims} claims válidas).`,
+  );
 
   let inserted = 0;
   const errors = [];
