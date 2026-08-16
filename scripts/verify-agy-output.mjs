@@ -1,18 +1,20 @@
 #!/usr/bin/env node
 // Wrapper standalone: valida um arquivo de saída do AGY contra o contrato.
 // Delega ao módulo genérico em lib/verify-cli-output.mjs (que já tem CLI embutido).
-import { verifyCliOutput, AGY_CONTRACT } from './lib/verify-cli-output.mjs';
+import { verifyCliOutput, AGY_CONTRACT, SENATOR_CLAIMS_CONTRACT } from './lib/verify-cli-output.mjs';
 import { readFileSync } from 'node:fs';
 
 const args = process.argv.slice(2);
 const jsonOnly = args.includes('--json');
+const senatorMode = args.includes('--senator-claims');
 const file = args.find((a) => !a.startsWith('--'));
 if (!file) {
-  console.error('Uso: node scripts/verify-agy-output.mjs <arquivo> [--json]');
+  console.error('Uso: node scripts/verify-agy-output.mjs <arquivo> [--json] [--senator-claims]');
   process.exit(2);
 }
 const raw = readFileSync(file, 'utf-8');
-const { ok, code, report } = verifyCliOutput(raw, AGY_CONTRACT);
+const contract = senatorMode ? SENATOR_CLAIMS_CONTRACT : AGY_CONTRACT;
+const { ok, code, report } = verifyCliOutput(raw, contract);
 if (jsonOnly) {
   console.log(JSON.stringify({ ok, code, report }, null, 2));
 } else {

@@ -25,6 +25,31 @@ export const LAYER = {
   CONFIDENCE: 'confianca', // score fora da faixa exigida
 };
 
+/** Contrato para claims diretas (ex: AGY processando dossiês de senadores). */
+export const SENATOR_CLAIMS_CONTRACT = {
+  expectArray: true,
+  item: (rec) => {
+    const errors = [];
+    if (typeof rec?.candidate_remote_id !== 'string' && typeof rec?.tse_candidate_id !== 'string') {
+      errors.push({ field: 'candidate_remote_id/tse_candidate_id', reason: 'nem remote UUID nem TSE informado', layer: LAYER.CONTRACT });
+    }
+    if (typeof rec?.category !== 'string' || rec.category.trim() === '') {
+      errors.push({ field: 'category', reason: 'category ausente', layer: LAYER.CONTRACT });
+    }
+    if (typeof rec?.claim !== 'string' || rec.claim.trim().length < 10) {
+      errors.push({ field: 'claim', reason: 'conteúdo ausente ou muito curto', layer: LAYER.CONTRACT });
+    }
+    if (typeof rec?.source !== 'string' || rec.source.trim() === '') {
+      errors.push({ field: 'source', reason: 'fonte AUSENTE (regra absoluta)', layer: LAYER.SOURCE });
+    }
+    const conf = rec?.confidence;
+    if (typeof conf !== 'number' || conf < 1 || conf > 5) {
+      errors.push({ field: 'confidence', reason: `confiança fora de 1-5 (${conf})`, layer: LAYER.CONFIDENCE });
+    }
+    return errors;
+  },
+};
+
 /** Contrato padrão para saída do AGY (enrichment de claims). */
 export const AGY_CONTRACT = {
   // Espera-se um array de candidatos.
