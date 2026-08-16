@@ -129,7 +129,8 @@ describe('ComparePage H5.3', () => {
     fireEvent.click(screen.getByRole('button', { name: /ada cristina munaretto/i }));
     fireEvent.click(screen.getByRole('button', { name: /joão batista garcia dias/i }));
 
-    expect(screen.getByLabelText(/url atual/i)).toHaveTextContent('/comparar?candidatos=tse-1,tse-2');
+    const urlText = screen.getByLabelText(/url atual/i).textContent || '';
+    expect(decodeURIComponent(urlText)).toBe('/comparar?candidatos=tse-1,tse-2');
     expect(screen.getByRole('table')).toBeInTheDocument();
   });
 
@@ -137,7 +138,8 @@ describe('ComparePage H5.3', () => {
     renderCompare('/comparar?candidatos=tse-1,tse-invalido,tse-2,tse-3,tse-extra');
 
     expect(screen.getByText(/3 selecionados/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/url atual/i)).toHaveTextContent('/comparar?candidatos=tse-1,tse-2,tse-3');
+    const urlText = screen.getByLabelText(/url atual/i).textContent || '';
+    expect(decodeURIComponent(urlText)).toBe('/comparar?candidatos=tse-1,tse-2,tse-3');
   });
 
   it('filtra a lista de seleção por partido, mulheres e cor/raça sem remover selecionados da rota', () => {

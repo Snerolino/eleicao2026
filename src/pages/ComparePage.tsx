@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
-import { Link, useNavigate, useSearchParams } from 'react-router';
+import { useEffect, useMemo, useState, memo, useCallback } from 'react';
+import { Link, useSearchParams } from 'react-router';
 import { useQuery } from '@tanstack/react-query';
 import { fetchAllCandidates } from '@/services/candidates';
 import { CandidatePhoto } from '@/components/candidates/CandidatePhoto';
@@ -85,14 +85,70 @@ function raceFilterLabel(value: string): string {
   return value.charAt(0) + value.slice(1).toLowerCase();
 }
 
+// Optimization: Memoized grid item prevents O(N) re-renders of the large
+// candidate list when a single selection state changes.
+const CandidateGridItem = memo(function CandidateGridItem({
+  candidate,
+  isSelected,
+  isMaxed,
+  onToggle,
+}: {
+  candidate: CandidateWithClaims;
+  isSelected: boolean;
+  isMaxed: boolean;
+  onToggle: (id: string) => void;
+}) {
+  return (
+    <li>
+      <button
+        type="button"
+        onClick={() => {
+          if (!isMaxed) onToggle(candidate.id);
+        }}
+        disabled={isMaxed}
+        aria-pressed={isSelected}
+        className={`flex w-full items-center gap-3 rounded-sm border p-3 text-left transition-colors ${
+          isSelected
+            ? 'border-[var(--color-institutional)] bg-[color-mix(in_srgb,var(--color-institutional)_8%,var(--color-paper))]'
+            : 'border-[var(--color-border-editorial)] bg-[var(--color-paper)] hover:border-[var(--color-institutional)]'
+        } ${isMaxed ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`}
+      >
+        <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-sm bg-[var(--color-skeleton)]">
+          <CandidatePhoto
+            name={candidate.full_name}
+            photoUrl={candidate.photo_url}
+            className="h-full w-full object-cover"
+          />
+        </div>
+        <div className="min-w-0 flex-1">
+          <p className="font-mono text-[0.65rem] uppercase tracking-wider text-[var(--color-muted-ink)]">
+            {candidate.position_label}
+          </p>
+          <p className="truncate font-semibold">{candidate.full_name}</p>
+          <p className="font-mono text-xs text-[var(--color-muted-ink)]">
+            {candidate.party}
+            {candidate.ballot_number != null
+              ? ` · nº ${candidate.ballot_number}`
+              : ''}
+          </p>
+        </div>
+        {isSelected && (
+          <span className="shrink-0 font-mono text-sm font-bold text-[var(--color-institutional)]">
+            ✓
+          </span>
+        )}
+      </button>
+    </li>
+  );
+});
+
 export function ComparePage() {
   usePageMetadata(
     'Comparar candidatos — Portal Transparência Eleitoral RS',
     'Selecione e compare candidatos lado a lado nas eleições 2026 no RS.'
   );
 
-  const [searchParams] = useSearchParams();
-  const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [partyFilter, setPartyFilter] = useState('');
   const [womenOnly, setWomenOnly] = useState(false);
   const [raceFilter, setRaceFilter] = useState('');
@@ -134,32 +190,63 @@ export function ComparePage() {
     [searchParams, validCandidateIds]
   );
 
-  const selectedIds = useMemo(() => new Set(sharedIds), [sharedIds]);
-
   useEffect(() => {
     if (query.isLoading) return;
-    const sharedValue = serializeSelectedIds(sharedIds);
-    if ((searchParams.get('candidatos') ?? '') !== sharedValue) {
-      navigate({ search: sharedValue ? `?candidatos=${sharedValue}` : '' }, { replace: true });
+    const rawIds = searchParams.get('candidatos') ?? '';
+    const cleanValue = serializeSelectedIds(sharedIds);
+    if (rawIds !== cleanValue) {
+      setSearchParams((prev) => {
+        const next = new URLSearchParams(prev);
+        if (cleanValue) {
+          next.set('candidatos', cleanValue);
+        } else {
+          next.delete('candidatos');
+        }
+        return next;
+      }, { replace: true });
     }
-  }, [navigate, query.isLoading, searchParams, sharedIds]);
+  }, [query.isLoading, searchParams, sharedIds, setSearchParams]);
+
+  const selectedIds = useMemo(() => new Set(sharedIds), [sharedIds]);
 
   const selected = useMemo(
     () => candidates.filter((c) => selectedIds.has(c.id)),
     [candidates, selectedIds]
   );
 
-  const updateSharedRoute = (ids: string[]) => {
+  // Optimization: use functional updater for setSearchParams to keep callback stable
+  // and prevent invalidating the memoized grid items when search params change.
+  const updateSharedRoute = useCallback((ids: string[]) => {
     const value = serializeSelectedIds(ids.slice(0, 4));
-    navigate({ search: value ? `?candidatos=${value}` : '' }, { replace: false });
-  };
+    setSearchParams((prev) => {
+      const next = new URLSearchParams(prev);
+      if (value) {
+        next.set('candidatos', value);
+      } else {
+        next.delete('candidatos');
+      }
+      return next;
+    }, { replace: false });
+  }, [setSearchParams]);
 
-  const toggleCandidate = (id: string) => {
-    const next = sharedIds.includes(id)
-      ? sharedIds.filter((selectedId) => selectedId !== id)
-      : [...sharedIds, id].slice(0, 4);
-    updateSharedRoute(next);
-  };
+  const toggleCandidate = useCallback((id: string) => {
+    setSearchParams((prev) => {
+      const currentRawIds = prev.get('candidatos');
+      const currentSharedIds = parseSharedCandidateIds(currentRawIds, validCandidateIds);
+      const next = currentSharedIds.includes(id)
+        ? currentSharedIds.filter((selectedId) => selectedId !== id)
+        : [...currentSharedIds, id].slice(0, 4);
+      const value = serializeSelectedIds(next);
+
+      const nextParams = new URLSearchParams(prev);
+      if (value) {
+        nextParams.set('candidatos', value);
+      } else {
+        nextParams.delete('candidatos');
+      }
+      return nextParams;
+    }, { replace: false });
+  }, [setSearchParams, validCandidateIds]);
 
   if (query.isLoading) {
     return (
@@ -349,46 +436,13 @@ export function ComparePage() {
             const isSelected = selectedIds.has(c.id);
             const isMaxed = !isSelected && selectedIds.size >= 4;
             return (
-              <li key={c.id}>
-                <button
-                  type="button"
-                  onClick={() => {
-                    if (!isMaxed) toggleCandidate(c.id);
-                  }}
-                  disabled={isMaxed}
-                  aria-pressed={isSelected}
-                  className={`flex w-full items-center gap-3 rounded-sm border p-3 text-left transition-colors ${
-                    isSelected
-                      ? 'border-[var(--color-institutional)] bg-[color-mix(in_srgb,var(--color-institutional)_8%,var(--color-paper))]'
-                      : 'border-[var(--color-border-editorial)] bg-[var(--color-paper)] hover:border-[var(--color-institutional)]'
-                  } ${isMaxed ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`}
-                >
-                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-sm bg-[var(--color-skeleton)]">
-                    <CandidatePhoto
-                      name={c.full_name}
-                      photoUrl={c.photo_url}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="font-mono text-[0.65rem] uppercase tracking-wider text-[var(--color-muted-ink)]">
-                      {c.position_label}
-                    </p>
-                    <p className="truncate font-semibold">{c.full_name}</p>
-                    <p className="font-mono text-xs text-[var(--color-muted-ink)]">
-                      {c.party}
-                      {c.ballot_number != null
-                        ? ` · nº ${c.ballot_number}`
-                        : ''}
-                    </p>
-                  </div>
-                  {isSelected && (
-                    <span className="shrink-0 font-mono text-sm font-bold text-[var(--color-institutional)]">
-                      ✓
-                    </span>
-                  )}
-                </button>
-              </li>
+              <CandidateGridItem
+                key={c.id}
+                candidate={c}
+                isSelected={isSelected}
+                isMaxed={isMaxed}
+                onToggle={toggleCandidate}
+              />
             );
           })}
         </ul>
