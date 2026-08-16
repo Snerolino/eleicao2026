@@ -26,8 +26,8 @@ describe('Fase 7 checklist final de liberação MVP', () => {
       expect(checklist).toMatch(new RegExp(item, 'i'));
     }
 
-    expect(checklist).toContain('792');
-        expect(checklist).toContain('793');
+    expect(checklist).toContain('938');
+    expect(checklist).toContain('939');
     expect(checklist).toMatch(/FRANCISCO MARQUES NETO/);
     expect(checklist).toMatch(/interven[cç][aã]o humana/i);
     expect(checklist).toMatch(/CSP enforce/i);
