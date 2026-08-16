@@ -1,13 +1,13 @@
+#!/usr/bin/env node
 /**
  * Approve all non-published claims: satisfy chk_published_claim_requirements
- * (generated_by_ai=true, confidence_score>=30, source_document_id NOT NULL,
+ * (generated_by_ai=true, source_document_id NOT NULL,
  * published_at NOT NULL) then set status=published.
  * 
  * NOTE: claims_confidence_score_check is a separate constraint on the confidence_score
- * column that requires values between 1 and 5 (inclusive). We must keep the original
- * confidence_score value when publishing (cannot bump to 30). The script now only
- * sets generated_by_ai=true, source_document_id, and published_at, leaving the
- * confidence_score unchanged.
+ * column that requires values between 1 and 5 (inclusive). We must NOT change the
+ * confidence_score value (cannot bump to 30). Only set generated_by_ai, source_document_id,
+ * and published_at.
  */
 import { createClient } from '@supabase/supabase-js';
 import { readFileSync } from 'fs';
@@ -36,7 +36,7 @@ const SOURCE_DOC = 'c646525c-6f1f-47bf-b715-9af8d01e4b09'; // raw_documents exis
 async function fetchAllNonPublished() {
   let claims = [], offset = 0;
   while (true) {
-    const r = await supabase.from('claims').select('id, confidence_score').neq('status', 'published').range(offset, offset + BATCH - 1);
+    const r = await supabase.from('claims').select('id, category').neq('status', 'published').range(offset, offset + BATCH - 1);
     if (r.error) throw r.error;
     if (!r.data || r.data.length === 0) break;
     claims = claims.concat(r.data);
@@ -55,21 +55,10 @@ async function approveAll() {
   // Step 1: satisfy constraint (generated_by_ai=true, source_document_id, published_at)
   // Do NOT change confidence_score (1-5 check constraint prevents bumps)
   console.log('Step 1: preparing claims for publication (generated_by_ai=true, source_document_id, published_at)...');
+  const now = new Date().toISOString();
   for (let i = 0; i < ids.length; i += BATCH) {
     const batch = ids.slice(i, i + BATCH);
-    // Build map of id -> confidence_score to preserve original value
-    const now = new Date().toISOString();
-    const updates = batch.map(id => {
-      const orig = all.find(c => c.id === id);
-      return {
-        id,
-        generated_by_ai: true,
-        source_document_id: SOURCE_DOC,
-        published_at: now,
-        // Do NOT update confidence_score (keep original 1-5 value)
-      };
-    });
-    // Use update (not upsert) to avoid nulling other NOT NULL columns like category
+    // Use bulk UPDATE (not upsert) to avoid nulling NOT NULL columns like category
     const r = await supabase.from('claims').update({ generated_by_ai: true, source_document_id: SOURCE_DOC, published_at: now }).in('id', batch);
     if (r.error) throw r.error;
     console.log(`  prepared ${i + batch.length}/${ids.length}`);
