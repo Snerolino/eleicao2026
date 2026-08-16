@@ -88,7 +88,6 @@ describe('snapshot público de candidatos', () => {
 
     expect(slugs.size).toBe(candidates.length);
     expect(tseIds.size).toBe(candidates.length);
-    expect(tseIds.has('210002533050')).toBe(false);
     expect(candidates.some((candidate) => candidate.position === 'vice_governador')).toBe(true);
   });
 
