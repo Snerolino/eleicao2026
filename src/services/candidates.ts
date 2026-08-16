@@ -53,6 +53,9 @@ interface ClaimRow {
   status: string;
   source_document_id: string | null;
   source_references?: DocumentRow | DocumentRow[] | null;
+  source_text?: string | null;
+  source_url?: string | null;
+  published_at?: string | null;
 }
 
 let lastClaimsFetchDegraded = false;
@@ -151,6 +154,18 @@ export function mapClaim(row: ClaimRow): Claim {
       }
     : null;
 
+  const syntheticDocument: SourceReference | null =
+    document ??
+    (row.source_text || row.source_url
+      ? {
+          id: null,
+          source_name: row.source_text?.trim() || 'Fonte oficial',
+          source_category: 'oficial',
+          url: row.source_url ?? null,
+          fetched_at: row.published_at ?? null,
+        }
+      : null);
+
   return {
     id: row.id,
     candidate_id: row.candidate_id,
@@ -159,7 +174,10 @@ export function mapClaim(row: ClaimRow): Claim {
     confidence_score: clampConfidence(row.confidence_score),
     status: row.status as ClaimStatus,
     source_document_id: row.source_document_id,
-    source_document: document,
+    source_document: syntheticDocument,
+    source_text: row.source_text ?? null,
+    source_url: row.source_url ?? null,
+    published_at: row.published_at ?? null,
   };
 }
 
@@ -193,6 +211,9 @@ export async function fetchPublishedClaims(candidateIds: string[]): Promise<Clai
       confidence_score,
       status,
       source_document_id,
+      source_text,
+      source_url,
+      published_at,
       source_references (
         id,
         source_name,

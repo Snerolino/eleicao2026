@@ -38,6 +38,9 @@ export interface Claim {
   status: ClaimStatus;
   source_document_id: string | null;
   source_document: SourceReference | null;
+  source_text?: string | null;
+  source_url?: string | null;
+  published_at?: string | null;
 }
 
 export interface Candidate {

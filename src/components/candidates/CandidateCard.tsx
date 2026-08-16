@@ -13,11 +13,24 @@ interface CandidateCardProps {
 export const CandidateCard = memo(function CandidateCard({
   candidate
 }: CandidateCardProps) {
-  const summary = candidate.claims.find(
-    (claim) =>
-      claim.category.toLowerCase() === 'summary' &&
-      claim.status === 'published'
-  );
+  const published = candidate.claims.filter((claim) => claim.status === 'published');
+  const SUMMARY_PRIORITY = [
+    'summary',
+    'plataforma',
+    'historico_politico',
+    'reputacao',
+    'votacao_scrutiny',
+  ];
+  const summary =
+    published.find((claim) => claim.category.toLowerCase() === 'summary') ??
+    [...published].sort(
+      (a, b) =>
+        SUMMARY_PRIORITY.indexOf(a.category.toLowerCase()) -
+        SUMMARY_PRIORITY.indexOf(b.category.toLowerCase())
+    )[0] ??
+    null;
+
+  const sourceDoc = summary?.source_document ?? null;
 
   return (
     <article className="relative flex min-h-full flex-col overflow-hidden rounded-md border border-[var(--color-border-editorial)] bg-card transition-colors hover:border-[var(--color-institutional)] focus-within:border-[var(--color-institutional)] focus-within:ring-2 focus-within:ring-[var(--color-institutional)] focus-within:ring-offset-2 focus-within:ring-offset-[var(--color-paper)]">
@@ -76,7 +89,7 @@ export const CandidateCard = memo(function CandidateCard({
       <div className="mt-auto border-t border-[var(--color-border-editorial)] px-4 py-3">
         {summary ? (
           <SourceReferenceBadge
-            document={summary.source_document ?? null}
+            document={sourceDoc}
             confidenceScore={summary.confidence_score}
           />
         ) : (
