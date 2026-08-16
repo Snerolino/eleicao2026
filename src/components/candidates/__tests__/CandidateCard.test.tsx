@@ -56,13 +56,13 @@ describe('CandidateCard acessibilidade/performance', () => {
     expect(container).toHaveTextContent(/fonte/i);
   });
 
-  it('não acusa "Outra fonte / Não confirmado" quando não há summary publicado', () => {
+  it('não acusa "Outra fonte / Não confirmado" quando não há dados públicos verificados', () => {
     renderCard();
 
     // Candidato sem claims não deve exibir badge que pareça dado real.
     expect(screen.queryByText(/não confirmado/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/outra fonte/i)).not.toBeInTheDocument();
-    // Deve mostrar estado honesto de ausência de dados publicados.
-    expect(screen.getByText(/sem dados publicados/i)).toBeInTheDocument();
+    // Deve mostrar estado honesto de ausência de dados públicos verificados.
+    expect(screen.getByText(/sem dados públicos verificados/i)).toBeInTheDocument();
   });
 });

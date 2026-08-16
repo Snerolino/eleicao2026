@@ -159,22 +159,37 @@ export function CandidateDossierPage() {
                   </p>
                 ) : (
                   <ul className="space-y-4">
-                    {claims.map((claim) => (
-                      <li
-                        key={claim.id}
-                        className="space-y-4 rounded-md border border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-5"
-                      >
-                        <p className="leading-relaxed">
-                          {claim.content}
-                        </p>
-                        <SourceReferenceBadge
-                          document={claim.source_document}
-                          confidenceScore={
-                            claim.confidence_score
-                          }
-                        />
-                      </li>
-                    ))}
+                    {claims.map((claim) => {
+                      const source = claim.source_document;
+                      if (!source) {
+                        return (
+                          <li
+                            key={claim.id}
+                            className="space-y-2 rounded-md border border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-5"
+                          >
+                            <p className="font-mono text-xs uppercase tracking-wide text-[var(--color-muted-ink)]">
+                              Sem fonte verificada — conteúdo não exibido.
+                            </p>
+                          </li>
+                        );
+                      }
+                      return (
+                        <li
+                          key={claim.id}
+                          className="space-y-4 rounded-md border border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-5"
+                        >
+                          <p className="leading-relaxed">
+                            {claim.content}
+                          </p>
+                          <SourceReferenceBadge
+                            document={source}
+                            confidenceScore={
+                              claim.confidence_score
+                            }
+                          />
+                        </li>
+                      );
+                    })}
                   </ul>
                 )}
               </section>

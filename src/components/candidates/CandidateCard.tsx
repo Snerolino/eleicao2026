@@ -31,6 +31,7 @@ export const CandidateCard = memo(function CandidateCard({
     null;
 
   const sourceDoc = summary?.source_document ?? null;
+  const hasSource = Boolean(sourceDoc);
 
   return (
     <article className="relative flex min-h-full flex-col overflow-hidden rounded-md border border-[var(--color-border-editorial)] bg-card transition-colors hover:border-[var(--color-institutional)] focus-within:border-[var(--color-institutional)] focus-within:ring-2 focus-within:ring-[var(--color-institutional)] focus-within:ring-offset-2 focus-within:ring-offset-[var(--color-paper)]">
@@ -78,7 +79,7 @@ export const CandidateCard = memo(function CandidateCard({
             </p>
           )}
 
-          {summary && (
+          {summary && hasSource && (
             <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-[var(--color-ink)]">
               {summary.content}
             </p>
@@ -87,14 +88,14 @@ export const CandidateCard = memo(function CandidateCard({
       </div>
 
       <div className="mt-auto border-t border-[var(--color-border-editorial)] px-4 py-3">
-        {summary ? (
+        {summary && hasSource ? (
           <SourceReferenceBadge
             document={sourceDoc}
             confidenceScore={summary.confidence_score}
           />
         ) : (
           <p className="text-xs italic leading-relaxed text-[var(--color-muted-ink)]">
-            Sem dados publicados — aguarde a verificação editorial.
+            Sem dados públicos verificados.
           </p>
         )}
       </div>

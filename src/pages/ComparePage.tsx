@@ -40,7 +40,9 @@ function SectionCell({
   return (
     <td className="border-r border-[var(--color-border-editorial)] px-4 py-4 align-top last:border-r-0">
       <ul className="space-y-3">
-        {claims.map((claim) => (
+        {claims
+          .filter((claim) => claim.source_document)
+          .map((claim) => (
           <li key={claim.id} className="space-y-2">
             <p className="text-sm leading-relaxed">{claim.content}</p>
             <ConfidenceBadge
@@ -51,6 +53,14 @@ function SectionCell({
             />
           </li>
         ))}
+        {claims.filter((claim) => !claim.source_document).length > 0 && (
+          <li className="space-y-2">
+            <p className="font-mono text-xs uppercase tracking-wide text-[var(--color-muted-ink)]">
+              {claims.filter((claim) => !claim.source_document).length} item(s) sem
+              fonte verificada — não exibido(s).
+            </p>
+          </li>
+        )}
       </ul>
     </td>
   );
