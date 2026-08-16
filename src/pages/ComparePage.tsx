@@ -85,6 +85,25 @@ function raceFilterLabel(value: string): string {
   return value.charAt(0) + value.slice(1).toLowerCase();
 }
 
+const OFFICIAL_POSITIONS = [
+  'deputado_federal',
+  'deputado_estadual',
+  'governador',
+  'vice_governador',
+  'senador',
+] as const;
+
+function positionLabel(position: string): string {
+  const labels: Record<string, string> = {
+    deputado_federal: 'Deputado Federal',
+    deputado_estadual: 'Deputado Estadual',
+    governador: 'Governador',
+    vice_governador: 'Vice-Governador',
+    senador: 'Senador',
+  };
+  return labels[position] ?? position;
+}
+
 export function ComparePage() {
   usePageMetadata(
     'Comparar candidatos — Portal Transparência Eleitoral RS',
@@ -96,6 +115,8 @@ export function ComparePage() {
   const [partyFilter, setPartyFilter] = useState('');
   const [womenOnly, setWomenOnly] = useState(false);
   const [raceFilter, setRaceFilter] = useState('');
+  const [positionFilter, setPositionFilter] = useState('');
+  const showDocsHint = true;
 
   const query = useQuery<CandidateWithClaims[]>({
     queryKey: ['candidates'],
@@ -126,8 +147,9 @@ export function ComparePage() {
     if (partyFilter && candidate.party !== partyFilter) return false;
     if (womenOnly && candidate.gender !== 'FEMININO') return false;
     if (raceFilter && candidateRaceFilterValue(candidate) !== raceFilter) return false;
+    if (positionFilter && candidate.position !== positionFilter) return false;
     return true;
-  }), [candidates, partyFilter, womenOnly, raceFilter]);
+  }), [candidates, partyFilter, womenOnly, raceFilter, positionFilter]);
 
   const sharedIds = useMemo(
     () => parseSharedCandidateIds(searchParams.get('candidatos'), validCandidateIds),
@@ -307,6 +329,7 @@ export function ComparePage() {
               {partyFilter && ` do ${partyFilter}`}
               {womenOnly && ' · mulheres'}
               {raceFilter && ` · cor/raça ${raceFilter.toLowerCase()}`}
+              {positionFilter && ` · cargo ${positionLabel(positionFilter)}`}
             </p>
           </div>
           <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
@@ -340,6 +363,17 @@ export function ComparePage() {
               <option value="">Todas as cores/raças</option>
               {races.map((race) => (
                 <option key={race} value={race}>{raceFilterLabel(race)}</option>
+              ))}
+            </select>
+            <select
+              value={positionFilter}
+              onChange={(event) => setPositionFilter(event.target.value)}
+              className="cursor-pointer rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
+              aria-label="Filtrar por cargo"
+            >
+              <option value="">Todos os cargos</option>
+              {OFFICIAL_POSITIONS.map((position) => (
+                <option key={position} value={position}>{positionLabel(position)}</option>
               ))}
             </select>
           </div>
@@ -393,6 +427,11 @@ export function ComparePage() {
           })}
         </ul>
       </section>
+      {showDocsHint && (
+        <p className="mt-6 text-center text-xs text-[var(--color-muted-ink)]">
+          Dica: use o filtro de cargo para comparar candidatos de um mesmo mandato.
+        </p>
+      )}
     </main>
   );
 }
