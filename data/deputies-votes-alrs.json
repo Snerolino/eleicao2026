@@ -1,0 +1,45 @@
+{
+  "propositions": [
+    { "external_id": "PL 77/2025", "house": "alrs", "type": "pl", "number": "77", "year": "2025", "title": "Ampliação de mecanismos de proteção a vítimas com medidas protetivas de urgência", "source": "ALRS Sistema Legis — votação 10/03/2026; Diário Oficial de 11/03/2026" },
+    { "external_id": "PL 134/2023", "house": "alrs", "type": "pl", "number": "134", "year": "2023", "title": "Selo Tolerância Zero com Assédio no comércio gaúcho", "source": "ALRS Sistema Legis — votação 10/03/2026; Diário da Assembleia RS de 11/03/2026" },
+    { "external_id": "PL 165/2025", "house": "alrs", "type": "pl", "number": "165", "year": "2025", "title": "Sistema de inteligência preditiva de monitoramento de agressores reincidentes", "source": "ALRS Diário da Assembleia — 15/04/2026" },
+    { "external_id": "PL 361/2025", "house": "alrs", "type": "pl", "number": "361", "year": "2025", "title": "Reserva de 5% de vagas em contratos terceirizados para mulheres vítimas de violência", "source": "ALRS Diário Oficial — 28/04/2026; GZH 10/05/2026" },
+    { "external_id": "PL 38/2026", "house": "alrs", "type": "pl", "number": "38", "year": "2026", "title": "Reajuste de 5,4% no subsídio do magistério (texto original)", "source": "ALRS Sistema Legis — 24/03/2026" },
+    { "external_id": "PEC 305/2026", "house": "alrs", "type": "pec", "number": "305", "year": "2026", "title": "Data-base revisão anual do funcionalismo (admissibilidade CCJ)", "source": "ALRS — CCJ 15/07/2026; Sintergs/SIMPE-RS" }
+  ],
+  "events": [
+    { "external_id": "alrs_pl77_2025", "proposition_external_id": "PL 77/2025", "house": "alrs", "occurred_at": "2026-03-10T14:00:00Z", "source": "ALRS — 10/03/2026" },
+    { "external_id": "alrs_pl134_2023", "proposition_external_id": "PL 134/2023", "house": "alrs", "occurred_at": "2026-03-10T14:00:00Z", "source": "ALRS — 10/03/2026" },
+    { "external_id": "alrs_pl165_2025", "proposition_external_id": "PL 165/2025", "house": "alrs", "occurred_at": "2026-04-14T14:00:00Z", "source": "ALRS Diário da Assembleia — 15/04/2026" },
+    { "external_id": "alrs_pl361_2025", "proposition_external_id": "PL 361/2025", "house": "alrs", "occurred_at": "2026-04-28T14:00:00Z", "source": "ALRS — 28/04/2026" },
+    { "external_id": "alrs_pl38_2026", "proposition_external_id": "PL 38/2026", "house": "alrs", "occurred_at": "2026-03-24T14:00:00Z", "source": "ALRS Sistema Legis — 24/03/2026" },
+    { "external_id": "alrs_pec305_2026_ccj", "proposition_external_id": "PEC 305/2026", "house": "alrs", "occurred_at": "2026-07-15T14:00:00Z", "source": "ALRS — CCJ 15/07/2026" }
+  ],
+  "votes": [
+    { "candidate_tse_id": "210002533936", "event_external_id": "alrs_pl77_2025", "value": "sim", "recorded_at": "2026-03-10T14:00:00Z", "source": "ALRS — 10/03/2026 (Luciana Genro, matriz impacto v1)" },
+    { "candidate_tse_id": "210002533936", "event_external_id": "alrs_pl134_2023", "value": "sim", "recorded_at": "2026-03-10T14:00:00Z", "source": "ALRS — 10/03/2026 (Luciana Genro)" },
+    { "candidate_tse_id": "210002533936", "event_external_id": "alrs_pl165_2025", "value": "sim", "recorded_at": "2026-04-14T14:00:00Z", "source": "ALRS Diário da Assembleia — 14/04/2026 (Luciana Genro)" },
+    { "candidate_tse_id": "210002533936", "event_external_id": "alrs_pl361_2025", "value": "sim", "recorded_at": "2026-04-28T14:00:00Z", "source": "ALRS — 28/04/2026 (Luciana Genro)" },
+    { "candidate_tse_id": "210002533936", "event_external_id": "alrs_pl38_2026", "value": "nao", "recorded_at": "2026-03-24T14:00:00Z", "source": "ALRS Sistema Legis — 24/03/2026 (Luciana Genro, oposição emenda paridade)" },
+    { "candidate_tse_id": "210002534038", "event_external_id": "alrs_pl77_2025", "value": "sim", "recorded_at": "2026-03-10T14:00:00Z", "source": "ALRS — 10/03/2026 (Sofia Cavedon)" },
+    { "candidate_tse_id": "210002534038", "event_external_id": "alrs_pl134_2023", "value": "sim", "recorded_at": "2026-03-10T14:00:00Z", "source": "ALRS — 10/03/2026 (Sofia Cavedon)" },
+    { "candidate_tse_id": "210002534038", "event_external_id": "alrs_pl165_2025", "value": "sim", "recorded_at": "2026-04-14T14:00:00Z", "source": "ALRS Diário da Assembleia — 14/04/2026 (Sofia Cavedon)" },
+    { "candidate_tse_id": "210002534038", "event_external_id": "alrs_pl361_2025", "value": "sim", "recorded_at": "2026-04-28T14:00:00Z", "source": "ALRS — 28/04/2026 (Sofia Cavedon)" },
+    { "candidate_tse_id": "210002540644", "event_external_id": "alrs_pl77_2025", "value": "sim", "recorded_at": "2026-03-10T14:00:00Z", "source": "ALRS — 10/03/2026 (Delegada Nadine)" },
+    { "candidate_tse_id": "210002540644", "event_external_id": "alrs_pl134_2023", "value": "sim", "recorded_at": "2026-03-10T14:00:00Z", "source": "ALRS — 10/03/2026 (Delegada Nadine)" },
+    { "candidate_tse_id": "210002540644", "event_external_id": "alrs_pl165_2025", "value": "sim", "recorded_at": "2026-04-14T14:00:00Z", "source": "ALRS Diário da Assembleia — 14/04/2026 (Delegada Nadine)" },
+    { "candidate_tse_id": "210002540644", "event_external_id": "alrs_pl361_2025", "value": "sim", "recorded_at": "2026-04-28T14:00:00Z", "source": "ALRS — 28/04/2026 (Delegada Nadine)" },
+    { "candidate_tse_id": "210002537883", "event_external_id": "alrs_pl77_2025", "value": "sim", "recorded_at": "2026-03-10T14:00:00Z", "source": "ALRS Diário da Assembleia — 11/03/2026 (Capitão Martim)" },
+    { "candidate_tse_id": "210002537883", "event_external_id": "alrs_pl134_2023", "value": "sim", "recorded_at": "2026-03-10T14:00:00Z", "source": "ALRS Diário da Assembleia — 11/03/2026 (Capitão Martim)" },
+    { "candidate_tse_id": "210002537883", "event_external_id": "alrs_pl165_2025", "value": "sim", "recorded_at": "2026-04-14T14:00:00Z", "source": "ALRS Diário da Assembleia — 15/04/2026 (Capitão Martim)" },
+    { "candidate_tse_id": "210002537883", "event_external_id": "alrs_pl361_2025", "value": "sim", "recorded_at": "2026-04-28T14:00:00Z", "source": "ALRS — 28/04/2026 (Capitão Martim)" },
+    { "candidate_tse_id": "210002534312", "event_external_id": "alrs_pl77_2025", "value": "sim", "recorded_at": "2026-03-10T14:00:00Z", "source": "ALRS — 10/03/2026 (Kelly Moraes)" },
+    { "candidate_tse_id": "210002534312", "event_external_id": "alrs_pl134_2023", "value": "sim", "recorded_at": "2026-03-10T14:00:00Z", "source": "ALRS — 10/03/2026 (Kelly Moraes)" },
+    { "candidate_tse_id": "210002534312", "event_external_id": "alrs_pl165_2025", "value": "nao", "recorded_at": "2026-04-14T14:00:00Z", "source": "ALRS Diário da Assembleia — 15/04/2026 (Kelly Moraes)" },
+    { "candidate_tse_id": "210002534312", "event_external_id": "alrs_pl361_2025", "value": "nao", "recorded_at": "2026-04-28T14:00:00Z", "source": "ALRS — 28/04/2026 (Kelly Moraes)" },
+    { "candidate_tse_id": "210002537887", "event_external_id": "alrs_pl77_2025", "value": "sim", "recorded_at": "2026-03-10T14:00:00Z", "source": "ALRS — 10/03/2026 (Capitão Martim)" },
+    { "candidate_tse_id": "210002537887", "event_external_id": "alrs_pl134_2023", "value": "sim", "recorded_at": "2026-03-10T14:00:00Z", "source": "ALRS — 10/03/2026 (Capitão Martim)" },
+    { "candidate_tse_id": "210002537887", "event_external_id": "alrs_pl165_2025", "value": "sim", "recorded_at": "2026-04-14T14:00:00Z", "source": "ALRS Diário da Assembleia — 15/04/2026 (Capitão Martim)" },
+    { "candidate_tse_id": "210002537887", "event_external_id": "alrs_pl361_2025", "value": "sim", "recorded_at": "2026-04-28T14:00:00Z", "source": "ALRS — 28/04/2026 (Capitão Martim)" }
+  ]
+}
