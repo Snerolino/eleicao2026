@@ -5,6 +5,7 @@ import type {
   Claim,
   ClaimStatus,
   SourceReference,
+  VotingProfile,
 } from "@/types/election";
 import { onlyPublished } from "@/utils/claims";
 import { candidateSlugFromTse } from "@/utils/candidateIdentity";
@@ -236,6 +237,25 @@ export async function fetchPublishedClaims(candidateIds: string[]): Promise<Clai
   return onlyPublished(allClaims);
 }
 
+async function fetchVotingProfile(candidateId: string): Promise<VotingProfile | null> {
+  if (!supabase) return null;
+  const profileClient = supabase as unknown as {
+    from: (table: string) => {
+      select: (columns: string) => {
+        eq: (column: string, value: string) => {
+          maybeSingle: () => Promise<{ data: VotingProfile | null; error: unknown }>;
+        };
+      };
+    };
+  };
+  const { data, error } = await profileClient
+    .from('legislator_vote_profile')
+    .select('house,total_votes,votos_sim,votos_nao,votos_abstencao,votos_ausente,votos_obstrucao,profile_score')
+    .eq('candidate_id', candidateId)
+    .maybeSingle();
+  return error ? null : data;
+}
+
 async function fetchAllCandidatesFromSupabase(): Promise<
   CandidateWithClaims[]
 > {
@@ -303,10 +323,12 @@ async function fetchCandidateFromSupabase(
   const candidate = mapCandidate(data as CandidateRow);
   if (!isPublicCandidateVisible(candidate)) return null;
   const claims = await fetchPublishedClaims([candidate.id]);
+  const voting_profile = await fetchVotingProfile(candidate.id);
 
   return applyPublicCandidateWithClaimsOverrides({
     ...candidate,
     claims,
+    voting_profile,
   });
 }
 
@@ -323,13 +345,13 @@ export async function fetchAllCandidates(): Promise<CandidateWithClaims[]> {
         lastCandidatesFetchFromSnapshot = true;
         lastCandidatesFetchDiagnostic = `Snapshot oficial mais completo que Supabase (${PUBLIC_CANDIDATES.length}/${supabaseData.length}).`;
         console.warn(lastCandidatesFetchDiagnostic);
-        return fetchAllFromMock();
+        return mergeSupabaseEditorialData(supabaseData);
       }
       if (!lastClaimsFetchDegraded && isSupabaseSnapshotRicherForPhotos(supabaseData)) {
         lastCandidatesFetchFromSnapshot = true;
         lastCandidatesFetchDiagnostic = `Snapshot oficial tem fotos TSE mais completo que Supabase (${PUBLIC_CANDIDATES_WITH_PHOTOS}/${supabaseData.filter((candidate) => candidate.photo_url).length}).`;
         console.warn(lastCandidatesFetchDiagnostic);
-        return fetchAllFromMock();
+        return mergeSupabaseEditorialData(supabaseData);
       }
       lastCandidatesFetchFromSnapshot = false;
       lastCandidatesFetchDiagnostic = null;
@@ -349,6 +371,24 @@ function fetchAllFromMock(): CandidateWithClaims[] {
     ...candidate,
     claims: onlyPublished(candidate.claims),
   }));
+}
+
+function mergeSupabaseEditorialData(supabaseData: CandidateWithClaims[]): CandidateWithClaims[] {
+  const byTse = new Map(
+    supabaseData
+      .filter((candidate) => candidate.tse_candidate_id)
+      .map((candidate) => [candidate.tse_candidate_id as string, candidate]),
+  );
+  return PUBLIC_CANDIDATES.map((snapshotCandidate) => {
+    const remoteCandidate = snapshotCandidate.tse_candidate_id
+      ? byTse.get(snapshotCandidate.tse_candidate_id)
+      : undefined;
+    return applyPublicCandidateWithClaimsOverrides({
+      ...snapshotCandidate,
+      claims: remoteCandidate?.claims ?? onlyPublished(snapshotCandidate.claims),
+      voting_profile: remoteCandidate?.voting_profile ?? null,
+    });
+  });
 }
 
 function isSupabaseSnapshotStale(supabaseCount: number): boolean {

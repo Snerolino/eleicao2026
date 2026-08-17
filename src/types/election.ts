@@ -65,6 +65,18 @@ export interface Candidate {
 
 export interface CandidateWithClaims extends Candidate {
   claims: Claim[];
+  voting_profile?: VotingProfile | null;
+}
+
+export interface VotingProfile {
+  house: string;
+  total_votes: number;
+  votos_sim: number;
+  votos_nao: number;
+  votos_abstencao: number;
+  votos_ausente: number;
+  votos_obstrucao: number;
+  profile_score: number;
 }
 
 export const POSITION_ORDER: Position[] = [
