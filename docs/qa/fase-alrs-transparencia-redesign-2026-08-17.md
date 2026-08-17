@@ -110,3 +110,15 @@ Nenhum voto ALRS foi aplicado no Supabase remoto. O próximo lote requer:
 3. dry-run agregado e revisão de contagens;
 4. autorização separada para escrita remota;
 5. reindexação de perfis após importação factual.
+
+## Auditoria de publicação dos blocos de claims
+
+- 42 blocos JSON verificados independentemente: 1026 candidatos e 2150 claims;
+- 2135 hashes de conteúdo únicos;
+- auditoria remota confirmou 2683 claims: 2650 `published` e 33 `pending_review`;
+- o importador idempotente `scripts/import-agy-runtime-pending.mjs` encontrou 0
+  registros novos para aplicar: os hashes já estão no remoto;
+- 21 candidatos (42 claims) permanecem sem resolução no snapshot público e não
+  foram associados por heurística;
+- nenhuma claim foi promovida automaticamente: itens sem URL exata permanecem
+  sob revisão editorial.
