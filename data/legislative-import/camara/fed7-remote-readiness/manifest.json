@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "phase": "FED-7A",
+  "mode": "remote-readiness",
+  "source_catalog": "source-catalog.json",
+  "source_sql": "source-references.sql",
+  "source_count": 4,
+  "source_ids_resolved": 0,
+  "source_ids_required_before_factual_apply": true,
+  "candidate_fk_resolution": {
+    "lookup_key": "tse_candidate_id",
+    "required_candidates": 4,
+    "resolved_remote_candidate_ids": 0,
+    "unresolved_remote_candidate_ids": [
+      "210002533902",
+      "210002534604",
+      "210002537712",
+      "210002534668"
+    ]
+  },
+  "factual_sql_generated": false,
+  "remote_apply": false,
+  "impact_apply": false,
+  "public_approval": false,
+  "blockers": [
+    "source_references UUIDs must come from authorized remote query/upsert",
+    "candidate UUIDs must come from remote lookup by tse_candidate_id",
+    "factual legislative SQL remains blocked until both catalogs resolve"
+  ],
+  "secrets_scan": {
+    "checked_patterns": ["service_role", "apikey", "Authorization", "Bearer"],
+    "result": "not_present"
+  }
+}

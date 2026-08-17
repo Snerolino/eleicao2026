@@ -86,6 +86,19 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - QA: `docs/qa/fed6-camara-impact-pending-review-2026-08-17.md`.
 - Próximo gate: revisão humana editorial antes de qualquer aprovação.
 
+## Atualização FED-7A — prontidão remota Câmara (2026-08-17)
+
+- Catálogo de 4 fontes oficiais e SQL separado de `source_references` preparado.
+- Nenhum UUID remoto foi inventado: 4 source refs e 4 candidatos seguem sem
+  resolução remota nesta etapa.
+- `factual_sql_generated=false`, `remote_apply=false`, `impact_apply=false` e
+  `public_approval=false`.
+- SQL factual fica bloqueado até lookup remoto por `tse_candidate_id` e resolução
+  dos IDs reais de `source_references`.
+- QA: `docs/qa/fed7a-camara-remote-readiness-2026-08-17.md`.
+- Bloqueio operacional: doctor exige Node 24, shell atual está em Node 22.22.2;
+  repetir gates completos em runtime suportado antes de mutação remota.
+
 ## Checkpoint mais recente — migração de sessão (2026-08-17)
 
 - Último commit: `85d7031` (`feat: exibir claims e perfil de votações no dossiê`).
