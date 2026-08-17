@@ -17,8 +17,19 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
   Osmar Terra, Alceu Moreira e Afonso Hamm.
 - A auditoria encontrou riscos já previstos no packet: agregação de perfil por
   candidato (em vez de candidato+casa), `maybeSingle()` no fetch e fonte ALRS
-  hardcoded no dossiê. FED-1 ainda não foi iniciado.
+  hardcoded no dossiê. Esses riscos foram corrigidos na FED-1; FED-2 ainda não foi iniciado.
 - Documento: `docs/qa/camara-federal-adaptacao-auditoria.md`.
+
+## Atualização FED-1 — perfis multi-house (2026-08-17)
+
+- FED-1 concluída: perfis agora são `voting_profiles[]`, indexados por
+  `(candidate_id, house)` e exibidos em seções independentes por casa.
+- Dry-run/aplicação do indexador: 3.481 votos, 14 perfis; remoto validado com
+  `camara=1`, `alrs=13` e 0 duplicidades por `(candidate_id, house)`.
+- Suíte: 305 testes passando; TypeScript, schema, data-check, build e smoke local
+  verdes.
+- QA: `docs/qa/fed1-multi-house-voting-profiles-2026-08-17.md`.
+- FED-2 continua pendente para separar saldo nominal de impacto.
 
 ## Checkpoint mais recente — migração de sessão (2026-08-17)
 

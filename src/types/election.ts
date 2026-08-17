@@ -65,7 +65,7 @@ export interface Candidate {
 
 export interface CandidateWithClaims extends Candidate {
   claims: Claim[];
-  voting_profile?: VotingProfile | null;
+  voting_profiles?: VotingProfile[];
 }
 
 export interface VotingProfile {
@@ -77,6 +77,43 @@ export interface VotingProfile {
   votos_ausente: number;
   votos_obstrucao: number;
   profile_score: number;
+}
+
+export interface VotingHouseMetadata {
+  label: string;
+  sourceLabel: string;
+  sourceUrl: string | null;
+}
+
+export const VOTING_HOUSE_METADATA: Record<string, VotingHouseMetadata> = {
+  camara: {
+    label: 'Câmara dos Deputados',
+    sourceLabel: 'Câmara dos Deputados · Votações nominais',
+    sourceUrl: 'https://www.camara.leg.br/deputados',
+  },
+  alrs: {
+    label: 'Assembleia Legislativa do RS',
+    sourceLabel: 'Portal da Transparência ALRS · Votos em Plenário',
+    sourceUrl: 'https://transparencia.al.rs.gov.br/parlamentares/votos-plenario',
+  },
+  senado: {
+    label: 'Senado Federal',
+    sourceLabel: 'Senado Federal · Votações nominais',
+    sourceUrl: 'https://www25.senado.leg.br/web/atividade/votacoes-nominais',
+  },
+  camara_municipal: {
+    label: 'Câmara Municipal',
+    sourceLabel: 'Fonte institucional da Câmara Municipal',
+    sourceUrl: null,
+  },
+};
+
+export function votingHouseMetadata(house: string): VotingHouseMetadata {
+  return VOTING_HOUSE_METADATA[house] ?? {
+    label: house,
+    sourceLabel: `Fonte institucional · ${house}`,
+    sourceUrl: null,
+  };
 }
 
 export const POSITION_ORDER: Position[] = [

@@ -259,6 +259,41 @@ describe('fetchPublishedClaims', () => {
   });
 });
 
+describe('fetchVotingProfiles', () => {
+  it('retorna todos os perfis sem maybeSingle e preserva as casas', async () => {
+    const profiles = [
+      {
+        house: 'alrs',
+        total_votes: 2,
+        votos_sim: 1,
+        votos_nao: 1,
+        votos_abstencao: 0,
+        votos_ausente: 0,
+        votos_obstrucao: 0,
+        profile_score: 0,
+      },
+      {
+        house: 'camara',
+        total_votes: 3,
+        votos_sim: 2,
+        votos_nao: 1,
+        votos_abstencao: 0,
+        votos_ausente: 0,
+        votos_obstrucao: 0,
+        profile_score: 0.3333,
+      },
+    ];
+    const eq = vi.fn().mockResolvedValue({ data: profiles, error: null });
+    supabaseMock.from.mockReturnValue({
+      select: vi.fn().mockReturnValue({ eq }),
+    });
+
+    const { fetchVotingProfiles } = await import('../candidates');
+    await expect(fetchVotingProfiles('candidate-1')).resolves.toEqual(profiles);
+    expect(eq).toHaveBeenCalledWith('candidate_id', 'candidate-1');
+  });
+});
+
 describe('fetchAllCandidates', () => {
   function staleOfficialRows(count = 69) {
     return Array.from({ length: count }, (_, index) => ({

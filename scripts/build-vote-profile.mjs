@@ -4,7 +4,7 @@
  *
  * Lê os votos factuais (legislative_votes) UMA vez e os materializa em:
  *   - legislator_vote_index: voto por evento já pontuado (direction).
- *   - legislator_vote_profile: agregado por candidato (contagens + score).
+ *   - legislator_vote_profile: agregado por candidato e casa (contagens + score).
  *
  * Isso evita reavaliar o sentido de cada voto a cada renderização/comparacao.
  * Idempotente: roda quantas vezes forem necessárias (upsert por chave única).
@@ -15,6 +15,7 @@ import { createClient } from '@supabase/supabase-js';
 import { existsSync, readFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { buildVoteProfileRows } from './lib/vote-profile.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const raspadorEnv = '/home/lourenco/Projetos/raspador-candidados-2026/.env';
@@ -43,7 +44,6 @@ if (!url || !key) {
 const apply = process.argv.includes('--apply');
 const sb = createClient(url, key, { auth: { persist: false } });
 
-const DIRECTION = { sim: 1, nao: -1, abstencao: 0, ausente: 0, obstrucao: 0 };
 const PAGE_SIZE = 1000;
 
 async function fetchAllVotes() {
@@ -72,47 +72,8 @@ async function main() {
     return;
   }
 
-  // 2) Montar índice por evento (direction) + agregar por candidato
-  const indexRows = [];
-  const profileMap = new Map(); // candidate_id -> {house, counts}
-  for (const v of votes) {
-    const house = v.voting_events?.house ?? 'camara';
-    const direction = DIRECTION[v.value] ?? 0;
-    indexRows.push({
-      candidate_id: v.candidate_id,
-      voting_event_id: v.voting_event_id,
-      direction,
-      value: v.value,
-    });
-    const p = profileMap.get(v.candidate_id) || {
-      house: house,
-      sim: 0, nao: 0, abstencao: 0, ausente: 0, obstrucao: 0, total: 0,
-    };
-    p.house = house;
-    p.total++;
-    if (v.value === 'sim') p.sim++;
-    else if (v.value === 'nao') p.nao++;
-    else if (v.value === 'abstencao') p.abstencao++;
-    else if (v.value === 'ausente') p.ausente++;
-    else if (v.value === 'obstrucao') p.obstrucao++;
-    profileMap.set(v.candidate_id, p);
-  }
-
-  const profileRows = [];
-  for (const [candidateId, p] of profileMap) {
-    const score = p.total > 0 ? (p.sim - p.nao) / p.total : 0;
-    profileRows.push({
-      candidate_id: candidateId,
-      house: p.house,
-      total_votes: p.total,
-      votos_sim: p.sim,
-      votos_nao: p.nao,
-      votos_abstencao: p.abstencao,
-      votos_ausente: p.ausente,
-      votos_obstrucao: p.obstrucao,
-      profile_score: Number(score.toFixed(4)),
-    });
-  }
+  // 2) Montar índice por evento e agregar por candidato+casa.
+  const { indexRows, profileRows } = buildVoteProfileRows(votes);
 
   console.log(`Índice por evento: ${indexRows.length} | Perfis: ${profileRows.length}`);
 

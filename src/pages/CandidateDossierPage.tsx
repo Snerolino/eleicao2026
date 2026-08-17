@@ -14,6 +14,7 @@ import { fetchCandidateById } from '@/services/candidates';
 import { candidatePublicId, candidatePublicPath } from '@/utils/candidateIdentity';
 import {
   DOSSIER_SECTIONS,
+  votingHouseMetadata,
   type CandidateWithClaims,
   type Claim
 } from '@/types/election';
@@ -134,21 +135,26 @@ export function CandidateDossierPage() {
             </div>
           </header>
 
-          {candidate.voting_profile && candidate.voting_profile.total_votes > 0 && (
+          {(candidate.voting_profiles ?? []).filter((profile) => profile.total_votes > 0).map((profile) => {
+            const house = votingHouseMetadata(profile.house);
+            const headingId = `voting-profile-heading-${profile.house}`;
+            const safeSourceUrl = sanitizeUrl(house.sourceUrl);
+            return (
             <section
-              aria-labelledby="voting-profile-heading"
+              key={profile.house}
+              aria-labelledby={headingId}
               className="border-y-[3px] border-double border-[var(--color-ink)] py-6"
             >
               <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
                 <div>
                   <p className="font-mono text-[0.68rem] uppercase tracking-[0.14em] text-[var(--color-muted-ink)]">
-                    Registro legislativo · {candidate.voting_profile.house.toUpperCase()}
+                    Registro legislativo · {house.label}
                   </p>
-                  <h2 id="voting-profile-heading" className="mt-1 text-3xl">
+                  <h2 id={headingId} className="mt-1 text-3xl">
                     Perfil de votações nominais
                   </h2>
                   <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[var(--color-muted-ink)]">
-                    {candidate.voting_profile.total_votes} votos individuais localizados no Portal da Transparência ALRS.
+                    {profile.total_votes} votos individuais localizados na {house.label}.
                     O índice é descritivo: não transforma ausência em voto contrário.
                   </p>
                 </div>
@@ -157,17 +163,17 @@ export function CandidateDossierPage() {
                     saldo nominal
                   </span>
                   <strong className="mt-1 block font-mono text-2xl text-[var(--color-institutional)]">
-                    {candidate.voting_profile.profile_score.toFixed(2)}
+                    {profile.profile_score.toFixed(2)}
                   </strong>
                 </div>
               </div>
               <dl className="mt-5 grid grid-cols-2 gap-px border border-[var(--color-border-editorial)] bg-[var(--color-border-editorial)] sm:grid-cols-5">
                 {[
-                  ['Sim', candidate.voting_profile.votos_sim, 'text-[var(--color-institutional)]'],
-                  ['Não', candidate.voting_profile.votos_nao, 'text-[var(--color-factcheck)]'],
-                  ['Abstenção', candidate.voting_profile.votos_abstencao, 'text-[var(--color-ink)]'],
-                  ['Ausente', candidate.voting_profile.votos_ausente, 'text-[var(--color-muted-ink)]'],
-                  ['Obstrução', candidate.voting_profile.votos_obstrucao, 'text-[var(--color-press)]'],
+                  ['Sim', profile.votos_sim, 'text-[var(--color-institutional)]'],
+                  ['Não', profile.votos_nao, 'text-[var(--color-factcheck)]'],
+                  ['Abstenção', profile.votos_abstencao, 'text-[var(--color-ink)]'],
+                  ['Ausente', profile.votos_ausente, 'text-[var(--color-muted-ink)]'],
+                  ['Obstrução', profile.votos_obstrucao, 'text-[var(--color-press)]'],
                 ].map(([label, value, color]) => (
                   <div key={label} className="bg-[var(--color-paper)] px-3 py-3">
                     <dt className="font-mono text-[0.62rem] uppercase tracking-wider text-[var(--color-muted-ink)]">{label}</dt>
@@ -175,16 +181,23 @@ export function CandidateDossierPage() {
                   </div>
                 ))}
               </dl>
-              <a
-                href="https://transparencia.al.rs.gov.br/parlamentares/votos-plenario"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="mt-4 inline-block font-mono text-xs text-[var(--color-institutional)] underline underline-offset-4"
-              >
-                Fonte: Portal da Transparência ALRS · Votos em Plenário ↗
-              </a>
+              {safeSourceUrl ? (
+                <a
+                  href={safeSourceUrl}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="mt-4 inline-block font-mono text-xs text-[var(--color-institutional)] underline underline-offset-4"
+                >
+                  Fonte: {house.sourceLabel} ↗
+                </a>
+              ) : (
+                <p className="mt-4 font-mono text-xs text-[var(--color-muted-ink)]">
+                  Fonte: {house.sourceLabel}
+                </p>
+              )}
             </section>
-          )}
+            );
+          })}
 
           {DOSSIER_SECTIONS.map((section) => {
             const claims = claimsForSection(

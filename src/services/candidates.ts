@@ -237,23 +237,20 @@ export async function fetchPublishedClaims(candidateIds: string[]): Promise<Clai
   return onlyPublished(allClaims);
 }
 
-async function fetchVotingProfile(candidateId: string): Promise<VotingProfile | null> {
-  if (!supabase) return null;
+export async function fetchVotingProfiles(candidateId: string): Promise<VotingProfile[]> {
+  if (!supabase) return [];
   const profileClient = supabase as unknown as {
     from: (table: string) => {
       select: (columns: string) => {
-        eq: (column: string, value: string) => {
-          maybeSingle: () => Promise<{ data: VotingProfile | null; error: unknown }>;
-        };
+        eq: (column: string, value: string) => Promise<{ data: VotingProfile[] | null; error: unknown }>;
       };
     };
   };
   const { data, error } = await profileClient
     .from('legislator_vote_profile')
     .select('house,total_votes,votos_sim,votos_nao,votos_abstencao,votos_ausente,votos_obstrucao,profile_score')
-    .eq('candidate_id', candidateId)
-    .maybeSingle();
-  return error ? null : data;
+    .eq('candidate_id', candidateId);
+  return error ? [] : (data ?? []);
 }
 
 async function fetchAllCandidatesFromSupabase(): Promise<
@@ -323,12 +320,12 @@ async function fetchCandidateFromSupabase(
   const candidate = mapCandidate(data as CandidateRow);
   if (!isPublicCandidateVisible(candidate)) return null;
   const claims = await fetchPublishedClaims([candidate.id]);
-  const voting_profile = await fetchVotingProfile(candidate.id);
+  const voting_profiles = await fetchVotingProfiles(candidate.id);
 
   return applyPublicCandidateWithClaimsOverrides({
     ...candidate,
     claims,
-    voting_profile,
+    voting_profiles,
   });
 }
 
@@ -386,7 +383,7 @@ function mergeSupabaseEditorialData(supabaseData: CandidateWithClaims[]): Candid
     return applyPublicCandidateWithClaimsOverrides({
       ...snapshotCandidate,
       claims: remoteCandidate?.claims ?? onlyPublished(snapshotCandidate.claims),
-      voting_profile: remoteCandidate?.voting_profile ?? null,
+      voting_profiles: remoteCandidate?.voting_profiles ?? [],
     });
   });
 }
