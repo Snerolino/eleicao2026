@@ -319,7 +319,7 @@ export async function fetchAllCandidates(): Promise<CandidateWithClaims[]> {
   try {
     const supabaseData = await fetchAllCandidatesFromSupabase();
     if (supabaseData.length > 0) {
-      if (!lastClaimsFetchDegraded && isSupabaseSnapshotStale(supabaseData.length)) {
+      if (isSupabaseSnapshotStale(supabaseData.length)) {
         lastCandidatesFetchFromSnapshot = true;
         lastCandidatesFetchDiagnostic = `Snapshot oficial mais completo que Supabase (${PUBLIC_CANDIDATES.length}/${supabaseData.length}).`;
         console.warn(lastCandidatesFetchDiagnostic);

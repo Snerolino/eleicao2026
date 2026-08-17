@@ -36,4 +36,14 @@ describe('SiteNavigation', () => {
     expect(screen.queryByRole('link', { name: /^admin$/i })).not.toBeInTheDocument();
     expect(screen.queryByRole('link', { name: /administração/i })).not.toBeInTheDocument();
   });
+
+  it('mantém navegação e controles no masthead editorial', () => {
+    renderWithRouter(<SiteHeader />);
+
+    expect(screen.getByText('Eleições 2026 · Rio Grande do Sul')).toBeInTheDocument();
+    expect(screen.getByText('Fonte, data e confiança em cada informação')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /transparência eleitoral rs — página inicial/i })).toBeInTheDocument();
+    expect(screen.getByRole('navigation', { name: /navegação principal/i })).toBeInTheDocument();
+    expect(screen.getByRole('switch', { name: /ativar modo escuro/i })).toBeInTheDocument();
+  });
 });

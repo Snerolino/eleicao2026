@@ -1,8 +1,19 @@
 import { spawn } from 'node:child_process';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { setTimeout as delay } from 'node:timers/promises';
 import { chromium } from 'playwright';
 import { loadPublicCandidateSnapshot } from './public-candidate-snapshot.mjs';
+
+function loadPublicCandidateOverrides() {
+  try {
+    const overrides = JSON.parse(readFileSync(resolve('data/public-candidate-overrides.json'), 'utf8'));
+    return new Set((overrides.excluded_tse_candidate_ids ?? []).map(String));
+  } catch {
+    return new Set();
+  }
+}
 
 const DEFAULT_URL = 'http://127.0.0.1:4173/';
 const MANIFEST_PATH = 'manifest.webmanifest';
@@ -85,6 +96,7 @@ export async function assertOfflineRender(offlineBody, serviceWorkerReady) {
   }
   if (
     !normalizedBody.includes('Portal Transparência Eleitoral RS') &&
+    !normalizedBody.includes('Transparência Eleitoral RS') &&
     !normalizedBody.includes('Candidatos') &&
     !normalizedBody.includes('offline')
   ) {
@@ -163,7 +175,9 @@ async function main() {
   const expectedMinCount = Number(
     getArg('--expected-min-count') ?? process.env.PUBLIC_CANDIDATES_MIN_COUNT ?? 69,
   );
-  const snapshotCandidates = loadPublicCandidateSnapshot({ minCount: expectedMinCount });
+  const excludedTseIds = loadPublicCandidateOverrides();
+  const snapshotCandidates = loadPublicCandidateSnapshot({ minCount: expectedMinCount })
+    .filter((candidate) => !excludedTseIds.has(String(candidate.tse_candidate_id)));
   const snapshotCount = snapshotCandidates.length;
   const [firstSnapshotCandidate] = snapshotCandidates;
   const expectedCount = Math.max(expectedMinCount, snapshotCount);

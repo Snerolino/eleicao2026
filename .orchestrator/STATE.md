@@ -1,13 +1,24 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-15 07:35 -03
-Status: `F3_INICIADA_ELECTION_RESULTS_PROFILE_CLAIMS_246`
+Atualizado: 2026-08-17 -03
+Status: `F4_ALRS_TRANSPARENCIA_REDESIGN_LOCAL`
+
+## Checkpoint local — importer ALRS + refinamento editorial (2026-08-17)
+
+- Worktree local, sem commit e sem qualquer acesso/mutação Supabase ou deploy.
+- Importer `scripts/import-alrs-votes.mjs` criado como dry-run estrito: captura
+  `data-item`, preserva HTML/SHA-256, exige catálogo ALRS→TSE e registra match
+  ausente como pendência sem gerar voto.
+- `SiteHeader`, `CandidateCard` e `CandidateSearch` receberam o primeiro bloco
+  incremental do refinamento editorial, sem mudar dados nem estrutura de claims.
+- Node 24.19.0: doctor smoke 54 OK, 2 WARN, 0 FAIL; `tsc`, schema,
+  `data:check`, build e suíte completa 302/302 verdes.
 
 ## Fase 3 (iniciada 2026-08-15)
 - Schema: migration `20260815030000_candidate_profiles_and_election_results.sql` aplicada (db push) → tabelas `election_results`, `candidate_profiles` no remote ✅
 - ETL `scripts/import-candidate-profiles.mjs`: 246 claims `pending_review` aplicados (49 bens declarados + 197 redes sociais) via service_role idempotente (dedupeAndInsert). Visible pra editors; anon vê só 281 published ✅
 - Dados originais: bem_candidato (188 rows/49 candidatos), rede_social (197 URLs/69 candidatos), deepseek_json (22 perfis profundos) — do mirror `../dataset2026/`
-- ⚠️ votos/resultados: ainda NÃO publicados pelo TSE (eleição outubro). Tabela `election_results` preparada; ETL `import-election-results.mjs` pra criar pós-resultados
+- ⚠️ resultados eleitorais de outubro ainda não existem; a tabela `election_results` permanece preparada. O portal já possui 483 votos nominais legislativos factuais em `legislative_votes`.
 - 📊 cobertura perfil: 49/49 bens, 68/69 redes sociais mapeadas pro snapshot (1 social SQ_CANDIDATO não no snapshot — fora do array)
 - Drift: `claims.content_hash` NOT unique no remote (local tem constraint; ETL usa lookup prévio — não bloqueia)
 
@@ -62,20 +73,20 @@ Status: `F3_INICIADA_ELECTION_RESULTS_PROFILE_CLAIMS_246`
 - **Scrape pós-inscrição (2026-08-15)**: `consulta_cand_2026.zip` + `foto_cand2026_RS_div.zip` baixados do TSE oficial. Snapshot: **1002 candidaturas** (era 938). Novos: gov 6 (+1), vice-gov 6 (+1), dep fed 434 (+59), dep est 520 (+3), outro 24, sen 12.
 - Fotos: 988/1002 oficiais TSE 2026; 14 sem foto (dep federais tardios faixa 2100025519xx, SOLIDARIEDADE/PRD — TSE não publicou, sem fabricar).
 - Selos oficiais: 1002/1002 com `photo_source_url` TSE 2026 no snapshot; 1000/1002 no Supabase (extra 210002533050 preservado sem fonte 2026 por decisão anterior).
-- Claims: 281 publicadas, 0 pendentes.
+- Claims: 2650 published, 33 `pending_review` não públicas, 0 published sem fonte.
 
 ## Dados públicos atuais
 
 - Fonte oficial TSE RS 2026 atualizada em **2026-08-15** via scrape pós-fim de inscrições.
 - Manifesto TSE: 1002 registros oficiais (RS).
-- Snapshot público: **1002 candidaturas** (era 938 no checkpoint 2026-08-12).
+- Snapshot público: **1003 candidaturas** (era 938 no checkpoint 2026-08-12).
 - Exclusão humana preservada: `FRANCISCO MARQUES NETO` e extras sem correspondência.
-- Fotos rastreáveis: **988/1002**.
+- Fotos rastreáveis: **988/1003**.
   - 984 matches exatos no ZIP oficial TSE 2026 por `SQ_CANDIDATO`.
   - 4 fallbacks conservadores de fonte oficial TSE 2024.
   - 14 sem match (dep federais tardios faixa 210002548xxx/5519xx, SOLIDARIEDADE/PRD — TSE não publicou).
-- Selos oficiais (fonte TSE 2026): **1002/1002 candidaturas** com `photo_source_url`.
-- Selo de versão pública: `0.2.{N}` (contador de commits / GITHUB_RUN_NUMBER no CI), exibido como "Versão 0.2.298" no canto superior direito do header (`/release.json`).
+- Selos oficiais (fonte TSE 2026): **1003/1003 candidaturas** com `photo_source_url`.
+- Selo de versão pública: `0.2.{N}` (contador de commits / GITHUB_RUN_NUMBER no CI), exibido no canto superior direito do header (`/release.json`).
   - `docs/qa/fotos-candidatos-fontes-oficiais.md`
   - `docs/qa/fotos-pendentes-2026-08-12.md`
   - `docs/qa/fotos-pendentes-2026-08-12.json`
@@ -123,7 +134,7 @@ Entregas concluídas e publicadas:
 - `npm run test`: verde.
 - `npx tsc --noEmit`: verde.
 - `node scripts/validate-impact-schema.mjs`: verde.
-- `npm run data:check`: verde, 938 candidaturas / 906 fotos.
+- `npm run data:check`: verde, 1003 candidaturas / 988 fotos oficiais.
 - `npm run build`: verde.
 - `npm run smoke:local`: verde, 938 cards.
 - `npm run smoke:preview -- --url https://rs.votopraquem.org`: verde.

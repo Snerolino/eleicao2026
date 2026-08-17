@@ -5,6 +5,7 @@ import { SourceReferenceBadge } from '@/components/sources/SourceReferenceBadge'
 import { CandidatePhoto } from './CandidatePhoto';
 import { sanitizeUrl } from '@/utils/sanitizeUrl';
 import { candidatePublicPath } from '@/utils/candidateIdentity';
+import { SOURCE_CATEGORY_COLOR } from '@/utils/sourceCategory';
 
 interface CandidateCardProps {
   candidate: CandidateWithClaims;
@@ -32,9 +33,14 @@ export const CandidateCard = memo(function CandidateCard({
 
   const sourceDoc = summary?.source_document ?? null;
   const hasSource = Boolean(sourceDoc);
+  const spineColor = SOURCE_CATEGORY_COLOR[sourceDoc?.source_category ?? 'outro'];
 
   return (
-    <article className="relative flex min-h-full flex-col overflow-hidden rounded-md border border-[var(--color-border-editorial)] bg-card transition-colors hover:border-[var(--color-institutional)] focus-within:border-[var(--color-institutional)] focus-within:ring-2 focus-within:ring-[var(--color-institutional)] focus-within:ring-offset-2 focus-within:ring-offset-[var(--color-paper)]">
+    <article
+      className="relative flex min-h-full flex-col overflow-hidden rounded-sm border border-l-4 border-[var(--color-border-editorial)] bg-card transition-colors hover:border-[var(--color-institutional)] focus-within:border-[var(--color-institutional)] focus-within:ring-2 focus-within:ring-[var(--color-institutional)] focus-within:ring-offset-2 focus-within:ring-offset-[var(--color-paper)]"
+      style={{ borderLeftColor: spineColor }}
+      data-source-category={sourceDoc?.source_category ?? 'outro'}
+    >
       <div className="flex gap-4 p-4">
         <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-sm bg-[var(--color-skeleton)]">
           <CandidatePhoto
@@ -87,18 +93,14 @@ export const CandidateCard = memo(function CandidateCard({
         </div>
       </div>
 
-      <div className="mt-auto border-t border-[var(--color-border-editorial)] px-4 py-3">
-        {summary && hasSource ? (
+      {summary && hasSource && (
+        <div className="mt-auto border-t border-[var(--color-border-editorial)] px-4 py-3">
           <SourceReferenceBadge
             document={sourceDoc}
             confidenceScore={summary.confidence_score}
           />
-        ) : (
-          <p className="text-xs italic text-[var(--color-muted-ink)]">
-            Sem dados públicos verificados.
-          </p>
-        )}
-      </div>
+        </div>
+      )}
     </article>
   );
 });

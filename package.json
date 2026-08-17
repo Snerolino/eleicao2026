@@ -24,6 +24,7 @@
     "test": "NODE_ENV=test vitest run",
     "test:watch": "NODE_ENV=test vitest",
     "impact:dryrun": "node scripts/import-legislative-dry-run.mjs",
+    "impact:alrs": "node scripts/import-alrs-votes.mjs",
     "impact:sql": "node scripts/import-legislative-dry-run.mjs --emit-sql",
     "impact:sources": "node scripts/build-legislative-source-catalog.mjs",
     "orch:setup": "bash scripts/orchestrator/setup-local.sh",

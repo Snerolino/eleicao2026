@@ -21,10 +21,10 @@ const candidate: CandidateWithClaims = {
   claims: [],
 };
 
-function renderCard() {
+function renderCard(value: CandidateWithClaims = candidate) {
   return render(
     <MemoryRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
-      <CandidateCard candidate={candidate} />
+      <CandidateCard candidate={value} />
     </MemoryRouter>,
   );
 }
@@ -56,13 +56,40 @@ describe('CandidateCard acessibilidade/performance', () => {
     expect(container).toHaveTextContent(/fonte/i);
   });
 
-  it('não acusa "Outra fonte / Não confirmado" quando não há dados públicos verificados', () => {
-    renderCard();
+  it('não inventa rodapé ou mensagem editorial quando não há claim publicada', () => {
+    const { container } = renderCard();
 
-    // Candidato sem claims não deve exibir badge que pareça dado real.
     expect(screen.queryByText(/não confirmado/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/outra fonte/i)).not.toBeInTheDocument();
-    // Deve mostrar estado honesto de ausência de dados públicos verificados.
-    expect(screen.getByText(/sem dados públicos verificados/i)).toBeInTheDocument();
+    expect(screen.queryByText(/sem dados públicos verificados/i)).not.toBeInTheDocument();
+    expect(container.querySelector('article')).toHaveAttribute('data-source-category', 'outro');
+    expect(container.querySelector('article')).toHaveStyle({ borderLeftColor: 'var(--color-unverified)' });
+  });
+
+  it('usa a categoria da fonte publicada como lombada editorial', () => {
+    const withPressClaim: CandidateWithClaims = {
+      ...candidate,
+      claims: [{
+        id: 'claim-1',
+        candidate_id: candidate.id,
+        category: 'summary',
+        content: 'Resumo publicado com fonte de imprensa.',
+        confidence_score: 4,
+        status: 'published',
+        source_document_id: 'source-1',
+        source_document: {
+          id: 'source-1',
+          source_name: 'Veículo fixture',
+          source_category: 'imprensa',
+          url: 'https://example.com/fonte',
+          fetched_at: '2026-08-17T00:00:00Z',
+        },
+      }],
+    };
+    const { container } = renderCard(withPressClaim);
+
+    expect(container.querySelector('article')).toHaveAttribute('data-source-category', 'imprensa');
+    expect(container.querySelector('article')).toHaveStyle({ borderLeftColor: 'var(--color-press)' });
+    expect(screen.getByText(/resumo publicado/i)).toBeInTheDocument();
   });
 });

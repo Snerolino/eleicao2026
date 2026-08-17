@@ -4,55 +4,70 @@ import { VersionBadge } from './VersionBadge';
 
 function linkClass({ isActive }: { isActive: boolean }) {
   return [
-    'font-mono text-xs uppercase tracking-wider underline-offset-4 hover:underline rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-institutional)]',
+    'border-b-2 border-transparent pb-1 font-mono text-[0.68rem] uppercase tracking-[0.12em] underline-offset-4 hover:border-[var(--color-ink)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-institutional)]',
     isActive
-      ? 'font-semibold text-[var(--color-institutional)] underline'
+      ? 'border-[var(--color-institutional)] font-semibold text-[var(--color-institutional)]'
       : 'text-[var(--color-ink)]'
   ].join(' ');
 }
 
 export function SiteHeader() {
   return (
-    <header className="border-b border-[var(--color-border-editorial)] bg-[var(--color-paper)]">
-      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-6 sm:flex-row sm:items-end sm:justify-between">
-        <div>
+    <header className="border-b-[3px] border-double border-[var(--color-ink)] bg-[var(--color-paper)]">
+      <div className="mx-auto max-w-6xl px-4 pb-4 pt-5 sm:pt-7">
+        <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 border-b border-[var(--color-border-editorial)] pb-3 font-mono text-[0.62rem] uppercase tracking-[0.14em] text-[var(--color-muted-ink)]">
+          <span>Eleições 2026 · Rio Grande do Sul</span>
+          <span>Fonte, data e confiança em cada informação</span>
+        </div>
+
+        <div className="mt-4 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <NavLink
             to="/"
-            className="block text-2xl leading-tight sm:text-3xl rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-institutional)]"
+            aria-label="Transparência Eleitoral RS — página inicial"
+            className="flex max-w-3xl items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-institutional)]"
           >
-            Portal Transparência Eleitoral{' '}
-            <span className="text-[var(--color-institutional)]">
-              RS
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 64 64"
+              className="h-11 w-11 shrink-0"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="64" height="64" rx="2" fill="var(--color-institutional)" />
+              <path d="M18 16h28v6H35v27h-6V22H18z" fill="var(--color-paper)" />
+              <circle cx="46" cy="45" r="6" fill="var(--color-factcheck)" />
+            </svg>
+            <span>
+              <span className="block font-[family-name:var(--font-display)] text-2xl font-semibold leading-none tracking-tight sm:text-[2rem]">
+                Transparência Eleitoral{' '}
+                <span className="text-[var(--color-institutional)]">RS</span>
+              </span>
+              <span className="mt-1.5 block max-w-2xl font-mono text-[0.68rem] leading-relaxed text-[var(--color-muted-ink)]">
+                Dossiê público de candidatos — cada dado com fonte, data de coleta e confiança verificáveis.
+              </span>
             </span>
           </NavLink>
 
-          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[var(--color-muted-ink)]">
-            Consulta pública a candidatos das eleições de 2026 no
-            Rio Grande do Sul. Cada informação mostra sua fonte,
-            data de coleta e nível de confiança.
-          </p>
-        </div>
-
-        <nav
-          aria-label="Navegação principal"
-          className="flex items-center gap-5"
-        >
-          <NavLink to="/" end className={linkClass}>
-            Candidatos
-          </NavLink>
-          <NavLink to="/comparar" className={linkClass}>
-            Comparar
-          </NavLink>
-          <NavLink to="/metodologia" className={linkClass}>
-            Metodologia
-          </NavLink>
-          <span className="ml-2">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
+            <nav
+              aria-label="Navegação principal"
+              className="flex items-center gap-4 sm:gap-5"
+            >
+              <NavLink to="/" end className={linkClass}>
+                Candidatos
+              </NavLink>
+              <NavLink to="/comparar" className={linkClass}>
+                Comparar
+              </NavLink>
+              <NavLink to="/metodologia" className={linkClass}>
+                Metodologia
+              </NavLink>
+            </nav>
             <ThemeToggle />
-          </span>
-          <span className="ml-3 flex items-center">
-            <VersionBadge />
-          </span>
-        </nav>
+            <span className="flex items-center">
+              <VersionBadge />
+            </span>
+          </div>
+        </div>
       </div>
     </header>
   );
