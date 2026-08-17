@@ -3,6 +3,23 @@
 Atualizado: 2026-08-17 -03
 Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 
+## Atualização de retomada — nova instrução Câmara (2026-08-17)
+
+- O `../dataset2026` adicionou o task packet `hermes-task-deputados-federais-comparacao-v1.md`.
+- A nova frente é `camara-deputados-federais-impact-comparison-v1`; `FED-0`
+  (auditoria/read-only) foi concluída nesta sessão, sem escrita remota.
+- O snapshot público atual foi revalidado localmente com 1.003 candidaturas,
+  incluindo 434 candidatos a deputado federal.
+- Consulta remota somente leitura confirmou: Câmara 3 eventos, 3 votos e 1 perfil;
+  total 1.264 proposições, 1.347 eventos, 3.936 votos e 14 perfis.
+- Cruzamento oficial conservador encontrou 23 correspondências exatas RS↔TSE e
+  411 identidades pendentes; piloto futuro: Fernanda Melchionna, Maria do Rosário,
+  Osmar Terra, Alceu Moreira e Afonso Hamm.
+- A auditoria encontrou riscos já previstos no packet: agregação de perfil por
+  candidato (em vez de candidato+casa), `maybeSingle()` no fetch e fonte ALRS
+  hardcoded no dossiê. FED-1 ainda não foi iniciado.
+- Documento: `docs/qa/camara-federal-adaptacao-auditoria.md`.
+
 ## Checkpoint mais recente — migração de sessão (2026-08-17)
 
 - Último commit: `85d7031` (`feat: exibir claims e perfil de votações no dossiê`).

@@ -81,6 +81,7 @@
 | [`qa/card-sem-summary-estado-honesto.md`](qa/card-sem-summary-estado-honesto.md) | Correção do badge enganoso em cards sem summary publicado |
 | [`qa/e0-cobertura-majoritarios.md`](qa/e0-cobertura-majoritarios.md) | Evidência do gate E0 dos majoritários |
 | [`qa/cobertura-editorial-2026-08-03.md`](qa/cobertura-editorial-2026-08-03.md) | Cobertura editorial atual por cargo/categoria |
+| [`qa/camara-federal-adaptacao-auditoria.md`](qa/camara-federal-adaptacao-auditoria.md) | Auditoria FED-0 da nova instrução para deputados federais/Câmara |
 | [`qa/fotos-sem-match-2026-08-03.md`](qa/fotos-sem-match-2026-08-03.md) | Distribuição dos candidatos sem foto e caso ambíguo |
 
 ## Release
