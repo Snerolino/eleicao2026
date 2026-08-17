@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "methodology_version": "1.0.0",
+  "severity": 2,
+  "structural_type": "budgetary",
+  "assessments": [
+    {
+      "group": "pessoas_com_deficiencia",
+      "impact_direction": "unclear",
+      "defending_vote": null,
+      "rationale": "O texto oficial trata do FUST e pode afetar conectividade relevante para acessibilidade e inclusão digital, mas não segmenta explicitamente pessoas com deficiência; a direção permanece unclear até revisão humana específica.",
+      "confidence": 0.55,
+      "sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2580259",
+        "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3170169",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2580259-24/votos"
+      ]
+    }
+  ],
+  "review_status": "pending_review"
+}

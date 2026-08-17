@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "camara_impact_review",
+  "review_status": "pending_review",
+  "remote_apply": false,
+  "public_approval": false,
+  "matrix_file": "plp-230-2025-sbt-1-pending-review.json",
+  "proposition": {
+    "external_id": "camara-proposicao-2580259-plp",
+    "voting_event_id": "camara-votacao-2580259-24",
+    "sources": [
+      "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2580259",
+      "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3170169",
+      "https://dadosabertos.camara.leg.br/api/v2/votacoes/2580259-24/votos"
+    ]
+  },
+  "candidates": [
+    {
+      "camara_deputado_id": 204407,
+      "camara_name": "Fernanda Melchionna",
+      "candidate_id": "2b0a1506-b39f-5518-bb73-9e1f773cc7a0",
+      "tse_candidate_id": "210002533902",
+      "factual_vote_count": 1
+    },
+    {
+      "camara_deputado_id": 74398,
+      "camara_name": "Maria do Rosário",
+      "candidate_id": "26a5d598-b270-5cde-9072-76c48eda6cad",
+      "tse_candidate_id": "210002534604",
+      "factual_vote_count": 1
+    },
+    {
+      "camara_deputado_id": 136811,
+      "camara_name": "Afonso Hamm",
+      "candidate_id": "bc8db953-a639-5f00-8e9e-8d36687e246b",
+      "tse_candidate_id": "210002537712",
+      "factual_vote_count": 1
+    },
+    {
+      "camara_deputado_id": 73692,
+      "camara_name": "Osmar Terra",
+      "candidate_id": "13c2caaf-4383-50ac-943c-224077c5887f",
+      "tse_candidate_id": "210002534668",
+      "factual_vote_count": 1
+    }
+  ],
+  "regression_fixture": {
+    "name": "Marcel van Hattem",
+    "camara_deputado_id": 156190,
+    "status": "regression_fixture_identity_pending"
+  },
+  "safeguards": [
+    "matriz não aprovada",
+    "matriz não carregada automaticamente pela UI pública",
+    "votos factuais não são convertidos em alinhamento sem revisão",
+    "defending_vote null porque a direção é unclear"
+  ]
+}

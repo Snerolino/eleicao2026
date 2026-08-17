@@ -76,6 +76,16 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - QA: `docs/qa/fed5-camara-pilot-2026-08-17.md`.
 - Próximo arco: FED-6 — matrizes `pending_review`, nunca publicação automática.
 
+## Atualização FED-6 — pacote de impacto `pending_review` (2026-08-17)
+
+- FED-6 concluída como pacote de revisão, sem aprovação/publicação.
+- Matriz do PLP 230/2025/SBT-1: `unclear`, `defending_vote=null`, confidence
+  0.55, fontes oficiais Câmara e nenhuma revisão registrada.
+- Manifesto liga 4 candidatos a 4 votos factuais, sem score ou alinhamento.
+- `public_approval=false`, `remote_apply=false`; nenhum RPC ou escrita remota.
+- QA: `docs/qa/fed6-camara-impact-pending-review-2026-08-17.md`.
+- Próximo gate: revisão humana editorial antes de qualquer aprovação.
+
 ## Checkpoint mais recente — migração de sessão (2026-08-17)
 
 - Último commit: `85d7031` (`feat: exibir claims e perfil de votações no dossiê`).
