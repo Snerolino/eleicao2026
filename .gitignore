@@ -11,6 +11,7 @@ coverage/
 .DS_Store
 .worktrees/
 data/tse-archive/
+data/legislative-import/camara/collector-pilot/*.raw.json
 .refs-fase0/
 
 # Build cache (TypeScript incremental)

@@ -54,6 +54,17 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - QA: `docs/qa/fed3-camara-candidate-catalog-2026-08-17.md`.
 - Próximo arco: FED-4 — coletor oficial da Câmara em piloto/dry-run.
 
+## Atualização FED-4 — coletor oficial Câmara (2026-08-17)
+
+- FED-4 concluída no gate de piloto/dry-run; coletor somente leitura criado.
+- Evento `2580259-24`: 425 registros brutos, nominal individualizado, 29 votos
+  normalizados no recorte RS, 1 registro não normalizável.
+- Envelope factual validado pelo importer existente: 1 proposição, 1 versão,
+  1 evento e 29 votos; nenhum campo de impacto/alinhamento.
+- Bruto fica local e ignorado pelo Git; manifesto e envelope são versionados.
+- QA: `docs/qa/fed4-camara-collector-2026-08-17.md`.
+- Próximo arco: FED-5 — lote factual piloto de 3–5 candidatos.
+
 ## Checkpoint mais recente — migração de sessão (2026-08-17)
 
 - Último commit: `85d7031` (`feat: exibir claims e perfil de votações no dossiê`).

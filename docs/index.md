@@ -85,6 +85,7 @@
 | [`qa/fed1-multi-house-voting-profiles-2026-08-17.md`](qa/fed1-multi-house-voting-profiles-2026-08-17.md) | Fechamento QA da FED-1: perfis multi-house |
 | [`qa/fed2-factual-vs-impact-2026-08-17.md`](qa/fed2-factual-vs-impact-2026-08-17.md) | Fechamento QA da FED-2: fato legislativo separado de impacto |
 | [`qa/fed3-camara-candidate-catalog-2026-08-17.md`](qa/fed3-camara-candidate-catalog-2026-08-17.md) | Fechamento QA da FED-3: catálogo Câmara ↔ candidato TSE |
+| [`qa/fed4-camara-collector-2026-08-17.md`](qa/fed4-camara-collector-2026-08-17.md) | Fechamento QA da FED-4: coletor oficial Câmara em dry-run |
 | [`qa/fotos-sem-match-2026-08-03.md`](qa/fotos-sem-match-2026-08-03.md) | Distribuição dos candidatos sem foto e caso ambíguo |
 
 ## Release
