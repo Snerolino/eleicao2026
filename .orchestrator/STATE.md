@@ -43,6 +43,17 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - QA: `docs/qa/fed2-factual-vs-impact-2026-08-17.md`.
 - Próximo arco: FED-3 — catálogo Câmara ↔ candidato TSE.
 
+## Atualização FED-3 — catálogo Câmara ↔ candidato TSE (2026-08-17)
+
+- FED-3 concluída para o catálogo institucional determinístico.
+- API oficial retornou 513 deputados; o snapshot federal tem 434 candidaturas.
+- Catálogo publicado com 22 correspondências `official_name_exact` e 412
+  entradas `identity_pending`.
+- Pendências não foram tratadas como ausência de mandato; históricos exigem
+  consulta individual/histórica antes de vínculo.
+- QA: `docs/qa/fed3-camara-candidate-catalog-2026-08-17.md`.
+- Próximo arco: FED-4 — coletor oficial da Câmara em piloto/dry-run.
+
 ## Checkpoint mais recente — migração de sessão (2026-08-17)
 
 - Último commit: `85d7031` (`feat: exibir claims e perfil de votações no dossiê`).
