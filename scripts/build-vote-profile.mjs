@@ -44,16 +44,27 @@ const apply = process.argv.includes('--apply');
 const sb = createClient(url, key, { auth: { persist: false } });
 
 const DIRECTION = { sim: 1, nao: -1, abstencao: 0, ausente: 0, obstrucao: 0 };
+const PAGE_SIZE = 1000;
+
+async function fetchAllVotes() {
+  const rows = [];
+  for (let from = 0; ; from += PAGE_SIZE) {
+    const { data, error } = await sb
+      .from('legislative_votes')
+      .select('id, candidate_id, voting_event_id, value, voting_events(house)')
+      .not('candidate_id', 'is', null)
+      .range(from, from + PAGE_SIZE - 1);
+    if (error) throw error;
+    rows.push(...(data ?? []));
+    if ((data ?? []).length < PAGE_SIZE) return rows;
+  }
+}
 
 async function main() {
   console.log(`build-vote-profile: ${apply ? 'APLICAR' : 'DRY-RUN'}`);
 
   // 1) Ler todos os votos factuais com candidato (house vem de voting_events)
-  const { data: votes, error } = await sb
-    .from('legislative_votes')
-    .select('id, candidate_id, voting_event_id, value, voting_events(house)')
-    .not('candidate_id', 'is', null);
-  if (error) throw error;
+  const votes = await fetchAllVotes();
   console.log(`Votos factuais com candidato: ${votes?.length ?? 0}`);
 
   if (!votes || votes.length === 0) {

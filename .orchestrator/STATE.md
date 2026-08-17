@@ -1,11 +1,11 @@
 # STATE — eleicao2026
 
 Atualizado: 2026-08-17 -03
-Status: `F4_ALRS_TRANSPARENCIA_REDESIGN_LOCAL`
+Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS`
 
-## Checkpoint local — importer ALRS + refinamento editorial (2026-08-17)
+## Checkpoint remoto — votos nominais ALRS + refinamento editorial (2026-08-17)
 
-- Worktree local, sem commit e sem qualquer acesso/mutação Supabase ou deploy.
+- Redesign publicado em `a4d1025`; pipeline factual ALRS aplicado no Supabase remoto.
 - Importer `scripts/import-alrs-votes.mjs` criado como dry-run estrito: captura
   `data-item`, preserva HTML/SHA-256, exige catálogo ALRS→TSE e registra match
   ausente como pendência sem gerar voto.
@@ -13,12 +13,18 @@ Status: `F4_ALRS_TRANSPARENCIA_REDESIGN_LOCAL`
   incremental do refinamento editorial, sem mudar dados nem estrutura de claims.
 - Node 24.19.0: doctor smoke 54 OK, 2 WARN, 0 FAIL; `tsc`, schema,
   `data:check`, build e suíte completa 302/302 verdes.
+- Portal ALRS respondeu HTTP 200 em 42/42 consultas sequenciais para 7 IDs
+  catalogados por correspondência exata; 3456 `data-item`, 3453 votos, 0
+  pendências e 3 duplicidades idempotentes.
+- Supabase remoto: 3936 `legislative_votes`, 1264 proposições, 1264 versões,
+  1347 eventos e 93 fontes; segunda passagem do importer inseriu 0 linhas.
+- Perfis materializados com paginação completa: 3481 itens de índice e 14 perfis.
 
 ## Fase 3 (iniciada 2026-08-15)
 - Schema: migration `20260815030000_candidate_profiles_and_election_results.sql` aplicada (db push) → tabelas `election_results`, `candidate_profiles` no remote ✅
 - ETL `scripts/import-candidate-profiles.mjs`: 246 claims `pending_review` aplicados (49 bens declarados + 197 redes sociais) via service_role idempotente (dedupeAndInsert). Visible pra editors; anon vê só 281 published ✅
 - Dados originais: bem_candidato (188 rows/49 candidatos), rede_social (197 URLs/69 candidatos), deepseek_json (22 perfis profundos) — do mirror `../dataset2026/`
-- ⚠️ resultados eleitorais de outubro ainda não existem; a tabela `election_results` permanece preparada. O portal já possui 483 votos nominais legislativos factuais em `legislative_votes`.
+- ⚠️ resultados eleitorais de outubro ainda não existem; a tabela `election_results` permanece preparada. O portal possui 3936 votos nominais legislativos factuais em `legislative_votes`.
 - 📊 cobertura perfil: 49/49 bens, 68/69 redes sociais mapeadas pro snapshot (1 social SQ_CANDIDATO não no snapshot — fora do array)
 - Drift: `claims.content_hash` NOT unique no remote (local tem constraint; ETL usa lookup prévio — não bloqueia)
 
@@ -67,7 +73,7 @@ Status: `F4_ALRS_TRANSPARENCIA_REDESIGN_LOCAL`
 
 - Repositório: `Snerolino/eleicao2026`.
 - Branch de produção: `main`.
-- HEAD/produção atual: `a78e00e test: ajustar snapshot p/ fonte oficial TSE 2026 unificada (erani melo escapou)`.
+- HEAD local: `a261771 chore: auditar claims coletadas antes da publicação`; produção funcional: `a4d1025`.
 - Deploy desta sessão: wrangler pendente + push via fine-grained PAT (rede sandbox bloqueou github.com no shell; usuário fez push manual).
 - Página `/impacto` publicada: exibe matriz `plp-230-2025-sbt-1-approved.json`.
 - **Scrape pós-inscrição (2026-08-15)**: `consulta_cand_2026.zip` + `foto_cand2026_RS_div.zip` baixados do TSE oficial. Snapshot: **1002 candidaturas** (era 938). Novos: gov 6 (+1), vice-gov 6 (+1), dep fed 434 (+59), dep est 520 (+3), outro 24, sen 12.

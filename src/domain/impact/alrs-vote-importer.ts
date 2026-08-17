@@ -123,7 +123,9 @@ function decodeHtmlAttribute(value: string): string {
     .replace(/&apos;|&#39;|&#x27;/gi, "'")
     .replace(/&lt;|&#60;|&#x3c;/gi, '<')
     .replace(/&gt;|&#62;|&#x3e;/gi, '>')
-    .replace(/&amp;|&#38;|&#x26;/gi, '&');
+    .replace(/&amp;|&#38;|&#x26;/gi, '&')
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex: string) => String.fromCodePoint(Number.parseInt(hex, 16)))
+    .replace(/&#([0-9]+);/g, (_, decimal: string) => String.fromCodePoint(Number.parseInt(decimal, 10)));
 }
 
 function requiredScalar(item: Record<string, unknown>, field: RequiredItemField, index: number): string {

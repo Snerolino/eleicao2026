@@ -1,9 +1,15 @@
 {
   "schema_version": "1.0.0",
+  "source": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario",
+  "matching_policy": "exact_full_name_to_public_snapshot_only",
   "entries": [
-    {
-      "alrs_solicitante_id": "999999",
-      "tse_candidate_id": "210002533936"
-    }
+    { "alrs_solicitante_id": "999999", "alrs_full_name": "Fixture — Adolfo Brito", "tse_candidate_id": "210002533936" },
+    { "alrs_solicitante_id": "2144", "alrs_full_name": "Adão Pretto Filho", "tse_candidate_id": "210002534036" },
+    { "alrs_solicitante_id": "2110", "alrs_full_name": "Dirceu Franciscon", "tse_candidate_id": "210002537886" },
+    { "alrs_solicitante_id": "2045", "alrs_full_name": "Ernani Polo", "tse_candidate_id": "210002542891" },
+    { "alrs_solicitante_id": "28", "alrs_full_name": "Gerson Burmann", "tse_candidate_id": "210002539809" },
+    { "alrs_solicitante_id": "1505", "alrs_full_name": "Gilmar Sossella", "tse_candidate_id": "210002539803" },
+    { "alrs_solicitante_id": "2103", "alrs_full_name": "Juvir Costella", "tse_candidate_id": "210002541510" },
+    { "alrs_solicitante_id": "2034", "alrs_full_name": "Ronaldo Santini", "tse_candidate_id": "210002534313" }
   ]
 }

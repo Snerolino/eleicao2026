@@ -101,15 +101,21 @@ Fonte de direção: `dataset2026/refinamento-visual.html`.
 - build Vite/PWA: OK;
 - `git diff --check`: OK.
 
-## Limite desta fase
+## Coleta e publicação do lote ALRS
 
-Nenhum voto ALRS foi aplicado no Supabase remoto. O próximo lote requer:
-
-1. catálogo oficial completo de IDs ALRS;
-2. coleta sequencial por parlamentar/ano com backoff;
-3. dry-run agregado e revisão de contagens;
-4. autorização separada para escrita remota;
-5. reindexação de perfis após importação factual.
+- a página oficial expôs 55 IDs; somente 7 tiveram correspondência exata e
+  única no snapshot TSE e entraram no catálogo explícito;
+- 42 consultas sequenciais (7 parlamentares × 6 anos) retornaram HTTP 200;
+- 15 consultas sem `data-item` foram tratadas como anos sem registros;
+- 3456 `data-item` foram validados; 3453 votos planejados, 3 duplicidades e 0
+  pendências de correspondência;
+- foram aplicados 27 `source_references`, 1143 proposições, 1143 versões,
+  1150 eventos e 3453 votos individuais no Supabase;
+- segunda execução do writer: 0 fontes, 0 proposições, 0 versões, 0 eventos e
+  0 votos novos, comprovando idempotência;
+- perfis foram materializados com paginação: 3481 itens de índice e 14 perfis;
+- placares de bancada, nomes ambíguos e parlamentares sem match não foram
+  convertidos em votos.
 
 ## Auditoria de publicação dos blocos de claims
 
