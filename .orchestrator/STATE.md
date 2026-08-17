@@ -1,7 +1,19 @@
 # STATE — eleicao2026
 
 Atualizado: 2026-08-17 -03
-Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS`
+Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
+
+## Checkpoint mais recente — migração de sessão (2026-08-17)
+
+- Último commit: `85d7031` (`feat: exibir claims e perfil de votações no dossiê`).
+- Produção live: release `0.2.275`, SHA `85d7031`; CI/deploy `32014969028` verde.
+- Causa corrigida: fallback do snapshot descartava claims remotas; frontend não consultava `legislator_vote_profile`.
+- UI agora combina snapshot + claims remotas por `tse_candidate_id` e exibe perfil nominal no dossiê com fonte ALRS.
+- Verificação live real: Marcel van Hattem exibiu claims, 3 votos, 2 Sim, 1 Não e fonte ALRS.
+- Worktree deve permanecer limpa após versionar este handoff.
+- A pasta solicitada `../database2026` não existe; a fonte disponível consultada é `../dataset2026`.
+- Handoff completo: `docs/handoff/2026-08-17-migracao-sessao-plano-implementacao.md`.
+- Próximo arco: ALRS-0/ALRS-1/ALRS-2 e UI-1 conforme o planejamento externo; relatórios ALRS continuam staging, não fonte canônica automática.
 
 ## Checkpoint remoto — votos nominais ALRS + refinamento editorial (2026-08-17)
 
