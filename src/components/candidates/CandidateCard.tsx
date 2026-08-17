@@ -93,7 +93,11 @@ export const CandidateCard = memo(function CandidateCard({
             document={sourceDoc}
             confidenceScore={summary.confidence_score}
           />
-        ) : null}
+        ) : (
+          <p className="font-mono text-[0.65rem] uppercase tracking-wider text-[var(--color-muted-ink)]">
+            Sem dados públicos verificados
+          </p>
+        )}
       </div>
     </article>
   );

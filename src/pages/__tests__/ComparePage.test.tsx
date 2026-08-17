@@ -59,7 +59,7 @@ const candidates = [
 
 function LocationProbe() {
   const location = useLocation();
-  return <output aria-label="url atual">{`${location.pathname}${location.search}`}</output>;
+  return <div aria-label="url atual">{decodeURIComponent(location.pathname + location.search)}</div>;
 }
 
 function renderCompare(initialEntry = '/comparar') {
