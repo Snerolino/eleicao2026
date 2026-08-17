@@ -31,6 +31,18 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - QA: `docs/qa/fed1-multi-house-voting-profiles-2026-08-17.md`.
 - FED-2 continua pendente para separar saldo nominal de impacto.
 
+## Atualização FED-2 — fato versus impacto (2026-08-17)
+
+- FED-2 concluída: o domínio agora expõe `nominal_balance` separado de
+  avaliação de impacto; a coluna remota legada `profile_score` permanece apenas
+  como compatibilidade de leitura.
+- `interpretFactualVote` exige assessment para derivar alinhamento; sem
+  assessment o voto permanece factual e `nao_avaliado`.
+- Salvaguardas para `defending_vote=null`, `unclear`, ausência e `sem_dado`
+  cobertas por testes.
+- QA: `docs/qa/fed2-factual-vs-impact-2026-08-17.md`.
+- Próximo arco: FED-3 — catálogo Câmara ↔ candidato TSE.
+
 ## Checkpoint mais recente — migração de sessão (2026-08-17)
 
 - Último commit: `85d7031` (`feat: exibir claims e perfil de votações no dossiê`).

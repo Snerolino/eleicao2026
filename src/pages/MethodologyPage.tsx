@@ -128,6 +128,26 @@ function CategoriesSection() {
   );
 }
 
+function LegislativeSection() {
+  return (
+    <section>
+      <h2 className="text-2xl">Voto factual não é impacto</h2>
+      <p className="mt-2">
+        O portal mantém duas camadas separadas. A primeira registra o voto nominal
+        oficial — <strong>sim</strong>, <strong>não</strong>, abstenção, ausência ou
+        obstrução — por casa legislativa. O <strong>saldo nominal</strong> resume apenas
+        essa distribuição e não expressa posição política.
+      </p>
+      <p className="mt-3">
+        A segunda camada é a Matriz de Impacto. Ela só pode calcular alinhamento
+        quando existe uma avaliação editorial publicada, com direção do impacto,
+        voto de defesa, justificativa e fontes. Votos sem avaliação permanecem
+        factuais e não avaliados; direção <em>unclear</em> permanece não avaliável.
+      </p>
+    </section>
+  );
+}
+
 function LevelsSection() {
   return (
     <section>
@@ -232,6 +252,7 @@ export function MethodologyPage() {
 
       <div className="mt-8 space-y-9 text-[0.98rem] leading-relaxed">
         <ScoreSection />
+        <LegislativeSection />
         <CategoriesSection />
         <LevelsSection />
         <DisclaimerSection />

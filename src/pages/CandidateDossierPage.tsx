@@ -155,7 +155,8 @@ export function CandidateDossierPage() {
                   </h2>
                   <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[var(--color-muted-ink)]">
                     {profile.total_votes} votos individuais localizados na {house.label}.
-                    O índice é descritivo: não transforma ausência em voto contrário.
+                    O saldo abaixo é apenas descritivo: não transforma ausência em voto contrário
+                    e não é uma avaliação de impacto político.
                   </p>
                 </div>
                 <div className="shrink-0 text-left sm:text-right">
@@ -163,7 +164,7 @@ export function CandidateDossierPage() {
                     saldo nominal
                   </span>
                   <strong className="mt-1 block font-mono text-2xl text-[var(--color-institutional)]">
-                    {profile.profile_score.toFixed(2)}
+                    {profile.nominal_balance.toFixed(2)}
                   </strong>
                 </div>
               </div>

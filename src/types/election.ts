@@ -76,7 +76,8 @@ export interface VotingProfile {
   votos_abstencao: number;
   votos_ausente: number;
   votos_obstrucao: number;
-  profile_score: number;
+  /** Saldo descritivo das escolhas nominais; não é score de impacto. */
+  nominal_balance: number;
 }
 
 export interface VotingHouseMetadata {

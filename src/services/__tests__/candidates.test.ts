@@ -261,7 +261,7 @@ describe('fetchPublishedClaims', () => {
 
 describe('fetchVotingProfiles', () => {
   it('retorna todos os perfis sem maybeSingle e preserva as casas', async () => {
-    const profiles = [
+    const rows = [
       {
         house: 'alrs',
         total_votes: 2,
@@ -283,13 +283,16 @@ describe('fetchVotingProfiles', () => {
         profile_score: 0.3333,
       },
     ];
-    const eq = vi.fn().mockResolvedValue({ data: profiles, error: null });
+    const eq = vi.fn().mockResolvedValue({ data: rows, error: null });
     supabaseMock.from.mockReturnValue({
       select: vi.fn().mockReturnValue({ eq }),
     });
 
     const { fetchVotingProfiles } = await import('../candidates');
-    await expect(fetchVotingProfiles('candidate-1')).resolves.toEqual(profiles);
+    await expect(fetchVotingProfiles('candidate-1')).resolves.toEqual([
+      { ...rows[0], nominal_balance: 0 },
+      { ...rows[1], nominal_balance: 0.3333 },
+    ]);
     expect(eq).toHaveBeenCalledWith('candidate_id', 'candidate-1');
   });
 });

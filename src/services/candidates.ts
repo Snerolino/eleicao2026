@@ -239,10 +239,11 @@ export async function fetchPublishedClaims(candidateIds: string[]): Promise<Clai
 
 export async function fetchVotingProfiles(candidateId: string): Promise<VotingProfile[]> {
   if (!supabase) return [];
+  type VotingProfileRow = Omit<VotingProfile, 'nominal_balance'> & { profile_score: number };
   const profileClient = supabase as unknown as {
     from: (table: string) => {
       select: (columns: string) => {
-        eq: (column: string, value: string) => Promise<{ data: VotingProfile[] | null; error: unknown }>;
+        eq: (column: string, value: string) => Promise<{ data: VotingProfileRow[] | null; error: unknown }>;
       };
     };
   };
@@ -250,7 +251,10 @@ export async function fetchVotingProfiles(candidateId: string): Promise<VotingPr
     .from('legislator_vote_profile')
     .select('house,total_votes,votos_sim,votos_nao,votos_abstencao,votos_ausente,votos_obstrucao,profile_score')
     .eq('candidate_id', candidateId);
-  return error ? [] : (data ?? []);
+  return error ? [] : (data ?? []).map((profile) => ({
+    ...profile,
+    nominal_balance: profile.profile_score,
+  }));
 }
 
 async function fetchAllCandidatesFromSupabase(): Promise<
