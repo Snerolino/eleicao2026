@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "country": "BR",
+  "state": "RS",
+  "election_year": 2026,
+  "propositions": [
+    {
+      "external_id": "camara-proposicao-2580259-plp",
+      "house": "camara",
+      "proposition_type": "plp",
+      "number": 230,
+      "year": 2025,
+      "title": "PLP 230",
+      "summary": "Altera a Lei Complementar nº 101, de 4 de maio de 2000, para vedar a limitação de empenho e movimentação financeira das despesas relativas ao Fundo de Universalização dos Serviços de Telecomunicações, e a Lei nº 9.998, de 17 de agosto de 2000, para os fins que especifica.",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2580259",
+      "versions": [
+        {
+          "version_key": "event-2580259-24",
+          "version_label": "Aprovado o Substitutivo ao Projeto de Lei Complementar nº 230, de 2025, adotado pela relatora da Comissão de Finanças e Tributação. Sim: 333; Não: 91; Total: 424.",
+          "text_hash": "sha256:b989bd0e5bf93fe811299164aae3808305673d571831c84ba561bf2ad6abdcb9",
+          "effective_from": "2026-08-12T22:48:20.000Z",
+          "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2580259",
+          "voting_events": [
+            {
+              "external_id": "camara-votacao-2580259-24",
+              "house": "camara",
+              "session_id": "82876",
+              "vote_round": "Votação em turno único.",
+              "occurred_at": "2026-08-12T22:48:20.000Z",
+              "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2580259-24"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "votes": [
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2580259-24",
+      "deputy_id": "camara-deputado-136811",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2580259-plp:event-2580259-24",
+      "value": "nao",
+      "recorded_at": "2026-08-12T22:40:06.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2580259-24/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2580259-24",
+      "deputy_id": "camara-deputado-74398",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2580259-plp:event-2580259-24",
+      "value": "sim",
+      "recorded_at": "2026-08-12T22:38:12.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2580259-24/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2580259-24",
+      "deputy_id": "camara-deputado-73692",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2580259-plp:event-2580259-24",
+      "value": "sim",
+      "recorded_at": "2026-08-12T22:37:10.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2580259-24/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2580259-24",
+      "deputy_id": "camara-deputado-204407",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2580259-plp:event-2580259-24",
+      "value": "nao",
+      "recorded_at": "2026-08-12T22:35:40.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2580259-24/votos"
+    }
+  ]
+}

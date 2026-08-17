@@ -65,6 +65,17 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - QA: `docs/qa/fed4-camara-collector-2026-08-17.md`.
 - Próximo arco: FED-5 — lote factual piloto de 3–5 candidatos.
 
+## Atualização FED-5 — lote factual piloto Câmara (2026-08-17)
+
+- FED-5 concluída em dry-run com quatro vínculos seguros: Fernanda Melchionna,
+  Maria do Rosário, Afonso Hamm e Osmar Terra.
+- Pacote: 1 proposição, 1 versão, 1 evento e 4 votos factuais.
+- Marcel van Hattem permanece somente como `regression_fixture_identity_pending`;
+  não foi transformado em vínculo TSE.
+- Nenhuma identidade pendente entrou no envelope seguro; nenhuma escrita remota.
+- QA: `docs/qa/fed5-camara-pilot-2026-08-17.md`.
+- Próximo arco: FED-6 — matrizes `pending_review`, nunca publicação automática.
+
 ## Checkpoint mais recente — migração de sessão (2026-08-17)
 
 - Último commit: `85d7031` (`feat: exibir claims e perfil de votações no dossiê`).

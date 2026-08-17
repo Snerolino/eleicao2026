@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "mode": "dry-run",
+  "source_envelope": "collector-pilot/2580259-24.json",
+  "selected_candidates": [
+    {
+      "camara_deputado_id": 204407,
+      "camara_name": "Fernanda Melchionna",
+      "candidate_id": "2b0a1506-b39f-5518-bb73-9e1f773cc7a0",
+      "tse_candidate_id": "210002533902",
+      "identity_status": "matched",
+      "match_method": "official_name_exact"
+    },
+    {
+      "camara_deputado_id": 74398,
+      "camara_name": "Maria do Rosário",
+      "candidate_id": "26a5d598-b270-5cde-9072-76c48eda6cad",
+      "tse_candidate_id": "210002534604",
+      "identity_status": "matched",
+      "match_method": "official_name_exact"
+    },
+    {
+      "camara_deputado_id": 136811,
+      "camara_name": "Afonso Hamm",
+      "candidate_id": "bc8db953-a639-5f00-8e9e-8d36687e246b",
+      "tse_candidate_id": "210002537712",
+      "identity_status": "matched",
+      "match_method": "official_name_exact"
+    },
+    {
+      "camara_deputado_id": 73692,
+      "camara_name": "Osmar Terra",
+      "candidate_id": "13c2caaf-4383-50ac-943c-224077c5887f",
+      "tse_candidate_id": "210002534668",
+      "identity_status": "matched",
+      "match_method": "official_name_exact"
+    }
+  ],
+  "regression_fixture": {
+    "name": "Marcel van Hattem",
+    "camara_deputado_id": 156190,
+    "status": "regression_fixture_identity_pending"
+  },
+  "counts": {
+    "selected_candidates": 4,
+    "safe_votes": 4,
+    "propositions": 1,
+    "versions": 1,
+    "events": 1
+  },
+  "excluded_identity_pending": 412,
+  "remote_apply": false
+}
