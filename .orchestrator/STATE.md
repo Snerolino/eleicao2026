@@ -112,6 +112,15 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - QA: `docs/qa/fed7b-camara-factual-apply-2026-08-17.md`.
 - Próximo gate: revisão editorial da matriz antes de qualquer aprovação.
 
+## Atualização FED-8 — idempotência e coleta 2580259-27 (2026-08-18)
+
+- Writer factual reexecutado: 0 novas linhas (idempotente).
+- Coleta 2580259-27 (Redação Final): votação simbólica, 0 votos individuais;
+  não gerou envelope. O coletor preservou o JSON bruto.
+- Remoto: 5 votos no evento, 5 candidatos distintos, 0 matrizes impacto.
+- QA: `docs/qa/fed8-camara-idempotency-2026-08-18.md`.
+- Próximo arco: FED-9 — ampliação do lote com mais eventos nominos.
+
 ## Checkpoint mais recente — migração de sessão (2026-08-17)
 
 - Último commit: `85d7031` (`feat: exibir claims e perfil de votações no dossiê`).
