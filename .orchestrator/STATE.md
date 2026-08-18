@@ -1,3 +1,14 @@
+# Tick contínuo — auditoria/aplicação de fontes históricas Câmara (2026-08-18)
+
+- Lock bounded adquirido e liberado; worktree limpa antes do chunk; nenhum writer concorrente.
+- Revalidação oficial read-only refez 7/7 GETs Câmara com HTTP 200 e coincidência exata de bytes/SHA-256 contra `historical-resolved-source-manifest.json`.
+- Catálogo remoto `source_references` foi consultado antes da escrita: 125 linhas, 7 URLs ausentes.
+- Primeira inserção falhou fechada por `source_references_source_category_check`; schema remoto aceita `oficial|imprensa|fact_check|outro`. Nenhuma linha foi inserida nessa tentativa.
+- Retry idempotente com `source_category=oficial` inseriu 7 fontes; releitura confirmou 7/7 presentes e 7/7 hashes exatos. Nenhuma proposição, versão, evento, voto, identidade, FK, matriz ou RPC foi alterado.
+- Artefatos: `.orchestrator/runtime/camara-historical-scout/catalog-audit-2026-08-18.json` e `source-apply-2026-08-18.json`.
+- QA: `docs/qa/lote-camara-historical-source-catalog-audit-2026-08-18.md`.
+- Próximo chunk: revalidar o envelope histórico contra as 7 referências resolvidas e preparar dry-run factual; manter os 4 `position=outro` e 8 identidades não elegíveis fail-closed.
+
 # Tick contínuo — FED-26 adaptador de contrato Câmara histórico (2026-08-18)
 
 - Lock bounded adquirido e liberado; worktree limpa no início; nenhum writer concorrente.
