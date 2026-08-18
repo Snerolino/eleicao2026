@@ -1,0 +1,15 @@
+{
+  "source": "https://dadosabertos.camara.leg.br/api/v2/deputados/73482/historico",
+  "official_openapi": "https://dadosabertos.camara.leg.br/api/v2/api-docs",
+  "retrieved_at_utc": "2026-08-18T16:21:41Z",
+  "status": "read_only_evidence",
+  "subject": {"camara_id": 73482, "name": "HENRIQUE FONTANA JÚNIOR", "uf": "RS"},
+  "evidence": {
+    "openapi_route": "/deputados/{id}/historico",
+    "openapi_summary": "Lista de mudanças no exercício parlamentar de um deputado",
+    "historico_successful_probe": {"http_status": 200, "bytes": 7634, "sha256": "e08beccf1b578c5929143268a8d4da814668447c3a55fb1066dad69514d574fb", "data_count": 14, "observed_legislaturas": [51, 52, 53, 54, 55, 56]},
+    "mandatos_externos_successful_probe": {"url": "https://dadosabertos.camara.leg.br/api/v2/deputados/73482/mandatosExternos", "http_status": 200, "bytes": 534, "sha256": "e319923ef9db9e0512532df8fee712a954a41763277d4ad527ed5fd00ff62b7a", "data_count": 2, "scope": "Vereador(a), Porto Alegre/RS, 1993-1999"}
+  },
+  "revalidation": {"historico": "blocked_dns_after_successful_probe", "legislaturas_54_55": "HTTP 200, endpoints provide only period metadata", "legislatura_56": "blocked_dns_timeout", "no_absence_inferred": true},
+  "decision": {"remote_write": false, "votes_created": 0, "identity_fk_created": 0, "position_outro_promoted": 0, "reason": "The route proves historical exercise data exists, but this chunk does not create or alter remote identity/vote records. Exact event-level reconciliation remains a separate gate."}
+}

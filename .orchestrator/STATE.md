@@ -1,3 +1,15 @@
+# Tick contínuo — rota histórica OpenAPI Câmara (2026-08-18)
+
+- Lock bounded adquirido e liberado; worktree estava limpa antes do chunk.
+- OpenAPI oficial da Câmara (`/api/v2/api-docs`) confirmou a rota `GET /deputados/{id}/historico`, descrita como histórico de mudanças no exercício parlamentar.
+- Probe oficial do perfil Câmara `73482` respondeu HTTP 200 com 14 itens históricos, incluindo legislaturas 51–56; hash `e08beccf1b578c5929143268a8d4da814668447c3a55fb1066dad69514d574fb` e 7634 bytes registrados.
+- `mandatosExternos` respondeu HTTP 200 com 2 mandatos de vereador em Porto Alegre/RS (1993–1999), sem ser usado como prova de voto federal.
+- Revalidação posterior teve falhas DNS/timeout intermitentes; nunca foi interpretada como ausência.
+- Nenhum voto, identidade, UUID, FK, source reference ou escrita remota foi criado. Os 4 casos `position=outro` seguem fail-closed.
+- Artefato: `data/legislative-import/camara/historical-historical-route-probe.json`.
+- QA: `docs/qa/lote-camara-historical-legislature-openapi-probe-2026-08-18.md`.
+- Próximo chunk: refazer a rota histórica com DNS estável e reconciliar somente intervalos/eventos nominais exatos.
+
 # Tick contínuo — rota estruturada de legislatura Câmara (2026-08-18)
 
 - Lock bounded adquirido e liberado; worktree estava limpa antes do chunk.
