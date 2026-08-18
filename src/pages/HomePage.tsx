@@ -241,7 +241,7 @@ export function HomePage() {
                 to="/comparar"
                 className="rounded-sm border border-[var(--color-border-editorial)] px-3 py-2 font-mono text-xs uppercase tracking-wider text-[var(--color-institutional)] hover:border-[var(--color-institutional)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-institutional)]"
               >
-                Comparar candidatos ↗
+                Comparar candidatos <span aria-hidden="true">↗</span>
               </Link>
             </div>
           </div>

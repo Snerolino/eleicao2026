@@ -59,7 +59,7 @@ export const CandidateCard = memo(function CandidateCard({
                 className="absolute bottom-1 right-1 z-10 rounded-sm bg-[var(--color-ink)]/85 px-1.5 py-1 font-mono text-[0.6rem] text-white"
                 aria-label={`Abrir fonte da foto de ${candidate.full_name}`}
               >
-                fonte ↗
+                fonte <span aria-hidden="true">↗</span>
               </a>
             ) : null;
           })()}
