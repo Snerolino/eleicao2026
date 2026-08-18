@@ -59,6 +59,9 @@ interface ClaimRow {
   published_at?: string | null;
 }
 
+type VotingProfileRow = Omit<VotingProfile, 'nominal_balance'> & { profile_score: number };
+type VotingProfileBatchRow = VotingProfileRow & { candidate_id: string };
+
 let lastClaimsFetchDegraded = false;
 let lastCandidatesFetchFromSnapshot = false;
 let lastCandidatesFetchDiagnostic: string | null = null;
@@ -239,7 +242,6 @@ export async function fetchPublishedClaims(candidateIds: string[]): Promise<Clai
 
 export async function fetchVotingProfiles(candidateId: string): Promise<VotingProfile[]> {
   if (!supabase) return [];
-  type VotingProfileRow = Omit<VotingProfile, 'nominal_balance'> & { profile_score: number };
   const profileClient = supabase as unknown as {
     from: (table: string) => {
       select: (columns: string) => {
@@ -255,6 +257,37 @@ export async function fetchVotingProfiles(candidateId: string): Promise<VotingPr
     ...profile,
     nominal_balance: profile.profile_score,
   }));
+}
+
+async function fetchVotingProfilesForCandidates(
+  candidateIds: string[],
+): Promise<Map<string, VotingProfile[]>> {
+  const profilesByCandidate = new Map<string, VotingProfile[]>();
+  if (!supabase || candidateIds.length === 0) return profilesByCandidate;
+
+  const profileClient = supabase as unknown as {
+    from: (table: string) => {
+      select: (columns: string) => {
+        in: (column: string, values: string[]) => Promise<{
+          data: VotingProfileBatchRow[] | null;
+          error: unknown;
+        }>;
+      };
+    };
+  };
+  const { data, error } = await profileClient
+    .from('legislator_vote_profile')
+    .select('candidate_id,house,total_votes,votos_sim,votos_nao,votos_abstencao,votos_ausente,votos_obstrucao,profile_score')
+    .in('candidate_id', candidateIds);
+
+  if (error) throw error;
+  for (const profile of data ?? []) {
+    const profiles = profilesByCandidate.get(profile.candidate_id) ?? [];
+    const { candidate_id: _candidateId, profile_score, ...rest } = profile;
+    profiles.push({ ...rest, nominal_balance: profile_score });
+    profilesByCandidate.set(profile.candidate_id, profiles);
+  }
+  return profilesByCandidate;
 }
 
 async function fetchAllCandidatesFromSupabase(): Promise<
@@ -299,9 +332,14 @@ async function fetchAllCandidatesFromSupabase(): Promise<
     claimsByCandidate.set(claim.candidate_id, current);
   }
 
+  const profilesByCandidate = await fetchVotingProfilesForCandidates(
+    candidates.map((candidate) => candidate.id),
+  );
+
   return candidates.map((candidate) => applyPublicCandidateWithClaimsOverrides({
     ...candidate,
     claims: claimsByCandidate.get(candidate.id) ?? [],
+    voting_profiles: profilesByCandidate.get(candidate.id) ?? [],
   }));
 }
 

@@ -27,12 +27,14 @@ function mockSupabase({
   candidates = dbCandidates,
   candidatesError = null,
   claims = [],
-  claimsError = null
+  claimsError = null,
+  profiles = []
 }: {
   candidates?: unknown[];
   candidatesError?: unknown;
   claims?: unknown[];
   claimsError?: unknown;
+  profiles?: unknown[];
 }) {
   supabaseMock.from.mockImplementation((table: string) => {
     if (table === 'candidates') {
@@ -51,6 +53,14 @@ function mockSupabase({
             eq: vi.fn().mockResolvedValue({ data: claims, error: claimsError })
           })
         })
+      };
+    }
+
+    if (table === 'legislator_vote_profile') {
+      return {
+        select: vi.fn().mockReturnValue({
+          in: vi.fn().mockResolvedValue({ data: profiles, error: null }),
+        }),
       };
     }
 
@@ -331,6 +341,29 @@ describe('fetchAllCandidates', () => {
       ),
     ).toBe(true);
     warnSpy.mockRestore();
+  });
+
+  it('carrega perfis de votação em lote e preserva a casa legislativa', async () => {
+    mockSupabase({
+      profiles: [{
+        candidate_id: 'db-candidate-1',
+        house: 'alrs',
+        total_votes: 2,
+        votos_sim: 1,
+        votos_nao: 1,
+        votos_abstencao: 0,
+        votos_ausente: 0,
+        votos_obstrucao: 0,
+        profile_score: 0,
+      }],
+    });
+
+    const { fetchAllCandidates } = await import('../candidates');
+    const result = await fetchAllCandidates();
+
+    expect(result[0].voting_profiles).toEqual([
+      expect.objectContaining({ house: 'alrs', total_votes: 2, nominal_balance: 0 }),
+    ]);
   });
 
   it('não registra detalhes técnicos da falha de claims em produção', async () => {

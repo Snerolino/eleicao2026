@@ -153,6 +153,14 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - QA: `docs/qa/fed11-alrs-vote-profiles-2026-08-18.md`.
 - Próximo gate: revisão de cobertura/exposição pública dos perfis ALRS.
 
+## Atualização FED-12 — cobertura pública dos perfis ALRS (2026-08-18)
+
+- Auditoria encontrou que `fetchAllCandidates()` não carregava `legislator_vote_profile`; a consulta individual já carregava.
+- Corrigido com consulta em lote por candidatos, preservando `(candidate_id, house)` e sem alterar fatos/impacto.
+- Teste direcionado: 29 testes passando; TypeScript passou.
+- QA: `docs/qa/fed12-public-alrs-profile-coverage-2026-08-18.md`.
+- Próximo gate: validar smoke do dossiê/coleção após publicação.
+
 ## Checkpoint mais recente — migração de sessão (2026-08-17)
 
 - Último commit: `85d7031` (`feat: exibir claims e perfil de votações no dossiê`).

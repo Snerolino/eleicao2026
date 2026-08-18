@@ -94,6 +94,7 @@
 | [`qa/fed9-senado-block-2026-08-18.md`](qa/fed9-senado-block-2026-08-18.md) | Fechamento QA da FED-9: bloqueio Senado; Câmara concluída |
 | [`qa/fed10-alrs-nominal-2026-08-18.md`](qa/fed10-alrs-nominal-2026-08-18.md) | Fechamento QA da FED-10: votos nominais ALRS |
 | [`qa/fed11-alrs-vote-profiles-2026-08-18.md`](qa/fed11-alrs-vote-profiles-2026-08-18.md) | Fechamento QA da FED-11: perfis nominais ALRS |
+| [`qa/fed12-public-alrs-profile-coverage-2026-08-18.md`](qa/fed12-public-alrs-profile-coverage-2026-08-18.md) | Fechamento QA da FED-12: cobertura pública de perfis ALRS |
 | [`qa/fotos-sem-match-2026-08-03.md`](qa/fotos-sem-match-2026-08-03.md) | Distribuição dos candidatos sem foto e caso ambíguo |
 
 ## Release
