@@ -1,0 +1,2244 @@
+{
+  "schema_version": "1.0.0",
+  "phase": "FED-25",
+  "mode": "read-only-local-identity-reconciliation",
+  "source": "data/public-candidates.json",
+  "records": [
+    {
+      "official_name": "Onyx Lorenzoni",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537722",
+          "full_name": "ONYX DORNELLES LORENZONI",
+          "ballot_name": "ONYX LORENZONI"
+        }
+      ]
+    },
+    {
+      "official_name": "Alceu Moreira",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002541514",
+          "full_name": "ALCEU MOREIRA DA SILVA",
+          "ballot_name": "ALCEU MOREIRA"
+        }
+      ]
+    },
+    {
+      "official_name": "Darcísio Perondi",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Giovani Feltes",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Márcio Biolchi",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Marcel van Hattem",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "ambiguous",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002547819",
+          "full_name": "MARCEL VAN HATTEM",
+          "ballot_name": "MARCEL VAN HATTEM"
+        },
+        {
+          "tse_candidate_id": "210002547819",
+          "full_name": "MARCEL VAN HATTEM",
+          "ballot_name": "MARCEL VAN HATTEM"
+        }
+      ]
+    },
+    {
+      "official_name": "Afonso Motta",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537057",
+          "full_name": "AFONSO ANTUNES DA MOTTA",
+          "ballot_name": "AFONSO MOTTA"
+        }
+      ]
+    },
+    {
+      "official_name": "Marlon Santos",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Pompeo de Mattos",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537066",
+          "full_name": "DARCI POMPEO DE MATTOS",
+          "ballot_name": "POMPEO DE MATTOS"
+        }
+      ]
+    },
+    {
+      "official_name": "Giovani Cherini",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "ambiguous",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534897",
+          "full_name": "GIOVANI CHERINI",
+          "ballot_name": "GIOVANI CHERINI"
+        },
+        {
+          "tse_candidate_id": "210002534897",
+          "full_name": "GIOVANI CHERINI",
+          "ballot_name": "GIOVANI CHERINI"
+        }
+      ]
+    },
+    {
+      "official_name": "Afonso Hamm",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537712",
+          "full_name": "JOSE ALFONSO EBERT HAMM",
+          "ballot_name": "AFONSO HAMM"
+        }
+      ]
+    },
+    {
+      "official_name": "Jerônimo Goergen",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Pedro Westphalen",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537717",
+          "full_name": "PEDRO BANDARRA WESTPHALEN",
+          "ballot_name": "PEDRO WESTPHALEN"
+        }
+      ]
+    },
+    {
+      "official_name": "Carlos Gomes",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002536917",
+          "full_name": "ANTONIO CARLOS GOMES DA SILVA",
+          "ballot_name": "CARLOS GOMES"
+        }
+      ]
+    },
+    {
+      "official_name": "Heitor Schuch",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538556",
+          "full_name": "HEITOR JOSÉ SCHUCH",
+          "ballot_name": "HEITOR SCHUCH"
+        }
+      ]
+    },
+    {
+      "official_name": "Liziane Bayer",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Danrlei de Deus Hinterholz",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538537",
+          "full_name": "DANRLEI DE DEUS HINTERHOLZ",
+          "ballot_name": "DANRLEI"
+        }
+      ]
+    },
+    {
+      "official_name": "Daniel Trzeciak",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Lucas Redecker",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538541",
+          "full_name": "LUCAS BELLO REDECKER",
+          "ballot_name": "LUCAS REDECKER"
+        }
+      ]
+    },
+    {
+      "official_name": "Bibo Nunes",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534656",
+          "full_name": "ALCIBIO MESQUITA BIBO NUNES",
+          "ballot_name": "BIBO NUNES"
+        }
+      ]
+    },
+    {
+      "official_name": "Nereu Crispim",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Sanderson",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002547816",
+          "full_name": "UBIRATAN ANTUNES SANDERSON",
+          "ballot_name": "SANDERSON"
+        }
+      ]
+    },
+    {
+      "official_name": "Fernanda Melchionna",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533902",
+          "full_name": "FERNANDA MELCHIONNA E SILVA",
+          "ballot_name": "FERNANDA MELCHIONNA"
+        }
+      ]
+    },
+    {
+      "official_name": "Bohn Gass",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534601",
+          "full_name": "ELVINO JOSE BOHN GASS",
+          "ballot_name": "BOHN GASS"
+        }
+      ]
+    },
+    {
+      "official_name": "Henrique Fontana",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533583",
+          "full_name": "HENRIQUE FONTANA JÚNIOR",
+          "ballot_name": "HENRIQUE FONTANA"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcon",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534598",
+          "full_name": "DIONILSO MATEUS MARCON",
+          "ballot_name": "MARCON"
+        }
+      ]
+    },
+    {
+      "official_name": "Maria do Rosário",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534604",
+          "full_name": "MARIA DO ROSARIO NUNES",
+          "ballot_name": "MARIA DO ROSARIO"
+        }
+      ]
+    },
+    {
+      "official_name": "Paulo Pimenta",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Marcelo Moraes",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534671",
+          "full_name": "MARCELO PIRES MORAES",
+          "ballot_name": "MARCELO MORAES"
+        }
+      ]
+    },
+    {
+      "official_name": "Maurício Dziedricki",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534272",
+          "full_name": "MAURICIO ALEXANDRE DZIEDRICKI",
+          "ballot_name": "MAURÍCIO DZIEDRICKI"
+        }
+      ]
+    },
+    {
+      "official_name": "Santini",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Alceu Moreira",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002541514",
+          "full_name": "ALCEU MOREIRA DA SILVA",
+          "ballot_name": "ALCEU MOREIRA"
+        }
+      ]
+    },
+    {
+      "official_name": "Darcísio Perondi",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Márcio Biolchi",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Afonso Motta",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537057",
+          "full_name": "AFONSO ANTUNES DA MOTTA",
+          "ballot_name": "AFONSO MOTTA"
+        }
+      ]
+    },
+    {
+      "official_name": "Marlon Santos",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Pompeo de Mattos",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537066",
+          "full_name": "DARCI POMPEO DE MATTOS",
+          "ballot_name": "POMPEO DE MATTOS"
+        }
+      ]
+    },
+    {
+      "official_name": "Giovani Cherini",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "ambiguous",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534897",
+          "full_name": "GIOVANI CHERINI",
+          "ballot_name": "GIOVANI CHERINI"
+        },
+        {
+          "tse_candidate_id": "210002534897",
+          "full_name": "GIOVANI CHERINI",
+          "ballot_name": "GIOVANI CHERINI"
+        }
+      ]
+    },
+    {
+      "official_name": "Afonso Hamm",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537712",
+          "full_name": "JOSE ALFONSO EBERT HAMM",
+          "ballot_name": "AFONSO HAMM"
+        }
+      ]
+    },
+    {
+      "official_name": "Jerônimo Goergen",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Pedro Westphalen",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537717",
+          "full_name": "PEDRO BANDARRA WESTPHALEN",
+          "ballot_name": "PEDRO WESTPHALEN"
+        }
+      ]
+    },
+    {
+      "official_name": "Carlos Gomes",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002536917",
+          "full_name": "ANTONIO CARLOS GOMES DA SILVA",
+          "ballot_name": "CARLOS GOMES"
+        }
+      ]
+    },
+    {
+      "official_name": "Heitor Schuch",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538556",
+          "full_name": "HEITOR JOSÉ SCHUCH",
+          "ballot_name": "HEITOR SCHUCH"
+        }
+      ]
+    },
+    {
+      "official_name": "Liziane Bayer",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Daniel Trzeciak",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Lucas Redecker",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538541",
+          "full_name": "LUCAS BELLO REDECKER",
+          "ballot_name": "LUCAS REDECKER"
+        }
+      ]
+    },
+    {
+      "official_name": "Bibo Nunes",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534656",
+          "full_name": "ALCIBIO MESQUITA BIBO NUNES",
+          "ballot_name": "BIBO NUNES"
+        }
+      ]
+    },
+    {
+      "official_name": "Nereu Crispim",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Sanderson",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002547816",
+          "full_name": "UBIRATAN ANTUNES SANDERSON",
+          "ballot_name": "SANDERSON"
+        }
+      ]
+    },
+    {
+      "official_name": "Fernanda Melchionna",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533902",
+          "full_name": "FERNANDA MELCHIONNA E SILVA",
+          "ballot_name": "FERNANDA MELCHIONNA"
+        }
+      ]
+    },
+    {
+      "official_name": "Bohn Gass",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534601",
+          "full_name": "ELVINO JOSE BOHN GASS",
+          "ballot_name": "BOHN GASS"
+        }
+      ]
+    },
+    {
+      "official_name": "Henrique Fontana",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533583",
+          "full_name": "HENRIQUE FONTANA JÚNIOR",
+          "ballot_name": "HENRIQUE FONTANA"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcon",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534598",
+          "full_name": "DIONILSO MATEUS MARCON",
+          "ballot_name": "MARCON"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcelo Moraes",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534671",
+          "full_name": "MARCELO PIRES MORAES",
+          "ballot_name": "MARCELO MORAES"
+        }
+      ]
+    },
+    {
+      "official_name": "Maurício Dziedricki",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534272",
+          "full_name": "MAURICIO ALEXANDRE DZIEDRICKI",
+          "ballot_name": "MAURÍCIO DZIEDRICKI"
+        }
+      ]
+    },
+    {
+      "official_name": "Santini",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Giovani Feltes",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Afonso Motta",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537057",
+          "full_name": "AFONSO ANTUNES DA MOTTA",
+          "ballot_name": "AFONSO MOTTA"
+        }
+      ]
+    },
+    {
+      "official_name": "Giovani Cherini",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "ambiguous",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534897",
+          "full_name": "GIOVANI CHERINI",
+          "ballot_name": "GIOVANI CHERINI"
+        },
+        {
+          "tse_candidate_id": "210002534897",
+          "full_name": "GIOVANI CHERINI",
+          "ballot_name": "GIOVANI CHERINI"
+        }
+      ]
+    },
+    {
+      "official_name": "Heitor Schuch",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538556",
+          "full_name": "HEITOR JOSÉ SCHUCH",
+          "ballot_name": "HEITOR SCHUCH"
+        }
+      ]
+    },
+    {
+      "official_name": "Liziane Bayer",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Daniel Trzeciak",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Lucas Redecker",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538541",
+          "full_name": "LUCAS BELLO REDECKER",
+          "ballot_name": "LUCAS REDECKER"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcelo Brum",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534292",
+          "full_name": "MARCELO DE BRUM DA COSTA",
+          "ballot_name": "MARCELO BRUM"
+        }
+      ]
+    },
+    {
+      "official_name": "Nereu Crispim",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Fernanda Melchionna",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533902",
+          "full_name": "FERNANDA MELCHIONNA E SILVA",
+          "ballot_name": "FERNANDA MELCHIONNA"
+        }
+      ]
+    },
+    {
+      "official_name": "Bohn Gass",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534601",
+          "full_name": "ELVINO JOSE BOHN GASS",
+          "ballot_name": "BOHN GASS"
+        }
+      ]
+    },
+    {
+      "official_name": "Henrique Fontana",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533583",
+          "full_name": "HENRIQUE FONTANA JÚNIOR",
+          "ballot_name": "HENRIQUE FONTANA"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcon",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534598",
+          "full_name": "DIONILSO MATEUS MARCON",
+          "ballot_name": "MARCON"
+        }
+      ]
+    },
+    {
+      "official_name": "Maria do Rosário",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534604",
+          "full_name": "MARIA DO ROSARIO NUNES",
+          "ballot_name": "MARIA DO ROSARIO"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcelo Moraes",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534671",
+          "full_name": "MARCELO PIRES MORAES",
+          "ballot_name": "MARCELO MORAES"
+        }
+      ]
+    },
+    {
+      "official_name": "Santini",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Carlos Gomes",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002536917",
+          "full_name": "ANTONIO CARLOS GOMES DA SILVA",
+          "ballot_name": "CARLOS GOMES"
+        }
+      ]
+    },
+    {
+      "official_name": "Alceu Moreira",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002541514",
+          "full_name": "ALCEU MOREIRA DA SILVA",
+          "ballot_name": "ALCEU MOREIRA"
+        }
+      ]
+    },
+    {
+      "official_name": "Giovani Feltes",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Marcel van Hattem",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "ambiguous",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002547819",
+          "full_name": "MARCEL VAN HATTEM",
+          "ballot_name": "MARCEL VAN HATTEM"
+        },
+        {
+          "tse_candidate_id": "210002547819",
+          "full_name": "MARCEL VAN HATTEM",
+          "ballot_name": "MARCEL VAN HATTEM"
+        }
+      ]
+    },
+    {
+      "official_name": "Afonso Motta",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537057",
+          "full_name": "AFONSO ANTUNES DA MOTTA",
+          "ballot_name": "AFONSO MOTTA"
+        }
+      ]
+    },
+    {
+      "official_name": "Pompeo de Mattos",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537066",
+          "full_name": "DARCI POMPEO DE MATTOS",
+          "ballot_name": "POMPEO DE MATTOS"
+        }
+      ]
+    },
+    {
+      "official_name": "Giovani Cherini",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "ambiguous",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534897",
+          "full_name": "GIOVANI CHERINI",
+          "ballot_name": "GIOVANI CHERINI"
+        },
+        {
+          "tse_candidate_id": "210002534897",
+          "full_name": "GIOVANI CHERINI",
+          "ballot_name": "GIOVANI CHERINI"
+        }
+      ]
+    },
+    {
+      "official_name": "Afonso Hamm",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537712",
+          "full_name": "JOSE ALFONSO EBERT HAMM",
+          "ballot_name": "AFONSO HAMM"
+        }
+      ]
+    },
+    {
+      "official_name": "Liziane Bayer",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Danrlei de Deus Hinterholz",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538537",
+          "full_name": "DANRLEI DE DEUS HINTERHOLZ",
+          "ballot_name": "DANRLEI"
+        }
+      ]
+    },
+    {
+      "official_name": "Daniel Trzeciak",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Lucas Redecker",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538541",
+          "full_name": "LUCAS BELLO REDECKER",
+          "ballot_name": "LUCAS REDECKER"
+        }
+      ]
+    },
+    {
+      "official_name": "Bibo Nunes",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534656",
+          "full_name": "ALCIBIO MESQUITA BIBO NUNES",
+          "ballot_name": "BIBO NUNES"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcelo Brum",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534292",
+          "full_name": "MARCELO DE BRUM DA COSTA",
+          "ballot_name": "MARCELO BRUM"
+        }
+      ]
+    },
+    {
+      "official_name": "Nereu Crispim",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Sanderson",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002547816",
+          "full_name": "UBIRATAN ANTUNES SANDERSON",
+          "ballot_name": "SANDERSON"
+        }
+      ]
+    },
+    {
+      "official_name": "Fernanda Melchionna",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533902",
+          "full_name": "FERNANDA MELCHIONNA E SILVA",
+          "ballot_name": "FERNANDA MELCHIONNA"
+        }
+      ]
+    },
+    {
+      "official_name": "Bohn Gass",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534601",
+          "full_name": "ELVINO JOSE BOHN GASS",
+          "ballot_name": "BOHN GASS"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcon",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534598",
+          "full_name": "DIONILSO MATEUS MARCON",
+          "ballot_name": "MARCON"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcelo Moraes",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534671",
+          "full_name": "MARCELO PIRES MORAES",
+          "ballot_name": "MARCELO MORAES"
+        }
+      ]
+    },
+    {
+      "official_name": "Santini",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Carlos Gomes",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002536917",
+          "full_name": "ANTONIO CARLOS GOMES DA SILVA",
+          "ballot_name": "CARLOS GOMES"
+        }
+      ]
+    },
+    {
+      "official_name": "Alceu Moreira",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002541514",
+          "full_name": "ALCEU MOREIRA DA SILVA",
+          "ballot_name": "ALCEU MOREIRA"
+        }
+      ]
+    },
+    {
+      "official_name": "Giovani Feltes",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Márcio Biolchi",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Marcel van Hattem",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "ambiguous",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002547819",
+          "full_name": "MARCEL VAN HATTEM",
+          "ballot_name": "MARCEL VAN HATTEM"
+        },
+        {
+          "tse_candidate_id": "210002547819",
+          "full_name": "MARCEL VAN HATTEM",
+          "ballot_name": "MARCEL VAN HATTEM"
+        }
+      ]
+    },
+    {
+      "official_name": "Afonso Motta",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537057",
+          "full_name": "AFONSO ANTUNES DA MOTTA",
+          "ballot_name": "AFONSO MOTTA"
+        }
+      ]
+    },
+    {
+      "official_name": "Pompeo de Mattos",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537066",
+          "full_name": "DARCI POMPEO DE MATTOS",
+          "ballot_name": "POMPEO DE MATTOS"
+        }
+      ]
+    },
+    {
+      "official_name": "Giovani Cherini",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "ambiguous",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534897",
+          "full_name": "GIOVANI CHERINI",
+          "ballot_name": "GIOVANI CHERINI"
+        },
+        {
+          "tse_candidate_id": "210002534897",
+          "full_name": "GIOVANI CHERINI",
+          "ballot_name": "GIOVANI CHERINI"
+        }
+      ]
+    },
+    {
+      "official_name": "Afonso Hamm",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537712",
+          "full_name": "JOSE ALFONSO EBERT HAMM",
+          "ballot_name": "AFONSO HAMM"
+        }
+      ]
+    },
+    {
+      "official_name": "Pedro Westphalen",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537717",
+          "full_name": "PEDRO BANDARRA WESTPHALEN",
+          "ballot_name": "PEDRO WESTPHALEN"
+        }
+      ]
+    },
+    {
+      "official_name": "Heitor Schuch",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538556",
+          "full_name": "HEITOR JOSÉ SCHUCH",
+          "ballot_name": "HEITOR SCHUCH"
+        }
+      ]
+    },
+    {
+      "official_name": "Liziane Bayer",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Danrlei de Deus Hinterholz",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538537",
+          "full_name": "DANRLEI DE DEUS HINTERHOLZ",
+          "ballot_name": "DANRLEI"
+        }
+      ]
+    },
+    {
+      "official_name": "Daniel Trzeciak",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Lucas Redecker",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538541",
+          "full_name": "LUCAS BELLO REDECKER",
+          "ballot_name": "LUCAS REDECKER"
+        }
+      ]
+    },
+    {
+      "official_name": "Bibo Nunes",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534656",
+          "full_name": "ALCIBIO MESQUITA BIBO NUNES",
+          "ballot_name": "BIBO NUNES"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcelo Brum",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534292",
+          "full_name": "MARCELO DE BRUM DA COSTA",
+          "ballot_name": "MARCELO BRUM"
+        }
+      ]
+    },
+    {
+      "official_name": "Nereu Crispim",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Fernanda Melchionna",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533902",
+          "full_name": "FERNANDA MELCHIONNA E SILVA",
+          "ballot_name": "FERNANDA MELCHIONNA"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcelo Moraes",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534671",
+          "full_name": "MARCELO PIRES MORAES",
+          "ballot_name": "MARCELO MORAES"
+        }
+      ]
+    },
+    {
+      "official_name": "Santini",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Carlos Gomes",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002536917",
+          "full_name": "ANTONIO CARLOS GOMES DA SILVA",
+          "ballot_name": "CARLOS GOMES"
+        }
+      ]
+    },
+    {
+      "official_name": "Alceu Moreira",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002541514",
+          "full_name": "ALCEU MOREIRA DA SILVA",
+          "ballot_name": "ALCEU MOREIRA"
+        }
+      ]
+    },
+    {
+      "official_name": "Giovani Feltes",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Márcio Biolchi",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Marcel van Hattem",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "ambiguous",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002547819",
+          "full_name": "MARCEL VAN HATTEM",
+          "ballot_name": "MARCEL VAN HATTEM"
+        },
+        {
+          "tse_candidate_id": "210002547819",
+          "full_name": "MARCEL VAN HATTEM",
+          "ballot_name": "MARCEL VAN HATTEM"
+        }
+      ]
+    },
+    {
+      "official_name": "Afonso Motta",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537057",
+          "full_name": "AFONSO ANTUNES DA MOTTA",
+          "ballot_name": "AFONSO MOTTA"
+        }
+      ]
+    },
+    {
+      "official_name": "Pompeo de Mattos",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537066",
+          "full_name": "DARCI POMPEO DE MATTOS",
+          "ballot_name": "POMPEO DE MATTOS"
+        }
+      ]
+    },
+    {
+      "official_name": "Giovani Cherini",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "ambiguous",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534897",
+          "full_name": "GIOVANI CHERINI",
+          "ballot_name": "GIOVANI CHERINI"
+        },
+        {
+          "tse_candidate_id": "210002534897",
+          "full_name": "GIOVANI CHERINI",
+          "ballot_name": "GIOVANI CHERINI"
+        }
+      ]
+    },
+    {
+      "official_name": "Afonso Hamm",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537712",
+          "full_name": "JOSE ALFONSO EBERT HAMM",
+          "ballot_name": "AFONSO HAMM"
+        }
+      ]
+    },
+    {
+      "official_name": "Pedro Westphalen",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537717",
+          "full_name": "PEDRO BANDARRA WESTPHALEN",
+          "ballot_name": "PEDRO WESTPHALEN"
+        }
+      ]
+    },
+    {
+      "official_name": "Heitor Schuch",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538556",
+          "full_name": "HEITOR JOSÉ SCHUCH",
+          "ballot_name": "HEITOR SCHUCH"
+        }
+      ]
+    },
+    {
+      "official_name": "Liziane Bayer",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Danrlei de Deus Hinterholz",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538537",
+          "full_name": "DANRLEI DE DEUS HINTERHOLZ",
+          "ballot_name": "DANRLEI"
+        }
+      ]
+    },
+    {
+      "official_name": "Daniel Trzeciak",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Lucas Redecker",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538541",
+          "full_name": "LUCAS BELLO REDECKER",
+          "ballot_name": "LUCAS REDECKER"
+        }
+      ]
+    },
+    {
+      "official_name": "Bibo Nunes",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534656",
+          "full_name": "ALCIBIO MESQUITA BIBO NUNES",
+          "ballot_name": "BIBO NUNES"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcelo Brum",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534292",
+          "full_name": "MARCELO DE BRUM DA COSTA",
+          "ballot_name": "MARCELO BRUM"
+        }
+      ]
+    },
+    {
+      "official_name": "Nereu Crispim",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Sanderson",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002547816",
+          "full_name": "UBIRATAN ANTUNES SANDERSON",
+          "ballot_name": "SANDERSON"
+        }
+      ]
+    },
+    {
+      "official_name": "Fernanda Melchionna",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533902",
+          "full_name": "FERNANDA MELCHIONNA E SILVA",
+          "ballot_name": "FERNANDA MELCHIONNA"
+        }
+      ]
+    },
+    {
+      "official_name": "Bohn Gass",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534601",
+          "full_name": "ELVINO JOSE BOHN GASS",
+          "ballot_name": "BOHN GASS"
+        }
+      ]
+    },
+    {
+      "official_name": "Henrique Fontana",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533583",
+          "full_name": "HENRIQUE FONTANA JÚNIOR",
+          "ballot_name": "HENRIQUE FONTANA"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcon",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534598",
+          "full_name": "DIONILSO MATEUS MARCON",
+          "ballot_name": "MARCON"
+        }
+      ]
+    },
+    {
+      "official_name": "Maria do Rosário",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534604",
+          "full_name": "MARIA DO ROSARIO NUNES",
+          "ballot_name": "MARIA DO ROSARIO"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcelo Moraes",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534671",
+          "full_name": "MARCELO PIRES MORAES",
+          "ballot_name": "MARCELO MORAES"
+        }
+      ]
+    },
+    {
+      "official_name": "Maurício Dziedricki",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534272",
+          "full_name": "MAURICIO ALEXANDRE DZIEDRICKI",
+          "ballot_name": "MAURÍCIO DZIEDRICKI"
+        }
+      ]
+    },
+    {
+      "official_name": "Santini",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "not_found",
+      "candidate_matches": []
+    },
+    {
+      "official_name": "Carlos Gomes",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002536917",
+          "full_name": "ANTONIO CARLOS GOMES DA SILVA",
+          "ballot_name": "CARLOS GOMES"
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "records": 142,
+    "matched_exact": 92,
+    "ambiguous": 10,
+    "not_found": 40
+  },
+  "safety": {
+    "remote_lookup": false,
+    "remote_apply": false,
+    "heuristic_identity": false,
+    "reason": "Local snapshot comparison only; exact normalized full_name/ballot_name is a triage result, not remote identity proof."
+  }
+}

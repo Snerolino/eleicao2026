@@ -28,5 +28,11 @@ Refazer o GET das seis páginas nominais oficiais da Câmara catalogadas no FED-
 - Identidade Câmara histórica ainda pendente: nomes oficiais precisam ser reconciliados exatamente contra `full_name`/`ballot_name` e `tse_candidate_id` remoto.
 - Sem essa reconciliação, nenhum registro pode ser aplicado.
 
+## Reconciliação local subsequente
+- Comparação somente contra `data/public-candidates.json`, sem consulta ou escrita remota.
+- 142 registros classificados por correspondência exata normalizada em `full_name`/`ballot_name`: **92 matched_exact**, **10 ambiguous**, **40 not_found**.
+- Artefato: `data/legislative-import/camara/historical-nominal-local-reconciliation.json`.
+- A classificação local é triagem, não prova de FK: nenhum `tse_candidate_id` foi promovido ao envelope aplicável; ambiguidades e ausências permanecem fail-closed.
+
 ## Próximo passo
-Executar reconciliação read-only dos 142 registros por nome normalizado exato, deduplicar por `(tse_candidate_id, proposição, data, evento)` e manter ambiguidades/ausências fora do envelope aplicável. Depois validar novamente os hashes antes de qualquer writer.
+Repetir o lookup read-only no Supabase remoto pelo `tse_candidate_id` apenas para os 92 nomes exatos, conferir cargo/UF e proposição/data/evento, e manter os 50 restantes fora de qualquer aplicação. Antes do writer, refazer os seis GETs e validar novamente HTTP, hash e bytes.

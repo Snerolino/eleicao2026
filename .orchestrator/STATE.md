@@ -1,7 +1,16 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-18 14:45 UTC
-Status: `FED25_CAMARA_HISTORICAL_NOMINAL_DRY_RUN_READY`
+Atualizado: 2026-08-18 14:55 UTC
+Status: `FED25_CAMARA_HISTORICAL_LOCAL_RECON_PENDING_REMOTE_LOOKUP`
+
+## Tick contínuo — reconciliação local nominal Câmara (2026-08-18)
+
+- Lock bounded adquirido e liberado; nenhum writer concorrente. A reconciliação foi somente contra o snapshot público versionado.
+- Dos 142 registros RS do dry-run: 92 `matched_exact`, 10 `ambiguous`, 40 `not_found` por `full_name`/`ballot_name` normalizados.
+- Artefato: `data/legislative-import/camara/historical-nominal-local-reconciliation.json`; nenhum `tse_candidate_id` foi promovido a envelope aplicável e nenhuma escrita remota ocorreu.
+- QA atualizado: `docs/qa/lote-camara-historical-nominal-dry-run-2026-08-18.md`.
+- Push do commit `70aa5a0` bloqueado por DNS (`Could not resolve host: github.com`); `origin/main` permanece em `4dccdd4`.
+- Próximo chunk: lookup remoto read-only por `tse_candidate_id` somente para os 92 matches exatos, com conferência de cargo/UF e proposição/data/evento; 50 casos permanecem fail-closed.
 
 ## Tick contínuo — extração nominal histórica Câmara em dry-run (2026-08-18)
 
