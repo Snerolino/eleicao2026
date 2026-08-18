@@ -14,6 +14,11 @@ policy:
   context_strategy: task_packet_plus_files
   never_forward_full_conversation: true
   free_models_data_class: public_repo_only
+  authorization_scope: current_user_arc_covers_github_supabase_cloudflare
+  end_of_turn_policy: never_idle_between_eligible_chunks
+  gate_close_action: record_start_next_chunk_immediately
+  blocker_scope: affected_item_only
+  publish_after_green_gates: true
 
 executors:
   opencode_free:
@@ -197,6 +202,10 @@ fallback_rules:
     action: human_review
   - on: remote_supabase_or_cloudflare_or_deploy
     action: execute_only_after_identity_gate_and_current_user_authorization_else_continue_read_only_reconnaissance
+  - on: item_blocked_by_identity_source_or_fk
+    action: keep_item_fail_closed_and_start_next_independent_local_or_read_only_chunk
+  - on: gate_green
+    action: document_publish_verify_and_select_next_eligible_chunk_without_prompt
 
 context:
   stable:

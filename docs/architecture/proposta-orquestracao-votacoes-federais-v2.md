@@ -71,23 +71,47 @@ hash e status para o Hermes consolidar.
 Assim, a regra de fluxo único permanece: um Hermes control plane e um writer;
 paralelismo é permitido apenas na busca read-only de dados públicos.
 
+### 2.4 Invariante de continuidade
+
+Um gate concluído nunca é um estado terminal. O control plane deve executar,
+na mesma retomada, o ciclo:
+
+```text
+observar -> classificar -> escolher próximo chunk -> implementar/coletar
+  -> validar -> documentar -> publicar/verificar -> escolher próximo chunk
+```
+
+É proibido encerrar uma execução com `awaiting_user_prompt` entre gates, fases,
+lotes ou após CI verde. Se o próximo writer estiver bloqueado, o estado terminal
+daquele item é `blocked_item`, acompanhado de pelo menos uma trilha ativa
+`read_only_recon`, `local_implementation`, `test/documentation` ou
+`release_verification`. O prompt do usuário é entrada complementar, nunca uma
+dependência de progresso.
+
+Quando autorização global do arco estiver vigente, commit, push e deploy seguem
+automaticamente após gates verdes. Migrations, RLS, RPC, Auth, Storage, secrets
+e qualquer escrita remota continuam exigindo identidade correta, schema/FK,
+idempotência, segurança e o gate técnico específico; autorização não permite
+contornar esses critérios.
+
 ## 3. Estado real da implementação
 
 ### 3.1 Repositório e execução
 
 - Projeto: `/home/lourenco/Projetos/eleicao2026`.
 - Branch atual: `main`.
-- HEAD observado: `c79388c` — preparação da fila de recuperação de fontes ALRS.
-- Worktree observada limpa.
+- HEAD observado: `0531154` — reconciliação de identidades Câmara Q1/2026.
+- Worktree observada limpa e sincronizada com `origin/main`.
 - Node exigido pelo projeto: `>=24 <25`; Node 24.19.0 foi usado nos gates remotos documentados.
 - Produção e Supabase remoto devem continuar sendo distinguidos da worktree local.
 
 ### 3.2 Câmara dos Deputados
 
 - Snapshot público: 434 candidaturas a deputado federal pelo RS.
-- Catálogo institucional: 22 correspondências exatas no fechamento de FED-3;
-  as demais identidades continuam pendentes, não devem ser tratadas como
-  ausência de mandato.
+- Catálogo institucional inicial: 22 correspondências exatas no fechamento de FED-3.
+- FED-19/FED-20: batch Q1/2026 com 100 eventos descobertos, 10 nominais, 268
+  votos RS e 24 de 32 deputados reconciliados por nome oficial exato; 8 seguem
+  `identity_pending`.
 - FED-4: coletor oficial em dry-run, com preservação do bruto local.
 - FED-5: piloto factual com Fernanda Melchionna, Maria do Rosário, Afonso Hamm
   e Osmar Terra; Marcel van Hattem permanece fixture de regressão sem vínculo
@@ -109,9 +133,9 @@ paralelismo é permitido apenas na busca read-only de dados públicos.
 - FED-12/FED-13: perfis carregados na coleção pública e smoke de produção verde.
 - FED-14: nenhum candidato com duas casas foi inventado; 18 perfis em 18
   candidatos no recorte auditado.
-- FED-15/FED-16: auditoria encontrou 93 referências de fonte e cinco eventos
-  ALRS com 25 votos sem vínculo de fonte. A fila de recuperação é somente
-  diagnóstico e fail-closed.
+- FED-15/FED-16/FED-17: auditoria iniciou com 25 votos ALRS sem vínculo; 10
+  receberam fontes oficiais verificadas e idempotentes. Restam 15, mantidos
+  fail-closed por divergência de data, ambiguidade ou identidade ausente.
 - As lacunas de fonte e o bloqueio do Senado impedem declarar cobertura
   legislativa completa.
 
@@ -183,20 +207,20 @@ Cada voto deve manter, no mínimo:
 ### 5.1 Bloqueio imediato de ambiente
 
 Antes de qualquer nova escrita, confirmar que a sessão e o CLI apontam para o
-mesmo projeto. O projeto local está ligado ao ref
-`hhqxhxcfkoijevxyzfky`, mas a consulta MCP realizada em 18/08/2026 listou apenas
-tabelas de eventos da aplicação e retornou `relation public.legislative_votes
-does not exist`. Isso contradiz os QA FED-7B/FED-15 e não pode ser ignorado.
+mesmo projeto. No checkpoint atual, o Gate R0 foi confirmado em modo read-only:
+ref `hhqxhxcfkoijevxyzfky`, projeto `eleicao2026`, migrations alinhadas e as
+tabelas de candidatos e legislativas coexistem no mesmo banco.
 
-O writer deve bloquear e emitir `REMOTE_IDENTITY_MISMATCH` para este item, mas o
-control plane deve continuar com scouts read-only até concluir:
+Se uma nova sessão encontrar divergência, o writer deve bloquear somente o item
+afetado e emitir `REMOTE_IDENTITY_MISMATCH`; o control plane continua com
+scouts read-only até concluir:
 
 1. confirmar URL, project ref e nome do projeto por CLI/MCP;
 2. consultar read-only `information_schema`, migrations e tabelas legislativas;
 3. comparar o ref com `supabase/.temp/project-ref`;
 4. confirmar que `candidates.tse_candidate_id` e as tabelas legislativas estão
    no mesmo banco;
-5. registrar a evidência em novo QA antes de liberar qualquer writer.
+5. registrar a evidência em novo QA antes de liberar aquele writer.
 
 Não aplicar migration, não recriar tabelas e não fazer carga em um projeto que
 apenas pareça ter o nome correto. O bloqueio do writer não encerra a execução
@@ -265,18 +289,21 @@ identificado.
 - Comparar migrations locais com migrations remotas.
 - Confirmar Node 24 e ambiente limpo.
 - Reexecutar auditorias read-only de contagem e RLS.
-- Se houver divergência, parar e produzir handoff; não corrigir por tentativa.
+- Se houver divergência, bloquear somente o item remoto afetado; iniciar
+  imediatamente reconciliação local, scouts oficiais e documentação das trilhas
+  independentes.
 
 ### Gate R1 — recuperação de fontes ALRS
 
-- Recuperar evidência oficial dos cinco eventos listados em FED-16.
+- Recuperar evidência oficial dos cinco eventos listados em FED-16, aplicando
+  somente sublotes com data, identidade, proposição e voto exatos.
 - Gerar manifesto com URL/hash.
 - Fazer dry-run de backfill apenas depois de resolver cada evento e candidato.
 - Reexecutar `impact:sources:audit --strict`.
 
 ### Gate R2 — ampliação factual da Câmara
 
-- Selecionar novos eventos nominais oficiais.
+- Selecionar novos eventos nominais oficiais e continuar a batch Q1 já descoberta.
 - Priorizar candidatos com identidade confirmada.
 - Manter o piloto em lotes pequenos.
 - Reusar o PLP 230/2025 como regressão.
@@ -319,6 +346,7 @@ O orquestrador só pode marcar a frente como implementada quando:
 - testes, TypeScript, schema, data-check, build e smoke passarem;
 - a mudança de UI for compatível com RLS e grants reais;
 - houver revisão humana documentada antes de qualquer publicação de impacto.
+- nenhum chunk elegível tiver sido deixado ocioso aguardando prompt entre gates.
 
 ## 8. Comandos de verificação local
 
@@ -343,7 +371,9 @@ o Gate R0 nem permite contornar identidade, RLS, fontes ou schemas.
 ## 9. Decisão recomendada
 
 Prosseguir em modo contínuo/local-first: scouts oficiais podem pesquisar e
-preparar evidência enquanto o writer resolve a divergência de identidade do
-Supabase. A carga remota permanece bloqueada até o Gate R0; isso não deve fazer
-o Hermes esperar um novo prompt. A implementação existente ainda não pode
-declarar cobertura completa de parlamentares nem publicar matriz federal ampla.
+preparar evidência enquanto o writer resolve divergências por item. Ao fechar
+cada gate, Hermes deve iniciar o próximo chunk elegível automaticamente, publicar
+quando os gates e a autorização estiverem verdes, verificar CI/produção e só
+parar diante de bloqueio técnico, factual ou de segurança concreto. A cobertura
+completa de parlamentares e matrizes federais só pode ser declarada quando os
+critérios de aceite estiverem verdes.
