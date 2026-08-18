@@ -12,7 +12,8 @@ Status: `FED25_CAMARA_HISTORICAL_REMOTE_IDENTITY_LOOKUP_BLOCKED_ROLE`
 - 4 ocorrências de Henrique Fontana ficaram bloqueadas porque o remoto classifica `position=outro`; não foi inferido cargo histórico. Os 10 `ambiguous` e 40 `not_found` continuam fail-closed.
 - Artefato: `data/legislative-import/camara/historical-nominal-remote-identity-lookup.json`.
 - QA: `docs/qa/lote-camara-historical-remote-identity-lookup-2026-08-18.md`.
-- Próximo chunk: executar gates locais do artefato e, se verdes, publicar/documentar; depois pesquisar fonte oficial para classificação histórica dos 4 casos, sem escrita remota.
+- Backup remoto `334951434` disparado manualmente como run `32153053432`; `gh run watch --exit-status` concluiu verde em 42s, com build e deploy Cloudflare verdes. A consulta posterior `gh run view` sofreu falha intermitente de `api.github.com`, mas `/release.json` em produção confirma SHA completo `135213b7cf98433300de48d70d79083ce6d19935` e HTTP 200.
+- Próximo chunk: manter os 4 casos `position=outro` bloqueados e pesquisar classificação histórica oficial Câmara; não aplicar votos até cargo/UF, proposição, data e fonte permanecerem exatos.
 
 ## Tick contínuo — reconciliação local nominal Câmara (2026-08-18)
 
