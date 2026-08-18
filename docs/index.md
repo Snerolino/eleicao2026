@@ -90,6 +90,8 @@
 | [`qa/fed6-camara-impact-pending-review-2026-08-17.md`](qa/fed6-camara-impact-pending-review-2026-08-17.md) | Fechamento QA da FED-6: impacto Câmara em pending_review |
 | [`qa/fed7a-camara-remote-readiness-2026-08-17.md`](qa/fed7a-camara-remote-readiness-2026-08-17.md) | Fechamento QA da FED-7A: prontidão remota Câmara |
 | [`qa/fed7b-camara-factual-apply-2026-08-17.md`](qa/fed7b-camara-factual-apply-2026-08-17.md) | Fechamento QA da FED-7B: carga factual Câmara |
+| [`qa/fed8-camara-idempotency-2026-08-18.md`](qa/fed8-camara-idempotency-2026-08-18.md) | Fechamento QA da FED-8: idempotência e votação simbólica |
+| [`qa/fed9-senado-block-2026-08-18.md`](qa/fed9-senado-block-2026-08-18.md) | Fechamento QA da FED-9: bloqueio Senado; Câmara concluída |
 | [`qa/fotos-sem-match-2026-08-03.md`](qa/fotos-sem-match-2026-08-03.md) | Distribuição dos candidatos sem foto e caso ambíguo |
 
 ## Release

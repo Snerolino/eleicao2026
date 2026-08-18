@@ -121,6 +121,20 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - QA: `docs/qa/fed8-camara-idempotency-2026-08-18.md`.
 - Próximo arco: FED-9 — ampliação do lote com mais eventos nominos.
 
+## Atualização FED-9 — bloqueio Senado e coleta 2580259-27 (2026-08-18)
+
+- Coleta confirmou que PLP 230/2025 Câmara tem apenas dois eventos:
+  2580259-24 (nominal) e 2580259-27 (simbólica).
+- `2580259-13` e `2580259-15` retornam 404 — não existem.
+- Redirecionando verificação remota: evento 2580259-24 conclui com 5 votos
+  (4 do lote + Marcel), 0 impact_rows, 0 RPC, worktree limpa, build/IDÊNTRICO
+  e produção HTTP 200 em `ef77a57`.
+- API do Senado `dados-legislacao` retorna 403 em todos os endpoints testados;
+  `dadosabertos.senado.leg.br` exige autenticação (401).
+- Próximo foco viável: ALRS nominais via
+  `transparencia.al.rs.gov.br/parlamentares/votos-plenario` (HTML server-side).
+- QA: `docs/qa/fed9-senado-block-2026-08-18.md`.
+
 ## Checkpoint mais recente — migração de sessão (2026-08-17)
 
 - Último commit: `85d7031` (`feat: exibir claims e perfil de votações no dossiê`).
