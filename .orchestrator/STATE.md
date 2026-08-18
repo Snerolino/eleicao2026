@@ -1,3 +1,14 @@
+# Tick contínuo — rota estruturada de legislatura Câmara (2026-08-18)
+
+- Lock bounded adquirido e liberado; worktree estava limpa antes do chunk.
+- Reconhecimento read-only na API oficial Dados Abertos Câmara: `GET /deputados/73482` HTTP 200 confirma Henrique Fontana Júnior, PT-RS e último status na legislatura 56; `GET /legislaturas?itens=100` HTTP 200 confirma as janelas das legislaturas 54 e 55.
+- A rota presumida `GET /deputados/73482/legislaturas` respondeu HTTP 405; consultas agregadas RS por `idLegislatura=54/55` responderam HTTP 504. O 504 foi tratado como indisponibilidade, nunca como ausência histórica.
+- Nenhum voto, identidade histórica, UUID, FK, source reference ou escrita remota foi criado. Os 4 casos `position=outro` permanecem fail-closed.
+- Artefatos transitórios/hash: `.orchestrator/runtime/camara-historical-scout/`.
+- QA: `docs/qa/lote-camara-historical-legislature-route-scout-2026-08-18.md`.
+- Status mantido: `FED25_CAMARA_HISTORICAL_REMOTE_IDENTITY_LOOKUP_BLOCKED_ROLE`.
+- Próximo chunk: consultar o OpenAPI oficial e testar rotas de histórico/mandato e paginação agregada menor.
+
 # Release verification — evidência histórica Câmara (2026-08-18)
 
 - Commit `faef2fdd499d3d2877e9ab7acc9aababd8cedd9b` confirmado em `origin/main`.
