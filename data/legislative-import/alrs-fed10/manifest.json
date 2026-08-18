@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "phase": "FED-10",
+  "mode": "applied",
+  "house": "alrs",
+  "source": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario",
+  "total_data_items": 526,
+  "envelope_propositions": 102,
+  "envelope_events": 491,
+  "envelope_votes": 526,
+  "collected_deputies": 7,
+  "total_deputies": 8,
+  "pending_matches": 0,
+  "remote_alrs_events_after_apply": 522,
+  "impact_touched": false,
+  "idempotent_reapply": true,
+  "uncollected_solicitante_ids": ["999999"]
+}

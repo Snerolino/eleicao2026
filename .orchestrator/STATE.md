@@ -135,6 +135,16 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
   `transparencia.al.rs.gov.br/parlamentares/votos-plenario` (HTML server-side).
 - QA: `docs/qa/fed9-senado-block-2026-08-18.md`.
 
+## Atualização FED-10 — votos nominais ALRS (2026-08-18)
+
+- Coleta oficial processou 526 data-items de 7 deputados ALRS; 0 pending_matches.
+- Envelope versionado: 102 proposições, 491 eventos e 526 votos nominais.
+- Writer existente `scripts/import-senator-votes.mjs` aplicou os votos por `tse_candidate_id`; reaplicação idempotente não aumentou o conjunto.
+- Remoto confirmado: 522 eventos ALRS, com os 491 eventos do envelope presentes; 7 candidatos TSE resolvidos.
+- Nenhuma matriz de impacto foi criada ou alterada.
+- QA: `docs/qa/fed10-alrs-nominal-2026-08-18.md`.
+- Próximo gate: materializar/revalidar perfis nominais ALRS, sem score de impacto.
+
 ## Checkpoint mais recente — migração de sessão (2026-08-17)
 
 - Último commit: `85d7031` (`feat: exibir claims e perfil de votações no dossiê`).
