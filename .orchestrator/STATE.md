@@ -3,6 +3,18 @@
 Atualizado: 2026-08-17 -03
 Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 
+## Atualização FED-21 — envelope Câmara Q1 com identidades resolvidas (2026-08-18)
+
+- Gate remoto read-only resolveu 24/24 FKs `candidates.id` por `tse_candidate_id`.
+- Envelope factual consolidado com 7 proposições, 10 versões, 10 eventos e 190 votos.
+- Oito identidades `identity_pending` permaneceram fora; nenhuma heurística foi usada.
+- `npm run impact:dryrun data/legislative-import/camara/collector-2026-q1/resolved-envelope.json` passou.
+- Nenhuma matriz de impacto/RPC foi executada; o writer factual aplicou somente dados Câmara com fonte.
+- QA: `docs/qa/fed21-camara-q1-envelope-resolvido-2026-08-18.md`.
+- Auditoria read-only encontrou 27 URLs Câmara HTTP 200 com hash; 27 `source_references` foram cadastradas idempotentemente.
+- Writer aplicou 7 proposições, 10 versões, 10 eventos e 190 votos com 24 FKs remotas; terceira execução registrou 0 inserções, 0 updates e 0 votos tocados.
+- Próximo chunk: materializar perfis Câmara e auditar cobertura; 8 identidades permanecem `identity_pending`.
+
 ## Atualização do fluxo contínuo — orquestração federal v2
 
 - Supervisor durável ativo: `eleicao2026-continuous-progress`, job Hermes `c4278be3a8a5`, recorrência `every 15m`, workdir da worktree real, lock `.orchestrator/runtime/locks/continuous-progress.lock`.

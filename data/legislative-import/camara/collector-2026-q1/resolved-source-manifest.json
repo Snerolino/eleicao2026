@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0.0",
+  "mode": "read-only",
+  "source_domain": "dadosabertos.camara.leg.br",
+  "envelope": "data/legislative-import/camara/collector-2026-q1/resolved-envelope.json",
+  "urls": [
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2432865",
+      "status": 200,
+      "bytes": 1977,
+      "sha256": "sha256:b45179af5163d6977426649001f242aaed41ef5283ad4ba63df19ee500ad99f6"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2481715",
+      "status": 200,
+      "bytes": 2032,
+      "sha256": "sha256:92e9ddfde4dd4dc7622204d08534e74c627c28da242d60568f8f9f6d9c19e4f0"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2557414",
+      "status": 200,
+      "bytes": 1947,
+      "sha256": "sha256:29bccb4b0042fbc309efd2b122d297a7f24c777c8c3bedcee710d98b6442f831"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2562173",
+      "status": 200,
+      "bytes": 2377,
+      "sha256": "sha256:e92cdb30e9dde2e7bfd3363eb46d43d09d5ac42736217166cd64541ca59e3f98"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2598651",
+      "status": 200,
+      "bytes": 1845,
+      "sha256": "sha256:a4e0d4cb13b6fb9bb56eb445a7bb1ee1c615482601b73e59967927f88e688910"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2600127",
+      "status": 200,
+      "bytes": 1671,
+      "sha256": "sha256:3c9a3d7de273364f3d22923ef5a2ca18fbe060593f51c0fbe1d2ff7f74e81097"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2601040",
+      "status": 200,
+      "bytes": 2058,
+      "sha256": "sha256:8a528197203e0552c829d7ab81d6b28648b589c7091b0267e1699585afa8b568"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2557414-24",
+      "status": 200,
+      "bytes": 7278,
+      "sha256": "sha256:e29e35cf29af84dec04b37e39ac2d0e35582e6f39524941c6087374d42a27f48"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2557414-24/votos",
+      "status": 200,
+      "bytes": 161618,
+      "sha256": "sha256:fff650f65965c511fee55f317fb4a100ec349b99546ac473ffc5d628a7dc2e04"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2557414-32",
+      "status": 200,
+      "bytes": 7685,
+      "sha256": "sha256:a6b229f2f23b328100866d590e2e717a175c8255e9ca5c62cbc9b67a24eb3386"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2557414-32/votos",
+      "status": 200,
+      "bytes": 187182,
+      "sha256": "sha256:cdb815dd7b13e30dd425b5a66b41cb964a9985851275e5c69d25176f0565cf4b"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2557414-41",
+      "status": 200,
+      "bytes": 7700,
+      "sha256": "sha256:41c78bf25cad51a9194420e54a87ec8911b265273efc33af52e65d11ce71f665"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2557414-41/votos",
+      "status": 200,
+      "bytes": 182577,
+      "sha256": "sha256:f0e398978c31285f5fe171fb6355b699ee14496931d0f4ce780affe0ff009231"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562173-21",
+      "status": 200,
+      "bytes": 4315,
+      "sha256": "sha256:866fcfd2966086fac195b574e850bc82ddb3ecfb6fdcb93f96a49d7fdb3c9e98"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562173-21/votos",
+      "status": 200,
+      "bytes": 177088,
+      "sha256": "sha256:bf9f8f3b52488a4cbe7b8f5b0649a9fa0137a11233986411e44c70f5892f8e68"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562173-30",
+      "status": 200,
+      "bytes": 4442,
+      "sha256": "sha256:dc06e0703f6c47932a2c1967b61629a0b3544fd7b0b6808236a4157d43c1221e"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562173-30/votos",
+      "status": 200,
+      "bytes": 166864,
+      "sha256": "sha256:4c8299eac7c5a2ce69fcc6528dcdbe5d17f056ae1fa7b00635393117f6f2af9c"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2596339-8",
+      "status": 200,
+      "bytes": 5127,
+      "sha256": "sha256:4ef2ce0469b858256004f3ea3aabce4a472eb8964454bc28ddab91577f0de20a"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2596339-8/votos",
+      "status": 200,
+      "bytes": 175282,
+      "sha256": "sha256:9d2f75ffdffd23ab3414ee4f5a9ed161cb930e0e077f1bd06ea4a5a509e6b4c3"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2600122-8",
+      "status": 200,
+      "bytes": 2496,
+      "sha256": "sha256:c1d2803694135cb8e20c75f0a1ca20d9da20f6bb1506bb0e6a1ed08743b7a75f"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2600122-8/votos",
+      "status": 200,
+      "bytes": 177734,
+      "sha256": "sha256:f68bb8a672ded8dc6ec6be628b76c29e48fd34981f783c808d1d31fda51c8fa0"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2601223-8",
+      "status": 200,
+      "bytes": 3050,
+      "sha256": "sha256:c360ddbdfdf55b2222699f2894f2e112406c6330151e3ac24880b7649dc3a0a8"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2601223-8/votos",
+      "status": 200,
+      "bytes": 149793,
+      "sha256": "sha256:6d741db00257f8f25b9a28bec0853fe3cfe32cf47943589a41e32b1fa67d70e8"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2601522-8",
+      "status": 200,
+      "bytes": 2688,
+      "sha256": "sha256:07a27ba687c1d4414fe1ed2bff9b11cced65821cd2ab21ef80ad6afa05689d9a"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2601522-8/votos",
+      "status": 200,
+      "bytes": 180821,
+      "sha256": "sha256:fe778b71292231f7dfd43578e3a0239f91a87e61fe22459868bfeedc76eab2b5"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2601794-5",
+      "status": 200,
+      "bytes": 1974,
+      "sha256": "sha256:eddadc93d893214ec245d2152c0f8b272a8133a1c0d490635da635461658e00a"
+    },
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2601794-5/votos",
+      "status": 200,
+      "bytes": 166926,
+      "sha256": "sha256:9879624b14bdb2c70bc3a37e4374a06fa52a8800dd4d9d6476a50ce651ded9bd"
+    }
+  ]
+}
