@@ -28,3 +28,15 @@ Nenhum registro foi vinculado por nome parcial, cargo, partido, número históri
 ## Próximo passo
 
 Buscar, em fonte oficial da Câmara, o catálogo histórico/endpoint que relacione os `NUMVOT` 9002–9003 e 9224–9227 aos identificadores nominais e às proposições/eventos correspondentes. Só depois gerar envelope dry-run com URL, hash, data, proposição, identidade e voto exatos.
+
+## Reconhecimento de fonte oficial
+
+- Busca em fonte oficial localizou o índice `https://www.camara.leg.br/Internet/VotacaoDBF/pages/listavotacao5601.asp`, que referencia os DBFs da 56ª Legislatura e descreve `CD190242` como PEC 6/2019 — segundo turno e `CD190244` como requerimento de retirada de pauta.
+- A ficha oficial da PEC 6/2019 (`https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2192459`) confirma a proposição e as sessões de 07/08/2019, mas não substitui a prova nominal individual.
+- O fetch direto do índice neste ambiente falhou antes do HTTP por DNS (`Name or service not known`); a saída do scraper/web search não foi convertida em dado.
+
+## Publicação
+
+- Gates locais: 73 arquivos / 347 testes, TypeScript, schema, `data:check` (1003 candidaturas / 988 fotos), build e `git diff --check` passaram.
+- Commit local: `fe58376` (`docs: registra reconciliacao offline dos DBFs`).
+- Push bloqueado por DNS de `github.com`; duas tentativas retornaram `Could not resolve host: github.com`. Produção permaneceu verificável em HTTP 200, mas o commit ainda não está no remoto.
