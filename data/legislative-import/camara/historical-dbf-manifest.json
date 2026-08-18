@@ -1,0 +1,553 @@
+{
+  "schema_version": "1.0.0",
+  "phase": "FED-24",
+  "mode": "read-only-official-dbf-evidence",
+  "source_domain": "www.camara.leg.br",
+  "retrieved_on": "2026-08-18",
+  "source_index": "56ª Legislatura — 1ª Sessão Legislativa",
+  "artifacts": [
+    {
+      "file": ".orchestrator/runtime/camara-historical-dbf/CD190400.dbf",
+      "code": "CD190400",
+      "proposition": "PL 3723/2019",
+      "calendar_date": "2019-11-05",
+      "description": "Subemenda Substitutiva Global",
+      "url": "https://www.camara.leg.br/Internet/votacaodbf/56Primeira/CD190400.dbf",
+      "http_status": 200,
+      "bytes": 44312,
+      "sha256": "sha256:6cce4849504bcd84948018c13106898690d400a360127bdc5bee5d14a40bd257",
+      "dbf_version_byte": 3,
+      "valid_dbf": true,
+      "record_count": 513,
+      "header_length": 193,
+      "record_length": 86,
+      "fields": [
+        {
+          "name": "NUMVOT",
+          "type": "C",
+          "length": 4,
+          "decimals": 0
+        },
+        {
+          "name": "NOME_PAR",
+          "type": "C",
+          "length": 31,
+          "decimals": 0
+        },
+        {
+          "name": "VOTO",
+          "type": "C",
+          "length": 9,
+          "decimals": 0
+        },
+        {
+          "name": "PARTIDO",
+          "type": "C",
+          "length": 11,
+          "decimals": 0
+        },
+        {
+          "name": "ESTADO",
+          "type": "C",
+          "length": 30,
+          "decimals": 0
+        }
+      ],
+      "rs_record_count": 31,
+      "rs_names": [
+        "AFONSO HAMM",
+        "AFONSO MOTTA",
+        "ALCEU MOREIRA",
+        "BIBO NUNES",
+        "BOHN GASS",
+        "CARLOS GOMES",
+        "DANIEL TRZECIAK",
+        "DANRLEI DE DEUS HINTERHOLZ",
+        "DARCISIO PERONDI",
+        "FERNANDA MELCHIONNA",
+        "GIOVANI CHERINI",
+        "GIOVANI FELTES",
+        "HEITOR SCHUCH",
+        "HENRIQUE FONTANA",
+        "JERONIMO GOERGEN",
+        "LIZIANE BAYER",
+        "LUCAS REDECKER",
+        "MARCEL VAN HATTEM",
+        "MARCELO BRUM",
+        "MARCELO MORAES",
+        "MARCIO BIOLCHI",
+        "MARCON",
+        "MARIA DO ROSARIO",
+        "MARLON SANTOS",
+        "MAURICIO DZIEDRICKI",
+        "NEREU CRISPIM",
+        "PAULO PIMENTA",
+        "PEDRO WESTPHALEN",
+        "POMPEO DE MATTOS",
+        "SANDERSON",
+        "SANTINI"
+      ],
+      "rs_vote_counts": {
+        "SIM": 21,
+        "NAO": 6,
+        "<------->": 4
+      },
+      "numvot_values": [
+        "9227"
+      ]
+    },
+    {
+      "file": ".orchestrator/runtime/camara-historical-dbf/CD190398.dbf",
+      "code": "CD190398",
+      "proposition": "PL 3723/2019",
+      "calendar_date": "2019-11-05",
+      "description": "Requerimento de adiamento por 1 sessão",
+      "url": "https://www.camara.leg.br/Internet/votacaodbf/56Primeira/CD190398.dbf",
+      "http_status": 200,
+      "bytes": 44312,
+      "sha256": "sha256:32752ea2173ba792e26bdcfafd2b3fd6b72166fb0a1cc2dfadc48f1122c692c1",
+      "dbf_version_byte": 3,
+      "valid_dbf": true,
+      "record_count": 513,
+      "header_length": 193,
+      "record_length": 86,
+      "fields": [
+        {
+          "name": "NUMVOT",
+          "type": "C",
+          "length": 4,
+          "decimals": 0
+        },
+        {
+          "name": "NOME_PAR",
+          "type": "C",
+          "length": 31,
+          "decimals": 0
+        },
+        {
+          "name": "VOTO",
+          "type": "C",
+          "length": 9,
+          "decimals": 0
+        },
+        {
+          "name": "PARTIDO",
+          "type": "C",
+          "length": 11,
+          "decimals": 0
+        },
+        {
+          "name": "ESTADO",
+          "type": "C",
+          "length": 30,
+          "decimals": 0
+        }
+      ],
+      "rs_record_count": 31,
+      "rs_names": [
+        "AFONSO HAMM",
+        "AFONSO MOTTA",
+        "ALCEU MOREIRA",
+        "BIBO NUNES",
+        "BOHN GASS",
+        "CARLOS GOMES",
+        "DANIEL TRZECIAK",
+        "DANRLEI DE DEUS HINTERHOLZ",
+        "DARCISIO PERONDI",
+        "FERNANDA MELCHIONNA",
+        "GIOVANI CHERINI",
+        "GIOVANI FELTES",
+        "HEITOR SCHUCH",
+        "HENRIQUE FONTANA",
+        "JERONIMO GOERGEN",
+        "LIZIANE BAYER",
+        "LUCAS REDECKER",
+        "MARCEL VAN HATTEM",
+        "MARCELO BRUM",
+        "MARCELO MORAES",
+        "MARCIO BIOLCHI",
+        "MARCON",
+        "MARIA DO ROSARIO",
+        "MARLON SANTOS",
+        "MAURICIO DZIEDRICKI",
+        "NEREU CRISPIM",
+        "PAULO PIMENTA",
+        "PEDRO WESTPHALEN",
+        "POMPEO DE MATTOS",
+        "SANDERSON",
+        "SANTINI"
+      ],
+      "rs_vote_counts": {
+        "NAO": 17,
+        "OBSTRUCAO": 3,
+        "SIM": 1,
+        "<------->": 10
+      },
+      "numvot_values": [
+        "9226"
+      ]
+    },
+    {
+      "file": ".orchestrator/runtime/camara-historical-dbf/CD190397.dbf",
+      "code": "CD190397",
+      "proposition": "PL 3723/2019",
+      "calendar_date": "2019-11-05",
+      "description": "Requerimento de adiamento por 2 sessões",
+      "url": "https://www.camara.leg.br/Internet/votacaodbf/56Primeira/CD190397.dbf",
+      "http_status": 200,
+      "bytes": 44312,
+      "sha256": "sha256:05c7971ac69f91b5d05f775310719c0b50a345e4ed2bb8b2a1fcccf73a4ddb30",
+      "dbf_version_byte": 3,
+      "valid_dbf": true,
+      "record_count": 513,
+      "header_length": 193,
+      "record_length": 86,
+      "fields": [
+        {
+          "name": "NUMVOT",
+          "type": "C",
+          "length": 4,
+          "decimals": 0
+        },
+        {
+          "name": "NOME_PAR",
+          "type": "C",
+          "length": 31,
+          "decimals": 0
+        },
+        {
+          "name": "VOTO",
+          "type": "C",
+          "length": 9,
+          "decimals": 0
+        },
+        {
+          "name": "PARTIDO",
+          "type": "C",
+          "length": 11,
+          "decimals": 0
+        },
+        {
+          "name": "ESTADO",
+          "type": "C",
+          "length": 30,
+          "decimals": 0
+        }
+      ],
+      "rs_record_count": 31,
+      "rs_names": [
+        "AFONSO HAMM",
+        "AFONSO MOTTA",
+        "ALCEU MOREIRA",
+        "BIBO NUNES",
+        "BOHN GASS",
+        "CARLOS GOMES",
+        "DANIEL TRZECIAK",
+        "DANRLEI DE DEUS HINTERHOLZ",
+        "DARCISIO PERONDI",
+        "FERNANDA MELCHIONNA",
+        "GIOVANI CHERINI",
+        "GIOVANI FELTES",
+        "HEITOR SCHUCH",
+        "HENRIQUE FONTANA",
+        "JERONIMO GOERGEN",
+        "LIZIANE BAYER",
+        "LUCAS REDECKER",
+        "MARCEL VAN HATTEM",
+        "MARCELO BRUM",
+        "MARCELO MORAES",
+        "MARCIO BIOLCHI",
+        "MARCON",
+        "MARIA DO ROSARIO",
+        "MARLON SANTOS",
+        "MAURICIO DZIEDRICKI",
+        "NEREU CRISPIM",
+        "PAULO PIMENTA",
+        "PEDRO WESTPHALEN",
+        "POMPEO DE MATTOS",
+        "SANDERSON",
+        "SANTINI"
+      ],
+      "rs_vote_counts": {
+        "NAO": 16,
+        "OBSTRUCAO": 4,
+        "SIM": 1,
+        "<------->": 10
+      },
+      "numvot_values": [
+        "9225"
+      ]
+    },
+    {
+      "file": ".orchestrator/runtime/camara-historical-dbf/CD190396.dbf",
+      "code": "CD190396",
+      "proposition": "PL 3723/2019",
+      "calendar_date": "2019-11-05",
+      "description": "Requerimento de retirada de pauta",
+      "url": "https://www.camara.leg.br/Internet/votacaodbf/56Primeira/CD190396.dbf",
+      "http_status": 200,
+      "bytes": 44312,
+      "sha256": "sha256:171e32588843bb644caee5b5f3cf7586ae8e8a7c041018acda7d9516dd337d6b",
+      "dbf_version_byte": 3,
+      "valid_dbf": true,
+      "record_count": 513,
+      "header_length": 193,
+      "record_length": 86,
+      "fields": [
+        {
+          "name": "NUMVOT",
+          "type": "C",
+          "length": 4,
+          "decimals": 0
+        },
+        {
+          "name": "NOME_PAR",
+          "type": "C",
+          "length": 31,
+          "decimals": 0
+        },
+        {
+          "name": "VOTO",
+          "type": "C",
+          "length": 9,
+          "decimals": 0
+        },
+        {
+          "name": "PARTIDO",
+          "type": "C",
+          "length": 11,
+          "decimals": 0
+        },
+        {
+          "name": "ESTADO",
+          "type": "C",
+          "length": 30,
+          "decimals": 0
+        }
+      ],
+      "rs_record_count": 31,
+      "rs_names": [
+        "AFONSO HAMM",
+        "AFONSO MOTTA",
+        "ALCEU MOREIRA",
+        "BIBO NUNES",
+        "BOHN GASS",
+        "CARLOS GOMES",
+        "DANIEL TRZECIAK",
+        "DANRLEI DE DEUS HINTERHOLZ",
+        "DARCISIO PERONDI",
+        "FERNANDA MELCHIONNA",
+        "GIOVANI CHERINI",
+        "GIOVANI FELTES",
+        "HEITOR SCHUCH",
+        "HENRIQUE FONTANA",
+        "JERONIMO GOERGEN",
+        "LIZIANE BAYER",
+        "LUCAS REDECKER",
+        "MARCEL VAN HATTEM",
+        "MARCELO BRUM",
+        "MARCELO MORAES",
+        "MARCIO BIOLCHI",
+        "MARCON",
+        "MARIA DO ROSARIO",
+        "MARLON SANTOS",
+        "MAURICIO DZIEDRICKI",
+        "NEREU CRISPIM",
+        "PAULO PIMENTA",
+        "PEDRO WESTPHALEN",
+        "POMPEO DE MATTOS",
+        "SANDERSON",
+        "SANTINI"
+      ],
+      "rs_vote_counts": {
+        "OBSTRUCAO": 6,
+        "NAO": 10,
+        "SIM": 1,
+        "<------->": 14
+      },
+      "numvot_values": [
+        "9224"
+      ]
+    },
+    {
+      "file": ".orchestrator/runtime/camara-historical-dbf/CD190242.dbf",
+      "code": "CD190242",
+      "proposition": "PEC 6/2019",
+      "calendar_date": "2019-08-07",
+      "description": "Segundo turno",
+      "url": "https://www.camara.leg.br/Internet/votacaodbf/56Primeira/CD190242.dbf",
+      "http_status": 200,
+      "bytes": 44312,
+      "sha256": "sha256:e87e25cca55d826f88219f1ebb53a70ea8461ab3daea47a453155ab1f4a949b3",
+      "dbf_version_byte": 3,
+      "valid_dbf": true,
+      "record_count": 513,
+      "header_length": 193,
+      "record_length": 86,
+      "fields": [
+        {
+          "name": "NUMVOT",
+          "type": "C",
+          "length": 4,
+          "decimals": 0
+        },
+        {
+          "name": "NOME_PAR",
+          "type": "C",
+          "length": 31,
+          "decimals": 0
+        },
+        {
+          "name": "VOTO",
+          "type": "C",
+          "length": 9,
+          "decimals": 0
+        },
+        {
+          "name": "PARTIDO",
+          "type": "C",
+          "length": 11,
+          "decimals": 0
+        },
+        {
+          "name": "ESTADO",
+          "type": "C",
+          "length": 30,
+          "decimals": 0
+        }
+      ],
+      "rs_record_count": 31,
+      "rs_names": [
+        "AFONSO HAMM",
+        "AFONSO MOTTA",
+        "ALCEU MOREIRA",
+        "BIBO NUNES",
+        "BOHN GASS",
+        "CARLOS GOMES",
+        "DANIEL TRZECIAK",
+        "DANRLEI DE DEUS HINTERHOLZ",
+        "DARCISIO PERONDI",
+        "FERNANDA MELCHIONNA",
+        "GIOVANI CHERINI",
+        "GIOVANI FELTES",
+        "HEITOR SCHUCH",
+        "HENRIQUE FONTANA",
+        "JERONIMO GOERGEN",
+        "LIZIANE BAYER",
+        "LUCAS REDECKER",
+        "MARCEL VAN HATTEM",
+        "MARCELO MORAES",
+        "MARCIO BIOLCHI",
+        "MARCON",
+        "MARIA DO ROSARIO",
+        "MARLON SANTOS",
+        "MAURICIO DZIEDRICKI",
+        "NEREU CRISPIM",
+        "ONYX LORENZONI",
+        "PAULO PIMENTA",
+        "PEDRO WESTPHALEN",
+        "POMPEO DE MATTOS",
+        "SANDERSON",
+        "SANTINI"
+      ],
+      "rs_vote_counts": {
+        "SIM": 22,
+        "NAO": 9
+      },
+      "numvot_values": [
+        "9002"
+      ]
+    },
+    {
+      "file": ".orchestrator/runtime/camara-historical-dbf/CD190244.dbf",
+      "code": "CD190244",
+      "proposition": "PEC 6/2019",
+      "calendar_date": "2019-08-07",
+      "description": "Requerimento de retirada de pauta",
+      "url": "https://www.camara.leg.br/Internet/votacaodbf/56Primeira/CD190244.dbf",
+      "http_status": 200,
+      "bytes": 44312,
+      "sha256": "sha256:77530b632dcf2fd77e9d33704717bcc57f5e082ec13fa42ccd9da3b8b77e0875",
+      "dbf_version_byte": 3,
+      "valid_dbf": true,
+      "record_count": 513,
+      "header_length": 193,
+      "record_length": 86,
+      "fields": [
+        {
+          "name": "NUMVOT",
+          "type": "C",
+          "length": 4,
+          "decimals": 0
+        },
+        {
+          "name": "NOME_PAR",
+          "type": "C",
+          "length": 31,
+          "decimals": 0
+        },
+        {
+          "name": "VOTO",
+          "type": "C",
+          "length": 9,
+          "decimals": 0
+        },
+        {
+          "name": "PARTIDO",
+          "type": "C",
+          "length": 11,
+          "decimals": 0
+        },
+        {
+          "name": "ESTADO",
+          "type": "C",
+          "length": 30,
+          "decimals": 0
+        }
+      ],
+      "rs_record_count": 31,
+      "rs_names": [
+        "AFONSO HAMM",
+        "AFONSO MOTTA",
+        "ALCEU MOREIRA",
+        "BIBO NUNES",
+        "BOHN GASS",
+        "CARLOS GOMES",
+        "DANIEL TRZECIAK",
+        "DANRLEI DE DEUS HINTERHOLZ",
+        "DARCISIO PERONDI",
+        "FERNANDA MELCHIONNA",
+        "GIOVANI CHERINI",
+        "GIOVANI FELTES",
+        "HEITOR SCHUCH",
+        "HENRIQUE FONTANA",
+        "JERONIMO GOERGEN",
+        "LIZIANE BAYER",
+        "LUCAS REDECKER",
+        "MARCEL VAN HATTEM",
+        "MARCELO MORAES",
+        "MARCIO BIOLCHI",
+        "MARCON",
+        "MARIA DO ROSARIO",
+        "MARLON SANTOS",
+        "MAURICIO DZIEDRICKI",
+        "NEREU CRISPIM",
+        "ONYX LORENZONI",
+        "PAULO PIMENTA",
+        "PEDRO WESTPHALEN",
+        "POMPEO DE MATTOS",
+        "SANDERSON",
+        "SANTINI"
+      ],
+      "rs_vote_counts": {
+        "NAO": 18,
+        "OBSTRUCAO": 6,
+        "SIM": 1,
+        "<------->": 6
+      },
+      "numvot_values": [
+        "9003"
+      ]
+    }
+  ]
+}
