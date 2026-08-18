@@ -275,17 +275,21 @@ async function fetchVotingProfilesForCandidates(
       };
     };
   };
-  const { data, error } = await profileClient
+
+  const chunks = chunkBy(candidateIds, CLAIM_ID_CHUNK_SIZE);
+  const responses = await Promise.all(chunks.map((chunk) => profileClient
     .from('legislator_vote_profile')
     .select('candidate_id,house,total_votes,votos_sim,votos_nao,votos_abstencao,votos_ausente,votos_obstrucao,profile_score')
-    .in('candidate_id', candidateIds);
+    .in('candidate_id', chunk)));
 
-  if (error) throw error;
-  for (const profile of data ?? []) {
-    const profiles = profilesByCandidate.get(profile.candidate_id) ?? [];
-    const { candidate_id: _candidateId, profile_score, ...rest } = profile;
-    profiles.push({ ...rest, nominal_balance: profile_score });
-    profilesByCandidate.set(profile.candidate_id, profiles);
+  for (const { data, error } of responses) {
+    if (error) throw error;
+    for (const profile of data ?? []) {
+      const profiles = profilesByCandidate.get(profile.candidate_id) ?? [];
+      const { candidate_id: _candidateId, profile_score, ...rest } = profile;
+      profiles.push({ ...rest, nominal_balance: profile_score });
+      profilesByCandidate.set(profile.candidate_id, profiles);
+    }
   }
   return profilesByCandidate;
 }

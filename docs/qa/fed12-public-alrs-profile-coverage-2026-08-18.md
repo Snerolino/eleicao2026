@@ -25,6 +25,21 @@ perfis ALRS desaparecerem da coleção pública, apesar de existirem no remoto.
 - TypeScript: passou;
 - suíte completa e build executados antes da publicação.
 
+## Segunda correção durante o smoke
+
+O primeiro ajuste usava lotes de 100 IDs sequencialmente. No smoke, a Home
+permanecia em carregamento; a consulta pública confirmou que o gateway aceitava
+os lotes, mas a latência acumulada bloqueava a renderização.
+
+Os lotes agora são executados em paralelo com `Promise.all`, mantendo o limite
+de 100 IDs por requisição. Smoke local final:
+
+- 1002 cards renderizados;
+- 0 falhas HTTP;
+- 0 erros de console online;
+- service worker pronto;
+- rota canônica e modo offline validados.
+
 ## Limites
 
 A cobertura pública depende de `candidate_id` existir no conjunto de candidatos
