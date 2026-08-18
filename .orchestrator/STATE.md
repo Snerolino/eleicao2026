@@ -96,8 +96,21 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - SQL factual fica bloqueado até lookup remoto por `tse_candidate_id` e resolução
   dos IDs reais de `source_references`.
 - QA: `docs/qa/fed7a-camara-remote-readiness-2026-08-17.md`.
-- Bloqueio operacional: doctor exige Node 24, shell atual está em Node 22.22.2;
-  repetir gates completos em runtime suportado antes de mutação remota.
+- Bloqueio operacional resolvido: Node 24.19.0 ativado e usado no gate remoto.
+
+## Atualização FED-7B — carga factual Câmara (2026-08-17)
+
+- Node 24.19.0 ativado para o gate remoto.
+- Lookup remoto por `tse_candidate_id` resolveu 4 candidatos; 4 source refs
+  existentes foram recuperadas por `content_hash`.
+- Writer factual aplicou 1 proposição, 1 versão, evento já existente e 4 votos;
+  segunda passagem criou 0 linhas.
+- Evento ficou com 5 votos totais porque Marcel já existia como fixture anterior;
+  não houve duplicidade dos 4 novos votos.
+- `impact_rows_created=0`, RPC de aprovação não chamado e matriz permanece
+  `pending_review`.
+- QA: `docs/qa/fed7b-camara-factual-apply-2026-08-17.md`.
+- Próximo gate: revisão editorial da matriz antes de qualquer aprovação.
 
 ## Checkpoint mais recente — migração de sessão (2026-08-17)
 

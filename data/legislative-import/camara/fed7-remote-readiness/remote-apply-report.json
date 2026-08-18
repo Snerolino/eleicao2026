@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "phase": "FED-7B",
+  "remote_apply": true,
+  "source_reference_gate": {
+    "source_count": 4,
+    "existing_before_apply": 4,
+    "inserted": 0,
+    "resolved_ids": 4
+  },
+  "candidate_lookup": {
+    "lookup_key": "tse_candidate_id",
+    "resolved": 4,
+    "unresolved": 0
+  },
+  "factual_gate": {
+    "propositions_created": 1,
+    "versions_created": 1,
+    "events_created": 0,
+    "votes_created_first_pass": 4,
+    "votes_created_second_pass": 0,
+    "total_votes_for_event_after_apply": 5,
+    "distinct_candidates_for_event_after_apply": 5
+  },
+  "impact_gate": {
+    "impact_rows_created": 0,
+    "matrix_status": "pending_review",
+    "approval_rpc_called": false
+  },
+  "remote_ids": {
+    "proposition_id": "0a7d7020-2ed9-41cf-96b6-0f0283ee96c7",
+    "proposition_version_id": "a2481245-0290-49c2-83e2-f5e8f58c03d4",
+    "voting_event_id": "ed8433cf-0d62-4137-9a02-a64b2bb9ec18"
+  }
+}

@@ -7,22 +7,26 @@ const root = resolve(process.cwd());
 const dir = resolve(root, 'data/legislative-import/camara/fed7-remote-readiness');
 const manifest = JSON.parse(readFileSync(resolve(dir, 'manifest.json'), 'utf8'));
 const catalog = JSON.parse(readFileSync(resolve(dir, 'source-catalog.json'), 'utf8'));
+const report = JSON.parse(readFileSync(resolve(dir, 'remote-apply-report.json'), 'utf8'));
 const sql = readFileSync(resolve(dir, 'source-references.sql'), 'utf8');
 
 describe('FED-7A: prontidão remota Câmara', () => {
   it('mantém os quatro source references sem UUID inventado', () => {
     expect(manifest.source_count).toBe(4);
-    expect(manifest.source_ids_resolved).toBe(0);
+    expect(manifest.source_ids_resolved).toBe(4);
     expect(catalog.unresolved).toHaveLength(4);
     expect(Object.values(catalog.sourceReferenceByKey).every((id) => id === null)).toBe(true);
   });
 
-  it('bloqueia SQL factual até resolver FKs remotas', () => {
-    expect(manifest.factual_sql_generated).toBe(false);
-    expect(manifest.remote_apply).toBe(false);
-    expect(manifest.candidate_fk_resolution.resolved_remote_candidate_ids).toBe(0);
+  it('registra FKs resolvidas e mantém impacto separado', () => {
+    expect(manifest.factual_sql_generated).toBe(true);
+    expect(manifest.remote_apply).toBe(true);
+    expect(manifest.candidate_fk_resolution.resolved_remote_candidate_ids).toBe(4);
+    expect(report.factual_gate.votes_created_first_pass).toBe(4);
+    expect(report.factual_gate.votes_created_second_pass).toBe(0);
+    expect(report.impact_gate.impact_rows_created).toBe(0);
     expect(manifest.blockers).toEqual(expect.arrayContaining([
-      'candidate UUIDs must come from remote lookup by tse_candidate_id',
+      'impact matrix remains pending_review and requires editorial approval',
     ]));
   });
 

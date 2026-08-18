@@ -5,27 +5,27 @@
   "source_catalog": "source-catalog.json",
   "source_sql": "source-references.sql",
   "source_count": 4,
-  "source_ids_resolved": 0,
+  "source_ids_resolved": 4,
   "source_ids_required_before_factual_apply": true,
   "candidate_fk_resolution": {
     "lookup_key": "tse_candidate_id",
     "required_candidates": 4,
-    "resolved_remote_candidate_ids": 0,
-    "unresolved_remote_candidate_ids": [
-      "210002533902",
-      "210002534604",
-      "210002537712",
-      "210002534668"
-    ]
+    "resolved_remote_candidate_ids": 4,
+    "unresolved_remote_candidate_ids": []
   },
-  "factual_sql_generated": false,
-  "remote_apply": false,
+  "factual_sql_generated": true,
+  "remote_apply": true,
   "impact_apply": false,
   "public_approval": false,
+  "factual_apply": {
+    "proposition_external_id": "camara-proposicao-2580259-plp",
+    "voting_event_external_id": "camara-votacao-2580259-24",
+    "first_pass_created_votes": 4,
+    "second_pass_created_votes": 0,
+    "impact_touched": false
+  },
   "blockers": [
-    "source_references UUIDs must come from authorized remote query/upsert",
-    "candidate UUIDs must come from remote lookup by tse_candidate_id",
-    "factual legislative SQL remains blocked until both catalogs resolve"
+    "impact matrix remains pending_review and requires editorial approval"
   ],
   "secrets_scan": {
     "checked_patterns": ["service_role", "apikey", "Authorization", "Bearer"],
