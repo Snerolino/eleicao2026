@@ -1,75 +1,30 @@
-# QA — reconciliação histórica Câmara por índice DBF oficial (2026-08-18)
+# QA — Reconciliação offline dos DBFs históricos da Câmara
+
+- Data: 2026-08-18
+- Fase: FED-24
+- Modo: somente leitura; nenhum voto, identidade, FK, source reference ou escrita remota foi criado.
 
 ## Objetivo
 
-Executar um chunk bounded read-only para localizar, em fonte oficial da Câmara,
-as votações nominais correspondentes aos dois eventos sem fonte individual:
-PEC 6/2019 (`2192459`) e PL 3723/2019 (`2209381`).
+Revalidar os seis DBFs oficiais já baixados, cruzando `NOME_PAR` de registros `ESTADO=RIO GRANDE DO SUL` com `full_name`/`ballot_name` do snapshot público, sem matching heurístico.
 
-## Estado operacional
+## Evidência oficial
 
-- Lock contínuo adquirido somente durante o chunk; nenhum writer concorrente.
-- Worktree estava limpa no início, em `main`, `HEAD=eb4d145d589dd75447e58e3209f36d3f0e28928d`.
-- O shell do cron iniciou Node `v22.22.2`; o projeto exige Node `>=24 <25`. O
-  doctor foi executado e retornou `FAIL` somente por essa versão do shell, além
-  de warnings opcionais de OpenCode/Ollama/Antigravity. O gate de dados foi
-  reexecutado com Node `v24.19.0` e passou.
-- `npm run data:check`: **candidaturas 1003; fotos oficiais 988; fontes TSE 1**.
+Os seis artefatos do manifesto `data/legislative-import/camara/historical-dbf-manifest.json` têm HTTP 200, 44.312 bytes, 513 registros e SHA-256 versionado. Foram usados os próprios arquivos locais do manifesto em `.orchestrator/runtime/camara-historical-dbf/`; os brutos não entram no snapshot Git.
 
-## Evidência oficial encontrada
+## Resultado verificado
 
-A página oficial do índice de votações da 56ª Legislatura — 1ª Sessão Legislativa
-lista arquivos DBF nominais com URL completa:
+- 6 DBFs processados; 31 registros RS por arquivo; 186 linhas avaliadas.
+- Cada arquivo produziu 19 correspondências únicas no snapshot, 10 nomes ausentes e 2 nomes ambíguos (`GIOVANI CHERINI` e `MARCEL VAN HATTEM`, duas entradas cada).
+- Os 10 nomes ausentes recorrentes são: DANIEL TRZECIAK, DARCISIO PERONDI, GIOVANI FELTES, JERONIMO GOERGEN, LIZIANE BAYER, MARCIO BIOLCHI, MARLON SANTOS, NEREU CRISPIM, PAULO PIMENTA e SANTINI.
+- PL 3723/2019: quatro votações em 2019-11-05 (`CD190396`–`CD190400`), com `NUMVOT` 9224–9227.
+- PEC 6/2019: duas votações em 2019-08-07 (`CD190242` e `CD190244`), com `NUMVOT` 9002–9003.
+- Valores observados incluem `SIM`, `NAO`, `OBSTRUCAO` e `\<------->`; não foram convertidos em eventos do portal.
 
-- PL 3723/2019 — Subemenda Substitutiva Global, 05/11/2019:
-  `https://www.camara.leg.br/Internet/votacaodbf/56Primeira/CD190400.dbf`
-- PL 3723/2019 — requerimento de adiamento por 1 sessão:
-  `https://www.camara.leg.br/Internet/votacaodbf/56Primeira/CD190398.dbf`
-- PL 3723/2019 — requerimento de adiamento por 2 sessões:
-  `https://www.camara.leg.br/Internet/votacaodbf/56Primeira/CD190397.dbf`
-- PL 3723/2019 — requerimento de retirada de pauta:
-  `https://www.camara.leg.br/Internet/votacaodbf/56Primeira/CD190396.dbf`
-- PEC 6/2019 — segundo turno, 07/08/2019:
-  `https://www.camara.leg.br/Internet/votacaodbf/56Primeira/CD190242.dbf`
-- PEC 6/2019 — requerimento de retirada de pauta, 07/08/2019:
-  `https://www.camara.leg.br/Internet/votacaodbf/56Primeira/CD190244.dbf`
+## Decisão fail-closed
 
-A página oficial de votação para a reunião `58528` confirma o evento nominal do
-PL 3723/2019 em 05/11/2019, com proposição, tipo e resultado agregado; ela lista
-votos individuais, mas ainda não foi usada para preencher o lote remoto porque a
-reconciliação exige o registro nominal oficial exato e identidade remota.
+Nenhum registro foi vinculado por nome parcial, cargo, partido, número histórico ou proximidade textual. A reconciliação não fornece identidade TSE suficiente para os 10 ausentes nem para os 2 ambíguos; portanto o lote permanece bloqueado para importação factual. Também não há, nesta etapa, prova de proposição/evento remoto exato para materializar os DBFs.
 
-A rota oficial de sessão `https://www.camara.leg.br/evento-legislativo/56938`
-(e o texto Escriba vinculado) foi localizada, mas corresponde à sessão de
-20/08/2019 e não prova, sozinha, um voto nominal individual para o evento
-pendente. Nenhum voto foi inferido de placar, sessão, discurso ou página de
-proposição.
+## Próximo passo
 
-## Resultado e bloqueios
-
-- A pesquisa avançou de “rota desconhecida” para um catálogo oficial de arquivos
-  DBF candidatos, com proposição, data, descrição e URL completa.
-- Os arquivos ainda precisam ser baixados, validados como DBF, ter bytes e
-  SHA-256 registrados em manifesto e ser reconciliados por proposição, data,
-  evento e identidade exatos antes de qualquer envelope ou escrita.
-- Não foram inventados `vote_id`, UUID, hash, `source_reference` ou valor de voto.
-- ALRS permanece separado e bloqueado pelo JWT `issued at future`, conforme
-  checkpoint anterior.
-
-## Alterações e verificação
-
-- Alterado somente este relatório e `.orchestrator/STATE.md`.
-- Nenhuma migration, RPC, matriz, claim, Supabase, Cloudflare ou dado factual
-  remoto foi alterado.
-- O commit final `facea44` foi publicado com sucesso (`main -> origin/main`);
-  `git ls-remote` confirmou o mesmo SHA remoto.
-- Produção respondeu `HTTP 200` em `https://rs.votopraquem.org`. A consulta do
-  workflow via `gh run list` falhou temporariamente por conexão com
-  `api.github.com`; o run/deploy do backup não foi confirmado neste tick.
-
-## Próximo chunk bounded
-
-Baixar sequencialmente apenas os DBFs oficiais acima, registrar manifesto com
-HTTP/bytes/SHA-256 e inspecionar o schema/linhas sem aplicar dados. Depois,
-selecionar somente arquivos com correspondência exata de proposição e data; o
-writer deve permanecer fail-closed até haver identidade e fonte verificadas.
+Buscar, em fonte oficial da Câmara, o catálogo histórico/endpoint que relacione os `NUMVOT` 9002–9003 e 9224–9227 aos identificadores nominais e às proposições/eventos correspondentes. Só depois gerar envelope dry-run com URL, hash, data, proposição, identidade e voto exatos.

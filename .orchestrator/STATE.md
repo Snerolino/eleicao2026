@@ -3,6 +3,14 @@
 Atualizado: 2026-08-18 13:11 UTC
 Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 
+## Tick contínuo — reconciliação offline DBF Câmara (2026-08-18)
+
+- Lock bounded adquirido e liberado; nenhum writer concorrente. Worktree estava limpa no início; `HEAD=9f5efda32b3c9c508bdea6f92281768a3e523595`.
+- Revalidação local dos seis DBFs oficiais: 186 registros RS, 19 correspondências únicas por arquivo, 10 nomes ausentes e 2 nomes ambíguos recorrentes. Nenhuma identidade ou voto foi inferido.
+- PL 3723/2019: `CD190396`–`CD190400`, `NUMVOT` 9224–9227, 2019-11-05. PEC 6/2019: `CD190242`–`CD190244`, `NUMVOT` 9002–9003, 2019-08-07.
+- QA: `docs/qa/lote-camara-historical-dbf-recon-2026-08-18.md`.
+- Gates desta retomada ainda pendentes; próximo chunk é localizar endpoint/catálogo histórico oficial que ligue `NUMVOT` aos eventos e identidades, mantendo fail-closed.
+
 ## Tick contínuo — download e inspeção DBF Câmara (2026-08-18)
 
 - Lock bounded adquirido e liberado; nenhum writer concorrente. Worktree limpa no início; `HEAD=15637a5fe95fa1bfcc92df6818a979b395399e5b`.
