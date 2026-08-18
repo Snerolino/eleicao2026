@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "phase": "FED-17",
+  "mode": "source-recovery-evidence",
+  "source_domain": "transparencia.al.rs.gov.br",
+  "retrieved_on": "2026-08-18",
+  "sources": [
+    { "solicitante": "93", "name": "Luciana Genro", "tse_candidate_id": "210002533936", "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=93&ano=2026", "sha256": "sha256:4f41ddb84d7139397aadeab10d379d0e55950fd0514d6e8e2bc5dba65b309014", "bytes": 589283, "data_items": 109 },
+    { "solicitante": "2122", "name": "Sofia Cavedon", "tse_candidate_id": "210002534038", "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2122&ano=2026", "sha256": "sha256:97492fb28e6d85e94f379128037535d99191664dcb518fa484aac915749cd9bc", "bytes": 540317, "data_items": 99 },
+    { "solicitante": "2153", "name": "Guilherme Pasin", "tse_candidate_id": "210002537883", "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2153&ano=2026", "sha256": "sha256:268f0655e02118fa60b63f4616c10525aa66d4f5aa04a57e9b58afd62f80ce76", "bytes": 534734, "data_items": 97 },
+    { "solicitante": "2136", "name": "Rodrigo Lorenzoni", "tse_candidate_id": "210002537887", "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2136&ano=2026", "sha256": "sha256:69833351d77c5617073e6981571b212c71d20999099306ce3d797e4d60a5d5ae", "bytes": 541531, "data_items": 99 },
+    { "solicitante": "2162", "name": "Delegada Nadine", "tse_candidate_id": "210002540644", "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2162&ano=2026", "sha256": "sha256:c12c6f762fabed296f48f7e9044b2f5ea42ec290dd6af46117721d6bc6eafaf1", "bytes": 495335, "data_items": 89 }
+  ],
+  "eligible_events": ["alrs_pl134_2023", "alrs_pl77_2025"],
+  "blocked_events": [
+    { "external_id": "alrs_pl165_2025", "reason": "official_page_date_2026-03-10_vs_remote_event_2026-04-14" },
+    { "external_id": "alrs_pl361_2025", "reason": "official_page_date_2026-04-07_vs_remote_event_2026-04-28" },
+    { "external_id": "alrs_pl38_2026", "reason": "two_official_records_same_candidate_proposition_date" }
+  ],
+  "blocked_identity": [
+    { "tse_candidate_id": "210002534312", "name": "Enio Carlos Terra", "reason": "not_present_in_official_ALRS_option_catalog" }
+  ]
+}

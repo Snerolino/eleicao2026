@@ -37,6 +37,15 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - QA: `docs/qa/fed19-camara-q1-dry-run-2026-08-18.md`.
 - Próximo chunk: resolver os 233 votos por `tse_candidate_id`, sem fuzzy matching.
 
+## Atualização FED-17 — recuperação parcial ALRS (2026-08-18)
+
+- Manifesto oficial com 5 páginas, URLs e hashes versionado em `data/legislative-import/alrs-fed17/recovery-manifest.json`.
+- `scripts/backfill-alrs-missing-sources.mjs` implementado em dry-run por padrão, com `--apply` restrito a evidência exata.
+- Aplicados 10 `source_reference_id` em 10 votos (`alrs_pl134_2023` e `alrs_pl77_2025`); segunda execução criou/atualizou zero.
+- Auditoria pós-aplicação: 3985/4000 votos ALRS com fonte; 15 sem fonte.
+- PL165, PL361, PL38 e Enio permanecem bloqueados por divergência, ambiguidade ou identidade ausente.
+- QA: `docs/qa/fed17-alrs-source-recovery-2026-08-18.md`.
+
 ## Atualização de retomada — nova instrução Câmara (2026-08-17)
 
 - O `../dataset2026` adicionou o task packet `hermes-task-deputados-federais-comparacao-v1.md`.

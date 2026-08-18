@@ -29,6 +29,7 @@
     "impact:sources": "node scripts/build-legislative-source-catalog.mjs",
     "impact:sources:audit": "node scripts/audit-legislative-source-coverage.mjs",
     "impact:camara:discover": "node scripts/discover-camara-vote-ids.mjs",
+    "impact:alrs:sources:backfill": "node scripts/backfill-alrs-missing-sources.mjs",
     "orch:setup": "bash scripts/orchestrator/setup-local.sh",
     "orch:doctor": "bash scripts/orchestrator/doctor.sh",
     "orch:install-skill": "bash scripts/orchestrator/install-hermes-skill.sh",
