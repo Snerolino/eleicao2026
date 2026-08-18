@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "source_manifest": "data/legislative-import/camara/historical-resolved-source-manifest.json",
+  "mode": "dry-run-ready",
+  "sources": [
+    {
+      "key": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2209381",
+      "source_name": "Câmara dos Deputados — Dados Abertos",
+      "source_category": "oficial",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2209381",
+      "title": "Fonte oficial Câmara — proposição 2209381",
+      "content_hash": "sha256:c6c6ba658bb8880ca8f8f559f5cd840201b5fc56184caa2ba6eec256894c6273",
+      "hash_method": "raw-bytes-v1"
+    },
+    {
+      "key": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "source_name": "Câmara dos Deputados — votação nominal histórica",
+      "source_category": "oficial",
+      "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "title": "Fonte oficial Câmara — votação nominal 9002",
+      "content_hash": "sha256:1e7e76c9da6680c1eb9f044dfbb2b5fec057a29dc05d5282a55c2be51938ad5c",
+      "hash_method": "raw-bytes-v1"
+    },
+    {
+      "key": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "source_name": "Câmara dos Deputados — votação nominal histórica",
+      "source_category": "oficial",
+      "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "title": "Fonte oficial Câmara — votação nominal 9003",
+      "content_hash": "sha256:de2075a3559e0f5cdd828a5e999959b4fb9d7677515ba22e3106fd9cf9d0b287",
+      "hash_method": "raw-bytes-v1"
+    },
+    {
+      "key": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "source_name": "Câmara dos Deputados — votação nominal histórica",
+      "source_category": "oficial",
+      "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "title": "Fonte oficial Câmara — votação nominal 9224",
+      "content_hash": "sha256:5ce82d869a34547149d742d9e136f20151e2e10b7b2277b8b29b9ca4d2f5ad50",
+      "hash_method": "raw-bytes-v1"
+    },
+    {
+      "key": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "source_name": "Câmara dos Deputados — votação nominal histórica",
+      "source_category": "oficial",
+      "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "title": "Fonte oficial Câmara — votação nominal 9225",
+      "content_hash": "sha256:22fa0ace00322c330b81b68d3a524f49251cef296bf02ad664b6a34fbcca0ae5",
+      "hash_method": "raw-bytes-v1"
+    },
+    {
+      "key": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "source_name": "Câmara dos Deputados — votação nominal histórica",
+      "source_category": "oficial",
+      "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "title": "Fonte oficial Câmara — votação nominal 9226",
+      "content_hash": "sha256:7606555cbe1523bd7ab403813f6048069e2789e41b3a098c80d14cc391fb3636",
+      "hash_method": "raw-bytes-v1"
+    },
+    {
+      "key": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "source_name": "Câmara dos Deputados — votação nominal histórica",
+      "source_category": "oficial",
+      "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "title": "Fonte oficial Câmara — votação nominal 9227",
+      "content_hash": "sha256:b87af47156369cfb359c33993441d33dcbf433f019ac2c831b2d8405b400118e",
+      "hash_method": "raw-bytes-v1"
+    }
+  ]
+}

@@ -872,3 +872,17 @@ Sem autorização humana explícita própria, não fazer:
 - Após propagação/cache-busting, produção respondeu HTTP 200 em `/release.json` com SHA `9871916949f21d34f3d9b717a2855d253afb7a7c`, release `9871916-20260818T224958523Z` e snapshot de 1003 candidaturas.
 - O catálogo remoto continua sem as 7 referências históricas; nenhum dado factual foi aplicado.
 - Próximo chunk: preparar plano idempotente de `source_references` e repetir os gates de identidade/schema/FK antes de qualquer aplicação.
+
+## Tick contínuo — plano idempotente de catálogo Câmara histórico (2026-08-18 23:15 UTC)
+
+- Lock bounded adquirido e liberado; worktree limpa antes do chunk; nenhum writer concorrente.
+- Manifesto oficial revalidado por comparação determinística: 7/7 URLs e hashes exatos no input do plano.
+- Projeto remoto confirmado pelo CLI; migrations local/remoto alinhadas até `20260816100000`.
+- `information_schema` read-only confirmou colunas de `source_references`, `candidates.tse_candidate_id` e tabelas legislativas.
+- Consulta remota por URL + hash: 7 `missing`, 0 `hash_mismatch`, 0 UUID resolvidos.
+- Criado `data/legislative-import/camara/historical-source-catalog-input.json`, somente dry-run-ready, sem UUID/FK/SQL/votos.
+- Gates verdes: 76 arquivos/359 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check`.
+- Doctor smoke foi tentado com timeout de 180s; o shell do doctor detectou Node 22.22.2 apesar do PATH do processo e encerrou com timeout, sem mutação remota. Gates do projeto foram executados explicitamente com Node 24.19.0.
+- QA: `docs/qa/lote-camara-historical-source-catalog-plan-2026-08-18.md`.
+- Nenhuma referência, proposição, evento, voto, identidade, FK, matriz, Supabase ou Cloudflare foi escrita; os 8 casos inelegíveis permanecem fail-closed.
+- Próximo chunk: executar dry-run remoto usando este input ou adaptar o writer histórico para aceitá-lo explicitamente; refazer GET/hash/bytes antes de qualquer `--apply`.
