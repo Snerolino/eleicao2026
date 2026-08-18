@@ -1,3 +1,13 @@
+# Tick contínuo — evidência oficial de cargo histórico Câmara (2026-08-18)
+
+- Lock bounded adquirido e liberado; worktree estava limpa antes do chunk.
+- Busca oficial localizou o perfil Câmara `73482` de Henrique Fontana; GETs diretos ao perfil e à variante anual `?ano=2014` foram registrados com HTTP, bytes e SHA-256 em `.orchestrator/runtime/camara-historical-scout/henrique-fontana-official-profile-probe.json`.
+- A API aberta atual respondeu HTTP 200 com `data=[]`; não foi interpretada como ausência histórica.
+- A página confirma `HENRIQUE FONTANA JÚNIOR` e `PT - RS`, mas não fornece, neste chunk, prova estruturada suficiente para alterar `position=outro` no remoto. Nenhuma escrita de identidade/voto/FK ocorreu.
+- QA: `docs/qa/lote-camara-historical-role-evidence-2026-08-18.md`.
+- Bloqueio mantido: `FED25_CAMARA_HISTORICAL_REMOTE_IDENTITY_LOOKUP_BLOCKED_ROLE`.
+- Próximo chunk elegível: localizar rota histórica estruturada de legislatura/mandato no portal Câmara e revalidar cargo/período; manter os 4 casos fail-closed.
+
 # STATE — eleicao2026
 
 Atualizado: 2026-08-18 14:55 UTC
