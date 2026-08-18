@@ -783,3 +783,17 @@ Sem autorização humana explícita própria, não fazer:
 - Backup Cloudflare `334951434`, run `32172065273`, concluiu `success` com `headSha` idêntico.
 - Produção respondeu HTTP 200; `/release.json` confirmou SHA `9d942c18e215c67267b013efeee45b1ceee6c194` e versão `0.2.344`.
 - Worktree estava limpa após o primeiro release; esta atualização documental requer novo commit/release.
+
+## Tick contínuo — envelope histórico Câmara resolvido em dry-run (2026-08-18)
+
+- Lock bounded adquirido e liberado; nenhum writer concorrente.
+- Novo builder determinístico `scripts/build-camara-historical-resolved-envelope.mjs` e contrato Vitest criados; comando `npm run impact:camara:historical:envelope:build` executado.
+- Resultado: 2 proposições, 6 eventos, 84 votos, 18 identidades elegíveis; somente `matched_exact` com cargo remoto `deputado_federal` e UF RS.
+- Oito registros permanecem fail-closed: Sanderson (`senador`) e Henrique Fontana (`outro`). Nenhuma identidade foi inferida.
+- Auditoria oficial: 7 URLs HTTP 200; os seis hashes nominais repetiram exatamente o catálogo (`6/6`).
+- Idempotência local provada: segunda execução manteve SHA-256 idêntico do envelope e catálogo.
+- Nenhuma escrita Supabase/Cloudflare, FK, UUID, source_reference, voto publicado ou matriz foi aplicada.
+- Artefatos: `data/legislative-import/camara/historical-resolved-envelope.json`, `historical-resolved-catalog.json` e `historical-resolved-source-manifest.json`.
+- QA: `docs/qa/lote-camara-historical-resolved-envelope-2026-08-18.md`.
+- Gates focados verdes: builder, auditoria de fontes e 3 testes Vitest; doctor smoke registrou `FAIL` apenas pelo shell Node 22, corrigível com Node 24.19.0 disponível via `nvm use 24`.
+- Próximo chunk: executar gates locais completos em Node 24 e revisar contrato/identidade/schema/FK antes de qualquer SQL remoto.

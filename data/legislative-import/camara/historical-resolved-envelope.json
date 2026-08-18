@@ -1,0 +1,963 @@
+{
+  "schema_version": "1.0.0",
+  "country": "BR",
+  "state": "RS",
+  "election_year": 2026,
+  "propositions": [
+    {
+      "external_id": "camara-proposicao-2192459",
+      "house": "camara",
+      "proposition_type": "pec",
+      "title": "PEC 6/2019",
+      "versions": [
+        {
+          "version_key": "event-9002",
+          "version_label": "PEC 6/2019 — votação nominal 9002",
+          "effective_from": "2019-08-07T00:00:00.000Z",
+          "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+          "voting_events": [
+            {
+              "external_id": "camara-votacao-9002",
+              "house": "camara",
+              "session_id": "9002",
+              "vote_round": null,
+              "occurred_at": "2019-08-07T00:00:00.000Z",
+              "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002"
+            }
+          ]
+        },
+        {
+          "version_key": "event-9003",
+          "version_label": "PEC 6/2019 — votação nominal 9003",
+          "effective_from": "2019-08-07T00:00:00.000Z",
+          "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+          "voting_events": [
+            {
+              "external_id": "camara-votacao-9003",
+              "house": "camara",
+              "session_id": "9003",
+              "vote_round": null,
+              "occurred_at": "2019-08-07T00:00:00.000Z",
+              "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "external_id": "camara-proposicao-2209381",
+      "house": "camara",
+      "proposition_type": "pl",
+      "title": "PL 3723/2019",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2209381",
+      "versions": [
+        {
+          "version_key": "event-9224",
+          "version_label": "PL 3723/2019 — votação nominal 9224",
+          "effective_from": "2019-11-05T00:00:00.000Z",
+          "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+          "voting_events": [
+            {
+              "external_id": "camara-votacao-9224",
+              "house": "camara",
+              "session_id": "9224",
+              "vote_round": null,
+              "occurred_at": "2019-11-05T00:00:00.000Z",
+              "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224"
+            }
+          ]
+        },
+        {
+          "version_key": "event-9225",
+          "version_label": "PL 3723/2019 — votação nominal 9225",
+          "effective_from": "2019-11-05T00:00:00.000Z",
+          "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+          "voting_events": [
+            {
+              "external_id": "camara-votacao-9225",
+              "house": "camara",
+              "session_id": "9225",
+              "vote_round": null,
+              "occurred_at": "2019-11-05T00:00:00.000Z",
+              "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225"
+            }
+          ]
+        },
+        {
+          "version_key": "event-9226",
+          "version_label": "PL 3723/2019 — votação nominal 9226",
+          "effective_from": "2019-11-05T00:00:00.000Z",
+          "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+          "voting_events": [
+            {
+              "external_id": "camara-votacao-9226",
+              "house": "camara",
+              "session_id": "9226",
+              "vote_round": null,
+              "occurred_at": "2019-11-05T00:00:00.000Z",
+              "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226"
+            }
+          ]
+        },
+        {
+          "version_key": "event-9227",
+          "version_label": "PL 3723/2019 — votação nominal 9227",
+          "effective_from": "2019-11-05T00:00:00.000Z",
+          "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+          "voting_events": [
+            {
+              "external_id": "camara-votacao-9227",
+              "house": "camara",
+              "session_id": "9227",
+              "vote_round": null,
+              "occurred_at": "2019-11-05T00:00:00.000Z",
+              "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "votes": [
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9002",
+      "deputy_id": "camara-deputado-bc25a9c2-3a15-454b-b1e8-888c6a366d4b",
+      "candidate_id": "bc25a9c2-3a15-454b-b1e8-888c6a366d4b",
+      "tse_candidate_id": "210002537722",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9002",
+      "value": "sim",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9002",
+      "deputy_id": "camara-deputado-9d3cb185-49eb-4d46-9dc3-5b7bbcc8e7d7",
+      "candidate_id": "9d3cb185-49eb-4d46-9dc3-5b7bbcc8e7d7",
+      "tse_candidate_id": "210002541514",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9002",
+      "value": "sim",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9002",
+      "deputy_id": "camara-deputado-a6f54550-15bb-4a75-bd8b-c75a1ea255ac",
+      "candidate_id": "a6f54550-15bb-4a75-bd8b-c75a1ea255ac",
+      "tse_candidate_id": "210002537057",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9002",
+      "value": "nao",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9002",
+      "deputy_id": "camara-deputado-ed16ff79-183c-46ee-af38-b2903cdb6fea",
+      "candidate_id": "ed16ff79-183c-46ee-af38-b2903cdb6fea",
+      "tse_candidate_id": "210002537066",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9002",
+      "value": "nao",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9002",
+      "deputy_id": "camara-deputado-18544dbc-171e-4efe-865b-9aebfd31edf6",
+      "candidate_id": "18544dbc-171e-4efe-865b-9aebfd31edf6",
+      "tse_candidate_id": "210002537712",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9002",
+      "value": "sim",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9002",
+      "deputy_id": "camara-deputado-b5e9d477-fc45-4ee7-a972-d5e386134ac6",
+      "candidate_id": "b5e9d477-fc45-4ee7-a972-d5e386134ac6",
+      "tse_candidate_id": "210002537717",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9002",
+      "value": "sim",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9002",
+      "deputy_id": "camara-deputado-44e185f9-b370-42f4-80c5-4f2d3b4416a4",
+      "candidate_id": "44e185f9-b370-42f4-80c5-4f2d3b4416a4",
+      "tse_candidate_id": "210002536917",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9002",
+      "value": "sim",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9002",
+      "deputy_id": "camara-deputado-ca137aa8-99fe-4573-968d-7358fe492f34",
+      "candidate_id": "ca137aa8-99fe-4573-968d-7358fe492f34",
+      "tse_candidate_id": "210002538556",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9002",
+      "value": "nao",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9002",
+      "deputy_id": "camara-deputado-3f3d4e34-f0cf-4674-9d1d-9af0c7a3f522",
+      "candidate_id": "3f3d4e34-f0cf-4674-9d1d-9af0c7a3f522",
+      "tse_candidate_id": "210002538537",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9002",
+      "value": "sim",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9002",
+      "deputy_id": "camara-deputado-d6772dbe-a671-40a6-8cf9-916151fa8a64",
+      "candidate_id": "d6772dbe-a671-40a6-8cf9-916151fa8a64",
+      "tse_candidate_id": "210002538541",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9002",
+      "value": "sim",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9002",
+      "deputy_id": "camara-deputado-e2355507-af97-4305-8375-a6d23b55a4ab",
+      "candidate_id": "e2355507-af97-4305-8375-a6d23b55a4ab",
+      "tse_candidate_id": "210002534656",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9002",
+      "value": "sim",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9002",
+      "deputy_id": "camara-deputado-f11a78d6-40f3-476d-adc3-6d2d34857bbf",
+      "candidate_id": "f11a78d6-40f3-476d-adc3-6d2d34857bbf",
+      "tse_candidate_id": "210002533902",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9002",
+      "value": "nao",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9002",
+      "deputy_id": "camara-deputado-3d10d681-85ed-42ce-a6f9-feab00d9e4f3",
+      "candidate_id": "3d10d681-85ed-42ce-a6f9-feab00d9e4f3",
+      "tse_candidate_id": "210002534601",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9002",
+      "value": "nao",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9002",
+      "deputy_id": "camara-deputado-e5bd28d0-782d-49b9-8fff-da203e4d5920",
+      "candidate_id": "e5bd28d0-782d-49b9-8fff-da203e4d5920",
+      "tse_candidate_id": "210002534598",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9002",
+      "value": "nao",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9002",
+      "deputy_id": "camara-deputado-65b71a02-73ea-40e5-8df2-c484b87fc565",
+      "candidate_id": "65b71a02-73ea-40e5-8df2-c484b87fc565",
+      "tse_candidate_id": "210002534604",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9002",
+      "value": "nao",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9002",
+      "deputy_id": "camara-deputado-f3ce3ad2-76b4-4f85-997d-17fee42a991a",
+      "candidate_id": "f3ce3ad2-76b4-4f85-997d-17fee42a991a",
+      "tse_candidate_id": "210002534671",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9002",
+      "value": "sim",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9002",
+      "deputy_id": "camara-deputado-6edecc57-157a-4c73-bd2f-06f0e7f47559",
+      "candidate_id": "6edecc57-157a-4c73-bd2f-06f0e7f47559",
+      "tse_candidate_id": "210002534272",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9002",
+      "value": "sim",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9003",
+      "deputy_id": "camara-deputado-9d3cb185-49eb-4d46-9dc3-5b7bbcc8e7d7",
+      "candidate_id": "9d3cb185-49eb-4d46-9dc3-5b7bbcc8e7d7",
+      "tse_candidate_id": "210002541514",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9003",
+      "value": "nao",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9003",
+      "deputy_id": "camara-deputado-a6f54550-15bb-4a75-bd8b-c75a1ea255ac",
+      "candidate_id": "a6f54550-15bb-4a75-bd8b-c75a1ea255ac",
+      "tse_candidate_id": "210002537057",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9003",
+      "value": "obstrucao",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9003",
+      "deputy_id": "camara-deputado-ed16ff79-183c-46ee-af38-b2903cdb6fea",
+      "candidate_id": "ed16ff79-183c-46ee-af38-b2903cdb6fea",
+      "tse_candidate_id": "210002537066",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9003",
+      "value": "obstrucao",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9003",
+      "deputy_id": "camara-deputado-18544dbc-171e-4efe-865b-9aebfd31edf6",
+      "candidate_id": "18544dbc-171e-4efe-865b-9aebfd31edf6",
+      "tse_candidate_id": "210002537712",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9003",
+      "value": "nao",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9003",
+      "deputy_id": "camara-deputado-b5e9d477-fc45-4ee7-a972-d5e386134ac6",
+      "candidate_id": "b5e9d477-fc45-4ee7-a972-d5e386134ac6",
+      "tse_candidate_id": "210002537717",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9003",
+      "value": "nao",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9003",
+      "deputy_id": "camara-deputado-44e185f9-b370-42f4-80c5-4f2d3b4416a4",
+      "candidate_id": "44e185f9-b370-42f4-80c5-4f2d3b4416a4",
+      "tse_candidate_id": "210002536917",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9003",
+      "value": "nao",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9003",
+      "deputy_id": "camara-deputado-ca137aa8-99fe-4573-968d-7358fe492f34",
+      "candidate_id": "ca137aa8-99fe-4573-968d-7358fe492f34",
+      "tse_candidate_id": "210002538556",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9003",
+      "value": "sim",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9003",
+      "deputy_id": "camara-deputado-d6772dbe-a671-40a6-8cf9-916151fa8a64",
+      "candidate_id": "d6772dbe-a671-40a6-8cf9-916151fa8a64",
+      "tse_candidate_id": "210002538541",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9003",
+      "value": "nao",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9003",
+      "deputy_id": "camara-deputado-e2355507-af97-4305-8375-a6d23b55a4ab",
+      "candidate_id": "e2355507-af97-4305-8375-a6d23b55a4ab",
+      "tse_candidate_id": "210002534656",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9003",
+      "value": "nao",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9003",
+      "deputy_id": "camara-deputado-f11a78d6-40f3-476d-adc3-6d2d34857bbf",
+      "candidate_id": "f11a78d6-40f3-476d-adc3-6d2d34857bbf",
+      "tse_candidate_id": "210002533902",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9003",
+      "value": "obstrucao",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9003",
+      "deputy_id": "camara-deputado-3d10d681-85ed-42ce-a6f9-feab00d9e4f3",
+      "candidate_id": "3d10d681-85ed-42ce-a6f9-feab00d9e4f3",
+      "tse_candidate_id": "210002534601",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9003",
+      "value": "obstrucao",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9003",
+      "deputy_id": "camara-deputado-e5bd28d0-782d-49b9-8fff-da203e4d5920",
+      "candidate_id": "e5bd28d0-782d-49b9-8fff-da203e4d5920",
+      "tse_candidate_id": "210002534598",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9003",
+      "value": "obstrucao",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9003",
+      "deputy_id": "camara-deputado-f3ce3ad2-76b4-4f85-997d-17fee42a991a",
+      "candidate_id": "f3ce3ad2-76b4-4f85-997d-17fee42a991a",
+      "tse_candidate_id": "210002534671",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9003",
+      "value": "nao",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9003",
+      "deputy_id": "camara-deputado-6edecc57-157a-4c73-bd2f-06f0e7f47559",
+      "candidate_id": "6edecc57-157a-4c73-bd2f-06f0e7f47559",
+      "tse_candidate_id": "210002534272",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9003",
+      "value": "nao",
+      "recorded_at": "2019-08-07T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9224",
+      "deputy_id": "camara-deputado-a6f54550-15bb-4a75-bd8b-c75a1ea255ac",
+      "candidate_id": "a6f54550-15bb-4a75-bd8b-c75a1ea255ac",
+      "tse_candidate_id": "210002537057",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9224",
+      "value": "obstrucao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9224",
+      "deputy_id": "camara-deputado-ca137aa8-99fe-4573-968d-7358fe492f34",
+      "candidate_id": "ca137aa8-99fe-4573-968d-7358fe492f34",
+      "tse_candidate_id": "210002538556",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9224",
+      "value": "sim",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9224",
+      "deputy_id": "camara-deputado-d6772dbe-a671-40a6-8cf9-916151fa8a64",
+      "candidate_id": "d6772dbe-a671-40a6-8cf9-916151fa8a64",
+      "tse_candidate_id": "210002538541",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9224",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9224",
+      "deputy_id": "camara-deputado-622412cd-cd6b-4ce5-87d2-658bd73418e1",
+      "candidate_id": "622412cd-cd6b-4ce5-87d2-658bd73418e1",
+      "tse_candidate_id": "210002534292",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9224",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9224",
+      "deputy_id": "camara-deputado-f11a78d6-40f3-476d-adc3-6d2d34857bbf",
+      "candidate_id": "f11a78d6-40f3-476d-adc3-6d2d34857bbf",
+      "tse_candidate_id": "210002533902",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9224",
+      "value": "obstrucao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9224",
+      "deputy_id": "camara-deputado-3d10d681-85ed-42ce-a6f9-feab00d9e4f3",
+      "candidate_id": "3d10d681-85ed-42ce-a6f9-feab00d9e4f3",
+      "tse_candidate_id": "210002534601",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9224",
+      "value": "obstrucao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9224",
+      "deputy_id": "camara-deputado-e5bd28d0-782d-49b9-8fff-da203e4d5920",
+      "candidate_id": "e5bd28d0-782d-49b9-8fff-da203e4d5920",
+      "tse_candidate_id": "210002534598",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9224",
+      "value": "obstrucao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9224",
+      "deputy_id": "camara-deputado-65b71a02-73ea-40e5-8df2-c484b87fc565",
+      "candidate_id": "65b71a02-73ea-40e5-8df2-c484b87fc565",
+      "tse_candidate_id": "210002534604",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9224",
+      "value": "obstrucao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9224",
+      "deputy_id": "camara-deputado-f3ce3ad2-76b4-4f85-997d-17fee42a991a",
+      "candidate_id": "f3ce3ad2-76b4-4f85-997d-17fee42a991a",
+      "tse_candidate_id": "210002534671",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9224",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9224",
+      "deputy_id": "camara-deputado-44e185f9-b370-42f4-80c5-4f2d3b4416a4",
+      "candidate_id": "44e185f9-b370-42f4-80c5-4f2d3b4416a4",
+      "tse_candidate_id": "210002536917",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9224",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9225",
+      "deputy_id": "camara-deputado-9d3cb185-49eb-4d46-9dc3-5b7bbcc8e7d7",
+      "candidate_id": "9d3cb185-49eb-4d46-9dc3-5b7bbcc8e7d7",
+      "tse_candidate_id": "210002541514",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9225",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9225",
+      "deputy_id": "camara-deputado-a6f54550-15bb-4a75-bd8b-c75a1ea255ac",
+      "candidate_id": "a6f54550-15bb-4a75-bd8b-c75a1ea255ac",
+      "tse_candidate_id": "210002537057",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9225",
+      "value": "obstrucao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9225",
+      "deputy_id": "camara-deputado-ed16ff79-183c-46ee-af38-b2903cdb6fea",
+      "candidate_id": "ed16ff79-183c-46ee-af38-b2903cdb6fea",
+      "tse_candidate_id": "210002537066",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9225",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9225",
+      "deputy_id": "camara-deputado-18544dbc-171e-4efe-865b-9aebfd31edf6",
+      "candidate_id": "18544dbc-171e-4efe-865b-9aebfd31edf6",
+      "tse_candidate_id": "210002537712",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9225",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9225",
+      "deputy_id": "camara-deputado-3f3d4e34-f0cf-4674-9d1d-9af0c7a3f522",
+      "candidate_id": "3f3d4e34-f0cf-4674-9d1d-9af0c7a3f522",
+      "tse_candidate_id": "210002538537",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9225",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9225",
+      "deputy_id": "camara-deputado-d6772dbe-a671-40a6-8cf9-916151fa8a64",
+      "candidate_id": "d6772dbe-a671-40a6-8cf9-916151fa8a64",
+      "tse_candidate_id": "210002538541",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9225",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9225",
+      "deputy_id": "camara-deputado-e2355507-af97-4305-8375-a6d23b55a4ab",
+      "candidate_id": "e2355507-af97-4305-8375-a6d23b55a4ab",
+      "tse_candidate_id": "210002534656",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9225",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9225",
+      "deputy_id": "camara-deputado-622412cd-cd6b-4ce5-87d2-658bd73418e1",
+      "candidate_id": "622412cd-cd6b-4ce5-87d2-658bd73418e1",
+      "tse_candidate_id": "210002534292",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9225",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9225",
+      "deputy_id": "camara-deputado-f11a78d6-40f3-476d-adc3-6d2d34857bbf",
+      "candidate_id": "f11a78d6-40f3-476d-adc3-6d2d34857bbf",
+      "tse_candidate_id": "210002533902",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9225",
+      "value": "obstrucao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9225",
+      "deputy_id": "camara-deputado-3d10d681-85ed-42ce-a6f9-feab00d9e4f3",
+      "candidate_id": "3d10d681-85ed-42ce-a6f9-feab00d9e4f3",
+      "tse_candidate_id": "210002534601",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9225",
+      "value": "obstrucao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9225",
+      "deputy_id": "camara-deputado-e5bd28d0-782d-49b9-8fff-da203e4d5920",
+      "candidate_id": "e5bd28d0-782d-49b9-8fff-da203e4d5920",
+      "tse_candidate_id": "210002534598",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9225",
+      "value": "obstrucao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9225",
+      "deputy_id": "camara-deputado-f3ce3ad2-76b4-4f85-997d-17fee42a991a",
+      "candidate_id": "f3ce3ad2-76b4-4f85-997d-17fee42a991a",
+      "tse_candidate_id": "210002534671",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9225",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9225",
+      "deputy_id": "camara-deputado-44e185f9-b370-42f4-80c5-4f2d3b4416a4",
+      "candidate_id": "44e185f9-b370-42f4-80c5-4f2d3b4416a4",
+      "tse_candidate_id": "210002536917",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9225",
+      "value": "sim",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9226",
+      "deputy_id": "camara-deputado-9d3cb185-49eb-4d46-9dc3-5b7bbcc8e7d7",
+      "candidate_id": "9d3cb185-49eb-4d46-9dc3-5b7bbcc8e7d7",
+      "tse_candidate_id": "210002541514",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9226",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9226",
+      "deputy_id": "camara-deputado-a6f54550-15bb-4a75-bd8b-c75a1ea255ac",
+      "candidate_id": "a6f54550-15bb-4a75-bd8b-c75a1ea255ac",
+      "tse_candidate_id": "210002537057",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9226",
+      "value": "obstrucao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9226",
+      "deputy_id": "camara-deputado-ed16ff79-183c-46ee-af38-b2903cdb6fea",
+      "candidate_id": "ed16ff79-183c-46ee-af38-b2903cdb6fea",
+      "tse_candidate_id": "210002537066",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9226",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9226",
+      "deputy_id": "camara-deputado-18544dbc-171e-4efe-865b-9aebfd31edf6",
+      "candidate_id": "18544dbc-171e-4efe-865b-9aebfd31edf6",
+      "tse_candidate_id": "210002537712",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9226",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9226",
+      "deputy_id": "camara-deputado-b5e9d477-fc45-4ee7-a972-d5e386134ac6",
+      "candidate_id": "b5e9d477-fc45-4ee7-a972-d5e386134ac6",
+      "tse_candidate_id": "210002537717",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9226",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9226",
+      "deputy_id": "camara-deputado-ca137aa8-99fe-4573-968d-7358fe492f34",
+      "candidate_id": "ca137aa8-99fe-4573-968d-7358fe492f34",
+      "tse_candidate_id": "210002538556",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9226",
+      "value": "obstrucao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9226",
+      "deputy_id": "camara-deputado-3f3d4e34-f0cf-4674-9d1d-9af0c7a3f522",
+      "candidate_id": "3f3d4e34-f0cf-4674-9d1d-9af0c7a3f522",
+      "tse_candidate_id": "210002538537",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9226",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9226",
+      "deputy_id": "camara-deputado-d6772dbe-a671-40a6-8cf9-916151fa8a64",
+      "candidate_id": "d6772dbe-a671-40a6-8cf9-916151fa8a64",
+      "tse_candidate_id": "210002538541",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9226",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9226",
+      "deputy_id": "camara-deputado-e2355507-af97-4305-8375-a6d23b55a4ab",
+      "candidate_id": "e2355507-af97-4305-8375-a6d23b55a4ab",
+      "tse_candidate_id": "210002534656",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9226",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9226",
+      "deputy_id": "camara-deputado-622412cd-cd6b-4ce5-87d2-658bd73418e1",
+      "candidate_id": "622412cd-cd6b-4ce5-87d2-658bd73418e1",
+      "tse_candidate_id": "210002534292",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9226",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9226",
+      "deputy_id": "camara-deputado-f11a78d6-40f3-476d-adc3-6d2d34857bbf",
+      "candidate_id": "f11a78d6-40f3-476d-adc3-6d2d34857bbf",
+      "tse_candidate_id": "210002533902",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9226",
+      "value": "obstrucao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9226",
+      "deputy_id": "camara-deputado-f3ce3ad2-76b4-4f85-997d-17fee42a991a",
+      "candidate_id": "f3ce3ad2-76b4-4f85-997d-17fee42a991a",
+      "tse_candidate_id": "210002534671",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9226",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9226",
+      "deputy_id": "camara-deputado-44e185f9-b370-42f4-80c5-4f2d3b4416a4",
+      "candidate_id": "44e185f9-b370-42f4-80c5-4f2d3b4416a4",
+      "tse_candidate_id": "210002536917",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9226",
+      "value": "sim",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9227",
+      "deputy_id": "camara-deputado-9d3cb185-49eb-4d46-9dc3-5b7bbcc8e7d7",
+      "candidate_id": "9d3cb185-49eb-4d46-9dc3-5b7bbcc8e7d7",
+      "tse_candidate_id": "210002541514",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9227",
+      "value": "sim",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9227",
+      "deputy_id": "camara-deputado-a6f54550-15bb-4a75-bd8b-c75a1ea255ac",
+      "candidate_id": "a6f54550-15bb-4a75-bd8b-c75a1ea255ac",
+      "tse_candidate_id": "210002537057",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9227",
+      "value": "sim",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9227",
+      "deputy_id": "camara-deputado-ed16ff79-183c-46ee-af38-b2903cdb6fea",
+      "candidate_id": "ed16ff79-183c-46ee-af38-b2903cdb6fea",
+      "tse_candidate_id": "210002537066",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9227",
+      "value": "sim",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9227",
+      "deputy_id": "camara-deputado-18544dbc-171e-4efe-865b-9aebfd31edf6",
+      "candidate_id": "18544dbc-171e-4efe-865b-9aebfd31edf6",
+      "tse_candidate_id": "210002537712",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9227",
+      "value": "sim",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9227",
+      "deputy_id": "camara-deputado-b5e9d477-fc45-4ee7-a972-d5e386134ac6",
+      "candidate_id": "b5e9d477-fc45-4ee7-a972-d5e386134ac6",
+      "tse_candidate_id": "210002537717",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9227",
+      "value": "sim",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9227",
+      "deputy_id": "camara-deputado-ca137aa8-99fe-4573-968d-7358fe492f34",
+      "candidate_id": "ca137aa8-99fe-4573-968d-7358fe492f34",
+      "tse_candidate_id": "210002538556",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9227",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9227",
+      "deputy_id": "camara-deputado-3f3d4e34-f0cf-4674-9d1d-9af0c7a3f522",
+      "candidate_id": "3f3d4e34-f0cf-4674-9d1d-9af0c7a3f522",
+      "tse_candidate_id": "210002538537",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9227",
+      "value": "sim",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9227",
+      "deputy_id": "camara-deputado-d6772dbe-a671-40a6-8cf9-916151fa8a64",
+      "candidate_id": "d6772dbe-a671-40a6-8cf9-916151fa8a64",
+      "tse_candidate_id": "210002538541",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9227",
+      "value": "sim",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9227",
+      "deputy_id": "camara-deputado-e2355507-af97-4305-8375-a6d23b55a4ab",
+      "candidate_id": "e2355507-af97-4305-8375-a6d23b55a4ab",
+      "tse_candidate_id": "210002534656",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9227",
+      "value": "sim",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9227",
+      "deputy_id": "camara-deputado-622412cd-cd6b-4ce5-87d2-658bd73418e1",
+      "candidate_id": "622412cd-cd6b-4ce5-87d2-658bd73418e1",
+      "tse_candidate_id": "210002534292",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9227",
+      "value": "sim",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9227",
+      "deputy_id": "camara-deputado-f11a78d6-40f3-476d-adc3-6d2d34857bbf",
+      "candidate_id": "f11a78d6-40f3-476d-adc3-6d2d34857bbf",
+      "tse_candidate_id": "210002533902",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9227",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9227",
+      "deputy_id": "camara-deputado-3d10d681-85ed-42ce-a6f9-feab00d9e4f3",
+      "candidate_id": "3d10d681-85ed-42ce-a6f9-feab00d9e4f3",
+      "tse_candidate_id": "210002534601",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9227",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9227",
+      "deputy_id": "camara-deputado-e5bd28d0-782d-49b9-8fff-da203e4d5920",
+      "candidate_id": "e5bd28d0-782d-49b9-8fff-da203e4d5920",
+      "tse_candidate_id": "210002534598",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9227",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9227",
+      "deputy_id": "camara-deputado-65b71a02-73ea-40e5-8df2-c484b87fc565",
+      "candidate_id": "65b71a02-73ea-40e5-8df2-c484b87fc565",
+      "tse_candidate_id": "210002534604",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9227",
+      "value": "nao",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9227",
+      "deputy_id": "camara-deputado-f3ce3ad2-76b4-4f85-997d-17fee42a991a",
+      "candidate_id": "f3ce3ad2-76b4-4f85-997d-17fee42a991a",
+      "tse_candidate_id": "210002534671",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9227",
+      "value": "sim",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9227",
+      "deputy_id": "camara-deputado-6edecc57-157a-4c73-bd2f-06f0e7f47559",
+      "candidate_id": "6edecc57-157a-4c73-bd2f-06f0e7f47559",
+      "tse_candidate_id": "210002534272",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9227",
+      "value": "sim",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-9227",
+      "deputy_id": "camara-deputado-44e185f9-b370-42f4-80c5-4f2d3b4416a4",
+      "candidate_id": "44e185f9-b370-42f4-80c5-4f2d3b4416a4",
+      "tse_candidate_id": "210002536917",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9227",
+      "value": "sim",
+      "recorded_at": "2019-11-05T00:00:00.000Z",
+      "source": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227"
+    }
+  ]
+}
