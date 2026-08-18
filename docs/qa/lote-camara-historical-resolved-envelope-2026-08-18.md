@@ -67,3 +67,12 @@ Fontana: cargo remoto outro) não entram no envelope.
 Auditar o envelope contra o contrato legislativo e, separadamente, validar a
 identidade/schema/FK remota dos 18 candidatos antes de preparar qualquer SQL ou
 aplicação. Manter os oito casos bloqueados sem inferência.
+
+## Verificação de publicação
+
+- Commit: `c1295745b58383dd6a59947a64d3595f4deb2edd`.
+- Backup Cloudflare `334951434`, run `32174553709`, concluiu `success` com
+  `headSha` idêntico.
+- Produção `https://rs.votopraquem.org` respondeu HTTP 200.
+- `/release.json` confirmou SHA completo `c1295745b58383dd6a59947a64d3595f4deb2edd`,
+  versão `0.2.346` e snapshot de 1003 candidaturas.

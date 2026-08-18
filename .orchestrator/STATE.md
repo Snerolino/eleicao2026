@@ -797,3 +797,11 @@ Sem autorização humana explícita própria, não fazer:
 - QA: `docs/qa/lote-camara-historical-resolved-envelope-2026-08-18.md`.
 - Gates focados verdes: builder, auditoria de fontes e 3 testes Vitest; doctor smoke registrou `FAIL` apenas pelo shell Node 22, corrigível com Node 24.19.0 disponível via `nvm use 24`.
 - Próximo chunk: executar gates locais completos em Node 24 e revisar contrato/identidade/schema/FK antes de qualquer SQL remoto.
+
+## Release verification — envelope histórico Câmara resolvido (2026-08-18)
+
+- Commit `c1295745b58383dd6a59947a64d3595f4deb2edd` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32174553709`, concluiu `success` com `headSha` idêntico.
+- Produção respondeu HTTP 200; `/release.json` confirmou o mesmo SHA e versão `0.2.346`, snapshot 1003 candidaturas.
+- QA atualizado com a evidência de publicação; nenhuma escrita legislativa remota foi feita.
+- Próximo chunk elegível: auditoria de contrato e gate read-only de identidade/schema/FK dos 18 candidatos antes de qualquer SQL.
