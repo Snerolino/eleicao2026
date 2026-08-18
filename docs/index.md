@@ -97,6 +97,7 @@
 | [`qa/fed12-public-alrs-profile-coverage-2026-08-18.md`](qa/fed12-public-alrs-profile-coverage-2026-08-18.md) | Fechamento QA da FED-12: cobertura pública de perfis ALRS |
 | [`qa/fed13-production-alrs-profile-smoke-2026-08-18.md`](qa/fed13-production-alrs-profile-smoke-2026-08-18.md) | Fechamento QA da FED-13: smoke público dos perfis ALRS |
 | [`qa/fed14-multi-house-coverage-2026-08-18.md`](qa/fed14-multi-house-coverage-2026-08-18.md) | Fechamento QA da FED-14: cobertura multi-house |
+| [`qa/fed15-legislative-source-coverage-2026-08-18.md`](qa/fed15-legislative-source-coverage-2026-08-18.md) | Fechamento QA da FED-15: cobertura de fontes legislativas |
 | [`qa/fotos-sem-match-2026-08-03.md`](qa/fotos-sem-match-2026-08-03.md) | Distribuição dos candidatos sem foto e caso ambíguo |
 
 ## Release

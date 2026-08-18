@@ -179,6 +179,16 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - QA: `docs/qa/fed14-multi-house-coverage-2026-08-18.md`.
 - Próximo gate: repetir validação quando houver candidato real com duas casas.
 
+## Atualização FED-15 — cobertura de fontes legislativas (2026-08-18)
+
+- Auditor read-only criado em `scripts/audit-legislative-source-coverage.mjs` e comando `npm run impact:sources:audit`.
+- Remoto: 93 `source_references`; 1398 versões, 1869 eventos e 4462 votos.
+- ALRS: 31/1282 versões com fonte, 31/1678 eventos com fonte e 3975/4000 votos com fonte; 25 votos permanecem sem vínculo.
+- Senado segue sem fontes nos registros históricos, conforme bloqueio FED-9.
+- Nenhuma fonte artificial foi criada; modo `--strict` retorna código 2 quando há lacunas.
+- QA: `docs/qa/fed15-legislative-source-coverage-2026-08-18.md`.
+- Próximo gate: capturar evidência oficial suficiente para os 25 votos ALRS sem fonte antes de qualquer backfill.
+
 ## Checkpoint mais recente — migração de sessão (2026-08-17)
 
 - Último commit: `85d7031` (`feat: exibir claims e perfil de votações no dossiê`).
