@@ -61,8 +61,8 @@ proposição.
 - Alterado somente este relatório e `.orchestrator/STATE.md`.
 - Nenhuma migration, RPC, matriz, claim, Supabase, Cloudflare ou dado factual
   remoto foi alterado.
-- O commit foi amendado para `a5b5f49` e publicado com sucesso (`main ->
-  origin/main`); `git ls-remote` confirmou o mesmo SHA remoto.
+- O commit final `facea44` foi publicado com sucesso (`main -> origin/main`);
+  `git ls-remote` confirmou o mesmo SHA remoto.
 - Produção respondeu `HTTP 200` em `https://rs.votopraquem.org`. A consulta do
   workflow via `gh run list` falhou temporariamente por conexão com
   `api.github.com`; o run/deploy do backup não foi confirmado neste tick.
