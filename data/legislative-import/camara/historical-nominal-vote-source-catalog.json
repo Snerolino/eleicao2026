@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "phase": "FED-25",
+  "mode": "read-only-official-source-catalog",
+  "source_domain": "www.camara.gov.br",
+  "retrieved_on": "2026-08-18",
+  "propositions": [
+    {
+      "name": "PEC 6/2019",
+      "camara_proposition_id": "2192459",
+      "proposition_page": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2192459",
+      "dbf_numvot_values": ["9002", "9003"],
+      "nominal_vote_sources": [
+        {
+          "numvot": "9002",
+          "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+          "http_status": 200,
+          "bytes": 79457,
+          "sha256": "1e7e76c9da6680c1eb9f044dfbb2b5fec057a29dc05d5282a55c2be51938ad5c"
+        },
+        {
+          "numvot": "9003",
+          "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+          "http_status": 200,
+          "bytes": 58685,
+          "sha256": "de2075a3559e0f5cdd828a5e999959b4fb9d7677515ba22e3106fd9cf9d0b287"
+        }
+      ]
+    },
+    {
+      "name": "PL 3723/2019",
+      "camara_proposition_id": "2209381",
+      "proposition_page": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2209381",
+      "dbf_numvot_values": ["9224", "9225", "9226", "9227"],
+      "nominal_vote_sources": [
+        {
+          "numvot": "9224",
+          "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+          "http_status": 200,
+          "bytes": 58008,
+          "sha256": "5ce82d869a34547149d742d9e136f20151e2e10b7b2277b8b29b9ca4d2f5ad50"
+        },
+        {
+          "numvot": "9225",
+          "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+          "http_status": 200,
+          "bytes": 62394,
+          "sha256": "22fa0ace00322c330b81b68d3a524f49251cef296bf02ad664b6a34fbcca0ae5"
+        },
+        {
+          "numvot": "9226",
+          "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+          "http_status": 200,
+          "bytes": 60848,
+          "sha256": "7606555cbe1523bd7ab403813f6048069e2789e41b3a098c80d14cc391fb3636"
+        },
+        {
+          "numvot": "9227",
+          "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+          "http_status": 200,
+          "bytes": 70141,
+          "sha256": "b87af47156369cfb359c33993441d33dcbf433f019ac2c831b2d8405b400118e"
+        }
+      ]
+    }
+  ],
+  "safety": {
+    "identity_reconciliation": "pending",
+    "dbf_code_to_numvot_mapping": "not_individually_asserted",
+    "remote_apply": false,
+    "impact_matrix": "not_created",
+    "reason": "The catalog proves official nominal-vote source URLs and proposition IDs, but does not infer candidate identities or event linkage."
+  }
+}

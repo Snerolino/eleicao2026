@@ -1,7 +1,17 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-18 13:11 UTC
-Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
+Atualizado: 2026-08-18 14:20 UTC
+Status: `FED25_CAMARA_HISTORICAL_SOURCE_CATALOG_READY`
+
+## Tick contínuo — catálogo oficial de fontes nominais Câmara (2026-08-18)
+
+- Lock bounded adquirido e liberado; nenhum writer concorrente. Worktree limpa no início; `HEAD=97da6805f917227c6d0dbfe5364ddc27eafaede4`.
+- Fichas oficiais Câmara HTTP 200 confirmaram PEC 6/2019 (`2192459`) com `ideVotacao=9002,9003` e PL 3723/2019 (`2209381`) com `ideVotacao=9224..9227`.
+- As seis páginas nominais oficiais responderam HTTP 200; bytes e SHA-256 foram coletados e versionados em `data/legislative-import/camara/historical-nominal-vote-source-catalog.json`.
+- Nenhuma identidade, voto, FK, source reference, matriz ou escrita remota foi criada. O catálogo declara `dbf_code_to_numvot_mapping=not_individually_asserted` e `identity_reconciliation=pending`.
+- QA: `docs/qa/lote-camara-historical-source-catalog-2026-08-18.md`.
+- Workflow backup `334951434` teve run concluído com sucesso para este HEAD (`32146301143`); o artefato não altera UI.
+- Próximo chunk: refazer GET das seis páginas a partir do catálogo, validar hash/bytes e extrair registros nominais somente com proposição/data/identidade exatos, em dry-run.
 
 ## Tick contínuo — reconciliação offline DBF Câmara (2026-08-18)
 
