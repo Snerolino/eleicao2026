@@ -27,6 +27,12 @@
 
 - `FED25_CAMARA_HISTORICAL_REMOTE_IDENTITY_LOOKUP_BLOCKED_ROLE`: a rota histórica prova mudanças no exercício parlamentar, mas não resolve, sozinha, o vínculo factual dos votos pendentes.
 
+## Publicação verificada
+
+- Commit publicado: `e2f4d98f71e71c69e40bbe14421ad9de0ab120bf` (`main -> origin/main`).
+- Workflow backup Cloudflare `334951434`, run `32161920563`: `success`, `headSha` idêntico ao commit.
+- Produção `https://rs.votopraquem.org/release.json`: HTTP 200, SHA `e2f4d98f71e71c69e40bbe14421ad9de0ab120bf`, versão `0.2.334`.
+
 ## Próximo passo
 
 Pesquisar, em fonte oficial Câmara, a ligação exata entre cada evento nominal pendente, proposição, data, parlamentar/UF e voto. Manter dry-run e fail-closed até todos os campos serem comprovados.
