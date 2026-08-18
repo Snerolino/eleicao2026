@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "phase": "FED-27",
+  "mode": "read-only-role-reconciliation-dry-run",
+  "source_file": "data/legislative-import/camara/historical-nominal-remote-identity-lookup.json",
+  "source_sha256": "47c8f8528e613d7377a8a87b536aa77d0d67953fe6e2db042561d98faa28c551",
+  "remote_apply": false,
+  "summary": {
+    "input_exact_records": 92,
+    "eligible_deputado_federal_rs": 84,
+    "blocked_exact_records": 8,
+    "eligible_unique_tse_candidate_ids": 18
+  },
+  "blocked_groups": [
+    {"official_name": "Sanderson", "tse_candidate_id": "210002547816", "remote_position": "senador", "records": 4},
+    {"official_name": "Henrique Fontana", "tse_candidate_id": "210002533583", "remote_position": "outro", "records": 4}
+  ],
+  "eligibility_rule": "matched_exact + one remote match + position deputado_federal + state RS; proposition, date, vote and source_url remain from the official nominal record",
+  "decision": "No remote writer: eligible records are only a dry-run candidate set; senator/outro groups remain fail-closed."
+}

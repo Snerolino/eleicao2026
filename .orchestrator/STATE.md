@@ -766,3 +766,13 @@ Sem autorização humana explícita própria, não fazer:
 - Commit `8302b29608d8b3e8fe6ca434fde2a8d27c193e82` foi publicado; backup `334951434`, run `32170124260`, concluiu `success`.
 - Produção respondeu HTTP 200 e `/release.json` confirmou o mesmo SHA, versão `0.2.342`.
 - Worktree permaneceu limpa após a verificação.
+
+## Tick contínuo — reconciliação de cargo/UF nominal Câmara (2026-08-18 18:36 UTC)
+
+- Lock bounded adquirido e liberado; worktree limpa antes do chunk; nenhum writer concorrente.
+- Entrada `historical-nominal-remote-identity-lookup.json`: 92 registros `matched_exact`, SHA-256 `47c8f8528e613d7377a8a87b536aa77d0d67953fe6e2db042561d98faa28c551`.
+- Gate read-only de cargo/UF: 84 registros elegíveis (`deputado_federal`, RS), 18 `tse_candidate_id` únicos.
+- 8 registros permanecem bloqueados: Sanderson (4, remoto `senador`) e Henrique Fontana (4, remoto `outro`).
+- Artefato: `data/legislative-import/camara/historical-role-reconciliation.json`; QA: `docs/qa/lote-camara-historical-role-reconciliation-2026-08-18.md`.
+- `remote_apply=false`; nenhum voto, FK, UUID, source_reference, matriz, RPC, Supabase ou Cloudflare foi alterado.
+- Próximo chunk: construir/auditar envelope factual dry-run dos 84 elegíveis, provar idempotência local e manter os 8 bloqueados fail-closed.
