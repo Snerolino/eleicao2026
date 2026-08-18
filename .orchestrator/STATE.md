@@ -6,7 +6,7 @@
 - Dry-run adaptado verde: 2 proposições, 6 versões, 6 eventos, 84 votos; nenhum SQL, Supabase, Cloudflare ou FK foi escrito.
 - Gates verdes com Node 24.19.0: TypeScript, schema, `data:check` (1003 candidaturas / 988 fotos), build e `git diff --check`.
 - QA: `docs/qa/lote-camara-historical-contract-adapter-2026-08-18.md`.
-- 7 `source_references` permanecem sem UUID remoto resolvido; 8 identidades não elegíveis seguem fora. Publicação verificada no backup Cloudflare `334951434`, run `32190857815`, `success`, `headSha=b50db97c7bd45045e640afcdd9d4261d25eb4621`; produção HTTP 200 e `/release.json` confirmou o mesmo SHA. Próximo chunk: auditoria read-only do catálogo remoto por URL/hash antes de qualquer aplicação idempotente.
+- 7 `source_references` permanecem sem UUID remoto resolvido; 8 identidades não elegíveis seguem fora. Publicação funcional verificada no backup Cloudflare `334951434`, run `32190857815`, `success`, `headSha=b50db97c7bd45045e640afcdd9d4261d25eb4621`; follow-up documental `91405ede184254175a19f29b56f268785b84e82d` também está em `origin/main` e `/release.json` o confirmou. A API GitHub ficou indisponível para um novo run do follow-up; nenhum código funcional mudou. Próximo chunk: auditoria read-only do catálogo remoto por URL/hash antes de qualquer aplicação idempotente.
 
 # Tick contínuo — FED-26 revalidação de fontes nominais Câmara (2026-08-18)
 

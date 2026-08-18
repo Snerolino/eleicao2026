@@ -30,12 +30,15 @@ identidades/FKs remotas fail-closed.
 
 ## Publicação e verificação
 
-- Commit `b50db97c7bd45045e640afcdd9d4261d25eb4621` publicado em `origin/main`.
+- Commit funcional `b50db97c7bd45045e640afcdd9d4261d25eb4621` e o follow-up documental `91405ede184254175a19f29b56f268785b84e82d` estão em `origin/main`.
 - Backup Cloudflare `334951434`, run `32190857815`: `completed/success`,
-  `headSha` idêntico ao commit.
-- Produção: `https://rs.votopraquem.org` respondeu HTTP 200; `/release.json`
-  confirmou SHA `b50db97c7bd45045e640afcdd9d4261d25eb4621`, release `b50db97`
-  e snapshot com 1003 candidaturas.
+  `headSha` idêntico ao commit funcional.
+- Produção: `https://rs.votopraquem.org` respondeu HTTP 200 no release funcional;
+  a nova consulta DNS ficou intermitente, mas `/release.json` posteriormente
+  confirmou o follow-up `91405ede184254175a19f29b56f268785b84e82d`, release
+  `91405ed` e snapshot com 1003 candidaturas. A API GitHub falhou ao tentar
+  disparar/consultar um novo run para o follow-up documental; nenhum código
+  funcional mudou nesse follow-up.
 
 ## Estado e bloqueios
 
