@@ -43,6 +43,13 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - Rotação gratuita continua nos CLIs read-only do projeto (`opencode_free_pool`/scouts), sem depender do Gemini legado.
 - `scripts/orchestrator/doctor.sh` agora falha se `gemini-2.5-flash` voltar ao fallback.
 
+## Atualização FED-23 — lacunas históricas Câmara (2026-08-18)
+
+- Os 2 votos Câmara sem fonte são PEC 6/2019 e PL 3723/2019.
+- API oficial confirmou proposições 2192459 e 2209381, mas não retornou votação correspondente nas janelas trimestrais consultadas.
+- Mantidos fail-closed; próximo scout deve buscar endpoint histórico/Diário da Câmara.
+- QA: `docs/qa/fed23-camara-historical-source-gaps-2026-08-18.md`.
+
 ## Atualização do fluxo contínuo — orquestração federal v2
 
 - Supervisor durável ativo: `eleicao2026-continuous-progress`, job Hermes `c4278be3a8a5`, recorrência `every 15m`, workdir da worktree real, lock `.orchestrator/runtime/locks/continuous-progress.lock`.
