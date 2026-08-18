@@ -835,3 +835,13 @@ Sem autorização humana explícita própria, não fazer:
 - Workflow backup `334951434` foi identificado, mas a confirmação independente do run/`headSha` ficou bloqueada por `error connecting to api.github.com`.
 - QA corrigido com a evidência real em `docs/qa/lote-camara-historical-contract-fk-gate-2026-08-18.md`.
 - Próximo tick: revalidar `git ls-remote` e workflow backup quando a API GitHub voltar; depois implementar o adaptador local do envelope sem promover os 8 casos bloqueados.
+
+## Tick contínuo — verificação do adaptador de contrato Câmara histórico (2026-08-18 22:25 UTC)
+
+- Lock bounded adquirido e liberado; worktree limpa antes e depois; nenhum writer concorrente.
+- Adaptador local fail-closed reexecutado com Node 24.19.0: 2 proposições, 6 versões, 6 eventos, 84 votos, 18 candidatos elegíveis e 7 fontes oficiais.
+- `impact:dryrun` sobre envelope e catálogo adaptados passou com RC 0; plano sem escrita remota.
+- Doctor smoke passou: `OK=53 WARN=4 FAIL=0`; gates completos passaram: 76 arquivos/359 testes, TypeScript, schema, `data:check` 1003 candidaturas/988 fotos, build e `git diff --check`.
+- QA: `docs/qa/lote-camara-historical-contract-adapter-verification-2026-08-18.md`.
+- Nenhum SQL, FK, UUID, source_reference, voto, matriz, RPC, Supabase ou Cloudflare foi escrito; oito registros inelegíveis permanecem fail-closed.
+- Próximo chunk: auditoria read-only do catálogo remoto de `source_references` e FKs por `tse_candidate_id`, seguida de plano idempotente sem aplicar bloqueados.
