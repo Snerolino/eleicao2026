@@ -846,3 +846,13 @@ Sem autorização humana explícita própria, não fazer:
 - Nenhum SQL, FK, UUID, source_reference, voto, matriz, RPC, Supabase ou Cloudflare foi escrito; oito registros inelegíveis permanecem fail-closed.
 - Publicação verificada: commit `ac368980a0a0e0e7139720b235ab93cc10b15cf1` em `origin/main`; backup Cloudflare `334951434`, run `32192705790`, `success`, `headSha` idêntico; produção HTTP 200 e `/release.json` confirmou SHA completo e snapshot de 1003 candidaturas.
 - Próximo chunk: auditoria read-only do catálogo remoto de `source_references` e FKs por `tse_candidate_id`, seguida de plano idempotente sem aplicar bloqueados.
+
+## Tick contínuo — auditoria read-only do catálogo remoto Câmara histórico (2026-08-18 22:47 UTC)
+
+- Lock bounded adquirido e liberado; worktree estava limpa antes do chunk; nenhum writer concorrente.
+- Projeto remoto confirmado: ref `hhqxhxcfkoijevxyzfky`; `supabase migration list --linked` alinhado até `20260816100000`.
+- Consulta read-only por URL e consulta independente por `content_hash` nas 7 fontes do manifesto: `0/7` correspondências exatas e `0/7` hashes encontrados; nenhum UUID remoto resolvido.
+- QA: `docs/qa/lote-camara-historical-source-reference-catalog-audit-2026-08-18.md`.
+- Nenhuma escrita Supabase/Cloudflare, SQL, FK, voto, proposição, evento, matriz ou RPC foi executada; 8 registros inelegíveis permanecem fail-closed.
+- Bloqueio real: o catálogo remoto ainda não possui as 7 referências; não é seguro preencher `source_reference_id` nem aplicar o envelope.
+- Próximo chunk: preparar plano idempotente de materialização das 7 `source_references`, revalidar identidade/schema/FK e somente então considerar `--apply`; não promover bloqueados.
