@@ -886,3 +886,11 @@ Sem autorização humana explícita própria, não fazer:
 - QA: `docs/qa/lote-camara-historical-source-catalog-plan-2026-08-18.md`.
 - Nenhuma referência, proposição, evento, voto, identidade, FK, matriz, Supabase ou Cloudflare foi escrita; os 8 casos inelegíveis permanecem fail-closed.
 - Próximo chunk: executar dry-run remoto usando este input ou adaptar o writer histórico para aceitá-lo explicitamente; refazer GET/hash/bytes antes de qualquer `--apply`.
+
+## Release verification — plano de catálogo Câmara histórico (2026-08-18)
+
+- Commit `19b13448987a6f5d4ad738921920561088723b2d` confirmado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32196478017`, concluiu `success` com `headSha` idêntico.
+- Produção respondeu HTTP 200; `/release.json` confirmou SHA `19b13448987a6f5d4ad738921920561088723b2d`, release `19b1344-20260818T231713881Z`, versão `0.2.358` e snapshot de 1003 candidaturas.
+- Nenhuma referência histórica foi materializada remotamente; o catálogo permanece com 7 entradas ausentes e os 8 casos inelegíveis seguem fail-closed.
+- Próximo chunk: dry-run remoto do input histórico, com revalidação oficial de URL/bytes/hash antes de qualquer aplicação idempotente.
