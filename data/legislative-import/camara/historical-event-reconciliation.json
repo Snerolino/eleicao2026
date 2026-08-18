@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0.0",
+  "phase": "FED-26",
+  "mode": "read-only-event-reconciliation",
+  "retrieved_at_utc": "2026-08-18T17:06:44.760Z",
+  "subject": {
+    "camara_id": 73482,
+    "name": "HENRIQUE FONTANA JÚNIOR",
+    "uf": "RS"
+  },
+  "requests": [
+    {
+      "key": "historico",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/73482/historico",
+      "http_status": 200,
+      "bytes": 7634,
+      "sha256": "e08beccf1b578c5929143268a8d4da814668447c3a55fb1066dad69514d574fb",
+      "data_count": 14
+    },
+    {
+      "key": "perfil",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/73482",
+      "http_status": 200,
+      "bytes": 927,
+      "sha256": "4cd0dfc2d3f6234919c088baf22316f02b0ac63cb6b976a95b786202e9c4f654",
+      "data_count": 1
+    },
+    {
+      "key": "legislatura56",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/legislaturas/56",
+      "http_status": 200,
+      "bytes": 226,
+      "sha256": "e2df6500daab1e958f992cb609b669f0dc7c8ce024c05099242b99549722b1a6",
+      "data_count": 1
+    },
+    {
+      "key": "vote9002",
+      "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "http_status": 200,
+      "bytes": 79457,
+      "sha256": "1e7e76c9da6680c1eb9f044dfbb2b5fec057a29dc05d5282a55c2be51938ad5c",
+      "data_count": 0
+    },
+    {
+      "key": "vote9003",
+      "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "http_status": 200,
+      "bytes": 58685,
+      "sha256": "de2075a3559e0f5cdd828a5e999959b4fb9d7677515ba22e3106fd9cf9d0b287",
+      "data_count": 0
+    },
+    {
+      "key": "vote9224",
+      "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "http_status": 200,
+      "bytes": 58008,
+      "sha256": "5ce82d869a34547149d742d9e136f20151e2e10b7b2277b8b29b9ca4d2f5ad50",
+      "data_count": 0
+    },
+    {
+      "key": "vote9227",
+      "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "http_status": 200,
+      "bytes": 70141,
+      "sha256": "b87af47156369cfb359c33993441d33dcbf433f019ac2c831b2d8405b400118e",
+      "data_count": 0
+    }
+  ],
+  "historical_status": {
+    "http": 200,
+    "data_count": 14,
+    "observed_legislaturas": [
+      51,
+      52,
+      53,
+      54,
+      55,
+      56
+    ]
+  },
+  "event_reconciliation": [
+    {
+      "key": "vote9002",
+      "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "http_status": 200,
+      "bytes": 79457,
+      "sha256": "1e7e76c9da6680c1eb9f044dfbb2b5fec057a29dc05d5282a55c2be51938ad5c",
+      "fontana_rows": []
+    },
+    {
+      "key": "vote9003",
+      "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "http_status": 200,
+      "bytes": 58685,
+      "sha256": "de2075a3559e0f5cdd828a5e999959b4fb9d7677515ba22e3106fd9cf9d0b287",
+      "fontana_rows": []
+    },
+    {
+      "key": "vote9224",
+      "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "http_status": 200,
+      "bytes": 58008,
+      "sha256": "5ce82d869a34547149d742d9e136f20151e2e10b7b2277b8b29b9ca4d2f5ad50",
+      "fontana_rows": []
+    },
+    {
+      "key": "vote9227",
+      "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "http_status": 200,
+      "bytes": 70141,
+      "sha256": "b87af47156369cfb359c33993441d33dcbf433f019ac2c831b2d8405b400118e",
+      "fontana_rows": []
+    }
+  ],
+  "decision": {
+    "remote_write": false,
+    "votes_created": 0,
+    "identity_fk_created": 0,
+    "position_outro_promoted": 0,
+    "reason": "Official endpoints provide exact event rows and historical exercise evidence, but this scout does not alter remote identity or votes."
+  }
+}

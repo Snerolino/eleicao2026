@@ -1,3 +1,15 @@
+# Tick contínuo — FED-26 revalidação de fontes nominais Câmara (2026-08-18)
+
+- Lock bounded adquirido e liberado; worktree limpa no início; nenhum writer concorrente.
+- Revalidação read-only refez 7 GETs oficiais: API Câmara (histórico, perfil, legislatura 56) e 4 páginas nominais legadas (9002, 9003, 9224, 9227), todos HTTP 200.
+- Hashes e bytes dos 4 eventos repetiram exatamente o catálogo oficial versionado; histórico 73482 repetiu 14 itens e legislaturas 51–56.
+- Artefato: `data/legislative-import/camara/historical-event-reconciliation.json`.
+- QA: `docs/qa/lote-camara-historical-event-source-revalidation-2026-08-18.md`.
+- Nenhum voto, identidade, UUID, FK, source_reference, Supabase ou Cloudflare foi alterado. Os 4 `position=outro` permanecem fail-closed.
+- O parser leve não extraiu linhas HTML (`fontana_rows=[]`); isso foi registrado como bloqueio, sem transformar HTTP 200 em prova de voto.
+- Gates locais verdes: 73 arquivos / 347 testes, TypeScript, schema, data:check (1003 candidaturas / 988 fotos), build e diff check.
+- Próximo chunk: parser HTML robusto offline + teste de contrato, depois nova coleta; não aplicar remoto sem identidade/cargo/UF/proposição/data/voto exatos.
+
 # Tick contínuo — rota histórica OpenAPI Câmara (2026-08-18)
 
 - Lock bounded adquirido e liberado; worktree estava limpa antes do chunk.
