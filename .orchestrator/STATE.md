@@ -46,6 +46,13 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - PL165, PL361, PL38 e Enio permanecem bloqueados por divergência, ambiguidade ou identidade ausente.
 - QA: `docs/qa/fed17-alrs-source-recovery-2026-08-18.md`.
 
+## Atualização FED-20 — reconciliação Câmara Q1 (2026-08-18)
+
+- `scripts/reconcile-camara-q1-identities.mjs` consultou a rota oficial de votos e gerou `identity-reconciliation.json`.
+- 32 deputados distintos: 24 correspondências exatas únicas e 8 `identity_pending`.
+- Nenhum voto foi aplicado; próximo chunk: envelope factual somente dos 24 resolvidos, com fontes Câmara verificadas.
+- QA: `docs/qa/fed20-camara-identity-reconciliation-2026-08-18.md`.
+
 ## Atualização de retomada — nova instrução Câmara (2026-08-17)
 
 - O `../dataset2026` adicionou o task packet `hermes-task-deputados-federais-comparacao-v1.md`.
