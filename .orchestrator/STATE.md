@@ -10,7 +10,10 @@
 - Gates locais verdes: 73 arquivos / 347 testes, TypeScript, schema, data:check (1003 candidaturas / 988 fotos), build e diff check.
 - Commit local `943fcd6` criado; push `origin/main` falhou duas vezes por DNS (`Could not resolve host: github.com`), portanto o deploy backup não foi disparado neste tick e `main` local está 1 commit à frente.
 - Produção anterior continua sendo apenas verificada, não é prova de publicação deste commit.
-- Próximo chunk: parser HTML robusto offline + teste de contrato, depois nova coleta; não aplicar remoto sem identidade/cargo/UF/proposição/data/voto exatos.
+- Chunk concluído: parser HTML nominal robusto offline + fixture sanitizada + contrato Vitest em `scripts/lib/camara-historical-html.mjs`, `scripts/__tests__/camara-historical-html.test.mjs` e `fixtures/legislative-import/camara-historical-nominal.html`.
+- Gates deste chunk verdes: 74 arquivos/351 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check`.
+- QA: `docs/qa/lote-camara-historical-html-parser-2026-08-18.md`. Nenhuma escrita remota; os 4 casos `position=outro` permanecem fail-closed.
+- Próximo chunk: refazer os quatro GETs oficiais nominais (`9002`, `9003`, `9224`, `9227`) com o parser, preservando URL/HTTP/bytes/SHA-256 e só preparar envelope quando houver linha exata.
 
 # Tick contínuo — rota histórica OpenAPI Câmara (2026-08-18)
 
