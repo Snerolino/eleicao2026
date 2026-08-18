@@ -45,10 +45,18 @@ no Supabase.
   gates deste chunk foram executados com Node 24.19.0. O smoke também registrou
   falha de evidência MCP Codex, sem impacto porque não houve mutação de código.
 
-## Próximo passo
+- Próximo passo
 
 Criar um adaptador/contrato de importação separado que derive `number`, `year`,
 `text_hash` e referências de fonte a partir do catálogo oficial versionado e
 resolva candidatos apenas por `tse_candidate_id` remoto. Provar novamente o
 `impact:dryrun` e a idempotência local antes de qualquer SQL. Manter os oito
 casos bloqueados fail-closed.
+
+## Publicação e verificação
+
+- Commit local criado: `3a25759` (`docs: registrar gate de contrato da Camara historica`).
+- `git push origin main` teve uma tentativa bem-sucedida (`00ae3d5..3a25759 main -> main`); uma segunda tentativa subsequente encontrou falha DNS intermitente para `github.com`.
+- Workflow backup identificado como `334951434`, mas o disparo manual/listagem encontrou `error connecting to api.github.com` neste tick.
+- Produção respondeu HTTP 200 em `/release.json` e confirmou `release_id=3a25759-20260818T192919494Z`, `sha=3a25759a0f614c9da2854fbb5be8f87568bd81c5` e snapshot de 1003 candidaturas. O deploy está refletido em produção; a confirmação independente do run/`headSha` do workflow backup ficou bloqueada pela indisponibilidade de `api.github.com`.
+- Próximo tick deve revalidar `git ls-remote`, disparar/consultar o backup e confirmar `headSha`/`release.json` antes de registrar produção verde.

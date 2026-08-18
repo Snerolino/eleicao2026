@@ -817,3 +817,11 @@ Sem autorização humana explícita própria, não fazer:
 - QA: `docs/qa/lote-camara-historical-contract-fk-gate-2026-08-18.md`.
 - Bloqueio: adaptar o envelope ao contrato do planejador e resolver fontes/FKs por catálogo, sem promover os 8 registros bloqueados.
 - Próximo chunk: implementar/testar o adaptador local fail-closed, depois repetir `impact:dryrun` e provar idempotência antes de qualquer writer remoto.
+
+## Verificação de publicação — gate de contrato/schema/FK Câmara histórico
+
+- Commit `3a25759` foi aceito pelo push (`00ae3d5..3a25759 main -> main`); tentativa adicional encontrou DNS intermitente.
+- Produção respondeu HTTP 200 e `/release.json` confirmou `release_id=3a25759-20260818T192919494Z`, SHA completo `3a25759a0f614c9da2854fbb5be8f87568bd81c5` e snapshot de 1003 candidaturas.
+- Workflow backup `334951434` foi identificado, mas a confirmação independente do run/`headSha` ficou bloqueada por `error connecting to api.github.com`.
+- QA corrigido com a evidência real em `docs/qa/lote-camara-historical-contract-fk-gate-2026-08-18.md`.
+- Próximo tick: revalidar `git ls-remote` e workflow backup quando a API GitHub voltar; depois implementar o adaptador local do envelope sem promover os 8 casos bloqueados.
