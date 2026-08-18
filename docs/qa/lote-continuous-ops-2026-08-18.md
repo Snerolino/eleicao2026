@@ -28,13 +28,14 @@ produção, sem inventar evidência nem alterar dados remotos sem prova.
   sincronização destrutiva.
 - Suíte local: **73 arquivos / 347 testes passando**.
 - TypeScript, schema, data-check, build e `git diff --check`: **passaram**.
-- Build gerou release local para o SHA `37b76c5` sem alterações pendentes.
+- Build local: **passou** para o commit `50bfcd4` sem gerar alterações
+  versionáveis.
+- Publicação: backup Cloudflare workflow `32134497188` concluiu **success**;
+  `headSha=50bfcd468f788e8a86fe57587edee1f4f46778ed`.
 - Produção `https://rs.votopraquem.org`: **HTTP 200**; `/release.json` reporta
-  SHA completo `37b76c5355a33a65ef88b164263fe2a4b780f4`, versão `0.2.307`.
-- Smoke de produção: **passou**, 1002 cards visíveis, 0 falhas HTTP, 0 erros de
-  console online e service worker pronto.
-- Git: `main` alinhada com `origin/main`; worktree limpa. Não havia mutação
-  funcional para commit/push neste tick.
+  SHA completo `50bfcd468f788e8a86fe57587edee1f4f46778ed`, versão `0.2.309` e
+  snapshot com 1003 registros.
+- Git: `main` alinhada com `origin/main`; worktree limpa após publicação.
 
 ## Atualização deste tick — 2026-08-18
 
