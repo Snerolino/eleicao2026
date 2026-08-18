@@ -1,0 +1,1235 @@
+{
+  "schema_version": "1.0.0",
+  "phase": "FED-25",
+  "mode": "dry-run-official-nominal-records",
+  "source_domain": "www.camara.gov.br",
+  "retrieved_on": "2026-08-18",
+  "propositions": [
+    {
+      "name": "PEC 6/2019",
+      "camara_proposition_id": "2192459",
+      "events": [
+        {
+          "numvot": "9002",
+          "vote_date": "2019-08-07",
+          "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+          "http_status": 200,
+          "bytes": 79457,
+          "sha256": "1e7e76c9da6680c1eb9f044dfbb2b5fec057a29dc05d5282a55c2be51938ad5c",
+          "rs_record_count": 31,
+          "records": [
+            {
+              "official_name": "Onyx Lorenzoni",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Alceu Moreira",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Darcísio Perondi",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Giovani Feltes",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Márcio Biolchi",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Marcel van Hattem",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Afonso Motta",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Marlon Santos",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Pompeo de Mattos",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Giovani Cherini",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Afonso Hamm",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Jerônimo Goergen",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Pedro Westphalen",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Carlos Gomes",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Heitor Schuch",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Liziane Bayer",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Danrlei de Deus Hinterholz",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Daniel Trzeciak",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Lucas Redecker",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Bibo Nunes",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Nereu Crispim",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Sanderson",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Fernanda Melchionna",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Bohn Gass",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Henrique Fontana",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Marcon",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Maria do Rosário",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Paulo Pimenta",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Marcelo Moraes",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Maurício Dziedricki",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            },
+            {
+              "official_name": "Santini",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+              "numvot": "9002"
+            }
+          ]
+        },
+        {
+          "numvot": "9003",
+          "vote_date": "2019-08-07",
+          "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+          "http_status": 200,
+          "bytes": 58685,
+          "sha256": "de2075a3559e0f5cdd828a5e999959b4fb9d7677515ba22e3106fd9cf9d0b287",
+          "rs_record_count": 25,
+          "records": [
+            {
+              "official_name": "Alceu Moreira",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Darcísio Perondi",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Márcio Biolchi",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Afonso Motta",
+              "uf": "RS",
+              "vote": "Obstrução",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Marlon Santos",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Pompeo de Mattos",
+              "uf": "RS",
+              "vote": "Obstrução",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Giovani Cherini",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Afonso Hamm",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Jerônimo Goergen",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Pedro Westphalen",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Carlos Gomes",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Heitor Schuch",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Liziane Bayer",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Daniel Trzeciak",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Lucas Redecker",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Bibo Nunes",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Nereu Crispim",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Sanderson",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Fernanda Melchionna",
+              "uf": "RS",
+              "vote": "Obstrução",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Bohn Gass",
+              "uf": "RS",
+              "vote": "Obstrução",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Henrique Fontana",
+              "uf": "RS",
+              "vote": "Obstrução",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Marcon",
+              "uf": "RS",
+              "vote": "Obstrução",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Marcelo Moraes",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Maurício Dziedricki",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            },
+            {
+              "official_name": "Santini",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-08-07",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+              "numvot": "9003"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PL 3723/2019",
+      "camara_proposition_id": "2209381",
+      "events": [
+        {
+          "numvot": "9224",
+          "vote_date": "2019-11-05",
+          "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+          "http_status": 200,
+          "bytes": 58008,
+          "sha256": "5ce82d869a34547149d742d9e136f20151e2e10b7b2277b8b29b9ca4d2f5ad50",
+          "rs_record_count": 17,
+          "records": [
+            {
+              "official_name": "Giovani Feltes",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+              "numvot": "9224"
+            },
+            {
+              "official_name": "Afonso Motta",
+              "uf": "RS",
+              "vote": "Obstrução",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+              "numvot": "9224"
+            },
+            {
+              "official_name": "Giovani Cherini",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+              "numvot": "9224"
+            },
+            {
+              "official_name": "Heitor Schuch",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+              "numvot": "9224"
+            },
+            {
+              "official_name": "Liziane Bayer",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+              "numvot": "9224"
+            },
+            {
+              "official_name": "Daniel Trzeciak",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+              "numvot": "9224"
+            },
+            {
+              "official_name": "Lucas Redecker",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+              "numvot": "9224"
+            },
+            {
+              "official_name": "Marcelo Brum",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+              "numvot": "9224"
+            },
+            {
+              "official_name": "Nereu Crispim",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+              "numvot": "9224"
+            },
+            {
+              "official_name": "Fernanda Melchionna",
+              "uf": "RS",
+              "vote": "Obstrução",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+              "numvot": "9224"
+            },
+            {
+              "official_name": "Bohn Gass",
+              "uf": "RS",
+              "vote": "Obstrução",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+              "numvot": "9224"
+            },
+            {
+              "official_name": "Henrique Fontana",
+              "uf": "RS",
+              "vote": "Obstrução",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+              "numvot": "9224"
+            },
+            {
+              "official_name": "Marcon",
+              "uf": "RS",
+              "vote": "Obstrução",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+              "numvot": "9224"
+            },
+            {
+              "official_name": "Maria do Rosário",
+              "uf": "RS",
+              "vote": "Obstrução",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+              "numvot": "9224"
+            },
+            {
+              "official_name": "Marcelo Moraes",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+              "numvot": "9224"
+            },
+            {
+              "official_name": "Santini",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+              "numvot": "9224"
+            },
+            {
+              "official_name": "Carlos Gomes",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+              "numvot": "9224"
+            }
+          ]
+        },
+        {
+          "numvot": "9225",
+          "vote_date": "2019-11-05",
+          "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+          "http_status": 200,
+          "bytes": 62394,
+          "sha256": "22fa0ace00322c330b81b68d3a524f49251cef296bf02ad664b6a34fbcca0ae5",
+          "rs_record_count": 21,
+          "records": [
+            {
+              "official_name": "Alceu Moreira",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+              "numvot": "9225"
+            },
+            {
+              "official_name": "Giovani Feltes",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+              "numvot": "9225"
+            },
+            {
+              "official_name": "Marcel van Hattem",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+              "numvot": "9225"
+            },
+            {
+              "official_name": "Afonso Motta",
+              "uf": "RS",
+              "vote": "Obstrução",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+              "numvot": "9225"
+            },
+            {
+              "official_name": "Pompeo de Mattos",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+              "numvot": "9225"
+            },
+            {
+              "official_name": "Giovani Cherini",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+              "numvot": "9225"
+            },
+            {
+              "official_name": "Afonso Hamm",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+              "numvot": "9225"
+            },
+            {
+              "official_name": "Liziane Bayer",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+              "numvot": "9225"
+            },
+            {
+              "official_name": "Danrlei de Deus Hinterholz",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+              "numvot": "9225"
+            },
+            {
+              "official_name": "Daniel Trzeciak",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+              "numvot": "9225"
+            },
+            {
+              "official_name": "Lucas Redecker",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+              "numvot": "9225"
+            },
+            {
+              "official_name": "Bibo Nunes",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+              "numvot": "9225"
+            },
+            {
+              "official_name": "Marcelo Brum",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+              "numvot": "9225"
+            },
+            {
+              "official_name": "Nereu Crispim",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+              "numvot": "9225"
+            },
+            {
+              "official_name": "Sanderson",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+              "numvot": "9225"
+            },
+            {
+              "official_name": "Fernanda Melchionna",
+              "uf": "RS",
+              "vote": "Obstrução",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+              "numvot": "9225"
+            },
+            {
+              "official_name": "Bohn Gass",
+              "uf": "RS",
+              "vote": "Obstrução",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+              "numvot": "9225"
+            },
+            {
+              "official_name": "Marcon",
+              "uf": "RS",
+              "vote": "Obstrução",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+              "numvot": "9225"
+            },
+            {
+              "official_name": "Marcelo Moraes",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+              "numvot": "9225"
+            },
+            {
+              "official_name": "Santini",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+              "numvot": "9225"
+            },
+            {
+              "official_name": "Carlos Gomes",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+              "numvot": "9225"
+            }
+          ]
+        },
+        {
+          "numvot": "9226",
+          "vote_date": "2019-11-05",
+          "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+          "http_status": 200,
+          "bytes": 60848,
+          "sha256": "7606555cbe1523bd7ab403813f6048069e2789e41b3a098c80d14cc391fb3636",
+          "rs_record_count": 21,
+          "records": [
+            {
+              "official_name": "Alceu Moreira",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+              "numvot": "9226"
+            },
+            {
+              "official_name": "Giovani Feltes",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+              "numvot": "9226"
+            },
+            {
+              "official_name": "Márcio Biolchi",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+              "numvot": "9226"
+            },
+            {
+              "official_name": "Marcel van Hattem",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+              "numvot": "9226"
+            },
+            {
+              "official_name": "Afonso Motta",
+              "uf": "RS",
+              "vote": "Obstrução",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+              "numvot": "9226"
+            },
+            {
+              "official_name": "Pompeo de Mattos",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+              "numvot": "9226"
+            },
+            {
+              "official_name": "Giovani Cherini",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+              "numvot": "9226"
+            },
+            {
+              "official_name": "Afonso Hamm",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+              "numvot": "9226"
+            },
+            {
+              "official_name": "Pedro Westphalen",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+              "numvot": "9226"
+            },
+            {
+              "official_name": "Heitor Schuch",
+              "uf": "RS",
+              "vote": "Obstrução",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+              "numvot": "9226"
+            },
+            {
+              "official_name": "Liziane Bayer",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+              "numvot": "9226"
+            },
+            {
+              "official_name": "Danrlei de Deus Hinterholz",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+              "numvot": "9226"
+            },
+            {
+              "official_name": "Daniel Trzeciak",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+              "numvot": "9226"
+            },
+            {
+              "official_name": "Lucas Redecker",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+              "numvot": "9226"
+            },
+            {
+              "official_name": "Bibo Nunes",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+              "numvot": "9226"
+            },
+            {
+              "official_name": "Marcelo Brum",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+              "numvot": "9226"
+            },
+            {
+              "official_name": "Nereu Crispim",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+              "numvot": "9226"
+            },
+            {
+              "official_name": "Fernanda Melchionna",
+              "uf": "RS",
+              "vote": "Obstrução",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+              "numvot": "9226"
+            },
+            {
+              "official_name": "Marcelo Moraes",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+              "numvot": "9226"
+            },
+            {
+              "official_name": "Santini",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+              "numvot": "9226"
+            },
+            {
+              "official_name": "Carlos Gomes",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+              "numvot": "9226"
+            }
+          ]
+        },
+        {
+          "numvot": "9227",
+          "vote_date": "2019-11-05",
+          "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+          "http_status": 200,
+          "bytes": 70141,
+          "sha256": "b87af47156369cfb359c33993441d33dcbf433f019ac2c831b2d8405b400118e",
+          "rs_record_count": 27,
+          "records": [
+            {
+              "official_name": "Alceu Moreira",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Giovani Feltes",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Márcio Biolchi",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Marcel van Hattem",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Afonso Motta",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Pompeo de Mattos",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Giovani Cherini",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Afonso Hamm",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Pedro Westphalen",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Heitor Schuch",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Liziane Bayer",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Danrlei de Deus Hinterholz",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Daniel Trzeciak",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Lucas Redecker",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Bibo Nunes",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Marcelo Brum",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Nereu Crispim",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Sanderson",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Fernanda Melchionna",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Bohn Gass",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Henrique Fontana",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Marcon",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Maria do Rosário",
+              "uf": "RS",
+              "vote": "Não",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Marcelo Moraes",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Maurício Dziedricki",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Santini",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            },
+            {
+              "official_name": "Carlos Gomes",
+              "uf": "RS",
+              "vote": "Sim",
+              "vote_date": "2019-11-05",
+              "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+              "numvot": "9227"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "sources": 6,
+    "rs_records": 142,
+    "unique_names": 32
+  },
+  "safety": {
+    "identity_reconciliation": "pending",
+    "candidate_tse_ids": 0,
+    "remote_apply": false,
+    "impact_matrix": "not_created",
+    "reason": "Records are emitted only with exact official proposition, vote date, UF, parliamentary name, vote and source URL; no candidate identity or remote FK is inferred."
+  }
+}

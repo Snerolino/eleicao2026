@@ -1,7 +1,16 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-18 14:20 UTC
-Status: `FED25_CAMARA_HISTORICAL_SOURCE_CATALOG_READY`
+Atualizado: 2026-08-18 14:45 UTC
+Status: `FED25_CAMARA_HISTORICAL_NOMINAL_DRY_RUN_READY`
+
+## Tick contínuo — extração nominal histórica Câmara em dry-run (2026-08-18)
+
+- Lock bounded adquirido e liberado; nenhum writer concorrente. Worktree limpa antes do chunk; `HEAD=4dccdd4fbc6151c9b1821cf010356f08e1690c3a`.
+- As seis páginas nominais catalogadas foram refeitas sequencialmente: 6/6 HTTP 200, bytes e SHA-256 coincidentes.
+- Parser fail-closed extraiu 142 registros RS de 32 nomes distintos, preservando proposição, `numvot`, data oficial, parlamentar, UF, voto e URL completa.
+- Envelope dry-run: `data/legislative-import/camara/historical-nominal-vote-dry-run.json`; `candidate_tse_ids=0`, `remote_apply=false`, nenhuma FK/UUID/matriz/RPC criada.
+- QA: `docs/qa/lote-camara-historical-nominal-dry-run-2026-08-18.md`.
+- Próximo chunk: reconciliação read-only dos 142 registros por nome oficial exato contra `full_name`/`ballot_name` e `tse_candidate_id`, mantendo ausências/ambiguidades fail-closed.
 
 ## Tick contínuo — catálogo oficial de fontes nominais Câmara (2026-08-18)
 
