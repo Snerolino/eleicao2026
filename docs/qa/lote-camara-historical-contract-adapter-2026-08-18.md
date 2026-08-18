@@ -28,6 +28,15 @@ identidades/FKs remotas fail-closed.
 - Nenhuma chamada remota, SQL, Supabase, Cloudflare, FK ou `source_reference`
   foi escrita.
 
+## Publicação e verificação
+
+- Commit `b50db97c7bd45045e640afcdd9d4261d25eb4621` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32190857815`: `completed/success`,
+  `headSha` idêntico ao commit.
+- Produção: `https://rs.votopraquem.org` respondeu HTTP 200; `/release.json`
+  confirmou SHA `b50db97c7bd45045e640afcdd9d4261d25eb4621`, release `b50db97`
+  e snapshot com 1003 candidaturas.
+
 ## Estado e bloqueios
 
 O envelope adaptado está pronto para a próxima validação de catálogo remoto, mas
