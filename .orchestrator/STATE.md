@@ -145,6 +145,14 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - QA: `docs/qa/fed10-alrs-nominal-2026-08-18.md`.
 - Próximo gate: materializar/revalidar perfis nominais ALRS, sem score de impacto.
 
+## Atualização FED-11 — perfis nominais ALRS (2026-08-18)
+
+- `build-vote-profile.mjs --apply` materializou 4.007 índices factuais e 18 perfis por `(candidate_id, house)`.
+- Remoto confirmou 13 perfis ALRS e 4.000 votos agregados; sem duplicidades novas.
+- Perfil deriva somente contagens nominais; nenhuma matriz de impacto foi criada ou alterada.
+- QA: `docs/qa/fed11-alrs-vote-profiles-2026-08-18.md`.
+- Próximo gate: revisão de cobertura/exposição pública dos perfis ALRS.
+
 ## Checkpoint mais recente — migração de sessão (2026-08-17)
 
 - Último commit: `85d7031` (`feat: exibir claims e perfil de votações no dossiê`).
