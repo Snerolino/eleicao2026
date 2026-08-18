@@ -1,3 +1,10 @@
+# Release verification — evidência histórica Câmara (2026-08-18)
+
+- Commit `faef2fdd499d3d2877e9ab7acc9aababd8cedd9b` confirmado em `origin/main`.
+- Workflow backup Cloudflare `334951434`, run `32155139013`, concluiu `success` com `headSha` idêntico ao commit.
+- Produção `https://rs.votopraquem.org` respondeu HTTP 200; `/release.json` confirmou SHA `faef2fdd499d3d2877e9ab7acc9aababd8cedd9b`, versão `0.2.328` e snapshot com 1003 candidaturas.
+- Próximo tick: continuar somente a descoberta read-only de rota histórica estruturada; não aplicar os 4 casos `position=outro`.
+
 # Tick contínuo — evidência oficial de cargo histórico Câmara (2026-08-18)
 
 - Lock bounded adquirido e liberado; worktree estava limpa antes do chunk.
