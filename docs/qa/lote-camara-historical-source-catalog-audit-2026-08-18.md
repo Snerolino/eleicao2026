@@ -16,7 +16,7 @@
 ## Escopo e segurança
 
 - `votes_touched=0`, `propositions_touched=0`; nenhum voto, identidade, UUID de candidato, FK, matriz ou RPC foi alterado.
-- Não houve deploy Cloudflare neste chunk; fontes remotas foram a única mutação autorizada.
+- Deploy publicado pelo workflow backup `334951434`, run `32198093850`, concluído `success` com `headSha=d999496101ac7cd3a1f62e4e9b5b184c5954948f`; produção respondeu HTTP 200 e `/release.json` confirmou o mesmo SHA, versão `0.2.360` e 1003 candidaturas.
 - Os 4 registros históricos de Henrique Fontana com `position=outro` permanecem fail-closed; as 8 identidades não elegíveis continuam fora do envelope.
 - Nenhum segredo foi impresso ou versionado.
 

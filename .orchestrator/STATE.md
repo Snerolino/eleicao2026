@@ -7,6 +7,7 @@
 - Retry idempotente com `source_category=oficial` inseriu 7 fontes; releitura confirmou 7/7 presentes e 7/7 hashes exatos. Nenhuma proposição, versão, evento, voto, identidade, FK, matriz ou RPC foi alterado.
 - Artefatos: `.orchestrator/runtime/camara-historical-scout/catalog-audit-2026-08-18.json` e `source-apply-2026-08-18.json`.
 - QA: `docs/qa/lote-camara-historical-source-catalog-audit-2026-08-18.md`.
+- Deploy backup Cloudflare `334951434`, run `32198093850`, concluiu `success` com `headSha=d999496101ac7cd3a1f62e4e9b5b184c5954948f`; produção HTTP 200 e `/release.json` confirmaram o SHA, versão `0.2.360` e 1003 candidaturas.
 - Próximo chunk: revalidar o envelope histórico contra as 7 referências resolvidas e preparar dry-run factual; manter os 4 `position=outro` e 8 identidades não elegíveis fail-closed.
 
 # Tick contínuo — FED-26 adaptador de contrato Câmara histórico (2026-08-18)
