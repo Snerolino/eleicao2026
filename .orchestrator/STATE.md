@@ -10,7 +10,7 @@ Status: `FED25_CAMARA_HISTORICAL_SOURCE_CATALOG_READY`
 - As seis páginas nominais oficiais responderam HTTP 200; bytes e SHA-256 foram coletados e versionados em `data/legislative-import/camara/historical-nominal-vote-source-catalog.json`.
 - Nenhuma identidade, voto, FK, source reference, matriz ou escrita remota foi criada. O catálogo declara `dbf_code_to_numvot_mapping=not_individually_asserted` e `identity_reconciliation=pending`.
 - QA: `docs/qa/lote-camara-historical-source-catalog-2026-08-18.md`.
-- Workflow backup `334951434` teve run concluído com sucesso para este HEAD (`32146301143`); o artefato não altera UI.
+- Workflow backup `334951434` não foi disparado automaticamente; foi acionado manualmente após o push e está `queued` no run `32148409007`, com `headSha=1f73e401d4e2f038bc890a4727f4a34aa52ef569`. Produção respondeu `HTTP 200`; o próximo tick deve aguardar/validar a conclusão e o `headSha` do deploy.
 - Próximo chunk: refazer GET das seis páginas a partir do catálogo, validar hash/bytes e extrair registros nominais somente com proposição/data/identidade exatos, em dry-run.
 
 ## Tick contínuo — reconciliação offline DBF Câmara (2026-08-18)
