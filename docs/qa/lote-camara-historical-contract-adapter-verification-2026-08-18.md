@@ -50,6 +50,14 @@ Cloudflare foi escrito. O adaptador não resolve UUID remoto: o catálogo de
 fontes permanece explicitamente pendente para uma futura aplicação idempotente.
 Os oito registros inelegíveis permanecem fail-closed.
 
+## Publicação e verificação
+
+- Commit funcional/documental `ac368980a0a0e0e7139720b235ab93cc10b15cf1` foi publicado em `origin/main`.
+- Workflow backup Cloudflare `334951434`, run `32192705790`, concluiu `success` com `headSha` idêntico.
+- Produção respondeu `HTTP 200` em `https://rs.votopraquem.org`.
+- `/release.json` confirmou SHA completo `ac368980a0a0e0e7139720b235ab93cc10b15cf1`, release `ac36898-20260818T222704535Z` e snapshot com 1003 candidaturas.
+- Worktree final limpa e `git ls-remote` confirmou o mesmo SHA em `origin/main`.
+
 ## Próximo passo
 
 Executar a auditoria read-only final do catálogo remoto de `source_references`
