@@ -753,3 +753,9 @@ Sem autorização humana explícita própria, não fazer:
 - Artefato transitório: `.orchestrator/runtime/camara-historical-scout/dbf-revalidation-2026-08-18.json`; QA: `docs/qa/lote-camara-historical-dbf-revalidation-2026-08-18.md`.
 - Nenhum voto, identidade, UUID, FK, `source_reference`, matriz ou escrita remota foi criado. Os quatro casos `position=outro` permanecem fail-closed.
 - Próximo chunk: reconciliar somente registros nominais com identidade oficial exata, proposição e data correspondentes; não aplicar ambiguidades.
+
+
+## Release verification — revalidação DBFs Câmara (2026-08-18)
+
+- Backup `334951434` run `32169951790` concluiu `success`, `headSha=b08eab0baf602ecb6ac8d188dcf758444fbaf664`; build e deploy backup verdes.
+- Produção respondeu HTTP 200, mas o `/release.json` consultado imediatamente após o run ainda retornou SHA anterior `4fb426b...`; a propagação final deste commit requer nova verificação após o commit de QA/STATE.

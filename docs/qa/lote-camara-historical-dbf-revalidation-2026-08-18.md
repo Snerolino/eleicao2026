@@ -23,3 +23,8 @@
 ## Próximo passo bounded
 
 - Reconciliar os registros dos DBFs revalidados somente por identidade oficial exata e evento/proposição/data correspondentes; manter ambiguidades e `position=outro` fora de qualquer aplicação remota.
+
+## Publicação verificada
+
+- Backup Cloudflare `334951434`, run `32169951790`, concluiu `success` em 55s com `headSha=b08eab0baf602ecb6ac8d188dcf758444fbaf664`.
+- A produção respondeu HTTP 200; a verificação inicial ainda apontava o release anterior (`4fb426b...`) antes da propagação. O commit de documentação deste QA será publicado em novo run, sem considerar o release anterior como prova final deste estado.
