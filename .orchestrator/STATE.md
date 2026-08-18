@@ -864,3 +864,11 @@ Sem autorização humana explícita própria, não fazer:
 - Produção respondeu HTTP 200 em `/release.json`; SHA `3cd7be6ea4510f3547833e1e5e0952a3cdb2aba2`, release `3cd7be6-20260818T224826675Z`, versão `0.2.355`, snapshot com 1003 candidaturas.
 - Nenhuma referência histórica foi materializada remotamente; as 7 fontes continuam bloqueadas por ausência no catálogo e os 8 registros inelegíveis seguem fail-closed.
 - Próximo chunk: preparar plano idempotente de `source_references` e repetir os gates de identidade/schema/FK antes de qualquer aplicação.
+
+## Release verification — documentação do catálogo remoto Câmara histórico (2026-08-18 22:50 UTC)
+
+- Commit `9871916949f21d34f3d9b717a2855d253afb7a7c` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32194464071`, concluiu `success` com `headSha` idêntico ao commit.
+- Após propagação/cache-busting, produção respondeu HTTP 200 em `/release.json` com SHA `9871916949f21d34f3d9b717a2855d253afb7a7c`, release `9871916-20260818T224958523Z` e snapshot de 1003 candidaturas.
+- O catálogo remoto continua sem as 7 referências históricas; nenhum dado factual foi aplicado.
+- Próximo chunk: preparar plano idempotente de `source_references` e repetir os gates de identidade/schema/FK antes de qualquer aplicação.
