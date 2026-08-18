@@ -28,3 +28,5 @@
 
 - Backup Cloudflare `334951434`, run `32169951790`, concluiu `success` em 55s com `headSha=b08eab0baf602ecb6ac8d188dcf758444fbaf664`.
 - A produção respondeu HTTP 200; a verificação inicial ainda apontava o release anterior (`4fb426b...`) antes da propagação. O commit de documentação deste QA será publicado em novo run, sem considerar o release anterior como prova final deste estado.
+
+- Verificação final: backup `334951434`, run `32170124260`, `success`, `headSha=8302b29608d8b3e8fe6ca434fde2a8d27c193e82`; produção HTTP 200 e `/release.json` com o mesmo SHA, versão `0.2.342`.
