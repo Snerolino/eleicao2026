@@ -744,3 +744,12 @@ Sem autorização humana explícita própria, não fazer:
 - Nenhum voto, identidade, UUID, FK, source_reference, matriz ou escrita remota foi criado. Os quatro casos `position=outro` continuam fail-closed.
 - Bloqueio real: DNS direto do shell para `dadosabertos.camara.leg.br` falhou; `web_extract` foi apenas fallback de reconciliação de rota, sem hash/bytes novos dos DBFs.
 - Próximo chunk: refazer os seis GETs oficiais dos DBFs, verificar HTTP/bytes/SHA-256 contra o catálogo e reconciliar somente registros nominais exatos.
+
+
+## Tick contínuo — revalidação dos DBFs nominais Câmara (2026-08-18 18:13 UTC)
+
+- Lock bounded adquirido e liberado; worktree limpa antes do chunk; nenhum writer concorrente.
+- Os seis GETs oficiais dos DBFs (`CD190242`, `CD190244`, `CD190396`, `CD190397`, `CD190398`, `CD190400`) responderam HTTP 200, 44.312 bytes cada, com SHA-256 6/6 idênticos ao catálogo versionado.
+- Artefato transitório: `.orchestrator/runtime/camara-historical-scout/dbf-revalidation-2026-08-18.json`; QA: `docs/qa/lote-camara-historical-dbf-revalidation-2026-08-18.md`.
+- Nenhum voto, identidade, UUID, FK, `source_reference`, matriz ou escrita remota foi criado. Os quatro casos `position=outro` permanecem fail-closed.
+- Próximo chunk: reconciliar somente registros nominais com identidade oficial exata, proposição e data correspondentes; não aplicar ambiguidades.
