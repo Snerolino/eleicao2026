@@ -19,6 +19,12 @@ A API oficial consultada confirma a identidade Câmara/RS atual do perfil e forn
 
 O HTTP 504 foi classificado como bloqueio de disponibilidade da consulta agregada; não foi convertido em `not_found`.
 
+## Publicação verificada
+
+- Commit publicado: `b33450a0ba24153866427417226153bd14209829`.
+- Workflow backup `334951434`, run `32157295723`: `success`, `headSha` idêntico ao commit.
+- Produção `https://rs.votopraquem.org`: HTTP 200; `/release.json` confirmou SHA `b33450a0ba24153866427417226153bd14209829` e snapshot com 1003 candidaturas.
+
 ## Estado e próximo passo
 
 - **Status:** `FED25_CAMARA_HISTORICAL_REMOTE_IDENTITY_LOOKUP_BLOCKED_ROLE`
