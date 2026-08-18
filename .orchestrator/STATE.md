@@ -776,3 +776,10 @@ Sem autorização humana explícita própria, não fazer:
 - Artefato: `data/legislative-import/camara/historical-role-reconciliation.json`; QA: `docs/qa/lote-camara-historical-role-reconciliation-2026-08-18.md`.
 - `remote_apply=false`; nenhum voto, FK, UUID, source_reference, matriz, RPC, Supabase ou Cloudflare foi alterado.
 - Próximo chunk: construir/auditar envelope factual dry-run dos 84 elegíveis, provar idempotência local e manter os 8 bloqueados fail-closed.
+
+## Release verification — reconciliação de cargo/UF Câmara (2026-08-18)
+
+- Commit `9d942c18e215c67267b013efeee45b1ceee6c194` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32172065273`, concluiu `success` com `headSha` idêntico.
+- Produção respondeu HTTP 200; `/release.json` confirmou SHA `9d942c18e215c67267b013efeee45b1ceee6c194` e versão `0.2.344`.
+- Worktree estava limpa após o primeiro release; esta atualização documental requer novo commit/release.

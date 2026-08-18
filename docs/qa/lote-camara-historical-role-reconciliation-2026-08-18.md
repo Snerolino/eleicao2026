@@ -23,6 +23,12 @@
 
 O conjunto de 84 é somente candidato a próximo envelope factual. Ainda não é carga remota: falta validar/produzir o envelope idempotente com proposição, evento, data, voto e fonte por registro e auditar duplicidades antes de qualquer writer. Os grupos `senador`/`outro` permanecem fora.
 
+## Publicação verificada
+
+- Commit `9d942c18e215c67267b013efeee45b1ceee6c194` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32172065273`, concluiu `success` com `headSha` idêntico.
+- Produção `https://rs.votopraquem.org/release.json`: HTTP 200, SHA `9d942c18e215c67267b013efeee45b1ceee6c194`, versão `0.2.344`.
+
 ## Próximo chunk bounded
 
 Construir e auditar o envelope factual dry-run dos 84 registros elegíveis, reutilizando somente fontes oficiais e chaves exatas; depois provar idempotência local. Não aplicar Supabase até o envelope passar o gate de fontes/FK/duplicidade.
