@@ -186,8 +186,15 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - ALRS: 31/1282 versões com fonte, 31/1678 eventos com fonte e 3975/4000 votos com fonte; 25 votos permanecem sem vínculo.
 - Senado segue sem fontes nos registros históricos, conforme bloqueio FED-9.
 - Nenhuma fonte artificial foi criada; modo `--strict` retorna código 2 quando há lacunas.
+- A fila read-only agrupou os 25 votos ALRS sem fonte em 5 eventos para recuperação oficial; nenhum backfill foi aplicado.
 - QA: `docs/qa/fed15-legislative-source-coverage-2026-08-18.md`.
 - Próximo gate: capturar evidência oficial suficiente para os 25 votos ALRS sem fonte antes de qualquer backfill.
+
+## Atualização FED-16 — plano de recuperação ALRS (2026-08-18)
+
+- A fila de recuperação permanece somente diagnóstico e fail-closed.
+- Eventos pendentes: `alrs_pl134_2023`, `alrs_pl165_2025`, `alrs_pl361_2025`, `alrs_pl38_2026` e `alrs_pl77_2025`.
+- Critério de conclusão: obter HTML oficial/hash e URL por evento, revalidar candidato/evento e só então preparar dry-run de backfill.
 
 ## Checkpoint mais recente — migração de sessão (2026-08-17)
 

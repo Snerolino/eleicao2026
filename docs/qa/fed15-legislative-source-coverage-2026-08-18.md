@@ -33,6 +33,14 @@ npm run impact:sources:audit
 node scripts/audit-legislative-source-coverage.mjs --strict
 ```
 
+## FED-16 — fila de recuperação preparada
+
+O auditor também agrupa os votos ALRS sem fonte por evento. A execução remota
+identificou **5 eventos** para recuperar: `alrs_pl134_2023` (6 votos),
+`alrs_pl165_2025` (6), `alrs_pl361_2025` (6), `alrs_pl38_2026` (1) e
+`alrs_pl77_2025` (6). A fila é somente diagnóstico e usa o motivo
+`source_evidence_not_linked`; não cria URL, hash ou UUID.
+
 ## Contrato local
 
 `scripts/__tests__/source-coverage.test.mjs`: **3 testes passando**.

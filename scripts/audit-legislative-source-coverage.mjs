@@ -3,7 +3,7 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { createClient } from '@supabase/supabase-js';
-import { hasSourceGaps, summarizeSourceCoverage } from './lib/source-coverage.mjs';
+import { buildRecoveryQueue, hasSourceGaps, summarizeSourceCoverage } from './lib/source-coverage.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const PAGE = 1000;
@@ -11,7 +11,7 @@ const TABLES = {
   propositions: { table: 'legislative_propositions', select: 'house,external_id', source: false },
   versions: { table: 'proposition_versions', select: 'source_reference_id,proposition_id,legislative_propositions(house)', source: true },
   events: { table: 'voting_events', select: 'house,source_reference_id,external_id', source: true },
-  votes: { table: 'legislative_votes', select: 'source_reference_id,voting_events(house)', source: true },
+  votes: { table: 'legislative_votes', select: 'source_reference_id,voting_events(house,external_id,occurred_at)', source: true },
 };
 
 function loadEnv() {
@@ -51,6 +51,7 @@ async function main() {
     const rows = await allRows(client, config.table, config.select);
     const summary = summarizeSourceCoverage(rows);
     report.tables[name] = { rows: rows.length, source_tracking: config.source, coverage: config.source ? summary : null };
+    if (name === 'votes') report.recovery_queue = buildRecoveryQueue(rows);
     if (config.source && hasSourceGaps(summary)) report.has_gaps = true;
   }
 

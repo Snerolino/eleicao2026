@@ -18,3 +18,20 @@ export function summarizeSourceCoverage(rows, houseSelector = (row) => (
 export function hasSourceGaps(summary) {
   return Object.values(summary).some((entry) => entry.without_source > 0);
 }
+
+export function buildRecoveryQueue(rows) {
+  const queue = new Map();
+  for (const row of rows) {
+    if (row.source_reference_id || row.voting_events?.house !== 'alrs') continue;
+    const event = row.voting_events;
+    const current = queue.get(event.external_id) ?? {
+      external_id: event.external_id,
+      occurred_at: event.occurred_at,
+      missing_votes: 0,
+      reason: 'source_evidence_not_linked',
+    };
+    current.missing_votes += 1;
+    queue.set(event.external_id, current);
+  }
+  return [...queue.values()].sort((left, right) => left.external_id.localeCompare(right.external_id));
+}

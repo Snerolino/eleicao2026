@@ -1,7 +1,7 @@
 // @vitest-environment node
 
 import { describe, expect, it } from 'vitest';
-import { hasSourceGaps, summarizeSourceCoverage } from '../lib/source-coverage.mjs';
+import { buildRecoveryQueue, hasSourceGaps, summarizeSourceCoverage } from '../lib/source-coverage.mjs';
 
 describe('source-coverage', () => {
   it('agrega cobertura por casa sem misturar tabelas', () => {
@@ -33,5 +33,20 @@ describe('source-coverage', () => {
     ]);
 
     expect(summary.alrs.without_source).toBe(1);
+  });
+
+  it('cria fila somente para votos ALRS sem fonte e agrupa por evento', () => {
+    const queue = buildRecoveryQueue([
+      { source_reference_id: null, voting_events: { house: 'alrs', external_id: 'event-2', occurred_at: '2026-01-02' } },
+      { source_reference_id: null, voting_events: { house: 'alrs', external_id: 'event-2', occurred_at: '2026-01-02' } },
+      { source_reference_id: null, voting_events: { house: 'senado', external_id: 'event-3', occurred_at: '2026-01-03' } },
+    ]);
+
+    expect(queue).toEqual([{
+      external_id: 'event-2',
+      occurred_at: '2026-01-02',
+      missing_votes: 2,
+      reason: 'source_evidence_not_linked',
+    }]);
   });
 });
