@@ -171,6 +171,14 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - QA: `docs/qa/fed13-production-alrs-profile-smoke-2026-08-18.md`.
 - Próximo gate: ampliar a cobertura de perfis ALRS para candidatos com múltiplas casas, sem misturar saldos nominais.
 
+## Atualização FED-14 — cobertura multi-house (2026-08-18)
+
+- Auditoria remota encontrou 18 perfis em 18 candidatos e 0 candidatos com mais de uma casa.
+- Os 13 perfis ALRS permanecem separados por `house`; nenhum caso ALRS+Câmara foi inventado.
+- Contrato local multi-house validado com 31 testes direcionados.
+- QA: `docs/qa/fed14-multi-house-coverage-2026-08-18.md`.
+- Próximo gate: repetir validação quando houver candidato real com duas casas.
+
 ## Checkpoint mais recente — migração de sessão (2026-08-17)
 
 - Último commit: `85d7031` (`feat: exibir claims e perfil de votações no dossiê`).
