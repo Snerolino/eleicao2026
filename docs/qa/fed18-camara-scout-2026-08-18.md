@@ -41,3 +41,10 @@ manifesto foi criado a partir dessas respostas.
 Pesquisar a documentação/rota oficial alternativa de descoberta de votações ou
 usar somente `vote-id` oficial já conhecido. Não repetir o endpoint 405 nem
 transformar timeout em ausência de dados.
+
+Foi implementado `npm run impact:camara:discover`, que consulta o endpoint
+geral paginado `/api/v2/votacoes`, deduplica `vote_id` e retorna código 2 com
+`blocked.reason` para HTTP 405, timeout ou outro erro de rede. A saída bloqueada
+não pode ser usada como envelope vazio.
+
+Contrato: `scripts/__tests__/discover-camara-vote-ids.test.mjs`.

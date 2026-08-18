@@ -25,7 +25,17 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - `/api/v2/deputados/{id}/votacoes` retornou HTTP 405 para os quatro IDs Câmara resolvidos; endpoint geral sofreu timeout.
 - Não repetir a rota 405 nem interpretar timeout como ausência de votações.
 - Próximo chunk: localizar rota oficial alternativa ou usar somente `vote-id` oficial conhecido, sempre dry-run.
+- Descobridor read-only implementado em `scripts/discover-camara-vote-ids.mjs`; HTTP 405/timeout agora retornam `blocked` e código 2, nunca lista vazia válida.
 - QA: `docs/qa/fed18-camara-scout-2026-08-18.md`.
+
+## Atualização FED-19 — Câmara Q1/2026 dry-run (2026-08-18)
+
+- Descobertos 100 eventos na janela trimestral; 10 nominais e 90 sem individualização.
+- Coletados 268 votos RS em 10 envelopes; todos os 10 passaram `impact:dryrun`.
+- 35 votos têm parlamentar remoto resolvido; 233 permanecem `identity_pending`.
+- Artefatos derivados versionados; bruto removido e nenhum Supabase/RPC/matriz foi alterado.
+- QA: `docs/qa/fed19-camara-q1-dry-run-2026-08-18.md`.
+- Próximo chunk: resolver os 233 votos por `tse_candidate_id`, sem fuzzy matching.
 
 ## Atualização de retomada — nova instrução Câmara (2026-08-17)
 
