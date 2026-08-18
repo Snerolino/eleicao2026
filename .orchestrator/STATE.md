@@ -12,6 +12,7 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - `npm run orch:doctor -- --smoke` com Node 24.19.0 iniciou e passou os checks visíveis, mas excedeu o timeout do supervisor durante probe externo; processos do tick foram encerrados. Registrar como bloqueio de verificação do executor.
 - QA: `docs/qa/lote-camara-historical-dbf-evidence-2026-08-18.md`.
 - Próximo chunk: reconciliação offline exata de `NUMVOT`/nome/voto contra proposição, data e catálogo TSE/remoto; manter ambiguidades fail-closed.
+- Gates locais pós-manifesto: 73 arquivos/347 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check` passaram. Commit local `841f2b0` criado; duas tentativas de push falharam por DNS de `github.com`. Produção respondeu `HTTP 200`.
 
 ## Tick contínuo — catálogo oficial DBF Câmara (2026-08-18)
 
