@@ -804,4 +804,16 @@ Sem autorização humana explícita própria, não fazer:
 - Backup Cloudflare `334951434`, run `32174553709`, concluiu `success` com `headSha` idêntico.
 - Produção respondeu HTTP 200; `/release.json` confirmou o mesmo SHA e versão `0.2.346`, snapshot 1003 candidaturas.
 - QA atualizado com a evidência de publicação; nenhuma escrita legislativa remota foi feita.
-- Próximo chunk elegível: auditoria de contrato e gate read-only de identidade/schema/FK dos 18 candidatos antes de qualquer SQL.
+- Próximo chunk elegível: auditoria de contrato e gate read-only de identidade/schema/FK dos 18 candidatos antes de qualquer SQL remoto.
+
+## Tick contínuo — gate de contrato/schema/FK Câmara histórico (2026-08-18)
+
+- Lock bounded adquirido e liberado; worktree limpa no início; nenhum writer concorrente.
+- Builder determinístico refez o envelope: 2 proposições, 6 eventos, 84 votos, 18 identidades elegíveis.
+- Teste focado passou: 1 arquivo, 3 testes; `validate-impact-schema.mjs` passou.
+- Consulta read-only `information_schema` do Supabase confirmou `candidates.tse_candidate_id`, `legislative_votes.candidate_id`, `proposition_versions.text_hash` e referências de fonte no schema remoto.
+- `impact:dryrun` falhou fechado com 212 erros reais: faltam `number`/`year` nas 2 proposições, `text_hash` nas 6 versões e os 84 votos usam `candidate_id`/`tse_candidate_id` fora do contrato v1.0.0 do planejador; as URLs ainda precisam de resolução em `source_reference_id` por catálogo/hash.
+- Nenhum SQL, UUID, FK, source_reference, voto, proposição, evento ou matriz foi escrito remotamente.
+- QA: `docs/qa/lote-camara-historical-contract-fk-gate-2026-08-18.md`.
+- Bloqueio: adaptar o envelope ao contrato do planejador e resolver fontes/FKs por catálogo, sem promover os 8 registros bloqueados.
+- Próximo chunk: implementar/testar o adaptador local fail-closed, depois repetir `impact:dryrun` e provar idempotência antes de qualquer writer remoto.
