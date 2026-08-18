@@ -1,7 +1,19 @@
 # STATE — eleicao2026
 
-Atualizado: 2026-08-17 -03
+Atualizado: 2026-08-18 13:11 UTC
 Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
+
+## Tick contínuo — catálogo oficial DBF Câmara (2026-08-18)
+
+- Lock bounded adquirido; nenhum writer concorrente; `HEAD=eb4d145d589dd75447e58e3209f36d3f0e28928d`, worktree limpa no início.
+- `npm run orch:doctor -- --smoke` no shell cron falhou apenas pelo Node `v22.22.2`; o projeto exige Node `>=24 <25`. `npm run data:check` com Node `v24.19.0` passou: 1003 candidaturas e 988 fotos.
+- Pesquisa oficial encontrou o índice DBF da 56ª Legislatura e URLs nominais para PL 3723/2019 (`CD190400`, `CD190398`, `CD190397`, `CD190396`) e PEC 6/2019 (`CD190242`, `CD190244`).
+- A reunião oficial `58528` confirma nominal do PL 3723/2019 em 05/11/2019; `evento-legislativo/56938` é rota de sessão de 20/08/2019, não prova nominal individual exata do gap.
+- Nenhum voto, UUID, hash, source reference ou identidade foi inferido; nenhuma escrita remota foi executada.
+- Gates locais verdes: 73 arquivos/347 testes, TypeScript, schema, data-check, build e `git diff --check`.
+- Commit local `9536208` criado; push falhou por DNS (`Could not resolve host: github.com`). Produção não validada: `curl` HTTP 000 por timeout de resolução. Workflow backup remoto confirmado como `334951434`, mas não disparado sem push.
+- QA: `docs/qa/lote-camara-historical-dbf-recon-2026-08-18.md`.
+- Próximo chunk: baixar sequencialmente os DBFs oficiais, versionar manifesto de HTTP/bytes/SHA-256 e inspecionar sem aplicar.
 
 ## Tick contínuo — recuperação ALRS/Câmara bounded — 2026-08-18
 
