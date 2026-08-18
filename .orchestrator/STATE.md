@@ -3,6 +3,20 @@
 Atualizado: 2026-08-17 -03
 Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 
+## Tick contínuo — 2026-08-18 08:57 UTC
+
+- Infra local corrigida para Node `v24.19.0`; `npm run orch:doctor` passou com
+  `OK=50 WARN=4 FAIL=0`. O primeiro FAIL era apenas o shell em Node 22.
+- Gates locais passaram: **73 arquivos / 347 testes**, TypeScript, schema,
+  `data:check` (**1003 candidaturas / 988 fotos**), build e `git diff --check`.
+- Auditoria legislativa read-only encontrou **4652 votos**: ALRS 3985/4000,
+  Câmara 195/197, Senado 0/455 com fonte. `--strict` segue fail-closed (exit 2).
+- Backfill ALRS em dry-run: 2 eventos elegíveis, 0 fontes/votos planejados, 3
+  eventos bloqueados e 1 identidade bloqueada. Nenhuma escrita remota.
+- QA atualizado em `docs/qa/lote-continuous-ops-2026-08-18.md`.
+- Próximo chunk: recuperar somente evidência oficial dos eventos ALRS elegíveis
+  e auditar os 2 votos Câmara sem fonte; não executar `--apply` sem hash, bytes,
+  URL, identidade, proposição e data exatos.
 ## Atualização FED-21 — envelope Câmara Q1 com identidades resolvidas (2026-08-18)
 
 - Gate remoto read-only resolveu 24/24 FKs `candidates.id` por `tse_candidate_id`.

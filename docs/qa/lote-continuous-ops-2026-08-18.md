@@ -8,9 +8,12 @@ produção, sem inventar evidência nem alterar dados remotos sem prova.
 
 ## Entregue e verificado
 
-- `npm run orch:doctor -- --smoke`: **OK=55, WARN=2, FAIL=0**.
-  - Warnings: rota Gemini legacy informativa e Ollama sem resposta no preflight;
-    nenhuma bloqueia a rota Codex/OpenCode/Antigravity.
+- `npm run orch:doctor`: primeira execução detectou **FAIL=1** porque o shell
+  estava em Node 22; o projeto exige Node 24. O ambiente foi corrigido para
+  Node **v24.19.0** (já instalado) e a segunda execução terminou **OK=50,
+  WARN=4, FAIL=0**. Warnings: OpenCode ausente, Gemini legacy informativo,
+  Ollama sem resposta no preflight e rota Codex não exercitada no modo rápido;
+  nenhuma bloqueou os gates locais.
 - `npm run data:check`: **passou**; snapshot com **1003 candidaturas** e
   **988 fotos oficiais**.
 - `node scripts/validate-impact-schema.mjs`: **passou**.
@@ -32,6 +35,21 @@ produção, sem inventar evidência nem alterar dados remotos sem prova.
   console online e service worker pronto.
 - Git: `main` alinhada com `origin/main`; worktree limpa. Não havia mutação
   funcional para commit/push neste tick.
+
+## Atualização deste tick — 2026-08-18
+
+- HEAD revalidado em `f30a42f1c3922746ba66a2e77635fdc7158226ed`, `main` alinhada
+  com `origin/main` e worktree limpa antes da documentação.
+- Auditoria read-only atual: **1381 proposições**, **1408 versões**, **1879
+  eventos** e **4652 votos**. Cobertura de votos: ALRS **3985/4000**, Câmara
+  **195/197**, Senado **0/455**.
+- `--strict` retornou código **2** por lacunas de fonte, como esperado; o
+  auditor classificou cinco eventos ALRS na fila: `alrs_pl134_2023` (1),
+  `alrs_pl165_2025` (6), `alrs_pl361_2025` (6), `alrs_pl38_2026` (1) e
+  `alrs_pl77_2025` (1).
+- Dry-run do backfill oficial terminou com **2 eventos elegíveis, 0 votos e 0
+  fontes planejados, 3 eventos bloqueados e 1 identidade bloqueada**. Nenhum
+  `--apply`, escrita remota, commit ou push foi executado neste ponto.
 
 ## Estado dos dados e bloqueios
 
