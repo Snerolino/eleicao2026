@@ -129,7 +129,8 @@ describe('ComparePage H5.3', () => {
     fireEvent.click(screen.getByRole('button', { name: /ada cristina munaretto/i }));
     fireEvent.click(screen.getByRole('button', { name: /joão batista garcia dias/i }));
 
-    expect(screen.getByLabelText(/url atual/i)).toHaveTextContent('/comparar?candidatos=tse-1,tse-2');
+    const urlElement = screen.getByLabelText(/url atual/i);
+    expect(decodeURIComponent(urlElement.textContent ?? '')).toBe('/comparar?candidatos=tse-1,tse-2');
     expect(screen.getByRole('table')).toBeInTheDocument();
   });
 
