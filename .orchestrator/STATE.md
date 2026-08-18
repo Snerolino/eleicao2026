@@ -3,6 +3,15 @@
 Atualizado: 2026-08-17 -03
 Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 
+## Tick contínuo — recuperação ALRS com fallback direto — 2026-08-18
+
+- As cinco páginas oficiais ALRS do manifesto FED-17 foram refeitas por `curl` direto: HTTP 200, bytes, SHA-256 e contagem `data-item` coincidiram exatamente com o manifesto.
+- `web_extract` sofreu 504 nessas páginas; o fallback direto funcionou. A saída do scraper não foi usada como dado.
+- `npm run impact:alrs:sources:backfill` permaneceu verde em dry-run, mas sem plano aplicável: 2 eventos elegíveis, 0 votos, 0 fontes, 3 eventos bloqueados e 1 identidade bloqueada.
+- Câmara: endpoints oficiais testados para os dois gaps históricos (`2192459`, `2209381`) retornaram HTTP 404; nenhum voto foi inferido.
+- QA: `docs/qa/lote-alrs-source-recovery-2026-08-18.md`.
+- Próximo chunk: comparar os `data-item` oficiais já validados com os eventos remotos e preparar plano somente com coincidência exata; em paralelo, localizar rota histórica Câmara oficial.
+
 ## Tick contínuo — 2026-08-18 08:57 UTC
 
 - Infra local corrigida para Node `v24.19.0`; `npm run orch:doctor` passou com
