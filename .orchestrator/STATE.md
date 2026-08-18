@@ -733,3 +733,14 @@ Sem autorização humana explícita própria, não fazer:
 - commit/push/PR/merge quando a autorização do arco não cobrir a ação.
 
 `service_role` nunca entra no frontend, build, logs ou docs.
+
+## Tick contínuo — scout de rota histórica oficial Câmara (2026-08-18 17:54 UTC)
+
+- Lock bounded adquirido e liberado; worktree estava limpa no início; nenhum writer concorrente.
+- Índice oficial de votações nominais da 56ª Legislatura confirmou a rota determinística dos DBFs dos dois gaps: PEC 6/2019 (`CD190242`, `CD190244`, 07/08/2019) e PL 3723/2019 (`CD190396`–`CD190400`, 05/11/2019).
+- API oficial confirmou a proposição `2209381` como PL 3723/2019 e a tramitação da PEC `2192459`; tramitação não foi tratada como prova nominal individual.
+- Artefato: `data/legislative-import/camara/historical-official-route-scout.json`.
+- QA: `docs/qa/lote-camara-historical-official-route-scout-2026-08-18.md`.
+- Nenhum voto, identidade, UUID, FK, source_reference, matriz ou escrita remota foi criado. Os quatro casos `position=outro` continuam fail-closed.
+- Bloqueio real: DNS direto do shell para `dadosabertos.camara.leg.br` falhou; `web_extract` foi apenas fallback de reconciliação de rota, sem hash/bytes novos dos DBFs.
+- Próximo chunk: refazer os seis GETs oficiais dos DBFs, verificar HTTP/bytes/SHA-256 contra o catálogo e reconciliar somente registros nominais exatos.

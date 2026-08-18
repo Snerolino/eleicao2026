@@ -1,0 +1,38 @@
+{
+  "scout": "camara-historical-official-route",
+  "collected_at": "2026-08-18T17:54:26Z",
+  "remote_apply": false,
+  "identity_reconciliation": "pending",
+  "official_sources": [
+    {
+      "kind": "nominal_dbf_index",
+      "url": "https://www.camara.leg.br/Internet/votacaodbf/",
+      "evidence": "56Primeira index lists CD190242 and CD190244 for PEC 6/2019 on 2019-08-07, and CD190396 through CD190400 for PL 3723/2019 on 2019-11-05.",
+      "related_urls": [
+        "https://www.camara.leg.br/Internet/votacaodbf/56Primeira/CD190242.dbf",
+        "https://www.camara.leg.br/Internet/votacaodbf/56Primeira/CD190244.dbf",
+        "https://www.camara.leg.br/Internet/votacaodbf/56Primeira/CD190396.dbf",
+        "https://www.camara.leg.br/Internet/votacaodbf/56Primeira/CD190397.dbf",
+        "https://www.camara.leg.br/Internet/votacaodbf/56Primeira/CD190398.dbf",
+        "https://www.camara.leg.br/Internet/votacaodbf/56Primeira/CD190400.dbf"
+      ]
+    },
+    {
+      "kind": "proposition_api",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2192459/tramitacoes",
+      "evidence": "Official API exposes PEC 6/2019 tramitation records and 2019-08-07 plenary records; this response is not by itself an individual nominal vote proof."
+    },
+    {
+      "kind": "proposition_api",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2209381",
+      "evidence": "Official API identifies PL 3723/2019 (PL13937232019) and its official proposition URL."
+    }
+  ],
+  "findings": [
+    "Official DBF index provides a deterministic historical source route for the two pending gaps.",
+    "No candidate identity, vote value, UUID, FK, source_reference, or remote row was created or changed.",
+    "The four Henrique Fontana records remain fail-closed until exact event/proposition/date/identity linkage is proven.",
+    "Direct cron-shell DNS failed for dadosabertos.camara.leg.br; web extraction fallback returned official public pages and was used only as reconnaissance."
+  ],
+  "next_action": "Refetch the six catalogued DBFs when direct DNS is available, verify HTTP/bytes/SHA-256 against the existing catalog, and reconcile only exact nominal records."
+}
