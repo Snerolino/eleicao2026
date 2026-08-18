@@ -8,6 +8,8 @@
 - Nenhum voto, identidade, UUID, FK, source_reference, Supabase ou Cloudflare foi alterado. Os 4 `position=outro` permanecem fail-closed.
 - O parser leve não extraiu linhas HTML (`fontana_rows=[]`); isso foi registrado como bloqueio, sem transformar HTTP 200 em prova de voto.
 - Gates locais verdes: 73 arquivos / 347 testes, TypeScript, schema, data:check (1003 candidaturas / 988 fotos), build e diff check.
+- Commit local `943fcd6` criado; push `origin/main` falhou duas vezes por DNS (`Could not resolve host: github.com`), portanto o deploy backup não foi disparado neste tick e `main` local está 1 commit à frente.
+- Produção anterior continua sendo apenas verificada, não é prova de publicação deste commit.
 - Próximo chunk: parser HTML robusto offline + teste de contrato, depois nova coleta; não aplicar remoto sem identidade/cargo/UF/proposição/data/voto exatos.
 
 # Tick contínuo — rota histórica OpenAPI Câmara (2026-08-18)
