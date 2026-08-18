@@ -1,0 +1,2806 @@
+{
+  "schema_version": "1.0.0",
+  "phase": "FED-25",
+  "mode": "read-only-remote-identity-lookup",
+  "source_file": "data/legislative-import/camara/historical-nominal-local-reconciliation.json",
+  "queried_at": "2026-08-18T15:09:56.480Z",
+  "query": {
+    "unique_tse_ids": 20,
+    "chunk_size": 20
+  },
+  "summary": {
+    "exact_records": 92,
+    "remote_rows": 20,
+    "missing_remote_ids": 0,
+    "identity_role_uf_mismatches": 4
+  },
+  "missing_remote_ids": [],
+  "role_uf_mismatches": [
+    {
+      "official_name": "Henrique Fontana",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533583",
+          "full_name": "HENRIQUE FONTANA JÚNIOR",
+          "ballot_name": "HENRIQUE FONTANA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "7396addb-9892-4862-a7e2-2bf3f79aff08",
+          "tse_candidate_id": "210002533583",
+          "full_name": "HENRIQUE FONTANA JÚNIOR",
+          "ballot_name": "HENRIQUE FONTANA",
+          "position": "outro",
+          "state": "RS",
+          "party": "PT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Henrique Fontana",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533583",
+          "full_name": "HENRIQUE FONTANA JÚNIOR",
+          "ballot_name": "HENRIQUE FONTANA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "7396addb-9892-4862-a7e2-2bf3f79aff08",
+          "tse_candidate_id": "210002533583",
+          "full_name": "HENRIQUE FONTANA JÚNIOR",
+          "ballot_name": "HENRIQUE FONTANA",
+          "position": "outro",
+          "state": "RS",
+          "party": "PT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Henrique Fontana",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533583",
+          "full_name": "HENRIQUE FONTANA JÚNIOR",
+          "ballot_name": "HENRIQUE FONTANA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "7396addb-9892-4862-a7e2-2bf3f79aff08",
+          "tse_candidate_id": "210002533583",
+          "full_name": "HENRIQUE FONTANA JÚNIOR",
+          "ballot_name": "HENRIQUE FONTANA",
+          "position": "outro",
+          "state": "RS",
+          "party": "PT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Henrique Fontana",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533583",
+          "full_name": "HENRIQUE FONTANA JÚNIOR",
+          "ballot_name": "HENRIQUE FONTANA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "7396addb-9892-4862-a7e2-2bf3f79aff08",
+          "tse_candidate_id": "210002533583",
+          "full_name": "HENRIQUE FONTANA JÚNIOR",
+          "ballot_name": "HENRIQUE FONTANA",
+          "position": "outro",
+          "state": "RS",
+          "party": "PT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    }
+  ],
+  "records": [
+    {
+      "official_name": "Onyx Lorenzoni",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537722",
+          "full_name": "ONYX DORNELLES LORENZONI",
+          "ballot_name": "ONYX LORENZONI"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "bc25a9c2-3a15-454b-b1e8-888c6a366d4b",
+          "tse_candidate_id": "210002537722",
+          "full_name": "ONYX DORNELLES LORENZONI",
+          "ballot_name": "ONYX LORENZONI",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PP",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Alceu Moreira",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002541514",
+          "full_name": "ALCEU MOREIRA DA SILVA",
+          "ballot_name": "ALCEU MOREIRA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "9d3cb185-49eb-4d46-9dc3-5b7bbcc8e7d7",
+          "tse_candidate_id": "210002541514",
+          "full_name": "ALCEU MOREIRA DA SILVA",
+          "ballot_name": "ALCEU MOREIRA",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "MDB",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Afonso Motta",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537057",
+          "full_name": "AFONSO ANTUNES DA MOTTA",
+          "ballot_name": "AFONSO MOTTA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "a6f54550-15bb-4a75-bd8b-c75a1ea255ac",
+          "tse_candidate_id": "210002537057",
+          "full_name": "AFONSO ANTUNES DA MOTTA",
+          "ballot_name": "AFONSO MOTTA",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PDT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Pompeo de Mattos",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537066",
+          "full_name": "DARCI POMPEO DE MATTOS",
+          "ballot_name": "POMPEO DE MATTOS"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "ed16ff79-183c-46ee-af38-b2903cdb6fea",
+          "tse_candidate_id": "210002537066",
+          "full_name": "DARCI POMPEO DE MATTOS",
+          "ballot_name": "POMPEO DE MATTOS",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PDT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Afonso Hamm",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537712",
+          "full_name": "JOSE ALFONSO EBERT HAMM",
+          "ballot_name": "AFONSO HAMM"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "18544dbc-171e-4efe-865b-9aebfd31edf6",
+          "tse_candidate_id": "210002537712",
+          "full_name": "JOSE ALFONSO EBERT HAMM",
+          "ballot_name": "AFONSO HAMM",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PP",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Pedro Westphalen",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537717",
+          "full_name": "PEDRO BANDARRA WESTPHALEN",
+          "ballot_name": "PEDRO WESTPHALEN"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "b5e9d477-fc45-4ee7-a972-d5e386134ac6",
+          "tse_candidate_id": "210002537717",
+          "full_name": "PEDRO BANDARRA WESTPHALEN",
+          "ballot_name": "PEDRO WESTPHALEN",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PP",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Carlos Gomes",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002536917",
+          "full_name": "ANTONIO CARLOS GOMES DA SILVA",
+          "ballot_name": "CARLOS GOMES"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "44e185f9-b370-42f4-80c5-4f2d3b4416a4",
+          "tse_candidate_id": "210002536917",
+          "full_name": "ANTONIO CARLOS GOMES DA SILVA",
+          "ballot_name": "CARLOS GOMES",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "REPUBLICANOS",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Heitor Schuch",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538556",
+          "full_name": "HEITOR JOSÉ SCHUCH",
+          "ballot_name": "HEITOR SCHUCH"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "ca137aa8-99fe-4573-968d-7358fe492f34",
+          "tse_candidate_id": "210002538556",
+          "full_name": "HEITOR JOSÉ SCHUCH",
+          "ballot_name": "HEITOR SCHUCH",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PSD",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Danrlei de Deus Hinterholz",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538537",
+          "full_name": "DANRLEI DE DEUS HINTERHOLZ",
+          "ballot_name": "DANRLEI"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "3f3d4e34-f0cf-4674-9d1d-9af0c7a3f522",
+          "tse_candidate_id": "210002538537",
+          "full_name": "DANRLEI DE DEUS HINTERHOLZ",
+          "ballot_name": "DANRLEI",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PSD",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Lucas Redecker",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538541",
+          "full_name": "LUCAS BELLO REDECKER",
+          "ballot_name": "LUCAS REDECKER"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "d6772dbe-a671-40a6-8cf9-916151fa8a64",
+          "tse_candidate_id": "210002538541",
+          "full_name": "LUCAS BELLO REDECKER",
+          "ballot_name": "LUCAS REDECKER",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PSD",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Bibo Nunes",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534656",
+          "full_name": "ALCIBIO MESQUITA BIBO NUNES",
+          "ballot_name": "BIBO NUNES"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "e2355507-af97-4305-8375-a6d23b55a4ab",
+          "tse_candidate_id": "210002534656",
+          "full_name": "ALCIBIO MESQUITA BIBO NUNES",
+          "ballot_name": "BIBO NUNES",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PL",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Sanderson",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002547816",
+          "full_name": "UBIRATAN ANTUNES SANDERSON",
+          "ballot_name": "SANDERSON"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "5d085423-b9f2-4649-9fc4-4777f4a9fcfe",
+          "tse_candidate_id": "210002547816",
+          "full_name": "UBIRATAN ANTUNES SANDERSON",
+          "ballot_name": "SANDERSON",
+          "position": "senador",
+          "state": "RS",
+          "party": "PL",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Fernanda Melchionna",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533902",
+          "full_name": "FERNANDA MELCHIONNA E SILVA",
+          "ballot_name": "FERNANDA MELCHIONNA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "f11a78d6-40f3-476d-adc3-6d2d34857bbf",
+          "tse_candidate_id": "210002533902",
+          "full_name": "FERNANDA MELCHIONNA E SILVA",
+          "ballot_name": "FERNANDA MELCHIONNA",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PSOL",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Bohn Gass",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534601",
+          "full_name": "ELVINO JOSE BOHN GASS",
+          "ballot_name": "BOHN GASS"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "3d10d681-85ed-42ce-a6f9-feab00d9e4f3",
+          "tse_candidate_id": "210002534601",
+          "full_name": "ELVINO JOSE BOHN GASS",
+          "ballot_name": "BOHN GASS",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Henrique Fontana",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533583",
+          "full_name": "HENRIQUE FONTANA JÚNIOR",
+          "ballot_name": "HENRIQUE FONTANA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "7396addb-9892-4862-a7e2-2bf3f79aff08",
+          "tse_candidate_id": "210002533583",
+          "full_name": "HENRIQUE FONTANA JÚNIOR",
+          "ballot_name": "HENRIQUE FONTANA",
+          "position": "outro",
+          "state": "RS",
+          "party": "PT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcon",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534598",
+          "full_name": "DIONILSO MATEUS MARCON",
+          "ballot_name": "MARCON"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "e5bd28d0-782d-49b9-8fff-da203e4d5920",
+          "tse_candidate_id": "210002534598",
+          "full_name": "DIONILSO MATEUS MARCON",
+          "ballot_name": "MARCON",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Maria do Rosário",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534604",
+          "full_name": "MARIA DO ROSARIO NUNES",
+          "ballot_name": "MARIA DO ROSARIO"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "65b71a02-73ea-40e5-8df2-c484b87fc565",
+          "tse_candidate_id": "210002534604",
+          "full_name": "MARIA DO ROSARIO NUNES",
+          "ballot_name": "MARIA DO ROSARIO",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcelo Moraes",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534671",
+          "full_name": "MARCELO PIRES MORAES",
+          "ballot_name": "MARCELO MORAES"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "f3ce3ad2-76b4-4f85-997d-17fee42a991a",
+          "tse_candidate_id": "210002534671",
+          "full_name": "MARCELO PIRES MORAES",
+          "ballot_name": "MARCELO MORAES",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PL",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Maurício Dziedricki",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "numvot": "9002",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534272",
+          "full_name": "MAURICIO ALEXANDRE DZIEDRICKI",
+          "ballot_name": "MAURÍCIO DZIEDRICKI"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "6edecc57-157a-4c73-bd2f-06f0e7f47559",
+          "tse_candidate_id": "210002534272",
+          "full_name": "MAURICIO ALEXANDRE DZIEDRICKI",
+          "ballot_name": "MAURÍCIO DZIEDRICKI",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PODE",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Alceu Moreira",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002541514",
+          "full_name": "ALCEU MOREIRA DA SILVA",
+          "ballot_name": "ALCEU MOREIRA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "9d3cb185-49eb-4d46-9dc3-5b7bbcc8e7d7",
+          "tse_candidate_id": "210002541514",
+          "full_name": "ALCEU MOREIRA DA SILVA",
+          "ballot_name": "ALCEU MOREIRA",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "MDB",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Afonso Motta",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537057",
+          "full_name": "AFONSO ANTUNES DA MOTTA",
+          "ballot_name": "AFONSO MOTTA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "a6f54550-15bb-4a75-bd8b-c75a1ea255ac",
+          "tse_candidate_id": "210002537057",
+          "full_name": "AFONSO ANTUNES DA MOTTA",
+          "ballot_name": "AFONSO MOTTA",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PDT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Pompeo de Mattos",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537066",
+          "full_name": "DARCI POMPEO DE MATTOS",
+          "ballot_name": "POMPEO DE MATTOS"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "ed16ff79-183c-46ee-af38-b2903cdb6fea",
+          "tse_candidate_id": "210002537066",
+          "full_name": "DARCI POMPEO DE MATTOS",
+          "ballot_name": "POMPEO DE MATTOS",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PDT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Afonso Hamm",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537712",
+          "full_name": "JOSE ALFONSO EBERT HAMM",
+          "ballot_name": "AFONSO HAMM"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "18544dbc-171e-4efe-865b-9aebfd31edf6",
+          "tse_candidate_id": "210002537712",
+          "full_name": "JOSE ALFONSO EBERT HAMM",
+          "ballot_name": "AFONSO HAMM",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PP",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Pedro Westphalen",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537717",
+          "full_name": "PEDRO BANDARRA WESTPHALEN",
+          "ballot_name": "PEDRO WESTPHALEN"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "b5e9d477-fc45-4ee7-a972-d5e386134ac6",
+          "tse_candidate_id": "210002537717",
+          "full_name": "PEDRO BANDARRA WESTPHALEN",
+          "ballot_name": "PEDRO WESTPHALEN",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PP",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Carlos Gomes",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002536917",
+          "full_name": "ANTONIO CARLOS GOMES DA SILVA",
+          "ballot_name": "CARLOS GOMES"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "44e185f9-b370-42f4-80c5-4f2d3b4416a4",
+          "tse_candidate_id": "210002536917",
+          "full_name": "ANTONIO CARLOS GOMES DA SILVA",
+          "ballot_name": "CARLOS GOMES",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "REPUBLICANOS",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Heitor Schuch",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538556",
+          "full_name": "HEITOR JOSÉ SCHUCH",
+          "ballot_name": "HEITOR SCHUCH"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "ca137aa8-99fe-4573-968d-7358fe492f34",
+          "tse_candidate_id": "210002538556",
+          "full_name": "HEITOR JOSÉ SCHUCH",
+          "ballot_name": "HEITOR SCHUCH",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PSD",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Lucas Redecker",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538541",
+          "full_name": "LUCAS BELLO REDECKER",
+          "ballot_name": "LUCAS REDECKER"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "d6772dbe-a671-40a6-8cf9-916151fa8a64",
+          "tse_candidate_id": "210002538541",
+          "full_name": "LUCAS BELLO REDECKER",
+          "ballot_name": "LUCAS REDECKER",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PSD",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Bibo Nunes",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534656",
+          "full_name": "ALCIBIO MESQUITA BIBO NUNES",
+          "ballot_name": "BIBO NUNES"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "e2355507-af97-4305-8375-a6d23b55a4ab",
+          "tse_candidate_id": "210002534656",
+          "full_name": "ALCIBIO MESQUITA BIBO NUNES",
+          "ballot_name": "BIBO NUNES",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PL",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Sanderson",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002547816",
+          "full_name": "UBIRATAN ANTUNES SANDERSON",
+          "ballot_name": "SANDERSON"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "5d085423-b9f2-4649-9fc4-4777f4a9fcfe",
+          "tse_candidate_id": "210002547816",
+          "full_name": "UBIRATAN ANTUNES SANDERSON",
+          "ballot_name": "SANDERSON",
+          "position": "senador",
+          "state": "RS",
+          "party": "PL",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Fernanda Melchionna",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533902",
+          "full_name": "FERNANDA MELCHIONNA E SILVA",
+          "ballot_name": "FERNANDA MELCHIONNA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "f11a78d6-40f3-476d-adc3-6d2d34857bbf",
+          "tse_candidate_id": "210002533902",
+          "full_name": "FERNANDA MELCHIONNA E SILVA",
+          "ballot_name": "FERNANDA MELCHIONNA",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PSOL",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Bohn Gass",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534601",
+          "full_name": "ELVINO JOSE BOHN GASS",
+          "ballot_name": "BOHN GASS"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "3d10d681-85ed-42ce-a6f9-feab00d9e4f3",
+          "tse_candidate_id": "210002534601",
+          "full_name": "ELVINO JOSE BOHN GASS",
+          "ballot_name": "BOHN GASS",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Henrique Fontana",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533583",
+          "full_name": "HENRIQUE FONTANA JÚNIOR",
+          "ballot_name": "HENRIQUE FONTANA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "7396addb-9892-4862-a7e2-2bf3f79aff08",
+          "tse_candidate_id": "210002533583",
+          "full_name": "HENRIQUE FONTANA JÚNIOR",
+          "ballot_name": "HENRIQUE FONTANA",
+          "position": "outro",
+          "state": "RS",
+          "party": "PT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcon",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534598",
+          "full_name": "DIONILSO MATEUS MARCON",
+          "ballot_name": "MARCON"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "e5bd28d0-782d-49b9-8fff-da203e4d5920",
+          "tse_candidate_id": "210002534598",
+          "full_name": "DIONILSO MATEUS MARCON",
+          "ballot_name": "MARCON",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcelo Moraes",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534671",
+          "full_name": "MARCELO PIRES MORAES",
+          "ballot_name": "MARCELO MORAES"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "f3ce3ad2-76b4-4f85-997d-17fee42a991a",
+          "tse_candidate_id": "210002534671",
+          "full_name": "MARCELO PIRES MORAES",
+          "ballot_name": "MARCELO MORAES",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PL",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Maurício Dziedricki",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-08-07",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "numvot": "9003",
+      "proposition": "PEC 6/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534272",
+          "full_name": "MAURICIO ALEXANDRE DZIEDRICKI",
+          "ballot_name": "MAURÍCIO DZIEDRICKI"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "6edecc57-157a-4c73-bd2f-06f0e7f47559",
+          "tse_candidate_id": "210002534272",
+          "full_name": "MAURICIO ALEXANDRE DZIEDRICKI",
+          "ballot_name": "MAURÍCIO DZIEDRICKI",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PODE",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Afonso Motta",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537057",
+          "full_name": "AFONSO ANTUNES DA MOTTA",
+          "ballot_name": "AFONSO MOTTA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "a6f54550-15bb-4a75-bd8b-c75a1ea255ac",
+          "tse_candidate_id": "210002537057",
+          "full_name": "AFONSO ANTUNES DA MOTTA",
+          "ballot_name": "AFONSO MOTTA",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PDT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Heitor Schuch",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538556",
+          "full_name": "HEITOR JOSÉ SCHUCH",
+          "ballot_name": "HEITOR SCHUCH"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "ca137aa8-99fe-4573-968d-7358fe492f34",
+          "tse_candidate_id": "210002538556",
+          "full_name": "HEITOR JOSÉ SCHUCH",
+          "ballot_name": "HEITOR SCHUCH",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PSD",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Lucas Redecker",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538541",
+          "full_name": "LUCAS BELLO REDECKER",
+          "ballot_name": "LUCAS REDECKER"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "d6772dbe-a671-40a6-8cf9-916151fa8a64",
+          "tse_candidate_id": "210002538541",
+          "full_name": "LUCAS BELLO REDECKER",
+          "ballot_name": "LUCAS REDECKER",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PSD",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcelo Brum",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534292",
+          "full_name": "MARCELO DE BRUM DA COSTA",
+          "ballot_name": "MARCELO BRUM"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "622412cd-cd6b-4ce5-87d2-658bd73418e1",
+          "tse_candidate_id": "210002534292",
+          "full_name": "MARCELO DE BRUM DA COSTA",
+          "ballot_name": "MARCELO BRUM",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PODE",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Fernanda Melchionna",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533902",
+          "full_name": "FERNANDA MELCHIONNA E SILVA",
+          "ballot_name": "FERNANDA MELCHIONNA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "f11a78d6-40f3-476d-adc3-6d2d34857bbf",
+          "tse_candidate_id": "210002533902",
+          "full_name": "FERNANDA MELCHIONNA E SILVA",
+          "ballot_name": "FERNANDA MELCHIONNA",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PSOL",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Bohn Gass",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534601",
+          "full_name": "ELVINO JOSE BOHN GASS",
+          "ballot_name": "BOHN GASS"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "3d10d681-85ed-42ce-a6f9-feab00d9e4f3",
+          "tse_candidate_id": "210002534601",
+          "full_name": "ELVINO JOSE BOHN GASS",
+          "ballot_name": "BOHN GASS",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Henrique Fontana",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533583",
+          "full_name": "HENRIQUE FONTANA JÚNIOR",
+          "ballot_name": "HENRIQUE FONTANA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "7396addb-9892-4862-a7e2-2bf3f79aff08",
+          "tse_candidate_id": "210002533583",
+          "full_name": "HENRIQUE FONTANA JÚNIOR",
+          "ballot_name": "HENRIQUE FONTANA",
+          "position": "outro",
+          "state": "RS",
+          "party": "PT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcon",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534598",
+          "full_name": "DIONILSO MATEUS MARCON",
+          "ballot_name": "MARCON"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "e5bd28d0-782d-49b9-8fff-da203e4d5920",
+          "tse_candidate_id": "210002534598",
+          "full_name": "DIONILSO MATEUS MARCON",
+          "ballot_name": "MARCON",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Maria do Rosário",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534604",
+          "full_name": "MARIA DO ROSARIO NUNES",
+          "ballot_name": "MARIA DO ROSARIO"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "65b71a02-73ea-40e5-8df2-c484b87fc565",
+          "tse_candidate_id": "210002534604",
+          "full_name": "MARIA DO ROSARIO NUNES",
+          "ballot_name": "MARIA DO ROSARIO",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcelo Moraes",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534671",
+          "full_name": "MARCELO PIRES MORAES",
+          "ballot_name": "MARCELO MORAES"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "f3ce3ad2-76b4-4f85-997d-17fee42a991a",
+          "tse_candidate_id": "210002534671",
+          "full_name": "MARCELO PIRES MORAES",
+          "ballot_name": "MARCELO MORAES",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PL",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Carlos Gomes",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "numvot": "9224",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002536917",
+          "full_name": "ANTONIO CARLOS GOMES DA SILVA",
+          "ballot_name": "CARLOS GOMES"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "44e185f9-b370-42f4-80c5-4f2d3b4416a4",
+          "tse_candidate_id": "210002536917",
+          "full_name": "ANTONIO CARLOS GOMES DA SILVA",
+          "ballot_name": "CARLOS GOMES",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "REPUBLICANOS",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Alceu Moreira",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002541514",
+          "full_name": "ALCEU MOREIRA DA SILVA",
+          "ballot_name": "ALCEU MOREIRA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "9d3cb185-49eb-4d46-9dc3-5b7bbcc8e7d7",
+          "tse_candidate_id": "210002541514",
+          "full_name": "ALCEU MOREIRA DA SILVA",
+          "ballot_name": "ALCEU MOREIRA",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "MDB",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Afonso Motta",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537057",
+          "full_name": "AFONSO ANTUNES DA MOTTA",
+          "ballot_name": "AFONSO MOTTA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "a6f54550-15bb-4a75-bd8b-c75a1ea255ac",
+          "tse_candidate_id": "210002537057",
+          "full_name": "AFONSO ANTUNES DA MOTTA",
+          "ballot_name": "AFONSO MOTTA",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PDT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Pompeo de Mattos",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537066",
+          "full_name": "DARCI POMPEO DE MATTOS",
+          "ballot_name": "POMPEO DE MATTOS"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "ed16ff79-183c-46ee-af38-b2903cdb6fea",
+          "tse_candidate_id": "210002537066",
+          "full_name": "DARCI POMPEO DE MATTOS",
+          "ballot_name": "POMPEO DE MATTOS",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PDT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Afonso Hamm",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537712",
+          "full_name": "JOSE ALFONSO EBERT HAMM",
+          "ballot_name": "AFONSO HAMM"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "18544dbc-171e-4efe-865b-9aebfd31edf6",
+          "tse_candidate_id": "210002537712",
+          "full_name": "JOSE ALFONSO EBERT HAMM",
+          "ballot_name": "AFONSO HAMM",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PP",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Danrlei de Deus Hinterholz",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538537",
+          "full_name": "DANRLEI DE DEUS HINTERHOLZ",
+          "ballot_name": "DANRLEI"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "3f3d4e34-f0cf-4674-9d1d-9af0c7a3f522",
+          "tse_candidate_id": "210002538537",
+          "full_name": "DANRLEI DE DEUS HINTERHOLZ",
+          "ballot_name": "DANRLEI",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PSD",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Lucas Redecker",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538541",
+          "full_name": "LUCAS BELLO REDECKER",
+          "ballot_name": "LUCAS REDECKER"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "d6772dbe-a671-40a6-8cf9-916151fa8a64",
+          "tse_candidate_id": "210002538541",
+          "full_name": "LUCAS BELLO REDECKER",
+          "ballot_name": "LUCAS REDECKER",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PSD",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Bibo Nunes",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534656",
+          "full_name": "ALCIBIO MESQUITA BIBO NUNES",
+          "ballot_name": "BIBO NUNES"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "e2355507-af97-4305-8375-a6d23b55a4ab",
+          "tse_candidate_id": "210002534656",
+          "full_name": "ALCIBIO MESQUITA BIBO NUNES",
+          "ballot_name": "BIBO NUNES",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PL",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcelo Brum",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534292",
+          "full_name": "MARCELO DE BRUM DA COSTA",
+          "ballot_name": "MARCELO BRUM"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "622412cd-cd6b-4ce5-87d2-658bd73418e1",
+          "tse_candidate_id": "210002534292",
+          "full_name": "MARCELO DE BRUM DA COSTA",
+          "ballot_name": "MARCELO BRUM",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PODE",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Sanderson",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002547816",
+          "full_name": "UBIRATAN ANTUNES SANDERSON",
+          "ballot_name": "SANDERSON"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "5d085423-b9f2-4649-9fc4-4777f4a9fcfe",
+          "tse_candidate_id": "210002547816",
+          "full_name": "UBIRATAN ANTUNES SANDERSON",
+          "ballot_name": "SANDERSON",
+          "position": "senador",
+          "state": "RS",
+          "party": "PL",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Fernanda Melchionna",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533902",
+          "full_name": "FERNANDA MELCHIONNA E SILVA",
+          "ballot_name": "FERNANDA MELCHIONNA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "f11a78d6-40f3-476d-adc3-6d2d34857bbf",
+          "tse_candidate_id": "210002533902",
+          "full_name": "FERNANDA MELCHIONNA E SILVA",
+          "ballot_name": "FERNANDA MELCHIONNA",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PSOL",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Bohn Gass",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534601",
+          "full_name": "ELVINO JOSE BOHN GASS",
+          "ballot_name": "BOHN GASS"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "3d10d681-85ed-42ce-a6f9-feab00d9e4f3",
+          "tse_candidate_id": "210002534601",
+          "full_name": "ELVINO JOSE BOHN GASS",
+          "ballot_name": "BOHN GASS",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcon",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534598",
+          "full_name": "DIONILSO MATEUS MARCON",
+          "ballot_name": "MARCON"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "e5bd28d0-782d-49b9-8fff-da203e4d5920",
+          "tse_candidate_id": "210002534598",
+          "full_name": "DIONILSO MATEUS MARCON",
+          "ballot_name": "MARCON",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcelo Moraes",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534671",
+          "full_name": "MARCELO PIRES MORAES",
+          "ballot_name": "MARCELO MORAES"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "f3ce3ad2-76b4-4f85-997d-17fee42a991a",
+          "tse_candidate_id": "210002534671",
+          "full_name": "MARCELO PIRES MORAES",
+          "ballot_name": "MARCELO MORAES",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PL",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Carlos Gomes",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "numvot": "9225",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002536917",
+          "full_name": "ANTONIO CARLOS GOMES DA SILVA",
+          "ballot_name": "CARLOS GOMES"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "44e185f9-b370-42f4-80c5-4f2d3b4416a4",
+          "tse_candidate_id": "210002536917",
+          "full_name": "ANTONIO CARLOS GOMES DA SILVA",
+          "ballot_name": "CARLOS GOMES",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "REPUBLICANOS",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Alceu Moreira",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002541514",
+          "full_name": "ALCEU MOREIRA DA SILVA",
+          "ballot_name": "ALCEU MOREIRA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "9d3cb185-49eb-4d46-9dc3-5b7bbcc8e7d7",
+          "tse_candidate_id": "210002541514",
+          "full_name": "ALCEU MOREIRA DA SILVA",
+          "ballot_name": "ALCEU MOREIRA",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "MDB",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Afonso Motta",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537057",
+          "full_name": "AFONSO ANTUNES DA MOTTA",
+          "ballot_name": "AFONSO MOTTA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "a6f54550-15bb-4a75-bd8b-c75a1ea255ac",
+          "tse_candidate_id": "210002537057",
+          "full_name": "AFONSO ANTUNES DA MOTTA",
+          "ballot_name": "AFONSO MOTTA",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PDT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Pompeo de Mattos",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537066",
+          "full_name": "DARCI POMPEO DE MATTOS",
+          "ballot_name": "POMPEO DE MATTOS"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "ed16ff79-183c-46ee-af38-b2903cdb6fea",
+          "tse_candidate_id": "210002537066",
+          "full_name": "DARCI POMPEO DE MATTOS",
+          "ballot_name": "POMPEO DE MATTOS",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PDT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Afonso Hamm",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537712",
+          "full_name": "JOSE ALFONSO EBERT HAMM",
+          "ballot_name": "AFONSO HAMM"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "18544dbc-171e-4efe-865b-9aebfd31edf6",
+          "tse_candidate_id": "210002537712",
+          "full_name": "JOSE ALFONSO EBERT HAMM",
+          "ballot_name": "AFONSO HAMM",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PP",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Pedro Westphalen",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537717",
+          "full_name": "PEDRO BANDARRA WESTPHALEN",
+          "ballot_name": "PEDRO WESTPHALEN"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "b5e9d477-fc45-4ee7-a972-d5e386134ac6",
+          "tse_candidate_id": "210002537717",
+          "full_name": "PEDRO BANDARRA WESTPHALEN",
+          "ballot_name": "PEDRO WESTPHALEN",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PP",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Heitor Schuch",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538556",
+          "full_name": "HEITOR JOSÉ SCHUCH",
+          "ballot_name": "HEITOR SCHUCH"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "ca137aa8-99fe-4573-968d-7358fe492f34",
+          "tse_candidate_id": "210002538556",
+          "full_name": "HEITOR JOSÉ SCHUCH",
+          "ballot_name": "HEITOR SCHUCH",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PSD",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Danrlei de Deus Hinterholz",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538537",
+          "full_name": "DANRLEI DE DEUS HINTERHOLZ",
+          "ballot_name": "DANRLEI"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "3f3d4e34-f0cf-4674-9d1d-9af0c7a3f522",
+          "tse_candidate_id": "210002538537",
+          "full_name": "DANRLEI DE DEUS HINTERHOLZ",
+          "ballot_name": "DANRLEI",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PSD",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Lucas Redecker",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538541",
+          "full_name": "LUCAS BELLO REDECKER",
+          "ballot_name": "LUCAS REDECKER"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "d6772dbe-a671-40a6-8cf9-916151fa8a64",
+          "tse_candidate_id": "210002538541",
+          "full_name": "LUCAS BELLO REDECKER",
+          "ballot_name": "LUCAS REDECKER",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PSD",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Bibo Nunes",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534656",
+          "full_name": "ALCIBIO MESQUITA BIBO NUNES",
+          "ballot_name": "BIBO NUNES"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "e2355507-af97-4305-8375-a6d23b55a4ab",
+          "tse_candidate_id": "210002534656",
+          "full_name": "ALCIBIO MESQUITA BIBO NUNES",
+          "ballot_name": "BIBO NUNES",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PL",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcelo Brum",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534292",
+          "full_name": "MARCELO DE BRUM DA COSTA",
+          "ballot_name": "MARCELO BRUM"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "622412cd-cd6b-4ce5-87d2-658bd73418e1",
+          "tse_candidate_id": "210002534292",
+          "full_name": "MARCELO DE BRUM DA COSTA",
+          "ballot_name": "MARCELO BRUM",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PODE",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Fernanda Melchionna",
+      "uf": "RS",
+      "vote": "Obstrução",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533902",
+          "full_name": "FERNANDA MELCHIONNA E SILVA",
+          "ballot_name": "FERNANDA MELCHIONNA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "f11a78d6-40f3-476d-adc3-6d2d34857bbf",
+          "tse_candidate_id": "210002533902",
+          "full_name": "FERNANDA MELCHIONNA E SILVA",
+          "ballot_name": "FERNANDA MELCHIONNA",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PSOL",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcelo Moraes",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534671",
+          "full_name": "MARCELO PIRES MORAES",
+          "ballot_name": "MARCELO MORAES"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "f3ce3ad2-76b4-4f85-997d-17fee42a991a",
+          "tse_candidate_id": "210002534671",
+          "full_name": "MARCELO PIRES MORAES",
+          "ballot_name": "MARCELO MORAES",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PL",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Carlos Gomes",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "numvot": "9226",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002536917",
+          "full_name": "ANTONIO CARLOS GOMES DA SILVA",
+          "ballot_name": "CARLOS GOMES"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "44e185f9-b370-42f4-80c5-4f2d3b4416a4",
+          "tse_candidate_id": "210002536917",
+          "full_name": "ANTONIO CARLOS GOMES DA SILVA",
+          "ballot_name": "CARLOS GOMES",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "REPUBLICANOS",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Alceu Moreira",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002541514",
+          "full_name": "ALCEU MOREIRA DA SILVA",
+          "ballot_name": "ALCEU MOREIRA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "9d3cb185-49eb-4d46-9dc3-5b7bbcc8e7d7",
+          "tse_candidate_id": "210002541514",
+          "full_name": "ALCEU MOREIRA DA SILVA",
+          "ballot_name": "ALCEU MOREIRA",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "MDB",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Afonso Motta",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537057",
+          "full_name": "AFONSO ANTUNES DA MOTTA",
+          "ballot_name": "AFONSO MOTTA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "a6f54550-15bb-4a75-bd8b-c75a1ea255ac",
+          "tse_candidate_id": "210002537057",
+          "full_name": "AFONSO ANTUNES DA MOTTA",
+          "ballot_name": "AFONSO MOTTA",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PDT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Pompeo de Mattos",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537066",
+          "full_name": "DARCI POMPEO DE MATTOS",
+          "ballot_name": "POMPEO DE MATTOS"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "ed16ff79-183c-46ee-af38-b2903cdb6fea",
+          "tse_candidate_id": "210002537066",
+          "full_name": "DARCI POMPEO DE MATTOS",
+          "ballot_name": "POMPEO DE MATTOS",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PDT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Afonso Hamm",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537712",
+          "full_name": "JOSE ALFONSO EBERT HAMM",
+          "ballot_name": "AFONSO HAMM"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "18544dbc-171e-4efe-865b-9aebfd31edf6",
+          "tse_candidate_id": "210002537712",
+          "full_name": "JOSE ALFONSO EBERT HAMM",
+          "ballot_name": "AFONSO HAMM",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PP",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Pedro Westphalen",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002537717",
+          "full_name": "PEDRO BANDARRA WESTPHALEN",
+          "ballot_name": "PEDRO WESTPHALEN"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "b5e9d477-fc45-4ee7-a972-d5e386134ac6",
+          "tse_candidate_id": "210002537717",
+          "full_name": "PEDRO BANDARRA WESTPHALEN",
+          "ballot_name": "PEDRO WESTPHALEN",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PP",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Heitor Schuch",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538556",
+          "full_name": "HEITOR JOSÉ SCHUCH",
+          "ballot_name": "HEITOR SCHUCH"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "ca137aa8-99fe-4573-968d-7358fe492f34",
+          "tse_candidate_id": "210002538556",
+          "full_name": "HEITOR JOSÉ SCHUCH",
+          "ballot_name": "HEITOR SCHUCH",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PSD",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Danrlei de Deus Hinterholz",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538537",
+          "full_name": "DANRLEI DE DEUS HINTERHOLZ",
+          "ballot_name": "DANRLEI"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "3f3d4e34-f0cf-4674-9d1d-9af0c7a3f522",
+          "tse_candidate_id": "210002538537",
+          "full_name": "DANRLEI DE DEUS HINTERHOLZ",
+          "ballot_name": "DANRLEI",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PSD",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Lucas Redecker",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002538541",
+          "full_name": "LUCAS BELLO REDECKER",
+          "ballot_name": "LUCAS REDECKER"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "d6772dbe-a671-40a6-8cf9-916151fa8a64",
+          "tse_candidate_id": "210002538541",
+          "full_name": "LUCAS BELLO REDECKER",
+          "ballot_name": "LUCAS REDECKER",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PSD",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Bibo Nunes",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534656",
+          "full_name": "ALCIBIO MESQUITA BIBO NUNES",
+          "ballot_name": "BIBO NUNES"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "e2355507-af97-4305-8375-a6d23b55a4ab",
+          "tse_candidate_id": "210002534656",
+          "full_name": "ALCIBIO MESQUITA BIBO NUNES",
+          "ballot_name": "BIBO NUNES",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PL",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcelo Brum",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534292",
+          "full_name": "MARCELO DE BRUM DA COSTA",
+          "ballot_name": "MARCELO BRUM"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "622412cd-cd6b-4ce5-87d2-658bd73418e1",
+          "tse_candidate_id": "210002534292",
+          "full_name": "MARCELO DE BRUM DA COSTA",
+          "ballot_name": "MARCELO BRUM",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PODE",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Sanderson",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002547816",
+          "full_name": "UBIRATAN ANTUNES SANDERSON",
+          "ballot_name": "SANDERSON"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "5d085423-b9f2-4649-9fc4-4777f4a9fcfe",
+          "tse_candidate_id": "210002547816",
+          "full_name": "UBIRATAN ANTUNES SANDERSON",
+          "ballot_name": "SANDERSON",
+          "position": "senador",
+          "state": "RS",
+          "party": "PL",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Fernanda Melchionna",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533902",
+          "full_name": "FERNANDA MELCHIONNA E SILVA",
+          "ballot_name": "FERNANDA MELCHIONNA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "f11a78d6-40f3-476d-adc3-6d2d34857bbf",
+          "tse_candidate_id": "210002533902",
+          "full_name": "FERNANDA MELCHIONNA E SILVA",
+          "ballot_name": "FERNANDA MELCHIONNA",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PSOL",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Bohn Gass",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534601",
+          "full_name": "ELVINO JOSE BOHN GASS",
+          "ballot_name": "BOHN GASS"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "3d10d681-85ed-42ce-a6f9-feab00d9e4f3",
+          "tse_candidate_id": "210002534601",
+          "full_name": "ELVINO JOSE BOHN GASS",
+          "ballot_name": "BOHN GASS",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Henrique Fontana",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002533583",
+          "full_name": "HENRIQUE FONTANA JÚNIOR",
+          "ballot_name": "HENRIQUE FONTANA"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "7396addb-9892-4862-a7e2-2bf3f79aff08",
+          "tse_candidate_id": "210002533583",
+          "full_name": "HENRIQUE FONTANA JÚNIOR",
+          "ballot_name": "HENRIQUE FONTANA",
+          "position": "outro",
+          "state": "RS",
+          "party": "PT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcon",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534598",
+          "full_name": "DIONILSO MATEUS MARCON",
+          "ballot_name": "MARCON"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "e5bd28d0-782d-49b9-8fff-da203e4d5920",
+          "tse_candidate_id": "210002534598",
+          "full_name": "DIONILSO MATEUS MARCON",
+          "ballot_name": "MARCON",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Maria do Rosário",
+      "uf": "RS",
+      "vote": "Não",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534604",
+          "full_name": "MARIA DO ROSARIO NUNES",
+          "ballot_name": "MARIA DO ROSARIO"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "65b71a02-73ea-40e5-8df2-c484b87fc565",
+          "tse_candidate_id": "210002534604",
+          "full_name": "MARIA DO ROSARIO NUNES",
+          "ballot_name": "MARIA DO ROSARIO",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PT",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Marcelo Moraes",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534671",
+          "full_name": "MARCELO PIRES MORAES",
+          "ballot_name": "MARCELO MORAES"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "f3ce3ad2-76b4-4f85-997d-17fee42a991a",
+          "tse_candidate_id": "210002534671",
+          "full_name": "MARCELO PIRES MORAES",
+          "ballot_name": "MARCELO MORAES",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PL",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Maurício Dziedricki",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002534272",
+          "full_name": "MAURICIO ALEXANDRE DZIEDRICKI",
+          "ballot_name": "MAURÍCIO DZIEDRICKI"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "6edecc57-157a-4c73-bd2f-06f0e7f47559",
+          "tse_candidate_id": "210002534272",
+          "full_name": "MAURICIO ALEXANDRE DZIEDRICKI",
+          "ballot_name": "MAURÍCIO DZIEDRICKI",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "PODE",
+          "registration_status": "registration_requested"
+        }
+      ]
+    },
+    {
+      "official_name": "Carlos Gomes",
+      "uf": "RS",
+      "vote": "Sim",
+      "vote_date": "2019-11-05",
+      "source_url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "numvot": "9227",
+      "proposition": "PL 3723/2019",
+      "match_status": "matched_exact",
+      "candidate_matches": [
+        {
+          "tse_candidate_id": "210002536917",
+          "full_name": "ANTONIO CARLOS GOMES DA SILVA",
+          "ballot_name": "CARLOS GOMES"
+        }
+      ],
+      "remote_matches": [
+        {
+          "id": "44e185f9-b370-42f4-80c5-4f2d3b4416a4",
+          "tse_candidate_id": "210002536917",
+          "full_name": "ANTONIO CARLOS GOMES DA SILVA",
+          "ballot_name": "CARLOS GOMES",
+          "position": "deputado_federal",
+          "state": "RS",
+          "party": "REPUBLICANOS",
+          "registration_status": "registration_requested"
+        }
+      ]
+    }
+  ]
+}

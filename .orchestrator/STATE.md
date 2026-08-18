@@ -1,7 +1,18 @@
 # STATE — eleicao2026
 
 Atualizado: 2026-08-18 14:55 UTC
-Status: `FED25_CAMARA_HISTORICAL_LOCAL_RECON_PENDING_REMOTE_LOOKUP`
+Status: `FED25_CAMARA_HISTORICAL_REMOTE_IDENTITY_LOOKUP_BLOCKED_ROLE`
+
+## Tick contínuo — lookup remoto nominal Câmara (2026-08-18)
+
+- Lock bounded adquirido e liberado; worktree limpa antes do chunk.
+- Doctor smoke com Node 24.19.0: `OK=53 WARN=4 FAIL=0`; warnings: OpenCode ausente, Gemini legacy, Ollama sem preflight e rota opcional.
+- Projeto remoto conferido: ref `hhqxhxcfkoijevxyzfky`; `supabase migration list --linked` alinhado até `20260816100000`.
+- Consulta read-only por `tse_candidate_id` em lote de 20: 92 registros `matched_exact`, 20 IDs únicos, 20 linhas remotas, 0 ausentes.
+- 4 ocorrências de Henrique Fontana ficaram bloqueadas porque o remoto classifica `position=outro`; não foi inferido cargo histórico. Os 10 `ambiguous` e 40 `not_found` continuam fail-closed.
+- Artefato: `data/legislative-import/camara/historical-nominal-remote-identity-lookup.json`.
+- QA: `docs/qa/lote-camara-historical-remote-identity-lookup-2026-08-18.md`.
+- Próximo chunk: executar gates locais do artefato e, se verdes, publicar/documentar; depois pesquisar fonte oficial para classificação histórica dos 4 casos, sem escrita remota.
 
 ## Tick contínuo — reconciliação local nominal Câmara (2026-08-18)
 
