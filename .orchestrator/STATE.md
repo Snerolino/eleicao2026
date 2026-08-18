@@ -9,6 +9,7 @@
 - Artefato: `data/legislative-import/camara/historical-historical-route-probe.json`.
 - QA: `docs/qa/lote-camara-historical-legislature-openapi-probe-2026-08-18.md`.
 - Próximo chunk: refazer a rota histórica com DNS estável e reconciliar somente intervalos/eventos nominais exatos.
+- Publicação verificada: backup Cloudflare `334951434`, run `32159903258`, `success`, `headSha=e1c06c742497610d4a7a3b95b742fcaf92747609`; produção HTTP 200 em `/release.json`, SHA e1c06c7, versão 0.2.332, 1003 candidaturas.
 
 # Tick contínuo — rota estruturada de legislatura Câmara (2026-08-18)
 

@@ -23,6 +23,12 @@
 
 - `data/legislative-import/camara/historical-historical-route-probe.json`
 
+## Verificação de publicação
+
+- Commit: `e1c06c742497610d4a7a3b95b742fcaf92747609`.
+- Backup Cloudflare `334951434`, run `32159903258`: `success`, `headSha` idêntico ao commit.
+- Produção `https://rs.votopraquem.org/release.json`: HTTP 200, SHA confirmado após propagação como `e1c06c742497610d4a7a3b95b742fcaf92747609`, versão `0.2.332`, snapshot com 1003 candidaturas.
+
 ## Próximo passo
 
 Refazer o GET da rota histórica quando a resolução estiver estável, preservar o corpo/hash no manifesto e cruzar somente os intervalos históricos exatos dos quatro casos bloqueados. Não aplicar votos por inferência de perfil ou legislatura.
