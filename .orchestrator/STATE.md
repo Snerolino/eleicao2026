@@ -1,3 +1,13 @@
+# Tick contínuo — FED-26 adaptador de contrato Câmara histórico (2026-08-18)
+
+- Lock bounded adquirido e liberado; worktree limpa no início; nenhum writer concorrente.
+- Implementado `scripts/adapt-camara-historical-contract.mjs` com derivação fail-closed de número/ano, hashes oficiais, referências lógicas TSE e validação de 7 fontes.
+- Teste focado verde: 5/5; suíte completa verde: 76 arquivos / 359 testes.
+- Dry-run adaptado verde: 2 proposições, 6 versões, 6 eventos, 84 votos; nenhum SQL, Supabase, Cloudflare ou FK foi escrito.
+- Gates verdes com Node 24.19.0: TypeScript, schema, `data:check` (1003 candidaturas / 988 fotos), build e `git diff --check`.
+- QA: `docs/qa/lote-camara-historical-contract-adapter-2026-08-18.md`.
+- 7 `source_references` permanecem sem UUID remoto resolvido; 8 identidades não elegíveis seguem fora. Próximo chunk: auditoria read-only do catálogo remoto por URL/hash antes de qualquer aplicação idempotente.
+
 # Tick contínuo — FED-26 revalidação de fontes nominais Câmara (2026-08-18)
 
 - Lock bounded adquirido e liberado; worktree limpa no início; nenhum writer concorrente.
