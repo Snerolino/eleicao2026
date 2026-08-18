@@ -13,7 +13,9 @@
 - Chunk concluído: parser HTML nominal robusto offline + fixture sanitizada + contrato Vitest em `scripts/lib/camara-historical-html.mjs`, `scripts/__tests__/camara-historical-html.test.mjs` e `fixtures/legislative-import/camara-historical-nominal.html`.
 - Gates deste chunk verdes: 74 arquivos/351 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check`.
 - QA: `docs/qa/lote-camara-historical-html-parser-2026-08-18.md`. Nenhuma escrita remota; os 4 casos `position=outro` permanecem fail-closed.
-- Próximo chunk: refazer os quatro GETs oficiais nominais (`9002`, `9003`, `9224`, `9227`) com o parser, preservando URL/HTTP/bytes/SHA-256 e só preparar envelope quando houver linha exata.
+- Chunk seguinte concluído: os quatro GETs oficiais (`9002`, `9003`, `9224`, `9227`) foram refeitos com o parser; 4/4 HTTP 200, hashes/bytes coincidentes e linhas exatas de Henrique Fontana/RS extraídas (`Não`, `Obstrução`, `Obstrução`, `Não`).
+- QA: `docs/qa/lote-camara-historical-parser-revalidation-2026-08-18.md`; artefato transitório `.orchestrator/runtime/camara-historical-scout/parser-revalidation-2026-08-18.json`.
+- Nenhum voto/identidade/FK/source_reference foi aplicado. O bloqueio `FED25_CAMARA_HISTORICAL_REMOTE_IDENTITY_LOOKUP_BLOCKED_ROLE` permanece; próximo chunk é resolver cargo histórico oficial e validar FK remota por `tse_candidate_id`.
 
 # Tick contínuo — rota histórica OpenAPI Câmara (2026-08-18)
 
