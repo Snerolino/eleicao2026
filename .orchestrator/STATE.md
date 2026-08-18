@@ -9,7 +9,9 @@ Status: `FED25_CAMARA_HISTORICAL_LOCAL_RECON_PENDING_REMOTE_LOOKUP`
 - Dos 142 registros RS do dry-run: 92 `matched_exact`, 10 `ambiguous`, 40 `not_found` por `full_name`/`ballot_name` normalizados.
 - Artefato: `data/legislative-import/camara/historical-nominal-local-reconciliation.json`; nenhum `tse_candidate_id` foi promovido a envelope aplicável e nenhuma escrita remota ocorreu.
 - QA atualizado: `docs/qa/lote-camara-historical-nominal-dry-run-2026-08-18.md`.
-- Push do commit `70aa5a0` bloqueado por DNS (`Could not resolve host: github.com`); `origin/main` permanece em `4dccdd4`.
+- Commits `70aa5a0` e `1d68a09` foram publicados com sucesso em `origin/main` após uma segunda tentativa; a primeira falhou por DNS de `github.com`.
+- Produção respondeu `HTTP 200` em `https://rs.votopraquem.org`.
+- API do GitHub ficou intermitente: listagem de workflows funcionou, mas o disparo manual do backup `334951434` falhou por conexão a `api.github.com`; não afirmar run/deploy deste commit sem confirmação.
 - Próximo chunk: lookup remoto read-only por `tse_candidate_id` somente para os 92 matches exatos, com conferência de cargo/UF e proposição/data/evento; 50 casos permanecem fail-closed.
 
 ## Tick contínuo — extração nominal histórica Câmara em dry-run (2026-08-18)
