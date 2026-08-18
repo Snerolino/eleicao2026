@@ -99,6 +99,8 @@
 | [`qa/fed13-production-alrs-profile-smoke-2026-08-18.md`](qa/fed13-production-alrs-profile-smoke-2026-08-18.md) | Fechamento QA da FED-13: smoke público dos perfis ALRS |
 | [`qa/fed14-multi-house-coverage-2026-08-18.md`](qa/fed14-multi-house-coverage-2026-08-18.md) | Fechamento QA da FED-14: cobertura multi-house |
 | [`qa/fed15-legislative-source-coverage-2026-08-18.md`](qa/fed15-legislative-source-coverage-2026-08-18.md) | Fechamento QA da FED-15: cobertura de fontes legislativas |
+| [`qa/fed17-supabase-remote-identity-2026-08-18.md`](qa/fed17-supabase-remote-identity-2026-08-18.md) | Gate R0 FED-17: identidade remota Supabase |
+| [`qa/fed18-camara-scout-2026-08-18.md`](qa/fed18-camara-scout-2026-08-18.md) | FED-18: scout read-only da próxima batch Câmara |
 | [`qa/fotos-sem-match-2026-08-03.md`](qa/fotos-sem-match-2026-08-03.md) | Distribuição dos candidatos sem foto e caso ambíguo |
 
 ## Release

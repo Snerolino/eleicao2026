@@ -11,6 +11,22 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - Bloqueios de identidade, fonte, schema ou segurança pausam apenas a mutação do item e disparam coleta segura, nunca espera passiva por prompt.
 - Autorização do usuário cobre GitHub, Supabase e Cloudflare, mas Gate R0 e identidade remota continuam obrigatórios.
 
+## Atualização FED-17 — Gate R0 identidade remota (2026-08-18)
+
+- `supabase/.temp/project-ref` e `supabase projects list` coincidem em `hhqxhxcfkoijevxyzfky`, projeto `eleicao2026`, São Paulo.
+- `supabase migration list` confirmou migrations locais/remotas alinhadas até `20260816100000`.
+- Subgate seguinte: consultar `information_schema`, `candidates.tse_candidate_id` e tabelas legislativas no mesmo banco, sempre read-only.
+- Nenhuma escrita remota foi executada.
+- QA: `docs/qa/fed17-supabase-remote-identity-2026-08-18.md`.
+
+## Atualização FED-18 — scout Câmara read-only (2026-08-18)
+
+- Pool gratuito confirmou pipeline oficial existente e nenhum writer foi acionado.
+- `/api/v2/deputados/{id}/votacoes` retornou HTTP 405 para os quatro IDs Câmara resolvidos; endpoint geral sofreu timeout.
+- Não repetir a rota 405 nem interpretar timeout como ausência de votações.
+- Próximo chunk: localizar rota oficial alternativa ou usar somente `vote-id` oficial conhecido, sempre dry-run.
+- QA: `docs/qa/fed18-camara-scout-2026-08-18.md`.
+
 ## Atualização de retomada — nova instrução Câmara (2026-08-17)
 
 - O `../dataset2026` adicionou o task packet `hermes-task-deputados-federais-comparacao-v1.md`.
