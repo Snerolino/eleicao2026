@@ -15,6 +15,13 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - Writer aplicou 7 proposições, 10 versões, 10 eventos e 190 votos com 24 FKs remotas; terceira execução registrou 0 inserções, 0 updates e 0 votos tocados.
 - Próximo chunk: materializar perfis Câmara e auditar cobertura; 8 identidades permanecem `identity_pending`.
 
+## Atualização FED-22 — perfis nominais pós-Câmara Q1 (2026-08-18)
+
+- `build-vote-profile.mjs --apply` executado duas vezes: 4197 votos indexados e 38 perfis.
+- Distribuição: ALRS 4000, Câmara 197, Senado 455; separação `(candidate_id, house)` preservada.
+- Nenhuma matriz, score, claim ou RPC editorial foi criado.
+- QA: `docs/qa/fed22-vote-profiles-after-camara-q1-2026-08-18.md`.
+
 ## Atualização do fluxo contínuo — orquestração federal v2
 
 - Supervisor durável ativo: `eleicao2026-continuous-progress`, job Hermes `c4278be3a8a5`, recorrência `every 15m`, workdir da worktree real, lock `.orchestrator/runtime/locks/continuous-progress.lock`.
