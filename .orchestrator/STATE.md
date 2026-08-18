@@ -22,6 +22,13 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - Nenhuma matriz, score, claim ou RPC editorial foi criado.
 - QA: `docs/qa/fed22-vote-profiles-after-camara-q1-2026-08-18.md`.
 
+## Correção do supervisor — fallback Hermes (2026-08-18)
+
+- Tick manual do job falhou porque o fallback configurado era `gemini-2.5-flash`, modelo HTTP 404 para novos usuários.
+- Fallback obsoleto removido do perfil `eleicao2026`; primário permanece `openai-codex/gpt-5.6-luna`.
+- Rotação gratuita continua nos CLIs read-only do projeto (`opencode_free_pool`/scouts), sem depender do Gemini legado.
+- `scripts/orchestrator/doctor.sh` agora falha se `gemini-2.5-flash` voltar ao fallback.
+
 ## Atualização do fluxo contínuo — orquestração federal v2
 
 - Supervisor durável ativo: `eleicao2026-continuous-progress`, job Hermes `c4278be3a8a5`, recorrência `every 15m`, workdir da worktree real, lock `.orchestrator/runtime/locks/continuous-progress.lock`.

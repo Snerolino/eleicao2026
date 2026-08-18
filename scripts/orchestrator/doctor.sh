@@ -184,6 +184,13 @@ if env HOME="$REAL_HOME" hermes profile show "$PROFILE" >/dev/null 2>&1; then
     warn "Hermes config check sinalizou configuração pendente no perfil $PROFILE"
   fi
 
+  FALLBACK_LIST="$(env HOME="$REAL_HOME" hermes -p "$PROFILE" fallback list 2>/dev/null || true)"
+  if grep -q 'gemini-2\.5-flash' <<<"$FALLBACK_LIST"; then
+    fail "fallback Hermes contém gemini-2.5-flash removido; atualize para modelo disponível"
+  else
+    ok "fallback Hermes sem modelo Gemini obsoleto"
+  fi
+
   if env HOME="$REAL_HOME" hermes -p "$PROFILE" mcp list 2>/dev/null | grep -qi 'codex'; then
     ok "Codex MCP aparece na configuração do perfil $PROFILE"
   else
