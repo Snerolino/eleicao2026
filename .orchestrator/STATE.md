@@ -3,6 +3,14 @@
 Atualizado: 2026-08-17 -03
 Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 
+## Atualização do fluxo contínuo — orquestração federal v2
+
+- `docs/architecture/proposta-orquestracao-votacoes-federais-v2.md` passou a `active_continuous_orchestration`.
+- `routing.yaml` agora define `continuous_progress`, ausência de espera entre gates e rota `public_data_reconnaissance`.
+- Scouts CLI podem pesquisar portais oficiais em paralelo, somente read-only, retornando manifest/handoff; o writer único continua preservado.
+- Bloqueios de identidade, fonte, schema ou segurança pausam apenas a mutação do item e disparam coleta segura, nunca espera passiva por prompt.
+- Autorização do usuário cobre GitHub, Supabase e Cloudflare, mas Gate R0 e identidade remota continuam obrigatórios.
+
 ## Atualização de retomada — nova instrução Câmara (2026-08-17)
 
 - O `../dataset2026` adicionou o task packet `hermes-task-deputados-federais-comparacao-v1.md`.

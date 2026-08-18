@@ -49,6 +49,7 @@ Regras:
 7. Se o writer perder quota/timeout, parar a mutação; um fallback gratuito pode analisar e preparar handoff, mas não assumir automaticamente a escrita.
 8. O runtime global do Hermes permanece o padrão. Não ativar Codex App-Server como runtime global sem decisão específica, pois Hermes deve preservar suas próprias ferramentas de memória/delegação.
 9. OpenCode/Antigravity trabalham sobre `git archive HEAD`. Se a tarefa depende de alterações ainda não commitadas, não fingir que esses executores as enxergam: usar Codex na worktree viva ou criar checkpoint autorizado.
+10. O fluxo é `CONTINUOUS_PROGRESS`: não esperar prompt entre gates. Com writer bloqueado por drift, fonte ou executor, scouts CLI read-only podem pesquisar portais oficiais em paralelo e preparar manifests/handoffs, sem escrever na worktree ou em serviços remotos.
 
 ## Regras de dados e segurança
 

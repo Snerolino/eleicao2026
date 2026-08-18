@@ -55,6 +55,16 @@ describe('MOA do perfil eleicao2026 — fallback com pagos + grátis', () => {
     expect(freePoolScript).toContain('--agent=plan');
   });
 
+  it('mantém o fluxo contínuo com scouts read-only sem quebrar o writer único', () => {
+    expect(routing).toContain('continuous_progress: true');
+    expect(routing).toContain('idle_between_gates: false');
+    expect(routing).toContain('public_data_reconnaissance:');
+    expect(routing).toContain('public_data_scout_pool:');
+    expect(routing).toContain('scouts_are_read_only: true');
+    expect(routing).toContain('single_writer_per_worktree: true');
+    expect(routing).toContain('continue_read_only_reconnaissance');
+  });
+
   it('implementa failover: falha fatal pula para o próximo modelo', () => {
     expect(script).toMatch(/FATAL_ERROR_PATTERN/);
     expect(script).toMatch(/rate limit|no payment method|quota|billing|429|timeout|ENOTFOUND|ECONNREFUSED/);

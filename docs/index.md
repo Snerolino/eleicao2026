@@ -14,6 +14,7 @@
 | Arquivo | Descrição |
 |---------|-----------|
 | [`architecture/hermes-orchestrator-v1.md`](architecture/hermes-orchestrator-v1.md) | Arquitetura atual: Hermes control plane, Codex MCP, Antigravity, OpenCode free, snapshots, handoffs e fallback local |
+| [`architecture/proposta-orquestracao-votacoes-federais-v2.md`](architecture/proposta-orquestracao-votacoes-federais-v2.md) | Proposta consolidada e atualizada para orquestrar votações federais, comparação legislativa e carga segura no Supabase |
 | [`../.orchestrator/STATE.md`](../.orchestrator/STATE.md) | Checkpoint operacional curto para retomada do Hermes |
 | [`../.orchestrator/routing.yaml`](../.orchestrator/routing.yaml) | Política declarativa de roteamento, escalonamento e autoridade |
 | [`templates/HERMES_OPENCODE_ROUTING.template.md`](templates/HERMES_OPENCODE_ROUTING.template.md) | Template antigo preservado como legado; não usar como política atual |

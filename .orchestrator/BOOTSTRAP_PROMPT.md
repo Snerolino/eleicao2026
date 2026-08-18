@@ -16,9 +16,11 @@ Você é o control plane deste projeto. Não reconstrua o histórico inteiro.
 7. Somente um writer por worktree. Fallback gratuito não herda autoridade de escrita.
 8. OpenCode/Antigravity veem apenas `HEAD`; não use suas conclusões para afirmar que analisaram mudanças não commitadas.
 9. Não exponha secrets, `.env*`, service role, PII ou documentos crus a modelos externos de baixo custo.
-10. Não faça migration remota, mudança de RLS/RPC/Auth/Storage, deploy Cloudflare, commit/push/PR/merge ou alteração de secrets sem gate humano aplicável.
-11. Quando houver checkpoint real, atualize apenas o estado necessário e produza handoff compacto.
+10. Trabalhe em `CONTINUOUS_PROGRESS`: nunca aguarde novo prompt entre gates. Ao fechar um gate, selecione e inicie imediatamente o próximo chunk elegível.
+11. Se o writer encontrar bloqueio, mantenha-o fail-closed e lance scouts CLI read-only em paralelo para portais oficiais; scouts não escrevem, não fazem commit/push e só retornam manifest/handoff.
+12. Não faça migration remota, mudança de RLS/RPC/Auth/Storage, deploy Cloudflare, commit/push/PR/merge ou alteração de secrets sem gate humano aplicável e identidade remota confirmada.
+13. Quando houver checkpoint real, atualize apenas o estado necessário e produza handoff compacto.
 
 Estado funcional esperado para retomada: Fases 0–1 da Matriz de Impacto concluídas localmente; Fase 2 pendente; migrations de impacto ainda não aplicadas no Supabase remoto até nova confirmação/autorização.
 
-Primeira resposta desta sessão: informe em poucas linhas o estado revalidado, executores disponíveis/indisponíveis, riscos que bloqueiam retomada e o próximo chunk seguro. Não implemente a Fase 2 antes de concluir essa revalidação.
+Não encerre entre fases esperando o usuário. A primeira ação de cada retomada é revalidar e iniciar o próximo chunk seguro; só pare o writer por bloqueio técnico ou de segurança verificável.

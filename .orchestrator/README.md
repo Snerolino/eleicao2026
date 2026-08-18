@@ -19,6 +19,15 @@ A ordem canônica é a mesma de `AGENTS.md`:
 O Hermes é o único dono do contexto global e do roteamento. Executores recebem
 apenas o contexto necessário para a tarefa atual.
 
+## Modo contínuo
+
+O control plane usa `continuous_progress: true`: gates concluídos disparam o
+próximo chunk sem aguardar prompt. Um único writer continua autorizado na
+worktree. Scouts CLI read-only podem pesquisar portais oficiais em paralelo e
+entregar manifests/handoffs, sem editar, commitar, publicar ou escrever remoto.
+Bloqueio de writer abre circuit breaker e mantém a coleta segura ativa; não vira
+ociosidade nem autorização para contornar identidade, fonte ou schema.
+
 ## Arquivos
 
 - `STATE.md`: checkpoint operacional curto. Somente Hermes deve atualizá-lo durante a orquestração normal.

@@ -4,6 +4,11 @@ control_plane: hermes
 
 policy:
   single_writer_per_worktree: true
+  continuous_progress: true
+  idle_between_gates: false
+  prompt_wait_policy: never_wait_between_gates
+  public_data_reconnaissance_parallel: true
+  scouts_are_read_only: true
   remote_mutation_requires_human: true
   max_failures_same_executor: 2
   context_strategy: task_packet_plus_files
@@ -53,6 +58,25 @@ executors:
       - service_role
       - raw_documents
       - pii
+
+  public_data_scout_pool:
+    transport: cli
+    wrapper: scripts/orchestrator/run-free-pool.sh
+    authority: read-only
+    data_class: official_public_sources_only
+    parallelism: bounded_per_portal
+    output: manifest_or_handoff_only
+    forbidden_actions:
+      - worktree_write
+      - git_commit
+      - git_push
+      - supabase_write
+      - cloudflare_deploy
+    best_for:
+      - official_portal_reconnaissance
+      - pagination_and_endpoint_discovery
+      - source_hash_collection
+      - coverage_gap_inventory
 
   google_antigravity:
     transport: cli
@@ -111,6 +135,13 @@ executors:
     enabled_when: doctor_confirms_available
 
 routes:
+  public_data_reconnaissance:
+    - public_data_scout_pool
+    - opencode_free_pool
+    - google_antigravity
+    - codex_exec_fallback
+    - local_fallback
+
   cheap_analysis:
     - opencode_free
     - opencode_free_pool
@@ -161,11 +192,11 @@ fallback_rules:
   - on: [rate_limit, quota_exhausted, timeout, auth_error, provider_down]
     action: mark_circuit_open_and_try_next_eligible_executor
   - on: mutation_executor_unavailable
-    action: stop_writes_and_delegate_read_only_handoff_only
+    action: keep_writer_blocked_and_continue_read_only_reconnaissance_and_handoff
   - on: two_model_disagreement_on_sensitive_change
     action: human_review
   - on: remote_supabase_or_cloudflare_or_deploy
-    action: human_review
+    action: execute_only_after_identity_gate_and_current_user_authorization_else_continue_read_only_reconnaissance
 
 context:
   stable:
