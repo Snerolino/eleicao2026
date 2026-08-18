@@ -163,6 +163,14 @@ Status: `F5_ALRS_VOTOS_NOMINAIS_PUBLICADOS_UI_CORRIGIDA`
 - QA: `docs/qa/fed12-public-alrs-profile-coverage-2026-08-18.md`.
 - Próximo gate: validar smoke do dossiê/coleção após publicação.
 
+## Atualização FED-13 — smoke público dos perfis ALRS (2026-08-18)
+
+- Smoke de produção passou com 1002 cards, 0 falhas HTTP, 0 erros de console online, slug canônico, rota legada e offline.
+- Dossiê de Adão Pretto Filho respondeu HTTP 200 e exibiu perfil nominal, Assembleia Legislativa do RS e fonte institucional ALRS.
+- Nenhuma escrita remota, matriz de impacto ou aprovação editorial nesta fase.
+- QA: `docs/qa/fed13-production-alrs-profile-smoke-2026-08-18.md`.
+- Próximo gate: ampliar a cobertura de perfis ALRS para candidatos com múltiplas casas, sem misturar saldos nominais.
+
 ## Checkpoint mais recente — migração de sessão (2026-08-17)
 
 - Último commit: `85d7031` (`feat: exibir claims e perfil de votações no dossiê`).
