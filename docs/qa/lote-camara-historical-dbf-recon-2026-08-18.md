@@ -61,13 +61,11 @@ proposição.
 - Alterado somente este relatório e `.orchestrator/STATE.md`.
 - Nenhuma migration, RPC, matriz, claim, Supabase, Cloudflare ou dado factual
   remoto foi alterado.
-- Commit local `9536208` (`docs: registra catálogo histórico da Câmara`) foi
-  criado após os gates. `git push origin main` falhou por DNS
-  (`Could not resolve host: github.com`); `main` ficou dois commits à frente de
-  `origin/main`.
-- Produção não pôde ser validada: `curl` retornou HTTP 000 por timeout de
-  resolução. O workflow backup remoto `334951434` foi confirmado via `gh`, mas
-  não foi disparado sem push.
+- O commit foi amendado para `a5b5f49` e publicado com sucesso (`main ->
+  origin/main`); `git ls-remote` confirmou o mesmo SHA remoto.
+- Produção respondeu `HTTP 200` em `https://rs.votopraquem.org`. A consulta do
+  workflow via `gh run list` falhou temporariamente por conexão com
+  `api.github.com`; o run/deploy do backup não foi confirmado neste tick.
 
 ## Próximo chunk bounded
 
