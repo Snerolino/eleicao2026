@@ -94,6 +94,20 @@ e qualquer escrita remota continuam exigindo identidade correta, schema/FK,
 idempotência, segurança e o gate técnico específico; autorização não permite
 contornar esses critérios.
 
+### 2.5 Supervisor durável
+
+Como uma sessão TUI/CLI pode terminar depois de uma resposta, a continuidade
+não pode depender da vida do processo atual. O perfil mantém um job durável
+`eleicao2026-continuous-progress` (`c4278be3a8a5`) recorrente a cada 15 minutos,
+com `workdir` na worktree real e as skills de operação contínua, orquestração e
+verificação local. Cada tick relê `STATE.md`, disputa lock exclusivo, retoma o
+próximo chunk e registra o checkpoint. O job é local-only por desenho: executa
+autonomamente, mas não promete mensagem de volta à TUI.
+
+Se o tick anterior morrer, o próximo retoma do Git/STATE; se houver writer
+ativo, o lock impede concorrência. O scheduler é mecanismo de continuidade, não
+autorização para ignorar gates ou inventar evidências.
+
 ## 3. Estado real da implementação
 
 ### 3.1 Repositório e execução

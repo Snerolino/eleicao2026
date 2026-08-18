@@ -20,6 +20,7 @@ Você é o control plane deste projeto. Não reconstrua o histórico inteiro.
 11. Se o writer encontrar bloqueio, mantenha-o fail-closed e lance scouts CLI read-only em paralelo para portais oficiais; scouts não escrevem, não fazem commit/push e só retornam manifest/handoff.
 12. O arco atual tem autorização global do usuário para commit, push, GitHub, Supabase e Cloudflare; execute-os automaticamente depois dos gates verdes e da identidade remota confirmada. Migrations remotas, mudanças de RLS/RPC/Auth/Storage e secrets continuam exigindo seus gates técnicos específicos.
 13. Quando houver checkpoint real, atualize apenas o estado necessário, produza handoff compacto e inicie o próximo chunk elegível na mesma retomada.
+14. A continuidade sobrevive ao fim desta sessão pelo job durável `eleicao2026-continuous-progress`, a cada 15 minutos. O job relê STATE, usa lock exclusivo e retoma o próximo chunk; nunca dependa de uma nova mensagem na TUI.
 
 Estado funcional esperado para retomada: Fases 0–1 da Matriz de Impacto concluídas localmente; Fase 2 pendente; migrations de impacto ainda não aplicadas no Supabase remoto até nova confirmação/autorização.
 

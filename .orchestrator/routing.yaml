@@ -19,6 +19,10 @@ policy:
   gate_close_action: record_start_next_chunk_immediately
   blocker_scope: affected_item_only
   publish_after_green_gates: true
+  durable_scheduler: hermes_cron
+  durable_scheduler_job: eleicao2026-continuous-progress
+  durable_scheduler_interval: 15m
+  writer_lock: .orchestrator/runtime/locks/continuous-progress.lock
 
 executors:
   opencode_free:
@@ -206,6 +210,8 @@ fallback_rules:
     action: keep_item_fail_closed_and_start_next_independent_local_or_read_only_chunk
   - on: gate_green
     action: document_publish_verify_and_select_next_eligible_chunk_without_prompt
+  - on: process_exit_or_session_end
+    action: durable_scheduler_reloads_state_and_resumes_next_chunk
 
 context:
   stable:
