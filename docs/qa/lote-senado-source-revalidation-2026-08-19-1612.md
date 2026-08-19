@@ -31,3 +31,9 @@ Reexecutar, em tick bounded e read-only, os seis GETs oficiais do catálogo nomi
 
 ## Próximo chunk bounded
 Repetir os seis GETs oficiais no próximo tick, sem gerar manifesto novo nem aplicar votos enquanto persistir a deriva SHA-256. Manter gates locais em Node 24 e tratar a correção do shell cron como chunk separado.
+
+## Publicação/verificação
+- Commit documental `6542559988a096361b4fdb9e1ddc1028d48bae53` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32274687701`, concluiu `completed/success` com `headSha` idêntico.
+- Produção raiz HTTP 200; `/release.json` HTTP 200 confirma SHA idêntico, versão `0.2.449` e snapshot `row_count=1003`.
+- Nenhuma migration, escrita Supabase, alteração de RLS/RPC/Auth/Storage, deploy direto Cloudflare ou alteração factual foi executada.
