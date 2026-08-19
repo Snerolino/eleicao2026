@@ -8,6 +8,13 @@
 - QA: `docs/qa/lote-senado-source-revalidation-2026-08-19-1650.md`.
 - Próximo chunk: repetir os seis GETs oficiais sem gerar manifesto novo nem aplicar votos enquanto persistir a deriva; manter gates locais e tratar o shell cron Node 22 separadamente.
 
+## Publicação/verificação — tick 16:52 UTC
+
+- Commit `72828b514072ddf7cad9b748bc8316588995479e` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32278314535`, concluiu `success` com `headSha` idêntico.
+- Produção raiz HTTP 200; `/release.json` HTTP 200 confirma SHA idêntico, release `72828b5-20260819T165205122Z` e snapshot `row_count=1003`.
+- Senado permanece fail-closed; nenhuma escrita factual remota foi executada.
+
 ## Publicação/verificação — tick Senado 16:15 UTC
 
 - Commit documental `81ee230a555fcd5e9c6a6a28626e4e852bf9c022` publicado em `origin/main`.

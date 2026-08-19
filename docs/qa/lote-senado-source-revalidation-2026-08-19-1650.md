@@ -27,3 +27,10 @@ Reexecutar, em tick bounded e read-only, os seis GETs oficiais do catálogo nomi
 ## Bloqueios e próximo passo
 - Bloqueio real: deriva SHA-256 persistente nos seis documentos oficiais; não é seguro substituir o manifesto, cadastrar `source_references` ou inserir votos. Não inventar hash, URL, identidade ou voto.
 - Próximo chunk bounded: repetir os seis GETs oficiais sem gerar manifesto novo nem aplicar votos enquanto persistir a deriva; manter os gates locais e tratar separadamente o FAIL do shell cron em Node 22 quando houver executor disponível.
+
+## Publicação/verificação
+- Commit `72828b514072ddf7cad9b748bc8316588995479e` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32278314535`, concluiu `completed/success` com `headSha` idêntico.
+- Produção `https://rs.votopraquem.org`: HTTP 200.
+- Produção `/release.json`: HTTP 200; SHA idêntico, `row_count=1003`, release `72828b5-20260819T165205122Z`.
+- Nenhuma migration, escrita Supabase, alteração de RLS/RPC/Auth/Storage ou aplicação factual foi executada.
