@@ -230,6 +230,15 @@
 - Próximo chunk: writer idempotente por `legislator_id`, após estabilização do manifesto PDF.
 - QA: `docs/qa/lote-senado-envelope-legislator-id-2026-08-19.md`.
 
+## Tick contínuo — contrato de comparação de votos por categoria (2026-08-19)
+
+- Implementado contrato puro para comparar candidatos por `house`, `group_slug` e eventos comuns.
+- Somente assessments `approved` entram; valores factuais permanecem separados de score/alinhamento.
+- Teste focal 2/2 e TypeScript passaram.
+- Supabase possui apenas 1 assessment aprovado no recorte atual; nenhuma categoria foi inventada.
+- Próximo chunk: consulta pública de assessments aprovados e integração da `ComparePage` com fallback de cobertura insuficiente.
+- QA: `docs/qa/lote-vote-category-comparison-contract-2026-08-19.md`.
+
 ## Release verification — documentação do tick (2026-08-19 06:01 UTC)
 
 - Commit documental `9c62ada88cb3ff6bd5ee65922f270d9270d10db3` publicado em `origin/main`.

@@ -109,6 +109,7 @@
 | [`qa/fed23-camara-historical-source-gaps-2026-08-18.md`](qa/fed23-camara-historical-source-gaps-2026-08-18.md) | FED-23: lacunas históricas de fontes Câmara |
 | [`qa/lote-senado-sources-parser-ready-2026-08-19.md`](qa/lote-senado-sources-parser-ready-2026-08-19.md) | Senado nominal: fontes aplicadas e parser preparado |
 | [`qa/lote-senado-envelope-legislator-id-2026-08-19.md`](qa/lote-senado-envelope-legislator-id-2026-08-19.md) | Senado: envelope nominal por legislator_id |
+| [`qa/lote-vote-category-comparison-contract-2026-08-19.md`](qa/lote-vote-category-comparison-contract-2026-08-19.md) | Contrato de comparação de votos por categoria |
 | [`qa/fotos-sem-match-2026-08-03.md`](qa/fotos-sem-match-2026-08-03.md) | Distribuição dos candidatos sem foto e caso ambíguo |
 
 ## Release
