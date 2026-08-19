@@ -1,3 +1,15 @@
+## Tick contínuo — fonte oficial Senado nominal em dry-run (2026-08-19)
+
+- Lock bounded adquirido e liberado; worktree limpa e nenhum writer concorrente.
+- Seis GETs oficiais do endpoint `legis.senado.leg.br/parlam-servicosweb` (IDs RS 6341, 1186, 825; anos 2025/2026) responderam HTTP 200 e retornaram PDFs.
+- Três PDFs de 2026 foram refeitos, convertidos localmente com `pdftotext -layout` e tiveram bytes/SHA-256 registrados em `.orchestrator/runtime/senado-scout/`.
+- `scripts/parse-senado-votes.mjs` produziu dry-run com 12 proposições, 17 eventos, 48 votos e 3 parlamentares.
+- Contrato independente passou: 0 fontes ausentes, 0 valores inválidos e 48 chaves únicas para 48 votos (`CONTRACT_EXIT=0`).
+- Nenhuma proposição, evento, voto, identidade, FK, `source_reference`, matriz, claim, Supabase ou Cloudflare foi alterado.
+- Bloqueio: falta catálogo versionado de referências por URL/hash e reconciliação remota exata de identidade/FK; o parser ainda usa descrição textual de fonte no envelope.
+- QA: `docs/qa/lote-senado-nominal-source-scout-2026-08-19.md`.
+- Próximo chunk: catalogar os seis endpoints oficiais e executar reconciliação read-only por identidade/FK; manter Senado fail-closed até `source_reference` e identidade exatas.
+
 ## Tick contínuo — publicação verificada dataset/release (2026-08-19 04:08 UTC)
 
 - Lock bounded adquirido e liberado; worktree limpa antes do chunk.
