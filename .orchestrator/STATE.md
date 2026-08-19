@@ -1,16 +1,17 @@
-## Tick contínuo — fonte oficial Senado nominal em dry-run (2026-08-19)
+## Tick contínuo — catálogo Senado nominal e reconciliação read-only (2026-08-19 04:53 UTC)
 
-- Lock bounded adquirido e liberado; worktree limpa e nenhum writer concorrente.
-- Seis GETs oficiais do endpoint `legis.senado.leg.br/parlam-servicosweb` (IDs RS 6341, 1186, 825; anos 2025/2026) responderam HTTP 200 e retornaram PDFs.
-- Três PDFs de 2026 foram refeitos, convertidos localmente com `pdftotext -layout` e tiveram bytes/SHA-256 registrados em `.orchestrator/runtime/senado-scout/`.
-- `scripts/parse-senado-votes.mjs` produziu dry-run com 12 proposições, 17 eventos, 48 votos e 3 parlamentares.
-- Contrato independente passou: 0 fontes ausentes, 0 valores inválidos e 48 chaves únicas para 48 votos (`CONTRACT_EXIT=0`).
-- Nenhuma proposição, evento, voto, identidade, FK, `source_reference`, matriz, claim, Supabase ou Cloudflare foi alterado.
-- Bloqueio: falta catálogo versionado de referências por URL/hash e reconciliação remota exata de identidade/FK; o parser ainda usa descrição textual de fonte no envelope.
-- QA: `docs/qa/lote-senado-nominal-source-scout-2026-08-19.md`.
-- Deploy backup `334951434`, run `32215881748`, concluiu `success` com `headSha=21c681dd2f0a1ad6ac792ea35669a5f112944da3`.
-- Produção respondeu raiz HTTP 200 e `/release.json` HTTP 200, mas ainda exibe SHA anterior `4d94e55cd559d14780a7c0b0e0c830f1202275ed`; publicação deste commit permanece pendente de propagação/verificação no próximo tick.
-- Próximo chunk: revalidar propagação do release e, em paralelo, catalogar os seis endpoints oficiais e executar reconciliação read-only por identidade/FK; manter Senado fail-closed até `source_reference` e identidade exatas.
+- Lock bounded adquirido e liberado; worktree estava limpa antes do chunk e nenhum writer concorrente foi observado.
+- Produção revalidada: raiz e `/release.json` HTTP 200; `release.json` confirmou SHA completo `f32fbd35c6e8b2cf42bac8c3b75339b289e528ff`, versão `0.2.386`, snapshot 1003.
+- Backup Cloudflare `334951434`, run `32215967150`, concluiu `success` com `headSha` idêntico; runs `32215969665` e `32216161304` ficaram `skipped`.
+- Seis GETs oficiais Senado foram refeitos: 6/6 HTTP 200, payload PDF, bytes/SHA-256 completos. Catálogo transitório: `.orchestrator/runtime/senado-scout/endpoint-catalog-2026-08-19.json`.
+- Schema remoto read-only confirmou `candidates.tse_candidate_id`, `legislators`, `legislative_votes.legislator_id/candidate_id/source_reference_id`, `voting_events.source_reference_id` e `source_references.url/content_hash`.
+- Reconciliação exata resolveu os legisladores 6341, 1186 e 825 no remoto; consulta exata de candidatos RS por nome retornou 0 linhas. Nenhum `candidate_id` foi inferido.
+- Consulta exata das seis URLs em `source_references` retornou 0/6; nenhum UUID remoto de fonte foi resolvido. Senado permanece fail-closed.
+- Nenhuma proposição, versão, evento, voto, identidade, FK, `source_reference`, matriz, claim, RPC, RLS, Supabase ou Cloudflare foi alterado.
+- QA: `docs/qa/lote-senado-nominal-catalogo-fk-reconciliation-2026-08-19.md`.
+- Artefato de reconciliação: `.orchestrator/runtime/senado-scout/source-reference-reconciliation-2026-08-19.json`.
+- Próximo chunk: preparar catálogo idempotente das seis `source_references`, revalidar URL/bytes/hash e identidade/FK imediatamente antes de eventual `--apply`; não publicar votos enquanto houver divergência.
+
 
 ## Tick contínuo — publicação verificada dataset/release (2026-08-19 04:08 UTC)
 
