@@ -55,6 +55,17 @@ O `orch:doctor -- --smoke` no shell cron permanece bloqueado somente pelo Node
 22.22.2; a execução do tick foi corrigida por `nvm use 24.19.0` e os gates acima
 foram executados nessa versão suportada.
 
+## Publicação e verificação
+
+- Commit funcional/documental `ccc44a1ee4bca20f0235ca9d2fd031b26aee9256` foi
+  publicado em `origin/main`.
+- Workflow backup Cloudflare `334951434`, run `32199836179`, concluiu `success`
+  com `headSha` idêntico ao commit.
+- Produção respondeu `HTTP 200` em `https://rs.votopraquem.org`.
+- `/release.json` confirmou SHA completo `ccc44a1ee4bca20f0235ca9d2fd031b26aee9256`,
+  release `ccc44a1-20260819T000527903Z`, versão `0.2.362` e snapshot com 1003
+  candidaturas.
+
 ## Próximo passo
 
 Auditar novamente o catálogo remoto de `source_references` e preparar, em chunk
