@@ -6,6 +6,7 @@
 - `npm run impact:dryrun data/legislative-import/camara/historical-contract-envelope.json`: exit 0; 2 proposições, 6 versões, 6 eventos, 84 votos.
 - Teste focado: 5/5 verde. Nenhuma escrita remota, identidade, FK, matriz, RPC ou Cloudflare foi alterada.
 - QA: `docs/qa/lote-camara-historical-source-catalog-revalidation-2026-08-19.md`.
+- Publicação verificada: backup Cloudflare `334951434`, run `32202957347`, concluiu `success` com `headSha=da8cd69dfdf7830a53575b18999f93a24f8b405c`; produção HTTP 200 e `/release.json` confirmaram SHA, versão `0.2.368` e 1003 candidaturas.
 - Próximo chunk: implementar/revisar writer histórico idempotente dry-run por padrão, com `--apply` explícito, usando somente as 7 referências resolvidas e as 18 identidades elegíveis; manter 8 inelegíveis fail-closed.
 
 # Tick contínuo — contrato histórico Câmara e dry-run factual (2026-08-19)

@@ -27,6 +27,13 @@
 - As **8 identidades inelegíveis** do envelope permanecem fail-closed e não serão promovidas por heurística.
 - Não foi executado `--apply`: o próximo chunk deve implementar/revisar o writer histórico idempotente, validar FKs/constraints remotamente em leitura e provar segunda execução sem alterações antes de qualquer publicação factual.
 
+## Publicação verificada
+
+- Commit: `da8cd69dfdf7830a53575b18999f93a24f8b405c`.
+- Backup Cloudflare `334951434`, run `32202957347`: **success**; `headSha` idêntico ao commit.
+- Produção `https://rs.votopraquem.org`: **HTTP 200**.
+- `/release.json`: SHA idêntico, versão `0.2.368`, snapshot com **1003 candidaturas**.
+
 ## Próximo passo
 
 Preparar o writer histórico em modo dry-run por padrão, com `--apply` explícito, exigindo os 7 UUIDs/hash exatos, as 18 identidades elegíveis e rejeitando as 8 bloqueadas; depois rodar os gates locais completos antes de qualquer aplicação remota.
