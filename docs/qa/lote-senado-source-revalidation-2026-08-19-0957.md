@@ -20,5 +20,11 @@ O catálogo Senado continua transitório/volátil. Nenhum voto, identidade, FK, 
 - `npm run orch:doctor` no shell do cron reporta `FAIL` porque o shell usa Node v22.22.2, enquanto o projeto exige Node >=24 <25. Os gates do projeto não devem ser declarados verdes nesse shell sem trocar para Node 24.
 - OpenCode está ausente e Ollama não respondeu ao preflight; não bloquearam este chunk read-only, pois a reconciliação oficial foi executada localmente.
 
+## Publicação verificada
+- Commit documental: `916ac23cbc3b777f1f61e8ae78e959d3d49aeac4`, em `origin/main`.
+- Backup Cloudflare workflow `334951434`, run `32240414747`: `success`, `headSha` idêntico.
+- Produção raiz e `/release.json`: HTTP 200.
+- `/release.json` confirma SHA completo idêntico, versão `0.2.419`, snapshot `consulta_cand/2026/RS` com 1003 linhas.
+
 ## Próximo passo
 Repetir GETs oficiais com retry controlado e preservar bytes/hash. Não gerar novo manifesto nem executar `--apply` enquanto a estabilidade do catálogo e os gates de identidade/schema/FK/idempotência não forem comprovados.
