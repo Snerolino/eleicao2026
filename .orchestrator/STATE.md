@@ -6,7 +6,7 @@
 - Reconciliação do CSV oficial local contra o snapshot: 1003/1003 IDs, 0 somente no dataset e 0 somente no snapshot.
 - Nenhuma escrita factual ou remota foi executada; Senado permanece fail-closed por deriva binária do catálogo.
 - QA: `docs/qa/lote-senado-source-revalidation-2026-08-19-0815.md` e `docs/qa/lote-senado-release-verification-2026-08-19-0815.md`.
-- Publicação verificada: commit `97435fbc865a9993576c6d43679158a5ed5328b6`, backup Cloudflare `334951434`, run `32232671812` success com `headSha` idêntico; produção `/release.json` HTTP 200, SHA idêntico, versão `0.2.409`, snapshot 1003.
+- Publicação verificada: commit `96840023a8281a137e10503ad87cb4f28718568f`, backup Cloudflare `334951434`, run `32232775185` success com `headSha` idêntico; produção `/release.json` HTTP 200, SHA idêntico, versão `0.2.410`, snapshot 1003.
 - Próximo chunk: preservar/revisar a deriva binária dos PDFs e manter o Senado fail-closed; não gerar manifesto novo nem aplicar votos sem fonte estável, R0/schema/FK e idempotência.
 
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19 07:58 UTC)
