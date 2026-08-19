@@ -34,5 +34,11 @@ Repetir os seis GETs oficiais do catálogo nominal do Senado em modo read-only, 
 - Produção raiz: HTTP 200; `/release.json` confirma o mesmo SHA, versão `0.2.436` e snapshot 1003.
 - Backup Cloudflare `334951434`, run `32251738328`: `completed/success`, `headSha` idêntico.
 
+## Publicação verificada
+- Commit `21cc1b6c5098dc5c33e6dcf5a14af6c164d90673` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32255815222`: `completed/success`, `headSha` idêntico.
+- Produção raiz: HTTP 200.
+- `/release.json` propagou e confirmou SHA completo `21cc1b6c5098dc5c33e6dcf5a14af6c164d90673`.
+
 ## Próximo passo bounded
-Publicar esta documentação e verificar o backup/produção do novo commit. No próximo tick, repetir os seis GETs sem gerar manifesto novo nem aplicar votos enquanto persistir a deriva.
+No próximo tick, repetir os seis GETs sem gerar manifesto novo nem aplicar votos enquanto persistir a deriva.
