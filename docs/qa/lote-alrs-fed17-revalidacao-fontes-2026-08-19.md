@@ -46,9 +46,20 @@ O doctor do shell cron retornou `FAIL` somente porque o shell iniciou Node
 22.22.2, enquanto o projeto exige Node 24. Neste chunk os comandos do projeto
 foram executados com Node 24.19.0.
 
+## Publicação
+
+- Commit `1f4eec2ec4e8ec37b4263d7bd5a952315414fa68` publicado em `origin/main`.
+- Workflow backup `334951434`, run `32213337592`, foi disparado com `headSha`
+  idêntico e permaneceu `in_progress` na última consulta.
+- `gh run watch` encontrou erro transitório de conexão com `api.github.com`; não
+  foi usado como prova de sucesso.
+- A verificação de produção neste instante não foi conclusiva: a raiz teve
+  falha DNS e `/release.json` respondeu HTTP 403. Não declarar deploy concluído;
+  revalidar no próximo tick após o run.
+
 ## Próximo passo
 
-Manter a fila ALRS em recuperação read-only e avançar somente quando surgir
-prova oficial adicional que produza plano não vazio. O próximo tick pode
-revalidar a identidade/schema/FK de outro lote legislativo independente, sem
-promover os registros bloqueados.
+Revalidar o run `32213337592` e `/release.json` para o SHA acima. Depois manter
+a fila ALRS em recuperação read-only e avançar somente quando surgir prova
+oficial adicional que produza plano não vazio. Não promover os registros
+bloqueados.
