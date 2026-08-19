@@ -1,3 +1,10 @@
+## Release verification — documentação do tick Senado 10:45 UTC
+
+- Commit documental `35f695142b3731e1fe3cfbfb1f6f63aabf6c8fd0` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32244291304`, concluiu `success` com `headSha` idêntico.
+- Produção `https://rs.votopraquem.org`: HTTP 200 com User-Agent de verificação.
+- Produção `/release.json`: HTTP 200; SHA idêntico ao commit, versão `0.2.426`.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19 10:45 UTC)
 
 - Lock bounded adquirido durante os chunks e liberado ao finalizar; worktree iniciou limpa.
