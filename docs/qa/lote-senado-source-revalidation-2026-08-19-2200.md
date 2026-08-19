@@ -29,6 +29,13 @@ A deriva SHA-256 permanece real: **0/6** respostas atuais coincide com o manifes
 
 O `npm run orch:doctor` retornou `OK=48 WARN=5 FAIL=1`: FAIL conhecido porque o shell do cron usa Node 22.22.2 enquanto o projeto exige Node 24; OpenCode ausente e Ollama sem resposta permanecem WARN opcionais. Os gates do projeto passaram com Node 24.19.0.
 
+## Publicação e verificação final
+
+- Commit documental final: `c8675b6e119ca6a06f96592a9b2b163c3c105e01` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32306924768`: `completed/success`, `headSha` idêntico ao commit.
+- Produção `https://rs.votopraquem.org/`: raiz HTTP 200 e `/release.json` HTTP 200.
+- `release.json` confirma SHA completo `c8675b6e119ca6a06f96592a9b2b163c3c105e01`, versão `0.2.468` e snapshot com `row_count=1003`.
+
 ## Publicação e verificação
 
 - Commit documental inicial: `8e774a6267ed792afd9f0e41e283ed63fcca79f1` publicado em `origin/main`.

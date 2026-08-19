@@ -1,3 +1,9 @@
+## Publicação/verificação final — tick 22:03 UTC
+
+- Commit documental final `c8675b6e119ca6a06f96592a9b2b163c3c105e01` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32306924768`, concluiu `completed/success` com `headSha` idêntico.
+- Produção raiz e `/release.json`: HTTP 200; release confirma SHA idêntico, versão `0.2.468` e `snapshot.row_count=1003`.
+
 ## Publicação/verificação — tick 22:01 UTC
 
 - Commit `8e774a6267ed792afd9f0e41e283ed63fcca79f1` publicado em `origin/main`.
