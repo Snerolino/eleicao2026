@@ -15,6 +15,7 @@
 - Backup Cloudflare `334951434`, run `32263280981`, concluiu `success` com `headSha` idêntico.
 - Preview do run HTTP 200 e `/release.json` confirma SHA `f753739c54aebb0986b4f38225af14495225f50d`, versão `0.2.442`, snapshot 1003.
 - Domínio customizado raiz HTTP 200, porém `/release.json` ainda retorna SHA anterior `3c84e9ac231265b13581eb81b74a45aa1ebe7e1f`, versão `0.2.441`; publicação customizada permanece bloqueada por deriva de domínio/cache/roteamento.
+- Revalidação final após novo backup: run `32263486665` concluiu `success` com `headSha` `a7a01f61f0fa93ab75b38a3caff393390a982c35`; produção raiz HTTP 200 e `/release.json` passou a confirmar esse SHA, versão `0.2.443`, snapshot `row_count=1003`.
 - Senado permanece fail-closed por deriva SHA-256; nenhum dado factual remoto foi aplicado.
 
 ## Release verification — tick Senado 14:17 UTC
