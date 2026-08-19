@@ -1,3 +1,14 @@
+## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19 11:06 UTC)
+
+- Lock bounded adquirido e liberado; worktree iniciou limpa.
+- Reconhecimento oficial read-only com retry controlado: 6/6 HTTP 200, 6/6 prefixos PDF válidos, 1/6 coincidências de bytes e 0/6 coincidências SHA-256 contra o manifesto versionado. Evidência: `.orchestrator/runtime/senado-scout/revalidation-current.json`.
+- Dry-run `npm run impact:senado:sources:apply -- --dry-run`: 6 planejadas, 0 ausentes, 0 inserções, 0 votos tocados.
+- Gates com Node v22.22.2: 79 arquivos/368 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check` verdes.
+- `npm run orch:doctor`: `OK=48 WARN=5 FAIL=1`; FAIL restrito ao shell em Node 22, enquanto o projeto exige Node 24; OpenCode ausente, sem bloquear a rota local.
+- Nenhuma escrita factual remota foi executada; Senado permanece fail-closed por deriva binária do catálogo.
+- QA: `docs/qa/lote-senado-source-revalidation-2026-08-19-1106.md`.
+- Próximo chunk: publicar esta documentação e verificar backup Cloudflare/produção; no próximo tick repetir os GETs sem gerar manifesto novo nem aplicar votos enquanto persistir a deriva.
+
 ## Release verification — documentação do tick Senado 10:45 UTC
 
 - Commit documental `35f695142b3731e1fe3cfbfb1f6f63aabf6c8fd0` publicado em `origin/main`.
