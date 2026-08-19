@@ -1,3 +1,13 @@
+## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19 08:15 UTC)
+
+- Lock bounded adquirido e liberado; worktree estava limpa antes da documentação.
+- Reconhecimento oficial read-only: 6/6 HTTP 200, prefixo PDF válido, 2/6 coincidências de bytes e 0/6 coincidências SHA-256 contra o manifesto versionado.
+- Dry-run `scripts/apply-senado-nominal-sources.mjs`: 6 planejadas, 0 ausentes, 0 inserções, 0 votos tocados.
+- Reconciliação do CSV oficial local contra o snapshot: 1003/1003 IDs, 0 somente no dataset e 0 somente no snapshot.
+- Nenhuma escrita factual ou remota foi executada; Senado permanece fail-closed por deriva binária do catálogo.
+- QA: `docs/qa/lote-senado-source-revalidation-2026-08-19-0815.md`.
+- Próximo chunk: preservar/revisar a deriva binária dos PDFs e manter o Senado fail-closed; não gerar manifesto novo nem aplicar votos sem fonte estável, R0/schema/FK e idempotência.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19 07:58 UTC)
 
 - Lock bounded adquirido e liberado; worktree estava limpa antes da documentação.
