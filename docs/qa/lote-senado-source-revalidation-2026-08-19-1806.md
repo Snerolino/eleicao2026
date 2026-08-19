@@ -45,6 +45,20 @@ Refazer, em modo somente leitura, os seis GETs oficiais dos relatórios nominais
   com Node 24.19.0 disponível localmente. OpenCode ausente e Ollama sem
   resposta permanecem WARN opcionais.
 
+## Publicação e verificação remota
+
+- Commit documental: `ebe88327eb23da5c4a42a3c74a611d3695b1bc7f`.
+- Push `origin/main`: concluído.
+- GitHub Actions `Deploy`, run `32285508631`: `completed/success`, `headSha`
+  idêntico ao commit; quality e deploy/smoke passaram.
+- Tentativa de disparar o backup `334951434` falhou por erro transitório de
+  conexão com `api.github.com`; não foi necessário para esta publicação porque
+  o workflow primário concluiu com sucesso.
+- Produção `https://rs.votopraquem.org`: HTTP 200.
+- `https://rs.votopraquem.org/release.json`: HTTP 200, SHA idêntico ao commit,
+  release `ebe8832-20260819T180855928Z`, versão `0.2.456`, snapshot com 1003
+  registros.
+
 ## Próximo passo
 
 No próximo tick, repetir os seis GETs oficiais sem gerar manifesto novo nem

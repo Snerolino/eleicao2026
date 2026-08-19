@@ -1,3 +1,10 @@
+## Publicação/verificação — tick 18:06 UTC
+
+- Commit `ebe88327eb23da5c4a42a3c74a611d3695b1bc7f` publicado em `origin/main`.
+- GitHub Actions `Deploy`, run `32285508631`, concluiu `completed/success` com `headSha` idêntico; quality, deploy e smoke passaram.
+- Tentativa de disparar o backup `334951434` falhou por erro transitório de conexão com `api.github.com`; o primário publicou com sucesso.
+- Produção raiz HTTP 200; `/release.json` confirma SHA idêntico, versão `0.2.456`, release `ebe8832-20260819T180855928Z` e snapshot `row_count=1003`.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T18:06Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `eab91ce6af17f33e53dbe7cd4185f744d4709d7c`.
