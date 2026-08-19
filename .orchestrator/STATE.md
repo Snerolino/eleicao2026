@@ -1,3 +1,14 @@
+## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19 07:09 UTC)
+
+- Lock bounded mantido por execução única; worktree limpa antes da documentação e nenhum writer concorrente.
+- Seis GETs oficiais Senado refeitos sequencialmente com retry controlado: 6/6 HTTP 200.
+- 0/6 coincidiram em bytes + SHA-256 com o manifesto versionado; todos os hashes/bytes observados foram preservados em `.orchestrator/runtime/senado-scout/revalidation.json`.
+- Dry-run `scripts/apply-senado-nominal-sources.mjs`: 6 planejadas, 0 ausentes, 0 inserções, 0 votos tocados.
+- Gates Node 24.19.0: 78 arquivos/367 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check` verdes.
+- Nenhum voto, identidade, FK, source_reference, matriz, claim, RPC, Supabase ou Cloudflare foi alterado.
+- QA: `docs/qa/lote-senado-source-revalidation-2026-08-19-0709.md`.
+- Próximo chunk: preservar/revisar o conteúdo transitório para explicar a deriva de PDF antes de gerar manifesto novo; Senado permanece fail-closed.
+
 ## Release verification — documentação da deriva Senado (2026-08-19 06:49 UTC)
 
 - Commit `91d5358646b7f359f4440ba70c62f0c57ce5ca7d` publicado em `origin/main`.
