@@ -26,7 +26,7 @@
 
 - `gh api repos/Snerolino/eleicao2026/actions/workflows`: bloqueado por `error connecting to api.github.com`.
 - `curl https://rs.votopraquem.org` e `/release.json`: bloqueados por falha DNS (`Could not resolve host`).
-- Nenhum commit, push, workflow, Supabase, Cloudflare ou escrita factual remota foi executado neste tick por indisponibilidade real de rede.
+- Commit documental `c876f0e73d4d244f07685158f075a8085e5bc982` foi criado e publicado em `origin/main`; a API GitHub continua indisponível para localizar/disparar o workflow backup. Nenhuma escrita factual Supabase foi executada.
 
 ## Estado dos dados e segurança
 

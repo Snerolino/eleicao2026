@@ -5,9 +5,11 @@
 - Doctor smoke: `OK=51 WARN=5 FAIL=1`; FAIL restrito ao shell cron em Node 22.22.2. Gates executados com Node 24.19.0.
 - Reconciliação read-only do CSV oficial local `consulta_cand_2026_RS.csv` contra o snapshot: 1003/1003 linhas, 0 somente no dataset e 0 somente no snapshot; única divergência de apresentação: `210002533050`/TENENTE NETO com `ballot_name` ausente no snapshot.
 - Gates locais: 78 arquivos/366 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check` verdes.
-- GitHub API falhou com `error connecting to api.github.com`; produção falhou por DNS (`Could not resolve host`). Nenhum commit/push/deploy ou write remoto neste tick.
+- Commit documental `c876f0e73d4d244f07685158f075a8085e5bc982` publicado em `origin/main`; API GitHub continua indisponível para localizar/disparar o backup Cloudflare.
+- Produção ainda serve `release.json` com SHA `f16cdf8f382e442d3766e2044e26f25f2c6539df`, versão `0.2.390` e snapshot 1003; o commit documental ainda não está propagado.
+- Nenhuma escrita factual Supabase foi executada.
 - QA: `docs/qa/lote-continuous-ops-recon-release-2026-08-19.md`.
-- Próximo chunk: reexecutar GitHub/Cloudflare/produção com rede disponível e revisar a divergência de `ballot_name`; manter qualquer aplicação factual fail-closed.
+- Próximo chunk: localizar o run do backup `334951434` quando a API GitHub voltar e confirmar `headSha=c876f0e73d4d244f07685158f075a8085e5bc982`; depois revalidar `/release.json`.
 
 ## Release verification — catálogo Senado (2026-08-19 05:00 UTC)
 
