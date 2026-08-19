@@ -36,10 +36,10 @@ seguro substituir o manifesto, cadastrar novas `source_references` ou inserir
 votos. Não inventar hash, URL, identidade ou voto.
 
 ## Publicação/verificação
-- Commit documental `3c84e9ac231265b13581eb81b74a45aa1ebe7e1f` publicado em `origin/main`.
-- Backup Cloudflare `334951434`, run `32263142568`, concluiu `completed/success` com `headSha` idêntico.
-- Produção raiz: HTTP 200.
-- Produção `/release.json`: HTTP 200; SHA idêntico ao commit, versão `0.2.441`, snapshot `row_count=1003`.
+- Commit documental `f753739c54aebb0986b4f38225af14495225f50d` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32263280981`, concluiu `completed/success` com `headSha` idêntico.
+- Preview produzido pelo run: HTTP 200 e `/release.json` confirma SHA `f753739c54aebb0986b4f38225af14495225f50d`, versão `0.2.442`, snapshot `row_count=1003`.
+- Produção raiz: HTTP 200, mas o `/release.json` no domínio customizado ainda serve SHA anterior `3c84e9ac231265b13581eb81b74a45aa1ebe7e1f` (versão `0.2.441`); portanto a verificação de SHA da produção está **bloqueada por deriva de publicação/domínio**, não declarada verde.
 - Nenhuma migration, escrita Supabase, alteração de RLS/RPC/Auth/Storage, deploy direto Cloudflare ou alteração de dados factuais foi executada.
 
 ## Próximo chunk bounded
