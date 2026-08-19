@@ -34,5 +34,10 @@ Revalidar, em modo read-only, os seis PDFs oficiais do catálogo nominal do Sena
 - Produção `https://rs.votopraquem.org`: HTTP 200.
 - Produção `/release.json`: HTTP 200, `sha` idêntico, versão `0.2.423`, snapshot com 1003 registros.
 
+## Verificação final do segundo commit documental
+- Commit `2a044d3b430576b0e82c4e15305e11bc1f238e2f` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32242524296`: `completed/success`, `headSha` idêntico.
+- Produção raiz e `/release.json`: HTTP 200; SHA idêntico ao commit, versão `0.2.424`, snapshot 1003.
+
 ## Próximo passo bounded
 Repetir GETs oficiais com retry controlado no próximo tick e manter o item Senado fail-closed; continuar lanes locais/publicação documental independentes sem inventar hash, URL, identidade ou voto.
