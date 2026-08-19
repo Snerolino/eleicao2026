@@ -23,6 +23,13 @@ if [[ -z "${PROMPT//[[:space:]]/}" ]]; then
   exit 42
 fi
 
+# Códigos OAuth/API nunca devem entrar no prompt nem ser encaminhados ao AGY.
+# A autenticação interativa deve ocorrer somente na janela oficial do navegador.
+if grep -Eqi '(^|[[:space:]])(4/[A-Za-z0-9._~-]{20,}|AIza[0-9A-Za-z_-]{20,}|ya29\.[0-9A-Za-z._-]{20,}|ghp_[0-9A-Za-z]{20,}|sk-[A-Za-z0-9_-]{20,}|Bearer[[:space:]]+[A-Za-z0-9._~-]{20,})($|[[:space:]])' <<<"$PROMPT"; then
+  echo 'credencial/código OAuth detectado no prompt; não encaminhado ao AGY. Faça a autenticação somente no navegador oficial.' >&2
+  exit 48
+fi
+
 RUNTIME="$ROOT/.orchestrator/runtime"
 mkdir -p "$RUNTIME/locks"
 exec 8>"$RUNTIME/locks/snapshot-antigravity.lock"

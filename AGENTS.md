@@ -64,6 +64,7 @@ Regras:
 - `docs/context-export/` é o contrato curado exposto ao raspador por MCP. Quando migrations alterarem schema, FKs, status, grants ou RLS relevantes, atualizar `docs/context-export/SCHEMA.md` e `CHANGELOG.md` no mesmo trabalho.
 - Nunca colocar credenciais, `.env`, payloads brutos ou PII em `docs/context-export/`.
 - OpenCode gratuito não recebe Supabase MCP nem outros MCPs no caminho orquestrado.
+- Autenticação interativa do AGY ocorre somente na janela oficial do navegador; nunca colar códigos OAuth, API keys ou tokens em prompts, chats, arquivos, logs ou task packets. O wrapper `run-antigravity.sh` rejeita padrões de credencial antes do envio.
 
 ## Operações remotas
 
