@@ -1,3 +1,12 @@
+## Release verification — documentação do tick (2026-08-19 06:01 UTC)
+
+- Commit documental `9c62ada88cb3ff6bd5ee65922f270d9270d10db3` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32221589008`, concluiu `success` com `headSha` idêntico.
+- Produção raiz e `/release.json`: HTTP 200; release confirma SHA completo `9c62ada88cb3ff6bd5ee65922f270d9270d10db3`, versão `0.2.393`.
+- QA do tick: `docs/qa/lote-continuous-ops-dataset-release-2026-08-19-0557.md`.
+- Nenhuma escrita factual Supabase foi executada; aplicações Senado permanecem fail-closed.
+- Próximo chunk: revalidar novamente o catálogo oficial Senado e suas seis `source_references`, sem aplicar enquanto URL/hash/UUID/FK não forem exatos.
+
 ## Tick contínuo — reconciliação dataset e release verificado (2026-08-19 05:58 UTC)
 
 - Lock bounded adquirido e liberado; worktree limpa.
