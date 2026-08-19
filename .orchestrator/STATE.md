@@ -1,3 +1,9 @@
+## Publicação/verificação — documentação do tick 20:10 UTC
+
+- Commit documental `1830d32ae9a49bbf8ee1b93a07ea835ac124739c` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32297150184`, concluiu `completed/success` com `headSha` idêntico.
+- Produção raiz HTTP 200 e `/release.json` HTTP 200; release confirma SHA idêntico, versão `0.2.461` e `row_count=1003`.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T20:10Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `595cf9d47602e4a3f7741eba798be4cc518ae973`.
