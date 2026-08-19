@@ -35,6 +35,13 @@ coincidem, apesar de 6/6 HTTP 200 e prefixo PDF válido. Sem igualdade SHA não 
 seguro substituir o manifesto, cadastrar novas `source_references` ou inserir
 votos. Não inventar hash, URL, identidade ou voto.
 
+## Publicação/verificação
+- Commit `c23c14e0b9057347cff23e211f69bf1e61a7fd3e` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32267316158`, concluiu `completed/success` com `headSha` idêntico.
+- Produção `https://rs.votopraquem.org`: raiz HTTP 200.
+- Produção `/release.json`: HTTP 200, SHA idêntico ao commit e `snapshot.row_count=1003`.
+- Nenhuma migration, escrita Supabase, alteração de RLS/RPC/Auth/Storage, deploy direto Cloudflare ou alteração de dados factuais foi executada.
+
 ## Próximo chunk bounded
 Repetir os seis GETs oficiais no próximo tick, sem gerar manifesto novo nem aplicar
 votos enquanto persistir a deriva SHA-256. Manter gates locais em Node 24 e tratar
