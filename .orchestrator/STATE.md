@@ -977,9 +977,9 @@ Sem autorização humana explícita própria, não fazer:
 
 ## Release verification — dry-run factual histórico Câmara (2026-08-19)
 
-- Commit `d2ad994bfbb8b7d04c316a0a420a34bd5bdcafac` foi publicado em `origin/main`.
+- Commit `1c8fc0bcfef5fa2633143640844659c5fddabbff` foi publicado em `origin/main`.
 - Backup Cloudflare `334951434`, run `32206014628`, concluiu `success` com `headSha` idêntico.
-- Produção confirmada após o run: HTTP 200 em `/release.json`, SHA `d2ad994bfbb8b7d04c316a0a420a34bd5bdcafac`, versão `0.2.0`, snapshot com 1003 candidaturas.
+- Produção confirmada após o run: HTTP 200 em `/release.json`, SHA `1c8fc0bcfef5fa2633143640844659c5fddabbff`, versão `0.2.0`, snapshot com 1003 candidaturas.
 - QA atualizado em `docs/qa/lote-camara-historical-dryrun-verification-2026-08-19.md`.
 - Próximo chunk: auditar catálogo remoto e FKs por `tse_candidate_id`, mantendo os 8 casos inelegíveis fail-closed.
 

@@ -37,10 +37,10 @@ casos bloqueados fora do plano.
 
 ## Publicação deste checkpoint
 
-- Commit documental: `d2ad994bfbb8b7d04c316a0a420a34bd5bdcafac` publicado em
+- Commit documental: `1c8fc0bcfef5fa2633143640844659c5fddabbff` publicado em
   `origin/main`.
 - Backup Cloudflare `334951434`, run `32206014628`, concluiu `success` com
   `headSha` idêntico ao commit.
 - Produção confirmada após o run: `https://rs.votopraquem.org/release.json` respondeu
-  HTTP 200 com SHA `d2ad994bfbb8b7d04c316a0a420a34bd5bdcafac`, versão `0.2.0` e
+  HTTP 200 com SHA `1c8fc0bcfef5fa2633143640844659c5fddabbff`, versão `0.2.0` e
   snapshot de `1003` candidaturas.
