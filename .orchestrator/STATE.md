@@ -963,3 +963,14 @@ Sem autorização humana explícita própria, não fazer:
 - Produção ainda confirma o release anterior `50e484c5...` via `/release.json`; o run backup correspondente ao novo commit ainda não foi identificado/concluído neste tick.
 - QA: `docs/qa/lote-camara-historical-idempotent-source-writer-2026-08-19.md`.
 - Próximo chunk: verificar o workflow backup `334951434` para `headSha=c90a371...`, confirmar `/release.json`, depois executar dry-run do importador histórico factual sem promover os 8 bloqueados.
+
+## Tick contínuo — verificação do dry-run factual histórico Câmara (2026-08-19 01:43 UTC)
+
+- Lock bounded adquirido e liberado; nenhum writer concorrente.
+- `HEAD`/`origin/main` confirmado em `5cac9a8a3cca5906f1178f55c575c84b99102d9b`.
+- Backup Cloudflare `334951434`, run `32205537792`, concluiu `success` com `headSha` idêntico; run posterior `32205704978` foi `skipped`.
+- Produção HTTP 200; `/release.json` confirmou SHA idêntico, versão `0.2.371` e snapshot de 1003 candidaturas.
+- Builder histórico e auditoria oficial passaram: 2 proposições, 6 eventos, 84 votos, 18 identidades elegíveis; 7 URLs HTTP 200 com bytes/SHA-256 revalidados.
+- `impact:dryrun` passou com plano 2/6/6/84 e nenhuma escrita remota.
+- QA: `docs/qa/lote-camara-historical-dryrun-verification-2026-08-19.md`.
+- Os 8 casos inelegíveis seguem fail-closed. Próximo chunk: auditar catálogo remoto e FKs por `tse_candidate_id`; materializar/aplicar somente após UUID/hash/schema/FK exatos.
