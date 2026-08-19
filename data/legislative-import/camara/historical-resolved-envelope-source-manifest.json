@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "mode": "read-only",
+  "source_domain": "dadosabertos.camara.leg.br",
+  "envelope": "data/legislative-import/camara/historical-resolved-envelope.json",
+  "urls": [
+    {
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2209381",
+      "status": 200,
+      "bytes": 2278,
+      "sha256": "sha256:c6c6ba658bb8880ca8f8f559f5cd840201b5fc56184caa2ba6eec256894c6273"
+    },
+    {
+      "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "status": 200,
+      "bytes": 79457,
+      "sha256": "sha256:1e7e76c9da6680c1eb9f044dfbb2b5fec057a29dc05d5282a55c2be51938ad5c"
+    },
+    {
+      "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "status": 200,
+      "bytes": 58685,
+      "sha256": "sha256:de2075a3559e0f5cdd828a5e999959b4fb9d7677515ba22e3106fd9cf9d0b287"
+    },
+    {
+      "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "status": 200,
+      "bytes": 58008,
+      "sha256": "sha256:5ce82d869a34547149d742d9e136f20151e2e10b7b2277b8b29b9ca4d2f5ad50"
+    },
+    {
+      "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "status": 200,
+      "bytes": 62394,
+      "sha256": "sha256:22fa0ace00322c330b81b68d3a524f49251cef296bf02ad664b6a34fbcca0ae5"
+    },
+    {
+      "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "status": 200,
+      "bytes": 60848,
+      "sha256": "sha256:7606555cbe1523bd7ab403813f6048069e2789e41b3a098c80d14cc391fb3636"
+    },
+    {
+      "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+      "status": 200,
+      "bytes": 70141,
+      "sha256": "sha256:b87af47156369cfb359c33993441d33dcbf433f019ac2c831b2d8405b400118e"
+    }
+  ]
+}

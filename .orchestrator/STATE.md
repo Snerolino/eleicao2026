@@ -1,3 +1,14 @@
+# Tick contínuo — contrato histórico Câmara e dry-run factual (2026-08-19)
+
+- Lock bounded adquirido e liberado; worktree limpa no início; nenhum writer concorrente.
+- Revalidação oficial das 7 URLs resolveu 7/7 HTTP 200; manifesto derivado confirmou bytes/SHA-256.
+- Adaptador CLI fail-closed executado: 2 proposições, 6 versões, 6 eventos, 84 votos, 18 candidatos elegíveis e 8 registros bloqueados.
+- `npm run impact:dryrun data/legislative-import/camara/historical-contract-envelope.json` passou sem escrita remota.
+- Auditoria de fontes passou com 7 URLs HTTP 200; nenhuma FK, UUID, voto, matriz, RPC, Supabase ou Cloudflare foi alterada.
+- Gates locais verdes: 76 arquivos/359 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check`.
+- QA: `docs/qa/lote-camara-historical-contract-dry-run-2026-08-19.md`.
+- Próximo chunk: revalidar catálogo remoto `source_references` por URL/hash e preparar writer idempotente apenas se as 7 referências tiverem UUID exato; manter 8 identidades inelegíveis fail-closed.
+
 # Tick contínuo — auditoria/aplicação de fontes históricas Câmara (2026-08-18)
 
 - Lock bounded adquirido e liberado; worktree limpa antes do chunk; nenhum writer concorrente.

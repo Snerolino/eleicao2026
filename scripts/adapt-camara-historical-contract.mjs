@@ -147,5 +147,27 @@ export function adaptCamaraHistoricalContract({ envelope, candidateCatalog, sour
 }
 
 if (process.argv[1]?.endsWith('adapt-camara-historical-contract.mjs')) {
-  console.error('Use este módulo via teste/importador; nenhuma escrita remota é executada.');
+  const { readFileSync, writeFileSync } = await import('node:fs');
+  const { resolve } = await import('node:path');
+  const root = resolve(import.meta.dirname, '..');
+  const readJson = (path) => JSON.parse(readFileSync(resolve(root, path), 'utf8'));
+  const envelope = readJson('data/legislative-import/camara/historical-resolved-envelope.json');
+  const candidateCatalog = readJson('data/legislative-import/camara/historical-resolved-catalog.json');
+  const sourceManifest = readJson('data/legislative-import/camara/historical-resolved-source-manifest.json');
+  const sourceInput = readJson('data/legislative-import/camara/historical-source-catalog-input.json');
+  const sourceCatalog = {
+    propositions: [{
+      nominal_vote_sources: sourceInput.sources.map((source) => ({
+        url: source.url,
+        http_status: sourceManifest.urls.find((entry) => entry.url === source.url)?.status,
+        bytes: sourceManifest.urls.find((entry) => entry.url === source.url)?.bytes,
+        sha256: source.content_hash.replace(/^sha256:/, ''),
+      })),
+    }],
+  };
+  const result = adaptCamaraHistoricalContract({ envelope, candidateCatalog, sourceManifest, sourceCatalog });
+  const output = process.argv[2] || 'data/legislative-import/camara/historical-contract-envelope.json';
+  writeFileSync(resolve(root, output), `${JSON.stringify(result.envelope, null, 2)}\n`);
+  writeFileSync(resolve(root, 'data/legislative-import/camara/historical-contract-dry-run.json'), `${JSON.stringify({ ...result, envelope: output }, null, 2)}\n`);
+  console.log(JSON.stringify(result.totals));
 }

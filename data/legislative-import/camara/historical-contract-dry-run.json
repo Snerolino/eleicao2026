@@ -1,0 +1,118 @@
+{
+  "envelope": "data/legislative-import/camara/historical-contract-envelope.json",
+  "supportCatalog": {
+    "legislatorsToCandidateId": {
+      "tse-candidate-210002537722": "bc25a9c2-3a15-454b-b1e8-888c6a366d4b",
+      "tse-candidate-210002541514": "9d3cb185-49eb-4d46-9dc3-5b7bbcc8e7d7",
+      "tse-candidate-210002537057": "a6f54550-15bb-4a75-bd8b-c75a1ea255ac",
+      "tse-candidate-210002537066": "ed16ff79-183c-46ee-af38-b2903cdb6fea",
+      "tse-candidate-210002537712": "18544dbc-171e-4efe-865b-9aebfd31edf6",
+      "tse-candidate-210002537717": "b5e9d477-fc45-4ee7-a972-d5e386134ac6",
+      "tse-candidate-210002536917": "44e185f9-b370-42f4-80c5-4f2d3b4416a4",
+      "tse-candidate-210002538556": "ca137aa8-99fe-4573-968d-7358fe492f34",
+      "tse-candidate-210002538537": "3f3d4e34-f0cf-4674-9d1d-9af0c7a3f522",
+      "tse-candidate-210002538541": "d6772dbe-a671-40a6-8cf9-916151fa8a64",
+      "tse-candidate-210002534656": "e2355507-af97-4305-8375-a6d23b55a4ab",
+      "tse-candidate-210002533902": "f11a78d6-40f3-476d-adc3-6d2d34857bbf",
+      "tse-candidate-210002534601": "3d10d681-85ed-42ce-a6f9-feab00d9e4f3",
+      "tse-candidate-210002534598": "e5bd28d0-782d-49b9-8fff-da203e4d5920",
+      "tse-candidate-210002534604": "65b71a02-73ea-40e5-8df2-c484b87fc565",
+      "tse-candidate-210002534671": "f3ce3ad2-76b4-4f85-997d-17fee42a991a",
+      "tse-candidate-210002534272": "6edecc57-157a-4c73-bd2f-06f0e7f47559",
+      "tse-candidate-210002534292": "622412cd-cd6b-4ce5-87d2-658bd73418e1"
+    },
+    "candidateByIdentifier": {
+      "210002537722": "bc25a9c2-3a15-454b-b1e8-888c6a366d4b",
+      "210002541514": "9d3cb185-49eb-4d46-9dc3-5b7bbcc8e7d7",
+      "210002537057": "a6f54550-15bb-4a75-bd8b-c75a1ea255ac",
+      "210002537066": "ed16ff79-183c-46ee-af38-b2903cdb6fea",
+      "210002537712": "18544dbc-171e-4efe-865b-9aebfd31edf6",
+      "210002537717": "b5e9d477-fc45-4ee7-a972-d5e386134ac6",
+      "210002536917": "44e185f9-b370-42f4-80c5-4f2d3b4416a4",
+      "210002538556": "ca137aa8-99fe-4573-968d-7358fe492f34",
+      "210002538537": "3f3d4e34-f0cf-4674-9d1d-9af0c7a3f522",
+      "210002538541": "d6772dbe-a671-40a6-8cf9-916151fa8a64",
+      "210002534656": "e2355507-af97-4305-8375-a6d23b55a4ab",
+      "210002533902": "f11a78d6-40f3-476d-adc3-6d2d34857bbf",
+      "210002534601": "3d10d681-85ed-42ce-a6f9-feab00d9e4f3",
+      "210002534598": "e5bd28d0-782d-49b9-8fff-da203e4d5920",
+      "210002534604": "65b71a02-73ea-40e5-8df2-c484b87fc565",
+      "210002534671": "f3ce3ad2-76b4-4f85-997d-17fee42a991a",
+      "210002534272": "6edecc57-157a-4c73-bd2f-06f0e7f47559",
+      "210002534292": "622412cd-cd6b-4ce5-87d2-658bd73418e1"
+    },
+    "sourceReferenceByKey": {
+      "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2209381": null,
+      "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002": null,
+      "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003": null,
+      "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224": null,
+      "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225": null,
+      "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226": null,
+      "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227": null
+    }
+  },
+  "contract": {
+    "officialSourceByUrl": {
+      "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2209381": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2209381",
+        "status": 200,
+        "bytes": 2278,
+        "content_hash": "sha256:c6c6ba658bb8880ca8f8f559f5cd840201b5fc56184caa2ba6eec256894c6273"
+      },
+      "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002": {
+        "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+        "status": 200,
+        "bytes": 79457,
+        "content_hash": "sha256:1e7e76c9da6680c1eb9f044dfbb2b5fec057a29dc05d5282a55c2be51938ad5c"
+      },
+      "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003": {
+        "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+        "status": 200,
+        "bytes": 58685,
+        "content_hash": "sha256:de2075a3559e0f5cdd828a5e999959b4fb9d7677515ba22e3106fd9cf9d0b287"
+      },
+      "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224": {
+        "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+        "status": 200,
+        "bytes": 58008,
+        "content_hash": "sha256:5ce82d869a34547149d742d9e136f20151e2e10b7b2277b8b29b9ca4d2f5ad50"
+      },
+      "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225": {
+        "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+        "status": 200,
+        "bytes": 62394,
+        "content_hash": "sha256:22fa0ace00322c330b81b68d3a524f49251cef296bf02ad664b6a34fbcca0ae5"
+      },
+      "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226": {
+        "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+        "status": 200,
+        "bytes": 60848,
+        "content_hash": "sha256:7606555cbe1523bd7ab403813f6048069e2789e41b3a098c80d14cc391fb3636"
+      },
+      "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227": {
+        "url": "https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227",
+        "status": 200,
+        "bytes": 70141,
+        "content_hash": "sha256:b87af47156369cfb359c33993441d33dcbf433f019ac2c831b2d8405b400118e"
+      }
+    },
+    "unresolvedRemoteSourceReferences": [
+      "source_references:https://dadosabertos.camara.leg.br/api/v2/proposicoes/2209381",
+      "source_references:https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9002",
+      "source_references:https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9003",
+      "source_references:https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9224",
+      "source_references:https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9225",
+      "source_references:https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9226",
+      "source_references:https://www.camara.gov.br/internet/votacao/mostraVotacao.asp?ideVotacao=9227"
+    ]
+  },
+  "totals": {
+    "propositions": 2,
+    "versions": 6,
+    "events": 6,
+    "votes": 84,
+    "candidates": 18,
+    "official_sources": 7,
+    "blocked_exact_records": 8
+  }
+}

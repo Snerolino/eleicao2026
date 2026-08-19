@@ -18,9 +18,8 @@ export function collectSourceUrls(envelope) {
 }
 
 async function main() {
-  const input = process.argv[2];
+  const input = process.argv[2] || 'data/legislative-import/camara/historical-resolved-envelope.json';
   const output = process.argv[3] || input.replace(/\.json$/, '-source-manifest.json');
-  if (!input) throw new Error('Uso: node scripts/audit-camara-envelope-sources.mjs <envelope.json> [manifest.json]');
   const envelope = JSON.parse(readFileSync(resolve(input), 'utf8'));
   const urls = collectSourceUrls(envelope);
   const rows = [];
