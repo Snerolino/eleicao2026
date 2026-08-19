@@ -7,6 +7,7 @@
 - Auditoria de fontes passou com 7 URLs HTTP 200; nenhuma FK, UUID, voto, matriz, RPC, Supabase ou Cloudflare foi alterada.
 - Gates locais verdes: 76 arquivos/359 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check`.
 - QA: `docs/qa/lote-camara-historical-contract-dry-run-2026-08-19.md`.
+- Commit `59246fe5fee32383cba3520741a151144f81214f` publicado; backup Cloudflare `334951434`, run `32201674930`, concluiu `success` com `headSha` idêntico; produção HTTP 200 e `/release.json` confirmaram o SHA.
 - Próximo chunk: revalidar catálogo remoto `source_references` por URL/hash e preparar writer idempotente apenas se as 7 referências tiverem UUID exato; manter 8 identidades inelegíveis fail-closed.
 
 # Tick contínuo — auditoria/aplicação de fontes históricas Câmara (2026-08-18)

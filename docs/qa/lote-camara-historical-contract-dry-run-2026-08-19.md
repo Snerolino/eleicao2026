@@ -30,6 +30,10 @@ adaptá-lo ao contrato do planner legislativo sem escrever no Supabase.
 - `data:check`: **1003 candidaturas / 988 fotos**, exit 0.
 - Build Vite/PWA/sitemap/release: exit 0; sitemap **1003 candidatos + 2 estáticas**.
 - `git diff --check`: exit 0.
+- Commit `59246fe5fee32383cba3520741a151144f81214f` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32201674930`, concluiu `success` com
+  `headSha` idêntico ao commit; produção respondeu HTTP 200 e `/release.json`
+  confirmou o mesmo SHA, versão `0.2.0` e 1003 candidaturas.
 
 ## Bloqueios e segurança
 
