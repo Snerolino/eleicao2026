@@ -1,3 +1,15 @@
+## Tick contínuo — catálogo oficial Senado preparado (2026-08-19 06:25 UTC)
+
+- Lock bounded adquirido e liberado; worktree estava limpa no início; nenhum writer concorrente.
+- Revalidação final dos seis endpoints oficiais Senado: 6/6 HTTP 200, 6 URLs únicas, 6 hashes únicos e payloads PDF. Uma falha DNS transitória em 2026/6341 foi recuperada com curl retry e registrada no manifesto final.
+- Criados `data/legislative-import/senado/nominal-source-manifest-2026-08-19.json` e `nominal-source-catalog-input.json`, somente dry-run-ready; nenhum UUID foi inventado.
+- `build-legislative-source-catalog.mjs` passou a aceitar prefixos oficiais Câmara/Senado; teste de contrato Senado adicionado.
+- Gates Node 24.19.0: 78 arquivos/367 testes, TypeScript, schema, data:check (1003 candidaturas/988 fotos), build e diff check verdes.
+- Nenhuma escrita Supabase/Cloudflare, source_reference, voto, FK, identidade, matriz ou RPC foi executada.
+- QA: `docs/qa/lote-senado-source-catalogo-2026-08-19.md`.
+- Bloqueio real: as seis referências ainda não estão resolvidas no catálogo remoto por URL+hash; Senado permanece fail-closed.
+- Próximo chunk: reconsultar catálogo remoto por URL/hash e preparar somente plano SQL/dry-run idempotente das seis referências, sem aplicar votos.
+
 ## Release verification — documentação do tick (2026-08-19 06:01 UTC)
 
 - Commit documental `9c62ada88cb3ff6bd5ee65922f270d9270d10db3` publicado em `origin/main`.

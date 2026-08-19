@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "source": "Senado Federal — relatórios oficiais de votações nominais",
+  "generated_at_utc": "2026-08-19T06:21:41Z",
+  "entries": [
+    {
+      "year": 2025,
+      "legislator_external_id": "6341",
+      "url": "https://legis.senado.leg.br/parlam-servicosweb/api/v1/relatorios/votacoes-nominais/ano/2025/parlamentar/6341",
+      "http_status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 138361,
+      "sha256": "sha256:a2f3b64d749beb7a998157ba493c4078f251c07a77fbfea38af5db515e10c91a",
+      "prefix": "255044462d312e35"
+    },
+    {
+      "year": 2025,
+      "legislator_external_id": "1186",
+      "url": "https://legis.senado.leg.br/parlam-servicosweb/api/v1/relatorios/votacoes-nominais/ano/2025/parlamentar/1186",
+      "http_status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 138557,
+      "sha256": "sha256:5c15609659907027cd73dec258de43976c00bb1aecd1debc55970c9e08960be5",
+      "prefix": "255044462d312e35"
+    },
+    {
+      "year": 2025,
+      "legislator_external_id": "825",
+      "url": "https://legis.senado.leg.br/parlam-servicosweb/api/v1/relatorios/votacoes-nominais/ano/2025/parlamentar/825",
+      "http_status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 138150,
+      "sha256": "sha256:f0c68a0253a370efa245226f9f173b9c1f46f79e9435fd7234ce660921cc39f0",
+      "prefix": "255044462d312e35"
+    },
+    {
+      "year": 2026,
+      "legislator_external_id": "6341",
+      "url": "https://legis.senado.leg.br/parlam-servicosweb/api/v1/relatorios/votacoes-nominais/ano/2026/parlamentar/6341",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "bytes": 97445,
+      "sha256": "sha256:0bcb214a208fa3eb3a81e174f100436fbfad5c88291f61ba5cbe81ca2991ef03",
+      "prefix": "255044462d312e35"
+    },
+    {
+      "year": 2026,
+      "legislator_external_id": "1186",
+      "url": "https://legis.senado.leg.br/parlam-servicosweb/api/v1/relatorios/votacoes-nominais/ano/2026/parlamentar/1186",
+      "http_status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 97431,
+      "sha256": "sha256:5f29297da34ef773769fc005c55f5252a6ca0a88821714a5ff942fe08b804c33",
+      "prefix": "255044462d312e35"
+    },
+    {
+      "year": 2026,
+      "legislator_external_id": "825",
+      "url": "https://legis.senado.leg.br/parlam-servicosweb/api/v1/relatorios/votacoes-nominais/ano/2026/parlamentar/825",
+      "http_status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 97376,
+      "sha256": "sha256:5dd0b734fd4ced52618d9358acc585785ddb4c7d20d3f5e60fa9d39a28ee8f1e",
+      "prefix": "255044462d312e35"
+    }
+  ],
+  "recovery_note": "Entrada 2026/6341 refeita via curl após falha DNS transitória do urllib; manifesto final contém 6/6 respostas HTTP 200."
+}

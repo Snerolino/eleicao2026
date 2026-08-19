@@ -55,8 +55,14 @@ function validateSource(source, index) {
     }
   }
   if (source.key !== source.url) throw new Error(`${where}.key deve ser igual a url`);
-  if (!source.url.startsWith('https://dadosabertos.camara.leg.br/') && !source.url.startsWith('https://www.camara.leg.br/')) {
-    throw new Error(`${where}.url fora das fontes públicas oficiais da Câmara`);
+  const officialPrefixes = [
+    'https://dadosabertos.camara.leg.br/',
+    'https://www.camara.leg.br/',
+    'https://www25.senado.leg.br/',
+    'https://legis.senado.leg.br/',
+  ];
+  if (!officialPrefixes.some((prefix) => source.url.startsWith(prefix))) {
+    throw new Error(`${where}.url fora das fontes públicas oficiais Câmara/Senado`);
   }
   if (!ALLOWED_CATEGORIES.has(source.source_category)) throw new Error(`${where}.source_category inválida`);
   if (!SHA_RE.test(source.content_hash)) throw new Error(`${where}.content_hash deve ser sha256:<64 hex>`);

@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "mode": "dry-run-ready",
+  "source_manifest": "data/legislative-import/senado/nominal-source-manifest-2026-08-19.json",
+  "sources": [
+    {
+      "key": "https://legis.senado.leg.br/parlam-servicosweb/api/v1/relatorios/votacoes-nominais/ano/2025/parlamentar/6341",
+      "source_name": "Senado Federal — Dados Abertos",
+      "source_category": "oficial",
+      "url": "https://legis.senado.leg.br/parlam-servicosweb/api/v1/relatorios/votacoes-nominais/ano/2025/parlamentar/6341",
+      "title": "Relatório oficial de votações nominais — Antonio Hamilton Martins Mourão — 2025",
+      "content_hash": "sha256:a2f3b64d749beb7a998157ba493c4078f251c07a77fbfea38af5db515e10c91a",
+      "hash_method": "raw-bytes-v1",
+      "legislator_external_id": "6341",
+      "year": 2025,
+      "bytes": 138361
+    },
+    {
+      "key": "https://legis.senado.leg.br/parlam-servicosweb/api/v1/relatorios/votacoes-nominais/ano/2025/parlamentar/1186",
+      "source_name": "Senado Federal — Dados Abertos",
+      "source_category": "oficial",
+      "url": "https://legis.senado.leg.br/parlam-servicosweb/api/v1/relatorios/votacoes-nominais/ano/2025/parlamentar/1186",
+      "title": "Relatório oficial de votações nominais — Luis Carlos Heinze — 2025",
+      "content_hash": "sha256:5c15609659907027cd73dec258de43976c00bb1aecd1debc55970c9e08960be5",
+      "hash_method": "raw-bytes-v1",
+      "legislator_external_id": "1186",
+      "year": 2025,
+      "bytes": 138557
+    },
+    {
+      "key": "https://legis.senado.leg.br/parlam-servicosweb/api/v1/relatorios/votacoes-nominais/ano/2025/parlamentar/825",
+      "source_name": "Senado Federal — Dados Abertos",
+      "source_category": "oficial",
+      "url": "https://legis.senado.leg.br/parlam-servicosweb/api/v1/relatorios/votacoes-nominais/ano/2025/parlamentar/825",
+      "title": "Relatório oficial de votações nominais — Paulo Paim — 2025",
+      "content_hash": "sha256:f0c68a0253a370efa245226f9f173b9c1f46f79e9435fd7234ce660921cc39f0",
+      "hash_method": "raw-bytes-v1",
+      "legislator_external_id": "825",
+      "year": 2025,
+      "bytes": 138150
+    },
+    {
+      "key": "https://legis.senado.leg.br/parlam-servicosweb/api/v1/relatorios/votacoes-nominais/ano/2026/parlamentar/6341",
+      "source_name": "Senado Federal — Dados Abertos",
+      "source_category": "oficial",
+      "url": "https://legis.senado.leg.br/parlam-servicosweb/api/v1/relatorios/votacoes-nominais/ano/2026/parlamentar/6341",
+      "title": "Relatório oficial de votações nominais — Antonio Hamilton Martins Mourão — 2026",
+      "content_hash": "sha256:0bcb214a208fa3eb3a81e174f100436fbfad5c88291f61ba5cbe81ca2991ef03",
+      "hash_method": "raw-bytes-v1",
+      "legislator_external_id": "6341",
+      "year": 2026,
+      "bytes": 97445
+    },
+    {
+      "key": "https://legis.senado.leg.br/parlam-servicosweb/api/v1/relatorios/votacoes-nominais/ano/2026/parlamentar/1186",
+      "source_name": "Senado Federal — Dados Abertos",
+      "source_category": "oficial",
+      "url": "https://legis.senado.leg.br/parlam-servicosweb/api/v1/relatorios/votacoes-nominais/ano/2026/parlamentar/1186",
+      "title": "Relatório oficial de votações nominais — Luis Carlos Heinze — 2026",
+      "content_hash": "sha256:5f29297da34ef773769fc005c55f5252a6ca0a88821714a5ff942fe08b804c33",
+      "hash_method": "raw-bytes-v1",
+      "legislator_external_id": "1186",
+      "year": 2026,
+      "bytes": 97431
+    },
+    {
+      "key": "https://legis.senado.leg.br/parlam-servicosweb/api/v1/relatorios/votacoes-nominais/ano/2026/parlamentar/825",
+      "source_name": "Senado Federal — Dados Abertos",
+      "source_category": "oficial",
+      "url": "https://legis.senado.leg.br/parlam-servicosweb/api/v1/relatorios/votacoes-nominais/ano/2026/parlamentar/825",
+      "title": "Relatório oficial de votações nominais — Paulo Paim — 2026",
+      "content_hash": "sha256:5dd0b734fd4ced52618d9358acc585785ddb4c7d20d3f5e60fa9d39a28ee8f1e",
+      "hash_method": "raw-bytes-v1",
+      "legislator_external_id": "825",
+      "year": 2026,
+      "bytes": 97376
+    }
+  ]
+}

@@ -9,6 +9,7 @@ import { describe, expect, it } from 'vitest';
 const root = resolve(import.meta.dirname, '..', '..');
 const scriptPath = resolve(root, 'scripts/build-legislative-source-catalog.mjs');
 const sourcesPath = resolve(root, 'data/legislative-import/camara/plp-230-2025-votacao-2580259-24-sources.json');
+const senadoSourcesPath = resolve(root, 'data/legislative-import/senado/nominal-source-catalog-input.json');
 
 function runCatalog(args) {
   return execFileSync(process.execPath, [scriptPath, ...args], {
@@ -32,6 +33,13 @@ describe('build-legislative-source-catalog', () => {
     expect(Object.values(catalog.sourceReferenceByKey)).toEqual([null, null, null, null]);
     expect(output).not.toMatch(/[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}/i);
     expect(output).not.toMatch(/service_role|apikey|Authorization|Bearer/i);
+  });
+
+  it('aceita catálogo oficial do Senado sem UUID inventado', () => {
+    const catalog = JSON.parse(runCatalog([senadoSourcesPath]));
+    expect(catalog.sourceReferences).toHaveLength(6);
+    expect(catalog.unresolved).toHaveLength(6);
+    expect(Object.values(catalog.sourceReferenceByKey)).toEqual([null, null, null, null, null, null]);
   });
 
   it('emite SQL revisável para source_references sem executar Supabase', () => {
