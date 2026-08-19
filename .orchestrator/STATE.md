@@ -906,3 +906,14 @@ Sem autorização humana explícita própria, não fazer:
 - Produção respondeu HTTP 200; `/release.json` confirmou SHA `19b13448987a6f5d4ad738921920561088723b2d`, release `19b1344-20260818T231713881Z`, versão `0.2.358` e snapshot de 1003 candidaturas.
 - Nenhuma referência histórica foi materializada remotamente; o catálogo permanece com 7 entradas ausentes e os 8 casos inelegíveis seguem fail-closed.
 - Próximo chunk: dry-run remoto do input histórico, com revalidação oficial de URL/bytes/hash antes de qualquer aplicação idempotente.
+
+## Tick contínuo — dry-run histórico Câmara e revalidação de fontes (2026-08-18)
+
+- Lock bounded adquirido e liberado; nenhum writer concorrente.
+- Node `v24.19.0` usado no chunk; o doctor executado no shell cron continua acusando Node 22, mas os gates do projeto foram executados explicitamente com Node 24.
+- Adaptador local refez o envelope: 2 proposições, 6 versões, 6 eventos, 84 votos, 18 candidatos elegíveis, 7 fontes oficiais e 8 registros bloqueados.
+- Auditoria oficial refez 7/7 GETs Câmara com HTTP 200; manifesto transitório registrou bytes e SHA-256 revalidados.
+- `impact:dryrun` com envelope e catálogo adaptados passou RC 0; plano 2/6/6/84, nenhuma escrita remota.
+- Artefatos transitórios em `.orchestrator/runtime/camara-historical-scout/`; QA: `docs/qa/lote-camara-historical-dry-run-source-revalidation-2026-08-18.md`.
+- Nenhuma proposição, evento, voto, identidade, FK, `source_reference`, matriz, RPC, Supabase ou Cloudflare foi alterado; os 8 casos inelegíveis permanecem fail-closed.
+- Próximo chunk: executar gates locais completos e publicar este checkpoint; depois auditar novamente o catálogo remoto e preparar writer idempotente das 7 referências, sem aplicar os bloqueados.
