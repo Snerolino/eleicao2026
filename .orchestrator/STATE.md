@@ -1,3 +1,9 @@
+## Publicação/verificação
+- Commit documental `4f95075aa12a161f8801eb049737592673183e46` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32300597168`, concluiu `completed/success` com `headSha` idêntico.
+- Produção `https://rs.votopraquem.org/`: raiz HTTP 200 e `/release.json` HTTP 200.
+- Release de produção confirma SHA `4f95075aa12a161f8801eb049737592673183e46`, versão `0.2.0` e `snapshot.row_count=1003`.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T20:48Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `aec4e6ca533d90d797824d6ec8ef2973d5c53555`.

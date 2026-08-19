@@ -26,5 +26,11 @@ Executados com Node `v24.19.0`:
 - A diferença de bytes melhorou para `5/6`, mas não altera o gate: SHA-256 continua `0/6`.
 - O doctor do cron permanece com FAIL estrutural no shell Node 22.22.2; este tick executou os gates com Node 24.19.0. OpenCode ausente e Ollama sem resposta são WARN opcionais.
 
+## Publicação/verificação
+- Commit documental `4f95075aa12a161f8801eb049737592673183e46` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32300597168`, concluiu `completed/success` com `headSha` idêntico.
+- Produção raiz HTTP 200 e `/release.json` HTTP 200.
+- `/release.json` confirma SHA `4f95075aa12a161f8801eb049737592673183e46`, versão `0.2.0` e `snapshot.row_count=1003`.
+
 ## Próximo passo
 No próximo tick, repetir os seis GETs oficiais sem gerar manifesto novo; manter o writer factual parado até resolução explícita da deriva SHA-256 e continuar a verificação/publicação documental independente.
