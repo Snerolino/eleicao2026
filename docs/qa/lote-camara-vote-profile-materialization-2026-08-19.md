@@ -37,8 +37,19 @@ bloqueada ou fonte foi alterada. O writer só materializou derivados dos votos
 factuais já existentes. As 8 identidades históricas inelegíveis permanecem
 fail-closed.
 
+## Publicação verificada
+
+- Commit `6c94c27bfb23440fa2fe849322accadbdb8410a8` está em `origin/main`.
+- O disparo manual do workflow backup `334951434` encontrou erro transitório de
+  conexão com `api.github.com`; não foi usado como prova de sucesso.
+- Apesar disso, produção respondeu HTTP 200 e `/release.json` confirmou o SHA
+  completo `6c94c27bfb23440fa2fe849322accadbdb8410a8`, versão `0.2.0` e release
+  `6c94c27-20260819T032347891Z`.
+- A listagem posterior do workflow ainda não expôs um run `headSha` deste
+  commit; a confirmação de produção é independente e suficiente para o gate de
+  publicação deste checkpoint.
+
 ## Próximo passo
 
-Executar os gates locais completos, publicar este checkpoint e verificar o
-backup Cloudflare/produção. Depois, selecionar o próximo lote legislativo
-independente sem inferir identidades ou votos sem fonte oficial.
+Selecionar o próximo lote legislativo independente sem inferir identidades ou
+votos sem fonte oficial.

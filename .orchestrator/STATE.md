@@ -7,7 +7,12 @@
 - Releitura remota: 4.281 votos factuais com candidato, 4.281 índices e 41 perfis; ALRS 13 perfis/4.000 votos e Câmara 28 perfis/281 votos.
 - Nenhuma migration, RLS/RPC/Auth/Storage, claim, matriz, identidade bloqueada ou fonte foi alterada; as 8 identidades históricas inelegíveis permanecem fail-closed.
 - QA: `docs/qa/lote-camara-vote-profile-materialization-2026-08-19.md`.
-- Próximo chunk: executar gates locais completos, publicar este checkpoint e verificar CI/Cloudflare/produção.
+- Gates locais completos passaram: 78 arquivos/366 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check`.
+- Commit `6c94c27bfb23440fa2fe849322accadbdb8410a8` publicado em `origin/main`.
+- Disparo manual do backup `334951434` encontrou erro transitório de conexão com `api.github.com`; a confirmação independente de produção passou: HTTP 200 e `/release.json` com SHA completo `6c94c27bfb23440fa2fe849322accadbdb8410a8`, versão `0.2.0`, release `6c94c27-20260819T032347891Z`.
+- A listagem posterior do workflow ainda não expôs run com este `headSha`; não atribuir sucesso de run específico sem essa evidência.
+- QA: `docs/qa/lote-camara-vote-profile-materialization-2026-08-19.md`.
+- Próximo chunk: selecionar o próximo lote legislativo independente sem inferir identidades ou votos sem fonte oficial.
 
 # Tick contínuo — publicação da aplicação histórica Câmara (2026-08-19)
 
