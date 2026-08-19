@@ -1,3 +1,9 @@
+## Release verification — revalidação Senado (2026-08-19T13:40Z)
+
+- Commit `d181d2d101ee32b792a62b29e2b5ad8fa5518a96` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32259303211`, concluiu `completed/success` com `headSha` idêntico.
+- Produção raiz HTTP 200; `/release.json` confirma SHA idêntico, versão `0.2.439` e snapshot `row_count=1003`.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva SHA persistente (2026-08-19T13:15Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `bc393440216db1aca8d08b2ad5376083ade4bf78`.

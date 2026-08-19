@@ -25,5 +25,11 @@ Repetir os seis GETs oficiais do catálogo nominal do Senado em modo read-only, 
 ## Bloqueio real
 A resposta oficial permanece binariamente instável em relação ao manifesto: 0/6 SHA-256 coincidem, apesar de 6/6 HTTP 200 e prefixo PDF válido. Sem igualdade SHA não é seguro substituir o manifesto nem inserir fontes/votos.
 
+## Publicação/verificação
+- Commit documental `d181d2d101ee32b792a62b29e2b5ad8fa5518a96` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32259303211`: `completed/success`, `headSha` idêntico.
+- Produção raiz: HTTP 200.
+- Produção `/release.json`: HTTP 200; `sha` confirma `d181d2d101ee32b792a62b29e2b5ad8fa5518a96`, versão `0.2.439`, snapshot `row_count=1003`.
+
 ## Próximo passo bounded
 No próximo tick, repetir os seis GETs sem gerar manifesto novo nem aplicar votos enquanto persistir a deriva SHA-256. Se os gates locais estiverem disponíveis com Node 24, executar a matriz completa; caso contrário registrar o bloqueio de runtime sem mascará-lo.
