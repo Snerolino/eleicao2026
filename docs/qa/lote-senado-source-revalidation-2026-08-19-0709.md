@@ -41,6 +41,14 @@ fail-closed para parser, votos, identidades, FKs e aplicação remota.
 Nenhum UUID, candidato TSE, legislador, voto, proposição, matriz, claim, RPC,
 RLS, Supabase ou Cloudflare foi alterado.
 
+## Publicação verificada
+
+- Commit `da85075c32d5b36b4121b11973d5d686b3ddbde2` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32226647319`, concluiu `success` com `headSha` idêntico.
+- Produção raiz e `/release.json` responderam HTTP 200; `/release.json` confirmou
+  o SHA completo, release `da85075-20260819T071125205Z`, versão `0.2.399` e
+  snapshot com 1003 candidaturas.
+
 ## Próximo passo bounded
 
 Preservar os seis payloads transitórios para comparação de conteúdo e revisar a
