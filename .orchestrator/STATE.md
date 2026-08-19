@@ -5,7 +5,8 @@
 - Dry-run `scripts/apply-senado-nominal-sources.mjs`: 6 planejadas, 0 ausentes, 0 inserções, 0 votos tocados.
 - Reconciliação do CSV oficial local contra o snapshot: 1003/1003 IDs, 0 somente no dataset e 0 somente no snapshot.
 - Nenhuma escrita factual ou remota foi executada; Senado permanece fail-closed por deriva binária do catálogo.
-- QA: `docs/qa/lote-senado-source-revalidation-2026-08-19-0815.md`.
+- QA: `docs/qa/lote-senado-source-revalidation-2026-08-19-0815.md` e `docs/qa/lote-senado-release-verification-2026-08-19-0815.md`.
+- Publicação verificada: commit `c268d9acf14e7caf3c855eaab578658eb7006def`, backup Cloudflare `334951434`, run `32232544550` success com `headSha` idêntico; produção raiz e `/release.json` HTTP 200, SHA idêntico, versão `0.2.408`, snapshot 1003.
 - Próximo chunk: preservar/revisar a deriva binária dos PDFs e manter o Senado fail-closed; não gerar manifesto novo nem aplicar votos sem fonte estável, R0/schema/FK e idempotência.
 
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19 07:58 UTC)
