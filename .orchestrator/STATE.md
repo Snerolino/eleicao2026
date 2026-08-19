@@ -1,3 +1,15 @@
+# Tick contínuo — writer histórico Câmara em dry-run verificado (2026-08-19)
+
+- Lock bounded adquirido e liberado; nenhum writer concorrente.
+- Implementado `scripts/apply-camara-historical-resolved.mjs` com `dry-run` por padrão e `--apply` explícito; adicionado comando `npm run impact:camara:historical:write`.
+- Contrato Vitest adicionado em `scripts/__tests__/apply-camara-historical-resolved.test.mjs`.
+- Dry-run verificado: 2 proposições, 6 versões, 6 eventos, 84 votos, 18 identidades elegíveis, 8 bloqueadas, 7 fontes; zero escrita remota.
+- Gates locais com Node 24.19.0: 78 arquivos/366 testes, TypeScript, schema, data:check (1003 candidaturas/988 fotos), build e diff check verdes.
+- Doctor smoke: OK=51, WARN=5, FAIL=1; FAIL restrito à comprovação da rota MCP Codex read-only, com fallback Codex exec verde.
+- QA: `docs/qa/lote-camara-historical-idempotent-writer-dryrun-2026-08-19.md`.
+- Nenhuma proposição, evento, voto, identidade, FK, source_reference, matriz, RPC, Supabase ou Cloudflare foi alterada; 8 identidades inelegíveis permanecem fail-closed.
+- Próximo chunk: revalidar read-only identidade remota por `tse_candidate_id`, schema/FK e 7 fontes por URL/hash; somente então executar `--apply`, provar idempotência e publicar.
+
 # Tick contínuo — catálogo remoto histórico Câmara revalidado (2026-08-19)
 
 - Lock bounded adquirido e liberado; nenhum writer concorrente.
