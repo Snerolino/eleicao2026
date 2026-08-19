@@ -949,3 +949,17 @@ Sem autorização humana explícita própria, não fazer:
 - Follow-up documental `af5318a87c6c8bf2d5a39cff5332e856007d8bc4` também foi publicado; backup `334951434`, run `32199939419`, concluiu `success` com `headSha` idêntico e produção confirmou o SHA final.
 - Consolidação final `5e92d6ecff437c7e365fa00957ca87e84b80ce1c` foi publicada; backup `334951434`, run `32200089176`, concluiu `success` com `headSha` idêntico, produção HTTP 200 e `/release.json` confirmou release `5e92d6e-20260819T001012333Z`, versão `0.2.364` e snapshot com 1003 candidaturas.
 - Próximo chunk: auditar novamente o catálogo remoto e preparar writer idempotente das 7 referências; nenhum dos 8 registros bloqueados pode ser promovido.
+
+## Tick contínuo — writer idempotente de fontes históricas Câmara (2026-08-19 01:24 UTC)
+
+- Lock bounded adquirido e liberado; nenhum writer concorrente.
+- Doctor smoke com Node `v24.19.0`: `OK=53 WARN=4 FAIL=0`; OpenCode ausente e Ollama sem preflight continuam apenas warnings.
+- Auditoria oficial `npm run impact:camara:sources:audit`: `7` URLs, todas HTTP 200; manifesto de bytes/SHA-256 regenerado.
+- Writer em `scripts/apply-camara-q1-sources.mjs` ampliado para catálogo histórico explícito via `--input=`/`--manifest=`, dry-run por padrão, `--apply` explícito, paginação remota, revalidação pós-inserção e resolução somente de UUID + hash exatos.
+- Teste focado criado: `5/5` verde. Gates completos: `77 arquivos / 364 testes`, TypeScript, schema, `data:check` (`1003` candidaturas/`988` fotos), build e diff check verdes.
+- Dry-run histórico: `7` fontes planejadas, `7` validadas localmente, `remote_apply=false`, `inserted=0`, `votes_touched=0`.
+- Nenhuma escrita Supabase, voto, proposição, evento, FK, identidade, matriz ou Cloudflare foi executada neste chunk; 8 identidades inelegíveis continuam fail-closed.
+- Commit funcional em `origin/main`: `c90a371e0c56446fbb2e1865b6c51e58db57c4ac`.
+- Produção ainda confirma o release anterior `50e484c5...` via `/release.json`; o run backup correspondente ao novo commit ainda não foi identificado/concluído neste tick.
+- QA: `docs/qa/lote-camara-historical-idempotent-source-writer-2026-08-19.md`.
+- Próximo chunk: verificar o workflow backup `334951434` para `headSha=c90a371...`, confirmar `/release.json`, depois executar dry-run do importador histórico factual sem promover os 8 bloqueados.
