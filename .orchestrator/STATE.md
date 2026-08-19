@@ -8,7 +8,9 @@
 - Nenhuma proposição, evento, voto, identidade, FK, `source_reference`, matriz, claim, Supabase ou Cloudflare foi alterado.
 - Bloqueio: falta catálogo versionado de referências por URL/hash e reconciliação remota exata de identidade/FK; o parser ainda usa descrição textual de fonte no envelope.
 - QA: `docs/qa/lote-senado-nominal-source-scout-2026-08-19.md`.
-- Próximo chunk: catalogar os seis endpoints oficiais e executar reconciliação read-only por identidade/FK; manter Senado fail-closed até `source_reference` e identidade exatas.
+- Deploy backup `334951434`, run `32215881748`, concluiu `success` com `headSha=21c681dd2f0a1ad6ac792ea35669a5f112944da3`.
+- Produção respondeu raiz HTTP 200 e `/release.json` HTTP 200, mas ainda exibe SHA anterior `4d94e55cd559d14780a7c0b0e0c830f1202275ed`; publicação deste commit permanece pendente de propagação/verificação no próximo tick.
+- Próximo chunk: revalidar propagação do release e, em paralelo, catalogar os seis endpoints oficiais e executar reconciliação read-only por identidade/FK; manter Senado fail-closed até `source_reference` e identidade exatas.
 
 ## Tick contínuo — publicação verificada dataset/release (2026-08-19 04:08 UTC)
 
