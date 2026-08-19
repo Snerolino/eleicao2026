@@ -1,6 +1,16 @@
+# Tick contínuo — catálogo remoto histórico Câmara revalidado (2026-08-19)
+
+- Lock bounded adquirido e liberado; nenhum writer concorrente.
+- Consulta remota read-only paginada leu 132 `source_references`; as 7 URLs do envelope têm UUID remoto exato e hash coincidente (7/7, 0 ausentes, 0 divergentes).
+- Artefato: `.orchestrator/runtime/camara-historical-scout/catalog-revalidation-2026-08-19.json`.
+- `npm run impact:dryrun data/legislative-import/camara/historical-contract-envelope.json`: exit 0; 2 proposições, 6 versões, 6 eventos, 84 votos.
+- Teste focado: 5/5 verde. Nenhuma escrita remota, identidade, FK, matriz, RPC ou Cloudflare foi alterada.
+- QA: `docs/qa/lote-camara-historical-source-catalog-revalidation-2026-08-19.md`.
+- Próximo chunk: implementar/revisar writer histórico idempotente dry-run por padrão, com `--apply` explícito, usando somente as 7 referências resolvidas e as 18 identidades elegíveis; manter 8 inelegíveis fail-closed.
+
 # Tick contínuo — contrato histórico Câmara e dry-run factual (2026-08-19)
 
-- Lock bounded adquirido e liberado; worktree limpa no início; nenhum writer concorrente.
+- Lock bounded adquirido e liberado; nenhum writer concorrente.
 - Revalidação oficial das 7 URLs resolveu 7/7 HTTP 200; manifesto derivado confirmou bytes/SHA-256.
 - Adaptador CLI fail-closed executado: 2 proposições, 6 versões, 6 eventos, 84 votos, 18 candidatos elegíveis e 8 registros bloqueados.
 - `npm run impact:dryrun data/legislative-import/camara/historical-contract-envelope.json` passou sem escrita remota.
