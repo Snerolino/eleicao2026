@@ -36,8 +36,10 @@ coincidem, apesar de 6/6 HTTP 200 e prefixo PDF válido. Sem igualdade SHA não
 votos. Não inventar hash, URL, identidade ou voto.
 
 ## Publicação/verificação
-- Este tick preparou documentação local; commit/push e verificação de produção
-  serão executados após o gate documental.
+- Commit `91e5aeb8c166297ec3bdc9fd62ba98030efbc057` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32270981774`, concluiu `completed/success` com `headSha` idêntico.
+- Produção `https://rs.votopraquem.org`: raiz HTTP 200.
+- Produção `/release.json`: SHA `91e5aeb8c166297ec3bdc9fd62ba98030efbc057`, versão `0.2.447`, snapshot `row_count=1003`.
 - Nenhuma migration, escrita Supabase, alteração de RLS/RPC/Auth/Storage,
   deploy direto Cloudflare ou alteração factual foi executada.
 
