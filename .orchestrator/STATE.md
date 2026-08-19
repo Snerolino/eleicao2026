@@ -1,3 +1,14 @@
+# Tick contínuo — materialização de perfis nominais Câmara (2026-08-19 03:21 UTC)
+
+- Lock bounded adquirido e liberado; worktree limpa antes do chunk; nenhum writer concorrente.
+- Gate remoto read-only passou: projeto Supabase vinculado, migrations alinhadas até `20260816100000`, schema legislativo presente e constraints compostas exatas em `legislator_vote_index (candidate_id, voting_event_id)` e `legislator_vote_profile (candidate_id, house)`.
+- Dry-run `node scripts/build-vote-profile.mjs` passou com Node `v24.19.0`: 4.281 votos factuais com candidato, 4.281 índices e 41 perfis.
+- Primeiro `--apply` passou; segundo `--apply` passou, comprovando idempotência.
+- Releitura remota: 4.281 votos factuais com candidato, 4.281 índices e 41 perfis; ALRS 13 perfis/4.000 votos e Câmara 28 perfis/281 votos.
+- Nenhuma migration, RLS/RPC/Auth/Storage, claim, matriz, identidade bloqueada ou fonte foi alterada; as 8 identidades históricas inelegíveis permanecem fail-closed.
+- QA: `docs/qa/lote-camara-vote-profile-materialization-2026-08-19.md`.
+- Próximo chunk: executar gates locais completos, publicar este checkpoint e verificar CI/Cloudflare/produção.
+
 # Tick contínuo — publicação da aplicação histórica Câmara (2026-08-19)
 
 - Commit `ff92c3e50b6caec2dcf43038c1292fccbf6cdcd9` publicado em `origin/main`.
