@@ -1,3 +1,11 @@
+## Release verification — revalidação Senado (2026-08-19T12:15:30Z)
+
+- Commit documental `7beebc10167e12f8d92ff845b797ad7b3107bf25` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32251540611`, concluiu `completed/success` com `headSha` idêntico.
+- Produção raiz e `/release.json`: HTTP 200; `/release.json` confirma SHA `7beebc10167e12f8d92ff845b797ad7b3107bf25`, versão `0.2.435` e snapshot `1003`.
+- QA atualizado em `docs/qa/lote-senado-source-revalidation-2026-08-19-1213.md`.
+- Senado permanece fail-closed por deriva binária; nenhum dado factual remoto foi aplicado.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T12:13:10Z)
 
 - Lock bounded adquirido e liberado; worktree iniciou limpa.

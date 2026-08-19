@@ -30,3 +30,9 @@ Deriva binária persistente: 0/6 SHA-256 coincide com o manifesto. Não gerar ma
 
 ## Próximo passo bounded
 Publicar esta documentação e verificar o workflow backup/produção. No próximo tick, repetir os seis GETs sem gerar manifesto novo nem aplicar votos enquanto persistir a deriva.
+
+## Publicação verificada (2026-08-19T12:15:30Z)
+- Commit `7beebc10167e12f8d92ff845b797ad7b3107bf25` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32251540611`: `completed/success`, `headSha` idêntico.
+- Produção raiz e `/release.json`: HTTP 200.
+- `/release.json`: SHA `7beebc10167e12f8d92ff845b797ad7b3107bf25`, versão `0.2.435`, snapshot `1003`.
