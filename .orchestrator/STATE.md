@@ -2,7 +2,7 @@
 
 - Commit documental `916ac23cbc3b777f1f61e8ae78e959d3d49aeac4` publicado em `origin/main`.
 - Backup Cloudflare `334951434`, run `32240414747`, concluiu `success` com `headSha` idêntico.
-- Produção raiz e `/release.json`: HTTP 200; release confirma SHA completo idêntico, versão `0.2.0`, snapshot 1003.
+- Produção raiz e `/release.json`: HTTP 200; release confirma SHA completo idêntico e snapshot 1003.
 - QA: `docs/qa/lote-senado-source-revalidation-2026-08-19-0957.md`.
 
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19 09:57 UTC)
