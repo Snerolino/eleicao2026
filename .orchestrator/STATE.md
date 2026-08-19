@@ -1,3 +1,13 @@
+## Tick contínuo — deriva do catálogo oficial Senado detectada (2026-08-19 06:48 UTC)
+
+- Lock bounded adquirido e liberado; worktree limpa no início; nenhum writer concorrente.
+- Reconhecimento read-only refez os seis GETs oficiais Senado: 5/6 HTTP 200 e 1/6 com falha DNS transitória.
+- Nenhuma das cinco respostas HTTP 200 coincidiu em bytes + SHA-256 com o manifesto versionado; o catálogo está stale/volátil e permanece fail-closed.
+- Dry-run local de `scripts/apply-senado-nominal-sources.mjs`: 6 planejadas, 0 ausentes, 0 inserções, 0 votos tocados; o comando não consulta remoto em dry-run.
+- Nenhuma fonte, voto, identidade, FK, candidato, proposição, matriz, claim, RPC, Supabase ou Cloudflare foi alterada.
+- QA: `docs/qa/lote-senado-source-revalidation-drift-2026-08-19.md`.
+- Próximo chunk: repetir GETs com retry controlado, preservar bytes transitórios e revisar novo manifesto somente após 6/6 HTTP 200; depois parser/dry-run usando somente `legislator_id`.
+
 ## Tick contínuo — catálogo oficial Senado preparado (2026-08-19 06:25 UTC)
 
 - Lock bounded adquirido e liberado; worktree estava limpa no início; nenhum writer concorrente.
