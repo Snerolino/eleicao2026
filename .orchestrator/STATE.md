@@ -1,3 +1,16 @@
+## Tick contínuo — reconciliação dataset e release verificado (2026-08-19 05:58 UTC)
+
+- Lock bounded adquirido e liberado; worktree limpa.
+- `HEAD`/`origin/main` em `867c011258899f119a3c94b320a5b67e6840b2a0`.
+- Doctor smoke: `OK=51 WARN=5 FAIL=1`; FAIL restrito ao shell cron em Node `v22.22.2`. Gates executados com Node `v24.19.0`.
+- Reconciliação read-only correta do CSV oficial `../dataset2026/candidatos/consulta_cand_2026/consulta_cand_2026_RS.csv`: 1003/1003 linhas e IDs contra o snapshot, 0 somente no dataset e 0 somente no snapshot.
+- Gates locais: 78 arquivos/366 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check` verdes.
+- Produção raiz e `/release.json`: HTTP 200; release confirma SHA completo `867c011258899f119a3c94b320a5b67e6840b2a0`, versão `0.2.392`.
+- Backup Cloudflare `334951434`: runs deste SHA ficaram `skipped`; disparo manual falhou com `error connecting to api.github.com`. Produção confirma o SHA, mas nenhum run específico deve ser atribuído.
+- Nenhuma escrita factual Supabase foi executada.
+- QA: `docs/qa/lote-continuous-ops-dataset-release-2026-08-19-0557.md`.
+- Próximo chunk: revalidar GitHub API e localizar run concluído com `headSha=867c011258899f119a3c94b320a5b67e6840b2a0`; manter aplicações Senado fail-closed.
+
 ## Tick contínuo — reconciliação TSE e release bloqueado por rede (2026-08-19 05:36 UTC)
 
 - Lock bounded adquirido e liberado; worktree limpa no início.
