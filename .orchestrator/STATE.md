@@ -1,3 +1,15 @@
+## Tick contínuo — revalidação read-only de fontes ALRS FED-17 (2026-08-19 03:44 UTC)
+
+- Lock bounded adquirido e liberado; nenhum writer concorrente.
+- Cinco GETs sequenciais ao Portal da Transparência ALRS responderam HTTP 200.
+- Bytes, SHA-256 e contagem de `data-item` coincidiram exatamente em 5/5 com `data/legislative-import/alrs-fed17/recovery-manifest.json`.
+- `npm run impact:alrs:sources:backfill` em dry-run: 2 eventos elegíveis, 0 votos, 0 fontes, 3 eventos bloqueados e 1 identidade bloqueada.
+- Auditoria estrita read-only segue exit 2 por lacunas reais: ALRS 3985/4000 votos com fonte, Câmara 279/281, Senado 0/455.
+- Nenhuma escrita remota, identidade, FK, UUID, matriz, claim, RPC ou Cloudflare foi alterada.
+- QA: `docs/qa/lote-alrs-fed17-revalidacao-fontes-2026-08-19.md`.
+- Doctor do shell cron tem FAIL apenas por Node 22.22.2; gates deste chunk foram executados com Node 24.19.0.
+- Próximo chunk: revalidar outro lote legislativo independente por fonte/schema/FK, mantendo a fila ALRS fail-closed até existir correspondência exata aplicável.
+
 # Tick contínuo — materialização de perfis nominais Câmara (2026-08-19 03:21 UTC)
 
 - Lock bounded adquirido e liberado; worktree limpa antes do chunk; nenhum writer concorrente.
