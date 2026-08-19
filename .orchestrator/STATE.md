@@ -923,4 +923,5 @@ Sem autorização humana explícita própria, não fazer:
 - Commit `ccc44a1ee4bca20f0235ca9d2fd031b26aee9256` publicado em `origin/main`.
 - Backup Cloudflare `334951434`, run `32199836179`, concluiu `success` com `headSha` idêntico.
 - Produção respondeu HTTP 200; `/release.json` confirmou SHA completo, release `ccc44a1-20260819T000527903Z`, versão `0.2.362` e snapshot com 1003 candidaturas.
+- Follow-up documental `af5318a87c6c8bf2d5a39cff5332e856007d8bc4` também foi publicado; backup `334951434`, run `32199939419`, concluiu `success` com `headSha` idêntico e produção confirmou o SHA final.
 - Próximo chunk: auditar novamente o catálogo remoto e preparar writer idempotente das 7 referências; nenhum dos 8 registros bloqueados pode ser promovido.
