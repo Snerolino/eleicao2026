@@ -1,3 +1,11 @@
+## Release verification — documentação do tick (2026-08-19 08:51 UTC)
+
+- Commit `92a955266071cd2df7ae3dcad3e459482dd42b0c` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32234591902`, concluiu `success` com `headSha` idêntico.
+- Produção raiz HTTP 200; `/release.json` confirma SHA completo idêntico,
+  versão `0.2.412` e snapshot 1003.
+- Nenhuma escrita factual remota foi executada; Senado permanece fail-closed.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19 08:49 UTC)
 
 - Lock bounded adquirido e liberado; worktree estava limpa antes da documentação.

@@ -48,14 +48,13 @@ fail-closed enquanto as respostas do portal forem voláteis.
 
 ## Publicação/verificação
 
-- Não houve mudança funcional nem novo commit neste tick; o HEAD é
-  `fc0b06ce9af306d6d8fc2360cf133261e4de1fe1`.
+- O lote documental foi commitado e enviado para `origin/main` no commit
+  `92a955266071cd2df7ae3dcad3e459482dd42b0c`.
+- Backup Cloudflare workflow `334951434`: run `32234591902` concluído
+  `success`, com `headSha` idêntico ao commit publicado.
 - Produção raiz: **HTTP 200**.
-- `https://rs.votopraquem.org/release.json`: SHA completo coincide com o HEAD,
-  snapshot `1003`, versão `0.2.411`.
-- Backup Cloudflare workflow `334951434`: run `32232867724` concluído
-  `success` com `headSha` igual ao HEAD; runs posteriores do mesmo SHA foram
-  `skipped`.
+- `https://rs.votopraquem.org/release.json`: SHA completo coincide com o
+  commit publicado, snapshot `1003`, versão `0.2.412`.
 
 ## Bloqueio real
 
