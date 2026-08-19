@@ -1,3 +1,12 @@
+## Release verification — documentação da deriva Senado (2026-08-19 06:49 UTC)
+
+- Commit `91d5358646b7f359f4440ba70c62f0c57ce5ca7d` publicado em `origin/main`.
+- Gates Node 24.19.0: 78 arquivos/367 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check` verdes.
+- Produção raiz e `/release.json`: HTTP 200, mas ainda serve SHA anterior `ef1b37a70a3e74bd678afc27b0f45f14b84b3e92`; o commit documental ainda não foi propagado.
+- Tentativas de listar/disparar workflow backup Cloudflare `334951434` falharam duas vezes por conexão com `api.github.com`; nenhum run deve ser atribuído sem `headSha` verificável.
+- QA: `docs/qa/lote-senado-source-revalidation-drift-2026-08-19.md`.
+- Próximo chunk: quando a API GitHub voltar, disparar o backup, confirmar `headSha=91d5358646b7f359f4440ba70c62f0c57ce5ca7d` e revalidar `/release.json`; em paralelo repetir os GETs Senado com retry e bytes preservados.
+
 ## Tick contínuo — deriva do catálogo oficial Senado detectada (2026-08-19 06:48 UTC)
 
 - Lock bounded adquirido e liberado; worktree limpa no início; nenhum writer concorrente.
