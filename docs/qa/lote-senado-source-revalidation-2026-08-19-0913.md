@@ -45,13 +45,14 @@ as respostas binárias permanecerem voláteis.
   `v22.22.2` no shell, enquanto o projeto exige Node 24. Os gates foram
   executados com Node `v24.19.0`.
 
-## Publicação/verificação do estado anterior
+## Publicação/verificação
 
-- Worktree iniciou limpa em `88edebfb465e84fee495f33856f55dcecf242d81`.
+- Commit documental publicado em `origin/main`: `eaab9069d44c2689e629b254446277ea37b86a66`.
+- Backup Cloudflare `334951434`, run `32236568369`, concluído `success` com
+  `headSha` idêntico.
 - Produção raiz: **HTTP 200**.
-- `/release.json`: SHA `88edebfb465e84fee495f33856f55dcecf242d81`, versão `0.2.414`,
-  snapshot `1003`.
-- Este relatório ainda precisa ser publicado no ciclo bounded atual.
+- `/release.json`: SHA `eaab9069d44c2689e629b254446277ea37b86a66`, versão
+  `0.2.415`, snapshot `1003`.
 
 ## Bloqueio real
 
