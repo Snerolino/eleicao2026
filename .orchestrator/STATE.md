@@ -9,6 +9,13 @@
 - QA: `docs/qa/lote-senado-source-revalidation-2026-08-19-1415.md`.
 - Próximo chunk: repetir os seis GETs sem gerar manifesto novo nem aplicar votos enquanto persistir a deriva SHA-256; manter gates com Node 24.
 
+## Release verification — tick Senado 14:17 UTC
+
+- Commit documental `3c84e9ac231265b13581eb81b74a45aa1ebe7e1f` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32263142568`, concluiu `success` com `headSha` idêntico.
+- Produção raiz e `/release.json`: HTTP 200; release confirma SHA idêntico, versão `0.2.441` e snapshot 1003.
+- Senado permanece fail-closed por deriva SHA-256; nenhum dado factual remoto foi aplicado.
+
 ## Release verification — revalidação Senado (2026-08-19T13:40Z)
 
 - Commit `d181d2d101ee32b792a62b29e2b5ad8fa5518a96` publicado em `origin/main`.

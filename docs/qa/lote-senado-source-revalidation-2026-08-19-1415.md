@@ -36,7 +36,10 @@ seguro substituir o manifesto, cadastrar novas `source_references` ou inserir
 votos. Não inventar hash, URL, identidade ou voto.
 
 ## Publicação/verificação
-- Este tick produziu apenas documentação QA; não havia mudança funcional para publicar antes do registro.
+- Commit documental `3c84e9ac231265b13581eb81b74a45aa1ebe7e1f` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32263142568`, concluiu `completed/success` com `headSha` idêntico.
+- Produção raiz: HTTP 200.
+- Produção `/release.json`: HTTP 200; SHA idêntico ao commit, versão `0.2.441`, snapshot `row_count=1003`.
 - Nenhuma migration, escrita Supabase, alteração de RLS/RPC/Auth/Storage, deploy direto Cloudflare ou alteração de dados factuais foi executada.
 
 ## Próximo chunk bounded
