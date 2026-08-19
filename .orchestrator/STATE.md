@@ -1,8 +1,19 @@
-## Release verification — tick Senado 11:06 UTC
+## Release verification — tick Senado 11:50 UTC
 
-- Commit documental `707a324d6623f1d421d8ea5c0bf1643b623fabda` publicado em `origin/main`.
-- Backup Cloudflare `334951434`, run `32246035809`, concluiu `success` com `headSha` idêntico.
-- Produção raiz e `/release.json`: HTTP 200; release confirma SHA completo idêntico, versão `0.2.428` e snapshot 1003.
+- Commit documental `7e4e538db6e944f8901e3420ddd1ca2b261e238c` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32249528119`, concluiu `completed/success` com `headSha` idêntico.
+- Produção raiz e `/release.json`: HTTP 200; release confirma SHA completo idêntico, versão `0.2.433` e snapshot 1003.
+
+## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19 11:48 UTC)
+
+- Lock bounded adquirido e liberado; worktree iniciou limpa.
+- Reconhecimento oficial read-only com retry controlado: 6/6 HTTP 200, 6/6 prefixos PDF válidos, 4/6 coincidências de bytes e 0/6 coincidências SHA-256 contra o manifesto versionado. Evidência: `.orchestrator/runtime/senado-scout/revalidation-current.json`.
+- Dry-run `npm run impact:senado:sources:apply -- --dry-run`: 6 planejadas, 0 ausentes, 0 inserções, 0 votos tocados.
+- Gates com Node 24.19.0: 81 arquivos/371 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check` verdes.
+- `npm run orch:doctor`: `OK=48 WARN=5 FAIL=1`; FAIL restrito ao shell em Node 22.22.2; OpenCode ausente, sem bloquear a rota local.
+- Nenhuma escrita factual remota foi executada; Senado permanece fail-closed por deriva binária do catálogo.
+- QA: `docs/qa/lote-senado-source-revalidation-2026-08-19-1148.md`.
+- Próximo chunk: repetir os seis GETs oficiais com retry controlado; não gerar manifesto novo nem aplicar votos enquanto persistir a deriva.
 
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19 11:06 UTC)
 
