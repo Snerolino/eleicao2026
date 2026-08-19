@@ -7,6 +7,7 @@
 - Gates Node 24.19.0: 79 arquivos/368 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build, sitemap e `git diff --check` verdes.
 - Nenhum voto, identidade, FK, source_reference, matriz, claim, RPC, Supabase ou Cloudflare foi alterado.
 - QA: `docs/qa/lote-senado-source-revalidation-2026-08-19-0734.md`.
+- Publicação verificada: commit `b818bdcd49b663bcee13b9832ac3384df5e0a097` em `origin/main`; backup Cloudflare `334951434`, run `32228571803`, `success`, `headSha` idêntico; produção raiz HTTP 200 e `/release.json` confirmou SHA, versão `0.2.402` e snapshot 1003.
 - Próximo chunk: preservar/revisar o conteúdo transitório para explicar a deriva de PDF antes de gerar manifesto novo; Senado permanece fail-closed.
 
 ## Release verification — revalidação Senado (2026-08-19 07:11 UTC)

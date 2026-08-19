@@ -28,5 +28,11 @@ Executados com Node `v24.19.0`:
 - Não foram alterados votos, candidatos, identidades, FKs, `source_references`, claims, matrizes, RPC, RLS, Supabase ou Cloudflare.
 - O dry-run reporta `already_existing=0` porque não consulta remoto em modo dry-run; isso não é autorização para inserir fontes.
 
+## Publicação verificada
+- Commit `b818bdcd49b663bcee13b9832ac3384df5e0a097` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32228571803`, concluiu `success` com `headSha` idêntico.
+- Produção raiz respondeu HTTP 200.
+- `/release.json` respondeu HTTP 200 e confirmou SHA `b818bdcd49b663bcee13b9832ac3384df5e0a097`, versão `0.2.402`, snapshot com 1003 registros.
+
 ## Próximo passo
 Preservar os seis payloads transitórios e revisar a causa da deriva de PDF; somente gerar novo manifesto após decisão/validação de uma captura estável. Depois repetir gates de identidade/schema/FK e manter o writer de votos por `legislator_id`, sem inferir `candidate_id`.
