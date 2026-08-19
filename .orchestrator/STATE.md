@@ -1,3 +1,9 @@
+## Release verification — tick Senado 09:37 UTC
+
+- Commit `82ab4d97d659612dfe4bac6d1256d7845df3ef36` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32238623203`, concluiu `success` com `headSha` idêntico.
+- Produção raiz e `/release.json`: HTTP 200; release confirma SHA completo idêntico, versão `0.2.417`, snapshot 1003.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19 09:37 UTC)
 
 - Lock bounded adquirido; reconhecimento oficial read-only refez os seis GETs com retry controlado: 6/6 HTTP 200 e prefixos PDF válidos.

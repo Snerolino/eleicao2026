@@ -29,5 +29,11 @@ Revalidar, em modo read-only e com retry controlado, os seis endpoints oficiais 
 ## Bloqueios reais
 O catálogo oficial do Senado é binariamente volátil: apesar de HTTP 200 e assinatura PDF válida, os bytes/hashes atuais divergem do manifesto versionado. Portanto o fluxo permanece fail-closed; não é seguro gerar manifesto novo ou aplicar votos com evidência instável.
 
+## Release verification
+
+- Commit `82ab4d97d659612dfe4bac6d1256d7845df3ef36` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32238623203`, concluído `success` com `headSha` idêntico.
+- Produção raiz e `/release.json`: HTTP 200; release confirma SHA completo idêntico, versão `0.2.417` e snapshot 1003.
+
 ## Próximo passo bounded
 Repetir a revalidação sequencial dos seis endpoints com retry controlado e preservar as assinaturas. Só avançar para novo manifesto/parser/writer após estabilidade do catálogo, R0 de identidade, schema/FK, dry-run factual e prova de idempotência.
