@@ -239,6 +239,13 @@
 - Próximo chunk: consulta pública de assessments aprovados e integração da `ComparePage` com fallback de cobertura insuficiente.
 - QA: `docs/qa/lote-vote-category-comparison-contract-2026-08-19.md`.
 
+## Tick contínuo — UI de comparação de votos por categoria (2026-08-19)
+
+- `ComparePage` agora consulta índice factual, eventos e assessments aprovados e exibe valores por categoria/casa em eventos comuns.
+- Fallback explícito permanece quando não há cobertura aprovada; nenhum score, recomendação ou categoria foi inventado.
+- Suíte: 80 arquivos/370 testes; TypeScript e build verdes.
+- QA: `docs/qa/lote-vote-category-comparison-ui-2026-08-19.md`.
+
 ## Release verification — documentação do tick (2026-08-19 06:01 UTC)
 
 - Commit documental `9c62ada88cb3ff6bd5ee65922f270d9270d10db3` publicado em `origin/main`.

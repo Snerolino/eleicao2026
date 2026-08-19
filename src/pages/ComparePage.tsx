@@ -12,6 +12,8 @@ import { usePageMetadata } from '@/hooks/usePageMetadata';
 import { ConfidenceBadge } from '@/components/sources/ConfidenceBadge';
 import { LoadingSkeleton } from '@/components/states';
 import { candidatePublicPath } from '@/utils/candidateIdentity';
+import { fetchVoteCategoryComparisons } from '@/services/voteCategoryComparison';
+import type { VoteCategoryComparison } from '@/domain/impact/vote-category-comparison';
 
 function claimsForSection(
   claims: Claim[],
@@ -63,6 +65,33 @@ function SectionCell({
         )}
       </ul>
     </td>
+  );
+}
+
+function VoteCategoryTable({
+  comparisons,
+  candidates,
+}: {
+  comparisons: VoteCategoryComparison[];
+  candidates: CandidateWithClaims[];
+}) {
+  const safeComparisons = comparisons.filter((comparison) => typeof comparison?.group_slug === 'string' && Array.isArray(comparison?.candidates));
+  if (safeComparisons.length === 0) {
+    return <p className="font-mono text-xs uppercase tracking-wide text-[var(--color-muted-ink)]">Ainda não há cobertura aprovada de impacto em eventos comuns para comparar por categoria.</p>;
+  }
+  return (
+    <div className="overflow-auto rounded-sm border border-[var(--color-border-editorial)]">
+      <table className="w-full border-collapse text-sm">
+        <thead><tr className="bg-[var(--color-paper)]">
+          <th className="p-3 text-left font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">Categoria / casa</th>
+          {candidates.map((candidate) => <th key={candidate.id} className="border-l border-[var(--color-border-editorial)] p-3 text-left">{candidate.full_name}</th>)}
+        </tr></thead>
+        <tbody>{safeComparisons.map((comparison) => <tr key={`${comparison.house}:${comparison.group_slug}`} className="border-t border-[var(--color-border-editorial)]">
+          <th className="p-3 text-left align-top font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">{comparison.group_slug.replaceAll('_', ' ')} · {comparison.house} · {comparison.events_compared} evento(s) comum(ns)</th>
+          {comparison.candidates.map((summary) => <td key={summary.candidate_id} className="border-l border-[var(--color-border-editorial)] p-3 align-top"><span className="font-mono text-xs">Sim {summary.sim} · Não {summary.nao}</span><br /><span className="font-mono text-[0.65rem] text-[var(--color-muted-ink)]">Abst. {summary.abstencao} · Aus. {summary.ausente} · Obst. {summary.obstrucao}</span></td>)}
+        </tr>)}</tbody>
+      </table>
+    </div>
   );
 }
 
@@ -180,6 +209,13 @@ export function ComparePage() {
     () => candidates.filter((c) => selectedIds.has(c.id)),
     [candidates, selectedIds]
   );
+
+  const voteCategoryQuery = useQuery({
+    queryKey: ['vote-category-comparison', selected.map((candidate) => candidate.id)],
+    queryFn: () => fetchVoteCategoryComparisons(selected.map((candidate) => candidate.id)),
+    enabled: selected.length >= 2,
+    staleTime: 60_000,
+  });
 
   const updateSharedRoute = (ids: string[]) => {
     const value = serializeSelectedIds(ids.slice(0, 4));
@@ -325,6 +361,17 @@ export function ComparePage() {
                 </tbody>
               </table>
             </div>
+          )}
+          {selected.length >= 2 && (
+            <section className="mt-6 space-y-3" aria-label="Comparação de votos por categoria">
+              <div>
+                <h2 className="text-xl">Votos em categorias aprovadas</h2>
+                <p className="mt-1 font-mono text-xs text-[var(--color-muted-ink)]">
+                  Apenas eventos comuns, fontes e assessments aprovados. Os números são fatos nominais, não recomendação ou score.
+                </p>
+              </div>
+              {voteCategoryQuery.isLoading ? <LoadingSkeleton label="Carregando comparação factual" /> : <VoteCategoryTable comparisons={voteCategoryQuery.data ?? []} candidates={selected} />}
+            </section>
           )}
         </section>
       )}
