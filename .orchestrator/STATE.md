@@ -8,13 +8,13 @@
 - Doctor cron permanece com FAIL restrito ao shell em Node 22.22.2; OpenCode ausente e Ollama sem resposta permanecem WARN opcionais.
 - Nenhuma escrita factual remota, atualização do manifesto, Supabase ou alteração do snapshot foi executada; Senado permanece fail-closed por deriva SHA-256.
 - QA: `docs/qa/lote-senado-source-revalidation-2026-08-19-2124.md`.
-- Próximo chunk: publicar esta documentação, verificar backup Cloudflare/produção e repetir os seis GETs oficiais sem gerar manifesto novo nem aplicar votos enquanto persistir a deriva.
+- Próximo chunk: repetir os seis GETs oficiais sem gerar manifesto novo nem aplicar votos enquanto persistir a deriva; manter a reconciliação local/publicação independente.
 
-## Publicação/verificação
-- Commit documental `4f95075aa12a161f8801eb049737592673183e46` publicado em `origin/main`.
-- Backup Cloudflare `334951434`, run `32300597168`, concluiu `completed/success` com `headSha` idêntico.
+## Publicação/verificação — tick 21:25 UTC
+- Commit documental `d6517dcf4b5bcf9d39ddaef34bb643400dfbcdfa` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32303782063`, concluiu `completed/success` com `headSha` idêntico.
 - Produção `https://rs.votopraquem.org/`: raiz HTTP 200 e `/release.json` HTTP 200.
-- Release de produção confirma SHA `4f95075aa12a161f8801eb049737592673183e46`, versão `0.2.0` e `snapshot.row_count=1003`.
+- Release de produção confirma `release_id=d6517dc-20260819T212559975Z`, versão `0.2.0` e `snapshot.row_count=1003`; o `commit_sha` do JSON está nulo, mas o prefixo do release e o `headSha` do run confirmam o commit publicado.
 
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T20:48Z)
 
