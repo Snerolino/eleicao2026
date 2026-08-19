@@ -48,13 +48,13 @@ fail-closed enquanto as respostas do portal forem voláteis.
 
 ## Publicação/verificação
 
-- O lote documental foi commitado e enviado para `origin/main` no commit
-  `92a955266071cd2df7ae3dcad3e459482dd42b0c`.
-- Backup Cloudflare workflow `334951434`: run `32234591902` concluído
+- O lote documental final foi commitado e enviado para `origin/main` no commit
+  `56a2ce2078153d07c8d83a8e743c9f61a6a20ca4`.
+- Backup Cloudflare workflow `334951434`: run `32234723842` concluído
   `success`, com `headSha` idêntico ao commit publicado.
 - Produção raiz: **HTTP 200**.
 - `https://rs.votopraquem.org/release.json`: SHA completo coincide com o
-  commit publicado, snapshot `1003`, versão `0.2.412`.
+  commit publicado, snapshot `1003`, versão `0.2.413`.
 
 ## Bloqueio real
 
