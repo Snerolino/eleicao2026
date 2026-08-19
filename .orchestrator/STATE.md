@@ -1,3 +1,10 @@
+## Release verification pendente — catálogo Senado (2026-08-19 04:55 UTC)
+
+- Commit `46c94ffd146a825629eba31d194ee9e6e1797f6c` publicado em `origin/main`.
+- Backup Cloudflare `334951434` disparado manualmente; run `32217488055` está `in_progress` com `headSha` idêntico.
+- Produção ainda expõe o release anterior `f32fbd35c6e8b2cf42bac8c3b75339b289e528ff`; não declarar a documentação deste tick como propagada até nova verificação.
+- Próximo tick: consultar `gh run view 32217488055 --json status,conclusion,headSha`; após sucesso, confirmar `/release.json` com o SHA do commit.
+
 ## Tick contínuo — catálogo Senado nominal e reconciliação read-only (2026-08-19 04:53 UTC)
 
 - Lock bounded adquirido e liberado; worktree estava limpa antes do chunk e nenhum writer concorrente foi observado.
