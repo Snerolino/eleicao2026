@@ -11,7 +11,7 @@ Revalidar read-only os seis endpoints oficiais de relatórios nominais do Senado
   - 0/6 coincidiram em SHA-256;
   - divergências observadas: `2025/6341` (138360 vs 138361 bytes), `2025/825` (138151 vs 138150), `2026/1186` (97428 vs 97431), `2026/825` (97375 vs 97376); os demais mantiveram bytes, mas não o hash.
 - `scripts/apply-senado-nominal-sources.mjs` em dry-run: 6 planejadas, 0 ausentes, 0 inseridas, 0 votos tocados.
-- Reconciliação explícita do CSV TSE local ainda requer parsing delimitado por `;`; o arquivo tem cabeçalho único com campos separados por ponto e vírgula. Não houve alteração do snapshot.
+- Reconciliação explícita do CSV TSE local com delimitador oficial `;`: 1003/1003 linhas e IDs; 0 somente no dataset e 0 somente no snapshot. Não houve alteração do snapshot.
 
 ## Gates locais
 Executados com Node `v24.19.0`:
