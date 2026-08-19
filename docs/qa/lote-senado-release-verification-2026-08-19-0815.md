@@ -1,15 +1,15 @@
 # QA — verificação de publicação do tick Senado (2026-08-19 08:15 UTC)
 
 ## Commit e CI
-- Commit publicado: `c268d9acf14e7caf3c855eaab578658eb7006def`.
+- Commit documental de verificação publicado: `97435fbc865a9993576c6d43679158a5ed5328b6`.
 - Workflow backup `Deploy to Cloudflare Pages (backup)`, ID `334951434`.
-- Run `32232544550`: `completed`, `success`, `headSha` idêntico ao commit.
+- Run `32232671812`: `completed`, `success`, `headSha` idêntico ao commit.
 
 ## Produção
 - `https://rs.votopraquem.org`: HTTP 200.
 - `https://rs.votopraquem.org/release.json`: HTTP 200.
-- `release.json.sha`: `c268d9acf14e7caf3c855eaab578658eb7006def` (confere).
-- Versão publicada: `0.2.408`.
+- `release.json.sha`: `97435fbc865a9993576c6d43679158a5ed5328b6` (confere).
+- Versão publicada: `0.2.409`.
 - Snapshot publicado: 1003 candidaturas.
 
 ## Segurança e escopo
