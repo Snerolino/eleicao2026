@@ -24,7 +24,7 @@ O catálogo Senado continua transitório/volátil. Nenhum voto, identidade, FK, 
 - Commit documental: `916ac23cbc3b777f1f61e8ae78e959d3d49aeac4`, em `origin/main`.
 - Backup Cloudflare workflow `334951434`, run `32240414747`: `success`, `headSha` idêntico.
 - Produção raiz e `/release.json`: HTTP 200.
-- `/release.json` confirma SHA completo idêntico, versão `0.2.419`, snapshot `consulta_cand/2026/RS` com 1003 linhas.
+- `/release.json` confirma SHA completo idêntico, versão `0.2.0`, snapshot `consulta_cand/2026/RS` com 1003 linhas.
 
 ## Próximo passo
 Repetir GETs oficiais com retry controlado e preservar bytes/hash. Não gerar novo manifesto nem executar `--apply` enquanto a estabilidade do catálogo e os gates de identidade/schema/FK/idempotência não forem comprovados.
