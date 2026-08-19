@@ -34,3 +34,7 @@ Reexecutar, em tick bounded e read-only, os seis GETs oficiais do catálogo nomi
 - Produção `https://rs.votopraquem.org`: HTTP 200.
 - Produção `/release.json`: HTTP 200; SHA idêntico, `row_count=1003`, release `72828b5-20260819T165205122Z`.
 - Nenhuma migration, escrita Supabase, alteração de RLS/RPC/Auth/Storage ou aplicação factual foi executada.
+
+## Revalidação pós-propagação
+- O preview do run `32278480237` (`https://20c03e52.portal-transparencia-rs.pages.dev`) confirmou o `headSha` `6aa59c6260d033356be4f8c1566c35c7c4dc5dff`.
+- Após a propagação do domínio customizado, `https://rs.votopraquem.org/release.json` passou a confirmar o mesmo SHA; raiz e release retornaram HTTP 200.

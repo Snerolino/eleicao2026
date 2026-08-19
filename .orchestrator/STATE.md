@@ -13,7 +13,7 @@
 - Commit `72828b514072ddf7cad9b748bc8316588995479e` publicado em `origin/main`.
 - Backup Cloudflare `334951434`, run `32278314535`, concluiu `success` com `headSha` idêntico.
 - Produção raiz HTTP 200; `/release.json` HTTP 200 confirma SHA idêntico, release `72828b5-20260819T165205122Z` e snapshot `row_count=1003`.
-- Senado permanece fail-closed; nenhuma escrita factual remota foi executada.
+- Revalidação pós-propagação confirmou `rs.votopraquem.org/release.json` com SHA `6aa59c6260d033356be4f8c1566c35c7c4dc5dff`, correspondente ao run `32278480237`; Senado permanece fail-closed.
 
 ## Publicação/verificação — tick Senado 16:15 UTC
 
