@@ -24,5 +24,11 @@ O manifesto versionado permanece divergente dos bytes atuais do portal oficial e
 
 `npm run orch:doctor -- --smoke` retornou `OK=51 WARN=5 FAIL=1`: FAIL restrito ao shell usando Node 22.22.2, enquanto os gates do projeto foram executados explicitamente com Node 24.19.0. OpenCode ausente e Ollama sem resposta continuam WARN opcionais.
 
+## Publicação/verificação
+- Commit documental: `f25650cef6e2a1eb18b24e265b2846013d4c99e9`, publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32312848279`: `completed/success`, `headSha` idêntico.
+- Produção `https://rs.votopraquem.org/`: raiz HTTP 200 e `/release.json` HTTP 200.
+- Após propagação, `/release.json` confirmou release `f25650c-20260819T232136791Z` e `snapshot.row_count=1003`; o campo `commit_sha` veio nulo, então a confirmação do SHA é pelo `headSha` do run e pelo prefixo do release.
+
 ## Próximo passo
 No próximo tick, repetir os seis GETs oficiais sem alterar o manifesto; manter a reconciliação local e a publicação documental independentes do bloqueio factual. Só avançar para aplicação após R0, fonte/hash estáveis, dry-run e prova de idempotência.

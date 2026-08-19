@@ -9,6 +9,12 @@
 - QA: `docs/qa/lote-senado-source-revalidation-2026-08-19-2318.md`.
 - Próximo chunk: repetir os seis GETs oficiais sem gerar manifesto novo nem aplicar votos enquanto persistir a deriva; manter publicação documental independente.
 
+## Publicação/verificação — tick 23:21 UTC
+
+- Commit documental `f25650cef6e2a1eb18b24e265b2846013d4c99e9` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32312848279`, concluiu `completed/success` com `headSha` idêntico.
+- Produção raiz e `/release.json`: HTTP 200; após propagação, release `f25650c-20260819T232136791Z`, snapshot `row_count=1003`; `commit_sha` nulo no payload, confirmado pelo `headSha` do run e prefixo do release.
+
 ## Publicação/verificação — tick 22:39 UTC
 
 - Commit documental `5d02882954a8ccec55a29cd8f697e51569a55b68` publicado em `origin/main`.
