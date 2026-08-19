@@ -1,8 +1,8 @@
-## Publicação/verificação — tick Senado 16:12 UTC
+## Publicação/verificação — tick Senado 16:15 UTC
 
-- Commit `6542559988a096361b4fdb9e1ddc1028d48bae53` publicado em `origin/main`.
-- Backup Cloudflare `334951434`, run `32274687701`, concluiu `completed/success` com `headSha` idêntico.
-- Produção raiz HTTP 200; `/release.json` confirma SHA idêntico, versão `0.2.449` e snapshot `row_count=1003`.
+- Commit documental `81ee230a555fcd5e9c6a6a28626e4e852bf9c022` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32274838148`, concluiu `completed/success` com `headSha` idêntico.
+- Produção raiz HTTP 200; `/release.json` confirma SHA idêntico, versão `0.2.0` e snapshot `row_count=1003`.
 - Senado permanece fail-closed por deriva SHA-256; nenhuma escrita factual remota foi executada.
 
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T16:12Z)
