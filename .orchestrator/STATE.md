@@ -1,3 +1,12 @@
+## Release verification — catálogo Senado (2026-08-19 05:00 UTC)
+
+- Revalidação confirmou `origin/main` e `HEAD` em `a42567c0a661f19785dfd941273f4638db498d3d`.
+- Backup Cloudflare `334951434`, run `32217515668`, concluiu `success` com `headSha` idêntico; runs posteriores do mesmo SHA ficaram `skipped`.
+- Produção raiz e `/release.json` responderam HTTP 200; `release.json` confirmou SHA completo `a42567c0a661f19785dfd941273f4638db498d3d`, versão `0.2.388` e snapshot 1003.
+- QA: `docs/qa/lote-senado-release-verification-2026-08-19.md`.
+- Nenhuma escrita legislativa remota foi feita; Senado permanece fail-closed por ausência das seis `source_references`.
+- Próximo chunk: preparar dry-run idempotente das seis `source_references`, com GET/hash/bytes e gates de identidade/schema/FK imediatamente antes de eventual `--apply`.
+
 ## Release verification pendente — catálogo Senado (2026-08-19 04:55 UTC)
 
 - Commit `46c94ffd146a825629eba31d194ee9e6e1797f6c` publicado em `origin/main`.
