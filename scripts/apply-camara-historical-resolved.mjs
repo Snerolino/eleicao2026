@@ -229,7 +229,11 @@ export async function runHistoricalWriter({ inputs = loadHistoricalInputs(), app
   if (!sb) fail('cliente Supabase ausente para --apply');
 
   const rows = sourceRows ?? await allRows(sb, 'source_references', 'id,url,content_hash');
-  const resolvedSources = resolveExistingSources(contract.expectedSources, rows);
+  // O catálogo remoto pode conter duplicatas históricas fora deste envelope.
+  // Restrinja a resolução às URLs esperadas; duplicata entre as fontes do
+  // envelope continua sendo rejeitada por resolveExistingSources().
+  const relevantRows = rows.filter((row) => contract.sourceByUrl.has(row?.url));
+  const resolvedSources = resolveExistingSources(contract.expectedSources, relevantRows);
   if (resolvedSources.size !== EXPECTED.sources) fail(`source_reference mappings resolvidos: esperado ${EXPECTED.sources}, recebido ${resolvedSources.size}`);
   report.source_reference_mappings = contract.expectedSources.map((source) => ({ url: source.url, content_hash: source.content_hash, id: resolvedSources.get(source.url) }));
 

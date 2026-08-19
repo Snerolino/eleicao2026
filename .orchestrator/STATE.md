@@ -1,3 +1,17 @@
+# Tick contínuo — aplicação histórica Câmara idempotente (2026-08-19)
+
+- Lock bounded adquirido e liberado; nenhum writer concorrente.
+- API GitHub revalidada; `origin/main` e produção estavam em `16eb24b`, HTTP 200, versão `0.2.376`, snapshot 1003.
+- Gate remoto read-only passou: migrations alinhadas até `20260816100000`, schema/FK legislativo presente, 18/18 pares TSE/UUID exatos e 7/7 `source_references` por URL/hash exatos.
+- Auditoria refez 7 GETs oficiais Câmara: 7/7 HTTP 200, bytes/SHA-256 sem divergência.
+- Primeira tentativa de `--apply` falhou fechada antes da escrita porque o catálogo remoto contém duplicata histórica de URL TSE fora do envelope; o writer foi corrigido para filtrar somente URLs esperadas, mantendo rejeição de duplicatas dentro do envelope.
+- Teste focado: 2/2 verde. Dry-run: 2 proposições, 6 versões, 6 eventos, 84 votos, 18 elegíveis e 8 bloqueadas.
+- Primeiro `--apply`: inseriu 2 proposições, 6 versões, 6 eventos e 84 votos; 84 votos tocados. Nenhuma matriz, claim, RPC ou editorial foi alterada.
+- Segundo `--apply`: 0 inserts, 0 updates, 84 registros existentes e 0 votos tocados; idempotência comprovada.
+- Gates locais: 78 arquivos/366 testes, TypeScript, schema, `data:check` (1003/988), build e diff check verdes.
+- QA: `docs/qa/lote-camara-historical-apply-idempotent-2026-08-19.md`.
+- Alteração ainda não publicada: commit/push deste writer e QA são o próximo passo bounded.
+
 # Tick contínuo — release do writer histórico bloqueado por GitHub API (2026-08-19)
 
 - Commit funcional `b9711f2` foi publicado em `origin/main`.
