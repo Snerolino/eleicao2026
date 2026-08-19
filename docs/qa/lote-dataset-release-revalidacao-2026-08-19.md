@@ -23,6 +23,16 @@ promover registros ALRS bloqueados.
 - `npm run data:check`: verde — 1003 candidaturas, 988 fotos oficiais.
 - `node scripts/validate-impact-schema.mjs`: verde.
 
+## Publicação verificada
+
+- Commit `887ad5503dff139fc2a0d4f776ec9a440c693e3e` foi publicado em
+  `origin/main`.
+- Backup Cloudflare `334951434`, run `32214606403`, concluiu `success` com
+  `headSha` idêntico.
+- Produção respondeu raiz HTTP 200 e `/release.json` HTTP 200; release
+  `887ad55-20260819T040815723Z` confirmou o SHA completo e snapshot de 1003
+  candidaturas.
+
 ## Bloqueios e escopo
 
 Nenhuma fonte legislativa nova foi encontrada neste chunk. A fila ALRS FED-17

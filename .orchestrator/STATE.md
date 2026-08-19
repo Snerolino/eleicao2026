@@ -1,11 +1,9 @@
-## Tick contínuo — revalidação dataset e release (2026-08-19 04:00 UTC)
+## Tick contínuo — publicação verificada dataset/release (2026-08-19 04:08 UTC)
 
 - Lock bounded adquirido e liberado; worktree limpa antes do chunk.
-- `HEAD`/`origin/main`: `712898f10a539431bd0b18fb45ba87bd4668a53a`.
-- Backup Cloudflare `334951434`, run `32213337592`: `completed/success`, mas com `headSha=1f4eec2...` (commit anterior); não atribuir esse run ao `HEAD` atual.
-- Produção: raiz HTTP 200 e `/release.json` HTTP 200; release confirmou SHA completo `712898f10a539431bd0b18fb45ba87bd4668a53a`, versão `0.2.382`, snapshot 1003.
-- `../dataset2026/candidatos/consulta_cand_2026/consulta_cand_2026_RS.csv`: 1003 IDs TSE únicos; comparação com snapshot público: 0 snapshot-only e 0 dataset-only.
-- Gates read-only: `data:check` verde (1003/988) e `validate-impact-schema` verde.
+- Commit `887ad5503dff139fc2a0d4f776ec9a440c693e3e` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32214606403`, concluiu `success` com `headSha` idêntico.
+- Produção: raiz HTTP 200 e `/release.json` HTTP 200; release `887ad55-20260819T040815723Z` confirmou o SHA completo e snapshot 1003.
 - QA: `docs/qa/lote-dataset-release-revalidacao-2026-08-19.md`.
 - Próximo chunk: selecionar outro lote legislativo independente para auditoria read-only de fonte/schema/FK; manter ALRS FED-17 fail-closed.
 
