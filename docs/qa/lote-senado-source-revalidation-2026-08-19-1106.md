@@ -30,5 +30,11 @@ Executados com Node v22.22.2 disponível no shell:
 - Deriva binária persistente: 0/6 SHA-256 coincide com o manifesto. Não gerar manifesto novo automaticamente e não aplicar dados factuais.
 - `npm run orch:doctor`: `OK=48 WARN=5 FAIL=1`; o único FAIL é o shell em Node v22.22.2, mas o projeto exige Node `>=24 <25`. OpenCode está ausente; não bloqueou a revalidação local.
 
+## Publicação verificada
+- Commit documental inicial `707a324d6623f1d421d8ea5c0bf1643b623fabda` foi publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32246035809`: `completed/success`, `headSha` idêntico ao commit.
+- Produção raiz: HTTP 200.
+- Produção `/release.json`: HTTP 200, SHA `707a324d6623f1d421d8ea5c0bf1643b623fabda` idêntico ao commit, versão `0.2.428`, snapshot com 1003 registros.
+
 ## Próximo passo bounded
 Repetir os seis GETs oficiais com retry controlado no próximo tick; manter o Senado fail-closed e continuar lanes locais/publicação documental independentes sem inventar hash, URL, identidade ou voto.
