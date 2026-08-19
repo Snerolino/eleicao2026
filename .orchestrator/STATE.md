@@ -5,7 +5,8 @@
 - Dry-run `scripts/apply-senado-nominal-sources.mjs`: 6 planejadas, 0 ausentes, 0 inserções, 0 votos tocados.
 - Gates Node 24.19.0: 79 arquivos/368 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check` verdes.
 - Doctor cron: `OK=48 WARN=5 FAIL=1`; FAIL restrito ao shell Node 22. Nenhuma escrita factual ou remota foi executada.
-- Publicação já verificada para `HEAD=8ea7a11b34fa46c9110c23cef0b14db8103741a8`: produção HTTP 200, `/release.json` SHA idêntico, versão `0.2.404`; backup Cloudflare `334951434`, run `32228818575`, `success` e `headSha` idêntico.
+- Publicação verificada para o commit documental `5774d3bf398e63f3e7f9f9ea6816443eec5258ec`: backup Cloudflare `334951434`, run `32230438334`, `success` e `headSha` idêntico; produção HTTP 200 e `/release.json` confirmou SHA idêntico, versão `0.2.405` e snapshot 1003.
+- A execução anterior também confirmou `HEAD=8ea7a11b34fa46c9110c23cef0b14db8103741a8`, produção HTTP 200 e versão `0.2.404`.
 - QA: `docs/qa/lote-senado-source-revalidation-2026-08-19-0758.md`.
 - Próximo chunk: preservar/revisar a deriva binária dos PDFs e manter o Senado fail-closed; não gerar manifesto novo nem aplicar votos sem fonte estável, R0/schema/FK e idempotência.
 
