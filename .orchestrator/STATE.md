@@ -1,3 +1,15 @@
+## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T21:24Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `b1128436a73f41fdf6ba4442d239ebf7c56e6939`.
+- Reconhecimento oficial read-only: 6/6 HTTP 200, 6/6 prefixos PDF válidos, 2/6 coincidências de bytes e 0/6 coincidências SHA-256 contra o manifesto versionado. Evidência: `.orchestrator/runtime/senado-revalidation-current.json`.
+- Dry-run `npm run impact:senado:sources:apply -- --dry-run`: 6 planejadas, 0 ausentes, 0 inserções, 0 votos tocados.
+- CSV oficial `../dataset2026/candidatos/lista_candidatos_2026.csv`: SHA-256 `7c80d8260618ddc18ce62b44f12f7c463032c937f7f6ea5179cf75943f4207ea`, 67.483 bytes; snapshot público com 1.003 candidaturas.
+- Gates Node 24: 81 arquivos/371 testes, TypeScript, schema, `data:check` (1.003 candidaturas/988 fotos), build `0.2.0` e `git diff --check` verdes.
+- Doctor cron permanece com FAIL restrito ao shell em Node 22.22.2; OpenCode ausente e Ollama sem resposta permanecem WARN opcionais.
+- Nenhuma escrita factual remota, atualização do manifesto, Supabase ou alteração do snapshot foi executada; Senado permanece fail-closed por deriva SHA-256.
+- QA: `docs/qa/lote-senado-source-revalidation-2026-08-19-2124.md`.
+- Próximo chunk: publicar esta documentação, verificar backup Cloudflare/produção e repetir os seis GETs oficiais sem gerar manifesto novo nem aplicar votos enquanto persistir a deriva.
+
 ## Publicação/verificação
 - Commit documental `4f95075aa12a161f8801eb049737592673183e46` publicado em `origin/main`.
 - Backup Cloudflare `334951434`, run `32300597168`, concluiu `completed/success` com `headSha` idêntico.
