@@ -39,10 +39,14 @@ falhando fechado.
 - `npm run build`: exit 0 — sitemap **1003 candidatos + 2 estáticas** e `release.json` gerado.
 - `git diff --check`: exit 0.
 
-## Publicação e próximo passo
+## Publicação verificada
 
-A alteração do writer e este relatório estão prontos para commit/push. Após o
-push, confirmar o workflow backup Cloudflare `334951434` (ID `334951434`) e
-validar `headSha`, HTTP 200 e `/release.json` em produção. Em seguida, o próximo
-chunk elegível é materializar/revalidar os perfis nominais Câmara sem promover
-identidades históricas bloqueadas.
+- Commit funcional `ff92c3e50b6caec2dcf43038c1292fccbf6cdcd9` está em `origin/main`.
+- Workflow backup Cloudflare `334951434`, run `32210316104`, concluiu `success` com `headSha` idêntico.
+- Produção respondeu HTTP 200; após propagação, `/release.json` confirmou SHA `ff92c3e50b6caec2dcf43038c1292fccbf6cdcd9`, versão `0.2.377` e 1003 candidaturas.
+
+## Próximo passo
+
+Próximo chunk elegível: materializar/revalidar perfis nominais Câmara, preservando
+separação por `(candidate_id, house)` e mantendo as 8 identidades históricas
+bloqueadas fail-closed.

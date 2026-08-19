@@ -1,3 +1,11 @@
+# Tick contínuo — publicação da aplicação histórica Câmara (2026-08-19)
+
+- Commit `ff92c3e50b6caec2dcf43038c1292fccbf6cdcd9` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32210316104`, concluiu `success` com `headSha` idêntico.
+- Produção HTTP 200; após propagação, `/release.json` confirmou SHA `ff92c3e`, versão `0.2.377`, snapshot com 1003 candidaturas.
+- QA atualizado em `docs/qa/lote-camara-historical-apply-idempotent-2026-08-19.md`.
+- Próximo chunk: materializar/revalidar perfis nominais Câmara, preservando `(candidate_id, house)` e as 8 identidades históricas bloqueadas.
+
 # Tick contínuo — aplicação histórica Câmara idempotente (2026-08-19)
 
 - Lock bounded adquirido e liberado; nenhum writer concorrente.
