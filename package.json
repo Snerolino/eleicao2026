@@ -38,6 +38,7 @@
     "impact:camara:sources:apply": "node scripts/apply-camara-q1-sources.mjs",
     "impact:camara:apply": "node scripts/apply-camara-q1-resolved.mjs",
     "impact:senado:sources:apply": "node scripts/apply-senado-nominal-sources.mjs",
+    "impact:senado:envelope:adapt": "node scripts/adapt-senado-nominal-envelope.mjs",
     "orch:setup": "bash scripts/orchestrator/setup-local.sh",
     "orch:doctor": "bash scripts/orchestrator/doctor.sh",
     "orch:install-skill": "bash scripts/orchestrator/install-hermes-skill.sh",

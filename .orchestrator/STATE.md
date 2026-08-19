@@ -55,6 +55,14 @@
 - Nenhum voto Senado, matriz, claim ou RPC foi aplicado.
 - QA: `docs/qa/lote-senado-sources-parser-ready-2026-08-19.md`.
 
+## Tick contínuo — envelope Senado por legislator_id (2026-08-19)
+
+- Adaptador oficial produziu 48 proposições, 68 eventos e 184 votos em dry-run local.
+- 3 legisladores preservados; 0 `candidate_tse_id` inferidos.
+- URLs exatas resolvidas por legislador/ano; nenhum voto remoto aplicado.
+- Próximo chunk: writer idempotente por `legislator_id`, após estabilização do manifesto PDF.
+- QA: `docs/qa/lote-senado-envelope-legislator-id-2026-08-19.md`.
+
 ## Release verification — documentação do tick (2026-08-19 06:01 UTC)
 
 - Commit documental `9c62ada88cb3ff6bd5ee65922f270d9270d10db3` publicado em `origin/main`.
