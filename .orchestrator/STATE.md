@@ -1,10 +1,14 @@
-## Tick contínuo — publicação pendente da revalidação ALRS (2026-08-19 03:49 UTC)
+## Tick contínuo — revalidação dataset e release (2026-08-19 04:00 UTC)
 
-- Commit `1f4eec2ec4e8ec37b4263d7bd5a952315414fa68` está em `origin/main`.
-- Backup Cloudflare `334951434`, run `32213337592`, foi disparado e segue `in_progress` na última consulta; `gh run watch` falhou por conexão transitória com `api.github.com`.
-- Produção ainda não está validada para este SHA: raiz com falha DNS e `/release.json` HTTP 403 nesta consulta. Não atribuir sucesso de deploy.
-- QA: `docs/qa/lote-alrs-fed17-revalidacao-fontes-2026-08-19.md`.
-- Próximo chunk: revalidar run e `/release.json`; depois selecionar outro lote read-only sem promover registros ALRS bloqueados.
+- Lock bounded adquirido e liberado; worktree limpa antes do chunk.
+- `HEAD`/`origin/main`: `712898f10a539431bd0b18fb45ba87bd4668a53a`.
+- Backup Cloudflare `334951434`, run `32213337592`: `completed/success`, mas com `headSha=1f4eec2...` (commit anterior); não atribuir esse run ao `HEAD` atual.
+- Produção: raiz HTTP 200 e `/release.json` HTTP 200; release confirmou SHA completo `712898f10a539431bd0b18fb45ba87bd4668a53a`, versão `0.2.382`, snapshot 1003.
+- `../dataset2026/candidatos/consulta_cand_2026/consulta_cand_2026_RS.csv`: 1003 IDs TSE únicos; comparação com snapshot público: 0 snapshot-only e 0 dataset-only.
+- Gates read-only: `data:check` verde (1003/988) e `validate-impact-schema` verde.
+- QA: `docs/qa/lote-dataset-release-revalidacao-2026-08-19.md`.
+- Próximo chunk: selecionar outro lote legislativo independente para auditoria read-only de fonte/schema/FK; manter ALRS FED-17 fail-closed.
+
 
 ## Tick contínuo — revalidação read-only de fontes ALRS FED-17 (2026-08-19 03:44 UTC)
 
