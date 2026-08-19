@@ -28,5 +28,11 @@ Revalidar, em modo read-only, os seis PDFs oficiais do catálogo nominal do Sena
 - Deriva binária persistente: 0/6 SHA-256 coincide com o manifesto. Não gerar manifesto novo automaticamente e não aplicar dados factuais.
 - `npm run orch:doctor`: FAIL conhecido porque o shell cron usa Node v22.22.2, mas o projeto exige Node 24; os gates foram executados explicitamente com Node v24.19.0. OpenCode também está ausente, sem bloquear a rota local.
 
+## Publicação verificada
+- Commit documental: `c9c7d024d06a42d74031989f3831a7e12886f748` em `origin/main`.
+- Backup Cloudflare `334951434`, run `32242405791`: `completed/success`, `headSha` idêntico ao commit.
+- Produção `https://rs.votopraquem.org`: HTTP 200.
+- Produção `/release.json`: HTTP 200, `sha` idêntico, versão `0.2.423`, snapshot com 1003 registros.
+
 ## Próximo passo bounded
 Repetir GETs oficiais com retry controlado no próximo tick e manter o item Senado fail-closed; continuar lanes locais/publicação documental independentes sem inventar hash, URL, identidade ou voto.

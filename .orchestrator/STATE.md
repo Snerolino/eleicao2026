@@ -1,3 +1,10 @@
+## Release verification — tick Senado 10:23 UTC
+
+- Commit documental `c9c7d024d06a42d74031989f3831a7e12886f748` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32242405791`, concluiu `success` com `headSha` idêntico.
+- Produção raiz e `/release.json`: HTTP 200; release confirma SHA completo idêntico, versão `0.2.423` e snapshot 1003.
+- QA: `docs/qa/lote-senado-source-revalidation-2026-08-19-1022.md`.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19 10:22 UTC)
 
 - Lock bounded adquirido durante o bloco e liberado ao finalizar; worktree iniciou limpa.
