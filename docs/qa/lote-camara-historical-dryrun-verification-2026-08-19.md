@@ -34,3 +34,13 @@ sem escrita remota, o envelope factual histórico Câmara.
 Auditar o catálogo remoto e as FKs por `tse_candidate_id`; só então preparar a
 aplicação idempotente das 7 referências e do envelope elegível, mantendo os 8
 casos bloqueados fora do plano.
+
+## Publicação deste checkpoint
+
+- Commit documental: `d2ad994bfbb8b7d04c316a0a420a34bd5bdcafac` publicado em
+  `origin/main`.
+- Backup Cloudflare `334951434`, run `32206014628`, concluiu `success` com
+  `headSha` idêntico ao commit.
+- Produção confirmada após o run: `https://rs.votopraquem.org/release.json` respondeu
+  HTTP 200 com SHA `d2ad994bfbb8b7d04c316a0a420a34bd5bdcafac`, versão `0.2.0` e
+  snapshot de `1003` candidaturas.
