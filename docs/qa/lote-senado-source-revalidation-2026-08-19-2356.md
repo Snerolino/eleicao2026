@@ -25,10 +25,10 @@ O portal oficial continua retornando bytes diferentes do manifesto em 5/6 respos
 O `npm run orch:doctor -- --smoke` do shell continua com FAIL restrito a Node `22.22.2` quando o projeto exige Node 24; OpenCode ausente e Ollama sem resposta são WARN opcionais. Isso não contaminou os gates, executados com Node 24.19.0.
 
 ## Publicação/verificação
-- Não houve alteração funcional nem novo commit neste tick; worktree permaneceu limpa antes da documentação.
+- Commit documental `83cc367d5cbf60e3a94c1f8390660bf0c6805b7f` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32315419428`: `completed/success`, `headSha` idêntico.
 - Produção `https://rs.votopraquem.org/`: raiz HTTP 200 e `/release.json` HTTP 200.
-- Release observado: `ef57622fe3133b1f3d2bf1dc8ae33dc63bdb7eee`, versão `0.2.473`, snapshot `row_count=1003`.
-- Backup Cloudflare `334951434`: último run concluído com sucesso observado `32312965928`, `headSha=ef57622fe3133b1f3d2bf1dc8ae33dc63bdb7eee`; runs posteriores do mesmo SHA ficaram `skipped`.
+- Release de produção confirmado: `83cc367-20260819T235814262Z`, versão `0.2.474`, SHA completo idêntico e snapshot `row_count=1003`.
 
 ## Próximo passo
 No próximo tick, repetir os seis GETs oficiais sem alterar o manifesto; manter a reconciliação local e a publicação documental independentes do bloqueio factual. Só avançar para aplicação após R0, fonte/hash estáveis, dry-run e prova de idempotência.

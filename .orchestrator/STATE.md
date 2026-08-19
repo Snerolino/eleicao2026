@@ -4,7 +4,7 @@
 - Reconhecimento oficial read-only: 6/6 HTTP 200, 6/6 prefixos PDF válidos, 1/6 coincidências de bytes e 0/6 coincidências SHA-256 contra o manifesto versionado. Evidência: `.orchestrator/runtime/senado-revalidation-current.json`.
 - Dry-run `npm run impact:senado:sources:apply -- --dry-run`: 6 planejadas, 0 ausentes, 0 inserções, 0 votos tocados.
 - Gates Node 24.19.0: 81 arquivos/371 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check` verdes.
-- Produção raiz e `/release.json`: HTTP 200; release observado `ef57622-20260819T232440926Z`, versão `0.2.473`, snapshot `row_count=1003`. Backup `334951434`, último run concluído com sucesso `32312965928`, `headSha` idêntico; runs posteriores do mesmo SHA ficaram `skipped`.
+- Produção raiz e `/release.json`: HTTP 200; release observado após publicação `83cc367-20260819T235814262Z`, versão `0.2.474`, SHA completo idêntico e snapshot `row_count=1003`. Backup `334951434`, run `32315419428`, `completed/success`, `headSha` idêntico.
 - Nenhuma escrita factual remota, atualização do manifesto, Supabase ou alteração do snapshot foi executada; Senado permanece fail-closed por deriva SHA-256.
 - QA: `docs/qa/lote-senado-source-revalidation-2026-08-19-2356.md`.
 - Próximo chunk: repetir os seis GETs oficiais sem gerar manifesto novo nem aplicar votos enquanto persistir a deriva; manter publicação documental independente.
