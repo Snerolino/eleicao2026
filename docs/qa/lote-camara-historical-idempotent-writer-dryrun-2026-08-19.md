@@ -53,9 +53,22 @@ catálogo de fontes no mesmo tick de aplicação.
 - As 8 identidades históricas inelegíveis permanecem fail-closed por contrato e
   não entram no envelope aplicável.
 
+## Publicação deste checkpoint
+
+- Commit: `b9711f2` publicado em `origin/main`.
+- A tentativa de disparar manualmente o backup Cloudflare `334951434` falhou
+  por `error connecting to api.github.com`.
+- Os runs listados mais recentes eram anteriores, `skipped`, com `headSha`
+  `683286c...`; não são evidência de deploy deste commit.
+- Produção respondeu HTTP 200, mas `/release.json` ainda confirma o SHA anterior
+  `683286c2336142f9c0915402e04d312cc71df0f9`, versão `0.2.374` e 1003
+  candidaturas. Portanto este checkpoint ainda não está publicado em produção.
+
 ## Próximo passo
 
-Revalidar, em modo read-only, identidade remota por `tse_candidate_id`, schema/FK
-legislativo e os 7 `source_references` por URL/hash; somente com todos os gates
-exatos executar `npm run impact:camara:historical:write -- --apply`, provar uma
-segunda execução idempotente e então publicar/validar produção.
+Revalidar a API GitHub e disparar/confirmar o backup Cloudflare para
+`headSha=b9711f2`; depois revalidar, em modo read-only, identidade remota por
+`tse_candidate_id`, schema/FK legislativo e os 7 `source_references` por
+URL/hash. Somente com todos os gates exatos executar
+`npm run impact:camara:historical:write -- --apply`, provar uma segunda execução
+idempotente e validar produção.

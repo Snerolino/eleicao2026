@@ -1,3 +1,11 @@
+# Tick contínuo — release do writer histórico bloqueado por GitHub API (2026-08-19)
+
+- Commit funcional `b9711f2` foi publicado em `origin/main`.
+- Disparo manual do backup Cloudflare `334951434` falhou por `error connecting to api.github.com`.
+- Produção segue HTTP 200, mas `/release.json` confirma somente SHA anterior `683286c...`, versão `0.2.374`; este commit ainda não foi verificado em produção.
+- QA atualizado em `docs/qa/lote-camara-historical-idempotent-writer-dryrun-2026-08-19.md`.
+- Próximo chunk: revalidar GitHub API e confirmar deploy de `b9711f2`; depois executar gate read-only de identidade/schema/FK/fontes antes de qualquer `--apply`.
+
 # Tick contínuo — writer histórico Câmara em dry-run verificado (2026-08-19)
 
 - Lock bounded adquirido e liberado; nenhum writer concorrente.
