@@ -5,10 +5,18 @@
 - Criados `data/legislative-import/senado/nominal-source-manifest-2026-08-19.json` e `nominal-source-catalog-input.json`, somente dry-run-ready; nenhum UUID foi inventado.
 - `build-legislative-source-catalog.mjs` passou a aceitar prefixos oficiais Câmara/Senado; teste de contrato Senado adicionado.
 - Gates Node 24.19.0: 78 arquivos/367 testes, TypeScript, schema, data:check (1003 candidaturas/988 fotos), build e diff check verdes.
-- Nenhuma escrita Supabase/Cloudflare, source_reference, voto, FK, identidade, matriz ou RPC foi executada.
+- Nenhuma escrita de voto/FK/identidade/matriz/RPC foi executada; apenas 6 `source_references` oficiais foram cadastradas.
 - QA: `docs/qa/lote-senado-source-catalogo-2026-08-19.md`.
-- Bloqueio real: as seis referências ainda não estão resolvidas no catálogo remoto por URL+hash; Senado permanece fail-closed.
-- Próximo chunk: reconsultar catálogo remoto por URL/hash e preparar somente plano SQL/dry-run idempotente das seis referências, sem aplicar votos.
+- 6 `source_references` foram aplicadas com URL/hash exatos; Senado permanece fail-closed para votos porque os candidatos TSE não foram resolvidos e o writer `legislator_id` ainda está em preparação.
+- Próximo chunk: adaptar o envelope PDF para dry-run factual usando somente `legislator_id`, sem aplicar votos até validar o writer idempotente.
+
+## Tick contínuo — fontes Senado aplicadas e parser nominal preparado (2026-08-19)
+
+- 6 `source_references` Senado aplicadas com URL/hash exatos; segunda execução inseriu 0.
+- Parser oficial em PDF extraiu 48 proposições, 68 eventos e 184 votos em dry-run local.
+- Legisladores remotos 6341, 1186 e 825 resolvidos; candidatos TSE 0, portanto o próximo writer deve usar `legislator_id` sem inferir `candidate_id`.
+- Nenhum voto Senado, matriz, claim ou RPC foi aplicado.
+- QA: `docs/qa/lote-senado-sources-parser-ready-2026-08-19.md`.
 
 ## Release verification — documentação do tick (2026-08-19 06:01 UTC)
 

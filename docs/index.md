@@ -107,6 +107,7 @@
 | [`qa/fed21-camara-q1-envelope-resolvido-2026-08-18.md`](qa/fed21-camara-q1-envelope-resolvido-2026-08-18.md) | FED-21: envelope Câmara Q1 com identidades resolvidas |
 | [`qa/fed22-vote-profiles-after-camara-q1-2026-08-18.md`](qa/fed22-vote-profiles-after-camara-q1-2026-08-18.md) | FED-22: perfis nominais após batch Câmara Q1 |
 | [`qa/fed23-camara-historical-source-gaps-2026-08-18.md`](qa/fed23-camara-historical-source-gaps-2026-08-18.md) | FED-23: lacunas históricas de fontes Câmara |
+| [`qa/lote-senado-sources-parser-ready-2026-08-19.md`](qa/lote-senado-sources-parser-ready-2026-08-19.md) | Senado nominal: fontes aplicadas e parser preparado |
 | [`qa/fotos-sem-match-2026-08-03.md`](qa/fotos-sem-match-2026-08-03.md) | Distribuição dos candidatos sem foto e caso ambíguo |
 
 ## Release
