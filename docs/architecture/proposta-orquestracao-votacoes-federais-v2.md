@@ -108,6 +108,25 @@ Se o tick anterior morrer, o próximo retoma do Git/STATE; se houver writer
 ativo, o lock impede concorrência. O scheduler é mecanismo de continuidade, não
 autorização para ignorar gates ou inventar evidências.
 
+### 2.6 Lanes simultâneas sem quebrar fluxo único
+
+O reconhecimento oficial permanece sempre ativo, mas não monopoliza o tick. O
+control plane mantém quatro lanes coordenadas:
+
+1. `official_reconnaissance`: scouts read-only pesquisam Senado, Câmara, ALRS e
+   fontes históricas, retornando manifesto, hash e handoff;
+2. `local_implementation`: o único writer implementa parsers, contratos,
+   adaptadores, UI, testes e documentação usando os manifests disponíveis;
+3. `publication_verification`: após gates verdes, executa commit, push, CI,
+   backup Cloudflare, smoke HTTP e conferência de SHA;
+4. `remote_factual_apply`: só inicia quando R0, FK, fonte oficial, dry-run e
+   idempotência estiverem verdes.
+
+Um bloqueio na lane de reconhecimento mantém sua fila fail-closed, mas inicia
+outra lane elegível na mesma retomada. Paralelismo de scouts não cria múltiplos
+writers: a worktree continua com um único writer e as escritas remotas continuam
+separadas por gate.
+
 ## 3. Estado real da implementação
 
 ### 3.1 Repositório e execução
