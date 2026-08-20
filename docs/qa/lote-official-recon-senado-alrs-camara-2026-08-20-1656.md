@@ -44,6 +44,27 @@ votos, identidades, FKs, referências ou alterações remotas.
 - `.orchestrator/runtime/continuous-tick-2026-08-20T1656Z/senado.json`
 - `.orchestrator/runtime/continuous-tick-2026-08-20T1656Z/dataset-diff.json`
 
+## Gates locais
+
+- `npm run test`: exit 0, 82 arquivos/372 testes.
+- `npx tsc --noEmit`: exit 0.
+- `node scripts/validate-impact-schema.mjs`: exit 0.
+- `npm run data:check`: exit 0, 1003 candidaturas/988 fotos oficiais.
+- `npm run build`: exit 0, sitemap com 1003 candidatos + 2 URLs estáticas.
+- `git diff --check`: exit 0.
+- `npm run smoke:local`: exit 0, 1002 cards, mínimo 1002, 0 falhas HTTP e 0 erros de console online.
+
+## Publicação e verificação
+
+- Commit: `683e1100b2cb0caceeebd1680b3f69b45f9a20e8`, publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32395013816`, `completed/success`,
+  `headSha` idêntico ao commit.
+- Produção: raiz HTTP 200; `/release.json?cb=683e1100` HTTP 200 com SHA
+  `683e1100b2cb0caceeebd1680b3f69b45f9a20e8`, `release_id=683e110-20260820T165929563Z`
+  e snapshot `row_count=1003`.
+- A primeira leitura sem cache serviu release anterior durante propagação; a
+  leitura com cache-buster foi repetida e alinhou ao commit publicado.
+
 ## Próximo passo
 
 Manter Senado e ALRS fail-closed e repetir reconhecimento oficial bounded; não
