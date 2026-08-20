@@ -35,7 +35,10 @@ Executados com Node 24:
 - `.orchestrator/runtime/continuous-tick-20260820T220006Z/camara-q4.json`
 - `.orchestrator/runtime/continuous-tick-20260820T220006Z/dataset-diff.json`
 
+## Publicação e produção
+- Commit documental inicial `4729e56d2b3ed9aee434c0e3080fa8f6521478a7` publicado em `origin/main`; workflow backup `334951434`, run `32422422008`, `completed/success`, `headSha` idêntico.
+- Checkpoint operacional em `d75394505d93afde10335d7094c257e965e9bf45`; workflow backup `334951434`, run `32422546489`, `completed/success`, `headSha` idêntico.
+- Produção raiz HTTP 200; `/release.json` confirmou SHA `d75394505d93afde10335d7094c257e965e9bf45`, `row_count=1003`, release `d753945-20260820T220454230Z`.
+
 ## Próximo passo
-Concluir build, diff check e smoke. Se verdes, publicar somente este checkpoint
-com documentação; manter Senado/ALRS fail-closed e não aplicar fatos sem R0/schema/FK,
-fonte, dry-run e prova de idempotência.
+Repetir a reconciliação bounded no próximo tick; manter Senado/ALRS fail-closed e não aplicar fatos sem R0/schema/FK, fonte, dry-run e prova de idempotência.
