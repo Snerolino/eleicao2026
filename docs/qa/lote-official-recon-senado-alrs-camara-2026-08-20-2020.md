@@ -36,8 +36,12 @@ dry-run e idempotência.
 - `.orchestrator/runtime/continuous-tick-20260820T2020Z/camara-q4.json`
 - `.orchestrator/runtime/continuous-tick-20260820T2020Z/dataset-diff.json`
 
+## Publicação e produção
+- Commit documental `c12318fbeca32c4051c37bb942b072aa47058db4` publicado em `origin/main`.
+- Workflow backup `334951434`, run `32413831816`, concluiu `completed/success` com `headSha=c12318fbeca32c4051c37bb942b072aa47058db4`.
+- Produção raiz HTTP 200; `/release.json` HTTP 200 permanece no SHA funcional anterior `a84cd5c8ac2f5119c02fd233d1364e94d8cc9289`, esperado porque o commit foi somente documental e não alterou `dist/` funcional.
+- Smoke remoto exit 0: 1.002 cards, mínimo 1.002, 0 falhas HTTP, 0 erros de console online e service worker pronto.
+
 ## Próximo passo
-Publicar este checkpoint documental pelos gates autorizados, verificar o workflow
-backup e produção, e repetir a reconciliação bounded. Manter ALRS/Senado
-fail-closed e não aplicar fatos sem R0/schema/FK/fonte, dry-run e prova de
-idempotência.
+Repetir a reconciliação bounded. Manter ALRS/Senado fail-closed e não aplicar fatos
+sem R0/schema/FK/fonte, dry-run e prova de idempotência.

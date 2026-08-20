@@ -9,7 +9,9 @@
 - Doctor do cron permanece FAIL pelo Node 22.22.2 do shell; OpenCode ausente e Ollama sem preflight são WARNs opcionais.
 - QA: `docs/qa/lote-official-recon-senado-alrs-camara-2026-08-20-2020.md`; artefatos read-only em `.orchestrator/runtime/continuous-tick-20260820T2020Z/`.
 - Nenhuma escrita factual Supabase, snapshot, claim, manifesto, source reference, voto, identidade, FK ou matriz ocorreu.
-- Próximo passo: publicar este fechamento documental e repetir reconciliação bounded sem promover deriva.
+- Publicação: commit documental `c12318fbeca32c4051c37bb942b072aa47058db4` em `origin/main`; backup `334951434`, run `32413831816`, `completed/success`, `headSha` idêntico.
+- Produção: raiz HTTP 200; `/release.json` HTTP 200 permanece no SHA funcional anterior `a84cd5c8ac2f5119c02fd233d1364e94d8cc9289`, pois o commit alterou somente documentação; smoke remoto exit 0 (1002 cards, 0 falhas HTTP, 0 erros de console).
+- Próximo passo: repetir reconciliação bounded sem promover deriva.
 
 ## Tick contínuo — recon oficial bounded Senado/ALRS/Câmara (2026-08-20T19:38Z)
 
