@@ -1,3 +1,14 @@
+## Tick contínuo — Câmara votos nominais bounded, lote 04 (2026-08-20T07:45Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `9ba709a9755554ab488d07cae9612b7ec5ab8d88`.
+- Coletor oficial read-only consultou `/votacoes/{id}/votos` para 25/300 IDs da janela 2026-07-01 a 2026-09-30, posições 76–100.
+- Resultado verificado: 25 eventos, 0 individualizados, 0 votos; manifesto SHA-256 `6d63f3602a1f15e24d28930d99f23cd766767e7224399ea046bcbbb8a1bab64f`.
+- QA: `docs/qa/lote-camara-votos-batch-04-2026-08-20.md`.
+- Gates Node 24.19.0: 82 arquivos/372 testes, TypeScript, schema, `data:check` (1003/988), build e `git diff --check` verdes.
+- Nenhuma escrita factual remota; ALRS e Senado continuam fail-closed pelos bloqueios já documentados.
+- Doctor do shell cron permanece FAIL restrito ao Node 22.22.2; OpenCode ausente, gateway divergente e Ollama sem resposta são WARNs opcionais.
+- Próximo chunk: Câmara lote 05 read-only; depois seguir bounded até cobrir os 300 IDs.
+
 ## Tick contínuo — Câmara votos nominais bounded, lote 03 (2026-08-20T07:07Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `514eb22b39eb6e532e925f3e228930281264b21a`.
