@@ -1,3 +1,16 @@
+## Tick contínuo — recon oficial bounded Senado/ALRS/Câmara (2026-08-20T16:17Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `3ce04b62721a27e45395bd2cc24fce2d0d4d0ab6`.
+- Câmara: janela oficial 2026-10-01 a 2026-12-31, HTTP 200, uma página válida, 0 votações e nenhum bloqueio; nenhum evento inferido.
+- Senado: 6/6 HTTP 200, 6/6 prefixos PDF válidos, 3/6 coincidências de bytes e 0/6 SHA-256 contra o manifesto; fail-closed, sem atualização ou aplicação.
+- ALRS: HTTP 200, 77442 bytes, SHA-256 `sha256:6a386d7d8b9ae17f8f5107b0cb6c90d71795a8568f08ed7c5972746a4ac0bab1`, 0 `data-item`, sem `Enio Carlos Terra`/`Terra`; os quatro residuais seguem sem ID oficial/fonte exata.
+- Nenhuma escrita factual Supabase, snapshot, claim, manifesto, source reference, voto, identidade, FK ou matriz ocorreu.
+- QA: `docs/qa/lote-official-recon-senado-alrs-camara-2026-08-20-1617.md`; gates locais verdes: 82 arquivos/372 testes, TypeScript, schema, `data:check` 1003/988, build e diff check.
+- Doctor exit 1 somente pelo shell Node 22.22.2; OpenCode ausente e Ollama sem preflight são WARNs opcionais.
+- Publicação documental: commits `95b9cc7c29699bab5b48b04c4c0b295f7d85727b` e `efebeea38b589ca074cb77fb694cd8074bd8fd24`; backup `334951434`, run `32391521233`, `completed/success`, `headSha` idêntico ao HEAD final.
+- Produção: raiz HTTP 200; `/release.json` SHA `efebeea38b589ca074cb77fb694cd8074bd8fd24`, release `efebeea-20260820T162157162Z`, snapshot `row_count=1003`.
+- Próximo passo: repetir reconciliação bounded sem promover deriva; manter ALRS/Senado fail-closed e consultar próxima janela Câmara elegível.
+
 ## Tick contínuo — recon oficial bounded Senado/ALRS/Câmara (2026-08-20T16:00Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `a6b428300cd11ce456418885486716071ac3dce5`.
