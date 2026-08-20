@@ -8,6 +8,7 @@
 - Gates Node 24.19.0: 82 arquivos/372 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check` verdes.
 - Doctor do shell cron permanece FAIL restrito ao Node 22.22.2; OpenCode ausente e Ollama sem preflight permanecem WARNs opcionais.
 - QA criado: `docs/qa/lote-senado-source-revalidation-2026-08-20-1333.md`.
+- Commit documental `d19bedf7a35b32782539b3fdf724e82b3351118f` publicado; backup `334951434`, run `32375095689`, `completed/success`, `headSha` idêntico. Preview `ac507dae.portal-transparencia-rs.pages.dev` serve SHA idêntico; domínio customizado continua servindo SHA anterior `68db32a16e82b0f614023354df27b30cd3846bd4` apesar de raiz/release HTTP 200 e smoke exit 0 (1002 cards, 0 falhas HTTP, 0 erros de console), divergência de propagação/roteamento aberta.
 - Nenhuma escrita Supabase, snapshot, claim ou dado factual remoto ocorreu.
 - Próximo passo: repetir a revalidação bounded sem gerar manifesto novo enquanto persistir a deriva; manter Câmara/Q3 e a reconciliação ALRS independentes.
 

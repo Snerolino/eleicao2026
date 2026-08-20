@@ -33,7 +33,14 @@
 - Senado permanece bloqueado exclusivamente pela deriva SHA-256 do conteúdo oficial contra o manifesto versionado.
 - ALRS permanece bloqueado por ausência de ID oficial exato/fonte exata para os 4 residuais de Enio.
 - Câmara Q3 permanece fechado; nenhum evento foi inferido a partir de resposta vazia.
-- Não houve escrita Supabase, Cloudflare, snapshot, claim ou dado factual remoto.
+- Não houve escrita Supabase, snapshot, claim ou dado factual remoto.
+
+## Publicação e verificação
+
+- Commit documental: `d19bedf7a35b32782539b3fdf724e82b3351118f` publicado em `origin/main`.
+- Workflow backup `334951434`, run `32375095689`: `completed/success`, `headSha` idêntico ao commit.
+- Preview Cloudflare `https://ac507dae.portal-transparencia-rs.pages.dev`: `/release.json` HTTP 200 e SHA `d19bedf7a35b32782539b3fdf724e82b3351118f` idêntico.
+- Domínio customizado `https://rs.votopraquem.org`: raiz HTTP 200, `/release.json` HTTP 200 e smoke exit 0 — 1002 cards, 0 falhas HTTP, 0 erros de console online — porém ainda serve SHA anterior `68db32a16e82b0f614023354df27b30cd3846bd4`; a divergência de propagação/roteamento fica explicitamente aberta, sem declarar produção alinhada ao commit novo.
 
 ## Próximo passo
 
