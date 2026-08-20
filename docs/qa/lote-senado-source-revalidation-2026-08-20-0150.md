@@ -35,6 +35,13 @@ A deriva SHA-256 persiste em **6/6** fontes; portanto não há autorização fac
 
 O doctor do shell cron continua com FAIL restrito ao Node `v22.22.2` (o projeto exige Node 24); OpenCode ausente e Ollama sem resposta permanecem WARN opcionais. Os gates desta execução foram feitos explicitamente com Node 24.19.0.
 
+## Publicação e produção
+
+- Commit documental: `9a7053090cc305d0b2f96b400656695c8e1d1bd3`, publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32322524502`, concluiu `completed/success` com `headSha` idêntico.
+- Produção raiz: HTTP 200.
+- `https://rs.votopraquem.org/release.json`: HTTP 200; release `9a70530-20260820T015156137Z`, versão `0.2.484`, `snapshot.row_count=1003` e SHA do run confirmado; `commit_sha` no payload veio nulo.
+
 ## Próximo passo
 
 Repetir os seis GETs oficiais no próximo tick sem atualizar o manifesto e sem aplicar votos enquanto a deriva persistir. A lane de publicação documental segue independente; a lane factual continua bloqueada somente para este item.

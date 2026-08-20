@@ -7,6 +7,7 @@
 - Nenhuma escrita factual remota, atualização do manifesto, Supabase ou alteração do snapshot foi executada; Senado permanece fail-closed por deriva SHA-256.
 - Doctor do shell cron permanece com FAIL restrito ao Node 22.22.2; OpenCode ausente e Ollama sem resposta permanecem WARN opcionais.
 - QA: `docs/qa/lote-senado-source-revalidation-2026-08-20-0150.md`.
+- Publicação: commit `9a7053090cc305d0b2f96b400656695c8e1d1bd3`; backup `334951434`, run `32322524502`, `completed/success`, `headSha` idêntico; produção raiz e `/release.json` HTTP 200, release `9a70530-20260820T015156137Z`, versão `0.2.484`, snapshot `row_count=1003`.
 - Próximo chunk: repetir os seis GETs oficiais sem gerar manifesto novo nem aplicar votos enquanto persistir a deriva; publicação documental segue independente.
 
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-20T01:11Z)
