@@ -71,6 +71,8 @@
 
 ## QA
 
+| [`qa/lote-senado-source-revalidation-2026-08-20-0357.md`](qa/lote-senado-source-revalidation-2026-08-20-0357.md) | Senado nominal: revalidação oficial com deriva SHA-256; aplicação bloqueada |
+
 | Arquivo | Descrição |
 |---------|-----------|
 | [`qa/fase-7-acessibilidade-contraste-final.md`](qa/fase-7-acessibilidade-contraste-final.md) | Rodada final de teclado, headings e contraste em mobile/desktop; registra correção de `h1` da Home |
