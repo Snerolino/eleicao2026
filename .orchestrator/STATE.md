@@ -1,3 +1,14 @@
+## Tick contínuo — reconhecimento Câmara Q4 sem novos eventos (2026-08-20)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `fe2d154b7877f8adbc2c137ef133a66b7f690eef`.
+- Reconhecimento oficial read-only consultou `https://dadosabertos.camara.leg.br/api/v2/votacoes` na janela `2026-10-01` a `2026-12-31`, respeitando a janela máxima de três meses.
+- Resultado verificado: HTTP 200, uma página válida, 0 `vote_id`, nenhum bloqueio; não houve inferência de eventos, votos, identidades, FKs ou fontes.
+- Auditoria de fontes Câmara: 7 URLs, todas HTTP 200; manifesto versionado permaneceu sem alteração.
+- Auditoria estrita de cobertura continua exit 2 por gaps reais: Câmara 2 votos, ALRS 4 votos e Senado 455 votos sem fonte.
+- QA criado: `docs/qa/lote-camara-q4-discovery-2026-08-20.md`.
+- Nenhuma escrita factual remota; ALRS/Senado seguem fail-closed.
+- Próximo passo: manter reconhecimento oficial independente e revalidar a Câmara em nova janela elegível; seguir com gates locais/documentais sem inventar lote vazio.
+
 ## Tick contínuo — Câmara votos nominais bounded, lote 12 (2026-08-20T11:33Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `c66f4ce8a6b4726d5a32af86950b7e4f3b433e6c`.
