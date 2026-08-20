@@ -7,9 +7,9 @@
 - QA criado: `docs/qa/lote-camara-votos-batch-05-2026-08-20.md`.
 - Próximo passo: gates locais; se verdes, publicar QA e verificar produção; depois Câmara lote 06. ALRS/Senado continuam fail-closed.
 - Gates verdes após coleta: 82 arquivos/372 testes, TypeScript, schema, `data:check` (1003/988), build (`768ff81-20260820T082327408Z`) e `git diff --check`.
-- Publicação inicial: commit `d6a0b6bd8b43c14cfd2b344ad4226a801e913e67` em `origin/main`; backup `334951434`, run `32348599354`, `completed/success`, `headSha` idêntico; raiz e `/release.json` HTTP 200; release `d6a0b6b-20260820T082421010Z`, versão `0.2.518`, snapshot `row_count=1003`.
+- Publicação: commit `9c8a93c7c0494d177d949268ac1f49dff03b957e` em `origin/main`; backup `334951434`, run `32348781252`, `completed/success`, `headSha` idêntico; raiz e `/release.json` HTTP 200; release `9c8a93c-20260820T082633676Z`, versão `0.2.519`, snapshot `row_count=1003`.
 - Smoke remoto exit 0: 1002 cards, mínimo esperado 1002, 0 falhas HTTP e 0 erros de console online.
-- A atualização documental atual requer uma verificação final após novo commit; próximo chunk permanece Câmara lote 06 após esse fechamento.
+- Fechamento documental final pendente apenas de registrar este último commit; próximo chunk permanece Câmara lote 06 após o fechamento.
 
 ## Tick contínuo — Câmara votos nominais bounded, lote 04 (2026-08-20T07:45Z)
 
