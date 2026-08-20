@@ -1,3 +1,15 @@
+## Tick contínuo — reconhecimento ALRS Enio sem ID oficial (2026-08-20)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `312a900a69e71983856b38ab5b8c5ba53f22d456`.
+- Reconhecimento read-only consultou exclusivamente `https://transparencia.al.rs.gov.br/parlamentares/votos-plenario`.
+- Resultado verificado: HTTP 200, HTML server-side de 77442 bytes, 55 opções de parlamentares; busca exata não encontrou Enio Carlos Terra nem Terra.
+- O JavaScript oficial confirma `idDeputado`/`nomeDeputado`; a resposta do endpoint neste acesso permaneceu HTML, não foi tratada como JSON.
+- Nenhum ID, identidade, URL, hash, voto ou FK foi inventado; nenhuma escrita remota ocorreu.
+- Auditoria: `impact:sources:audit` exit 0; `audit-legislative-source-coverage --strict` exit 2 por gaps reais; ALRS 3996/4000 votos com fonte e 4 residuais sem fonte.
+- QA criado: `docs/qa/lote-alrs-enio-id-recon-2026-08-20.md`.
+- Bloqueio restrito ao item ALRS: falta rota histórica/ID oficial exato para Enio; Câmara/Senado e gates locais continuam independentes.
+- Próximo passo: publicar este checkpoint e iniciar o próximo chunk independente, mantendo ALRS em reconhecimento background fail-closed.
+
 ## Tick contínuo — reconhecimento Câmara Q4 sem novos eventos (2026-08-20)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `fe2d154b7877f8adbc2c137ef133a66b7f690eef`.
