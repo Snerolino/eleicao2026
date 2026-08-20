@@ -24,7 +24,10 @@
       "review_status": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
-      "human_review_required": true
+      "human_review_required": true,
+      "editorial_disposition": "procedural_only",
+      "editorial_review_status": "approved",
+      "rationale": "Votação de retirada de pauta altera o rito, não o conteúdo material do substitutivo."
     },
     {
       "house": "camara",
@@ -45,7 +48,10 @@
       "review_status": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
-      "human_review_required": true
+      "human_review_required": true,
+      "editorial_disposition": "no_direct_population_group",
+      "editorial_review_status": "approved",
+      "rationale": "Regulação fiscal setorial sem efeito direto comprovado sobre grupo da taxonomia v1."
     },
     {
       "house": "camara",
@@ -62,7 +68,10 @@
       "review_status": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
-      "human_review_required": true
+      "human_review_required": true,
+      "editorial_disposition": "procedural_only",
+      "editorial_review_status": "approved",
+      "rationale": "Evento de urgência; não aprova nem rejeita o conteúdo tributário do projeto."
     },
     {
       "house": "camara",
@@ -81,7 +90,11 @@
       "review_status": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
-      "human_review_required": true
+      "human_review_required": true,
+      "editorial_disposition": "taxonomy_gap",
+      "editorial_review_status": "approved",
+      "taxonomy_gap": "pescadores_artesanais",
+      "rationale": "O evento afeta pescadores artesanais, população sem slug adequado na taxonomia v1."
     },
     {
       "house": "camara",
@@ -100,7 +113,10 @@
       "review_status": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
-      "human_review_required": true
+      "human_review_required": true,
+      "editorial_disposition": "event_resolution_required",
+      "editorial_review_status": "pending_review",
+      "rationale": "O objeto exato do evento ainda precisa ser resolvido na fonte oficial."
     },
     {
       "house": "camara",
@@ -119,7 +135,10 @@
       "review_status": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
-      "human_review_required": true
+      "human_review_required": true,
+      "editorial_disposition": "event_resolution_required_no_group_expected",
+      "editorial_review_status": "pending_review",
+      "rationale": "O objeto exato do evento ainda precisa ser resolvido; a matéria não indica grupo v1 direto."
     },
     {
       "house": "camara",
@@ -138,7 +157,10 @@
       "review_status": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
-      "human_review_required": true
+      "human_review_required": true,
+      "editorial_disposition": "event_resolution_required_no_group_expected",
+      "editorial_review_status": "pending_review",
+      "rationale": "O objeto exato do evento ainda precisa ser resolvido; a matéria não indica grupo v1 direto."
     },
     {
       "house": "camara",
@@ -155,7 +177,11 @@
       "review_status": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
-      "human_review_required": true
+      "human_review_required": true,
+      "editorial_disposition": "procedural_only",
+      "editorial_review_status": "approved",
+      "editorial_review_note": "O mérito ambiental não é herdado por votação de urgência.",
+      "rationale": "Evento de urgência; não pontua o conteúdo ambiental subjacente."
     },
     {
       "house": "camara",
@@ -174,7 +200,14 @@
       "review_status": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
-      "human_review_required": true
+      "human_review_required": true,
+      "editorial_disposition": "impact_assessment",
+      "editorial_review_status": "approved",
+      "approved_group": "mulheres",
+      "approved_direction": "positive",
+      "defending_vote": "sim",
+      "confidence": 0.99,
+      "rationale": "O substitutivo cria estrutura nacional de prevenção e enfrentamento da violência contra meninas e mulheres, incluindo feminicídio; voto SIM aprova o instrumento de proteção."
     },
     {
       "house": "camara",
@@ -191,7 +224,13 @@
       "review_status": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
-      "human_review_required": true
+      "human_review_required": true,
+      "editorial_disposition": "procedural_only",
+      "editorial_review_status": "approved",
+      "underlying_group_hint": [
+        "agricultura_familiar_sem_terra"
+      ],
+      "rationale": "Evento de urgência; não pontua o regime material para pequenos produtores."
     },
     {
       "house": "camara",
@@ -208,7 +247,13 @@
       "review_status": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
-      "human_review_required": true
+      "human_review_required": true,
+      "editorial_disposition": "procedural_only",
+      "editorial_review_status": "approved",
+      "underlying_group_hint": [
+        "mulheres"
+      ],
+      "rationale": "Evento de urgência; não pontua o mérito antimisoginia subjacente."
     },
     {
       "house": "camara",
@@ -225,7 +270,10 @@
       "review_status": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
-      "human_review_required": true
+      "human_review_required": true,
+      "editorial_disposition": "procedural_only",
+      "editorial_review_status": "approved",
+      "rationale": "Evento de urgência; não pontua o mérito ambiental subjacente."
     },
     {
       "house": "camara",
@@ -244,7 +292,15 @@
       "review_status": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
-      "human_review_required": true
+      "human_review_required": true,
+      "editorial_disposition": "no_direct_population_group",
+      "editorial_review_status": "approved",
+      "rationale": "Emenda processual sobre recursos especiais sem grupo populacional v1 diretamente afetado."
     }
-  ]
+  ],
+  "review_decisions": {
+    "approved_non_scoring": 9,
+    "approved_assessments": 1,
+    "pending_event_resolution": 3
+  }
 }
