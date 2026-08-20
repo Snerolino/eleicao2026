@@ -33,6 +33,13 @@ O manifesto versionado continua divergente do conteúdo atualmente servido pelas
 
 A deriva SHA-256 persiste em **6/6** fontes; portanto não há autorização factual para gerar novo manifesto ou executar `--apply`. Não inventar hash, URL, identidade ou voto.
 
+## Publicação e produção
+
+- Commit documental: `1328f0b37fa92ab147c70c46cc58e67d3d57eeac`, publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32317745454`: `completed/success`, `headSha` idêntico ao commit.
+- Produção: raiz HTTP 200 e `/release.json` HTTP 200.
+- Após propagação, release `1328f0b-20260820T003345616Z`, versão `0.2.478`, snapshot com `row_count=1003`; `commit_sha` nulo no payload, mas o `headSha` do run confirma a publicação.
+
 ## Próximo passo
 
-Repetir os seis GETs oficiais no próximo tick sem atualizar o manifesto e sem aplicar votos enquanto a deriva persistir. A lane de publicação documental segue independente e pode publicar este QA após os gates.
+Repetir os seis GETs oficiais no próximo tick sem atualizar o manifesto e sem aplicar votos enquanto a deriva persistir. A lane de publicação documental segue independente.
