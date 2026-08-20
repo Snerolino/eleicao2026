@@ -6,6 +6,8 @@
 - Verificação: 8/8 checks passaram — IDs, URLs oficiais, arquivos brutos JSON válidos, contagens e ausência de envelopes inconsistentes.
 - Gates Node 24.19.0: 82 arquivos/372 testes, TypeScript, schema, `data:check` (1003/988), build e `git diff --check` verdes; doctor do cron segue FAIL restrito ao Node 22.22.2.
 - QA criado: `docs/qa/lote-camara-votos-batch-11-2026-08-20.md`.
+- Publicação: commit `edd3d695c83b104a96b099533cde228cb18c406f` em `origin/main`; backup `334951434`, run `32361452076`, `completed/success`, `headSha` idêntico. Preview Cloudflare `750e23e4.portal-transparencia-rs.pages.dev` HTTP 200 e release SHA idêntico; domínio customizado raiz HTTP 200, mas `/release.json` ainda retorna o SHA anterior `d186b1dc611e...`, divergência de propagação/roteamento não declarada como alinhamento.
+- Smoke local exit 0: 1002 cards, mínimo esperado 1002, 0 falhas HTTP e 0 erros de console online.
 - Nenhuma escrita factual remota; ALRS/Senado continuam fail-closed.
 - Próximo passo: publicar este checkpoint e iniciar Câmara lote 12 (posições 276–300).
 

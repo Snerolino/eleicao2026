@@ -13,6 +13,9 @@
 - Manifesto: `.orchestrator/runtime/camara-batch-11/collector/manifest.json`.
 - SHA-256: `007571c5b4df2fc9936601a71fbdbcc9b17581fc444f86f16c0541f5b97d348e`.
 - Nenhuma escrita remota ou alteração factual foi realizada.
+- **Publicação:** commit `edd3d695c83b104a96b099533cde228cb18c406f` em `origin/main`; backup `334951434`, run `32361452076`, `completed/success`, `headSha` idêntico.
+- **Verificação:** raiz de produção HTTP 200, porém `https://rs.votopraquem.org/release.json` ainda serve SHA anterior `d186b1dc611e...`; o deploy novo está verificável no preview `https://750e23e4.portal-transparencia-rs.pages.dev`, HTTP 200, com SHA completo `edd3d695c83b104a96b099533cde228cb18c406f` e `row_count=1003`.
+- Smoke local exit 0: 1002 cards, mínimo esperado 1002, 0 falhas HTTP e 0 erros de console online.
 
 ## Estado e bloqueios
 
