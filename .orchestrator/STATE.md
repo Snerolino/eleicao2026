@@ -1,3 +1,15 @@
+## Tick contínuo — recon oficial bounded Senado/ALRS/Câmara (2026-08-20T23:31Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `62ae6dfdea0f1e5951d2abed158ac5e280c725c6`.
+- Senado: 6/6 HTTP 200, 6/6 prefixos PDF válidos, 3/6 coincidências de bytes e 0/6 SHA-256 contra o manifesto de 2026-08-19; fail-closed, sem atualização ou aplicação.
+- ALRS: HTTP 200, 77442 bytes, SHA-256 `sha256:6a386d7d8b9ae17f8f5107b0cb6c90d71795a8568f08ed7c5972746a4ac0bab1`, 0 `data-item`, sem `Enio Carlos Terra`/`Terra`; os quatro residuais seguem sem ID oficial/fonte exata.
+- Câmara: janela oficial 2026-10-01 a 2026-12-31, HTTP 200, JSON válido, 0 registros; nenhum evento inferido.
+- Dataset vivo: snapshot 1003 IDs; 10 CSVs comparáveis, 0 IDs ausentes; nenhum refresh/sincronização aplicado.
+- Nenhuma escrita factual em snapshot, manifesto, source reference, voto, identidade, FK, Supabase ou matriz ocorreu.
+- Doctor permanece FAIL somente pelo Node 22.22.2 do shell; OpenCode ausente e Ollama sem preflight são WARNs opcionais. Reconhecimento read-only executado com sucesso.
+- QA: `docs/qa/lote-official-recon-senado-alrs-camara-2026-08-20-2331.md`; artefatos em `.orchestrator/runtime/continuous-tick-20260820T2331Z/`.
+- Próximo passo: gates locais completos, publicar este checkpoint documental e repetir reconciliação bounded sem promover deriva.
+
 ## Tick contínuo — gate de segurança do refresh TSE (2026-08-20T23:10Z)
 
 - Worktree iniciou limpa em `482b21b00136` e terminou limpa em `8a0a10c3ade27321e8a42c70869a74f1b1fc9132`.
