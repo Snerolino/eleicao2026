@@ -1,3 +1,14 @@
+## Tick contínuo — Câmara votos nominais bounded, lote 11 (2026-08-20T10:55Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `d186b1dc611e16e53a085ca225292289458b7b90`.
+- Coletor oficial read-only processou as posições 251–275 dos 300 IDs oficiais da janela 2026-07-01 a 2026-09-30.
+- Resultado verificado independentemente: 25 eventos, 0 registros individuais, 0 votos brutos e 0 votos RS; manifesto SHA-256 `007571c5b4df2fc9936601a71fbdbcc9b17581fc444f86f16c0541f5b97d348e`.
+- Verificação: 8/8 checks passaram — IDs, URLs oficiais, arquivos brutos JSON válidos, contagens e ausência de envelopes inconsistentes.
+- Gates Node 24.19.0: 82 arquivos/372 testes, TypeScript, schema, `data:check` (1003/988), build e `git diff --check` verdes; doctor do cron segue FAIL restrito ao Node 22.22.2.
+- QA criado: `docs/qa/lote-camara-votos-batch-11-2026-08-20.md`.
+- Nenhuma escrita factual remota; ALRS/Senado continuam fail-closed.
+- Próximo passo: publicar este checkpoint e iniciar Câmara lote 12 (posições 276–300).
+
 ## Tick contínuo — Câmara votos nominais bounded, lote 10 (2026-08-20T10:22Z)
 
 - Lote read-only processou as posições 226–250 dos 300 IDs oficiais da janela 2026-07-01 a 2026-09-30.
