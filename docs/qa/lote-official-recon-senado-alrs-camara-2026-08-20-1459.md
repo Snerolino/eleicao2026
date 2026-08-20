@@ -29,6 +29,20 @@ prioritárias sem promover votos, identidades, FKs ou referências remotas.
   HTTP 200 não foi tratado como prova de ausência.
 - Câmara sem lote elegível nesta janela; não houve dado a aplicar.
 
+## Publicação e verificação
+
+- Gates locais: `npm run test` 82 arquivos/372 testes, TypeScript, schema,
+  `data:check` (1003 candidaturas/988 fotos), build e `git diff --check`, todos
+  exit 0.
+- Commit publicado: `f399eb62bbe94ec6c54f01e6c534080b2e8267de` (`docs: registrar
+  recon oficial bounded`), `main -> main`.
+- Backup Cloudflare `334951434`, run `32383613166`, `completed/success`,
+  `headSha` idêntico ao commit.
+- Produção: raiz HTTP 200; domínio customizado e preview confirmaram `/release.json`
+  com SHA `f399eb62bbe94ec6c54f01e6c534080b2e8267de`, release
+  `f399eb6-20260820T150155974Z`, snapshot `row_count=1003`.
+- Worktree final limpa: `## main...origin/main`.
+
 ## Próximo passo
 
 Manter a reconciliação oficial bounded: repetir Senado somente para detectar
