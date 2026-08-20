@@ -38,8 +38,8 @@ fail-closed.
 
 ## Publicação e produção
 - Commit `078dfa1413a47c52948fac66ee2758717c2bcb3f` publicado em `origin/main`.
-- Workflow backup `334951434`, run `32418320170`, concluiu `completed/success` com `headSha` idêntico.
-- Produção raiz HTTP 200 e `/release.json` HTTP 200; release confirmou SHA `078dfa1413a47c52948fac66ee2758717c2bcb3f`, snapshot `row_count=1003`.
+- Follow-up documental `bbb319b17a4f7f6edcb62c9695457ac31737cfd9` também foi publicado; workflow backup `334951434`, run `32418525682`, concluiu `completed/success` com `headSha` idêntico.
+- Produção raiz HTTP 200 e `/release.json` HTTP 200; o release funcional verificado no primeiro deploy confirmou SHA `078dfa1413a47c52948fac66ee2758717c2bcb3f`, snapshot `row_count=1003`.
 - Smoke remoto exit 0: 1.002 cards, mínimo 1.002, 0 falhas HTTP, 0 erros de console online e service worker pronto.
 - O workflow primário Wrangler não foi usado como caminho de publicação, conforme o circuit-breaker documentado.
 
