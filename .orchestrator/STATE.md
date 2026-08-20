@@ -9,7 +9,7 @@
 - Gates verdes após coleta: 82 arquivos/372 testes, TypeScript, schema, `data:check` (1003/988), build (`768ff81-20260820T082327408Z`) e `git diff --check`.
 - Publicação: commit `9c8a93c7c0494d177d949268ac1f49dff03b957e` em `origin/main`; backup `334951434`, run `32348781252`, `completed/success`, `headSha` idêntico; raiz e `/release.json` HTTP 200; release `9c8a93c-20260820T082633676Z`, versão `0.2.519`, snapshot `row_count=1003`.
 - Smoke remoto exit 0: 1002 cards, mínimo esperado 1002, 0 falhas HTTP e 0 erros de console online.
-- Fechamento documental final pendente apenas de registrar este último commit; próximo chunk permanece Câmara lote 06 após o fechamento.
+- Fechamento documental registrado no commit `6e9e2cdb5dcbb57b5cadd6878823b060cc91b6f4`; próximo chunk permanece Câmara lote 06.
 
 ## Tick contínuo — Câmara votos nominais bounded, lote 04 (2026-08-20T07:45Z)
 
