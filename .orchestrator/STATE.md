@@ -1,3 +1,9 @@
+## Publicação/verificação — tick 05:17 UTC
+
+- Commit `475cca3f3c25b7dad1e08be17f2b6f6ce1c100a9` publicado em `origin/main`.
+- Produção raiz HTTP 200; `/release.json` confirmou SHA completo idêntico, release `475cca3-20260820T051725432Z`, versão `0.2.505` e snapshot `row_count=1003`.
+- Workflow backup `334951434` foi disparado; a confirmação operacional final foi o release live com SHA idêntico.
+
 ## Tick contínuo — reconciliação oficial e gates locais (2026-08-20T05:15Z)
 
 - Lock bounded adquirido/liberado; worktree iniciou e terminou limpa em `2e87ad8588d4040a2fa23d82023cc8356964a68c`.

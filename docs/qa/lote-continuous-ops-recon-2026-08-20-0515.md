@@ -45,6 +45,13 @@ Executados com Node `v24.19.0`:
 - `git diff --check`: **verde**.
 - Worktree após os gates: **limpa**; HEAD `2e87ad8588d4040a2fa23d82023cc8356964a68c`.
 
+## Publicação e verificação
+
+- Commit `475cca3f3c25b7dad1e08be17f2b6f6ce1c100a9` publicado em `origin/main`.
+- Produção `https://rs.votopraquem.org`: raiz HTTP 200.
+- `https://rs.votopraquem.org/release.json`: release `475cca3-20260820T051725432Z`, SHA completo idêntico, versão `0.2.505` e snapshot `row_count=1003`.
+- O backup foi disparado via workflow `334951434`; a confirmação final foi feita pelo SHA do release em produção, que já contém o commit.
+
 ## Bloqueios
 
 1. ALRS: JWT do ambiente está adiantado (`JWT issued at future`); além disso,
