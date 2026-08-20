@@ -47,11 +47,13 @@ votos, identidades, FKs, referências ou alterações remotas.
 - `npm run build`: exit 0, sitemap com 1003 candidatos + 2 URLs estáticas e
   `release.json` gerado para o HEAD.
 - `git diff --check`: exit 0.
-- Commit publicado: `95b9cc7c29699bab5b48b04c4c0b295f7d85727b`, `main -> origin/main`.
-- Backup Cloudflare `334951434`, run `32391277428`, `completed/success`,
-  `headSha` idêntico ao commit.
-- Produção: raiz HTTP 200; `/release.json` HTTP 200 com SHA idêntico,
-  `release_id=95b9cc7-20260820T161908428Z`, snapshot `row_count=1003`.
+- Commit de conteúdo publicado: `95b9cc7c29699bab5b48b04c4c0b295f7d85727b`.
+- Fechamento documental publicado em `0b5a2fbeb1a9da2a25b07460aba8a0ecf767759e`;
+  backup Cloudflare `334951434`, run `32391386463`, `completed/success`,
+  `headSha` idêntico ao fechamento documental.
+- Produção: raiz HTTP 200; `/release.json` HTTP 200 com SHA
+  `0b5a2fbeb1a9da2a25b07460aba8a0ecf767759e`,
+  `release_id=0b5a2fb-20260820T162023963Z`, snapshot `row_count=1003`.
 
 ## Próximo passo
 
