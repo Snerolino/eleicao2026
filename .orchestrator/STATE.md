@@ -109,6 +109,14 @@
 - 8 identidades pendentes permanecem fora.
 - QA: `docs/qa/lote-camara-q3-extra-apply-2026-08-20.md`.
 
+## Tick contínuo — fechamento Câmara Q3 (2026-08-20)
+
+- Paginação completa: páginas 1–13 com 1270 eventos; página 14 retornou 0.
+- Q3 fechado com 13 eventos nominais e 196 votos aplicados.
+- 404/429 e identidades pendentes permanecem fail-closed.
+- Próxima fase: R4 editorial e reconhecimento contínuo ALRS/Senado.
+- QA: `docs/qa/lote-camara-q3-pagination-final-2026-08-20.md`.
+
 ## Tick contínuo — smoke R5 pós-Câmara Q3 (2026-08-20)
 
 - Smoke local verde: 1002 cards, busca/detalhe/PWA offline, 0 falhas HTTP e 0 erros online.
