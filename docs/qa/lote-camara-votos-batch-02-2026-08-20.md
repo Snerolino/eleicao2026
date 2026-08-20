@@ -27,6 +27,14 @@ placares ou respostas vazias.
 - Nenhuma identidade, FK, proposição, classificação nominal ou voto foi
   inventado ou aplicado.
 
+## Publicação e verificação
+
+- Commit documental: `76563260bf6ab991892a2ef08e7e78d6ac7ea999`, publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32339810400`: `completed/success`, `headSha` completo idêntico.
+- Produção `https://rs.votopraquem.org/`: raiz HTTP 200 e `/release.json` HTTP 200.
+- `release.json` confirmou release `7656326-20260820T062951391Z`, versão `0.2.510` e snapshot com `row_count=1003`; `commit_sha` nulo no payload, validado pelo `headSha` do run e pelo prefixo do release.
+- Worktree final limpa e `HEAD` igual a `origin/main`.
+
 ## Bloqueios e escopo
 
 - Resposta vazia no endpoint `/votos` não foi convertida em votação simbólica;

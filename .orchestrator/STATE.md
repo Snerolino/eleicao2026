@@ -6,6 +6,8 @@
 - QA: `docs/qa/lote-camara-votos-batch-02-2026-08-20.md`.
 - Gates Node 24.19.0: 82 arquivos/372 testes, TypeScript, schema, `data:check` (1003/988), build e `git diff --check` verdes.
 - Nenhuma escrita factual remota; ALRS e Senado continuam fail-closed pelos bloqueios já documentados.
+- Publicação: commit `76563260bf6ab991892a2ef08e7e78d6ac7ea999` em `origin/main`; backup `334951434`, run `32339810400`, `completed/success`, `headSha` idêntico.
+- Produção raiz e `/release.json` HTTP 200; release `7656326-20260820T062951391Z`, versão `0.2.510`, snapshot `row_count=1003`.
 - Próximo chunk: Câmara lote 03 read-only; depois seguir bounded até cobrir os 300 IDs.
 
 ## Tick contínuo — Câmara votos nominais bounded, lote 01 (2026-08-20T05:51Z)
