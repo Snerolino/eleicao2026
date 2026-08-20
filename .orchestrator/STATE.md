@@ -1,3 +1,15 @@
+## Tick contínuo — reconciliação oficial e gates locais (2026-08-20T05:15Z)
+
+- Lock bounded adquirido/liberado; worktree iniciou e terminou limpa em `2e87ad8588d4040a2fa23d82023cc8356964a68c`.
+- Senado: dry-run exit 0, 6 planejadas, 0 ausentes, 0 inserções e 0 votos tocados; deriva SHA-256 permanece fail-closed.
+- ALRS: reparador bloqueado honestamente por `JWT issued at future`; os 4 residuais de Enio seguem sem ID/fonte exata e sem alteração.
+- Câmara: descoberta oficial read-only de 2026-07-01 a 2026-09-30, 3 páginas válidas, 300 vote_ids, sem bloqueios; nenhum detalhe/voto foi inferido da listagem.
+- Dataset: `consulta_cand_2026_RS.csv` coincide 100% com o snapshot nos 1003 IDs; `lista_candidatos_2026.csv` tem 322 linhas sem coluna TSE utilizável e não foi tratado como equivalente.
+- Auditoria ampla de fontes terminou exit 2 com gaps reais: ALRS 3996/4000, Câmara 550/552, Senado 0/455 votos com fonte.
+- Gates Node 24.19.0 verdes: 82 arquivos/372 testes, TypeScript, schema, `data:check` (1003/988), build e `git diff --check`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-20-0515.md`.
+- Próximo chunk: buscar `/votacoes/{id}/votos` para os 300 IDs Câmara em lotes bounded, reconciliar apenas identidade/cargo/UF exatos e manter ALRS/Senado read-only.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-20T04:34Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `66812b2128087e3a2c068f8c042e322316362cc2`.
