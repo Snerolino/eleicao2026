@@ -8,7 +8,7 @@
 - Gates verdes com Node 24.19.0: 82 arquivos/372 testes, TypeScript, schema, `data:check` (1003/988), build e `git diff --check`.
 - Doctor do cron permanece FAIL restrito ao Node 22.22.2; OpenCode ausente e Ollama/gateway são WARNs opcionais.
 - Publicação: commit `e041fcfc1e5c2b3a2b704e29f73cc45ea93ff253` em `origin/main`; backup `334951434`, run `32352044974`, `completed/success`, `headSha` idêntico.
-- Produção: raiz HTTP 200. O domínio customizado ainda serve `/release.json` da publicação anterior (`e041fcf`, versão `0.2.522`), embora o run tenha concluído com sucesso para `0315780`; o deployment Pages direto `902cb011.portal-transparencia-rs.pages.dev` confirmou `0315780`, versão `0.2.523`. Divergência de propagação/roteamento registrada, sem declarar domínio customizado atualizado.
+- Produção: raiz HTTP 200. Na última verificação, o domínio customizado serviu `/release.json` de uma publicação anterior (`0315780`, versão `0.2.0`), enquanto o run final `32352375195` concluiu com sucesso para `234e455`; a divergência de propagação/roteamento permanece registrada e o domínio customizado não foi declarado alinhado ao commit final.
 - Smoke local exit 0: 1002 cards, mínimo esperado 1002, 0 falhas HTTP e 0 erros de console online.
 - Próximo passo: Câmara lote 07. ALRS/Senado continuam fail-closed.
 
