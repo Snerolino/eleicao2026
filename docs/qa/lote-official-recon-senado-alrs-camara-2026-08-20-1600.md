@@ -40,6 +40,20 @@ promover votos, identidades, FKs, referências ou alterações remotas.
 - `.orchestrator/runtime/continuous-tick-2026-08-20-1600/senado.json`
 - `.orchestrator/runtime/continuous-tick-2026-08-20-1600/alrs.json`
 
+## Gates locais e publicação
+
+- Node local: `v22.22.2`.
+- `npm run test`: exit 0, 82 arquivos/372 testes aprovados.
+- `npx tsc --noEmit`: exit 0.
+- `node scripts/validate-impact-schema.mjs`: exit 0.
+- `npm run data:check`: exit 0, 1003 candidaturas/988 fotos oficiais.
+- `npm run build`: exit 0, sitemap com 1003 candidatos + 2 URLs estáticas e `release.json` gerado.
+- `git diff --check`: exit 0; worktree limpa após publicação.
+- Commit: `9f7e8ab34b68bd603901ee4be3531f0b8b2957dd`, `main -> origin/main`.
+- Backup Cloudflare `334951434`, run `32387548508`, `completed/success`, `headSha` idêntico.
+- Produção: raiz HTTP 200; `/release.json` HTTP 200, SHA idêntico ao commit,
+  `release_id=9f7e8ab-20260820T154110020Z`, snapshot `row_count=1003`.
+
 ## Próximo passo
 
 Repetir a reconciliação bounded sem promover deriva: manter Senado e ALRS
