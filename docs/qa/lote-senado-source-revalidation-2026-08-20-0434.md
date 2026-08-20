@@ -38,9 +38,10 @@ Supabase ou claims. A deriva não autoriza substituir o hash por um novo valor.
 
 ## Publicação/verificação
 
-Este tick não introduziu alteração funcional. A documentação deste resultado
-será publicada pelo backup Cloudflare após commit/push; nenhuma aplicação
-factual remota foi executada.
+- Commit `e90edd3ff3ab9bffad3a3ae59148b791d29f08a8` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32332454671`, concluiu `completed/success` com `headSha` idêntico.
+- Produção raiz HTTP 200 e `/release.json` HTTP 200.
+- Release de produção `e90edd3-20260820T043621374Z`, SHA completo idêntico e snapshot `row_count=1003`.
 
 ## Próximo passo
 
