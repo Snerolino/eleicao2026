@@ -56,12 +56,13 @@ votos, identidades, FKs, referências ou alterações remotas.
 
 ## Publicação e verificação
 
-- Commit: `683e1100b2cb0caceeebd1680b3f69b45f9a20e8`, publicado em `origin/main`.
-- Backup Cloudflare `334951434`, run `32395013816`, `completed/success`,
-  `headSha` idêntico ao commit.
-- Produção: raiz HTTP 200; `/release.json?cb=683e1100` HTTP 200 com SHA
-  `683e1100b2cb0caceeebd1680b3f69b45f9a20e8`, `release_id=683e110-20260820T165929563Z`
-  e snapshot `row_count=1003`.
+- Commit de conteúdo: `683e1100b2cb0caceeebd1680b3f69b45f9a20e8`, publicado em `origin/main`.
+- Fechamento documental final: `0238a89f23dc7632afaaeda1fb6285777f8260f8`, publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run final `32395226840`, `completed/success`,
+  `headSha` idêntico ao fechamento documental final.
+- Produção: raiz HTTP 200; `/release.json?cb=0238a89f` HTTP 200 com SHA
+  `0238a89f23dc7632afaaeda1fb6285777f8260f8`, `release_id=0238a89-20260820T170016492Z`
+  (após propagação) e snapshot `row_count=1003`.
 - A primeira leitura sem cache serviu release anterior durante propagação; a
   leitura com cache-buster foi repetida e alinhou ao commit publicado.
 
