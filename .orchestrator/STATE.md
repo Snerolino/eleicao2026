@@ -76,6 +76,13 @@
 - Nenhuma escrita ou classificação factual foi feita; próximo chunk deve confirmar `/votos` em concorrência bounded.
 - QA: `docs/qa/lote-camara-q3-scout-parcial-2026-08-20.md`.
 
+## Tick contínuo — scout Câmara Q3/2026 completo (2026-08-20)
+
+- 1000 eventos descobertos; 992 `/votos` acessíveis; 8 bloqueados por 429/404.
+- 9 eventos nominais RS confirmados, totalizando 174 votos.
+- Nenhum voto foi aplicado; próximo chunk é coleta/identidade/FK/fontes Q3.
+- QA: `docs/qa/lote-camara-q3-scout-completo-2026-08-20.md`.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T23:56Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `ef57622fe3133b1f3d2bf1dc8ae33dc63bdb7eee`.
