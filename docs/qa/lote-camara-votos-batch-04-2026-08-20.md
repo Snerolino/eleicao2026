@@ -30,6 +30,13 @@ Avançar a lane de reconhecimento da Câmara consultando exclusivamente o endpoi
 - `git diff --check`: exit 0.
 - Worktree: limpa; nenhum arquivo versionado alterado pelo lote.
 
+## Publicação e verificação
+
+- Commit documental: `c195d3042ad150c88112119725c4fd3de250d69a`, publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32345577348`: `completed/success`, `headSha` completo idêntico.
+- Produção `https://rs.votopraquem.org/`: raiz HTTP 200 e `/release.json?verify=c195d30` HTTP 200.
+- `release.json` confirmou release `c195d30-20260820T074703139Z`, versão `0.2.515`, SHA completo idêntico e snapshot `row_count=1003`.
+
 ## Bloqueios e escopo
 
 - Respostas vazias no endpoint `/votos` não foram convertidas em votação simbólica; a classificação permaneceu `outro` e fail-closed.
