@@ -30,9 +30,13 @@ A auditoria read-only do mirror confirmou que `../dataset2026/candidatos/lista_c
 
 A deriva SHA-256 6/6 impede gerar manifesto novo ou executar `--apply`. Não inventar hash, URL, identidade ou voto. A reconciliação do CSV segmentado do mirror também fica pendente por cobertura insuficiente, sem tratar a ausência como remoção.
 
-## Publicação
+## Publicação verificada
 
-Após os gates documentais, publicar somente esta evidência e verificar o backup Cloudflare, HTTP de produção e SHA do release conforme a lane automática. Nenhuma escrita factual remota é permitida neste tick.
+- Commit documental: `b9cf75d35a33c6012b2b75e80f60763629bf302f`, publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32324729127`, concluiu `completed/success` com `headSha` idêntico ao commit.
+- Produção raiz: HTTP 200.
+- `https://rs.votopraquem.org/release.json`: HTTP 200; release `b9cf75d-20260820T022842373Z`, `snapshot.row_count=1003`; `commit_sha` no payload veio nulo, mas o `headSha` do run confirma o commit publicado.
+- Nenhuma escrita factual remota foi executada.
 
 ## Próximo passo
 

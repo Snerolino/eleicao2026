@@ -6,6 +6,7 @@
 - Auditoria do mirror: `lista_candidatos_2026.csv` tem 322 IDs e o snapshot 1003; 681 IDs aparecem somente no snapshot. CSV segmentado não é equivalente e não houve sincronização inferida.
 - Nenhuma escrita factual remota, atualização do manifesto, Supabase ou alteração do snapshot foi executada; Senado permanece fail-closed por deriva SHA-256.
 - QA: `docs/qa/lote-senado-source-revalidation-2026-08-20-0225.md`.
+- Publicação: commit `b9cf75d35a33c6012b2b75e80f60763629bf302f`; backup `334951434`, run `32324729127`, `completed/success`, `headSha` idêntico; produção raiz e `/release.json` HTTP 200, release `b9cf75d-20260820T022842373Z`, snapshot `row_count=1003`.
 - Próximo chunk: repetir os seis GETs oficiais sem gerar manifesto novo nem aplicar votos enquanto persistir a deriva; investigar fonte oficial completa do dataset e manter publicação documental independente.
 
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-20T01:50Z)
