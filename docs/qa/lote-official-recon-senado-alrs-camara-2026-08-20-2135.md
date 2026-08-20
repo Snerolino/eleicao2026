@@ -36,6 +36,12 @@ Executados com Node 24.19.0:
 - `.orchestrator/runtime/continuous-tick-20260820T213537Z/camara-q4.json`
 - `.orchestrator/runtime/continuous-tick-20260820T213537Z/dataset-diff.json`
 
+## Publicação e produção
+- Commit documental `7ef2a9e02aebeb9eeaec4c5fe77908d065cfdfb4` publicado em `origin/main`.
+- Workflow backup `334951434`, run `32420395423`, concluiu `completed/success` com `headSha` idêntico.
+- Produção raiz HTTP 200 e `/release.json` HTTP 200; release confirmou SHA `7ef2a9e02aebeb9eeaec4c5fe77908d065cfdfb4`, `row_count=1003` e release `7ef2a9e-20260820T213845704Z`.
+- O workflow primário Wrangler não foi usado, conforme o circuit-breaker documentado.
+
 ## Próximo passo
 Repetir a reconciliação bounded no próximo tick. Manter ALRS/Senado fail-closed
 e não aplicar fatos sem R0/schema/FK/fonte, dry-run e prova de idempotência.

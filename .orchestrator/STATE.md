@@ -9,7 +9,9 @@
 - Auditoria de fontes read-only exit 0; `--strict` exit 2 por gaps reais: ALRS 4, Câmara 2 e Senado 455 votos sem fonte, além de versões/eventos sem fonte.
 - QA: `docs/qa/lote-official-recon-senado-alrs-camara-2026-08-20-2135.md`; artefatos read-only em `.orchestrator/runtime/continuous-tick-20260820T213537Z/`.
 - Nenhuma escrita factual Supabase, snapshot, claim, manifesto, source reference, voto, identidade, FK ou matriz ocorreu.
-- Próximo passo: publicar este checkpoint documental e repetir reconciliação bounded sem promover deriva.
+- Publicação: commit documental `7ef2a9e02aebeb9eeaec4c5fe77908d065cfdfb4` em `origin/main`; backup `334951434`, run `32420395423`, `completed/success`, `headSha` idêntico.
+- Produção: raiz e `/release.json` HTTP 200; release confirmou SHA `7ef2a9e02aebeb9eeaec4c5fe77908d065cfdfb4`, `row_count=1003`, release `7ef2a9e-20260820T213845704Z`.
+- Próximo passo: repetir reconciliação bounded sem promover deriva.
 
 ## Tick contínuo — recon oficial bounded Senado/ALRS/Câmara (2026-08-20T21:11Z)
 
