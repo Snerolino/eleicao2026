@@ -168,7 +168,7 @@ export function CandidateDossierPage() {
                   </h2>
                   <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[var(--color-muted-ink)]">
                     {profile.total_votes} votos individuais localizados na {house.label}.
-                    A avaliação pública aparece por categoria somente quando existe assessment aprovado e fonte verificável.
+                    Os números abaixo são fatos de votação; a avaliação pública aparece por categoria somente quando existe assessment aprovado e fonte verificável.
                   </p>
                 </div>
                 <div className="shrink-0 text-left sm:text-right">
