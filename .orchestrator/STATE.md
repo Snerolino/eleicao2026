@@ -98,6 +98,13 @@
 - 1 matriz aprovada; comparação categorial mantém fallback sem cobertura aprovada.
 - QA: `docs/qa/lote-r5-smoke-comparacao-pos-q3-2026-08-20.md`.
 
+## Tick contínuo — fila R4 pós-Câmara Q2/Q3 (2026-08-20)
+
+- 1 assessment aprovado com fonte cobre 1 versão, 1 evento e 5 votos.
+- Q2/Q3 permanecem fatos nominais publicados, sem score/alinhamento/categoria editorial automática.
+- Comparação categorial mantém fallback fora do recorte aprovado.
+- QA: `docs/qa/lote-r4-review-queue-pos-q2-q3-2026-08-20.md`.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T23:56Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `ef57622fe3133b1f3d2bf1dc8ae33dc63bdb7eee`.
