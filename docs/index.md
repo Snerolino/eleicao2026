@@ -115,6 +115,7 @@
 | [`qa/lote-alrs-fed17-final-gate-2026-08-20.md`](qa/lote-alrs-fed17-final-gate-2026-08-20.md) | Fechamento final do gate R1 ALRS |
 | [`qa/lote-camara-q2-scout-2026-08-20.md`](qa/lote-camara-q2-scout-2026-08-20.md) | Scout Câmara Q2/2026 |
 | [`qa/lote-camara-q2-apply-2026-08-20.md`](qa/lote-camara-q2-apply-2026-08-20.md) | Aplicação Câmara Q2/2026 |
+| [`qa/lote-camara-q3-scout-parcial-2026-08-20.md`](qa/lote-camara-q3-scout-parcial-2026-08-20.md) | Scout Câmara Q3/2026 parcial |
 | [`qa/fotos-sem-match-2026-08-03.md`](qa/fotos-sem-match-2026-08-03.md) | Distribuição dos candidatos sem foto e caso ambíguo |
 
 ## Release

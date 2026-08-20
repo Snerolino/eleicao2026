@@ -69,6 +69,13 @@
 - Nenhuma matriz, score, claim ou RPC editorial foi alterada.
 - QA: `docs/qa/lote-camara-q2-apply-2026-08-20.md`.
 
+## Tick contínuo — scout Câmara Q3/2026 parcial (2026-08-20)
+
+- 1000 registros de listagem consultados em 10 páginas HTTP 200; `tipoVotacao` ausente em 1000/1000.
+- Primeiro lote não retornou voto RS nominal; nominalidade não foi inferida pela ausência do campo.
+- Nenhuma escrita ou classificação factual foi feita; próximo chunk deve confirmar `/votos` em concorrência bounded.
+- QA: `docs/qa/lote-camara-q3-scout-parcial-2026-08-20.md`.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T23:56Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `ef57622fe3133b1f3d2bf1dc8ae33dc63bdb7eee`.
