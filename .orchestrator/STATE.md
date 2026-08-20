@@ -6,7 +6,10 @@
 - ALRS: HTTP 200, 77442 bytes, SHA-256 `sha256:6a386d7d8b9ae17f8f5107b0cb6c90d71795a8568f08ed7c5972746a4ac0bab1`, 0 `data-item`, sem `Enio Carlos Terra`/`Terra`; os quatro residuais seguem sem ID oficial/fonte exata.
 - Dataset vivo inspecionado com CP1252/`;`: 322 IDs únicos, todos contidos no snapshot público de 1003; o CSV isolado tem 681 IDs ausentes. Nenhum refresh/sincronização aplicado.
 - Nenhuma escrita factual Supabase, snapshot, claim, manifesto, source reference, voto, identidade, FK ou matriz ocorreu.
-- QA criado: `docs/qa/lote-official-recon-senado-alrs-camara-2026-08-20-1600.md`; artefatos read-only em `.orchestrator/runtime/continuous-tick-2026-08-20-1600/`.
+- QA criado e fechado: `docs/qa/lote-official-recon-senado-alrs-camara-2026-08-20-1600.md`; artefatos read-only em `.orchestrator/runtime/continuous-tick-2026-08-20-1600/`.
+- Gates locais: 82 arquivos/372 testes, TypeScript, schema, `data:check` 1003/988, build e diff check verdes.
+- Publicação final: commit `347e5ac2bb0c8514cc7ebc212901bca16e01344f`; backup `334951434`, run `32387688707`, `completed/success`, `headSha` idêntico.
+- Produção final: raiz HTTP 200; `/release.json` SHA `347e5ac2bb0c8514cc7ebc212901bca16e01344f`, release `347e5ac-20260820T154248381Z`, snapshot `row_count=1003`.
 - Próximo passo: repetir reconciliação bounded sem promover deriva; manter ALRS/Senado fail-closed e consultar próxima janela Câmara elegível.
 
 ## Tick contínuo — recon oficial bounded Senado/ALRS/Câmara (2026-08-20T14:59Z)
