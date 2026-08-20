@@ -1,3 +1,13 @@
+## Tick contínuo — Câmara votos nominais bounded, lote 01 (2026-08-20T05:51Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `206725d0cf95fc6924bbc49dec499a8c06a98104`.
+- Coletor oficial read-only consultou `/votacoes/{id}/votos` para 25/300 IDs da janela 2026-07-01 a 2026-09-30.
+- Resultado verificado: 25 eventos, 0 individualizados, 0 votos; manifesto e brutos no runtime transitório, sem escrita remota.
+- QA: `docs/qa/lote-camara-votos-batch-01-2026-08-20.md`.
+- ALRS segue bloqueado por JWT `issued at future` e ausência de ID oficial exato; Senado segue fail-closed por deriva SHA-256.
+- Doctor continua FAIL por shell Node 22; tentativa de reinício do gateway com Node 24 falhou, sem declarar correção concluída.
+- Próximo chunk: Câmara lote 02 read-only; depois seguir bounded até cobrir os 300 IDs, sem inferência a partir de respostas vazias.
+
 ## Publicação/verificação — tick 05:17 UTC
 
 - Commit `475cca3f3c25b7dad1e08be17f2b6f6ce1c100a9` publicado em `origin/main`.
