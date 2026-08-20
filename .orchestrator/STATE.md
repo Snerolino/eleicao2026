@@ -1,3 +1,10 @@
+## Fechamento R1 ALRS — 2026-08-20
+
+- Auditoria CLI read-only confirmou 3996/4000 votos ALRS com fonte e exatamente 4 residuais, todos Enio (`210002534312`).
+- R1 concluída para todos os casos comprováveis; residual factual permanece fail-closed sem ID oficial ALRS.
+- QA: `docs/qa/lote-alrs-fed17-final-gate-2026-08-20.md`.
+- R2/R3/R5 continuam liberadas; R4 só avança com matrizes/fontes aprováveis.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T23:56Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `ef57622fe3133b1f3d2bf1dc8ae33dc63bdb7eee`.
