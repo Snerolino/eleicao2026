@@ -36,6 +36,12 @@ fail-closed.
 - `.orchestrator/runtime/continuous-tick-20260820T2045Z/camara-q4.json`
 - `.orchestrator/runtime/continuous-tick-20260820T2045Z/dataset-diff.json`
 
+## Publicação e produção
+- Commit documental `446e0ab29775c5e85574cd07c7808e6fc3e599be` publicado em `origin/main`.
+- Workflow backup `334951434`, run `32416139676`, concluiu `completed/success` com `headSha` idêntico.
+- Produção raiz e `/release.json` HTTP 200; `release.json` confirmou SHA `446e0ab29775c5e85574cd07c7808e6fc3e599be`, snapshot `row_count=1003`.
+- Smoke remoto exit 0: 1.002 cards, 0 falhas HTTP, 0 erros de console online e service worker pronto.
+
 ## Próximo passo
 Repetir a reconciliação bounded no próximo tick. Manter ALRS/Senado fail-closed e
 não aplicar fatos sem R0/schema/FK/fonte, dry-run e prova de idempotência.
