@@ -118,6 +118,7 @@
 | [`qa/lote-camara-q3-scout-parcial-2026-08-20.md`](qa/lote-camara-q3-scout-parcial-2026-08-20.md) | Scout Câmara Q3/2026 parcial |
 | [`qa/lote-camara-q3-scout-completo-2026-08-20.md`](qa/lote-camara-q3-scout-completo-2026-08-20.md) | Scout Câmara Q3/2026 completo |
 | [`qa/lote-camara-q3-apply-2026-08-20.md`](qa/lote-camara-q3-apply-2026-08-20.md) | Aplicação Câmara Q3/2026 |
+| [`qa/lote-r5-smoke-comparacao-pos-q3-2026-08-20.md`](qa/lote-r5-smoke-comparacao-pos-q3-2026-08-20.md) | Smoke R5 após Câmara Q2/Q3 |
 | [`qa/fotos-sem-match-2026-08-03.md`](qa/fotos-sem-match-2026-08-03.md) | Distribuição dos candidatos sem foto e caso ambíguo |
 
 ## Release

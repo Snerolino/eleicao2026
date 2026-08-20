@@ -91,6 +91,13 @@
 - 9 identidades pendentes e 8 eventos inacessíveis permanecem fora.
 - QA: `docs/qa/lote-camara-q3-apply-2026-08-20.md`.
 
+## Tick contínuo — smoke R5 pós-Câmara Q3 (2026-08-20)
+
+- Smoke local verde: 1002 cards, busca/detalhe/PWA offline, 0 falhas HTTP e 0 erros online.
+- Auditoria: 4932 votos totais; Câmara 477/475 com fonte; ALRS 4000/3996; Senado 455/0.
+- 1 matriz aprovada; comparação categorial mantém fallback sem cobertura aprovada.
+- QA: `docs/qa/lote-r5-smoke-comparacao-pos-q3-2026-08-20.md`.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T23:56Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `ef57622fe3133b1f3d2bf1dc8ae33dc63bdb7eee`.
