@@ -37,10 +37,10 @@ placar de bancada.
 
 ## Publicação e verificação
 
-- Commit `4a1fa6e8a3fe6afdbaabbfd1cf02b00a30ba1e0c` publicado em `origin/main`.
-- Workflow backup `334951434`, run `32337305782`: `completed/success`, `headSha` idêntico.
+- Commit inicial do lote `4a1fa6e8a3fe6afdbaabbfd1cf02b00a30ba1e0c` publicado em `origin/main`; a atualização documental final foi `4aa10f9c37e018415677fbf4c789f1f123b9a900`.
+- Workflow backup `334951434`, run `32337398480`: `completed/success`, `headSha` final idêntico.
 - Produção `https://rs.votopraquem.org`: raiz HTTP 200 e `/release.json` HTTP 200.
-- `release.json` confirmou SHA live `4a1fa6e8a3fe6afdbaabbfd1cf02b00a30ba1e0c`.
+- `release.json` confirmou SHA live final `4aa10f9c37e018415677fbf4c789f1f123b9a900`.
 
 ## Bloqueios e escopo
 
