@@ -1,3 +1,14 @@
+## Tick contínuo — Câmara votos nominais bounded, lote 03 (2026-08-20T07:07Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `514eb22b39eb6e532e925f3e228930281264b21a`.
+- Coletor oficial read-only consultou `/votacoes/{id}/votos` para 25/300 IDs da janela 2026-07-01 a 2026-09-30, posições 51–75.
+- Resultado verificado: 25 eventos, 0 individualizados, 0 votos; manifesto SHA-256 `e819a83808435223f6fc0e51b74ada80a14951b28c173592c2450db8850d10c7`.
+- QA: `docs/qa/lote-camara-votos-batch-03-2026-08-20.md`.
+- Gates Node 24.19.0: 82 arquivos/372 testes, TypeScript, schema, `data:check` (1003/988), build e `git diff --check` verdes.
+- Publicação: commit documental `c7acbc747bf17cfc8d2841d4dd1709ac41ce45ab` em `origin/main`; backup `334951434`, run `32342483102`, `completed/success`, `headSha` idêntico; produção raiz e `/release.json` HTTP 200; release `c7acbc7-20260820T070652474Z`, versão `0.2.512`, snapshot `row_count=1003`.
+- Nenhuma escrita factual remota; ALRS e Senado continuam fail-closed pelos bloqueios já documentados.
+- Próximo chunk: Câmara lote 04 read-only; depois seguir bounded até cobrir os 300 IDs.
+
 ## Tick contínuo — Câmara votos nominais bounded, lote 02 (2026-08-20T06:29Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `ba120b80d30f9215cb6cd7982a60302bfc79f102`.

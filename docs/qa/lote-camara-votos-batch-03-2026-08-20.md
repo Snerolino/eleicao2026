@@ -21,7 +21,12 @@ Avançar a lane de reconhecimento da Câmara consultando exclusivamente o endpoi
 
 ## Publicação e verificação
 
-- A preencher após gates locais e publicação documental.
+- Gates locais verdes com Node `v24.19.0`: 82 arquivos/372 testes; TypeScript; schema; `data:check` (1003 candidaturas, 988 fotos); build; `git diff --check`.
+- Commit documental: `c7acbc747bf17cfc8d2841d4dd1709ac41ce45ab`, publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32342483102`: `completed/success`, `headSha` completo idêntico.
+- Produção `https://rs.votopraquem.org/`: raiz HTTP 200 e `/release.json` HTTP 200.
+- `release.json` confirmou release `c7acbc7-20260820T070652474Z`, versão `0.2.512`, SHA completo idêntico e snapshot `row_count=1003`.
+- Worktree final limpa e `HEAD` igual a `origin/main`.
 
 ## Bloqueios e escopo
 
