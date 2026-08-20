@@ -54,6 +54,9 @@ manter o fluxo fail-closed sem promover votos, identidades, FKs ou referências.
 - `npm run smoke:local`: exit 0, 1.002 cards, mínimo 1.002, 0 falhas HTTP,
   0 erros de console online e service worker pronto.
 - `npm run impact:sources:audit`: exit 0.
+- Commit documental: `3a4c51fa58cab76801b301f62da8d05f8f60d25a`, publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32406465039`, `completed/success`, `headSha` idêntico ao commit.
+- Produção: raiz HTTP 200 e `/release.json` HTTP 200; após propagação, `sha=3a4c51fa58cab76801b301f62da8d05f8f60d25a`, `release_id=3a4c51f-20260820T190235277Z`, snapshot `row_count=1003`.
 
 ## Próximo passo
 
