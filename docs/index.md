@@ -132,6 +132,7 @@
 | [`qa/lote-r4-fechamento-final-2026-08-20.md`](qa/lote-r4-fechamento-final-2026-08-20.md) | Fechamento final R4 |
 | [`qa/lote-vote-category-score-ui-2026-08-20.md`](qa/lote-vote-category-score-ui-2026-08-20.md) | Saldo metodológico por categoria |
 | [`qa/lote-scores-por-categoria-dossie-2026-08-20.md`](qa/lote-scores-por-categoria-dossie-2026-08-20.md) | Scores por categoria no dossiê |
+| [`qa/lote-caso-adao-704-votos-sem-assessment-alrs-2026-08-20.md`](qa/lote-caso-adao-704-votos-sem-assessment-alrs-2026-08-20.md) | Caso Adão: votos ALRS sem assessment |
 | [`qa/lote-official-recon-senado-alrs-camara-2026-08-20-1938.md`](qa/lote-official-recon-senado-alrs-camara-2026-08-20-1938.md) | Reconhecimento oficial bounded |
 | [`architecture/politica-precedencia-fontes.md`](architecture/politica-precedencia-fontes.md) | Precedência: fonte oficial sobre dataset2026 |
 | [`qa/lote-precedencia-fonte-oficial-dataset2026-2026-08-20.md`](qa/lote-precedencia-fonte-oficial-dataset2026-2026-08-20.md) | QA da precedência de fontes |

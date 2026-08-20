@@ -612,6 +612,13 @@
 - Gates: 84 arquivos/377 testes, TypeScript, build e smoke local verdes.
 - QA: `docs/qa/lote-scores-por-categoria-dossie-2026-08-20.md`.
 
+## Tick contínuo — caso Adão Pretto Filho (2026-08-20)
+
+- Adão: 704 votos factuais ALRS (600 sim, 104 não).
+- ALRS: 1678 eventos/1282 versões e 0 matrizes aprovadas; as 2 matrizes aprovadas são Câmara.
+- UI corrigida para explicar ausência de assessment ALRS, sem sugerir ausência de votos.
+- QA: `docs/qa/lote-caso-adao-704-votos-sem-assessment-alrs-2026-08-20.md`.
+
 ## Tick contínuo — fechamento final R4 (2026-08-20)
 
 - 13/13 itens da fila Q2/Q3 revisados; 12 não pontuáveis aprovados e 1 assessment populacional aprovado.
