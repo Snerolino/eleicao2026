@@ -622,6 +622,12 @@
 - Divergências históricas (938 candidaturas e preparação sem heartbeat) foram registradas; estado atual validado permanece 1003 candidaturas/1002 cards e heartbeat autorizado.
 - QA: `docs/qa/lote-importacao-documentacao-orquestracao-hermes-2026-08-20.md`.
 
+## Documento operacional para revisores (2026-08-20)
+
+- Criado `docs/OPERACAO-ATUAL-PARA-REVISORES.md` com CLIs, modelos, heartbeat, gates, trilhas, precedência de fontes, bloqueios e checklist.
+- Valores voláteis devem ser revalidados pelos comandos do próprio documento.
+- QA: `docs/qa/lote-documento-operacional-revisores-2026-08-20.md`.
+
 ## Tick contínuo — scores por categoria no dossiê (2026-08-20)
 
 - Dossiê deixou de exibir `nominal_balance` como avaliação pública.
