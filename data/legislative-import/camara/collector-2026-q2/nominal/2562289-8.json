@@ -1,0 +1,239 @@
+{
+  "schema_version": "1.0.0",
+  "country": "BR",
+  "state": "RS",
+  "election_year": 2026,
+  "propositions": [
+    {
+      "external_id": "camara-proposicao-2501880-plp",
+      "house": "camara",
+      "proposition_type": "plp",
+      "number": 104,
+      "year": 2025,
+      "title": "PLP 104",
+      "summary": "Altera a Lei Complementar nº 214 de 16 de janeiro de 2025, incluindo a sardinha em conserva na lista de produtos da cesta básica isentos de incidência da Contribuição sobre Bens e Serviços (CBS) e do Imposto sobre Bens e Serviços (IBS).",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2501880",
+      "versions": [
+        {
+          "version_key": "event-2562289-8",
+          "version_label": "Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 272; Não: 18; Total: 290.",
+          "text_hash": "sha256:05e21f6681a8e361398cf5e680ce2eea8f0fa07ef6a31f56a150c942d6a8eb78",
+          "effective_from": "2026-04-07T19:56:15.000Z",
+          "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2501880",
+          "voting_events": [
+            {
+              "external_id": "camara-votacao-2562289-8",
+              "house": "camara",
+              "session_id": "81519",
+              "vote_round": null,
+              "occurred_at": "2026-04-07T19:56:15.000Z",
+              "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "votes": [
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-204407",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:54:37.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-220554",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:54:33.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-160673",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:54:15.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-220549",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:52:46.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-156190",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:52:19.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-160559",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:52:18.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-74400",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:52:08.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-160552",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:52:01.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-204406",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:51:43.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-178964",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:51:26.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-141485",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:51:22.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-160535",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:51:20.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-220552",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:51:18.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-204416",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:51:06.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-160538",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:50:59.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-136811",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:50:43.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-204404",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:50:26.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-73692",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:50:24.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-220551",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:50:17.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-204388",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:50:16.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-133810",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:50:12.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-178962",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:50:04.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-235776",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:49:52.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-220553",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:48:56.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2562289-8",
+      "deputy_id": "camara-deputado-178835",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "value": "sim",
+      "recorded_at": "2026-04-07T19:48:43.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos"
+    }
+  ]
+}

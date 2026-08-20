@@ -113,6 +113,7 @@
 | [`qa/lote-vote-category-comparison-ui-2026-08-19.md`](qa/lote-vote-category-comparison-ui-2026-08-19.md) | UI de comparação de votos por categoria |
 | [`qa/lote-alrs-fed17-residual-repair-2026-08-19.md`](qa/lote-alrs-fed17-residual-repair-2026-08-19.md) | FED-17: reparo residual ALRS |
 | [`qa/lote-alrs-fed17-final-gate-2026-08-20.md`](qa/lote-alrs-fed17-final-gate-2026-08-20.md) | Fechamento final do gate R1 ALRS |
+| [`qa/lote-camara-q2-scout-2026-08-20.md`](qa/lote-camara-q2-scout-2026-08-20.md) | Scout Câmara Q2/2026 |
 | [`qa/fotos-sem-match-2026-08-03.md`](qa/fotos-sem-match-2026-08-03.md) | Distribuição dos candidatos sem foto e caso ambíguo |
 
 ## Release

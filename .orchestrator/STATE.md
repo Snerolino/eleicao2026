@@ -53,6 +53,14 @@
 - QA: `docs/qa/lote-alrs-fed17-final-gate-2026-08-20.md`.
 - R2/R3/R5 continuam liberadas; R4 só avança com matrizes/fontes aprováveis.
 
+## Tick contínuo — scout Câmara Q2/2026 (2026-08-20)
+
+- Janela oficial 2026-04-01 a 2026-06-30: 100 eventos descobertos, 97 acessíveis, 3 HTTP 404, 4 nominais RS e 106 votos.
+- Rota `/votacoes/{id}/votos` reconciliou 29 deputados: 21 `matched_exact`, 8 pendentes.
+- Nenhum voto Q2 foi aplicado; 3 eventos 404 e 8 identidades permanecem fail-closed.
+- Próximo chunk: resolver FKs remotas das 21 identidades e gerar envelope dry-run com fontes.
+- QA: `docs/qa/lote-camara-q2-scout-2026-08-20.md`.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T23:56Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `ef57622fe3133b1f3d2bf1dc8ae33dc63bdb7eee`.

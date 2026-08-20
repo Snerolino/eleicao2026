@@ -1,0 +1,1004 @@
+{
+  "summary": {
+    "mode": "read-only",
+    "window": {
+      "start": "2026-04-01",
+      "end": "2026-06-30"
+    },
+    "discovered": 100,
+    "accessible": 97,
+    "blocked": 3,
+    "nominal_rs": 4,
+    "total_rs_votes": 106,
+    "blocked_reasons": [
+      "404:detail_unavailable"
+    ]
+  },
+  "rows": [
+    {
+      "vote_id": "2591059-27",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2591059-27",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2591059-27/votos",
+      "description": "Aprovado o Parecer."
+    },
+    {
+      "vote_id": "2599771-24",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2599771-24",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2599771-24/votos",
+      "description": "Aprovado o Parecer."
+    },
+    {
+      "vote_id": "2613020-2",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613020-2",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613020-2/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2613089-2",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613089-2",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613089-2/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2613195-2",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613195-2",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613195-2/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2612585-2",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2612585-2",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2612585-2/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2599428-23",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2599428-23",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2599428-23/votos",
+      "description": "Aprovado o Parecer."
+    },
+    {
+      "vote_id": "2599598-21",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2599598-21",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2599598-21/votos",
+      "description": "Aprovado o Parecer."
+    },
+    {
+      "vote_id": "2600260-21",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2600260-21",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2600260-21/votos",
+      "description": "Aprovado o Parecer."
+    },
+    {
+      "vote_id": "2601720-21",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2601720-21",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2601720-21/votos",
+      "description": "Aprovado o Parecer."
+    },
+    {
+      "vote_id": "2611260-2",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611260-2",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611260-2/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2611339-2",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611339-2",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611339-2/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2611990-2",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611990-2",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611990-2/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2612293-2",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2612293-2",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2612293-2/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2612295-2",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2612295-2",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2612295-2/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2612296-2",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2612296-2",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2612296-2/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2613086-3",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613086-3",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613086-3/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2613088-2",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613088-2",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613088-2/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2613361-2",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613361-2",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613361-2/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2613400-2",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613400-2",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613400-2/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2613403-2",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613403-2",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613403-2/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2613406-2",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613406-2",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613406-2/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2613762-2",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613762-2",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613762-2/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2573620-27",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2573620-27",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2573620-27/votos",
+      "description": "Aprovado o Parecer."
+    },
+    {
+      "vote_id": "2580888-29",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2580888-29",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2580888-29/votos",
+      "description": "Aprovado o Parecer."
+    },
+    {
+      "vote_id": "2611539-3",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611539-3",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611539-3/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2613076-3",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613076-3",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613076-3/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2358498-33",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2358498-33",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2358498-33/votos",
+      "description": "Aprovado o Parecer."
+    },
+    {
+      "vote_id": "2539064-32",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2539064-32",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2539064-32/votos",
+      "description": "Aprovado o Parecer."
+    },
+    {
+      "vote_id": "2613393-2",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613393-2",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613393-2/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2557624-22",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2557624-22",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2557624-22/votos",
+      "description": "Aprovado o Parecer."
+    },
+    {
+      "vote_id": "2565846-25",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2565846-25",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2565846-25/votos",
+      "description": "Aprovado o Parecer, com o voto contrário do Dep. Pastor Henrique Vieira."
+    },
+    {
+      "vote_id": "2579952-26",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2579952-26",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2579952-26/votos",
+      "description": "Aprovado o Parecer."
+    },
+    {
+      "vote_id": "2407469-7",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2407469-7",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2407469-7/votos",
+      "description": "Aprovado o Requerimento de Urgência (Art. 155 do RICD)."
+    },
+    {
+      "vote_id": "2398224-20",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2398224-20",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2398224-20/votos",
+      "description": "Aprovado o requerimento nº 4107/2023,do Sr. Fred Costa, que solicita urgência (art. 155) para o PL 4820/2023."
+    },
+    {
+      "vote_id": "2399623-20",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2399623-20",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2399623-20/votos",
+      "description": "Aprovado o requerimento nº 4107/2023,do Sr. Fred Costa, que solicita urgência (art. 155) para o PL 4820/2023."
+    },
+    {
+      "vote_id": "2398700-27",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2398700-27",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2398700-27/votos",
+      "description": "Aprovado o requerimento nº 4107/2023,do Sr. Fred Costa, que solicita urgência (art. 155) para o PL 4820/2023."
+    },
+    {
+      "vote_id": "2404726-20",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2404726-20",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2404726-20/votos",
+      "description": "Aprovado o requerimento nº 4107/2023,do Sr. Fred Costa, que solicita urgência (art. 155) para o PL 4820/2023."
+    },
+    {
+      "vote_id": "2418054-20",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2418054-20",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2418054-20/votos",
+      "description": "Aprovado o requerimento nº 4107/2023,do Sr. Fred Costa, que solicita urgência (art. 155) para o PL 4820/2023."
+    },
+    {
+      "vote_id": "2392934-64",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2392934-64",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2392934-64/votos",
+      "description": "Realizar o encaminhamento do PL-4820/2023 à CCJC (tramitação simultânea), em razão da aprovação de requerimento de urgência."
+    },
+    {
+      "vote_id": "2392934-65",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2392934-65",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2392934-65/votos",
+      "description": "Realizar o encaminhamento do PL-4820/2023 à CFT (tramitação simultânea), em razão da aprovação de requerimento de urgência."
+    },
+    {
+      "vote_id": "2398224-21",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2398224-21",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2398224-21/votos",
+      "description": "Alteração do Regime de Tramitação desta proposição em virtude da alteração do regime do PL 4820/2023, por ter sido aprovado o REQ 4107/2023 que está apensado ao primeiro."
+    },
+    {
+      "vote_id": "2398700-28",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2398700-28",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2398700-28/votos",
+      "description": "Alteração do Regime de Tramitação desta proposição em virtude da alteração do regime do PL 4820/2023, por ter sido aprovado o REQ 4107/2023 que está apensado ao primeiro."
+    },
+    {
+      "vote_id": "2399623-21",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2399623-21",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2399623-21/votos",
+      "description": "Alteração do Regime de Tramitação desta proposição em virtude da alteração do regime do PL 4820/2023, por ter sido aprovado o REQ 4107/2023 que está apensado ao primeiro."
+    },
+    {
+      "vote_id": "2404726-21",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2404726-21",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2404726-21/votos",
+      "description": "Alteração do Regime de Tramitação desta proposição em virtude da alteração do regime do PL 4820/2023, por ter sido aprovado o REQ 4107/2023 que está apensado ao primeiro."
+    },
+    {
+      "vote_id": "2418054-21",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2418054-21",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2418054-21/votos",
+      "description": "Alteração do Regime de Tramitação desta proposição em virtude da alteração do regime do PL 4820/2023, por ter sido aprovado o REQ 4107/2023 que está apensado ao primeiro."
+    },
+    {
+      "vote_id": "2428845-7",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2428845-7",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2428845-7/votos",
+      "description": "Aprovado, por unanimidade, o Requerimento de Urgência (Art. 155 do RICD)."
+    },
+    {
+      "vote_id": "2434433-21",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2434433-21",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2434433-21/votos",
+      "description": "Aprovado o requerimento nº 1306/2024,do Sr. Gilvan Maximo, que solicita urgência (art. 155) para o PL 1367/2024."
+    },
+    {
+      "vote_id": "2428459-46",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2428459-46",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2428459-46/votos",
+      "description": "Realizar o encaminhamento do PL-1367/2024 à CCJC (tramitação simultânea), em razão da aprovação de requerimento de urgência."
+    },
+    {
+      "vote_id": "2428459-47",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2428459-47",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2428459-47/votos",
+      "description": "Realizar o encaminhamento do PL-1367/2024 à CCJC (tramitação simultânea), em razão da aprovação de requerimento de urgência."
+    },
+    {
+      "vote_id": "2428459-48",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2428459-48",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2428459-48/votos",
+      "description": "Realizar o encaminhamento do PL-1367/2024 à CE (tramitação simultânea), em razão da aprovação de requerimento de urgência."
+    },
+    {
+      "vote_id": "2428459-49",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2428459-49",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2428459-49/votos",
+      "description": "Realizar o encaminhamento do PL-1367/2024 à CFT (tramitação simultânea), em razão da aprovação de requerimento de urgência."
+    },
+    {
+      "vote_id": "2428459-50",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2428459-50",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2428459-50/votos",
+      "description": "Alteração do Regime de Tramitação desta proposição em virtude da Aprovação do REQ 1306/2024."
+    },
+    {
+      "vote_id": "2434433-22",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2434433-22",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2434433-22/votos",
+      "description": "Alteração do Regime de Tramitação desta proposição em virtude da alteração do regime do PL 1367/2024, por ter sido aprovado o REQ 1306/2024 que está apensado ao primeiro."
+    },
+    {
+      "vote_id": "2562289-8",
+      "status": 200,
+      "vote_method": "nominal",
+      "raw_vote_count": 291,
+      "rs_vote_count": 25,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos",
+      "description": "Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 272; Não: 18; Total: 290."
+    },
+    {
+      "vote_id": "2494487-34",
+      "status": 404,
+      "reason": "detail_unavailable"
+    },
+    {
+      "vote_id": "2494487-35",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2494487-35",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2494487-35/votos",
+      "description": "Realizar o encaminhamento do PLP-80/2025 à CCJC (tramitação simultânea), em razão da aprovação de requerimento de urgência."
+    },
+    {
+      "vote_id": "2494487-36",
+      "status": 404,
+      "reason": "detail_unavailable"
+    },
+    {
+      "vote_id": "2566469-9",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2566469-9",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2566469-9/votos",
+      "description": "Aprovado, por unanimidade, o Requerimento de Urgência (Art. 155 do RICD)."
+    },
+    {
+      "vote_id": "2417718-24",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2417718-24",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2417718-24/votos",
+      "description": "Aprovado o requerimento nº 4019/2025,do Sr. Fred Costa, que solicita urgência (art. 155) para o PL 25/2024."
+    },
+    {
+      "vote_id": "2417921-21",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2417921-21",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2417921-21/votos",
+      "description": "Aprovado o requerimento nº 4019/2025,do Sr. Fred Costa, que solicita urgência (art. 155) para o PL 25/2024."
+    },
+    {
+      "vote_id": "2423187-22",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2423187-22",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2423187-22/votos",
+      "description": "Aprovado o requerimento nº 4019/2025,do Sr. Fred Costa, que solicita urgência (art. 155) para o PL 25/2024."
+    },
+    {
+      "vote_id": "2575644-17",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2575644-17",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2575644-17/votos",
+      "description": "Aprovado o requerimento nº 4019/2025,do Sr. Fred Costa, que solicita urgência (art. 155) para o PL 25/2024."
+    },
+    {
+      "vote_id": "2417718-25",
+      "status": 404,
+      "reason": "detail_unavailable"
+    },
+    {
+      "vote_id": "2423187-23",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2423187-23",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2423187-23/votos",
+      "description": "Alteração do Regime de Tramitação desta proposição em virtude da alteração do regime do PL 25/2024, por ter sido aprovado o REQ 4019/2025 que está apensado ao primeiro."
+    },
+    {
+      "vote_id": "2575644-18",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2575644-18",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2575644-18/votos",
+      "description": "Alteração do Regime de Tramitação desta proposição em virtude da alteração do regime do PL 25/2024, por ter sido aprovado o REQ 4019/2025 que está apensado ao primeiro."
+    },
+    {
+      "vote_id": "2417921-22",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2417921-22",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2417921-22/votos",
+      "description": "Alteração do Regime de Tramitação desta proposição em virtude da alteração do regime do PL 25/2024, por ter sido aprovado o REQ 4019/2025 que está apensado ao primeiro."
+    },
+    {
+      "vote_id": "2607072-8",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2607072-8",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2607072-8/votos",
+      "description": "Aprovado o Requerimento de Urgência (Art. 155 do RICD)."
+    },
+    {
+      "vote_id": "2545048-18",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2545048-18",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2545048-18/votos",
+      "description": "Realizar o encaminhamento do PL-3984/2025 à CCJC (tramitação simultânea), em razão da aprovação de requerimento de urgência."
+    },
+    {
+      "vote_id": "2545048-19",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2545048-19",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2545048-19/votos",
+      "description": "Realizar o encaminhamento do PL-3984/2025 à CCJC (tramitação simultânea), em razão da aprovação de requerimento de urgência."
+    },
+    {
+      "vote_id": "2545048-20",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2545048-20",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2545048-20/votos",
+      "description": "Realizar o encaminhamento do PL-3984/2025 à CFT (tramitação simultânea), em razão da aprovação de requerimento de urgência."
+    },
+    {
+      "vote_id": "2545048-21",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2545048-21",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2545048-21/votos",
+      "description": "Realizar o encaminhamento do PL-3984/2025 à CPASF (tramitação simultânea), em razão da aprovação de requerimento de urgência."
+    },
+    {
+      "vote_id": "2610322-7",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2610322-7",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2610322-7/votos",
+      "description": "Aprovado o Requerimento de Urgência (Art. 155 do RICD)."
+    },
+    {
+      "vote_id": "2611404-7",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611404-7",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611404-7/votos",
+      "description": "Aprovado, por unanimidade, o Requerimento de Urgência (Art. 155 do RICD)."
+    },
+    {
+      "vote_id": "2611437-7",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611437-7",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611437-7/votos",
+      "description": "Aprovado, por unanimidade, o Requerimento de Urgência (Art. 155 do RICD)."
+    },
+    {
+      "vote_id": "2566557-18",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2566557-18",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2566557-18/votos",
+      "description": "Realizar o encaminhamento do PL-4913/2025 à CCJC (tramitação simultânea), em razão da aprovação de requerimento de urgência."
+    },
+    {
+      "vote_id": "2566557-19",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2566557-19",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2566557-19/votos",
+      "description": "Realizar o encaminhamento do PL-4913/2025 à CSAUDE (tramitação simultânea), em razão da aprovação de requerimento de urgência."
+    },
+    {
+      "vote_id": "2566557-20",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2566557-20",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2566557-20/votos",
+      "description": "Realizar o encaminhamento do PL-4913/2025 à CPASF (tramitação simultânea), em razão da aprovação de requerimento de urgência."
+    },
+    {
+      "vote_id": "2566557-21",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2566557-21",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2566557-21/votos",
+      "description": "Alteração do Regime de Tramitação desta proposição em virtude da Aprovação do REQ 1592/2026."
+    },
+    {
+      "vote_id": "2612447-7",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2612447-7",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2612447-7/votos",
+      "description": "Aprovado, por unanimidade, o Requerimento de Urgência (Art. 155 do RICD)."
+    },
+    {
+      "vote_id": "2581700-26",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2581700-26",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2581700-26/votos",
+      "description": "Aprovado, em apreciação preliminar, o Parecer da Comissão Mista, na parte em que manifesta opinião favorável quanto ao atendimento dos pressupostos constitucionais de relevância e urgência e de sua adequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN."
+    },
+    {
+      "vote_id": "2611341-4",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611341-4",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611341-4/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2581700-28",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2581700-28",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2581700-28/votos",
+      "description": "Aprovada a Medida Provisória nº 1.323, de 2025, na forma do Projeto de Lei de Conversão, ressalvado o destaque."
+    },
+    {
+      "vote_id": "2581700-31",
+      "status": 200,
+      "vote_method": "nominal",
+      "raw_vote_count": 368,
+      "rs_vote_count": 28,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2581700-31",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2581700-31/votos",
+      "description": "Mantido o texto. Sim: 268; Não: 99; Total: 367."
+    },
+    {
+      "vote_id": "2581700-33",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2581700-33",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2581700-33/votos",
+      "description": "Aprovada a Redação Final, assinada pelo relator, Dep. Sidney Leite (PSD/AM)."
+    },
+    {
+      "vote_id": "2079783-99",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2079783-99",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2079783-99/votos",
+      "description": "Aprovado o Projeto de Lei nº 4.768, de 2016."
+    },
+    {
+      "vote_id": "2079783-101",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2079783-101",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2079783-101/votos",
+      "description": "Rejeitada a Emenda nº 1 da Comissão de Educação."
+    },
+    {
+      "vote_id": "2079783-103",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2079783-103",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2079783-103/votos",
+      "description": "Rejeitada a Emenda  nº 2 da Comissão de Educação."
+    },
+    {
+      "vote_id": "481891-125",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/481891-125",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/481891-125/votos",
+      "description": "Aprovada a Emenda do Senado Federal ao Projeto de Lei nº 7.536, de 2010."
+    },
+    {
+      "vote_id": "344542-77",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/344542-77",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/344542-77/votos",
+      "description": "Aprovado o Substitutivo ao Projeto de Lei nº 396, de 2007, da Comissão de Trabalho, de Administração e Serviço Público."
+    },
+    {
+      "vote_id": "2503998-70",
+      "status": 200,
+      "vote_method": "nominal",
+      "raw_vote_count": 367,
+      "rs_vote_count": 26,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-70",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-70/votos",
+      "description": "Rejeitado o Requerimento. Sim: 60; Não: 306; Total: 366."
+    },
+    {
+      "vote_id": "344542-82",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/344542-82",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/344542-82/votos",
+      "description": "Aprovadas as Subemendas da Comissão de Constituição e Justiça e de Cidadania ao Substitutivo."
+    },
+    {
+      "vote_id": "2503998-75",
+      "status": 200,
+      "vote_method": "nominal",
+      "raw_vote_count": 384,
+      "rs_vote_count": 27,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-75",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-75/votos",
+      "description": "Aprovado o Substitutivo ao Projeto de Lei Complementar nº 109, de 2025, adotado pelo relator da Comissão de Constituição e Justiça e de Cidadania. Sim: 381; Não: 2; Total: 383."
+    },
+    {
+      "vote_id": "2503998-78",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-78",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-78/votos",
+      "description": "Aprovada a Redação Final assinada pelo relator, Dep. Neto Carletto (AVANTE/BA)."
+    },
+    {
+      "vote_id": "2611001-3",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611001-3",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611001-3/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2611002-2",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611002-2",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611002-2/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2611537-2",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611537-2",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611537-2/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2611538-2",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611538-2",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611538-2/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2612403-2",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2612403-2",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2612403-2/votos",
+      "description": "Aprovado o Requerimento."
+    },
+    {
+      "vote_id": "2613090-3",
+      "status": 200,
+      "vote_method": "outro",
+      "raw_vote_count": 0,
+      "rs_vote_count": 0,
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613090-3",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2613090-3/votos",
+      "description": "Aprovado o Requerimento."
+    }
+  ]
+}
