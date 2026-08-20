@@ -41,6 +41,7 @@
 - Workflow backup `334951434`, run `32375095689`: `completed/success`, `headSha` idêntico ao commit.
 - Preview Cloudflare `https://ac507dae.portal-transparencia-rs.pages.dev`: `/release.json` HTTP 200 e SHA `d19bedf7a35b32782539b3fdf724e82b3351118f` idêntico.
 - Após novo push documental, workflow backup `334951434`, run `32375409134`: `completed/success`, `headSha` `7c8d4e6884d12aef03e6790330a9e6311d796eb9` idêntico ao `HEAD`; domínio customizado `/release.json` passou a servir o mesmo SHA, com raiz HTTP 200. A divergência transitória de propagação foi encerrada.
+- Verificação posterior do workflow backup `32375603712`: `completed/success`, `headSha` `fccee8337291813f05de4bfd9c9ebe431f39ac7c`; após propagação, o domínio customizado `/release.json` HTTP 200 passou a servir esse SHA. Smoke funcional anterior permaneceu verde: 1002 cards, 0 falhas HTTP e 0 erros de console online.
 
 ## Próximo passo
 

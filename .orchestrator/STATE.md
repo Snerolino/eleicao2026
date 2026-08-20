@@ -8,7 +8,7 @@
 - Gates Node 24.19.0: 82 arquivos/372 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check` verdes.
 - Doctor do shell cron permanece FAIL restrito ao Node 22.22.2; OpenCode ausente e Ollama sem preflight permanecem WARNs opcionais.
 - QA criado: `docs/qa/lote-senado-source-revalidation-2026-08-20-1333.md`.
-- Commits documentais `d19bedf7a35b32782539b3fdf724e82b3351118f` e `7c8d4e6884d12aef03e6790330a9e6311d796eb9` publicados; backup final `334951434`, run `32375409134`, `completed/success`, `headSha` idêntico ao `HEAD`. A primeira verificação encontrou propagação transitória no domínio customizado; nova verificação confirmou `/release.json` alinhado ao SHA `7c8d4e6884d12aef03e6790330a9e6311d796eb9` e raiz HTTP 200.
+- Commits documentais `d19bedf7a35b32782539b3fdf724e82b3351118f`, `7c8d4e6884d12aef03e6790330a9e6311d796eb9` e `fccee8337291813f05de4bfd9c9ebe431f39ac7c` publicados; backup final verificado `334951434`, run `32375603712`, `completed/success`, `headSha` idêntico ao commit `fccee8337291813f05de4bfd9c9ebe431f39ac7c`. Após propagação, `/release.json` do domínio customizado alinhou ao mesmo SHA e a raiz permaneceu HTTP 200.
 - Nenhuma escrita Supabase, snapshot, claim ou dado factual remoto ocorreu.
 - Próximo passo: repetir a revalidação bounded sem gerar manifesto novo enquanto persistir a deriva; manter Câmara/Q3 e a reconciliação ALRS independentes.
 
