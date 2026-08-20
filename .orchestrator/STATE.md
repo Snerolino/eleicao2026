@@ -1,4 +1,16 @@
-## Tick contínuo — Câmara votos nominais bounded, lote 06 (2026-08-20T09:05Z)
+## Tick contínuo — Câmara votos nominais bounded, lote 08 (2026-08-20T10:19Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `684feee4ff74af9c392be704b264a70a57f9083d`.
+- Coletor oficial read-only consultou `/votacoes/{id}/votos` para 25/300 IDs da janela 2026-07-01 a 2026-09-30, posições 176–200.
+- Resultado verificado independentemente: 25 eventos, 0 registros individuais, 0 votos brutos e 0 votos RS no envelope dry-run; manifesto SHA-256 `05108277eb11022be123a30900ef756153d4377351829ba7636bc3f95d94f373`.
+- Verificação: 8/8 checks passaram — IDs, URLs oficiais, arquivos brutos JSON válidos, contagens e ausência de envelopes inconsistentes.
+- QA criado: `docs/qa/lote-camara-votos-batch-08-2026-08-20.md`.
+- Gates verdes com Node 24.19.0: 82 arquivos/372 testes, TypeScript, schema, `data:check` (1003/988), build e `git diff --check`.
+- Nenhuma escrita factual remota; ALRS/Senado continuam fail-closed pelos bloqueios já documentados.
+- Doctor do cron permanece FAIL restrito ao Node 22.22.2; OpenCode ausente e Ollama/gateway são WARNs opcionais.
+- Próximo passo: publicar este checkpoint e iniciar Câmara lote 09 (posições 201–225).
+
+## Tick contínuo — Câmara votos nominais bounded, lote 07 (2026-08-20T09:05Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `afe654c1d946abd025f356684eece44eda21368c`.
 - Coletor oficial read-only consultou `/votacoes/{id}/votos` para 25/300 IDs da janela 2026-07-01 a 2026-09-30, posições 126–150.
