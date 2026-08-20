@@ -61,14 +61,14 @@ FK, dry-run e idempotência.
 
 ## Publicação e produção
 
-- Commits documentais `a2f9dcd69f5470927c87ccebe079478d621be86a` e
-  `7546d7d9fc08e6a98021270f039c0f16f7b1221f` publicados em `origin/main`.
-- O backup `334951434`, run `32410183487`, concluiu `completed/success` com
-  `headSha=7546d7d9fc08e6a98021270f039c0f16f7b1221f`.
-- Produção: raiz HTTP 200; `/release.json` HTTP 200 finalmente alinhado ao
-  SHA `7546d7d9fc08e6a98021270f039c0f16f7b1221f`, release
-  `7546d7d-20260820T194358985Z` e snapshot `row_count=1003`.
-- Smoke remoto exit 0, 1.002 cards, 0 falhas HTTP e 0 erros de console online.
+- Commits documentais `a2f9dcd69f5470927c87ccebe079478d621be86a`,
+  `7546d7d9fc08e6a98021270f039c0f16f7b1221f` e
+  `c62045b61b9a5355f4eae414f87971c8ca9828b4` publicados em `origin/main`.
+- O backup `334951434`, run `32410387125`, concluiu `completed/success` com
+  `headSha=c62045b61b9a5355f4eae414f87971c8ca9828b4`; `/release.json?cb=c62045b`
+  confirmou o mesmo SHA, snapshot `row_count=1003`.
+- Smoke remoto final exit 0, 1.002 cards, 0 falhas HTTP e 0 erros de console
+  online.
 
 ## Próximo passo
 
