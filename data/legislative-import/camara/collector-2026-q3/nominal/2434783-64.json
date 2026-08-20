@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "country": "BR",
+  "state": "RS",
+  "election_year": 2026,
+  "propositions": [
+    {
+      "external_id": "camara-proposicao-2434783-pl",
+      "house": "camara",
+      "proposition_type": "pl",
+      "number": 1928,
+      "year": 2024,
+      "title": "PL 1928",
+      "summary": "Dispõe sobre a profissão de artista visual e dá outras providências",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2434783",
+      "versions": [
+        {
+          "version_key": "event-2434783-64",
+          "version_label": "Rejeitado o Requerimento de Retirada de Pauta. Resultado:  17 votos \"Sim\", 20 votos \"Não\". Quórum de votação: 37 votos.",
+          "text_hash": "sha256:761eae587350af74a5c5955ef9aa7b2e27e8b07bb9fbd3a2598583792632e1d7",
+          "effective_from": "2026-07-01T15:51:06.000Z",
+          "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2434783",
+          "voting_events": [
+            {
+              "external_id": "camara-votacao-2434783-64",
+              "house": "camara",
+              "session_id": "82609",
+              "vote_round": "Votação nominal, de ofício, do Requerimento de Retirada de Pauta, de autoria dos Deputados Bia Kicis e Sérgio Turra.",
+              "occurred_at": "2026-07-01T15:51:06.000Z",
+              "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2434783-64"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "votes": [
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2434783-64",
+      "deputy_id": "camara-deputado-74398",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2434783-pl:event-2434783-64",
+      "value": "nao",
+      "recorded_at": "2026-07-01T15:51:06.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2434783-64/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2434783-64",
+      "deputy_id": "camara-deputado-141485",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2434783-pl:event-2434783-64",
+      "value": "nao",
+      "recorded_at": "2026-07-01T15:51:06.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2434783-64/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2434783-64",
+      "deputy_id": "camara-deputado-204404",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2434783-pl:event-2434783-64",
+      "value": "sim",
+      "recorded_at": "2026-07-01T15:51:06.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2434783-64/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2434783-64",
+      "deputy_id": "camara-deputado-235776",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2434783-pl:event-2434783-64",
+      "value": "sim",
+      "recorded_at": "2026-07-01T15:51:06.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2434783-64/votos"
+    }
+  ]
+}

@@ -83,6 +83,14 @@
 - Nenhum voto foi aplicado; próximo chunk é coleta/identidade/FK/fontes Q3.
 - QA: `docs/qa/lote-camara-q3-scout-completo-2026-08-20.md`.
 
+## Tick contínuo — aplicação Câmara Q3/2026 (2026-08-20)
+
+- Aplicados 9 proposições, 9 versões, 9 eventos e 121 votos com 22 FKs remotas exatas.
+- Segunda execução: 0 inserts, 0 updates, 121 existentes; impacto zero.
+- Perfis recalculados duas vezes: 4477 índices/41 perfis; Câmara 477 votos.
+- 9 identidades pendentes e 8 eventos inacessíveis permanecem fora.
+- QA: `docs/qa/lote-camara-q3-apply-2026-08-20.md`.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T23:56Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `ef57622fe3133b1f3d2bf1dc8ae33dc63bdb7eee`.

@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "country": "BR",
+  "state": "RS",
+  "election_year": 2026,
+  "propositions": [
+    {
+      "external_id": "camara-proposicao-2168586-pl",
+      "house": "camara",
+      "proposition_type": "pl",
+      "number": 9657,
+      "year": 2018,
+      "title": "PL 9657",
+      "summary": "Altera as Leis nºs 8.080, de 19 de setembro de 1990, e 9.656, de 3 de junho de 1998, para garantir direito à realização de cirurgia plástica reparadora, com ou sem uso de dispositivos médicos implantáveis.",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2168586",
+      "versions": [
+        {
+          "version_key": "event-2168586-96",
+          "version_label": "Rejeitado o Requerimento de Retirada de Pauta. Resultado:  21 votos \"Sim\", 25 votos \"Não\". Quórum de votação: 46 votos.",
+          "text_hash": "sha256:ef753315e7d63f11a0c0a7413957518503bcb79ea5c024a6e3d1e2b83c560cfe",
+          "effective_from": "2026-07-01T15:15:48.000Z",
+          "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2168586",
+          "voting_events": [
+            {
+              "external_id": "camara-votacao-2168586-96",
+              "house": "camara",
+              "session_id": "82609",
+              "vote_round": "Votação nominal, de ofício, do Requerimento de Retirada de Pauta, de autoria dos Deputados Chris Tonietto e Delegado Éder Mauro.",
+              "occurred_at": "2026-07-01T15:15:48.000Z",
+              "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2168586-96"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "votes": [
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2168586-96",
+      "deputy_id": "camara-deputado-74398",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2168586-pl:event-2168586-96",
+      "value": "nao",
+      "recorded_at": "2026-07-01T15:15:48.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2168586-96/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2168586-96",
+      "deputy_id": "camara-deputado-141485",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2168586-pl:event-2168586-96",
+      "value": "nao",
+      "recorded_at": "2026-07-01T15:15:48.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2168586-96/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2168586-96",
+      "deputy_id": "camara-deputado-204404",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2168586-pl:event-2168586-96",
+      "value": "sim",
+      "recorded_at": "2026-07-01T15:15:48.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2168586-96/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2168586-96",
+      "deputy_id": "camara-deputado-220555",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2168586-pl:event-2168586-96",
+      "value": "nao",
+      "recorded_at": "2026-07-01T15:15:48.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2168586-96/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2168586-96",
+      "deputy_id": "camara-deputado-235776",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2168586-pl:event-2168586-96",
+      "value": "sim",
+      "recorded_at": "2026-07-01T15:15:48.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2168586-96/votos"
+    }
+  ]
+}

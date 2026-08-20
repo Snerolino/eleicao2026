@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "country": "BR",
+  "state": "RS",
+  "election_year": 2026,
+  "propositions": [
+    {
+      "external_id": "camara-proposicao-2193266-pl",
+      "house": "camara",
+      "proposition_type": "pl",
+      "number": 1183,
+      "year": 2019,
+      "title": "PL 1183",
+      "summary": "Dispõe sobre a regulamentação do exercício das profissões de Conservador-Restaurador de Bens Culturais e de Técnico em Conservação-Restauração de Bens Culturais.",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2193266",
+      "versions": [
+        {
+          "version_key": "event-2193266-77",
+          "version_label": "Rejeitado o Requerimento de Retirada de Pauta. Resultado:  17 votos \"Sim\", 31 votos \"Não\". Quórum de votação: 48 votos.",
+          "text_hash": "sha256:d9559e5b89dba9981ac90a78d53c52ee4f40a53d6eb1fe6e9d1a9ebae317b5d9",
+          "effective_from": "2026-07-01T15:33:39.000Z",
+          "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2193266",
+          "voting_events": [
+            {
+              "external_id": "camara-votacao-2193266-77",
+              "house": "camara",
+              "session_id": "82609",
+              "vote_round": "Votação nominal, de ofício, do Requerimento de Retirada de Pauta, de autoria dos Deputados Julia Zanatta e Sérgio Turra.",
+              "occurred_at": "2026-07-01T15:33:39.000Z",
+              "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2193266-77"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "votes": [
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2193266-77",
+      "deputy_id": "camara-deputado-74398",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2193266-pl:event-2193266-77",
+      "value": "nao",
+      "recorded_at": "2026-07-01T15:33:39.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2193266-77/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2193266-77",
+      "deputy_id": "camara-deputado-141485",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2193266-pl:event-2193266-77",
+      "value": "nao",
+      "recorded_at": "2026-07-01T15:33:39.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2193266-77/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2193266-77",
+      "deputy_id": "camara-deputado-204404",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2193266-pl:event-2193266-77",
+      "value": "nao",
+      "recorded_at": "2026-07-01T15:33:39.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2193266-77/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2193266-77",
+      "deputy_id": "camara-deputado-220555",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2193266-pl:event-2193266-77",
+      "value": "nao",
+      "recorded_at": "2026-07-01T15:33:39.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2193266-77/votos"
+    },
+    {
+      "voting_event_id": "voting_events:camara:camara-votacao-2193266-77",
+      "deputy_id": "camara-deputado-235776",
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2193266-pl:event-2193266-77",
+      "value": "sim",
+      "recorded_at": "2026-07-01T15:33:39.000Z",
+      "source": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2193266-77/votos"
+    }
+  ]
+}
