@@ -5,8 +5,9 @@
 - Resultado verificado: HTTP 200, uma página válida, 0 `vote_id`, nenhum bloqueio; não houve inferência de eventos, votos, identidades, FKs ou fontes.
 - Auditoria de fontes Câmara: 7 URLs, todas HTTP 200; manifesto versionado permaneceu sem alteração.
 - Auditoria estrita de cobertura continua exit 2 por gaps reais: Câmara 2 votos, ALRS 4 votos e Senado 455 votos sem fonte.
+- Publicação documental: commit `6d8bd886d6e0be83a25847e1fdb4c5e15b5225df` em `origin/main`; workflow backup `334951434`, run `32367645034`, `completed/success`, `headSha` idêntico; produção inicialmente serviu SHA anterior durante propagação e depois alinhou ao commit.
+- Produção verificada após propagação: raiz HTTP 200; `/release.json` HTTP 200 com SHA completo idêntico e snapshot `row_count=1003`; smoke remoto exit 0, 1002 cards, 0 falhas HTTP e 0 erros de console online.
 - QA criado: `docs/qa/lote-camara-q4-discovery-2026-08-20.md`.
-- Nenhuma escrita factual remota; ALRS/Senado seguem fail-closed.
 - Próximo passo: manter reconhecimento oficial independente e revalidar a Câmara em nova janela elegível; seguir com gates locais/documentais sem inventar lote vazio.
 
 ## Tick contínuo — Câmara votos nominais bounded, lote 12 (2026-08-20T11:33Z)
