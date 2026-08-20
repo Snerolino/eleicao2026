@@ -667,6 +667,14 @@
 - UI corrigida para explicar ausência de assessment ALRS, sem sugerir ausência de votos.
 - QA: `docs/qa/lote-caso-adao-704-votos-sem-assessment-alrs-2026-08-20.md`.
 
+## Tick contínuo — fila ALRS de impacto por versão (2026-08-20)
+
+- Fila event-first gerada: 1281 versões/4000 votos, sem escrita remota.
+- 30 versões P0 atingem 7 candidatos; 82 versões P1 atingem 5–6 candidatos.
+- Matriz será criada uma vez por `proposition_version` e reutilizada para todos os votantes.
+- Próximo passo: classificar oficialmente mérito/emenda/destaque/procedimento.
+- QA: `docs/qa/lote-alrs-impact-review-queue-v1-2026-08-20.md`.
+
 ## Tick contínuo — fechamento final R4 (2026-08-20)
 
 - 13/13 itens da fila Q2/Q3 revisados; 12 não pontuáveis aprovados e 1 assessment populacional aprovado.
