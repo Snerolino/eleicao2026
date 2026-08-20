@@ -1,3 +1,14 @@
+## Tick contínuo — recon oficial bounded Senado/ALRS/Câmara (2026-08-20T18:59Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `5a560732a6adafa0c8c85ca0d8387ae540bfebd9`.
+- Senado: 6/6 HTTP 200, 6/6 prefixos PDF válidos, 3/6 coincidências de bytes e 0/6 SHA-256 contra o manifesto de 2026-08-19; fail-closed, sem atualização ou aplicação.
+- ALRS: HTTP 200, 77442 bytes, 0 `data-item`, sem `Enio Carlos Terra`/`Terra`; os quatro residuais seguem sem ID oficial/fonte exata.
+- Câmara: janela oficial 2026-10-01 a 2026-12-31, HTTP 200, JSON válido, 0 registros; nenhum evento inferido.
+- Dataset vivo: snapshot 1003 IDs; sete CSVs TSE comparados, com 0 IDs ausentes; nenhum refresh/sincronização aplicado.
+- Auditoria read-only: `npm run impact:sources:audit` exit 0; gaps reais ALRS 4, Câmara 2 e Senado 455 votos sem fonte.
+- QA: `docs/qa/lote-official-recon-senado-alrs-camara-2026-08-20-1859.md`; artefatos read-only em `.orchestrator/runtime/continuous-tick-20260820T1836Z/`.
+- Próximo passo: gates locais completos, publicar o checkpoint documental e repetir reconciliação bounded sem promover deriva.
+
 ## Tick contínuo — recon oficial bounded Senado/ALRS/Câmara (2026-08-20T18:16Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `536fad28aa2b67d3b958ac24d6c14101cd90ef57`.
@@ -456,6 +467,13 @@
 - Guia de revisão humana criado para as 13 versões Q2/Q3, com taxonomia oficial, `impact_direction`, `defending_vote`, rationale, fonte e checklist.
 - Nenhuma aprovação ou RPC foi executada; comparação pública permanece limitada ao recorte aprovado.
 - QA: `docs/qa/guia-revisao-r4-camara-q2-q3.md`.
+
+## Tick contínuo — fechamento editorial R4 Q2/Q3 (2026-08-20)
+
+- 9 itens aprovados como não pontuáveis; 1 assessment aprovado para PLP 41/2026 (`mulheres`, `positive`, `sim`, confiança 0.99, 3 fontes).
+- 3 itens permanecem `pending_review` por resolução do objeto do evento.
+- Supabase: 2 matrizes aprovadas, ambas com 3 fontes; nenhum voto factual alterado.
+- QA: `docs/qa/lote-r4-fechamento-editorial-q2-q3-2026-08-20.md`.
 
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T23:56Z)
 
