@@ -37,7 +37,7 @@
 - Commit `e041fcfc1e5c2b3a2b704e29f73cc45ea93ff253` publicado em `origin/main`.
 - Backup Cloudflare `334951434`: run `32352044974`, `completed/success`, `headSha` idêntico.
 - Produção `https://rs.votopraquem.org`: raiz HTTP 200.
-- `/release.json`: SHA idêntico, release `e041fcf-20260820T090524385Z`, versão `0.2.522`, snapshot `row_count=1003`.
+- `/release.json` no domínio customizado ainda retorna a publicação anterior (`e041fcf`, versão `0.2.522`), apesar do run `32352224181` ter `headSha` `0315780`; o hostname direto do deployment `902cb011.portal-transparencia-rs.pages.dev` confirma `0315780`, versão `0.2.523`. A produção customizada permanece com divergência de propagação/roteamento e não foi declarada atualizada.
 - Smoke local exit 0: `1002` cards, mínimo esperado `1002`, `0` falhas HTTP e `0` erros de console online.
 
 ## Próximo passo
