@@ -8,7 +8,8 @@
 - Gates Node 24.19.0: 83 arquivos/374 testes, TypeScript, schema, `data:check` 1003/988, build, diff check e smoke local (1002 cards, 0 HTTP/console errors).
 - Auditoria de fontes read-only exit 0; `--strict` exit 2 por gaps reais: ALRS 4, Câmara 2 e Senado 455 votos sem fonte, além de versões/eventos Senado sem fonte.
 - QA: `docs/qa/lote-official-recon-senado-alrs-camara-2026-08-20-2111.md`; artefatos read-only em `.orchestrator/runtime/continuous-tick-20260820T211103Z/`.
-- Nenhuma escrita factual Supabase, snapshot, claim, manifesto, source reference, voto, identidade, FK, Cloudflare ou matriz ocorreu.
+- Publicação documental: commit `078dfa1413a47c52948fac66ee2758717c2bcb3f` em `origin/main`; backup `334951434`, run `32418320170`, `completed/success`, `headSha` idêntico.
+- Produção: raiz e `/release.json` HTTP 200; release confirmou SHA `078dfa1413a47c52948fac66ee2758717c2bcb3f`, snapshot `row_count=1003`; smoke remoto exit 0 (1002 cards, 0 falhas HTTP, 0 erros de console).
 - Doctor do cron permanece FAIL pelo Node 22.22.2 do shell; OpenCode ausente e Ollama sem preflight são WARNs opcionais.
 - Próximo passo: repetir reconciliação bounded sem promover deriva.
 
