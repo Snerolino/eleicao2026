@@ -1,4 +1,16 @@
-## Tick contínuo — refresh dataset fail-closed (2026-08-20T22:48Z)
+## Tick contínuo — gate de segurança do refresh TSE (2026-08-20T23:10Z)
+
+- Worktree iniciou limpa em `482b21b00136` e terminou limpa em `8a0a10c3ade27321e8a42c70869a74f1b1fc9132`.
+- Implementado `compareRefreshSafety()` e gate fail-closed em `scripts/refresh-public-snapshot.mjs`; testes adicionados.
+- `npm run data:refresh` com Node 24 foi rejeitado sem escrita: 1 candidato removido e 1990 perdas de metadados de foto exigem prova oficial explícita.
+- Gates Node 24.19.0 verdes: 84 arquivos/379 testes, TypeScript, schema, data:check 1003/988, build, diff check e smoke local 1002 cards/0 HTTP/console errors.
+- Auditoria de fontes read-only exit 0; gaps permanecem ALRS 1251/1647/4, Câmara 3/2/2 e Senado 112/188/455 sem fonte.
+- Doctor do cron continua FAIL somente pelo shell Node 22.22.2; OpenCode ausente e Ollama sem preflight são WARNs opcionais.
+- QA: `docs/qa/lote-refresh-safety-gate-2026-08-20.md`.
+- Publicação documental: backup `334951434`, run `32427583136`, `completed/success`, `headSha` idêntico; produção raiz e `/release.json` HTTP 200, release SHA `8a0a10c3ade27321e8a42c70869a74f1b1fc9132`.
+- Nenhuma escrita factual em snapshot, manifesto, Supabase, claim, voto, identidade, FK ou matriz ocorreu.
+- Próximo passo: reconciliação oficial bounded dos 4 votos ALRS residuais; Senado permanece fail-closed enquanto SHA divergir e Câmara aguarda lote oficial não vazio.
+
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `5bb6a68f3f13b8d1119a83287a69466b1cbd38d2`.
 - Reconciliação viva: 22 CSVs encontrados; o refresh local produziu apenas 1002 candidaturas, removeu `tse_candidate_id=210002533050` e zerou os metadados de 988 fotos oficiais já publicados. Proposta rejeitada e revertida imediatamente; snapshot voltou a 1003 candidaturas/988 fotos.
