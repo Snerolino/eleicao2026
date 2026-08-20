@@ -121,6 +121,13 @@
 - Todos os itens `pending_review`, sem grupo/direção automática, `remote_apply=false` e revisão humana exigida.
 - QA: `docs/qa/lote-r4-review-queue-camara-q2-q3-2026-08-20.md`.
 
+## Tick contínuo — isolamento R4 Q2/Q3 (2026-08-20)
+
+- 30 eventos Câmara Q2/Q3 auditados; 0 associados a matriz `approved`.
+- Única matriz aprovada continua sendo o piloto PLP 230/2025.
+- 196 votos Q2/Q3 permanecem fatos nominais fora de impacto.
+- QA: `docs/qa/lote-r4-isolamento-q2-q3-2026-08-20.md`.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T23:56Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `ef57622fe3133b1f3d2bf1dc8ae33dc63bdb7eee`.
