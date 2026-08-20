@@ -1,3 +1,14 @@
+## Tick contínuo — recon oficial bounded Senado/ALRS/Câmara (2026-08-20T16:00Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `a6b428300cd11ce456418885486716071ac3dce5`.
+- Câmara: janela oficial 2026-10-01 a 2026-12-31, HTTP 200, uma página válida, 0 votações e nenhum bloqueio; nenhum evento inferido.
+- Senado: 6/6 HTTP 200, 6/6 prefixos PDF válidos, 2/6 coincidências de bytes e 0/6 SHA-256 contra o manifesto; fail-closed, sem atualização ou aplicação.
+- ALRS: HTTP 200, 77442 bytes, SHA-256 `sha256:6a386d7d8b9ae17f8f5107b0cb6c90d71795a8568f08ed7c5972746a4ac0bab1`, 0 `data-item`, sem `Enio Carlos Terra`/`Terra`; os quatro residuais seguem sem ID oficial/fonte exata.
+- Dataset vivo inspecionado com CP1252/`;`: 322 IDs únicos, todos contidos no snapshot público de 1003; o CSV isolado tem 681 IDs ausentes. Nenhum refresh/sincronização aplicado.
+- Nenhuma escrita factual Supabase, snapshot, claim, manifesto, source reference, voto, identidade, FK ou matriz ocorreu.
+- QA criado: `docs/qa/lote-official-recon-senado-alrs-camara-2026-08-20-1600.md`; artefatos read-only em `.orchestrator/runtime/continuous-tick-2026-08-20-1600/`.
+- Próximo passo: repetir reconciliação bounded sem promover deriva; manter ALRS/Senado fail-closed e consultar próxima janela Câmara elegível.
+
 ## Tick contínuo — recon oficial bounded Senado/ALRS/Câmara (2026-08-20T14:59Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `5d43799a3c102e6ed15f5461f187741eeda8b9ed`.
