@@ -239,6 +239,20 @@
 - Todos os itens `pending_review`, sem grupo/direção automática, `remote_apply=false` e revisão humana exigida.
 - QA: `docs/qa/lote-r4-review-queue-camara-q2-q3-2026-08-20.md`.
 
+## Tick contínuo — Câmara votos nominais bounded, lote 07 (2026-08-20T09:43Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `5db50fdd51336ea57e93463d9028de51181980ff`.
+- Coletor oficial read-only consultou `/votacoes/{id}/votos` para 25/300 IDs da janela 2026-07-01 a 2026-09-30, posições 151–175.
+- Resultado verificado: 25 eventos, 0 individualizados, 0 votos brutos e 0 votos RS no envelope dry-run; manifesto SHA-256 `b1575d51e3f4fcd35f194b0a80300460a9161393d313369e8af20d365dd578eb`.
+- Verificação independente: 100 checks passaram (`detail.id`, IDs, URLs oficiais e contagens); nenhum voto, identidade ou FK foi aplicado.
+- QA criado: `docs/qa/lote-camara-votos-batch-07-2026-08-20.md`.
+- Gates Node 24.19.0: 82 arquivos/372 testes, TypeScript, schema, `data:check` (1003/988), build e `git diff --check` verdes.
+- Publicação: commit `02444923448231f7f2d2659c824af4f52ed593b4` em `origin/main`; backup `334951434`, run `32355398527`, `completed/success`, `headSha` idêntico.
+- Produção: raiz HTTP 200; `/release.json` confirmou SHA completo idêntico `02444923448231f7f2d2659c824af4f52ed593b4`, snapshot `row_count=1003`.
+- Smoke local exit 0: 1002 cards, mínimo esperado 1002, 0 falhas HTTP e 0 erros de console online.
+- ALRS/Senado continuam fail-closed; doctor continua FAIL restrito ao Node 22.22.2, com OpenCode ausente e gateway/Ollama como WARNs opcionais.
+- Próximo passo: Câmara lote 08, posições 176–200; reconhecimento ALRS/Senado permanece independente e sem aplicação factual.
+
 ## Tick contínuo — isolamento R4 Q2/Q3 (2026-08-20)
 
 - 30 eventos Câmara Q2/Q3 auditados; 0 associados a matriz `approved`.
