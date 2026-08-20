@@ -1,3 +1,13 @@
+## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-20T00:32Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `f55335498555d3440cfc1a5073ddca3ecf0c8459`.
+- Reconhecimento oficial read-only: 6/6 HTTP 200, 6/6 prefixos PDF válidos, 3/6 coincidências de bytes e 0/6 coincidências SHA-256 contra o manifesto versionado. Evidência: `.orchestrator/runtime/senado-revalidation-current.json`.
+- Dry-run `npm run impact:senado:sources:apply -- --dry-run`: 6 planejadas, 0 ausentes, 0 inserções, 0 votos tocados.
+- Gates no shell Node 22.22.2: 81 arquivos/371 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check` verdes. Doctor: 48 OK, 5 WARN, 1 FAIL restrito à versão do Node.
+- Nenhuma escrita factual remota, atualização do manifesto, Supabase ou alteração do snapshot foi executada; Senado permanece fail-closed por deriva SHA-256.
+- QA: `docs/qa/lote-senado-source-revalidation-2026-08-20-0032.md`.
+- Próximo chunk: repetir os seis GETs oficiais sem gerar manifesto novo nem aplicar votos enquanto persistir a deriva; publicar/verificar a documentação.
+
 ## Fechamento R1 ALRS — 2026-08-20
 
 - Auditoria CLI read-only confirmou 3996/4000 votos ALRS com fonte e exatamente 4 residuais, todos Enio (`210002534312`).
