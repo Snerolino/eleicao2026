@@ -8,7 +8,10 @@
 - Auditoria: `impact:sources:audit` exit 0; `audit-legislative-source-coverage --strict` exit 2 por gaps reais; ALRS 3996/4000 votos com fonte e 4 residuais sem fonte.
 - QA criado: `docs/qa/lote-alrs-enio-id-recon-2026-08-20.md`.
 - Bloqueio restrito ao item ALRS: falta rota histórica/ID oficial exato para Enio; Câmara/Senado e gates locais continuam independentes.
-- Próximo passo: publicar este checkpoint e iniciar o próximo chunk independente, mantendo ALRS em reconhecimento background fail-closed.
+- Publicação documental: commit `712a5286d4131368e85f2b86c34ef46568f94dd5` em `origin/main`; backup `334951434`, run `32371311304`, `completed/success`, `headSha` idêntico; preview `247c14ff.portal-transparencia-rs.pages.dev`.
+- Produção verificada: raiz e `/release.json` HTTP 200; primeira leitura sem cache-bust serviu release anterior, mas `/release.json?cb=712a528` retornou SHA completo `712a5286d4131368e85f2b86c34ef46568f94dd5` e snapshot `row_count=1003`; smoke remoto exit 0, 1002 cards, 0 falhas HTTP e 0 erros de console online.
+- QA atualizado com os gates e a evidência de propagação/cache.
+- Próximo passo: manter ALRS em reconhecimento background e iniciar o próximo chunk independente, sem aguardar prompt.
 
 ## Tick contínuo — reconhecimento Câmara Q4 sem novos eventos (2026-08-20)
 
