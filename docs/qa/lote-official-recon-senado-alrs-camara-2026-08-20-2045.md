@@ -37,9 +37,10 @@ fail-closed.
 - `.orchestrator/runtime/continuous-tick-20260820T2045Z/dataset-diff.json`
 
 ## Publicação e produção
-- Commit documental `446e0ab29775c5e85574cd07c7808e6fc3e599be` publicado em `origin/main`.
+- Commit documental inicial `446e0ab29775c5e85574cd07c7808e6fc3e599be` publicado em `origin/main`.
 - Workflow backup `334951434`, run `32416139676`, concluiu `completed/success` com `headSha` idêntico.
-- Produção raiz e `/release.json` HTTP 200; `release.json` confirmou SHA `446e0ab29775c5e85574cd07c7808e6fc3e599be`, snapshot `row_count=1003`.
+- Follow-up documental `40837887622c4a921315a02a6bb42b0d14a04de9` também foi publicado; workflow backup `334951434`, run `32416296285`, concluiu `completed/success` com `headSha` idêntico.
+- Produção raiz e `/release.json` HTTP 200; `release.json` final confirmou SHA `40837887622c4a921315a02a6bb42b0d14a04de9`, snapshot `row_count=1003`.
 - Smoke remoto exit 0: 1.002 cards, 0 falhas HTTP, 0 erros de console online e service worker pronto.
 
 ## Próximo passo
