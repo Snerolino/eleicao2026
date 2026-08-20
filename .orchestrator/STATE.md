@@ -7,6 +7,7 @@
 - Doctor do shell cron permanece com FAIL restrito ao Node 22.22.2; OpenCode ausente e Ollama sem resposta permanecem WARN opcionais.
 - Nenhuma escrita factual remota, atualização do manifesto, Supabase ou alteração do snapshot foi executada; Senado permanece fail-closed por deriva SHA-256.
 - QA: `docs/qa/lote-senado-source-revalidation-2026-08-20-0111.md`.
+- Auditoria read-only do mirror `../dataset2026/candidatos`: arquivos segmentados; `lista_candidatos_2026.csv` atual tem 322 IDs e não é equivalente sozinho ao snapshot de 1003. Nenhuma sincronização foi inferida ou executada; reconciliação do contrato de ingestão fica pendente.
 - Publicação: commit documental `fc97b5e3af6b1202dbfaa0ce232ba83dd59bdb69` publicado em `origin/main`; backup `334951434`, run `32320190679`, `completed/success`, `headSha` idêntico.
 - Produção raiz HTTP 200 e `/release.json` HTTP 200; release `fc97b5e-20260820T011314753Z`, SHA completo idêntico e snapshot `row_count=1003`.
 - Próximo chunk: repetir os seis GETs oficiais sem gerar manifesto novo nem aplicar votos enquanto persistir a deriva.

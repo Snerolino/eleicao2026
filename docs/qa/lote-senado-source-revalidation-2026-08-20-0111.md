@@ -35,6 +35,8 @@ A deriva SHA-256 persiste em **6/6** fontes; portanto não há autorização fac
 
 O doctor do shell cron continua com FAIL restrito ao Node `v22.22.2` (o projeto exige Node 24); OpenCode ausente e Ollama sem resposta permanecem WARN opcionais. Os gates desta execução foram feitos explicitamente com Node 24.19.0.
 
+- Auditoria read-only do mirror `../dataset2026/candidatos` não encontrou um CSV único equivalente ao snapshot: os arquivos estão segmentados e o `lista_candidatos_2026.csv` atual tem 322 IDs; a auditoria não alterou snapshot nem inferiu ausência de candidatos. Requer reconciliação do contrato de ingestão antes de qualquer sincronização.
+
 ## Publicação e produção
 
 - Commit documental: `fc97b5e3af6b1202dbfaa0ce232ba83dd59bdb69`, publicado em `origin/main`.
