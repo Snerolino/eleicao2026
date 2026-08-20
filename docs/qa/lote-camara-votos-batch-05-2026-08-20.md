@@ -33,8 +33,12 @@ Avançar a lane de reconhecimento da Câmara consultando exclusivamente o endpoi
 
 ## Publicação e verificação
 
-- Será executada somente após todos os gates locais verdes.
-- Nenhuma escrita factual remota foi autorizada por este lote: não houve `--apply`, Supabase, migration, RLS, RPC ou Storage.
+- Commit funcional/documental do lote: `d6a0b6bd8b43c14cfd2b344ad4226a801e913e67`, publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32348599354`: `completed/success`, `headSha` idêntico ao commit.
+- Produção `https://rs.votopraquem.org/`: raiz HTTP 200 e `/release.json` HTTP 200.
+- `release.json` confirmou `release_id=d6a0b6b-20260820T082421010Z`, `sha` completo idêntico, versão `0.2.518` e snapshot `row_count=1003`.
+- Smoke remoto exit 0: 1002 cards visíveis (mínimo esperado 1002), busca 2 resultados, detalhe/canonical/offline OK, service worker pronto, 0 falhas HTTP e 0 erros de console online.
+- A documentação deste QA/STATE foi incluída no commit seguinte e exigirá nova verificação final do backup antes do fechamento do lote.
 
 ## Bloqueios e escopo
 
