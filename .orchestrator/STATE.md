@@ -1,3 +1,18 @@
+## Tick contínuo — recon oficial bounded Senado/ALRS/Câmara (2026-08-20T22:00Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `b0a024efbe4e8db1f8f2931c654bbd7f9c94df0a` e terminou limpa em `4729e56d2b3ed9aee434c0e3080fa8f6521478a7`.
+- Senado: 6/6 HTTP 200, 6/6 prefixos PDF válidos; hashes atuais divergiram do manifesto de 2026-08-19 em 6/6 consultas. Fail-closed, sem atualização ou aplicação.
+- ALRS: HTTP 200, 77442 bytes, SHA-256 `sha256:6a386d7d8b9ae17f8f5107b0cb6c90d71795a8568f08ed7c5972746a4ac0bab1`, 0 `data-item`, sem `Enio Carlos Terra`/`Terra`; os quatro residuais seguem sem ID oficial/fonte exata.
+- Câmara: janela oficial 2026-10-01 a 2026-12-31, HTTP 200, JSON válido, 0 registros; nenhum evento inferido.
+- Dataset vivo: snapshot 1003 IDs; 6 CSVs comparáveis, 0 IDs ausentes; nenhum refresh/sincronização aplicado.
+- Auditoria de fontes read-only exit 0; `--strict` exit 2 por gaps reais: versões ALRS 1251, Câmara 3, Senado 112; eventos ALRS 1647, Câmara 2, Senado 188; votos ALRS 4, Câmara 2, Senado 455 sem fonte.
+- Gates Node 24: 84 arquivos/377 testes, TypeScript, schema, `data:check` 1003/988, build, diff check e smoke local verdes; smoke 1002 cards, 0 HTTP/console errors.
+- QA: `docs/qa/lote-official-recon-senado-alrs-camara-2026-08-20-2200.md`; artefatos read-only em `.orchestrator/runtime/continuous-tick-20260820T220006Z/`.
+- Nenhuma escrita factual Supabase, snapshot, claim, manifesto, source reference, voto, identidade, FK ou matriz ocorreu.
+- Publicação documental: commit `4729e56d2b3ed9aee434c0e3080fa8f6521478a7` em `origin/main`; backup `334951434`, run `32422422008`, `completed/success`, `headSha` idêntico.
+- Produção: raiz HTTP 200; `/release.json` confirmou SHA `4729e56d2b3ed9aee434c0e3080fa8f6521478a7`, `row_count=1003`, release `4729e56-20260820T220328887Z`.
+- Próximo passo: repetir reconciliação bounded sem promover deriva.
+
 ## Tick contínuo — recon oficial bounded Senado/ALRS/Câmara (2026-08-20T21:35Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `f18d27a003591ddf390b33b82aa43c5fc09163c2`.
