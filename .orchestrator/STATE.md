@@ -1,3 +1,13 @@
+## Tick contínuo — Câmara votos nominais bounded, lote 12 (2026-08-20T11:33Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `c66f4ce8a6b4726d5a32af86950b7e4f3b433e6c`.
+- Descoberta oficial read-only confirmou 300 votações na janela 2026-07-01 a 2026-09-30; lote processado nas posições 276–300.
+- Resultado verificado independentemente: 25 eventos, 2 individualizados, 898 votos brutos e 54 votos RS no envelope dry-run; manifesto SHA-256 `58692c4b8ab25196d37cc4d99ed0e8c9aaf4d737dce272a9fabde95b176b68b2`.
+- Verificação: 8/8 checks passaram — IDs, eventos, arquivos brutos, unicidade/exatidão, URLs oficiais, JSON, contagens e envelopes consistentes.
+- QA criado: `docs/qa/lote-camara-votos-batch-12-2026-08-20.md`.
+- Nenhuma escrita factual remota; ALRS/Senado continuam fail-closed.
+- Próximo passo: consolidar auditoria/manifestos Q3 e manter reconhecimento oficial independente para ALRS/Senado; qualquer aplicação continua condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — Câmara votos nominais bounded, lote 11 (2026-08-20T10:55Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `d186b1dc611e16e53a085ca225292289458b7b90`.
