@@ -39,10 +39,9 @@ A página oficial atual não expõe Enio Carlos Terra no catálogo de 55 parlame
 
 - Gates locais em Node 24.19.0: `npm run test` — 82 arquivos/372 testes, exit 0; `npx tsc --noEmit` exit 0; `validate-impact-schema` exit 0; `data:check` 1003 candidaturas/988 fotos exit 0; `npm run build` exit 0; `git diff --check` exit 0.
 - Commit publicado: `712a5286d4131368e85f2b86c34ef46568f94dd5`, `main -> origin/main`.
-- Backup Cloudflare `334951434`, run `32371311304`: `completed/success`, `headSha` igual ao commit.
-- Preview do run: `https://247c14ff.portal-transparencia-rs.pages.dev`.
-- Produção: raiz HTTP 200; `/release.json` HTTP 200. Sem cache-bust, a primeira leitura ainda serviu release anterior; com `?cb=712a528`, release retornou SHA `712a5286d4131368e85f2b86c34ef46568f94dd5` e `row_count=1003`, evidenciando propagação/cache do domínio.
-- Smoke remoto exit 0: 1002 cards, mínimo 1002, 0 falhas HTTP e 0 erros de console online.
+- Backup Cloudflare `334951434`, run `32371311304`: `completed/success`, `headSha` igual ao commit; preview `https://247c14ff.portal-transparencia-rs.pages.dev`.
+- Fechamento documental posterior: commit `dcda5fe85bb3fa24c6c5c438df4a94167cba9191`; run `32371519458` `completed/success`, `headSha` igual. Como só mudou documentação fora de `dist/`, o artefato funcional foi reutilizado: `/release.json?cb=dcda5fe` permanece no SHA de conteúdo `712a5286d4131368e85f2b86c34ef46568f94dd5`.
+- Produção: raiz e `/release.json` HTTP 200; snapshot `row_count=1003`; smoke remoto exit 0: 1002 cards, mínimo 1002, 0 falhas HTTP e 0 erros de console online.
 
 ## Próximo passo
 

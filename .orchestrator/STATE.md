@@ -9,7 +9,8 @@
 - QA criado: `docs/qa/lote-alrs-enio-id-recon-2026-08-20.md`.
 - Bloqueio restrito ao item ALRS: falta rota histórica/ID oficial exato para Enio; Câmara/Senado e gates locais continuam independentes.
 - Publicação documental: commit `712a5286d4131368e85f2b86c34ef46568f94dd5` em `origin/main`; backup `334951434`, run `32371311304`, `completed/success`, `headSha` idêntico; preview `247c14ff.portal-transparencia-rs.pages.dev`.
-- Produção verificada: raiz e `/release.json` HTTP 200; primeira leitura sem cache-bust serviu release anterior, mas `/release.json?cb=712a528` retornou SHA completo `712a5286d4131368e85f2b86c34ef46568f94dd5` e snapshot `row_count=1003`; smoke remoto exit 0, 1002 cards, 0 falhas HTTP e 0 erros de console online.
+- O fechamento documental posterior foi commit `dcda5fe85bb3fa24c6c5c438df4a94167cba9191`; backup `334951434`, run `32371519458`, `completed/success`, `headSha` idêntico. Como o segundo commit só alterou documentação fora de `dist/`, o Cloudflare reutilizou o artefato idêntico e `/release.json?cb=dcda5fe` permanece com SHA de conteúdo `712a5286d4131368e85f2b86c34ef46568f94dd5`, sem divergência funcional.
+- Produção verificada: raiz e `/release.json` HTTP 200; snapshot `row_count=1003`; smoke remoto exit 0, 1002 cards, 0 falhas HTTP e 0 erros de console online.
 - QA atualizado com os gates e a evidência de propagação/cache.
 - Próximo passo: manter ALRS em reconhecimento background e iniciar o próximo chunk independente, sem aguardar prompt.
 
