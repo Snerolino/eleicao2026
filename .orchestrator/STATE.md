@@ -1,3 +1,11 @@
+## Tick contínuo — Câmara votos nominais bounded, lote 10 (2026-08-20T10:22Z)
+
+- Lote read-only processou as posições 226–250 dos 300 IDs oficiais da janela 2026-07-01 a 2026-09-30.
+- Resultado verificado: 25 eventos, 0 registros individuais, 0 votos brutos e 0 votos RS; manifesto SHA-256 `1a7d0f0d0c47fdd2aaf96c8cc34a5c3e19db2865c46b3e9fb1bb18cf3d43fbd7`.
+- Verificação: 8/8 checks passaram. QA: `docs/qa/lote-camara-votos-batch-10-2026-08-20.md`.
+- Nenhuma escrita factual remota; ALRS/Senado continuam fail-closed.
+- Próximo passo: publicar este checkpoint e iniciar Câmara lote 11 (posições 251–275).
+
 ## Tick contínuo — Câmara votos nominais bounded, lote 09 (2026-08-20T10:20Z)
 
 - Lock bounded adquirido/liberado; lote read-only processou as posições 201–225 dos 300 IDs oficiais da janela 2026-07-01 a 2026-09-30.
