@@ -12,6 +12,8 @@ import {
 import { usePageMetadata } from '@/hooks/usePageMetadata';
 import { fetchCandidateById } from '@/services/candidates';
 import { candidatePublicId, candidatePublicPath } from '@/utils/candidateIdentity';
+import { fetchVoteCategoryScores } from '@/services/voteCategoryComparison';
+import { formatCategoryScore, type VoteCategoryScore } from '@/domain/impact/vote-category-score';
 import {
   DOSSIER_SECTIONS,
   votingHouseMetadata,
@@ -28,6 +30,11 @@ function claimsForSection(
   );
 }
 
+function CategoryScoreList({ scores }: { scores: VoteCategoryScore[] }) {
+  if (scores.length === 0) return <p className="font-mono text-xs uppercase tracking-wide text-[var(--color-muted-ink)]">Nenhuma categoria com assessment aprovado e voto elegível.</p>;
+  return <div className="grid gap-2 sm:grid-cols-2">{scores.map((score) => <div key={`${score.house}-${score.group_slug}`} className="flex items-center justify-between border-b border-[var(--color-border-editorial)] py-2"><span className="text-sm">{score.group_slug.replaceAll('_', ' ')}</span><strong className="font-mono text-lg text-[var(--color-institutional)]">{formatCategoryScore(score.score)}</strong></div>)}</div>;
+}
+
 export function CandidateDossierPage() {
   const { slug = '' } = useParams();
   const decodedId = decodeURIComponent(slug);
@@ -41,6 +48,12 @@ export function CandidateDossierPage() {
   });
 
   const candidate = query.data;
+  const categoryScoresQuery = useQuery({
+    queryKey: ['candidate-category-scores', candidate?.id],
+    queryFn: () => fetchVoteCategoryScores(candidate?.id ? [candidate.id] : []),
+    enabled: Boolean(candidate?.id),
+    staleTime: 60_000,
+  });
 
   usePageMetadata(
     candidate
@@ -155,18 +168,18 @@ export function CandidateDossierPage() {
                   </h2>
                   <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[var(--color-muted-ink)]">
                     {profile.total_votes} votos individuais localizados na {house.label}.
-                    O saldo abaixo é apenas descritivo: não transforma ausência em voto contrário
-                    e não é uma avaliação de impacto político.
+                    A avaliação pública aparece por categoria somente quando existe assessment aprovado e fonte verificável.
                   </p>
                 </div>
                 <div className="shrink-0 text-left sm:text-right">
-                  <span className="font-mono text-[0.68rem] uppercase tracking-widest text-[var(--color-muted-ink)]">
-                    saldo nominal
-                  </span>
-                  <strong className="mt-1 block font-mono text-2xl text-[var(--color-institutional)]">
-                    {profile.nominal_balance.toFixed(2)}
-                  </strong>
+                  <span className="font-mono text-[0.68rem] uppercase tracking-widest text-[var(--color-muted-ink)]">avaliação por categoria</span>
+                  <strong className="mt-1 block font-mono text-sm text-[var(--color-institutional)]">metodologia v1</strong>
                 </div>
+              </div>
+              <div className="mt-5 border border-[var(--color-border-editorial)] p-4">
+                <h3 className="font-mono text-xs uppercase tracking-widest text-[var(--color-muted-ink)]">Impacto populacional por categoria</h3>
+                <p className="mt-2 text-sm text-[var(--color-muted-ink)]">Não é saldo nominal. O valor considera somente proposições com assessment aprovado, grupo identificado e voto elegível.</p>
+                {categoryScoresQuery.isLoading ? <LoadingSkeleton label="Calculando avaliação por categoria" /> : <div className="mt-3"><CategoryScoreList scores={(categoryScoresQuery.data ?? []).filter((score) => score.house === profile.house)} /></div>}
               </div>
               <dl className="mt-5 grid grid-cols-2 gap-px border border-[var(--color-border-editorial)] bg-[var(--color-border-editorial)] sm:grid-cols-5">
                 {[

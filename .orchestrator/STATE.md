@@ -575,6 +575,14 @@
 - QA/documentação: `docs/architecture/politica-precedencia-fontes.md`.
 - QA do contrato: `docs/qa/lote-precedencia-fonte-oficial-dataset2026-2026-08-20.md`; 84 arquivos/377 testes verdes.
 
+## Tick contínuo — scores por categoria no dossiê (2026-08-20)
+
+- Dossiê deixou de exibir `nominal_balance` como avaliação pública.
+- Exibe fatos nominais separados e score metodológico por grupo quando há assessment/fonte/voto elegível.
+- Sem cobertura: `não avaliado`; nunca zero artificial.
+- Gates: 84 arquivos/377 testes, TypeScript, build e smoke local verdes.
+- QA: `docs/qa/lote-scores-por-categoria-dossie-2026-08-20.md`.
+
 ## Tick contínuo — fechamento final R4 (2026-08-20)
 
 - 13/13 itens da fila Q2/Q3 revisados; 12 não pontuáveis aprovados e 1 assessment populacional aprovado.

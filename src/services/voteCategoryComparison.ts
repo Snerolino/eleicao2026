@@ -47,7 +47,7 @@ export async function fetchVoteCategoryComparisons(candidateIds: string[]): Prom
 }
 
 export async function fetchVoteCategoryScores(candidateIds: string[]): Promise<VoteCategoryScore[]> {
-  if (!supabase || candidateIds.length < 2) return [];
+  if (!supabase || candidateIds.length < 1) return [];
   const client = supabase as any;
   const { data: indexRows, error: indexError } = await client.from('legislator_vote_index').select('candidate_id,voting_event_id,value').in('candidate_id', candidateIds);
   if (indexError) throw indexError;
