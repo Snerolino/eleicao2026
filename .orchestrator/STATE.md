@@ -1,3 +1,14 @@
+## Tick contínuo — refresh dataset fail-closed (2026-08-20T22:48Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `5bb6a68f3f13b8d1119a83287a69466b1cbd38d2`.
+- Reconciliação viva: 22 CSVs encontrados; o refresh local produziu apenas 1002 candidaturas, removeu `tse_candidate_id=210002533050` e zerou os metadados de 988 fotos oficiais já publicados. Proposta rejeitada e revertida imediatamente; snapshot voltou a 1003 candidaturas/988 fotos.
+- Nenhuma escrita factual em snapshot, manifesto, Supabase, claim, voto, identidade, FK ou Cloudflare foi mantida.
+- Auditoria `npm run impact:sources:audit` exit 0; gaps permanecem reais: ALRS 1251 versões/1647 eventos/4 votos, Câmara 3/2/2 e Senado 112/188/455 sem fonte.
+- Gates Node 24.19.0 verdes: 84 arquivos/377 testes, TypeScript, schema, `data:check` 1003/988, build, `git diff --check` e smoke local (1002 cards, 0 HTTP/console errors).
+- QA: `docs/qa/lote-dataset-refresh-blocked-2026-08-20.md`.
+- Bloqueio: `refresh-public-snapshot.mjs` não é seguro como refresh incremental enquanto a entrada local não preservar candidato e fotos publicados; fail-closed.
+- Próximo passo: implementar comparador que exija prova explícita para remoções/perdas de foto e repetir recon oficial bounded sem aplicação remota.
+
 ## Tick contínuo — recon oficial bounded Senado/ALRS/Câmara (2026-08-20T22:25Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `a0525230dff15753a810a46f5a71696863302bd1`.
