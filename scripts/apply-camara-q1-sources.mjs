@@ -67,10 +67,11 @@ export function validateSourceInput(input, manifest) {
 
 /** Revalida as linhas remotas por URL e hash e devolve somente IDs já existentes. */
 export function resolveExistingSources(expectedSources, remoteRows) {
+  const expectedUrls = new Set(expectedSources.map((source) => source.url));
   const byUrl = new Map();
   for (const row of remoteRows ?? []) {
-    if (!row?.url) continue;
-    if (byUrl.has(row.url)) throw new Error(`source_reference duplicada por URL: ${row.url}`);
+    if (!row?.url || !expectedUrls.has(row.url)) continue;
+    if (byUrl.has(row.url)) throw new Error(`source_reference duplicada por URL esperada: ${row.url}`);
     byUrl.set(row.url, row);
   }
   const resolved = new Map();

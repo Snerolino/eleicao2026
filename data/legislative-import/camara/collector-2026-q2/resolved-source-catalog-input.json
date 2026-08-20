@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "sources": [
+    {
+      "key": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2501880",
+      "source_name": "Câmara dos Deputados — Dados Abertos",
+      "source_category": "oficial",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2501880",
+      "title": "Fonte oficial Câmara — 2501880",
+      "content_hash": "sha256:fb02fe355f2551f78f6730c1cc731432c093c3f85e9e57bc30fb68ba49140487"
+    },
+    {
+      "key": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2503998",
+      "source_name": "Câmara dos Deputados — Dados Abertos",
+      "source_category": "oficial",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2503998",
+      "title": "Fonte oficial Câmara — 2503998",
+      "content_hash": "sha256:9c3ef00c7d6abc00ed75fe6241c91d2af6849bf1a751ff8b088fb022b3426616"
+    },
+    {
+      "key": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2581700",
+      "source_name": "Câmara dos Deputados — Dados Abertos",
+      "source_category": "oficial",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2581700",
+      "title": "Fonte oficial Câmara — 2581700",
+      "content_hash": "sha256:974f43e51568ec2b4c2fd18a0ea6cc6f60d28cf02037d9af1a00edc27e17a421"
+    },
+    {
+      "key": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-70",
+      "source_name": "Câmara dos Deputados — Dados Abertos",
+      "source_category": "oficial",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-70",
+      "title": "Fonte oficial Câmara — 2503998-70",
+      "content_hash": "sha256:7766a01636cf604edce856fe6c8379ad00abe5b77632a30b76639a44a2eeba93"
+    },
+    {
+      "key": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-70/votos",
+      "source_name": "Câmara dos Deputados — Dados Abertos",
+      "source_category": "oficial",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-70/votos",
+      "title": "Fonte oficial Câmara — votos",
+      "content_hash": "sha256:1b214ce3a96dbb0cc46904894b9470c3848fd3509d894fe107a607616ceef824"
+    },
+    {
+      "key": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-75",
+      "source_name": "Câmara dos Deputados — Dados Abertos",
+      "source_category": "oficial",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-75",
+      "title": "Fonte oficial Câmara — 2503998-75",
+      "content_hash": "sha256:fb5eb1cbdb4d6dfacaab76a8245a74d92a7bd5275a59befe5ac3d86096342cf8"
+    },
+    {
+      "key": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-75/votos",
+      "source_name": "Câmara dos Deputados — Dados Abertos",
+      "source_category": "oficial",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-75/votos",
+      "title": "Fonte oficial Câmara — votos",
+      "content_hash": "sha256:b4d5cad8f3ce98c2bbd67741d0ed62d04ce4eb9f59ab0b6a7a1746b568df7550"
+    },
+    {
+      "key": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8",
+      "source_name": "Câmara dos Deputados — Dados Abertos",
+      "source_category": "oficial",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8",
+      "title": "Fonte oficial Câmara — 2562289-8",
+      "content_hash": "sha256:a74b23d52beed61b93aa5bd8f276737570f8788b0aec25ae6fa02dbe0e020d95"
+    },
+    {
+      "key": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos",
+      "source_name": "Câmara dos Deputados — Dados Abertos",
+      "source_category": "oficial",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2562289-8/votos",
+      "title": "Fonte oficial Câmara — votos",
+      "content_hash": "sha256:eef8f8ffde6d415d50456b93869df805cebb568d8e8beec9a6b3e52f4e16338d"
+    },
+    {
+      "key": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2581700-31",
+      "source_name": "Câmara dos Deputados — Dados Abertos",
+      "source_category": "oficial",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2581700-31",
+      "title": "Fonte oficial Câmara — 2581700-31",
+      "content_hash": "sha256:df15bb0fd4f9f371c735c9ef178d0b28614c88bad73b85b162b15224ad93371b"
+    },
+    {
+      "key": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2581700-31/votos",
+      "source_name": "Câmara dos Deputados — Dados Abertos",
+      "source_category": "oficial",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2581700-31/votos",
+      "title": "Fonte oficial Câmara — votos",
+      "content_hash": "sha256:f9b5f059b0731047610dab45fb756ac5ad4c7ca2e8ff891d6c95099cbccaf779"
+    }
+  ]
+}

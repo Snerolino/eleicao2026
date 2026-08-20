@@ -5,8 +5,10 @@ import { resolve } from 'node:path';
 import { createClient } from '@supabase/supabase-js';
 
 const ROOT = resolve(import.meta.dirname, '..');
-const ENVELOPE = resolve(ROOT, 'data/legislative-import/camara/collector-2026-q1/resolved-envelope.json');
-const CATALOG = resolve(ROOT, 'data/legislative-import/camara/collector-2026-q1/resolved-catalog.json');
+const args = process.argv.slice(2);
+const argValue = (name, fallback) => args.find((arg) => arg.startsWith(`${name}=`))?.slice(name.length + 1) || fallback;
+const ENVELOPE = resolve(ROOT, argValue('--envelope', 'data/legislative-import/camara/collector-2026-q1/resolved-envelope.json'));
+const CATALOG = resolve(ROOT, argValue('--catalog', 'data/legislative-import/camara/collector-2026-q1/resolved-catalog.json'));
 const ENV_FILES = [resolve(ROOT, '.env.local'), '/home/lourenco/Projetos/raspador-candidados-2026/.env'];
 
 function loadEnv() {

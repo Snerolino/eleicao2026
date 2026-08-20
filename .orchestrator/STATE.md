@@ -61,6 +61,14 @@
 - Próximo chunk: resolver FKs remotas das 21 identidades e gerar envelope dry-run com fontes.
 - QA: `docs/qa/lote-camara-q2-scout-2026-08-20.md`.
 
+## Tick contínuo — aplicação Câmara Q2/2026 (2026-08-20)
+
+- Dry-run e aplicação idempotente: 3 proposições, 4 versões, 4 eventos e 75 votos.
+- 21 FKs remotas exatas; 8 identidades pendentes e 3 eventos HTTP 404 fora.
+- Perfis recalculados duas vezes: 4356 índices/41 perfis; Câmara 356 votos.
+- Nenhuma matriz, score, claim ou RPC editorial foi alterada.
+- QA: `docs/qa/lote-camara-q2-apply-2026-08-20.md`.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T23:56Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `ef57622fe3133b1f3d2bf1dc8ae33dc63bdb7eee`.
