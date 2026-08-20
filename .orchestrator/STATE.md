@@ -5,6 +5,7 @@
 - Resultado verificado independentemente: 25 eventos, 2 individualizados, 898 votos brutos e 54 votos RS no envelope dry-run; manifesto SHA-256 `58692c4b8ab25196d37cc4d99ed0e8c9aaf4d737dce272a9fabde95b176b68b2`.
 - Verificação: 8/8 checks passaram — IDs, eventos, arquivos brutos, unicidade/exatidão, URLs oficiais, JSON, contagens e envelopes consistentes.
 - QA criado: `docs/qa/lote-camara-votos-batch-12-2026-08-20.md`.
+- Publicação: commit `d50cc007fc002bef5433f6571e5ee74e494a33ff` em `origin/main`; backup `334951434`, run `32364568922`, `completed/success`, `headSha` idêntico. Produção raiz e `/release.json` HTTP 200; SHA live idêntico e snapshot `row_count=1003`. Smoke local exit 0: 1002 cards, mínimo esperado 1002, 0 falhas HTTP e 0 erros de console online.
 - Nenhuma escrita factual remota; ALRS/Senado continuam fail-closed.
 - Próximo passo: consolidar auditoria/manifestos Q3 e manter reconhecimento oficial independente para ALRS/Senado; qualquer aplicação continua condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 

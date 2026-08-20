@@ -14,6 +14,9 @@
 - Manifesto: `.orchestrator/runtime/camara-batch-12/collector/manifest.json`.
 - SHA-256 do manifesto: `58692c4b8ab25196d37cc4d99ed0e8c9aaf4d737dce272a9fabde95b176b68b2`.
 - Nenhuma escrita em Supabase, snapshot público, claims ou dados factuais remotos foi realizada.
+- **Publicação:** commit `d50cc007fc002bef5433f6571e5ee74e494a33ff` em `origin/main`; workflow backup `334951434`, run `32364568922`, `completed/success`, `headSha` idêntico.
+- **Produção:** raiz HTTP 200; `/release.json` HTTP 200 com SHA completo `d50cc007fc002bef5433f6571e5ee74e494a33ff`, release `d50cc00-20260820T113613373Z` e snapshot `row_count=1003`.
+- **Smoke local:** exit 0, `1002` cards, mínimo esperado `1002`, 0 falhas HTTP e 0 erros de console online.
 
 ## Estado e bloqueios
 
