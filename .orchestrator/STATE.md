@@ -1,3 +1,12 @@
+## Tick contínuo — Câmara votos nominais bounded, lote 05 (2026-08-20T08:22Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `768ff81a2f2ee241aee108708566beb9da7bc8fd`.
+- Coletor oficial read-only consultou `/votacoes/{id}/votos` para 25/300 IDs da janela 2026-07-01 a 2026-09-30, posições 101–125.
+- Resultado verificado: 25 eventos, 2 individualizados, 94 votos brutos e 10 votos RS no envelope dry-run; manifesto SHA-256 `2e1d0ebb48706f969fa561e3dc4d0ade2610b0ff9c63f57983c9e520c4dbc07d`.
+- Os eventos `2168586-96` e `2193266-77` têm `detail.id` exato, proposição e URLs oficiais; nenhum voto, identidade ou FK foi aplicado.
+- QA criado: `docs/qa/lote-camara-votos-batch-05-2026-08-20.md`.
+- Próximo passo: gates locais; se verdes, publicar QA e verificar produção; depois Câmara lote 06. ALRS/Senado continuam fail-closed.
+
 ## Tick contínuo — Câmara votos nominais bounded, lote 04 (2026-08-20T07:45Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `9ba709a9755554ab488d07cae9612b7ec5ab8d88`.
