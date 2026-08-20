@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "mode": "dry-run",
+  "source": "https://dadosabertos.camara.leg.br/api/v2",
+  "events": [
+    {
+      "vote_id": "2618177-71",
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2618177-71",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2618177-71/votos",
+      "raw_file": "2618177-71.raw.json",
+      "envelope_file": "2618177-71.json",
+      "target_uf": "RS",
+      "vote_method": "nominal",
+      "is_individualized": true,
+      "reason": "endpoint /votos retornou registros individuais",
+      "raw_vote_count": 433,
+      "envelope_vote_count": 30
+    },
+    {
+      "vote_id": "2618177-73",
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2618177-73",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2618177-73/votos",
+      "raw_file": "2618177-73.raw.json",
+      "envelope_file": "2618177-73.json",
+      "target_uf": "RS",
+      "vote_method": "nominal",
+      "is_individualized": true,
+      "reason": "endpoint /votos retornou registros individuais",
+      "raw_vote_count": 385,
+      "envelope_vote_count": 28
+    },
+    {
+      "vote_id": "2618177-82",
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2618177-82",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2618177-82/votos",
+      "raw_file": "2618177-82.raw.json",
+      "envelope_file": "2618177-82.json",
+      "target_uf": "RS",
+      "vote_method": "nominal",
+      "is_individualized": true,
+      "reason": "endpoint /votos retornou registros individuais",
+      "raw_vote_count": 339,
+      "envelope_vote_count": 23
+    },
+    {
+      "vote_id": "2611992-24",
+      "detail_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611992-24",
+      "votes_url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2611992-24/votos",
+      "raw_file": "2611992-24.raw.json",
+      "envelope_file": "2611992-24.json",
+      "target_uf": "RS",
+      "vote_method": "nominal",
+      "is_individualized": true,
+      "reason": "endpoint /votos retornou registros individuais",
+      "raw_vote_count": 354,
+      "envelope_vote_count": 22
+    }
+  ]
+}

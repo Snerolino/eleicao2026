@@ -101,6 +101,14 @@
 - 9 identidades pendentes e 8 eventos inacessíveis permanecem fora.
 - QA: `docs/qa/lote-camara-q3-apply-2026-08-20.md`.
 
+## Tick contínuo — Câmara Q3 extra nominal (2026-08-20)
+
+- 4 eventos adicionais, 2 proposições, 4 versões e 75 votos aplicados com 23 FKs exatas.
+- Segunda execução: 0 inserts, 0 updates, 75 existentes; impacto zero.
+- Perfis: 4552 índices/41 perfis; Câmara 552 votos, ALRS 4000, Senado 455.
+- 8 identidades pendentes permanecem fora.
+- QA: `docs/qa/lote-camara-q3-extra-apply-2026-08-20.md`.
+
 ## Tick contínuo — smoke R5 pós-Câmara Q3 (2026-08-20)
 
 - Smoke local verde: 1002 cards, busca/detalhe/PWA offline, 0 falhas HTTP e 0 erros online.
