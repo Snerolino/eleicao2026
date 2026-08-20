@@ -135,6 +135,7 @@
 | [`qa/lote-caso-adao-704-votos-sem-assessment-alrs-2026-08-20.md`](qa/lote-caso-adao-704-votos-sem-assessment-alrs-2026-08-20.md) | Caso Adão: votos ALRS sem assessment |
 | [`qa/lote-official-recon-senado-alrs-camara-2026-08-20-1938.md`](qa/lote-official-recon-senado-alrs-camara-2026-08-20-1938.md) | Reconhecimento oficial bounded |
 | [`architecture/politica-precedencia-fontes.md`](architecture/politica-precedencia-fontes.md) | Precedência: fonte oficial sobre dataset2026 |
+| [`qa/lote-importacao-documentacao-orquestracao-hermes-2026-08-20.md`](qa/lote-importacao-documentacao-orquestracao-hermes-2026-08-20.md) | Importação da documentação Hermes |
 | [`qa/lote-precedencia-fonte-oficial-dataset2026-2026-08-20.md`](qa/lote-precedencia-fonte-oficial-dataset2026-2026-08-20.md) | QA da precedência de fontes |
 | [`qa/fotos-sem-match-2026-08-03.md`](qa/fotos-sem-match-2026-08-03.md) | Distribuição dos candidatos sem foto e caso ambíguo |
 

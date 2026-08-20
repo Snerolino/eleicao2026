@@ -615,6 +615,13 @@
 - QA/documentação: `docs/architecture/politica-precedencia-fontes.md`.
 - QA do contrato: `docs/qa/lote-precedencia-fonte-oficial-dataset2026-2026-08-20.md`; 84 arquivos/377 testes verdes.
 
+## Documentação Hermes importada (2026-08-20)
+
+- Importados, após leitura integral na ordem indicada, os documentos `00-LEIA-PRIMEIRO`, `01-PROMPT-BOOTSTRAP` e `02-CONTRATOS-TASK-PACKET-HANDOFF` em `docs/orquestracao/`.
+- Eles são orientação operacional; código, migrations, `AGENTS.md` e contratos executáveis atuais permanecem superiores.
+- Divergências históricas (938 candidaturas e preparação sem heartbeat) foram registradas; estado atual validado permanece 1003 candidaturas/1002 cards e heartbeat autorizado.
+- QA: `docs/qa/lote-importacao-documentacao-orquestracao-hermes-2026-08-20.md`.
+
 ## Tick contínuo — scores por categoria no dossiê (2026-08-20)
 
 - Dossiê deixou de exibir `nominal_balance` como avaliação pública.
