@@ -178,7 +178,7 @@ export function CandidateDossierPage() {
               </div>
               <div className="mt-5 border border-[var(--color-border-editorial)] p-4">
                 <h3 className="font-mono text-xs uppercase tracking-widest text-[var(--color-muted-ink)]">Impacto populacional por categoria</h3>
-                <p className="mt-2 text-sm text-[var(--color-muted-ink)]">Não é saldo nominal. O valor considera somente proposições com assessment aprovado, grupo identificado e voto elegível.</p>
+                <p className="mt-2 text-sm text-[var(--color-muted-ink)]">O valor considera somente proposições com assessment aprovado, grupo identificado e voto elegível.</p>
                 {categoryScoresQuery.isLoading ? <LoadingSkeleton label="Calculando avaliação por categoria" /> : <div className="mt-3"><CategoryScoreList scores={(categoryScoresQuery.data ?? []).filter((score) => score.house === profile.house)} /></div>}
               </div>
               <dl className="mt-5 grid grid-cols-2 gap-px border border-[var(--color-border-editorial)] bg-[var(--color-border-editorial)] sm:grid-cols-5">
