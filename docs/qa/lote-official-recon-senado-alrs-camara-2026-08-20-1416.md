@@ -47,6 +47,14 @@
 - Auditoria anterior permanece com gaps reais de fontes; este tick não alterou cobertura.
 - Nenhuma escrita Supabase, Cloudflare, snapshot, claim, manifesto ou dado factual remoto ocorreu durante o reconhecimento.
 
+## Publicação e verificação
+
+- Commit documental: `fda32aff4e76bc884d5e51a5b2e7a2b57c682bbb` publicado em `origin/main`.
+- Workflow backup `334951434`, run `32379265014`: **completed/success**, `headSha` idêntico ao commit.
+- Produção: raiz HTTP **200** e `/release.json` HTTP **200** com SHA `fda32aff4e76bc884d5e51a5b2e7a2b57c682bbb`, versão `0.2.544`, snapshot `row_count=1003`.
+- Smoke remoto `npm run smoke:preview -- --url https://rs.votopraquem.org/`: **exit 0**, 1002 cards, mínimo esperado 1002, 0 falhas HTTP, 0 erros de console online e service worker pronto.
+- Observação: requests Python sem User-Agent receberam HTTP 403; a verificação final com `curl -A Mozilla/5.0` retornou HTTP 200. Não é divergência de produção.
+
 ## Próximo passo
 
 Manter Senado e ALRS em revalidação bounded sem gerar manifesto substituto; manter Câmara em nova janela oficial elegível. A lane local/publicação segue independente, condicionada aos gates e à verificação de produção.
