@@ -6,7 +6,7 @@
 - QA: `docs/qa/lote-camara-votos-batch-04-2026-08-20.md`.
 - Gates Node 24.19.0: 82 arquivos/372 testes, TypeScript, schema, `data:check` (1003/988), build e `git diff --check` verdes.
 - Nenhuma escrita factual remota; ALRS e Senado continuam fail-closed pelos bloqueios já documentados.
-- Publicação: commit `c195d3042ad150c88112119725c4fd3de250d69a` em `origin/main`; backup `334951434`, run `32345577348`, `completed/success`, `headSha` idêntico; produção raiz e `/release.json` HTTP 200; release `c195d30-20260820T074703139Z`, versão `0.2.515`, snapshot `row_count=1003`.
+- Publicação: commits documentais `c195d3042ad150c88112119725c4fd3de250d69a` e `1dc58bd2e2a855b703c197c636d39786915fbba6` em `origin/main`; backup `334951434`, run final `32345680096`, `completed/success`, `headSha` idêntico; produção raiz e `/release.json` HTTP 200; release final `1dc58bd-20260820T074830867Z`, versão `0.2.0`, snapshot `row_count=1003`.
 - Doctor do shell cron permanece FAIL restrito ao Node 22.22.2; OpenCode ausente, gateway divergente e Ollama sem resposta são WARNs opcionais.
 - Próximo chunk: Câmara lote 05 read-only; depois seguir bounded até cobrir os 300 IDs.
 

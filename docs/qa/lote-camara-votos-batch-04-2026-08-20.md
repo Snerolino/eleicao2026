@@ -32,10 +32,10 @@ Avançar a lane de reconhecimento da Câmara consultando exclusivamente o endpoi
 
 ## Publicação e verificação
 
-- Commit documental: `c195d3042ad150c88112119725c4fd3de250d69a`, publicado em `origin/main`.
-- Backup Cloudflare `334951434`, run `32345577348`: `completed/success`, `headSha` completo idêntico.
-- Produção `https://rs.votopraquem.org/`: raiz HTTP 200 e `/release.json?verify=c195d30` HTTP 200.
-- `release.json` confirmou release `c195d30-20260820T074703139Z`, versão `0.2.515`, SHA completo idêntico e snapshot `row_count=1003`.
+- Commit documental inicial: `c195d3042ad150c88112119725c4fd3de250d69a`, publicado em `origin/main`; fechamento QA/STATE: `1dc58bd2e2a855b703c197c636d39786915fbba6`, também publicado.
+- Backup Cloudflare `334951434`, run final `32345680096`: `completed/success`, `headSha` completo idêntico a `1dc58bd2e2a855b703c197c636d39786915fbba6`.
+- Produção `https://rs.votopraquem.org/`: raiz HTTP 200 e `/release.json?verify=1dc58bd` HTTP 200.
+- `release.json` confirmou release final `1dc58bd-20260820T074830867Z`, versão `0.2.0`, SHA completo idêntico e snapshot `row_count=1003`.
 
 ## Bloqueios e escopo
 
