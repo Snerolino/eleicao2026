@@ -8,7 +8,9 @@
 - Nenhuma escrita factual em snapshot, manifesto, source reference, voto, identidade, FK, Supabase ou matriz ocorreu.
 - Doctor permanece FAIL somente pelo Node 22.22.2 do shell; OpenCode ausente e Ollama sem preflight são WARNs opcionais. Reconhecimento read-only executado com sucesso.
 - QA: `docs/qa/lote-official-recon-senado-alrs-camara-2026-08-20-2331.md`; artefatos em `.orchestrator/runtime/continuous-tick-20260820T2331Z/`.
-- Próximo passo: gates locais completos, publicar este checkpoint documental e repetir reconciliação bounded sem promover deriva.
+- Publicação documental: commit `52e583a7e0a3bc6b0eb59aca09c42fe4aacf5df3`; backup `334951434`, runs `32429215748` e `32429509570`, concluídos com sucesso; o HEAD remoto vigente `7ea4e51ff623f4d4740a8ae3fab5bf88106b1520` também foi publicado com sucesso.
+- Produção: raiz HTTP 200; `/release.json` confirmou SHA `7ea4e51ff623f4d4740a8ae3fab5bf88106b1520`, snapshot `row_count=1003`, release `7ea4e51-20260820T233913573Z`.
+- Próximo passo: repetir reconciliação bounded sem promover deriva e manter a lane local ativa no próximo chunk elegível.
 
 ## Tick contínuo — gate de segurança do refresh TSE (2026-08-20T23:10Z)
 
