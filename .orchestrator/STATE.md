@@ -550,6 +550,16 @@
 - R5 fechado para o recorte atual; coberturas sem assessment permanecem `não avaliado`.
 - QA: `docs/qa/lote-r5-fechamento-final-2026-08-20.md`.
 
+## Política permanente — precedência de fontes (2026-08-20)
+
+- Fonte oficial primária vence conflito com `dataset2026` sem comprovação oficial.
+- O dataset só complementa quando não há registro oficial conflitante.
+- Mirror `dataset2026` com `official_url`/hash oficial TSE é tratado como evidência TSE.
+- Resolver implementado em `scripts/lib/source-precedence.mjs` e CLI `npm run data:source:precedence`.
+- Conflitos descartados permanecem auditáveis em `discarded`/`conflicting_fields`.
+- QA/documentação: `docs/architecture/politica-precedencia-fontes.md`.
+- QA do contrato: `docs/qa/lote-precedencia-fonte-oficial-dataset2026-2026-08-20.md`; 84 arquivos/377 testes verdes.
+
 ## Tick contínuo — fechamento final R4 (2026-08-20)
 
 - 13/13 itens da fila Q2/Q3 revisados; 12 não pontuáveis aprovados e 1 assessment populacional aprovado.
