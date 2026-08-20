@@ -513,6 +513,14 @@
 - Gates: 83 arquivos/374 testes, TypeScript e build verdes.
 - QA: `docs/qa/lote-vote-category-score-ui-2026-08-20.md`.
 
+## Tick contínuo — fechamento final R5 (2026-08-20)
+
+- Smoke local e produção verdes: 1002 cards, comparação, offline/PWA, 0 HTTP, 0 console online.
+- Health production: `status=ok`, RLS `failures=[]`, alerts `[]`.
+- Release observado: `c2ae329-20260820T203554888Z`.
+- R5 fechado para o recorte atual; coberturas sem assessment permanecem `não avaliado`.
+- QA: `docs/qa/lote-r5-fechamento-final-2026-08-20.md`.
+
 ## Tick contínuo — fechamento final R4 (2026-08-20)
 
 - 13/13 itens da fila Q2/Q3 revisados; 12 não pontuáveis aprovados e 1 assessment populacional aprovado.

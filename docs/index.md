@@ -123,6 +123,7 @@
 | [`qa/lote-camara-q3-extra-apply-2026-08-20.md`](qa/lote-camara-q3-extra-apply-2026-08-20.md) | Câmara Q3 extra nominal |
 | [`qa/lote-camara-q3-pagination-final-2026-08-20.md`](qa/lote-camara-q3-pagination-final-2026-08-20.md) | Fechamento da paginação Câmara Q3 |
 | [`qa/lote-r5-smoke-comparacao-pos-q3-2026-08-20.md`](qa/lote-r5-smoke-comparacao-pos-q3-2026-08-20.md) | Smoke R5 após Câmara Q2/Q3 |
+| [`qa/lote-r5-fechamento-final-2026-08-20.md`](qa/lote-r5-fechamento-final-2026-08-20.md) | Fechamento final R5 |
 | [`qa/lote-r4-review-queue-pos-q2-q3-2026-08-20.md`](qa/lote-r4-review-queue-pos-q2-q3-2026-08-20.md) | Fila R4 após Câmara Q2/Q3 |
 | [`qa/lote-r4-review-queue-camara-q2-q3-2026-08-20.md`](qa/lote-r4-review-queue-camara-q2-q3-2026-08-20.md) | Fila R4 Câmara Q2/Q3 |
 | [`qa/lote-r4-isolamento-q2-q3-2026-08-20.md`](qa/lote-r4-isolamento-q2-q3-2026-08-20.md) | Isolamento R4 Q2/Q3 |
