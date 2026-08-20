@@ -6,7 +6,7 @@
 - Gates no shell Node 22.22.2: 81 arquivos/371 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check` verdes. Doctor: 48 OK, 5 WARN, 1 FAIL restrito à versão do Node.
 - Nenhuma escrita factual remota, atualização do manifesto, Supabase ou alteração do snapshot foi executada; Senado permanece fail-closed por deriva SHA-256.
 - QA: `docs/qa/lote-senado-source-revalidation-2026-08-20-0032.md`.
-- Publicação: commit documental `1328f0b37fa92ab147c70c46cc58e67d3d57eeac` em `origin/main`; backup `334951434`, run `32317745454`, `completed/success`, `headSha` idêntico. Produção raiz e `/release.json` HTTP 200; release `1328f0b-20260820T003345616Z`, versão `0.2.478`, snapshot `row_count=1003`.
+- Publicação final: commit documental `35a933de320480adf96d00f4a28190f824a35891` em `origin/main`; backup `334951434`, run `32317878884`, `completed/success`, `headSha` idêntico. Produção raiz e `/release.json` HTTP 200; release `35a933d-20260820T003554995Z`, versão `0.2.479`, snapshot `row_count=1003`.
 - Próximo chunk: repetir os seis GETs oficiais sem gerar manifesto novo nem aplicar votos enquanto persistir a deriva; manter publicação documental independente.
 
 ## Fechamento R1 ALRS — 2026-08-20

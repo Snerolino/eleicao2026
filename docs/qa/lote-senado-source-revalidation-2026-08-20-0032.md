@@ -35,10 +35,10 @@ A deriva SHA-256 persiste em **6/6** fontes; portanto não há autorização fac
 
 ## Publicação e produção
 
-- Commit documental: `1328f0b37fa92ab147c70c46cc58e67d3d57eeac`, publicado em `origin/main`.
-- Backup Cloudflare `334951434`, run `32317745454`: `completed/success`, `headSha` idêntico ao commit.
+- Publicação inicial: commit documental `1328f0b37fa92ab147c70c46cc58e67d3d57eeac`, publicado em `origin/main`.
+- Publicação final desta documentação: commit `35a933de320480adf96d00f4a28190f824a35891`, backup Cloudflare `334951434`, run `32317878884`: `completed/success`, `headSha` idêntico.
 - Produção: raiz HTTP 200 e `/release.json` HTTP 200.
-- Após propagação, release `1328f0b-20260820T003345616Z`, versão `0.2.478`, snapshot com `row_count=1003`; `commit_sha` nulo no payload, mas o `headSha` do run confirma a publicação.
+- Release final `35a933d-20260820T003554995Z`, versão `0.2.479`, snapshot com `row_count=1003`; `commit_sha` nulo no payload, mas o `headSha` do run confirma a publicação.
 
 ## Próximo passo
 
