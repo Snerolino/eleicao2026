@@ -7,6 +7,7 @@ import { describe, expect, it } from 'vitest';
 import {
   generatePublicCandidateSnapshot,
   generateTseSourceManifest,
+  compareRefreshSafety,
 } from '../refresh-public-snapshot.mjs';
 import {
   loadPublicCandidateSnapshot,
@@ -178,5 +179,31 @@ describe('snapshot público de candidatos', () => {
       ]),
     );
     rmSync(datasetDir, { recursive: true, force: true });
+  });
+
+  it('rejeita refresh que remove candidato ou foto oficial publicada', () => {
+    const existing = [
+      { tse_candidate_id: '1', photo_url: 'https://foto/oficial.jpg', photo_source_url: 'https://fonte/oficial' },
+      { tse_candidate_id: '2', photo_url: null, photo_source_url: null },
+    ];
+    const generated = [{ tse_candidate_id: '1', photo_url: null, photo_source_url: null }];
+
+    expect(compareRefreshSafety(existing, generated)).toEqual({
+      safe: false,
+      removedTseIds: ['2'],
+      photoLosses: [
+        { tse_candidate_id: '1', field: 'photo_url' },
+        { tse_candidate_id: '1', field: 'photo_source_url' },
+      ],
+    });
+  });
+
+  it('permite refresh quando preserva todos os candidatos e fotos publicadas', () => {
+    const candidates = [{ tse_candidate_id: '1', photo_url: 'foto.jpg', photo_source_url: 'fonte' }];
+    expect(compareRefreshSafety(candidates, candidates)).toEqual({
+      safe: true,
+      removedTseIds: [],
+      photoLosses: [],
+    });
   });
 });

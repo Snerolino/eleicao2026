@@ -351,12 +351,53 @@ export function generateTseSourceManifest({ datasetDir = DATASET_DIR, createdAt 
     });
 }
 
+export function compareRefreshSafety(existingCandidates, generatedCandidates) {
+  const generatedByTseId = new Map(
+    generatedCandidates
+      .filter((candidate) => candidate.tse_candidate_id != null)
+      .map((candidate) => [String(candidate.tse_candidate_id), candidate]),
+  );
+  const removedTseIds = [];
+  const photoLosses = [];
+
+  for (const existing of existingCandidates) {
+    const tseId = existing.tse_candidate_id == null ? null : String(existing.tse_candidate_id);
+    if (!tseId) continue;
+    const generated = generatedByTseId.get(tseId);
+    if (!generated) {
+      removedTseIds.push(tseId);
+      continue;
+    }
+    for (const field of ['photo_url', 'photo_source_url']) {
+      if (existing[field] != null && generated[field] == null) {
+        photoLosses.push({ tse_candidate_id: tseId, field });
+      }
+    }
+  }
+
+  return {
+    safe: removedTseIds.length === 0 && photoLosses.length === 0,
+    removedTseIds,
+    photoLosses,
+  };
+}
+
 function main() {
   console.log('🔄 Atualizando snapshot público de candidatos TSE 2026...');
   console.log(`   Dataset: ${DATASET_DIR}`);
 
   const createdAt = new Date().toISOString();
   const candidates = generatePublicCandidateSnapshot();
+  if (existsSync(OUTPUT)) {
+    const existingCandidates = JSON.parse(readFileSync(OUTPUT, 'utf8'));
+    const safety = compareRefreshSafety(existingCandidates, candidates);
+    if (!safety.safe) {
+      throw new Error(
+        `Refresh rejeitado fail-closed: ${safety.removedTseIds.length} candidatos removidos e `
+        + `${safety.photoLosses.length} perdas de metadados de foto; exige prova oficial explícita antes da promoção.`,
+      );
+    }
+  }
   const manifest = generateTseSourceManifest({ createdAt });
   mkdirSync(dirname(OUTPUT), { recursive: true });
   writeFileSync(`${OUTPUT}.tmp`, `${JSON.stringify(candidates, null, 2)}\n`, 'utf8');
