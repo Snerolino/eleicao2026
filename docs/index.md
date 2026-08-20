@@ -128,6 +128,7 @@
 | [`qa/lote-r4-isolamento-q2-q3-2026-08-20.md`](qa/lote-r4-isolamento-q2-q3-2026-08-20.md) | Isolamento R4 Q2/Q3 |
 | [`qa/guia-revisao-r4-camara-q2-q3.md`](qa/guia-revisao-r4-camara-q2-q3.md) | Guia operacional de revisão R4 |
 | [`qa/lote-r4-fechamento-editorial-q2-q3-2026-08-20.md`](qa/lote-r4-fechamento-editorial-q2-q3-2026-08-20.md) | Fechamento editorial R4 Q2/Q3 |
+| [`qa/lote-official-recon-senado-alrs-camara-2026-08-20-1938.md`](qa/lote-official-recon-senado-alrs-camara-2026-08-20-1938.md) | Reconhecimento oficial bounded |
 | [`qa/fotos-sem-match-2026-08-03.md`](qa/fotos-sem-match-2026-08-03.md) | Distribuição dos candidatos sem foto e caso ambíguo |
 
 ## Release
