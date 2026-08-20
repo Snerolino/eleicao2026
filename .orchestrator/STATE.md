@@ -513,6 +513,14 @@
 - Gates: 83 arquivos/374 testes, TypeScript e build verdes.
 - QA: `docs/qa/lote-vote-category-score-ui-2026-08-20.md`.
 
+## Tick contínuo — fechamento final R4 (2026-08-20)
+
+- 13/13 itens da fila Q2/Q3 revisados; 12 não pontuáveis aprovados e 1 assessment populacional aprovado.
+- PL 9657, PL 1183 e PL 1928 confirmados por API Câmara como retirada de pauta; não herdam impacto.
+- Nenhum item `pending_review` restante na fila Q2/Q3.
+- Senado e ALRS continuam fail-closed apenas em suas trilhas independentes.
+- QA: `docs/qa/lote-r4-fechamento-final-2026-08-20.md`.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T23:56Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `ef57622fe3133b1f3d2bf1dc8ae33dc63bdb7eee`.

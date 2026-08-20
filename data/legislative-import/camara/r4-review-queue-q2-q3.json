@@ -114,9 +114,10 @@
       "suggested_groups": [],
       "suggested_direction": null,
       "human_review_required": true,
-      "editorial_disposition": "event_resolution_required",
-      "editorial_review_status": "pending_review",
-      "rationale": "O objeto exato do evento ainda precisa ser resolvido na fonte oficial."
+      "editorial_disposition": "procedural_only",
+      "editorial_review_status": "approved",
+      "rationale": "A votação oficial decidiu requerimento de retirada de pauta, não o mérito da proposição; o evento não deve herdar impacto populacional do projeto.",
+      "defending_vote": null
     },
     {
       "house": "camara",
@@ -136,9 +137,10 @@
       "suggested_groups": [],
       "suggested_direction": null,
       "human_review_required": true,
-      "editorial_disposition": "event_resolution_required_no_group_expected",
-      "editorial_review_status": "pending_review",
-      "rationale": "O objeto exato do evento ainda precisa ser resolvido; a matéria não indica grupo v1 direto."
+      "editorial_disposition": "procedural_only",
+      "editorial_review_status": "approved",
+      "rationale": "A votação oficial decidiu requerimento de retirada de pauta, não o mérito da proposição; o evento não deve herdar impacto populacional do projeto.",
+      "defending_vote": null
     },
     {
       "house": "camara",
@@ -158,9 +160,10 @@
       "suggested_groups": [],
       "suggested_direction": null,
       "human_review_required": true,
-      "editorial_disposition": "event_resolution_required_no_group_expected",
-      "editorial_review_status": "pending_review",
-      "rationale": "O objeto exato do evento ainda precisa ser resolvido; a matéria não indica grupo v1 direto."
+      "editorial_disposition": "procedural_only",
+      "editorial_review_status": "approved",
+      "rationale": "A votação oficial decidiu requerimento de retirada de pauta, não o mérito da proposição; o evento não deve herdar impacto populacional do projeto.",
+      "defending_vote": null
     },
     {
       "house": "camara",
@@ -299,8 +302,8 @@
     }
   ],
   "review_decisions": {
-    "approved_non_scoring": 9,
+    "approved_non_scoring": 12,
     "approved_assessments": 1,
-    "pending_event_resolution": 3
+    "pending_event_resolution": 0
   }
 }
