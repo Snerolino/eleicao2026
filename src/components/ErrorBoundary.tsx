@@ -37,7 +37,7 @@ export class ErrorBoundary extends Component<Props, State> {
           </p>
           <h1 className="mt-2 text-3xl">Algo deu errado</h1>
           <p className="mt-4 text-sm text-[var(--color-muted-ink)]">
-            {this.state.error?.message ?? 'Um erro inesperado ocorreu.'}
+            {import.meta.env.DEV ? this.state.error?.message : 'Um erro inesperado ocorreu.'}
           </p>
           <button
             type="button"
