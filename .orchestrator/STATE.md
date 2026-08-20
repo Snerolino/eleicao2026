@@ -1,3 +1,14 @@
+## Tick contínuo — recon oficial bounded Senado/ALRS/Câmara (2026-08-20T14:16Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `2387d9d15e599fdccde871218f17538c91de9f03`.
+- Senado: 6/6 HTTP 200, 6/6 prefixos PDF válidos, 3/6 coincidências de bytes e 0/6 coincidências SHA-256 contra o manifesto; fail-closed, sem atualização ou aplicação.
+- ALRS: HTTP 200, 77442 bytes, 0 `data-item`, sem `Enio Carlos Terra`/`Terra`; os quatro residuais seguem sem ID oficial/fonte exata.
+- Câmara Q4: API oficial HTTP OK na janela 2026-10-01 a 2026-12-31, 0 vote_ids e nenhum bloqueio; nenhum evento foi inferido.
+- Gates Node 22.22.2: 82 arquivos/372 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check` verdes. Build gerou sitemap com 1003 candidatos + 2 estáticas e `release.json` para o HEAD.
+- QA criado: `docs/qa/lote-official-recon-senado-alrs-camara-2026-08-20-1416.md`.
+- Nenhuma escrita Supabase, snapshot, claim, manifesto ou dado factual remoto ocorreu.
+- Próximo passo: manter revalidação bounded sem promover deriva; continuar Câmara em janela oficial elegível e publicar/verificar este checkpoint.
+
 ## Tick contínuo — revalidação oficial Senado com deriva persistente (2026-08-20T13:33Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `68db32a16e82b0f614023354df27b30cd3846bd4`.
