@@ -17,8 +17,10 @@ prioritárias sem promover votos, identidades, FKs ou referências remotas.
   `sha256:6a386d7d8b9ae17f8f5107b0cb6c90d71795a8568f08ed7c5972746a4ac0bab1`, zero
   `data-item`, sem `Enio Carlos Terra` e sem `Terra`. Os quatro residuais seguem
   sem ID oficial e fonte exata.
-- Dataset vivo: `../dataset2026/candidatos/lista_candidatos_2026.csv` presente,
-  322 linhas de dados; nenhuma sincronização foi necessária neste tick.
+- Dataset vivo: `../dataset2026/candidatos/lista_candidatos_2026.csv` presente com
+  322 linhas/IDs únicos; os 322 IDs estão contidos no snapshot público de 1003,
+  que tem 681 IDs adicionais. Este CSV isolado não é paridade completa do
+  dataset; nenhum refresh ou sincronização foi aplicado neste tick.
 
 ## Estado e bloqueios
 

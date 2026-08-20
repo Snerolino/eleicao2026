@@ -4,7 +4,7 @@
 - Câmara: janela oficial 2026-10-01 a 2026-12-31, HTTP 200, 0 votações, nenhum bloqueio; nenhum evento inferido.
 - Senado: 6/6 HTTP 200, 6/6 prefixos PDF válidos, 1/6 bytes coincidentes e 0/6 SHA-256 contra o manifesto; fail-closed, sem atualização ou aplicação.
 - ALRS: HTTP 200, 77442 bytes, SHA-256 `sha256:6a386d7d8b9ae17f8f5107b0cb6c90d71795a8568f08ed7c5972746a4ac0bab1`, 0 `data-item`, sem `Enio Carlos Terra`/`Terra`; os quatro residuais seguem sem ID oficial/fonte exata.
-- Dataset vivo presente: `../dataset2026/candidatos/lista_candidatos_2026.csv`, 322 linhas de dados; nenhuma sincronização necessária neste tick.
+- Dataset vivo inspecionado: `../dataset2026/candidatos/lista_candidatos_2026.csv`, 322 IDs únicos, todos contidos no snapshot público de 1003; o arquivo isolado tem 681 IDs a menos e não fecha paridade completa. Nenhum refresh/sincronização foi aplicado.
 - Nenhuma escrita factual Supabase, snapshot, claim, manifesto, source reference, voto, identidade, FK ou matriz ocorreu; houve somente publicação documental no GitHub/Cloudflare após gates verdes.
 - QA criado: `docs/qa/lote-official-recon-senado-alrs-camara-2026-08-20-1459.md`.
 - Gates locais verdes: 82 arquivos/372 testes, TypeScript, schema, `data:check` 1003/988, build e diff check.
