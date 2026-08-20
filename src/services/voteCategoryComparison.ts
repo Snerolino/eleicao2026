@@ -4,6 +4,12 @@ import { buildVoteCategoryScores, type VoteCategoryScore, type VoteCategoryScore
 
 type Row = Record<string, any>;
 
+function chunk<T>(items: T[], size = 100): T[][] {
+  const result: T[][] = [];
+  for (let index = 0; index < items.length; index += size) result.push(items.slice(index, index + size));
+  return result;
+}
+
 export function buildApprovedVoteFacts(
   indexRows: readonly Row[],
   eventRows: readonly Row[],
@@ -54,16 +60,18 @@ export async function fetchVoteCategoryScores(candidateIds: string[]): Promise<V
   const indexes = (indexRows ?? []) as Row[];
   const eventIds = [...new Set(indexes.map((row) => row.voting_event_id).filter(Boolean))];
   if (eventIds.length === 0) return [];
-  const { data: eventRows, error: eventError } = await client.from('voting_events').select('id,house,proposition_version_id').in('id', eventIds);
+  const eventBatches = await Promise.all(chunk(eventIds).map((batch) => client.from('voting_events').select('id,house,proposition_version_id').in('id', batch)));
+  const eventError = eventBatches.find((result) => result.error)?.error;
   if (eventError) throw eventError;
-  const events = (eventRows ?? []) as Row[];
+  const events = eventBatches.flatMap((result) => result.data ?? []) as Row[];
   const versionIds = [...new Set(events.map((row) => row.proposition_version_id).filter(Boolean))];
   if (versionIds.length === 0) return [];
-  const { data: matrixRows, error: matrixError } = await client.from('impact_matrices').select('proposition_version_id,review_status,severity,structural_type,impact_assessments(group_slug,impact_direction,defending_vote,confidence,impact_assessment_sources(source_reference_id))').in('proposition_version_id', versionIds).in('review_status', ['approved', 'contested']);
+  const matrixBatches = await Promise.all(chunk(versionIds).map((batch) => client.from('impact_matrices').select('proposition_version_id,review_status,severity,structural_type,impact_assessments(group_slug,impact_direction,defending_vote,confidence,impact_assessment_sources(source_reference_id))').in('proposition_version_id', batch).in('review_status', ['approved', 'contested'])));
+  const matrixError = matrixBatches.find((result) => result.error)?.error;
   if (matrixError) throw matrixError;
   const eventById = new Map(events.map((row) => [row.id, row]));
   const facts: VoteCategoryScoreFact[] = [];
-  for (const matrix of (matrixRows ?? []) as Row[]) {
+  for (const matrix of matrixBatches.flatMap((result) => result.data ?? []) as Row[]) {
     const groups = Array.isArray(matrix.impact_assessments) ? matrix.impact_assessments : [];
     for (const group of groups) {
       if (typeof group.group_slug !== 'string' || !Array.isArray(group.impact_assessment_sources) || group.impact_assessment_sources.length === 0) continue;

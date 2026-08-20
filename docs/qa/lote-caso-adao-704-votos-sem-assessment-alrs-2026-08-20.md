@@ -23,6 +23,9 @@ Conclusão: não é ausência de votos. É ausência de assessments populacionai
 aprovados para a casa ALRS. Sem assessment da mesma versão/casa, score por
 categoria seria inventado; a UI agora informa isso explicitamente.
 
+A consulta de eventos e matrizes usa lotes de até 100 IDs, evitando URL PostgREST
+excessiva em perfis com centenas de votos.
+
 ## Correção pública
 
 O dossiê mantém a distribuição factual e exibe:
