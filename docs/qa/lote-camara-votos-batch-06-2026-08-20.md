@@ -32,6 +32,14 @@
 - **Doctor:** `FAIL` operacional conhecido porque o shell do cron inicia Node `v22.22.2`, embora os gates tenham sido executados com Node `v24.19.0`; OpenCode ausente e gateway/Ollama permanecem avisos opcionais. Não foi alterada infraestrutura neste lote.
 - Não houve inferência a partir de respostas vazias, matching heurístico, UUID inventado ou fonte fabricada.
 
+## Publicação e verificação externa
+
+- Commit `e041fcfc1e5c2b3a2b704e29f73cc45ea93ff253` publicado em `origin/main`.
+- Backup Cloudflare `334951434`: run `32352044974`, `completed/success`, `headSha` idêntico.
+- Produção `https://rs.votopraquem.org`: raiz HTTP 200.
+- `/release.json`: SHA idêntico, release `e041fcf-20260820T090524385Z`, versão `0.2.522`, snapshot `row_count=1003`.
+- Smoke local exit 0: `1002` cards, mínimo esperado `1002`, `0` falhas HTTP e `0` erros de console online.
+
 ## Próximo passo
 
-Publicar este checkpoint documental e verificar o backup Cloudflare/produção. Em seguida iniciar a reconciliação oficial read-only da Câmara, lote 07 (posições 151–175), mantendo ALRS e Senado independentes e fail-closed.
+Iniciar Câmara lote 07 (posições 151–175), mantendo ALRS e Senado independentes e fail-closed.

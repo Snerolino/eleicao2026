@@ -7,7 +7,10 @@
 - QA criado: `docs/qa/lote-camara-votos-batch-06-2026-08-20.md`.
 - Gates verdes com Node 24.19.0: 82 arquivos/372 testes, TypeScript, schema, `data:check` (1003/988), build e `git diff --check`.
 - Doctor do cron permanece FAIL restrito ao Node 22.22.2; OpenCode ausente e Ollama/gateway são WARNs opcionais.
-- Próximo passo: publicar/verificar este checkpoint; depois Câmara lote 07. ALRS/Senado continuam fail-closed.
+- Publicação: commit `e041fcfc1e5c2b3a2b704e29f73cc45ea93ff253` em `origin/main`; backup `334951434`, run `32352044974`, `completed/success`, `headSha` idêntico.
+- Produção: raiz HTTP 200; `/release.json` confirmou SHA idêntico, release `e041fcf-20260820T090524385Z`, versão `0.2.522`, snapshot `row_count=1003`.
+- Smoke local exit 0: 1002 cards, mínimo esperado 1002, 0 falhas HTTP e 0 erros de console online.
+- Próximo passo: Câmara lote 07. ALRS/Senado continuam fail-closed.
 
 ## Tick contínuo — Câmara votos nominais bounded, lote 05 (2026-08-20T08:22Z)
 
