@@ -47,6 +47,25 @@ identidades, FKs, referências ou alterações remotas.
 - `.orchestrator/runtime/continuous-tick-20260820T1800Z/camara-q4.json`
 - `.orchestrator/runtime/continuous-tick-20260820T1800Z/dataset-diff.json`
 
+## Gates locais e publicação
+
+- Node dos gates: `v24.19.0`.
+- `npm run test`: exit 0, 82 arquivos/372 testes.
+- `npx tsc --noEmit`: exit 0.
+- `node scripts/validate-impact-schema.mjs`: exit 0.
+- `npm run data:check`: exit 0, 1.003 candidaturas/988 fotos oficiais.
+- `npm run build`: exit 0, sitemap com 1.003 candidatos + 2 URLs estáticas;
+  `release.json` gerado.
+- `git diff --check`: exit 0.
+- `npm run smoke:local`: exit 0, 1.002 cards, mínimo 1.002, 0 falhas HTTP,
+  0 erros de console online e service worker pronto.
+- Commit `ae18f5c6b712403c1603dc2c4ce2059087938e4f`, publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32402455733`, `completed/success`,
+  `headSha` idêntico ao commit.
+- Produção: raiz HTTP 200 e `/release.json` HTTP 200; após propagação,
+  `sha=ae18f5c6b712403c1603dc2c4ce2059087938e4f`, `short_sha=ae18f5c`,
+  `release_id=ae18f5c-20260820T181923996Z`, snapshot `row_count=1003`.
+
 ## Próximo passo
 
 Manter Senado e ALRS fail-closed, repetir revalidação bounded e consultar a
