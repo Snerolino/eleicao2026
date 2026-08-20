@@ -61,11 +61,13 @@ FK, dry-run e idempotência.
 
 ## Publicação e produção
 
-- Commit `a2f9dcd69f5470927c87ccebe079478d621be86a` publicado em `origin/main`.
-- Backup Cloudflare `334951434`, run `32409998925`, `completed/success`, com
-  `headSha` idêntico ao commit.
-- Produção: raiz HTTP 200; `/release.json` HTTP 200 com SHA idêntico,
-  `release_id=a2f9dcd-20260820T194130466Z` e snapshot `row_count=1003`.
+- Commits documentais `a2f9dcd69f5470927c87ccebe079478d621be86a` e
+  `7546d7d9fc08e6a98021270f039c0f16f7b1221f` publicados em `origin/main`.
+- O backup `334951434`, run `32410183487`, concluiu `completed/success` com
+  `headSha=7546d7d9fc08e6a98021270f039c0f16f7b1221f`.
+- Produção: raiz HTTP 200; `/release.json` HTTP 200 finalmente alinhado ao
+  SHA `7546d7d9fc08e6a98021270f039c0f16f7b1221f`, release
+  `7546d7d-20260820T194358985Z` e snapshot `row_count=1003`.
 - Smoke remoto exit 0, 1.002 cards, 0 falhas HTTP e 0 erros de console online.
 
 ## Próximo passo
