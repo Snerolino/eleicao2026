@@ -4,6 +4,7 @@
 - Coletor oficial read-only consultou `/votacoes/{id}/votos` para 25/300 IDs da janela 2026-07-01 a 2026-09-30.
 - Resultado verificado: 25 eventos, 0 individualizados, 0 votos; manifesto e brutos no runtime transitório, sem escrita remota.
 - QA: `docs/qa/lote-camara-votos-batch-01-2026-08-20.md`.
+- Publicação: commit `4a1fa6e8a3fe6afdbaabbfd1cf02b00a30ba1e0c`; backup `334951434`, run `32337305782`, `completed/success`, `headSha` idêntico; raiz e `/release.json` HTTP 200 com SHA live idêntico.
 - ALRS segue bloqueado por JWT `issued at future` e ausência de ID oficial exato; Senado segue fail-closed por deriva SHA-256.
 - Doctor continua FAIL por shell Node 22; tentativa de reinício do gateway com Node 24 falhou, sem declarar correção concluída.
 - Próximo chunk: Câmara lote 02 read-only; depois seguir bounded até cobrir os 300 IDs, sem inferência a partir de respostas vazias.

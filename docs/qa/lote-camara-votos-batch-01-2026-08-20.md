@@ -35,6 +35,13 @@ placar de bancada.
   ativo. O drop-in `70-eleicao2026-node24.conf` foi criado fora da worktree, mas
   não se declarou a correção como concluída.
 
+## Publicação e verificação
+
+- Commit `4a1fa6e8a3fe6afdbaabbfd1cf02b00a30ba1e0c` publicado em `origin/main`.
+- Workflow backup `334951434`, run `32337305782`: `completed/success`, `headSha` idêntico.
+- Produção `https://rs.votopraquem.org`: raiz HTTP 200 e `/release.json` HTTP 200.
+- `release.json` confirmou SHA live `4a1fa6e8a3fe6afdbaabbfd1cf02b00a30ba1e0c`.
+
 ## Bloqueios e escopo
 
 - Este lote não encontrou votos nominais; isso não prova votação simbólica e não
