@@ -60,6 +60,15 @@ alterações remotas.
 - `npm run smoke:local`: exit 0, 1.002 cards, mínimo 1.002, 0 falhas HTTP,
   0 erros de console online e service worker pronto.
 
+## Publicação e verificação
+
+- Commit documental: `1097079f9c5907d73df682c91942690351c0ffdf`, publicado em
+  `origin/main`.
+- Backup Cloudflare `334951434`, run `32398933958`, `completed/success`,
+  `headSha` completo `1097079f9c5907d73df682c91942690351c0ffdf`.
+- Produção: raiz HTTP 200; `/release.json?cb=1097079` HTTP 200, `short_sha`
+  `1097079`, release `1097079-20260820T174100801Z` e snapshot `row_count=1003`.
+
 ## Próximo passo
 
 Manter Senado e ALRS fail-closed e repetir reconhecimento oficial bounded. Não
