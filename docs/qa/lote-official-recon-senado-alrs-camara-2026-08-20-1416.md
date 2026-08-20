@@ -49,11 +49,11 @@
 
 ## Publicação e verificação
 
-- Commit documental: `fda32aff4e76bc884d5e51a5b2e7a2b57c682bbb` publicado em `origin/main`.
-- Workflow backup `334951434`, run `32379265014`: **completed/success**, `headSha` idêntico ao commit.
-- Produção: raiz HTTP **200** e `/release.json` HTTP **200** com SHA `fda32aff4e76bc884d5e51a5b2e7a2b57c682bbb`, versão `0.2.544`, snapshot `row_count=1003`.
-- Smoke remoto `npm run smoke:preview -- --url https://rs.votopraquem.org/`: **exit 0**, 1002 cards, mínimo esperado 1002, 0 falhas HTTP, 0 erros de console online e service worker pronto.
-- Observação: requests Python sem User-Agent receberam HTTP 403; a verificação final com `curl -A Mozilla/5.0` retornou HTTP 200. Não é divergência de produção.
+- Commit documental de fechamento: `b4a51ac1ab9b3c38cc9b83998abd7de2af7df395` publicado em `origin/main`.
+- Workflow backup `334951434`, run `32379933091`: **completed/success**, `headSha` idêntico ao commit.
+- Produção: raiz HTTP **200** e `/release.json` HTTP **200**. O domínio ainda serve o artefato funcional anterior com SHA `fda32aff4e76bc884d5e51a5b2e7a2b57c682bbb`; como o segundo commit só alterou QA/STATE, não houve divergência funcional e a propagação/cache do conteúdo documental não é observável pelo `release.json`.
+- Smoke remoto anterior do artefato funcional `fda32af`: **exit 0**, 1002 cards, mínimo esperado 1002, 0 falhas HTTP, 0 erros de console online e service worker pronto.
+- Observação: requests Python sem User-Agent receberam HTTP 403; a verificação final com `curl -A Mozilla/5.0` retornou HTTP 200. Não é falha de produção.
 
 ## Próximo passo
 

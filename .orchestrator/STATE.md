@@ -7,7 +7,7 @@
 - Gates Node 22.22.2: 82 arquivos/372 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check` verdes. Build gerou sitemap com 1003 candidatos + 2 estáticas e `release.json` para o HEAD.
 - QA criado: `docs/qa/lote-official-recon-senado-alrs-camara-2026-08-20-1416.md`.
 - Nenhuma escrita Supabase, snapshot, claim, manifesto ou dado factual remoto ocorreu.
-- Publicação/verificação: commit `fda32aff4e76bc884d5e51a5b2e7a2b57c682bbb` em `origin/main`; backup `334951434`, run `32379265014`, `completed/success`, `headSha` idêntico; raiz e `/release.json` HTTP 200 com SHA live idêntico; smoke remoto exit 0 (1002 cards, 0 falhas HTTP, 0 erros de console online).
+- Publicação/verificação: commit `b4a51ac1ab9b3c38cc9b83998abd7de2af7df395` em `origin/main`; backup `334951434`, run `32379933091`, `completed/success`, `headSha` idêntico; raiz e `/release.json` HTTP 200. O `release.json` permanece no SHA funcional anterior `fda32aff4e76bc884d5e51a5b2e7a2b57c682bbb` porque o commit de fechamento só alterou documentação; smoke do artefato funcional está verde.
 - Próximo passo: manter revalidação bounded sem promover deriva; continuar Câmara em janela oficial elegível e publicar/verificar este checkpoint.
 
 ## Tick contínuo — revalidação oficial Senado com deriva persistente (2026-08-20T13:33Z)
