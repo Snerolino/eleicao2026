@@ -1,3 +1,16 @@
+## Tick contínuo — revalidação oficial Senado com deriva persistente (2026-08-20T13:33Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `68db32a16e82b0f614023354df27b30cd3846bd4`.
+- Seis GETs oficiais do manifesto foram refeitos em modo read-only: 6/6 HTTP 200, 6/6 prefixos PDF válidos, 3/6 coincidências de bytes e 0/6 coincidências SHA-256.
+- Senado permanece fail-closed: nenhum manifesto foi atualizado e nenhum voto, identidade ou FK foi aplicado.
+- Reconhecimento ALRS paralelo: HTTP 200, 77442 bytes, sem `Enio Carlos Terra`, `Terra` ou `data-item`; os 4 residuais continuam sem ID oficial/fonte exata.
+- Auditoria estrita permanece exit 2 por gaps reais: ALRS 3996/4000, Câmara 550/552 e Senado 0/455 votos com fonte.
+- Gates Node 24.19.0: 82 arquivos/372 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check` verdes.
+- Doctor do shell cron permanece FAIL restrito ao Node 22.22.2; OpenCode ausente e Ollama sem preflight permanecem WARNs opcionais.
+- QA criado: `docs/qa/lote-senado-source-revalidation-2026-08-20-1333.md`.
+- Nenhuma escrita Supabase, snapshot, claim ou dado factual remoto ocorreu.
+- Próximo passo: repetir a revalidação bounded sem gerar manifesto novo enquanto persistir a deriva; manter Câmara/Q3 e a reconciliação ALRS independentes.
+
 ## Tick contínuo — reconhecimento ALRS Enio sem ID oficial (2026-08-20)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `312a900a69e71983856b38ab5b8c5ba53f22d456`.
