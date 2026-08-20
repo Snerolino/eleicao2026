@@ -12,8 +12,9 @@ import { usePageMetadata } from '@/hooks/usePageMetadata';
 import { ConfidenceBadge } from '@/components/sources/ConfidenceBadge';
 import { LoadingSkeleton } from '@/components/states';
 import { candidatePublicPath } from '@/utils/candidateIdentity';
-import { fetchVoteCategoryComparisons } from '@/services/voteCategoryComparison';
+import { fetchVoteCategoryComparisons, fetchVoteCategoryScores } from '@/services/voteCategoryComparison';
 import type { VoteCategoryComparison } from '@/domain/impact/vote-category-comparison';
+import { formatCategoryScore, type VoteCategoryScore } from '@/domain/impact/vote-category-score';
 
 function claimsForSection(
   claims: Claim[],
@@ -93,6 +94,13 @@ function VoteCategoryTable({
       </table>
     </div>
   );
+}
+
+function VoteCategoryScoreTable({ scores, candidates }: { scores: VoteCategoryScore[]; candidates: CandidateWithClaims[] }) {
+  const safeScores = scores.filter((score) => typeof score?.group_slug === 'string' && typeof score?.candidate_id === 'string' && ('score' in score));
+  if (safeScores.length === 0) return <p className="font-mono text-xs uppercase tracking-wide text-[var(--color-muted-ink)]">Saldo por categoria não avaliado para este recorte.</p>;
+  const keys = [...new Set(safeScores.map((score) => `${score.house}|${score.group_slug}`))];
+  return <div className="overflow-auto rounded-sm border border-[var(--color-border-editorial)]"><table className="w-full border-collapse text-sm"><thead><tr className="bg-[var(--color-paper)]"><th className="p-3 text-left font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">Saldo / categoria</th>{candidates.map((candidate) => <th key={candidate.id} className="border-l border-[var(--color-border-editorial)] p-3 text-left">{candidate.full_name}</th>)}</tr></thead><tbody>{keys.map((key) => { const [house, group] = key.split('|'); return <tr key={key} className="border-t border-[var(--color-border-editorial)]"><th className="p-3 text-left font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">{group.replaceAll('_', ' ')} · {house}</th>{candidates.map((candidate) => { const score = scores.find((item) => item.candidate_id === candidate.id && item.house === house && item.group_slug === group); return <td key={candidate.id} className="border-l border-[var(--color-border-editorial)] p-3"><strong className="font-mono text-base">{formatCategoryScore(score?.score ?? null)}</strong>{score && <span className="ml-2 font-mono text-[0.65rem] text-[var(--color-muted-ink)]">{score.evaluated_propositions} item(s)</span>}</td>})}</tr>})}</tbody></table></div>;
 }
 
 function parseSharedCandidateIds(
@@ -213,6 +221,12 @@ export function ComparePage() {
   const voteCategoryQuery = useQuery({
     queryKey: ['vote-category-comparison', selected.map((candidate) => candidate.id)],
     queryFn: () => fetchVoteCategoryComparisons(selected.map((candidate) => candidate.id)),
+    enabled: selected.length >= 2,
+    staleTime: 60_000,
+  });
+  const voteCategoryScoreQuery = useQuery({
+    queryKey: ['vote-category-scores', selected.map((candidate) => candidate.id)],
+    queryFn: () => fetchVoteCategoryScores(selected.map((candidate) => candidate.id)),
     enabled: selected.length >= 2,
     staleTime: 60_000,
   });
@@ -371,6 +385,9 @@ export function ComparePage() {
                 </p>
               </div>
               {voteCategoryQuery.isLoading ? <LoadingSkeleton label="Carregando comparação factual" /> : <VoteCategoryTable comparisons={voteCategoryQuery.data ?? []} candidates={selected} />}
+              <h3 className="pt-3 text-lg">Saldo metodológico por categoria</h3>
+              <p className="font-mono text-xs text-[var(--color-muted-ink)]">Fórmula v1: peso × sinal / peso elegível. `não avaliado` não é zero.</p>
+              {voteCategoryScoreQuery.isLoading ? <LoadingSkeleton label="Calculando saldos por categoria" /> : <VoteCategoryScoreTable scores={voteCategoryScoreQuery.data ?? []} candidates={selected} />}
             </section>
           )}
         </section>

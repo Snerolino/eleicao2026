@@ -490,6 +490,14 @@
 - Supabase: 2 matrizes aprovadas, ambas com 3 fontes; nenhum voto factual alterado.
 - QA: `docs/qa/lote-r4-fechamento-editorial-q2-q3-2026-08-20.md`.
 
+## Tick contínuo — saldo metodológico por categoria (2026-08-20)
+
+- Implementado agregador v1 por candidato/casa/grupo com `deriveAlignment` e `computeScore`.
+- UI exibe `+0,62`/`-0,08` somente para peso elegível; sem peso exibe `não avaliado`.
+- Consulta exige assessment aprovado/contestado e fonte; `confidence` não pondera o score.
+- Gates: 83 arquivos/374 testes, TypeScript e build verdes.
+- QA: `docs/qa/lote-vote-category-score-ui-2026-08-20.md`.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T23:56Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `ef57622fe3133b1f3d2bf1dc8ae33dc63bdb7eee`.
