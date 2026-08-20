@@ -115,6 +115,12 @@
 - Comparação categorial mantém fallback fora do recorte aprovado.
 - QA: `docs/qa/lote-r4-review-queue-pos-q2-q3-2026-08-20.md`.
 
+## Tick contínuo — fila R4 Câmara Q2/Q3 (2026-08-20)
+
+- Gerada fila editorial com 13 versões e 196 votos factuais.
+- Todos os itens `pending_review`, sem grupo/direção automática, `remote_apply=false` e revisão humana exigida.
+- QA: `docs/qa/lote-r4-review-queue-camara-q2-q3-2026-08-20.md`.
+
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T23:56Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `ef57622fe3133b1f3d2bf1dc8ae33dc63bdb7eee`.

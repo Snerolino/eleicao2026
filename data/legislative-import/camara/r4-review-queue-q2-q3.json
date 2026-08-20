@@ -1,0 +1,250 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "camara_r4_review_queue",
+  "review_status": "pending_review",
+  "remote_apply": false,
+  "public_approval": false,
+  "items": [
+    {
+      "house": "camara",
+      "proposition_external_id": "camara-proposicao-2503998-plp",
+      "version_key": "event-2503998-70",
+      "title": "PLP 109",
+      "event_external_ids": [
+        "camara-votacao-2503998-70"
+      ],
+      "factual_vote_count": 18,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2503998",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-70",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-70/votos",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-75",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-75/votos"
+      ],
+      "review_status": "pending_review",
+      "suggested_groups": [],
+      "suggested_direction": null,
+      "human_review_required": true
+    },
+    {
+      "house": "camara",
+      "proposition_external_id": "camara-proposicao-2503998-plp",
+      "version_key": "event-2503998-75",
+      "title": "PLP 109",
+      "event_external_ids": [
+        "camara-votacao-2503998-75"
+      ],
+      "factual_vote_count": 19,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2503998",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-70",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-70/votos",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-75",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-75/votos"
+      ],
+      "review_status": "pending_review",
+      "suggested_groups": [],
+      "suggested_direction": null,
+      "human_review_required": true
+    },
+    {
+      "house": "camara",
+      "proposition_external_id": "camara-proposicao-2501880-plp",
+      "version_key": "event-2562289-8",
+      "title": "PLP 104",
+      "event_external_ids": [
+        "camara-votacao-2562289-8"
+      ],
+      "factual_vote_count": 18,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2501880"
+      ],
+      "review_status": "pending_review",
+      "suggested_groups": [],
+      "suggested_direction": null,
+      "human_review_required": true
+    },
+    {
+      "house": "camara",
+      "proposition_external_id": "camara-proposicao-2581700-mpv",
+      "version_key": "event-2581700-31",
+      "title": "MPV 1323",
+      "event_external_ids": [
+        "camara-votacao-2581700-31"
+      ],
+      "factual_vote_count": 20,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2581700",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2581700-31",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2581700-31/votos"
+      ],
+      "review_status": "pending_review",
+      "suggested_groups": [],
+      "suggested_direction": null,
+      "human_review_required": true
+    },
+    {
+      "house": "camara",
+      "proposition_external_id": "camara-proposicao-2168586-pl",
+      "version_key": "event-2168586-96",
+      "title": "PL 9657",
+      "event_external_ids": [
+        "camara-votacao-2168586-96"
+      ],
+      "factual_vote_count": 3,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2168586",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2168586-96",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2168586-96/votos"
+      ],
+      "review_status": "pending_review",
+      "suggested_groups": [],
+      "suggested_direction": null,
+      "human_review_required": true
+    },
+    {
+      "house": "camara",
+      "proposition_external_id": "camara-proposicao-2193266-pl",
+      "version_key": "event-2193266-77",
+      "title": "PL 1183",
+      "event_external_ids": [
+        "camara-votacao-2193266-77"
+      ],
+      "factual_vote_count": 3,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2193266",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2193266-77",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2193266-77/votos"
+      ],
+      "review_status": "pending_review",
+      "suggested_groups": [],
+      "suggested_direction": null,
+      "human_review_required": true
+    },
+    {
+      "house": "camara",
+      "proposition_external_id": "camara-proposicao-2434783-pl",
+      "version_key": "event-2434783-64",
+      "title": "PL 1928",
+      "event_external_ids": [
+        "camara-votacao-2434783-64"
+      ],
+      "factual_vote_count": 2,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2434783",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2434783-64",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2434783-64/votos"
+      ],
+      "review_status": "pending_review",
+      "suggested_groups": [],
+      "suggested_direction": null,
+      "human_review_required": true
+    },
+    {
+      "house": "camara",
+      "proposition_external_id": "camara-proposicao-2486315-pl",
+      "version_key": "event-2606189-10",
+      "title": "PL 849",
+      "event_external_ids": [
+        "camara-votacao-2606189-10"
+      ],
+      "factual_vote_count": 19,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2486315"
+      ],
+      "review_status": "pending_review",
+      "suggested_groups": [],
+      "suggested_direction": null,
+      "human_review_required": true
+    },
+    {
+      "house": "camara",
+      "proposition_external_id": "camara-proposicao-2606313-plp",
+      "version_key": "event-2606313-36",
+      "title": "PLP 41",
+      "event_external_ids": [
+        "camara-votacao-2606313-36"
+      ],
+      "factual_vote_count": 21,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2606313",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2606313-36",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2606313-36/votos"
+      ],
+      "review_status": "pending_review",
+      "suggested_groups": [],
+      "suggested_direction": null,
+      "human_review_required": true
+    },
+    {
+      "house": "camara",
+      "proposition_external_id": "camara-proposicao-2525620-pl",
+      "version_key": "event-2610579-7",
+      "title": "PL 2898",
+      "event_external_ids": [
+        "camara-votacao-2610579-7"
+      ],
+      "factual_vote_count": 18,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2525620"
+      ],
+      "review_status": "pending_review",
+      "suggested_groups": [],
+      "suggested_direction": null,
+      "human_review_required": true
+    },
+    {
+      "house": "camara",
+      "proposition_external_id": "camara-proposicao-2612930-pl",
+      "version_key": "event-2636281-8",
+      "title": "PL 896",
+      "event_external_ids": [
+        "camara-votacao-2636281-8"
+      ],
+      "factual_vote_count": 20,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2612930"
+      ],
+      "review_status": "pending_review",
+      "suggested_groups": [],
+      "suggested_direction": null,
+      "human_review_required": true
+    },
+    {
+      "house": "camara",
+      "proposition_external_id": "camara-proposicao-2612908-pdl",
+      "version_key": "event-2637721-10",
+      "title": "PDL 171",
+      "event_external_ids": [
+        "camara-votacao-2637721-10"
+      ],
+      "factual_vote_count": 17,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2612908"
+      ],
+      "review_status": "pending_review",
+      "suggested_groups": [],
+      "suggested_direction": null,
+      "human_review_required": true
+    },
+    {
+      "house": "camara",
+      "proposition_external_id": "camara-proposicao-2638483-pl",
+      "version_key": "event-2638483-34",
+      "title": "PL 3085",
+      "event_external_ids": [
+        "camara-votacao-2638483-34"
+      ],
+      "factual_vote_count": 18,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2638483",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2638483-34",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2638483-34/votos"
+      ],
+      "review_status": "pending_review",
+      "suggested_groups": [],
+      "suggested_direction": null,
+      "human_review_required": true
+    }
+  ]
+}

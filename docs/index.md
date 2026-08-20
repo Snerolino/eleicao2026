@@ -122,6 +122,7 @@
 | [`qa/lote-camara-q3-apply-2026-08-20.md`](qa/lote-camara-q3-apply-2026-08-20.md) | Aplicação Câmara Q3/2026 |
 | [`qa/lote-r5-smoke-comparacao-pos-q3-2026-08-20.md`](qa/lote-r5-smoke-comparacao-pos-q3-2026-08-20.md) | Smoke R5 após Câmara Q2/Q3 |
 | [`qa/lote-r4-review-queue-pos-q2-q3-2026-08-20.md`](qa/lote-r4-review-queue-pos-q2-q3-2026-08-20.md) | Fila R4 após Câmara Q2/Q3 |
+| [`qa/lote-r4-review-queue-camara-q2-q3-2026-08-20.md`](qa/lote-r4-review-queue-camara-q2-q3-2026-08-20.md) | Fila R4 Câmara Q2/Q3 |
 | [`qa/fotos-sem-match-2026-08-03.md`](qa/fotos-sem-match-2026-08-03.md) | Distribuição dos candidatos sem foto e caso ambíguo |
 
 ## Release
