@@ -7,6 +7,9 @@
 - Dataset vivo: snapshot 1003 IDs; seis CSVs de candidatos analisados foram subconjuntos completos, com 0 IDs ausentes; nenhum refresh/sincronização aplicado.
 - Auditoria read-only: `npm run impact:sources:audit` exit 0; gaps reais ALRS 4, Câmara 2 e Senado 455 votos sem fonte.
 - QA: `docs/qa/lote-official-recon-senado-alrs-camara-2026-08-20-1800.md`; artefatos read-only em `.orchestrator/runtime/continuous-tick-20260820T1800Z/`.
+- Gates Node 24.19.0 verdes: 82 arquivos/372 testes, TypeScript, schema, `data:check` 1003/988, build, diff check e smoke local (1002 cards, 0 HTTP/console errors).
+- Publicação documental: commits `ae18f5c6b712403c1603dc2c4ce2059087938e4f` e `b73d375591ca21f44edd3ec7611d72bd118abaa6`; backup `334951434`, run `32402703138`, `completed/success`, `headSha` final idêntico.
+- Produção: raiz e `/release.json` HTTP 200 após propagação; SHA final `b73d375591ca21f44edd3ec7611d72bd118abaa6`, release `b73d375-20260820T182157059Z`, snapshot `row_count=1003`.
 - Nenhuma escrita factual Supabase, snapshot, claim, manifesto, source reference, voto, identidade, FK ou matriz ocorreu.
 - Doctor do cron permanece FAIL pelo Node 22.22.2 do shell; recon executada com Node 24.19.0. OpenCode ausente e Ollama sem preflight são WARNs opcionais.
 - Próximo passo: repetir reconciliação bounded sem promover deriva; manter ALRS/Senado fail-closed e consultar a próxima janela Câmara elegível.
