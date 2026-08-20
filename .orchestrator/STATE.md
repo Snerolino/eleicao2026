@@ -8,8 +8,9 @@
 - Gates Node 24.19.0 verdes: 82 arquivos/372 testes, TypeScript, schema, `data:check` 1003/988, build, diff check e smoke local (1002 cards, 0 HTTP/console errors).
 - Doctor do cron permanece FAIL pelo Node 22.22.2 do shell; OpenCode ausente e Ollama sem preflight são WARNs opcionais.
 - QA: `docs/qa/lote-official-recon-senado-alrs-camara-2026-08-20-1938.md`; artefatos read-only em `.orchestrator/runtime/continuous-tick-20260820T1938Z/`.
+- Commit `a2f9dcd69f5470927c87ccebe079478d621be86a` publicado; backup `334951434`, run `32409998925`, `completed/success`, `headSha` idêntico; produção raiz e `/release.json` HTTP 200, snapshot `row_count=1003`; smoke remoto exit 0 (1002 cards, 0 falhas HTTP, 0 erros de console).
 - Nenhuma escrita factual Supabase, snapshot, claim, manifesto, source reference, voto, identidade, FK ou matriz ocorreu.
-- Próximo passo: publicar este checkpoint documental e verificar produção; repetir reconciliação bounded sem promover deriva.
+- Próximo passo: publicar este fechamento documental e repetir reconciliação bounded sem promover deriva.
 
 ## Tick contínuo — recon oficial bounded Senado/ALRS/Câmara (2026-08-20T18:59Z)
 

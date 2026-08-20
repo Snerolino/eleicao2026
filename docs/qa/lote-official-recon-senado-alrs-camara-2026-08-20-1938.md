@@ -55,6 +55,18 @@ FK, dry-run e idempotência.
 - `git diff --check`: exit 0.
 - `npm run smoke:local`: exit 0, 1.002 cards, mínimo 1.002, 0 falhas HTTP,
   0 erros de console online e service worker pronto.
+- `npm run smoke:preview -- --url https://rs.votopraquem.org/`: exit 0, 1.002
+  cards, mínimo 1.002, 0 falhas HTTP, 0 erros de console online e service
+  worker pronto.
+
+## Publicação e produção
+
+- Commit `a2f9dcd69f5470927c87ccebe079478d621be86a` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `32409998925`, `completed/success`, com
+  `headSha` idêntico ao commit.
+- Produção: raiz HTTP 200; `/release.json` HTTP 200 com SHA idêntico,
+  `release_id=a2f9dcd-20260820T194130466Z` e snapshot `row_count=1003`.
+- Smoke remoto exit 0, 1.002 cards, 0 falhas HTTP e 0 erros de console online.
 
 ## Próximo passo
 
