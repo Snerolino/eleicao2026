@@ -1,3 +1,16 @@
+## Tick contínuo — recon oficial bounded Senado/ALRS/Câmara (2026-08-20T16:56Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `bd81ff40fdb21b9f13a6335c0b804f80b94e547a`.
+- Câmara: janela oficial 2026-10-01 a 2026-12-31, HTTP 200, uma página válida, 0 votações e nenhum bloqueio; nenhum evento inferido.
+- Senado: 6/6 HTTP 200, 6/6 prefixos PDF válidos, 0/6 coincidências de bytes e 0/6 SHA-256 contra o manifesto; fail-closed, sem atualização ou aplicação.
+- ALRS: HTTP 200, 77442 bytes, SHA-256 `sha256:6a386d7d8b9ae17f8f5107b0cb6c90d71795a8568f08ed7c5972746a4ac0bab1`, 0 `data-item`, sem `Enio Carlos Terra`/`Terra`; os quatro residuais seguem sem ID oficial/fonte exata.
+- Dataset vivo inspecionado: snapshot 1003 IDs; CSVs parciais com 213 (`consulta_cand`), 322 (`lista_candidatos`), 49 (`bem_candidato`) e 69 (`rede_social`) IDs, todos subconjuntos do snapshot; nenhum refresh/sincronização aplicado.
+- Auditoria read-only: `npm run impact:sources:audit` exit 0; gaps reais ALRS 4, Câmara 2 e Senado 455 votos sem fonte.
+- Nenhuma escrita factual Supabase, snapshot, claim, manifesto, source reference, voto, identidade, FK ou matriz ocorreu.
+- QA: `docs/qa/lote-official-recon-senado-alrs-camara-2026-08-20-1656.md`; artefatos read-only em `.orchestrator/runtime/continuous-tick-2026-08-20T1656Z/`.
+- Doctor do cron exit 1 somente pelo shell Node 22.22.2; OpenCode ausente e Ollama sem preflight são WARNs opcionais.
+- Próximo passo: repetir reconciliação bounded sem promover deriva; manter ALRS/Senado fail-closed e consultar próxima janela Câmara elegível.
+
 ## Tick contínuo — recon oficial bounded Senado/ALRS/Câmara (2026-08-20T16:17Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `3ce04b62721a27e45395bd2cc24fce2d0d4d0ab6`.
