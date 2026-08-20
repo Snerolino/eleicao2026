@@ -111,6 +111,7 @@
 | [`qa/lote-senado-envelope-legislator-id-2026-08-19.md`](qa/lote-senado-envelope-legislator-id-2026-08-19.md) | Senado: envelope nominal por legislator_id |
 | [`qa/lote-vote-category-comparison-contract-2026-08-19.md`](qa/lote-vote-category-comparison-contract-2026-08-19.md) | Contrato de comparação de votos por categoria |
 | [`qa/lote-vote-category-comparison-ui-2026-08-19.md`](qa/lote-vote-category-comparison-ui-2026-08-19.md) | UI de comparação de votos por categoria |
+| [`qa/lote-alrs-fed17-residual-repair-2026-08-19.md`](qa/lote-alrs-fed17-residual-repair-2026-08-19.md) | FED-17: reparo residual ALRS |
 | [`qa/fotos-sem-match-2026-08-03.md`](qa/fotos-sem-match-2026-08-03.md) | Distribuição dos candidatos sem foto e caso ambíguo |
 
 ## Release

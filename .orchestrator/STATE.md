@@ -583,6 +583,14 @@
 - Suíte: 80 arquivos/370 testes; TypeScript e build verdes.
 - QA: `docs/qa/lote-vote-category-comparison-ui-2026-08-19.md`.
 
+## Tick contínuo — reparo residual FED-17 ALRS (2026-08-19)
+
+- Writer oficial aplicou 11 `source_reference_id` e corrigiu 2 datas de eventos com evidência ALRS exata.
+- Segunda execução: 0 alterações; idempotência confirmada.
+- Auditoria pós-reparo: ALRS 3996/4000 votos com fonte; 4 sem fonte.
+- Os 4 residuais são Enio Carlos Terra, identidade ALRS não localizada; permanecem fail-closed.
+- QA: `docs/qa/lote-alrs-fed17-residual-repair-2026-08-19.md`.
+
 ## Release verification — documentação do tick (2026-08-19 06:01 UTC)
 
 - Commit documental `9c62ada88cb3ff6bd5ee65922f270d9270d10db3` publicado em `origin/main`.
