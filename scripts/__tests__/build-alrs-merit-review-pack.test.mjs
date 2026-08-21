@@ -13,6 +13,8 @@ describe('alrs-merit-review-pack', () => {
           priority: 'P0',
           factual_vote_count: 4,
           version_key: 'v0',
+          title_quality: 'complete_or_unverified',
+          version_key_collision: false,
           source_urls: ['official'],
         },
         {

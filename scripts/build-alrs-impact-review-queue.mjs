@@ -6,18 +6,25 @@ import { resolve } from 'node:path';
 const ROOT = resolve(import.meta.dirname, '..');
 const OUTPUT = resolve(ROOT, 'data/legislative-import/alrs/impact-review-queue-v1.json');
 const RESOLUTIONS = resolve(ROOT, 'data/legislative-import/alrs/version-key-collision-resolutions-confirmed.json');
+const CLASSIFICATIONS = resolve(ROOT, 'data/legislative-import/alrs/p0-official-classifications.json');
 
 function loadConfirmedResolutions() {
   try { return JSON.parse(readFileSync(RESOLUTIONS, 'utf8')).resolutions ?? {}; } catch { return {}; }
 }
 
+function loadOfficialClassifications() {
+  try { return JSON.parse(readFileSync(CLASSIFICATIONS, 'utf8')).classifications ?? {}; } catch { return {}; }
+}
+
 export function buildAlrsReviewQueue(rows) {
   const resolutions = loadConfirmedResolutions();
+  const classifications = loadOfficialClassifications();
   const items = rows.map((row) => {
     const candidates = Number(row.candidates ?? 0);
     const votes = Number(row.votes ?? 0);
     const priority = candidates >= 7 ? 'P0' : candidates >= 5 ? 'P1' : candidates >= 3 ? 'P2' : 'P3';
     const technical_event_classification = classifyAlrsEventTitle(row.title);
+    const official = classifications[row.version_key];
     return {
       house: 'alrs',
       proposition_version_id: row.version_id,
@@ -27,14 +34,17 @@ export function buildAlrsReviewQueue(rows) {
       title: row.title,
       title_quality: classifyAlrsTitleQuality(row.title),
       collision_resolution_status: resolutions[row.version_key]?.status ?? null,
+      official_event_type: official?.event_type ?? null,
+      official_event_date: official?.official_date ?? null,
+      official_event_description: official?.description ?? null,
       candidate_count: candidates,
       factual_vote_count: votes,
       event_count: Number(row.events ?? 0),
       event_external_ids: row.event_external_ids ?? [],
       source_urls: row.source_urls ?? [],
       candidate_source_links: row.candidate_source_links ?? [],
-      event_type: technical_event_classification,
-      editorial_disposition: 'pending_review',
+      event_type: official?.event_type ?? technical_event_classification,
+      editorial_disposition: official?.event_type === 'procedural_confirmed' ? 'procedural_only' : 'pending_review',
       priority,
       suggested_groups: [],
       suggested_direction: null,

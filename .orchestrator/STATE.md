@@ -805,6 +805,12 @@
 - Evidência factual pronta para reconciliar tipo/versão/evento; nenhum impacto aprovado.
 - QA: `docs/qa/lote-alrs-p0-official-event-evidence-2026-08-21.md`.
 
+## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)
+
+- 30/30 itens P0 classificados: 9 mérito, 19 procedimento, 2 emenda, 0 destaque.
+- Procedimentos foram segregados; emendas não herdam automaticamente o mérito.
+- Nenhum assessment ou matriz foi aprovado por esta classificação factual.
+
 ## Tick contínuo — fechamento final R4 (2026-08-20)
 
 - 13/13 itens da fila Q2/Q3 revisados; 12 não pontuáveis aprovados e 1 assessment populacional aprovado.

@@ -7,8 +7,9 @@ const input = resolve(root, 'data/legislative-import/alrs/impact-review-priority
 const output = resolve(root, 'data/legislative-import/alrs/impact-merit-review-pack-p0-p1.json');
 
 export function buildMeritReviewPack(queue) {
-  const excluded_collision_count = (queue.items ?? []).filter((item) => item.event_type === 'merit_candidate' && item.version_key_collision).length;
-  const items = (queue.items ?? []).filter((item) => item.event_type === 'merit_candidate' && !item.version_key_collision).map((item) => ({
+  const excluded_collision_count = (queue.items ?? []).filter((item) => ['merit_candidate', 'merit_confirmed'].includes(item.event_type) && item.version_key_collision).length;
+  const excluded_title_count = (queue.items ?? []).filter((item) => ['merit_candidate', 'merit_confirmed'].includes(item.event_type) && item.title_quality !== 'complete_or_unverified').length;
+  const items = (queue.items ?? []).filter((item) => ['merit_candidate', 'merit_confirmed'].includes(item.event_type) && !item.version_key_collision && item.title_quality === 'complete_or_unverified').map((item) => ({
     ...item,
     review_gate: 'official_event_confirmation_required',
     editorial_disposition: 'pending_review',
@@ -32,6 +33,7 @@ export function buildMeritReviewPack(queue) {
       p0_versions: items.filter((item) => item.priority === 'P0').length,
       p1_versions: items.filter((item) => item.priority === 'P1').length,
       excluded_version_collisions: excluded_collision_count,
+      excluded_title_quality: excluded_title_count,
     },
     items,
   };
