@@ -1,3 +1,16 @@
+## Tick contínuo — recon bounded oficial e gates locais — 2026-08-21T07:14Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou em `20a71ee0aa46cb82c0bfd28319334247473e7c35`.
+- Recon oficial: ALRS 7/7 HTTP 200 e válidas; FED-17 dry-run `0` votos/`0` correções, 4 bloqueados, `impact_touched=false`. Câmara HTTP válido na janela 2026-10-01–2026-12-31, 0 `vote_ids`. Senado permanece fail-closed por deriva de bytes/SHA.
+- Dataset vivo completo com 1003 linhas/IDs; 0 somente no dataset e 0 somente no snapshot. CSV segmentado de 213 linhas foi desconsiderado.
+- Lane local: pacote de pedidos substantivos regenerado com 9 pedidos/8 versões, `pending_substantive_source`, `human_review_required=true`, `remote_apply=false`.
+- Auditoria read-only: gaps ALRS 1251/1647/4, Câmara 3/2/2 e Senado 112/188/455 (versões/eventos/votos sem fonte).
+- Gates Node 24.19.0 verdes: 97 arquivos/398 testes, TypeScript, schema, `data:check` 1003/988, build, `git diff --check` e smoke local 1002 cards/0 HTTP/console errors.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0714.md`.
+- Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase, Cloudflare ou snapshot ocorreu; somente documentação e timestamp do manifesto ALRS.
+- Bloqueios: JWT do ambiente em futuro para FED-17; Senado com deriva SHA/bytes; Câmara sem lote novo; doctor shell FAIL por Node 22.22.2.
+- Próximo chunk: nova recon bounded oficial e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon bounded oficial e gates locais — 2026-08-21T06:49Z
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `2527c0f720a833eb7662d74225f8ee8e89cc33f2`.
