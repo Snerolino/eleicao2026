@@ -903,6 +903,12 @@
 - Todas `needs_human_review`; nenhuma matriz/assessment remoto criado.
 - QA: `docs/qa/lote-alrs-confirmed-merit-assessment-proposals-2026-08-21.md`.
 
+## Tick contínuo — gate de fontes substantivas ALRS (2026-08-21)
+
+- Gate rejeitou 25/25 itens por `substantive_source_missing`/`substantive_gate_blocked`.
+- Páginas de voto continuam fontes factuais; não fundamentam impacto sozinhas.
+- QA: `docs/qa/lote-alrs-substantive-source-gate-2026-08-21.md`.
+
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)
 
 - 30/30 itens P0 classificados: 9 mérito, 19 procedimento, 2 emenda, 0 destaque.
