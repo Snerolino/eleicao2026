@@ -49,6 +49,7 @@
     "impact:alrs:r4:matrix:pack": "node scripts/build-alrs-impact-matrix-review-pack.mjs",
     "impact:alrs:r4:groups": "node scripts/preanalyze-alrs-impact-groups.mjs",
     "impact:alrs:r4:assessment:drafts": "node scripts/build-alrs-assessment-draft-pack.mjs",
+    "impact:alrs:r4:assessment:proposals": "node scripts/build-alrs-assessment-proposal-pack.mjs",
     "orch:setup": "bash scripts/orchestrator/setup-local.sh",
     "orch:doctor": "bash scripts/orchestrator/doctor.sh",
     "orch:install-skill": "bash scripts/orchestrator/install-hermes-skill.sh",

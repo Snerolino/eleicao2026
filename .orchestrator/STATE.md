@@ -729,6 +729,13 @@
 - Nenhuma matriz/assessment remoto criado; score ainda não publicado para esses itens.
 - QA: `docs/qa/lote-alrs-assessment-drafts-v1-2026-08-20.md`.
 
+## Tick contínuo — propostas preliminares de assessments ALRS (2026-08-20)
+
+- 12 versões/13 propostas preliminares geradas a partir do objeto oficial.
+- Todas `needs_human_review`; nenhuma matriz/assessment remoto criado.
+- Próximo passo: confirmar evento, texto integral, direção e defending vote.
+- QA: `docs/qa/lote-alrs-assessment-proposals-v1-2026-08-20.md`.
+
 ## Tick contínuo — fechamento final R4 (2026-08-20)
 
 - 13/13 itens da fila Q2/Q3 revisados; 12 não pontuáveis aprovados e 1 assessment populacional aprovado.
