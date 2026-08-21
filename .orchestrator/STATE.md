@@ -1,3 +1,14 @@
+## Tick contínuo — validação/publicação do pacote substantivo P0 (2026-08-21T04:10Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree terminou limpa em `300fbe7a48042d8cee75cd33664688aba326817b`.
+- Lane local: gerador `scripts/build-alrs-p0-substantive-matrix-pack.mjs` reexecutado com Node 24.18.1; pacote validado com 5 versões, 5/5 fontes substantivas oficiais e 40 votos factuais; `remote_apply=false`, revisão humana pendente.
+- Gates: 97 arquivos/398 testes, TypeScript, schema, `data:check` 1003/988, build, `git diff --check` e smoke local 1002 cards/0 HTTP/console errors.
+- Publicação: commit `300fbe7a48042d8cee75cd33664688aba326817b` em `origin/main`; backup `334951434`, run `32445745462`, `completed/success`, `headSha` idêntico.
+- Produção: raiz e `/release.json` HTTP 200; release confirmou SHA `300fbe7a48042d8cee75cd33664688aba326817b`, snapshot `row_count=1003`; smoke remoto 1002 cards/0 HTTP/console errors.
+- Nenhuma escrita factual em Supabase, identidade, FK, voto, matriz, claim, source reference ou aprovação ocorreu.
+- Bloqueios mantidos: quatro residuais Enio/Terra sem ID/fonte exata, Senado com SHA divergente, Câmara sem lote novo e itens sem fonte substantiva fora do pacote P0.
+- Próximo chunk: recon bounded oficial e preparação local independente; aplicar remotamente somente após R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — reconciliação P1 + gate de fonte substantiva (2026-08-21T03:42Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `22ca9d67a4cc`.
