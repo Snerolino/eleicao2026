@@ -28,11 +28,10 @@ Executar um tick bounded do control plane, manter a recon oficial read-only ativ
 - Doctor operacional segue com o conhecido risco do shell de cron em Node 22.22.2, enquanto os gates deste tick foram executados com Node 24.19.0.
 
 ## Publicação verificada
-- Commit `71c1e4efdc277877dd3829a74b2d92f2e4214d57` publicado em `origin/main`.
-- Workflow backup Cloudflare `334951434`, run `32494384180`: `completed/success`; `headSha` igual ao commit.
-- Produção `https://rs.votopraquem.org`: HTTP 200.
-- `https://rs.votopraquem.org/release.json?cb=71c1e4e`: SHA idêntico, `row_count=1003`, release `71c1e4e-20260821T145145362Z`.
-- `npm run smoke:preview -- --url https://rs.votopraquem.org`: 1.002 cards, 0 falhas HTTP, 0 erros de console online, service worker pronto, exit 0.
+- Workflow backup Cloudflare `334951434`, run `32494588486`: `completed/success`; `headSha` igual ao commit `55d52c4`.
+- Preview do run: `https://7009dd90.portal-transparencia-rs.pages.dev/release.json` confirmou SHA `55d52c4`, versão `0.2.723` e `row_count=1003`.
+- Produção `https://rs.votopraquem.org`: HTTP 200. A propagação do custom domain ficou inconsistente durante a verificação: respostas com cache-busters alternaram entre o release anterior `71c1e4e` e o release `55d52c4`; não marcar como convergência final até nova checagem.
+- Smoke remoto executado contra produção: 1.002 cards, 0 falhas HTTP, 0 erros de console online, service worker pronto. O artefato publicado no preview está confirmado; o domínio customizado permanece em verificação de propagação.
 
 ## Próximo passo
 Iniciar novo chunk bounded de recon oficial e lane local independente. Aplicação factual remota permanece condicionada a R0, schema/FK, fonte oficial, dry-run e idempotência.
