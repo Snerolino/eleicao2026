@@ -9,8 +9,8 @@
 - Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1003/988, build (`sitemap` 1.003 candidatos), smoke local 1.002 cards/0 HTTP/console errors/service worker e `git diff --check`.
 - Produção respondeu HTTP 200; segunda tentativa de `release.json` sofreu falha transitória de DNS e não foi usada para afirmar SHA live.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1915.md`.
-- Nenhuma escrita factual, identidade, FK, voto, claim, source reference, Supabase ou Cloudflare ocorreu.
-- Próximo chunk: tentar publicação após resolver a permissão efetiva de push e continuar recon bounded oficial read-only; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+- Commit documental `cdd828e` criado após os gates verdes; `git push origin main` e `env -u GH_TOKEN git push origin main` falharam com HTTP 403 (`Permission denied`). `main` segue 16 commits à frente de `origin/main`; nenhum deploy deste tick foi acionado.
+- Próximo chunk: resolver a permissão efetiva de push e continuar recon bounded oficial read-only; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T18:19Z
 
