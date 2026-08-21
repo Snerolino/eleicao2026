@@ -8,6 +8,7 @@
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0540.md`.
 - Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase, Cloudflare ou snapshot ocorreu.
 - Bloqueios: quatro residuais Enio/Terra sem ID/fonte exata, Senado com deriva de SHA/bytes, Câmara sem lote novo e gaps substantivos de fonte; doctor shell ainda FAIL pelo Node 22.22.2, gates executados com Node 24.19.0.
+- Publicação verificada: commit `1985a833c06f4320d8266c8f1855cc44310ba3b4` em `origin/main`; backup `334951434`, run `32451471195`, `completed/success`, `headSha` idêntico. Produção raiz HTTP 200 e `/release.json` confirmou o mesmo SHA, release `1985a83-20260821T054145857Z`, `row_count=1003`.
 - Próximo chunk: nova recon bounded oficial e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon bounded oficial e gates fail-closed — 2026-08-21T05:16Z

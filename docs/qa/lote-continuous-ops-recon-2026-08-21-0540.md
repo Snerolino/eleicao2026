@@ -32,7 +32,9 @@
 ## Estado remoto
 
 - Nenhuma escrita factual em Supabase, identidade, FK, voto, matriz, claim ou source reference.
-- Publicação GitHub/Cloudflare deste checkpoint documental segue após commit/push e verificação do workflow backup.
+- Commit `1985a833c06f4320d8266c8f1855cc44310ba3b4` publicado em `origin/main`.
+- Workflow backup `334951434`, run `32451471195`: `completed/success`, `headSha` idêntico ao commit.
+- Produção `https://rs.votopraquem.org/?cb=1985a83`: HTTP 200. `release.json` confirmou SHA `1985a833c06f4320d8266c8f1855cc44310ba3b4`, release `1985a83-20260821T054145857Z` e snapshot `row_count=1003`.
 
 ## Próximo passo
 
