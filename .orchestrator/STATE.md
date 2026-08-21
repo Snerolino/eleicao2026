@@ -1,3 +1,14 @@
+## Tick contínuo — recon bounded oficial e gates fail-closed — 2026-08-21T05:16Z
+
+- Lock bounded com `flock -n`; worktree iniciou limpa em `9e5eabe3404b94a7504daafd7cbacd6a9600272d`.
+- ALRS: 7/7 URLs oficiais HTTP 200, 7/7 válidas, 0 falhas; pacote substantivo regenerado com 9 pedidos/8 versões; gate fail-closed confirmou 25 itens sem fonte substantiva; FED17 dry-run 0 votos/0 datas e 4 bloqueados.
+- Câmara: API oficial read-only HTTP válido para 2026-10-01–2026-12-31, 0 vote_ids novos. Senado: dry-run de 6 fontes, 0 ausentes, 0 inserções e 0 votos tocados; nenhuma aplicação.
+- Auditoria: ALRS sem fonte 1251/1282 versões, 1647/1678 eventos, 4/4000 votos; Câmara 3/37, 2/36, 2/552; Senado 112/112, 188/188, 455/455. `data:check`: 1003 candidaturas/988 fotos.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0516.md`.
+- Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase, Cloudflare ou snapshot ocorreu.
+- Gates locais serão/foram executados com Node 24.19.0; doctor do shell continua FAIL somente por Node 22.22.2, com OpenCode ausente e Ollama sem preflight como WARNs opcionais.
+- Próximo chunk: fechar gates locais, publicar documentação e verificar produção; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon bounded e dataset audit — 2026-08-21T04:55Z
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `ff5fd4dd75cd54fba9e57450c17aa9f8a53936b8`.
