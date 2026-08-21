@@ -2543,4 +2543,16 @@ Sem autorização humana explícita própria, não fazer:
 - Produção confirmada após o run: HTTP 200 em `/release.json`, SHA `1c8fc0bcfef5fa2633143640844659c5fddabbff`, versão `0.2.0`, snapshot com 1003 candidaturas.
 - QA atualizado em `docs/qa/lote-camara-historical-dryrun-verification-2026-08-19.md`.
 - Próximo chunk: auditar catálogo remoto e FKs por `tse_candidate_id`, mantendo os 8 casos inelegíveis fail-closed.
+## Tick contínuo — recon oficial P0/ALRS e Câmara (2026-08-21T02:07Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `d122b0a4ea4c9bd5e1ac74bd37729bd878ce12c7`.
+- ALRS P0: 7/7 URLs oficiais HTTP 200, 526 `data-item`; pacote permanece `remote_apply=false`.
+- ALRS P0/P1: 7/7 URLs verificadas HTTP 200, 0 falhas; somente `generated_at` do manifesto foi atualizado.
+- Câmara: descoberta oficial read-only retornou páginas trimestrais válidas e `vote_ids`; nenhum evento/voto/identidade/FK foi aplicado.
+- Senado: dry-run 6 planejadas, 0 ausentes, 0 inserções, 0 votos tocados; fail-closed.
+- Gates: 95 arquivos/396 testes, TypeScript, schema, data:check 1003/988, build e diff check verdes.
+- QA: `docs/qa/lote-continuous-ops-p0-recon-2026-08-21-0207.md`.
+- Produção antes da publicação documental: raiz e `/release.json` HTTP 200; live SHA `d122b0a4ea4c9bd5e1ac74bd37729bd878ce12c7`, `row_count=1003`.
+- Nenhuma escrita factual em snapshot, votos, source references, Supabase ou matriz.
+- Próximo passo: publicar o checkpoint documental e repetir recon bounded sem promover deriva.
 
