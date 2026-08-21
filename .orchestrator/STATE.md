@@ -843,6 +843,12 @@
 - Colisões/títulos inválidos permanecem excluídos; `human_review_required=true`.
 - QA: `docs/qa/lote-alrs-p1-substantive-pack-2026-08-21.md`.
 
+## Tick contínuo — evidência oficial estruturada P1 ALRS (2026-08-21)
+
+- 7 páginas oficiais HTTP 200 e 526 `data-item` estruturados para o pacote P1.
+- Evidência factual pronta para classificar os 20 itens; nenhum impacto aprovado.
+- QA: `docs/qa/lote-alrs-p1-official-event-evidence-2026-08-21.md`.
+
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)
 
 - 30/30 itens P0 classificados: 9 mérito, 19 procedimento, 2 emenda, 0 destaque.

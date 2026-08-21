@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+import { createHash } from 'node:crypto';
+import { readFileSync, writeFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+const root=resolve(import.meta.dirname,'..');const input=resolve(root,'data/legislative-import/alrs/p1-substantive-review-pack-v1.json');const output=resolve(root,'data/legislative-import/alrs/p1-official-event-evidence.json');
+function decode(v){return v.replace(/&#x([0-9a-f]+);/gi,(_,h)=>String.fromCodePoint(parseInt(h,16))).replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>')}
+function items(html){const out=[];for(const m of html.matchAll(/data-item='([^']+)'/g)){try{out.push(JSON.parse(decode(m[1])))}catch{}}return out}
+async function fetchSource(url){const r=await fetch(url,{headers:{'user-agent':'eleicao2026-p1-evidence/1.0'}});const body=await r.text();return {url,http_status:r.status,bytes:Buffer.byteLength(body),sha256:createHash('sha256').update(body).digest('hex'),items:items(body)}}
+const pack=JSON.parse(readFileSync(input,'utf8'));const urls=[...new Set(pack.items.flatMap(x=>x.source_urls??[]))];const sources=[];for(let i=0;i<urls.length;i+=3)sources.push(...await Promise.all(urls.slice(i,i+3).map(fetchSource)));const official_items=sources.flatMap(s=>s.items.map(item=>({...item,source_url:s.url,source_sha256:s.sha256,source_bytes:s.bytes})));const result={schema_version:'1.0.0',packet_type:'alrs_p1_official_event_evidence',source_kind:'official_alrs_data_item',remote_apply:false,totals:{urls:sources.length,http_200:sources.filter(s=>s.http_status===200).length,official_items:official_items.length},sources:sources.map(({items,...s})=>s),official_items};writeFileSync(output,JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify({output,...result.totals}));
