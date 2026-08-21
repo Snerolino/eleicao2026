@@ -9,7 +9,8 @@
 - Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase, Cloudflare ou snapshot ocorreu; somente timestamp do manifesto ALRS e documentação.
 - Bloqueios: quatro residuais Enio/Terra sem ID/fonte exata, gaps de fontes ALRS 1251/1647/4, Câmara 3/2/2 e Senado 112/188/455, Senado com deriva criptográfica/envelope ausente, doctor FAIL por Node 22.22.2 e smoke Codex MCP `401 invalid_refresh_token`.
 - Publicação existente verificada: produção HTTP 200 e `/release.json` HTTP 200 com SHA `c97de368ab697e3286c62a8e2e84ab2539b6330f`, `row_count=1003`.
-- Próximo chunk: publicar documentação/manifesto após gates; manter recon bounded e aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+- Publicação verificada: commit `feb57c82ec22d1b5d31e9cfed4ee58f1e899604f` em `origin/main`; backup `334951434`, run `32472389728`, `completed/success`, `headSha` idêntico. Produção HTTP 200 e `/release.json` confirmaram SHA idêntico, release `feb57c8-20260821T102338452Z`, `row_count=1003`; smoke remoto 1002 cards/0 HTTP/console errors.
+- Próximo chunk: nova recon bounded oficial e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T09:35Z
 

@@ -35,5 +35,11 @@ Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, 
 - Produção `https://rs.votopraquem.org`: HTTP `200`.
 - `/release.json`: HTTP `200`, SHA `c97de368ab697e3286c62a8e2e84ab2539b6330f`, `row_count=1003`.
 
+## Publicação concluída e verificada
+- Commit `feb57c82ec22d1b5d31e9cfed4ee58f1e899604f` enviado para `origin/main`.
+- Workflow backup Cloudflare `334951434`, run `32472389728`: `completed/success`, `headSha` idêntico ao commit.
+- Produção: raiz e `/release.json` HTTP `200`; release `feb57c8-20260821T102338452Z`, SHA idêntico e `row_count=1003`.
+- Smoke remoto aprovado: `1002` cards, `0` falhas HTTP, `0` erros online de console, service worker pronto.
+
 ## Próximo passo
-Publicar esta evidência e o refresh de timestamp somente após commit/push e workflow backup; manter recon bounded e lane local independente. Aplicação remota permanece proibida até todos os gates exatos passarem.
+Manter recon bounded e lane local independente. Aplicação remota permanece proibida até todos os gates exatos passarem.
