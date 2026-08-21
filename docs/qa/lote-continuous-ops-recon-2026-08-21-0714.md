@@ -30,8 +30,11 @@ Nenhuma escrita factual em Supabase, claims, source references, votos, identidad
 3. Câmara não retornou lote novo na janela consultada.
 4. `npm run orch:doctor` permanece `OK=48`, `WARN=5`, `FAIL=1`: shell do cron usa Node 22.22.2; gates executados com Node 24.19.0. OpenCode ausente, fallback Ollama sem preflight e Codex MCP rápido não alteram a lane local segura.
 
-## Publicação
-Este tick está pronto para publicação documental após os gates verdes. Não há aplicação remota factual elegível.
+## Publicação verificada
+- Commit `0044b910f6f3d588b87230d2a05aed79767ef841` publicado em `origin/main`.
+- Workflow backup Cloudflare `334951434`, run `32457794693`: `completed/success`, `headSha` idêntico.
+- Produção: raiz HTTP 200; `/release.json` confirmou SHA `0044b910f6f3d588b87230d2a05aed79767ef841`, `row_count=1003`, release `0044b91-20260821T071529908Z`.
+- Smoke remoto não foi repetido neste tick; smoke local confirmou 1002 cards, 0 falhas HTTP e 0 erros online de console.
 
 ## Próximo passo
 Repetir recon bounded oficial e manter recuperação local de fontes substantivas ativa; qualquer aplicação remota continua condicionada a R0, schema/FK, fonte oficial exata, dry-run aprovado e idempotência.

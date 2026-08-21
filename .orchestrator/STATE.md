@@ -8,6 +8,7 @@
 - Gates Node 24.19.0 verdes: 97 arquivos/398 testes, TypeScript, schema, `data:check` 1003/988, build, `git diff --check` e smoke local 1002 cards/0 HTTP/console errors.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0714.md`.
 - Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase, Cloudflare ou snapshot ocorreu; somente documentação e timestamp do manifesto ALRS.
+- Publicação verificada: commit `0044b910f6f3d588b87230d2a05aed79767ef841` em `origin/main`; backup `334951434`, run `32457794693`, `completed/success`, `headSha` idêntico. Produção raiz HTTP 200 e `/release.json` confirmou o mesmo SHA, `row_count=1003`, release `0044b91-20260821T071529908Z`. Smoke local: 1002 cards/0 HTTP/console errors.
 - Bloqueios: JWT do ambiente em futuro para FED-17; Senado com deriva SHA/bytes; Câmara sem lote novo; doctor shell FAIL por Node 22.22.2.
 - Próximo chunk: nova recon bounded oficial e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
