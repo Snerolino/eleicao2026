@@ -692,6 +692,13 @@
 - Próximo passo: classificar oficialmente mérito/emenda/destaque/procedimento.
 - QA: `docs/qa/lote-alrs-impact-review-queue-v1-2026-08-20.md`.
 
+## Tick contínuo — fila ALRS prioritária P0/P1 (2026-08-20)
+
+- Visão compacta criada: 112 versões/671 votos; 30 P0 e 82 P1.
+- URLs deduplicadas e payload reduzido para economizar tokens dos revisores.
+- Fila completa preservada; nenhuma escrita, matriz ou aprovação ocorreu.
+- QA: `docs/qa/lote-alrs-impact-review-priority-p0-p1-2026-08-20.md`.
+
 ## Tick contínuo — fechamento final R4 (2026-08-20)
 
 - 13/13 itens da fila Q2/Q3 revisados; 12 não pontuáveis aprovados e 1 assessment populacional aprovado.

@@ -43,6 +43,7 @@
     "impact:alrs:residual:repair": "node scripts/repair-alrs-fed17-residual.mjs",
     "impact:camara:r4:queue": "node scripts/build-camara-r4-review-queue.mjs",
     "impact:alrs:r4:queue": "node scripts/build-alrs-impact-review-queue.mjs",
+    "impact:alrs:r4:priority": "node scripts/build-alrs-priority-review-queue.mjs",
     "orch:setup": "bash scripts/orchestrator/setup-local.sh",
     "orch:doctor": "bash scripts/orchestrator/doctor.sh",
     "orch:install-skill": "bash scripts/orchestrator/install-hermes-skill.sh",
