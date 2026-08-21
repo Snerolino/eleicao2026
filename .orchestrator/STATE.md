@@ -1,4 +1,16 @@
-## Tick contínuo — pacote ALRS, gates e publicação — 2026-08-21T12:57Z
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T14:04Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `766d483dd7705bf1dda2a391bd63652595cd0ca5`.
+- ALRS P0/P1: 7/7 URLs oficiais HTTP 200 e 526 itens; nenhum ID Enio/Terra foi inferido. Câmara respondeu em janelas oficiais sem aplicação. Senado fail-closed por envelope `/tmp/senado-nominal-envelope-latest.json` ausente.
+- Auditoria estrita: 1.397 proposições, 1.431 versões, 1.902 eventos e 5.007 votos; gaps versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; exit 2 mantido.
+- Dataset: 1.003 candidaturas e 988 fotos; sem refresh/diff factual.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check`, build, smoke local 1.002 cards/0 HTTP/console errors, diff check.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1404.md`.
+- Bloqueios: quatro votos Enio/Terra sem identidade/fonte exata; gaps substantivos; Senado sem envelope verificável; doctor FAIL por Node 22.22.2 e OpenCode ausente como WARN opcional.
+- Nenhuma escrita factual remota; após commit/push, verificar backup Cloudflare, `headSha`, produção HTTP 200, `/release.json` e smoke remoto.
+- Próximo chunk: nova recon bounded e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
+# Tick contínuo — pacote ALRS, gates e publicação — 2026-08-21T12:57Z
 
 - Lock bounded adquirido/liberado com `flock -n`; commit publicado `6d5a3730023ec91a9fd1c0d7d6ec2d143dd4fa21`.
 - Lane local: pacote ALRS com 7 requisições/6 versões, fontes oficiais preservadas e `remote_apply=false`; nenhum voto, FK, claim, source reference ou Supabase foi aplicado.
