@@ -2889,4 +2889,16 @@ Sem autorização humana explícita própria, não fazer:
 
 - Publicação verificada: commit `dcda2c3d1137385ae224484c15630cf7a7cd03ff`, backup `334951434`, run `32440153324`, `completed/success`, `headSha` idêntico; produção raiz HTTP 200 e `/release.json` confirmou o SHA live com `row_count=1003`.
 - Próximo chunk: nova recon bounded sem promover deriva; ALRS, Senado e Câmara continuam fail-closed para aplicação factual sem gates específicos.
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T09:59Z
+
+- Lock `flock -n` adquirido/liberado; worktree iniciou em `0ada04c734dc3233229a465ae58a91c4583e4158`.
+- Recon ALRS: 7/7 URLs oficiais HTTP 200, 7/7 válidas; manifesto atualizado somente no timestamp. Auditoria read-only mantém gaps ALRS 1251/1647/4, Câmara 3/2/2 e Senado 112/188/455.
+- FED-17 permaneceu bloqueado por `JWT issued at future`; 0 votos, 0 correções e 0 aplicações.
+- Dataset vivo: 6 CSVs comparáveis, 1003 IDs; snapshot 1003 IDs; 0 somente no dataset e 0 somente no snapshot.
+- Gates Node 24.19.0 verdes: 97 arquivos/398 testes, TypeScript, schema, `data:check` 1003/988, build, `git diff --check` e smoke local 1002 cards/0 HTTP/console errors.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0959.md`.
+- Única mutação local: timestamp do manifesto ALRS; nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase ou snapshot.
+- Bloqueios: 4 residuais Enio/Terra sem ID/fonte exata, Senado com deriva SHA/bytes e envelope ausente, gaps substantivos, doctor shell FAIL por Node 22.22.2 e Codex MCP 401 `invalid_refresh_token`.
+- Produção já verificada no commit `0ada04c734dc3233229a465ae58a91c4583e4158`: HTTP 200, `/release.json` SHA idêntico, `row_count=1003`.
+- Próximo chunk: nova recon bounded e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
