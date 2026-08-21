@@ -1,0 +1,950 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "alrs_impact_assessment_draft_pack",
+  "methodology_version": "1.0.0",
+  "unit_of_work": "one_matrix_per_proposition_version",
+  "remote_apply": false,
+  "public_approval": false,
+  "totals": {
+    "versions": 12,
+    "factual_votes": 70,
+    "draft_assessments": 13
+  },
+  "items": [
+    {
+      "proposition_version_id": "7c132ddc-b571-43ee-b2bc-e877f053480a",
+      "proposition_external_id": "alrs_prop_f510d5f5859f870e2c4f27e0",
+      "version_key": "sha256:7cf39a1e311538faa0de87845c8535ad54b09c3760f94837682c5d81a335ad31",
+      "title": "Altera a Lei Ordinária n.º 15.988 de 07 de agosto de 2023, que consolida a legislação relativa às mulheres vítimas de violência no âmbito do Estado do Rio Grande do Sul.",
+      "priority": "P0",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "event_external_ids": [
+        "alrs_event_bd8cd263cd90f83632405c1a"
+      ],
+      "official_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 330560,
+          "sha256": "ceb2889e11b05f5c08ed4257df790942bd306230bd442bb29ccd05d7ccf0ad77",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 463347,
+          "sha256": "fa5b524364dc25b7d8a646c136ea62f006faf8b6ac9e7204bc577ce5e12ce07d",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 395019,
+          "sha256": "6e4be199082a01634304d50adb369cd399fbc112d5127fc2c504ebfe4689bbe3",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 431084,
+          "sha256": "4886d420ba4c711abe5049f78672b22f595fb1b490d3020567d1fa603ceb2236",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 413104,
+          "sha256": "25f10a97469732f1a4a91a42d7b02f5433dfeac8e9caf8a7eb99c7faf72be98d",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 514640,
+          "sha256": "ab2c08ec5973117658887b765d6d7d190c52477302142b8db6cc49bbf0baee3a",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 471592,
+          "sha256": "d696145372caad664b4c8b897f82979ffda34ba11fd2e57b67f3372fa8939a77",
+          "ok": true
+        }
+      ],
+      "group_candidates": [
+        "mulheres"
+      ],
+      "draft_assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
+          "status": "needs_editorial_decision"
+        }
+      ],
+      "review_status": "pending_review",
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "a57b1c83-3749-4c45-85b7-2408db20f5a2",
+      "proposition_external_id": "alrs_prop_2a4640e188225a0fece6ec70",
+      "version_key": "sha256:c1f571e5077d13d1486261d3db0fb706cee52efd00465184fef79a872f0772ee",
+      "title": "Dispõe sobre a criação do Programa de Defesa pessoal para Mulheres “RS POR ELAS” no âmbito do Estado do Rio Grande do Sul e dá outras providências.(SEI 4237-0100/21-8)",
+      "priority": "P0",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "event_external_ids": [
+        "alrs_event_0c98f486921cb63aa48c97de"
+      ],
+      "official_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 330560,
+          "sha256": "ceb2889e11b05f5c08ed4257df790942bd306230bd442bb29ccd05d7ccf0ad77",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 463347,
+          "sha256": "fa5b524364dc25b7d8a646c136ea62f006faf8b6ac9e7204bc577ce5e12ce07d",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 395019,
+          "sha256": "6e4be199082a01634304d50adb369cd399fbc112d5127fc2c504ebfe4689bbe3",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 431084,
+          "sha256": "4886d420ba4c711abe5049f78672b22f595fb1b490d3020567d1fa603ceb2236",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 413104,
+          "sha256": "25f10a97469732f1a4a91a42d7b02f5433dfeac8e9caf8a7eb99c7faf72be98d",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 514640,
+          "sha256": "ab2c08ec5973117658887b765d6d7d190c52477302142b8db6cc49bbf0baee3a",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 471592,
+          "sha256": "d696145372caad664b4c8b897f82979ffda34ba11fd2e57b67f3372fa8939a77",
+          "ok": true
+        }
+      ],
+      "group_candidates": [
+        "mulheres"
+      ],
+      "draft_assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
+          "status": "needs_editorial_decision"
+        }
+      ],
+      "review_status": "pending_review",
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "1eb30d74-271c-4315-b7f6-54849d31c9bc",
+      "proposition_external_id": "alrs_prop_f76d72ac85ddbd12519f1e5d",
+      "version_key": "sha256:0d0b779976354f6bd951ce8d8bff213f63b1b515712734564144254577e6aa51",
+      "title": "Institui a política de prevenção a crimes sexuais contra adolescentes, no Estado do Rio Grande do Sul, denominado “Projeto Libertar”.",
+      "priority": "P1",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "event_external_ids": [
+        "alrs_event_41c48a6dc5b300e1fff66c4d"
+      ],
+      "official_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 330560,
+          "sha256": "ceb2889e11b05f5c08ed4257df790942bd306230bd442bb29ccd05d7ccf0ad77",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 463347,
+          "sha256": "fa5b524364dc25b7d8a646c136ea62f006faf8b6ac9e7204bc577ce5e12ce07d",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 395019,
+          "sha256": "6e4be199082a01634304d50adb369cd399fbc112d5127fc2c504ebfe4689bbe3",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 431084,
+          "sha256": "4886d420ba4c711abe5049f78672b22f595fb1b490d3020567d1fa603ceb2236",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 514640,
+          "sha256": "ab2c08ec5973117658887b765d6d7d190c52477302142b8db6cc49bbf0baee3a",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 471592,
+          "sha256": "d696145372caad664b4c8b897f82979ffda34ba11fd2e57b67f3372fa8939a77",
+          "ok": true
+        }
+      ],
+      "group_candidates": [
+        "criancas_adolescentes_vulnerabilidade"
+      ],
+      "draft_assessments": [
+        {
+          "group_slug": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
+          "status": "needs_editorial_decision"
+        }
+      ],
+      "review_status": "pending_review",
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "10887f06-837a-47ed-aa52-f05560d17742",
+      "proposition_external_id": "alrs_prop_967582f2abd1c3a3a041a768",
+      "version_key": "sha256:1a61707c7c826f5b75d1b3e2725f6d4c473e3852568f5d3fac7a94540c5cab1a",
+      "title": "Dispõe sobre a criação da Patrulha Estadual de Prevenção à Violência Doméstica e Familiar contra Crianças e Adolescentes.",
+      "priority": "P1",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "event_external_ids": [
+        "alrs_event_42b962ff38ef0ee48780ed7a"
+      ],
+      "official_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 463347,
+          "sha256": "fa5b524364dc25b7d8a646c136ea62f006faf8b6ac9e7204bc577ce5e12ce07d",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 395019,
+          "sha256": "6e4be199082a01634304d50adb369cd399fbc112d5127fc2c504ebfe4689bbe3",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 431084,
+          "sha256": "4886d420ba4c711abe5049f78672b22f595fb1b490d3020567d1fa603ceb2236",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 413104,
+          "sha256": "25f10a97469732f1a4a91a42d7b02f5433dfeac8e9caf8a7eb99c7faf72be98d",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 514640,
+          "sha256": "ab2c08ec5973117658887b765d6d7d190c52477302142b8db6cc49bbf0baee3a",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 471592,
+          "sha256": "d696145372caad664b4c8b897f82979ffda34ba11fd2e57b67f3372fa8939a77",
+          "ok": true
+        }
+      ],
+      "group_candidates": [
+        "criancas_adolescentes_vulnerabilidade"
+      ],
+      "draft_assessments": [
+        {
+          "group_slug": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
+          "status": "needs_editorial_decision"
+        }
+      ],
+      "review_status": "pending_review",
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "b4a681d1-53c2-4c16-b038-45606adfd2f1",
+      "proposition_external_id": "alrs_prop_6c0127039e60a30bb11eca13",
+      "version_key": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924",
+      "title": "Altera a Lei n.º 15.988, de 7 de agosto de 2023, que consolida a legislação relativa às mulheres vítimas de violência no âmbito do Estado do Rio Grande do Sul.",
+      "priority": "P1",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "event_external_ids": [
+        "alrs_event_fde899ed5662145ce9615dd6"
+      ],
+      "official_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 330560,
+          "sha256": "ceb2889e11b05f5c08ed4257df790942bd306230bd442bb29ccd05d7ccf0ad77",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 463347,
+          "sha256": "fa5b524364dc25b7d8a646c136ea62f006faf8b6ac9e7204bc577ce5e12ce07d",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 395019,
+          "sha256": "6e4be199082a01634304d50adb369cd399fbc112d5127fc2c504ebfe4689bbe3",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 431084,
+          "sha256": "4886d420ba4c711abe5049f78672b22f595fb1b490d3020567d1fa603ceb2236",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 514640,
+          "sha256": "ab2c08ec5973117658887b765d6d7d190c52477302142b8db6cc49bbf0baee3a",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 471592,
+          "sha256": "d696145372caad664b4c8b897f82979ffda34ba11fd2e57b67f3372fa8939a77",
+          "ok": true
+        }
+      ],
+      "group_candidates": [
+        "mulheres"
+      ],
+      "draft_assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
+          "status": "needs_editorial_decision"
+        }
+      ],
+      "review_status": "pending_review",
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "7bae10be-b80b-4b2c-88cf-0c2561edeb6b",
+      "proposition_external_id": "alrs_prop_be6aa727b687a333b258ef85",
+      "version_key": "sha256:bb8c0d5262e866faa5745a563abedcccb73854825373843994ccfb6969f18f38",
+      "title": "Institui a Política Estadual de Proteção Social às Crianças e aos Adolescentes em situação de orfandade decorrente da Covid-19 e dá outras providências. (SEI 1338-0100/22-5)",
+      "priority": "P1",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "event_external_ids": [
+        "alrs_event_1dedb39bbfb31ba60f92b63e"
+      ],
+      "official_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 330560,
+          "sha256": "ceb2889e11b05f5c08ed4257df790942bd306230bd442bb29ccd05d7ccf0ad77",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 463347,
+          "sha256": "fa5b524364dc25b7d8a646c136ea62f006faf8b6ac9e7204bc577ce5e12ce07d",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 395019,
+          "sha256": "6e4be199082a01634304d50adb369cd399fbc112d5127fc2c504ebfe4689bbe3",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 431084,
+          "sha256": "4886d420ba4c711abe5049f78672b22f595fb1b490d3020567d1fa603ceb2236",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 514640,
+          "sha256": "ab2c08ec5973117658887b765d6d7d190c52477302142b8db6cc49bbf0baee3a",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 471592,
+          "sha256": "d696145372caad664b4c8b897f82979ffda34ba11fd2e57b67f3372fa8939a77",
+          "ok": true
+        }
+      ],
+      "group_candidates": [
+        "criancas_adolescentes_vulnerabilidade"
+      ],
+      "draft_assessments": [
+        {
+          "group_slug": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
+          "status": "needs_editorial_decision"
+        }
+      ],
+      "review_status": "pending_review",
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "d75becac-49d6-4bdd-95e8-29270980b4f4",
+      "proposition_external_id": "alrs_prop_7bed77c7ca2a760f17b16432",
+      "version_key": "sha256:f6f602bc12539cc5787793134de2a805eef274ad9d36ed06525a3fb4ec55b317",
+      "title": "Altera a Lei Estadual nº 16.328, de 8 de agosto de 2025, que institui a reserva de vagas, em percentual de no mínimo 20% (vinte por cento), nas empresas da área de segurança, vigilância e transportes de valores, para vigilantes do sexo feminino, nas contratações que especifica e dá outras providências, estendendo a reserva de vagas para todos os tipos de contrato e priorizando a contratação de vít",
+      "priority": "P1",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "event_external_ids": [
+        "alrs_event_62d74685b4c294072d611aed"
+      ],
+      "official_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 330560,
+          "sha256": "ceb2889e11b05f5c08ed4257df790942bd306230bd442bb29ccd05d7ccf0ad77",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 463347,
+          "sha256": "fa5b524364dc25b7d8a646c136ea62f006faf8b6ac9e7204bc577ce5e12ce07d",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 395019,
+          "sha256": "6e4be199082a01634304d50adb369cd399fbc112d5127fc2c504ebfe4689bbe3",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 431084,
+          "sha256": "4886d420ba4c711abe5049f78672b22f595fb1b490d3020567d1fa603ceb2236",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 514640,
+          "sha256": "ab2c08ec5973117658887b765d6d7d190c52477302142b8db6cc49bbf0baee3a",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 471592,
+          "sha256": "d696145372caad664b4c8b897f82979ffda34ba11fd2e57b67f3372fa8939a77",
+          "ok": true
+        }
+      ],
+      "group_candidates": [
+        "mulheres"
+      ],
+      "draft_assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
+          "status": "needs_editorial_decision"
+        }
+      ],
+      "review_status": "pending_review",
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "d4cbc2f3-6ee6-4057-a376-e5b3d1fe599a",
+      "proposition_external_id": "PL 361/2025",
+      "version_key": "texto-base",
+      "title": "Reserva de 5% de vagas em contratos terceirizados para mulheres vítimas de violência",
+      "priority": "P1",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "event_external_ids": [
+        "alrs_pl361_2025"
+      ],
+      "official_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2122&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 540317,
+          "sha256": "97492fb28e6d85e94f379128037535d99191664dcb518fa484aac915749cd9bc",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2136&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 541531,
+          "sha256": "69833351d77c5617073e6981571b212c71d20999099306ce3d797e4d60a5d5ae",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2153&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 534734,
+          "sha256": "268f0655e02118fa60b63f4616c10525aa66d4f5aa04a57e9b58afd62f80ce76",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2162&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 495335,
+          "sha256": "c12c6f762fabed296f48f7e9044b2f5ea42ec290dd6af46117721d6bc6eafaf1",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=93&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 589283,
+          "sha256": "4f41ddb84d7139397aadeab10d379d0e55950fd0514d6e8e2bc5dba65b309014",
+          "ok": true
+        }
+      ],
+      "group_candidates": [
+        "mulheres"
+      ],
+      "draft_assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
+          "status": "needs_editorial_decision"
+        }
+      ],
+      "review_status": "pending_review",
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "d2043a70-64b3-4ea7-8a1f-c51c15393602",
+      "proposition_external_id": "alrs_prop_bcbc1b68a2b489b4c96b04d1",
+      "version_key": "sha256:22217e72b94cdfd307e3089d02d367446b1d3f68f11a3e709eb9743aa9df9990",
+      "title": "Cria o Programa Estadual de Proteção e Apoio à Mulher Vítima de Violência Doméstica ou Familiar (PROMULHER-RS) e altera a Lei n.º 15.988, de 7 de agosto de 2023, que consolida a legislação relativa às mulheres vítimas de violência no âmbito do Estado do Rio Grande do Sul.(SEI 13088-0100/23-9)",
+      "priority": "P1",
+      "candidate_count": 5,
+      "factual_vote_count": 5,
+      "event_external_ids": [
+        "alrs_event_b11b95834b07cd80ef41eb04"
+      ],
+      "official_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 463347,
+          "sha256": "fa5b524364dc25b7d8a646c136ea62f006faf8b6ac9e7204bc577ce5e12ce07d",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 431084,
+          "sha256": "4886d420ba4c711abe5049f78672b22f595fb1b490d3020567d1fa603ceb2236",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 413104,
+          "sha256": "25f10a97469732f1a4a91a42d7b02f5433dfeac8e9caf8a7eb99c7faf72be98d",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 514640,
+          "sha256": "ab2c08ec5973117658887b765d6d7d190c52477302142b8db6cc49bbf0baee3a",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 471592,
+          "sha256": "d696145372caad664b4c8b897f82979ffda34ba11fd2e57b67f3372fa8939a77",
+          "ok": true
+        }
+      ],
+      "group_candidates": [
+        "mulheres"
+      ],
+      "draft_assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
+          "status": "needs_editorial_decision"
+        }
+      ],
+      "review_status": "pending_review",
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "3f2e156e-8430-44be-8564-77578ef9fc81",
+      "proposition_external_id": "alrs_prop_eb6d03ca39766d6c6f4f6041",
+      "version_key": "sha256:3e7be81fb11122aea31318a85d9167eb367bbc16bb7fc3088bf93fd2d934d143",
+      "title": "Institui a política estadual de combate ao racismo, à LGBTfobia e à violência contra as mulheres nos estádios e nas arenas esportivas do Estado do Rio Grande do Sul - Política Estádio de Respeito. (SEI 5535-0100/23-0)",
+      "priority": "P1",
+      "candidate_count": 5,
+      "factual_vote_count": 5,
+      "event_external_ids": [
+        "alrs_event_56f0086488488853bc5207f9"
+      ],
+      "official_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 330560,
+          "sha256": "ceb2889e11b05f5c08ed4257df790942bd306230bd442bb29ccd05d7ccf0ad77",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 463347,
+          "sha256": "fa5b524364dc25b7d8a646c136ea62f006faf8b6ac9e7204bc577ce5e12ce07d",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 431084,
+          "sha256": "4886d420ba4c711abe5049f78672b22f595fb1b490d3020567d1fa603ceb2236",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 514640,
+          "sha256": "ab2c08ec5973117658887b765d6d7d190c52477302142b8db6cc49bbf0baee3a",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 471592,
+          "sha256": "d696145372caad664b4c8b897f82979ffda34ba11fd2e57b67f3372fa8939a77",
+          "ok": true
+        }
+      ],
+      "group_candidates": [
+        "mulheres",
+        "populacao_negra_periferica"
+      ],
+      "draft_assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
+          "status": "needs_editorial_decision"
+        },
+        {
+          "group_slug": "populacao_negra_periferica",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
+          "status": "needs_editorial_decision"
+        }
+      ],
+      "review_status": "pending_review",
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "107c79e5-2dd2-42ca-a906-f2674b103455",
+      "proposition_external_id": "alrs_prop_5d7ce3dddd17ee16bebfbf92",
+      "version_key": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924",
+      "title": "Altera a Lei n.º 15.988, de 7 de agosto de 2023, que consolida a legislação relativa às mulheres vítimas de violência no âmbito do Estado do Rio Grande do Sul.",
+      "priority": "P1",
+      "candidate_count": 5,
+      "factual_vote_count": 5,
+      "event_external_ids": [
+        "alrs_event_61f8d7a97e94834da95e0a82"
+      ],
+      "official_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 330560,
+          "sha256": "ceb2889e11b05f5c08ed4257df790942bd306230bd442bb29ccd05d7ccf0ad77",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 463347,
+          "sha256": "fa5b524364dc25b7d8a646c136ea62f006faf8b6ac9e7204bc577ce5e12ce07d",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 431084,
+          "sha256": "4886d420ba4c711abe5049f78672b22f595fb1b490d3020567d1fa603ceb2236",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 514640,
+          "sha256": "ab2c08ec5973117658887b765d6d7d190c52477302142b8db6cc49bbf0baee3a",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 471592,
+          "sha256": "d696145372caad664b4c8b897f82979ffda34ba11fd2e57b67f3372fa8939a77",
+          "ok": true
+        }
+      ],
+      "group_candidates": [
+        "mulheres"
+      ],
+      "draft_assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
+          "status": "needs_editorial_decision"
+        }
+      ],
+      "review_status": "pending_review",
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "92f2865a-1414-4077-85ae-7d10711c51b4",
+      "proposition_external_id": "alrs_prop_927e2ef19844c7099d4ca7eb",
+      "version_key": "sha256:f0832e005dea9c6626b6648ffce12e0c90417b86f10ff26a2fac23fe09b3be05",
+      "title": "Institui o Programa de Inclusão Digital para Idosos (PIDI) no âmbito do Estado do Rio Grande do Sul, e dá outras providências.",
+      "priority": "P1",
+      "candidate_count": 5,
+      "factual_vote_count": 5,
+      "event_external_ids": [
+        "alrs_event_e7f9f8dba4c0197f8b571e05"
+      ],
+      "official_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 463347,
+          "sha256": "fa5b524364dc25b7d8a646c136ea62f006faf8b6ac9e7204bc577ce5e12ce07d",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 395019,
+          "sha256": "6e4be199082a01634304d50adb369cd399fbc112d5127fc2c504ebfe4689bbe3",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 431084,
+          "sha256": "4886d420ba4c711abe5049f78672b22f595fb1b490d3020567d1fa603ceb2236",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 413104,
+          "sha256": "25f10a97469732f1a4a91a42d7b02f5433dfeac8e9caf8a7eb99c7faf72be98d",
+          "ok": true
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "http_status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 514640,
+          "sha256": "ab2c08ec5973117658887b765d6d7d190c52477302142b8db6cc49bbf0baee3a",
+          "ok": true
+        }
+      ],
+      "group_candidates": [
+        "pessoas_idosas_dependentes"
+      ],
+      "draft_assessments": [
+        {
+          "group_slug": "pessoas_idosas_dependentes",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
+          "status": "needs_editorial_decision"
+        }
+      ],
+      "review_status": "pending_review",
+      "remote_apply": false
+    }
+  ]
+}

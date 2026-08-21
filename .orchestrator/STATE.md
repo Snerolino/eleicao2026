@@ -722,6 +722,13 @@
 - Assessments permanecem vazios; revisão de evento e editorial continuam obrigatórias.
 - QA: `docs/qa/lote-alrs-impact-matrix-review-pack-p0-p1-2026-08-20.md`.
 
+## Tick contínuo — drafts de assessments ALRS v1 (2026-08-20)
+
+- 12 versões/70 votos e 13 drafts de grupo gerados para decisão editorial.
+- Direção, defending vote, severidade, tipo e rationale permanecem nulos.
+- Nenhuma matriz/assessment remoto criado; score ainda não publicado para esses itens.
+- QA: `docs/qa/lote-alrs-assessment-drafts-v1-2026-08-20.md`.
+
 ## Tick contínuo — fechamento final R4 (2026-08-20)
 
 - 13/13 itens da fila Q2/Q3 revisados; 12 não pontuáveis aprovados e 1 assessment populacional aprovado.
