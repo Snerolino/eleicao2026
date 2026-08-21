@@ -2967,4 +2967,15 @@ Sem autorização humana explícita própria, não fazer:
 - Bloqueios: 4 residuais Enio/Terra sem ID/fonte exata, Senado com deriva SHA/bytes e envelope ausente, gaps substantivos, doctor shell FAIL por Node 22.22.2 e Codex MCP 401 `invalid_refresh_token`.
 - Produção já verificada no commit `0ada04c734dc3233229a465ae58a91c4583e4158`: HTTP 200, `/release.json` SHA idêntico, `row_count=1003`.
 - Próximo chunk: nova recon bounded e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T12:25Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `4a21cb6cbfd8d36acf5a618ab0ec1c533023af79`.
+- Recon ALRS FED-17 dry-run: 0 votos, 0 correções de data, 4 bloqueados, `impact_touched=false`.
+- Câmara: quatro janelas oficiais 2026 de até três meses responderam `status=ok` e retornaram IDs; nenhuma reconciliação/aplicação. Senado: envelope `/tmp/senado-nominal-envelope-latest.json` ausente, fail-closed.
+- Auditoria estrita de fontes: gaps ALRS/Câmara/Senado em versões `1251/3/112`, eventos `1647/2/188` e votos `4/2/455`; exit 2 por gaps reais.
+- Dataset/snapshot sem diff; nenhum dado factual, identidade, FK, voto, claim, source reference ou Supabase foi escrito.
+- Gates Node 24.19.0 verdes: 398 testes, TypeScript, schema, `data:check` 1003/988, build, `git diff --check` e smoke local 1002 cards/0 HTTP/console errors/service worker pronto.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1225.md`.
+- Bloqueios: quatro residuais Enio/Terra sem ID/fonte exata; Senado sem envelope/deriva registrada; gaps de fontes; doctor shell FAIL por Node 22.22.2; Codex MCP `401 invalid_refresh_token` e OpenCode ausente.
+- Próximo chunk: publicar documentação após commit/push e backup Cloudflare; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
