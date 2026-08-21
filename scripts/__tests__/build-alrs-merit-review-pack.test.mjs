@@ -38,4 +38,10 @@ describe('alrs-merit-review-pack', () => {
       remote_apply: false,
     });
   });
+
+  it('exclui colisões do pacote de mérito até resolução oficial', () => {
+    const result = buildMeritReviewPack({ methodology_version: '1.0.0', unit_of_work: 'one_matrix_per_version', items: [{ event_type: 'merit_candidate', version_key_collision: true, factual_vote_count: 7 }] });
+    expect(result.items).toHaveLength(0);
+    expect(result.totals.excluded_version_collisions).toBe(1);
+  });
 });

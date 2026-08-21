@@ -15,6 +15,10 @@ mérito dos candidatos procedimentais/ambíguos.
 - revisão oficial do evento: obrigatória;
 - escrita remota: desabilitada.
 
+Após a auditoria estrutural, 4 versões com `version_key_collision` foram
+retiradas fail-closed. O pacote estruturalmente liberável passou a ter 25
+versões/149 votos; as 4 versões continuam na fila de resolução.
+
 Os demais 83 itens P0/P1 não foram descartados do histórico: permanecem na fila
 prioritária original para confirmação oficial.
 

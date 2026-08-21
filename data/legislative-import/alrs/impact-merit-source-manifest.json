@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "source_kind": "official_alrs",
-  "generated_at": "2026-08-21T00:32:36.892Z",
+  "generated_at": "2026-08-21T01:29:05.709Z",
   "urls": [
     {
       "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
@@ -58,52 +58,12 @@
       "bytes": 471592,
       "sha256": "d696145372caad664b4c8b897f82979ffda34ba11fd2e57b67f3372fa8939a77",
       "ok": true
-    },
-    {
-      "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2122&ano=2026",
-      "http_status": 200,
-      "content_type": "text/html; charset=UTF-8",
-      "bytes": 540317,
-      "sha256": "97492fb28e6d85e94f379128037535d99191664dcb518fa484aac915749cd9bc",
-      "ok": true
-    },
-    {
-      "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2136&ano=2026",
-      "http_status": 200,
-      "content_type": "text/html; charset=UTF-8",
-      "bytes": 541531,
-      "sha256": "69833351d77c5617073e6981571b212c71d20999099306ce3d797e4d60a5d5ae",
-      "ok": true
-    },
-    {
-      "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2153&ano=2026",
-      "http_status": 200,
-      "content_type": "text/html; charset=UTF-8",
-      "bytes": 534734,
-      "sha256": "268f0655e02118fa60b63f4616c10525aa66d4f5aa04a57e9b58afd62f80ce76",
-      "ok": true
-    },
-    {
-      "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2162&ano=2026",
-      "http_status": 200,
-      "content_type": "text/html; charset=UTF-8",
-      "bytes": 495335,
-      "sha256": "c12c6f762fabed296f48f7e9044b2f5ea42ec290dd6af46117721d6bc6eafaf1",
-      "ok": true
-    },
-    {
-      "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=93&ano=2026",
-      "http_status": 200,
-      "content_type": "text/html; charset=UTF-8",
-      "bytes": 589283,
-      "sha256": "4f41ddb84d7139397aadeab10d379d0e55950fd0514d6e8e2bc5dba65b309014",
-      "ok": true
     }
   ],
   "totals": {
-    "urls": 12,
-    "http_200": 12,
-    "ok": 12,
+    "urls": 7,
+    "http_200": 7,
+    "ok": 7,
     "failed": 0
   }
 }

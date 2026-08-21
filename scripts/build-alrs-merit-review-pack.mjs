@@ -7,7 +7,8 @@ const input = resolve(root, 'data/legislative-import/alrs/impact-review-priority
 const output = resolve(root, 'data/legislative-import/alrs/impact-merit-review-pack-p0-p1.json');
 
 export function buildMeritReviewPack(queue) {
-  const items = (queue.items ?? []).filter((item) => item.event_type === 'merit_candidate').map((item) => ({
+  const excluded_collision_count = (queue.items ?? []).filter((item) => item.event_type === 'merit_candidate' && item.version_key_collision).length;
+  const items = (queue.items ?? []).filter((item) => item.event_type === 'merit_candidate' && !item.version_key_collision).map((item) => ({
     ...item,
     review_gate: 'official_event_confirmation_required',
     editorial_disposition: 'pending_review',
@@ -30,6 +31,7 @@ export function buildMeritReviewPack(queue) {
       factual_votes: items.reduce((sum, item) => sum + item.factual_vote_count, 0),
       p0_versions: items.filter((item) => item.priority === 'P0').length,
       p1_versions: items.filter((item) => item.priority === 'P1').length,
+      excluded_version_collisions: excluded_collision_count,
     },
     items,
   };

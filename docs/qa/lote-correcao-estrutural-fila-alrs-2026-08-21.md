@@ -23,6 +23,7 @@
 - scores não calculados para esses itens;
 - eventos procedimentais continuam separados.
 - gate `npm run impact:alrs:r4:validate` rejeita o pacote de mérito enquanto houver colisão, título incompleto, fonte factual não verde ou revisão humana ausente.
+- Após a exclusão fail-closed das colisões, o pacote merit contém 25 versões/149 votos e passa `validate` estruturalmente; 4 versões colididas continuam fora.
 
 ## Reexecução
 

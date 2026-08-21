@@ -745,6 +745,12 @@
 - Gate `impact:alrs:r4:validate` rejeita automaticamente o pacote de mérito enquanto houver colisões, identidade/título/fonte ou revisão humana incompletos.
 - QA: `docs/qa/lote-correcao-estrutural-fila-alrs-2026-08-21.md`.
 
+## Tick contínuo — recorte merit estruturalmente liberável (2026-08-21)
+
+- 4 versões colididas retiradas fail-closed; pacote merit agora tem 25 versões/149 votos.
+- `impact:alrs:r4:validate` retorna `ok=true` para o recorte estrutural.
+- As 4 versões continuam na resolução oficial; nenhuma matriz/assessment remoto criado.
+
 ## Tick contínuo — auditoria de colisões ALRS (2026-08-21)
 
 - Auditoria completa: 18 chaves duplicadas, 65 versões e 65 eventos afetados.
