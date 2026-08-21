@@ -149,6 +149,7 @@
 | [`qa/lote-alrs-p0-matrix-pack-2026-08-21.md`](qa/lote-alrs-p0-matrix-pack-2026-08-21.md) | Pacote editorial P0 ALRS |
 | [`qa/lote-alrs-p0-official-event-evidence-2026-08-21.md`](qa/lote-alrs-p0-official-event-evidence-2026-08-21.md) | Evidência oficial estruturada P0 |
 | [`qa/lote-alrs-p0-assessment-proposals-2026-08-21.md`](qa/lote-alrs-p0-assessment-proposals-2026-08-21.md) | Propostas editoriais P0 ALRS |
+| [`qa/lote-alrs-substantive-review-queue-2026-08-21.md`](qa/lote-alrs-substantive-review-queue-2026-08-21.md) | Fila substantiva ALRS |
 | [`qa/lote-alrs-safe-matrix-apply-plan-2026-08-21.md`](qa/lote-alrs-safe-matrix-apply-plan-2026-08-21.md) | Plano seguro de aplicação ALRS |
 | [`qa/lote-alrs-merit-review-pack-p0-p1-2026-08-20.md`](qa/lote-alrs-merit-review-pack-p0-p1-2026-08-20.md) | Pacote ALRS de revisão de mérito P0/P1 |
 | [`qa/lote-official-recon-senado-alrs-camara-2026-08-20-1938.md`](qa/lote-official-recon-senado-alrs-camara-2026-08-20-1938.md) | Reconhecimento oficial bounded |

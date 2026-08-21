@@ -831,6 +831,12 @@
 - Versões/eventos/fonte confirmados; campos substantivos permanecem sujeitos à revisão humana.
 - QA: `docs/qa/lote-alrs-p0-assessment-proposals-2026-08-21.md`.
 
+## Tick contínuo — fila substantiva ALRS (2026-08-21)
+
+- Filtro oficial: 462 versões/1398 votos; 5 mérito confirmado e 457 candidatos a mérito.
+- Procedimentos/emendas foram retirados da fila de score; colisões/títulos inválidos permanecem fora.
+- QA: `docs/qa/lote-alrs-substantive-review-queue-2026-08-21.md`.
+
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)
 
 - 30/30 itens P0 classificados: 9 mérito, 19 procedimento, 2 emenda, 0 destaque.
