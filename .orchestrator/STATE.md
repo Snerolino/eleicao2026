@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T19:35Z
+
+- Lock bounded adquirido/liberado com `flock -n`; recon oficial read-only executada.
+- ALRS FED-17 falhou fechado com `JWT issued at future`; quatro residuais Enio Carlos Terra continuam sem ID/fonte exata. Senado falhou fechado por envelope `/tmp/senado-nominal-envelope-latest.json` ausente. Câmara: 8/8 janelas oficiais válidas, 700 IDs descobertos, sem aplicação.
+- Dataset e snapshot alinhados: 1.003/1.003 IDs, diferença 0/0. Auditoria estrita manteve gaps de fontes `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; exit 2 por gaps reais.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1003/988, build, diff check e smoke 1002 cards/0 HTTP/console errors/service worker.
+- Produção HTTP 200, mas `release.json` continua no live `e925327`; `git push origin main` permanece bloqueado por HTTP 403 apesar de `gh api` confirmar permissão administrativa/push. Nenhum deploy foi acionado.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1935.md`; commit documental local atual `2d75345` (18 commits à frente de `origin/main`). Nenhuma escrita factual/remota ocorreu.
+- Próximo chunk: recon bounded read-only e lane local independente; resolver credencial efetiva de push antes de publicação. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T19:15Z
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `f5fe3315c0bb51f6c8c374e88ac966c178d1eb8c`.
