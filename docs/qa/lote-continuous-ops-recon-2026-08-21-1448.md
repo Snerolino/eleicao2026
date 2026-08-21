@@ -27,8 +27,12 @@ Executar um tick bounded do control plane, manter a recon oficial read-only ativ
 - Gaps de fonte legislativa continuam reais e separados da lane local.
 - Doctor operacional segue com o conhecido risco do shell de cron em Node 22.22.2, enquanto os gates deste tick foram executados com Node 24.19.0.
 
-## Publicação
-Este tick gerou QA local novo após gates verdes. Como o documento ainda não está commitado, não houve commit/push/deploy neste ponto; a publicação automática deve ocorrer somente após revalidar os gates incluindo este arquivo.
+## Publicação verificada
+- Commit `71c1e4efdc277877dd3829a74b2d92f2e4214d57` publicado em `origin/main`.
+- Workflow backup Cloudflare `334951434`, run `32494384180`: `completed/success`; `headSha` igual ao commit.
+- Produção `https://rs.votopraquem.org`: HTTP 200.
+- `https://rs.votopraquem.org/release.json?cb=71c1e4e`: SHA idêntico, `row_count=1003`, release `71c1e4e-20260821T145145362Z`.
+- `npm run smoke:preview -- --url https://rs.votopraquem.org`: 1.002 cards, 0 falhas HTTP, 0 erros de console online, service worker pronto, exit 0.
 
 ## Próximo passo
-Revalidar gates finais, publicar o lote documental no caminho backup do Cloudflare somente após commit/push, confirmar `headSha`/`release.json`/HTTP 200, e iniciar novo chunk bounded. Aplicação factual remota permanece condicionada a R0, schema/FK, fonte oficial, dry-run e idempotência.
+Iniciar novo chunk bounded de recon oficial e lane local independente. Aplicação factual remota permanece condicionada a R0, schema/FK, fonte oficial, dry-run e idempotência.

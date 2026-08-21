@@ -9,7 +9,8 @@
 - Auditoria estrita read-only manteve gaps de fonte: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; exit 2 por gaps reais.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1448.md`.
 - Nenhuma escrita factual, identidade, FK, voto, claim, source reference, Supabase ou Cloudflare ocorreu.
-- Próximo chunk: revalidar gates incluindo QA, publicar documentação via backup Cloudflare e confirmar produção; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+- Publicação verificada: commit `71c1e4efdc277877dd3829a74b2d92f2e4214d57` em `origin/main`; backup Cloudflare `334951434`, run `32494384180`, `completed/success`, `headSha` idêntico. Produção HTTP 200; `/release.json?cb=71c1e4e` confirmou SHA idêntico, `row_count=1003`, release `71c1e4e-20260821T145145362Z`; smoke remoto 1002 cards/0 HTTP/console errors/service worker pronto.
+- Próximo chunk: nova recon bounded oficial e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
 # Tick contínuo — recon oficial e gates locais — 2026-08-21T14:26Z
 
