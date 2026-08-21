@@ -1,3 +1,15 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T21:51Z
+
+- Lock bounded adquirido/liberado com `flock -n`; recon oficial e lane local executadas sem escrita factual.
+- Dataset oficial comparado ao snapshot: 1.003/1.003 IDs, diferença 0/0.
+- Câmara: API oficial em oito janelas trimestrais, 22/22 páginas válidas, `blocked=null`, 2.100 IDs descobertos read-only; sem reconciliação/aplicação.
+- ALRS FED-17 residual falhou fechado com `fetch failed`; quatro residuais Enio Carlos Terra continuam sem ID/fonte exata. Senado falhou fechado por envelope `/tmp/senado-nominal-envelope-latest.json` ausente (`ENOENT`); nenhum PDF, identidade, FK ou voto promovido.
+- Auditoria de fontes manteve gaps `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; sem promoção.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos, build (sitemap 1.003 + 2), `git diff --check`; primeiro smoke transitório falhou durante carregamento e a repetição passou com 1.002 cards/0 HTTP/console errors/service worker.
+- Produção respondeu HTTP 200. QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-2151.md`.
+- Nenhuma escrita Supabase/Cloudflare ocorreu. Push GitHub segue bloqueado por HTTP 403; ALRS fetch, envelope Senado, gaps de fontes e credenciais de executor continuam bloqueios reais.
+- Próximo chunk: recon bounded oficial e lane local independente; publicação após credencial Git efetiva. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T21:30Z
 
 - Lock bounded adquirido/liberado com `flock -n`; recon oficial e lane local executadas sem escrita factual.
