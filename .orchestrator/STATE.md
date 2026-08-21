@@ -9,7 +9,7 @@
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1046.md`.
 - Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase ou Cloudflare ocorreu; somente timestamp de manifesto e documentação operacional.
 - Bloqueios: doctor shell FAIL por Node 22.22.2; smoke Codex MCP `401 invalid_refresh_token`, OpenCode ausente e Ollama sem preflight; quatro residuais Enio/Terra sem ID/fonte exata; gaps de fontes ALRS 1251/1647/4, Câmara 3/2/2 e Senado 112/188/455; Senado sem envelope e com deriva criptográfica.
-- Publicação verificada: commit `cc7e1783756f0f47032a2aa5f1b0608b560868a2` em `origin/main`; backup `334951434`, run `32474231702`, `completed/success`, `headSha` idêntico. Produção HTTP 200 e `/release.json` confirmaram SHA idêntico, release `cc7e178-20260821T104801124Z`, `row_count=1003`; smoke remoto 1002 cards/0 HTTP/console errors.
+- Publicação verificada: commit final `020211c4b9d51bd6a278141dd1614e4af4696a72` em `origin/main`; backup `334951434`, run `32474391422`, `completed/success`, `headSha` idêntico. Produção HTTP 200 e `/release.json` confirmaram SHA idêntico, release `020211c-20260821T105005720Z`, `row_count=1003`; smoke remoto 1002 cards/0 HTTP/console errors.
 - Próximo chunk: nova recon bounded e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T10:22Z
