@@ -878,6 +878,12 @@
 - Pacote continua `pending_review`, sem assessments/aplicação remota.
 - QA: `docs/qa/lote-alrs-confirmed-merit-review-pack-2026-08-21.md`.
 
+## Tick contínuo — drafts de assessments do mérito ALRS (2026-08-21)
+
+- 23 versões/139 votos; 8 versões com grupo candidato e 9 drafts de assessment.
+- Campos substantivos continuam nulos; nenhum grupo foi aprovado por palavra-chave.
+- QA: `docs/qa/lote-alrs-confirmed-merit-assessment-drafts-2026-08-21.md`.
+
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)
 
 - 30/30 itens P0 classificados: 9 mérito, 19 procedimento, 2 emenda, 0 destaque.
