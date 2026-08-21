@@ -2571,3 +2571,6 @@ Sem autorização humana explícita própria, não fazer:
 - Nenhuma escrita factual em snapshot, votos, source references, Supabase ou matriz ocorreu.
 - Próximo passo: publicar este checkpoint documental, verificar backup Cloudflare/SHA live e repetir recon bounded sem promover deriva.
 
+- Publicação verificada: commit `dcda2c3d1137385ae224484c15630cf7a7cd03ff`, backup `334951434`, run `32440153324`, `completed/success`, `headSha` idêntico; produção raiz HTTP 200 e `/release.json` confirmou o SHA live com `row_count=1003`.
+- Próximo chunk: nova recon bounded sem promover deriva; ALRS, Senado e Câmara continuam fail-closed para aplicação factual sem gates específicos.
+

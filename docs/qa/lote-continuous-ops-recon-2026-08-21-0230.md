@@ -30,6 +30,12 @@
 - Câmara permanece em reconhecimento; qualquer aplicação exige reconciliação exata, R0/schema/FK/fonte, dry-run e idempotência.
 - Doctor do shell cron continua com FAIL por Node 22.22.2; o chunk foi executado e validado explicitamente com Node 24.19.0. OpenCode ausente e Ollama sem preflight permanecem warnings opcionais.
 
+## Publicação/verificação
+
+- Commit documental inicial: `dcda2c3d1137385ae224484c15630cf7a7cd03ff` publicado em `origin/main`.
+- Workflow backup `334951434`, run `32440153324`, concluiu `completed/success` com `headSha` idêntico ao commit.
+- Produção: raiz `HTTP 200`; após propagação, `/release.json` confirmou SHA `dcda2c3d1137385ae224484c15630cf7a7cd03ff`, snapshot `row_count=1003`.
+
 ## Próximo passo
 
-Publicar este checkpoint documental no `main`, verificar o workflow backup do Cloudflare e confirmar o SHA live; depois iniciar nova recon bounded sem promover deriva.
+Iniciar nova recon bounded sem promover deriva; ALRS, Senado e Câmara continuam fail-closed para aplicação factual sem os gates específicos.
