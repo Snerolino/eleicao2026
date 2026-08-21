@@ -16,7 +16,9 @@ Manter as quatro lanes ativas: reconciliação oficial prioritária (ALRS/Senado
 
 ## Lane local
 
-`npm run impact:alrs:r4:merit` executado com Node 24: 25 versões, 149 votos factuais, 5 P0, 20 P1 e 4 colisões excluídas fail-closed. O pacote permanece `pending_review`, sem grupos/direção/defending_vote e sem aplicação remota.
+`npm run impact:alrs:r4:merit` em Node 24: 25 versões, 149 votos factuais, 5 P0, 20 P1 e 4 colisões excluídas fail-closed. O pacote permanece `pending_review`, sem grupos/direção/defending_vote e sem aplicação remota.
+
+A lane P0 independente também extraiu evidência oficial das 7 URLs ALRS do pacote: 7/7 HTTP 200 e 526 objetos `data-item`; a busca exata não encontrou Enio/Terra. O artefato `data/legislative-import/alrs/p0-official-event-evidence.json` mantém URLs, bytes e SHA por fonte, com `remote_apply=false`. Isso não resolve a identidade dos quatro residuais e não autoriza aplicação.
 
 ## Bloqueios reais
 
