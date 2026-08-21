@@ -1,3 +1,17 @@
+## Tick contínuo — recon oficial bounded Senado/ALRS/Câmara (2026-08-20T23:57Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `266b71c5e8b9c6df71ec679c6aacbd2faec673de` e terminou limpa em `3f0fa326db64659e162b1448dd92dce9ab4e1991`.
+- Senado: 6/6 HTTP 200, 6/6 prefixos PDF válidos, 0/6 bytes e 0/6 SHA-256 coincidentes com o manifesto de 2026-08-19; fail-closed, sem atualização ou aplicação.
+- ALRS: HTTP 200, 77442 bytes, SHA-256 `sha256:6a386d7d8b9ae17f8f5107b0cb6c90d71795a8568f08ed7c5972746a4ac0bab1`, 0 `data-item`, sem `Enio Carlos Terra`/`Terra`; os quatro residuais seguem sem ID oficial/fonte exata.
+- Câmara: janela oficial 2026-10-01 a 2026-12-31, HTTP 200, JSON válido, 0 registros; nenhum evento inferido.
+- Dataset vivo: snapshot 1003 IDs; 10 CSVs comparáveis, 0 IDs ausentes; nenhum refresh/sincronização aplicado.
+- Gates: 85 arquivos/381 testes, TypeScript, schema, `data:check` 1003/988, build, diff check e smoke local (1002 cards, 0 HTTP/console errors) verdes. Doctor segue FAIL somente pelo Node 22.22.2 do shell; OpenCode ausente e Ollama sem preflight são WARNs opcionais.
+- QA: `docs/qa/lote-official-recon-senado-alrs-camara-2026-08-20-2357.md`; artefatos read-only em `.orchestrator/runtime/continuous-tick-20260820T235752Z/`.
+- Nenhuma escrita factual em snapshot, manifesto, source reference, voto, identidade, FK, Supabase ou matriz ocorreu.
+- Publicação documental: commit `3f0fa326db64659e162b1448dd92dce9ab4e1991` em `origin/main`; backup `334951434`, run `32430978291`, `completed/success`, `headSha` idêntico.
+- Produção: raiz HTTP 200; `/release.json` HTTP 200 confirmou SHA `3f0fa326db64659e162b1448dd92dce9ab4e1991`, `row_count=1003`, release `3f0fa32-20260821T000221814Z`.
+- Próximo passo: repetir reconciliação bounded sem promover deriva e manter a lane local ativa no próximo chunk elegível.
+
 ## Tick contínuo — recon oficial bounded Senado/ALRS/Câmara (2026-08-20T23:31Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `62ae6dfdea0f1e5951d2abed158ac5e280c725c6`.
