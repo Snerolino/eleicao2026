@@ -1131,7 +1131,7 @@
 
 ## Tick contínuo — requisições de fontes substantivas ALRS (2026-08-21)
 
-- 9 requisições/8 versões geradas para texto integral, parecer/substitutivo e resultado/tramitação.
+- 7 requisições/6 versões P1 geradas para texto integral, parecer/substitutivo e resultado/tramitação; 5 P0 já verdes foram excluídos.
 - Nenhuma fonte substantiva foi promovida; score continua bloqueado.
 - QA: `docs/qa/lote-alrs-substantive-source-requests-2026-08-21.md`.
 

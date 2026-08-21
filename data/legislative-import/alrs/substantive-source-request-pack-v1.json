@@ -4,40 +4,11 @@
   "remote_apply": false,
   "public_approval": false,
   "totals": {
-    "requests": 9,
-    "versions": 8
+    "requests": 7,
+    "versions": 6,
+    "excluded_with_substantive_source": 5
   },
   "items": [
-    {
-      "proposition_version_id": "7c132ddc-b571-43ee-b2bc-e877f053480a",
-      "review_key": "sha256:7cf39a1e311538faa0de87845c8535ad54b09c3760f94837682c5d81a335ad31#7c132ddc-b571-43ee-b2bc-e877f053480a",
-      "title": "Altera a Lei Ordinária n.º 15.988 de 07 de agosto de 2023, que consolida a legislação relativa às mulheres vítimas de violência no âmbito do Estado do Rio Grande do Sul.",
-      "group_slug": "mulheres",
-      "official_vote_sources": [],
-      "required_source_types": [
-        "texto_integral_versao",
-        "parecer_ou_substitutivo",
-        "resultado_oficial_ou_tramitacao"
-      ],
-      "source_request_status": "pending_substantive_source",
-      "human_review_required": true,
-      "remote_apply": false
-    },
-    {
-      "proposition_version_id": "a57b1c83-3749-4c45-85b7-2408db20f5a2",
-      "review_key": "sha256:c1f571e5077d13d1486261d3db0fb706cee52efd00465184fef79a872f0772ee#a57b1c83-3749-4c45-85b7-2408db20f5a2",
-      "title": "Dispõe sobre a criação do Programa de Defesa pessoal para Mulheres “RS POR ELAS” no âmbito do Estado do Rio Grande do Sul e dá outras providências.(SEI 4237-0100/21-8)",
-      "group_slug": "mulheres",
-      "official_vote_sources": [],
-      "required_source_types": [
-        "texto_integral_versao",
-        "parecer_ou_substitutivo",
-        "resultado_oficial_ou_tramitacao"
-      ],
-      "source_request_status": "pending_substantive_source",
-      "human_review_required": true,
-      "remote_apply": false
-    },
     {
       "proposition_version_id": "1eb30d74-271c-4315-b7f6-54849d31c9bc",
       "review_key": "sha256:0d0b779976354f6bd951ce8d8bff213f63b1b515712734564144254577e6aa51#1eb30d74-271c-4315-b7f6-54849d31c9bc",

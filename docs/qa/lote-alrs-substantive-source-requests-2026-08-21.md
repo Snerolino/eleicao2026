@@ -4,8 +4,9 @@
 
 ## Resultado
 
-- 9 requisições de fonte substantiva;
-- 8 versões;
+- 7 requisições de fonte substantiva;
+- 6 versões P1;
+- 5 versões P0 excluídas por já possuírem fonte substantiva verde;
 - grupos/assessments vinculados preservados;
 - fontes factuais de voto separadas;
 - requisitos por item:
