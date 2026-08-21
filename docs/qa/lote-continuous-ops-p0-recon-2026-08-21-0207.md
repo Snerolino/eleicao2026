@@ -29,8 +29,9 @@
 
 ## Publicação/verificação
 
-- Worktree ficou com a atualização documental verificável do timestamp de `impact-merit-source-manifest.json` e este QA.
-- Produção consultada: raiz `HTTP 200`; `/release.json` `HTTP 200`, SHA live `d122b0a4ea4c9bd5e1ac74bd37729bd878ce12c7`, `row_count=1003`.
+- Commit publicado: `e056c0f1ea14ae8115dfbec30585bee0dd80220d`.
+- Backup Cloudflare workflow `334951434`, run `32438857575`, `completed/success`, `headSha` idêntico ao commit.
+- Produção após propagação: raiz `HTTP 200`; `/release.json` `HTTP 200`, SHA live `e056c0f1ea14ae8115dfbec30585bee0dd80220d`, release `e056c0f-20260821T021002403Z`, `row_count=1003`.
 
 ## Próximo passo
 

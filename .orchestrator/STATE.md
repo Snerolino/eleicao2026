@@ -2552,7 +2552,8 @@ Sem autorização humana explícita própria, não fazer:
 - Senado: dry-run 6 planejadas, 0 ausentes, 0 inserções, 0 votos tocados; fail-closed.
 - Gates: 95 arquivos/396 testes, TypeScript, schema, data:check 1003/988, build e diff check verdes.
 - QA: `docs/qa/lote-continuous-ops-p0-recon-2026-08-21-0207.md`.
-- Produção antes da publicação documental: raiz e `/release.json` HTTP 200; live SHA `d122b0a4ea4c9bd5e1ac74bd37729bd878ce12c7`, `row_count=1003`.
+- Publicação documental: commit `e056c0f1ea14ae8115dfbec30585bee0dd80220d`; backup `334951434`, run `32438857575`, `completed/success`, `headSha` idêntico.
+- Produção após propagação: raiz e `/release.json` HTTP 200; SHA live `e056c0f1ea14ae8115dfbec30585bee0dd80220d`, release `e056c0f-20260821T021002403Z`, `row_count=1003`.
 - Nenhuma escrita factual em snapshot, votos, source references, Supabase ou matriz.
 - Próximo passo: publicar o checkpoint documental e repetir recon bounded sem promover deriva.
 
