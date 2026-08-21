@@ -1,3 +1,18 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T16:17Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou em `23e085a431c6128e96a452def180ff1107ed57d5`; o commit documental `58e7377` permanece local, seis commits à frente de `origin/main`.
+- ALRS residual FED-17: dry-run `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio/Terra continuam sem ID/fonte exata.
+- Câmara: API oficial em 8 janelas trimestrais 2025–2026, 8/8 `status=ok`, IDs retornados na primeira página; nenhuma reconciliação/aplicação.
+- Senado: envelope nominal transitório ausente; fail-closed, sem PDF, `legislator_id`, FK ou voto promovido.
+- Dataset: arquivo completo `../dataset2026/candidatos/consulta_cand_2026/consulta_cand_2026_RS.csv` comparado ao snapshot por `SQ_CANDIDATO`: 1.003/1.003 IDs, diferença 0/0. O CSV irmão com 213 linhas é parcial e não foi usado como fonte completa.
+- Auditoria estrita read-only manteve gaps de fonte: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; exit 2 por gaps reais.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1003/988, build, smoke local 1002 cards/0 HTTP/console errors/service worker e `git diff --check`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1617.md`.
+- Produção respondeu HTTP 200 e `/release.json` HTTP 200, mas ainda está no release `e925327276b82481a348d4db3e2339d075dfe9a3`.
+- `git push origin main` e `env -u GH_TOKEN git push origin main` falharam com HTTP 403; workflow backup Cloudflare `334951434` não foi acionado. Doctor continua exit 1 por Node 22.22.2, OpenCode ausente/Ollama sem preflight e Codex MCP `401 invalid_refresh_token`.
+- Nenhuma escrita factual, identidade, FK, voto, claim, source reference, Supabase ou Cloudflare ocorreu.
+- Próximo chunk: recon bounded oficial e lane local independente; republicar após corrigir permissão efetiva de push. Aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T15:54Z
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou em `f904171ea1b3` e tinha quatro commits documentais locais à frente de `origin/main`; após os gates, o commit documental deste tick permanece local por bloqueio GitHub 403.
