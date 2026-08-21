@@ -1,4 +1,13 @@
-## Tick contínuo — recon bounded oficial e gates locais — 2026-08-21T07:14Z
+## Tick contínuo — recon bounded oficial e gates locais — 2026-08-21T07:33Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `165e5f0f5f7849a4a0fd2786bb5cf7a2a158dfca`.
+- Recon oficial: Senado 6/6 HTTP 200 e PDFs válidos, 3/6 bytes e 0/6 SHA coincidentes; ALRS HTTP 200, 77442 bytes, 0 `data-item`, sem Enio/Terra; Câmara JSON válido na janela 2026-10-01–2026-12-31, 0 registros; fail-closed.
+- Dataset vivo: 7 CSVs comparáveis, snapshot 1003 IDs, 0 ausentes no snapshot; nenhum refresh aplicado.
+- Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase, Cloudflare ou snapshot ocorreu; evidências em `.orchestrator/runtime/tick-20260821T073351Z/`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0733.md`.
+- Bloqueios: Senado com deriva SHA/bytes; ALRS sem catálogo `data-item`/Enio/Terra; Câmara sem lote novo; doctor shell FAIL por Node 22.22.2. Gates serão executados com Node 24.19.0.
+- Próximo chunk: gates locais da documentação deste tick e publicação/verificação; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou em `20a71ee0aa46cb82c0bfd28319334247473e7c35`.
 - Recon oficial: ALRS 7/7 HTTP 200 e válidas; FED-17 dry-run `0` votos/`0` correções, 4 bloqueados, `impact_touched=false`. Câmara HTTP válido na janela 2026-10-01–2026-12-31, 0 `vote_ids`. Senado permanece fail-closed por deriva de bytes/SHA.
