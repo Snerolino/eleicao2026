@@ -1,3 +1,17 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T19:15Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `f5fe3315c0bb51f6c8c374e88ac966c178d1eb8c`.
+- ALRS residual FED-17: `repair-alrs-fed17-residual.mjs` falhou fechado com `FED-17 repair: fetch failed`; 0 votos/correções e quatro residuais Enio/Terra continuam sem ID/fonte exata.
+- Câmara: API oficial em 8 janelas trimestrais 2025–2026, 8/8 páginas iniciais `status=ok`; IDs descobertos read-only, nenhuma reconciliação/aplicação.
+- Senado: envelope nominal transitório ausente (`ENOENT`); fail-closed, sem PDF, `legislator_id`, FK ou voto promovido.
+- Dataset completo comparado ao snapshot: 1.003/1.003 IDs, diferença 0/0.
+- Auditoria estrita read-only manteve gaps de fonte: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; exit 2 por gaps reais.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1003/988, build (`sitemap` 1.003 candidatos), smoke local 1.002 cards/0 HTTP/console errors/service worker e `git diff --check`.
+- Produção respondeu HTTP 200; segunda tentativa de `release.json` sofreu falha transitória de DNS e não foi usada para afirmar SHA live.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1915.md`.
+- Nenhuma escrita factual, identidade, FK, voto, claim, source reference, Supabase ou Cloudflare ocorreu.
+- Próximo chunk: tentar publicação após resolver a permissão efetiva de push e continuar recon bounded oficial read-only; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T18:19Z
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `f975f809a3d9c2cb4920f0032de88452e6c33095`.
