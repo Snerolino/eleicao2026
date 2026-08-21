@@ -1,3 +1,15 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T23:24Z
+
+- Lock bounded adquirido/liberado com `flock -n`; recon oficial read-only e lane local executadas sem escrita factual/remota.
+- Câmara: API oficial em 8 janelas trimestrais, 22 páginas observadas, `blocked=null`, 2.100 `vote_ids` descobertos read-only; sem reconciliação/aplicação.
+- ALRS FED-17 permanece com `planned_votes=0` e 4 residuais Enio Carlos Terra sem ID/fonte exata. Senado fail-closed por envelope ausente; nenhum PDF, `legislator_id`, FK ou voto promovido.
+- Dataset oficial comparado ao snapshot: SHA CSV `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`, 1.003/1.003 IDs, diferença 0/0. Supabase dry-run: banco 1.000, 3 a criar, 1.000 a atualizar, 0 fora do snapshot; nenhuma escrita.
+- Gates Node 24.18.1 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos, build (sitemap 1.003 + 2), smoke local 1.002 cards/0 HTTP/console errors/service worker e `git diff --check`.
+- Auditoria estrita mantém gaps de fontes `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; sem promoção.
+- Doctor FAIL por shell Node 22.22.2; OpenCode ausente/Ollama sem preflight/MCP não exercitado. Push GitHub HTTP 403 e DNS/produção não revalidados neste tick. Nenhuma escrita Supabase/Cloudflare ocorreu.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-2324.md`.
+- Próximo chunk: recon bounded oficial da Câmara, mantendo ALRS/Senado fail-closed; publicar após push e DNS permitirem validar backup Cloudflare, SHA live e smoke remoto. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T23:01Z
 
 - Lock bounded adquirido/liberado com `flock -n`; recon oficial read-only e lane local executadas sem escrita factual/remota.
