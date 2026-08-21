@@ -1,4 +1,14 @@
-## Tick contínuo — recon bounded oficial e gates fail-closed — 2026-08-21T05:40Z
+## Tick contínuo — recon bounded oficial e gates locais — 2026-08-21T06:03Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou em `78cae7a4ee87d6d044f70b3a84ff45e28e356be9`.
+- Recon oficial: ALRS 7/7 HTTP 200 e válidas; FED-17 dry-run bloqueado por `JWT issued at future`, 0 aplicações. Senado 6/6 HTTP 200, 6/6 PDFs válidos, 3/6 bytes coincidentes e 0/6 SHA coincidentes. Câmara HTTP válido na janela 2026-10-01–2026-12-31, 0 vote_ids.
+- Dataset vivo: CSV completo com 1003 linhas/IDs, 0 somente no dataset e 0 somente no snapshot; CSV segmentado de 213 linhas não foi tratado como equivalente.
+- Gates Node 24.19.0 verdes: 97 arquivos/398 testes, TypeScript, schema, `data:check` 1003/988, build, `git diff --check` e smoke local 1002 cards/0 HTTP/console errors.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0603.md`.
+- Alterações limitadas à evidência: relatório QA, checkpoint e timestamp do manifesto ALRS; nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase ou snapshot ocorreu.
+- Bloqueios: JWT do ambiente em futuro para FED-17, Senado com deriva SHA, Câmara sem lote novo; doctor shell continua FAIL por Node 22.22.2, gates executados com Node 24.19.0.
+- Próximo chunk: publicar evidência documental após commit/push e workflow backup; manter recon oficial e lane local independentes.
+
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou em `82141728b1568805ec468f155a9409d56d5ba6ab`.
 - ALRS FED-17 dry-run: 0 votos, 0 correções de data, 4 bloqueados; nenhuma aplicação. Revalidação de 7/7 URLs ALRS oficiais: HTTP 200, 7/7 válidas, 0 falhas; manifesto somente com timestamp atualizado.
