@@ -22,12 +22,13 @@ Executar tick bounded com recon oficial read-only nas três frentes prioritária
 - `git diff --check`: aprovado.
 - `npm run smoke:local`: aprovado; 1002 cards, 0 falhas HTTP, 0 erros online de console, service worker pronto.
 
-## Estado e bloqueios reais
-- Nenhuma escrita factual, identidade, FK, voto, claim, source reference, Supabase ou Cloudflare ocorreu.
-- Senado bloqueado por envelope transitório ausente e deriva criptográfica já registrada.
-- FED-17 bloqueado pelo JWT emitido no futuro e pelos quatro residuais sem ID oficial/fonte exata.
-- Validador substantivo permanece fail-closed para 25 itens sem fonte.
-- Doctor do shell continua FAIL por Node `v22.22.2`; rota Codex MCP continua bloqueada por `401 invalid_refresh_token`, OpenCode ausente e Ollama sem preflight utilizável.
+## Estado e publicação
+- Nenhuma escrita factual, identidade, FK, voto, claim, source reference ou Supabase ocorreu.
+- Commit documental `d353d3009ce6894903f3079db6a8c0e2cdd368ec` enviado para `origin/main`.
+- Workflow backup Cloudflare `334951434`, run `32476264004`: `completed/success`, `headSha` idêntico.
+- Produção `https://rs.votopraquem.org`: root HTTP `200`; `/release.json` HTTP `200`, `sha=d353d3009ce6894903f3079db6a8c0e2cdd368ec`, `release_id=d353d30-20260821T111430060Z`, `row_count=1003`.
+- Smoke local e remoto aprovados: 1002 cards, 0 falhas HTTP, 0 erros online de console, service worker pronto.
+- Bloqueios reais mantidos: Senado sem envelope transitório e com deriva criptográfica; FED-17 com JWT emitido no futuro e quatro residuais sem ID/fonte exata; validador substantivo fail-closed para 25 itens; doctor shell FAIL por Node `v22.22.2`; Codex MCP `401 invalid_refresh_token`, OpenCode ausente e Ollama sem preflight.
 
 ## Próximo passo
-Executar gates locais completos; se verdes, publicar apenas a evidência operacional e verificar produção. Manter aplicação remota bloqueada até todos os gates factuais obrigatórios.
+Manter recon bounded e lane local independente; aplicação remota continua proibida até R0, schema/FK, fonte oficial exata, dry-run e idempotência.
