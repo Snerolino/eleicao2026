@@ -1,3 +1,16 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T22:34Z
+
+- Lock bounded adquirido/liberado com `flock -n`; recon oficial read-only e gates locais executados sem escrita factual/remota.
+- ALRS FED-17 dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra continuam sem ID/fonte exata.
+- Câmara: 7/8 janelas trimestrais oficiais responderam `ok`; a janela 2025-01-01–2025-03-31 falhou fechado com `fetch failed`, sem `vote_ids`, reconciliação ou aplicação.
+- Senado fail-closed: `/tmp/senado-nominal-envelope-latest.json` ausente; nenhum PDF, `legislator_id`, FK ou voto promovido.
+- Snapshot público alinhado e `data:check` verde: 1.003 candidaturas/988 fotos; SHA TSE `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check`, build (sitemap 1.003 + 2), smoke local 1.002 cards/0 HTTP/console errors/service worker e `git diff --check`.
+- Produção HTTP 200 e `/release.json` HTTP 200, live permanece em `e925327276b82481a348d4db3e2339d075dfe9a3`; local `main` está 27 commits à frente de `origin/main`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-2234.md`.
+- Bloqueios: push efetivo GitHub ainda pendente; doctor FAIL por shell Node 22.22.2 e timeout no smoke dos executores; Senado sem envelope; ALRS sem evidência recuperável; janela Câmara com `fetch failed`. Nenhuma escrita Supabase/Cloudflare ocorreu.
+- Próximo chunk: recon bounded oficial da janela Câmara bloqueada e lane local independente; publicação após credencial efetiva de push. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T22:13Z
 
 - Lock bounded com `flock -n`; recon oficial read-only e gates locais executados sem escrita factual/remota.
