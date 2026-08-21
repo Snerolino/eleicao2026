@@ -142,6 +142,7 @@
 | [`qa/lote-correcao-estrutural-fila-alrs-2026-08-21.md`](qa/lote-correcao-estrutural-fila-alrs-2026-08-21.md) | Correções estruturais da fila ALRS |
 | [`qa/lote-alrs-version-key-collisions-2026-08-21.md`](qa/lote-alrs-version-key-collisions-2026-08-21.md) | Auditoria de colisões ALRS |
 | [`qa/lote-alrs-version-collision-resolution-pack-2026-08-21.md`](qa/lote-alrs-version-collision-resolution-pack-2026-08-21.md) | Pacote de resolução de colisões ALRS |
+| [`qa/lote-alrs-collision-source-recovery-followup-2026-08-21.md`](qa/lote-alrs-collision-source-recovery-followup-2026-08-21.md) | Follow-up de fontes das colisões ALRS |
 | [`qa/lote-alrs-matrix-apply-plan-2026-08-21.md`](qa/lote-alrs-matrix-apply-plan-2026-08-21.md) | Plano local de aplicação da matriz ALRS (fail-closed) |
 | [`qa/lote-official-recon-bounded-2026-08-21-0116.md`](qa/lote-official-recon-bounded-2026-08-21-0116.md) | Reconhecimento oficial bounded e circuit-breaker ALRS |
 | [`qa/lote-alrs-title-recovery-pack-2026-08-21.md`](qa/lote-alrs-title-recovery-pack-2026-08-21.md) | Pacote ALRS de recuperação de títulos |

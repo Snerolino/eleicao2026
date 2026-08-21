@@ -792,6 +792,13 @@
 - Manifesto `version-key-collision-resolutions-confirmed.json` integrado ao gerador.
 - 12 colisões continuam bloqueadas por falta de fonte primária/text hash suficiente.
 
+## Tick contínuo — follow-up de fontes das colisões ALRS (2026-08-21)
+
+- Scouts recuperaram fontes de votação/matéria para os 12 grupos restantes, sem promover resolução automática.
+- `texto-base`, PEC 305/2026 e títulos truncados continuam bloqueados para identidade/text hash/texto substantivo.
+- Nenhuma escrita remota ocorreu.
+- QA: `docs/qa/lote-alrs-collision-source-recovery-followup-2026-08-21.md`.
+
 ## Tick contínuo — recuperação de títulos ALRS (2026-08-21)
 
 - Pacote criado para 110 itens: 109 títulos genéricos e 1 possivelmente truncado.
