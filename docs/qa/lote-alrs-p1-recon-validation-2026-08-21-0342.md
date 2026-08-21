@@ -54,9 +54,9 @@ Não aplicar nada remotamente sem R0/schema/FK/fonte exata/dry-run/idempotência
 
 ## Publicação documental verificada
 
-- Commits publicados em `origin/main`: `454bf35` e `fd489b1`.
-- Workflow backup Cloudflare `334951434`, run `32444404944`: `completed/success`,
-  `headSha=fd489b1ed61b1244f130e392b764b519603f656b`.
+- Commits publicados em `origin/main`: `454bf35`, `fd489b1`, `6040b2a` e `e4e192b`.
+- Workflow backup Cloudflare `334951434`, run `32444502108`: `completed/success`,
+  `headSha=6040b2af939555b23662523a356644d53d32f5c4`.
 - Produção: raiz HTTP 200; `/release.json` confirmou o mesmo SHA, `row_count=1003`.
 - Smoke remoto: **1002 cards, 0 falhas HTTP, 0 erros de console online**;
   service worker pronto.
