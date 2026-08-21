@@ -29,6 +29,14 @@ Executados com Node `v24.19.0`:
 
 Nenhuma escrita factual em Supabase, identidade, FK, voto, matriz, claim ou source reference ocorreu. O item ALRS FED-17 permanece bloqueado pelo relógio/JWT do ambiente (`JWT issued at future`). Senado permanece fail-closed pela deriva de SHA; Câmara não possui lote novo. O doctor do shell continua com FAIL porque usa Node `v22.22.2`; os gates do projeto foram executados com Node `v24.19.0`. O smoke do doctor também não comprovou Codex MCP por token expirado (`401 invalid_refresh_token`); isso não bloqueou as lanes read-only nem a verificação local.
 
+## Publicação verificada
+
+- Commit `bc1faed514013b52c5feeb5ce08ad1d2044dc237` publicado em `origin/main`.
+- Workflow backup `334951434`, run `32454517903`: `completed/success`, `headSha` idêntico ao commit.
+- Produção raiz `https://rs.votopraquem.org`: **HTTP 200**.
+- `release.json`: SHA completo idêntico; snapshot `row_count=1003`, SHA TSE `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- `npm run smoke:preview -- --url https://rs.votopraquem.org/`: **exit 0**, 1002 cards, 0 falhas HTTP, 0 erros de console online, service worker pronto.
+
 ## Próximo passo
 
 Manter recon bounded oficial e lane local independente. Revalidar FED-17 somente após corrigir o relógio/JWT; não aplicar Senado, Câmara ou ALRS remotamente sem R0, schema/FK, fonte exata, dry-run e idempotência.
