@@ -10,7 +10,7 @@
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1720.md`; evidências read-only em `.orchestrator/runtime/continuous-tick-20260821T172033Z/`.
 - Doctor permanece exit 1 por Node 22.22.2; OpenCode ausente, Ollama sem preflight e Codex MCP/exec `401 invalid_refresh_token` são bloqueios de infraestrutura.
 - Nenhuma escrita factual, identidade, FK, voto, claim, source reference, Supabase ou Cloudflare ocorreu.
-- Commit documental deve seguir após os gates; push continuará sendo tentado, sem contornar o HTTP 403 já observado. Aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+- Commit documental `e262953` criado após os gates; `git push origin main` e `env -u GH_TOKEN git push origin main` falharam com HTTP 403 (`Permission denied`). Produção respondeu HTTP 200; workflows backup Cloudflare `334951434` e primário `320564705` permanecem ativos, sem run novo por ausência de push. Aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T17:00Z
 
