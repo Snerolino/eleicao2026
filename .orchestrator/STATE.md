@@ -776,6 +776,12 @@
 - `remote_apply=false`; nenhum assessment/matriz remoto aplicado.
 - QA: `docs/qa/lote-alrs-safe-matrix-apply-plan-2026-08-21.md`.
 
+## Tick contínuo — pacote editorial P0 ALRS (2026-08-21)
+
+- 5 versões P0 sem colisão/40 votos, até 7 candidatos por versão.
+- Pacote marcado `P0-first-editorial-review`, ainda `pending_review` e sem escrita remota.
+- QA: `docs/qa/lote-alrs-p0-matrix-pack-2026-08-21.md`.
+
 ## Tick contínuo — fechamento final R4 (2026-08-20)
 
 - 13/13 itens da fila Q2/Q3 revisados; 12 não pontuáveis aprovados e 1 assessment populacional aprovado.
