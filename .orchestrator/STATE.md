@@ -865,6 +865,12 @@
 - 0 itens sem correspondência; nenhum write remoto.
 - QA: `docs/qa/lote-alrs-p1-official-match-2026-08-21.md`.
 
+## Tick contínuo — classificação oficial P1 ALRS (2026-08-21)
+
+- 20 P1 classificados: 18 mérito, 1 procedimento/emenda, 1 múltiplo bloqueado.
+- Nenhum grupo/impacto inferido; nenhum write remoto.
+- QA: `docs/qa/lote-alrs-p1-official-classification-2026-08-21.md`.
+
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)
 
 - 30/30 itens P0 classificados: 9 mérito, 19 procedimento, 2 emenda, 0 destaque.
