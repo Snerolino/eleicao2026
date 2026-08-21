@@ -1,3 +1,15 @@
+## Tick contínuo — recon bounded oficial e gates fail-closed — 2026-08-21T05:40Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou em `82141728b1568805ec468f155a9409d56d5ba6ab`.
+- ALRS FED-17 dry-run: 0 votos, 0 correções de data, 4 bloqueados; nenhuma aplicação. Revalidação de 7/7 URLs ALRS oficiais: HTTP 200, 7/7 válidas, 0 falhas; manifesto somente com timestamp atualizado.
+- Câmara: API oficial Q4 2026 HTTP válido, 0 `vote_ids`, sem inferência. Senado permaneceu fail-closed por deriva já registrada.
+- Auditoria read-only: gaps ALRS 1251 versões/1647 eventos/4 votos; Câmara 3/2/2; Senado 112/188/455. `data:check`: 1003 candidaturas/988 fotos.
+- Gates Node 24.19.0 verdes: 97 arquivos/398 testes, TypeScript, schema, `data:check`, build, diff check e smoke local 1002 cards/0 HTTP/console errors.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0540.md`.
+- Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase, Cloudflare ou snapshot ocorreu.
+- Bloqueios: quatro residuais Enio/Terra sem ID/fonte exata, Senado com deriva de SHA/bytes, Câmara sem lote novo e gaps substantivos de fonte; doctor shell ainda FAIL pelo Node 22.22.2, gates executados com Node 24.19.0.
+- Próximo chunk: nova recon bounded oficial e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon bounded oficial e gates fail-closed — 2026-08-21T05:16Z
 
 - Lock bounded com `flock -n`; worktree iniciou limpa em `9e5eabe3404b94a7504daafd7cbacd6a9600272d`.
