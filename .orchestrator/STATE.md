@@ -4,7 +4,7 @@
 - Recon oficial: ALRS HTTP 200, 77442 bytes, SHA `6a386d7d8b9ae17f8f5107b0cb6c90d71795a8568f08ed7c5972746a4ac0bab1`, 0 `data-item`; Câmara HTTP 200, JSON válido, janela 2026-10-01–2026-12-31, 0 registros; Senado 6/6 HTTP 200 e prefixos PDF válidos, 2/6 bytes e 0/6 SHA coincidentes com o manifesto.
 - Lane local: pacote de pedidos substantivos regenerado com 9 pedidos/8 versões; validador fail-closed confirmou 25/25 itens sem fonte substantiva; reparo ALRS FED17 permaneceu dry-run com 0 votos/0 datas e 4 bloqueados.
 - Gates Node 24.19.0 verdes: 97 arquivos/398 testes, TypeScript, schema, `data:check` 1003/988, build, diff check e smoke local 1002 cards/0 HTTP/console errors.
-- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0430.md`. Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase ou Cloudflare ocorreu.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0430.md`. Nenhuma escrita factual, identidade, FK, voto, matriz, claim ou source reference ocorreu; documentação publicada pelo backup `334951434`, run `32447332560`, `completed/success`, `headSha` `1646526907999fae5a4def41a23bcb9426509814`; produção HTTP 200, `/release.json` confirmou o SHA e snapshot 1003; smoke remoto 1002 cards/0 HTTP/console errors.
 - Bloqueios: quatro residuais Enio/Terra sem ID/fonte exata, Senado com SHA divergente, Câmara sem lote novo, 25 itens ALRS sem fonte substantiva; doctor FAIL somente pelo Node 22.22.2 do shell.
 - Próximo chunk: recon bounded e recuperação de fontes substantivas oficiais; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 

@@ -53,8 +53,13 @@ Executados com Node 24.19.0:
 ## Estado de publicação
 
 Este tick só produziu evidência read-only e documentação. Nenhuma identidade,
-FK, voto, matriz, claim, source reference, Supabase ou Cloudflare foi alterada.
-Não há mutação factual elegível para publicação neste tick.
+FK, voto, matriz, claim ou source reference foi alterada; não houve escrita
+factual em Supabase. A documentação foi publicada no commit
+`1646526907999fae5a4def41a23bcb9426509814` pelo workflow backup Cloudflare
+`334951434`, run `32447332560`, concluído com sucesso e `headSha` idêntico.
+Produção respondeu HTTP 200; `/release.json` confirmou o mesmo SHA e
+`snapshot.row_count=1003`. Smoke remoto: 1002 cards, 0 falhas HTTP e 0 erros
+de console online.
 
 ## Próximo passo
 
