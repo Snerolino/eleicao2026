@@ -1,4 +1,13 @@
-## Tick contínuo — recon bounded oficial e gates locais — 2026-08-21T06:27Z
+## Tick contínuo — recon bounded oficial e gates locais — 2026-08-21T06:49Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `2527c0f720a833eb7662d74225f8ee8e89cc33f2`.
+- Recon oficial: ALRS 7/7 HTTP 200 e válidas; FED-17 dry-run bloqueado por `JWT issued at future`, 0 aplicações. Câmara HTTP válido na janela 2026-10-01–2026-12-31, 0 `vote_ids`.
+- Dataset vivo: `consulta_cand_2026/consulta_cand_2026_RS.csv` com 1003 linhas/IDs; 0 somente no dataset e 0 somente no snapshot. Nenhum refresh aplicado.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0649.md`; manifesto ALRS alterado somente no timestamp de reconciliação.
+- Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase, Cloudflare ou snapshot ocorreu.
+- Bloqueios: JWT do ambiente em futuro para FED-17; Senado com deriva SHA/bytes; Câmara sem lote novo; doctor shell FAIL por Node 22.22.2. Recon e verificações executadas com Node 24.19.0.
+- Próximo chunk: gates locais completos, publicação documental e nova recon bounded; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou em `d22d4312c830e94025954af41cf2b7b915476434`.
 - Recon oficial: ALRS 7/7 HTTP 200 e válidas; FED-17 dry-run bloqueado por `JWT issued at future`, 0 aplicações. Senado 6/6 HTTP 200, 6/6 PDFs válidos, 3/6 bytes coincidentes e 0/6 SHA coincidentes. Câmara HTTP válido na janela 2026-10-01–2026-12-31, 0 vote_ids.
