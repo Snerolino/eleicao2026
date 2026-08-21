@@ -67,6 +67,7 @@
     "impact:alrs:r4:confirmed-merit": "node scripts/build-confirmed-alrs-merit-review-pack.mjs",
     "impact:alrs:r4:confirmed-merit:drafts": "node scripts/build-confirmed-merit-assessment-drafts.mjs",
     "impact:alrs:r4:confirmed-merit:proposals": "node scripts/build-confirmed-merit-assessment-proposals.mjs",
+    "impact:alrs:r4:substantive:sources": "node scripts/validate-alrs-substantive-sources.mjs",
     "orch:setup": "bash scripts/orchestrator/setup-local.sh",
     "orch:doctor": "bash scripts/orchestrator/doctor.sh",
     "orch:install-skill": "bash scripts/orchestrator/install-hermes-skill.sh",
