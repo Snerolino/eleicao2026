@@ -849,6 +849,12 @@
 - Evidência factual pronta para classificar os 20 itens; nenhum impacto aprovado.
 - QA: `docs/qa/lote-alrs-p1-official-event-evidence-2026-08-21.md`.
 
+## Tick contínuo — matching oficial P1 ALRS (2026-08-21)
+
+- 19/20 itens P1 matched por identidade oficial estruturada; 1 múltiplo mantido para revisão.
+- 0 itens sem correspondência; nenhum write remoto.
+- QA: `docs/qa/lote-alrs-p1-official-match-2026-08-21.md`.
+
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)
 
 - 30/30 itens P0 classificados: 9 mérito, 19 procedimento, 2 emenda, 0 destaque.

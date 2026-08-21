@@ -62,6 +62,7 @@
     "impact:alrs:r4:substantive": "node scripts/build-alrs-substantive-review-queue.mjs",
     "impact:alrs:r4:p1": "node scripts/build-alrs-p1-substantive-pack.mjs",
     "impact:alrs:r4:p1:evidence": "node scripts/extract-alrs-p1-official-evidence.mjs",
+    "impact:alrs:r4:p1:match": "node scripts/match-alrs-p1-official-evidence.mjs",
     "orch:setup": "bash scripts/orchestrator/setup-local.sh",
     "orch:doctor": "bash scripts/orchestrator/doctor.sh",
     "orch:install-skill": "bash scripts/orchestrator/install-hermes-skill.sh",
