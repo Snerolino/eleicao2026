@@ -34,6 +34,12 @@ Executados com Node `v24.19.0` após o doctor do shell cron detectar Node 22.22.
 - Câmara não apresentou lote oficial novo.
 - Doctor: único FAIL operacional é o shell Node 22; OpenCode ausente e Ollama sem preflight são warnings opcionais. A rota Codex MCP não foi usada para mutação.
 
+## Publicação verificada
+
+- Commit `2588c28cd214ededc3b7e6c0104e1cbcd7434aba` publicado em `origin/main`.
+- Workflow backup `334951434`, run `32450168296`, concluiu `success` com `headSha` idêntico.
+- Produção respondeu HTTP 200; `/release.json` confirmou SHA idêntico, release `2588c28-20260821T052045516Z` e snapshot `row_count=1003`.
+
 ## Próximo passo
 
-Manter recon bounded e lane local independente. Aplicação remota somente após R0, schema/FK, fonte oficial exata, dry-run e idempotência.
+Manter recon bounded e lane local independente; aplicação remota somente após R0, schema/FK, fonte oficial exata, dry-run e idempotência.

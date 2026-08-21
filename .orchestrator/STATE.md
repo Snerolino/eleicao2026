@@ -7,7 +7,8 @@
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0516.md`.
 - Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase, Cloudflare ou snapshot ocorreu.
 - Gates locais serão/foram executados com Node 24.19.0; doctor do shell continua FAIL somente por Node 22.22.2, com OpenCode ausente e Ollama sem preflight como WARNs opcionais.
-- Próximo chunk: fechar gates locais, publicar documentação e verificar produção; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+- Publicação verificada: commit `2588c28cd214ededc3b7e6c0104e1cbcd7434aba` em `origin/main`; backup `334951434`, run `32450168296`, `completed/success`, `headSha` idêntico. Produção raiz HTTP 200 e `/release.json` confirmou SHA idêntico, `row_count=1003`, release `2588c28-20260821T052045516Z`.
+- Próximo chunk: nova recon bounded oficial e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon bounded e dataset audit — 2026-08-21T04:55Z
 
