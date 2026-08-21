@@ -14,6 +14,7 @@ export function buildMeritReviewPack(queue) {
     suggested_groups: [],
     suggested_direction: null,
     defending_vote: null,
+    human_review_required: true,
     remote_apply: false,
   }));
   return {

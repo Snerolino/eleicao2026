@@ -9,14 +9,18 @@ const output = resolve(root, 'data/legislative-import/alrs/impact-assessment-dra
 export function buildAssessmentDraftPack(pack) {
   const items = (pack.items ?? []).filter((item) => Array.isArray(item.group_candidates) && item.group_candidates.length > 0).map((item) => ({
     proposition_version_id: item.proposition_version_id,
+    review_key: item.review_key,
     proposition_external_id: item.proposition_external_id,
     version_key: item.version_key,
+    version_key_collision: item.version_key_collision,
     title: item.title,
+    title_quality: item.title_quality,
     priority: item.priority,
     candidate_count: item.candidate_count,
     factual_vote_count: item.factual_vote_count,
     event_external_ids: item.event_external_ids,
     official_sources: item.official_sources,
+    candidate_source_links: item.candidate_source_links ?? [],
     group_candidates: item.group_candidates,
     draft_assessments: item.group_candidates.map((group_slug) => ({
       group_slug,
@@ -30,6 +34,7 @@ export function buildAssessmentDraftPack(pack) {
     })),
     review_status: 'pending_review',
     remote_apply: false,
+    human_review_required: true,
   }));
   return { schema_version: '1.0.0', packet_type: 'alrs_impact_assessment_draft_pack', methodology_version: '1.0.0', unit_of_work: 'one_matrix_per_proposition_version', remote_apply: false, public_approval: false, totals: { versions: items.length, factual_votes: items.reduce((sum, item) => sum + item.factual_vote_count, 0), draft_assessments: items.reduce((sum, item) => sum + item.draft_assessments.length, 0) }, items };
 }

@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { describe, expect, it } from 'vitest';
-import { buildAlrsReviewQueue, classifyAlrsEventTitle } from '../build-alrs-impact-review-queue.mjs';
+import { buildAlrsReviewQueue, classifyAlrsEventTitle, classifyAlrsTitleQuality } from '../build-alrs-impact-review-queue.mjs';
 
 describe('alrs-impact-review-queue', () => {
   it('prioriza uma matriz por versão e reutilização entre candidatos', () => {
@@ -24,5 +24,15 @@ describe('alrs-impact-review-queue', () => {
     expect(classifyAlrsEventTitle('Requer a preferência para votação')).toBe('procedural_candidate');
     expect(classifyAlrsEventTitle('Altera a lei estadual')).toBe('merit_candidate');
     expect(classifyAlrsEventTitle('Aprova relatório final')).toBe('needs_official_classification');
+  });
+
+  it('marca colisões e títulos genéricos para revisão', () => {
+    const queue = buildAlrsReviewQueue([
+      { version_id: 'v1', version_key: 'same', proposition_external_id: 'p1', title: 'PL 1/2026', candidates: 7, votes: 7 },
+      { version_id: 'v2', version_key: 'same', proposition_external_id: 'p2', title: 'Texto completo da matéria', candidates: 7, votes: 7 },
+    ]);
+    expect(queue.items.every((item) => item.version_key_collision && item.human_review_required)).toBe(true);
+    expect(queue.items[0].review_key).not.toBe(queue.items[1].review_key);
+    expect(classifyAlrsTitleQuality('PL 1/2026')).toBe('generic');
   });
 });

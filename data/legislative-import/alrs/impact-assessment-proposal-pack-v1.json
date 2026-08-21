@@ -12,9 +12,12 @@
   "items": [
     {
       "proposition_version_id": "7c132ddc-b571-43ee-b2bc-e877f053480a",
+      "review_key": "sha256:7cf39a1e311538faa0de87845c8535ad54b09c3760f94837682c5d81a335ad31#7c132ddc-b571-43ee-b2bc-e877f053480a",
       "proposition_external_id": "alrs_prop_f510d5f5859f870e2c4f27e0",
       "version_key": "sha256:7cf39a1e311538faa0de87845c8535ad54b09c3760f94837682c5d81a335ad31",
+      "version_key_collision": false,
       "title": "Altera a Lei Ordinária n.º 15.988 de 07 de agosto de 2023, que consolida a legislação relativa às mulheres vítimas de violência no âmbito do Estado do Rio Grande do Sul.",
+      "title_quality": "complete_or_unverified",
       "priority": "P0",
       "candidate_count": 7,
       "factual_vote_count": 7,
@@ -79,6 +82,43 @@
           "ok": true
         }
       ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+          "event_external_id": "alrs_event_bd8cd263cd90f83632405c1a",
+          "source_reference_id": "b301a4ee-52cc-4cab-9089-6c92e8a9ca13"
+        },
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_bd8cd263cd90f83632405c1a",
+          "source_reference_id": "7739d2d8-4b18-49ad-ba85-610497376401"
+        },
+        {
+          "candidate_id": "733cef65-bf07-44ef-9521-36232ad0135c",
+          "event_external_id": "alrs_event_bd8cd263cd90f83632405c1a",
+          "source_reference_id": "c034ce27-3daa-48fb-89d9-58bd520c890c"
+        },
+        {
+          "candidate_id": "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+          "event_external_id": "alrs_event_bd8cd263cd90f83632405c1a",
+          "source_reference_id": "ad396b72-6a02-4fd9-978b-20a97afa88d5"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_bd8cd263cd90f83632405c1a",
+          "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_bd8cd263cd90f83632405c1a",
+          "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
+        },
+        {
+          "candidate_id": "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1",
+          "event_external_id": "alrs_event_bd8cd263cd90f83632405c1a",
+          "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
+        }
+      ],
       "group_candidates": [
         "mulheres"
       ],
@@ -96,6 +136,7 @@
       ],
       "review_status": "pending_review",
       "remote_apply": false,
+      "human_review_required": true,
       "proposed_assessments": [
         {
           "group_slug": "mulheres",
@@ -111,9 +152,12 @@
     },
     {
       "proposition_version_id": "a57b1c83-3749-4c45-85b7-2408db20f5a2",
+      "review_key": "sha256:c1f571e5077d13d1486261d3db0fb706cee52efd00465184fef79a872f0772ee#a57b1c83-3749-4c45-85b7-2408db20f5a2",
       "proposition_external_id": "alrs_prop_2a4640e188225a0fece6ec70",
       "version_key": "sha256:c1f571e5077d13d1486261d3db0fb706cee52efd00465184fef79a872f0772ee",
+      "version_key_collision": false,
       "title": "Dispõe sobre a criação do Programa de Defesa pessoal para Mulheres “RS POR ELAS” no âmbito do Estado do Rio Grande do Sul e dá outras providências.(SEI 4237-0100/21-8)",
+      "title_quality": "complete_or_unverified",
       "priority": "P0",
       "candidate_count": 7,
       "factual_vote_count": 7,
@@ -178,6 +222,43 @@
           "ok": true
         }
       ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+          "event_external_id": "alrs_event_0c98f486921cb63aa48c97de",
+          "source_reference_id": "b301a4ee-52cc-4cab-9089-6c92e8a9ca13"
+        },
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_0c98f486921cb63aa48c97de",
+          "source_reference_id": "7739d2d8-4b18-49ad-ba85-610497376401"
+        },
+        {
+          "candidate_id": "733cef65-bf07-44ef-9521-36232ad0135c",
+          "event_external_id": "alrs_event_0c98f486921cb63aa48c97de",
+          "source_reference_id": "c034ce27-3daa-48fb-89d9-58bd520c890c"
+        },
+        {
+          "candidate_id": "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+          "event_external_id": "alrs_event_0c98f486921cb63aa48c97de",
+          "source_reference_id": "ad396b72-6a02-4fd9-978b-20a97afa88d5"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_0c98f486921cb63aa48c97de",
+          "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_0c98f486921cb63aa48c97de",
+          "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
+        },
+        {
+          "candidate_id": "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1",
+          "event_external_id": "alrs_event_0c98f486921cb63aa48c97de",
+          "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
+        }
+      ],
       "group_candidates": [
         "mulheres"
       ],
@@ -195,6 +276,7 @@
       ],
       "review_status": "pending_review",
       "remote_apply": false,
+      "human_review_required": true,
       "proposed_assessments": [
         {
           "group_slug": "mulheres",
@@ -210,9 +292,12 @@
     },
     {
       "proposition_version_id": "1eb30d74-271c-4315-b7f6-54849d31c9bc",
+      "review_key": "sha256:0d0b779976354f6bd951ce8d8bff213f63b1b515712734564144254577e6aa51#1eb30d74-271c-4315-b7f6-54849d31c9bc",
       "proposition_external_id": "alrs_prop_f76d72ac85ddbd12519f1e5d",
       "version_key": "sha256:0d0b779976354f6bd951ce8d8bff213f63b1b515712734564144254577e6aa51",
+      "version_key_collision": false,
       "title": "Institui a política de prevenção a crimes sexuais contra adolescentes, no Estado do Rio Grande do Sul, denominado “Projeto Libertar”.",
+      "title_quality": "complete_or_unverified",
       "priority": "P1",
       "candidate_count": 6,
       "factual_vote_count": 6,
@@ -269,6 +354,38 @@
           "ok": true
         }
       ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_41c48a6dc5b300e1fff66c4d",
+          "source_reference_id": "7739d2d8-4b18-49ad-ba85-610497376401"
+        },
+        {
+          "candidate_id": "733cef65-bf07-44ef-9521-36232ad0135c",
+          "event_external_id": "alrs_event_41c48a6dc5b300e1fff66c4d",
+          "source_reference_id": "c034ce27-3daa-48fb-89d9-58bd520c890c"
+        },
+        {
+          "candidate_id": "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+          "event_external_id": "alrs_event_41c48a6dc5b300e1fff66c4d",
+          "source_reference_id": "ad396b72-6a02-4fd9-978b-20a97afa88d5"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_41c48a6dc5b300e1fff66c4d",
+          "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_41c48a6dc5b300e1fff66c4d",
+          "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
+        },
+        {
+          "candidate_id": "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1",
+          "event_external_id": "alrs_event_41c48a6dc5b300e1fff66c4d",
+          "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
+        }
+      ],
       "group_candidates": [
         "criancas_adolescentes_vulnerabilidade"
       ],
@@ -286,6 +403,7 @@
       ],
       "review_status": "pending_review",
       "remote_apply": false,
+      "human_review_required": true,
       "proposed_assessments": [
         {
           "group_slug": "criancas_adolescentes_vulnerabilidade",
@@ -301,9 +419,12 @@
     },
     {
       "proposition_version_id": "10887f06-837a-47ed-aa52-f05560d17742",
+      "review_key": "sha256:1a61707c7c826f5b75d1b3e2725f6d4c473e3852568f5d3fac7a94540c5cab1a#10887f06-837a-47ed-aa52-f05560d17742",
       "proposition_external_id": "alrs_prop_967582f2abd1c3a3a041a768",
       "version_key": "sha256:1a61707c7c826f5b75d1b3e2725f6d4c473e3852568f5d3fac7a94540c5cab1a",
+      "version_key_collision": false,
       "title": "Dispõe sobre a criação da Patrulha Estadual de Prevenção à Violência Doméstica e Familiar contra Crianças e Adolescentes.",
+      "title_quality": "complete_or_unverified",
       "priority": "P1",
       "candidate_count": 6,
       "factual_vote_count": 6,
@@ -360,6 +481,38 @@
           "ok": true
         }
       ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+          "event_external_id": "alrs_event_42b962ff38ef0ee48780ed7a",
+          "source_reference_id": "b301a4ee-52cc-4cab-9089-6c92e8a9ca13"
+        },
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_42b962ff38ef0ee48780ed7a",
+          "source_reference_id": "7739d2d8-4b18-49ad-ba85-610497376401"
+        },
+        {
+          "candidate_id": "733cef65-bf07-44ef-9521-36232ad0135c",
+          "event_external_id": "alrs_event_42b962ff38ef0ee48780ed7a",
+          "source_reference_id": "c034ce27-3daa-48fb-89d9-58bd520c890c"
+        },
+        {
+          "candidate_id": "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+          "event_external_id": "alrs_event_42b962ff38ef0ee48780ed7a",
+          "source_reference_id": "ad396b72-6a02-4fd9-978b-20a97afa88d5"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_42b962ff38ef0ee48780ed7a",
+          "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_42b962ff38ef0ee48780ed7a",
+          "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
+        }
+      ],
       "group_candidates": [
         "criancas_adolescentes_vulnerabilidade"
       ],
@@ -377,6 +530,7 @@
       ],
       "review_status": "pending_review",
       "remote_apply": false,
+      "human_review_required": true,
       "proposed_assessments": [
         {
           "group_slug": "criancas_adolescentes_vulnerabilidade",
@@ -392,9 +546,12 @@
     },
     {
       "proposition_version_id": "b4a681d1-53c2-4c16-b038-45606adfd2f1",
+      "review_key": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924#b4a681d1-53c2-4c16-b038-45606adfd2f1",
       "proposition_external_id": "alrs_prop_6c0127039e60a30bb11eca13",
       "version_key": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924",
+      "version_key_collision": true,
       "title": "Altera a Lei n.º 15.988, de 7 de agosto de 2023, que consolida a legislação relativa às mulheres vítimas de violência no âmbito do Estado do Rio Grande do Sul.",
+      "title_quality": "complete_or_unverified",
       "priority": "P1",
       "candidate_count": 6,
       "factual_vote_count": 6,
@@ -451,6 +608,38 @@
           "ok": true
         }
       ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_fde899ed5662145ce9615dd6",
+          "source_reference_id": "7739d2d8-4b18-49ad-ba85-610497376401"
+        },
+        {
+          "candidate_id": "733cef65-bf07-44ef-9521-36232ad0135c",
+          "event_external_id": "alrs_event_fde899ed5662145ce9615dd6",
+          "source_reference_id": "c034ce27-3daa-48fb-89d9-58bd520c890c"
+        },
+        {
+          "candidate_id": "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+          "event_external_id": "alrs_event_fde899ed5662145ce9615dd6",
+          "source_reference_id": "ad396b72-6a02-4fd9-978b-20a97afa88d5"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_fde899ed5662145ce9615dd6",
+          "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_fde899ed5662145ce9615dd6",
+          "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
+        },
+        {
+          "candidate_id": "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1",
+          "event_external_id": "alrs_event_fde899ed5662145ce9615dd6",
+          "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
+        }
+      ],
       "group_candidates": [
         "mulheres"
       ],
@@ -468,6 +657,7 @@
       ],
       "review_status": "pending_review",
       "remote_apply": false,
+      "human_review_required": true,
       "proposed_assessments": [
         {
           "group_slug": "mulheres",
@@ -483,9 +673,12 @@
     },
     {
       "proposition_version_id": "7bae10be-b80b-4b2c-88cf-0c2561edeb6b",
+      "review_key": "sha256:bb8c0d5262e866faa5745a563abedcccb73854825373843994ccfb6969f18f38#7bae10be-b80b-4b2c-88cf-0c2561edeb6b",
       "proposition_external_id": "alrs_prop_be6aa727b687a333b258ef85",
       "version_key": "sha256:bb8c0d5262e866faa5745a563abedcccb73854825373843994ccfb6969f18f38",
+      "version_key_collision": false,
       "title": "Institui a Política Estadual de Proteção Social às Crianças e aos Adolescentes em situação de orfandade decorrente da Covid-19 e dá outras providências. (SEI 1338-0100/22-5)",
+      "title_quality": "complete_or_unverified",
       "priority": "P1",
       "candidate_count": 6,
       "factual_vote_count": 6,
@@ -542,6 +735,38 @@
           "ok": true
         }
       ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_1dedb39bbfb31ba60f92b63e",
+          "source_reference_id": "7739d2d8-4b18-49ad-ba85-610497376401"
+        },
+        {
+          "candidate_id": "733cef65-bf07-44ef-9521-36232ad0135c",
+          "event_external_id": "alrs_event_1dedb39bbfb31ba60f92b63e",
+          "source_reference_id": "c034ce27-3daa-48fb-89d9-58bd520c890c"
+        },
+        {
+          "candidate_id": "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+          "event_external_id": "alrs_event_1dedb39bbfb31ba60f92b63e",
+          "source_reference_id": "ad396b72-6a02-4fd9-978b-20a97afa88d5"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_1dedb39bbfb31ba60f92b63e",
+          "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_1dedb39bbfb31ba60f92b63e",
+          "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
+        },
+        {
+          "candidate_id": "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1",
+          "event_external_id": "alrs_event_1dedb39bbfb31ba60f92b63e",
+          "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
+        }
+      ],
       "group_candidates": [
         "criancas_adolescentes_vulnerabilidade"
       ],
@@ -559,6 +784,7 @@
       ],
       "review_status": "pending_review",
       "remote_apply": false,
+      "human_review_required": true,
       "proposed_assessments": [
         {
           "group_slug": "criancas_adolescentes_vulnerabilidade",
@@ -574,9 +800,12 @@
     },
     {
       "proposition_version_id": "d75becac-49d6-4bdd-95e8-29270980b4f4",
+      "review_key": "sha256:f6f602bc12539cc5787793134de2a805eef274ad9d36ed06525a3fb4ec55b317#d75becac-49d6-4bdd-95e8-29270980b4f4",
       "proposition_external_id": "alrs_prop_7bed77c7ca2a760f17b16432",
       "version_key": "sha256:f6f602bc12539cc5787793134de2a805eef274ad9d36ed06525a3fb4ec55b317",
+      "version_key_collision": false,
       "title": "Altera a Lei Estadual nº 16.328, de 8 de agosto de 2025, que institui a reserva de vagas, em percentual de no mínimo 20% (vinte por cento), nas empresas da área de segurança, vigilância e transportes de valores, para vigilantes do sexo feminino, nas contratações que especifica e dá outras providências, estendendo a reserva de vagas para todos os tipos de contrato e priorizando a contratação de vít",
+      "title_quality": "complete_or_unverified",
       "priority": "P1",
       "candidate_count": 6,
       "factual_vote_count": 6,
@@ -633,6 +862,38 @@
           "ok": true
         }
       ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_62d74685b4c294072d611aed",
+          "source_reference_id": "7739d2d8-4b18-49ad-ba85-610497376401"
+        },
+        {
+          "candidate_id": "733cef65-bf07-44ef-9521-36232ad0135c",
+          "event_external_id": "alrs_event_62d74685b4c294072d611aed",
+          "source_reference_id": "c034ce27-3daa-48fb-89d9-58bd520c890c"
+        },
+        {
+          "candidate_id": "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+          "event_external_id": "alrs_event_62d74685b4c294072d611aed",
+          "source_reference_id": "ad396b72-6a02-4fd9-978b-20a97afa88d5"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_62d74685b4c294072d611aed",
+          "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_62d74685b4c294072d611aed",
+          "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
+        },
+        {
+          "candidate_id": "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1",
+          "event_external_id": "alrs_event_62d74685b4c294072d611aed",
+          "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
+        }
+      ],
       "group_candidates": [
         "mulheres"
       ],
@@ -650,6 +911,7 @@
       ],
       "review_status": "pending_review",
       "remote_apply": false,
+      "human_review_required": true,
       "proposed_assessments": [
         {
           "group_slug": "mulheres",
@@ -665,9 +927,12 @@
     },
     {
       "proposition_version_id": "d4cbc2f3-6ee6-4057-a376-e5b3d1fe599a",
+      "review_key": "texto-base#d4cbc2f3-6ee6-4057-a376-e5b3d1fe599a",
       "proposition_external_id": "PL 361/2025",
       "version_key": "texto-base",
+      "version_key_collision": true,
       "title": "Reserva de 5% de vagas em contratos terceirizados para mulheres vítimas de violência",
+      "title_quality": "complete_or_unverified",
       "priority": "P1",
       "candidate_count": 6,
       "factual_vote_count": 6,
@@ -716,6 +981,38 @@
           "ok": true
         }
       ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "0a399b37-0c0d-4db9-9466-d4f02d942fa3",
+          "event_external_id": "alrs_pl361_2025",
+          "source_reference_id": null
+        },
+        {
+          "candidate_id": "17cb13b2-daa3-4e0f-9256-af654de4aeb3",
+          "event_external_id": "alrs_pl361_2025",
+          "source_reference_id": "55c2a9b1-b075-4997-a1ab-4b993f4afe38"
+        },
+        {
+          "candidate_id": "1af05d1a-f528-40ce-ad63-cd4e1ed3bdd4",
+          "event_external_id": "alrs_pl361_2025",
+          "source_reference_id": "e456042a-b928-40ec-a1b5-08b45b040af0"
+        },
+        {
+          "candidate_id": "ab6f31e2-0232-4e4e-be2e-c0d550b03088",
+          "event_external_id": "alrs_pl361_2025",
+          "source_reference_id": "cc259b3d-02b6-46f5-90ba-56fcaa855541"
+        },
+        {
+          "candidate_id": "e90d2d3f-868e-4acd-84fc-5886680fbf8c",
+          "event_external_id": "alrs_pl361_2025",
+          "source_reference_id": "20342968-0e47-4a58-9ac8-9ba9b7b94041"
+        },
+        {
+          "candidate_id": "ed2bc663-3c2b-47e9-9cb7-ab1081ec8596",
+          "event_external_id": "alrs_pl361_2025",
+          "source_reference_id": "ab3010ef-199b-4849-bddd-f5190d10eec4"
+        }
+      ],
       "group_candidates": [
         "mulheres"
       ],
@@ -733,6 +1030,7 @@
       ],
       "review_status": "pending_review",
       "remote_apply": false,
+      "human_review_required": true,
       "proposed_assessments": [
         {
           "group_slug": "mulheres",
@@ -748,9 +1046,12 @@
     },
     {
       "proposition_version_id": "d2043a70-64b3-4ea7-8a1f-c51c15393602",
+      "review_key": "sha256:22217e72b94cdfd307e3089d02d367446b1d3f68f11a3e709eb9743aa9df9990#d2043a70-64b3-4ea7-8a1f-c51c15393602",
       "proposition_external_id": "alrs_prop_bcbc1b68a2b489b4c96b04d1",
       "version_key": "sha256:22217e72b94cdfd307e3089d02d367446b1d3f68f11a3e709eb9743aa9df9990",
+      "version_key_collision": false,
       "title": "Cria o Programa Estadual de Proteção e Apoio à Mulher Vítima de Violência Doméstica ou Familiar (PROMULHER-RS) e altera a Lei n.º 15.988, de 7 de agosto de 2023, que consolida a legislação relativa às mulheres vítimas de violência no âmbito do Estado do Rio Grande do Sul.(SEI 13088-0100/23-9)",
+      "title_quality": "complete_or_unverified",
       "priority": "P1",
       "candidate_count": 5,
       "factual_vote_count": 5,
@@ -799,6 +1100,33 @@
           "ok": true
         }
       ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+          "event_external_id": "alrs_event_b11b95834b07cd80ef41eb04",
+          "source_reference_id": "b301a4ee-52cc-4cab-9089-6c92e8a9ca13"
+        },
+        {
+          "candidate_id": "733cef65-bf07-44ef-9521-36232ad0135c",
+          "event_external_id": "alrs_event_b11b95834b07cd80ef41eb04",
+          "source_reference_id": "c034ce27-3daa-48fb-89d9-58bd520c890c"
+        },
+        {
+          "candidate_id": "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+          "event_external_id": "alrs_event_b11b95834b07cd80ef41eb04",
+          "source_reference_id": "ad396b72-6a02-4fd9-978b-20a97afa88d5"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_b11b95834b07cd80ef41eb04",
+          "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_b11b95834b07cd80ef41eb04",
+          "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
+        }
+      ],
       "group_candidates": [
         "mulheres"
       ],
@@ -816,6 +1144,7 @@
       ],
       "review_status": "pending_review",
       "remote_apply": false,
+      "human_review_required": true,
       "proposed_assessments": [
         {
           "group_slug": "mulheres",
@@ -831,9 +1160,12 @@
     },
     {
       "proposition_version_id": "3f2e156e-8430-44be-8564-77578ef9fc81",
+      "review_key": "sha256:3e7be81fb11122aea31318a85d9167eb367bbc16bb7fc3088bf93fd2d934d143#3f2e156e-8430-44be-8564-77578ef9fc81",
       "proposition_external_id": "alrs_prop_eb6d03ca39766d6c6f4f6041",
       "version_key": "sha256:3e7be81fb11122aea31318a85d9167eb367bbc16bb7fc3088bf93fd2d934d143",
+      "version_key_collision": false,
       "title": "Institui a política estadual de combate ao racismo, à LGBTfobia e à violência contra as mulheres nos estádios e nas arenas esportivas do Estado do Rio Grande do Sul - Política Estádio de Respeito. (SEI 5535-0100/23-0)",
+      "title_quality": "complete_or_unverified",
       "priority": "P1",
       "candidate_count": 5,
       "factual_vote_count": 5,
@@ -882,6 +1214,33 @@
           "ok": true
         }
       ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "733cef65-bf07-44ef-9521-36232ad0135c",
+          "event_external_id": "alrs_event_56f0086488488853bc5207f9",
+          "source_reference_id": "c034ce27-3daa-48fb-89d9-58bd520c890c"
+        },
+        {
+          "candidate_id": "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+          "event_external_id": "alrs_event_56f0086488488853bc5207f9",
+          "source_reference_id": "ad396b72-6a02-4fd9-978b-20a97afa88d5"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_56f0086488488853bc5207f9",
+          "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_56f0086488488853bc5207f9",
+          "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
+        },
+        {
+          "candidate_id": "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1",
+          "event_external_id": "alrs_event_56f0086488488853bc5207f9",
+          "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
+        }
+      ],
       "group_candidates": [
         "mulheres",
         "populacao_negra_periferica"
@@ -910,6 +1269,7 @@
       ],
       "review_status": "pending_review",
       "remote_apply": false,
+      "human_review_required": true,
       "proposed_assessments": [
         {
           "group_slug": "mulheres",
@@ -935,9 +1295,12 @@
     },
     {
       "proposition_version_id": "107c79e5-2dd2-42ca-a906-f2674b103455",
+      "review_key": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924#107c79e5-2dd2-42ca-a906-f2674b103455",
       "proposition_external_id": "alrs_prop_5d7ce3dddd17ee16bebfbf92",
       "version_key": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924",
+      "version_key_collision": true,
       "title": "Altera a Lei n.º 15.988, de 7 de agosto de 2023, que consolida a legislação relativa às mulheres vítimas de violência no âmbito do Estado do Rio Grande do Sul.",
+      "title_quality": "complete_or_unverified",
       "priority": "P1",
       "candidate_count": 5,
       "factual_vote_count": 5,
@@ -986,6 +1349,33 @@
           "ok": true
         }
       ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "733cef65-bf07-44ef-9521-36232ad0135c",
+          "event_external_id": "alrs_event_61f8d7a97e94834da95e0a82",
+          "source_reference_id": "c034ce27-3daa-48fb-89d9-58bd520c890c"
+        },
+        {
+          "candidate_id": "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+          "event_external_id": "alrs_event_61f8d7a97e94834da95e0a82",
+          "source_reference_id": "ad396b72-6a02-4fd9-978b-20a97afa88d5"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_61f8d7a97e94834da95e0a82",
+          "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_61f8d7a97e94834da95e0a82",
+          "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
+        },
+        {
+          "candidate_id": "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1",
+          "event_external_id": "alrs_event_61f8d7a97e94834da95e0a82",
+          "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
+        }
+      ],
       "group_candidates": [
         "mulheres"
       ],
@@ -1003,6 +1393,7 @@
       ],
       "review_status": "pending_review",
       "remote_apply": false,
+      "human_review_required": true,
       "proposed_assessments": [
         {
           "group_slug": "mulheres",
@@ -1018,9 +1409,12 @@
     },
     {
       "proposition_version_id": "92f2865a-1414-4077-85ae-7d10711c51b4",
+      "review_key": "sha256:f0832e005dea9c6626b6648ffce12e0c90417b86f10ff26a2fac23fe09b3be05#92f2865a-1414-4077-85ae-7d10711c51b4",
       "proposition_external_id": "alrs_prop_927e2ef19844c7099d4ca7eb",
       "version_key": "sha256:f0832e005dea9c6626b6648ffce12e0c90417b86f10ff26a2fac23fe09b3be05",
+      "version_key_collision": false,
       "title": "Institui o Programa de Inclusão Digital para Idosos (PIDI) no âmbito do Estado do Rio Grande do Sul, e dá outras providências.",
+      "title_quality": "complete_or_unverified",
       "priority": "P1",
       "candidate_count": 5,
       "factual_vote_count": 5,
@@ -1069,6 +1463,33 @@
           "ok": true
         }
       ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+          "event_external_id": "alrs_event_e7f9f8dba4c0197f8b571e05",
+          "source_reference_id": "b301a4ee-52cc-4cab-9089-6c92e8a9ca13"
+        },
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_e7f9f8dba4c0197f8b571e05",
+          "source_reference_id": "7739d2d8-4b18-49ad-ba85-610497376401"
+        },
+        {
+          "candidate_id": "733cef65-bf07-44ef-9521-36232ad0135c",
+          "event_external_id": "alrs_event_e7f9f8dba4c0197f8b571e05",
+          "source_reference_id": "c034ce27-3daa-48fb-89d9-58bd520c890c"
+        },
+        {
+          "candidate_id": "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+          "event_external_id": "alrs_event_e7f9f8dba4c0197f8b571e05",
+          "source_reference_id": "ad396b72-6a02-4fd9-978b-20a97afa88d5"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_e7f9f8dba4c0197f8b571e05",
+          "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
+        }
+      ],
       "group_candidates": [
         "pessoas_idosas_dependentes"
       ],
@@ -1086,6 +1507,7 @@
       ],
       "review_status": "pending_review",
       "remote_apply": false,
+      "human_review_required": true,
       "proposed_assessments": [
         {
           "group_slug": "pessoas_idosas_dependentes",

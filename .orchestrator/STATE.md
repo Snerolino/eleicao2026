@@ -736,6 +736,14 @@
 - Próximo passo: confirmar evento, texto integral, direção e defending vote.
 - QA: `docs/qa/lote-alrs-assessment-proposals-v1-2026-08-20.md`.
 
+## Tick contínuo — correções estruturais da fila ALRS (2026-08-21)
+
+- `review_key` único por `version_key#proposition_version_id`; 64 colisões explicitamente bloqueadas.
+- `human_review_required=true` propagado; `factual_source_gate` substitui nome ambíguo.
+- Vínculo candidato/evento/fonte e qualidade de título adicionados.
+- Detectados 109 títulos genéricos e 1 possivelmente truncado para correção antes do mérito.
+- QA: `docs/qa/lote-correcao-estrutural-fila-alrs-2026-08-21.md`.
+
 ## Tick contínuo — fechamento final R4 (2026-08-20)
 
 - 13/13 itens da fila Q2/Q3 revisados; 12 não pontuáveis aprovados e 1 assessment populacional aprovado.
