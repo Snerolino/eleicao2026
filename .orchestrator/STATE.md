@@ -1,3 +1,16 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T10:22Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `c97de368ab697e3286c62a8e2e84ab2539b6330f`.
+- Recon ALRS: 7/7 URLs oficiais HTTP 200 e válidas; manifesto atualizado somente no timestamp. FED-17 dry-run: 0 votos, 0 correções, 4 bloqueados, `impact_touched=false`.
+- Senado: adaptação fail-closed por envelope transitório ausente (`/tmp/senado-nominal-envelope-latest.json`); Câmara: API oficial 2026 em quatro janelas trimestrais HTTP válido, IDs descobertos, sem reconciliação/aplicação.
+- Dataset vivo: 2 CSVs comparáveis, 1003 IDs; snapshot 1003; 0 somente no dataset e 0 somente no snapshot; nenhum refresh.
+- Gates Node 24.19.0 verdes: 97 arquivos/398 testes, TypeScript, schema, `data:check` 1003/988, build, `git diff --check` e smoke local 1002 cards/0 HTTP/console errors.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1022.md`.
+- Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase, Cloudflare ou snapshot ocorreu; somente timestamp do manifesto ALRS e documentação.
+- Bloqueios: quatro residuais Enio/Terra sem ID/fonte exata, gaps de fontes ALRS 1251/1647/4, Câmara 3/2/2 e Senado 112/188/455, Senado com deriva criptográfica/envelope ausente, doctor FAIL por Node 22.22.2 e smoke Codex MCP `401 invalid_refresh_token`.
+- Publicação existente verificada: produção HTTP 200 e `/release.json` HTTP 200 com SHA `c97de368ab697e3286c62a8e2e84ab2539b6330f`, `row_count=1003`.
+- Próximo chunk: publicar documentação/manifesto após gates; manter recon bounded e aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T09:35Z
 
 - Lock bounded não bloqueante disponível; worktree iniciou limpa em `501e3b65559ab982efb3fa09f378a6dace5a0eee` e permaneceu limpa.
