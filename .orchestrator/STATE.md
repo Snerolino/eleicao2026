@@ -764,6 +764,12 @@
 - Todos permanecem bloqueados para mérito até título/texto/hash oficial.
 - QA: `docs/qa/lote-alrs-title-recovery-pack-2026-08-21.md`.
 
+## Tick contínuo — plano seguro de aplicação ALRS (2026-08-21)
+
+- Writer local fail-closed criado; pacote atual rejeitado com 64 erros de colisão.
+- `remote_apply=false`; nenhum assessment/matriz remoto aplicado.
+- QA: `docs/qa/lote-alrs-safe-matrix-apply-plan-2026-08-21.md`.
+
 ## Tick contínuo — fechamento final R4 (2026-08-20)
 
 - 13/13 itens da fila Q2/Q3 revisados; 12 não pontuáveis aprovados e 1 assessment populacional aprovado.
