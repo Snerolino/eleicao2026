@@ -22,6 +22,7 @@
 - `pending_review` preservado;
 - scores não calculados para esses itens;
 - eventos procedimentais continuam separados.
+- gate `npm run impact:alrs:r4:validate` rejeita o pacote de mérito enquanto houver colisão, título incompleto, fonte factual não verde ou revisão humana ausente.
 
 ## Reexecução
 

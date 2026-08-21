@@ -142,6 +142,7 @@
 | [`qa/lote-correcao-estrutural-fila-alrs-2026-08-21.md`](qa/lote-correcao-estrutural-fila-alrs-2026-08-21.md) | Correções estruturais da fila ALRS |
 | [`qa/lote-alrs-version-key-collisions-2026-08-21.md`](qa/lote-alrs-version-key-collisions-2026-08-21.md) | Auditoria de colisões ALRS |
 | [`qa/lote-alrs-version-collision-resolution-pack-2026-08-21.md`](qa/lote-alrs-version-collision-resolution-pack-2026-08-21.md) | Pacote de resolução de colisões ALRS |
+| [`qa/lote-official-recon-bounded-2026-08-21-0116.md`](qa/lote-official-recon-bounded-2026-08-21-0116.md) | Reconhecimento oficial bounded e circuit-breaker ALRS |
 | [`qa/lote-alrs-title-recovery-pack-2026-08-21.md`](qa/lote-alrs-title-recovery-pack-2026-08-21.md) | Pacote ALRS de recuperação de títulos |
 | [`qa/lote-alrs-merit-review-pack-p0-p1-2026-08-20.md`](qa/lote-alrs-merit-review-pack-p0-p1-2026-08-20.md) | Pacote ALRS de revisão de mérito P0/P1 |
 | [`qa/lote-official-recon-senado-alrs-camara-2026-08-20-1938.md`](qa/lote-official-recon-senado-alrs-camara-2026-08-20-1938.md) | Reconhecimento oficial bounded |

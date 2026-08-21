@@ -742,6 +742,7 @@
 - `human_review_required=true` propagado; `factual_source_gate` substitui nome ambíguo.
 - Vínculo candidato/evento/fonte e qualidade de título adicionados.
 - Detectados 109 títulos genéricos e 1 possivelmente truncado para correção antes do mérito.
+- Gate `impact:alrs:r4:validate` rejeita automaticamente o pacote de mérito enquanto houver colisões, identidade/título/fonte ou revisão humana incompletos.
 - QA: `docs/qa/lote-correcao-estrutural-fila-alrs-2026-08-21.md`.
 
 ## Tick contínuo — auditoria de colisões ALRS (2026-08-21)
