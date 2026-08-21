@@ -1,3 +1,17 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T17:42Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `ff2c22154ba12b9d3ed73159088f5958a079c9a1`.
+- ALRS residual FED-17: dry-run `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio/Terra continuam sem ID/fonte exata.
+- Câmara: API oficial em 8 janelas trimestrais 2025–2026, 8/8 páginas iniciais válidas; IDs descobertos read-only, nenhuma reconciliação/aplicação.
+- Senado: envelope nominal transitório ausente (`ENOENT`); fail-closed, sem PDF, `legislator_id`, FK ou voto promovido.
+- Dataset completo comparado ao snapshot com delimitador oficial `;`: 1.003/1.003 IDs, diferença 0/0.
+- Auditoria estrita read-only manteve gaps de fonte: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; exit 2 por gaps reais.
+- Gates Node 24.19.0 verdes: testes, TypeScript, schema, `data:check`, build (`sitemap` 1.003 candidatos; `release.json` para `ff2c221`), smoke local 1.002 cards/0 HTTP/console errors/service worker e `git diff --check`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1742.md`.
+- Doctor permanece exit 1 por Node 22.22.2; OpenCode ausente, Ollama sem preflight e Codex MCP/exec `401 invalid_refresh_token` são bloqueios de infraestrutura.
+- Commit documental `9731678` criado após os gates; `git push origin main` e `env -u GH_TOKEN git push origin main` falharam com HTTP 403 (`Permission denied`). `main` está 12 commits à frente de `origin/main`; produção HTTP 200 continua no live anterior `e925327` e nenhum deploy deste tick foi acionado.
+- Nenhuma escrita factual, identidade, FK, voto, claim, source reference, Supabase ou Cloudflare ocorreu.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T17:20Z
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `e6686b89f9c94d20fe7dbe5ec443fc0f096ef33d`.
