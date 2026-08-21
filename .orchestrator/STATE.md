@@ -8,7 +8,8 @@
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1111.md`.
 - Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase ou Cloudflare ocorreu; somente timestamp de manifesto e documentação operacional.
 - Bloqueios: doctor shell FAIL por Node 22.22.2; Codex MCP `401 invalid_refresh_token`, OpenCode ausente e Ollama sem preflight; quatro residuais Enio/Terra sem ID/fonte exata; Senado sem envelope/deriva criptográfica; gaps substantivos sem fonte.
-- Próximo chunk: publicar a evidência documental após os gates verdes e verificar produção; aplicação remota continua bloqueada até R0/schema/FK/fonte/dry-run/idempotência.
+- Publicação verificada após o tick: commit `a7403882f797e08c33297559353e850a20c3f1b7` em `origin/main`; backup `334951434`, run `32476420122`, `completed/success`, `headSha` idêntico. Produção HTTP 200 e `/release.json` confirmaram SHA idêntico, `release_id=a740388-20260821T111630058Z`, `row_count=1003`; smoke remoto 1002 cards/0 HTTP/console errors.
+- Próximo chunk: nova recon bounded oficial e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T10:46Z
 
