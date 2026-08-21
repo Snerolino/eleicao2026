@@ -10,7 +10,8 @@
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0907.md`; evidências read-only em `.orchestrator/runtime/continuous-tick-20260821T090751Z/`.
 - Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase, Cloudflare ou snapshot ocorreu; somente timestamp do manifesto ALRS e documentação QA/STATE.
 - Bloqueios: 4 residuais Enio/Terra sem ID/fonte exata, 25 fontes substantivas ausentes, Senado com deriva SHA/bytes, gaps de cobertura ALRS 1251/1647/4, Câmara 3/2/2 e Senado 112/188/455; doctor FAIL por Node 22.22.2 e smoke Codex MCP `401 invalid_refresh_token`.
-- Próximo chunk: publicação documental deste tick e nova recon bounded oficial; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+- Próximo chunk: nova recon bounded oficial e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+- Publicação verificada no commit `fa71f134eafdf0eb810adea382901ea98c442bf8`; backup `334951434`, run `32466647132`, `completed/success`, `headSha` idêntico. Preview e produção HTTP 200; `/release.json` confirmou SHA idêntico, `row_count=1003`; smoke remoto 1002 cards/0 HTTP/console errors.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T08:42Z
 

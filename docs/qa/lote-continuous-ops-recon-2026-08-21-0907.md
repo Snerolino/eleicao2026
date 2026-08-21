@@ -33,5 +33,12 @@ Nenhuma candidatura, foto, identidade, FK, voto, matriz, claim, source reference
 - Auditoria estrita de cobertura continua com gaps reais: ALRS sem fonte em 1251 versões / 1647 eventos / 4 votos; Câmara 3 / 2 / 2; Senado 112 / 188 / 455.
 - Doctor do shell: FAIL por Node `v22.22.2`; gates do projeto foram executados comprovadamente com Node `v24.19.0`. Smoke MCP Codex segue indisponível por `401 invalid_refresh_token`; não foi repetido.
 
+## Publicação e verificação externa
+- Commit publicado: `fa71f134eafdf0eb810adea382901ea98c442bf8` (`main -> origin/main`).
+- Backup Cloudflare `334951434`, run `32466647132`: `completed/success`, `headSha` idêntico ao commit.
+- Preview `https://0cfcb846.portal-transparencia-rs.pages.dev`: HTTP 200; `/release.json` confirmou SHA `fa71f134eafdf0eb810adea382901ea98c442bf8`, release `fa71f13-20260821T091116114Z`, `row_count=1003`.
+- Produção `https://rs.votopraquem.org`: HTTP 200; `/release.json` com cache-busting confirmou o mesmo SHA, release `fa71f13-20260821T091120566Z`, `row_count=1003`.
+- Smoke remoto no preview: 1002 cards, 0 falhas HTTP, 0 erros de console online, service worker pronto.
+
 ## Próximo passo
 Nova recon bounded oficial e lane local independente. Aplicação remota factual continua condicionada a R0, schema/FK, fonte oficial exata, dry-run e idempotência.
