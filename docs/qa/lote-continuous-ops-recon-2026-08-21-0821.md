@@ -32,8 +32,12 @@ Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, 
 - `git diff --check`: exit 0.
 - `npm run smoke:local`: exit 0; 1002 cards, 0 falhas HTTP, 0 erros de console online e service worker pronto.
 
-## Publicação
-Este lote ainda requer commit/push e verificação automática do backup Cloudflare após a documentação ser registrada.
+## Publicação verificada
+- Commit `ed320f9815efa56134262275c96fbf7451a0c146` enviado para `origin/main`.
+- Backup Cloudflare `334951434`, run `32462865222`: `completed/success`, `headSha` idêntico.
+- Produção: `https://rs.votopraquem.org` HTTP 200.
+- `release.json` em produção confirma SHA idêntico, `row_count=1003`, release `ed320f9-20260821T082252009Z`.
+- Smoke remoto: exit 0; 1002 cards, 0 falhas HTTP, 0 erros de console online e service worker pronto.
 
 ## Próximo passo
 Repetir recon bounded fail-closed e manter a lane local independente. Aplicação remota somente após R0/schema/FK/fonte oficial/dry-run/idempotência; não inventar URL, hash, UUID, identidade ou voto.

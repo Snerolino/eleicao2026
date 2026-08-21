@@ -9,7 +9,7 @@
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0821.md`; evidências read-only em `.orchestrator/runtime/continuous-tick-20260821T081923Z/`.
 - Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase, Cloudflare ou snapshot ocorreu.
 - Bloqueios: Senado com deriva SHA, ALRS sem catálogo/Enio/Terra e 25 fontes substantivas, Câmara sem lote novo; doctor FAIL por Node 22.22.2 e Codex/MCP `401 invalid_refresh_token`.
-- Próximo chunk: commit/push desta documentação, backup Cloudflare e verificação de produção; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+- Próximo chunk: nova recon bounded oficial e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
 
 ## Tick contínuo — recon bounded oficial e gates locais — 2026-08-21T07:55Z
