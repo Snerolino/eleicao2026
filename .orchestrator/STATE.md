@@ -1,3 +1,17 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T09:07Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `d14ae93ef78e8b0548e6d68e6e82295fe927fcfb`.
+- Recon ALRS: 7/7 URLs oficiais HTTP 200 e válidas; manifesto atualizado somente no timestamp. FED-17 dry-run: 0 votos, 0 correções de data, 4 bloqueados, `impact_touched=false`.
+- Senado: 6/6 HTTP 200, 6/6 prefixos PDF válidos, 3/6 bytes coincidentes e 0/6 SHA coincidentes com manifesto de 2026-08-19; fail-closed, sem atualização ou aplicação.
+- Câmara: API oficial read-only Q4/2026 HTTP válido, 0 `vote_ids`; nenhum registro reconciliado ou aplicado.
+- Pacote de pedidos substantivos regenerado: 9 pedidos/8 versões; validador fail-closed confirmou 25 itens sem fonte substantiva; `remote_apply=false`.
+- Dataset vivo: 2 CSVs oficiais comparáveis, 1003 IDs; snapshot 1003 IDs; 0 somente no dataset e 0 somente no snapshot; nenhum refresh aplicado.
+- Gates Node 24.19.0 verdes: 97 arquivos/398 testes, TypeScript, schema, `data:check` 1003/988, build, `git diff --check` e smoke local 1002 cards/0 HTTP/console errors.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0907.md`; evidências read-only em `.orchestrator/runtime/continuous-tick-20260821T090751Z/`.
+- Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase, Cloudflare ou snapshot ocorreu; somente timestamp do manifesto ALRS e documentação QA/STATE.
+- Bloqueios: 4 residuais Enio/Terra sem ID/fonte exata, 25 fontes substantivas ausentes, Senado com deriva SHA/bytes, gaps de cobertura ALRS 1251/1647/4, Câmara 3/2/2 e Senado 112/188/455; doctor FAIL por Node 22.22.2 e smoke Codex MCP `401 invalid_refresh_token`.
+- Próximo chunk: publicação documental deste tick e nova recon bounded oficial; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T08:42Z
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `ac16a6ba178342310fdcffa4a914a2c14fbc29d9`.
