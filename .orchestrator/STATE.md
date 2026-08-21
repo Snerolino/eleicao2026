@@ -763,6 +763,12 @@
 - Todos exigem confirmação oficial; nenhum foi resolvido por inferência.
 - QA: `docs/qa/lote-alrs-version-collision-resolution-pack-2026-08-21.md`.
 
+## Tick contínuo — resolução oficial parcial de colisões ALRS (2026-08-21)
+
+- 6 colisões `alrs-*` confirmadas como cross-proposition no evento de 2026-08-11, com URL/SHA oficiais.
+- Manifesto `version-key-collision-resolutions-confirmed.json` integrado ao gerador.
+- 12 colisões continuam bloqueadas por falta de fonte primária/text hash suficiente.
+
 ## Tick contínuo — recuperação de títulos ALRS (2026-08-21)
 
 - Pacote criado para 110 itens: 109 títulos genéricos e 1 possivelmente truncado.

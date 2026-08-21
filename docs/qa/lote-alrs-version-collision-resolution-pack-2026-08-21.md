@@ -13,6 +13,12 @@
 - `human_review_required=true`;
 - `remote_apply=false`.
 
+Atualização por scout oficial: 6 colisões `alrs-*` foram confirmadas como
+proposições diferentes no mesmo evento plenário, com data oficial `2026-08-11`,
+URL e SHA-256. Elas não devem ser agrupadas pelo `version_key`; a resolução é
+carregada pelo gerador em `version-key-collision-resolutions-confirmed.json`.
+As outras 12 colisões continuam bloqueadas.
+
 ## Regra
 
 A hipótese técnica não resolve a colisão. Cada grupo precisa confirmar, em fonte

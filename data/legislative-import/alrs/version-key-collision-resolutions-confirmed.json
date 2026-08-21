@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "source": "official_alrs_scout",
+  "remote_apply": false,
+  "resolutions": {
+    "alrs-1505": {
+      "status": "resolved_as_cross_proposition_collision",
+      "official_date": "2026-08-11",
+      "propositions": ["PR 6/2026", "PL 10/2022", "PL 364/2025", "PL 169/2025", "PL 188/2024"],
+      "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+      "source_sha256": "ceb2889e11b05f5c08ed4257df790942bd306230bd442bb29ccd05d7ccf0ad77"
+    },
+    "alrs-2034": {
+      "status": "resolved_as_cross_proposition_collision",
+      "official_date": "2026-08-11",
+      "propositions": ["PL 169/2025", "PL 10/2022", "PR 6/2026", "PL 364/2025", "PL 321/2025", "PL 188/2024"],
+      "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+      "source_sha256": "fa5b524364dc25b7d8a646c136ea62f006faf8b6ac9e7204bc577ce5e12ce07d"
+    },
+    "alrs-2045": {"status":"resolved_as_cross_proposition_collision","official_date":"2026-08-11","source_url":"https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026","source_sha256":"6e4be199082a01634304d50adb369cd399fbc112d5127fc2c504ebfe4689bbe3"},
+    "alrs-2103": {"status":"resolved_as_cross_proposition_collision","official_date":"2026-08-11","source_url":"https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026","source_sha256":"4886d420ba4c711abe5049f78672b22f595fb1b490d3020567d1fa603ceb2236"},
+    "alrs-2144": {"status":"resolved_as_cross_proposition_collision","official_date":"2026-08-11","source_url":"https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026","source_sha256":"ab2c08ec5973117658887b765d6d7d190c52477302142b8db6cc49bbf0baee3a"},
+    "alrs-28": {"status":"resolved_as_cross_proposition_collision","official_date":"2026-08-11","source_url":"https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026","source_sha256":"d696145372caad664b4c8b897f82979ffda34ba11fd2e57b67f3372fa8939a77"}
+  }
+}

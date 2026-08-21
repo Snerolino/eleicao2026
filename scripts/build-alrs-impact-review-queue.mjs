@@ -5,8 +5,14 @@ import { resolve } from 'node:path';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const OUTPUT = resolve(ROOT, 'data/legislative-import/alrs/impact-review-queue-v1.json');
+const RESOLUTIONS = resolve(ROOT, 'data/legislative-import/alrs/version-key-collision-resolutions-confirmed.json');
+
+function loadConfirmedResolutions() {
+  try { return JSON.parse(readFileSync(RESOLUTIONS, 'utf8')).resolutions ?? {}; } catch { return {}; }
+}
 
 export function buildAlrsReviewQueue(rows) {
+  const resolutions = loadConfirmedResolutions();
   const items = rows.map((row) => {
     const candidates = Number(row.candidates ?? 0);
     const votes = Number(row.votes ?? 0);
@@ -20,6 +26,7 @@ export function buildAlrsReviewQueue(rows) {
       version_key: row.version_key,
       title: row.title,
       title_quality: classifyAlrsTitleQuality(row.title),
+      collision_resolution_status: resolutions[row.version_key]?.status ?? null,
       candidate_count: candidates,
       factual_vote_count: votes,
       event_count: Number(row.events ?? 0),
@@ -39,7 +46,7 @@ export function buildAlrsReviewQueue(rows) {
   const versionKeyCounts = new Map();
   for (const item of items) versionKeyCounts.set(item.version_key, (versionKeyCounts.get(item.version_key) ?? 0) + 1);
   for (const item of items) {
-    item.version_key_collision = (versionKeyCounts.get(item.version_key) ?? 0) > 1;
+    item.version_key_collision = (versionKeyCounts.get(item.version_key) ?? 0) > 1 && item.collision_resolution_status !== 'resolved_as_cross_proposition_collision';
     item.human_review_required = true;
   }
   items.sort((a, b) => b.candidate_count - a.candidate_count || b.factual_vote_count - a.factual_vote_count || a.review_key.localeCompare(b.review_key));
