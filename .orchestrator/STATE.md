@@ -1,4 +1,15 @@
-## Tick contínuo — recon bounded oficial e gates locais — 2026-08-21T07:33Z
+## Tick contínuo — recon bounded oficial e gates locais — 2026-08-21T07:55Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `069105268f54623d4f974a26704c0babd7bed36b`.
+- Recon oficial: Senado 6/6 HTTP 200 e PDFs válidos, 4/6 bytes e 0/6 SHA coincidentes; ALRS HTTP 200, 77442 bytes, 0 `data-item`, sem Enio/Terra; Câmara JSON válido na janela 2026-10-01–2026-12-31, 0 registros; fail-closed.
+- Dataset vivo: 7 CSVs comparáveis, snapshot 1003 IDs, 0 ausentes no snapshot; nenhum refresh aplicado.
+- Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase, Cloudflare ou snapshot ocorreu; evidências em `.orchestrator/runtime/tick-20260821T075555Z/`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0755.md`.
+- Bloqueios: Senado com deriva SHA/bytes; ALRS sem catálogo `data-item`/Enio/Terra; Câmara sem lote novo; doctor shell FAIL por Node 22.22.2. Gates executados com Node 24.19.0.
+- Gates locais verdes: testes, TypeScript, schema, `data:check` 1003/988, build, `git diff --check` e smoke local 1002 cards/0 HTTP/console errors.
+- Publicação deste tick: documentação será commitada/enviada e workflow backup Cloudflare `334951434` será verificado por `headSha`, HTTP 200 e `release.json`.
+- Próximo chunk: nova recon bounded oficial e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `165e5f0f5f7849a4a0fd2786bb5cf7a2a158dfca`.
 - Recon oficial: Senado 6/6 HTTP 200 e PDFs válidos, 3/6 bytes e 0/6 SHA coincidentes; ALRS HTTP 200, 77442 bytes, 0 `data-item`, sem Enio/Terra; Câmara JSON válido na janela 2026-10-01–2026-12-31, 0 registros; fail-closed.
