@@ -916,6 +916,13 @@
 - Nenhuma fonte substantiva foi promovida; score continua bloqueado.
 - QA: `docs/qa/lote-alrs-substantive-source-requests-2026-08-21.md`.
 
+## Tick contínuo — leads substantivos do dataset (2026-08-21)
+
+- 5 leads auxiliares catalogados para localizar fontes oficiais ALRS/Diário.
+- Status de todos: `dataset_lead_only`/`needs_official_confirmation`.
+- Nenhum lead foi tratado como fonte ou assessment.
+- QA: `docs/qa/lote-alrs-substantive-source-leads-dataset-2026-08-21.md`.
+
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)
 
 - 30/30 itens P0 classificados: 9 mérito, 19 procedimento, 2 emenda, 0 destaque.
