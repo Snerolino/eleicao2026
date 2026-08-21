@@ -34,5 +34,12 @@ Executar um tick bounded do control plane com recon oficial read-only, auditoria
 - Senado bloqueado por envelope transitório ausente e deriva criptográfica previamente registrada.
 - Gaps substantivos oficiais permanecem e o validador rejeita 25/25 itens sem fonte.
 
+## Publicação e verificação
+- Commit `cc7e1783756f0f47032a2aa5f1b0608b560868a2` enviado para `origin/main`.
+- Workflow backup Cloudflare `334951434`, run `32474231702`: `completed/success`, `headSha` idêntico ao commit.
+- Produção `https://rs.votopraquem.org`: HTTP `200`.
+- `/release.json`: HTTP `200`, `sha=cc7e1783756f0f47032a2aa5f1b0608b560868a2`, `release_id=cc7e178-20260821T104801124Z`, snapshot `row_count=1003`.
+- Smoke remoto aprovado: 1002 cards, 0 falhas HTTP, 0 erros online de console, service worker pronto.
+
 ## Próximo passo
-Publicar este checkpoint pelos gates verdes e verificar o backup Cloudflare/produção. Em seguida manter recon bounded e lane local independente; aplicação remota continua proibida até R0, schema/FK, fonte oficial exata, dry-run e idempotência.
+Manter recon bounded e lane local independente; aplicação remota continua proibida até R0, schema/FK, fonte oficial exata, dry-run e idempotência.
