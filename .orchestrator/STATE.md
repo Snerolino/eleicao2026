@@ -1,3 +1,14 @@
+## Tick contínuo — recon bounded oficial e gates locais — 2026-08-21T06:27Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou em `d22d4312c830e94025954af41cf2b7b915476434`.
+- Recon oficial: ALRS 7/7 HTTP 200 e válidas; FED-17 dry-run bloqueado por `JWT issued at future`, 0 aplicações. Senado 6/6 HTTP 200, 6/6 PDFs válidos, 3/6 bytes coincidentes e 0/6 SHA coincidentes. Câmara HTTP válido na janela 2026-10-01–2026-12-31, 0 vote_ids.
+- Dataset vivo: CSV CP1252 completo com 1003 linhas/IDs, 0 somente no dataset e 0 somente no snapshot; nenhum refresh aplicado.
+- Gates Node 24.19.0 verdes: 97 arquivos/398 testes, TypeScript, schema, `data:check` 1003/988, build, `git diff --check` e smoke local 1002 cards/0 HTTP/console errors.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0627.md`.
+- Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase, Cloudflare ou snapshot ocorreu.
+- Bloqueios: JWT do ambiente em futuro para FED-17, Senado com deriva SHA/bytes, Câmara sem lote novo; doctor shell continua FAIL por Node 22.22.2 e smoke Codex MCP por `401 invalid_refresh_token`; gates executados com Node 24.19.0.
+- Próximo chunk: nova recon bounded oficial e lane local independente; publicação deste tick após commit/push, backup Cloudflare e verificação de produção.
+
 ## Tick contínuo — recon bounded oficial e gates locais — 2026-08-21T06:03Z
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou em `78cae7a4ee87d6d044f70b3a84ff45e28e356be9`.
