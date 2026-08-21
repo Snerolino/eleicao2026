@@ -26,6 +26,7 @@ const items = merit.items.map((item) => ({
   official_sources: item.source_urls.map((url) => sourceByUrl.get(url)).filter(Boolean),
   candidate_source_links: item.candidate_source_links ?? [],
   factual_source_gate: item.source_urls.every((url) => sourceByUrl.get(url)?.ok === true) ? 'green' : 'blocked',
+  substantive_source_gate: 'blocked_until_impact_sources',
   event_gate: 'official_event_classification_required',
   editorial_status: 'pending_review',
   methodology_version: '1.0.0',

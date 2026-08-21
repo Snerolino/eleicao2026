@@ -9,6 +9,7 @@
 - 12 URLs oficiais únicas verificadas;
 - HTTP 200: 12/12;
 - gate de fonte factual verde: 29/29 itens;
+- gate de fonte substantiva de impacto: `blocked_until_impact_sources`;
 - uma entrada de matriz por `proposition_version`;
 - assessments: 0 preenchidos automaticamente;
 - pré-análise de grupo por palavra-chave: 12/29 versões com candidatos de grupo;
