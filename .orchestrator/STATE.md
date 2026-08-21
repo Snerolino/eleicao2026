@@ -1,10 +1,21 @@
+## Tick contínuo — recon bounded e dataset audit — 2026-08-21T04:55Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `ff5fd4dd75cd54fba9e57450c17aa9f8a53936b8`.
+- Lane local: pacote de pedidos substantivos regenerado com 9 pedidos/8 versões; validador fail-closed confirmou 25/25 itens sem fonte substantiva; reparo ALRS FED17 permaneceu dry-run com 0 votos/0 datas e 4 bloqueados.
+- Auditoria read-only de cobertura: ALRS sem fonte em 1251 versões, 1647 eventos e 4 votos; Câmara 3/2/2; Senado 112/188/455. Nenhuma fonte foi inventada ou aplicada.
+- Dataset vivo: 22 CSVs, 8 comparáveis por identificador; os CSVs de candidatos não têm IDs ausentes no snapshot 1003. O único extra veio de `SQ_CANDIDATO_DOADOR` de receita partidária e foi excluído como falso positivo; nenhum refresh aplicado.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0455.md`.
+- Doctor smoke: OK=51, WARN=5, FAIL=1; Codex MCP não comprovado por 401 `invalid_refresh_token`, OpenCode ausente e Ollama sem preflight. Gates de projeto permanecem executáveis com Node 24.19.0.
+- Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase, Cloudflare ou snapshot ocorreu.
+- Próximo chunk: recon bounded oficial e recuperação local de fonte substantiva; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon bounded oficial + pacote de pedidos substantivos (2026-08-21T04:30Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `281cdf0635e257251209e5da288f7a54f711830a`.
 - Recon oficial: ALRS HTTP 200, 77442 bytes, SHA `6a386d7d8b9ae17f8f5107b0cb6c90d71795a8568f08ed7c5972746a4ac0bab1`, 0 `data-item`; Câmara HTTP 200, JSON válido, janela 2026-10-01–2026-12-31, 0 registros; Senado 6/6 HTTP 200 e prefixos PDF válidos, 2/6 bytes e 0/6 SHA coincidentes com o manifesto.
 - Lane local: pacote de pedidos substantivos regenerado com 9 pedidos/8 versões; validador fail-closed confirmou 25/25 itens sem fonte substantiva; reparo ALRS FED17 permaneceu dry-run com 0 votos/0 datas e 4 bloqueados.
 - Gates Node 24.19.0 verdes: 97 arquivos/398 testes, TypeScript, schema, `data:check` 1003/988, build, diff check e smoke local 1002 cards/0 HTTP/console errors.
-- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0430.md`. Nenhuma escrita factual, identidade, FK, voto, matriz, claim ou source reference ocorreu; documentação publicada pelo backup `334951434`, run `32447332560`, `completed/success`, `headSha` `1646526907999fae5a4def41a23bcb9426509814`; produção HTTP 200, `/release.json` confirmou o SHA e snapshot 1003; smoke remoto 1002 cards/0 HTTP/console errors.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0430.md`. Nenhuma escrita factual, identidade, FK, voto, matriz, claim ou source reference ocorreu; documentação publicada pelo backup `334951434`, run `32447332560`, `completed/success`, `headSha` `1646526907999fae5a4def41a23bcb9426509814`; produção HTTP 200, `/release.json` confirmou o SHA e snapshot 1003.
 - Bloqueios: quatro residuais Enio/Terra sem ID/fonte exata, Senado com SHA divergente, Câmara sem lote novo, 25 itens ALRS sem fonte substantiva; doctor FAIL somente pelo Node 22.22.2 do shell.
 - Próximo chunk: recon bounded e recuperação de fontes substantivas oficiais; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
