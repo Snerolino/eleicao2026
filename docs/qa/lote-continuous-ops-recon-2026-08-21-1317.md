@@ -31,9 +31,8 @@ Executar novo tick bounded das quatro lanes: recon oficial ALRS/Câmara/Senado, 
 - Doctor do shell permanece FAIL por Node 22.22.2; gates foram executados explicitamente em Node 24.19.0. Codex MCP permanece indisponível por `401 invalid_refresh_token`.
 
 ## Publicação verificada
-- Commit `6f649f666685deffe78c1b6f8c6225f8de78e1aa` em `origin/main`.
-- Workflow backup Cloudflare `334951434`, run `32486110175`: `completed/success`, `headSha` idêntico.
-- Produção `https://rs.votopraquem.org`: HTTP 200; `/release.json` confirmou SHA idêntico, `release_id=6f649f6-20260821T131834035Z` e snapshot `row_count=1003`.
+- Commit final `2ea9d52dbe882a455e5a3282702d07e3e55b7191` em `origin/main`; workflow backup Cloudflare `334951434`, run `32486296457`: `completed/success`, `headSha` idêntico.
+- Produção `https://rs.votopraquem.org`: HTTP 200; `/release.json` confirmou SHA idêntico, `release_id=2ea9d52-20260821T132042907Z` e snapshot `row_count=1003`.
 - Smoke remoto: 1.002 cards, 0 falhas HTTP, 0 erros de console online e service worker pronto.
 
 ## Próximo passo

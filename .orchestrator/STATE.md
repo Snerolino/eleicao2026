@@ -3001,6 +3001,6 @@ Sem autorização humana explícita própria, não fazer:
 - Gates Node 24.19.0: 98 arquivos/400 testes, TypeScript, schema, `data:check` 1003/988, build, smoke local 1002 cards/0 HTTP/console errors/service worker, diff check verdes.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1317.md`.
 - Bloqueios: quatro residuais Enio/Terra sem identidade/fonte exata; Senado sem envelope/deriva; gaps substantivos; doctor FAIL por Node 22.22.2; Codex MCP 401.
-- Publicação verificada: commit `6f649f666685deffe78c1b6f8c6225f8de78e1aa`; backup Cloudflare `334951434`, run `32486110175`, `completed/success`, `headSha` idêntico. Produção HTTP 200, `/release.json` com `release_id=6f649f6-20260821T131834035Z`, SHA idêntico e `row_count=1003`; smoke remoto 1002 cards/0 HTTP/console errors/service worker.
+- Publicação verificada: commit final `2ea9d52dbe882a455e5a3282702d07e3e55b7191`; backup Cloudflare `334951434`, run `32486296457`, `completed/success`, `headSha` idêntico. Produção HTTP 200, `/release.json` com `release_id=2ea9d52-20260821T132042907Z`, SHA idêntico e `row_count=1003`; smoke remoto 1002 cards/0 HTTP/console errors/service worker.
 - Próximo chunk: nova recon bounded oficial e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
