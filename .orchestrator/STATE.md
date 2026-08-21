@@ -756,6 +756,13 @@
 - Todos exigem confirmação oficial; nenhum foi resolvido por inferência.
 - QA: `docs/qa/lote-alrs-version-collision-resolution-pack-2026-08-21.md`.
 
+## Tick contínuo — recuperação de títulos ALRS (2026-08-21)
+
+- Pacote criado para 110 itens: 109 títulos genéricos e 1 possivelmente truncado.
+- Eventos, fontes, `review_key` e vínculos candidato/evento preservados.
+- Todos permanecem bloqueados para mérito até título/texto/hash oficial.
+- QA: `docs/qa/lote-alrs-title-recovery-pack-2026-08-21.md`.
+
 ## Tick contínuo — fechamento final R4 (2026-08-20)
 
 - 13/13 itens da fila Q2/Q3 revisados; 12 não pontuáveis aprovados e 1 assessment populacional aprovado.
