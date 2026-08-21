@@ -715,6 +715,12 @@
 - Matriz e assessments continuam sem escrita/aprovação; revisão oficial do evento é obrigatória.
 - QA: `docs/qa/lote-alrs-impact-merit-pack-p0-p1-2026-08-20.md`.
 
+## Tick contínuo — pacote ALRS de matrizes P0/P1 (2026-08-20)
+
+- Pacote por versão gerado: 29 versões/172 votos, 29/29 com fonte oficial HTTP 200.
+- Assessments permanecem vazios; revisão de evento e editorial continuam obrigatórias.
+- QA: `docs/qa/lote-alrs-impact-matrix-review-pack-p0-p1-2026-08-20.md`.
+
 ## Tick contínuo — fechamento final R4 (2026-08-20)
 
 - 13/13 itens da fila Q2/Q3 revisados; 12 não pontuáveis aprovados e 1 assessment populacional aprovado.
