@@ -1,3 +1,16 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T15:54Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou em `f904171ea1b3` e tinha quatro commits documentais locais à frente de `origin/main`; após os gates, o commit documental deste tick permanece local por bloqueio GitHub 403.
+- ALRS residual FED-17: dry-run `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio/Terra continuam sem ID/fonte exata.
+- Câmara: API oficial em 8 janelas trimestrais 2025–2026, 8/8 `status=ok`, 700 IDs descobertos na primeira página; nenhuma reconciliação/aplicação.
+- Senado: envelope `/tmp/senado-nominal-envelope-latest.json` ausente (`ENOENT`); fail-closed, sem PDF, `legislator_id`, FK ou voto promovido.
+- Dataset: `consulta_cand_2026_RS.csv` com 1.003 linhas/IDs comparado ao snapshot com 1.003 IDs; diferença 0/0. Nenhum refresh aplicado.
+- Auditoria estrita read-only manteve gaps de fonte: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; exit 2 por gaps reais.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1554.md`.
+- Doctor: exit 1 por shell Node 22.22.2; WARN OpenCode ausente/Ollama sem preflight e FAIL de evidência Codex MCP com `401 invalid_refresh_token`. Gates serão executados em Node 24.19.0.
+- Nenhuma escrita factual, identidade, FK, voto, claim, source reference, Supabase ou Cloudflare ocorreu.
+- Próximo chunk: gates locais sob Node 24.19.0, publicar/verificar commits documentais pendentes e iniciar nova recon bounded; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T15:35Z
 
 - Lock bounded tentado/adquirido/liberado com `flock -n`; worktree iniciou em `970a07d7246b27f7ed1641807b8c9511d4bbbfad` e tinha dois commits documentais à frente de `origin/main`; após este tick, `92b8fd4` foi criado e segue local por bloqueio GitHub 403.
