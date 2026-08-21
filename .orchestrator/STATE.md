@@ -1,3 +1,16 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T10:46Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `bc087de1d7a5a890ff270307758ac1f9ceece21f`.
+- Recon ALRS: 7/7 URLs oficiais HTTP 200 e válidas; manifesto atualizado somente no timestamp. FED-17 dry-run bloqueado por `JWT issued at future`, 0 votos, 0 correções e 4 residuais bloqueados.
+- Senado: adaptação fail-closed porque `/tmp/senado-nominal-envelope-latest.json` não existe. Câmara: API oficial read-only em quatro janelas trimestrais de 2026 respondeu HTTP válido e retornou IDs oficiais; sem reconciliação/aplicação.
+- Pacote ALRS substantivo regenerado: 9 pedidos/8 versões; validador fail-closed confirmou 25 itens sem fonte substantiva; `remote_apply=false`.
+- Dataset vivo: CSV completo `consulta_cand_2026_RS.csv` com 1003 IDs; snapshot 1003; 0 somente no dataset e 0 somente no snapshot; nenhum refresh.
+- Gates Node 24.19.0 verdes: 97 arquivos/398 testes, TypeScript, schema, `data:check` 1003/988, build, `git diff --check` e smoke local 1002 cards/0 HTTP/console errors.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1046.md`.
+- Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase ou Cloudflare ocorreu; somente timestamp de manifesto e documentação operacional.
+- Bloqueios: doctor shell FAIL por Node 22.22.2; smoke Codex MCP `401 invalid_refresh_token`, OpenCode ausente e Ollama sem preflight; quatro residuais Enio/Terra sem ID/fonte exata; gaps de fontes ALRS 1251/1647/4, Câmara 3/2/2 e Senado 112/188/455; Senado sem envelope e com deriva criptográfica.
+- Próximo chunk: publicar/verificar este checkpoint e iniciar nova recon bounded; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T10:22Z
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `c97de368ab697e3286c62a8e2e84ab2539b6330f`.
