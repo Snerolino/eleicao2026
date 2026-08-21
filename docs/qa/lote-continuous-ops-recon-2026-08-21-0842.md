@@ -32,5 +32,11 @@ Nenhuma candidatura, foto, identidade, FK, voto, matriz, claim, source reference
 - Senado permanece bloqueado enquanto bytes/SHA dos PDFs não coincidirem com o manifesto de origem.
 - Doctor do shell continua FAIL por Node `v22.22.2`; os gates do projeto foram executados comprovadamente com Node `v24.19.0`. Smoke MCP Codex continua indisponível por `401 invalid_refresh_token`; rota não foi repetida.
 
+## Publicação e verificação externa
+- Commit publicado: `fffebaa154d3f4e7c2e108b13256a8932ac6e299` (`main -> origin/main`).
+- Backup Cloudflare `334951434`, run `32464751253`: `completed/success`, `headSha` idêntico ao commit.
+- Produção: raiz HTTP 200 e `/release.json` HTTP 200; release `fffebaa-20260821T084702933Z`, `sha` idêntico, snapshot `row_count=1003`.
+- Smoke remoto: 1002 cards, 0 falhas HTTP, 0 erros de console online, service worker pronto.
+
 ## Próximo passo
-Publicar a evidência documental após os gates verdes, verificar o backup Cloudflare e a produção, e iniciar novo tick bounded. Aplicação remota factual continua condicionada a R0, schema/FK, fonte oficial exata, dry-run e idempotência.
+Iniciar novo tick bounded de recon oficial e lane local independente. Aplicação remota factual continua condicionada a R0, schema/FK, fonte oficial exata, dry-run e idempotência.
