@@ -27,5 +27,11 @@ Executar um tick bounded do control plane, mantendo recon oficial read-only ativ
 - Gaps de fonte legislativa continuam reais e separados da lane de implementação.
 - `orch:doctor` permanece com FAIL operacional porque o shell do cron usa Node `v22.22.2` enquanto o projeto exige Node 24; WARNs opcionais incluem OpenCode ausente, Ollama sem preflight e rota Codex MCP não exercitada no modo rápido.
 
+## Publicação verificada
+- Commit `5ff10341d6e6594d1c87c0afdccdc3deffb9ef7b` publicado em `origin/main`.
+- Workflow backup Cloudflare `334951434`, run `32492243130`: `completed/success`; `headSha` igual ao commit.
+- Produção `https://rs.votopraquem.org`: HTTP 200.
+- `https://rs.votopraquem.org/release.json?cb=5ff1034`: `sha=5ff10341d6e6594d1c87c0afdccdc3deffb9ef7b`, `row_count=1003`.
+
 ## Próximo passo
-Manter a recon oficial bounded e iniciar o próximo chunk local independente; publicação somente após documentar as mudanças e repetir gates. Aplicação factual remota permanece condicionada a R0, schema/FK, fonte oficial, dry-run e idempotência.
+Manter a recon oficial bounded e iniciar o próximo chunk local independente. Aplicação factual remota permanece condicionada a R0, schema/FK, fonte oficial, dry-run e idempotência.

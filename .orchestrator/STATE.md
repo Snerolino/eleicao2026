@@ -8,6 +8,7 @@
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1426.md`.
 - Nenhuma escrita factual, identidade, FK, claim, source reference, Supabase ou Cloudflare ocorreu.
 - Bloqueios: quatro votos Enio/Terra sem ID/fonte exata; Senado sem envelope/deriva; gaps substantivos; doctor FAIL por Node 22.22.2 e WARNs opcionais de OpenCode/Ollama/Codex MCP.
+- Publicação verificada: commit `5ff10341d6e6594d1c87c0afdccdc3deffb9ef7b` em `origin/main`; backup Cloudflare `334951434`, run `32492243130`, `completed/success`, `headSha` idêntico. Produção `rs.votopraquem.org` HTTP 200 e `/release.json?cb=5ff1034` confirmaram SHA idêntico e `row_count=1003`.
 - Próximo chunk: nova recon bounded e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T14:04Z
