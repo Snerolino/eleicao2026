@@ -1,3 +1,18 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T15:15Z
+
+- Lock bounded tentado/adquirido/liberado com `flock -n`; worktree iniciou limpa em `e925327276b82481a348d4db3e2339d075dfe9a3`.
+- Câmara: API oficial em 8 janelas trimestrais 2025–2026, 8/8 `status=ok`, 700 IDs descobertos na primeira página; nenhuma reconciliação/aplicação.
+- ALRS residual FED-17: dry-run `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio/Terra continuam sem ID/fonte exata.
+- Senado: `/tmp/senado-nominal-envelope-latest.json` ausente; fail-closed, sem PDF, legislator_id, FK ou voto promovido.
+- Dataset: `data:check` 1.003 candidaturas/988 fotos oficiais; CSV parcial `lista_candidatos_2026.csv` não foi usado para substituir o snapshot.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check`, build, smoke local 1002 cards/0 HTTP/console errors/service worker e `git diff --check`.
+- Auditoria estrita read-only manteve gaps de fonte: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; exit 2 por gaps reais.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1515.md`.
+- Doctor: FAIL por shell Node 22.22.2 e FAIL de evidência MCP Codex com `401 invalid_refresh_token`; gates foram executados explicitamente em Node 24.19.0. OpenCode ausente e Ollama sem preflight permanecem WARNs.
+- Nenhuma escrita factual, identidade, FK, voto, claim, source reference, Supabase ou Cloudflare ocorreu.
+- Produção respondeu HTTP 200 antes da documentação; publicação deste checkpoint seguirá pelo workflow backup Cloudflare após os gates documentais.
+- Próximo chunk: publicar/verificar a documentação e iniciar nova recon bounded; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T14:48Z
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `90bc4f59314d7859b944875e9c3560c12146b82c`.
