@@ -1,3 +1,15 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T14:26Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `10eb88d086f6808bc9eaea66330d5d178fe6eb94`.
+- Recon oficial: Câmara 4/4 janelas trimestrais HTTP válido e 300 IDs descobertos em primeira página; ALRS HTTP 200, 77.442 bytes, SHA `sha256:6a386d7d8b9ae17f8f5107b0cb6c90d71795a8568f08ed7c5972746a4ac0bab1`, 0 `data-item`, sem Enio/Terra; Senado sem envelope transitório verificável.
+- Dataset: 3 CSVs comparáveis, 1.003 IDs; snapshot 1.003; diferença 0/0.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1003/988, build, smoke local 1002 cards/0 HTTP/console errors/service worker pronto e diff check.
+- Auditoria estrita read-only: gaps versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; exit 2 por gaps reais.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1426.md`.
+- Nenhuma escrita factual, identidade, FK, claim, source reference, Supabase ou Cloudflare ocorreu.
+- Bloqueios: quatro votos Enio/Terra sem ID/fonte exata; Senado sem envelope/deriva; gaps substantivos; doctor FAIL por Node 22.22.2 e WARNs opcionais de OpenCode/Ollama/Codex MCP.
+- Próximo chunk: nova recon bounded e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T14:04Z
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `766d483dd7705bf1dda2a391bd63652595cd0ca5`.
