@@ -26,4 +26,4 @@ Executados com Node `v24.19.0`:
 - Push GitHub e deploy Cloudflare não foram acionados neste registro até a tentativa explícita pós-documentação; produção respondeu `HTTP 200` neste tick.
 
 ## Próximo passo
-Tentar publicar o commit documental pelos canais autorizados e verificar o workflow backup Cloudflare `334951434` por `headSha`; manter recon ALRS/Senado fail-closed e a aplicação remota condicionada a R0, schema/FK, fonte oficial, dry-run e idempotência.
+Commit documental criado como `1e324f9`. `git push origin main` falhou em duas tentativas com HTTP 403 (`Permission denied`), embora `gh` esteja autenticado; por isso nenhum workflow novo nem deploy foi acionado. Manter recon ALRS/Senado fail-closed e a aplicação remota condicionada a R0, schema/FK, fonte oficial, dry-run e idempotência.

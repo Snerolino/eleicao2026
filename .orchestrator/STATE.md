@@ -11,7 +11,7 @@
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-2045.md`.
 - Workflows GitHub confirmados: backup Cloudflare `334951434`, primário `320564705` e verificador `335560210` ativos.
 - Bloqueios: doctor shell Node 22.22.2; OpenCode ausente, Ollama sem preflight, MCP não exercitado; Senado sem envelope; gaps de fontes. Nenhuma escrita Supabase/Cloudflare ocorreu.
-- Próximo chunk: commit/push documental e verificação do workflow backup; recon bounded oficial continua. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+- Próximo chunk: commit documental criado `1e324f9`, mas `git push origin main` falhou duas vezes com HTTP 403 (`Permission denied`) apesar de `gh` autenticado; nenhum workflow/deploy novo foi acionado. Recon bounded oficial continua. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T20:25Z
 
