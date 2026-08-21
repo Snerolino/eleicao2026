@@ -806,6 +806,12 @@
 - Evidência factual pronta para reconciliar tipo/versão/evento; nenhum impacto aprovado.
 - QA: `docs/qa/lote-alrs-p0-official-event-evidence-2026-08-21.md`.
 
+## Tick contínuo — propostas editoriais P0 ALRS (2026-08-21)
+
+- 2 versões P0 com grupo candidato `mulheres`; 2 propostas de assessment.
+- Versões/eventos/fonte confirmados; campos substantivos permanecem sujeitos à revisão humana.
+- QA: `docs/qa/lote-alrs-p0-assessment-proposals-2026-08-21.md`.
+
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)
 
 - 30/30 itens P0 classificados: 9 mérito, 19 procedimento, 2 emenda, 0 destaque.
