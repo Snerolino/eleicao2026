@@ -1,3 +1,14 @@
+## Tick contínuo — propostas P0 ALRS + verificação oficial de fontes (2026-08-21T02:52Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `a5fcdd55dc828e769e065c4dac5f7e456f88eb53`.
+- Lane local: `npm run impact:alrs:r4:p0:proposals` produziu 2 versões/2 avaliações propostas; pacote permanece `pending_review`, `human_review_required=true` e `remote_apply=false`.
+- Recon oficial: `npm run impact:alrs:r4:sources` refez GET bounded de 7 URLs ALRS; 7/7 HTTP 200, 7/7 válidas, 0 falhas; manifesto atualizado somente no timestamp.
+- Gates Node 24 verdes: 95 arquivos/396 testes, TypeScript, schema, `data:check` 1003/988, build, diff check e smoke local (1002 cards, 0 falhas HTTP/console; service worker pronto).
+- QA: `docs/qa/lote-continuous-ops-p0-proposals-2026-08-21-0252.md`.
+- Nenhuma escrita factual em snapshot, identidade, FK, voto, matriz, claim, Supabase ou Cloudflare ocorreu.
+- Bloqueios persistentes: quatro residuais Enio/Terra sem ID oficial/fonte exata; Senado com SHA divergente; Câmara sem lote novo. Doctor do cron FAIL somente por Node 22.22.2 do shell; execução dos gates com Node 24.
+- Próximo passo: publicar checkpoint documental, confirmar backup Cloudflare/produção e manter recon bounded fail-closed.
+
 ## Tick contínuo — recon oficial + pacote ALRS de mérito (2026-08-21T01:42Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `54391bcad9adcb3c5aa417485ba8265da35227a8`.
