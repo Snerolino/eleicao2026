@@ -13,6 +13,7 @@
 - `editorial_status=pending_review`;
 - nenhuma matriz aprovada;
 - nenhuma escrita remota.
+- revalidação oficial: **5/5** `official_version_confirmed=true`;
 
 ## Objetivo
 

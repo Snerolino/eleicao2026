@@ -797,6 +797,7 @@
 
 - 5 versões P0 sem colisão/40 votos, até 7 candidatos por versão.
 - Pacote marcado `P0-first-editorial-review`, ainda `pending_review` e sem escrita remota.
+- Revalidação oficial dos cinco P0 sem colisão: 5/5 `official_version_confirmed=true`.
 - QA: `docs/qa/lote-alrs-p0-matrix-pack-2026-08-21.md`.
 
 ## Tick contínuo — evidência oficial estruturada P0 ALRS (2026-08-21)
