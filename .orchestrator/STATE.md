@@ -1,3 +1,13 @@
+## Tick contínuo — matching oficial P1 ALRS + publicação (2026-08-21T03:20Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; lane local processou 20 versões P1 contra 7 páginas oficiais ALRS.
+- Evidência: 7/7 HTTP 200 e 526 `data-item`; matching por identidade de proposição agrupou linhas por tipo/número/ano: 19 matched, 1 múltiplo mantido para revisão, 0 sem correspondência.
+- Pacote permanece `pending_review`, `human_review_required=true` e `remote_apply=false`; nenhuma escrita factual, FK, matriz, claim ou Supabase ocorreu.
+- Gates Node 24.19.0 verdes: 96 arquivos/397 testes, TypeScript, schema, `data:check` 1003/988, build, `git diff --check` e smoke local 1002 cards/0 HTTP/console errors.
+- QA: `docs/qa/lote-alrs-p1-official-match-2026-08-21.md`; artefato `data/legislative-import/alrs/p1-official-match-report.json`.
+- Publicação: commit `9e726f9163bc109242a4364f41eb337da5ffe91f` em `origin/main`; backup `334951434`, run `32442947375`, `completed/success`, `headSha` idêntico; produção HTTP 200, `/release.json` confirmou o SHA e snapshot 1003; smoke remoto 1002 cards/0 HTTP/console errors.
+- Bloqueios mantidos: um item P1 com múltiplas proposições oficiais, quatro residuais Enio/Terra sem ID/fonte exata, Senado com SHA divergente e Câmara sem lote novo. Próximo chunk: recon bounded fail-closed e preparação local independente.
+
 ## Tick contínuo — propostas P0 ALRS + verificação oficial de fontes (2026-08-21T02:52Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `a5fcdd55dc828e769e065c4dac5f7e456f88eb53`.
