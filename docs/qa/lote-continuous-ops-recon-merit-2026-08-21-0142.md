@@ -31,6 +31,12 @@ A lane P0 independente também extraiu evidência oficial das 7 URLs ALRS do pac
 
 Nenhuma escrita em snapshot, manifesto factual, source reference, voto, identidade, FK, Supabase, Cloudflare ou matriz de impacto ocorreu. Sem fonte oficial exata, a fila permanece fail-closed.
 
+## Publicação / verificação
+
+- Commit final: `74bb92a70279b4b0dc92ea6b6e7f700e21b2878f`, `main` sincronizada com `origin/main`.
+- Backup Cloudflare `334951434`, run `32437580967`: `completed/success`, `headSha` idêntico.
+- Produção: raiz HTTP 200; `/release.json` HTTP 200, SHA `74bb92a70279b4b0dc92ea6b6e7f700e21b2878f`, `row_count=1003`, release `74bb92a-20260821T014847154Z`.
+
 ## Próximo passo
 
 Repetir recon bounded pelas rotas oficiais e manter a revisão local do pacote ALRS independente. Só planejar/aplicar fatos após identidade oficial, fonte exata, R0/schema/FK, dry-run e segunda execução idempotente.
