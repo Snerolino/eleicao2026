@@ -25,7 +25,9 @@ Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, 
 - Smoke Codex MCP falha por `401 invalid_refresh_token`; OpenCode ausente e Ollama sem preflight são rotas opcionais, não bloquearam os gates locais.
 
 ## Publicação
-Não houve novo commit neste tick porque a reconciliação alterou apenas o timestamp do manifesto e a política de publicação requer um lote documentado. A produção permanece no commit `0ada04c734dc3233229a465ae58a91c4583e4158`, já validado por `/release.json`.
+- Commit `6731c1247a3141372c4c628db7fa8a7ab25b5287` criado e enviado para `origin/main` (`docs: registrar recon oficial e gates do tick`).
+- Workflow backup Cloudflare `334951434`, run `32470554577`: `completed/success`, `headSha` idêntico ao commit.
+- Produção: raiz HTTP `200`; `/release.json` confirmou SHA idêntico, release `6731c12-20260821T100022968Z` e `row_count=1003`.
 
 ## Próximo passo
 Manter a recon bounded oficial e a lane local independente; tentar novo FED-17 somente após o JWT deixar de estar no futuro. Qualquer aplicação remota permanece condicionada a R0, schema/FK, fonte oficial, dry-run e idempotência.
