@@ -750,6 +750,12 @@
 - Todos permanecem `blocked_until_official_version_identity`; nenhuma matriz foi criada.
 - QA: `docs/qa/lote-alrs-version-key-collisions-2026-08-21.md`.
 
+## Tick contínuo — pacote de resolução de colisões ALRS (2026-08-21)
+
+- 18 colisões agrupadas: 8 possíveis mesmos textos em eventos diferentes e 10 possíveis divergências de identidade/hash.
+- Todos exigem confirmação oficial; nenhum foi resolvido por inferência.
+- QA: `docs/qa/lote-alrs-version-collision-resolution-pack-2026-08-21.md`.
+
 ## Tick contínuo — fechamento final R4 (2026-08-20)
 
 - 13/13 itens da fila Q2/Q3 revisados; 12 não pontuáveis aprovados e 1 assessment populacional aprovado.

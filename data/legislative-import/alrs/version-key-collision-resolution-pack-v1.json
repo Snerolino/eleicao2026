@@ -1,0 +1,626 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "alrs_version_key_collision_resolution_pack",
+  "remote_apply": false,
+  "public_approval": false,
+  "totals": {
+    "collision_keys": 18,
+    "same_text_multiple_events_possible": 8,
+    "version_identity_mismatch_possible": 10
+  },
+  "items": [
+    {
+      "version_key": "alrs-1505",
+      "proposition_version_ids": [
+        "1135afac-26a6-41d3-bd12-282a632d1483",
+        "11dc4047-7337-4814-8db8-39873aff4da0",
+        "1c94fa20-d734-4725-b0aa-16a92c0121d9",
+        "4205ddcb-cd1d-4ec7-b366-6733633cae1c",
+        "99bf71d7-fa13-4419-8a9e-c0b9e464c3b7"
+      ],
+      "proposition_external_ids": [
+        "alrs:PR-6/2026",
+        "alrs:PL-10/2022",
+        "alrs:PL-364/2025",
+        "alrs:PL-169/2025",
+        "alrs:PL-188/2024"
+      ],
+      "official_titles": [
+        "PR 6/2026",
+        "PL 10/2022",
+        "PL 364/2025",
+        "PL 169/2025",
+        "PL 188/2024"
+      ],
+      "event_dates": [
+        "2026-11-08 00:00:00+00"
+      ],
+      "event_ids": [
+        "alrs-votacao-1505-PR-6-2026",
+        "alrs-votacao-1505-PL-10-2022",
+        "alrs-votacao-1505-PL-364-2025",
+        "alrs-votacao-1505-PL-169-2025",
+        "alrs-votacao-1505-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "remote_apply": false,
+      "human_review_required": true
+    },
+    {
+      "version_key": "alrs-2034",
+      "proposition_version_ids": [
+        "10a2f43c-e6af-4619-b8b5-c91198909516",
+        "42b0e419-c6b0-4c8b-9c73-b2ea20b84a58",
+        "5800dcb8-cddc-44d4-91a8-647f963185f8",
+        "804f8ead-7051-4aa4-b3f2-3ac4c0960482",
+        "d136f938-eed6-45fb-95c6-fcf18168353b",
+        "e435e864-1741-4561-8bc5-08384ae287e6"
+      ],
+      "proposition_external_ids": [
+        "alrs:PL-169/2025",
+        "alrs:PL-10/2022",
+        "alrs:PR-6/2026",
+        "alrs:PL-364/2025",
+        "alrs:PL-321/2025",
+        "alrs:PL-188/2024"
+      ],
+      "official_titles": [
+        "PL 169/2025",
+        "PL 10/2022",
+        "PR 6/2026",
+        "PL 364/2025",
+        "PL 321/2025",
+        "PL 188/2024"
+      ],
+      "event_dates": [
+        "2026-11-08 00:00:00+00"
+      ],
+      "event_ids": [
+        "alrs-votacao-2034-PL-169-2025",
+        "alrs-votacao-2034-PL-10-2022",
+        "alrs-votacao-2034-PR-6-2026",
+        "alrs-votacao-2034-PL-364-2025",
+        "alrs-votacao-2034-PL-321-2025",
+        "alrs-votacao-2034-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "remote_apply": false,
+      "human_review_required": true
+    },
+    {
+      "version_key": "alrs-2045",
+      "proposition_version_ids": [
+        "1cc8fd95-be6b-47cb-927f-5c3d3b6ad85d",
+        "27a6ee4f-cc96-41a0-964d-a93504dc9c99",
+        "92df7f50-bbaf-4708-85ff-9eb8b09bb687",
+        "b7afb033-49ec-4cc3-ac6f-8fe2b61aa1f9"
+      ],
+      "proposition_external_ids": [
+        "alrs:PL-364/2025",
+        "alrs:PL-169/2025",
+        "alrs:PL-10/2022",
+        "alrs:PL-188/2024"
+      ],
+      "official_titles": [
+        "PL 364/2025",
+        "PL 169/2025",
+        "PL 10/2022",
+        "PL 188/2024"
+      ],
+      "event_dates": [
+        "2026-11-08 00:00:00+00"
+      ],
+      "event_ids": [
+        "alrs-votacao-2045-PL-364-2025",
+        "alrs-votacao-2045-PL-169-2025",
+        "alrs-votacao-2045-PL-10-2022",
+        "alrs-votacao-2045-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "remote_apply": false,
+      "human_review_required": true
+    },
+    {
+      "version_key": "alrs-2103",
+      "proposition_version_ids": [
+        "6f2c5b2e-5e36-43ad-9270-7e10e15d6fa0",
+        "9bf6173c-35c0-4c20-ac2c-8e5bd83c0c6c",
+        "ba2efdf4-c9ac-4a15-8c3c-bc2244dc0595",
+        "bfee5021-0fe3-4e78-a688-acded3d34c9b",
+        "fef6b7b9-6b30-4323-b1a0-bf0cc6d61f5d"
+      ],
+      "proposition_external_ids": [
+        "alrs:PL-10/2022",
+        "alrs:PL-169/2025",
+        "alrs:PL-364/2025",
+        "alrs:PR-6/2026",
+        "alrs:PL-188/2024"
+      ],
+      "official_titles": [
+        "PL 10/2022",
+        "PL 169/2025",
+        "PL 364/2025",
+        "PR 6/2026",
+        "PL 188/2024"
+      ],
+      "event_dates": [
+        "2026-11-08 00:00:00+00"
+      ],
+      "event_ids": [
+        "alrs-votacao-2103-PL-10-2022",
+        "alrs-votacao-2103-PL-169-2025",
+        "alrs-votacao-2103-PL-364-2025",
+        "alrs-votacao-2103-PR-6-2026",
+        "alrs-votacao-2103-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "remote_apply": false,
+      "human_review_required": true
+    },
+    {
+      "version_key": "alrs-2144",
+      "proposition_version_ids": [
+        "1e6fb183-de4e-4e5a-ad10-e09979e32911",
+        "477a24c1-8431-44b5-b3b2-0d05b2e95ae0",
+        "c31c4aa5-3599-409c-a75d-e1fc93b9d383",
+        "c8e7a10b-332b-49db-8ac9-cacb467d14b6",
+        "d5cbf3ab-e8b7-485e-bf62-c6d7bbf599e4",
+        "f898c431-0344-4d50-999f-9337f7c2824a"
+      ],
+      "proposition_external_ids": [
+        "alrs:PL-10/2022",
+        "alrs:PL-321/2025",
+        "alrs:PL-364/2025",
+        "alrs:PL-169/2025",
+        "alrs:PR-6/2026",
+        "alrs:PL-188/2024"
+      ],
+      "official_titles": [
+        "PL 10/2022",
+        "PL 321/2025",
+        "PL 364/2025",
+        "PL 169/2025",
+        "PR 6/2026",
+        "PL 188/2024"
+      ],
+      "event_dates": [
+        "2026-11-08 00:00:00+00"
+      ],
+      "event_ids": [
+        "alrs-votacao-2144-PL-10-2022",
+        "alrs-votacao-2144-PL-321-2025",
+        "alrs-votacao-2144-PL-364-2025",
+        "alrs-votacao-2144-PL-169-2025",
+        "alrs-votacao-2144-PR-6-2026",
+        "alrs-votacao-2144-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "remote_apply": false,
+      "human_review_required": true
+    },
+    {
+      "version_key": "alrs-28",
+      "proposition_version_ids": [
+        "212a64d2-7f68-4aa0-b95d-a9041b0fb18f",
+        "42b1596d-9f23-4ed1-af41-885384fe766f",
+        "44355a11-6ef9-40e9-bfad-1c457b892fa2",
+        "4d49f69f-e94d-4ef8-8d85-56473efaf4a2",
+        "d55c520b-5e34-46bf-aa04-0aea85db1edd"
+      ],
+      "proposition_external_ids": [
+        "alrs:PL-321/2025",
+        "alrs:PL-169/2025",
+        "alrs:PL-188/2024",
+        "alrs:PL-10/2022",
+        "alrs:PR-6/2026"
+      ],
+      "official_titles": [
+        "PL 321/2025",
+        "PL 169/2025",
+        "PL 188/2024",
+        "PL 10/2022",
+        "PR 6/2026"
+      ],
+      "event_dates": [
+        "2026-11-08 00:00:00+00"
+      ],
+      "event_ids": [
+        "alrs-votacao-28-PL-321-2025",
+        "alrs-votacao-28-PL-169-2025",
+        "alrs-votacao-28-PL-188-2024",
+        "alrs-votacao-28-PL-10-2022",
+        "alrs-votacao-28-PR-6-2026"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "remote_apply": false,
+      "human_review_required": true
+    },
+    {
+      "version_key": "sha256:0cdbef70e6ca5a6ef7c81cdba4b73cd78380a780b748d4a99edc8a09825ff6e2",
+      "proposition_version_ids": [
+        "245303bd-b927-44a7-9cb3-763e9e9b5511",
+        "5dcc1e75-8a21-4244-b138-9f418826abde"
+      ],
+      "proposition_external_ids": [
+        "alrs_prop_2191cd41f3e4abad07e42b5f",
+        "alrs_prop_775fb8b3a6f3e254c3e230aa"
+      ],
+      "official_titles": [
+        "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 17 a 31 de julho de 2026."
+      ],
+      "event_dates": [
+        "2026-06-09 00:00:00+00",
+        "2026-07-14 00:00:00+00"
+      ],
+      "event_ids": [
+        "alrs_event_f92d78c0b210ce22dd453c9a",
+        "alrs_event_cbc0280eafd2bfd1aea51e20"
+      ],
+      "source_urls": [],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "remote_apply": false,
+      "human_review_required": true
+    },
+    {
+      "version_key": "sha256:2153b7d26a279490da4ed0de073c26331b8fe24de9abe9549a644d23989abc5c",
+      "proposition_version_ids": [
+        "6857fd00-8ea9-44ca-9757-801139b9af22",
+        "b3f8b5fc-c90f-450b-a34e-b7517e1dbd04"
+      ],
+      "proposition_external_ids": [
+        "alrs_prop_37041a96d00a66750a23d9e4",
+        "alrs_prop_9d546ab56f3fe2aea881ff2a"
+      ],
+      "official_titles": [
+        "Autoriza a transferência de recursos do Fundo de Reaparelhamento da Assembleia Legislativa – FRAL, instituído pela Resolução n.º 2.889, de 9 de setembro de 2003, ao Tesouro do Estado do Rio Grande do Sul."
+      ],
+      "event_dates": [
+        "2024-06-25 00:00:00+00"
+      ],
+      "event_ids": [
+        "alrs_event_860025529cfb085177f5e3d1",
+        "alrs_event_7c8dbaa06dc2b4c1e1e2dbd8"
+      ],
+      "source_urls": [],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "remote_apply": false,
+      "human_review_required": true
+    },
+    {
+      "version_key": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924",
+      "proposition_version_ids": [
+        "107c79e5-2dd2-42ca-a906-f2674b103455",
+        "706fd8fa-b0b7-42a2-b76a-bc352d4dc889",
+        "b3b27d88-a651-4680-9f97-7784ecfc51c3",
+        "b4a681d1-53c2-4c16-b038-45606adfd2f1"
+      ],
+      "proposition_external_ids": [
+        "alrs_prop_5d7ce3dddd17ee16bebfbf92",
+        "alrs_prop_bd3c9e198a3d6ab75eb40cd7",
+        "alrs_prop_e6d6bc434bb2495d1f9016e7",
+        "alrs_prop_6c0127039e60a30bb11eca13"
+      ],
+      "official_titles": [
+        "Altera a Lei n.º 15.988, de 7 de agosto de 2023, que consolida a legislação relativa às mulheres vítimas de violência no âmbito do Estado do Rio Grande do Sul."
+      ],
+      "event_dates": [
+        "2026-04-07 00:00:00+00",
+        "2026-06-23 00:00:00+00",
+        "2026-03-10 00:00:00+00"
+      ],
+      "event_ids": [
+        "alrs_event_61f8d7a97e94834da95e0a82",
+        "alrs_event_37b49f368a12283746ef9e06",
+        "alrs_event_a815bcbbdb5399a06257f9c4",
+        "alrs_event_fde899ed5662145ce9615dd6"
+      ],
+      "source_urls": [],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "remote_apply": false,
+      "human_review_required": true
+    },
+    {
+      "version_key": "sha256:5f45c68c549e9aa03f35f374c22455f2ff9d3069303e705868f5a2d394f62136",
+      "proposition_version_ids": [
+        "0638273a-f944-40f8-aab4-c934cff1631f",
+        "cae9dc8a-c64a-4bb8-a446-1919755116fe"
+      ],
+      "proposition_external_ids": [
+        "alrs_prop_c6e65e16d9d03db5c25c8625",
+        "alrs_prop_3c61cf2b6f3176da722ea3df"
+      ],
+      "official_titles": [
+        "Altera a Lei nº 14.499, de 3 de abril de 2014, que institui o Plano de Empregos, Funções e Salários e cria os empregos permanentes e os empregos e funções em comissão da Fundação Teatro São Pedro."
+      ],
+      "event_dates": [
+        "2025-08-05 00:00:00+00",
+        "2026-06-23 00:00:00+00"
+      ],
+      "event_ids": [
+        "alrs_event_bda28d65eaacc9f8fd395f87",
+        "alrs_event_9a5b8fa772d7a3cb4d32f024"
+      ],
+      "source_urls": [],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "remote_apply": false,
+      "human_review_required": true
+    },
+    {
+      "version_key": "sha256:648bb36ab78f53e0f8a2126bbc8915088ab19bcd7ad89a36295777938ed97546",
+      "proposition_version_ids": [
+        "920d992c-ae77-496d-8e59-cb110364a19d",
+        "c5a71560-81fe-4d16-9af4-62160eac232d"
+      ],
+      "proposition_external_ids": [
+        "alrs_prop_9298336d402b2cd71fdec76b",
+        "alrs_prop_ee3ccc41df5ba7600248e61d"
+      ],
+      "official_titles": [
+        "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 23 de dezembro de 2025 a 31 de janeiro de 2026."
+      ],
+      "event_dates": [
+        "2025-11-18 00:00:00+00",
+        "2025-12-16 00:00:00+00"
+      ],
+      "event_ids": [
+        "alrs_event_7fc468a0542ab7370ba0f3b1",
+        "alrs_event_031ba82afbe40ca2b412494a"
+      ],
+      "source_urls": [],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "remote_apply": false,
+      "human_review_required": true
+    },
+    {
+      "version_key": "sha256:6851f29702ea6fd276e86f09af257ff8d72716dfc448069bcaff6ebb6aed9907",
+      "proposition_version_ids": [
+        "bcf24d3d-809a-48a2-be66-193ed05c7e9b",
+        "c1fb9b07-400e-4c2c-aaa3-9435aeda8962"
+      ],
+      "proposition_external_ids": [
+        "alrs_prop_0fc17ed2830e502bc52a59f1",
+        "alrs_prop_3e4293b254be99e7de11b6ec"
+      ],
+      "official_titles": [
+        "Altera a Resolução n.º 2.514, de 30 de novembro de 1993, que institui o Código de Ética Parlamentar."
+      ],
+      "event_dates": [
+        "2025-07-15 00:00:00+00",
+        "2025-08-12 00:00:00+00"
+      ],
+      "event_ids": [
+        "alrs_event_47f98a82770b1c5ba39de186",
+        "alrs_event_fa5e909aa7f411aab320c8b7"
+      ],
+      "source_urls": [],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "remote_apply": false,
+      "human_review_required": true
+    },
+    {
+      "version_key": "sha256:7a3c1db1ae0e28f59fe04449e1f24a5e1fc40d5d4acacebff8699b4210709620",
+      "proposition_version_ids": [
+        "ab624748-5807-4889-82b4-23af4e9295eb",
+        "c55181e5-8d2d-4939-bcfa-ac6d91407bd4"
+      ],
+      "proposition_external_ids": [
+        "alrs_prop_f240e457e9d6412fc7428be4",
+        "alrs_prop_e368ca3990c6ac9610ca715b"
+      ],
+      "official_titles": [
+        "Altera a Resolução n.º 2.288, de 18 de janeiro de 1991, que dispõe sobre o Regimento Interno da Assembleia Legislativa do Estado do Rio Grande do Sul."
+      ],
+      "event_dates": [
+        "2024-05-14 00:00:00+00",
+        "2025-10-28 00:00:00+00"
+      ],
+      "event_ids": [
+        "alrs_event_3f4738bbab8f5d3756b1f701",
+        "alrs_event_be2caaa7c8321fa714ab9b48"
+      ],
+      "source_urls": [],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "remote_apply": false,
+      "human_review_required": true
+    },
+    {
+      "version_key": "sha256:893beb47914572406fa95274c527988b84a01b5e10f4cb7a57ef30269bf9c338",
+      "proposition_version_ids": [
+        "4663d604-5056-401e-a55c-f6343a414d7b",
+        "7c31b171-e6c7-4605-af2a-6f2690505608"
+      ],
+      "proposition_external_ids": [
+        "alrs_prop_2f45347751e5d9a26011e3aa",
+        "alrs_prop_a4b9f51cc184898a06cb97b4"
+      ],
+      "official_titles": [
+        "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 17 a 31 de julho de 2025."
+      ],
+      "event_dates": [
+        "2025-06-24 00:00:00+00"
+      ],
+      "event_ids": [
+        "alrs_event_c64109628107305dbd536503",
+        "alrs_event_a157712207598d9d509fb48c"
+      ],
+      "source_urls": [],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "remote_apply": false,
+      "human_review_required": true
+    },
+    {
+      "version_key": "sha256:96616d78191cde5f8ee477abe0e6bcc2adae024db6ae0c86b5929cddcf6a8dfc",
+      "proposition_version_ids": [
+        "356a7ad6-65e5-4f36-ab89-ae46bb56dc39",
+        "573a434b-eb4d-4ffe-ae95-b9e31a0dd932"
+      ],
+      "proposition_external_ids": [
+        "alrs_prop_db4406f33c3014579aade29d",
+        "alrs_prop_1ad89cf901c3764d657f9f56"
+      ],
+      "official_titles": [
+        "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 17 a 31 de julho de 2024."
+      ],
+      "event_dates": [
+        "2024-07-16 00:00:00+00"
+      ],
+      "event_ids": [
+        "alrs_event_c060806b5dd91e92af82565a",
+        "alrs_event_40f72893ff6416c5b16d71f4"
+      ],
+      "source_urls": [],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "remote_apply": false,
+      "human_review_required": true
+    },
+    {
+      "version_key": "sha256:a4714c50e29cacb893e775a86ce306cf103e170fb3f967b819138d07f4a43954",
+      "proposition_version_ids": [
+        "3a3ed8d4-3c61-4fb0-9ba8-f762066c4590",
+        "c547b12f-fc38-475b-9475-70a16b564531"
+      ],
+      "proposition_external_ids": [
+        "alrs_prop_0a19adb48ba25b3e8b6c2003",
+        "alrs_prop_496e4c4c37e9015c811e1a10"
+      ],
+      "official_titles": [
+        "Autoriza o Poder Executivo a prorrogar parte dos contratos de que trata a Lei nº 11.638, de 6 de junho de 2001, que dispõe sobre a contratação emergencial de servidores para o Instituto-Geral de Perícias visando ao atendimento de necessidade temporária de excepcional interesse público e dá outras providências; a Lei nº 12.879, de 27 de dezembro de 2007, que autoriza o Poder Executivo a prorrogar p"
+      ],
+      "event_dates": [
+        "2022-05-03 00:00:00+00",
+        "2025-04-29 00:00:00+00"
+      ],
+      "event_ids": [
+        "alrs_event_6cf7e82907a01414e7d388f1",
+        "alrs_event_4717403fc05d5b449b6ec35f"
+      ],
+      "source_urls": [],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "remote_apply": false,
+      "human_review_required": true
+    },
+    {
+      "version_key": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c",
+      "proposition_version_ids": [
+        "5d0a2dcb-55d7-4773-992f-a4ddba3e1571",
+        "78c2730c-6515-4386-896d-8f4d84c7c517",
+        "910ecc25-82fe-4877-8849-1f83ea9f768d",
+        "ce5d5c4d-832c-44cc-a249-6b4177d597d4",
+        "cffb8ddb-0557-4c3a-9769-422c23e94fa1",
+        "d953e523-ffd0-4767-b308-097a76277050"
+      ],
+      "proposition_external_ids": [
+        "alrs_prop_bf820724976fb26dd9c3cbd6",
+        "alrs_prop_e6a906d03b35c3747233a07b",
+        "alrs_prop_43a3009cf63d2b7a5ab45e6a",
+        "alrs_prop_fb411e1f9d50d67f0d5cf459",
+        "alrs_prop_79f7b28357a9bd43cfe97630",
+        "alrs_prop_e0d503c19a2e45462cc12b38"
+      ],
+      "official_titles": [
+        "Dispõe sobre o reajuste dos pisos salariais no âmbito do Estado do Rio Grande do Sul, para as categorias profissionais que menciona, com fundamento na Lei Complementar Federal nº 103, de 14 de julho de 2000, que autoriza os Estados e o Distrito Federal a instituir o piso salarial a que se refere o inciso V do art. 7º da Constituição Federal, por aplicação do disposto no parágrafo único do seu art."
+      ],
+      "event_dates": [
+        "2022-12-20 00:00:00+00",
+        "2023-11-14 00:00:00+00",
+        "2024-12-03 00:00:00+00",
+        "2025-06-03 00:00:00+00",
+        "2026-05-19 00:00:00+00",
+        "2021-12-14 00:00:00+00"
+      ],
+      "event_ids": [
+        "alrs_event_04c20fd7d56659e493ada6a0",
+        "alrs_event_905d68031675d81ff5aa4130",
+        "alrs_event_28b272219b274d0ac3fb2ccc",
+        "alrs_event_e8adcecf2cc201c0d4b4cf8a",
+        "alrs_event_048170ad04f80ed17d107fad",
+        "alrs_event_fce6ee577819b60dcbcab63a"
+      ],
+      "source_urls": [],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "remote_apply": false,
+      "human_review_required": true
+    },
+    {
+      "version_key": "texto-base",
+      "proposition_version_ids": [
+        "3a09304a-4476-4746-81b2-2915d5f9f0ca",
+        "4043661b-fcc9-4aca-b805-ff68e940044f",
+        "747b2eb9-5a2e-4b90-b534-62cb73bda7d9",
+        "91384302-90d0-4740-8e6d-ce09d481be16",
+        "d4cbc2f3-6ee6-4057-a376-e5b3d1fe599a",
+        "da644106-dd52-40d7-a171-b631edec98e5"
+      ],
+      "proposition_external_ids": [
+        "PL 134/2023",
+        "PEC 305/2026",
+        "PL 38/2026",
+        "PL 165/2025",
+        "PL 361/2025",
+        "PL 77/2025"
+      ],
+      "official_titles": [
+        "Selo Tolerância Zero com Assédio no comércio gaúcho",
+        "Data-base revisão anual do funcionalismo (admissibilidade CCJ)",
+        "Reajuste de 5,4% no subsídio do magistério (texto original)",
+        "Sistema de inteligência preditiva de monitoramento de agressores reincidentes",
+        "Reserva de 5% de vagas em contratos terceirizados para mulheres vítimas de violência",
+        "Ampliação de mecanismos de proteção a vítimas com medidas protetivas de urgência"
+      ],
+      "event_dates": [
+        "2026-03-10 14:00:00+00",
+        "2026-07-15 14:00:00+00",
+        "2026-03-24 14:00:00+00",
+        "2026-04-07 14:00:00+00"
+      ],
+      "event_ids": [
+        "alrs_pl134_2023",
+        "alrs_pec305_2026_ccj",
+        "alrs_pl38_2026",
+        "alrs_pl165_2025",
+        "alrs_pl361_2025",
+        "alrs_pl77_2025"
+      ],
+      "source_urls": [],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "remote_apply": false,
+      "human_review_required": true
+    }
+  ]
+}

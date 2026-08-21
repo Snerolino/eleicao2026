@@ -51,6 +51,7 @@
     "impact:alrs:r4:assessment:drafts": "node scripts/build-alrs-assessment-draft-pack.mjs",
     "impact:alrs:r4:assessment:proposals": "node scripts/build-alrs-assessment-proposal-pack.mjs",
     "impact:alrs:r4:collisions": "node scripts/audit-alrs-version-key-collisions.mjs",
+    "impact:alrs:r4:collision:pack": "node scripts/build-alrs-version-collision-resolution-pack.mjs",
     "orch:setup": "bash scripts/orchestrator/setup-local.sh",
     "orch:doctor": "bash scripts/orchestrator/doctor.sh",
     "orch:install-skill": "bash scripts/orchestrator/install-hermes-skill.sh",
