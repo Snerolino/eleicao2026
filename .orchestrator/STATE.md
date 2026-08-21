@@ -1,3 +1,18 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T18:19Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `f975f809a3d9c2cb4920f0032de88452e6c33095`.
+- ALRS residual FED-17: dry-run falhou fechado com `JWT issued at future`; 0 votos/correções e quatro residuais Enio/Terra continuam sem ID/fonte exata.
+- Câmara: API oficial em 8 janelas trimestrais 2025–2026, 8/8 páginas iniciais `status=ok`; IDs descobertos read-only, nenhuma reconciliação/aplicação.
+- Senado: envelope nominal transitório ausente (`ENOENT`); fail-closed, sem PDF, `legislator_id`, FK ou voto promovido.
+- Dataset completo comparado ao snapshot com delimitador oficial `;`: 1.003/1.003 IDs, diferença 0/0.
+- Auditoria estrita read-only manteve gaps de fonte: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; exit 2 por gaps reais.
+- Produção respondeu HTTP 200; `/release.json?cb=f975f80` respondeu HTTP 200 e confirmou live `e925327`, snapshot `row_count=1003`; commit local deste tick ainda não publicado.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1819.md`.
+- Commit documental `44c9753` criado após os gates verdes; `git push origin main` e `env -u GH_TOKEN git push origin main` falharam com HTTP 403 (`Permission denied`). `main` segue 15 commits à frente de `origin/main`; nenhum deploy deste tick foi acionado.
+- Doctor permanece exit 1 por Node 22.22.2; OpenCode ausente, Ollama sem preflight e Codex MCP/exec `401 invalid_refresh_token` são bloqueios de infraestrutura.
+- Nenhuma escrita factual, identidade, FK, voto, claim, source reference, Supabase ou Cloudflare ocorreu.
+- Próximo chunk: corrigir a permissão efetiva de push e, enquanto isso, continuar recon bounded oficial read-only; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T18:01Z
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `1a488e7da5b2eaf680f39e2d04a2118828476fe4`.
