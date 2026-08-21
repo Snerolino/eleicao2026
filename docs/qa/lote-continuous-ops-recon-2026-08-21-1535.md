@@ -33,8 +33,8 @@ Executados sob Node `v24.19.0`:
 ## Publicação/verificação
 
 - Worktree estava limpa antes do tick; a documentação deste lote e o checkpoint operacional são as únicas alterações pretendidas.
-- O HEAD local contém dois commits documentais ainda à frente de `origin/main`; a publicação deve seguir pelo push GitHub e workflow backup Cloudflare após confirmar os gates.
-- Produção foi previamente observada em HTTP 200 no release anterior; este tick ainda não possui release novo até a verificação do push/workflow.
+- O commit deste tick foi criado como `92b8fd4`; `git push origin main` falhou com HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). `gh api` confirma permissões administrativas, mas a credencial usada pelo Git continua sem autorização efetiva de push; não houve loop cego.
+- Produção respondeu `HTTP 200`; `/release.json?cb=continuous1535` confirmou o release anterior `e925327276b82481a348d4db3e2339d075dfe9a3`, snapshot `row_count=1003`. Sem push, o workflow backup Cloudflare não foi acionado e não há release novo deste tick.
 
 ## Próximo passo
 

@@ -1,6 +1,6 @@
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T15:35Z
 
-- Lock bounded tentado/adquirido/liberado com `flock -n`; worktree iniciou em `970a07d7246b27f7ed1641807b8c9511d4bbbfad` e tinha dois commits documentais à frente de `origin/main`.
+- Lock bounded tentado/adquirido/liberado com `flock -n`; worktree iniciou em `970a07d7246b27f7ed1641807b8c9511d4bbbfad` e tinha dois commits documentais à frente de `origin/main`; após este tick, `92b8fd4` foi criado e segue local por bloqueio GitHub 403.
 - ALRS residual FED-17: dry-run `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio/Terra continuam sem ID/fonte exata.
 - Câmara: API oficial em 8 janelas trimestrais 2025–2026, 8/8 `status=ok`, 700 IDs descobertos na primeira página; nenhuma reconciliação/aplicação.
 - Senado: envelope `/tmp/senado-nominal-envelope-latest.json` ausente (`ENOENT`); fail-closed, sem PDF, `legislator_id`, FK ou voto promovido.
