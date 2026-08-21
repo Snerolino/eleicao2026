@@ -24,5 +24,8 @@ Executar tick bounded com lock não bloqueante, recon oficial read-only nas lane
 ## Estado, bloqueios e publicação
 - Nenhuma escrita factual, identidade, FK, voto, claim, source reference, Supabase ou Cloudflare ocorreu.
 - Alteração local rastreável: timestamp do manifesto ALRS e este QA.
+- Publicação verificada: commit `7f0dfd9b660b3aaf3da62c46087b2c5c95c3e125` em `origin/main`; workflow backup `334951434`, run `32478241299`, `completed/success`, `headSha` idêntico.
+- Produção `https://rs.votopraquem.org`: root HTTP 200; `/release.json` HTTP 200 com SHA idêntico, `release_id=7f0dfd9-20260821T114026464Z`, `row_count=1003`.
+- Smoke remoto aprovado: 1002 cards, 0 falhas HTTP, 0 erros online de console e service worker pronto.
 - Bloqueios: quatro residuais ALRS sem ID/fonte exata; Senado sem envelope transitório e com deriva criptográfica pré-existente; gaps substantivos de fontes; doctor shell continua FAIL por Node 22.22.2, embora os gates tenham sido executados explicitamente em Node 24.19.0; Codex MCP continua `401 invalid_refresh_token` e OpenCode ausente.
 - Próximo passo: manter recon bounded e lane local independente; aplicação remota continua proibida até R0, schema/FK, fonte oficial exata, dry-run e idempotência.
