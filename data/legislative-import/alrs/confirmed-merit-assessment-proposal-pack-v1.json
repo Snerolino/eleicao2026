@@ -2,6 +2,7 @@
   "schema_version": "1.0.0",
   "packet_type": "alrs_confirmed_merit_assessment_proposal_pack",
   "methodology_version": "1.0.0",
+  "source": "human_review_form_only",
   "remote_apply": false,
   "public_approval": false,
   "totals": {
@@ -104,8 +105,9 @@
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "green",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [],
@@ -182,8 +184,9 @@
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "green",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [
@@ -205,12 +208,12 @@
       "proposed_assessments": [
         {
           "group_slug": "mulheres",
-          "impact_direction": "positive",
-          "defending_vote": "sim",
-          "severity": 4,
-          "structural_type": "structural",
-          "confidence": 0.88,
-          "rationale": "Proposta preliminar baseada na matéria oficial relacionada a mulheres; confirmar texto integral, versão, tipo do evento e justificativa antes da aprovação.",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
           "proposal_status": "needs_human_review"
         }
       ]
@@ -284,8 +287,9 @@
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "green",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [],
@@ -362,8 +366,9 @@
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "green",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [
@@ -385,12 +390,12 @@
       "proposed_assessments": [
         {
           "group_slug": "mulheres",
-          "impact_direction": "positive",
-          "defending_vote": "sim",
-          "severity": 3,
-          "structural_type": "budgetary",
-          "confidence": 0.78,
-          "rationale": "Proposta preliminar baseada na matéria oficial relacionada a mulheres; confirmar texto integral, versão, tipo do evento e justificativa antes da aprovação.",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
           "proposal_status": "needs_human_review"
         }
       ]
@@ -464,8 +469,9 @@
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "green",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [],
@@ -529,15 +535,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [
@@ -559,12 +566,12 @@
       "proposed_assessments": [
         {
           "group_slug": "criancas_adolescentes_vulnerabilidade",
-          "impact_direction": "positive",
-          "defending_vote": "sim",
-          "severity": 3,
-          "structural_type": "budgetary",
-          "confidence": 0.78,
-          "rationale": "Proposta preliminar baseada na matéria oficial relacionada a criancas adolescentes vulnerabilidade; confirmar texto integral, versão, tipo do evento e justificativa antes da aprovação.",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
           "proposal_status": "needs_human_review"
         }
       ]
@@ -625,15 +632,16 @@
           "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [
@@ -655,12 +663,12 @@
       "proposed_assessments": [
         {
           "group_slug": "criancas_adolescentes_vulnerabilidade",
-          "impact_direction": "positive",
-          "defending_vote": "sim",
-          "severity": 4,
-          "structural_type": "structural",
-          "confidence": 0.88,
-          "rationale": "Proposta preliminar baseada na matéria oficial relacionada a criancas adolescentes vulnerabilidade; confirmar texto integral, versão, tipo do evento e justificativa antes da aprovação.",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
           "proposal_status": "needs_human_review"
         }
       ]
@@ -721,15 +729,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [],
@@ -793,15 +802,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [],
@@ -865,15 +875,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [],
@@ -937,15 +948,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [],
@@ -1009,15 +1021,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [
@@ -1039,12 +1052,12 @@
       "proposed_assessments": [
         {
           "group_slug": "criancas_adolescentes_vulnerabilidade",
-          "impact_direction": "positive",
-          "defending_vote": "sim",
-          "severity": 4,
-          "structural_type": "structural",
-          "confidence": 0.88,
-          "rationale": "Proposta preliminar baseada na matéria oficial relacionada a criancas adolescentes vulnerabilidade; confirmar texto integral, versão, tipo do evento e justificativa antes da aprovação.",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
           "proposal_status": "needs_human_review"
         }
       ]
@@ -1105,15 +1118,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [],
@@ -1177,15 +1191,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [
@@ -1207,12 +1222,12 @@
       "proposed_assessments": [
         {
           "group_slug": "mulheres",
-          "impact_direction": "positive",
-          "defending_vote": "sim",
-          "severity": 3,
-          "structural_type": "budgetary",
-          "confidence": 0.78,
-          "rationale": "Proposta preliminar baseada na matéria oficial relacionada a mulheres; confirmar texto integral, versão, tipo do evento e justificativa antes da aprovação.",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
           "proposal_status": "needs_human_review"
         }
       ]
@@ -1267,15 +1282,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [],
@@ -1333,15 +1349,16 @@
           "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [],
@@ -1399,15 +1416,16 @@
           "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [],
@@ -1465,15 +1483,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [
@@ -1506,22 +1525,22 @@
       "proposed_assessments": [
         {
           "group_slug": "mulheres",
-          "impact_direction": "positive",
-          "defending_vote": "sim",
-          "severity": 4,
-          "structural_type": "structural",
-          "confidence": 0.88,
-          "rationale": "Proposta preliminar baseada na matéria oficial relacionada a mulheres; confirmar texto integral, versão, tipo do evento e justificativa antes da aprovação.",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
           "proposal_status": "needs_human_review"
         },
         {
           "group_slug": "populacao_negra_periferica",
-          "impact_direction": "positive",
-          "defending_vote": "sim",
-          "severity": 4,
-          "structural_type": "structural",
-          "confidence": 0.88,
-          "rationale": "Proposta preliminar baseada na matéria oficial relacionada a populacao negra periferica; confirmar texto integral, versão, tipo do evento e justificativa antes da aprovação.",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
           "proposal_status": "needs_human_review"
         }
       ]
@@ -1576,15 +1595,16 @@
           "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [],
@@ -1642,15 +1662,16 @@
           "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [],
@@ -1708,15 +1729,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [],
@@ -1774,15 +1796,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [],
@@ -1840,15 +1863,16 @@
           "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review",
       "group_candidates": [
@@ -1870,12 +1894,12 @@
       "proposed_assessments": [
         {
           "group_slug": "pessoas_idosas_dependentes",
-          "impact_direction": "positive",
-          "defending_vote": "sim",
-          "severity": 3,
-          "structural_type": "budgetary",
-          "confidence": 0.78,
-          "rationale": "Proposta preliminar baseada na matéria oficial relacionada a pessoas idosas dependentes; confirmar texto integral, versão, tipo do evento e justificativa antes da aprovação.",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
           "proposal_status": "needs_human_review"
         }
       ]

@@ -10,7 +10,7 @@ describe('plan-alrs-matrix-apply', () => {
     expect(result.errors).toEqual(expect.arrayContaining(['pack_review_status_not_approved', 'items[0]:version_key_collision', 'items[0]:assessments_empty']));
   });
   it('planeja somente pacote explicitamente aprovado e completo', () => {
-    const result = planAlrsMatrixApply({ review_status: 'approved', public_approval: true, items: [{ proposition_version_id: 'v', review_key: 'k', version_key_collision: false, factual_source_gate: 'green', human_review_required: true, editorial_status: 'approved', assessments: [{ group_slug: 'mulheres' }] }] });
+    const result = planAlrsMatrixApply({ review_status: 'approved', public_approval: true, items: [{ proposition_version_id: 'v', review_key: 'k', version_key_collision: false, factual_source_gate: 'green', substantive_source_gate: 'green', human_review_required: true, editorial_status: 'approved', assessments: [{ group_slug: 'mulheres' }] }] });
     expect(result).toMatchObject({ ok: true, remote_apply: false, planned_versions: 1 });
   });
 });

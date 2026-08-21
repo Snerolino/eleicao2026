@@ -997,6 +997,13 @@
 - Nenhum lead foi tratado como fonte ou assessment.
 - QA: `docs/qa/lote-alrs-substantive-source-leads-dataset-2026-08-21.md`.
 
+## Tick contínuo — regeneração do pacote corrente ALRS (2026-08-21)
+
+- Pacote corrente fixado em 23 versões: 5 P0 com fonte substantiva verde e 18 P1 bloqueados por fonte substantiva.
+- Proposal/draft packs regenerados sem valores decisórios automáticos.
+- Apply plan atualizado para o pacote de 23, não o histórico de 29.
+- QA: `docs/qa/lote-alrs-current-package-regeneration-2026-08-21.md`.
+
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)
 
 - 30/30 itens P0 classificados: 9 mérito, 19 procedimento, 2 emenda, 0 destaque.

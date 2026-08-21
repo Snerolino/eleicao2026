@@ -1,13 +1,4 @@
 #!/usr/bin/env node
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-
-const root = resolve(import.meta.dirname, '..');
-const input = resolve(root, 'data/legislative-import/alrs/impact-assessment-proposal-pack-v1.json');
-const output = resolve(root, 'data/legislative-import/alrs/p0-assessment-proposal-pack-v1.json');
-
-const pack = JSON.parse(readFileSync(input, 'utf8').replace(/\\n\s*$/, ''));
-const items = (pack.items ?? []).filter((item) => item.priority === 'P0' && item.official_version_confirmed !== false).map((item) => ({ ...item, review_batch: 'P0-official-substantive', human_review_required: true, review_status: 'pending_review', remote_apply: false }));
-const result = { ...pack, packet_type: 'alrs_p0_assessment_proposal_pack', totals: { versions: items.length, proposed_assessments: items.reduce((sum, item) => sum + (item.proposed_assessments?.length ?? 0), 0) }, items };
-writeFileSync(output, `${JSON.stringify(result, null, 2)}\n`);
-console.log(JSON.stringify({ output, ...result.totals }));
+const root=resolve(import.meta.dirname,'..');const input=resolve(root,'data/legislative-import/alrs/confirmed-merit-assessment-draft-pack-v1.json');const output=resolve(root,'data/legislative-import/alrs/p0-assessment-proposal-pack-v1.json');const q=JSON.parse(readFileSync(input,'utf8'));const items=(q.items??[]).filter(x=>x.priority==='P0').map(item=>({...item,proposed_assessments:(item.draft_assessments??[]).map(a=>({group_slug:a.group_slug,impact_direction:null,defending_vote:null,severity:null,structural_type:null,confidence:null,rationale:null,proposal_status:'needs_human_review'})),review_status:'pending_review',human_review_required:true,remote_apply:false}));const result={schema_version:'1.0.0',packet_type:'alrs_p0_assessment_proposal_pack',methodology_version:'1.0.0',source:'human_review_form_only',remote_apply:false,public_approval:false,totals:{versions:items.length,proposed_assessments:items.reduce((s,x)=>s+x.proposed_assessments.length,0)},items};writeFileSync(output,JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify({output,...result.totals}));

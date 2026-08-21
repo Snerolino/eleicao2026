@@ -10,7 +10,8 @@
     "versions": 23,
     "factual_votes": 139,
     "p0_versions": 5,
-    "p1_versions": 18
+    "p1_versions": 18,
+    "substantive_source_green": 5
   },
   "items": [
     {
@@ -108,8 +109,9 @@
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "green",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -182,8 +184,9 @@
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "green",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -256,8 +259,9 @@
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "green",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -330,8 +334,9 @@
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "green",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -404,8 +409,9 @@
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "green",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -465,15 +471,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -533,15 +540,16 @@
           "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -601,15 +609,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -669,15 +678,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -737,15 +747,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -805,15 +816,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -873,15 +885,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -941,15 +954,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -1009,15 +1023,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -1071,15 +1086,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -1133,15 +1149,16 @@
           "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -1195,15 +1212,16 @@
           "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -1257,15 +1275,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -1319,15 +1338,16 @@
           "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -1381,15 +1401,16 @@
           "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -1443,15 +1464,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -1505,15 +1527,16 @@
           "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     },
@@ -1567,15 +1590,16 @@
           "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
         }
       ],
-      "event_type": "merit_candidate",
+      "event_type": "merit_confirmed",
       "editorial_disposition": "pending_review",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
       "human_review_required": true,
       "remote_apply": false,
-      "review_gate": "official_event_confirmation_required",
+      "review_gate": "official_event_confirmed",
       "official_merit_confirmed": true,
+      "substantive_source_gate": "blocked_until_impact_sources",
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     }
