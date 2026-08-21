@@ -744,6 +744,12 @@
 - Detectados 109 títulos genéricos e 1 possivelmente truncado para correção antes do mérito.
 - QA: `docs/qa/lote-correcao-estrutural-fila-alrs-2026-08-21.md`.
 
+## Tick contínuo — auditoria de colisões ALRS (2026-08-21)
+
+- Auditoria completa: 18 chaves duplicadas, 65 versões e 65 eventos afetados.
+- Todos permanecem `blocked_until_official_version_identity`; nenhuma matriz foi criada.
+- QA: `docs/qa/lote-alrs-version-key-collisions-2026-08-21.md`.
+
 ## Tick contínuo — fechamento final R4 (2026-08-20)
 
 - 13/13 itens da fila Q2/Q3 revisados; 12 não pontuáveis aprovados e 1 assessment populacional aprovado.
