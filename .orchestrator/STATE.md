@@ -3015,7 +3015,7 @@ Sem autorização humana explícita própria, não fazer:
 - Gates Node 24.19.0 verdes: 400 testes, TypeScript, schema, data:check, build, smoke local (1002 cards/0 HTTP/console errors) e diff check.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1340.md`.
 - Produção existente verificada: raiz HTTP 200 e `/release.json` SHA `b7bb235c2f99651e2d99df220967df7a97b48237`, `row_count=1003`, versão `0.2.714`.
-- Nenhuma escrita factual em votos, source references, identidade, FK, snapshot, Supabase ou matriz; sem novo commit/push/deploy porque a worktree permaneceu limpa.
+- Nenhuma escrita factual em votos, source references, identidade, FK, snapshot, Supabase ou matriz; QA/checkpoint documental publicado após os gates, sem alteração factual.
 - Bloqueios: quatro residuais Enio/Terra sem ID/fonte exata, gaps substantivos, Senado sem envelope verificável, doctor shell FAIL por Node 22.22.2 e OpenCode ausente como WARN.
 - Próximo chunk: recon bounded oficial e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 

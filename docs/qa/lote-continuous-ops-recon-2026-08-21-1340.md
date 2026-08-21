@@ -33,11 +33,12 @@ Executados com Node 24.19.0:
 - `git diff --check`: exit 0.
 
 ## Publicação/verificação
-Não houve alteração rastreada após a recon: `git status` permaneceu limpo em
-`main` no commit `b7bb235c2f99651e2d99df220967df7a97b48237`; portanto não houve
-novo commit/push/deploy neste tick. A produção existente foi verificada:
-raiz HTTP 200 e `/release.json` com SHA idêntico, `row_count=1003`, versão
-`0.2.714`.
+Não houve alteração factual após a recon: `git status` permaneceu limpo em
+`main` no commit-base `b7bb235c2f99651e2d99df220967df7a97b48237`. A QA e o
+checkpoint foram publicados em commit documental posterior; o backup
+Cloudflare `334951434`, run `32488245380`, concluiu `success` com `headSha`
+idêntico. Produção foi verificada com raiz HTTP 200 e `/release.json` SHA
+idêntico, `row_count=1003`.
 
 ## Bloqueios reais
 - Quatro votos ALRS residuais de Enio Carlos Terra continuam sem ID oficial e
