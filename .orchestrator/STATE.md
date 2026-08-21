@@ -1,3 +1,13 @@
+## Tick contínuo — pacote ALRS, gates e publicação — 2026-08-21T12:57Z
+
+- Lock bounded adquirido/liberado com `flock -n`; commit publicado `6d5a3730023ec91a9fd1c0d7d6ec2d143dd4fa21`.
+- Lane local: pacote ALRS com 7 requisições/6 versões, fontes oficiais preservadas e `remote_apply=false`; nenhum voto, FK, claim, source reference ou Supabase foi aplicado.
+- Gates Node 24.19.0: 98 arquivos/400 testes, TypeScript, schema, `data:check` 1003/988, build, diff check e smoke built preview 1002 cards/0 HTTP/console errors/service worker pronto.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1257.md`.
+- Publicação: backup Cloudflare `334951434`, run `32484300926`, `completed/success`, `headSha` idêntico; produção HTTP 200 e `/release.json` confirmou `release_id=6d5a373-20260821T125647847Z`, `row_count=1003`.
+- Bloqueios: 4 votos Enio/Terra sem identidade/fonte exata; Senado sem envelope/deriva; gaps de fonte; doctor shell FAIL por Node 22.22.2 e Codex MCP 401.
+- Próximo chunk: nova recon bounded oficial e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T12:02Z
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `31bed8c5bebb`.
