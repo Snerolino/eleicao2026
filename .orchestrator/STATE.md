@@ -1,3 +1,17 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T17:00Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `0acf65cc44a6186f51caf0713cdbd750668343e6`.
+- Câmara: API oficial em 8 janelas trimestrais 2025–2026, 8/8 páginas iniciais válidas, 700 IDs descobertos; nenhuma reconciliação/aplicação.
+- ALRS residual FED-17: dry-run `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio/Terra continuam sem ID/fonte exata.
+- Senado: envelope nominal transitório ausente; fail-closed, sem PDF, `legislator_id`, FK ou voto promovido.
+- Dataset completo comparado ao snapshot: 1.003/1.003 IDs, diferença 0/0.
+- Auditoria estrita read-only manteve gaps de fonte: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; exit 2 por gaps reais.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1003/988, build, smoke local 1002 cards/0 HTTP/console errors/service worker e `git diff --check`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1700.md`.
+- Doctor exit 1 por Node 22.22.2; OpenCode ausente, Ollama sem preflight e Codex MCP/exec `401 invalid_refresh_token` permanecem bloqueios de infraestrutura.
+- Nenhuma escrita factual, identidade, FK, voto, claim, source reference, Supabase ou Cloudflare ocorreu.
+- Próximo chunk: recon bounded oficial e lane local independente; publicar após corrigir permissão efetiva de push. Aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T16:40Z
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `d97a5a580ac7`.
