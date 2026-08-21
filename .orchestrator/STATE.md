@@ -9,6 +9,7 @@
 - Bloqueios mantidos: quatro residuais Enio/Terra sem ID/fonte exata, Senado com SHA divergente, Câmara sem lote novo e 25 itens sem fonte substantiva.
 - Nenhuma escrita em snapshot, identidade, FK, voto, matriz, claim, source reference, Supabase ou Cloudflare ocorreu.
 - Próximo chunk: recon bounded fail-closed e recuperação de fonte substantiva oficial; não aplicar remotamente sem R0/schema/FK/fonte/dry-run/idempotência.
+- Publicação verificada: commits `454bf35` e `fd489b1` em `origin/main`; backup `334951434`, run `32444404944`, `completed/success`, `headSha` idêntico; produção raiz HTTP 200, `/release.json` confirmou SHA `fd489b1ed61b1244f130e392b764b519603f656b`, `row_count=1003`; smoke remoto 1002 cards/0 HTTP/console errors.
 
 ## Tick contínuo — matching oficial P1 ALRS + publicação (2026-08-21T03:20Z)
 
