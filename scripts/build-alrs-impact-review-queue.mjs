@@ -11,6 +11,7 @@ export function buildAlrsReviewQueue(rows) {
     const candidates = Number(row.candidates ?? 0);
     const votes = Number(row.votes ?? 0);
     const priority = candidates >= 7 ? 'P0' : candidates >= 5 ? 'P1' : candidates >= 3 ? 'P2' : 'P3';
+    const technical_event_classification = classifyAlrsEventTitle(row.title);
     return {
       house: 'alrs',
       proposition_version_id: row.version_id,
@@ -22,7 +23,7 @@ export function buildAlrsReviewQueue(rows) {
       event_count: Number(row.events ?? 0),
       event_external_ids: row.event_external_ids ?? [],
       source_urls: row.source_urls ?? [],
-      event_type: 'needs_official_classification',
+      event_type: technical_event_classification,
       editorial_disposition: 'pending_review',
       priority,
       suggested_groups: [],
@@ -49,6 +50,13 @@ export function buildAlrsReviewQueue(rows) {
     },
     items,
   };
+}
+
+export function classifyAlrsEventTitle(title) {
+  const value = String(title ?? '').trim();
+  if (/^(requer|encaminha indicação|encaminha indicacao)\b/i.test(value)) return 'procedural_candidate';
+  if (/^(altera|dispõe|dispoe|permite|cria|institui|estabelece|reserva|regulamenta)\b/i.test(value)) return 'merit_candidate';
+  return 'needs_official_classification';
 }
 
 function parseSupabaseJson(output) {

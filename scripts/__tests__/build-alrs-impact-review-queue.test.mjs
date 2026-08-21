@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { describe, expect, it } from 'vitest';
-import { buildAlrsReviewQueue } from '../build-alrs-impact-review-queue.mjs';
+import { buildAlrsReviewQueue, classifyAlrsEventTitle } from '../build-alrs-impact-review-queue.mjs';
 
 describe('alrs-impact-review-queue', () => {
   it('prioriza uma matriz por versão e reutilização entre candidatos', () => {
@@ -18,5 +18,11 @@ describe('alrs-impact-review-queue', () => {
     expect(item.suggested_groups).toEqual([]);
     expect(item.suggested_direction).toBeNull();
     expect(item.defending_vote).toBeNull();
+  });
+
+  it('faz triagem técnica sem transformar triagem em aprovação editorial', () => {
+    expect(classifyAlrsEventTitle('Requer a preferência para votação')).toBe('procedural_candidate');
+    expect(classifyAlrsEventTitle('Altera a lei estadual')).toBe('merit_candidate');
+    expect(classifyAlrsEventTitle('Aprova relatório final')).toBe('needs_official_classification');
   });
 });

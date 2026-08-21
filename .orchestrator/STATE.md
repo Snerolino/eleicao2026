@@ -688,6 +688,7 @@
 - Fila event-first gerada: 1281 versões/4000 votos, sem escrita remota.
 - 30 versões P0 atingem 7 candidatos; 82 versões P1 atingem 5–6 candidatos.
 - Matriz será criada uma vez por `proposition_version` e reutilizada para todos os votantes.
+- Triagem técnica preliminar: 479 mérito candidato, 218 procedimento candidato, 584 precisam classificação oficial.
 - Próximo passo: classificar oficialmente mérito/emenda/destaque/procedimento.
 - QA: `docs/qa/lote-alrs-impact-review-queue-v1-2026-08-20.md`.
 

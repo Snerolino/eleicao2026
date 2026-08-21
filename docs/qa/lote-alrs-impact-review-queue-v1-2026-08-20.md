@@ -14,6 +14,7 @@ Fila gerada de forma event-first:
 - fontes oficiais ALRS preservadas por item;
 - uma unidade de trabalho por `proposition_version`;
 - matriz será reutilizada para todos os votantes da versão;
+- triagem técnica preliminar: 479 `merit_candidate`, 218 `procedural_candidate` e 584 `needs_official_classification`;
 - grupos, direção e `defending_vote` permanecem vazios até revisão.
 
 ## Ganho operacional
@@ -39,5 +40,6 @@ event_type: needs_official_classification
 - `data/legislative-import/alrs/impact-review-queue-v1.json`;
 - comando `npm run impact:alrs:r4:queue`.
 
-A próxima etapa é classificar eventos oficiais como mérito, emenda, destaque ou
-procedimento; eventos procedimentais não herdam impacto do projeto.
+A triagem por título não é aprovação: a próxima etapa é confirmar nas fontes
+oficiais mérito, emenda, destaque ou procedimento. Eventos procedimentais não
+herdam impacto do projeto.
