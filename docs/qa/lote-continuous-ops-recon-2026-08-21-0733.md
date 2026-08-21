@@ -21,5 +21,20 @@ Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, 
 - Câmara: nenhum `vote_id` no intervalo consultado.
 - `npm run orch:doctor` retorna FAIL porque o shell está em Node 22.22.2; Node 24.19.0 está instalado e foi usado no recon/gates.
 
+## Verificação local
+- `npm run test`: exit 0 (97 arquivos, 398 testes).
+- `npx tsc --noEmit`: exit 0.
+- `node scripts/validate-impact-schema.mjs`: exit 0.
+- `npm run data:check`: exit 0 (1003 candidaturas, 988 fotos oficiais).
+- `npm run build`: exit 0; sitemap com 1003 candidatos + 2 URLs estáticas; `release.json` gerado.
+- `npm run smoke:local`: exit 0; 1002 cards, 0 falhas HTTP, 0 erros de console online, service worker pronto.
+- `git diff --check`: exit 0.
+
+## Publicação verificada
+- Commit `08d21182afd3f242048e5f8be44f1766a6296f96` enviado para `origin/main`.
+- Backup Cloudflare `334951434`, run `32459370834`: `completed/success`, `headSha` idêntico.
+- Produção: `https://rs.votopraquem.org` HTTP 200.
+- `release.json` em produção confirma SHA idêntico, `row_count=1003`, release `08d2118-20260821T073649672Z`.
+
 ## Próximo passo
-Executar gates locais com Node 24.19.0; se verdes, publicar somente a documentação/evidência deste tick e verificar o backup Cloudflare e `release.json`. Manter recon oficial e lane local independentes; não aplicar fatos remotos sem evidência exata.
+Manter recon oficial e lane local independentes. Senado, ALRS e Câmara continuam fail-closed; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.

@@ -7,6 +7,9 @@
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0733.md`.
 - Bloqueios: Senado com deriva SHA/bytes; ALRS sem catálogo `data-item`/Enio/Terra; Câmara sem lote novo; doctor shell FAIL por Node 22.22.2. Gates serão executados com Node 24.19.0.
 - Próximo chunk: gates locais da documentação deste tick e publicação/verificação; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+- Gates locais verdes com Node 24.19.0: 97 arquivos/398 testes, TypeScript, schema, `data:check` 1003/988, build, `git diff --check` e smoke local 1002 cards/0 HTTP/console errors.
+- Publicação verificada inicialmente no commit `08d21182afd3f242048e5f8be44f1766a6296f96`; backup `334951434`, run `32459370834`, `completed/success`, `headSha` idêntico; produção HTTP 200 e `/release.json` confirmou SHA idêntico, `row_count=1003`, release `08d2118-20260821T073649672Z`.
+- Próximo chunk: registrar esta evidência final e republicar a documentação; aplicação remota permanece bloqueada.
 
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou em `20a71ee0aa46cb82c0bfd28319334247473e7c35`.
