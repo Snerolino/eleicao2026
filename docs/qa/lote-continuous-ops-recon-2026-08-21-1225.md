@@ -26,8 +26,11 @@ Executar um tick bounded do control plane, mantendo recon oficial read-only, lan
 - Gaps substantivos de fontes permanecem; auditoria estrita saiu com exit 2.
 - `npm run orch:doctor -- --smoke` segue FAIL apenas na infraestrutura: shell em Node 22.22.2 embora o projeto exija Node 24; smoke Codex MCP falhou por `401 invalid_refresh_token`; OpenCode ausente e Ollama sem preflight são WARNs opcionais.
 
-## Publicação
-Após os gates verdes, publicar commit documental via `origin/main`, disparar o workflow backup Cloudflare `334951434` se necessário, validar `headSha`, HTTP 200, `/release.json` e smoke remoto.
+## Publicação verificada
+- Commit `9f2a43033ca54ba65cc2cef8e7552742a728f385` publicado em `origin/main`.
+- Workflow backup Cloudflare `334951434`, run `32481840600`: `completed/success`, `headSha` idêntico.
+- Produção `https://rs.votopraquem.org`: HTTP 200; `/release.json` confirmou SHA idêntico, `release_id=9f2a430-20260821T122613607Z`, `row_count=1003`.
+- Smoke remoto: 1002 cards, 0 falhas HTTP, 0 erros de console online, service worker pronto.
 
 ## Próximo passo
 Nova recon bounded oficial e lane local independente. Aplicação factual remota somente após R0, schema/FK, fonte oficial exata, dry-run e idempotência.
