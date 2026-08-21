@@ -837,6 +837,12 @@
 - Procedimentos/emendas foram retirados da fila de score; colisões/títulos inválidos permanecem fora.
 - QA: `docs/qa/lote-alrs-substantive-review-queue-2026-08-21.md`.
 
+## Tick contínuo — pacote P1 substantivo ALRS (2026-08-21)
+
+- Pacote compacto criado: 20 versões/109 votos para classificação oficial P1.
+- Colisões/títulos inválidos permanecem excluídos; `human_review_required=true`.
+- QA: `docs/qa/lote-alrs-p1-substantive-pack-2026-08-21.md`.
+
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)
 
 - 30/30 itens P0 classificados: 9 mérito, 19 procedimento, 2 emenda, 0 destaque.
