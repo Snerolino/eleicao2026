@@ -52,9 +52,12 @@ Executados sob Node `v24.19.0`:
 
 - Worktree iniciou e terminou sem alterações antes da documentação; produção
   respondeu `HTTP 200` em `https://rs.votopraquem.org`.
-- Após esta documentação, repetir os gates afetados, publicar pelo workflow backup
-  Cloudflare `334951434` e confirmar `headSha`/release antes de considerar o lote
-  publicado.
+- O commit local `5b6be14` foi criado, mas `git push origin main` falhou duas vezes
+  com GitHub HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`).
+  `gh api` confirma permissões administrativas, porém a credencial usada pela
+  operação Git não autoriza o push. Portanto o workflow backup `334951434` não foi
+  acionado e este lote não pode ser declarado publicado; produção segue HTTP 200
+  no release anterior.
 
 ## Próximo passo
 

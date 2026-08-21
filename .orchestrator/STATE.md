@@ -10,7 +10,7 @@
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1515.md`.
 - Doctor: FAIL por shell Node 22.22.2 e FAIL de evidência MCP Codex com `401 invalid_refresh_token`; gates foram executados explicitamente em Node 24.19.0. OpenCode ausente e Ollama sem preflight permanecem WARNs.
 - Nenhuma escrita factual, identidade, FK, voto, claim, source reference, Supabase ou Cloudflare ocorreu.
-- Produção respondeu HTTP 200 antes da documentação; publicação deste checkpoint seguirá pelo workflow backup Cloudflare após os gates documentais.
+- Produção respondeu HTTP 200 no release anterior. Commit local `5b6be14` foi criado, mas `git push origin main` falhou duas vezes com HTTP 403 (`Permission denied`); `gh api` confirma push administrativo, indicando divergência na credencial Git. Workflow backup Cloudflare não foi acionado.
 - Próximo chunk: publicar/verificar a documentação e iniciar nova recon bounded; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T14:48Z
