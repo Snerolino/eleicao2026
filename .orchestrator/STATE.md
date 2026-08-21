@@ -2557,3 +2557,17 @@ Sem autorização humana explícita própria, não fazer:
 - Nenhuma escrita factual em snapshot, votos, source references, Supabase ou matriz.
 - Próximo passo: publicar o checkpoint documental e repetir recon bounded sem promover deriva.
 
+## Tick contínuo — recon oficial bounded e gates locais (2026-08-21T02:30Z)
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `e2de164416d1ae56c66543b61ad40698496356a3`.
+- ALRS P0: 7/7 URLs oficiais HTTP 200, 526 `data-item`; pacote permanece `remote_apply=false`.
+- ALRS P0/P1: 7/7 URLs verificadas HTTP 200, `ok=7`, `failed=0`; somente o timestamp do manifesto foi atualizado.
+- Câmara: janelas trimestrais oficiais 2025–2026 válidas, `vote_ids` inventariados em modo read-only; nenhum evento/voto/identidade/FK aplicado.
+- Senado: dry-run 6 planejadas, 0 ausentes, 0 inserções, 0 votos tocados; fail-closed.
+- Dataset vivo: CSVs comparáveis sem IDs ausentes frente ao snapshot; nenhum refresh/sincronização aplicado.
+- Gates Node 24.19.0: 95 arquivos/396 testes, TypeScript, schema, `data:check` 1003/988, build, smoke local (1002 cards, 0 HTTP/console errors) e diff check verdes.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0230.md`.
+- Doctor do shell cron continua FAIL somente pelo Node 22.22.2; OpenCode ausente e Ollama sem preflight são WARNs opcionais.
+- Nenhuma escrita factual em snapshot, votos, source references, Supabase ou matriz ocorreu.
+- Próximo passo: publicar este checkpoint documental, verificar backup Cloudflare/SHA live e repetir recon bounded sem promover deriva.
+
