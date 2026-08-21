@@ -910,6 +910,12 @@
 - Páginas de voto continuam fontes factuais; não fundamentam impacto sozinhas.
 - QA: `docs/qa/lote-alrs-substantive-source-gate-2026-08-21.md`.
 
+## Tick contínuo — requisições de fontes substantivas ALRS (2026-08-21)
+
+- 9 requisições/8 versões geradas para texto integral, parecer/substitutivo e resultado/tramitação.
+- Nenhuma fonte substantiva foi promovida; score continua bloqueado.
+- QA: `docs/qa/lote-alrs-substantive-source-requests-2026-08-21.md`.
+
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)
 
 - 30/30 itens P0 classificados: 9 mérito, 19 procedimento, 2 emenda, 0 destaque.
