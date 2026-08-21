@@ -1,3 +1,18 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T20:45Z
+
+- Lock bounded adquirido/liberado com `flock -n`; recon oficial e lane local executadas sem escrita factual.
+- ALRS FED-17 dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra continuam sem ID/fonte exata.
+- Câmara: API oficial em 8 janelas trimestrais 2025–2026, 8/8 páginas iniciais válidas, `blocked=null`, 700 IDs descobertos read-only; sem reconciliação/aplicação.
+- Senado falhou fechado por envelope `/tmp/senado-nominal-envelope-latest.json` ausente (`ENOENT`); nenhum `legislator_id`, FK ou voto promovido.
+- Dataset oficial comparado ao snapshot: 1.003/1.003 IDs, diferença 0/0; `data:check` confirmou 1.003 candidaturas/988 fotos.
+- Auditoria estrita manteve gaps de fontes `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; exit 2 por gaps reais.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check`, build, `git diff --check`; smoke 1002 cards/0 HTTP/console errors/service worker.
+- Produção respondeu HTTP 200. Worktree recebeu apenas QA/STATE documental; HEAD local `a23c49e` está 21 commits à frente de `origin/main` antes da publicação deste tick.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-2045.md`.
+- Workflows GitHub confirmados: backup Cloudflare `334951434`, primário `320564705` e verificador `335560210` ativos.
+- Bloqueios: doctor shell Node 22.22.2; OpenCode ausente, Ollama sem preflight, MCP não exercitado; Senado sem envelope; gaps de fontes. Nenhuma escrita Supabase/Cloudflare ocorreu.
+- Próximo chunk: commit/push documental e verificação do workflow backup; recon bounded oficial continua. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T20:25Z
 
 - Lock bounded adquirido/liberado com `flock -n`; recon oficial e lane local executadas sem escrita factual.
