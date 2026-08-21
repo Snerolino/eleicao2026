@@ -30,8 +30,11 @@ Executar novo tick bounded das quatro lanes: recon oficial ALRS/Câmara/Senado, 
 - Auditoria estrita mantém gaps substantivos; não inventar fontes, hashes, IDs ou votos.
 - Doctor do shell permanece FAIL por Node 22.22.2; gates foram executados explicitamente em Node 24.19.0. Codex MCP permanece indisponível por `401 invalid_refresh_token`.
 
-## Publicação
-A documentação deste tick será commitada e publicada pelo workflow backup Cloudflare `334951434`; validar `headSha`, HTTP 200, `/release.json` e smoke remoto após o push.
+## Publicação verificada
+- Commit `6f649f666685deffe78c1b6f8c6225f8de78e1aa` em `origin/main`.
+- Workflow backup Cloudflare `334951434`, run `32486110175`: `completed/success`, `headSha` idêntico.
+- Produção `https://rs.votopraquem.org`: HTTP 200; `/release.json` confirmou SHA idêntico, `release_id=6f649f6-20260821T131834035Z` e snapshot `row_count=1003`.
+- Smoke remoto: 1.002 cards, 0 falhas HTTP, 0 erros de console online e service worker pronto.
 
 ## Próximo passo
 Nova recon bounded oficial e lane local independente. Aplicação factual remota somente após R0, schema/FK, fonte oficial exata, dry-run e idempotência.
