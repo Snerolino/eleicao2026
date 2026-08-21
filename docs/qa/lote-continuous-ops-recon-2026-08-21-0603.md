@@ -29,9 +29,12 @@ Executados com Node `v24.19.0`:
 
 Nenhuma escrita factual em Supabase, identidade, FK, voto, matriz, claim ou source reference ocorreu. O item ALRS FED-17 permanece bloqueado pela causa real `JWT issued at future`; Senado permanece fail-closed por deriva SHA-256; Câmara não possui lote novo na janela consultada. O doctor do shell continua com FAIL de infraestrutura porque usa Node `v22.22.2`, embora os gates do projeto tenham sido executados com Node `v24.19.0`.
 
-## Publicação
+## Publicação verificada
 
-Este lote altera apenas evidência documental e o timestamp do manifesto ALRS. Após os gates verdes, publicar pelo fluxo autorizado: commit/push, workflow backup Cloudflare `334951434`, validar HTTP 200 e comparar `headSha`/`release.json`.
+- Commit `f5e53a216ca58f0d15fbbf3c9ee75e3e3ba1944d` publicado em `origin/main`.
+- Workflow backup `334951434`, run `32452916299`: `completed/success`, `headSha` idêntico ao commit.
+- Produção raiz `https://rs.votopraquem.org`: **HTTP 200**.
+- `release.json`: release `f5e53a2-20260821T060430121Z`, SHA completo idêntico e `snapshot.row_count=1003`.
 
 ## Próximo passo
 
