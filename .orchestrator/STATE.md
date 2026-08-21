@@ -1,3 +1,17 @@
+## Tick contínuo — recon bounded oficial e pacote de fonte — 2026-08-21T08:21Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `a921681375248fb6f1b9e67696953ff3685eee01`.
+- Recon oficial: Senado 6/6 HTTP 200 e prefixos PDF válidos, 3/6 bytes e 0/6 SHA coincidentes; ALRS HTTP 200, 77442 bytes, 0 `data-item`, sem Enio/Terra; Câmara JSON válido na janela 2026-10-01–2026-12-31, 0 registros; fail-closed.
+- Dataset vivo: 10 CSVs examinados, snapshot 1003 IDs, 0 ausentes; nenhum refresh aplicado.
+- Lane local: pacote de pedidos substantivos regenerado com 9 pedidos/8 versões; validador fail-closed confirmou 25 itens sem fonte substantiva; `pending_review`, `human_review_required=true`, `remote_apply=false`.
+- Auditoria read-only de fontes: gaps ALRS 1251/1647/4, Câmara 3/2/2 e Senado 112/188/455; `--strict` saiu 2 por gaps reais, sem supressão.
+- Gates Node 24.19.0 verdes: 97 arquivos/398 testes, TypeScript, schema, `data:check` 1003/988, build, `git diff --check` e smoke local 1002 cards/0 HTTP/console errors.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0821.md`; evidências read-only em `.orchestrator/runtime/continuous-tick-20260821T081923Z/`.
+- Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase, Cloudflare ou snapshot ocorreu.
+- Bloqueios: Senado com deriva SHA, ALRS sem catálogo/Enio/Terra e 25 fontes substantivas, Câmara sem lote novo; doctor FAIL por Node 22.22.2 e Codex/MCP `401 invalid_refresh_token`.
+- Próximo chunk: commit/push desta documentação, backup Cloudflare e verificação de produção; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
+
 ## Tick contínuo — recon bounded oficial e gates locais — 2026-08-21T07:55Z
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `069105268f54623d4f974a26704c0babd7bed36b`.
