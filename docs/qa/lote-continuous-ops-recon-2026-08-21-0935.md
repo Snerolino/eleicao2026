@@ -33,8 +33,12 @@ Nenhuma candidatura, foto, identidade, FK, voto, matriz, claim, source reference
 - Auditoria estrita de cobertura mantém gaps reais: ALRS 1251 versões / 1647 eventos / 4 votos; Câmara 3 / 2 / 2; Senado 112 / 188 / 455.
 - `npm run orch:doctor` no shell cron continua FAIL por Node `v22.22.2`; os gates foram executados comprovadamente com Node `v24.19.0`. Smoke Codex MCP segue indisponível por `401 invalid_refresh_token` e não foi repetido.
 
-## Publicação
-Não houve alteração rastreável neste tick; portanto não houve commit/push/deploy adicional. O HEAD verificado permanece `501e3b65559ab982efb3fa09f378a6dace5a0eee` em `main`, com worktree limpa. A publicação anterior permanece registrada no STATE e não foi reatribuída a este tick.
+## Publicação e verificação externa
+- Documentação publicada no commit `13b368239daa17712aa52341ec3c4cc06f5534bb` (`main -> origin/main`), com worktree limpa após o push.
+- Backup Cloudflare `334951434`, run `32468717253`: `completed/success`, `headSha` idêntico ao commit.
+- Produção `https://rs.votopraquem.org`: HTTP 200; `/release.json` confirmou SHA idêntico, release `13b3682-20260821T093702679Z`, versão `0.2.691`, `row_count=1003`.
+- Smoke remoto: 1002 cards, 0 falhas HTTP, 0 erros de console online, service worker pronto.
+- A recon do tick não criou dado factual; a publicação contém apenas o checkpoint operacional e a evidência dos gates.
 
 ## Próximo passo
 Nova recon bounded oficial e lane local independente. Priorizar a recuperação de identidade/fonte exata dos 4 casos Enio/Terra e a recuperação do input oficial do Senado, sempre fail-closed. Aplicação remota factual continua condicionada a R0, schema/FK, fonte oficial exata, dry-run e idempotência.
