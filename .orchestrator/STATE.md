@@ -7,7 +7,7 @@
 - Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check`, build, smoke local 1.002 cards/0 HTTP/console errors, diff check.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1404.md`.
 - Bloqueios: quatro votos Enio/Terra sem identidade/fonte exata; gaps substantivos; Senado sem envelope verificável; doctor FAIL por Node 22.22.2 e OpenCode ausente como WARN opcional.
-- Nenhuma escrita factual remota; após commit/push, verificar backup Cloudflare, `headSha`, produção HTTP 200, `/release.json` e smoke remoto.
+- Publicação verificada: commit `2d0aaa82dcee2cdaeb8b1449fba5e5dd39c07486` em `origin/main`; backup Cloudflare `334951434`, run `32490222626`, `completed/success`, `headSha` idêntico. Preview `1ffe46c6.portal-transparencia-rs.pages.dev` e produção `rs.votopraquem.org` responderam HTTP 200; `/release.json?cb=2d0aaa8` confirmou SHA idêntico e `row_count=1003`. A resposta sem cache-buster ainda mostrava release anterior durante a propagação.
 - Próximo chunk: nova recon bounded e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
 # Tick contínuo — pacote ALRS, gates e publicação — 2026-08-21T12:57Z

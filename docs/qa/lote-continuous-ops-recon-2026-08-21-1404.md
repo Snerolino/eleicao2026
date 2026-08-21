@@ -26,5 +26,12 @@ Executar um tick bounded das lanes oficiais e locais, sem promover dados factuai
 - Senado permanece sem envelope nominal verificável e com deriva de evidência.
 - `npm run orch:doctor` retorna FAIL porque o shell padrão usa Node 22.22.2; os gates foram executados explicitamente com Node 24.19.0. OpenCode ausente é WARN opcional. Nenhuma credencial foi lida ou exposta.
 
-## Publicação e próximo passo
-Este lote altera apenas documentação operacional/checkpoint; não houve escrita factual remota. Após commit/push, disparar o workflow backup Cloudflare `334951434`, verificar `headSha`, HTTP 200, `/release.json` e smoke remoto. Em seguida manter a recon bounded e a lane local independente; aplicação remota somente após R0, schema/FK, fonte exata, dry-run e idempotência.
+## Publicação verificada
+- Commit `2d0aaa82dcee2cdaeb8b1449fba5e5dd39c07486` publicado em `origin/main`.
+- Workflow backup Cloudflare `334951434`, run `32490222626`: `completed/success`, `headSha` idêntico.
+- Deploy preview confirmado em `https://1ffe46c6.portal-transparencia-rs.pages.dev`; `/release.json` confirmou SHA `2d0aaa82dcee2cdaeb8b1449fba5e5dd39c07486` e `row_count=1003`.
+- Produção `https://rs.votopraquem.org`: HTTP 200; `/release.json?cb=2d0aaa8` confirmou o mesmo SHA e `row_count=1003` (a consulta sem cache-buster ainda retornava release anterior durante a propagação).
+- Não houve escrita factual remota; apenas documentação operacional/checkpoint foi publicada.
+
+## Próximo passo
+Manter recon bounded e lane local independente; aplicação remota somente após R0, schema/FK, fonte exata, dry-run e idempotência.
