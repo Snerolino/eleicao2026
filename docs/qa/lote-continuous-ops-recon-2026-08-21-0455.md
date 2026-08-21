@@ -38,6 +38,15 @@ Nenhum voto, identidade, FK, matriz, claim, `source_reference`, Supabase,
 Cloudflare ou snapshot foi alterado. Nenhum dado foi inferido a partir do
 `dataset2026`; os leads continuam apenas pistas para localizar fonte oficial.
 
+## Publicação verificada
+
+- Commit `36db6a62afb6c58a1f83029276f17af31d659d2a` foi aceito em `origin/main`.
+- Workflow backup `334951434`, run `32448780041`, concluiu `success` com
+  `headSha` idêntico.
+- Produção respondeu HTTP 200; após cache-busting, `/release.json` confirmou
+  `release_id=36db6a6-20260821T045757361Z`, SHA idêntico e snapshot com
+  `row_count=1003`.
+
 ## Próximo passo
 
 Repetir recon bounded oficial e manter a lane local independente ativa. Aplicação

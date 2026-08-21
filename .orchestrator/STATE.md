@@ -7,6 +7,7 @@
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0455.md`.
 - Doctor smoke: OK=51, WARN=5, FAIL=1; Codex MCP não comprovado por 401 `invalid_refresh_token`, OpenCode ausente e Ollama sem preflight. Gates de projeto permanecem executáveis com Node 24.19.0.
 - Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase, Cloudflare ou snapshot ocorreu.
+- Publicação verificada: commit `36db6a62afb6c58a1f83029276f17af31d659d2a`, backup `334951434`, run `32448780041`, `completed/success`, `headSha` idêntico; produção HTTP 200 e `/release.json` confirmou o SHA após cache-busting, `row_count=1003`.
 - Próximo chunk: recon bounded oficial e recuperação local de fonte substantiva; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon bounded oficial + pacote de pedidos substantivos (2026-08-21T04:30Z)
