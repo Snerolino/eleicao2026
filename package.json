@@ -47,6 +47,7 @@
     "impact:alrs:r4:merit": "node scripts/build-alrs-merit-review-pack.mjs",
     "impact:alrs:r4:sources": "node scripts/verify-alrs-merit-sources.mjs",
     "impact:alrs:r4:matrix:pack": "node scripts/build-alrs-impact-matrix-review-pack.mjs",
+    "impact:alrs:r4:groups": "node scripts/preanalyze-alrs-impact-groups.mjs",
     "orch:setup": "bash scripts/orchestrator/setup-local.sh",
     "orch:doctor": "bash scripts/orchestrator/doctor.sh",
     "orch:install-skill": "bash scripts/orchestrator/install-hermes-skill.sh",

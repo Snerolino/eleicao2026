@@ -718,6 +718,7 @@
 ## Tick contínuo — pacote ALRS de matrizes P0/P1 (2026-08-20)
 
 - Pacote por versão gerado: 29 versões/172 votos, 29/29 com fonte oficial HTTP 200.
+- Pré-análise não aprovadora: 12/29 com grupos candidatos (`mulheres` 8, crianças/adolescentes 3, população negra periférica 1, pessoas idosas dependentes 1).
 - Assessments permanecem vazios; revisão de evento e editorial continuam obrigatórias.
 - QA: `docs/qa/lote-alrs-impact-matrix-review-pack-p0-p1-2026-08-20.md`.
 

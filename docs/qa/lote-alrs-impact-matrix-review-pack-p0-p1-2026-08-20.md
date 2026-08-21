@@ -11,6 +11,9 @@
 - gate de fonte verde: 29/29 itens;
 - uma entrada de matriz por `proposition_version`;
 - assessments: 0 preenchidos automaticamente;
+- pré-análise de grupo por palavra-chave: 12/29 versões com candidatos de grupo;
+- pré-análise não é assessment e exige confirmação na fonte;
+- comando reproduzível: `npm run impact:alrs:r4:groups`;
 - `remote_apply=false`;
 - revisão de evento oficial ainda obrigatória.
 
