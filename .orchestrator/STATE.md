@@ -1,3 +1,17 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T18:01Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `1a488e7da5b2eaf680f39e2d04a2118828476fe4`.
+- ALRS residual FED-17: repair dry-run bloqueado por `JWT issued at future` (exit 1); 0 votos/correções e quatro residuais Enio/Terra continuam sem ID/fonte exata.
+- Câmara: API oficial em 8 janelas trimestrais 2025–2026, 8/8 páginas iniciais válidas; IDs descobertos read-only, nenhuma reconciliação/aplicação.
+- Senado: envelope nominal transitório ausente (`ENOENT`); fail-closed, sem PDF, `legislator_id`, FK ou voto promovido.
+- Dataset completo comparado ao snapshot com delimitador oficial `;`: 1.003/1.003 IDs, diferença 0/0.
+- Auditoria estrita read-only manteve gaps de fonte: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; exit 2 por gaps reais.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1003/988, build (`sitemap` 1.003 candidatos; `release.json` para `1a488e7`), smoke local 1.002 cards/0 HTTP/console errors/service worker e `git diff --check`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1801.md`.
+- Push permanece bloqueado por HTTP 403 (`Permission denied`); `main` segue 12 commits à frente de `origin/main`, sem deploy deste tick. Produção não foi alterada.
+- Doctor permanece exit 1 por Node 22.22.2; OpenCode ausente, Ollama sem preflight e Codex MCP/exec `401 invalid_refresh_token` são bloqueios de infraestrutura.
+- Nenhuma escrita factual, identidade, FK, voto, claim, source reference, Supabase ou Cloudflare ocorreu.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T17:42Z
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `ff2c22154ba12b9d3ed73159088f5958a079c9a1`.
