@@ -7,7 +7,7 @@
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0755.md`.
 - Bloqueios: Senado com deriva SHA/bytes; ALRS sem catálogo `data-item`/Enio/Terra; Câmara sem lote novo; doctor shell FAIL por Node 22.22.2. Gates executados com Node 24.19.0.
 - Gates locais verdes: testes, TypeScript, schema, `data:check` 1003/988, build, `git diff --check` e smoke local 1002 cards/0 HTTP/console errors.
-- Publicação deste tick: documentação será commitada/enviada e workflow backup Cloudflare `334951434` será verificado por `headSha`, HTTP 200 e `release.json`.
+- Publicação verificada inicialmente no commit `7c8f84919cc2838a67d5de310d012185172503f9`; backup `334951434`, run `32461005226`, `completed/success`, `headSha` idêntico; produção HTTP 200 e `/release.json` confirmou SHA idêntico, `row_count=1003`, release `7c8f849-20260821T075850993Z`; smoke remoto 1002 cards/0 HTTP/console errors.
 - Próximo chunk: nova recon bounded oficial e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
 

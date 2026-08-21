@@ -30,8 +30,12 @@ Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, 
 - `git diff --check`: exit 0.
 - `npm run smoke:local`: exit 0; 1002 cards, 0 falhas HTTP, 0 erros de console online e service worker pronto.
 
-## Publicação
-Documentação deste tick será commitada e enviada para `origin/main`; depois será acionado o workflow backup Cloudflare `334951434`, com verificação de `headSha`, HTTP 200 e `release.json` em produção.
+## Publicação verificada
+- Commit `7c8f84919cc2838a67d5de310d012185172503f9` enviado para `origin/main`.
+- Backup Cloudflare `334951434`, run `32461005226`: `completed/success`, `headSha` idêntico.
+- Produção: `https://rs.votopraquem.org` HTTP 200.
+- `release.json` em produção confirma SHA idêntico, `row_count=1003`, release `7c8f849-20260821T075850993Z`.
+- Smoke remoto: exit 0; 1002 cards, 0 falhas HTTP, 0 erros de console online e service worker pronto.
 
 ## Próximo passo
 Manter recon oficial e lane local independentes. Senado, ALRS e Câmara continuam fail-closed; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
