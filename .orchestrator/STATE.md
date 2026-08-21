@@ -1,14 +1,18 @@
-## Tick contínuo — recon oficial e gates locais — 2026-08-21T19:57Z
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T20:25Z
 
 - Lock bounded adquirido/liberado com `flock -n`; recon oficial e lane local executadas sem escrita factual.
-- ALRS FED-17 falhou fechado com `JWT issued at future`; quatro residuais Enio Carlos Terra continuam sem ID/fonte exata. Senado falhou fechado por envelope `/tmp/senado-nominal-envelope-latest.json` ausente. Câmara: 8/8 janelas oficiais válidas, IDs descobertos em modo read-only, sem aplicação.
-- Dataset e snapshot alinhados: CSV oficial 1.003/1.003 IDs, diferença 0/0.
+- ALRS FED-17 dry-run concluiu `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra continuam sem ID/fonte exata.
+- Câmara: API oficial em 8 janelas trimestrais 2025–2026, páginas iniciais válidas e `blocked=null`; IDs descobertos read-only, sem reconciliação/aplicação.
+- Senado falhou fechado por envelope `/tmp/senado-nominal-envelope-latest.json` ausente (`ENOENT`); nenhum `legislator_id`, FK ou voto promovido.
+- Dataset dry-run: snapshot 1.003, banco 1.000, 3 a criar/1.000 a atualizar; nenhuma escrita. `data:check` confirmou 1.003 candidaturas/988 fotos.
 - Auditoria estrita manteve gaps de fontes `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; exit 2 por gaps reais.
-- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1003/988, build/release local `493a0e6`, diff check. Smoke teve timeout transitório na primeira tentativa e passou na repetição: 1002 cards/0 HTTP/console errors/service worker.
-- Produção HTTP 200, mas `release.json` ainda aponta live `e925327`; HEAD local `493a0e6` não publicado. Worktree limpa, `main` 19 commits à frente de `origin/main`.
-- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1957.md`.
-- Bloqueios: push efetivo GitHub continua HTTP 403 apesar de `gh api` indicar push; doctor shell Node 22.22.2; Senado sem envelope; ALRS JWT futuro; gaps de fontes. Nenhuma escrita Supabase/Cloudflare ocorreu.
-- Próximo chunk: recon bounded read-only e lane local independente; resolver credencial efetiva de push. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check`, build, `git diff --check`; smoke repetido passou com 1002 cards/0 HTTP/console errors/service worker, após timeout transitório inicial.
+- Produção não foi afirmada: DNS falhou (`curl` HTTP 000, `Could not resolve host`). Worktree agora contém apenas QA/STATE documental; `main` está 20 commits à frente de `origin/main`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-2025.md`.
+- Workflows GitHub confirmados: backup Cloudflare `334951434` e primário `320564705` ativos; nenhum run novo acionado sem push efetivo.
+- Bloqueios: push efetivo GitHub continua pendente; doctor shell Node 22.22.2, evidência MCP Codex sem fechamento e timeout; Senado sem envelope; gaps de fontes. Nenhuma escrita Supabase/Cloudflare ocorreu.
+- Próximo chunk: recon bounded oficial e lane local independente; resolver credencial efetiva de push. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T19:35Z
 
