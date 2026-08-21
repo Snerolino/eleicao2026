@@ -57,6 +57,7 @@
     "impact:alrs:r4:apply:plan": "node scripts/plan-alrs-matrix-apply.mjs",
     "impact:alrs:r4:matrix:plan": "node scripts/plan-alrs-matrix-apply.mjs",
     "impact:alrs:r4:p0": "node scripts/build-alrs-p0-matrix-pack.mjs",
+    "impact:alrs:r4:p0:evidence": "node scripts/extract-alrs-p0-official-evidence.mjs",
     "orch:setup": "bash scripts/orchestrator/setup-local.sh",
     "orch:doctor": "bash scripts/orchestrator/doctor.sh",
     "orch:install-skill": "bash scripts/orchestrator/install-hermes-skill.sh",

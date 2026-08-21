@@ -4,7 +4,7 @@
 - ALRS: HTTP 200, 77442 bytes, SHA-256 `sha256:6a386d7d8b9ae17f8f5107b0cb6c90d71795a8568f08ed7c5972746a4ac0bab1`, 0 `data-item`, sem Enio/Terra; quatro residuais continuam sem ID oficial/fonte exata.
 - Senado: 6/6 HTTP 200, 1/6 bytes coincidentes e 0/6 SHA coincidentes com manifesto 2026-08-19; fail-closed.
 - Câmara: janela oficial 2026-10-01 a 2026-12-31, HTTP 200, JSON válido, 0 registros; nenhum evento inferido.
-- Lane local: `npm run impact:alrs:r4:merit` em Node 24 produziu 25 versões/149 votos, 5 P0/20 P1; 4 colisões excluídas fail-closed; sem aplicação.
+- Lane local: `npm run impact:alrs:r4:merit` em Node 24 produziu 25 versões/149 votos, 5 P0/20 P1; 4 colisões excluídas fail-closed; sem aplicação. A extração P0 oficial consultou 7/7 URLs HTTP 200 e capturou 526 `data-item`, sem Enio/Terra, em `data/legislative-import/alrs/p0-official-event-evidence.json`, sempre com `remote_apply=false`.
 - QA: `docs/qa/lote-continuous-ops-recon-merit-2026-08-21-0142.md`; artefatos em `.orchestrator/runtime/continuous-tick-20260821T014207Z/`.
 - Nenhuma escrita factual em snapshot, manifesto, source reference, voto, identidade, FK, Supabase, Cloudflare ou matriz ocorreu.
 - Próximo passo: gates locais completos, publicação documental e nova recon bounded; ALRS/Senado permanecem fail-closed.
@@ -798,6 +798,12 @@
 - 5 versões P0 sem colisão/40 votos, até 7 candidatos por versão.
 - Pacote marcado `P0-first-editorial-review`, ainda `pending_review` e sem escrita remota.
 - QA: `docs/qa/lote-alrs-p0-matrix-pack-2026-08-21.md`.
+
+## Tick contínuo — evidência oficial estruturada P0 ALRS (2026-08-21)
+
+- 7 páginas oficiais HTTP 200, 526 `data-item` estruturados, hashes/bytes registrados.
+- Evidência factual pronta para reconciliar tipo/versão/evento; nenhum impacto aprovado.
+- QA: `docs/qa/lote-alrs-p0-official-event-evidence-2026-08-21.md`.
 
 ## Tick contínuo — fechamento final R4 (2026-08-20)
 
