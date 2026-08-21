@@ -1,4 +1,17 @@
-## Tick contínuo — recon oficial e gates locais — 2026-08-21T14:26Z
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T14:48Z
+
+- Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `90bc4f59314d7859b944875e9c3560c12146b82c`.
+- Câmara: API oficial em 8 janelas trimestrais 2025–2026, 8/8 `status=ok`, 700 IDs descobertos na primeira página; nenhuma reconciliação/aplicação.
+- ALRS: comando genérico sem parâmetros obrigatórios saiu exit 1 (`--solicitante`/`--ano`/catálogo ausentes); nenhum dado promovido. Quatro residuais Enio/Terra continuam sem ID/fonte exata.
+- Senado: adaptação fail-closed por ausência de `/tmp/senado-nominal-envelope-latest.json`; nenhum PDF, identidade, FK ou voto promovido.
+- Dataset: `data:check` 1.003 candidaturas/988 fotos oficiais; nenhum refresh factual.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check`, build, smoke local 1002 cards/0 HTTP/console errors/service worker e `git diff --check`.
+- Auditoria estrita read-only manteve gaps de fonte: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; exit 2 por gaps reais.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1448.md`.
+- Nenhuma escrita factual, identidade, FK, voto, claim, source reference, Supabase ou Cloudflare ocorreu.
+- Próximo chunk: revalidar gates incluindo QA, publicar documentação via backup Cloudflare e confirmar produção; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
+# Tick contínuo — recon oficial e gates locais — 2026-08-21T14:26Z
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `10eb88d086f6808bc9eaea66330d5d178fe6eb94`.
 - Recon oficial: Câmara 4/4 janelas trimestrais HTTP válido e 300 IDs descobertos em primeira página; ALRS HTTP 200, 77.442 bytes, SHA `sha256:6a386d7d8b9ae17f8f5107b0cb6c90d71795a8568f08ed7c5972746a4ac0bab1`, 0 `data-item`, sem Enio/Terra; Senado sem envelope transitório verificável.
