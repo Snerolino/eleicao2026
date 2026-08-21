@@ -10,6 +10,7 @@
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1700.md`.
 - Doctor exit 1 por Node 22.22.2; OpenCode ausente, Ollama sem preflight e Codex MCP/exec `401 invalid_refresh_token` permanecem bloqueios de infraestrutura.
 - Nenhuma escrita factual, identidade, FK, voto, claim, source reference, Supabase ou Cloudflare ocorreu.
+- Commit documental local `7bc0345` criado após gates verdes; `git push origin main` e `env -u GH_TOKEN git push origin main` falharam com HTTP 403 (`Permission denied`). Produção respondeu HTTP 200; backup Cloudflare `334951434` permanece ativo, sem run novo por ausência de push.
 - Próximo chunk: recon bounded oficial e lane local independente; publicar após corrigir permissão efetiva de push. Aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T16:40Z

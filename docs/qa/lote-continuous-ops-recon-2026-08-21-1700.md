@@ -24,7 +24,8 @@ Executados com Node 24.19.0:
 - Os quatro residuais Enio Carlos Terra continuam bloqueados por ausência de ID oficial e fonte exata vinculável. Nenhuma inferência foi feita.
 - Senado permanece fail-closed por ausência do envelope transitório e deriva de evidência; não houve escrita remota.
 - `npm run orch:doctor -- --smoke`: exit **1** por Node do shell 22.22.2, OpenCode ausente, fallback Ollama sem preflight e rota Codex MCP/exec com `401 invalid_refresh_token`. Os gates foram executados explicitamente no Node 24.19.0.
-- Push GitHub continua bloqueado por `HTTP 403 Permission denied` nos ticks anteriores; este lote não altera credenciais nem contorna a proteção.
+- Commit documental local `7bc0345` criado após os gates verdes. `git push origin main` e `env -u GH_TOKEN git push origin main` falharam novamente com `HTTP 403 Permission denied`; este lote não altera credenciais nem contorna a proteção.
+- Produção respondeu `HTTP 200`; workflow backup Cloudflare `334951434` permanece ativo, mas nenhum run novo foi acionado porque o push não foi publicado.
 
 ## Próximo passo
 Manter recon oficial bounded (ALRS residual, Senado fail-closed e novos lotes Câmara) e lane local independente. Publicar este checkpoint quando a permissão efetiva de push estiver disponível; aplicação factual remota somente após R0, schema/FK, fonte oficial, dry-run e idempotência.
