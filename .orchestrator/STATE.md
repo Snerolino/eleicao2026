@@ -2989,4 +2989,17 @@ Sem autorização humana explícita própria, não fazer:
 - Bloqueios: quatro residuais Enio/Terra sem ID/fonte exata; Senado sem envelope/deriva registrada; gaps de fontes; doctor shell FAIL por Node 22.22.2; Codex MCP `401 invalid_refresh_token` e OpenCode ausente.
 - Publicação verificada: commit `9f2a43033ca54ba65cc2cef8e7552742a728f385` em `origin/main`; backup `334951434`, run `32481840600`, `completed/success`, `headSha` idêntico. Produção HTTP 200 e `/release.json` confirmaram `release_id=9f2a430-20260821T122613607Z`, SHA idêntico e `row_count=1003`; smoke remoto 1002 cards/0 HTTP/console errors.
 - Próximo chunk: nova recon bounded oficial e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T13:17Z
+
+- Lock bounded disponível; worktree iniciou limpa em `dd5fe9b89e1c606b60812d2631568cbde5314357`.
+- Recon ALRS FED-17 dry-run bloqueado por `JWT issued at future`; nenhum voto, data, FK ou fonte aplicado. Manifesto preserva 5 URLs oficiais com ID, bytes e SHA.
+- Câmara: API oficial em 4 janelas trimestrais de 2026 respondeu `status=ok` e retornou IDs; nenhuma reconciliação/aplicação.
+- Senado: adaptação fail-closed por ausência de `/tmp/senado-nominal-envelope-latest.json`; nenhuma inferência.
+- Auditoria estrita: 1.397 proposições, 1.431 versões, 1.902 eventos e 5.007 votos; gaps `1251/3/112`, `1647/2/188`, `4/2/455`, exit 2 real.
+- Dataset vivo: CSV 1.003 IDs, snapshot 1.003 IDs, 0 somente em cada lado; nenhum refresh.
+- Lane local: pacote substantivo ALRS regenerado com 7 requisições/6 versões/5 excluídas por fonte verde; `remote_apply=false`.
+- Gates Node 24.19.0: 98 arquivos/400 testes, TypeScript, schema, `data:check` 1003/988, build, smoke local 1002 cards/0 HTTP/console errors/service worker, diff check verdes.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1317.md`.
+- Bloqueios: quatro residuais Enio/Terra sem identidade/fonte exata; Senado sem envelope/deriva; gaps substantivos; doctor FAIL por Node 22.22.2; Codex MCP 401.
+- Próximo chunk: commit/push/publicação da documentação e nova recon bounded; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
