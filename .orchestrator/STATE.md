@@ -3004,3 +3004,18 @@ Sem autorização humana explícita própria, não fazer:
 - Publicação verificada: commit final `2ea9d52dbe882a455e5a3282702d07e3e55b7191`; backup Cloudflare `334951434`, run `32486296457`, `completed/success`, `headSha` idêntico. Produção HTTP 200, `/release.json` com `release_id=2ea9d52-20260821T132042907Z`, SHA idêntico e `row_count=1003`; smoke remoto 1002 cards/0 HTTP/console errors/service worker.
 - Próximo chunk: nova recon bounded oficial e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
+
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T13:40Z
+
+- Lock `flock -n` adquirido/liberado; worktree iniciou limpa em `b7bb235c2f99651e2d99df220967df7a97b48237`.
+- ALRS P0/P1: 7/7 URLs oficiais HTTP 200 e 526 itens; nenhum ID novo de Enio/Terra foi inferido.
+- FED-17 residual em dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`.
+- Auditoria estrita read-only: gaps de versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188` e votos `4/2/455`; exit 2 real.
+- Dataset/snapshot sem diff factual; `data:check` verde em 1003 candidaturas/988 fotos.
+- Gates Node 24.19.0 verdes: 400 testes, TypeScript, schema, data:check, build, smoke local (1002 cards/0 HTTP/console errors) e diff check.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1340.md`.
+- Produção existente verificada: raiz HTTP 200 e `/release.json` SHA `b7bb235c2f99651e2d99df220967df7a97b48237`, `row_count=1003`, versão `0.2.714`.
+- Nenhuma escrita factual em votos, source references, identidade, FK, snapshot, Supabase ou matriz; sem novo commit/push/deploy porque a worktree permaneceu limpa.
+- Bloqueios: quatro residuais Enio/Terra sem ID/fonte exata, gaps substantivos, Senado sem envelope verificável, doctor shell FAIL por Node 22.22.2 e OpenCode ausente como WARN.
+- Próximo chunk: recon bounded oficial e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+
