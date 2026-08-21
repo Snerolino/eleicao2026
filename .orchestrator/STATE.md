@@ -1002,6 +1002,7 @@
 - Pacote corrente fixado em 23 versões: 5 P0 com fonte substantiva verde e 18 P1 bloqueados por fonte substantiva.
 - Proposal/draft packs regenerados sem valores decisórios automáticos.
 - Apply plan atualizado para o pacote de 23, não o histórico de 29.
+- Apply plan corrente: 66 erros decompostos em 2 globais, 18 fontes P1, 23 status editoriais e 23 assessments vazios.
 - QA: `docs/qa/lote-alrs-current-package-regeneration-2026-08-21.md`.
 
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)

@@ -12,6 +12,9 @@
 - proposal pack: 9 propostas, todas nulas para decisão;
 - apply plan referencia o pacote corrente, não o histórico de 29.
 
+O plano corrente agora registra 66 erros: 2 gates globais, 18 fontes
+substantivas P1, 23 status editoriais e 23 assessments vazios.
+
 O apply plan permanece fail-closed por falta de aprovação editorial, assessments
 preenchidos e fonte substantiva nos 18 P1.
 
