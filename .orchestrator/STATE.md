@@ -855,6 +855,12 @@
 - Versões/eventos/fonte confirmados; campos substantivos permanecem sujeitos à revisão humana.
 - QA: `docs/qa/lote-alrs-p0-assessment-proposals-2026-08-21.md`.
 
+## Tick contínuo — fontes substantivas oficiais P0 ALRS (2026-08-21)
+
+- 5/5 P0 têm página oficial de proposição e documento substantivo HTTP 200 com hash/bytes.
+- `substantive_source_gate=green` para o pacote P0; assessments ainda pending_review.
+- QA: `docs/qa/lote-alrs-p0-substantive-sources-2026-08-21.md`.
+
 ## Tick contínuo — fila substantiva ALRS (2026-08-21)
 
 - Filtro oficial: 462 versões/1398 votos; 5 mérito confirmado e 457 candidatos a mérito.

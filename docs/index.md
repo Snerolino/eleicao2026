@@ -149,6 +149,7 @@
 | [`qa/lote-alrs-p0-matrix-pack-2026-08-21.md`](qa/lote-alrs-p0-matrix-pack-2026-08-21.md) | Pacote editorial P0 ALRS |
 | [`qa/lote-alrs-p0-official-event-evidence-2026-08-21.md`](qa/lote-alrs-p0-official-event-evidence-2026-08-21.md) | Evidência oficial estruturada P0 |
 | [`qa/lote-alrs-p0-assessment-proposals-2026-08-21.md`](qa/lote-alrs-p0-assessment-proposals-2026-08-21.md) | Propostas editoriais P0 ALRS |
+| [`qa/lote-alrs-p0-substantive-sources-2026-08-21.md`](qa/lote-alrs-p0-substantive-sources-2026-08-21.md) | Fontes substantivas oficiais P0 |
 | [`qa/lote-alrs-substantive-review-queue-2026-08-21.md`](qa/lote-alrs-substantive-review-queue-2026-08-21.md) | Fila substantiva ALRS |
 | [`qa/lote-alrs-p1-substantive-pack-2026-08-21.md`](qa/lote-alrs-p1-substantive-pack-2026-08-21.md) | Pacote P1 substantivo ALRS |
 | [`qa/lote-alrs-p1-official-event-evidence-2026-08-21.md`](qa/lote-alrs-p1-official-event-evidence-2026-08-21.md) | Evidência oficial estruturada P1 |
