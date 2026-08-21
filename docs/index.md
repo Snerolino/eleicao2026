@@ -135,6 +135,8 @@
 | [`qa/lote-caso-adao-704-votos-sem-assessment-alrs-2026-08-20.md`](qa/lote-caso-adao-704-votos-sem-assessment-alrs-2026-08-20.md) | Caso Adão: votos ALRS sem assessment |
 | [`qa/lote-alrs-impact-review-queue-v1-2026-08-20.md`](qa/lote-alrs-impact-review-queue-v1-2026-08-20.md) | Fila ALRS de impacto por versão |
 | [`qa/lote-alrs-impact-review-priority-p0-p1-2026-08-20.md`](qa/lote-alrs-impact-review-priority-p0-p1-2026-08-20.md) | Fila ALRS prioritária P0/P1 |
+| [`qa/lote-alrs-impact-merit-pack-p0-p1-2026-08-20.md`](qa/lote-alrs-impact-merit-pack-p0-p1-2026-08-20.md) | Pacote ALRS candidato a mérito |
+| [`qa/lote-alrs-merit-review-pack-p0-p1-2026-08-20.md`](qa/lote-alrs-merit-review-pack-p0-p1-2026-08-20.md) | Pacote ALRS de revisão de mérito P0/P1 |
 | [`qa/lote-official-recon-senado-alrs-camara-2026-08-20-1938.md`](qa/lote-official-recon-senado-alrs-camara-2026-08-20-1938.md) | Reconhecimento oficial bounded |
 | [`architecture/politica-precedencia-fontes.md`](architecture/politica-precedencia-fontes.md) | Precedência: fonte oficial sobre dataset2026 |
 | [`qa/lote-importacao-documentacao-orquestracao-hermes-2026-08-20.md`](qa/lote-importacao-documentacao-orquestracao-hermes-2026-08-20.md) | Importação da documentação Hermes |

@@ -1,3 +1,12 @@
+## Tick contínuo — pacote ALRS de revisão de mérito P0/P1 (2026-08-21T00:28Z)
+
+- Lane local: criado `scripts/build-alrs-merit-review-pack.mjs` para separar 29 versões `merit_candidate` da fila prioritária.
+- Resultado determinístico: 29 versões, 172 votos factuais, 5 P0 e 24 P1.
+- Itens permanecem `pending_review`; `remote_apply=false`, `public_approval=false`; grupos/direção/defending_vote vazios.
+- Teste de contrato criado e executado; nenhuma escrita factual, matriz, Supabase ou aprovação ocorreu.
+- QA: `docs/qa/lote-alrs-merit-review-pack-p0-p1-2026-08-20.md`.
+- Próximo passo: revisão contra fonte oficial ALRS exata; sem confirmação, manter fail-closed e avançar recon bounded das lanes oficiais.
+
 ## Tick contínuo — recon oficial bounded Senado/ALRS/Câmara (2026-08-20T23:57Z)
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou limpa em `266b71c5e8b9c6df71ec679c6aacbd2faec673de` e terminou limpa em `34e03994ada399d33122ea2f6103d831952cb247`.
@@ -698,6 +707,13 @@
 - URLs deduplicadas e payload reduzido para economizar tokens dos revisores.
 - Fila completa preservada; nenhuma escrita, matriz ou aprovação ocorreu.
 - QA: `docs/qa/lote-alrs-impact-review-priority-p0-p1-2026-08-20.md`.
+
+## Tick contínuo — pacote ALRS candidato a mérito (2026-08-20)
+
+- Filtro P0/P1: 29 versões candidatas a mérito/172 votos; 5 P0 e 24 P1.
+- 83 demais itens continuam na fila original para confirmação oficial.
+- Matriz e assessments continuam sem escrita/aprovação; revisão oficial do evento é obrigatória.
+- QA: `docs/qa/lote-alrs-impact-merit-pack-p0-p1-2026-08-20.md`.
 
 ## Tick contínuo — fechamento final R4 (2026-08-20)
 
