@@ -1,3 +1,16 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T22:13Z
+
+- Lock bounded com `flock -n`; recon oficial read-only e gates locais executados sem escrita factual/remota.
+- ALRS FED-17 dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra continuam sem ID/fonte exata.
+- Câmara: API oficial em oito janelas trimestrais, 22/22 páginas válidas, `blocked=null`; IDs somente read-only, sem reconciliação/aplicação.
+- Senado falhou fechado por `/tmp/senado-nominal-envelope-latest.json` ausente (`ENOENT`); nenhum PDF, `legislator_id`, FK ou voto promovido.
+- Dataset oficial e snapshot alinhados: CSV `consulta_cand_2026_RS.csv` SHA-256 `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`, 1.003/1.003 IDs.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos, build (`release.json` local `92c73a2-20260821T221241235Z`), `git diff --check`; smoke 1.002 cards/0 HTTP/console errors/service worker.
+- Produção HTTP 200, mas `/release.json` live permanece em `e925327`; build local não publicado.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-2213.md`.
+- Bloqueios: doctor FAIL por shell Node 22.22.2; push GitHub HTTP 403; ALRS fetch sem evidência recuperável; Senado sem envelope; gaps de fontes. Nenhuma escrita Supabase/Cloudflare ocorreu.
+- Próximo chunk: recon bounded oficial e lane local independente; publicação após credencial efetiva de push. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T21:51Z
 
 - Lock bounded adquirido/liberado com `flock -n`; recon oficial e lane local executadas sem escrita factual.
