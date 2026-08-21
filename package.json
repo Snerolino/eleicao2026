@@ -54,6 +54,8 @@
     "impact:alrs:r4:collision:pack": "node scripts/build-alrs-version-collision-resolution-pack.mjs",
     "impact:alrs:r4:titles": "node scripts/build-alrs-title-recovery-pack.mjs",
     "impact:alrs:r4:validate": "node scripts/validate-alrs-merit-pack.mjs",
+    "impact:alrs:r4:apply:plan": "node scripts/plan-alrs-matrix-apply.mjs",
+    "impact:alrs:r4:matrix:plan": "node scripts/plan-alrs-matrix-apply.mjs",
     "orch:setup": "bash scripts/orchestrator/setup-local.sh",
     "orch:doctor": "bash scripts/orchestrator/doctor.sh",
     "orch:install-skill": "bash scripts/orchestrator/install-hermes-skill.sh",
