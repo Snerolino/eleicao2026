@@ -1,3 +1,17 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-21T23:01Z
+
+- Lock bounded adquirido/liberado com `flock -n`; recon oficial read-only e lane local executadas sem escrita factual/remota.
+- ALRS FED-17 dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra continuam sem ID/fonte exata.
+- Câmara: API oficial em 8 janelas trimestrais, 22 páginas observadas, `blocked=null`, 2.100 `vote_ids` descobertos read-only; sem reconciliação/aplicação.
+- Senado fail-closed: envelope `/tmp/senado-nominal-envelope-latest.json` ausente; nenhum PDF, `legislator_id`, FK ou voto promovido.
+- Dataset oficial comparado ao snapshot: 1.003/1.003 IDs, diferença 0/0; SHA CSV `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`. Refresh rejeitado fail-closed por 1 remoção e 1.990 perdas de metadados de foto; nenhum dado alterado.
+- Auditoria estrita manteve gaps de fontes `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; sem promoção.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos, build (sitemap 1.003 + 2), smoke local 1.002 cards/0 HTTP/console errors/service worker e `git diff --check`.
+- Produção não revalidada: DNS falhou com `Could not resolve host` (HTTP 000); último SHA live conhecido é `e925327276b82481a348d4db3e2339d075dfe9a3`, somente checkpoint anterior. `origin/main` permanece nesse SHA e local está 28 commits à frente.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-2301.md`.
+- Bloqueios: doctor FAIL por shell Node 22.22.2 e evidência MCP Codex; OpenCode ausente/Ollama sem preflight; push GitHub efetivo HTTP 403; DNS indisponível. Nenhuma escrita Supabase/Cloudflare ocorreu.
+- Próximo chunk: recon bounded oficial da Câmara, mantendo ALRS/Senado fail-closed; publicação após push e DNS permitirem validar backup Cloudflare, SHA live e smoke remoto. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T22:34Z
 
 - Lock bounded adquirido/liberado com `flock -n`; recon oficial read-only e gates locais executados sem escrita factual/remota.
