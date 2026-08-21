@@ -22,8 +22,8 @@ Executados com Node 24.19.0; todos os gates locais terminaram exit 0:
 - `git diff --check`.
 
 ## Publicação e bloqueios
-- Worktree iniciou limpa em `1a488e7da5b2eaf680f39e2d04a2118828476fe4`.
-- Push permanece bloqueado pelo problema já confirmado de permissão GitHub: HTTP 403 (`Permission denied`); `main` segue 12 commits à frente de `origin/main`. Não houve deploy deste tick.
+- Worktree iniciou limpa em `1a488e7da5b2eaf680f39e2d04a2118828476fe4`; commit documental deste tick: `d24043f`.
+- `git push origin main` e `env -u GH_TOKEN git push origin main` falharam com HTTP 403 (`Permission denied`); `main` segue 13 commits à frente de `origin/main`. Não houve deploy deste tick.
 - Produção não foi alterada por este tick; qualquer release novo depende de push efetivo e do workflow backup Cloudflare `334951434`.
 - Doctor padrão permanece bloqueado pelo shell Node 22.22.2; OpenCode ausente, Ollama sem preflight e Codex MCP/exec com `401 invalid_refresh_token` permanecem bloqueios de infraestrutura.
 - Nenhuma escrita factual, identidade, FK, voto, claim, source reference, Supabase ou Cloudflare ocorreu.

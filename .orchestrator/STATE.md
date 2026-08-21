@@ -8,7 +8,7 @@
 - Auditoria estrita read-only manteve gaps de fonte: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; exit 2 por gaps reais.
 - Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1003/988, build (`sitemap` 1.003 candidatos; `release.json` para `1a488e7`), smoke local 1.002 cards/0 HTTP/console errors/service worker e `git diff --check`.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-1801.md`.
-- Push permanece bloqueado por HTTP 403 (`Permission denied`); `main` segue 12 commits à frente de `origin/main`, sem deploy deste tick. Produção não foi alterada.
+- Commit documental `d24043f` criado após os gates; `git push origin main` e `env -u GH_TOKEN git push origin main` falharam com HTTP 403 (`Permission denied`); `main` segue 13 commits à frente de `origin/main`, sem deploy deste tick. Produção respondeu HTTP 200 e não foi alterada.
 - Doctor permanece exit 1 por Node 22.22.2; OpenCode ausente, Ollama sem preflight e Codex MCP/exec `401 invalid_refresh_token` são bloqueios de infraestrutura.
 - Nenhuma escrita factual, identidade, FK, voto, claim, source reference, Supabase ou Cloudflare ocorreu.
 
