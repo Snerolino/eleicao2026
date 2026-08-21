@@ -18,6 +18,12 @@ O snapshot público continua em 1003 candidaturas e 988 fotos rastreáveis, conf
 - Recon executada com Node 24.19.0.
 - O lock bounded foi usado com `flock -n` e liberado ao fim do tick.
 
+## Publicação verificada
+- Commit `49a1ce938e7e1c4576947535328b353891cadfd3` publicado em `origin/main`.
+- Workflow backup Cloudflare `334951434`, run `32456140033`: `completed/success`, `headSha` idêntico.
+- Produção: raiz HTTP 200; `/release.json` SHA `49a1ce938e7e1c4576947535328b353891cadfd3`, `row_count=1003`.
+- Smoke remoto: 1002 cards, 0 falhas HTTP, 0 erros de console online, service worker pronto.
+
 ## Bloqueios reais
 1. FED-17 não pode consultar/aplicar enquanto o JWT do ambiente estiver com emissão futura (`JWT issued at future`).
 2. Senado não pode promover PDFs enquanto bytes/SHA divergirem do manifesto oficial versionado.

@@ -6,7 +6,9 @@
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-21-0649.md`; manifesto ALRS alterado somente no timestamp de reconciliação.
 - Nenhuma escrita factual, identidade, FK, voto, matriz, claim, source reference, Supabase, Cloudflare ou snapshot ocorreu.
 - Bloqueios: JWT do ambiente em futuro para FED-17; Senado com deriva SHA/bytes; Câmara sem lote novo; doctor shell FAIL por Node 22.22.2. Recon e verificações executadas com Node 24.19.0.
-- Próximo chunk: gates locais completos, publicação documental e nova recon bounded; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
+- Gates verdes: 97 arquivos/398 testes, TypeScript, schema, `data:check` 1003/988, build, `git diff --check` e smoke local 1002 cards/0 HTTP/console errors.
+- Publicação verificada: commit `49a1ce938e7e1c4576947535328b353891cadfd3` em `origin/main`; backup `334951434`, run `32456140033`, `completed/success`, `headSha` idêntico. Produção raiz HTTP 200, `/release.json` confirmou SHA idêntico, `row_count=1003`, release `49a1ce9-20260821T065226303Z`; smoke remoto 1002 cards/0 HTTP/console errors.
+- Próximo chunk: nova recon bounded oficial e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
 
 - Lock bounded adquirido/liberado com `flock -n`; worktree iniciou em `d22d4312c830e94025954af41cf2b7b915476434`.
