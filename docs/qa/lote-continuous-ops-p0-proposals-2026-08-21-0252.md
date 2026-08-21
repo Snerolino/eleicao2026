@@ -30,3 +30,10 @@
 ## Próximo passo
 
 Publicar este checkpoint documental e o novo timestamp do manifesto; depois confirmar o workflow backup do Cloudflare, `release.json` e smoke de produção. Manter as lanes oficiais bounded ativas sem aplicação factual.
+
+## Publicação verificada
+
+- Commit publicado em `origin/main`: `a44350885c6868f447191921e3feec4e63dadeb0`.
+- Workflow backup `334951434`, run `32441385902`: `completed/success`, `headSha` idêntico ao commit.
+- Deploy confirmou preview `28f0fc34.portal-transparencia-rs.pages.dev`; tanto preview quanto domínio `https://rs.votopraquem.org` retornaram `/release.json` HTTP 200 com SHA `a44350885c6868f447191921e3feec4e63dadeb0`.
+- Smoke remoto: **0**, 1002 cards, 0 falhas HTTP e 0 erros de console online; service worker pronto.

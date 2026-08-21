@@ -7,7 +7,8 @@
 - QA: `docs/qa/lote-continuous-ops-p0-proposals-2026-08-21-0252.md`.
 - Nenhuma escrita factual em snapshot, identidade, FK, voto, matriz, claim, Supabase ou Cloudflare ocorreu.
 - Bloqueios persistentes: quatro residuais Enio/Terra sem ID oficial/fonte exata; Senado com SHA divergente; Câmara sem lote novo. Doctor do cron FAIL somente por Node 22.22.2 do shell; execução dos gates com Node 24.
-- Próximo passo: publicar checkpoint documental, confirmar backup Cloudflare/produção e manter recon bounded fail-closed.
+- Próximo passo: manter recon bounded fail-closed e iniciar próximo chunk elegível sem aplicar dados sem fonte.
+- Publicação verificada: commit `a44350885c6868f447191921e3feec4e63dadeb0` em `origin/main`; backup `334951434`, run `32441385902`, `completed/success`, `headSha` idêntico; `/release.json` no preview `28f0fc34.portal-transparencia-rs.pages.dev` e em `https://rs.votopraquem.org` HTTP 200 com o mesmo SHA; smoke remoto 1002 cards, 0 falhas HTTP/console.
 
 ## Tick contínuo — recon oficial + pacote ALRS de mérito (2026-08-21T01:42Z)
 
