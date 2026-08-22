@@ -1,3 +1,16 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T04:29Z
+
+- Lock bounded adquirido/liberado com `flock -n`; recon Câmara, ALRS e auditoria estrita executadas read-only/fail-closed.
+- Câmara: 25 páginas oficiais em janelas trimestrais 2025–2026, todas `status=ok`, sem bloqueios; `vote_ids` descobertos somente em memória, sem reconciliação/aplicação.
+- ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra continuam sem ID oficial/fonte exata. Senado permanece fail-closed sem envelope nominal.
+- Dataset oficial: `consulta_cand_2026_RS.csv` SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`, 1.003 IDs CSV e 1.003 no snapshot, diferença 0/0; sem refresh factual.
+- Auditoria estrita mantém gaps reais de fontes em versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188` e votos `4/2/455`; exit 2, sem promoção.
+- Gates Node 24 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build (`release.json` local `128e473-20260822T042748198Z`), sitemap 1.003 + 2, smoke 1.002 cards/0 HTTP/console errors/service worker e `git diff --check`.
+- Doctor cron: `OK=49 WARN=6 FAIL=2` por shell Node 22.22.2 e rota MCP Codex com `401 invalid_refresh_token`; OpenCode ausente/Ollama sem preflight. Nenhuma escrita factual, Supabase ou Cloudflare.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0429.md`.
+- Commit local `bd6f6db` criado; `git push origin main` e retry após `gh auth setup-git` falharam HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), deixando o HEAD 51 commits à frente de `origin/main`; nenhum workflow novo foi acionado. Produção atual respondeu root HTTP 200 e `/release.json` HTTP 200. Workflows ativos: backup `334951434`, primário `320564705`, verificador `335560210`.
+- Próximo passo: retentar publicação documental quando a permissão GitHub efetiva permitir; então validar workflow backup `334951434`, HTTP de produção e `headSha`. Manter ALRS/Senado fail-closed e aplicação remota condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T04:07Z
 
 - Lock bounded adquirido/liberado com `flock -n`; recon Câmara, ALRS e Senado executadas read-only/fail-closed.
