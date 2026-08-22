@@ -22,7 +22,8 @@ Executar um tick bounded do control plane com lock não bloqueante, manter as la
 - Nenhuma escrita factual, snapshot, claim, source reference, FK, voto, matriz, Supabase ou Cloudflare ocorreu.
 - Senado continua fail-closed por envelope nominal ausente/sem SHA verificável; não houve promoção de PDF, `legislator_id` ou voto.
 - `npm run orch:doctor`: `OK=48 WARN=5 FAIL=1`; FAIL conhecido: shell Node 22.22.2 enquanto o projeto exige Node 24. A rota Câmara também teve bloqueio de rede na primeira janela.
-- Worktree permanece limpa, HEAD local `79bf71bf7a8b601405faf42e804c922e7909e994`, 37 commits à frente de `origin/main`.
+- Commit documental `7ab5e0a` criado. `git push origin main` falhou HTTP 403 (permissão negada); retry `env -u GH_TOKEN git push origin main` falhou por DNS (`Could not resolve host: github.com`). HEAD local agora está 38 commits à frente de `origin/main`.
+- Verificação de publicação bloqueada por DNS: `rs.votopraquem.org` e `/release.json` retornaram HTTP 000 (`Could not resolve host`). Workflows remotos confirmados por `gh api`: backup `334951434`, primário `320564705`, verificador `335560210`; nenhum run novo foi acionado.
 
 ## Próximo passo
 Repetir recon bounded da Câmara quando a API responder; manter ALRS/Senado fail-closed. A publicação GitHub/deploy só pode ser validada após o push efetivo; aplicação factual remota permanece condicionada a R0, schema/FK, fonte oficial, dry-run e idempotência.

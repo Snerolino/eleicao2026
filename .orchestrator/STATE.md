@@ -6,8 +6,8 @@
 - Auditoria read-only mantém gaps de fontes `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; Senado continua fail-closed sem envelope nominal/SHA verificável.
 - Gates verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build (sitemap 1.003 + 2), smoke local 1.002 cards/0 HTTP/console errors/service worker e `git diff --check`.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0133.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
-- Doctor permanece `OK=48 WARN=5 FAIL=1` por shell Node 22.22.2; worktree limpa antes da documentação, HEAD local segue 37 commits à frente de `origin/main`.
-- Próximo chunk: repetir recon bounded da Câmara; tentar publicação documental quando o push estiver efetivo. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+- Doctor permanece `OK=48 WARN=5 FAIL=1` por shell Node 22.22.2. Commit documental `7ab5e0a` criado; push falhou HTTP 403 e retry sem `GH_TOKEN` falhou por DNS (`github.com`), deixando HEAD local 38 commits à frente de `origin/main`. Produção também não resolveu DNS (HTTP 000 em raiz e `/release.json`). Workflows backup `334951434`, primário `320564705` e verificador `335560210` confirmados; nenhum run novo.
+- Próximo chunk: repetir recon bounded da Câmara e retentar push/publicação quando DNS/permissão efetiva permitirem. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T01:11Z
 
