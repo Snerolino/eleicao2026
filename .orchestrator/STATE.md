@@ -5,7 +5,7 @@
 - Dataset/gates verdes com Node 24.19.0: 401 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas e 988 fotos, build (`release.json` local `3aae2d0-20260822T180739081Z`), sitemap 1.003 + 2 e `git diff --check`.
 - Smoke repetido passou após falhas transitórias de carregamento/estado de comparação: 1.002 cards, 0 HTTP failures, 0 erros de console online e service worker pronto. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1811.md`. Doctor continua bloqueado por shell Node 22.22.2 incompatível, MCP Codex `401 invalid_refresh_token`, OpenCode ausente e Ollama sem preflight; gates usaram Node 24.19.0.
-- HEAD iniciou alinhado a `origin/main`; a documentação deste tick ainda será commitada e publicada no próximo passo. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+- HEAD iniciou alinhado a `origin/main`; documentação commitada em `c49ca4f`, mas `git push origin main` e retry com `env -u GH_TOKEN` falharam HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). Produção permaneceu no release anterior `3aae2d0` (root HTTP 200, `/release.json` HTTP 200), sem workflow novo nem correspondência com o commit documental local. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T17:48Z
 

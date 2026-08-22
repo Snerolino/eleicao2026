@@ -20,7 +20,7 @@ Nenhum candidato, claim, fonte, voto, FK, matriz, snapshot ou registro remoto fo
 ## Bloqueios reais
 - `orch:doctor -- --smoke` RC 1: shell padrão Node `v22.22.2`, mas o projeto exige Node 24; gates foram executados explicitamente com Node `v24.19.0`.
 - Doctor também registrou rota MCP Codex sem evidência por `401 invalid_refresh_token`, OpenCode ausente e Ollama sem preflight; não houve repetição do executor bloqueado.
-- `git push`/workflow não foi executado neste tick porque o HEAD já está alinhado a `origin/main` no início do tick; a documentação deste tick ainda precisa ser commitada antes da próxima verificação de publicação.
+- A documentação foi commitada em `c49ca4f`. `git push origin main` e retry com `env -u GH_TOKEN` falharam HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); nenhum workflow novo foi acionado. Produção respondeu root HTTP 200 e `/release.json` HTTP 200, ainda no release `3aae2d0`, anterior ao commit local.
 
 ## Próximo passo
-Commitar esta documentação, tentar `main -> main`; se aceito, acompanhar workflow backup Cloudflare `334951434`, conferir `headSha` e validar raiz e `/release.json` em produção. Manter recon oficial read-only e aplicação factual remota condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+Retentar `main -> main` quando a permissão efetiva do GitHub permitir; se aceito, acompanhar workflow backup Cloudflare `334951434`, conferir `headSha` e validar raiz e `/release.json` em produção. Manter recon oficial read-only e aplicação factual remota condicionada a R0/schema/FK/fonte/dry-run/idempotência.
