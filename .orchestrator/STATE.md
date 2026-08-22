@@ -6,8 +6,8 @@
 - Gates verdes: 400 testes/98 arquivos, TypeScript, schema, build, smoke local (1.002 cards/0 HTTP/console errors/service worker pronto) e `git diff --check`; build gerou sitemap 1.003 + 2 e release local `d3095fd-20260822T095821707Z`.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0959.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
 - Doctor: `OK=49 WARN=6 FAIL=2`; shell Node 22.22.2 incompatível com requisito Node 24 e rota MCP Codex sem evidência (`401 invalid_refresh_token`); OpenCode ausente e Ollama sem preflight.
-- Publicação: worktree agora contém somente a documentação deste tick; push anterior permanece bloqueado por HTTP 403 para `Snerolino/eleicao2026`, sem workflow/deploy novo.
-- Próximo chunk: retentar `git push origin main`; se aceitar, validar backup Cloudflare `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+- Publicação: commit documental `6dcf042` criado após os gates; `git push origin main` e retry com `env -u GH_TOKEN` falharam ambos com HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), sem workflow/deploy novo. Produção revalidada: raiz e `/release.json` HTTP 200, live permanece no SHA `e925327276b82481a348d4db3e2339d075dfe9a3`, release `e925327-20260821T145742462Z`, snapshot 1.003; não corresponde ao HEAD local.
+- Próximo chunk: retentar `git push origin main` quando a permissão efetiva permitir; se aceitar, validar backup Cloudflare `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T09:38Z
 

@@ -28,5 +28,11 @@ Nenhum candidato, voto, proposição, evento, identidade, FK, source reference, 
 - `npm run orch:doctor -- --smoke`: `OK=49 WARN=6 FAIL=2`; FAIL por shell Node `v22.22.2` quando o projeto exige Node 24 e ausência de evidência da rota MCP Codex, com 401 `invalid_refresh_token`. OpenCode ausente; Ollama sem preflight.
 - Publicação continua bloqueada até permissão efetiva do GitHub: estado anterior registrou HTTP 403 no push para `Snerolino/eleicao2026`.
 
+## Publicação e produção
+- Commit local criado: `6dcf042664a92051e041cdb42b5eb282b68a88cb` (`docs: registra tick de recon e gates 0959`).
+- `git push origin main` e retry com `env -u GH_TOKEN` falharam ambos com HTTP 403: `Permission to Snerolino/eleicao2026.git denied to Snerolino`.
+- Workflows remotos ativos confirmados: backup Cloudflare `334951434`, primário `320564705`, verificador `335560210`; nenhum run novo foi disparado.
+- Produção revalidada: raiz HTTP 200 e `/release.json` HTTP 200, ainda no SHA `e925327276b82481a348d4db3e2339d075dfe9a3`, release `e925327-20260821T145742462Z`, snapshot 1.003. Não corresponde ao commit local; não afirmar publicação.
+
 ## Próximo passo
 Retentar publicação documental em novo tick quando GitHub aceitar `main -> main`; se aceitar, acompanhar workflow backup Cloudflare `334951434`, validar `headSha` e confirmar produção. Manter ALRS/Senado e aplicação factual remota condicionados a R0, schema/FK, fonte oficial, dry-run e idempotência.
