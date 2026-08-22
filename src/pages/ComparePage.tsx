@@ -1,8 +1,9 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router';
 import { useQuery } from '@tanstack/react-query';
 import { fetchAllCandidates } from '@/services/candidates';
 import { CandidatePhoto } from '@/components/candidates/CandidatePhoto';
+import { CandidateGridItem } from '@/components/candidates/CandidateGridItem';
 import {
   DOSSIER_SECTIONS,
   type CandidateWithClaims,
@@ -157,7 +158,7 @@ export function ComparePage() {
     'Selecione e compare candidatos lado a lado nas eleições 2026 no RS.'
   );
 
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
   const [partyFilter, setPartyFilter] = useState('');
   const [womenOnly, setWomenOnly] = useState(false);
@@ -236,12 +237,24 @@ export function ComparePage() {
     navigate({ search: value ? `?candidatos=${value}` : '' }, { replace: false });
   };
 
-  const toggleCandidate = (id: string) => {
-    const next = sharedIds.includes(id)
-      ? sharedIds.filter((selectedId) => selectedId !== id)
-      : [...sharedIds, id].slice(0, 4);
-    updateSharedRoute(next);
-  };
+  const toggleCandidate = useCallback((id: string) => {
+    setSearchParams((prevParams) => {
+      const prevCandidatos = prevParams.get('candidatos');
+      const currentIds = parseSharedCandidateIds(prevCandidatos, validCandidateIds);
+      const next = currentIds.includes(id)
+        ? currentIds.filter((selectedId) => selectedId !== id)
+        : [...currentIds, id].slice(0, 4);
+
+      const newParams = new URLSearchParams(prevParams);
+      const value = serializeSelectedIds(next);
+      if (value) {
+        newParams.set('candidatos', value);
+      } else {
+        newParams.delete('candidatos');
+      }
+      return newParams;
+    });
+  }, [setSearchParams, validCandidateIds]);
 
   if (query.isLoading) {
     return (
@@ -457,46 +470,13 @@ export function ComparePage() {
             const isSelected = selectedIds.has(c.id);
             const isMaxed = !isSelected && selectedIds.size >= 4;
             return (
-              <li key={c.id}>
-                <button
-                  type="button"
-                  onClick={() => {
-                    if (!isMaxed) toggleCandidate(c.id);
-                  }}
-                  disabled={isMaxed}
-                  aria-pressed={isSelected}
-                  className={`flex w-full items-center gap-3 rounded-sm border p-3 text-left transition-colors ${
-                    isSelected
-                      ? 'border-[var(--color-institutional)] bg-[color-mix(in_srgb,var(--color-institutional)_8%,var(--color-paper))]'
-                      : 'border-[var(--color-border-editorial)] bg-[var(--color-paper)] hover:border-[var(--color-institutional)]'
-                  } ${isMaxed ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`}
-                >
-                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-sm bg-[var(--color-skeleton)]">
-                    <CandidatePhoto
-                      name={c.full_name}
-                      photoUrl={c.photo_url}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="font-mono text-[0.65rem] uppercase tracking-wider text-[var(--color-muted-ink)]">
-                      {c.position_label}
-                    </p>
-                    <p className="truncate font-semibold">{c.full_name}</p>
-                    <p className="font-mono text-xs text-[var(--color-muted-ink)]">
-                      {c.party}
-                      {c.ballot_number != null
-                        ? ` · nº ${c.ballot_number}`
-                        : ''}
-                    </p>
-                  </div>
-                  {isSelected && (
-                    <span className="shrink-0 font-mono text-sm font-bold text-[var(--color-institutional)]">
-                      ✓
-                    </span>
-                  )}
-                </button>
-              </li>
+              <CandidateGridItem
+                key={c.id}
+                candidate={c}
+                isSelected={isSelected}
+                isMaxed={isMaxed}
+                onToggle={toggleCandidate}
+              />
             );
           })}
         </ul>
