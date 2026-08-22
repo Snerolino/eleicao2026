@@ -2030,6 +2030,13 @@ Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; som
 - Auditoria npm bloqueada por DNS do registry; sem afirmação de vulnerabilidades novas.
 - QA: `docs/qa/lote-alrs-structural-review-2026-08-22.md`.
 
+## Tick contínuo — três próximas fases (2026-08-22)
+
+- Hardening Supabase aplicado e verificado no histórico remoto; RLS/grants/RPC confirmados.
+- P0 preservado em corpus content-addressed: 5/5 bytes+SHA reproduzidos, durability green.
+- P1 em coleta oficial paralela: 18 versões, uma requisição por versão.
+- QA: `docs/qa/lote-alrs-next-three-phases-2026-08-22.md`.
+
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)
 
 - 30/30 itens P0 classificados: 9 mérito, 19 procedimento, 2 emenda, 0 destaque.
