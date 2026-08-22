@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T12:46Z
+
+- Lock bounded adquirido/liberado com `flock -n`; ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`. Os quatro casos Enio Carlos Terra permanecem bloqueados por ausência de ID oficial e fonte exata.
+- Auditoria regular de fontes RC 0; strict mantém gaps reais: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` (ALRS/Câmara/Senado). Senado fail-closed pela ausência de `/tmp/senado-nominal-envelope-latest.json`; nenhum dado factual promovido.
+- Dataset sem mudança: CSV e snapshot `1003/1003` IDs, diferença `0/0`; CSV 553.194 bytes SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; snapshot SHA `a7db54b20bd1aa0d49003e278d48d1443617f00b772d004d711cd762d0c982cf`; `data:check` 1.003 candidaturas/988 fotos.
+- Gates verdes: 401 testes/98 arquivos, TypeScript, schema, data:check, build (`release.json` local `c67efb1-20260822T124538276Z`), `git diff --check` e smoke com 1.002 cards/0 HTTP failures/0 console errors/service worker pronto.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1246.md`. HEAD local `c67efb1` permanece 3 commits à frente de `origin/main`; push anterior bloqueado por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), sem workflow/deploy novo.
+- Nenhuma escrita factual, Supabase ou Cloudflare ocorreu. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T12:27Z
 
 - Lock bounded adquirido/liberado com `flock -n`. Câmara oficial read-only: 8/8 janelas trimestrais 2025–2026 `ok`, sem bloqueio; 700 `vote_ids` somente transitórios, sem reconciliação/aplicação. ALRS FED-17 dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; Senado fail-closed por ausência de `/tmp/senado-nominal-envelope-latest.json`.
