@@ -1,3 +1,14 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T08:15Z
+
+- Lock bounded testado/adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026, `max_pages=1`, 700 `vote_ids` somente transitórios, sem reconciliação/aplicação.
+- ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado fail-closed pela ausência de `/tmp/senado-nominal-envelope-latest.json`.
+- Auditoria estrita read-only: gaps de fontes ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; sem promoção factual.
+- Dataset sem mudança: CSV oficial SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; snapshot SHA `a7db54b20bd1aa0d49003e278d48d1443617f00b772d004d711cd762d0c982cf`; `data:check` 1.003 candidaturas/988 fotos.
+- Gates Node 24.19.0: 400 testes/98 arquivos, TypeScript, schema, data:check e build verdes; sitemap 1.003 + 2; `release.json` local `cc4fe56-20260822T081339103Z`; smoke falhou transitoriamente com `cards=0` durante carregamento e passou na repetição com 1.002 cards/0 HTTP failures/0 erros de console online/service worker pronto; `git diff --check` verde.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0815.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Publicação: `env -u GH_TOKEN git push origin main` falhou HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); nenhum workflow/deploy novo. HEAD local segue 64 commits à frente de `origin/main`.
+- Doctor segue `OK=48 WARN=5 FAIL=1`: shell Node 22.22.2 incompatível; OpenCode ausente, Ollama sem preflight e rota Codex MCP não exercitada neste tick. Próximo chunk: retentar push documental quando a permissão efetiva permitir; se aceito, validar backup `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T07:52Z
 
 - Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026, `max_pages=1`, 700 `vote_ids` somente transitórios, sem reconciliação/aplicação.
