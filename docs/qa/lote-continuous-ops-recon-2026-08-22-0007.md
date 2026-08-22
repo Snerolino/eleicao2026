@@ -30,7 +30,9 @@
 
 ## Publicação
 
-- O checkpoint documental deve seguir o fluxo autorizado de commit/push. O deploy primário Wrangler continua não confiável conforme histórico; se o push funcionar, usar o workflow backup Cloudflare `334951434`, confirmar `headSha` e validar `/release.json`/HTTP 200 em produção.
+- Commit local criado: `67903566e8036c6531fab79674427b864c277040` (`docs: registra tick contínuo de recon oficial`).
+- `git push origin main` falhou com HTTP 403: `Permission to Snerolino/eleicao2026.git denied to Snerolino`. O commit está apenas local, 32 commits à frente de `origin/main`; nenhum workflow/deploy foi acionado.
+- Produção raiz respondeu HTTP 200; `/release.json` respondeu HTTP 403 nesta verificação, portanto não foi possível validar SHA live nem release. O deploy primário Wrangler não foi tentado.
 
 ## Próximo passo
 

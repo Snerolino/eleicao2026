@@ -8,6 +8,7 @@
 - Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, data:check, build (sitemap 1.003 + 2), smoke local na repetição (1.002 cards/0 HTTP/console errors/service worker) e `git diff --check`.
 - Doctor cron: `OK=49 WARN=6 FAIL=2` por shell Node 22.22.2 e rota Codex MCP/fallback com `401 invalid_refresh_token`; OpenCode ausente e Ollama sem preflight. Gates do projeto executados explicitamente com Node 24.19.0.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0007.md`.
+- Commit local `67903566e8036c6531fab79674427b864c277040` criado, mas `git push origin main` falhou HTTP 403 (`Permission denied`); nenhum workflow/deploy foi acionado. Produção raiz HTTP 200, porém `/release.json` HTTP 403, sem validação de SHA live.
 - Nenhuma escrita factual, Supabase, Cloudflare, snapshot, identidade, FK, voto, claim ou matriz ocorreu neste tick.
 - Próximo chunk: repetir a janela Câmara bloqueada quando a API voltar; manter ALRS/Senado fail-closed e seguir publicação documental autorizada se o push estiver disponível.
 
