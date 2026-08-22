@@ -1,3 +1,12 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T12:03Z
+
+- Lock bounded adquirido/liberado com `flock -n`. Câmara oficial read-only: 7/8 janelas trimestrais 2025–2026 `ok`; Q1/2025 bloqueada por `fetch failed`, sem `vote_id` promovido. ALRS FED-17 dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; Senado fail-closed por ausência de `/tmp/senado-nominal-envelope-latest.json`.
+- Auditoria de fontes read-only RC 0; strict RC 2 pelos gaps reais: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` (ALRS/Câmara/Senado). Nenhum dado factual promovido.
+- Dataset verificado sem mudança: `SQ_CANDIDATO` CSV e `tse_candidate_id` snapshot `1003/1003`, diferença `0/0`; CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; snapshot SHA `a7db54b20bd1aa0d49003e278d48d1443617f00b772d004d711cd762d0c982cf`; `data:check` 1.003 candidaturas/988 fotos.
+- Gates verdes: 401 testes/98 arquivos, TypeScript, schema, data:check, build, `git diff --check` e smoke; build release local `823e9df-20260822T120333373Z`, sitemap 1.003 + 2; smoke 1.002 cards/0 HTTP failures/0 console errors/service worker pronto.
+- Doctor `OK=49 WARN=6 FAIL=2`: shell Node 22.22.2 incompatível e Codex/MCP `401 invalid_refresh_token`; OpenCode ausente/Ollama sem preflight. QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1203.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Push/publicação documental foi tentado duas vezes neste tick e bloqueou por DNS (`Could not resolve host: github.com`, RC 128); `main` local está 1 commit à frente de `origin/main`. GitHub API também falhou por conexão; nenhum workflow novo foi acionado. Produção: raiz HTTP 000 por timeout DNS, `/release.json` HTTP 200, versão `0.2.806`, sem `commitSha`/`builtAt`/`snapshotSha` verificáveis. Próximo chunk: retentar `main -> main` quando rede/permissão permitirem; após aceite validar backup Cloudflare `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T11:42Z
 
 - Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026, todas `ok`, `blocked=null`, sem reconciliação/aplicação. ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`.
