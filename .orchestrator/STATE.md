@@ -1,3 +1,14 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T10:21Z
+
+- Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026 (`max_pages=1`), todas `ok`, `blocked=null`, 700 `vote_ids` transitórios, sem reconciliação/aplicação.
+- ALRS FED-17 residual dry-run confirmou `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado fail-closed por ausência de `/tmp/senado-nominal-envelope-latest.json`.
+- Auditoria read-only: `npm run impact:sources:audit` RC 0; auditoria estrita RC 2 por gaps reais de fontes ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; sem promoção factual.
+- Dataset sem mudança: CSV oficial 1.003 IDs SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; snapshot 1.003 IDs SHA `a7db54b20bd1aa0d49003e278d48d1443617f00b772d004d711cd762d0c982cf`; diferença de IDs 0/0. `data:check` verde com 1.003 candidaturas e 988 fotos.
+- Gates verdes: 400 testes/98 arquivos, TypeScript, schema, data:check, build (`release.json` local `5e97bdc-20260822T102009320Z`), smoke 1.002 cards/0 HTTP/console errors/service worker pronto e `git diff --check`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1021.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Doctor permanece `OK=48 WARN=5 FAIL=1`: shell Node 22.22.2 incompatível; OpenCode ausente, Ollama sem preflight e rota MCP Codex não exercitada.
+- Push/publicação: commit documental local `23bea6e` criado após os gates; principal e retry com `env -u GH_TOKEN` falharam HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), sem workflow/deploy novo. Produção revalidada: raiz HTTP 200 e `/release.json` HTTP 200, release live `0.2.724`, snapshot 1.003 com SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`, sem `commitSha`; live não corresponde verificavelmente ao HEAD local.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T09:59Z
 
 - Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026 (`max_pages=1`), sem reconciliação/aplicação; ALRS FED-17 residual dry-run confirmou `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`.
