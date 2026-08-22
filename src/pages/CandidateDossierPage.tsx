@@ -201,8 +201,9 @@ export function CandidateDossierPage() {
                   target="_blank"
                   rel="noreferrer noopener"
                   className="mt-4 inline-block font-mono text-xs text-[var(--color-institutional)] underline underline-offset-4"
+                  aria-label={`Abrir fonte do perfil de votações: ${house.sourceLabel}`}
                 >
-                  Fonte: {house.sourceLabel} ↗
+                  Fonte: {house.sourceLabel} <span aria-hidden="true">↗</span>
                 </a>
               ) : (
                 <p className="mt-4 font-mono text-xs text-[var(--color-muted-ink)]">
