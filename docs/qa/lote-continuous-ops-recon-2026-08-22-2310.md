@@ -19,7 +19,7 @@ Executar um tick bounded do control plane: manter a recon oficial read-only, con
 - Não houve escrita em Supabase, Cloudflare, claims, votos, FKs ou source references.
 
 ## Publicação
-`git push origin main` falhou com RC 128 / HTTP 403: `Permission to Snerolino/eleicao2026.git denied to Snerolino`. `gh api user` retornou `Snerolino`, mas a autorização efetiva do remoto continua insuficiente. Nenhum workflow novo foi acionado. HEAD local `1f511b5` está 20 commits à frente de `origin/main`.
+O push inicial e o push pós-documentação falharam com RC 128 / HTTP 403: `Permission to Snerolino/eleicao2026.git denied to Snerolino`. `gh api user` retornou `Snerolino`, mas a autorização efetiva do remoto continua insuficiente. Nenhum workflow novo foi acionado. HEAD local `74ed146` está 21 commits à frente de `origin/main`. Produção foi revalidada: raiz HTTP 200 e `/release.json` HTTP 200, live `3aae2d0`/SHA `3aae2d06338f81dc0b8c5df92ecc61ed8825dda3`, versão `0.2.835`, snapshot 1.003. Workflows remotos ativos: backup `334951434`, primário `320564705` e verificador `335560210`.
 
 ## Próximo passo
 Retentar `main -> main` após correção da permissão efetiva do GitHub; somente depois validar o workflow backup `334951434`, `headSha` e a produção. Aplicação factual remota continua condicionada a R0, schema/FK, fonte oficial, dry-run e idempotência.
