@@ -1,3 +1,15 @@
+## Tick contínuo — recon oficial, gates locais e publicação bloqueada — 2026-08-22T21:22Z
+
+- Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual falhou fechado por `JWT issued at future`; nenhum voto/correção foi planejado e os 4 casos de Enio Carlos Terra seguem sem ID oficial/fonte exata.
+- Câmara oficial consultada em 8 janelas trimestrais 2025–2026, todas `status=ok`, sem reconciliação ou escrita. Auditoria read-only RC 0 mantém gaps reais: votos sem fonte ALRS/Câmara/Senado `4/2/455`, versões `1251/3/112`, eventos `1647/2/188`.
+- Dataset conferido: snapshot e CSV oficial com 1.003 candidatos; `data:check` confirmou 1.003 candidaturas, 988 fotos e 1 fonte TSE. Nenhum fato foi promovido.
+- Gates Node 24.19.0 verdes: 401 testes/98 arquivos, TypeScript, schema, data:check, build (sitemap 1.003 + 2, release local `7b27187-20260822T212139921Z`) e `git diff --check`.
+- Smoke com Supabase configurado ficou em `Carregando lista de candidatos` após duas tentativas (`cards=0`); build snapshot-only, com variáveis Supabase vazias, passou com 1.002 cards, 0 falhas HTTP, 0 erros de console online e service worker pronto. Consulta mínima anon ao Supabase respondeu HTTP 200; latência da jornada completa permanece sem diagnóstico conclusivo.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-2122.md`. Nenhum candidato, voto, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado.
+- Publicação: `git push origin main` falhou RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); HEAD local `7b27187` segue 12 commits à frente de `origin/main`, sem workflow/deploy novo.
+- Doctor permanece RC 1 pelo shell Node 22.22.2 incompatível com requisito 24; OpenCode ausente permanece WARN.
+- Próximo chunk: retentar `main -> main`; se aceito, validar workflow backup `334951434`, `headSha` e produção. Senado/ALRS permanecem fail-closed e aplicação remota condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial, gates locais e publicação bloqueada — 2026-08-22T20:57Z
 
 - Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual permaneceu dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata.
