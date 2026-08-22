@@ -6,7 +6,8 @@
 - Gates Node 24.19.0 verdes: testes, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build (`release.json` local `69e74e9-20260822T222512297Z`), sitemap 1.003 + 2, smoke 1.002 cards/0 HTTP/0 erros de console online/service worker pronto e `git diff --check`.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-2225.md`. Nenhum candidato, voto, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado.
 - Doctor RC 1 por shell Node 22.22.2 incompatível, Codex MCP `401 invalid_refresh_token` e OpenCode ausente; gates do projeto foram executados explicitamente com Node 24.19.0.
-- Publicação segue bloqueada pelo histórico de HTTP 403 no `git push` (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); HEAD local `69e74e9` segue 16 commits à frente de `origin/main`, sem workflow/deploy novo.
+- Commit documental local `cf4c567` criado; `git push origin main` falhou RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). HEAD local segue 17 commits à frente de `origin/main`, sem workflow/deploy novo.
+- Workflows remotos backup `334951434`, primário `320564705` e verificador `335560210` estão ativos. Produção raiz HTTP 200; `/release.json` HTTP 200 no release `3aae2d0-20260822T180456083Z`, SHA `3aae2d06338f81dc0b8c5df92ecc61ed8825dda3`, versão `0.2.835`, sem correspondência com o HEAD local.
 - Próximo chunk: retentar `main -> main`; se aceito, validar backup `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 
 
