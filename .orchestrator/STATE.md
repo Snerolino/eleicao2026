@@ -1,3 +1,15 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T02:17Z
+
+- Lock bounded testado com `flock -n`; lane de recon oficial e lane local executadas read-only/sem escrita factual.
+- Câmara: 22/22 páginas oficiais válidas em janelas trimestrais 2025–2026, `blocked=null`, 2.100 `vote_ids` descobertos somente em memória; nenhuma reconciliação/aplicação.
+- ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra continuam sem ID oficial/fonte exata.
+- Auditoria estrita mantém gaps de fontes `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; exit 2 por gaps reais, sem promoção. Senado segue fail-closed sem envelope nominal/SHA verificável.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build (`release.json` local `9cc5770-20260822T021820618Z`, sitemap 1.003 + 2), smoke local 1.002 cards/0 HTTP/console errors/service worker e `git diff --check`.
+- Produção: `/release.json` HTTP 200 com live `e925327276b82481a348d4db3e2339d075dfe9a3`; raiz falhou DNS HTTP 000, sem validação HTTP completa.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0217.md`. Nenhuma escrita factual, snapshot, Supabase ou Cloudflare ocorreu.
+- Push/publicação segue bloqueado por HTTP 403 de permissão efetiva; node padrão do shell 22.22.2, gates executados com Node 24.19.0.
+- Próximo chunk: repetir recon bounded Câmara e manter ALRS/Senado fail-closed; publicação após push efetivo. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T01:58Z
 
 - Lock bounded adquirido/liberado com `flock -n`; Câmara, ALRS e auditoria de fontes executadas read-only.
