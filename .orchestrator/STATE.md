@@ -1,3 +1,14 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T13:51Z
+
+- Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8 janelas trimestrais 2025–2026: Q1/2025 bloqueada por `fetch failed`; por fail-closed `vote_ids=[]`, sem reconciliação/aplicação.
+- ALRS FED-17 residual dry-run falhou fechado com causa real `fetch failed`; 4 residuais Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado permanece fail-closed sem `/tmp/senado-nominal-envelope-latest.json`.
+- Auditoria regular de fontes RC 0; gaps reais: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` (ALRS/Câmara/Senado). Nenhum dado factual promovido.
+- Dataset conferido contra `../dataset2026`: CSV/snapshot `1003/1003`, diferença `0/0`, CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- Gates verdes com Node 24.19.0: 401 testes/98 arquivos, TypeScript, schema, data:check 1.003 candidaturas/988 fotos, build (`release.json` local `8b65029-20260822T134929193Z`), smoke 1.002 cards/0 HTTP failures/0 erros de console online/service worker pronto e `git diff --check`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1351.md`. Worktree ficou limpa após documentação; HEAD segue 9 commits à frente de `origin/main`.
+- Produção: `/release.json` HTTP 200 aponta live `823e9df5073070207a76d3247974fd9f607ff113`, versão `0.2.806`, snapshot 1.003; raiz expirou em timeout DNS (`curl` HTTP 000), sem SHA live novo afirmado.
+- Nenhuma escrita factual, Supabase ou Cloudflare ocorreu. Commit documental `faf8546` criado; `git push origin main` falhou novamente HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), sem workflow/deploy novo. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T13:29Z
 
 - Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8 janelas trimestrais 2025–2026: 7 `ok` e Q1/2025 bloqueada por `fetch failed`; por fail-closed `vote_ids=[]`, sem reconciliação/aplicação.
