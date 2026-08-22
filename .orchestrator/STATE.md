@@ -1,3 +1,15 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T01:11Z
+
+- Lock bounded adquirido/liberado com `flock -n`; lanes oficiais ALRS/Senado/Câmara e lane local executadas.
+- Câmara: 22 páginas em oito janelas oficiais 2025–2026, HTTP/JSON válidos, `blocked=null`, 2.100 `vote_ids` descobertos read-only; sem reconciliação/aplicação.
+- ALRS FED-17 residual falhou fechado com `JWT issued at future`; quatro residuais Enio Carlos Terra continuam sem ID oficial/fonte exata. Senado permanece fail-closed por envelope `/tmp/senado-nominal-envelope-latest.json` ausente.
+- Dataset oficial: CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`, 1.003/1.003 IDs, diferença 0/0.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build, sitemap 1.003 + 2, `git diff --check`; smoke 1.002 cards/0 HTTP/console errors/service worker.
+- Auditoria read-only mantém gaps de fontes ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; sem promoção. Produção raiz HTTP 200 e `/release.json` HTTP 200, live `e925327276b82481a348d4db3e2339d075dfe9a3`, snapshot live 1.003.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0111.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Commit documental local `823fd1791b895912ff01165c38877de1b7f5e328` segue 36 commits à frente de `origin/main`; três tentativas de push, inclusive após `gh auth setup-git` e com `GH_TOKEN` removido, falharam HTTP 403. Workflows backup `334951434`, primário `320564705` e verificador `335560210` confirmados, nenhum run novo.
+- Próximo chunk: repetir recon bounded; resolver permissão efetiva de push. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T00:49Z
 
 - Lock bounded adquirido/liberado com `flock` não bloqueante; recon oficial read-only e lane local executadas.
