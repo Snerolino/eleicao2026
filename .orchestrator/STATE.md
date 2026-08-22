@@ -4,7 +4,7 @@
 - Gates locais verdes: 401 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos, build (`release.json` local `67c135c-20260822T130649550Z`), smoke 1.002 cards/0 HTTP failures/0 erros de console online/service worker pronto e `git diff --check`.
 - Auditoria de fontes regular RC 0; strict RC 2 pelos gaps reais: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` (ALRS/Câmara/Senado). Nenhum dado factual promovido; ALRS Enio Carlos Terra e Senado permanecem fail-closed.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1307.md`. Produção revalidada: raiz e `/release.json` HTTP 200, porém payload live sem `commitSha`/`snapshotSha`/`builtAt`; não há correspondência verificável com HEAD local.
-- Publicação: `git push origin main` falhou HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); HEAD `67c135c` segue 5 commits à frente de `origin/main`, sem workflow/deploy novo.
+- Publicação: commit documental `dc9123c` criado após os gates; `git push origin main` e retry com `env -u GH_TOKEN` falharam HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); HEAD `dc9123c` segue 6 commits à frente de `origin/main`, sem workflow/deploy novo.
 - Doctor permanece bloqueado por shell Node 22.22.2 (projeto exige 24), smoke MCP Codex `401 invalid_refresh_token` e OpenCode ausente; não repetir MCP neste tick.
 - Nenhuma escrita factual, Supabase ou Cloudflare ocorreu. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 
