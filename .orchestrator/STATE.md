@@ -1,3 +1,16 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T00:49Z
+
+- Lock bounded adquirido/liberado com `flock` não bloqueante; recon oficial read-only e lane local executadas.
+- Senado: 6/6 HTTP 200, 6/6 prefixos válidos, 3/6 bytes coincidentes, 0/6 SHA coincidentes; fail-closed, sem PDF, `legislator_id`, FK ou voto promovido.
+- ALRS: HTTP 200, 77.442 bytes, SHA `sha256:6a386d7d8b9ae17f8f5107b0cb6c90d71795a8568f08ed7c5972746a4ac0bab1`, 0 `data-item`, sem Enio Carlos Terra/Terra exato; quatro residuais continuam sem ID/fonte exata.
+- Câmara: API oficial Q4/2026 HTTP 200, JSON válido, 0 registros novos; sem reconciliação/aplicação. Dataset: 1.003 IDs no snapshot, 10 CSVs, 0 ausentes; nenhum refresh factual.
+- Gates verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build, sitemap 1.003 + 2 e `git diff --check`. Smoke local: 1.002 cards, 0 HTTP failures, 0 erros de console online, service worker pronto.
+- Auditoria estrita mantém gaps de fontes em versões `1251/3/112`, eventos `1647/2/188` e votos `4/2/455`; exit 2 por gaps reais, sem supressão.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0049.md`.
+- Nenhuma escrita factual, snapshot, claim, source reference, FK, voto, matriz, Supabase ou Cloudflare ocorreu. `orch:doctor`: `OK=48 WARN=5 FAIL=1`, FAIL por shell Node 22.22.2 (projeto exige Node 24); OpenCode ausente, Ollama sem preflight e MCP não exercitado permanecem WARNs.
+- Commit documental `a712c2b` criado após os gates; `git push origin main` e `env -u GH_TOKEN git push origin main` falharam HTTP 403 (`Permission denied`). Nenhum workflow/deploy foi acionado; HEAD local segue 36 commits à frente de `origin/main`.
+- Próximo chunk: nova recon bounded e lane local independente; resolver push. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T00:29Z
 
 - Lock bounded testado com `flock -n`; recon oficial Câmara/ALRS/Senado executada read-only.
