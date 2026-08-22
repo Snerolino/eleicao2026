@@ -30,10 +30,10 @@ Operação contínua, auditoria e expansão
 ```text
 IMPLEMENTADO                         PENDENTE
 ──────────────────────────────────   ──────────────────────────────────
-R0 contrato/schema                   revisão humana dos assessments
-R1 identidade/fontes                 fontes substantivas dos 18 P1
-R2 fatos ALRS/Câmara/Senado           renovação/preservação dos PDFs P0
-R3 perfis/comparação                  plano com zero erros
+R0 contrato/schema                   revisão humana das disposições
+R1 identidade/fontes                 aplicação editorial autorizada
+R2 fatos ALRS/Câmara/Senado           recálculo e publicação do score
+R3 perfis/comparação                  validação final de cobertura
 release técnica                      aplicação remota autorizada
 produção HTTP 200                    score editorial público
 ```
@@ -181,31 +181,28 @@ substantive_source_gate=green
 P0 cobertos:
 
 - PEC 302/2025;
-- PL 98/2024;
+- PL 262/2024;
 - PL 432/2023;
 - PL 125/2021;
 - PL 172/2026.
 
-**Ressalva:** URLs assinadas expiraram; antes de persistência final, é necessário renovar a URL ou preservar cópia content-addressed com o mesmo SHA.
+**Durabilidade:** páginas e documentos P0 estão preservados em corpus content-addressed com bytes/SHA reproduzidos.
 
 #### P1
 
-Ainda pendentes seis versões únicas, em sete pares versão–grupo:
-
-- PL 10/2022;
-- PL 137/2023 — grupo `mulheres`;
-- PL 137/2023 — grupo `populacao_negra_periferica`;
-- PL 66/2024;
-- PL 328/2024;
-- PL 424/2024;
-- PL 361/2025.
-
-O pacote de pedidos correto é:
+As 18 versões P1 têm fonte substantiva oficial e preservação content-addressed:
 
 ```text
-data/legislative-import/alrs/substantive-source-request-pack-v1.json
-7 requisições
-6 versões
+18/18 páginas oficiais HTTP 200
+18/18 documentos NoPaper HTTP 200
+18/18 bytes/SHA preservados
+18/18 durability_gate=green
+```
+
+O manifesto está em:
+
+```text
+data/legislative-import/alrs/p1-substantive-source-manifest.json
 ```
 
 As fontes factuais dos votos já existem e agora são preservadas corretamente via:
@@ -269,9 +266,9 @@ remote_apply=false
 Bloqueios atuais:
 
 - gates globais de aprovação;
-- 18 P1 sem fonte substantiva;
-- 23 `editorial_status` não aprovados;
-- 23 assessments vazios.
+- 23 `editorial_disposition` pendentes;
+- nenhuma fonte substantiva pendente no pacote de 23;
+- 0 matrizes planejadas até decisão humana.
 
 **Nenhuma escrita editorial remota foi feita.**
 
@@ -318,55 +315,32 @@ snapshot público: 1.003 candidaturas
 
 ## 3. Próximos passos até o final
 
-### Próximo lote imediato — P1 substantivo
+### Próximo lote imediato — disposição editorial humana
 
-1. Consultar as seis páginas canônicas:
+1. Revisar as 23 versões do pacote consolidado, todas com fonte substantiva e durabilidade verdes.
+2. Escolher uma disposição por versão:
+   - `assess`;
+   - `no_direct_population_group`;
+   - `taxonomy_gap`;
+   - `excluded`.
+3. Preencher assessment somente para `assess`.
+4. Registrar justificativa e fonte específica em cada decisão.
 
-```text
-https://ww4.al.rs.gov.br/proposicao/PL/10/2022
-https://ww4.al.rs.gov.br/proposicao/PL/137/2023
-https://ww4.al.rs.gov.br/proposicao/PL/66/2024
-https://ww4.al.rs.gov.br/proposicao/PL/328/2024
-https://ww4.al.rs.gov.br/proposicao/PL/424/2024
-https://ww4.al.rs.gov.br/proposicao/PL/361/2025
-```
+### Revisão humana P0/P1
 
-2. Extrair página oficial, texto integral, parecer/substitutivo, tramitação e PDF NoPaper.
-3. Renovar ou preservar os PDFs com bytes/SHA verificável.
-4. Criar `p1-substantive-source-manifest.json`.
-5. Gerar pacote P1 com `substantive_source_gate` por versão.
-6. Remover da fila qualquer P1 que passe o gate.
-7. Manter os sete pares versão–grupo separados.
-
-### Revisão humana P0
-
-8. Apresentar os cinco P0 em formulário nulo.
-9. Decidir aplicabilidade de grupo para todos os cinco:
-   - PL 98/2024;
-   - PL 125/2021;
-   - PEC 302/2025;
-   - PL 432/2023;
-   - PL 172/2026.
-10. Preencher apenas após revisão: direção, voto defensor, severidade, tipo, confiança e rationale.
-11. Registrar fonte substantiva específica em cada assessment.
-12. Manter `pending_review` até a confirmação editorial.
-
-### Revisão humana P1
-
-13. Repetir o mesmo fluxo para os 18 P1.
-14. Revisar primeiro os seis P1 com pedidos de fonte.
-15. Triar os 12 P1 restantes, inclusive os sem grupo candidato.
-16. Registrar decisão explícita de aplicabilidade mesmo quando o resultado for “sem grupo”.
+5. Apresentar as cinco P0 e as 18 P1 em formulário nulo.
+6. Corrigir a identidade do P0 para **PL 262/2024**.
+7. Decidir aplicabilidade de grupo inclusive nas 12 versões sem grupo previamente identificado.
+8. Preencher apenas após revisão: direção, voto defensor, severidade, tipo, confiança e rationale.
+9. Manter `pending_review` até a confirmação editorial.
 
 ### Reconciliações paralelas
 
-17. Resolver a durabilidade dos cinco PDFs P0.
-18. Reconciliar as contagens de colisão 64/65.
-19. Resolver os 110 títulos inadequados antes da reentrada na fila.
-20. Manter PL 361/2025 bloqueado até título completo e texto oficial.
-21. Repetir FED-17 somente com relógio/JWT estável; não aplicar os quatro residuais sem fonte exata.
-22. Manter Senado bloqueado enquanto 0/6 SHA coincidirem.
-23. Reconciliar IDs Câmara descobertos antes de qualquer FK/voto.
+10. Reconciliar as contagens de colisão 64/65.
+11. Resolver os 110 títulos inadequados antes da reentrada na fila.
+12. Repetir FED-17 somente com relógio/JWT estável; não aplicar os quatro residuais sem fonte exata.
+13. Manter Senado bloqueado enquanto 0/6 SHA coincidirem.
+14. Reconciliar IDs Câmara descobertos antes de qualquer FK/voto.
 
 ### Apply local
 

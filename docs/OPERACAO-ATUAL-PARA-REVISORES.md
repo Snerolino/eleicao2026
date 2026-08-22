@@ -4,7 +4,7 @@
 **Repositório:** `Snerolino/eleicao2026`
 **Produção:** <https://rs.votopraquem.org>
 **Control plane:** Hermes
-**Última atualização deste documento:** 2026-08-20
+**Última atualização deste documento:** 2026-08-22
 
 > Este documento descreve o modo operacional vigente para revisão no GitHub.
 > Ele não substitui código, migrations, `AGENTS.md`, schemas ou contratos
@@ -52,8 +52,9 @@ Eles orientam o workflow, mas não podem substituir o estado real da aplicação
 - R1: operacionalmente concluído, com 4 residuais ALRS;
 - R2: Câmara Q1/Q2/Q3 factual aplicada nos lotes elegíveis;
 - R3: perfis nominais materializados por `(candidate_id, house)`;
-- R4: fila Q2/Q3 revisada, sem `pending_review` restante;
-- R5: comparação e score por categoria publicados no recorte atual.
+- R4: pacote ALRS consolidado com 23 versões, 23/23 fontes substantivas duráveis e disposição editorial pendente;
+- R5 Câmara/recortes previamente aprovados: publicados;
+- R5 ALRS do pacote atual: 0 matrizes, 0 assessments e 0 score editorial publicados;
 
 ### Regra de apresentação
 
@@ -430,8 +431,9 @@ Publicação normal:
 
 ```text
 git commit → git push origin main
-→ workflow backup 334951434
-→ CI/deploy success
+→ workflow primário Deploy
+→ backup somente se o primário falhar
+→ verificador/health
 → headSha == commit live
 → produção HTTP 200
 → smoke/health
