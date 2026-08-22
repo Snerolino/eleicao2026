@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T17:48Z
+
+- Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual permaneceu dry-run (`planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`); quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial read-only consultou 8 janelas trimestrais 2025–2026, todas `ok`, sem reconciliação/aplicação. Senado permaneceu fail-closed sem envelope nominal verificável.
+- Auditoria regular de fontes RC 0; strict RC 2 pelos gaps reais: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` em ALRS/Câmara/Senado. Nenhum fato promovido.
+- Dataset conferido contra `consulta_cand_2026_RS.csv`: `1003/1003` IDs, diferença `0/0`, CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- Gates com Node 24.19.0 verdes: 401 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas e 988 fotos, build (`release.json` local `2571e6c-20260822T174741306Z`), smoke 1.002 cards/0 HTTP/console errors/service worker pronto e `git diff --check`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1748.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Produção: raiz HTTP 200 e `/release.json` HTTP 200; live reportou SHA `2571e6c5fa9200745c6fcddbd687807db448fe4b`, versão `0.2.833`, snapshot 1.003 com SHA oficial. O SHA live corresponde ao HEAD local antes da documentação deste tick.
+- Publicação: `git push origin main` falhou HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); nenhum workflow/deploy novo foi acionado. Doctor segue com FAIL por shell Node 22.22.2 incompatível com requisito 24; gates usaram Node 24.19.0 explicitamente.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T17:26Z
 
 - Lock bounded testado/adquirido/liberado com `flock -n`. ALRS FED-17 residual permaneceu dry-run (`planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`); quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial read-only consultou 8 janelas trimestrais 2025–2026, todas `ok`, sem reconciliação/aplicação. Senado permaneceu fail-closed sem envelope nominal verificável.
