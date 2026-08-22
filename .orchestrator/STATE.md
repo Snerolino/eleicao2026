@@ -1,3 +1,12 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T14:13Z
+
+- Lock bounded adquirido/liberado com `flock -n`; ALRS FED-17 residual falhou fechado por `fetch failed`, mantendo 4 residuais Enio Carlos Terra sem ID oficial/fonte exata. Câmara oficial read-only em 8 janelas trimestrais 2025–2026: Q1/2025 bloqueada por `network_error`/`fetch failed`, demais `ok`; por fail-closed `vote_ids=[]`, sem reconciliação/aplicação. Senado continua sem envelope verificável.
+- Auditoria de fontes RC 0: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` sem fonte em ALRS/Câmara/Senado. Dry-run legislativo não executado sem envelope (`<envelope.json>`); nenhum dado factual promovido.
+- Dataset/gate público sem mudança: 1.003 candidaturas, 988 fotos, 1 fonte TSE. Gates verdes: 401 testes/98 arquivos, TypeScript, schema, build (`release.json` local `ec5ece9-20260822T141235170Z`), smoke 1.002 cards/0 HTTP failures/0 erros de console online/service worker pronto e `git diff --check`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1413.md`. Worktree limpa antes da documentação; HEAD local `ec5ece9` segue 10 commits à frente de `origin/main`.
+- Produção: `/release.json` HTTP 200 aponta live `823e9df5073070207a76d3247974fd9f607ff113`, versão `0.2.806`, snapshot 1.003/SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc9`; raiz expirou por timeout DNS (`HTTP 000`), sem correspondência verificável com o HEAD local. Workflows backup `334951434`, primário `320564705`, verificador `335560210`.
+- Nenhuma escrita factual, Supabase ou Cloudflare ocorreu. Doctor mantém bloqueios de infraestrutura: shell Node 22.22.2 incompatível, MCP Codex `401 invalid_refresh_token` e OpenCode ausente. Próximo chunk: retentar `git push origin main`; se aceito, validar backup/headSha/produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T13:51Z
 
 - Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8 janelas trimestrais 2025–2026: Q1/2025 bloqueada por `fetch failed`; por fail-closed `vote_ids=[]`, sem reconciliação/aplicação.
