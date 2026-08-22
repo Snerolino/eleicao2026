@@ -1,3 +1,16 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T03:04Z
+
+- Lock bounded adquirido/liberado com `flock -n`; recon Câmara, ALRS e auditoria de fontes executadas somente em leitura.
+- Câmara: 22/22 páginas oficiais 2025–2026 `status=ok`, `blocked=null`, 2.100 `vote_ids` descobertos em memória; sem reconciliação/aplicação.
+- ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra continuam sem ID oficial/fonte exata. Senado segue fail-closed sem envelope nominal/PDF/SHA verificável.
+- Dataset: `consulta_cand_2026/consulta_cand_2026_RS.csv` 1.003 linhas; snapshot 1.003 registros; SHA observado `7c80d8260618ddc18ce62b44f12f7c463032c937f7f6ea5179cf75943f4207ea`. Nenhum refresh factual.
+- Auditoria estrita saiu 2 por gaps reais: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; fila de recuperação de votos com 4 itens; sem promoção.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build (`release.json` local `92d74a3-20260822T030318318Z`), sitemap 1.003 + 2, `git diff --check`; smoke 1.002 cards/0 HTTP/console errors/service worker.
+- Produção raiz HTTP 200 e `/release.json` HTTP 200 (404 bytes). Nenhuma escrita factual, Supabase ou Cloudflare.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0304.md`.
+- Doctor `OK=49 WARN=6 FAIL=2`: shell Node 22.22.2 e rota MCP Codex sem evidência; Codex registrou 401 de token expirado. Push continua bloqueado por GitHub HTTP 403; nenhum workflow/deploy acionado; HEAD local permanece à frente de `origin/main`.
+- Próximo chunk: nova recon bounded Câmara; ALRS/Senado fail-closed; retentar push/publicação somente quando a permissão efetiva existir. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T02:43Z
 
 - Lock bounded adquirido/liberado com `flock -n`; lane oficial e lane local executadas read-only, sem escrita factual.
