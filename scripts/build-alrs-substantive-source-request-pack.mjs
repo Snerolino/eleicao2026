@@ -16,11 +16,7 @@ export function buildOfficialVoteSources(item) {
   }
   const urls = new Set(item.source_urls ?? []);
   for (const url of referencesByUrl.keys()) urls.add(url);
-  return [...urls].map((url) => ({
-    url,
-    source_reference_ids: [...(referencesByUrl.get(url) ?? [])],
-    source_kind: 'official_vote_source',
-  }));
+  return [...urls].map((url) => ({ url, source_reference_ids: [...(referencesByUrl.get(url) ?? [])], source_kind: 'official_vote_source' }));
 }
 
 export function buildVoteSourceReferenceIds(item) {
@@ -30,18 +26,18 @@ export function buildVoteSourceReferenceIds(item) {
 export function buildRequestPack(pack) {
   const items = (pack.items ?? [])
     .filter((item) => item.substantive_source_gate !== 'green')
-    .flatMap((item) => (item.proposed_assessments ?? []).map((assessment) => ({
+    .map((item) => ({
       proposition_version_id: item.proposition_version_id,
       review_key: item.review_key,
       title: item.title,
-      group_slug: assessment.group_slug,
+      requested_for_groups: (item.proposed_assessments ?? []).map((assessment) => assessment.group_slug),
       official_vote_sources: buildOfficialVoteSources(item),
       official_vote_source_reference_ids: buildVoteSourceReferenceIds(item),
       required_source_types: ['texto_integral_versao', 'parecer_ou_substitutivo', 'resultado_oficial_ou_tramitacao'],
       source_request_status: 'pending_substantive_source',
       human_review_required: true,
       remote_apply: false,
-    })));
+    }));
   return {
     schema_version: '1.0.0',
     packet_type: 'alrs_substantive_source_request_pack',
@@ -49,8 +45,9 @@ export function buildRequestPack(pack) {
     public_approval: false,
     totals: {
       requests: items.length,
-      versions: new Set(items.map((item) => item.proposition_version_id)).size,
+      versions: items.length,
       excluded_with_substantive_source: (pack.items ?? []).filter((item) => item.substantive_source_gate === 'green').length,
+      uncovered_merit_versions: items.filter((item) => item.requested_for_groups.length === 0).length,
     },
     items,
   };

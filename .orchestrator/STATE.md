@@ -1875,7 +1875,7 @@ Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; som
 
 ## Tick contínuo — requisições de fontes substantivas ALRS (2026-08-21)
 
-- 7 requisições/6 versões P1 geradas para texto integral, parecer/substitutivo e resultado/tramitação; 5 P0 já verdes foram excluídos.
+- 18 requisições/18 versões P1 geradas para texto integral, parecer/substitutivo e resultado/tramitação; 5 P0 já verdes foram excluídos. `requested_for_groups` preserva grupos candidatos sem duplicar a coleta.
 - Nenhuma fonte substantiva foi promovida; score continua bloqueado.
 - QA: `docs/qa/lote-alrs-substantive-source-requests-2026-08-21.md`.
 

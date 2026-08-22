@@ -15,11 +15,12 @@ describe('build-alrs-substantive-source-request-pack', () => {
     expect(buildVoteSourceReferenceIds(item)).toEqual(['ref-1']);
   });
 
-  it('mantém pedidos por grupo e versões distintas', () => {
+  it('faz uma coleta por versão e preserva os grupos solicitados', () => {
     const pack = buildRequestPack({ items: [
       { proposition_version_id: 'v1', substantive_source_gate: 'blocked', source_urls: ['u'], proposed_assessments: [{ group_slug: 'a' }] },
       { proposition_version_id: 'v2', substantive_source_gate: 'blocked', source_urls: ['u2'], proposed_assessments: [{ group_slug: 'a' }, { group_slug: 'b' }] },
     ] });
-    expect(pack.totals).toMatchObject({ requests: 3, versions: 2 });
+    expect(pack.totals).toMatchObject({ requests: 2, versions: 2 });
+    expect(pack.items[1].requested_for_groups).toEqual(['a', 'b']);
   });
 });

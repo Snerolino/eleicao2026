@@ -4,16 +4,19 @@
   "remote_apply": false,
   "public_approval": false,
   "totals": {
-    "requests": 7,
-    "versions": 6,
-    "excluded_with_substantive_source": 5
+    "requests": 18,
+    "versions": 18,
+    "excluded_with_substantive_source": 5,
+    "uncovered_merit_versions": 12
   },
   "items": [
     {
       "proposition_version_id": "1eb30d74-271c-4315-b7f6-54849d31c9bc",
       "review_key": "sha256:0d0b779976354f6bd951ce8d8bff213f63b1b515712734564144254577e6aa51#1eb30d74-271c-4315-b7f6-54849d31c9bc",
       "title": "Institui a política de prevenção a crimes sexuais contra adolescentes, no Estado do Rio Grande do Sul, denominado “Projeto Libertar”.",
-      "group_slug": "criancas_adolescentes_vulnerabilidade",
+      "requested_for_groups": [
+        "criancas_adolescentes_vulnerabilidade"
+      ],
       "official_vote_sources": [
         {
           "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
@@ -67,7 +70,9 @@
       "proposition_version_id": "10887f06-837a-47ed-aa52-f05560d17742",
       "review_key": "sha256:1a61707c7c826f5b75d1b3e2725f6d4c473e3852568f5d3fac7a94540c5cab1a#10887f06-837a-47ed-aa52-f05560d17742",
       "title": "Dispõe sobre a criação da Patrulha Estadual de Prevenção à Violência Doméstica e Familiar contra Crianças e Adolescentes.",
-      "group_slug": "criancas_adolescentes_vulnerabilidade",
+      "requested_for_groups": [
+        "criancas_adolescentes_vulnerabilidade"
+      ],
       "official_vote_sources": [
         {
           "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
@@ -118,10 +123,10 @@
       "remote_apply": false
     },
     {
-      "proposition_version_id": "7bae10be-b80b-4b2c-88cf-0c2561edeb6b",
-      "review_key": "sha256:bb8c0d5262e866faa5745a563abedcccb73854825373843994ccfb6969f18f38#7bae10be-b80b-4b2c-88cf-0c2561edeb6b",
-      "title": "Institui a Política Estadual de Proteção Social às Crianças e aos Adolescentes em situação de orfandade decorrente da Covid-19 e dá outras providências. (SEI 1338-0100/22-5)",
-      "group_slug": "criancas_adolescentes_vulnerabilidade",
+      "proposition_version_id": "8d172d3c-5bcb-4a30-ada2-2fd86a3fc4d9",
+      "review_key": "sha256:4f941baf624b5193cab674213624caff882d4ede9d85ac23a103a49543685780#8d172d3c-5bcb-4a30-ada2-2fd86a3fc4d9",
+      "title": "Altera a alínea b, do inciso II do art. 1º da Lei nº 15.766, de 20 de dezembro de 2021, que dispõe sobre a parcela do produto da arrecadação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e de Comunicação (ICMS pertencente aos municípios).",
+      "requested_for_groups": [],
       "official_vote_sources": [
         {
           "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
@@ -156,6 +161,278 @@
       ],
       "official_vote_source_reference_ids": [
         "7739d2d8-4b18-49ad-ba85-610497376401",
+        "c034ce27-3daa-48fb-89d9-58bd520c890c",
+        "ad396b72-6a02-4fd9-978b-20a97afa88d5",
+        "bff266f0-04fa-49c7-980b-e910fb035752",
+        "31249077-568e-4878-8e54-0c4b858e4a80",
+        "e391dd28-92ca-415c-b69a-446c61d690d2"
+      ],
+      "required_source_types": [
+        "texto_integral_versao",
+        "parecer_ou_substitutivo",
+        "resultado_oficial_ou_tramitacao"
+      ],
+      "source_request_status": "pending_substantive_source",
+      "human_review_required": true,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "7dd6f932-3e02-4eaa-8f5c-b7363545000c",
+      "review_key": "sha256:6e9b052a90e83cedccb28d63b11f3bbe4b46173f5d4ed899dd8236083f2c33dc#7dd6f932-3e02-4eaa-8f5c-b7363545000c",
+      "title": "Altera a Lei n.º 15.950, de 9 de janeiro de 2023, que consolida a legislação estadual relativa a eventos e datas estaduais, instituindo o Calendário Oficial de Eventos e Datas Comemorativas do Estado do Rio Grande do Sul, para incluir o Março Lilás, o dia de conscientização sobre HPV, o dia da prevenção ao câncer de colo do útero, e dá outras providências.",
+      "requested_for_groups": [],
+      "official_vote_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        }
+      ],
+      "official_vote_source_reference_ids": [
+        "7739d2d8-4b18-49ad-ba85-610497376401",
+        "c034ce27-3daa-48fb-89d9-58bd520c890c",
+        "ad396b72-6a02-4fd9-978b-20a97afa88d5",
+        "bff266f0-04fa-49c7-980b-e910fb035752",
+        "31249077-568e-4878-8e54-0c4b858e4a80",
+        "e391dd28-92ca-415c-b69a-446c61d690d2"
+      ],
+      "required_source_types": [
+        "texto_integral_versao",
+        "parecer_ou_substitutivo",
+        "resultado_oficial_ou_tramitacao"
+      ],
+      "source_request_status": "pending_substantive_source",
+      "human_review_required": true,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "4b72b569-1ad0-4c3e-af07-9062f49f4a76",
+      "review_key": "sha256:96d57b4c1dd856d40c32b886606687bf188d6cbbb26f1eda628d0402fe0f0428#4b72b569-1ad0-4c3e-af07-9062f49f4a76",
+      "title": "Altera a Lei nº 15.606, de 29 de abril de 2021, que institui a Política Estadual de Proteção dos Direitos da Pessoa com Fibromialgia – Lei Daniel Lenz, tornando obrigatória a inclusão do símbolo mundial da Fibromialgia nas placas ou avisos de atendimento prioritário no Estado do Rio Grande do Sul.",
+      "requested_for_groups": [],
+      "official_vote_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        }
+      ],
+      "official_vote_source_reference_ids": [
+        "7739d2d8-4b18-49ad-ba85-610497376401",
+        "c034ce27-3daa-48fb-89d9-58bd520c890c",
+        "ad396b72-6a02-4fd9-978b-20a97afa88d5",
+        "bff266f0-04fa-49c7-980b-e910fb035752",
+        "31249077-568e-4878-8e54-0c4b858e4a80",
+        "e391dd28-92ca-415c-b69a-446c61d690d2"
+      ],
+      "required_source_types": [
+        "texto_integral_versao",
+        "parecer_ou_substitutivo",
+        "resultado_oficial_ou_tramitacao"
+      ],
+      "source_request_status": "pending_substantive_source",
+      "human_review_required": true,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "00fb38c9-9b55-4926-8846-30ea799b66d0",
+      "review_key": "sha256:9eb24b4f0846e7e59087f3b806ef0f28ba205f5837270d38b91bd810a2c48510#00fb38c9-9b55-4926-8846-30ea799b66d0",
+      "title": "Altera a Lei nº 12.882, de 03 de janeiro de 2008, que institui o Programa Estadual de Apoio ao Transporte Escolar no Rio Grande do Sul - PEATE/RS.",
+      "requested_for_groups": [],
+      "official_vote_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        }
+      ],
+      "official_vote_source_reference_ids": [
+        "7739d2d8-4b18-49ad-ba85-610497376401",
+        "c034ce27-3daa-48fb-89d9-58bd520c890c",
+        "ad396b72-6a02-4fd9-978b-20a97afa88d5",
+        "bff266f0-04fa-49c7-980b-e910fb035752",
+        "31249077-568e-4878-8e54-0c4b858e4a80",
+        "e391dd28-92ca-415c-b69a-446c61d690d2"
+      ],
+      "required_source_types": [
+        "texto_integral_versao",
+        "parecer_ou_substitutivo",
+        "resultado_oficial_ou_tramitacao"
+      ],
+      "source_request_status": "pending_substantive_source",
+      "human_review_required": true,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "7bae10be-b80b-4b2c-88cf-0c2561edeb6b",
+      "review_key": "sha256:bb8c0d5262e866faa5745a563abedcccb73854825373843994ccfb6969f18f38#7bae10be-b80b-4b2c-88cf-0c2561edeb6b",
+      "title": "Institui a Política Estadual de Proteção Social às Crianças e aos Adolescentes em situação de orfandade decorrente da Covid-19 e dá outras providências. (SEI 1338-0100/22-5)",
+      "requested_for_groups": [
+        "criancas_adolescentes_vulnerabilidade"
+      ],
+      "official_vote_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        }
+      ],
+      "official_vote_source_reference_ids": [
+        "7739d2d8-4b18-49ad-ba85-610497376401",
+        "c034ce27-3daa-48fb-89d9-58bd520c890c",
+        "ad396b72-6a02-4fd9-978b-20a97afa88d5",
+        "bff266f0-04fa-49c7-980b-e910fb035752",
+        "31249077-568e-4878-8e54-0c4b858e4a80",
+        "e391dd28-92ca-415c-b69a-446c61d690d2"
+      ],
+      "required_source_types": [
+        "texto_integral_versao",
+        "parecer_ou_substitutivo",
+        "resultado_oficial_ou_tramitacao"
+      ],
+      "source_request_status": "pending_substantive_source",
+      "human_review_required": true,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "503d8a0a-cada-4173-91bd-16351a908099",
+      "review_key": "sha256:d216dcaf4063cb6819eda4e98e7b890dd976330f593a3b84dcdfaeba50e603e4#503d8a0a-cada-4173-91bd-16351a908099",
+      "title": "Altera a Lei nº 15.266, de 24 de janeiro de 2019, que dispõe sobre o Estatuto do Concurso Público no âmbito do Estado do Rio Grande do Sul e dá outras providências.",
+      "requested_for_groups": [],
+      "official_vote_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        }
+      ],
+      "official_vote_source_reference_ids": [
+        "b301a4ee-52cc-4cab-9089-6c92e8a9ca13",
         "c034ce27-3daa-48fb-89d9-58bd520c890c",
         "ad396b72-6a02-4fd9-978b-20a97afa88d5",
         "bff266f0-04fa-49c7-980b-e910fb035752",
@@ -175,7 +452,9 @@
       "proposition_version_id": "d75becac-49d6-4bdd-95e8-29270980b4f4",
       "review_key": "sha256:f6f602bc12539cc5787793134de2a805eef274ad9d36ed06525a3fb4ec55b317#d75becac-49d6-4bdd-95e8-29270980b4f4",
       "title": "Altera a Lei Estadual nº 16.328, de 8 de agosto de 2025, que institui a reserva de vagas, em percentual de no mínimo 20% (vinte por cento), nas empresas da área de segurança, vigilância e transportes de valores, para vigilantes do sexo feminino, nas contratações que especifica e dá outras providências, estendendo a reserva de vagas para todos os tipos de contrato e priorizando a contratação de vít",
-      "group_slug": "mulheres",
+      "requested_for_groups": [
+        "mulheres"
+      ],
       "official_vote_sources": [
         {
           "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
@@ -226,10 +505,10 @@
       "remote_apply": false
     },
     {
-      "proposition_version_id": "3f2e156e-8430-44be-8564-77578ef9fc81",
-      "review_key": "sha256:3e7be81fb11122aea31318a85d9167eb367bbc16bb7fc3088bf93fd2d934d143#3f2e156e-8430-44be-8564-77578ef9fc81",
-      "title": "Institui a política estadual de combate ao racismo, à LGBTfobia e à violência contra as mulheres nos estádios e nas arenas esportivas do Estado do Rio Grande do Sul - Política Estádio de Respeito. (SEI 5535-0100/23-0)",
-      "group_slug": "mulheres",
+      "proposition_version_id": "146f5b3a-2bbd-4d2f-b6b9-56658da10139",
+      "review_key": "sha256:10f3fb9d69994b6794881ecfd3d0b783eb5f8e7762a42d940592eb2fc1b3f782#146f5b3a-2bbd-4d2f-b6b9-56658da10139",
+      "title": "Dispõe sobre o Programa de Defesa e Amparo à Vítima.(SEI 17608-0100/23-2)",
+      "requested_for_groups": [],
       "official_vote_sources": [
         {
           "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
@@ -274,10 +553,301 @@
       "remote_apply": false
     },
     {
+      "proposition_version_id": "adeaa57e-4dd5-484b-8598-afa8f5b2d81f",
+      "review_key": "sha256:11be5cbc8b986e26db5c352b9011330020fa9ceaadb169ad9f665d5a872d757b#adeaa57e-4dd5-484b-8598-afa8f5b2d81f",
+      "title": "Institui o Programa Estadual de Promoção da Cultura e das Tradições Gaúchas nas Escolas da Rede Pública Estadual do Rio Grande do Sul.",
+      "requested_for_groups": [],
+      "official_vote_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        }
+      ],
+      "official_vote_source_reference_ids": [
+        "b301a4ee-52cc-4cab-9089-6c92e8a9ca13",
+        "7739d2d8-4b18-49ad-ba85-610497376401",
+        "c034ce27-3daa-48fb-89d9-58bd520c890c",
+        "ad396b72-6a02-4fd9-978b-20a97afa88d5",
+        "bff266f0-04fa-49c7-980b-e910fb035752"
+      ],
+      "required_source_types": [
+        "texto_integral_versao",
+        "parecer_ou_substitutivo",
+        "resultado_oficial_ou_tramitacao"
+      ],
+      "source_request_status": "pending_substantive_source",
+      "human_review_required": true,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "0b4b103e-d6cd-44ac-bb37-60299cd11aba",
+      "review_key": "sha256:3e6642bec51587d26ee8bb855c48611de3f01b639f711c2264b8c655ec060e96#0b4b103e-d6cd-44ac-bb37-60299cd11aba",
+      "title": "Institui o Programa de Combate ao Vício em Apostas e Jogos de Azar – Ludopatia, no âmbito do Estado do Rio Grande do Sul.",
+      "requested_for_groups": [],
+      "official_vote_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        }
+      ],
+      "official_vote_source_reference_ids": [
+        "b301a4ee-52cc-4cab-9089-6c92e8a9ca13",
+        "7739d2d8-4b18-49ad-ba85-610497376401",
+        "c034ce27-3daa-48fb-89d9-58bd520c890c",
+        "ad396b72-6a02-4fd9-978b-20a97afa88d5",
+        "bff266f0-04fa-49c7-980b-e910fb035752"
+      ],
+      "required_source_types": [
+        "texto_integral_versao",
+        "parecer_ou_substitutivo",
+        "resultado_oficial_ou_tramitacao"
+      ],
+      "source_request_status": "pending_substantive_source",
+      "human_review_required": true,
+      "remote_apply": false
+    },
+    {
       "proposition_version_id": "3f2e156e-8430-44be-8564-77578ef9fc81",
       "review_key": "sha256:3e7be81fb11122aea31318a85d9167eb367bbc16bb7fc3088bf93fd2d934d143#3f2e156e-8430-44be-8564-77578ef9fc81",
       "title": "Institui a política estadual de combate ao racismo, à LGBTfobia e à violência contra as mulheres nos estádios e nas arenas esportivas do Estado do Rio Grande do Sul - Política Estádio de Respeito. (SEI 5535-0100/23-0)",
-      "group_slug": "populacao_negra_periferica",
+      "requested_for_groups": [
+        "mulheres",
+        "populacao_negra_periferica"
+      ],
+      "official_vote_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        }
+      ],
+      "official_vote_source_reference_ids": [
+        "c034ce27-3daa-48fb-89d9-58bd520c890c",
+        "ad396b72-6a02-4fd9-978b-20a97afa88d5",
+        "bff266f0-04fa-49c7-980b-e910fb035752",
+        "31249077-568e-4878-8e54-0c4b858e4a80",
+        "e391dd28-92ca-415c-b69a-446c61d690d2"
+      ],
+      "required_source_types": [
+        "texto_integral_versao",
+        "parecer_ou_substitutivo",
+        "resultado_oficial_ou_tramitacao"
+      ],
+      "source_request_status": "pending_substantive_source",
+      "human_review_required": true,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "ce85243b-9542-4739-b9cb-6f415a914416",
+      "review_key": "sha256:5a215ac9f946e3ad9ef835a4694b9ccacfdde5370863f940b65e836525a3e365#ce85243b-9542-4739-b9cb-6f415a914416",
+      "title": "Dispõe sobre as condições de descanso intrajornada dos profissionais de enfermagem durante o horário de trabalho. (SEI 000005461-01.00/21-0 e 1030-0100/22-9)",
+      "requested_for_groups": [],
+      "official_vote_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        }
+      ],
+      "official_vote_source_reference_ids": [
+        "b301a4ee-52cc-4cab-9089-6c92e8a9ca13",
+        "7739d2d8-4b18-49ad-ba85-610497376401",
+        "c034ce27-3daa-48fb-89d9-58bd520c890c",
+        "ad396b72-6a02-4fd9-978b-20a97afa88d5",
+        "bff266f0-04fa-49c7-980b-e910fb035752"
+      ],
+      "required_source_types": [
+        "texto_integral_versao",
+        "parecer_ou_substitutivo",
+        "resultado_oficial_ou_tramitacao"
+      ],
+      "source_request_status": "pending_substantive_source",
+      "human_review_required": true,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "88ae6aa5-c613-424b-b299-50195fcb9a8d",
+      "review_key": "sha256:603693477fc06491bd158873e2d2561ddc61fd3c969e958585092ac90633a09e#88ae6aa5-c613-424b-b299-50195fcb9a8d",
+      "title": "Altera a Lei nº 8.109, de 19 de dezembro de 1985, que dispõe sobre a Taxa de Serviços Diversos. (ePRO 109084/2023)",
+      "requested_for_groups": [],
+      "official_vote_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        }
+      ],
+      "official_vote_source_reference_ids": [
+        "b301a4ee-52cc-4cab-9089-6c92e8a9ca13",
+        "c034ce27-3daa-48fb-89d9-58bd520c890c",
+        "ad396b72-6a02-4fd9-978b-20a97afa88d5",
+        "bff266f0-04fa-49c7-980b-e910fb035752",
+        "31249077-568e-4878-8e54-0c4b858e4a80"
+      ],
+      "required_source_types": [
+        "texto_integral_versao",
+        "parecer_ou_substitutivo",
+        "resultado_oficial_ou_tramitacao"
+      ],
+      "source_request_status": "pending_substantive_source",
+      "human_review_required": true,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "df109b14-250b-40a6-af19-ae7ffec834d6",
+      "review_key": "sha256:737492a11b4269a186feef11b645d0935f9f9631b755f039a9cbcc2ea589ec4d#df109b14-250b-40a6-af19-ae7ffec834d6",
+      "title": "Dispõe sobre restrições à publicidade de plataformas de apostas esportivas no âmbito do Estado do Rio Grande do Sul e dá outras providências.",
+      "requested_for_groups": [],
+      "official_vote_sources": [
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        },
+        {
+          "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026",
+          "source_reference_ids": [],
+          "source_kind": "official_vote_source"
+        }
+      ],
+      "official_vote_source_reference_ids": [
+        "c034ce27-3daa-48fb-89d9-58bd520c890c",
+        "ad396b72-6a02-4fd9-978b-20a97afa88d5",
+        "bff266f0-04fa-49c7-980b-e910fb035752",
+        "31249077-568e-4878-8e54-0c4b858e4a80",
+        "e391dd28-92ca-415c-b69a-446c61d690d2"
+      ],
+      "required_source_types": [
+        "texto_integral_versao",
+        "parecer_ou_substitutivo",
+        "resultado_oficial_ou_tramitacao"
+      ],
+      "source_request_status": "pending_substantive_source",
+      "human_review_required": true,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "e0b7e1b8-9cb6-41eb-8860-186f6bba833c",
+      "review_key": "sha256:9db0bea12af939a744a447393b4a1698a939e760f73c0e07ff6a8a4a8917269a#e0b7e1b8-9cb6-41eb-8860-186f6bba833c",
+      "title": "Cria o Programa Profissional do Futuro, no âmbito do Estado do Rio Grande do Sul",
+      "requested_for_groups": [],
       "official_vote_sources": [
         {
           "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
@@ -325,7 +895,9 @@
       "proposition_version_id": "92f2865a-1414-4077-85ae-7d10711c51b4",
       "review_key": "sha256:f0832e005dea9c6626b6648ffce12e0c90417b86f10ff26a2fac23fe09b3be05#92f2865a-1414-4077-85ae-7d10711c51b4",
       "title": "Institui o Programa de Inclusão Digital para Idosos (PIDI) no âmbito do Estado do Rio Grande do Sul, e dá outras providências.",
-      "group_slug": "pessoas_idosas_dependentes",
+      "requested_for_groups": [
+        "pessoas_idosas_dependentes"
+      ],
       "official_vote_sources": [
         {
           "url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",

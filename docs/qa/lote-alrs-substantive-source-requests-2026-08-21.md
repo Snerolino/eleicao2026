@@ -4,10 +4,11 @@
 
 ## Resultado
 
-- 7 requisições de fonte substantiva;
-- 6 versões P1;
+- 18 requisições de fonte substantiva;
+- 18 versões P1;
 - 5 versões P0 excluídas por já possuírem fonte substantiva verde;
 - fontes factuais preservadas de `source_urls`/`candidate_source_links`, incluindo `official_vote_source_reference_ids`;
+- uma coleta por versão; `requested_for_groups` preserva os grupos candidatos quando existirem;
 - grupos/assessments vinculados preservados;
 - fontes factuais de voto separadas;
 - requisitos por item:
