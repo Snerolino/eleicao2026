@@ -1,3 +1,14 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T01:33Z
+
+- Lock bounded adquirido/liberado com `flock -n`; recon oficial e lane local executadas.
+- Câmara: 20 páginas observadas nas janelas 2025–2026 até 3 páginas/janela; primeira janela bloqueada com `fetch failed`, `vote_ids=0` e sem reconciliação/aplicação.
+- ALRS FED-17 residual em dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra continuam sem ID oficial/fonte exata.
+- Auditoria read-only mantém gaps de fontes `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; Senado continua fail-closed sem envelope nominal/SHA verificável.
+- Gates verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build (sitemap 1.003 + 2), smoke local 1.002 cards/0 HTTP/console errors/service worker e `git diff --check`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0133.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Doctor permanece `OK=48 WARN=5 FAIL=1` por shell Node 22.22.2; worktree limpa antes da documentação, HEAD local segue 37 commits à frente de `origin/main`.
+- Próximo chunk: repetir recon bounded da Câmara; tentar publicação documental quando o push estiver efetivo. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T01:11Z
 
 - Lock bounded adquirido/liberado com `flock -n`; lanes oficiais ALRS/Senado/Câmara e lane local executadas.
