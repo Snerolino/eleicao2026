@@ -1,3 +1,15 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T03:45Z
+
+- Lock bounded adquirido/liberado com `flock -n`; recon Câmara, ALRS e auditoria de fontes executadas read-only/fail-closed.
+- Câmara: 22 páginas/janelas oficiais 2025–2026 com `status=ok`, `blocked=null`; IDs descobertos somente em memória, sem reconciliação/aplicação.
+- ALRS FED-17 falhou fechado com causa real `JWT issued at future`; quatro residuais Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado permanece fail-closed sem envelope nominal/PDF/SHA verificável.
+- Auditoria estrita: gaps reais de fontes em versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188` e votos `4/2/455`; exit 2, sem promoção.
+- Gates Node 24 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build, `git diff --check`. Smoke teve falha transitória no carregamento e repetição verde: 1.002 cards, 0 HTTP/console errors, service worker pronto.
+- Produção raiz HTTP 200 e `/release.json` HTTP 200. Nenhuma escrita factual, Supabase ou Cloudflare.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0045.md`.
+- Push tentado após gate; pendente de evidência efetiva. HEAD local estava 48 commits à frente de `origin/main`; live não foi alterado.
+- Próximo chunk: nova recon bounded Câmara; manter ALRS/Senado fail-closed e repetir publicação quando push efetivo existir. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T03:23Z
 
 - Lock bounded adquirido com `flock -n`; recon Câmara, ALRS e Senado executadas read-only/fail-closed.
