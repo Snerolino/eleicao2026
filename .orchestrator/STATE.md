@@ -1,3 +1,15 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T05:36Z
+
+- Lock bounded adquirido/liberado com `flock -n`; recon Câmara, ALRS, auditoria estrita e lane local executadas read-only/fail-closed.
+- Câmara: consulta oficial com `2025-01-01`–`2026-12-31`, `max_pages=3`; Q1 2025 falhou fechado com `fetch failed`, demais páginas observadas `ok`; por fail-closed `vote_ids=[]`, sem reconciliação/aplicação.
+- ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado permanece fail-closed sem envelope nominal/PDF/`legislator_id`/SHA verificável.
+- Auditoria estrita mantém gaps reais de fontes ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188` e votos `4/2/455`; exit 2, sem promoção.
+- Dataset oficial: CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`, 1.003/1.003 IDs CSV/snapshot, diferença 0/0; `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE; sem refresh factual.
+- Gates Node 24 verdes: 400 testes/98 arquivos, TypeScript, schema, build (`release.json` local `d697b66-20260822T053646130Z`, sitemap 1.003 + 2), smoke repetido 1.002 cards/0 HTTP/console errors/service worker e `git diff --check`. Primeira smoke falhou transitoriamente com `cards=0` durante carregamento; repetição verde.
+- Doctor: `OK=49 WARN=6 FAIL=2` por shell Node 22.22.2 e rota MCP Codex sem evidência (`401 invalid_refresh_token`); OpenCode ausente/Ollama sem preflight.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0536.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Próximo chunk: nova recon bounded Câmara; manter ALRS/Senado fail-closed e retentar publicação documental. HEAD local está 53 commits à frente de `origin/main`; validar push efetivo antes de acionar workflow backup `334951434` e confirmar `headSha`/produção.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T05:12Z
 
 - Lock bounded adquirido/liberado com `flock -n`; recon Câmara, ALRS, auditoria estrita e lane local executadas read-only/fail-closed.
