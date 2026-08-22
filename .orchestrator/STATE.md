@@ -8,7 +8,9 @@
 - Gates Node 24 verdes: 400 testes/98 arquivos, TypeScript, schema, build (`release.json` local `d697b66-20260822T053646130Z`, sitemap 1.003 + 2), smoke repetido 1.002 cards/0 HTTP/console errors/service worker e `git diff --check`. Primeira smoke falhou transitoriamente com `cards=0` durante carregamento; repetição verde.
 - Doctor: `OK=49 WARN=6 FAIL=2` por shell Node 22.22.2 e rota MCP Codex sem evidência (`401 invalid_refresh_token`); OpenCode ausente/Ollama sem preflight.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0536.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
-- Push/publicação: commit documental local `7d9f616` criado após os gates, mas `git push origin main` e retry sem `GH_TOKEN` falharam HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); nenhum workflow/deploy novo foi acionado. HEAD local segue 54 commits à frente de `origin/main`.
+- Push/publicação: commits documentais locais `7d9f616` e `662b75b` não chegaram a `origin/main`; `git push origin main` e retry sem `GH_TOKEN` falharam HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). Nenhum workflow/deploy novo foi acionado; HEAD local segue 55 commits à frente.
+- Produção existente revalidada: root HTTP 200 e `/release.json` HTTP 200 com `commitSha=e925327276b82481a348d4db3e2339d075dfe9a3`; workflows ativos backup `334951434`, primário `320564705`, verificador `335560210`. Nenhuma publicação nova foi afirmada.
+- Nenhum dado factual, Supabase, Cloudflare, identidade, FK, voto, claim ou matriz foi alterado.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T05:12Z
 

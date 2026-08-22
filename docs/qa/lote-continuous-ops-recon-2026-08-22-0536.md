@@ -24,7 +24,7 @@ Executar um tick bounded do control plane: recon oficial read-only (Câmara e AL
 - Push/publicação: commit local `7d9f616` criado após gates, mas `git push origin main` e retry com `env -u GH_TOKEN` falharam HTTP 403: `Permission to Snerolino/eleicao2026.git denied to Snerolino`. Nenhum workflow/deploy novo foi acionado; HEAD local segue 54 commits à frente de `origin/main`.
 - ALRS residual bloqueado por ausência de evidência oficial recuperável nesta execução.
 - Câmara Q1/2025 bloqueada por `fetch failed` e Senado continua fail-closed sem envelope nominal/PDF/`legislator_id`/SHA verificável.
-- Nenhum dado factual, Supabase, Cloudflare, identidade, FK, voto, claim ou matriz foi alterado.
+- Produção existente revalidada sem afirmar publicação nova: `https://rs.votopraquem.org` HTTP 200 e `/release.json?cb=continuous-ops-0536` HTTP 200, `commitSha=e925327276b82481a348d4db3e2339d075dfe9a3`; workflows remotos ativos: backup `334951434`, primário `320564705`, verificador `335560210`.
 
 ## Próximo passo
 Repetir a recon bounded da janela Câmara bloqueada, manter ALRS/Senado fail-closed e retentar a lane de publicação documental apenas com permissão efetiva de push; depois validar workflow backup `334951434`, `headSha`, HTTP de produção e release SHA. Aplicação factual remota continua condicionada a R0, schema/FK, fonte oficial, dry-run e idempotência.
