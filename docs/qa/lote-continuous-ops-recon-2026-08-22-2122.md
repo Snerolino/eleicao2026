@@ -35,9 +35,9 @@ promover fatos sem fonte.
 
 ## Bloqueios
 - Publicação bloqueada: `git push origin main` retornou RC 128 / HTTP 403:
-  `Permission to Snerolino/eleicao2026.git denied to Snerolino`. HEAD local
-  `7b27187` segue 12 commits à frente de `origin/main`; nenhum workflow novo foi
-  acionado.
+  `Permission to Snerolino/eleicao2026.git denied to Snerolino`. Após o commit
+  documental `ecf3892`, o HEAD local segue 13 commits à frente de `origin/main`;
+  nenhum workflow novo foi acionado.
 - `npm run orch:doctor` continua RC 1 porque o shell cron usa Node 22.22.2,
   enquanto o projeto exige Node 24; os gates foram executados explicitamente com
   Node 24.19.0. OpenCode ausente permanece WARN.

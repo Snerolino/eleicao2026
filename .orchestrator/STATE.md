@@ -6,7 +6,7 @@
 - Gates Node 24.19.0 verdes: 401 testes/98 arquivos, TypeScript, schema, data:check, build (sitemap 1.003 + 2, release local `7b27187-20260822T212139921Z`) e `git diff --check`.
 - Smoke com Supabase configurado ficou em `Carregando lista de candidatos` após duas tentativas (`cards=0`); build snapshot-only, com variáveis Supabase vazias, passou com 1.002 cards, 0 falhas HTTP, 0 erros de console online e service worker pronto. Consulta mínima anon ao Supabase respondeu HTTP 200; latência da jornada completa permanece sem diagnóstico conclusivo.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-2122.md`. Nenhum candidato, voto, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado.
-- Publicação: `git push origin main` falhou RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); HEAD local `7b27187` segue 12 commits à frente de `origin/main`, sem workflow/deploy novo.
+- Publicação: `git push origin main` falhou RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); Após o commit documental `ecf3892`, o HEAD local segue 13 commits à frente de `origin/main`, sem workflow/deploy novo. Produção foi revalidada: raiz e `/release.json` HTTP 200, live `3aae2d06338f81dc0b8c5df92ecc61ed8825dda3`, versão `0.2.835`, snapshot 1.003; sem correspondência com o HEAD local.
 - Doctor permanece RC 1 pelo shell Node 22.22.2 incompatível com requisito 24; OpenCode ausente permanece WARN.
 - Próximo chunk: retentar `main -> main`; se aceito, validar workflow backup `334951434`, `headSha` e produção. Senado/ALRS permanecem fail-closed e aplicação remota condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 
