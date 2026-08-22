@@ -2048,6 +2048,12 @@ Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; som
 - P1 fonte substantiva concluída: 18/18 páginas/documentos oficiais HTTP 200, bytes/SHA preservados e gate durável verde.
 - QA: `docs/qa/lote-alrs-next-three-phases-2026-08-22.md`.
 
+## Tick contínuo — início da revisão editorial P0 (2026-08-22)
+
+- Formulário nulo criado: 5 P0, 5 disposições `pending_review`, 0 assessments.
+- Próximo gate: decisão humana por versão; somente `assess` pode gerar matriz.
+- QA: `docs/qa/lote-alrs-p0-editorial-review-pack-2026-08-22.md`.
+
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)
 
 - 30/30 itens P0 classificados: 9 mérito, 19 procedimento, 2 emenda, 0 destaque.

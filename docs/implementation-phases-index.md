@@ -155,7 +155,8 @@ Passos concluídos:
 
 - 8 versões possuem grupos candidatos;
 - 9 drafts de assessment foram gerados;
-- 15 versões ainda exigem decisão explícita de aplicabilidade a grupos.
+- 15 versões não possuem grupo candidato pré-identificado;
+- 23/23 versões exigem `editorial_disposition` humana.
 
 **Correção importante:** os valores automáticos de propostas foram removidos. O proposal pack agora é somente formulário de revisão humana.
 
@@ -258,8 +259,10 @@ O plano atual está ancorado no pacote corrente de 23 versões e registra:
 
 ```text
 ok=false
-planned_versions=23
+input_versions=23
+planned_versions=0
 plan_entries=0
+errors=25
 remote_apply=false
 ```
 
@@ -306,7 +309,7 @@ A release técnica do site é independente e está saudável:
 ```text
 produção: HTTP 200
 snapshot público: 1.003 candidaturas
-últimos gates locais: 98 arquivos / 400 testes
+últimos gates locais: 98 arquivos / 401 testes
 ```
 
 **Status:** ⏳ aguardando Fases 6 e 7.

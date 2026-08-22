@@ -165,6 +165,7 @@
 | [`implementation-phases-index.md`](implementation-phases-index.md) | Índice visual de fases e passos da Matriz de Impacto |
 | [`qa/lote-alrs-structural-review-2026-08-22.md`](qa/lote-alrs-structural-review-2026-08-22.md) | Revisão estrutural pós-checkpoint publicado |
 | [`qa/lote-alrs-next-three-phases-2026-08-22.md`](qa/lote-alrs-next-three-phases-2026-08-22.md) | Execução das três próximas fases |
+| [`qa/lote-alrs-p0-editorial-review-pack-2026-08-22.md`](qa/lote-alrs-p0-editorial-review-pack-2026-08-22.md) | Formulário de revisão editorial P0 |
 | [`data/legislative-import/alrs/p1-substantive-source-manifest.json`](../data/legislative-import/alrs/p1-substantive-source-manifest.json) | Manifesto substantivo P1 |
 | [`qa/lote-alrs-safe-matrix-apply-plan-2026-08-21.md`](qa/lote-alrs-safe-matrix-apply-plan-2026-08-21.md) | Plano seguro de aplicação ALRS |
 | [`qa/lote-alrs-merit-review-pack-p0-p1-2026-08-20.md`](qa/lote-alrs-merit-review-pack-p0-p1-2026-08-20.md) | Pacote ALRS de revisão de mérito P0/P1 |

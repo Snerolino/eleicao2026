@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "alrs_p0_editorial_disposition_review_pack",
+  "review_status": "pending_review",
+  "remote_apply": false,
+  "public_approval": false,
+  "totals": {
+    "versions": 5,
+    "dispositions_pending": 5
+  },
+  "items": [
+    {
+      "proposition_version_id": "c82f08c4-188d-4361-961e-4d56fee4c4e3",
+      "review_key": "sha256:c3f815aab7b9674552394fdfdeb286ca720cb9d17db55b7eb107358c8c8ad7c8#c82f08c4-188d-4361-961e-4d56fee4c4e3",
+      "title": "Altera a Constituição do Estado do Rio Grande do Sul para instituir mecanismos de promoção e garantia de fomento ao Turismo, e transversalidade de ações com a Cultura e o Desporto, e dá outras providências.",
+      "official_merit_confirmed": true,
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "pending_review",
+      "disposition_rationale": null,
+      "assessments": [],
+      "human_review_required": true,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "7c132ddc-b571-43ee-b2bc-e877f053480a",
+      "review_key": "sha256:7cf39a1e311538faa0de87845c8535ad54b09c3760f94837682c5d81a335ad31#7c132ddc-b571-43ee-b2bc-e877f053480a",
+      "title": "Altera a Lei Ordinária n.º 15.988 de 07 de agosto de 2023, que consolida a legislação relativa às mulheres vítimas de violência no âmbito do Estado do Rio Grande do Sul.",
+      "official_merit_confirmed": true,
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "pending_review",
+      "disposition_rationale": null,
+      "assessments": [],
+      "human_review_required": true,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "3d47b25e-aab7-4a22-a815-f03b96518682",
+      "review_key": "sha256:9c2102e251a41e1458eacf75d46dda085a606e63fb04f9dfed211ccbe70252a5#3d47b25e-aab7-4a22-a815-f03b96518682",
+      "title": "Permite a cessão gratuita dos espaços físicos das unidades da rede pública estadual de ensino do Estado do Rio Grande do Sul para o funcionamento de cursos pré-universitários populares e dá outras providências. (SEI 14400-01.00/23-2)",
+      "official_merit_confirmed": true,
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "pending_review",
+      "disposition_rationale": null,
+      "assessments": [],
+      "human_review_required": true,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "a57b1c83-3749-4c45-85b7-2408db20f5a2",
+      "review_key": "sha256:c1f571e5077d13d1486261d3db0fb706cee52efd00465184fef79a872f0772ee#a57b1c83-3749-4c45-85b7-2408db20f5a2",
+      "title": "Dispõe sobre a criação do Programa de Defesa pessoal para Mulheres “RS POR ELAS” no âmbito do Estado do Rio Grande do Sul e dá outras providências.(SEI 4237-0100/21-8)",
+      "official_merit_confirmed": true,
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "pending_review",
+      "disposition_rationale": null,
+      "assessments": [],
+      "human_review_required": true,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "e297c2d0-84d6-4053-b42f-51e6450673d0",
+      "review_key": "sha256:cdfa161d6326bf4cc660af4aa8eaa4ca7c9bae0f9bf83b119ad8409b5f01e9e2#e297c2d0-84d6-4053-b42f-51e6450673d0",
+      "title": "Dispõe sobre as diretrizes para a elaboração da Lei Orçamentária para o exercício econômico-financeiro de 2027 e dá outras providências.",
+      "official_merit_confirmed": true,
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "pending_review",
+      "disposition_rationale": null,
+      "assessments": [],
+      "human_review_required": true,
+      "remote_apply": false
+    }
+  ]
+}
