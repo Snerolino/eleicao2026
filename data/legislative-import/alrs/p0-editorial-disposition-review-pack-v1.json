@@ -6,7 +6,8 @@
   "public_approval": false,
   "totals": {
     "versions": 5,
-    "dispositions_pending": 5
+    "dispositions_pending": 0,
+    "decisions_incomplete": 3
   },
   "items": [
     {
@@ -16,8 +17,8 @@
       "official_merit_confirmed": true,
       "substantive_source_gate": "green",
       "source_durability_gate": "green",
-      "editorial_disposition": "pending_review",
-      "disposition_rationale": null,
+      "editorial_disposition": "no_direct_population_group",
+      "disposition_rationale": "A versão é instrumento fiscal e orçamentário transversal do Estado, abrangendo múltiplas funções, políticas e destinatários. Não há um grupo populacional v1 que constitua o beneficiário direto da versão como unidade legislativa, e decompor efeitos setoriais exigiria unidades normativas mais granulares do que a proposition_version atual.",
       "assessments": [],
       "human_review_required": true,
       "remote_apply": false
@@ -29,9 +30,20 @@
       "official_merit_confirmed": true,
       "substantive_source_gate": "green",
       "source_durability_gate": "green",
-      "editorial_disposition": "pending_review",
+      "editorial_disposition": "assess",
       "disposition_rationale": null,
-      "assessments": [],
+      "assessments": [
+        {
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 4,
+          "structural_type": "structural",
+          "confidence": 0.96,
+          "group_slug": "mulheres",
+          "rationale": null,
+          "status": "needs_editorial_completion"
+        }
+      ],
       "human_review_required": true,
       "remote_apply": false
     },
@@ -42,7 +54,7 @@
       "official_merit_confirmed": true,
       "substantive_source_gate": "green",
       "source_durability_gate": "green",
-      "editorial_disposition": "pending_review",
+      "editorial_disposition": "taxonomy_gap",
       "disposition_rationale": null,
       "assessments": [],
       "human_review_required": true,
@@ -55,9 +67,20 @@
       "official_merit_confirmed": true,
       "substantive_source_gate": "green",
       "source_durability_gate": "green",
-      "editorial_disposition": "pending_review",
+      "editorial_disposition": "assess",
       "disposition_rationale": null,
-      "assessments": [],
+      "assessments": [
+        {
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 3,
+          "structural_type": "structural",
+          "confidence": 0.95,
+          "group_slug": "mulheres",
+          "rationale": null,
+          "status": "needs_editorial_completion"
+        }
+      ],
       "human_review_required": true,
       "remote_apply": false
     },
@@ -68,8 +91,8 @@
       "official_merit_confirmed": true,
       "substantive_source_gate": "green",
       "source_durability_gate": "green",
-      "editorial_disposition": "pending_review",
-      "disposition_rationale": null,
+      "editorial_disposition": "no_direct_population_group",
+      "disposition_rationale": "A versão é instrumento fiscal e orçamentário transversal do Estado, abrangendo múltiplas funções, políticas e destinatários. Não há um grupo populacional v1 que constitua o beneficiário direto da versão como unidade legislativa, e decompor efeitos setoriais exigiria unidades normativas mais granulares do que a proposition_version atual.",
       "assessments": [],
       "human_review_required": true,
       "remote_apply": false

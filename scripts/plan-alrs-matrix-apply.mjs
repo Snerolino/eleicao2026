@@ -24,11 +24,21 @@ export function planAlrsMatrixApply(pack) {
     if (item.factual_source_gate !== 'green') errors.push(`${prefix}:factual_source_gate_not_green`);
     if (item.human_review_required !== true) errors.push(`${prefix}:human_review_required_missing`);
     if (item.editorial_status !== 'approved') errors.push(`${prefix}:editorial_status_not_approved`);
+    if (!item.disposition_rationale || item.disposition_rationale.trim().length < 20) errors.push(`${prefix}:disposition_rationale_missing`);
     if (disposition !== 'assess') continue;
     if (item.substantive_source_gate !== 'green') errors.push(`${prefix}:substantive_source_gate_not_green`);
     if (!Array.isArray(item.assessments) || item.assessments.length === 0) {
       errors.push(`${prefix}:assessments_empty`);
       continue;
+    }
+    for (const [assessmentIndex, assessment] of item.assessments.entries()) {
+      if (!assessment.group_slug) errors.push(`${prefix}.assessments[${assessmentIndex}]:group_missing`);
+      if (!assessment.impact_direction) errors.push(`${prefix}.assessments[${assessmentIndex}]:direction_missing`);
+      if (!assessment.defending_vote && assessment.impact_direction !== 'unclear') errors.push(`${prefix}.assessments[${assessmentIndex}]:defending_vote_missing`);
+      if (assessment.severity == null) errors.push(`${prefix}.assessments[${assessmentIndex}]:severity_missing`);
+      if (!assessment.structural_type) errors.push(`${prefix}.assessments[${assessmentIndex}]:structural_type_missing`);
+      if (assessment.confidence == null) errors.push(`${prefix}.assessments[${assessmentIndex}]:confidence_missing`);
+      if (!assessment.rationale || assessment.rationale.trim().length < 20) errors.push(`${prefix}.assessments[${assessmentIndex}]:rationale_missing`);
     }
     plan.push({ proposition_version_id: item.proposition_version_id, review_key: item.review_key, assessments: item.assessments });
   }

@@ -8,13 +8,16 @@
 data/legislative-import/alrs/p0-editorial-disposition-review-pack-v1.json
 ```
 
-Resultado:
+Resultado após a decisão humana:
 
 ```text
 5 versões P0
-5/5 editorial_disposition=pending_review
-0 assessments
-0 decisões automáticas
+2 assess
+2 no_direct_population_group
+1 taxonomy_gap
+0 excluded
+2 assessments com campos substantivos preenchidos
+3 rationale ainda pendentes
 remote_apply=false
 ```
 
@@ -29,3 +32,4 @@ excluded
 ```
 
 Somente `assess` poderá receber campos de assessment e entrar no apply plan.
+O planner bloqueia os dois `assess` até receber os rationale obrigatórios.

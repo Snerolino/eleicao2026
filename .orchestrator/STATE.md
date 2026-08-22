@@ -2060,8 +2060,8 @@ Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; som
 
 ## Tick contínuo — início da revisão editorial P0 (2026-08-22)
 
-- Formulário nulo criado: 5 P0, 5 disposições `pending_review`, 0 assessments.
-- Próximo gate: decisão humana por versão; somente `assess` pode gerar matriz.
+- P0 revisado: 2 `assess`, 2 `no_direct_population_group`, 1 `taxonomy_gap`, 0 `excluded`.
+- Dois assessments receberam campos, mas 3 rationale ainda estão pendentes; planner permanece fail-closed.
 - QA: `docs/qa/lote-alrs-p0-editorial-review-pack-2026-08-22.md`.
 
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)

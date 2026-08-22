@@ -104,7 +104,7 @@
         }
       ],
       "event_type": "merit_confirmed",
-      "editorial_disposition": "pending_review",
+      "editorial_disposition": "no_direct_population_group",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
@@ -129,7 +129,9 @@
         }
       ],
       "review_status": "pending_review",
-      "editorial_status": "pending_review"
+      "editorial_status": "pending_review",
+      "disposition_rationale": "A versão é instrumento fiscal e orçamentário transversal do Estado, abrangendo múltiplas funções, políticas e destinatários. Não há um grupo populacional v1 que constitua o beneficiário direto da versão como unidade legislativa, e decompor efeitos setoriais exigiria unidades normativas mais granulares do que a proposition_version atual.",
+      "assessments": []
     },
     {
       "house": "alrs",
@@ -194,7 +196,7 @@
         }
       ],
       "event_type": "merit_confirmed",
-      "editorial_disposition": "pending_review",
+      "editorial_disposition": "assess",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
@@ -219,7 +221,20 @@
         }
       ],
       "review_status": "pending_review",
-      "editorial_status": "pending_review"
+      "editorial_status": "pending_review",
+      "disposition_rationale": null,
+      "assessments": [
+        {
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 4,
+          "structural_type": "structural",
+          "confidence": 0.96,
+          "group_slug": "mulheres",
+          "rationale": null,
+          "status": "needs_editorial_completion"
+        }
+      ]
     },
     {
       "house": "alrs",
@@ -284,7 +299,7 @@
         }
       ],
       "event_type": "merit_confirmed",
-      "editorial_disposition": "pending_review",
+      "editorial_disposition": "taxonomy_gap",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
@@ -309,7 +324,9 @@
         }
       ],
       "review_status": "pending_review",
-      "editorial_status": "pending_review"
+      "editorial_status": "pending_review",
+      "disposition_rationale": null,
+      "assessments": []
     },
     {
       "house": "alrs",
@@ -374,7 +391,7 @@
         }
       ],
       "event_type": "merit_confirmed",
-      "editorial_disposition": "pending_review",
+      "editorial_disposition": "assess",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
@@ -399,7 +416,20 @@
         }
       ],
       "review_status": "pending_review",
-      "editorial_status": "pending_review"
+      "editorial_status": "pending_review",
+      "disposition_rationale": null,
+      "assessments": [
+        {
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 3,
+          "structural_type": "structural",
+          "confidence": 0.95,
+          "group_slug": "mulheres",
+          "rationale": null,
+          "status": "needs_editorial_completion"
+        }
+      ]
     },
     {
       "house": "alrs",
@@ -464,7 +494,7 @@
         }
       ],
       "event_type": "merit_confirmed",
-      "editorial_disposition": "pending_review",
+      "editorial_disposition": "no_direct_population_group",
       "suggested_groups": [],
       "suggested_direction": null,
       "defending_vote": null,
@@ -489,7 +519,9 @@
         }
       ],
       "review_status": "pending_review",
-      "editorial_status": "pending_review"
+      "editorial_status": "pending_review",
+      "disposition_rationale": "A versão é instrumento fiscal e orçamentário transversal do Estado, abrangendo múltiplas funções, políticas e destinatários. Não há um grupo populacional v1 que constitua o beneficiário direto da versão como unidade legislativa, e decompor efeitos setoriais exigiria unidades normativas mais granulares do que a proposition_version atual.",
+      "assessments": []
     },
     {
       "house": "alrs",
@@ -2039,5 +2071,16 @@
       "review_status": "pending_review",
       "editorial_status": "pending_review"
     }
-  ]
+  ],
+  "editorial_review": {
+    "p0_total": 5,
+    "dispositions": {
+      "assess": 2,
+      "no_direct_population_group": 2,
+      "taxonomy_gap": 1,
+      "excluded": 0
+    },
+    "completed_dispositions": 2,
+    "incomplete_decisions": 3
+  }
 }

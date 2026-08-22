@@ -10,11 +10,11 @@ describe('plan-alrs-matrix-apply', () => {
     expect(result.errors).toEqual(expect.arrayContaining(['pack_review_status_not_approved', 'items[0]:version_key_collision', 'items[0]:assessments_empty']));
   });
   it('planeja somente pacote explicitamente aprovado e completo', () => {
-    const result = planAlrsMatrixApply({ review_status: 'approved', public_approval: true, items: [{ proposition_version_id: 'v', review_key: 'k', version_key_collision: false, factual_source_gate: 'green', substantive_source_gate: 'green', human_review_required: true, editorial_status: 'approved', editorial_disposition: 'assess', assessments: [{ group_slug: 'mulheres' }] }] });
+    const result = planAlrsMatrixApply({ review_status: 'approved', public_approval: true, items: [{ proposition_version_id: 'v', review_key: 'k', version_key_collision: false, factual_source_gate: 'green', substantive_source_gate: 'green', human_review_required: true, editorial_status: 'approved', editorial_disposition: 'assess', disposition_rationale: 'Decisão editorial fundamentada na fonte oficial e no texto da versão.', assessments: [{ group_slug: 'mulheres', impact_direction: 'positive', defending_vote: 'sim', severity: 3, structural_type: 'structural', confidence: 0.9, rationale: 'Texto oficial estabelece medida direta para o grupo.' }] }] });
     expect(result).toMatchObject({ ok: true, remote_apply: false, input_versions: 1, planned_versions: 1 });
   });
   it('não exige assessment para disposição sem grupo direto', () => {
-    const result = planAlrsMatrixApply({ review_status: 'approved', public_approval: true, items: [{ proposition_version_id: 'v', review_key: 'k', version_key_collision: false, factual_source_gate: 'green', substantive_source_gate: 'blocked_until_impact_sources', human_review_required: true, editorial_status: 'approved', editorial_disposition: 'no_direct_population_group', assessments: [] }] });
+    const result = planAlrsMatrixApply({ review_status: 'approved', public_approval: true, items: [{ proposition_version_id: 'v', review_key: 'k', version_key_collision: false, factual_source_gate: 'green', substantive_source_gate: 'blocked_until_impact_sources', human_review_required: true, editorial_status: 'approved', editorial_disposition: 'no_direct_population_group', disposition_rationale: 'Não há grupo direto aplicável nesta unidade legislativa.', assessments: [] }] });
     expect(result).toMatchObject({ ok: true, planned_versions: 0, plan: [] });
   });
 });
