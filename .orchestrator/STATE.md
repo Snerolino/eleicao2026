@@ -6,7 +6,7 @@
 - Auditoria estrita saiu 2 por gaps reais: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; sem promoção.
 - Dataset: CSV oficial 1.003 linhas de dados, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; snapshot 1.003 registros; nenhum refresh factual.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0323.md`.
-- Nenhuma escrita factual, Supabase ou Cloudflare. Próximo chunk: gates locais/publicação documental se push efetivo funcionar; manter ALRS/Senado bloqueados por fonte/identidade.
+- Nenhuma escrita factual, Supabase ou Cloudflare. Push revalidado: `git push origin main` e retry sem `GH_TOKEN` falharam HTTP 403; nenhum workflow/deploy acionado. Produção raiz HTTP 200 e `/release.json` HTTP 200 (404 bytes), live `e925327276b82481a348d4db3e2339d075dfe9a3`; HEAD local `b24612d` está 47 commits à frente de `origin/main`. Próximo chunk: manter ALRS/Senado bloqueados por fonte/identidade e repetir publicação quando a permissão efetiva existir.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T03:04Z
 

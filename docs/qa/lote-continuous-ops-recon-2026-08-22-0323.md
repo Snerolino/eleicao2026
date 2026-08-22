@@ -17,7 +17,7 @@ Nenhuma escrita em `data/public-candidates.json`, Supabase, Cloudflare, identida
 ## Bloqueios reais
 1. ALRS: JWT emitido no futuro impede a recuperação autenticada dos 4 residuais.
 2. Senado: envelope nominal verificável ausente e SHA dos PDFs não estabelecido.
-3. Push/publicação: permissão efetiva do GitHub ainda precisa ser revalidada; commits documentais locais anteriores permanecem à frente de `origin/main`.
+3. Push/publicação: revalidado neste tick; `git push origin main` e retry `env -u GH_TOKEN git push origin main` falharam com HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). Nenhum workflow/deploy foi acionado. Produção atual respondeu raiz HTTP 200 e `/release.json` HTTP 200, 404 bytes, SHA live `e925327276b82481a348d4db3e2339d075dfe9a3`; commit local `b24612d` não está publicado.
 
 ## Próximo passo
 Manter recon bounded da Câmara e fail-closed em ALRS/Senado; executar gates locais e tentar publicação documental somente se o push efetivo funcionar. Aplicação remota continua condicionada a R0, schema/FK, fonte oficial, dry-run e idempotência.
