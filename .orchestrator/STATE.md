@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T13:07Z
+
+- Lock bounded adquirido/liberado com `flock -n`; dataset oficial e snapshot conferidos por `SQ_CANDIDATO`/`tse_candidate_id`: `1003/1003`, diferença `0/0`. CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; snapshot SHA `a7db54b20bd1aa0d49003e278d48d1443617f00b772d004d711cd762d0c982cf`.
+- Gates locais verdes: 401 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos, build (`release.json` local `67c135c-20260822T130649550Z`), smoke 1.002 cards/0 HTTP failures/0 erros de console online/service worker pronto e `git diff --check`.
+- Auditoria de fontes regular RC 0; strict RC 2 pelos gaps reais: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` (ALRS/Câmara/Senado). Nenhum dado factual promovido; ALRS Enio Carlos Terra e Senado permanecem fail-closed.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1307.md`. Produção revalidada: raiz e `/release.json` HTTP 200, porém payload live sem `commitSha`/`snapshotSha`/`builtAt`; não há correspondência verificável com HEAD local.
+- Publicação: `git push origin main` falhou HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); HEAD `67c135c` segue 5 commits à frente de `origin/main`, sem workflow/deploy novo.
+- Doctor permanece bloqueado por shell Node 22.22.2 (projeto exige 24), smoke MCP Codex `401 invalid_refresh_token` e OpenCode ausente; não repetir MCP neste tick.
+- Nenhuma escrita factual, Supabase ou Cloudflare ocorreu. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T12:46Z
 
 - Lock bounded adquirido/liberado com `flock -n`; ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`. Os quatro casos Enio Carlos Terra permanecem bloqueados por ausência de ID oficial e fonte exata.
