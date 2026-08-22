@@ -43,8 +43,7 @@ Cloudflare ou em fonte remota ocorreu.
   resolução DNS neste tick.
 - Doctor ainda registra FAIL porque o shell invoca Node 22; os gates foram
   executados comprovadamente com Node 24.19.0.
-- Publicação Git permanece condicionada à permissão efetiva do remoto; tentativas
-  anteriores do mesmo arco retornaram HTTP 403.
+- Publicação: commit local `5776130` criado após os gates. `git push origin main` falhou com HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); retry com `env -u GH_TOKEN` falhou porque `github.com` não resolveu. Nenhum workflow/deploy novo foi acionado.
 
 ## Próximo passo
 Retentar `git push origin main`; se aceito, disparar/verificar o workflow backup

@@ -5,6 +5,7 @@
 - Gates com Node 24.19.0 verdes: 401 testes/98 arquivos, TypeScript, schema, `data:check`, build (`release.json` local `f24b2f7-20260822T191233705Z`) e `git diff --check`.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1913.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
 - Doctor continua com FAIL pelo shell Node 22.22.2 incompatível; os gates usaram explicitamente Node 24.19.0. Produção retornou HTTP 000 por timeout de resolução DNS neste tick.
+- Publicação: commit `577613060482390086a8e4452b8fa1bcd77504f2` criado. `git push origin main` falhou com HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); retry com `env -u GH_TOKEN` falhou porque `github.com` não resolveu. Nenhum workflow/deploy novo foi acionado.
 - Workflows confirmados: backup `334951434`, primário `320564705`, verificador `335560210`. Próximo chunk: retentar `git push origin main`; se aceito, validar backup/headSha/produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon oficial, gates locais e publicação bloqueada — 2026-08-22T18:32Z
