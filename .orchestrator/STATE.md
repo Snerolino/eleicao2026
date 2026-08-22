@@ -1,4 +1,15 @@
-## Tick contínuo — recon oficial e gates locais — 2026-08-22T03:45Z
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T04:07Z
+
+- Lock bounded adquirido/liberado com `flock -n`; recon Câmara, ALRS e Senado executadas read-only/fail-closed.
+- Câmara: 22 janelas/páginas observadas em 2025–2026; 21 `ok` e Q1 2025 bloqueada por `fetch failed`; por fail-closed `vote_ids=[]`, sem reconciliação/aplicação.
+- ALRS residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado segue fail-closed sem `/tmp/senado-nominal-envelope-latest.json`.
+- Auditoria estrita mantém gaps reais de fontes em versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188` e votos `4/2/455`; exit efetivo 2, sem promoção.
+- Dataset oficial: CSV 1.003 linhas, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; snapshot 1.003 registros, sem refresh factual.
+- Gates verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build (`release.json` local `763f095-20260822T040601426Z`), sitemap 1.003 + 2, smoke 1.002 cards/0 HTTP/console errors/service worker e `git diff --check`.
+- Produção raiz e `/release.json` HTTP 200; live permanece `e925327276b82481a348d4db3e2339d075dfe9a3`; nenhum dado factual/remoto foi alterado. Workflow backup `334951434` confirmado ativo, sem run novo.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0407.md`.
+- Doctor cron permanece com FAIL por shell Node 22.22.2; gates do projeto passaram. Commit documental local `c80c0bb` está 50 commits à frente de `origin/main`; `git push origin main` e retry após `gh auth setup-git` retornaram HTTP 403, sem workflow/deploy novo. Próximo passo é retentar após mudança de permissão efetiva, mantendo ALRS/Senado fail-closed.
+
 
 - Lock bounded adquirido/liberado com `flock -n`; recon Câmara, ALRS e auditoria de fontes executadas read-only/fail-closed.
 - Câmara: 22 páginas/janelas oficiais 2025–2026 com `status=ok`, `blocked=null`; IDs descobertos somente em memória, sem reconciliação/aplicação.
