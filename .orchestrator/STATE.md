@@ -8,7 +8,7 @@
 - Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build (`release.json` local `92d74a3-20260822T030318318Z`), sitemap 1.003 + 2, `git diff --check`; smoke 1.002 cards/0 HTTP/console errors/service worker.
 - Produção raiz HTTP 200 e `/release.json` HTTP 200 (404 bytes). Nenhuma escrita factual, Supabase ou Cloudflare.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0304.md`.
-- Doctor `OK=49 WARN=6 FAIL=2`: shell Node 22.22.2 e rota MCP Codex sem evidência; Codex registrou 401 de token expirado. Push continua bloqueado por GitHub HTTP 403; nenhum workflow/deploy acionado; HEAD local permanece à frente de `origin/main`.
+- Doctor `OK=49 WARN=6 FAIL=2`: shell Node 22.22.2 e rota MCP Codex sem evidência; Codex registrou 401 de token expirado. Commit documental `a22a9d7` criado; duas tentativas de `git push origin main` retornaram HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), nenhum workflow/deploy acionado; HEAD local permanece 45 commits à frente de `origin/main`.
 - Próximo chunk: nova recon bounded Câmara; ALRS/Senado fail-closed; retentar push/publicação somente quando a permissão efetiva existir. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T02:43Z
