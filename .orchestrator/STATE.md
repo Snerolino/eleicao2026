@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T15:13Z
+
+- Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026, todas `ok`, `blocked=null`, 700 `vote_ids` transitórios, sem reconciliação ou aplicação.
+- ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os quatro casos Enio Carlos Terra continuam sem ID oficial/fonte exata. Senado fail-closed sem `/tmp/senado-nominal-envelope-latest.json`.
+- Auditoria regular de fontes RC 0; strict RC 2 pelos gaps reais: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` em ALRS/Câmara/Senado; nenhum fato promovido.
+- Dataset/snapshot conferidos: 1.003/1.003 IDs, diferença `0/0`; CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`. Gates Node 24 verdes: 401 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos, build (`release.json` local `d535463-20260822T151353005Z`), smoke 1.002 cards/0 HTTP/console errors/service worker pronto e `git diff --check`.
+- Produção root HTTP 200 e `/release.json` HTTP 200; live versão `0.2.806`, sem `commitSha`/`headSha`/`snapshotSha`/`builtAt`, sem correspondência verificável com o HEAD local.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1213.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Publicação: `git push origin main` falhou HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), sem workflow/deploy novo. Próximo chunk: retentar push; se aceito, validar backup Cloudflare `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T14:53Z
 
 - Lock bounded adquirido/liberado com `flock -n`. Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026, todas `ok`, `blocked=null`; vote IDs ficaram transitórios, sem reconciliação ou aplicação.
