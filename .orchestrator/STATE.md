@@ -1,3 +1,18 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T05:12Z
+
+- Lock bounded adquirido/liberado com `flock -n`; recon Câmara, ALRS, auditoria estrita e lane local executadas read-only/fail-closed.
+- Câmara: consulta oficial corrigida com argumentos separados em janelas `2025-01-01`–`2026-12-31`, `max_pages=3`; janela 2025-01-01–2025-03-31 falhou fechado com `fetch failed`, demais observadas `ok`; por fail-closed `vote_ids=[]`, sem reconciliação/aplicação. A primeira tentativa com `--max-pages=3` falhou somente por parsing do CLI (`--max-pages deve estar entre 1 e 100`), sem alteração de código.
+- ALRS FED-17 residual falhou fechado com `FED-17 repair: fetch failed`; `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado permanece fail-closed sem envelope nominal/PDF/`legislator_id`/SHA verificável.
+- Auditoria estrita mantém gaps reais de fontes ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188` e votos `4/2/455`; exit 2, sem promoção.
+- Dataset oficial: CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`, 1.003/1.003 IDs CSV/snapshot, diferença 0/0; `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE; sem refresh factual.
+- Gates Node 24 verdes: 400 testes/98 arquivos, TypeScript, schema, build (`release.json` local `907ca10-20260822T050934626Z`, sitemap 1.003 + 2), smoke 1.002 cards/0 HTTP/console errors/service worker e `git diff --check`.
+- Doctor cron: `OK=48 WARN=5 FAIL=1` por shell Node 22.22.2; OpenCode ausente/Ollama sem preflight e rota MCP Codex não exercitada. Produção root HTTP 200, mas `/release.json` sofreu timeout de resolução DNS neste tick; sem SHA live afirmado.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0512.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Commit documental local criado após os gates; `git push origin main` falhou
+  primeiro por DNS (`Could not resolve host: github.com`) e, no retry, por HTTP
+  403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). Nenhum
+  workflow/deploy novo foi acionado; o commit permanece local.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T04:51Z
 
 - Lock bounded adquirido/liberado com `flock -n`; recon Câmara, ALRS, auditoria estrita e lane local executadas read-only/fail-closed.
