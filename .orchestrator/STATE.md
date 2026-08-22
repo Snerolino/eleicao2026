@@ -1,3 +1,12 @@
+## Tick contínuo — recon oficial, gates locais e publicação bloqueada — 2026-08-22T18:32Z
+
+- Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual permaneceu dry-run (`planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`); quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Auditoria regular de fontes RC 0; strict RC 2 pelos gaps reais: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` em ALRS/Câmara/Senado. Senado segue sem envelope nominal verificável; nenhum fato foi promovido.
+- Dataset conferido contra `../dataset2026/candidatos/consulta_cand_2026/consulta_cand_2026_RS.csv`: 1.003/1.003 IDs, diferença `0/0`, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- Gates com Node 24.19.0 verdes: 401 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas e 988 fotos, build (`release.json` local `0e1c18f-20260822T183046921Z`), `git diff --check`. Smoke passou na repetição após eliminar preview stale: 1.002 cards, 0 HTTP failures, 0 erros de console online e service worker pronto.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1832.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Doctor RC 1 por shell Node 22.22.2 incompatível; também confirmou OpenCode ausente e Codex MCP `401 invalid_refresh_token`; não repetido. `git push origin main` RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). Produção root e `/release.json` HTTP 200, ainda no release `3aae2d0`; sem correspondência com HEAD local `0e1c18f` porque o push foi rejeitado.
+- Próximo chunk: retentar publicação documental quando a permissão efetiva do GitHub permitir `main -> main`; se aceito, validar backup Cloudflare `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T18:11Z
 
 - Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual permaneceu dry-run (`planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`); quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial read-only consultou 8 janelas trimestrais 2025–2026, 8 páginas, todas `ok`, sem reconciliação/aplicação. Senado permaneceu fail-closed sem envelope nominal verificável.
