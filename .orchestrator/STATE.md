@@ -1,3 +1,14 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T06:21Z
+
+- Lock bounded adquirido/liberado; Câmara read-only respondeu `ok` nas 8 janelas trimestrais oficiais 2025–2026 (`max_pages=1`), com `vote_ids` somente em memória e sem reconciliação/aplicação.
+- ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado permanece fail-closed.
+- Auditoria read-only de fontes: gaps ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; sem promoção.
+- Dataset sem mudança: `consulta_cand_2026_RS.csv` SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; `data:check` verde com 1.003 candidaturas e 988 fotos.
+- Gates Node 24.19.0 verdes: 400/98 testes, TypeScript, schema, build (`release.json` local `3b1b951-20260822T062051487Z`), sitemap 1.003 + 2, smoke `1002` cards/0 HTTP/console errors/service worker e `git diff --check`.
+- Doctor: `OK=49 WARN=6 FAIL=2`; FAIL por shell Node 22.22.2 e rota MCP Codex sem evidência (`401 invalid_refresh_token`); OpenCode ausente e Ollama sem preflight. Não repetir MCP neste tick.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0621.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Próximo chunk: commit/push somente a documentação e validar publicação; se GitHub mantiver HTTP 403, registrar bloqueio e continuar recon read-only. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T06:00Z
 
 - Lock bounded adquirido/liberado com `flock -n`; recon Câmara, ALRS, auditoria estrita, dataset e gates locais executados read-only/fail-closed.
