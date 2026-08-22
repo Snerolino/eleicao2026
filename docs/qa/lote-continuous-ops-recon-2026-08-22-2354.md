@@ -18,11 +18,11 @@ Executados em sequência com resultado verde:
 - `node scripts/validate-impact-schema.mjs`: checkpoint OK.
 - `npm run data:check`: 1.003 candidaturas / 988 fotos / 1 fonte TSE.
 - `npm run build`: 224 módulos; sitemap 1.003 candidatos + 2 estáticas; `release.json` local `2b9bee3-20260822T235404782Z`.
-- `git diff --check`: RC 0; worktree limpa após a documentação deste tick.
+- `git diff --check`: RC 0 antes da documentação; commit documental local `99bd705` criado.
 
 ## Publicação e bloqueios
 - `git push origin main` falhou com HTTP 403: `Permission to Snerolino/eleicao2026.git denied to Snerolino`.
-- HEAD local `2b9bee3` está 23 commits à frente de `origin/main`; nenhum workflow novo foi acionado.
+- HEAD local `99bd705` está 24 commits à frente de `origin/main`; nenhum workflow novo foi acionado.
 - Workflows remotos confirmados: backup `334951434`, primário `320564705`, verificador `335560210`.
 - `npm run orch:doctor -- --smoke` continua RC 1: shell Node 22.22.2 enquanto o projeto exige Node 24; MCP Codex retorna token expirado/401 e OpenCode está ausente. Antigravity passou a leitura sanitizada; não repetir Codex neste tick.
 - Nenhum candidato, voto, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado.

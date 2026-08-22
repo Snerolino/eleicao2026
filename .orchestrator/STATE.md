@@ -4,7 +4,7 @@
 - Auditoria read-only de fontes RC 0; gaps reais preservados: versões sem fonte ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`. Nenhum fato promovido.
 - Gates locais verdes: 401 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build com 224 módulos, sitemap 1.003 + 2 e `release.json` local `2b9bee3-20260822T235404782Z`; `git diff --check` RC 0.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-2354.md`. Worktree limpa antes desta documentação; após ela ficará pendente commit documental local.
-- Publicação: `git push origin main` falhou HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); HEAD local `2b9bee3` está 23 commits à frente de `origin/main`, sem workflow/deploy novo. Workflows backup `334951434`, primário `320564705` e verificador `335560210` estão ativos.
+- Publicação: `git push origin main` falhou HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); HEAD local `99bd705` está 24 commits à frente de `origin/main`, sem workflow/deploy novo. Workflows backup `334951434`, primário `320564705` e verificador `335560210` estão ativos.
 - Doctor RC 1: shell Node 22.22.2 incompatível com requisito 24, Codex MCP com token expirado/401 e OpenCode ausente; Antigravity passou leitura sanitizada. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu. Próximo chunk: corrigir/revalidar permissão GitHub e retentar `main -> main`; depois validar backup/headSha/produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — gates locais verdes, recon oficial bloqueada e push rejeitado — 2026-08-22T23:10Z
