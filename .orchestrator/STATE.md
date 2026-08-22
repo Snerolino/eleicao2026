@@ -1,3 +1,14 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T06:44Z
+
+- Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026, `max_pages=1`, `vote_ids=700` somente em memória, sem reconciliação/aplicação.
+- ALRS FED-17 residual falhou fechado com causa real `JWT issued at future`; `planned_votes=0`, quatro residuais Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado permanece fail-closed sem PDF/`legislator_id`/SHA verificável.
+- Auditoria estrita: gaps reais de fontes ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; exit 2, sem promoção.
+- Dataset sem mudança: `data:check` verde com 1.003 candidaturas e 988 fotos; CSV oficial SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; snapshot SHA `a7db54b20bd1aa0d49003e278d48d1443617f00b772d004d711cd762d0c982cf`.
+- Gates Node 24 verdes: 400 testes/98 arquivos, TypeScript, schema, build, sitemap 1.003 + 2 e `git diff --check`; smoke verde com 1.002 cards, 0 HTTP failures, 0 erros de console online e service worker pronto.
+- Doctor `OK=49 WARN=6 FAIL=2`: shell Node 22.22.2 incompatível e rota MCP Codex sem evidência (`401 invalid_refresh_token`); OpenCode ausente/Ollama sem preflight. Não repetir MCP neste tick.
+- Produção: raiz HTTP 200; `/release.json` teve falha DNS inicial e repetição HTTP 200, mas leitura posterior voltou a falhar por resolução DNS intermitente; nenhum `headSha` live foi afirmado. Commit documental `b2bdb9e` criado; push e retry falharam por `Could not resolve host: github.com`, sem workflow/deploy novo. QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0644.md`.
+- Nenhuma escrita factual, Supabase ou Cloudflare. Próximo chunk: retentar publicação documental quando DNS resolver; se remoto aceitar, validar backup `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T06:21Z
 
 - Lock bounded adquirido/liberado; Câmara read-only respondeu `ok` nas 8 janelas trimestrais oficiais 2025–2026 (`max_pages=1`), com `vote_ids` somente em memória e sem reconciliação/aplicação.
