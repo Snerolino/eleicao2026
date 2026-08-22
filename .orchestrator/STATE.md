@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T03:23Z
+
+- Lock bounded adquirido com `flock -n`; recon Câmara, ALRS e Senado executadas read-only/fail-closed.
+- Câmara: 22/22 páginas oficiais em 8 janelas trimestrais 2025–2026 `status=ok`, `blocked=null`, 2.100 `vote_ids` descobertos em memória; sem reconciliação/aplicação.
+- ALRS FED-17 falhou fechado com causa real `JWT issued at future`; 4 residuais Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado segue fail-closed porque `/tmp/senado-nominal-envelope-latest.json` está ausente.
+- Auditoria estrita saiu 2 por gaps reais: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; sem promoção.
+- Dataset: CSV oficial 1.003 linhas de dados, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; snapshot 1.003 registros; nenhum refresh factual.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0323.md`.
+- Nenhuma escrita factual, Supabase ou Cloudflare. Próximo chunk: gates locais/publicação documental se push efetivo funcionar; manter ALRS/Senado bloqueados por fonte/identidade.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T03:04Z
 
 - Lock bounded adquirido/liberado com `flock -n`; recon Câmara, ALRS e auditoria de fontes executadas somente em leitura.
