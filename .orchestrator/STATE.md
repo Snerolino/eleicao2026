@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial, gates locais e publicação bloqueada — 2026-08-22T20:57Z
+
+- Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual permaneceu dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata.
+- Auditoria read-only de fontes: votos sem fonte ALRS `4/4000`, Câmara `2/552`, Senado `455/455`; versões `1251/3/112`; eventos `1647/2/188`. Câmara oficial consultou 8 janelas trimestrais 2025–2026, todas `status=ok`; nenhum fato foi promovido.
+- Dataset/snapshot e gates Node 24.19.0 verdes: 401 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos, build (`release.json` local `812b808-20260822T205651676Z`), sitemap 1.003 + 2, `git diff --check` e smoke 1.002 cards/0 HTTP/console errors/service worker pronto.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-2057.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Publicação: `git push origin main` falhou RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); HEAD local `812b808` segue 10 commits à frente de `origin/main`, sem workflow/deploy novo.
+- Doctor permanece RC 1 porque o shell usa Node 22.22.2; os gates usaram Node 24.19.0 explicitamente. Senado segue fail-closed sem envelope nominal verificável.
+- Próximo chunk: retentar `main -> main`; se aceito, validar backup `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial, gates locais e publicação bloqueada — 2026-08-22T20:37Z
 
 - Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual permaneceu dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado fail-closed sem `/tmp/senado-nominal-envelope-latest.json`.
