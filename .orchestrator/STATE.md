@@ -5,12 +5,13 @@
 - Auditoria estrita read-only retornou `rc=2` por gaps reais de fontes, sem promoção factual; auditor de repositório `npm run impact:sources:audit` retornou `rc=0`.
 - Dataset sem mudança: CSV oficial 1.003 IDs, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; snapshot 1.003 IDs, SHA `a7db54b20bd1aa0d49003e278d48d1443617f00b772d004d711cd762d0c982cf`; `data:check` verde com 1.003 candidaturas e 988 fotos.
 - Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, data:check, build, smoke e `git diff --check`; build gerou sitemap 1.003 + 2 e `release.json` local `d0880f2-20260822T093703194Z`; smoke 1.002 cards/0 HTTP/console errors/service worker pronto.
+- Publicação: commit documental `16ac7b0` criado (`docs: registra tick de recon oficial`), mas `git push origin main` e retry após `gh auth setup-git` falharam com HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); HEAD local está 71 commits à frente de `origin/main`, sem workflow/deploy novo. Workflows remotos ativos: backup `334951434`, primário `320564705`, verificador `335560210`.
+- Produção: raiz `https://rs.votopraquem.org` retornou HTTP 000 por falha DNS nesta tentativa; `/release.json?cb=continuous-ops-0938` retornou HTTP 200 com versão `0.2.724`, sem `commitSha` no payload. Não afirmar live correspondente ao commit local.
 - Doctor permanece `OK=47 WARN=6 FAIL=1`: shell cron Node 22.22.2 incompatível; MCP Codex sem evidência válida, OpenCode ausente e Ollama sem preflight. Os gates do projeto não dependeram dessas rotas.
-- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0938.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
-- Publicação: documentação deste tick ainda precisa de commit; HEAD anterior `d0880f2` está 70 commits à frente de `origin/main`. Push permanece condicionado à permissão efetiva; nenhum deploy novo foi afirmado.
+- ALRS/Senado permanecem bloqueados por evidência oficial/identidade, em fail-closed.
 
 ## Próximo passo
-Commit/push da documentação; se aceito, acompanhar workflow backup Cloudflare `334951434`, conferir `headSha` e HTTP 200 de `https://rs.votopraquem.org`. Manter recon oficial/read-only e ALRS/Senado fail-closed.
+Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; somente após aceitação acompanhar workflow backup Cloudflare `334951434`, conferir `headSha` e validar produção. Manter recon oficial/read-only e ALRS/Senado fail-closed.
 
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T08:55Z

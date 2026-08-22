@@ -24,10 +24,13 @@ Executar um tick bounded do control plane: recon oficial read-only, verificar o 
 - `npm run smoke:local`: `rc=0`; 1.002 cards, 0 falhas HTTP, 0 erros de console online, service worker pronto.
 - `git diff --check`: `rc=0`; worktree limpa após a documentação deste lote.
 
-## Bloqueios reais
-- Publicação GitHub ainda depende de permissão efetiva para `main -> main`; o HEAD local está 70 commits à frente de `origin/main` após falhas anteriores HTTP 403. Não afirmar deploy/live novo antes de push aceito.
+## Publicação e bloqueios reais
+- Commit documental criado: `16ac7b048c919aab305caa78b1a37a1869ea0bb7` (`docs: registra tick de recon oficial`).
+- `git push origin main` falhou com HTTP 403: `Permission to Snerolino/eleicao2026.git denied to Snerolino`. Retry após `gh auth setup-git` falhou com a mesma causa; HEAD local está 71 commits à frente de `origin/main`. Nenhum workflow/deploy novo foi acionado.
+- Workflows remotos confirmados ativos: backup `334951434`, primário `320564705`, verificador `335560210`.
+- Produção: `https://rs.votopraquem.org` retornou HTTP 000 por falha DNS nesta tentativa; `/release.json?cb=continuous-ops-0938` retornou HTTP 200 e versão `0.2.724`, sem `commitSha` no payload. Não afirmar live correspondente ao commit local.
 - Doctor do orquestrador permanece com FAIL por shell Node 22.22.2, embora os gates do projeto tenham sido executados com Node 24.19.0; rota MCP Codex continua sem evidência válida e OpenCode não está instalado.
 - ALRS/Senado permanecem bloqueados por evidência oficial/identidade, em fail-closed.
 
 ## Próximo passo
-Tentar publicar somente a documentação após o commit; se o push aceitar, acompanhar o workflow backup Cloudflare `334951434` (ID `334951434`), conferir `headSha` e validar `https://rs.votopraquem.org` e `/release.json`. Manter a recon oficial read-only e não aplicar fatos remotos sem R0, schema/FK, fonte oficial, dry-run e idempotência.
+Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; somente após aceitação acompanhar o workflow backup Cloudflare `334951434`, conferir `headSha` e validar produção. Manter a recon oficial read-only e não aplicar fatos remotos sem R0, schema/FK, fonte oficial, dry-run e idempotência.
