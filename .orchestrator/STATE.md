@@ -1,3 +1,15 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T07:52Z
+
+- Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026, `max_pages=1`, 700 `vote_ids` somente transitórios, sem reconciliação/aplicação.
+- ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado fail-closed por ausência de `/tmp/senado-nominal-envelope-latest.json` (ENOENT).
+- Dataset sem mudança: CSV oficial SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; 1.003 IDs no CSV e 1.003 no snapshot, diferença 0/0.
+- Auditoria estrita read-only: gaps de fontes ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; sem promoção factual.
+- Gates Node 24.19.0: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos, build, sitemap 1.003 + 2, smoke 1.002 cards/0 HTTP failures/0 erros de console online/service worker pronto, `git diff --check`; todos RC 0. Build local `release.json` `4506791-20260822T075142832Z`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0752.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Publicação: commit documental `19f6076` criado; `git push origin main` falhou por DNS (`Could not resolve host: github.com`), sem workflow/deploy novo. HEAD local segue 63 commits à frente de `origin/main`.
+- Doctor segue `OK=49 WARN=6 FAIL=2`: shell Node 22.22.2 incompatível e Codex MCP sem evidência por `401 invalid_refresh_token`; OpenCode ausente e Ollama sem preflight.
+- Próximo chunk: retentar push documental quando DNS resolver; se aceitar, validar backup `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T07:31Z
 
 - Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026, `max_pages=1`, 700 `vote_ids` somente em artefato transitório, sem reconciliação/aplicação.
