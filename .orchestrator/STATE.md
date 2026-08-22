@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T15:36Z
+
+- Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas 2025–2026, 7 `ok` e Q1/2025 bloqueada por `network_error`/`fetch failed`; `vote_ids=[]`, sem reconciliação ou aplicação.
+- ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os quatro casos Enio Carlos Terra continuam sem ID oficial/fonte exata. Senado fail-closed sem envelope nominal verificável.
+- Auditoria regular de fontes RC 0; strict RC 2 pelos gaps reais: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` em ALRS/Câmara/Senado; nenhum fato promovido.
+- Dataset/snapshot conferidos por `SQ_CANDIDATO`: 1.003/1.003, diferença `0/0`; CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- Gates verdes com Node 24.19.0: 401 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos, build (`release.json` local `7fa2afc-20260822T153633092Z`), smoke 1.002 cards/0 HTTP/console errors/service worker pronto e `git diff --check`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1536.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Publicação: worktree passou a conter a documentação deste tick; HEAD segue 15 commits à frente de `origin/main`. Próximo chunk: retentar push; se aceito, validar backup Cloudflare `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T15:13Z
 
 - Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026, todas `ok`, `blocked=null`, 700 `vote_ids` transitórios, sem reconciliação ou aplicação.
