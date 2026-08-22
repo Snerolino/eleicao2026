@@ -1,3 +1,14 @@
+## Tick contínuo — recon oficial e publicação bloqueada — 2026-08-22T16:00Z
+
+- Lock bounded adquirido/liberado com `flock -n`. Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026, todas `ok`, `blocked=null`, 700 `vote_ids` transitórios; nenhuma reconciliação ou aplicação.
+- ALRS FED-17 residual falhou fechado com causa real `fetch failed`; quatro casos Enio Carlos Terra continuam sem ID oficial/fonte exata. Senado fail-closed porque `/tmp/senado-nominal-envelope-latest.json` está ausente.
+- Auditoria regular de fontes RC 0; strict RC 2 pelos gaps reais: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` em ALRS/Câmara/Senado. Nenhum fato promovido.
+- Dataset sem mudança: checkpoint vigente 1.003/1.003 IDs CSV/snapshot, diferença `0/0`, CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- `git diff --check` RC 0 antes da documentação. QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1600.md`.
+- Publicação: commit documental local `b04cd69` criado. `git push origin main` e retry com `env -u GH_TOKEN` falharam HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); nenhum workflow/deploy novo. Produção independente respondeu root HTTP 200 e `/release.json` HTTP 200; sem correspondência de `headSha` porque o push foi rejeitado. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Doctor mantém bloqueios de infraestrutura: shell Node 22.22.2 incompatível com requisito 24; smoke Codex MCP sem evidência estruturada com `401 invalid_refresh_token`; OpenCode ausente e Ollama sem preflight.
+- Próximo chunk: retentar publicação documental quando a permissão efetiva do GitHub permitir `main -> main`; se aceito, validar backup Cloudflare `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T15:36Z
 
 - Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas 2025–2026, 7 `ok` e Q1/2025 bloqueada por `network_error`/`fetch failed`; `vote_ids=[]`, sem reconciliação ou aplicação.
