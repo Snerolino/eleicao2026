@@ -1,3 +1,17 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T02:43Z
+
+- Lock bounded adquirido/liberado com `flock -n`; lane oficial e lane local executadas read-only, sem escrita factual.
+- Câmara: 8/8 janelas trimestrais oficiais 2025–2026 `status=ok`, `blocked=null`; IDs descobertos somente em memória, sem reconciliação/aplicação.
+- ALRS FED-17 residual falhou fechado com causa real `JWT issued at future`; 0 votos/correções, 4 residuais Enio Carlos Terra continuam sem ID oficial/fonte exata.
+- Senado fail-closed por envelope nominal ausente `/tmp/senado-nominal-envelope-latest.json`; nenhum PDF, `legislator_id`, FK ou voto promovido.
+- Auditoria estrita mantém gaps de fontes em versões `1251/3/112`, eventos `1647/2/188` e votos `4/2/455`; exit 2 por gaps reais, sem promoção.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build com sitemap 1.003 + 2 e `git diff --check`.
+- Smoke local passou na segunda execução: 1.002 cards, 0 HTTP failures, 0 erros de console online, service worker pronto; primeira execução falhou transitoriamente com 0 cards durante carregamento.
+- Produção raiz HTTP 200; `/release.json` falhou por timeout de resolução DNS, sem inferir SHA live. Worktree ficou limpa antes da documentação.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0243.md`. Nenhuma escrita em snapshot, Supabase, Cloudflare, identidade, FK, voto ou matriz.
+- Push permanece bloqueado: após este commit documental, HEAD local está 44 commits à frente de `origin/main`; as duas tentativas de push deste tick retornaram HTTP 403. Doctor segue com FAIL por Node 22.22.2 no shell cron; gates foram executados em Node 24.19.0.
+- Próximo chunk: recon bounded Câmara novamente; ALRS/Senado fail-closed; retentar publicação quando permissão efetiva e DNS permitirem. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T02:17Z
 
 - Lock bounded testado com `flock -n`; lane de recon oficial e lane local executadas read-only/sem escrita factual.
