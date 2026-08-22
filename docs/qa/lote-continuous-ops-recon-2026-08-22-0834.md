@@ -22,7 +22,8 @@ Nenhuma alteração no snapshot, no dataset2026, no Supabase, em claims, votos, 
 ## Bloqueios reais
 - Quatro votos ALRS residuais não possuem simultaneamente identidade oficial e fonte exata; não foram inventados dados.
 - Auditoria estrita continua não-zero pelos gaps de fonte catalogados.
-- Push/publicação ainda depende de permissão efetiva do GitHub; será tentado após este gate.
+- Push/publicação bloqueado após tentativa normal e retry sem `GH_TOKEN`: GitHub respondeu HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). Nenhum workflow novo foi acionado.
+- Produção existente revalidada independentemente: raiz HTTP 200; `/release.json` HTTP 200 com live `e925327276b82481a348d4db3e2339d075dfe9a3`, release `e925327-20260821T145742462Z`, snapshot 1.003. Não corresponde ao commit local `da3b51f`.
 
 ## Próximo passo
 Tentar `git push origin main`. Se aceito, disparar/validar o workflow backup Cloudflare `334951434`, comparar `headSha` com o commit publicado e confirmar `https://rs.votopraquem.org` e `/release.json`. Manter aplicação remota condicionada a R0, schema/FK, fonte oficial, dry-run e idempotência.

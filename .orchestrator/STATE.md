@@ -6,7 +6,7 @@
 - Dataset sem mudança; `data:check` verde com 1.003 candidaturas e 988 fotos.
 - Gates verdes: 400 testes/98 arquivos, TypeScript, schema, build, sitemap 1.003 + 2, `release.json` local `7894e50-20260822T083323699Z`, smoke 1.002 cards/0 HTTP failures/0 erros de console online/service worker pronto e `git diff --check`.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0834.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
-- Próximo chunk: tentar `git push origin main`; se aceito, validar workflow backup `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+- Próximo chunk: tentar novamente a publicação documental quando a permissão efetiva do GitHub permitir `main -> main`; o push deste tick falhou HTTP 403 após retry sem `GH_TOKEN`. Produção revalidada em HTTP 200, live `e925327276b82481a348d4db3e2339d075dfe9a3` não corresponde ao HEAD local `da3b51f`. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T08:15Z
 
