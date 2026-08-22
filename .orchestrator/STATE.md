@@ -3993,3 +3993,14 @@ Sem autorização humana explícita própria, não fazer:
 - Bloqueios: quatro residuais Enio/Terra sem ID/fonte exata, gaps substantivos, Senado sem envelope verificável, doctor shell FAIL por Node 22.22.2 e OpenCode ausente como WARN.
 - Próximo chunk: recon bounded oficial e lane local independente; aplicação remota somente após R0/schema/FK/fonte/dry-run/idempotência.
 
+
+
+## Tick contínuo — recon oficial, gates verdes e push 403 — 2026-08-22T23:31Z
+
+- Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 permaneceu fail-closed: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado segue sem envelope nominal verificável.
+- Snapshot/data sem alteração factual: `data:check` confirmou 1.003 candidaturas, 988 fotos e 1 fonte TSE; estado anterior confirma dataset 1.003/1.003 e SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- Gates Node 24.19.0 verdes: 401 testes/98 arquivos, TypeScript, schema, data:check, build com 224 módulos e sitemap 1.003 + 2. Smoke teve timeout transitório na primeira execução e passou na repetição com 1.002 cards, 0 HTTP failures, 0 erros de console online e service worker pronto.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-2331.md`.
+- Publicação autorizada tentada e retentada após o commit documental; `git push origin main` rejeitado RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). HEAD local `d452976` segue 23 commits à frente de `origin/main`; nenhum workflow novo. Produção revalidada após o smoke: `/` e `/release.json` HTTP 200.
+- Doctor permanece RC 1 por Node 22.22.2 no shell, Codex token expirado/401 e OpenCode ausente; gates foram executados com Node 24.19.0.
+- Próximo chunk: corrigir/revalidar permissão efetiva do GitHub e retentar `main -> main`; após aceite verificar backup `334951434`, `headSha` e produção. Aplicação remota permanece condicionada a R0/schema/FK/fonte/dry-run/idempotência.
