@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T08:34Z
+
+- Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026, `max_pages=1`, sem reconciliação/aplicação.
+- ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado segue fail-closed sem envelope nominal verificável.
+- Auditoria estrita read-only: gaps de fontes ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; exit 2 por gaps reais, sem promoção factual.
+- Dataset sem mudança; `data:check` verde com 1.003 candidaturas e 988 fotos.
+- Gates verdes: 400 testes/98 arquivos, TypeScript, schema, build, sitemap 1.003 + 2, `release.json` local `7894e50-20260822T083323699Z`, smoke 1.002 cards/0 HTTP failures/0 erros de console online/service worker pronto e `git diff --check`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0834.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Próximo chunk: tentar `git push origin main`; se aceito, validar workflow backup `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T08:15Z
 
 - Lock bounded testado/adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026, `max_pages=1`, 700 `vote_ids` somente transitórios, sem reconciliação/aplicação.
