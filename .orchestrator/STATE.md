@@ -1,3 +1,15 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T04:51Z
+
+- Lock bounded adquirido/liberado com `flock -n`; recon Câmara, ALRS, auditoria estrita e lane local executadas read-only/fail-closed.
+- Câmara: chamada corrigida com janela explícita `2025-01-01`–`2026-12-31`; 22/22 páginas oficiais em 8 janelas `status=ok`, `blocked=null`, 2.100 `vote_ids` descobertos somente em memória, sem reconciliação/aplicação. A chamada inicial sem `--start/--end` falhou por bug de parsing de defaults (`intervalo de datas inválido`), sem alterar código ou dados.
+- ALRS FED-17 residual falhou fechado com causa real `JWT issued at future`; `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`. Quatro residuais Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado permanece fail-closed sem envelope nominal/PDF/`legislator_id`/SHA verificável.
+- Auditoria estrita mantém gaps reais de fontes em versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188` e votos `4/2/455`; exit 2, sem promoção.
+- Dataset oficial: CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`, 1.003/1.003 IDs CSV/snapshot, diferença 0/0; sem refresh factual.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build (`release.json` local `1e293ec-20260822T045022858Z`, sitemap 1.003 + 2), smoke 1.002 cards/0 HTTP/console errors/service worker e `git diff --check`.
+- Doctor cron: `OK=49 WARN=6 FAIL=2` por shell Node 22.22.2 e rota MCP Codex com `401 invalid_refresh_token`; OpenCode ausente/Ollama sem preflight. Nenhuma escrita factual, Supabase ou Cloudflare.
+- Produção root e `/release.json?cb=continuous-ops` HTTP 200. Worktree iniciou limpa em `1e293ecf80460efc5c10cbdda5598d47d5aa3dd0`; QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0451.md`.
+- Próximo passo: commit/push documental somente se a permissão efetiva deixar `main -> main`; então validar backup `334951434`, `headSha` e produção. Manter ALRS/Senado fail-closed e aplicação remota condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T04:29Z
 
 - Lock bounded adquirido/liberado com `flock -n`; recon Câmara, ALRS e auditoria estrita executadas read-only/fail-closed.
