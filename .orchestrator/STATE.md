@@ -1,3 +1,11 @@
+## Tick contínuo — gates locais verdes, recon oficial bloqueada e push rejeitado — 2026-08-22T23:10Z
+
+- Lock bounded adquirido/liberado com `flock -n`. Recon oficial: reparo ALRS FED-17 falhou fechado por `JWT issued at future`; os 4 casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Descoberta Câmara não executou porque o comando exige `--max-pages` entre 1 e 100; nenhum fato foi promovido. Senado permanece fail-closed sem envelope nominal verificável.
+- Dataset conferido read-only: `consulta_cand_2026_RS.csv` com 1.003 linhas e 553.194 bytes, SHA-256 `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; snapshot também 1.003 registros. Nenhuma alteração factual.
+- Gates Node 24.19.0 verdes: 401 testes/98 arquivos, TypeScript, schema, `data:check` (1.003 candidaturas/988 fotos/1 fonte TSE), build (224 módulos, sitemap 1.003 + 2, `release.json` local `1f511b5-20260822T230852414Z`), `git diff --check` e smoke (1.002 cards, 0 HTTP failures, 0 erros de console online, service worker pronto).
+- Publicação: `git push origin main` falhou RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). `gh api user` identifica `Snerolino`, mas a permissão efetiva no remoto continua rejeitando o push; nenhum workflow/deploy novo foi acionado. HEAD local `1f511b5` segue 20 commits à frente de `origin/main`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-2310.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu. Próximo chunk: retentar publicação quando a permissão efetiva do GitHub estiver corrigida; após `main -> main`, validar backup `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial, gates locais e publicação bloqueada — 2026-08-22T22:49Z
 
 - Lock bounded adquirido/liberado com `flock -n`. Câmara oficial consultou 14 páginas de janelas trimestrais 2025–2026: 13 `ok` e uma bloqueada por `network_error`/`fetch failed`; por fail-closed `vote_ids=0`, sem reconciliação/aplicação. ALRS FED-17 residual falhou fechado com `fetch failed`; os 4 casos Enio Carlos Terra continuam sem ID oficial/fonte exata. Senado permanece fail-closed sem `/tmp/senado-nominal-envelope-latest.json`.
