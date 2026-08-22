@@ -21,7 +21,7 @@ Executar um tick bounded do control plane: recon oficial read-only (Câmara e AL
 - `npm run smoke:local`: primeira tentativa falhou transitoriamente com `cards=0` durante carregamento; repetição verde — 1.002 cards, 0 falhas HTTP, 0 erros de console online, service worker pronto.
 
 ## Bloqueios
-- Push/publicação: ainda não revalidado neste tick; o HEAD local já está 53 commits à frente de `origin/main`, portanto nenhum deploy novo é afirmado.
+- Push/publicação: commit local `7d9f616` criado após gates, mas `git push origin main` e retry com `env -u GH_TOKEN` falharam HTTP 403: `Permission to Snerolino/eleicao2026.git denied to Snerolino`. Nenhum workflow/deploy novo foi acionado; HEAD local segue 54 commits à frente de `origin/main`.
 - ALRS residual bloqueado por ausência de evidência oficial recuperável nesta execução.
 - Câmara Q1/2025 bloqueada por `fetch failed` e Senado continua fail-closed sem envelope nominal/PDF/`legislator_id`/SHA verificável.
 - Nenhum dado factual, Supabase, Cloudflare, identidade, FK, voto, claim ou matriz foi alterado.

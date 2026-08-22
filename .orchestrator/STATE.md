@@ -8,7 +8,7 @@
 - Gates Node 24 verdes: 400 testes/98 arquivos, TypeScript, schema, build (`release.json` local `d697b66-20260822T053646130Z`, sitemap 1.003 + 2), smoke repetido 1.002 cards/0 HTTP/console errors/service worker e `git diff --check`. Primeira smoke falhou transitoriamente com `cards=0` durante carregamento; repetição verde.
 - Doctor: `OK=49 WARN=6 FAIL=2` por shell Node 22.22.2 e rota MCP Codex sem evidência (`401 invalid_refresh_token`); OpenCode ausente/Ollama sem preflight.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0536.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
-- Próximo chunk: nova recon bounded Câmara; manter ALRS/Senado fail-closed e retentar publicação documental. HEAD local está 53 commits à frente de `origin/main`; validar push efetivo antes de acionar workflow backup `334951434` e confirmar `headSha`/produção.
+- Push/publicação: commit documental local `7d9f616` criado após os gates, mas `git push origin main` e retry sem `GH_TOKEN` falharam HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); nenhum workflow/deploy novo foi acionado. HEAD local segue 54 commits à frente de `origin/main`.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T05:12Z
 
