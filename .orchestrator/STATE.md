@@ -2043,7 +2043,7 @@ Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; som
 
 - Hardening Supabase aplicado e verificado no histórico remoto; RLS/grants/RPC confirmados.
 - P0 preservado em corpus content-addressed: 5/5 bytes+SHA reproduzidos, durability green.
-- P1 em coleta oficial paralela: 18 versões, uma requisição por versão.
+- P1 fonte substantiva concluída: 18/18 páginas/documentos oficiais HTTP 200, bytes/SHA preservados e gate durável verde.
 - QA: `docs/qa/lote-alrs-next-three-phases-2026-08-22.md`.
 
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)

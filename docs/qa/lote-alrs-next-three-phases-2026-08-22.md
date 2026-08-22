@@ -27,21 +27,27 @@ Concluída:
 
 ## Fase 3 — fontes substantivas P1
 
-Em execução:
+Concluída:
 
-- 18 versões P1 na fila;
+- 18/18 versões P1 com página oficial HTTP 200;
+- 18/18 com documento NoPaper HTTP 200;
+- 18/18 bytes/SHA preservados em corpus content-addressed;
 - uma coleta por versão;
-- `requested_for_groups` preserva múltiplos grupos;
+- `requested_for_groups` preserva grupos candidatos quando existirem;
 - sem assessment ou score automático;
-- sem escrita Supabase.
-
-Os scouts oficiais foram divididos em dois lotes de 9 versões.
+- sem escrita editorial Supabase.
 
 ## Estado remoto
 
 ```text
 matrizes ALRS: 0
 assessments ALRS: 0
-score impacto ALRS: 0
+score de impacto ALRS: 0
 remote_apply: false
+
+## Próximo gate
+
+Com as fontes substantivas duráveis, o pacote consolidado está em `23/23`
+`substantive_source_gate=green` e `source_durability_gate=green`. O próximo
+bloqueio é a disposição editorial humana das 23 versões.
 ```

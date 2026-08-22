@@ -216,7 +216,7 @@ candidate_source_links
 official_vote_source_reference_ids
 ```
 
-**Status:** 🟡 P0 verde com ressalva; P1 pendente.
+**Status:** ✅ P0 e P1 com fontes substantivas duráveis; revisão editorial pendente.
 
 ---
 
