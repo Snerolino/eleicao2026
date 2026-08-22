@@ -1,3 +1,14 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T01:58Z
+
+- Lock bounded adquirido/liberado com `flock -n`; Câmara, ALRS e auditoria de fontes executadas read-only.
+- Câmara: 8 janelas trimestrais oficiais consultadas até 3 páginas/janela, HTTP/JSON válidos e `blocked=null`; IDs descobertos somente em memória, sem reconciliação/aplicação.
+- ALRS FED-17 residual falhou fechado com `JWT issued at future`; quatro residuais Enio Carlos Terra continuam sem ID oficial/fonte exata. Senado segue fail-closed sem envelope nominal/SHA verificável.
+- Auditoria estrita mantém gaps de fontes `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; sem promoção.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build (`release.json` local `6e76fb0-20260822T015709944Z`, sitemap 1.003 + 2), smoke local 1.002 cards/0 HTTP/console errors/service worker e `git diff --check`.
+- Produção raiz HTTP 200 e `/release.json` HTTP 200; snapshot e banco não foram alterados.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0158.md`. Doctor `OK=48 WARN=7 FAIL=2` por shell Node 22.22.2 e autenticação/timeout de Codex/Antigravity; gates do projeto foram rodados com Node 24.19.0.
+- Próximo chunk: push efetivo permanece bloqueado: commit documental anterior `0177df0` e este registro não chegaram a `origin/main` porque GitHub respondeu HTTP 403 mesmo após `gh auth setup-git`. Manter recon Câmara e ALRS/Senado fail-closed; aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T01:33Z
 
 - Lock bounded adquirido/liberado com `flock -n`; recon oficial e lane local executadas.
