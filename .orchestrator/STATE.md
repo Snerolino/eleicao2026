@@ -6,7 +6,7 @@
 - Gates com Node 24.19.0 verdes: 401 testes/98 arquivos, TypeScript, schema, build (`release.json` local `5c25ee6-20260822T172518608Z`), smoke 1.002 cards/0 HTTP/console errors/service worker pronto e `git diff --check`.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1726.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
 - Produção: `/release.json` HTTP 200 reportou SHA `5c25ee656ced3283002b8a5c2c83400a55f9e558`, versão `0.2.830`, snapshot 1.003 com SHA oficial; raiz retornou HTTP 000 por falha DNS (`Could not resolve host`). Workflows backup `334951434`, primário `320564705`, verificador `335560210` confirmados.
-- Publicação: documentação ainda não publicada; próximo chunk é `git push origin main`. Se aceito, validar backup Cloudflare `334951434`, `headSha` e produção; se 403, registrar bloqueio real. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+- Commit documental criado: `b445b86`; `git push origin main` falhou primeiro por DNS (`Could not resolve host: github.com`) e depois, sem `GH_TOKEN`, por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); nenhum workflow/deploy novo foi acionado. Produção `/release.json` HTTP 200 reportou SHA `5c25ee656ced3283002b8a5c2c83400a55f9e558`, enquanto a raiz retornou HTTP 000 por falha DNS. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 
 
 ## Tick contínuo — recon oficial e publicação bloqueada — 2026-08-22T16:20Z

@@ -46,10 +46,12 @@ estado de publicação sem promover fatos sem fonte.
   raiz neste tick.
 - Workflows remotos confirmados: backup Cloudflare `334951434`, primário
   `320564705`, verificador `335560210`.
-- Push/deploy não foram executados neste tick porque a documentação deste lote
-  ainda precisava ser registrada e a publicação anterior permanece condicionada
-  ao bloqueio real de permissão GitHub HTTP 403. Nenhuma migration, RLS, RPC,
-  Auth, Storage, Supabase factual ou Cloudflare remoto foi alterado.
+- Commit documental criado: `b445b86` (`docs: registra tick de recon oficial`).
+  O primeiro push falhou por DNS (`Could not resolve host: github.com`); o retry
+  sem `GH_TOKEN` alcançou o remoto e falhou HTTP 403 (`Permission to
+  Snerolino/eleicao2026.git denied to Snerolino`). Nenhum workflow/deploy novo
+  foi acionado. Nenhuma migration, RLS, RPC, Auth, Storage, Supabase factual ou
+  Cloudflare remoto foi alterado.
 
 ## Próximo passo
 Retentar `git push origin main` após registrar este checkpoint; se aceito,
