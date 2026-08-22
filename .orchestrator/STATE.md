@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T08:55Z
+
+- Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026, `max_pages=1`, sem reconciliação/aplicação.
+- ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado segue fail-closed sem envelope nominal verificável.
+- Dataset sem mudança: CSV oficial completo SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`, 1.003 IDs; snapshot também 1.003 IDs. `data:check` verde com 1.003 candidaturas e 988 fotos.
+- Gates: 400 testes/98 arquivos, TypeScript, schema, build, sitemap 1.003 + 2, `git diff --check`; primeira execução do smoke expirou durante carregamento, repetição passou com 1.002 cards/0 HTTP failures/0 erros de console online/service worker pronto. `release.json` local `931629a-20260822T085326549Z`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0855.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Publicação: `git push origin main` retornou HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); nenhum workflow/deploy novo. Produção revalidada em HTTP 200; HEAD local `931629a` segue à frente de `origin/main`.
+- Próximo chunk: retentar publicação documental quando a permissão efetiva permitir `main -> main`; se aceitar, validar backup `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T08:34Z
 
 - Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026, `max_pages=1`, sem reconciliação/aplicação.
