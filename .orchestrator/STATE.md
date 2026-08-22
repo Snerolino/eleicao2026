@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T10:42Z
+
+- Lock bounded adquirido/liberado com `flock -n`; ALRS residual dry-run confirmou `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra seguem bloqueados por ausência de ID oficial/fonte exata.
+- Câmara oficial read-only executada em 8/8 janelas trimestrais 2025–2026, todas `ok`; IDs permanecem transitórios, sem reconciliação/aplicação. Auditoria de fontes read-only mantém gaps: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` (ALRS/Câmara/Senado).
+- Dataset sem mudança: 1.003 IDs no CSV e snapshot, diferença `0/0`; snapshot SHA `a7db54b20bd1aa0d49003e278d48d1443617f00b772d004d711cd762d0c982cf`; `data:check` 1.003 candidaturas/988 fotos.
+- Gates locais verdes: 400 testes/98 arquivos, TypeScript, schema, data:check, build e `git diff --check`; smoke 1.002 cards/0 HTTP/console errors/service worker pronto. QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1042.md`.
+- Senado permanece fail-closed: `/tmp/senado-nominal-envelope-latest.json` ausente. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Push documental tentou novamente e falhou HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); HEAD `a1a12847c6422d9c7e366b06820148c88e720d77` segue 75 commits à frente de `origin/main`, sem workflow/deploy novo. Produção raiz e `/release.json` HTTP 200, mas release `0.2.724` não tem `commitSha`/`snapshotSha`/`builtAt`, portanto não há correspondência verificável com o HEAD local.
+- Doctor: Node shell v22.22.2 incompatível com requisito 24; MCP/Codex smoke falhou `401 invalid_refresh_token`; OpenCode ausente e Ollama sem preflight. Próximo chunk: retentar push quando a permissão efetiva permitir; manter recon oficial/read-only e aplicação remota condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T10:21Z
 
 - Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026 (`max_pages=1`), todas `ok`, `blocked=null`, 700 `vote_ids` transitórios, sem reconciliação/aplicação.
