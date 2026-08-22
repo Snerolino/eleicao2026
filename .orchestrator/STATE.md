@@ -4,7 +4,7 @@
 - ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os quatro casos Enio Carlos Terra continuam sem ID oficial/fonte exata. Senado fail-closed sem `/tmp/senado-nominal-envelope-latest.json`.
 - Auditoria estrita RC 2 pelos gaps reais: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` em ALRS/Câmara/Senado; nenhum fato promovido. Produção root HTTP 200 e `/release.json` HTTP 200, release live `823e9df-20260822T115410420Z`, snapshot 1.003 com SHA oficial `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1453.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
-- Publicação: `git push origin main` falhou HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); sem workflow/deploy novo. Próximo chunk: retentar push e, se aceito, validar backup Cloudflare `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+- Publicação: commit documental local `d7c9f8e` criado após os gates; `git push origin main` falhou em duas tentativas com HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); sem workflow/deploy novo. Próximo chunk: retentar push e, se aceito, validar backup Cloudflare `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T14:35Z
 
