@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial, gates locais e publicação bloqueada — 2026-08-22T20:18Z
+
+- Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual falhou fechado antes da leitura por `JWT issued at future` (RC 1); quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial read-only consultou 8 janelas trimestrais 2025–2026, todas `ok`, com 700 IDs transitórios; sem reconciliação ou aplicação. Senado fail-closed sem `/tmp/senado-nominal-envelope-latest.json`.
+- Dataset conferido contra `../dataset2026/candidatos/consulta_cand_2026/consulta_cand_2026_RS.csv`: 1.003/1.003 IDs, diferença `0/0`, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- Auditoria regular de fontes RC 0; strict RC 2 pelos gaps reais: votos sem fonte ALRS `4/4000`, Câmara `2/552`, Senado `455/455`; versões `1251/3/112`; eventos `1647/2/188`. Nenhum fato promovido.
+- Gates com Node 24.19.0 verdes: 401 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos, build (`release.json` local `63bb29b-20260822T201641788Z`) e `git diff --check`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-2018.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Publicação: `git push origin main` falhou novamente por resolução intermitente de `github.com`, inclusive após `gh auth setup-git`; HEAD local `63bb29b` segue 8 commits à frente de `origin/main`. Produção raiz e `/release.json` HTTP 200, ainda no release `3aae2d0`/SHA `3aae2d06338f81dc0b8c5df92ecc61ed8825dda3`; nenhum deploy novo.
+- Próximo chunk: retentar `git push origin main` quando a rede resolver GitHub; se aceito, validar backup `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial, gates locais e publicação bloqueada — 2026-08-22T19:55Z
 
 - Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual permaneceu dry-run (`planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`); quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial read-only consultou 8 janelas trimestrais 2025–2026, todas `ok`, com 700 IDs transitórios; sem reconciliação ou aplicação. Senado fail-closed sem `/tmp/senado-nominal-envelope-latest.json`.
