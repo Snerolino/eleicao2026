@@ -1,3 +1,12 @@
+## Tick contínuo — recon Câmara read-only, gates verdes e push rejeitado — 2026-08-22T23:54Z
+
+- Lock bounded adquirido/liberado com `flock -n`. Câmara oficial consultou 8 janelas trimestrais 2025–2026 com `--max-pages 1`: 8 páginas `ok`, 0 bloqueios e 700 IDs transitórios; sem reconciliação ou aplicação. ALRS FED-17 residual retornou dry-run `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os 4 casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado permanece fail-closed sem `/tmp/senado-nominal-envelope-latest.json`.
+- Auditoria read-only de fontes RC 0; gaps reais preservados: versões sem fonte ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`. Nenhum fato promovido.
+- Gates locais verdes: 401 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build com 224 módulos, sitemap 1.003 + 2 e `release.json` local `2b9bee3-20260822T235404782Z`; `git diff --check` RC 0.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-2354.md`. Worktree limpa antes desta documentação; após ela ficará pendente commit documental local.
+- Publicação: `git push origin main` falhou HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); HEAD local `2b9bee3` está 23 commits à frente de `origin/main`, sem workflow/deploy novo. Workflows backup `334951434`, primário `320564705` e verificador `335560210` estão ativos.
+- Doctor RC 1: shell Node 22.22.2 incompatível com requisito 24, Codex MCP com token expirado/401 e OpenCode ausente; Antigravity passou leitura sanitizada. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu. Próximo chunk: corrigir/revalidar permissão GitHub e retentar `main -> main`; depois validar backup/headSha/produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — gates locais verdes, recon oficial bloqueada e push rejeitado — 2026-08-22T23:10Z
 
 - Lock bounded adquirido/liberado com `flock -n`. Recon oficial: reparo ALRS FED-17 falhou fechado por `JWT issued at future`; os 4 casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Descoberta Câmara não executou porque o comando exige `--max-pages` entre 1 e 100; nenhum fato foi promovido. Senado permanece fail-closed sem envelope nominal verificável.
