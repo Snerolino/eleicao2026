@@ -6,8 +6,11 @@
 - Dataset sem mudança observável: snapshot 1.003 registros, SHA `a7db54b20bd1aa0d49003e278d48d1443617f00b772d004d711cd762d0c982cf`; `data:check` verde com 1.003 candidaturas e 988 fotos.
 - Gates verdes: 400 testes/98 arquivos, TypeScript, schema, build, sitemap 1.003 + 2 e `git diff --check`; `release.json` local `424951f-20260822T091426480Z`. Smoke local ainda será executado neste tick.
 - Doctor `OK=49 WARN=6 FAIL=2`: shell Node 22.22.2 incompatível, MCP Codex sem evidência (`401 invalid_refresh_token`), OpenCode ausente, fallback Codex vazio e Ollama sem preflight; lane local não dependeu dessas rotas.
-- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0914.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
-- HEAD local `424951f` está 68 commits à frente de `origin/main`; publicação será tentada após smoke. Só afirmar deploy após `main -> main`, workflow backup `334951434`, `headSha` e produção HTTP 200.
+- Publicação: smoke local passou com 1.002 cards, 0 HTTP failures, 0 erros de console online e service worker pronto; produção raiz e `/release.json` responderam HTTP 200. O commit documental `7853066` foi criado, mas três tentativas de `git push origin main` falharam com HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). Nenhum workflow/deploy novo foi acionado; `origin/main` permanece atrás do HEAD local.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0914.md` atualizado com a evidência de smoke, produção e bloqueio de publicação.
+
+## Próximo passo
+Retentar publicação documental no próximo tick quando a permissão efetiva permitir `main -> main`; se aceito, acompanhar o workflow backup Cloudflare `334951434`, conferir `headSha` e HTTP 200 de `https://rs.votopraquem.org`. Manter a recon oficial/read-only e os bloqueios ALRS/Senado fail-closed.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T08:55Z
 

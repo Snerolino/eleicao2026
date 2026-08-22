@@ -20,7 +20,7 @@ Nenhuma escrita em snapshot, Supabase, claims, votos, identidade, FK, Cloudflare
 - Senado: envelope nominal verificável/PDF, `legislator_id` e SHA continuam ausentes; não houve promoção.
 - Auditoria estrita: gaps de fonte descritos acima, exit lógico 2 por lacunas reais.
 - Doctor: shell cron usa Node 22.22.2 embora o projeto exija Node 24; rota MCP Codex não comprovada por `401 invalid_refresh_token`; OpenCode ausente; smoke do fallback Codex vazio; Ollama sem preflight. A lane local passou sem depender dessas rotas.
-- Publicação: `origin/main` está 68 commits atrás do HEAD local; push/deploy será tentado após este registro. Não afirmar publicação sem `main -> main`, run backup e `headSha` correspondente.
+- Publicação: smoke local passou com 1.002 cards, 0 HTTP failures, 0 erros de console online e service worker pronto; produção raiz e `/release.json` responderam HTTP 200. O commit documental `7853066` foi criado, mas três tentativas de `git push origin main` falharam com HTTP 403: `Permission to Snerolino/eleicao2026.git denied to Snerolino`. Nenhum workflow/deploy novo foi acionado; `origin/main` permanece atrás do HEAD local.
 
 ## Próximo passo
-Executar smoke local e revalidar produção; tentar `git push origin main`. Se o push for aceito, acompanhar o workflow backup Cloudflare `334951434`, conferir `headSha` e HTTP 200 de `https://rs.votopraquem.org`. Se o push continuar bloqueado, registrar a causa real e manter a recon oficial/read-only no próximo tick.
+Retentar publicação documental no próximo tick quando a permissão efetiva permitir `main -> main`; se aceito, acompanhar o workflow backup Cloudflare `334951434`, conferir `headSha` e HTTP 200 de `https://rs.votopraquem.org`. Manter a recon oficial/read-only e os bloqueios ALRS/Senado fail-closed.
