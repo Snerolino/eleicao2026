@@ -4,8 +4,8 @@
 - ALRS FED-17 residual dry-run falhou fechado com `fetch failed`; 4 residuais Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado permanece fail-closed sem envelope nominal verificável.
 - Auditoria regular de fontes RC 0; gaps reais: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` (ALRS/Câmara/Senado). Nenhum dado factual promovido.
 - Snapshot sem mudança: `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE. Gates verdes: 401 testes/98 arquivos, TypeScript, schema, build (`release.json` local `189ef01-20260822T132743516Z`), smoke 1.002 cards/0 HTTP failures/0 erros de console online/service worker pronto e `git diff --check`.
-- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1329.md`. Worktree limpa; HEAD `189ef01c597b36ffc5f3a6b63db54a45ec28825e` segue 7 commits à frente de `origin/main`.
-- Produção não revalidada neste tick: DNS de `rs.votopraquem.org` falhou (`curl` HTTP 000, `Could not resolve host`); nenhum SHA live foi afirmado. Push/deploy sem evidência nova.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1329.md`. Worktree estava limpa antes da documentação; após o commit `7de1198`, HEAD segue 8 commits à frente de `origin/main`.
+- Produção não revalidada neste tick: DNS de `rs.votopraquem.org` falhou (`curl` HTTP 000, `Could not resolve host`); nenhum SHA live foi afirmado. Commit documental `7de1198` criado após os gates; push e retry com `env -u GH_TOKEN` falharam HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), sem workflow/deploy novo.
 - Nenhuma escrita factual, Supabase ou Cloudflare ocorreu. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T13:07Z

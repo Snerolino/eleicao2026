@@ -20,9 +20,9 @@ Executar um tick bounded do control plane: recon oficial read-only, manter ALRS/
 Nenhum snapshot, claim, source reference, identidade, FK, voto, matriz, Supabase ou Cloudflare foi alterado. Aplicação factual permanece condicionada a R0, schema/FK, fonte oficial, dry-run e idempotência.
 
 ## Publicação/verificação remota
-- Worktree limpa; HEAD local `189ef01c597b36ffc5f3a6b63db54a45ec28825e`, 7 commits à frente de `origin/main`.
+- Worktree limpa antes da documentação; após o commit documental `7de1198`, HEAD local segue 8 commits à frente de `origin/main`.
 - Produção não pôde ser revalidada neste tick: DNS `rs.votopraquem.org` falhou (`curl` HTTP 000, `Could not resolve host`). Nenhum SHA live foi afirmado.
-- Push/deploy não foi executado neste tick; não há evidência de novo workflow ou release.
+- Commit documental `7de1198` criado após os gates. `git push origin main` e retry com `env -u GH_TOKEN` falharam HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); nenhum workflow/deploy novo foi acionado.
 
 ## Bloqueios reais
 - Câmara: API bloqueou a janela Q1/2025 por erro de rede; resposta global fail-closed.
