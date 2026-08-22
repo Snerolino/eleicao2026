@@ -1,3 +1,14 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T11:01Z
+
+- Lock bounded adquirido/liberado com `flock -n`; ALRS residual FED-17 dry-run confirmou `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra seguem bloqueados por ausência de ID oficial/fonte exata.
+- Câmara oficial read-only executada em 8/8 janelas trimestrais 2025–2026, todas `ok`, sem bloqueios, 700 `vote_ids` transitórios; nenhuma reconciliação ou aplicação. Senado fail-closed porque `/tmp/senado-nominal-envelope-latest.json` não existe.
+- Auditoria de fontes read-only mantém gaps reais: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` (ALRS/Câmara/Senado); strict gate exit 2, sem promoção factual.
+- Dataset sem mudança: 1.003 IDs no CSV e snapshot, diferença `0/0`; CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; snapshot SHA `a7db54b20bd1aa0d49003e278d48d1443617f00b772d004d711cd762d0c982cf`.
+- Produção revalidada: raiz HTTP 200 e `/release.json` HTTP 200; live `e925327276b82481a348d4db3e2339d075dfe9a3`, versão `0.2.724`, built_at `2026-08-21T14:57:42.462Z`, snapshot 1.003 com SHA oficial do CSV. Live não corresponde ao HEAD local recém-criado.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1101.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Push documental falhou HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); sem workflow/deploy novo. Doctor smoke: Node 22.22.2 incompatível com requisito 24, MCP/Codex `401 invalid_refresh_token`, OpenCode ausente e Ollama sem preflight.
+- Próximo chunk: retentar push quando a permissão efetiva permitir `main -> main`; após aceitação validar backup `334951434`, `headSha` e produção. Manter ALRS/Senado fail-closed e recon Câmara read-only.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T10:42Z
 
 - Lock bounded adquirido/liberado com `flock -n`; ALRS residual dry-run confirmou `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra seguem bloqueados por ausência de ID oficial/fonte exata.
