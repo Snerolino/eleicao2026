@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T14:35Z
+
+- Lock bounded adquirido/liberado com `flock -n`; dataset oficial e snapshot conferidos por `SQ_CANDIDATO`/`tse_candidate_id`: `1003/1003`, diferença `0/0`. CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; snapshot SHA `a7db54b20bd1aa0d49003e278d48d1443617f00b772d004d711cd762d0c982cf`.
+- Gates locais verdes: 401 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos, build (`release.json` local `cc86810-20260822T143219847Z`), smoke passou na repetição com 1.002 cards/0 HTTP failures/0 erros de console/service worker pronto e `git diff --check`.
+- Auditoria de fontes regular RC 0; strict RC 2 pelos gaps reais: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` (ALRS/Câmara/Senado). Nenhum dado factual promovido; ALRS Enio Carlos Terra e Senado permanecem fail-closed.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1435.md`. Primeira tentativa do smoke falhou transitoriamente com `cards=0` durante carregamento; repetição verificada passou.
+- Publicação: `git push origin main` e retry com `env -u GH_TOKEN` falharam HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), sem workflow/deploy novo. Worktree agora contém somente a documentação deste tick; HEAD `cc86810` segue 11 commits à frente de `origin/main`.
+- Produção `/release.json` HTTP 200, versão `0.2.806`, mas payload sem `commitSha`/`headSha`/`snapshotSha`/`builtAt`; não há correspondência verificável com o HEAD local. Workflows remotos: backup `334951434`, primário `320564705`, verificador `335560210`.
+- Nenhuma escrita factual, Supabase ou Cloudflare ocorreu. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T14:13Z
 
 - Lock bounded adquirido/liberado com `flock -n`; ALRS FED-17 residual falhou fechado por `fetch failed`, mantendo 4 residuais Enio Carlos Terra sem ID oficial/fonte exata. Câmara oficial read-only em 8 janelas trimestrais 2025–2026: Q1/2025 bloqueada por `network_error`/`fetch failed`, demais `ok`; por fail-closed `vote_ids=[]`, sem reconciliação/aplicação. Senado continua sem envelope verificável.
