@@ -7,7 +7,7 @@
 - Auditoria estrita permanece com gaps reais de fontes ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; exit 2, sem promoção.
 - Doctor `OK=48 WARN=5 FAIL=1`: shell Node 22.22.2 incompatível; OpenCode ausente, Ollama sem preflight e MCP não exercitado. Gates do projeto passaram.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0731.md`. Nenhuma escrita factual, Supabase ou Cloudflare.
-- Publicação: `git push origin main` e retry com `env -u GH_TOKEN` falharam HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); HEAD local permanece 60 commits à frente de `origin/main`, sem workflow novo. Produção revalidada: raiz e `/release.json` HTTP 200, live `e925327276b82481a348d4db3e2339d075dfe9a3`, versão `0.2.724`, snapshot 1.003; não corresponde ao HEAD local. Workflows ativos: backup `334951434`, primário `320564705`, verificador `335560210`.
+- Publicação: `git push origin main` e retry com `env -u GH_TOKEN` falharam HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); Commit documental `ae68e2c` criado; HEAD local permanece 61 commits à frente de `origin/main`, sem workflow novo. Produção revalidada: raiz e `/release.json` HTTP 200, live `e925327276b82481a348d4db3e2339d075dfe9a3`, versão `0.2.724`, snapshot 1.003; não corresponde ao HEAD local. Workflows ativos: backup `334951434`, primário `320564705`, verificador `335560210`.
 - Próximo chunk: retentar publicação documental quando a permissão efetiva permitir `main -> main`; então validar backup, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T07:10Z
