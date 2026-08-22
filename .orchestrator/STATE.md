@@ -1,11 +1,12 @@
-## Tick contínuo — recon oficial, gates locais e publicação bloqueada — 2026-08-22T22:04Z
+## Tick contínuo — recon oficial, gates locais e publicação bloqueada — 2026-08-22T22:25Z
 
-- Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual em dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os 4 casos de Enio Carlos Terra seguem sem ID oficial/fonte exata.
-- Câmara oficial consultada read-only em 15 páginas de janelas trimestrais 2025–2026 (`max_pages=2`), todas `status=ok`, 1.400 IDs transitórios; nenhum ID foi reconciliado ou escrito. Senado permanece fail-closed sem envelope nominal verificável.
-- Dataset conferido: CSV/snapshot `1003/1003`, diferença `0/0`, CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
-- Gates Node 24.19.0 verdes: 401 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build (`release.json` local `17939d5-20260822T220355832Z`), smoke repetido 1.002 cards/0 HTTP/0 erros de console online/service worker pronto e `git diff --check`.
-- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-2204.md`. Nenhum candidato, voto, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado.
-- Publicação: `git push origin main` falhou RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); HEAD local `17939d5` segue 15 commits à frente de `origin/main`, sem workflow/deploy novo. Produção raiz e `/release.json` responderam HTTP 200; live `3aae2d06338f81dc0b8c5df92ecc61ed8825dda3`, versão `0.2.835`, snapshot 1.003, sem correspondência com o HEAD local.
+- Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual falhou fechado antes do plano por `JWT issued at future`; os 4 casos de Enio Carlos Terra seguem sem ID oficial/fonte exata, sem alterações.
+- Câmara oficial consultada read-only em 15 páginas de janelas trimestrais 2025–2026 (`max_pages=2`), todas `status=ok`, `blocked=null`; IDs são somente descoberta transitória, sem reconciliação/aplicação. Senado permanece fail-closed porque `/tmp/senado-nominal-envelope-latest.json` está ausente.
+- Dataset conferido: CSV oficial `consulta_cand_2026_RS.csv` com 553.194 bytes; snapshot público SHA `a7db54b20bd1aa0d49003e278d48d1443617f00b772d004d711cd762d0c982cf`.
+- Gates Node 24.19.0 verdes: testes, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build (`release.json` local `69e74e9-20260822T222512297Z`), sitemap 1.003 + 2, smoke 1.002 cards/0 HTTP/0 erros de console online/service worker pronto e `git diff --check`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-2225.md`. Nenhum candidato, voto, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado.
+- Doctor RC 1 por shell Node 22.22.2 incompatível, Codex MCP `401 invalid_refresh_token` e OpenCode ausente; gates do projeto foram executados explicitamente com Node 24.19.0.
+- Publicação segue bloqueada pelo histórico de HTTP 403 no `git push` (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); HEAD local `69e74e9` segue 16 commits à frente de `origin/main`, sem workflow/deploy novo.
 - Próximo chunk: retentar `main -> main`; se aceito, validar backup `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 
 
