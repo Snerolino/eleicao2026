@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T11:42Z
+
+- Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026, todas `ok`, `blocked=null`, sem reconciliação/aplicação. ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`.
+- Senado fail-closed por ausência de `/tmp/senado-nominal-envelope-latest.json`. Auditoria de fontes read-only exit 0; strict exit 2 pelos gaps reais: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` (ALRS/Câmara/Senado). Nenhum dado factual promovido.
+- Dataset sem mudança: `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE; nenhum refresh factual.
+- Gates executados com Node 24.19.0: 401 testes/98 arquivos, TypeScript, schema, data:check, build com sitemap 1.003 + 2 e `release.json` local `d884f84-20260822T114135484Z`, `git diff --check`; smoke verde com 1.002 cards/0 HTTP failures/0 console errors/service worker pronto.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1142.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Commit documental criado após os gates; `git push origin main` e retry com `env -u GH_TOKEN` falharam HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), sem workflow/deploy novo. Worktree permanece limpa, 82 commits à frente de `origin/main`. Produção existente revalidada: raiz HTTP 200 e `/release.json` HTTP 200; nenhum `headSha` novo foi afirmado.
+- Próximo chunk: retentar push quando a permissão efetiva permitir `main -> main`; se aceito, validar backup Cloudflare `334951434`, `headSha` e produção. Manter ALRS/Senado fail-closed e aplicação remota condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T11:22Z
 
 - Lock bounded adquirido/liberado com `flock -n`; ALRS FED-17 dry-run confirmou `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra seguem bloqueados por ausência de ID oficial/fonte exata.
