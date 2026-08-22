@@ -11,7 +11,7 @@ describe('plan-alrs-matrix-apply', () => {
   });
   it('planeja somente pacote explicitamente aprovado e completo', () => {
     const result = planAlrsMatrixApply({ review_status: 'approved', public_approval: true, items: [{ proposition_version_id: 'v', review_key: 'k', version_key_collision: false, factual_source_gate: 'green', substantive_source_gate: 'green', human_review_required: true, editorial_status: 'approved', editorial_disposition: 'assess', assessments: [{ group_slug: 'mulheres' }] }] });
-    expect(result).toMatchObject({ ok: true, remote_apply: false, planned_versions: 1 });
+    expect(result).toMatchObject({ ok: true, remote_apply: false, input_versions: 1, planned_versions: 1 });
   });
   it('não exige assessment para disposição sem grupo direto', () => {
     const result = planAlrsMatrixApply({ review_status: 'approved', public_approval: true, items: [{ proposition_version_id: 'v', review_key: 'k', version_key_collision: false, factual_source_gate: 'green', substantive_source_gate: 'blocked_until_impact_sources', human_review_required: true, editorial_status: 'approved', editorial_disposition: 'no_direct_population_group', assessments: [] }] });

@@ -1,5 +1,18 @@
 # Changelog do contexto exportado
 
+## 2026-08-22
+
+- Contrato editorial ALRS refinado: `editorial_disposition` aceita `assess`,
+  `no_direct_population_group`, `taxonomy_gap` e `excluded`; somente `assess`
+  entra no apply plan.
+- Fila de fontes substantivas P1 passou a cobrir 18/18 versões, com uma coleta
+  por versão e `requested_for_groups` para preservar múltiplos grupos sem duplicar
+  documentos.
+- Preparada migration local `20260822120000_harden_impact_approval_and_legislators_rls.sql`:
+  caller editor obrigatório na RPC de aprovação, helpers internos sem execução
+  pública e RLS explícita para `legislators`. A migration ainda não foi aplicada
+  remotamente.
+
 ## 2026-08-12
 
 - Fase 2 marcada como fechada em produção no release

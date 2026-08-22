@@ -2003,6 +2003,14 @@ Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; som
 - Apply plan corrente: 66 erros decompostos em 2 globais, 18 fontes P1, 23 status editoriais e 23 assessments vazios.
 - QA: `docs/qa/lote-alrs-current-package-regeneration-2026-08-21.md`.
 
+## Tick contínuo — revisão estrutural pós-checkpoint (2026-08-22)
+
+- Planner usa `input_versions` e disposição editorial; somente `assess` entra no apply plan.
+- Fila substantiva cobre 18/18 P1, uma coleta por versão com `requested_for_groups`.
+- Migration local de hardening Supabase preparada, sem aplicação remota.
+- Auditoria npm bloqueada por DNS do registry; sem afirmação de vulnerabilidades novas.
+- QA: `docs/qa/lote-alrs-structural-review-2026-08-22.md`.
+
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)
 
 - 30/30 itens P0 classificados: 9 mérito, 19 procedimento, 2 emenda, 0 destaque.

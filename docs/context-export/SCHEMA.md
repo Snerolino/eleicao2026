@@ -96,13 +96,13 @@ Novas tabelas da Matriz de Impacto Populacional v1 (todas com RLS habilitado):
 - `legislative_votes` — SOMENTE fato: `value` (`sim|nao|abstencao|ausente|obstrucao`) e `absence_type` condicionado (`sim/nao/abstencao` → null; `ausente/obstrucao` → `estrategica|obstrucao_coordenada|justificada`). Nunca armazena impacto/alinhamento/grupo/score.
 - `beneficiary_groups` — catalogo versionado (14 slugs v1). Slugs nunca renomeados; evolucao via `deprecated_at` + `replacement_slug`. `geral` nao e grupo pontuavel.
 - `beneficiary_group_aliases` — variantes de grafia.
-- `impact_matrices` — matriz por `proposition_version_id` + `methodology_version` (unico); `severity` 1..5; `structural_type` (`structural|budgetary|symbolic`); `review_status` (`rascunho|pending_review|approved|contested`).
+- `impact_matrices` — matriz por `proposition_version_id` + `methodology_version` (unico); `severity` 1..5; `structural_type` (`structural|budgetary|symbolic`); `review_status` (`rascunho|pending_review|approved|contested`). A disposição editorial ocorre antes da matriz: `assess`, `no_direct_population_group`, `taxonomy_gap` ou `excluded`; somente `assess` pode gerar matriz.
 - `impact_assessments` — por grupo: `defending_vote` (`sim|nao`), `impact_direction` (`positive|negative|mixed|unclear`), `rationale` (>= 20 chars), `confidence` (0..1]; unico por matriz+grupo. Trigger garante: positive/negative → defending_vote obrigatorio; unclear → null.
 - `impact_assessment_sources` — ligacao N:N assessment ↔ `source_references`.
 - `impact_reviews` — revisao propria da matriz (`curadoria_interna|painel_externo`; `approved|rejected|needs_changes`).
 - `impact_contestations` — contestacao publica (`open|under_review|resolved|rejected`); justificativa original nunca apagada.
 
-RPC `approve_impact_matrix(uuid)` — aprovacao transacional que exige:
+RPC `approve_impact_matrix(uuid)` — aprovação transacional que exige caller com `editor_roles` e:
 1. matriz em `pending_review`;
 2. assessment valido com fontes e confidence na faixa;
 3. defending_vote conforme metodologia;
@@ -111,7 +111,7 @@ RPC `approve_impact_matrix(uuid)` — aprovacao transacional que exige:
 6. sem contestacao bloqueante (`open|under_review`).
 Aprovado → `review_status='approved'` + `approved_at=now()`.
 
-Helpers internos: `impact_matrix_has_internal_approval`, `impact_matrix_has_external_approval`, `impact_matrix_has_blocking_contestation`, `impact_assessment_defending_ok` (trigger).
+Helpers internos: `impact_matrix_has_internal_approval`, `impact_matrix_has_external_approval`, `impact_matrix_has_blocking_contestation`, `impact_assessment_defending_ok` (trigger). Os três helpers de consulta não devem ter `EXECUTE` público; a migration local de hardening ainda aguarda aplicação remota.
 
 RLS: publico le somente `approved|contested` de matriz/assessments/fontes; `impact_reviews` so editores; `impact_contestations` publico le `open|under_review|resolved`. Grants: leitura anon/authenticated concedida nas tabelas publicaveis; `approve_impact_matrix` somente `authenticated` (revogado de `anon`). Correção remota `20260812000000_grant_public_read.sql` aplicada após erro 42501 por policy sem GRANT base.
 

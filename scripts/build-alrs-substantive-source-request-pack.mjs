@@ -47,7 +47,7 @@ export function buildRequestPack(pack) {
       requests: items.length,
       versions: items.length,
       excluded_with_substantive_source: (pack.items ?? []).filter((item) => item.substantive_source_gate === 'green').length,
-      uncovered_merit_versions: items.filter((item) => item.requested_for_groups.length === 0).length,
+      versions_without_preidentified_groups: items.filter((item) => item.requested_for_groups.length === 0).length,
     },
     items,
   };
