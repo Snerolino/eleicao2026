@@ -4,8 +4,9 @@
 - Auditoria de fontes read-only RC 0; strict RC 2 pelos gaps reais: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` (ALRS/Câmara/Senado). Nenhum dado factual promovido.
 - Dataset sem mudança: CSV e snapshot `1003/1003` IDs, diferença `0/0`; CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; snapshot SHA `a7db54b20bd1aa0d49003e278d48d1443617f00b772d004d711cd762d0c982cf`; `data:check` 1.003 candidaturas/988 fotos.
 - Gates verdes: 401 testes/98 arquivos, TypeScript, schema, data:check, build, `git diff --check`; build release local `b61ab9c-20260822T122518614Z`, sitemap 1.003 + 2. Smoke falhou transitoriamente com `cards=0` durante carregamento e passou na repetição com 1.002 cards/0 HTTP failures/0 console errors/service worker pronto.
-- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1227.md`. Produção existente root e `/release.json` HTTP 200, live `823e9df5073070207a76d3247974fd9f607ff113`, versão `0.2.806`, não corresponde ao HEAD local `b61ab9c`. Workflows remotos backup `334951434`, primário `320564705`, verificador `335560210`.
-- Nenhuma escrita factual, Supabase ou Cloudflare ocorreu. Próximo chunk: tentar `git push origin main`; se aceito, validar workflow backup `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1227.md`. Produção existente root e `/release.json` HTTP 200, live `823e9df5073070207a76d3247974fd9f607ff113`, versão `0.2.806`, não corresponde ao HEAD local. Workflows remotos backup `334951434`, primário `320564705`, verificador `335560210`.
+- Push tentado duas vezes após os gates e bloqueado em HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); nenhum workflow/deploy novo foi acionado. Próximo chunk: retentar `main -> main` quando a permissão efetiva permitir.
+- Nenhuma escrita factual, Supabase ou Cloudflare ocorreu. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 
 
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T11:42Z

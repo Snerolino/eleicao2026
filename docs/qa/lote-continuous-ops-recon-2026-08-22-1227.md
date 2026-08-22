@@ -38,8 +38,7 @@ e verificar publicação existente sem promover fatos sem fonte.
   com SHA oficial do CSV. Não corresponde ao HEAD local `b61ab9c`.
 - Workflows remotos encontrados: backup Cloudflare `334951434`, primário
   `320564705`, verificador `335560210`.
-- Push ainda não foi tentado neste tick após os gates; o HEAD local está 1 commit
-  à frente de `origin/main`. Não acionar workflow/deploy até o push ser aceito.
+- Push tentado duas vezes após os gates; ambas falharam com HTTP 403: `Permission to Snerolino/eleicao2026.git denied to Snerolino`. O HEAD local `b77ed16` está 2 commits à frente de `origin/main`; nenhum workflow/deploy novo foi acionado.
 - Nenhuma escrita factual, migration, Supabase ou Cloudflare foi realizada.
 
 ## Próximo passo
