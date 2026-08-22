@@ -7,6 +7,7 @@
 - Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build (`release.json` local `9cc5770-20260822T021820618Z`, sitemap 1.003 + 2), smoke local 1.002 cards/0 HTTP/console errors/service worker e `git diff --check`.
 - Produção: `/release.json` HTTP 200 com live `e925327276b82481a348d4db3e2339d075dfe9a3`; raiz falhou DNS HTTP 000, sem validação HTTP completa.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0217.md`. Nenhuma escrita factual, snapshot, Supabase ou Cloudflare ocorreu.
+- Commit documental criado: `2132122` (`docs: registra tick de recon oficial`). `git push origin main` falhou HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), apesar de `gh auth status` mostrar conta ativa; nenhum workflow/deploy foi acionado.
 - Push/publicação segue bloqueado por HTTP 403 de permissão efetiva; node padrão do shell 22.22.2, gates executados com Node 24.19.0.
 - Próximo chunk: repetir recon bounded Câmara e manter ALRS/Senado fail-closed; publicação após push efetivo. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 
