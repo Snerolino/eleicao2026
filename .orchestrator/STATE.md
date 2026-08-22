@@ -1,3 +1,16 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T00:07Z
+
+- Lock bounded adquirido/liberado com `flock -n`; recon oficial read-only e lane local executadas sem escrita factual/remota.
+- Câmara: `impact:camara:discover` cobriu 8 janelas trimestrais; 7 `ok` e a janela 2025-01-01–2025-03-31 falhou fechado com `fetch failed`; `vote_ids=0` nesta execução, sem reconciliação/aplicação.
+- ALRS FED-17 dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra continuam sem ID oficial/fonte exata.
+- Senado fail-closed por `/tmp/senado-nominal-envelope-latest.json` ausente (`ENOENT`); nenhum PDF, `legislator_id`, FK ou voto promovido.
+- Auditoria estrita: gaps de fontes `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; sem promoção. `data:check`: 1.003 candidaturas, 988 fotos e 1 fonte TSE.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, data:check, build (sitemap 1.003 + 2), smoke local na repetição (1.002 cards/0 HTTP/console errors/service worker) e `git diff --check`.
+- Doctor cron: `OK=49 WARN=6 FAIL=2` por shell Node 22.22.2 e rota Codex MCP/fallback com `401 invalid_refresh_token`; OpenCode ausente e Ollama sem preflight. Gates do projeto executados explicitamente com Node 24.19.0.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0007.md`.
+- Nenhuma escrita factual, Supabase, Cloudflare, snapshot, identidade, FK, voto, claim ou matriz ocorreu neste tick.
+- Próximo chunk: repetir a janela Câmara bloqueada quando a API voltar; manter ALRS/Senado fail-closed e seguir publicação documental autorizada se o push estiver disponível.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-21T23:45Z
 
 - Lock bounded adquirido/liberado com `flock -n`; recon oficial read-only e gates locais executados sem escrita factual/remota.
