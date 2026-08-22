@@ -1,3 +1,14 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T09:14Z
+
+- Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026, `max_pages=1`, sem reconciliação/aplicação.
+- ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado permanece fail-closed sem envelope nominal verificável.
+- Auditoria estrita read-only mantém gaps reais de fontes ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; sem promoção factual.
+- Dataset sem mudança observável: snapshot 1.003 registros, SHA `a7db54b20bd1aa0d49003e278d48d1443617f00b772d004d711cd762d0c982cf`; `data:check` verde com 1.003 candidaturas e 988 fotos.
+- Gates verdes: 400 testes/98 arquivos, TypeScript, schema, build, sitemap 1.003 + 2 e `git diff --check`; `release.json` local `424951f-20260822T091426480Z`. Smoke local ainda será executado neste tick.
+- Doctor `OK=49 WARN=6 FAIL=2`: shell Node 22.22.2 incompatível, MCP Codex sem evidência (`401 invalid_refresh_token`), OpenCode ausente, fallback Codex vazio e Ollama sem preflight; lane local não dependeu dessas rotas.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0914.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- HEAD local `424951f` está 68 commits à frente de `origin/main`; publicação será tentada após smoke. Só afirmar deploy após `main -> main`, workflow backup `334951434`, `headSha` e produção HTTP 200.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T08:55Z
 
 - Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026, `max_pages=1`, sem reconciliação/aplicação.
