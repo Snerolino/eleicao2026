@@ -1,3 +1,12 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T18:11Z
+
+- Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual permaneceu dry-run (`planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`); quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial read-only consultou 8 janelas trimestrais 2025–2026, 8 páginas, todas `ok`, sem reconciliação/aplicação. Senado permaneceu fail-closed sem envelope nominal verificável.
+- Auditoria regular de fontes RC 0; strict mantém gaps reais: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` em ALRS/Câmara/Senado. Nenhum fato promovido.
+- Dataset/gates verdes com Node 24.19.0: 401 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas e 988 fotos, build (`release.json` local `3aae2d0-20260822T180739081Z`), sitemap 1.003 + 2 e `git diff --check`.
+- Smoke repetido passou após falhas transitórias de carregamento/estado de comparação: 1.002 cards, 0 HTTP failures, 0 erros de console online e service worker pronto. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1811.md`. Doctor continua bloqueado por shell Node 22.22.2 incompatível, MCP Codex `401 invalid_refresh_token`, OpenCode ausente e Ollama sem preflight; gates usaram Node 24.19.0.
+- HEAD iniciou alinhado a `origin/main`; a documentação deste tick ainda será commitada e publicada no próximo passo. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T17:48Z
 
 - Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual permaneceu dry-run (`planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`); quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial read-only consultou 8 janelas trimestrais 2025–2026, todas `ok`, sem reconciliação/aplicação. Senado permaneceu fail-closed sem envelope nominal verificável.
