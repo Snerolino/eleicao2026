@@ -23,7 +23,8 @@ Executar um tick bounded do control plane: manter recon oficial read-only ativa,
 ## Publicação e bloqueios
 - Worktree iniciou limpa em `006bb9c`; segue limpa após os gates e está 18 commits à frente de `origin/main`.
 - `npm run orch:doctor -- --smoke`: RC 1 por Node do shell em `v22.22.2` enquanto o projeto exige Node 24 e por ausência de evidência estruturada da rota MCP Codex; OpenCode ausente e fallback Codex com token expirado. Os gates foram executados explicitamente com Node 24.19.0.
-- Push/deploy não foi repetido neste tick porque o bloqueio de publicação documentado permanece efetivo: GitHub remoto rejeita `main -> main` com HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). Sem push não há novo workflow, `headSha` ou release de produção para validar.
+- `git push origin main` foi tentado após os gates e falhou com RC 128 por `Could not resolve host: github.com`; portanto não houve novo workflow. Worktree ficou limpa no commit local `d271312` e 19 commits à frente de `origin/main`.
+- Workflows remotos backup `334951434`, primário `320564705` e verificador `335560210` estão ativos. Produção `/release.json` respondeu HTTP 200, mas permanece em `0.2.835` sem `commitSha`, `headSha`, `snapshotSha` ou `builtAt`; a raiz expirou por timeout DNS (`HTTP 000`). Não há correspondência verificável com o HEAD local.
 - Nenhum candidato, voto, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado.
 
 ## Próximo passo
