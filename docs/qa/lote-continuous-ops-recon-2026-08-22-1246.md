@@ -33,13 +33,16 @@ permitir; manter fail-closed qualquer fato sem fonte oficial.
   console online, service worker pronto.
 
 ## Publicação e bloqueios
-- Worktree iniciou limpa e permanece somente com esta documentação e a entrada
-  correspondente no `STATE.md`; HEAD local `c67efb1` está 3 commits à frente de
-  `origin/main`.
-- Push/deploy não foram repetidos neste tick porque a permissão efetiva já
-  falhou no tick anterior com HTTP 403 (`Permission to Snerolino/eleicao2026.git
-  denied to Snerolino`). Nenhum workflow novo foi acionado; não afirmar release
-  remoto para este HEAD.
+- Worktree iniciou limpa; após a documentação, o HEAD local é `1a3b15b` e está
+  4 commits à frente de `origin/main`.
+- `git push origin main` foi tentado após o commit e falhou novamente com HTTP
+  403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), portanto
+  nenhum workflow novo foi acionado; HEAD local `1a3b15b` permanece 4 commits à
+  frente de `origin/main`.
+- Produção foi revalidada independentemente: raiz HTTP 200; `/release.json`
+  HTTP 200, live `823e9df5073070207a76d3247974fd9f607ff113`, versão `0.2.806`,
+  snapshot 1.003 e SHA do CSV oficial correto. Live não corresponde ao HEAD
+  local.
 - Nenhuma escrita factual, migration, Supabase ou Cloudflare ocorreu.
 
 ## Próximo passo
