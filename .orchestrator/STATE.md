@@ -5,6 +5,7 @@
 - Dataset/snapshot e gates Node 24.19.0 verdes: 401 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos, build (`release.json` local `812b808-20260822T205651676Z`), sitemap 1.003 + 2, `git diff --check` e smoke 1.002 cards/0 HTTP/console errors/service worker pronto.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-2057.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
 - Publicação: `git push origin main` falhou RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); HEAD local `812b808` segue 10 commits à frente de `origin/main`, sem workflow/deploy novo.
+- Verificação remota: workflows backup `334951434`, primário `320564705` e verificador `335560210` estão ativos; produção `/release.json` respondeu HTTP 200, mas permanece no release `3aae2d0`/SHA `3aae2d06338f81dc0b8c5df92ecc61ed8825dda3` (`0.2.835`), sem correspondência com o HEAD local.
 - Doctor permanece RC 1 porque o shell usa Node 22.22.2; os gates usaram Node 24.19.0 explicitamente. Senado segue fail-closed sem envelope nominal verificável.
 - Próximo chunk: retentar `main -> main`; se aceito, validar backup `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 

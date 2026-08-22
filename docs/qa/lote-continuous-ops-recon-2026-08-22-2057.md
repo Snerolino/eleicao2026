@@ -26,6 +26,10 @@ factual remota.
 ## Bloqueios
 - Publicação bloqueada: `git push origin main` retornou RC 128 / HTTP 403:
   `Permission to Snerolino/eleicao2026.git denied to Snerolino`.
+- Verificação remota: workflows backup `334951434`, primário `320564705` e
+  verificador `335560210` estão ativos; `/release.json` de produção respondeu
+  HTTP 200 no release `3aae2d0`/SHA `3aae2d06338f81dc0b8c5df92ecc61ed8825dda3`
+  (`0.2.835`), sem correspondência com o HEAD local.
 - Sem push, nenhum workflow Cloudflare foi acionado; não há novo `headSha` ou
   release de produção para validar neste tick.
 - ALRS residual permanece fail-closed por falta de identidade/fonte exata.
