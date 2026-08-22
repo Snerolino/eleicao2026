@@ -46,5 +46,11 @@ Executados com Node `v24.19.0`:
 - `git status`: worktree limpa após o build; `main` está 77 commits à frente de `origin/main`.
 - Push/deploy não executado neste tick; próximo passo automático é tentar `main -> main`, e somente se aceito acompanhar o workflow backup Cloudflare `334951434`, conferir `headSha` e validar produção. Nenhuma migration, escrita Supabase, Cloudflare direto ou DNS foi realizada.
 
+## Verificação de publicação
+
+- Produção revalidada sem novo deploy: `https://rs.votopraquem.org` retornou HTTP 200.
+- `https://rs.votopraquem.org/release.json` retornou versão `0.2.724`, sem `commitSha`, `snapshotSha` ou `builtAt`; não há correspondência verificável com o HEAD local.
+- Workflows remotos ativos: backup Cloudflare `334951434`, primário `320564705`, verificador `335560210`. Nenhum run novo foi disparado porque o push falhou.
+
 ## Próximo passo
 Retentar publicação documental autorizada quando a permissão efetiva do GitHub aceitar `main -> main`; manter recon ALRS/Senado fail-closed e recon Câmara read-only. Aplicação factual remota permanece condicionada a R0, schema/FK, fonte oficial, dry-run e prova de idempotência.
