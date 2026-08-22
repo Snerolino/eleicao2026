@@ -1,3 +1,16 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T06:00Z
+
+- Lock bounded adquirido/liberado com `flock -n`; recon Câmara, ALRS, auditoria estrita, dataset e gates locais executados read-only/fail-closed.
+- Câmara: 22 páginas em 8 janelas oficiais `2025-01-01`–`2026-12-31` responderam `ok`, sem bloqueios; 2.100 `vote_ids` descobertos somente em memória, sem reconciliação/aplicação.
+- ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado permanece fail-closed.
+- Auditoria estrita saiu 2 por gaps reais de fontes ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; sem promoção.
+- Dataset sem mudança: `data:check` verde com 1.003 candidaturas, 988 fotos e 1 fonte TSE; SHA CSV do checkpoint `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`, 1.003/1.003 IDs.
+- Gates: testes verdes (400/98), TypeScript, schema, data:check, build e `git diff --check`; smoke local falhou em duas tentativas (`cards=0` durante carregamento e timeout na comparação), portanto não foi declarado verde.
+- Doctor: `OK=52 WARN=4 FAIL=1`; Node 24.19.0 compatível, FAIL por rota MCP Codex sem evidência (`401 invalid_refresh_token`), Ollama sem preflight.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0600.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Push falhou HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); nenhum workflow novo. Produção existente revalidada: root HTTP 200, `/release.json` HTTP 200, live `e925327276b82481a348d4db3e2339d075dfe9a3`, snapshot 1.003/SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- Próximo chunk: diagnosticar smoke assíncrono e retentar publicação quando permissão efetiva existir; manter ALRS/Senado fail-closed e aplicação remota condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T05:36Z
 
 - Lock bounded adquirido/liberado com `flock -n`; recon Câmara, ALRS, auditoria estrita e lane local executadas read-only/fail-closed.
