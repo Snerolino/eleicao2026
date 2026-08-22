@@ -1,4 +1,13 @@
-## Tick contínuo — recon oficial, gates locais e publicação bloqueada — 2026-08-22T22:25Z
+## Tick contínuo — recon oficial, gates locais e publicação bloqueada — 2026-08-22T22:49Z
+
+- Lock bounded adquirido/liberado com `flock -n`. Câmara oficial consultou 14 páginas de janelas trimestrais 2025–2026: 13 `ok` e uma bloqueada por `network_error`/`fetch failed`; por fail-closed `vote_ids=0`, sem reconciliação/aplicação. ALRS FED-17 residual falhou fechado com `fetch failed`; os 4 casos Enio Carlos Terra continuam sem ID oficial/fonte exata. Senado permanece fail-closed sem `/tmp/senado-nominal-envelope-latest.json`.
+- Dataset conferido: CSV oficial 553.194 bytes; snapshot SHA `a7db54b20bd1aa0d49003e278d48d1443617f00b772d004d711cd762d0c982cf`; `data:check` confirmou 1.003 candidaturas/988 fotos/1 fonte TSE. Nenhum dado factual promovido.
+- Auditoria de fontes regular RC 0; gaps reais: versões sem fonte ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`.
+- Gates Node 24.19.0 verdes: 401 testes/98 arquivos, TypeScript, schema, `data:check`, build (224 módulos), `git diff --check` e smoke na repetição com 1.002 cards/0 HTTP failures/0 console errors/service worker pronto. Primeira tentativa do smoke falhou transitoriamente esperando `table`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-2249.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Doctor RC 1 por shell Node 22.22.2 incompatível, Codex MCP sem evidência estruturada/token expirado e OpenCode ausente; gates usaram Node 24.19.0 explicitamente.
+- Worktree limpa, HEAD `006bb9c` 18 commits à frente de `origin/main`. Publicação permanece bloqueada por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); nenhum workflow/deploy novo. Próximo chunk: retentar `main -> main`; se aceito, validar backup `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 
 - Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual falhou fechado antes do plano por `JWT issued at future`; os 4 casos de Enio Carlos Terra seguem sem ID oficial/fonte exata, sem alterações.
 - Câmara oficial consultada read-only em 15 páginas de janelas trimestrais 2025–2026 (`max_pages=2`), todas `status=ok`, `blocked=null`; IDs são somente descoberta transitória, sem reconciliação/aplicação. Senado permanece fail-closed porque `/tmp/senado-nominal-envelope-latest.json` está ausente.
