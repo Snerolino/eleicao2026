@@ -1,11 +1,13 @@
-## Tick contínuo — recon oficial e publicação bloqueada — 2026-08-22T16:42Z
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T17:26Z
 
-- Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual permaneceu dry-run (`planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`); quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial read-only percorreu 15 páginas em janelas trimestrais 2025–2026, todas `ok`, com `vote_ids=1400`; nenhum voto foi reconciliado/aplicado. Senado permaneceu fail-closed sem envelope nominal verificável.
+- Lock bounded testado/adquirido/liberado com `flock -n`. ALRS FED-17 residual permaneceu dry-run (`planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`); quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial read-only consultou 8 janelas trimestrais 2025–2026, todas `ok`, sem reconciliação/aplicação. Senado permaneceu fail-closed sem envelope nominal verificável.
 - Auditoria regular de fontes RC 0; strict RC 2 pelos gaps reais: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` em ALRS/Câmara/Senado. Nenhum fato promovido.
-- Dataset conferido contra `consulta_cand_2026_RS.csv`: 1.003/1.003 IDs, diferença `0/0`, CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; `lista_candidatos_2026.csv` tem 322 linhas e não é o snapshot completo. `npm run data:check` confirmou 1.003 candidaturas e 988 fotos.
-- Gates com Node 24.19.0 verdes: 401 testes/98 arquivos, TypeScript, schema, build (`release.json` local `e3bb312-20260822T164221331Z`), smoke 1.002 cards/0 HTTP/console errors/service worker pronto e `git diff --check`.
-- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1642.md`. Commit documental local `81d5497` criado.
-- Publicação: `git push origin main` e retry falharam HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); nenhum workflow/deploy novo. Produção root/release HTTP 200; workflows backup `334951434`, primário `320564705`, verificador `335560210` confirmados. Próximo chunk: retentar push quando a permissão efetiva permitir; se aceito, validar backup Cloudflare `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+- Dataset conferido contra `consulta_cand_2026_RS.csv`: 1.003/1.003 IDs, diferença `0/0`, CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; `npm run data:check` confirmou 1.003 candidaturas e 988 fotos.
+- Gates com Node 24.19.0 verdes: 401 testes/98 arquivos, TypeScript, schema, build (`release.json` local `5c25ee6-20260822T172518608Z`), smoke 1.002 cards/0 HTTP/console errors/service worker pronto e `git diff --check`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1726.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Produção: `/release.json` HTTP 200 reportou SHA `5c25ee656ced3283002b8a5c2c83400a55f9e558`, versão `0.2.830`, snapshot 1.003 com SHA oficial; raiz retornou HTTP 000 por falha DNS (`Could not resolve host`). Workflows backup `334951434`, primário `320564705`, verificador `335560210` confirmados.
+- Publicação: documentação ainda não publicada; próximo chunk é `git push origin main`. Se aceito, validar backup Cloudflare `334951434`, `headSha` e produção; se 403, registrar bloqueio real. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 
 ## Tick contínuo — recon oficial e publicação bloqueada — 2026-08-22T16:20Z
 
