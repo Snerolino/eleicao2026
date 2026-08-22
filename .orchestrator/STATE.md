@@ -1,3 +1,16 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T00:29Z
+
+- Lock bounded testado com `flock -n`; recon oficial Câmara/ALRS/Senado executada read-only.
+- Câmara: 8/8 janelas trimestrais oficiais `status=ok`, lote de IDs descoberto sem reconciliação/aplicação.
+- ALRS FED-17: dry-run `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra seguem sem ID/fonte exata.
+- Senado fail-closed por envelope ausente `/tmp/senado-nominal-envelope-latest.json` (`ENOENT`); nenhum PDF, `legislator_id`, FK ou voto promovido.
+- Auditoria estrita mantém gaps: versões ALRS 1251, Câmara 3, Senado 112; eventos ALRS 1647, Câmara 2, Senado 188; votos ALRS 4, Câmara 2, Senado 455.
+- Gates Node 24.19.0 verdes: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos, build (sitemap 1.003 + 2), `git diff --check`; smoke repetido verde com 1.002 cards/0 HTTP/console errors/service worker.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0029.md`.
+- Commit `df6d031` criado. Push retry falhou HTTP 403 (`Permission denied`); nenhum workflow/deploy acionado. Produção raiz HTTP 200 e `/release.json` HTTP 200, live permanece `e925327276b82481a348d4db3e2339d075dfe9a3`.
+- Nenhuma escrita factual, Supabase, Cloudflare, snapshot, identidade, FK, voto, claim ou matriz ocorreu.
+- Próximo chunk: recuperar push GitHub e então validar workflow backup/`headSha`; manter ALRS/Senado fail-closed e recon Câmara.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T00:07Z
 
 - Lock bounded adquirido/liberado com `flock -n`; recon oficial read-only e lane local executadas sem escrita factual/remota.
