@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial e gates locais — 2026-08-22T07:10Z
+
+- Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026, `max_pages=1`, 700 `vote_ids` somente em artefato transitório, sem reconciliação/aplicação.
+- ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro residuais Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado fail-closed pela ausência de `/tmp/senado-nominal-envelope-latest.json`.
+- Dataset sem mudança: CSV oficial SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; 1.003 IDs no CSV e 1.003 no snapshot, diferença 0/0.
+- Gates Node 22.22.2 do processo: 400 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos, build, sitemap 1.003 + 2, `git diff --check` e smoke 1.002 cards/0 HTTP failures/0 erros de console online/service worker pronto; todos RC 0. Build local `release.json` `0702049-20260822T070848357Z`.
+- Auditoria estrita permanece com gaps reais de fontes ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; sem promoção factual.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-0710.md`. Nenhuma escrita factual, Supabase ou Cloudflare.
+- Publicação: commit documental `e1947f5` criado após gates; `git push origin main` retornou HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), sem workflow novo. Produção existente foi apenas revalidada: raiz e `/release.json` HTTP 200, release `e925327-20260821T145742462Z`, versão `0.2.724`; não corresponde ao commit local. Backup `334951434` ativo.
+
 ## Tick contínuo — recon oficial e gates locais — 2026-08-22T06:44Z
 
 - Lock bounded adquirido/liberado com `flock -n`; Câmara oficial read-only em 8/8 janelas trimestrais 2025–2026, `max_pages=1`, `vote_ids=700` somente em memória, sem reconciliação/aplicação.
