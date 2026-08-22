@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial, gates locais e publicação bloqueada — 2026-08-22T18:53Z
+
+- Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual falhou fechado com causa real `fetch failed`; quatro casos de Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial read-only consultou 8 janelas trimestrais 2025–2026, todas `ok`, com 700 `vote_ids` transitórios; sem reconciliação ou aplicação. Senado permaneceu fail-closed sem envelope nominal verificável.
+- Auditoria regular de fontes RC 0; strict RC 2 pelos gaps reais: versões sem fonte `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` em ALRS/Câmara/Senado. Nenhum fato promovido.
+- Dataset conferido contra `../dataset2026`: CSV/snapshot `1003/1003` IDs, diferença `0/0`, CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- Gates com Node 24.19.0 verdes: 401 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos, build (`release.json` local `14db61c-20260822T185225287Z`) e `git diff --check`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1853.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Publicação: `git push origin main` RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); consulta de workflows GitHub falhou por conexão com `api.github.com`. Produção root e `/release.json` HTTP 200, live `3aae2d0-20260822T180456083Z`, SHA `3aae2d06338f81dc0b8c5df92ecc61ed8825dda3`, não corresponde verificavelmente ao HEAD local `14db61c`.
+- Próximo chunk: retentar push quando a permissão/rede efetiva permitir; se aceito, validar backup Cloudflare `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial, gates locais e publicação bloqueada — 2026-08-22T18:32Z
 
 - Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual permaneceu dry-run (`planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`); quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Auditoria regular de fontes RC 0; strict RC 2 pelos gaps reais: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` em ALRS/Câmara/Senado. Senado segue sem envelope nominal verificável; nenhum fato foi promovido.
