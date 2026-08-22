@@ -1,4 +1,13 @@
-## Tick contínuo — recon oficial, gates locais e publicação bloqueada — 2026-08-22T19:13Z
+## Tick contínuo — recon oficial, gates locais e publicação bloqueada — 2026-08-22T19:35Z
+
+- Lock bounded adquirido/liberado com `flock -n`. Dataset conferido contra `../dataset2026`: 1.003/1.003 IDs, diferença `0/0`, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- Auditoria read-only de fontes: gaps sem fonte em versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`. ALRS FED-17 residual permaneceu dry-run (`planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`); nenhum fato promovido.
+- Gates com Node 24 verdes: 401 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas e 988 fotos, build e `git diff --check`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-22-1935.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Publicação: `git push origin main` rejeitado por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). Workflows confirmados: backup `334951434`, primário `320564705`, verificador `335560210`; nenhum run novo acionado.
+- Produção: raiz HTTP 000 por timeout DNS; `/release.json` respondeu release anterior `3aae2d0`, SHA `3aae2d06338f81dc0b8c5df92ecc61ed8825dda3`, versão `0.2.835`, snapshot 1.003. Doctor continua FAIL por shell Node 22.22.2 incompatível; Codex MCP 401 e OpenCode ausente permanecem circuit-breaker.
+- Próximo chunk: retentar `git push origin main`; se aceito, verificar backup/headSha/produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 
 - Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual falhou fechado com causa real `fetch failed`; quatro casos de Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial read-only consultou 8 janelas trimestrais 2025–2026, todas `ok`, com IDs transitórios; sem reconciliação ou aplicação. Senado permaneceu fail-closed sem envelope nominal verificável.
 - Dataset sem alteração factual; snapshot validado em `data:check` com 1.003 candidaturas e 988 fotos oficiais. Nenhum fato promovido.
