@@ -5,7 +5,7 @@
 - Auditoria de fontes RC 0 mantém gaps: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`.
 - Gates Node `22.22.2` RC 0: `401` testes/`98` arquivos, TypeScript, schema, `data:check` (`1003/988/1`), build `224` módulos/sitemap `1003 + 2` e `git diff --check`.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1232.md`. Nenhum candidato, identidade, voto, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado.
-- Publicação retentada 2 vezes: `env -u GH_TOKEN git push origin main` falhou RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). HEAD `713c49e` está 9 commits à frente de `origin/main` `23fa294`; nenhum workflow novo foi acionado.
+- Publicação retentada 2 vezes: `env -u GH_TOKEN git push origin main` falhou RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). HEAD `ba5ca58` está 10 commits à frente de `origin/main` `23fa294`; nenhum workflow novo foi acionado. A raiz de produção respondeu HTTP 200, mas `/release.json` falhou com timeout DNS (`HTTP 000`), sem SHA/release live novo verificável.
 - Próximo chunk: retentar transporte Git; após `main -> main`, validar backup `334951434`, `headSha` e produção. Aplicação factual segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon Câmara/ALRS, push 403 e gaps de fontes — 2026-08-23T11:50Z

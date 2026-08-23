@@ -22,7 +22,7 @@ Executar tick bounded do control plane: manter as lanes de reconhecimento oficia
 Nenhum candidato, identidade, voto, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado. Senado permanece fail-closed por ausência de envelope nominal com SHA verificável; IDs da Câmara não foram vinculados a candidatos.
 
 ## Publicação
-Após os gates, foram feitas 2 tentativas de `env -u GH_TOKEN git push origin main`; ambas falharam com RC 128 e HTTP 403: `Permission to Snerolino/eleicao2026.git denied to Snerolino`. HEAD local `713c49e29b0c863a706b85d57e0dfd70d30e500d` está 9 commits à frente de `origin/main` `23fa294e9811c3aa69a41fdf44e168beb6f6e86e`. Nenhum workflow novo foi acionado e não foi possível validar novo deploy ou produção neste tick.
+Após os gates, foram feitas 2 tentativas de `env -u GH_TOKEN git push origin main`; ambas falharam com RC 128 e HTTP 403: `Permission to Snerolino/eleicao2026.git denied to Snerolino`. HEAD local `ba5ca58ac3522789d247de8614a1cc0e4b93ebf2` está 10 commits à frente de `origin/main` `23fa294e9811c3aa69a41fdf44e168beb6f6e86e`. Nenhum workflow novo foi acionado. Verificação pós-tentativa: raiz de produção respondeu HTTP 200; `/release.json` falhou por timeout de resolução DNS (`HTTP 000`), portanto não há SHA/release live novo verificável.
 
 ## Bloqueios
 - Transporte Git HTTPS/permissão efetiva continua bloqueando `main -> main`.
