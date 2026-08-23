@@ -2383,6 +2383,14 @@ Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; som
 - 12 matrizes geradas apenas em `pending_review`; nenhuma publicação ou escrita remota.
 - QA: `docs/qa/lote-alrs-editorial-approval-and-pending-matrices-2026-08-23.md`.
 
+## Tick contínuo — aplicação remota pending_review (2026-08-23)
+
+- 12 matrizes ALRS pending_review, 14 assessments e 14 fontes vinculadas.
+- 12 curadorias internas e 5 revisões externas registradas.
+- RPC recusou service-role sem `auth.uid()` com `42501 editor role required`; nenhum bypass.
+- Próximo gate: sessão authenticated de editor para chamar `approve_impact_matrix`.
+- QA: `docs/qa/lote-alrs-remote-pending-matrices-2026-08-23.md`.
+
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)
 
 - 30/30 itens P0 classificados: 9 mérito, 19 procedimento, 2 emenda, 0 destaque.
