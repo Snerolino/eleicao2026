@@ -1,3 +1,12 @@
+## Tick contínuo — recon Câmara read-only, gates verdes e push rejeitado — 2026-08-23T00:13Z
+
+- Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual falhou fechado com `JWT issued at future`; os 4 casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial consultou 8 janelas trimestrais 2025–2026 com `--max-pages 1`: 8 páginas `ok`, `blocked=null`, IDs somente transitórios; sem reconciliação ou aplicação. Senado permanece fail-closed sem envelope nominal verificável.
+- Gates locais com Node 24.19.0 verdes: 401 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build com 224 módulos, sitemap 1.003 + 2 e `release.json` local `29b596a-20260823T001255993Z`, `git diff --check` e smoke (1.002 cards, 0 HTTP failures, 0 erros de console online, service worker pronto).
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0013.md`. Nenhum candidato, voto, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado.
+- Publicação: `git push origin main` falhou HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); nenhum workflow/deploy novo. Workflows backup `334951434`, primário `320564705` e verificador `335560210` continuam ativos.
+- Produção revalidada: raiz HTTP 200 e `/release.json` HTTP 200, live `3aae2d06338f81dc0b8c5df92ecc61ed8825dda3` / versão `0.2.835`, sem correspondência verificável com o HEAD local `29b596a`. Doctor continua degradado pelo shell padrão Node 22.22.2; gates usaram Node 24.19.0.
+- Próximo chunk: retentar `main -> main` quando a permissão efetiva do GitHub permitir; se aceito, validar backup `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon Câmara read-only, gates verdes e push rejeitado — 2026-08-22T23:54Z
 
 - Lock bounded adquirido/liberado com `flock -n`. Câmara oficial consultou 8 janelas trimestrais 2025–2026 com `--max-pages 1`: 8 páginas `ok`, 0 bloqueios e 700 IDs transitórios; sem reconciliação ou aplicação. ALRS FED-17 residual retornou dry-run `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os 4 casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado permanece fail-closed sem `/tmp/senado-nominal-envelope-latest.json`.
