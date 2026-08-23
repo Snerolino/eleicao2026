@@ -1,3 +1,15 @@
+## Tick contínuo — recon oficial, gates verdes e publicação verificada — 2026-08-23T10:23Z
+
+- Lock bounded adquirido/liberado. ALRS FED-17 residual dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata.
+- Câmara oficial read-only: 8/8 janelas trimestrais 2025–2026 `status=ok`, `blocked=null`; somente inventário, sem reconciliação/aplicação. Senado permanece fail-closed.
+- Auditoria de fontes RC 0 mantém gaps reais: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` para ALRS/Câmara/Senado.
+- Dataset/snapshot conferidos: `1003/1003` por `SQ_CANDIDATO`, diferença `0`; CSV `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; `data:check` `1003` candidaturas/`988` fotos/`1` fonte TSE.
+- Gates Node 24.19.0 RC 0: `401` testes/`98` arquivos, TypeScript, schema, build `224` módulos/sitemap `1003 + 2`, `git diff --check`, smoke `1002` cards/`0` falhas HTTP/`0` erros online/service worker pronto.
+- Produção raiz e `/release.json` HTTP 200; live segue `23fa294e9811c3aa69a41fdf44e168beb6f6e86e`, release `23fa294-20260823T095444467Z`, versão `0.2.912`, snapshot `1003`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1023.md`. Worktree estava limpa antes do registro; este registro documental ainda precisa de commit/push.
+- Bloqueios: transporte Git segue HTTP 403 apesar da API reportar push; doctor foi bloqueado pelo runtime ao tentar reiniciar gateway. Nenhuma escrita factual remota, Supabase ou Cloudflare ocorreu.
+- Próximo chunk: retentar `main -> main`; se aceitar, validar backup `334951434`, `headSha` e produção. Aplicação factual segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial, gates verdes e publicação bloqueada — 2026-08-23T10:01Z
 
 - Lock bounded adquirido/liberado. ALRS FED-17 residual dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro Enio Carlos Terra seguem sem ID oficial/fonte exata.
