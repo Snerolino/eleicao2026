@@ -4205,3 +4205,15 @@ Sem autorização humana explícita própria, não fazer:
 - Publicação autorizada tentada e retentada após o commit documental; `git push origin main` rejeitado RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). HEAD local `d452976` segue 23 commits à frente de `origin/main`; nenhum workflow novo. Produção revalidada após o smoke: `/` e `/release.json` HTTP 200.
 - Doctor permanece RC 1 por Node 22.22.2 no shell, Codex token expirado/401 e OpenCode ausente; gates foram executados com Node 24.19.0.
 - Próximo chunk: corrigir/revalidar permissão efetiva do GitHub e retentar `main -> main`; após aceite verificar backup `334951434`, `headSha` e produção. Aplicação remota permanece condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
+## Tick contínuo — recon oficial e gates locais — 2026-08-23T07:43Z
+
+- Lock bounded adquirido/liberado com `flock -n`; Node 24.19.0 usado nos comandos do projeto.
+- ALRS FED-17 residual em dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`.
+- Auditoria read-only de fontes: versões sem fonte `1251/3/112`, eventos `1647/2/188` e votos `4/2/455` para ALRS/Câmara/Senado; gaps reais preservados.
+- Câmara: oito janelas trimestrais oficiais 2025–2026 responderam `status=ok` e retornaram IDs; nenhuma reconciliação ou aplicação.
+- Dataset/snapshot sem diff: `1003/1003`; SHA CSV `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`. `data:check` verde em 1003 candidaturas/988 fotos/1 fonte TSE.
+- Nenhum candidato, voto, identidade, FK, source reference, claim, snapshot, Supabase remoto ou Cloudflare foi alterado. Senado segue sem envelope nominal SHA-verificável; quatro Enio Carlos Terra seguem sem ID/fonte exata.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0743.md`.
+- Bloqueios: doctor shell Node 22.22.2/OpenCode ausente; publicação continua bloqueada pelo HTTP 403 do transporte Git registrado no tick anterior; remoto factual segue condicionado a R0/schema/FK/fonte/dry-run/idempotência.
+- Próximo chunk: retentar `git push origin main`; se aceito, validar backup `334951434`, `headSha`, `/release.json` e smoke remoto.
