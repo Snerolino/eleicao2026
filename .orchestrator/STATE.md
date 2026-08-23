@@ -1,3 +1,11 @@
+## Tick contínuo — recon Câmara, gates verdes e publicação bloqueada — 2026-08-23T04:02Z
+
+- Lock bounded adquirido/liberado com `flock -n`. Recon Câmara oficial read-only em 8 janelas trimestrais 2025–2026: `8/8` páginas `ok`, `blocked=null`, `700` IDs transitórios; nenhuma reconciliação/aplicação. ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado continua fail-closed.
+- Auditoria estrita read-only preservou gaps reais: versões sem fonte ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; exit 2 por lacunas. Dataset/snapshot sem alteração factual; `data:check` verde com `1003` candidaturas, `988` fotos e `1` fonte TSE.
+- Gates Node 24.19.0 verdes: `401` testes/`98` arquivos, TypeScript, schema, build `224` módulos, sitemap `1003 + 2`, release local `4a96bbb-20260823T040159849Z`, diff check e smoke (`1002` cards, `0` HTTP failures, `0` erros online, service worker pronto).
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0402.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Publicação: `env -u GH_TOKEN git push origin main` falhou RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); API GitHub lista workflows mas não resolve a divergência do transporte HTTPS. Produção permanece HTTP 200, live SHA `3aae2d06338f81dc0b8c5df92ecc61ed8825dda3`, release `3aae2d0-20260822T180456083Z`, versão `0.2.835`. Próximo chunk: revalidar credencial efetiva do Git; após push aceito, confirmar backup `334951434`, `headSha` e produção.
+
 ## Tick contínuo — recon Câmara, gates verdes e publicação bloqueada — 2026-08-23T03:41Z
 
 - Lock bounded adquirido/liberado com `flock -n`. Dataset conferido por `SQ_CANDIDATO`: CSV oficial `../dataset2026/candidatos/consulta_cand_2026/consulta_cand_2026_RS.csv` e snapshot têm `1.003/1.003` IDs, diferença `0/0`; CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
