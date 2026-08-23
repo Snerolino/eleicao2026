@@ -41,8 +41,7 @@ Executados com Node 24 via `nvm use 24`:
   `admin=true`, `push=true`. Transporte Git, porém, rejeitou
   `git push origin main` com HTTP 403: `Permission to Snerolino/eleicao2026.git
   denied to Snerolino`.
-- HEAD local: `5527c314de63b7a4040f10b27e25c2f94311374e`, branch `main`, 37 commits
-  à frente de `origin/main`; nenhum workflow novo foi acionado.
+- Commit documental criado: `f7fc4e84613069f59c5d84f831a3681c7831e0bc`. O push normal falhou primeiro por DNS (`Could not resolve host: github.com`) e o retry sem `GH_TOKEN` falhou por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). HEAD local `f7fc4e8`, branch `main`, 38 commits à frente de `origin/main`; nenhum workflow novo foi acionado.
 - Workflows remotos confirmados: backup `334951434`, primário `320564705` e
   verificador `335560210`, todos ativos.
 - Produção independente: raiz HTTP 200; `/release.json` HTTP 200, ainda no
