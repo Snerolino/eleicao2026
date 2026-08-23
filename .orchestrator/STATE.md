@@ -2412,6 +2412,13 @@ Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; som
 - Próximo gate: sessão authenticated de editor para chamar `approve_impact_matrix`.
 - QA: `docs/qa/lote-alrs-remote-pending-matrices-2026-08-23.md`.
 
+## Tick contínuo — correção de leitura no admin (2026-08-23)
+
+- Migration `20260823100000` aplicada e verificada no Supabase.
+- Editor autenticado agora lê matrizes/assessments/fontes `pending_review` via RLS.
+- `/admin` passa a exibir as 12 matrizes pendentes após recarregar a sessão.
+- QA: `docs/qa/lote-admin-pending-matrix-read-2026-08-23.md`.
+
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)
 
 - 30/30 itens P0 classificados: 9 mérito, 19 procedimento, 2 emenda, 0 destaque.
