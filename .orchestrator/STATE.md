@@ -1,3 +1,13 @@
+## Tick contínuo — matriz admin publicada, recon oficial fail-closed — 2026-08-23T08:52Z
+
+- Lock bounded adquirido/liberado. Commit `7a401fe` (`feat: adicionar aprovacao de matrizes no admin`) está em `main` e `origin/main`; worktree limpa antes deste registro.
+- Câmara oficial read-only: 8/8 janelas trimestrais 2025–2026 `status=ok`, `blocked=null`; somente inventário transitório, sem reconciliação/aplicação. ALRS FED-17 residual falhou fechado com `fetch failed`; os 4 casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado continua fail-closed.
+- Dataset/snapshot por `SQ_CANDIDATO`: `1003/1003`, diferença `0/0`, CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`. Auditoria regular RC 0 mantém gaps de fontes: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` para ALRS/Câmara/Senado.
+- Gates Node 24.19.0 RC 0: 401 testes/98 arquivos, TypeScript, schema, `data:check` (`1003` candidaturas/`988` fotos/`1` fonte TSE), build (`224` módulos; sitemap `1003 + 2`; release local `7a401fe-20260823T085152713Z`), `git diff --check` e smoke (`1002` cards, `0` falhas HTTP, `0` erros online, service worker pronto).
+- Produção `/release.json` respondeu HTTP 200 e reportou SHA `7a401fe21f8dba1ff8ffaefd7f6f22c2eff827e5`, versão `0.2.901`, snapshot `1003`. A raiz teve falha transitória DNS (`HTTP 000`) e `gh run list` falhou por indisponibilidade de `api.github.com`; workflow backup/headSha não foram confirmados neste tick.
+- Nenhum candidato, voto, identidade, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado. QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0852.md`.
+- Próximo chunk: retentar raiz de produção e workflow backup `334951434`; manter aplicação remota condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates locais verdes, publicação pendente — 2026-08-23T08:22Z
 
 - Lock bounded adquirido/liberado. ALRS FED-17 dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata.
