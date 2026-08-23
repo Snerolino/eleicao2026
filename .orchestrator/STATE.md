@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial, gates locais verdes e publicação bloqueada — 2026-08-23T08:04Z
+
+- Lock bounded adquirido/liberado. ALRS FED-17 dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata.
+- Câmara oficial em 8 janelas trimestrais 2025–2026: `8/8` `status=ok`, `700` IDs descobertos, somente inventário read-only. Senado segue fail-closed sem envelope nominal com SHA verificável.
+- Dataset/snapshot por `SQ_CANDIDATO`: `1003/1003`, diferença `0/0`, CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`. `data:check` RC 0: `1003` candidaturas, `988` fotos, `1` fonte TSE.
+- Gates Node 24.19.0 RC 0: `401` testes/`98` arquivos, TypeScript, schema, build (`224` módulos; sitemap `1003 + 2`), `git diff --check` e smoke (`1002` cards, `0` HTTP failures, `0` erros online, service worker pronto).
+- Auditoria regular de fontes RC 0; strict RC 2 mantém gaps reais: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` para ALRS/Câmara/Senado.
+- Nenhuma alteração factual, Supabase remoto ou Cloudflare. Doctor segue RC 1 por Node 22.22.2/OpenCode ausente.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0804.md`. Próximo chunk: retentar `main -> main`; aplicação remota continua condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial bounded, Câmara bloqueada por rede — 2026-08-23T07:25Z
 
 - Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os 4 casos Enio Carlos Terra seguem sem ID oficial/fonte exata.
