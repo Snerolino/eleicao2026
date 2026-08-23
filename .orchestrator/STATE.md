@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial, gates verdes, transporte Git bloqueado — 2026-08-23T18:03Z
+
+- Recon read-only revalidado: `npm run data:check` RC 0 (`1003` candidaturas, `988` fotos, `1` fonte TSE); auditoria de fontes RC 0 mantém gaps ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; fila residual ALRS continua com 4 votos sem evidência vinculada.
+- ALRS FED-17 dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`. Câmara oficial read-only: 8/8 janelas trimestrais 2025–2026 HTTP OK, IDs somente inventariados, sem reconciliação/aplicação.
+- Gates Node 24.19.0 RC 0: `401/401` testes em `98` arquivos, TypeScript, schema, `data:check`, build `226` módulos/sitemap `1003 + 2`, `git diff --check`.
+- Produção raiz e `/release.json` HTTP 200; live permanece `5a8a24013263b684384b17e003f9fd0d57ce92f4`, release `5a8a240-20260823T164257627Z`, snapshot `1003`.
+- `env -u GH_TOKEN git push origin main` falhou 3 vezes: uma HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`) e duas por DNS (`Could not resolve host: github.com`); local está 4 commits à frente de `origin/main`, nenhum workflow novo. QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1803.md`.
+- Nenhuma escrita factual em Supabase/Cloudflare, identidade, FK, source reference, claim, matriz ou assessment. Doctor RC 1 segue degradado por Node 22 no shell/OpenCode ausente/smoke MCP não exercitado no rápido.
+- Próximo chunk: retentar transporte Git; após `main -> main`, validar backup `334951434`, `headSha`, raiz e `/release.json`. Aplicação factual segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial, gates verdes, transporte Git bloqueado — 2026-08-23T17:43Z
 
 - Dataset oficial versus snapshot permanece `1003/1003` por `SQ_CANDIDATO`, diferença `0`; CSV `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`. `data:check` RC 0: `1003` candidaturas, `988` fotos, `1` fonte TSE.
