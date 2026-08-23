@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "alrs_p2_microbatch_4_substantive_source_manifest",
+  "remote_apply": false,
+  "items": {
+    "1620bf4c-ffa6-449f-ad6f-81598e9c9c44": {
+      "official_match_key": "PL-214-2020",
+      "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/214/2020",
+      "page_http": 200,
+      "page_bytes": 163104,
+      "page_sha256": "6b6951464fe9e7d71923fe49a1ae83e0516149c207bbd5cad2222a9c1a7f115c",
+      "document_url": "https://api-nopaper.al.rs.gov.br/api/v1/blob-storage/documents-alrs-prod/20241004/5306921e-8148-4846-aef9-cbd6cd54d1eb/67dcfbd7-98a2-4831-8dbc-f7ea9f3e7b7b.pdf?exp=2026-08-23T16%3a49%3a03Z&sp=r&sig=5QEg0rOXOmT8KiBLRG5osSmjh4qYKDGreaBmuxpKLUo%3d",
+      "document_http": 200,
+      "document_bytes": 37469,
+      "document_sha256": "698ca1274d05ff38120a98ac28fb9ad65dc3bc30ada7fde19611aaebad1c00ac",
+      "content_addressed_path": "data/legislative-import/alrs/source-corpus/p2-4/698ca1274d05ff38120a98ac28fb9ad65dc3bc30ada7fde19611aaebad1c00ac.pdf",
+      "durability_gate": "green"
+    },
+    "3bfdb0b1-821a-4efe-8239-0d04edc6a40e": {
+      "official_match_key": "PL-377-2023",
+      "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/377/2023",
+      "page_http": 200,
+      "page_bytes": 184432,
+      "page_sha256": "9c0318011ff92e75f50174dca510a77f0e2cbbbdfa2d4033eed3dc04da4a2851",
+      "document_url": "https://api-nopaper.al.rs.gov.br/api/v1/blob-storage/documents-alrs-prod/20240701/84e24e90-e0fb-4dba-9520-d55d568cc2bf/95da21a6-ca05-465e-acc5-4995f06dfcab.pdf?exp=2026-08-23T16%3a49%3a04Z&sp=r&sig=XgMBpS3P2d6QOGJu6xRIdDofUxPVRX1dHr2QtJw3LcA%3d",
+      "document_http": 200,
+      "document_bytes": 113531,
+      "document_sha256": "291c8e6ef376b17d7df8fcf5288c9ea454538e32813b38bccc4af98ca602c794",
+      "content_addressed_path": "data/legislative-import/alrs/source-corpus/p2-4/291c8e6ef376b17d7df8fcf5288c9ea454538e32813b38bccc4af98ca602c794.pdf",
+      "durability_gate": "green"
+    },
+    "002c5499-1f7e-45d8-8ea9-2287ad555655": {
+      "official_match_key": "PL-434-2023",
+      "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/434/2023",
+      "page_http": 200,
+      "page_bytes": 173672,
+      "page_sha256": "df57f546bea4e8588edb56beb15bf90cbbd7ccf7054c5a81d5cf981bb230fc8f",
+      "document_url": "https://api-nopaper.al.rs.gov.br/api/v1/blob-storage/documents-alrs-prod/20240701/84e24e90-e0fb-4dba-9520-d55d568cc2bf/05bda642-d93f-428b-917d-1b6ab5907737.pdf?exp=2026-08-23T16%3a49%3a05Z&sp=r&sig=10FvGX4SRwHLtTv4av6cwn%2bTPjHXrEMaWXCO1%2f%2foCjA%3d",
+      "document_http": 200,
+      "document_bytes": 82007,
+      "document_sha256": "f68e39f8a585518bbedb17f416c669735c85161bf145be39ea30ca8fd5f6de26",
+      "content_addressed_path": "data/legislative-import/alrs/source-corpus/p2-4/f68e39f8a585518bbedb17f416c669735c85161bf145be39ea30ca8fd5f6de26.pdf",
+      "durability_gate": "green"
+    },
+    "5d374030-ecdd-4bfd-b231-8c76e1472b23": {
+      "official_match_key": "PL-94-2022",
+      "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/94/2022",
+      "page_http": 200,
+      "page_bytes": 141633,
+      "page_sha256": "e670b72fa0c3e1ae1ae1007326777a6d3220354df9689c6bd38942078ac66008",
+      "document_url": "https://api-nopaper.al.rs.gov.br/api/v1/blob-storage/documents-alrs-prod/20241016/5306921e-8148-4846-aef9-cbd6cd54d1eb/79aa598c-b70e-4aaa-bae7-e73282d580c8.pdf?exp=2026-08-23T16%3a49%3a07Z&sp=r&sig=NGbvCfAIDaRSb9Ok%2fLjG8DYjlHvPLCbK%2b3y%2f%2fkONJ50%3d",
+      "document_http": 200,
+      "document_bytes": 30050,
+      "document_sha256": "47a982cbb336829811a1ece92d9b780d44eaa0023907c5e3e6fe57e4b645c47f",
+      "content_addressed_path": "data/legislative-import/alrs/source-corpus/p2-4/47a982cbb336829811a1ece92d9b780d44eaa0023907c5e3e6fe57e4b645c47f.pdf",
+      "durability_gate": "green"
+    },
+    "87800639-11fd-4a79-a5a2-5a14bd753941": {
+      "official_match_key": "PLC-48-2022",
+      "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PLC/48/2022",
+      "page_http": 200,
+      "page_bytes": 132304,
+      "page_sha256": "df48bfa720776d8a6914f9a562ff5ba79c91812eabfd3f94d1062d5b2f1acd85",
+      "document_url": "https://api-nopaper.al.rs.gov.br/api/v1/blob-storage/documents-alrs-prod/20250106/5306921e-8148-4846-aef9-cbd6cd54d1eb/0f6d391a-82bf-468f-83ce-6f1f1cc70e5a.pdf?exp=2026-08-23T16%3a49%3a08Z&sp=r&sig=iw2MpONKL17CKzU3YxHHsaaumb3KApQkTGL9ci%2fE2lw%3d",
+      "document_http": 200,
+      "document_bytes": 39661,
+      "document_sha256": "8d7b0386cad461d130fa96bf491cb08f48b1d29ad8ab4c0dbce6718f77af3c7e",
+      "content_addressed_path": "data/legislative-import/alrs/source-corpus/p2-4/8d7b0386cad461d130fa96bf491cb08f48b1d29ad8ab4c0dbce6718f77af3c7e.pdf",
+      "durability_gate": "green"
+    }
+  },
+  "totals": {
+    "versions": 5,
+    "durability_gate_green": 5
+  }
+}
