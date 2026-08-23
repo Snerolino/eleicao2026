@@ -1,3 +1,12 @@
+## Tick contínuo — recon read-only, push bloqueado, publicação estável — 2026-08-23T20:18Z
+
+- `npm run data:check` RC 0: `1003` candidaturas, `988` fotos oficiais, `1` fonte TSE; dataset oficial versus snapshot permanece `1003/1003`, diferença `0`.
+- Auditoria de fontes regular RC 0; strict RC 2 fail-closed preserva gaps ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos. `npm run impact:alrs:residual:repair` RC 0 dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`.
+- Supabase público read-only: `2650` claims published, `0` pending_review, `14` matrizes approved, `0` pending; a fila editorial exige sessão autenticada e devolveu HTTP 401 sob anon, sem qualquer escrita ou promoção.
+- Migrations local/remota alinhadas até `20260823110000`. Produção raiz e `/release.json` HTTP 200; live `0a1a202b503f094d18feca19dc04704c7ca46d3c`, versão `0.2.961`; `/admin` HTTP 200.
+- `git push origin main` RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); HEAD local `5807767` está 3 commits à frente de `origin/main` `0a1a202`. Nenhum workflow novo foi acionado.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-2018.md`. Doctor RC 1 por shell Node 22/OpenCode ausente/smoke MCP Codex não comprovado com 401 de token expirado.
+
 ## Tick contínuo — recon read-only, filas limpas, publicação estável — 2026-08-23T19:59Z
 
 - Dataset oficial `consulta_cand_2026/consulta_cand_2026_RS.csv`: `1003/1003` IDs contra o snapshot, diferença `0/0`; CSV `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
