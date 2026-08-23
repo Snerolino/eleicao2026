@@ -1,3 +1,14 @@
+## Tick contínuo — recon read-only, produção verificada — 2026-08-23T21:50Z
+
+- Dataset oficial versus snapshot: `1003/1003` IDs, diferença `0/0`; CSV `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- `npm run data:check` RC 0: `1003` candidaturas, `988` fotos oficiais, `1` fonte TSE.
+- Auditoria regular de fontes RC 0; strict RC 2 fail-closed mantém gaps ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos. `npm run impact:alrs:residual:repair` RC 0 dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`.
+- P2-6 local regenerado com `5` versões; nenhuma decisão editorial/factual aplicada. `verify-cli-output --live`: `1000` claims publicadas, `0` sem fonte.
+- Produção raiz e `/release.json` HTTP 200; release `0.2.971`, live `a82510b7d22199e1c22fbd1e05c57ef57567aad8`, snapshot `1003`.
+- Backup `334951434`, run `32668450924`, success, `headSha` igual ao live; primário `32668442174` success. QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-2150.md`.
+- Commit documental local `1b34ab4` criado (amend do registro inicial). `git push origin main` e retries falharam RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); nenhum workflow novo foi acionado. Local está 1 commit à frente.
+- Doctor continua RC 1 por Node 22 no shell/OpenCode ausente; recon read-only não bloqueada. Próximo passo: manter os quatro votos ALRS fail-closed e a fila editorial sob revisão humana.
+
 ## Tick contínuo — recon read-only, push bloqueado — 2026-08-23T21:14Z
 
 - Dataset oficial versus snapshot: `1003/1003` IDs, diferença `0/0`; CSV `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
