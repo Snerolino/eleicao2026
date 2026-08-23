@@ -25,7 +25,8 @@ Nenhuma escrita em Supabase, Cloudflare, snapshot, candidatos, votos, FKs, claim
 2. Senado: envelope nominal e SHA não verificáveis; aplicação proibida.
 3. Auditoria estrita retornou RC 2 pelos gaps de fontes acima; isso é fila de recuperação, não motivo para inventar evidência.
 4. Doctor retornou RC 1: shell Node 22 incompatível com requisito Node 24; smoke Codex MCP sem evidência estruturada por token expirado/401; OpenCode ausente. Gates do projeto foram executados com Node 24.19.0.
-5. Publicação: `git push origin main` ainda precisa ser retentado; HEAD local está 33 commits à frente de `origin/main`.
+5. Publicação: após o commit documental `34d622c`, `git push origin main` foi retentado duas vezes e falhou RC 128: primeira tentativa HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), segunda tentativa por falha DNS (`Could not resolve host: github.com`). HEAD local ficou 34 commits à frente de `origin/main`; nenhum workflow novo foi acionado.
+6. Produção revalidada independentemente: raiz HTTP 200 e `/release.json` HTTP 200, ainda no release `3aae2d0`/versão `0.2.835`, SHA `3aae2d06338f81dc0b8c5df92ecc61ed8825dda3`, sem correspondência com o HEAD local. Workflow backup `334951434` mais recente está `completed/skipped` para o SHA antigo.
 
 ## Próximo passo
-Retentar `git push origin main`; se aceitar, verificar o workflow backup Cloudflare `334951434`, comparar `headSha` com o commit publicado e validar produção (`https://rs.votopraquem.org` e `/release.json`). Manter ALRS/Senado fail-closed e Câmara somente como catálogo read-only até R0/schema/FK/fonte/dry-run/idempotência.
+Retentar `git push origin main` quando a credencial efetiva e a rede permitirem; se aceitar, verificar o workflow backup Cloudflare `334951434`, comparar `headSha` com o commit publicado e validar produção (`https://rs.votopraquem.org` e `/release.json`). Manter ALRS/Senado fail-closed e Câmara somente como catálogo read-only até R0/schema/FK/fonte/dry-run/idempotência.
