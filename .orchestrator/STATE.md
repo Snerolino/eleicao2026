@@ -1,3 +1,11 @@
+## Tick contínuo — recon Câmara read-only, gates verdes e push bloqueado por DNS — 2026-08-23T00:32Z
+
+- Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual executou dry-run com `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os 4 casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial consultou 8 janelas trimestrais 2025–2026 com `--max-pages 1`: 8 páginas `ok`, `blocked=null`; IDs somente transitórios, sem reconciliação ou aplicação. Senado permanece fail-closed sem envelope nominal verificável.
+- Dataset conferido read-only: quatro CSVs de candidatos em `../dataset2026/candidatos/`; snapshot público 1.003 registros, 761.786 bytes, SHA `a7db54b20bd1aa0d49003e278d48d1443617f00b772d004d711cd762d0c982cf`.
+- Gates locais verdes com Node 22.22.2: 401 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build com 224 módulos, sitemap 1.003 + 2 e `release.json` local `ff9fc4a-20260823T003240160Z`, `git diff --check`. Produção revalidada: raiz HTTP 200 e `/release.json` HTTP 200.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0032.md`. Nenhum candidato, voto, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado.
+- Commit documental local `89b6395` criado. `git push origin main` falhou RC 128 por DNS (`Could not resolve host: github.com`); nenhum workflow/deploy novo. Próximo chunk: retentar `main -> main`; se aceitar, validar backup `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon Câmara read-only, gates verdes e push rejeitado — 2026-08-23T00:13Z
 
 - Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual falhou fechado com `JWT issued at future`; os 4 casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial consultou 8 janelas trimestrais 2025–2026 com `--max-pages 1`: 8 páginas `ok`, `blocked=null`, IDs somente transitórios; sem reconciliação ou aplicação. Senado permanece fail-closed sem envelope nominal verificável.
