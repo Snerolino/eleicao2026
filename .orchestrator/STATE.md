@@ -1,3 +1,12 @@
+## Tick contínuo — recon oficial, gates locais verdes, transporte Git bloqueado — 2026-08-23T17:24Z
+
+- Bootstrap revalidado: HEAD local `8642734a366ea08be46b9c6bf0c42ac19da7fefa` em `main`, worktree limpa antes do registro; `npm run orch:doctor` RC 1 por Node 22.22.2/OpenCode ausente/smoke MCP não exercitado.
+- Dataset oficial versus snapshot: `1003/1003` IDs por `SQ_CANDIDATO`, diferença `0`; CSV `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`. `npm run data:check` RC 0: `1003` candidaturas, `988` fotos, `1` fonte TSE.
+- Câmara oficial read-only: `8/8` janelas trimestrais 2025–2026 `status=ok`, `blocked=null`; IDs somente inventariados, sem reconciliação/aplicação. ALRS FED-17 residual dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`.
+- Auditoria de fontes read-only RC 0 preserva gaps reais: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; fila ALRS mantém 4 votos sem evidência vinculada. Nenhum candidato, identidade, voto, FK, source reference, claim, matriz, assessment, Supabase ou Cloudflare foi alterado.
+- `git push origin main` retentado e bloqueado por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); nenhum workflow novo foi acionado. QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1724.md`.
+- Próximo chunk: retentar transporte Git; após `main -> main`, validar backup `334951434`, `headSha`, raiz e `/release.json`. Aplicação factual segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial, gates locais verdes, transporte Git bloqueado — 2026-08-23T17:06Z
 
 - Câmara oficial read-only: 8/8 janelas trimestrais 2025–2026 `status=ok`, `blocked=null`, IDs apenas inventariados; nenhuma reconciliação ou aplicação.
