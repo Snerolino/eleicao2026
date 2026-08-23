@@ -39,6 +39,8 @@ describe('ErrorBoundary', () => {
   });
 
   it('renders fallback UI when a child throws an error', () => {
+    vi.stubEnv('DEV', 'true');
+
     render(
       <ErrorBoundary>
         <Bomb shouldThrow={true} />
@@ -49,6 +51,22 @@ describe('ErrorBoundary', () => {
     expect(screen.getByText('Algo deu errado')).toBeInTheDocument();
     expect(screen.getByText('Kaboom')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /recarregar/i })).toBeInTheDocument();
+  });
+
+  it('não expõe detalhes do erro (como a mensagem original) em produção', () => {
+    vi.stubEnv('PROD', 'true');
+    vi.stubEnv('DEV', '');
+
+    render(
+      <ErrorBoundary>
+        <Bomb shouldThrow={true} />
+      </ErrorBoundary>
+    );
+
+    expect(screen.getByText('Erro inesperado')).toBeInTheDocument();
+    expect(screen.getByText('Algo deu errado')).toBeInTheDocument();
+    expect(screen.queryByText('Kaboom')).not.toBeInTheDocument();
+    expect(screen.getByText('Um erro inesperado ocorreu.')).toBeInTheDocument();
   });
 
   it('calls window.location.reload when the reload button is clicked', () => {
@@ -65,7 +83,8 @@ describe('ErrorBoundary', () => {
   });
 
   it('não registra erro e component stack detalhados em produção', () => {
-    vi.stubEnv('DEV', false);
+    vi.stubEnv('PROD', 'true');
+    vi.stubEnv('DEV', '');
 
     render(
       <ErrorBoundary>
