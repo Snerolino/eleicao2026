@@ -3,7 +3,7 @@
 - ALRS FED-17 residual dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata.
 - Câmara oficial read-only: 8/8 janelas trimestrais `2025-01-01`–`2026-12-31` `status=ok`; somente inventário de `vote_ids`, sem reconciliação ou escrita.
 - Auditoria de fontes RC 0 mantém gaps reais: versões sem fonte ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`.
-- Foram feitas 3 tentativas de `env -u GH_TOKEN git push origin main`: uma falhou por DNS de `github.com` e duas por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). O registro deste tick foi commitado localmente como `21935ca`; após o commit, `main` local está 5 commits à frente de `origin/main`. As 3 tentativas pós-commit retornaram HTTP 403; nenhum workflow novo foi acionado.
+- Foram feitas tentativas bounded de `env -u GH_TOKEN git push origin main`: a primeira rodada teve DNS e HTTP 403; após o registro, `21935ca` e a correção `287f678` foram commitados localmente, e as tentativas pós-correção retornaram HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). `main` local está 6 commits à frente de `origin/main`; nenhum workflow novo foi acionado.
 - Nenhum candidato, identidade, voto, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado. Doctor global segue RC 1 por shell Node 22.22.2/OpenCode ausente/smoke MCP Codex sem evidência estruturada.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1400.md`. Próximo chunk: retentar transporte Git; somente após `main -> main`, validar backup `334951434`, `headSha`, HTTP raiz e `/release.json`.
 
