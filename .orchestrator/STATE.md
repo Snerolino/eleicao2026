@@ -1,3 +1,13 @@
+## Tick contínuo — recon read-only, produção verificada — 2026-08-23T22:28Z
+
+- Dataset oficial versus snapshot: `1003/1003` IDs, diferença `0/0`; CSV `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- `npm run data:check` RC 0: `1003` candidaturas, `988` fotos oficiais, `1` fonte TSE. Auditoria regular RC 0; strict RC 2 fail-closed mantém gaps ALRS/Câmara/Senado `1251/3/112`, `1647/2/188`, `4/2/455`.
+- `npm run impact:alrs:residual:repair` RC 0 dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`. Câmara sources audit RC 0: `7/7` URLs HTTP 200.
+- `verify-cli-output --live`: `1000` claims publicadas auditadas, `0` sem fonte. Produção raiz, `/release.json` e `/admin` HTTP 200.
+- Backup `334951434` run `32668450924` e primário `32668442174` success, ambos com `headSha=a82510b7d22199e1c22fbd1e05c57ef57567aad8`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-2228.md`. Nenhuma identidade, FK, voto, source reference, claim, assessment, matriz, disposição editorial, Supabase ou Cloudflare foi alterada.
+- Transporte Git continua bloqueado/pendente: HEAD local `01e9fdd` está 2 commits à frente de `origin/main`; doctor RC 1 por Node 22 no shell/OpenCode ausente. Próximo passo: retentar `main -> main` e manter os quatro votos ALRS fail-closed até evidência oficial reproduzida.
+
 ## Tick contínuo — recon read-only, produção verificada — 2026-08-23T22:10Z
 
 - Dataset oficial versus snapshot: `1003/1003` IDs, diferença `0/0`; CSV `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
