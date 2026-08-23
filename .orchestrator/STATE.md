@@ -1,3 +1,12 @@
+## Tick contínuo — recon oficial bounded, Câmara bloqueada por rede — 2026-08-23T07:25Z
+
+- Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os 4 casos Enio Carlos Terra seguem sem ID oficial/fonte exata.
+- Câmara oficial read-only consultada na janela `2026-07-01`–`2026-09-30`, `max_pages=1`; API retornou `network_error`/`fetch failed`, por fail-closed `vote_ids=[]`, sem reconciliação/aplicação. Senado continua fail-closed sem `/tmp/senado-nominal-envelope-latest.json` verificável.
+- Dataset versus snapshot conferido por IDs: `1003/1003`, diferença `0/0`; CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`. `npm run data:check` RC 0: `1003` candidaturas, `988` fotos, `1` fonte TSE.
+- Nenhum candidato, voto, identidade, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado. Doctor segue RC 1 por Node 22.22.2/OpenCode ausente.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0725.md`.
+- Próximo chunk: retentar recon oficial read-only quando a rede responder; manter aplicação remota condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — gates verdes, backup e produção verificados — 2026-08-23T07:10Z
 
 - `origin/main` foi confirmado em `0bc536152731c7244e48863f37d09aabb3012f94`; a primeira tentativa deste tick retornou HTTP 403, mas o transporte posteriormente refletiu o commit remoto.
