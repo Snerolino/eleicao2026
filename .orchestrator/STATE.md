@@ -1,3 +1,12 @@
+## Tick contínuo — recon oficial, publicação bloqueada — 2026-08-23T06:02Z
+
+- Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os 4 casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial: `8/8` janelas trimestrais `status=ok`, `blocked=null`, `700` IDs transitórios; nenhum ID reconciliado/aplicado. Senado permanece fail-closed sem envelope nominal com SHA verificável.
+- Auditoria de fontes RC 0 preserva gaps reais: versões sem fonte ALRS/Câmara/Senado `1251/3/112`; eventos `1647/2/188`; votos `4/2/455`. Dataset/snapshot conferidos por `SQ_CANDIDATO`: `1003/1003`, diferença `0/0`, CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- `npm run orch:doctor` RC 1 por shell Node 22.22.2 incompatível com Node 24; warnings conhecidos OpenCode ausente/Ollama sem preflight. Nenhum segredo foi lido ou exposto.
+- Commit documental local `95bd074` segue 1 commit à frente de `origin/main`; `git push origin main` falhou RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). Workflows remotos backup `334951434`, primário `320564705` e verificador `335560210` estão ativos; nenhum run novo foi acionado.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0602.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Próximo chunk: retentar `main -> main`; após aceitar, validar backup/headSha/produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — gates verdes, publicação verificada e novo registro bloqueado — 2026-08-23T05:22Z
 
 - Commit `c8be4b754c602d4608d1578e0be0db5920aa3921` continua publicado em `origin/main`; produção foi verificada no mesmo SHA.
