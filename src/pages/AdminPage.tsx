@@ -73,6 +73,7 @@ export function AdminPage() {
   const [editingClaimId, setEditingClaimId] = useState<string | null>(null);
   const [editingContent, setEditingContent] = useState('');
   const [busyMatrixId, setBusyMatrixId] = useState<string | null>(null);
+  const [matrixNotes, setMatrixNotes] = useState<Record<string, string>>({});
 
   usePageMetadata(
     'Administração — Portal Transparência Eleitoral RS',
@@ -293,6 +294,19 @@ export function AdminPage() {
     if (!supabase || !user) return;
     setBusyMatrixId(matrix.id);
     setMessage(null);
+    const notes = matrixNotes[matrix.id]?.trim() || 'Aprovação registrada pelo painel administrativo.';
+    const { error: reviewError } = await supabase.from('impact_reviews').insert({
+      impact_matrix_id: matrix.id,
+      reviewer_id: user.id,
+      reviewer_type: 'curadoria_interna',
+      decision: 'approved',
+      notes,
+    });
+    if (reviewError) {
+      setBusyMatrixId(null);
+      setMessage(`Nota/revisão não registrada: ${reviewError.message}`);
+      return;
+    }
     const { error } = await supabase.rpc('approve_impact_matrix', { p_matrix_id: matrix.id });
     if (error) {
       setBusyMatrixId(null);
@@ -319,7 +333,7 @@ export function AdminPage() {
         </p>
         <h1 className="mt-2 text-3xl">Administração</h1>
         <p className="mt-3 max-w-3xl leading-relaxed text-[var(--color-muted-ink)]">
-          Painel para login administrativo, verificação de claims em revisão, aprovação humana e publicação via RPC editorial. Responsável provisório: <strong>{adminOwner}</strong>.
+          Painel único para autenticação, decisão editorial, instruções de revisão e aprovação humana via RPC. Claims e matrizes devem ser validadas aqui; não use escrita direta no Supabase. Responsável provisório: <strong>{adminOwner}</strong>.
         </p>
         <p className="mt-3 rounded-sm border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-900">
           Modo seguro: sem service role no navegador. O frontend usa Supabase Auth, RLS, <code>editor_roles</code>, <code>editorial_reviews</code> e RPC <code>publish_claim()</code>.
@@ -432,6 +446,18 @@ export function AdminPage() {
                         </li>
                       ))}
                     </ul>
+                    <label className="mt-4 grid gap-1 text-sm">
+                      <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">
+                        Instruções e observações da revisão
+                      </span>
+                      <textarea
+                        value={matrixNotes[matrix.id] ?? ''}
+                        onChange={(event) => setMatrixNotes((current) => ({ ...current, [matrix.id]: event.target.value }))}
+                        rows={3}
+                        placeholder="Registre contexto, ressalvas ou instruções úteis para a auditoria desta aprovação."
+                        className="rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 leading-relaxed"
+                      />
+                    </label>
                     <button
                       type="button"
                       disabled={busyMatrixId === matrix.id}
