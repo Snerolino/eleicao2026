@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial, gates verdes, publicação pendente — 2026-08-23T13:39Z
+
+- Dataset vivo versus snapshot por `SQ_CANDIDATO`: `1003/1003`, diferença `0/0`; CSV oficial `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- Câmara oficial read-only: 8/8 janelas trimestrais `2025-01-01`–`2026-12-31` `status=ok`, `700` IDs inventariados; sem reconciliação/aplicação. ALRS FED-17 dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os quatro casos Enio Carlos Terra seguem sem ID/fonte exata. Senado permanece fail-closed.
+- Auditoria de fontes RC 0: versões sem fonte ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`.
+- Gates Node 24.19.0 RC 0: `401` testes/`98` arquivos, TypeScript, schema, `data:check` (`1003/988/1`), build `224` módulos/sitemap `1003 + 2`, `git diff --check`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1339.md`. Nenhum candidato, identidade, voto, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado.
+- Doctor global continua RC 1 por shell Node 22.22.2, OpenCode ausente e smoke MCP Codex sem evidência estruturada; gates explícitos usaram Node 24.19.0.
+- Próximo chunk: tentar `main -> main`; após aceitar, validar backup `334951434`, `headSha`, HTTP de produção e `/release.json`. Aplicação factual segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — P2-2 publicado localmente, transporte Git bloqueado — 2026-08-23T13:15Z
 
 - Commit local `7feb231ed7393fb695cb7b45ae7a917cec46ec64` contém o registro QA e o índice documental; worktree limpa, `main` está `1` commit à frente de `origin/main`.
