@@ -1,3 +1,12 @@
+## Tick contínuo — recon oficial, push 403 e DNS de produção bloqueando publicação — 2026-08-23T11:08Z
+
+- Lock bounded adquirido/liberado. Bootstrap revalidado: HEAD local `dfb9094`, `main` 4 commits à frente de `origin/main`, worktree limpa.
+- Câmara oficial read-only reexecutada: 8/8 janelas trimestrais 2025–2026 `status=ok`, `blocked=null`, `700` IDs transitórios; sem reconciliação/aplicação. ALRS FED-17 residual falhou fechado com `JWT issued at future`; os 4 casos Enio Carlos Terra seguem sem ID oficial/fonte exata.
+- Publicação retentada 4 vezes: DNS transitório e depois HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). GitHub Actions consultado: último backup `334951434` é `32632385262`, `completed/skipped`, `headSha=23fa294`; nenhum run novo.
+- Produção teve timeout de DNS (`HTTP 000`); resposta residual de `/release.json` não foi considerada evidência por ser inconsistente/antiga. Nenhuma mutação factual, Supabase ou Cloudflare ocorreu.
+- Doctor: `48 OK`, `5 WARN`, `1 FAIL` (shell Node 22.22.2; OpenCode ausente). QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1108.md`.
+- Próximo chunk: retentar transporte Git; após `main -> main`, validar backup `334951434`, `headSha` e produção. Manter ALRS/Senado fail-closed e Câmara read-only independente.
+
 ## Tick contínuo — recon oficial, gates verdes e DNS bloqueando publicação — 2026-08-23T10:45Z
 
 - Lock bounded adquirido/liberado. Câmara oficial read-only: `8/8` janelas trimestrais 2025–2026 `status=ok`, `blocked=null`, sem reconciliação/aplicação. Auditoria de fontes RC 0 mantém gaps: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` para ALRS/Câmara/Senado.
