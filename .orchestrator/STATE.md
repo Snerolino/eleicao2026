@@ -4463,3 +4463,13 @@ Sem autorização humana explícita própria, não fazer:
 - Produção existente: raiz HTTP 200 e `/release.json` HTTP 200; SHA live `0bc536152731c7244e48863f37d09aabb3012f94`, `row_count=1003`. Nenhum deploy novo nem validação de `headSha` deste commit.
 - QA atualizado: `docs/qa/lote-continuous-ops-recon-2026-08-23-0743.md`.
 - Próximo chunk: corrigir/revalidar transporte Git HTTPS, aceitar `main -> main`, e então validar backup Cloudflare `334951434`, `headSha`, `/release.json` e smoke remoto.
+## Tick contínuo — recon oficial, gates verdes, transporte Git bloqueado — 2026-08-23T15:50Z
+
+- Lock bounded adquirido/liberado. HEAD local `84560d1049fa16cba5b9c0421442599678716681`, `main` à frente de `origin/main` por `5` commits; worktree estava limpa antes deste registro.
+- ALRS FED-17 residual dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os quatro Enio Carlos Terra seguem sem ID oficial/fonte exata.
+- Câmara API oficial read-only: `8/8` janelas trimestrais OK; `vote_ids` somente inventariados, sem reconciliação/aplicação. Senado permanece fail-closed sem SHA/`legislator_id` comprovados.
+- Auditoria de fontes read-only RC 2 preserva gaps: versões sem fonte ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`.
+- Gates Node 24.19.0 verdes: `401` testes/`98` arquivos, TypeScript, schema, `data:check` (`1003/988/1`), build (`225` módulos; sitemap `1003 + 2`), smoke (`1002` cards, `0` HTTP failures, `0` erros online) e `git diff --check`.
+- Produção verificada: raiz HTTP 200 e `/release.json` HTTP 200; live `692094f875844d977f8436b02c04dacaa6423068`, versão `0.2.936`, snapshot `1003`. Workflow backup `334951434` disponível, mas nenhum workflow novo foi acionado.
+- `env -u GH_TOKEN git push origin main` retentado 3 vezes e bloqueado nas 3 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). Doctor RC 1 continua degradado por shell Node 22.22.2, OpenCode ausente e smoke MCP Codex não exercitado.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1550.md`. Nenhum candidato, identidade, voto, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado. Próximo chunk: retentar transporte; após aceitação, validar backup/headSha/produção. Aplicação factual segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
