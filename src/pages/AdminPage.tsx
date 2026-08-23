@@ -597,7 +597,7 @@ export function AdminPage() {
                         <p className="mt-1 leading-relaxed">{item.title}</p>
                       </div>
                       <span className="font-mono text-xs uppercase tracking-wider text-amber-800">
-                        {completed ? 'registrada nesta sessão' : 'pending_review'}
+                        {completed ? 'já registrada no portal' : 'pending_review'}
                       </span>
                     </div>
                     <div className="mt-3 flex flex-wrap gap-3 font-mono text-xs uppercase tracking-wider">
