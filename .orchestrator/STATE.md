@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial, gates verdes, transporte Git bloqueado — 2026-08-23T18:23Z
+
+- Recon read-only revalidado: `data:check` RC 0 (`1003` candidaturas, `988` fotos, `1` fonte TSE); auditoria de fontes RC 0 mantém gaps ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; fila residual ALRS continua com 4 votos sem evidência vinculada.
+- ALRS FED-17 dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`. Câmara oficial read-only: `8/8` janelas trimestrais 2025–2026 HTTP OK, IDs somente inventariados, sem reconciliação/aplicação.
+- Gates Node 24.19.0 RC 0: `401/401` testes em `98` arquivos, TypeScript, schema, build `226` módulos/sitemap `1003 + 2`, `git diff --check`.
+- Produção raiz e `/release.json` HTTP 200; live permanece `5a8a24013263b684384b17e003f9fd0d57ce92f4`, release `5a8a240-20260823T164257627Z`, snapshot `1003`.
+- `env -u GH_TOKEN git push origin main` falhou HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); após o registro documental `ba19816`, local está 6 commits à frente de `origin/main`, nenhum workflow novo.
+- Nenhuma escrita factual em Supabase/Cloudflare, identidade, FK, source reference, claim, matriz ou assessment. Doctor RC 1 segue degradado por Node 22 no shell/OpenCode ausente/smoke MCP não exercitado no rápido.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1823.md`. Próximo chunk: retentar transporte Git; após `main -> main`, validar backup `334951434`, `headSha`, raiz e `/release.json`. Aplicação factual segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial, gates verdes, transporte Git bloqueado — 2026-08-23T18:03Z
 
 - Recon read-only revalidado: `npm run data:check` RC 0 (`1003` candidaturas, `988` fotos, `1` fonte TSE); auditoria de fontes RC 0 mantém gaps ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; fila residual ALRS continua com 4 votos sem evidência vinculada.
