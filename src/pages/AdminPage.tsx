@@ -318,6 +318,32 @@ export function AdminPage() {
     setMessage('Matriz aprovada pela RPC editorial.');
   }
 
+  async function reviewImpactMatrix(matrix: PendingImpactMatrix, decision: 'needs_changes' | 'rejected') {
+    if (!supabase || !user) return;
+    const notes = matrixNotes[matrix.id]?.trim();
+    if (!notes) {
+      setMessage('Registre instruções ou justificativa antes de pedir ajustes/rejeitar uma matriz.');
+      return;
+    }
+    setBusyMatrixId(matrix.id);
+    setMessage(null);
+    const { error } = await supabase.from('impact_reviews').insert({
+      impact_matrix_id: matrix.id,
+      reviewer_id: user.id,
+      reviewer_type: 'curadoria_interna',
+      decision,
+      notes,
+    });
+    if (error) {
+      setBusyMatrixId(null);
+      setMessage(`Revisão não registrada: ${error.message}`);
+      return;
+    }
+    setImpactMatrices((current) => current.filter((item) => item.id !== matrix.id));
+    setBusyMatrixId(null);
+    setMessage(decision === 'rejected' ? 'Matriz rejeitada e registrada no histórico.' : 'Matriz devolvida para ajustes.');
+  }
+
   return (
     <main id="main-content" className="mx-auto max-w-6xl px-4 py-8">
       <Link
@@ -466,6 +492,24 @@ export function AdminPage() {
                     >
                       {busyMatrixId === matrix.id ? 'Aprovando…' : 'Aprovar matriz via RPC'}
                     </button>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      <button
+                        type="button"
+                        disabled={busyMatrixId === matrix.id}
+                        onClick={() => void reviewImpactMatrix(matrix, 'needs_changes')}
+                        className="rounded-sm border border-amber-700 px-3 py-2 font-mono text-xs uppercase tracking-wider text-amber-800 disabled:cursor-wait disabled:opacity-60"
+                      >
+                        Pedir ajustes
+                      </button>
+                      <button
+                        type="button"
+                        disabled={busyMatrixId === matrix.id}
+                        onClick={() => void reviewImpactMatrix(matrix, 'rejected')}
+                        className="rounded-sm border border-red-700 px-3 py-2 font-mono text-xs uppercase tracking-wider text-red-800 disabled:cursor-wait disabled:opacity-60"
+                      >
+                        Rejeitar matriz
+                      </button>
+                    </div>
                   </article>
                 ))}
               </div>
