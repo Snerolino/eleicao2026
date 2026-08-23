@@ -1,3 +1,11 @@
+## Tick contínuo — recon Câmara, gates verdes e publicação bloqueada — 2026-08-23T04:22Z
+
+- Lock bounded adquirido/liberado com `flock -n`. Recon Câmara oficial read-only em 8 janelas explícitas 2025–2026: `8/8` páginas `ok`, `blocked=null`, 700 IDs transitórios; último trimestre sem IDs e sem erro. ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado continua fail-closed.
+- Auditoria regular de fontes RC 0; strict RC 2 preserva gaps reais: versões sem fonte ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; nenhuma evidência foi inventada. Dataset comparado por `SQ_CANDIDATO`: CSV/snapshot `1003/1003`, diferença `0/0`, CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- Gates Node 24.19.0 verdes: `401` testes/`98` arquivos, TypeScript, schema, `data:check` `1003` candidaturas/`988` fotos/`1` fonte TSE, build `224` módulos, sitemap `1003 + 2`, release local `f03a347-20260823T042207753Z`, `git diff --check` e smoke (`1002` cards, `0` HTTP failures, `0` erros online, service worker pronto).
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0422.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Doctor RC 1 mantém bloqueios conhecidos: shell Node 22.22.2, Codex 401/token expirado e OpenCode ausente; Antigravity read-only passou. Próximo chunk: retentar `main -> main`; se aceitar, validar backup `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon Câmara, gates verdes e publicação bloqueada — 2026-08-23T04:02Z
 
 - Lock bounded adquirido/liberado com `flock -n`. Recon Câmara oficial read-only em 8 janelas trimestrais 2025–2026: `8/8` páginas `ok`, `blocked=null`, `700` IDs transitórios; nenhuma reconciliação/aplicação. ALRS FED-17 residual dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado continua fail-closed.
