@@ -1,3 +1,13 @@
+## Tick contínuo — gates verdes, publicação e produção verificadas — 2026-08-23T05:22Z
+
+- Commit `c8be4b754c602d4608d1578e0be0db5920aa3921` publicado em `origin/main`; worktree limpa.
+- Gates locais verdes: `401` testes/`98` arquivos, TypeScript, schema, `data:check` (`1003` candidaturas/`988` fotos/`1` fonte TSE), build `224` módulos, smoke (`1002` cards/`0` falhas HTTP/`0` erros online/service worker pronto) e `git diff --check`.
+- Deploy primário `32620063530` concluído com sucesso; backup manual `32620104597` concluído com sucesso; ambos apontam para o mesmo `headSha`.
+- Produção `/release.json` HTTP 200 validou SHA `c8be4b754c602d4608d1578e0be0db5920aa3921`, release `c8be4b7-20260823T052052703Z`, versão `0.2.883`.
+- ALRS Enio Carlos Terra (4 casos) e Senado seguem fail-closed sem ID/fonte exata ou envelope nominal com SHA verificável; nenhuma escrita factual remota ocorreu.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0522.md`.
+- Próximo chunk: manter recon oficial read-only e avançar apenas lotes com R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial, gates verdes e publicação bloqueada — 2026-08-23T05:00Z
 
 - Lock bounded adquirido/liberado com `flock -n`. Câmara oficial read-only em 8 janelas trimestrais explícitas: `8/8` páginas `ok`, `blocked=null`, `700` IDs transitórios; nenhum ID reconciliado/aplicado.
