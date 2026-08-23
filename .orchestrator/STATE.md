@@ -1,3 +1,14 @@
+## Tick contínuo — recon oficial e gates verdes — 2026-08-23T16:28Z
+
+- Recon oficial read-only: Câmara `8/8` janelas trimestrais OK, `700` vote_ids inventariados, sem reconciliação/aplicação; ALRS FED-17 residual dry-run RC 0 (`planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`).
+- Auditoria de fontes estrita RC 2 preserva gaps reais: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; nenhuma escrita factual.
+- Gates locais RC 0: `401/401` testes, TypeScript, schema, `data:check` (`1003/988/1`), build `225` módulos/sitemap `1003 + 2`, `git diff --check`. Produção raiz e `/release.json` HTTP 200, live `cd84a79`, release `cd84a79-20260823T162442301Z`.
+- Backup `334951434` run `32651666506` `completed/skipped`, `headSha=cd84a7913f28`; primário `32651489149` success no mesmo SHA. Nenhum workflow adicional necessário.
+- Nenhum candidato, identidade, voto, FK, source reference, claim, matriz, assessment, Supabase ou Cloudflare foi alterado. QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1628.md`.
+- Doctor RC 1 permanece degradado por shell Node `22.22.2`, OpenCode ausente e smoke MCP Codex não exercitado no rápido.
+- Publicação documental: `git push origin main` retentado 3 vezes e bloqueado por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); commit `5bf1b91` permanece local, produção segue no SHA anterior `cd84a79`.
+- Próximo chunk: retentar transporte Git, recon read-only e monitorar `/admin`; manter aplicação factual condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial, gates verdes, Git 403 — 2026-08-23T16:10Z
 
 - Recon oficial read-only: Câmara `8/8` janelas trimestrais OK, `700` vote_ids inventariados, sem reconciliação/aplicação; auditoria do envelope `7/7` URLs HTTP 200.
