@@ -42,7 +42,7 @@ export function planAlrsMatrixApply(pack) {
     }
     plan.push({ proposition_version_id: item.proposition_version_id, review_key: item.review_key, assessments: item.assessments });
   }
-  return { ok: errors.length === 0, errors, remote_apply: false, input_versions: pack.items?.length ?? 0, planned_versions: plan.length, plan: errors.length === 0 ? plan : [] };
+  return { ok: errors.length === 0, errors, remote_apply: false, input_versions: pack.items?.length ?? 0, planned_versions: errors.length === 0 ? plan.length : 0, plan: errors.length === 0 ? plan : [] };
 }
 
 function main() {
