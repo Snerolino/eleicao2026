@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "alrs_p2_assessment_proposal_pack",
+  "methodology_version": "1.0.0",
+  "source": "admin_disposition_approved",
+  "remote_apply": false,
+  "public_approval": false,
+  "review_status": "pending_review",
+  "totals": {
+    "versions": 1,
+    "proposed_assessments": 1
+  },
+  "items": [
+    {
+      "proposition_version_id": "ebc01302-3211-487b-b1bb-6d515936b2e0",
+      "review_key": "sha256:1e42772d23c2ec8019a4eb13504373b1e6d0e02c72db46f7ceda0d635bf3cbc9#ebc01302-3211-487b-b1bb-6d515936b2e0",
+      "title": "Dispõe sobre a obrigatoriedade de afixação, no âmbito do Estado do Rio Grande do Sul, de placas informativas com o número da Central de Atendimento à Mulher, Disque Denúncia da Violência Contra a Mulher (Disque 180). (SEI 8916-01.00/21-8)",
+      "priority": "P2",
+      "event_type": "merit_candidate",
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+          "event_external_id": "alrs_event_fb0b5bb15b12b7ea5ac9e77b",
+          "source_reference_id": "b301a4ee-52cc-4cab-9089-6c92e8a9ca13"
+        },
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_fb0b5bb15b12b7ea5ac9e77b",
+          "source_reference_id": "7739d2d8-4b18-49ad-ba85-610497376401"
+        },
+        {
+          "candidate_id": "733cef65-bf07-44ef-9521-36232ad0135c",
+          "event_external_id": "alrs_event_fb0b5bb15b12b7ea5ac9e77b",
+          "source_reference_id": "c034ce27-3daa-48fb-89d9-58bd520c890c"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_fb0b5bb15b12b7ea5ac9e77b",
+          "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
+        }
+      ],
+      "source_status": "green",
+      "editorial_disposition": "pending_review",
+      "human_review_required": true,
+      "remote_apply": false,
+      "official_match_key": "PL-43-2019",
+      "official_uuid": "60738d5e-5711-11ee-9cfe-0242c0a8a005",
+      "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/43/2019",
+      "page_http": 200,
+      "page_bytes": 178110,
+      "page_sha256": "e27cd30791303b3b640a6dc950717b442d5d58a98e2a691ce598ae696f52f70a",
+      "document_url": "https://api-nopaper.al.rs.gov.br/api/v1/blob-storage/documents-alrs-prod/20240701/84e24e90-e0fb-4dba-9520-d55d568cc2bf/507ecdf4-4284-40a2-ad64-93f702658e36.pdf?exp=2026-08-23T13%3a21%3a55Z&sp=r&sig=L6rf0a1lRCwKgFKxq37qRPlZ6M6DagtUUhw%2bqv%2b3im0%3d",
+      "document_http": 200,
+      "document_bytes": 601730,
+      "document_sha256": "ebc04a7532cb14148f388c68ba5be074d1b2970bb240a25e133ef539e0d06752",
+      "content_addressed_path": "data/legislative-import/alrs/source-corpus/p2-2/ebc04a7532cb14148f388c68ba5be074d1b2970bb240a25e133ef539e0d06752.pdf",
+      "source_bytes_preserved": true,
+      "renewable_locator_verified": true,
+      "durability_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": null,
+          "defending_vote": null,
+          "severity": null,
+          "structural_type": null,
+          "confidence": null,
+          "rationale": null,
+          "proposal_status": "needs_human_review"
+        }
+      ]
+    }
+  ]
+}
