@@ -33,4 +33,4 @@ Executar o tick bounded do control plane: recon oficial read-only, comparar o da
 
 ## Próximo passo
 
-Commitar e publicar somente os artefatos locais/documentais após os gates; confirmar o workflow backup Cloudflare `334951434`, `headSha` e produção. Manter recon ALRS/Senado fail-closed e o microbatch P2 em revisão, sem Supabase/Cloudflare write.
+Commit criado: `f44f284` (`chore: registrar microbatch P2 e recon oficial`). Publicação bloqueada: `git push origin main` e `env -u GH_TOKEN git push origin main` retornaram HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); `main` local está 1 commit à frente de `origin/main`, portanto nenhum workflow novo foi acionado. Produção revalidada independentemente: raiz DNS falhou (`HTTP 000`), mas `/release.json` respondeu HTTP 200 no commit anterior `48eebb9`, versão `0.2.908`, snapshot `1003`; backup `334951434` permanece ativo. Manter recon ALRS/Senado fail-closed e o microbatch P2 em revisão, sem Supabase/Cloudflare write.
