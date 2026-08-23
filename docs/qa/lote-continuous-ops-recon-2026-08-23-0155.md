@@ -21,7 +21,7 @@ Nenhuma escrita em Supabase, Cloudflare ou snapshot público. Os bloqueios de fo
 ## Bloqueios reais
 1. ALRS: token remoto rejeitado por `JWT issued at future`; os 4 casos Enio Carlos Terra continuam sem ID oficial e fonte exata.
 2. Senado: SHA/envelope nominal ainda não verificável; aplicação permanece proibida.
-3. Publicação: HEAD local está 31 commits à frente de `origin/main`; push anterior foi rejeitado pelo GitHub com HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`).
+3. Publicação: o commit documental `dc4de33` foi criado após os gates, mas `git push origin main` foi rejeitado novamente pelo GitHub com HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). `gh api` identifica o usuário `Snerolino` e reporta `push=true/admin=true`, portanto há divergência entre a identidade/permissão da API e a credencial efetiva do transporte Git; HEAD segue local à frente de `origin/main`.
 4. Infra: doctor reporta shell padrão Node 22 incompatível com requisito Node 24, Codex MCP/exec com token expirado (401) e OpenCode ausente. Este tick usou Node 24.19.0 e gates locais passaram.
 
 ## Próximo passo
