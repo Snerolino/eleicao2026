@@ -2523,6 +2523,12 @@ Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; som
 - Bloqueio não afeta as 12 matrizes ALRS aprovadas.
 - QA: `docs/qa/lote-alrs-p2-microbatch-source-status-2026-08-23.md`.
 
+## Tick contínuo — encerramento request pack P1 (2026-08-23)
+
+- Request pack antigo regenerado como `superseded_resolved`.
+- `requests=0`, `resolved_substantive_versions=23`; nenhuma coleta P1 deve ser repetida.
+- QA: `docs/qa/lote-alrs-substantive-source-request-pack-resolved-2026-08-23.md`.
+
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)
 
 - 30/30 itens P0 classificados: 9 mérito, 19 procedimento, 2 emenda, 0 destaque.

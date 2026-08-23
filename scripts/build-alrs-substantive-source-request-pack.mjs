@@ -41,12 +41,14 @@ export function buildRequestPack(pack) {
   return {
     schema_version: '1.0.0',
     packet_type: 'alrs_substantive_source_request_pack',
+    status: items.length === 0 ? 'superseded_resolved' : 'pending_substantive_source',
     remote_apply: false,
     public_approval: false,
     totals: {
       requests: items.length,
       versions: items.length,
       excluded_with_substantive_source: (pack.items ?? []).filter((item) => item.substantive_source_gate === 'green').length,
+      resolved_substantive_versions: (pack.items ?? []).filter((item) => item.substantive_source_gate === 'green').length,
       versions_without_preidentified_groups: items.filter((item) => item.requested_for_groups.length === 0).length,
     },
     items,
