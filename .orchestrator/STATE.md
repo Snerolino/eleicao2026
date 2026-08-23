@@ -1,3 +1,14 @@
+## Tick contínuo — P2-5 fonte verde, publicação verificada — 2026-08-23T19:25Z
+
+- Dataset TSE oficial versus snapshot: `1003/1003` IDs, diferença `0/0`; SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- P2-5 ALRS: `5/5` identidades oficiais, páginas e PDFs HTTP 200, bytes/SHA reproduzidos, `durability_gate=green`; pack editorial `pending_review`, `0` assessments, `remote_apply=false`, `5` disposições aguardando revisão humana.
+- Gates Node 24.19.0: `401/401` testes em `98` arquivos, TypeScript, schema, `data:check`, build `227` módulos/sitemap `1003 + 2`, `git diff --check` verdes.
+- Recon Supabase read-only: cobertura preserva gaps ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; fila residual ALRS `4` votos sem evidência vinculada. Nenhuma escrita factual/editorial remota.
+- Câmara oficial read-only: `8/8` janelas trimestrais 2025–2026 HTTP OK, `blocked=null`; somente inventário de IDs.
+- Publicação: `HEAD=0a1a202b503f094d18feca19dc04704c7ca46d3c`, `origin/main` alinhado; backup `334951434` success com o mesmo `headSha`; raiz e `/release.json` HTTP 200, release `0a1a202-20260823T192243490Z`, snapshot `1003`.
+- Bloqueios: doctor continua RC 1 (shell Node 22/OpenCode ausente/Codex MCP smoke com token expirado); auditoria strict continua fail-closed pelos gaps oficiais. Deploy primário ainda queued, mas backup e produção já estão verificados.
+- QA: `docs/qa/lote-alrs-p2-microbatch-5-sources-2026-08-23.md`. Próximo chunk: manter `/admin` em revisão humana e continuar recuperação read-only dos 4 ALRS sem fonte; não aplicar voto/assessment/matriz.
+
 ## Tick contínuo — recon oficial, filas remotas e transporte Git bloqueado — 2026-08-23T19:02Z
 
 - Dataset oficial correto `consulta_cand_2026/consulta_cand_2026_RS.csv`: `553194` bytes, SHA-256 `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; `1003/1003` IDs contra o snapshot, diferença `0/0`.
