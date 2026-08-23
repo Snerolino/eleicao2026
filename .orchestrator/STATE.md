@@ -4625,3 +4625,13 @@ Sem autorização humana explícita própria, não fazer:
 - Produção verificada: raiz HTTP 200 e `/release.json` HTTP 200; live `692094f875844d977f8436b02c04dacaa6423068`, versão `0.2.936`, snapshot `1003`. Workflow backup `334951434` disponível, mas nenhum workflow novo foi acionado.
 - `env -u GH_TOKEN git push origin main` retentado 3 vezes e bloqueado nas 3 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). Doctor RC 1 continua degradado por shell Node 22.22.2, OpenCode ausente e smoke MCP Codex não exercitado.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1550.md`. Nenhum candidato, identidade, voto, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado. Próximo chunk: retentar transporte; após aceitação, validar backup/headSha/produção. Aplicação factual segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+## Tick contínuo — recon read-only, push bloqueado — 2026-08-23T21:30Z
+
+- Dataset oficial versus snapshot: `1003/1003` IDs, diferença `0/0`; CSV `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- `npm run data:check` RC 0: `1003` candidaturas, `988` fotos oficiais, `1` fonte TSE.
+- Auditoria regular de fontes RC 0; strict RC 2 fail-closed mantém gaps ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos. Fila residual ALRS permanece com 4 IDs sem evidência vinculada.
+- `npm run impact:alrs:residual:repair` RC 0 dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`.
+- Produção raiz e `/release.json` HTTP 200; release `0.2.961`, snapshot `1003`; SHA não exposto no payload.
+- `git push origin main` RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); HEAD local `4f33ddf` está 7 commits à frente de `origin/main`; nenhum workflow novo foi acionado.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-2130.md`. Doctor RC 1 por Node 22 no shell/OpenCode ausente; nenhuma escrita remota ocorreu.
+- Próximo passo: retentar transporte Git; se aceito, validar backup `334951434`, `headSha` e produção. Manter os quatro votos fail-closed até fonte oficial reproduzida com URL, hash, bytes e match exato.
