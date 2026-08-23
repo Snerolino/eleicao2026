@@ -62,6 +62,8 @@
     "impact:alrs:r4:p0:substantive": "node scripts/build-alrs-p0-substantive-matrix-pack.mjs",
     "impact:alrs:r4:p0:editorial": "node scripts/build-alrs-p0-editorial-disposition-review-pack.mjs",
     "impact:alrs:r4:p0:editorial:apply-local": "node scripts/apply-alrs-p0-editorial-review.mjs",
+    "impact:alrs:r4:editorial:approve": "node scripts/build-alrs-editorial-approval-pack.mjs",
+    "impact:alrs:r4:matrix:pending": "node scripts/build-alrs-pending-review-matrix-pack.mjs",
     "impact:alrs:r4:substantive": "node scripts/build-alrs-substantive-review-queue.mjs",
     "impact:alrs:r4:p1": "node scripts/build-alrs-p1-substantive-pack.mjs",
     "impact:alrs:r4:p1:evidence": "node scripts/extract-alrs-p1-official-evidence.mjs",

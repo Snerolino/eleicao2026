@@ -1,0 +1,371 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "alrs_impact_matrix_pending_review_pack",
+  "review_status": "pending_review",
+  "public_approval": false,
+  "remote_apply": false,
+  "apply_ready": false,
+  "totals": {
+    "matrices": 12,
+    "assessment_rows": 14,
+    "external_review_required": 5
+  },
+  "items": [
+    {
+      "proposition_version_id": "7c132ddc-b571-43ee-b2bc-e877f053480a",
+      "review_key": "sha256:7cf39a1e311538faa0de87845c8535ad54b09c3760f94837682c5d81a335ad31#7c132ddc-b571-43ee-b2bc-e877f053480a",
+      "title": "Altera a Lei Ordinária n.º 15.988 de 07 de agosto de 2023, que consolida a legislação relativa às mulheres vítimas de violência no âmbito do Estado do Rio Grande do Sul.",
+      "methodology_version": "impacto-populacional-v1",
+      "review_status": "pending_review",
+      "editorial_status": "approved",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 4,
+          "structural_type": "structural",
+          "confidence": 0.96,
+          "rationale": "A proposição altera diretamente o marco estadual de proteção às mulheres vítimas de violência, produzindo efeito normativo estrutural sobre esse grupo; o voto favorável é classificado como defesa de impacto positivo.",
+          "status": "approved",
+          "requires_external_review": true
+        }
+      ],
+      "external_review_required": true,
+      "human_review_required": true,
+      "public_approval": false,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "a57b1c83-3749-4c45-85b7-2408db20f5a2",
+      "review_key": "sha256:c1f571e5077d13d1486261d3db0fb706cee52efd00465184fef79a872f0772ee#a57b1c83-3749-4c45-85b7-2408db20f5a2",
+      "title": "Dispõe sobre a criação do Programa de Defesa pessoal para Mulheres “RS POR ELAS” no âmbito do Estado do Rio Grande do Sul e dá outras providências.(SEI 4237-0100/21-8)",
+      "methodology_version": "impacto-populacional-v1",
+      "review_status": "pending_review",
+      "editorial_status": "approved",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 3,
+          "structural_type": "structural",
+          "confidence": 0.95,
+          "rationale": "A proposição cria programa estadual de defesa pessoal voltado especificamente às mulheres, institucionalizando política pública direcionada ao grupo; o voto favorável é classificado como defesa de impacto positivo.",
+          "status": "approved",
+          "requires_external_review": false
+        }
+      ],
+      "external_review_required": false,
+      "human_review_required": true,
+      "public_approval": false,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "1eb30d74-271c-4315-b7f6-54849d31c9bc",
+      "review_key": "sha256:0d0b779976354f6bd951ce8d8bff213f63b1b515712734564144254577e6aa51#1eb30d74-271c-4315-b7f6-54849d31c9bc",
+      "official_match_key": "PL-66-2024",
+      "title": "Institui a política de prevenção a crimes sexuais contra adolescentes, no Estado do Rio Grande do Sul, denominado “Projeto Libertar”.",
+      "methodology_version": "impacto-populacional-v1",
+      "review_status": "pending_review",
+      "editorial_status": "approved",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": [
+        {
+          "group_slug": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 3,
+          "structural_type": "structural",
+          "confidence": 0.97,
+          "rationale": "A versão institui política permanente de prevenção a crimes sexuais dirigida a adolescentes, com informação sobre abuso, canais estatais, identificação de sinais e articulação com órgãos de segurança. O voto sim amplia medidas diretas de prevenção e proteção de adolescentes expostos a violência sexual.",
+          "status": "approved",
+          "requires_external_review": false
+        }
+      ],
+      "external_review_required": false,
+      "human_review_required": true,
+      "public_approval": false,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "10887f06-837a-47ed-aa52-f05560d17742",
+      "review_key": "sha256:1a61707c7c826f5b75d1b3e2725f6d4c473e3852568f5d3fac7a94540c5cab1a#10887f06-837a-47ed-aa52-f05560d17742",
+      "official_match_key": "PL-424-2024",
+      "title": "Dispõe sobre a criação da Patrulha Estadual de Prevenção à Violência Doméstica e Familiar contra Crianças e Adolescentes.",
+      "methodology_version": "impacto-populacional-v1",
+      "review_status": "pending_review",
+      "editorial_status": "approved",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": [
+        {
+          "group_slug": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 4,
+          "structural_type": "structural",
+          "confidence": 0.98,
+          "rationale": "A versão cria patrulha dedicada à prevenção e ao enfrentamento da violência doméstica e familiar contra crianças e adolescentes, prevendo atendimento humanizado, capacitação de agentes, integração institucional e ações educativas. O voto sim fortalece uma rede estrutural de proteção a crianças e adolescentes em situação de vulnerabilidade.",
+          "status": "approved",
+          "requires_external_review": true
+        }
+      ],
+      "external_review_required": true,
+      "human_review_required": true,
+      "public_approval": false,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "7dd6f932-3e02-4eaa-8f5c-b7363545000c",
+      "review_key": "sha256:6e9b052a90e83cedccb28d63b11f3bbe4b46173f5d4ed899dd8236083f2c33dc#7dd6f932-3e02-4eaa-8f5c-b7363545000c",
+      "official_match_key": "PL-57-2025",
+      "title": "Altera a Lei n.º 15.950, de 9 de janeiro de 2023, que consolida a legislação estadual relativa a eventos e datas estaduais, instituindo o Calendário Oficial de Eventos e Datas Comemorativas do Estado do Rio Grande do Sul, para incluir o Março Lilás, o dia de conscientização sobre HPV, o dia da prevenção ao câncer de colo do útero, e dá outras providências.",
+      "methodology_version": "impacto-populacional-v1",
+      "review_status": "pending_review",
+      "editorial_status": "approved",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 1,
+          "structural_type": "symbolic",
+          "confidence": 0.95,
+          "rationale": "A versão inclui o Março Lilás e datas de conscientização sobre HPV e prevenção do câncer do colo do útero no calendário oficial. O efeito normativo é principalmente informativo e simbólico, mas direcionado à saúde das mulheres; o voto sim favorece esse objetivo.",
+          "status": "approved",
+          "requires_external_review": false
+        }
+      ],
+      "external_review_required": false,
+      "human_review_required": true,
+      "public_approval": false,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "4b72b569-1ad0-4c3e-af07-9062f49f4a76",
+      "review_key": "sha256:96d57b4c1dd856d40c32b886606687bf188d6cbbb26f1eda628d0402fe0f0428#4b72b569-1ad0-4c3e-af07-9062f49f4a76",
+      "official_match_key": "PL-100-2025",
+      "title": "Altera a Lei nº 15.606, de 29 de abril de 2021, que institui a Política Estadual de Proteção dos Direitos da Pessoa com Fibromialgia – Lei Daniel Lenz, tornando obrigatória a inclusão do símbolo mundial da Fibromialgia nas placas ou avisos de atendimento prioritário no Estado do Rio Grande do Sul.",
+      "methodology_version": "impacto-populacional-v1",
+      "review_status": "pending_review",
+      "editorial_status": "approved",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": [
+        {
+          "group_slug": "pessoas_com_deficiencia",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 2,
+          "structural_type": "structural",
+          "confidence": 0.98,
+          "rationale": "A versão torna obrigatória a identificação da fibromialgia nas placas de atendimento prioritário e vincula esse atendimento à legislação que equipara pessoas com fibromialgia às pessoas com deficiência. O voto sim melhora o reconhecimento e o exercício de direitos prioritários desse subgrupo.",
+          "status": "approved",
+          "requires_external_review": false
+        }
+      ],
+      "external_review_required": false,
+      "human_review_required": true,
+      "public_approval": false,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "7bae10be-b80b-4b2c-88cf-0c2561edeb6b",
+      "review_key": "sha256:bb8c0d5262e866faa5745a563abedcccb73854825373843994ccfb6969f18f38#7bae10be-b80b-4b2c-88cf-0c2561edeb6b",
+      "official_match_key": "PL-10-2022",
+      "title": "Institui a Política Estadual de Proteção Social às Crianças e aos Adolescentes em situação de orfandade decorrente da Covid-19 e dá outras providências. (SEI 1338-0100/22-5)",
+      "methodology_version": "impacto-populacional-v1",
+      "review_status": "pending_review",
+      "editorial_status": "approved",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": [
+        {
+          "group_slug": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 4,
+          "structural_type": "structural",
+          "confidence": 0.99,
+          "rationale": "A versão institui proteção social continuada para crianças e adolescentes órfãos da Covid-19, com acesso prioritário a saúde, assistência, educação, proteção de renda e acompanhamento psicossocial. O voto sim amplia de forma estrutural a proteção de um grupo infantil e adolescente em vulnerabilidade claramente definido.",
+          "status": "approved",
+          "requires_external_review": true
+        }
+      ],
+      "external_review_required": true,
+      "human_review_required": true,
+      "public_approval": false,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "d75becac-49d6-4bdd-95e8-29270980b4f4",
+      "review_key": "sha256:f6f602bc12539cc5787793134de2a805eef274ad9d36ed06525a3fb4ec55b317#d75becac-49d6-4bdd-95e8-29270980b4f4",
+      "official_match_key": "PL-361-2025",
+      "title": "Altera a Lei Estadual nº 16.328, de 8 de agosto de 2025, que institui a reserva de vagas, em percentual de no mínimo 20% (vinte por cento), nas empresas da área de segurança, vigilância e transportes de valores, para vigilantes do sexo feminino, nas contratações que especifica e dá outras providências, estendendo a reserva de vagas para todos os tipos de contrato e priorizando a contratação de vít",
+      "methodology_version": "impacto-populacional-v1",
+      "review_status": "pending_review",
+      "editorial_status": "approved",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 4,
+          "structural_type": "structural",
+          "confidence": 0.99,
+          "rationale": "A versão exige participação mínima de 20% de mulheres no quadro de empresas prestadoras de serviços contratadas pelo Estado e prioriza mulheres em situação de violência doméstica e familiar. O voto sim amplia acesso ao trabalho e autonomia econômica com efeito estrutural direto sobre mulheres.",
+          "status": "approved",
+          "requires_external_review": true
+        }
+      ],
+      "external_review_required": true,
+      "human_review_required": true,
+      "public_approval": false,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "146f5b3a-2bbd-4d2f-b6b9-56658da10139",
+      "review_key": "sha256:10f3fb9d69994b6794881ecfd3d0b783eb5f8e7762a42d940592eb2fc1b3f782#146f5b3a-2bbd-4d2f-b6b9-56658da10139",
+      "official_match_key": "PL-587-2023",
+      "title": "Dispõe sobre o Programa de Defesa e Amparo à Vítima.(SEI 17608-0100/23-2)",
+      "methodology_version": "impacto-populacional-v1",
+      "review_status": "pending_review",
+      "editorial_status": "approved",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": [
+        {
+          "group_slug": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 4,
+          "structural_type": "structural",
+          "confidence": 0.94,
+          "rationale": "A versão assegura direitos e serviços a vítimas e determina tratamento específico quando a vítima é criança ou adolescente, com prioridade ao superior interesse, proteção contra revitimização e acesso a saúde, apoio psicossocial e medidas de reparação. O voto sim fortalece proteção estrutural a crianças e adolescentes vitimizados.",
+          "status": "approved",
+          "requires_external_review": true
+        }
+      ],
+      "external_review_required": true,
+      "human_review_required": true,
+      "public_approval": false,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "3f2e156e-8430-44be-8564-77578ef9fc81",
+      "review_key": "sha256:3e7be81fb11122aea31318a85d9167eb367bbc16bb7fc3088bf93fd2d934d143#3f2e156e-8430-44be-8564-77578ef9fc81",
+      "official_match_key": "PL-137-2023",
+      "title": "Institui a política estadual de combate ao racismo, à LGBTfobia e à violência contra as mulheres nos estádios e nas arenas esportivas do Estado do Rio Grande do Sul - Política Estádio de Respeito. (SEI 5535-0100/23-0)",
+      "methodology_version": "impacto-populacional-v1",
+      "review_status": "pending_review",
+      "editorial_status": "approved",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 3,
+          "structural_type": "structural",
+          "confidence": 0.99,
+          "rationale": "A versão cria política de combate à violência contra mulheres em estádios e arenas, com campanhas, protocolos de denúncia, acolhimento e formação de trabalhadores. O voto sim fortalece proteção e acesso seguro das mulheres a esses espaços.",
+          "status": "approved",
+          "requires_external_review": false
+        },
+        {
+          "group_slug": "lgbtqia",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 3,
+          "structural_type": "structural",
+          "confidence": 0.99,
+          "rationale": "A versão combate expressamente a LGBTfobia em estádios e arenas, prevendo campanhas, formação, protocolos de denúncia e medidas de acolhimento. O voto sim amplia proteção e condições de participação segura de pessoas LGBTQIA+ nesses espaços.",
+          "status": "approved",
+          "requires_external_review": false
+        },
+        {
+          "group_slug": "populacao_negra_periferica",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 3,
+          "structural_type": "structural",
+          "confidence": 0.94,
+          "rationale": "A versão combate expressamente o racismo em estádios e arenas, com prevenção, denúncia e acolhimento. A população negra e periférica urbana integra diretamente o conjunto protegido contra práticas racistas, embora a lei não restrinja o benefício a esse recorte; o voto sim favorece sua proteção.",
+          "status": "approved",
+          "requires_external_review": false
+        }
+      ],
+      "external_review_required": false,
+      "human_review_required": true,
+      "public_approval": false,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "df109b14-250b-40a6-af19-ae7ffec834d6",
+      "review_key": "sha256:737492a11b4269a186feef11b645d0935f9f9631b755f039a9cbcc2ea589ec4d#df109b14-250b-40a6-af19-ae7ffec834d6",
+      "official_match_key": "PL-408-2025",
+      "title": "Dispõe sobre restrições à publicidade de plataformas de apostas esportivas no âmbito do Estado do Rio Grande do Sul e dá outras providências.",
+      "methodology_version": "impacto-populacional-v1",
+      "review_status": "pending_review",
+      "editorial_status": "approved",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": [
+        {
+          "group_slug": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 3,
+          "structural_type": "structural",
+          "confidence": 0.97,
+          "rationale": "A versão restringe publicidade de apostas com objetivo expresso de resguardar infância e juventude, proibindo conteúdo direcionado a menores, apelo infantojuvenil, uso de menores e publicidade em locais vinculados a crianças. O voto sim reduz a exposição de crianças e adolescentes a estímulos de apostas e dependência.",
+          "status": "approved",
+          "requires_external_review": false
+        }
+      ],
+      "external_review_required": false,
+      "human_review_required": true,
+      "public_approval": false,
+      "remote_apply": false
+    },
+    {
+      "proposition_version_id": "92f2865a-1414-4077-85ae-7d10711c51b4",
+      "review_key": "sha256:f0832e005dea9c6626b6648ffce12e0c90417b86f10ff26a2fac23fe09b3be05#92f2865a-1414-4077-85ae-7d10711c51b4",
+      "official_match_key": "PL-328-2024",
+      "title": "Institui o Programa de Inclusão Digital para Idosos (PIDI) no âmbito do Estado do Rio Grande do Sul, e dá outras providências.",
+      "methodology_version": "impacto-populacional-v1",
+      "review_status": "pending_review",
+      "editorial_status": "approved",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": [
+        {
+          "group_slug": "pessoas_idosas_dependentes",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 3,
+          "structural_type": "structural",
+          "confidence": 0.92,
+          "rationale": "A versão cria programa de inclusão digital para toda a população idosa, com cursos, centros, prevenção a fraudes, acesso a saúde digital e estímulo à autonomia. Pessoas idosas em situação de dependência integram diretamente esse público, embora a lei não as trate como subgrupo separado; o voto sim amplia acesso e autonomia digital.",
+          "status": "approved",
+          "requires_external_review": false
+        }
+      ],
+      "external_review_required": false,
+      "human_review_required": true,
+      "public_approval": false,
+      "remote_apply": false
+    }
+  ]
+}

@@ -2328,6 +2328,14 @@ Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; som
 - Pacote global permanece fail-closed pelos 18 P1 pendentes e 2 gates globais.
 - QA: `docs/qa/lote-alrs-p0-editorial-review-pack-2026-08-22.md`.
 
+## Tick contínuo — aprovação editorial P0/P1 e matrizes pending_review (2026-08-23)
+
+- Autorização do usuário incorporada: 23 versões, 12 assess e 14 assessment rows.
+- PL 137/2023 aprovado com três grupos: `mulheres`, `lgbtqia`, `populacao_negra_periferica`.
+- Cinco versões severity 4 encaminhadas para revisão externa.
+- 12 matrizes geradas apenas em `pending_review`; nenhuma publicação ou escrita remota.
+- QA: `docs/qa/lote-alrs-editorial-approval-and-pending-matrices-2026-08-23.md`.
+
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)
 
 - 30/30 itens P0 classificados: 9 mérito, 19 procedimento, 2 emenda, 0 destaque.

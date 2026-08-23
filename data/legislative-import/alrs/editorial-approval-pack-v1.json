@@ -1,0 +1,1171 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "alrs_editorial_approval_pack",
+  "methodology_version": "impacto-populacional-v1",
+  "review_status": "approved",
+  "public_approval": false,
+  "remote_apply": false,
+  "apply_ready": false,
+  "source_basis": {
+    "p0_pack_sha256": "a35edd52927a7a9eff457b2af17799c10272c56b6c5727f308db7226a72c392e",
+    "p1_review_sha256": "05bcee98f454bc74501385ec5cc3db9dc5416712f9b9b80223417f21900f528c"
+  },
+  "totals": {
+    "versions": 23,
+    "p0_versions": 5,
+    "p1_versions": 18,
+    "assess_versions": 12,
+    "assessment_rows": 14,
+    "external_review_required_versions": 5
+  },
+  "items": [
+    {
+      "house": "alrs",
+      "proposition_version_id": "c82f08c4-188d-4361-961e-4d56fee4c4e3",
+      "review_key": "sha256:c3f815aab7b9674552394fdfdeb286ca720cb9d17db55b7eb107358c8c8ad7c8#c82f08c4-188d-4361-961e-4d56fee4c4e3",
+      "proposition_external_id": "alrs_prop_2d0e1036726a142ab935a0b5",
+      "version_key": "sha256:c3f815aab7b9674552394fdfdeb286ca720cb9d17db55b7eb107358c8c8ad7c8",
+      "version_key_collision": false,
+      "title": "Altera a Constituição do Estado do Rio Grande do Sul para instituir mecanismos de promoção e garantia de fomento ao Turismo, e transversalidade de ações com a Cultura e o Desporto, e dá outras providências.",
+      "title_quality": "complete_or_unverified",
+      "priority": "P0",
+      "candidate_count": 7,
+      "factual_vote_count": 12,
+      "event_count": 2,
+      "event_external_ids": [
+        "alrs_event_71c79958e854ff2e47c1c7e2",
+        "alrs_event_fbe6201eb8dc8461f157f47f"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+          "event_external_id": "alrs_event_71c79958e854ff2e47c1c7e2",
+          "source_reference_id": "b301a4ee-52cc-4cab-9089-6c92e8a9ca13"
+        },
+        {
+          "candidate_id": "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+          "event_external_id": "alrs_event_fbe6201eb8dc8461f157f47f",
+          "source_reference_id": "b301a4ee-52cc-4cab-9089-6c92e8a9ca13"
+        },
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_fbe6201eb8dc8461f157f47f",
+          "source_reference_id": "7739d2d8-4b18-49ad-ba85-610497376401"
+        },
+        {
+          "candidate_id": "733cef65-bf07-44ef-9521-36232ad0135c",
+          "event_external_id": "alrs_event_71c79958e854ff2e47c1c7e2",
+          "source_reference_id": "c034ce27-3daa-48fb-89d9-58bd520c890c"
+        },
+        {
+          "candidate_id": "733cef65-bf07-44ef-9521-36232ad0135c",
+          "event_external_id": "alrs_event_fbe6201eb8dc8461f157f47f",
+          "source_reference_id": "c034ce27-3daa-48fb-89d9-58bd520c890c"
+        },
+        {
+          "candidate_id": "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+          "event_external_id": "alrs_event_71c79958e854ff2e47c1c7e2",
+          "source_reference_id": "ad396b72-6a02-4fd9-978b-20a97afa88d5"
+        },
+        {
+          "candidate_id": "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+          "event_external_id": "alrs_event_fbe6201eb8dc8461f157f47f",
+          "source_reference_id": "ad396b72-6a02-4fd9-978b-20a97afa88d5"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_71c79958e854ff2e47c1c7e2",
+          "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_fbe6201eb8dc8461f157f47f",
+          "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_71c79958e854ff2e47c1c7e2",
+          "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_fbe6201eb8dc8461f157f47f",
+          "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
+        },
+        {
+          "candidate_id": "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1",
+          "event_external_id": "alrs_event_fbe6201eb8dc8461f157f47f",
+          "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
+        }
+      ],
+      "event_type": "merit_confirmed",
+      "editorial_disposition": "no_direct_population_group",
+      "suggested_groups": [],
+      "suggested_direction": null,
+      "defending_vote": null,
+      "human_review_required": true,
+      "remote_apply": false,
+      "review_gate": "official_event_confirmed",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "substantive_sources": [
+        {
+          "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PEC/302/2025",
+          "document_url": "https://api-nopaper.al.rs.gov.br/api/v1/blob-storage/documents-alrs-prod/20251127/09cb4900-b24d-4593-950f-7d5077550e22/5334cb53-4bd0-4925-86e9-ca238aa89036.pdf?exp=2026-08-21T03%3a51%3a42Z&sp=r&sig=JBhgBSCzZGsdmGkkpSXFpe7P5uyFVef0cf4zuaiLYwI%3d",
+          "http": 200,
+          "bytes": 136862,
+          "sha256": "2ba404863a07246c91374d84af85bf790da2e8cf9a7d82b3c262d6647917a73b",
+          "source_bytes_preserved": true,
+          "renewable_locator_verified": true,
+          "content_addressed_path": "data/legislative-import/alrs/source-corpus/2ba404863a07246c91374d84af85bf790da2e8cf9a7d82b3c262d6647917a73b.pdf",
+          "durability_gate": "green"
+        }
+      ],
+      "review_status": "pending_review",
+      "editorial_status": "approved",
+      "disposition_rationale": "A versão é instrumento fiscal e orçamentário transversal do Estado, abrangendo múltiplas funções, políticas e destinatários. Não há um grupo populacional v1 que constitua o beneficiário direto da versão como unidade legislativa, e decompor efeitos setoriais exigiria unidades normativas mais granulares do que a proposition_version atual.",
+      "assessments": [],
+      "human_approval_recorded": true,
+      "editorial_review_status": "approved"
+    },
+    {
+      "house": "alrs",
+      "proposition_version_id": "7c132ddc-b571-43ee-b2bc-e877f053480a",
+      "review_key": "sha256:7cf39a1e311538faa0de87845c8535ad54b09c3760f94837682c5d81a335ad31#7c132ddc-b571-43ee-b2bc-e877f053480a",
+      "proposition_external_id": "alrs_prop_f510d5f5859f870e2c4f27e0",
+      "version_key": "sha256:7cf39a1e311538faa0de87845c8535ad54b09c3760f94837682c5d81a335ad31",
+      "version_key_collision": false,
+      "title": "Altera a Lei Ordinária n.º 15.988 de 07 de agosto de 2023, que consolida a legislação relativa às mulheres vítimas de violência no âmbito do Estado do Rio Grande do Sul.",
+      "title_quality": "complete_or_unverified",
+      "priority": "P0",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "event_count": 1,
+      "event_external_ids": [
+        "alrs_event_bd8cd263cd90f83632405c1a"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+          "event_external_id": "alrs_event_bd8cd263cd90f83632405c1a",
+          "source_reference_id": "b301a4ee-52cc-4cab-9089-6c92e8a9ca13"
+        },
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_bd8cd263cd90f83632405c1a",
+          "source_reference_id": "7739d2d8-4b18-49ad-ba85-610497376401"
+        },
+        {
+          "candidate_id": "733cef65-bf07-44ef-9521-36232ad0135c",
+          "event_external_id": "alrs_event_bd8cd263cd90f83632405c1a",
+          "source_reference_id": "c034ce27-3daa-48fb-89d9-58bd520c890c"
+        },
+        {
+          "candidate_id": "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+          "event_external_id": "alrs_event_bd8cd263cd90f83632405c1a",
+          "source_reference_id": "ad396b72-6a02-4fd9-978b-20a97afa88d5"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_bd8cd263cd90f83632405c1a",
+          "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_bd8cd263cd90f83632405c1a",
+          "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
+        },
+        {
+          "candidate_id": "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1",
+          "event_external_id": "alrs_event_bd8cd263cd90f83632405c1a",
+          "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
+        }
+      ],
+      "event_type": "merit_confirmed",
+      "editorial_disposition": "assess",
+      "suggested_groups": [],
+      "suggested_direction": null,
+      "defending_vote": null,
+      "human_review_required": true,
+      "remote_apply": false,
+      "review_gate": "official_event_confirmed",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "substantive_sources": [
+        {
+          "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/262/2024",
+          "document_url": "https://api-nopaper.al.rs.gov.br/api/v1/blob-storage/documents-alrs-prod/20241008/09cb4900-b24d-4593-950f-7d5077550e22/258bf73b-e6f5-4ce6-9e3b-19227a06db2f.pdf?exp=2026-08-21T03%3a49%3a55Z&sp=r&sig=XT68gpPJGig5YuPj3KsjyiWtLflA5915XJftJgsr8%2f0%3d",
+          "http": 200,
+          "bytes": 101581,
+          "sha256": "69518d76b51e1af1fa27abc7fedbb6b496d73c0029f28ca0339a9765f8efab13",
+          "source_bytes_preserved": true,
+          "renewable_locator_verified": true,
+          "content_addressed_path": "data/legislative-import/alrs/source-corpus/69518d76b51e1af1fa27abc7fedbb6b496d73c0029f28ca0339a9765f8efab13.pdf",
+          "durability_gate": "green"
+        }
+      ],
+      "review_status": "pending_review",
+      "editorial_status": "approved",
+      "disposition_rationale": "A proposição altera diretamente o marco estadual de proteção às mulheres vítimas de violência, produzindo efeito normativo estrutural sobre esse grupo; o voto favorável é classificado como defesa de impacto positivo.",
+      "assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 4,
+          "structural_type": "structural",
+          "confidence": 0.96,
+          "rationale": "A proposição altera diretamente o marco estadual de proteção às mulheres vítimas de violência, produzindo efeito normativo estrutural sobre esse grupo; o voto favorável é classificado como defesa de impacto positivo.",
+          "status": "approved",
+          "requires_external_review": true
+        }
+      ],
+      "human_approval_recorded": true,
+      "editorial_review_status": "approved"
+    },
+    {
+      "house": "alrs",
+      "proposition_version_id": "3d47b25e-aab7-4a22-a815-f03b96518682",
+      "review_key": "sha256:9c2102e251a41e1458eacf75d46dda085a606e63fb04f9dfed211ccbe70252a5#3d47b25e-aab7-4a22-a815-f03b96518682",
+      "proposition_external_id": "alrs_prop_68ebe30038e4752f7a9b0ff4",
+      "version_key": "sha256:9c2102e251a41e1458eacf75d46dda085a606e63fb04f9dfed211ccbe70252a5",
+      "version_key_collision": false,
+      "title": "Permite a cessão gratuita dos espaços físicos das unidades da rede pública estadual de ensino do Estado do Rio Grande do Sul para o funcionamento de cursos pré-universitários populares e dá outras providências. (SEI 14400-01.00/23-2)",
+      "title_quality": "complete_or_unverified",
+      "priority": "P0",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "event_count": 1,
+      "event_external_ids": [
+        "alrs_event_32b2fb9b96064a7fcd6cb5ec"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+          "event_external_id": "alrs_event_32b2fb9b96064a7fcd6cb5ec",
+          "source_reference_id": "b301a4ee-52cc-4cab-9089-6c92e8a9ca13"
+        },
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_32b2fb9b96064a7fcd6cb5ec",
+          "source_reference_id": "7739d2d8-4b18-49ad-ba85-610497376401"
+        },
+        {
+          "candidate_id": "733cef65-bf07-44ef-9521-36232ad0135c",
+          "event_external_id": "alrs_event_32b2fb9b96064a7fcd6cb5ec",
+          "source_reference_id": "c034ce27-3daa-48fb-89d9-58bd520c890c"
+        },
+        {
+          "candidate_id": "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+          "event_external_id": "alrs_event_32b2fb9b96064a7fcd6cb5ec",
+          "source_reference_id": "ad396b72-6a02-4fd9-978b-20a97afa88d5"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_32b2fb9b96064a7fcd6cb5ec",
+          "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_32b2fb9b96064a7fcd6cb5ec",
+          "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
+        },
+        {
+          "candidate_id": "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1",
+          "event_external_id": "alrs_event_32b2fb9b96064a7fcd6cb5ec",
+          "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
+        }
+      ],
+      "event_type": "merit_confirmed",
+      "editorial_disposition": "taxonomy_gap",
+      "suggested_groups": [],
+      "suggested_direction": null,
+      "defending_vote": null,
+      "human_review_required": true,
+      "remote_apply": false,
+      "review_gate": "official_event_confirmed",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "substantive_sources": [
+        {
+          "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/432/2023",
+          "document_url": "https://api-nopaper.al.rs.gov.br/api/v1/blob-storage/documents-alrs-prod/20240701/84e24e90-e0fb-4dba-9520-d55d568cc2bf/8ab5c4ff-f92d-452b-9cdd-ea2ecef0f535.pdf?exp=2026-08-21T03%3a51%3a10Z&sp=r&sig=4DVG3KUl2pbmGyTMBb7royQwcKIueliW2%2bjOTndahpk%3d",
+          "http": 200,
+          "bytes": 85495,
+          "sha256": "9061e83c652d5262a90317cbfb787115ac5146de5b5b8a0f77e6246f37e9e63a",
+          "source_bytes_preserved": true,
+          "renewable_locator_verified": true,
+          "content_addressed_path": "data/legislative-import/alrs/source-corpus/9061e83c652d5262a90317cbfb787115ac5146de5b5b8a0f77e6246f37e9e63a.pdf",
+          "durability_gate": "green"
+        }
+      ],
+      "review_status": "pending_review",
+      "editorial_status": "approved",
+      "disposition_rationale": "A proposição beneficia diretamente estudantes atendidos por cursos pré-universitários populares, mas a taxonomia v1 não possui grupo específico que represente esse público sem forçar enquadramento inadequado.",
+      "assessments": [],
+      "human_approval_recorded": true,
+      "editorial_review_status": "approved"
+    },
+    {
+      "house": "alrs",
+      "proposition_version_id": "a57b1c83-3749-4c45-85b7-2408db20f5a2",
+      "review_key": "sha256:c1f571e5077d13d1486261d3db0fb706cee52efd00465184fef79a872f0772ee#a57b1c83-3749-4c45-85b7-2408db20f5a2",
+      "proposition_external_id": "alrs_prop_2a4640e188225a0fece6ec70",
+      "version_key": "sha256:c1f571e5077d13d1486261d3db0fb706cee52efd00465184fef79a872f0772ee",
+      "version_key_collision": false,
+      "title": "Dispõe sobre a criação do Programa de Defesa pessoal para Mulheres “RS POR ELAS” no âmbito do Estado do Rio Grande do Sul e dá outras providências.(SEI 4237-0100/21-8)",
+      "title_quality": "complete_or_unverified",
+      "priority": "P0",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "event_count": 1,
+      "event_external_ids": [
+        "alrs_event_0c98f486921cb63aa48c97de"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+          "event_external_id": "alrs_event_0c98f486921cb63aa48c97de",
+          "source_reference_id": "b301a4ee-52cc-4cab-9089-6c92e8a9ca13"
+        },
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_0c98f486921cb63aa48c97de",
+          "source_reference_id": "7739d2d8-4b18-49ad-ba85-610497376401"
+        },
+        {
+          "candidate_id": "733cef65-bf07-44ef-9521-36232ad0135c",
+          "event_external_id": "alrs_event_0c98f486921cb63aa48c97de",
+          "source_reference_id": "c034ce27-3daa-48fb-89d9-58bd520c890c"
+        },
+        {
+          "candidate_id": "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+          "event_external_id": "alrs_event_0c98f486921cb63aa48c97de",
+          "source_reference_id": "ad396b72-6a02-4fd9-978b-20a97afa88d5"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_0c98f486921cb63aa48c97de",
+          "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_0c98f486921cb63aa48c97de",
+          "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
+        },
+        {
+          "candidate_id": "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1",
+          "event_external_id": "alrs_event_0c98f486921cb63aa48c97de",
+          "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
+        }
+      ],
+      "event_type": "merit_confirmed",
+      "editorial_disposition": "assess",
+      "suggested_groups": [],
+      "suggested_direction": null,
+      "defending_vote": null,
+      "human_review_required": true,
+      "remote_apply": false,
+      "review_gate": "official_event_confirmed",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "substantive_sources": [
+        {
+          "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/125/2021",
+          "document_url": "https://api-nopaper.al.rs.gov.br/api/v1/blob-storage/documents-alrs-prod/20240701/84e24e90-e0fb-4dba-9520-d55d568cc2bf/0b0fb3f4-608a-4859-a465-588030542ecb.pdf?exp=2026-08-21T03%3a51%3a12Z&sp=r&sig=pWUvUd%2be96zII3P2NzkFrY9PLTEyBDreQ%2fK9flZ1OLk%3d",
+          "http": 200,
+          "bytes": 81668,
+          "sha256": "6761e172c8da2263aecdabf7678603df45b78cb1fa7b5eaa491f9bf68fad5831",
+          "source_bytes_preserved": true,
+          "renewable_locator_verified": true,
+          "content_addressed_path": "data/legislative-import/alrs/source-corpus/6761e172c8da2263aecdabf7678603df45b78cb1fa7b5eaa491f9bf68fad5831.pdf",
+          "durability_gate": "green"
+        }
+      ],
+      "review_status": "pending_review",
+      "editorial_status": "approved",
+      "disposition_rationale": "A proposição cria programa estadual de defesa pessoal voltado especificamente às mulheres, institucionalizando política pública direcionada ao grupo; o voto favorável é classificado como defesa de impacto positivo.",
+      "assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 3,
+          "structural_type": "structural",
+          "confidence": 0.95,
+          "rationale": "A proposição cria programa estadual de defesa pessoal voltado especificamente às mulheres, institucionalizando política pública direcionada ao grupo; o voto favorável é classificado como defesa de impacto positivo.",
+          "status": "approved",
+          "requires_external_review": false
+        }
+      ],
+      "human_approval_recorded": true,
+      "editorial_review_status": "approved"
+    },
+    {
+      "house": "alrs",
+      "proposition_version_id": "e297c2d0-84d6-4053-b42f-51e6450673d0",
+      "review_key": "sha256:cdfa161d6326bf4cc660af4aa8eaa4ca7c9bae0f9bf83b119ad8409b5f01e9e2#e297c2d0-84d6-4053-b42f-51e6450673d0",
+      "proposition_external_id": "alrs_prop_29a6d25a2677366e2aed9e03",
+      "version_key": "sha256:cdfa161d6326bf4cc660af4aa8eaa4ca7c9bae0f9bf83b119ad8409b5f01e9e2",
+      "version_key_collision": false,
+      "title": "Dispõe sobre as diretrizes para a elaboração da Lei Orçamentária para o exercício econômico-financeiro de 2027 e dá outras providências.",
+      "title_quality": "complete_or_unverified",
+      "priority": "P0",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "event_count": 1,
+      "event_external_ids": [
+        "alrs_event_299ab14423a5b2412c632dfc"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+          "event_external_id": "alrs_event_299ab14423a5b2412c632dfc",
+          "source_reference_id": "b301a4ee-52cc-4cab-9089-6c92e8a9ca13"
+        },
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_299ab14423a5b2412c632dfc",
+          "source_reference_id": "7739d2d8-4b18-49ad-ba85-610497376401"
+        },
+        {
+          "candidate_id": "733cef65-bf07-44ef-9521-36232ad0135c",
+          "event_external_id": "alrs_event_299ab14423a5b2412c632dfc",
+          "source_reference_id": "c034ce27-3daa-48fb-89d9-58bd520c890c"
+        },
+        {
+          "candidate_id": "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+          "event_external_id": "alrs_event_299ab14423a5b2412c632dfc",
+          "source_reference_id": "ad396b72-6a02-4fd9-978b-20a97afa88d5"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_299ab14423a5b2412c632dfc",
+          "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_299ab14423a5b2412c632dfc",
+          "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
+        },
+        {
+          "candidate_id": "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1",
+          "event_external_id": "alrs_event_299ab14423a5b2412c632dfc",
+          "source_reference_id": "e391dd28-92ca-415c-b69a-446c61d690d2"
+        }
+      ],
+      "event_type": "merit_confirmed",
+      "editorial_disposition": "no_direct_population_group",
+      "suggested_groups": [],
+      "suggested_direction": null,
+      "defending_vote": null,
+      "human_review_required": true,
+      "remote_apply": false,
+      "review_gate": "official_event_confirmed",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "substantive_sources": [
+        {
+          "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/172/2026",
+          "document_url": "https://api-nopaper.al.rs.gov.br/api/v1/blob-storage/documents-alrs-prod/20260703/3ee67fd9-0f78-4d8b-9c8c-a8d8f08eceb0/46738538-9397-40c6-9cb8-4502346eedec.pdf?exp=2026-08-21T03%3a50%3a00Z&sp=r&sig=ccHmO4ErY1CIbhCYdZgyi5TiznRZSP4QyxUWSSVlVRE%3d",
+          "http": 200,
+          "bytes": 306885,
+          "sha256": "ea202027bcc72c8ab9323ab4cfb50a70425418ce23be74fcb90d27f610fd69d1",
+          "source_bytes_preserved": true,
+          "renewable_locator_verified": true,
+          "content_addressed_path": "data/legislative-import/alrs/source-corpus/ea202027bcc72c8ab9323ab4cfb50a70425418ce23be74fcb90d27f610fd69d1.pdf",
+          "durability_gate": "green"
+        }
+      ],
+      "review_status": "pending_review",
+      "editorial_status": "approved",
+      "disposition_rationale": "A versão é instrumento fiscal e orçamentário transversal do Estado, abrangendo múltiplas funções, políticas e destinatários. Não há um grupo populacional v1 que constitua o beneficiário direto da versão como unidade legislativa, e decompor efeitos setoriais exigiria unidades normativas mais granulares do que a proposition_version atual.",
+      "assessments": [],
+      "human_approval_recorded": true,
+      "editorial_review_status": "approved"
+    },
+    {
+      "proposition_version_id": "1eb30d74-271c-4315-b7f6-54849d31c9bc",
+      "review_key": "sha256:0d0b779976354f6bd951ce8d8bff213f63b1b515712734564144254577e6aa51#1eb30d74-271c-4315-b7f6-54849d31c9bc",
+      "official_match_key": "PL-66-2024",
+      "title": "Institui a política de prevenção a crimes sexuais contra adolescentes, no Estado do Rio Grande do Sul, denominado “Projeto Libertar”.",
+      "priority": "P1",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "assess",
+      "disposition_rationale": "A versão institui política permanente de prevenção a crimes sexuais dirigida a adolescentes, com informação, identificação de sinais, orientação sobre a rede estatal e articulação de ações preventivas; há grupo v1 diretamente atingido.",
+      "assessments": [
+        {
+          "group_slug": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 3,
+          "structural_type": "structural",
+          "confidence": 0.97,
+          "rationale": "A versão institui política permanente de prevenção a crimes sexuais dirigida a adolescentes, com informação sobre abuso, canais estatais, identificação de sinais e articulação com órgãos de segurança. O voto sim amplia medidas diretas de prevenção e proteção de adolescentes expostos a violência sexual.",
+          "status": "approved",
+          "requires_external_review": false
+        }
+      ],
+      "editorial_status": "approved",
+      "review_status": "reviewed",
+      "human_review_required": true,
+      "remote_apply": false,
+      "source_basis": {
+        "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/66/2024",
+        "document_sha256": "6c3c2018df4ae6efee14bffc8fe8922baa12ef855e26187cf6e8f70f4b0b9228",
+        "content_addressed_path": "data/legislative-import/alrs/source-corpus/p1/6c3c2018df4ae6efee14bffc8fe8922baa12ef855e26187cf6e8f70f4b0b9228.pdf",
+        "source_bytes_preserved": true,
+        "renewable_locator_verified": true,
+        "durability_gate": "green"
+      },
+      "human_approval_recorded": true
+    },
+    {
+      "proposition_version_id": "10887f06-837a-47ed-aa52-f05560d17742",
+      "review_key": "sha256:1a61707c7c826f5b75d1b3e2725f6d4c473e3852568f5d3fac7a94540c5cab1a#10887f06-837a-47ed-aa52-f05560d17742",
+      "official_match_key": "PL-424-2024",
+      "title": "Dispõe sobre a criação da Patrulha Estadual de Prevenção à Violência Doméstica e Familiar contra Crianças e Adolescentes.",
+      "priority": "P1",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "assess",
+      "disposition_rationale": "A versão cria patrulha estadual especificamente destinada a prevenir e enfrentar violência doméstica e familiar contra crianças e adolescentes, correspondendo diretamente ao grupo v1 de crianças e adolescentes em vulnerabilidade.",
+      "assessments": [
+        {
+          "group_slug": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 4,
+          "structural_type": "structural",
+          "confidence": 0.98,
+          "rationale": "A versão cria patrulha dedicada à prevenção e ao enfrentamento da violência doméstica e familiar contra crianças e adolescentes, prevendo atendimento humanizado, capacitação de agentes, integração institucional e ações educativas. O voto sim fortalece uma rede estrutural de proteção a crianças e adolescentes em situação de vulnerabilidade.",
+          "status": "approved",
+          "requires_external_review": true
+        }
+      ],
+      "editorial_status": "approved",
+      "review_status": "reviewed",
+      "human_review_required": true,
+      "remote_apply": false,
+      "source_basis": {
+        "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/424/2024",
+        "document_sha256": "3cca170f474e9b57067226a2f11f7fca8b740014586ad8b0a2a79eaeea1a1a34",
+        "content_addressed_path": "data/legislative-import/alrs/source-corpus/p1/3cca170f474e9b57067226a2f11f7fca8b740014586ad8b0a2a79eaeea1a1a34.pdf",
+        "source_bytes_preserved": true,
+        "renewable_locator_verified": true,
+        "durability_gate": "green"
+      },
+      "human_approval_recorded": true
+    },
+    {
+      "proposition_version_id": "8d172d3c-5bcb-4a30-ada2-2fd86a3fc4d9",
+      "review_key": "sha256:4f941baf624b5193cab674213624caff882d4ede9d85ac23a103a49543685780#8d172d3c-5bcb-4a30-ada2-2fd86a3fc4d9",
+      "official_match_key": "PL-188-2024",
+      "title": "Altera a alínea b, do inciso II do art. 1º da Lei nº 15.766, de 20 de dezembro de 2021, que dispõe sobre a parcela do produto da arrecadação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e de Comunicação (ICMS pertencente aos municípios).",
+      "priority": "P1",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "no_direct_population_group",
+      "disposition_rationale": "A versão altera o critério de distribuição municipal do ICMS e usa, entre outros fatores territoriais, áreas indígenas. O recurso é transferido ao município sem vinculação ao atendimento de povos indígenas ou de outro grupo v1; o efeito populacional é indireto e não permite definir voto defensor para grupo específico.",
+      "assessments": [],
+      "editorial_status": "approved",
+      "review_status": "reviewed",
+      "human_review_required": true,
+      "remote_apply": false,
+      "source_basis": {
+        "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/188/2024",
+        "document_sha256": "0b22e9b7e392797445764be3ee0d3e64fed2bb0c00a5110332daeab9430267d0",
+        "content_addressed_path": "data/legislative-import/alrs/source-corpus/p1/0b22e9b7e392797445764be3ee0d3e64fed2bb0c00a5110332daeab9430267d0.pdf",
+        "source_bytes_preserved": true,
+        "renewable_locator_verified": true,
+        "durability_gate": "green"
+      },
+      "human_approval_recorded": true
+    },
+    {
+      "proposition_version_id": "7dd6f932-3e02-4eaa-8f5c-b7363545000c",
+      "review_key": "sha256:6e9b052a90e83cedccb28d63b11f3bbe4b46173f5d4ed899dd8236083f2c33dc#7dd6f932-3e02-4eaa-8f5c-b7363545000c",
+      "official_match_key": "PL-57-2025",
+      "title": "Altera a Lei n.º 15.950, de 9 de janeiro de 2023, que consolida a legislação estadual relativa a eventos e datas estaduais, instituindo o Calendário Oficial de Eventos e Datas Comemorativas do Estado do Rio Grande do Sul, para incluir o Março Lilás, o dia de conscientização sobre HPV, o dia da prevenção ao câncer de colo do útero, e dá outras providências.",
+      "priority": "P1",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "assess",
+      "disposition_rationale": "A versão inclui no calendário oficial campanhas e datas de conscientização sobre HPV e prevenção do câncer do colo do útero, com destinatário populacional diretamente relacionado à saúde das mulheres.",
+      "assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 1,
+          "structural_type": "symbolic",
+          "confidence": 0.95,
+          "rationale": "A versão inclui o Março Lilás e datas de conscientização sobre HPV e prevenção do câncer do colo do útero no calendário oficial. O efeito normativo é principalmente informativo e simbólico, mas direcionado à saúde das mulheres; o voto sim favorece esse objetivo.",
+          "status": "approved",
+          "requires_external_review": false
+        }
+      ],
+      "editorial_status": "approved",
+      "review_status": "reviewed",
+      "human_review_required": true,
+      "remote_apply": false,
+      "source_basis": {
+        "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/57/2025",
+        "document_sha256": "3f238f4835bf784c61f11a164e039229520e6a1435e5018b65e7c3785e4487ac",
+        "content_addressed_path": "data/legislative-import/alrs/source-corpus/p1/3f238f4835bf784c61f11a164e039229520e6a1435e5018b65e7c3785e4487ac.pdf",
+        "source_bytes_preserved": true,
+        "renewable_locator_verified": true,
+        "durability_gate": "green"
+      },
+      "human_approval_recorded": true
+    },
+    {
+      "proposition_version_id": "4b72b569-1ad0-4c3e-af07-9062f49f4a76",
+      "review_key": "sha256:96d57b4c1dd856d40c32b886606687bf188d6cbbb26f1eda628d0402fe0f0428#4b72b569-1ad0-4c3e-af07-9062f49f4a76",
+      "official_match_key": "PL-100-2025",
+      "title": "Altera a Lei nº 15.606, de 29 de abril de 2021, que institui a Política Estadual de Proteção dos Direitos da Pessoa com Fibromialgia – Lei Daniel Lenz, tornando obrigatória a inclusão do símbolo mundial da Fibromialgia nas placas ou avisos de atendimento prioritário no Estado do Rio Grande do Sul.",
+      "priority": "P1",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "assess",
+      "disposition_rationale": "A versão torna obrigatória a identificação da fibromialgia nos avisos de atendimento prioritário e relaciona esse atendimento ao regime legal de proteção equiparado às pessoas com deficiência; há grupo v1 diretamente aplicável.",
+      "assessments": [
+        {
+          "group_slug": "pessoas_com_deficiencia",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 2,
+          "structural_type": "structural",
+          "confidence": 0.98,
+          "rationale": "A versão torna obrigatória a identificação da fibromialgia nas placas de atendimento prioritário e vincula esse atendimento à legislação que equipara pessoas com fibromialgia às pessoas com deficiência. O voto sim melhora o reconhecimento e o exercício de direitos prioritários desse subgrupo.",
+          "status": "approved",
+          "requires_external_review": false
+        }
+      ],
+      "editorial_status": "approved",
+      "review_status": "reviewed",
+      "human_review_required": true,
+      "remote_apply": false,
+      "source_basis": {
+        "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/100/2025",
+        "document_sha256": "6bac704d56f814be02e5be219832732758d053c2c1e61a947db23833bce6c054",
+        "content_addressed_path": "data/legislative-import/alrs/source-corpus/p1/6bac704d56f814be02e5be219832732758d053c2c1e61a947db23833bce6c054.pdf",
+        "source_bytes_preserved": true,
+        "renewable_locator_verified": true,
+        "durability_gate": "green"
+      },
+      "human_approval_recorded": true
+    },
+    {
+      "proposition_version_id": "00fb38c9-9b55-4926-8846-30ea799b66d0",
+      "review_key": "sha256:9eb24b4f0846e7e59087f3b806ef0f28ba205f5837270d38b91bd810a2c48510#00fb38c9-9b55-4926-8846-30ea799b66d0",
+      "official_match_key": "PL-238-2026",
+      "title": "Altera a Lei nº 12.882, de 03 de janeiro de 2008, que institui o Programa Estadual de Apoio ao Transporte Escolar no Rio Grande do Sul - PEATE/RS.",
+      "priority": "P1",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "taxonomy_gap",
+      "disposition_rationale": "A versão amplia apoio financeiro municipal para garantir transporte escolar, com efeito direto sobre estudantes da rede pública, inclusive em contexto rural. A taxonomia v1 não possui grupo específico para estudantes ou estudantes rurais; não cabe presumir vulnerabilidade para forçar outro slug.",
+      "assessments": [],
+      "editorial_status": "approved",
+      "review_status": "reviewed",
+      "human_review_required": true,
+      "remote_apply": false,
+      "source_basis": {
+        "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/238/2026",
+        "document_sha256": "38fe352bf3ec64275ce0d6c1c3e50e628bb5ed7f7e149d1b47e36963bc9898c1",
+        "content_addressed_path": "data/legislative-import/alrs/source-corpus/p1/38fe352bf3ec64275ce0d6c1c3e50e628bb5ed7f7e149d1b47e36963bc9898c1.pdf",
+        "source_bytes_preserved": true,
+        "renewable_locator_verified": true,
+        "durability_gate": "green"
+      },
+      "human_approval_recorded": true
+    },
+    {
+      "proposition_version_id": "7bae10be-b80b-4b2c-88cf-0c2561edeb6b",
+      "review_key": "sha256:bb8c0d5262e866faa5745a563abedcccb73854825373843994ccfb6969f18f38#7bae10be-b80b-4b2c-88cf-0c2561edeb6b",
+      "official_match_key": "PL-10-2022",
+      "title": "Institui a Política Estadual de Proteção Social às Crianças e aos Adolescentes em situação de orfandade decorrente da Covid-19 e dá outras providências. (SEI 1338-0100/22-5)",
+      "priority": "P1",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "assess",
+      "disposition_rationale": "A versão institui proteção social para crianças e adolescentes em situação de orfandade decorrente da Covid-19, com prioridade para contextos de vulnerabilidade e risco; o grupo v1 é explícito e direto.",
+      "assessments": [
+        {
+          "group_slug": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 4,
+          "structural_type": "structural",
+          "confidence": 0.99,
+          "rationale": "A versão institui proteção social continuada para crianças e adolescentes órfãos da Covid-19, com acesso prioritário a saúde, assistência, educação, proteção de renda e acompanhamento psicossocial. O voto sim amplia de forma estrutural a proteção de um grupo infantil e adolescente em vulnerabilidade claramente definido.",
+          "status": "approved",
+          "requires_external_review": true
+        }
+      ],
+      "editorial_status": "approved",
+      "review_status": "reviewed",
+      "human_review_required": true,
+      "remote_apply": false,
+      "source_basis": {
+        "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/10/2022",
+        "document_sha256": "8730fe955a879f3fb3de8aada26eabe71b041f47651fa21c1ca7962074cd44d4",
+        "content_addressed_path": "data/legislative-import/alrs/source-corpus/p1/8730fe955a879f3fb3de8aada26eabe71b041f47651fa21c1ca7962074cd44d4.pdf",
+        "source_bytes_preserved": true,
+        "renewable_locator_verified": true,
+        "durability_gate": "green"
+      },
+      "human_approval_recorded": true
+    },
+    {
+      "proposition_version_id": "503d8a0a-cada-4173-91bd-16351a908099",
+      "review_key": "sha256:d216dcaf4063cb6819eda4e98e7b890dd976330f593a3b84dcdfaeba50e603e4#503d8a0a-cada-4173-91bd-16351a908099",
+      "official_match_key": "PL-52-2024",
+      "title": "Altera a Lei nº 15.266, de 24 de janeiro de 2019, que dispõe sobre o Estatuto do Concurso Público no âmbito do Estado do Rio Grande do Sul e dá outras providências.",
+      "priority": "P1",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "taxonomy_gap",
+      "disposition_rationale": "A versão beneficia candidatos de concursos públicos que atingiram nota mínima mas ficaram fora da classificação, preservando-os em cadastro reserva. A taxonomia v1 não possui categoria para candidatos a concurso ou trabalhadores formais, e não cabe forçar enquadramento em trabalhadores informais.",
+      "assessments": [],
+      "editorial_status": "approved",
+      "review_status": "reviewed",
+      "human_review_required": true,
+      "remote_apply": false,
+      "source_basis": {
+        "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/52/2024",
+        "document_sha256": "703debab0e3178c729cb940105b853de7828b3e13196706de5878cc9bee5f4ea",
+        "content_addressed_path": "data/legislative-import/alrs/source-corpus/p1/703debab0e3178c729cb940105b853de7828b3e13196706de5878cc9bee5f4ea.pdf",
+        "source_bytes_preserved": true,
+        "renewable_locator_verified": true,
+        "durability_gate": "green"
+      },
+      "human_approval_recorded": true
+    },
+    {
+      "proposition_version_id": "d75becac-49d6-4bdd-95e8-29270980b4f4",
+      "review_key": "sha256:f6f602bc12539cc5787793134de2a805eef274ad9d36ed06525a3fb4ec55b317#d75becac-49d6-4bdd-95e8-29270980b4f4",
+      "official_match_key": "PL-361-2025",
+      "title": "Altera a Lei Estadual nº 16.328, de 8 de agosto de 2025, que institui a reserva de vagas, em percentual de no mínimo 20% (vinte por cento), nas empresas da área de segurança, vigilância e transportes de valores, para vigilantes do sexo feminino, nas contratações que especifica e dá outras providências, estendendo a reserva de vagas para todos os tipos de contrato e priorizando a contratação de vít",
+      "priority": "P1",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "assess",
+      "disposition_rationale": "A versão estabelece reserva mínima de vagas para mulheres em empresas prestadoras de serviços contratadas pelo Estado e prioridade para mulheres em situação de violência doméstica e familiar; o grupo mulheres é destinatário direto.",
+      "assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 4,
+          "structural_type": "structural",
+          "confidence": 0.99,
+          "rationale": "A versão exige participação mínima de 20% de mulheres no quadro de empresas prestadoras de serviços contratadas pelo Estado e prioriza mulheres em situação de violência doméstica e familiar. O voto sim amplia acesso ao trabalho e autonomia econômica com efeito estrutural direto sobre mulheres.",
+          "status": "approved",
+          "requires_external_review": true
+        }
+      ],
+      "editorial_status": "approved",
+      "review_status": "reviewed",
+      "human_review_required": true,
+      "remote_apply": false,
+      "source_basis": {
+        "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/361/2025",
+        "document_sha256": "7bf5169cc49532b7290cb30ccbfd94d9396a03ee16f21a463d93f48d86c6f219",
+        "content_addressed_path": "data/legislative-import/alrs/source-corpus/p1/7bf5169cc49532b7290cb30ccbfd94d9396a03ee16f21a463d93f48d86c6f219.pdf",
+        "source_bytes_preserved": true,
+        "renewable_locator_verified": true,
+        "durability_gate": "green"
+      },
+      "human_approval_recorded": true
+    },
+    {
+      "proposition_version_id": "146f5b3a-2bbd-4d2f-b6b9-56658da10139",
+      "review_key": "sha256:10f3fb9d69994b6794881ecfd3d0b783eb5f8e7762a42d940592eb2fc1b3f782#146f5b3a-2bbd-4d2f-b6b9-56658da10139",
+      "official_match_key": "PL-587-2023",
+      "title": "Dispõe sobre o Programa de Defesa e Amparo à Vítima.(SEI 17608-0100/23-2)",
+      "priority": "P1",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "assess",
+      "disposition_rationale": "A versão cria programa amplo para vítimas e determina proteção específica quando a vítima é criança ou adolescente, inclusive com prioridade, prevenção de revitimização e acesso a serviços; esse recorte corresponde diretamente a grupo v1.",
+      "assessments": [
+        {
+          "group_slug": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 4,
+          "structural_type": "structural",
+          "confidence": 0.94,
+          "rationale": "A versão assegura direitos e serviços a vítimas e determina tratamento específico quando a vítima é criança ou adolescente, com prioridade ao superior interesse, proteção contra revitimização e acesso a saúde, apoio psicossocial e medidas de reparação. O voto sim fortalece proteção estrutural a crianças e adolescentes vitimizados.",
+          "status": "approved",
+          "requires_external_review": true
+        }
+      ],
+      "editorial_status": "approved",
+      "review_status": "reviewed",
+      "human_review_required": true,
+      "remote_apply": false,
+      "source_basis": {
+        "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/587/2023",
+        "document_sha256": "7b6ef2be460643f99ed72cdd3b1384d5b1aa10253bd308a366a904401fa3ecfa",
+        "content_addressed_path": "data/legislative-import/alrs/source-corpus/p1/7b6ef2be460643f99ed72cdd3b1384d5b1aa10253bd308a366a904401fa3ecfa.pdf",
+        "source_bytes_preserved": true,
+        "renewable_locator_verified": true,
+        "durability_gate": "green"
+      },
+      "human_approval_recorded": true
+    },
+    {
+      "proposition_version_id": "adeaa57e-4dd5-484b-8598-afa8f5b2d81f",
+      "review_key": "sha256:11be5cbc8b986e26db5c352b9011330020fa9ceaadb169ad9f665d5a872d757b#adeaa57e-4dd5-484b-8598-afa8f5b2d81f",
+      "official_match_key": "PL-233-2024",
+      "title": "Institui o Programa Estadual de Promoção da Cultura e das Tradições Gaúchas nas Escolas da Rede Pública Estadual do Rio Grande do Sul.",
+      "priority": "P1",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "taxonomy_gap",
+      "disposition_rationale": "A versão destina atividades de promoção da cultura e das tradições gaúchas a estudantes, professores e comunidades escolares. Esses destinatários são diretos, mas a taxonomia v1 não possui grupo para comunidade escolar ou estudantes em geral; não há base para classificá-los automaticamente como crianças e adolescentes em vulnerabilidade.",
+      "assessments": [],
+      "editorial_status": "approved",
+      "review_status": "reviewed",
+      "human_review_required": true,
+      "remote_apply": false,
+      "source_basis": {
+        "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/233/2024",
+        "document_sha256": "0ac337afeedc696524b35ca1dc6d4eb471fa169fd206f5eb71621233527243ba",
+        "content_addressed_path": "data/legislative-import/alrs/source-corpus/p1/0ac337afeedc696524b35ca1dc6d4eb471fa169fd206f5eb71621233527243ba.pdf",
+        "source_bytes_preserved": true,
+        "renewable_locator_verified": true,
+        "durability_gate": "green"
+      },
+      "human_approval_recorded": true
+    },
+    {
+      "proposition_version_id": "0b4b103e-d6cd-44ac-bb37-60299cd11aba",
+      "review_key": "sha256:3e6642bec51587d26ee8bb855c48611de3f01b639f711c2264b8c655ec060e96#0b4b103e-d6cd-44ac-bb37-60299cd11aba",
+      "official_match_key": "PL-311-2024",
+      "title": "Institui o Programa de Combate ao Vício em Apostas e Jogos de Azar – Ludopatia, no âmbito do Estado do Rio Grande do Sul.",
+      "priority": "P1",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "taxonomy_gap",
+      "disposition_rationale": "A versão dirige prevenção e apoio a pessoas com ludopatia e públicos em risco de jogo compulsivo. A taxonomia v1 não possui grupo para pessoas com transtorno do jogo ou consumidores vulneráveis; menções amplas a jovens, idosos e vulnerabilidade social não autorizam mapear com segurança aos slugs existentes.",
+      "assessments": [],
+      "editorial_status": "approved",
+      "review_status": "reviewed",
+      "human_review_required": true,
+      "remote_apply": false,
+      "source_basis": {
+        "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/311/2024",
+        "document_sha256": "c8c598213b302ac1893ef9fc0d3cd62a01d9891340e4c40f9409eb62cb153582",
+        "content_addressed_path": "data/legislative-import/alrs/source-corpus/p1/c8c598213b302ac1893ef9fc0d3cd62a01d9891340e4c40f9409eb62cb153582.pdf",
+        "source_bytes_preserved": true,
+        "renewable_locator_verified": true,
+        "durability_gate": "green"
+      },
+      "human_approval_recorded": true
+    },
+    {
+      "proposition_version_id": "3f2e156e-8430-44be-8564-77578ef9fc81",
+      "review_key": "sha256:3e7be81fb11122aea31318a85d9167eb367bbc16bb7fc3088bf93fd2d934d143#3f2e156e-8430-44be-8564-77578ef9fc81",
+      "official_match_key": "PL-137-2023",
+      "title": "Institui a política estadual de combate ao racismo, à LGBTfobia e à violência contra as mulheres nos estádios e nas arenas esportivas do Estado do Rio Grande do Sul - Política Estádio de Respeito. (SEI 5535-0100/23-0)",
+      "priority": "P1",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "assess",
+      "disposition_rationale": "A versão combate expressamente racismo, LGBTfobia e violência contra mulheres em estádios e arenas, com campanhas, formação, protocolos de denúncia e acolhimento. Há três recortes v1 diretamente protegidos, e os três devem ser avaliados.",
+      "assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 3,
+          "structural_type": "structural",
+          "confidence": 0.99,
+          "rationale": "A versão cria política de combate à violência contra mulheres em estádios e arenas, com campanhas, protocolos de denúncia, acolhimento e formação de trabalhadores. O voto sim fortalece proteção e acesso seguro das mulheres a esses espaços.",
+          "status": "approved",
+          "requires_external_review": false
+        },
+        {
+          "group_slug": "lgbtqia",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 3,
+          "structural_type": "structural",
+          "confidence": 0.99,
+          "rationale": "A versão combate expressamente a LGBTfobia em estádios e arenas, prevendo campanhas, formação, protocolos de denúncia e medidas de acolhimento. O voto sim amplia proteção e condições de participação segura de pessoas LGBTQIA+ nesses espaços.",
+          "status": "approved",
+          "requires_external_review": false
+        },
+        {
+          "group_slug": "populacao_negra_periferica",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 3,
+          "structural_type": "structural",
+          "confidence": 0.94,
+          "rationale": "A versão combate expressamente o racismo em estádios e arenas, com prevenção, denúncia e acolhimento. A população negra e periférica urbana integra diretamente o conjunto protegido contra práticas racistas, embora a lei não restrinja o benefício a esse recorte; o voto sim favorece sua proteção.",
+          "status": "approved",
+          "requires_external_review": false
+        }
+      ],
+      "editorial_status": "approved",
+      "review_status": "reviewed",
+      "human_review_required": true,
+      "remote_apply": false,
+      "source_basis": {
+        "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/137/2023",
+        "document_sha256": "180cd9e4cd478c23a09bf1bce448b7683b03db0b6477ef6c94f2fb7c25d66f7c",
+        "content_addressed_path": "data/legislative-import/alrs/source-corpus/p1/180cd9e4cd478c23a09bf1bce448b7683b03db0b6477ef6c94f2fb7c25d66f7c.pdf",
+        "source_bytes_preserved": true,
+        "renewable_locator_verified": true,
+        "durability_gate": "green"
+      },
+      "human_approval_recorded": true
+    },
+    {
+      "proposition_version_id": "ce85243b-9542-4739-b9cb-6f415a914416",
+      "review_key": "sha256:5a215ac9f946e3ad9ef835a4694b9ccacfdde5370863f940b65e836525a3e365#ce85243b-9542-4739-b9cb-6f415a914416",
+      "official_match_key": "PL-33-2017",
+      "title": "Dispõe sobre as condições de descanso intrajornada dos profissionais de enfermagem durante o horário de trabalho. (SEI 000005461-01.00/21-0 e 1030-0100/22-9)",
+      "priority": "P1",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "taxonomy_gap",
+      "disposition_rationale": "A versão beneficia diretamente profissionais de enfermagem ao exigir condições adequadas de descanso intrajornada. A taxonomia v1 não possui grupo ocupacional para profissionais de enfermagem ou trabalhadores formais; não cabe mapear para trabalhadores informais.",
+      "assessments": [],
+      "editorial_status": "approved",
+      "review_status": "reviewed",
+      "human_review_required": true,
+      "remote_apply": false,
+      "source_basis": {
+        "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/33/2017",
+        "document_sha256": "740f1724f7b89750b0c2120af32dd73b58622f55ad69a8a6f11b3536448944d5",
+        "content_addressed_path": "data/legislative-import/alrs/source-corpus/p1/740f1724f7b89750b0c2120af32dd73b58622f55ad69a8a6f11b3536448944d5.pdf",
+        "source_bytes_preserved": true,
+        "renewable_locator_verified": true,
+        "durability_gate": "green"
+      },
+      "human_approval_recorded": true
+    },
+    {
+      "proposition_version_id": "88ae6aa5-c613-424b-b299-50195fcb9a8d",
+      "review_key": "sha256:603693477fc06491bd158873e2d2561ddc61fd3c969e958585092ac90633a09e#88ae6aa5-c613-424b-b299-50195fcb9a8d",
+      "official_match_key": "PL-599-2023",
+      "title": "Altera a Lei nº 8.109, de 19 de dezembro de 1985, que dispõe sobre a Taxa de Serviços Diversos. (ePRO 109084/2023)",
+      "priority": "P1",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "no_direct_population_group",
+      "disposition_rationale": "A versão extingue taxa de serviço vinculada ao licenciamento de veículos após a digitalização do documento. O efeito é fiscal e administrativo para proprietários de veículos em geral, sem grupo populacional v1 diretamente definido; não gera matriz nem assessment.",
+      "assessments": [],
+      "editorial_status": "approved",
+      "review_status": "reviewed",
+      "human_review_required": true,
+      "remote_apply": false,
+      "source_basis": {
+        "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/599/2023",
+        "document_sha256": "7377dd2414999a4beb41c44cf503ec752e593d430c51d40b4137f103dc7c4d4e",
+        "content_addressed_path": "data/legislative-import/alrs/source-corpus/p1/7377dd2414999a4beb41c44cf503ec752e593d430c51d40b4137f103dc7c4d4e.pdf",
+        "source_bytes_preserved": true,
+        "renewable_locator_verified": true,
+        "durability_gate": "green"
+      },
+      "human_approval_recorded": true
+    },
+    {
+      "proposition_version_id": "df109b14-250b-40a6-af19-ae7ffec834d6",
+      "review_key": "sha256:737492a11b4269a186feef11b645d0935f9f9631b755f039a9cbcc2ea589ec4d#df109b14-250b-40a6-af19-ae7ffec834d6",
+      "official_match_key": "PL-408-2025",
+      "title": "Dispõe sobre restrições à publicidade de plataformas de apostas esportivas no âmbito do Estado do Rio Grande do Sul e dá outras providências.",
+      "priority": "P1",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "assess",
+      "disposition_rationale": "A versão restringe publicidade de apostas com objetivo expresso de resguardar infância e juventude, incluindo vedações específicas a conteúdo, linguagem, locais e participação de menores; há grupo v1 diretamente protegido.",
+      "assessments": [
+        {
+          "group_slug": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 3,
+          "structural_type": "structural",
+          "confidence": 0.97,
+          "rationale": "A versão restringe publicidade de apostas com objetivo expresso de resguardar infância e juventude, proibindo conteúdo direcionado a menores, apelo infantojuvenil, uso de menores e publicidade em locais vinculados a crianças. O voto sim reduz a exposição de crianças e adolescentes a estímulos de apostas e dependência.",
+          "status": "approved",
+          "requires_external_review": false
+        }
+      ],
+      "editorial_status": "approved",
+      "review_status": "reviewed",
+      "human_review_required": true,
+      "remote_apply": false,
+      "source_basis": {
+        "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/408/2025",
+        "document_sha256": "50e170aa8d6130484cec7e9b917fb253d8282a6e3967f0d149fe351741ec212a",
+        "content_addressed_path": "data/legislative-import/alrs/source-corpus/p1/50e170aa8d6130484cec7e9b917fb253d8282a6e3967f0d149fe351741ec212a.pdf",
+        "source_bytes_preserved": true,
+        "renewable_locator_verified": true,
+        "durability_gate": "green"
+      },
+      "human_approval_recorded": true
+    },
+    {
+      "proposition_version_id": "e0b7e1b8-9cb6-41eb-8860-186f6bba833c",
+      "review_key": "sha256:9db0bea12af939a744a447393b4a1698a939e760f73c0e07ff6a8a4a8917269a#e0b7e1b8-9cb6-41eb-8860-186f6bba833c",
+      "official_match_key": "PLC-385-2024",
+      "title": "Cria o Programa Profissional do Futuro, no âmbito do Estado do Rio Grande do Sul",
+      "priority": "P1",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "taxonomy_gap",
+      "disposition_rationale": "A versão cria benefício educacional financiado por compensação de ICMS para colaboradores formais de empresas, com bolsas de graduação, pós-graduação e cursos técnicos. A taxonomia v1 não inclui trabalhadores formais ou colaboradores nem estudantes em geral, e o grupo trabalhadores informais seria incompatível.",
+      "assessments": [],
+      "editorial_status": "approved",
+      "review_status": "reviewed",
+      "human_review_required": true,
+      "remote_apply": false,
+      "source_basis": {
+        "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PLC/385/2024",
+        "document_sha256": "5be5fd356a36fb52de5ea7f7feef0158fc758d1a106be35b2acb0dcb3da280c0",
+        "content_addressed_path": "data/legislative-import/alrs/source-corpus/p1/5be5fd356a36fb52de5ea7f7feef0158fc758d1a106be35b2acb0dcb3da280c0.pdf",
+        "source_bytes_preserved": true,
+        "renewable_locator_verified": true,
+        "durability_gate": "green"
+      },
+      "human_approval_recorded": true
+    },
+    {
+      "proposition_version_id": "92f2865a-1414-4077-85ae-7d10711c51b4",
+      "review_key": "sha256:f0832e005dea9c6626b6648ffce12e0c90417b86f10ff26a2fac23fe09b3be05#92f2865a-1414-4077-85ae-7d10711c51b4",
+      "official_match_key": "PL-328-2024",
+      "title": "Institui o Programa de Inclusão Digital para Idosos (PIDI) no âmbito do Estado do Rio Grande do Sul, e dá outras providências.",
+      "priority": "P1",
+      "official_merit_confirmed": true,
+      "factual_source_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "editorial_disposition": "assess",
+      "disposition_rationale": "A versão cria programa de inclusão digital dirigido à população idosa, com formação, centros de acesso, prevenção a fraudes e acesso a serviços. Pessoas idosas em situação de dependência integram esse público, embora a lei tenha alcance mais amplo que o slug v1.",
+      "assessments": [
+        {
+          "group_slug": "pessoas_idosas_dependentes",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 3,
+          "structural_type": "structural",
+          "confidence": 0.92,
+          "rationale": "A versão cria programa de inclusão digital para toda a população idosa, com cursos, centros, prevenção a fraudes, acesso a saúde digital e estímulo à autonomia. Pessoas idosas em situação de dependência integram diretamente esse público, embora a lei não as trate como subgrupo separado; o voto sim amplia acesso e autonomia digital.",
+          "status": "approved",
+          "requires_external_review": false
+        }
+      ],
+      "editorial_status": "approved",
+      "review_status": "reviewed",
+      "human_review_required": true,
+      "remote_apply": false,
+      "source_basis": {
+        "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/328/2024",
+        "document_sha256": "6339d84aab1a00e3f0c0513830186769e8ab5cf9fd2d5a71960bef2e243b266e",
+        "content_addressed_path": "data/legislative-import/alrs/source-corpus/p1/6339d84aab1a00e3f0c0513830186769e8ab5cf9fd2d5a71960bef2e243b266e.pdf",
+        "source_bytes_preserved": true,
+        "renewable_locator_verified": true,
+        "durability_gate": "green"
+      },
+      "human_approval_recorded": true
+    }
+  ]
+}

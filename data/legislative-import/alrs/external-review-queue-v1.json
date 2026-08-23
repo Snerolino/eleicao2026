@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "alrs_external_review_queue",
+  "remote_apply": false,
+  "public_approval": false,
+  "totals": {
+    "versions": 5
+  },
+  "items": [
+    {
+      "proposition_version_id": "7c132ddc-b571-43ee-b2bc-e877f053480a",
+      "official_match_key": "sha256:7cf39a1e311538faa0de87845c8535ad54b09c3760f94837682c5d81a335ad31#7c132ddc-b571-43ee-b2bc-e877f053480a",
+      "assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 4,
+          "structural_type": "structural",
+          "confidence": 0.96,
+          "rationale": "A proposição altera diretamente o marco estadual de proteção às mulheres vítimas de violência, produzindo efeito normativo estrutural sobre esse grupo; o voto favorável é classificado como defesa de impacto positivo.",
+          "status": "approved",
+          "requires_external_review": true
+        }
+      ],
+      "status": "pending_external_review"
+    },
+    {
+      "proposition_version_id": "10887f06-837a-47ed-aa52-f05560d17742",
+      "official_match_key": "PL-424-2024",
+      "assessments": [
+        {
+          "group_slug": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 4,
+          "structural_type": "structural",
+          "confidence": 0.98,
+          "rationale": "A versão cria patrulha dedicada à prevenção e ao enfrentamento da violência doméstica e familiar contra crianças e adolescentes, prevendo atendimento humanizado, capacitação de agentes, integração institucional e ações educativas. O voto sim fortalece uma rede estrutural de proteção a crianças e adolescentes em situação de vulnerabilidade.",
+          "status": "approved",
+          "requires_external_review": true
+        }
+      ],
+      "status": "pending_external_review"
+    },
+    {
+      "proposition_version_id": "7bae10be-b80b-4b2c-88cf-0c2561edeb6b",
+      "official_match_key": "PL-10-2022",
+      "assessments": [
+        {
+          "group_slug": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 4,
+          "structural_type": "structural",
+          "confidence": 0.99,
+          "rationale": "A versão institui proteção social continuada para crianças e adolescentes órfãos da Covid-19, com acesso prioritário a saúde, assistência, educação, proteção de renda e acompanhamento psicossocial. O voto sim amplia de forma estrutural a proteção de um grupo infantil e adolescente em vulnerabilidade claramente definido.",
+          "status": "approved",
+          "requires_external_review": true
+        }
+      ],
+      "status": "pending_external_review"
+    },
+    {
+      "proposition_version_id": "d75becac-49d6-4bdd-95e8-29270980b4f4",
+      "official_match_key": "PL-361-2025",
+      "assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 4,
+          "structural_type": "structural",
+          "confidence": 0.99,
+          "rationale": "A versão exige participação mínima de 20% de mulheres no quadro de empresas prestadoras de serviços contratadas pelo Estado e prioriza mulheres em situação de violência doméstica e familiar. O voto sim amplia acesso ao trabalho e autonomia econômica com efeito estrutural direto sobre mulheres.",
+          "status": "approved",
+          "requires_external_review": true
+        }
+      ],
+      "status": "pending_external_review"
+    },
+    {
+      "proposition_version_id": "146f5b3a-2bbd-4d2f-b6b9-56658da10139",
+      "official_match_key": "PL-587-2023",
+      "assessments": [
+        {
+          "group_slug": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "severity": 4,
+          "structural_type": "structural",
+          "confidence": 0.94,
+          "rationale": "A versão assegura direitos e serviços a vítimas e determina tratamento específico quando a vítima é criança ou adolescente, com prioridade ao superior interesse, proteção contra revitimização e acesso a saúde, apoio psicossocial e medidas de reparação. O voto sim fortalece proteção estrutural a crianças e adolescentes vitimizados.",
+          "status": "approved",
+          "requires_external_review": true
+        }
+      ],
+      "status": "pending_external_review"
+    }
+  ]
+}
