@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "alrs_p2_pl27_assessment_editorial_ready",
+  "methodology_version": "1.0.0",
+  "source": "admin_disposition_approved",
+  "remote_apply": false,
+  "public_approval": false,
+  "review_status": "pending_review",
+  "totals": {"versions": 1, "assessments": 1},
+  "items": [{
+    "official_match_key": "PL-27-2024",
+    "proposition_version_id": "338e6d1b-c0e7-4d0a-96af-6870bd8cd642",
+    "group_slug": "lgbtqia",
+    "impact_direction": "positive",
+    "defending_vote": "sim",
+    "severity": 3,
+    "structural_type": "structural",
+    "confidence": 0.99,
+    "rationale": "A proposição reconhece juridicamente a identidade de gênero de pessoas trans, travestis e não binárias após a morte, garantindo nome social e respeito à expressão pessoal em documentos e cerimônias fúnebres; o voto favorável protege diretamente dignidade e reconhecimento desse grupo.",
+    "editorial_status": "approved_by_user_pending_admin_record",
+    "source_gate": "green",
+    "source_manifest": "data/legislative-import/alrs/p2-microbatch-5-source-manifest.json"
+  }]
+}
