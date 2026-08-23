@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial, gates locais verdes, publicação bloqueada — 2026-08-23T06:22Z
+
+- Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os 4 casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial: `8/8` janelas `status=ok`, `blocked=null`; nenhum ID reconciliado/aplicado. Senado permanece fail-closed sem envelope nominal com SHA verificável.
+- Auditoria de fontes RC 0 preserva gaps reais: versões sem fonte ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`. `data:check` RC 0: `1003` candidaturas, `988` fotos oficiais, `1` fonte TSE.
+- Gates locais RC 0: `401` testes/`98` arquivos, TypeScript, schema, build `224` módulos, sitemap `1003 + 2`, `release.json` local `867b8ed-20260823T062149855Z`, `git diff --check` e smoke (`1002` cards, `0` falhas HTTP, `0` erros online, service worker pronto).
+- Produção raiz HTTP 200. Nenhuma escrita factual remota ocorreu.
+- Publicação: `git push origin main` falhou RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); local `main` segue 2 commits à frente de `origin/main`; nenhum deploy novo foi acionado.
+- Doctor RC 1 mantém bloqueios conhecidos: shell Node 22.22.2, Codex token expirado/401 e OpenCode ausente; Antigravity passou. QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0622.md`.
+- Próximo chunk: revalidar transporte Git e retentar `main -> main`; se aceitar, validar backup/headSha/produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial, publicação bloqueada — 2026-08-23T06:02Z
 
 - Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os 4 casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial: `8/8` janelas trimestrais `status=ok`, `blocked=null`, `700` IDs transitórios; nenhum ID reconciliado/aplicado. Senado permanece fail-closed sem envelope nominal com SHA verificável.
