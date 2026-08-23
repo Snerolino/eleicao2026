@@ -101,6 +101,7 @@ Novas tabelas da Matriz de Impacto Populacional v1 (todas com RLS habilitado):
 - `impact_assessment_sources` — ligacao N:N assessment ↔ `source_references`.
 - `impact_reviews` — revisao propria da matriz (`curadoria_interna|painel_externo`; `approved|rejected|needs_changes`).
 - `impact_contestations` — contestacao publica (`open|under_review|resolved|rejected`); justificativa original nunca apagada.
+- `impact_editorial_dispositions` — fila de triagem humana anterior à matriz, única por `proposition_version_id` + `methodology_version`; `disposition` (`assess|no_direct_population_group|taxonomy_gap|excluded`), justificativa mínima de 20 caracteres, revisor autenticado e status editorial.
 
 RPC `approve_impact_matrix(uuid)` — aprovação transacional que exige caller com `editor_roles` e:
 1. matriz em `pending_review`;

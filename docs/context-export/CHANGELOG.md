@@ -1,5 +1,10 @@
 # Changelog do contexto exportado
 
+## 2026-08-23
+
+- Migration `20260823110000_create_editorial_disposition_queue.sql` aplicada no Supabase remoto `eleicao2026`: tabela `impact_editorial_dispositions`, RLS de leitura para editores e RPC protegida `record_impact_editorial_disposition(uuid,text,text,text,text)`.
+- `/admin` passou a exibir o pacote ALRS P2 com links das fontes oficiais, disposição humana e justificativa mínima; a fila não publica votos nem matrizes.
+
 ## 2026-08-22
 
 - Contrato editorial ALRS refinado: `editorial_disposition` aceita `assess`,
