@@ -1,3 +1,12 @@
+## Tick contínuo — recon oficial, gates verdes, transporte Git bloqueado — 2026-08-23T18:41Z
+
+- Recon read-only revalidado: `npm run data:check` RC 0 (`1003` candidaturas, `988` fotos, `1` fonte TSE); auditoria de fontes RC 0 mantém gaps ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; fila residual ALRS continua com 4 votos sem evidência vinculada.
+- ALRS FED-17 dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`. Câmara oficial read-only: `8/8` janelas trimestrais 2025–2026 HTTP OK, `700` IDs inventariados, `blocked=null`; sem reconciliação/aplicação.
+- Produção raiz e `/release.json` HTTP 200; live permanece `5a8a24013263b684384b17e003f9fd0d57ce92f4`, release `5a8a240-20260823T164257627Z`, versão `0.2.950`, snapshot `1003`. Últimos runs primário `32652443864` e backup `32652456631` success no SHA remoto anterior.
+- `env -u GH_TOKEN git push origin main` falhou 3 vezes por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); local segue 7 commits à frente de `origin/main`, nenhum workflow novo.
+- Doctor RC 1 segue degradado por Node 22 no shell/OpenCode ausente/smoke MCP não exercitado no rápido. Nenhuma escrita factual em Supabase/Cloudflare, identidade, FK, source reference, claim, matriz ou assessment.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1841.md`. Próximo chunk: retentar transporte Git; após `main -> main`, validar backup `334951434`, `headSha`, raiz e `/release.json`. Aplicação factual segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial, gates verdes, transporte Git bloqueado — 2026-08-23T18:23Z
 
 - Recon read-only revalidado: `data:check` RC 0 (`1003` candidaturas, `988` fotos, `1` fonte TSE); auditoria de fontes RC 0 mantém gaps ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; fila residual ALRS continua com 4 votos sem evidência vinculada.
