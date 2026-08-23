@@ -1,3 +1,14 @@
+## Tick contínuo — gates verdes, publicação verificada e novo registro bloqueado — 2026-08-23T05:22Z
+
+- Commit `c8be4b754c602d4608d1578e0be0db5920aa3921` continua publicado em `origin/main`; produção foi verificada no mesmo SHA.
+- Gates locais do pacote ALRS P0 verdes: `401` testes/`98` arquivos, TypeScript, schema, `data:check` (`1003` candidaturas/`988` fotos/`1` fonte TSE), build `224` módulos, smoke (`1002` cards/`0` falhas HTTP/`0` erros online/service worker pronto) e `git diff --check`.
+- Deploy primário `32620063530` e backup manual `32620104597` concluíram com sucesso, ambos no `headSha` `c8be4b754c602d4608d1578e0be0db5920aa3921`.
+- Produção `/release.json` HTTP 200 validou release `c8be4b7-20260823T052052703Z`, versão `0.2.883`.
+- O novo registro QA foi commitado localmente como `1358925`, mas `git push origin main` e `env -u GH_TOKEN git push origin main` falharam com HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`).
+- ALRS Enio Carlos Terra (4 casos) e Senado seguem fail-closed sem ID/fonte exata ou envelope nominal com SHA verificável; nenhuma escrita factual remota ocorreu.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0522.md`.
+- Próximo chunk: retentar o push documental; manter recon oficial read-only e avançar apenas lotes com R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — gates verdes, publicação e produção verificadas — 2026-08-23T05:22Z
 
 - Commit `c8be4b754c602d4608d1578e0be0db5920aa3921` publicado em `origin/main`; worktree limpa.

@@ -30,5 +30,10 @@ Retomar o tick bounded, fechar os gates locais do pacote ALRS P0 e verificar a p
 - A reconciliação factual remota permanece bloqueada por ausência de evidência oficial exata para os quatro casos ALRS e pelo envelope nominal do Senado ausente/verificável.
 - Houve falha transitória de DNS ao consultar produção e a API GitHub; retries subsequentes passaram. Nenhum dado foi inventado.
 
+## Publicação deste registro
+- O registro foi commitado localmente em `1358925`.
+- `git push origin main` e retry com `env -u GH_TOKEN` falharam com HTTP 403: `Permission to Snerolino/eleicao2026.git denied to Snerolino`.
+- O commit anterior `c8be4b7` permanece publicado e verificado em produção; este registro documental aguarda a próxima tentativa de transporte Git.
+
 ## Próximo passo
-Manter reconhecimento oficial read-only e avançar somente com lotes que passem R0, schema/FK, fonte oficial, dry-run e idempotência. Não aplicar os itens factuais bloqueados.
+Retentar `main -> main` quando a permissão efetiva do transporte Git aceitar o push; depois validar novamente backup, `headSha` e produção. Manter reconhecimento oficial read-only e avançar somente com lotes que passem R0, schema/FK, fonte oficial, dry-run e idempotência. Não aplicar os itens factuais bloqueados.
