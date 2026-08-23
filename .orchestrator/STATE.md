@@ -1,3 +1,11 @@
+## Tick contínuo — recon e smoke locais verdes, transporte Git bloqueado — 2026-08-23T13:44Z
+
+- Commit documental `d2b1249` criado após os gates; três tentativas de `env -u GH_TOKEN git push origin main` falharam RC 128 com HTTP 403: `Permission to Snerolino/eleicao2026.git denied to Snerolino`. Nenhum workflow novo foi acionado; `main` local permanece à frente de `origin/main`.
+- Smoke local RC 0: `1002` cards (mínimo `1002`), `0` falhas HTTP, `0` erros online, service worker pronto; detalhe/canonical e offline verificados.
+- Produção não pode ser atribuída a este commit. `/release.json` respondeu HTTP 200, mas a raiz teve timeout DNS; sem confirmação de deploy ou `headSha` remoto.
+- Recon, fontes e dados permanecem sem escrita factual: Câmara `8/8` janelas/`700` IDs read-only; ALRS `blocked_remaining=4`; auditoria sem fonte `1251/3/112`, `1647/2/188`, `4/2/455`; dataset/snapshot `1003/1003`, diferença `0`.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1339.md`. Próximo chunk: retentar transporte Git; somente após `main -> main`, validar backup `334951434`, `headSha`, HTTP raiz e `/release.json`.
+
 ## Tick contínuo — recon oficial, gates verdes, publicação pendente — 2026-08-23T13:39Z
 
 - Dataset vivo versus snapshot por `SQ_CANDIDATO`: `1003/1003`, diferença `0/0`; CSV oficial `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
