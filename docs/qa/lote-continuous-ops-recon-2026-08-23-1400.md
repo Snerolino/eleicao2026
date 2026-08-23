@@ -19,11 +19,12 @@ read-only, verificando cobertura de fontes e retentando a publicação pendente.
 
 ## Publicação
 - Foram feitas 3 tentativas bounded de `env -u GH_TOKEN git push origin main`.
-- Resultado: RC 128 em todas; primeira falhou por DNS de `github.com`, duas
-  seguintes retornaram HTTP 403: `Permission to Snerolino/eleicao2026.git denied
-  to Snerolino`.
-- HEAD local: `4d2a17576700be4ef5b3aaccbeba4aa4c4e17424`; `main` local está 4
-  commits à frente de `origin/main`. Nenhum workflow novo foi acionado.
+- A primeira rodada (antes do registro) falhou por DNS e duas tentativas
+  retornaram HTTP 403. O registro foi commitado localmente como `21935ca` e
+  três novas tentativas pós-commit retornaram HTTP 403: `Permission to
+  Snerolino/eleicao2026.git denied to Snerolino`.
+- `main` local está 5 commits à frente de `origin/main`; nenhum workflow novo
+  foi acionado.
 
 ## Bloqueios reais
 - Transporte Git indisponível por DNS transitório seguido de HTTP 403 de
