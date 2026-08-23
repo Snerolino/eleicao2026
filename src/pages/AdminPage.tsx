@@ -36,6 +36,23 @@ type EditorialReview = {
   reviewed_at: string | null;
 };
 
+type PendingImpactMatrix = {
+  id: string;
+  proposition_version_id: string;
+  methodology_version: string;
+  severity: number;
+  structural_type: string;
+  review_status: string;
+  impact_assessments?: Array<{
+    id: string;
+    group_slug: string;
+    impact_direction: string;
+    defending_vote: string | null;
+    rationale: string;
+    confidence: number;
+  }> | null;
+};
+
 type LoadState = 'idle' | 'loading' | 'ready' | 'error';
 
 function formatCategory(category: string) {
@@ -49,11 +66,13 @@ export function AdminPage() {
   const [role, setRole] = useState<EditorialRole | null>(null);
   const [claims, setClaims] = useState<PendingClaim[]>([]);
   const [reviewedClaims, setReviewedClaims] = useState<PendingClaim[]>([]);
+  const [impactMatrices, setImpactMatrices] = useState<PendingImpactMatrix[]>([]);
   const [status, setStatus] = useState<LoadState>('idle');
   const [message, setMessage] = useState<string | null>(null);
   const [busyClaimId, setBusyClaimId] = useState<string | null>(null);
   const [editingClaimId, setEditingClaimId] = useState<string | null>(null);
   const [editingContent, setEditingContent] = useState('');
+  const [busyMatrixId, setBusyMatrixId] = useState<string | null>(null);
 
   usePageMetadata(
     'Administração — Portal Transparência Eleitoral RS',
@@ -115,6 +134,25 @@ export function AdminPage() {
       )
     );
     setStatus('ready');
+    await loadImpactMatrices();
+  }
+
+  async function loadImpactMatrices() {
+    if (!supabase) return;
+    try {
+      const { data, error } = await supabase
+        .from('impact_matrices')
+        .select('id, proposition_version_id, methodology_version, severity, structural_type, review_status, impact_assessments(id, group_slug, impact_direction, defending_vote, rationale, confidence)')
+        .eq('review_status', 'pending_review')
+        .order('created_at', { ascending: true });
+      if (error) {
+        setImpactMatrices([]);
+        return;
+      }
+      setImpactMatrices((data ?? []) as unknown as PendingImpactMatrix[]);
+    } catch {
+      setImpactMatrices([]);
+    }
   }
 
   useEffect(() => {
@@ -251,6 +289,21 @@ export function AdminPage() {
     setMessage('Edição salva. A claim segue aguardando revisão/publicação.');
   }
 
+  async function approveImpactMatrix(matrix: PendingImpactMatrix) {
+    if (!supabase || !user) return;
+    setBusyMatrixId(matrix.id);
+    setMessage(null);
+    const { error } = await supabase.rpc('approve_impact_matrix', { p_matrix_id: matrix.id });
+    if (error) {
+      setBusyMatrixId(null);
+      setMessage(`Matriz não aprovada: ${error.message}`);
+      return;
+    }
+    setImpactMatrices((current) => current.filter((item) => item.id !== matrix.id));
+    setBusyMatrixId(null);
+    setMessage('Matriz aprovada pela RPC editorial.');
+  }
+
   return (
     <main id="main-content" className="mx-auto max-w-6xl px-4 py-8">
       <Link
@@ -348,6 +401,50 @@ export function AdminPage() {
               Nenhuma claim em <code>pending_review</code> no momento.
             </p>
           ) : null}
+
+          <section className="mt-8 border-t border-[var(--color-border-editorial)] pt-6" aria-label="Matrizes de impacto pendentes">
+            <h2 className="text-2xl">Matrizes de impacto pendentes</h2>
+            <p className="mt-2 text-sm text-[var(--color-muted-ink)]">
+              Revise a evidência e use a RPC protegida para aprovar. Matrizes com severity alta ou confiança baixa exigem revisão externa registrada.
+            </p>
+            {impactMatrices.length === 0 ? (
+              <p className="mt-4 rounded-sm border border-[var(--color-border-editorial)] p-4 text-sm text-[var(--color-muted-ink)]">
+                Nenhuma matriz ALRS pendente nesta sessão.
+              </p>
+            ) : (
+              <div className="mt-4 grid gap-4">
+                {impactMatrices.map((matrix) => (
+                  <article key={matrix.id} className="rounded-sm border border-[var(--color-border-editorial)] p-4">
+                    <div className="flex flex-col gap-2 sm:flex-row sm:justify-between">
+                      <div>
+                        <h3 className="text-xl">{matrix.proposition_version_id}</h3>
+                        <p className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">
+                          {matrix.structural_type} · severity {matrix.severity} · {matrix.methodology_version}
+                        </p>
+                      </div>
+                      <span className="font-mono text-xs uppercase tracking-wider text-amber-800">{matrix.review_status}</span>
+                    </div>
+                    <ul className="mt-3 space-y-2 text-sm">
+                      {(matrix.impact_assessments ?? []).map((assessment) => (
+                        <li key={assessment.id} className="rounded-sm bg-[var(--color-paper-muted)] p-3">
+                          <strong>{assessment.group_slug}</strong> · {assessment.impact_direction} · voto defensor {assessment.defending_vote ?? 'não aplicável'} · confiança {assessment.confidence}
+                          <p className="mt-1 text-[var(--color-muted-ink)]">{assessment.rationale}</p>
+                        </li>
+                      ))}
+                    </ul>
+                    <button
+                      type="button"
+                      disabled={busyMatrixId === matrix.id}
+                      onClick={() => void approveImpactMatrix(matrix)}
+                      className="mt-4 rounded-sm border border-green-700 px-3 py-2 font-mono text-xs uppercase tracking-wider text-green-800 disabled:cursor-wait disabled:opacity-60"
+                    >
+                      {busyMatrixId === matrix.id ? 'Aprovando…' : 'Aprovar matriz via RPC'}
+                    </button>
+                  </article>
+                ))}
+              </div>
+            )}
+          </section>
 
           <div className="mt-5 grid gap-4">
             {claims.map((claim) => (
