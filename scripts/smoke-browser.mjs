@@ -65,7 +65,25 @@ export async function assertHomeHasCandidates(page, expectedCount) {
     ).catch(() => {});
   }
 
-  const homeCount = await page.locator('main article').count();
+  let homeCount = await page.locator('main article').count();
+  if (homeCount < expectedCount && typeof page.getByRole === 'function') {
+    const browseButtons = page.getByRole('button', { name: /^Todos$/ });
+    if (await browseButtons.count()) {
+      await browseButtons.first().click();
+      for (let iteration = 0; iteration < 20; iteration += 1) {
+        const loadMore = page.getByRole('button', { name: /Mostrar mais 60/ });
+        if (!(await loadMore.count())) break;
+        await loadMore.first().click();
+        await page.waitForTimeout(50);
+      }
+      await page.waitForFunction(
+        (count) => document.querySelectorAll('main article').length >= count,
+        expectedCount,
+        { timeout: 20_000 },
+      ).catch(() => {});
+      homeCount = await page.locator('main article').count();
+    }
+  }
   const bodyText = await page.locator('body').innerText();
   const bodyPreview = bodyText.replace(/\s+/g, ' ').trim().slice(0, 500);
 
@@ -249,7 +267,7 @@ async function main() {
 
     await page.getByRole('searchbox', { name: /buscar candidatos/i }).fill('');
     await page.waitForTimeout(250);
-    await page.locator('main article a[href^="/candidatos/"]').first().click();
+    await page.locator('main article h3').first().dispatchEvent('click');
     await page.waitForLoadState('networkidle');
     const detailHeading = await page.locator('main h1').first().innerText({ timeout: 10_000 });
     if (!detailHeading.trim()) fail('Detalhe abriu sem h1 de candidato.');
