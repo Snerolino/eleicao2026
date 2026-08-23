@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "alrs_p2_microbatch_source_status",
+  "remote_apply": false,
+  "status": "blocked_official_route",
+  "totals": {"versions": 5, "official_search_http_200": 5, "proposition_links_found": 0},
+  "items": [
+    {"proposition_version_id":"b50534a6-cf4b-41b2-b666-f88244ce5fe9","title":"Polícia Penal do Estado do Rio Grande do Sul","status":"blocked_official_route","reason":"buscador oficial HTTP 200 sem link de proposição; não inferir número/ano"},
+    {"proposition_version_id":"a738150b-d0ca-4bb2-a557-79300d480031","title":"Proteção e imutabilidade dos símbolos do Estado","status":"blocked_official_route","reason":"buscador oficial HTTP 200 sem link de proposição; não inferir número/ano"},
+    {"proposition_version_id":"67bf6829-0af4-483e-b273-b09609cd0b6c","title":"Divulgação de vagas de trabalho em shoppings","status":"blocked_official_route","reason":"buscador oficial HTTP 200 sem link de proposição; não inferir número/ano"},
+    {"proposition_version_id":"8876dc0d-f20b-4ce5-a5a9-b165ff15beaa","title":"Carreira dos servidores militares","status":"blocked_official_route","reason":"buscador oficial HTTP 200 sem link de proposição; não inferir número/ano"},
+    {"proposition_version_id":"aad6b20a-fb19-4e4e-8d14-2d17572a1add","title":"Educação Humanitária nas escolas estaduais","status":"blocked_official_route","reason":"buscador oficial HTTP 200 sem link de proposição; não inferir número/ano"}
+  ]
+}

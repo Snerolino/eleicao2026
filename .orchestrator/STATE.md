@@ -2445,6 +2445,13 @@ Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; som
 - 5 revisões externas aprovadas; 7 candidatos afetados.
 - QA: `docs/qa/lote-alrs-final-approved-microbatch-2026-08-23.md`.
 
+## Tick contínuo — bloqueio bounded do micro-lote P2 (2026-08-23)
+
+- 5 consultas ao buscador oficial retornaram HTTP 200, mas 0 links de proposição.
+- P2 mantido `blocked_official_route`; nenhum número/ano inferido.
+- Bloqueio não afeta as 12 matrizes ALRS aprovadas.
+- QA: `docs/qa/lote-alrs-p2-microbatch-source-status-2026-08-23.md`.
+
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)
 
 - 30/30 itens P0 classificados: 9 mérito, 19 procedimento, 2 emenda, 0 destaque.
