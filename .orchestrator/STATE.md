@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial, gates locais verdes, transporte Git bloqueado — 2026-08-23T17:06Z
+
+- Câmara oficial read-only: 8/8 janelas trimestrais 2025–2026 `status=ok`, `blocked=null`, IDs apenas inventariados; nenhuma reconciliação ou aplicação.
+- Auditoria de fontes regular RC 0; strict RC 2 preserva gaps reais: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`. Fila ALRS residual mantém 4 votos sem evidência vinculada. Nenhum fato foi inventado ou escrito.
+- Snapshot local conferido em `1003` registros. Gates Node 24.19.0 RC 0: `401/401` testes, TypeScript, schema, `data:check` (`1003/988/1`), build `226` módulos/sitemap `1003 + 2`, `git diff --check`.
+- Produção raiz e `/release.json` HTTP 200. Últimos runs primário `32652443864` e backup `32652456631` estão `success` no SHA remoto anterior `5a8a240`; este lote documental ainda não está publicado.
+- `git push origin main` retentado e bloqueado por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). Nenhum workflow novo foi acionado. Doctor RC 1 permanece degradado por shell Node 22.22.2/OpenCode ausente/smoke MCP Codex não exercitado no rápido.
+- Nenhum candidato, identidade, voto, FK, source reference, claim, matriz, assessment, Supabase ou Cloudflare foi alterado. QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1706.md`.
+- Próximo chunk: retentar transporte Git; após `main -> main`, validar backup `334951434`, `headSha`, raiz e `/release.json`. Aplicação factual segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial, publicação verificada — 2026-08-23T16:47Z
 
 - Recon Câmara oficial read-only: 8/8 janelas trimestrais 2025–2026 `status=ok`; inventário com `--max-pages 1`, sem reconciliação ou aplicação. Auditoria estrita de fontes preserva gaps reais: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`.
