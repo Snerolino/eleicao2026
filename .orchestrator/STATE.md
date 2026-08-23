@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial, gates verdes e DNS bloqueando publicação — 2026-08-23T10:45Z
+
+- Lock bounded adquirido/liberado. Câmara oficial read-only: `8/8` janelas trimestrais 2025–2026 `status=ok`, `blocked=null`, sem reconciliação/aplicação. Auditoria de fontes RC 0 mantém gaps: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` para ALRS/Câmara/Senado.
+- ALRS FED-17 residual falhou fechado com `JWT issued at future`; os 4 casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Nenhum fato foi inventado ou escrito.
+- Dataset/snapshot: `1003` registros e IDs únicos; CSV oficial `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- Gates Node 24.19.0 RC 0: `401` testes/`98` arquivos, TypeScript, schema, `data:check` (`1003/988/1`), build (`224` módulos; sitemap `1003 + 2`; release `85176ed-20260823T104525983Z`) e `git diff --check`.
+- Produção: `/release.json` respondeu HTTP 200 no primeiro check; uma revalidação posterior retornou HTTP 403. A raiz falhou com timeout DNS (`HTTP 000`). A primeira tentativa de `git push origin main` falhou por DNS e a retentativa alcançou o remoto mas retornou HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); commit local `125ea9f` deixa `main` 4 commits à frente de `origin/main`, nenhum workflow novo acionado.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1045.md`. Nenhuma mutação factual, Supabase remoto, Cloudflare, identidade, FK, source reference ou claim ocorreu.
+- Bloqueios: DNS GitHub/produção; ALRS JWT futuro; doctor degradado pelo shell Node 22/OpenCode ausente/smoke Codex sem evidência. Próximo chunk: retentar transporte Git; após `main -> main`, validar backup `334951434`, `headSha` e `/release.json`; manter aplicação factual condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial, gates verdes e publicação verificada — 2026-08-23T10:23Z
 
 - Lock bounded adquirido/liberado. ALRS FED-17 residual dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata.
