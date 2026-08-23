@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "alrs_p2_pl43_assessment_editorial_ready",
+  "methodology_version": "1.0.0",
+  "source": "admin_disposition_approved",
+  "remote_apply": false,
+  "public_approval": false,
+  "review_status": "pending_review",
+  "totals": {"versions": 1, "assessments": 1},
+  "items": [{
+    "official_match_key": "PL-43-2019",
+    "proposition_version_id": "ebc01302-3211-487b-b1bb-6d515936b2e0",
+    "group_slug": "mulheres",
+    "impact_direction": "positive",
+    "defending_vote": "sim",
+    "severity": 2,
+    "structural_type": "structural",
+    "confidence": 0.9,
+    "rationale": "A proposição cria obrigação de divulgação do Disque 180 em placas informativas, ampliando o acesso de mulheres a canal oficial de denúncia e atendimento. A classificação é positiva para mulheres, com voto defensor sim e fonte substantiva oficial preservada.",
+    "editorial_status": "approved_by_user_pending_admin_record",
+    "source_gate": "green",
+    "source_manifest": "data/legislative-import/alrs/p2-microbatch-2-source-manifest.json"
+  }]
+}
