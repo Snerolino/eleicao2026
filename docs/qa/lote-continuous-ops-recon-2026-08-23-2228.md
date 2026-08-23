@@ -25,8 +25,7 @@ manifesto Câmara, claims publicadas e produção, sem escrita factual/editorial
   conversão de ausência em voto nem publicação sem fonte.
 - `npm run orch:doctor`: RC `1` por shell Node `22.22.2` enquanto o projeto exige
   Node 24 e por OpenCode ausente. A recon read-only não foi bloqueada.
-- Transporte Git permanece pendente: HEAD local `01e9fdd` está `2` commits à frente
-  de `origin/main`; não houve push nem workflow novo neste tick.
+- Transporte Git: após o commit documental `3cecb00`, `git push origin main` foi retentado três vezes e bloqueado por HTTP `403` (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); HEAD local está `3` commits à frente de `origin/main` e não houve workflow novo neste tick.
 
 ## Próximo passo
 

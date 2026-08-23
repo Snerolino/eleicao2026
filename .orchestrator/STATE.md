@@ -6,7 +6,7 @@
 - `verify-cli-output --live`: `1000` claims publicadas auditadas, `0` sem fonte. Produção raiz, `/release.json` e `/admin` HTTP 200.
 - Backup `334951434` run `32668450924` e primário `32668442174` success, ambos com `headSha=a82510b7d22199e1c22fbd1e05c57ef57567aad8`.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-2228.md`. Nenhuma identidade, FK, voto, source reference, claim, assessment, matriz, disposição editorial, Supabase ou Cloudflare foi alterada.
-- Transporte Git continua bloqueado/pendente: HEAD local `01e9fdd` está 2 commits à frente de `origin/main`; doctor RC 1 por Node 22 no shell/OpenCode ausente. Próximo passo: retentar `main -> main` e manter os quatro votos ALRS fail-closed até evidência oficial reproduzida.
+- Transporte Git permanece pendente: após o commit documental `3cecb00`, `git push origin main` foi retentado 3 vezes e bloqueado por HTTP `403` (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); HEAD local está `3` commits à frente de `origin/main`. Não houve workflow novo neste tick.
 
 ## Tick contínuo — recon read-only, produção verificada — 2026-08-23T22:10Z
 
