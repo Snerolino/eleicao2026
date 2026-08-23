@@ -1,3 +1,14 @@
+## Tick contínuo — gates verdes, backup e produção verificados — 2026-08-23T07:10Z
+
+- `origin/main` foi confirmado em `0bc536152731c7244e48863f37d09aabb3012f94`; a primeira tentativa deste tick retornou HTTP 403, mas o transporte posteriormente refletiu o commit remoto.
+- Backup manual `334951434` concluído com sucesso no run `32624462504`, `headSha` igual ao commit remoto. Produção raiz e `/release.json` HTTP 200; release `0bc5361-20260823T064558287Z`, versão `0.2.892`, snapshot `1003`.
+- Gates Node 24.19.0 RC 0: `401` testes/`98` arquivos, TypeScript, schema, `data:check` (`1003` candidaturas/`988` fotos/`1` fonte TSE), build `224` módulos, sitemap `1003 + 2`, smoke (`1002` cards, `0` falhas HTTP, `0` erros online, service worker pronto).
+- Dataset vivo comparado por `SQ_CANDIDATO`: `1003/1003`, diferença `0/0`, CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- Auditoria de fontes regular RC 0; strict RC 2 preserva gaps reais: versões sem fonte `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` para ALRS/Câmara/Senado. ALRS Enio Carlos Terra (4 casos) e Senado seguem fail-closed; nenhuma escrita factual remota ocorreu.
+- Doctor permanece RC 1 por shell Node 22.22.2 incompatível com Node 24 e OpenCode ausente; gates foram executados explicitamente em Node 24.19.0.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0710.md`.
+- Próximo chunk: recon oficial read-only ALRS/Senado/Câmara; aplicar apenas lote com R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — gates verdes, código publicado, documentação local bloqueada por push — 2026-08-23T06:50Z
 
 - Commit de implementação `2026912fece8a3c60c3c5e57dbfb87143a634d00` já está em `origin/main` e produção responde HTTP 200 na raiz e em `/release.json`; release live `2026912-20260823T064218901Z`, versão `0.2.890`, snapshot `1003`.
