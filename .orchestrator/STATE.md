@@ -1,4 +1,12 @@
-## Tick contínuo — recon oficial, fontes auditadas e transporte Git bloqueado — 2026-08-23T14:00Z
+## Tick contínuo — P2 Admin publicado, QA documental local pendente de transporte — 2026-08-23T14:30Z
+
+- A fila editorial ALRS P2 foi publicada funcionalmente no commit remoto `692094f875844d977f8436b02c04dacaa6423068`; o workflow primário `32645269265` concluiu `success` nesse SHA. O backup `32645457872` concluiu `skipped` nesse mesmo SHA.
+- Produção verificada: raiz HTTP 200 e `/release.json` HTTP 200; live `692094f`, versão `0.2.936`, snapshot `1003`, release `692094f-20260823T142503596Z`.
+- Gates locais do tick: Node 24.19.0; `401` testes/`98` arquivos, TypeScript, schema, `data:check` (`1003/988/1`), build (`225` módulos; sitemap `1003 + 2`), smoke (`1002` cards, `0` HTTP failures, `0` erros online), lint remoto Supabase RC 0.
+- Migration `20260823110000` confirmada remota; tabela `impact_editorial_dispositions`, `proposition_versions`, `editor_roles` e `has_editor_role(uuid)` presentes. Nenhuma disposição factual foi registrada neste tick.
+- QA `docs/qa/lote-p2-editorial-admin-2026-08-23.md` e atualização do contrato estão em commit local `0aab938`; `git push origin main` falhou novamente por HTTP 403 e depois DNS (`Could not resolve host`). O commit documental ainda não está em `origin/main`; a funcionalidade já está no SHA remoto `692094f`.
+- ALRS residual dos 4 Enio Carlos Terra e Senado seguem fail-closed sem evidência oficial completa. Próximo chunk: retentar transporte documental; manter recon oficial independente e aplicar fatos somente após R0/schema/FK/fonte/dry-run/idempotência.
+
 
 - ALRS FED-17 residual dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata.
 - Câmara oficial read-only: 8/8 janelas trimestrais `2025-01-01`–`2026-12-31` `status=ok`; somente inventário de `vote_ids`, sem reconciliação ou escrita.
