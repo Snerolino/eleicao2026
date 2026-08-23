@@ -295,13 +295,27 @@ export function AdminPage() {
     setBusyMatrixId(matrix.id);
     setMessage(null);
     const notes = matrixNotes[matrix.id]?.trim() || 'Aprovação registrada pelo painel administrativo.';
-    const { error: reviewError } = await supabase.from('impact_reviews').insert({
-      impact_matrix_id: matrix.id,
-      reviewer_id: user.id,
-      reviewer_type: 'curadoria_interna',
-      decision: 'approved',
-      notes,
-    });
+    const { data: existingReview, error: existingReviewError } = await supabase
+      .from('impact_reviews')
+      .select('id')
+      .eq('impact_matrix_id', matrix.id)
+      .eq('reviewer_type', 'curadoria_interna')
+      .eq('decision', 'approved')
+      .limit(1);
+    if (existingReviewError) {
+      setBusyMatrixId(null);
+      setMessage(`Não foi possível verificar a revisão existente: ${existingReviewError.message}`);
+      return;
+    }
+    const { error: reviewError } = existingReview?.length
+      ? { error: null }
+      : await supabase.from('impact_reviews').insert({
+          impact_matrix_id: matrix.id,
+          reviewer_id: user.id,
+          reviewer_type: 'curadoria_interna',
+          decision: 'approved',
+          notes,
+        });
     if (reviewError) {
       setBusyMatrixId(null);
       setMessage(`Nota/revisão não registrada: ${reviewError.message}`);
