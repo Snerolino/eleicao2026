@@ -1,7 +1,10 @@
-import { useDeferredValue, useMemo, useState } from 'react';
+import { useDeferredValue, useEffect, useMemo, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router';
 import { CargoSection } from '@/components/candidates/CargoSection';
+import { CargoNavigation } from '@/components/candidates/CargoNavigation';
+import { CandidateCompactRow } from '@/components/candidates/CandidateCompactRow';
+import { CandidateViewToggle, type CandidateViewMode } from '@/components/candidates/CandidateViewToggle';
 import { DataFreshness } from '@/components/DataFreshness';
 import { CandidateSearch } from '@/components/CandidateSearch';
 import {
@@ -23,6 +26,7 @@ import {
   type Position
 } from '@/types/election';
 import { usePageMetadata } from '@/hooks/usePageMetadata';
+import { useSavedCandidates } from '@/hooks/useSavedCandidates';
 
 function normalize(text: string) {
   return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
@@ -33,6 +37,8 @@ interface CandidateSearchCache {
   nameNormalized?: string;
   labelNormalized?: string;
 }
+
+const EMPTY_CANDIDATES: CandidateWithClaims[] = [];
 
 function filterCandidates(
   candidates: CandidateWithClaims[],
@@ -90,6 +96,17 @@ export function HomePage() {
   const [partyFilter, setPartyFilter] = useState('');
   const [womenOnly, setWomenOnly] = useState(false);
   const [raceFilter, setRaceFilter] = useState('');
+  const [selectedPosition, setSelectedPosition] = useState<Position | 'saved' | ''>('');
+  const [browseAllCandidates, setBrowseAllCandidates] = useState(false);
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(60);
+  const [viewMode, setViewMode] = useState<CandidateViewMode>(() => {
+    try {
+      return window.localStorage.getItem('votopraquem:candidate-view-mode:v1') === 'compact' ? 'compact' : 'detailed';
+    } catch {
+      return 'detailed';
+    }
+  });
 
   const query = useQuery<CandidateWithClaims[]>({
     queryKey: ['candidates'],
@@ -99,7 +116,9 @@ export function HomePage() {
     refetchOnWindowFocus: true
   });
 
-  const allCandidates = query.data ?? [];
+  const allCandidates = query.data ?? EMPTY_CANDIDATES;
+  const validCandidateIds = useMemo(() => new Set(allCandidates.map((candidate) => candidate.tse_candidate_id ?? candidate.id)), [allCandidates]);
+  const { savedIds, savedSet, toggleSaved, clearSaved } = useSavedCandidates(validCandidateIds);
   const claimsDegraded = query.isSuccess && wasLastClaimsFetchDegraded();
   const usingSnapshotFallback = query.isSuccess && wasLastCandidatesFetchFromSnapshot();
 
@@ -124,35 +143,31 @@ export function HomePage() {
     return ordered;
   }, [cargoCounts]);
 
-  const groupedCandidates = useMemo(() => {
+  const selectedCandidates = useMemo(() => {
+    if (selectedPosition === 'saved') return filtered.filter((candidate) => savedSet.has(candidate.tse_candidate_id ?? candidate.id));
+    return filtered;
+  }, [filtered, savedSet, selectedPosition]);
+
+  const selectedGroups = useMemo(() => {
     const grouped = new Map<Position, CandidateWithClaims[]>();
-    for (const c of filtered) {
-      const g = grouped.get(c.position);
-      if (g) g.push(c);
-      else grouped.set(c.position, [c]);
+    for (const candidate of selectedCandidates) {
+      const current = grouped.get(candidate.position) ?? [];
+      current.push(candidate);
+      grouped.set(candidate.position, current);
     }
     return grouped;
-  }, [filtered]);
+  }, [selectedCandidates]);
 
-  function openCargo(position: Position) {
-    setSearchQuery('');
-    setPartyFilter('');
-    setWomenOnly(false);
-    setRaceFilter('');
-    setCargoFilter(position);
+  useEffect(() => {
+    setVisibleCount(60);
+  }, [deferredSearchQuery, cargoFilter, partyFilter, womenOnly, raceFilter, selectedPosition, viewMode]);
 
-    const scrollToCargo = () => {
-      const section = document.getElementById(`cargo-${position}`);
-      if (typeof section?.scrollIntoView !== 'function') return;
-      section.scrollIntoView({
-        block: 'start',
-        behavior: 'smooth',
-      });
-    };
-    if (typeof window.requestAnimationFrame === 'function') {
-      window.requestAnimationFrame(scrollToCargo);
-    } else {
-      window.setTimeout(scrollToCargo, 0);
+  function changeViewMode(mode: CandidateViewMode) {
+    setViewMode(mode);
+    try {
+      window.localStorage.setItem('votopraquem:candidate-view-mode:v1', mode);
+    } catch {
+      // Optional persistence.
     }
   }
 
@@ -226,6 +241,8 @@ export function HomePage() {
                 onPartyFilterChange={setPartyFilter}
                 onWomenOnlyChange={setWomenOnly}
                 onRaceFilterChange={setRaceFilter}
+                showCargoFilter={false}
+                showSecondaryFilters={filtersOpen}
               />
             </div>
             <div className="flex shrink-0 items-center gap-3">
@@ -245,6 +262,24 @@ export function HomePage() {
               </Link>
             </div>
           </div>
+          <CargoNavigation
+            positions={visiblePositions}
+            counts={cargoCounts}
+            selected={selectedPosition}
+            savedCount={savedIds.length}
+            onSelect={(selection) => {
+              setBrowseAllCandidates(true);
+              setSelectedPosition(selection);
+              setCargoFilter(selection === '' || selection === 'saved' ? '' : selection);
+            }}
+          />
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <CandidateViewToggle value={viewMode} onChange={changeViewMode} />
+            <div className="flex items-center gap-3">
+              <button type="button" onClick={() => setFiltersOpen((open) => !open)} aria-expanded={filtersOpen} className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)] underline underline-offset-4">{filtersOpen ? 'Ocultar filtros' : 'Filtros'}</button>
+              {selectedPosition === 'saved' ? <button type="button" onClick={clearSaved} className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)] underline underline-offset-4">Limpar salvos</button> : null}
+            </div>
+          </div>
           {hasActiveFilter && (
             <p aria-live="polite" className="mt-2 font-mono text-xs text-[var(--color-muted-ink)]">
               {filtered.length} de {allCandidates.length} candidatos
@@ -255,83 +290,24 @@ export function HomePage() {
               {raceFilter && ` · cor/raça ${raceFilter.toLowerCase()}`}
             </p>
           )}
-          {visiblePositions.length > 0 && (
-            <nav
-              aria-label="Atalhos por cargo"
-              className="flex flex-wrap gap-2 border-t border-dashed border-[var(--color-border-editorial)] pt-4"
-            >
-              {visiblePositions.map((position) => (
-                <button
-                  key={position}
-                  type="button"
-                  onClick={() => openCargo(position)}
-                  className={`rounded-sm border px-3 py-2 text-left font-mono text-xs uppercase tracking-wider transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-institutional)] ${
-                    cargoFilter === position
-                      ? 'border-[var(--color-institutional)] bg-[color-mix(in_srgb,var(--color-institutional)_10%,var(--color-paper))] text-[var(--color-institutional)]'
-                      : 'border-[var(--color-border-editorial)] text-[var(--color-muted-ink)] hover:border-[var(--color-institutional)] hover:text-[var(--color-ink)]'
-                  }`}
-                >
-                  <span>{POSITION_LABEL[position]}</span>{' '}
-                  <span aria-label={`${cargoCounts.get(position) ?? 0} candidatos`}>
-                    {cargoCounts.get(position) ?? 0}
-                  </span>
-                </button>
-              ))}
-            </nav>
-          )}
         </div>
       )}
 
-      {filtered.length === 0 ? (
+      {selectedCandidates.length === 0 ? (
         <div className="mt-20 text-center">
-          {hasActiveFilter ? (
-            <p className="font-mono text-sm text-[var(--color-muted-ink)]">
-              Nenhum candidato corresponde aos filtros atuais.
-            </p>
-          ) : (
-            <EmptyState ariaLabel="Estado da lista">
-              <p>
-                Nenhuma candidatura oficial encontrada na fonte atual.
-              </p>
-              <p className="mt-2">
-                Isso indica snapshot oficial vazio, não erro de conexão. Verifique a origem dos dados no pipeline TSE.
-              </p>
-            </EmptyState>
-          )}
-          {hasActiveFilter && (
-            <button
-              type="button"
-              onClick={() => {
-                setSearchQuery('');
-                setCargoFilter('');
-                setPartyFilter('');
-                setWomenOnly(false);
-                setRaceFilter('');
-              }}
-                className="mt-4 rounded-sm bg-[var(--color-institutional)] px-4 py-2 text-sm font-semibold text-white hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-institutional)]"
-            >
-              Limpar filtros
-            </button>
-          )}
+          {hasActiveFilter || selectedPosition === 'saved' ? <p className="font-mono text-sm text-[var(--color-muted-ink)]">{selectedPosition === 'saved' ? 'Nenhum candidato salvo neste navegador.' : 'Nenhum candidato corresponde aos filtros atuais.'}</p> : <EmptyState ariaLabel="Estado da lista"><p>Nenhuma candidatura oficial encontrada na fonte atual.</p><p className="mt-2">Isso indica snapshot oficial vazio, não erro de conexão. Verifique a origem dos dados no pipeline TSE.</p></EmptyState>}
+          {(hasActiveFilter || selectedPosition === 'saved') ? <button type="button" onClick={() => { setSearchQuery(''); setCargoFilter(''); setSelectedPosition(''); setBrowseAllCandidates(false); setPartyFilter(''); setWomenOnly(false); setRaceFilter(''); }} className="mt-4 rounded-sm bg-[var(--color-institutional)] px-4 py-2 text-sm font-semibold text-white">Limpar seleção</button> : null}
         </div>
+      ) : selectedPosition === '' && !browseAllCandidates && !hasActiveFilter ? (
+        <section className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3" aria-label="Resumo por cargo">
+          {visiblePositions.map((position) => <article key={position} className="border border-[var(--color-border-editorial)] p-5"><p className="font-mono text-xs uppercase tracking-widest text-[var(--color-muted-ink)]">{POSITION_LABEL[position]}</p><strong className="mt-2 block text-3xl">{cargoCounts.get(position) ?? 0}</strong><p className="text-sm text-[var(--color-muted-ink)]">candidatos</p><button type="button" onClick={() => { setBrowseAllCandidates(true); setSelectedPosition(position); setCargoFilter(position); }} className="mt-4 font-mono text-xs uppercase tracking-wider text-[var(--color-institutional)] underline underline-offset-4">Ver candidatos →</button></article>)}
+        </section>
       ) : (
-        <section className="mt-8 space-y-12">
-          {(() => {
-            const sections = [];
-            const positionsToRender = cargoFilter ? [cargoFilter] : visiblePositions;
-            for (const position of positionsToRender) {
-              const candidatesInPosition = groupedCandidates.get(position) ?? [];
-              if (candidatesInPosition.length === 0) continue;
-              sections.push(
-                <CargoSection
-                  key={position}
-                  position={position}
-                  candidates={candidatesInPosition}
-                />
-              );
-            }
-            return sections;
-          })()}
+        <section className="mt-8 space-y-8">
+          {[...selectedGroups.entries()].map(([position, candidatesInPosition]) => {
+            const visibleCandidates = candidatesInPosition.slice(0, visibleCount);
+            return <section key={position} id={`cargo-${position}`} aria-labelledby={`cargo-heading-${position}`} className="space-y-4"><header className="flex items-baseline justify-between gap-4 border-b border-[var(--color-border-editorial)] pb-2"><h2 id={`cargo-heading-${position}`} className="text-2xl">{position === 'outro' ? candidatesInPosition[0]?.position_label : POSITION_LABEL[position]}</h2><span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">{candidatesInPosition.length} candidatos</span></header>{viewMode === 'compact' ? <div className="border-t border-[var(--color-border-editorial)]">{visibleCandidates.map((candidate) => <CandidateCompactRow key={candidate.id} candidate={candidate} saved={savedSet.has(candidate.tse_candidate_id ?? candidate.id)} onToggleSaved={() => toggleSaved(candidate.tse_candidate_id ?? candidate.id)} />)}</div> : <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">{visibleCandidates.map((candidate) => <div key={candidate.id} className="relative"><CargoSection position={position} candidates={[candidate]} /></div>)}</div>}{visibleCandidates.length < candidatesInPosition.length ? <div className="flex flex-col items-center gap-2 pt-4"><p className="font-mono text-xs text-[var(--color-muted-ink)]">Mostrando {visibleCandidates.length} de {candidatesInPosition.length}</p><button type="button" onClick={() => setVisibleCount((count) => count + 60)} className="rounded-sm border border-[var(--color-institutional)] px-4 py-2 font-mono text-xs uppercase tracking-wider text-[var(--color-institutional)]">Mostrar mais 60</button></div> : null}</section>;
+          })}
         </section>
       )}
     </main>

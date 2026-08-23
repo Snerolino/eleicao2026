@@ -85,6 +85,7 @@ function renderHome() {
 }
 
 beforeEach(() => {
+  window.localStorage.clear();
   flags.claimsDegraded = false;
   flags.fromSnapshot = false;
   queryState.value = {
@@ -151,11 +152,13 @@ describe('HomePage estados honestos H5.2', () => {
     expect(await screen.findByText(/nenhum candidato corresponde aos filtros atuais/i)).toBeInTheDocument();
     expect(screen.queryByText(/nenhum candidato está disponível/i)).not.toBeInTheDocument();
 
-    fireEvent.click(screen.getByRole('button', { name: /limpar filtros/i }));
+    fireEvent.click(screen.getByRole('button', { name: /limpar seleção/i }));
 
     await waitFor(() => {
-      expect(screen.getByText('Candidata Oficial')).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: /deputado federal/i })).toBeInTheDocument();
     });
+    fireEvent.click(screen.getByRole('button', { name: /deputado federal/i }));
+    expect(screen.getByText('Candidata Oficial')).toBeInTheDocument();
   });
 
   it('degradação de claims não impede busca nem navegação', () => {
@@ -167,6 +170,7 @@ describe('HomePage estados honestos H5.2', () => {
       /informações editoriais temporariamente indisponíveis/i,
     );
     expect(screen.getByRole('searchbox', { name: /buscar candidatos/i })).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: /deputado federal/i }));
     expect(screen.getByRole('link', { name: /candidata oficial/i })).toHaveAttribute(
       'href',
       '/candidatos/candidata_oficial_1',
@@ -179,6 +183,7 @@ describe('HomePage estados honestos H5.2', () => {
     renderHome();
 
     expect(screen.getByText(/fallback oficial validado/i)).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: /deputado federal/i }));
     expect(screen.getByText('Candidata Oficial')).toBeInTheDocument();
   });
 
@@ -215,13 +220,13 @@ describe('HomePage estados honestos H5.2', () => {
     };
     renderHome();
 
-    const nav = screen.getByRole('navigation', { name: /atalhos por cargo/i });
+    const nav = screen.getByRole('navigation', { name: /navegação por cargo/i });
     expect(within(nav).getByRole('button', { name: /vice-governador/i })).toHaveTextContent('1');
 
     fireEvent.click(within(nav).getByRole('button', { name: /vice-governador/i }));
 
     expect(await screen.findByText('Vice Teste')).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: /vice-governador/i })).toBeInTheDocument();
+    expect(screen.getAllByRole('heading', { name: /vice-governador/i }).length).toBeGreaterThan(0);
     expect(screen.queryByText('Candidata Oficial')).not.toBeInTheDocument();
   });
 
@@ -254,5 +259,31 @@ describe('HomePage estados honestos H5.2', () => {
     expect(screen.getByText(/1 de 3 candidatos/i)).toHaveTextContent(/mulheres/i);
     expect(screen.getByText(/1 de 3 candidatos/i)).toHaveTextContent(/cor\/raça preta/i);
     expect(screen.getByRole('option', { name: 'Não informado' })).toBeInTheDocument();
+  });
+
+  it('renderiza Todos como resumo de cargos e abre um cargo sem despejar a lista inteira', () => {
+    queryState.value = { ...queryState.value, data: [officialCandidate, accentCandidate, viceGovernorCandidate] };
+    renderHome();
+    expect(screen.getByRole('region', { name: /resumo por cargo/i })).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: /deputado estadual/i }));
+    expect(screen.getByText('José Ademar')).toBeInTheDocument();
+  });
+
+  it('troca para compacta e salva somente o ID no navegador', () => {
+    queryState.value = { ...queryState.value, data: [officialCandidate] };
+    renderHome();
+    fireEvent.click(screen.getByRole('button', { name: /deputado federal/i }));
+    fireEvent.click(screen.getByRole('button', { name: /compacta/i }));
+    expect(screen.getByRole('button', { name: /compacta/i })).toHaveAttribute('aria-pressed', 'true');
+    fireEvent.click(screen.getByRole('button', { name: /salvar candidata oficial neste navegador/i }));
+    expect(screen.getByRole('button', { name: /remover candidata oficial dos salvos/i })).toBeInTheDocument();
+    expect(JSON.parse(window.localStorage.getItem('votopraquem:saved-candidates:v1') ?? '[]')).toEqual(['1']);
+  });
+
+  it('mostra estado vazio de Salvos sem tratar como indisponibilidade', () => {
+    queryState.value = { ...queryState.value, data: [officialCandidate] };
+    renderHome();
+    fireEvent.click(screen.getByRole('button', { name: /salvos/i }));
+    expect(screen.getByText(/nenhum candidato salvo neste navegador/i)).toBeInTheDocument();
   });
 });

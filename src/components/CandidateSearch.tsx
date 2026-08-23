@@ -14,6 +14,8 @@ interface CandidateSearchProps {
   onPartyFilterChange: (value: string) => void;
   onWomenOnlyChange: (value: boolean) => void;
   onRaceFilterChange: (value: string) => void;
+  showCargoFilter?: boolean;
+  showSecondaryFilters?: boolean;
 }
 
 const OFFICIAL_RACE_FILTERS = ['AMARELA', 'BRANCA', 'INDÍGENA', 'PARDA', 'PRETA', 'NÃO INFORMADO'] as const;
@@ -39,6 +41,8 @@ export function CandidateSearch({
   onPartyFilterChange,
   onWomenOnlyChange,
   onRaceFilterChange,
+  showCargoFilter = true,
+  showSecondaryFilters = true,
 }: CandidateSearchProps) {
   const selectClass = 'w-full appearance-none cursor-pointer rounded-sm border border-[var(--color-border-editorial)] bg-card px-3 py-2 pr-8 font-mono text-[0.72rem] uppercase tracking-[0.06em] text-[var(--color-ink)] focus:border-[var(--color-institutional)] focus:outline-none sm:w-auto';
   const { positions, parties, races } = useMemo(() => {
@@ -64,7 +68,7 @@ export function CandidateSearch({
   }, [candidates]);
 
   return (
-    <div className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center">
+    <div className={`flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center ${showSecondaryFilters ? '' : '[&>div:not(:first-child)]:hidden [&>label]:hidden'}`}>
       <div className="relative flex-1 sm:min-w-[260px]">
         <label htmlFor="candidate-search" className="sr-only">
           Buscar candidatos
@@ -99,22 +103,24 @@ export function CandidateSearch({
         )}
       </div>
 
-      <div className="relative">
-        <select
-          value={cargoFilter}
-          onChange={(e) => onCargoFilterChange(e.target.value as '' | Position)}
-          className={selectClass}
-          aria-label="Filtrar por cargo"
-        >
-          <option value="">Todos os cargos</option>
-          {positions.map((p) => (
-            <option key={p} value={p}>
-              {POSITION_LABEL[p]}
-            </option>
-          ))}
-        </select>
-        <span aria-hidden="true" className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[0.65rem] text-[var(--color-institutional)]">▼</span>
-      </div>
+      {showCargoFilter ? (
+        <div className="relative">
+          <select
+            value={cargoFilter}
+            onChange={(e) => onCargoFilterChange(e.target.value as '' | Position)}
+            className={selectClass}
+            aria-label="Filtrar por cargo"
+          >
+            <option value="">Todos os cargos</option>
+            {positions.map((p) => (
+              <option key={p} value={p}>
+                {POSITION_LABEL[p]}
+              </option>
+            ))}
+          </select>
+          <span aria-hidden="true" className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[0.65rem] text-[var(--color-institutional)]">▼</span>
+        </div>
+      ) : null}
 
       <div className="relative">
         <select
