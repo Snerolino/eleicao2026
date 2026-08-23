@@ -20,10 +20,10 @@ Executar um tick bounded do control plane: recon oficial read-only, validar o lo
 - `npm run smoke:local`: RC 0 — 1002 cards, 0 falhas HTTP, 0 erros online, service worker pronto.
 
 ## Publicação e bloqueios
-- GitHub remoto já reflete exatamente o HEAD (`main == origin/main`); não foi necessário novo commit/push neste tick.
+- O commit de feature está em `origin/main`; o registro documental deste tick (`748c0db`) está apenas local porque o push foi rejeitado por HTTP 403 e, na tentativa com a credencial keyring, por falha DNS.
 - `/release.json` de produção respondeu HTTP 200 e reportou SHA `7a401fe21f8dba1ff8ffaefd7f6f22c2eff827e5`, versão `0.2.901`, snapshot 1003 e o mesmo SHA oficial do CSV.
 - A checagem da raiz `https://rs.votopraquem.org` teve falha transitória de DNS (`curl: Could not resolve host`, HTTP 000); repetir em próximo tick. A verificação de `/release.json` foi bem-sucedida.
-- `gh run list` falhou por indisponibilidade de `api.github.com`; não há evidência deste tick sobre o estado do workflow backup/headSha além da confirmação independente do `release.json`.
+- O workflow backup `334951434` foi consultado depois: run `32629495380`, `completed/skipped`, `headSha=7a401fe21f8dba1ff8ffaefd7f6f22c2eff827e5`; o commit de feature já está em produção, mas não houve deploy para o commit documental deste tick.
 - Doctor permanece degradado: shell padrão Node 22.22.2 incompatível com requisito Node 24, OpenCode ausente e smoke MCP Codex sem evidência estruturada; gates do projeto foram executados explicitamente com Node 24.19.0.
 - Nenhuma escrita factual em Supabase, migration, RLS, source reference, claim ou Cloudflare foi executada. Aplicação remota continua condicionada a R0, schema/FK, fonte oficial, dry-run e idempotência.
 
