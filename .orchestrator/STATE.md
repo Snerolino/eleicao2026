@@ -1,3 +1,12 @@
+## Tick contínuo — recon ALRS residual, publicação remota estável — 2026-08-23T19:40Z
+
+- Auditoria read-only de fontes: `impact:sources:audit` RC 0; strict RC 2 fail-closed, preservando gaps ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos. A fila ALRS mantém exatamente `4` votos sem evidência vinculada: `alrs_pl134_2023`, `alrs_pl165_2025`, `alrs_pl361_2025`, `alrs_pl77_2025`.
+- FED-17 residual: `npm run impact:alrs:residual:repair` RC 0 em dry-run, `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; nenhuma escrita factual/editorial remota.
+- `data:check` RC 0: `1003` candidaturas, `988` fotos oficiais, `1` fonte TSE. Produção raiz e `/release.json` HTTP 200; release reportou versão `0.2.961`.
+- GitHub Actions: Deploy e backup mais recentes concluídos com sucesso no SHA remoto `0a1a202b503f094d18feca19dc04704c7ca46d3c`; este tick documental ainda não foi publicado.
+- `git push origin main` RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). Doctor RC 1 continua por shell Node `22.22.2` (projeto exige Node 24), OpenCode ausente e smoke MCP não exercitado no modo rápido.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1940.md`. Próximo chunk: retentar transporte Git e repetir recon/dry-run; manter os quatro votos fail-closed até fonte oficial reproduzida com URL, hash, bytes e match exato.
+
 ## Tick contínuo — P2-5 fonte verde, publicação verificada — 2026-08-23T19:25Z
 
 - Dataset TSE oficial versus snapshot: `1003/1003` IDs, diferença `0/0`; SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
