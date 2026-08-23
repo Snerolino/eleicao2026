@@ -1,3 +1,12 @@
+## Tick contínuo — recon Câmara ok, ALRS fail-closed e gates locais verdes — 2026-08-23T12:53Z
+
+- Lock bounded adquirido/liberado. Dataset vivo versus snapshot por `SQ_CANDIDATO`: `1003/1003`, diferença `0`; CSV oficial `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- Recon oficial read-only: Câmara em `8/8` janelas trimestrais `2025-01-01`–`2026-12-31`, todas `ok`; somente inventário, sem reconciliação/aplicação. ALRS FED-17 falhou fechado por `fetch failed`; os 4 casos Enio Carlos Terra continuam sem ID oficial/fonte exata. Senado permanece fail-closed.
+- Auditoria de fontes RC 0 mantém gaps: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`.
+- Gates locais RC 0: `401` testes/`98` arquivos, TypeScript, schema, `data:check` (`1003/988/1`), build `224` módulos/sitemap `1003 + 2`, release local `d028235-20260823T125326524Z` e `git diff --check`.
+- Antes do registro, HEAD local e `origin/main` coincidiam em `d0282353171c22ffc5ecde87048f558dd634a7c1`; o registro gerou commit local `b18dc55`. `git push origin main` falhou primeiro por DNS de `github.com` e depois por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). Nenhum candidato, voto, identidade, FK, source reference, Supabase remoto ou Cloudflare foi alterado.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1253.md`. Próximo chunk: retentar transporte Git; após `main -> main`, validar backup/headSha/produção. Recon e aplicação factual seguem condicionadas a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon Câmara/ALRS, push 403 e gates locais verdes — 2026-08-23T12:32Z
 
 - Lock bounded adquirido/liberado. Dataset vivo versus snapshot por `SQ_CANDIDATO`: `1003/1003`, diferença `0`; CSV oficial `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
