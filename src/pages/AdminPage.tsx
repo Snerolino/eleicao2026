@@ -4,6 +4,7 @@ import type { User } from '@supabase/supabase-js';
 import { usePageMetadata } from '@/hooks/usePageMetadata';
 import { isSupabaseConfigured, supabase } from '@/lib/supabase';
 import { sanitizeUrl } from '@/utils/sanitizeUrl';
+import p2EditorialPack from '../../data/legislative-import/alrs/p2-microbatch-2-editorial-review-pack.json';
 
 const adminOwner = 'admin@votopraquem.org';
 
@@ -53,6 +54,20 @@ type PendingImpactMatrix = {
   }> | null;
 };
 
+type P2Disposition = 'assess' | 'no_direct_population_group' | 'taxonomy_gap' | 'excluded';
+
+type P2EditorialItem = {
+  proposition_version_id: string;
+  review_key: string;
+  title: string;
+  official_match_key: string;
+  proposition_page: string;
+  editorial_disposition: 'pending_review';
+  source_urls: string[];
+};
+
+const p2EditorialItems = (p2EditorialPack.items ?? []) as P2EditorialItem[];
+
 type LoadState = 'idle' | 'loading' | 'ready' | 'error';
 
 function formatCategory(category: string) {
@@ -74,6 +89,9 @@ export function AdminPage() {
   const [editingContent, setEditingContent] = useState('');
   const [busyMatrixId, setBusyMatrixId] = useState<string | null>(null);
   const [matrixNotes, setMatrixNotes] = useState<Record<string, string>>({});
+  const [p2Decisions, setP2Decisions] = useState<Record<string, P2Disposition>>({});
+  const [p2Notes, setP2Notes] = useState<Record<string, string>>({});
+  const [p2Completed, setP2Completed] = useState<Set<string>>(new Set());
 
   usePageMetadata(
     'Administração — Portal Transparência Eleitoral RS',
@@ -358,6 +376,29 @@ export function AdminPage() {
     setMessage(decision === 'rejected' ? 'Matriz rejeitada e registrada no histórico.' : 'Matriz devolvida para ajustes.');
   }
 
+  async function recordP2Disposition(item: P2EditorialItem) {
+    if (!supabase || !user) return;
+    const disposition = p2Decisions[item.proposition_version_id];
+    const rationale = p2Notes[item.proposition_version_id]?.trim();
+    if (!disposition || !rationale || rationale.length < 20) {
+      setMessage('Escolha uma disposição e registre uma justificativa de pelo menos 20 caracteres.');
+      return;
+    }
+    const { error } = await (supabase as any).rpc('record_impact_editorial_disposition', {
+      p_proposition_version_id: item.proposition_version_id,
+      p_review_key: item.review_key,
+      p_title: item.title,
+      p_disposition: disposition,
+      p_rationale: rationale,
+    });
+    if (error) {
+      setMessage(`Disposição P2 não registrada: ${error.message}`);
+      return;
+    }
+    setP2Completed((current) => new Set(current).add(item.proposition_version_id));
+    setMessage(`Disposição registrada para ${item.official_match_key}.`);
+  }
+
   return (
     <main id="main-content" className="mx-auto max-w-6xl px-4 py-8">
       <Link
@@ -528,6 +569,77 @@ export function AdminPage() {
                 ))}
               </div>
             )}
+          </section>
+
+          <section className="mt-8 border-t border-[var(--color-border-editorial)] pt-6" aria-label="Lote P2 aguardando disposição editorial">
+            <h2 className="text-2xl">Lote P2 — disposição editorial</h2>
+            <p className="mt-2 text-sm text-[var(--color-muted-ink)]">
+              Cinco versões ALRS têm fonte oficial preservada e aguardam decisão humana. A decisão apenas registra a triagem; nenhum voto ou matriz é publicado por esta fila.
+            </p>
+            <div className="mt-4 grid gap-4">
+              {p2EditorialItems.map((item) => {
+                const completed = p2Completed.has(item.proposition_version_id);
+                return (
+                  <article key={item.proposition_version_id} className="rounded-sm border border-[var(--color-border-editorial)] p-4">
+                    <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                      <div>
+                        <h3 className="text-lg">{item.official_match_key}</h3>
+                        <p className="mt-1 leading-relaxed">{item.title}</p>
+                      </div>
+                      <span className="font-mono text-xs uppercase tracking-wider text-amber-800">
+                        {completed ? 'registrada nesta sessão' : 'pending_review'}
+                      </span>
+                    </div>
+                    <div className="mt-3 flex flex-wrap gap-3 font-mono text-xs uppercase tracking-wider">
+                      <a href={item.proposition_page} target="_blank" rel="noreferrer" className="text-[var(--color-institutional)] underline-offset-4 hover:underline">
+                        Fonte da proposição
+                      </a>
+                      {item.source_urls.slice(0, 2).map((sourceUrl) => (
+                        <a key={sourceUrl} href={sourceUrl} target="_blank" rel="noreferrer" className="text-[var(--color-institutional)] underline-offset-4 hover:underline">
+                          Fonte do voto
+                        </a>
+                      ))}
+                    </div>
+                    <div className="mt-4 grid gap-3 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
+                      <label className="grid gap-1 text-sm">
+                        <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">Disposição</span>
+                        <select
+                          value={p2Decisions[item.proposition_version_id] ?? ''}
+                          disabled={completed}
+                          onChange={(event) => setP2Decisions((current) => ({ ...current, [item.proposition_version_id]: event.target.value as P2Disposition }))}
+                          className="rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2"
+                        >
+                          <option value="">Selecione…</option>
+                          <option value="assess">Enviar para assessment</option>
+                          <option value="no_direct_population_group">Sem grupo populacional direto</option>
+                          <option value="taxonomy_gap">Lacuna de taxonomia</option>
+                          <option value="excluded">Excluir da fila</option>
+                        </select>
+                      </label>
+                      <label className="grid gap-1 text-sm">
+                        <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">Justificativa (mínimo 20 caracteres)</span>
+                        <textarea
+                          value={p2Notes[item.proposition_version_id] ?? ''}
+                          disabled={completed}
+                          onChange={(event) => setP2Notes((current) => ({ ...current, [item.proposition_version_id]: event.target.value }))}
+                          rows={3}
+                          placeholder="Explique a decisão com base na fonte oficial e no escopo da versão."
+                          className="rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 leading-relaxed"
+                        />
+                      </label>
+                    </div>
+                    <button
+                      type="button"
+                      disabled={completed}
+                      onClick={() => void recordP2Disposition(item)}
+                      className="mt-3 rounded-sm border border-green-700 px-3 py-2 font-mono text-xs uppercase tracking-wider text-green-800 disabled:cursor-not-allowed disabled:opacity-60"
+                    >
+                      {completed ? 'Disposição registrada' : 'Registrar disposição protegida'}
+                    </button>
+                  </article>
+                );
+              })}
+            </div>
           </section>
 
           <div className="mt-5 grid gap-4">
