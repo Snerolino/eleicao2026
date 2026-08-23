@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial, rede bloqueando publicação e gates locais verdes — 2026-08-23T11:31Z
+
+- Lock bounded adquirido/liberado. Bootstrap revalidado: HEAD local `32b3be8`, `main` 5 commits à frente de `origin/main`, worktree limpa antes do registro.
+- Dataset vivo versus snapshot: `1003/1003` IDs por `SQ_CANDIDATO`, diferença `0`; CSV oficial `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; snapshot `1003` IDs únicos.
+- Recon oficial read-only: auditoria de fontes RC 0 mantém gaps ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos. ALRS FED-17 residual falhou fechado com `fetch failed`; os 4 Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara consultada em `2025-01-01`–`2025-03-31` retornou `network_error`/`fetch failed`; sem IDs, reconciliação ou aplicação. Senado segue fail-closed.
+- Gates Node 24.19.0 RC 0: `401` testes/`98` arquivos, TypeScript, schema, `data:check` (`1003` candidaturas/`988` fotos/`1` fonte TSE), build `224` módulos, sitemap `1003 + 2`, release local `32b3be8-20260823T113108215Z` e `git diff --check`.
+- Publicação não verificável neste tick: GitHub API falhou `error connecting to api.github.com`; produção falhou DNS (`HTTP 000`). Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Doctor continua degradado por shell Node 22.22.2, OpenCode ausente e smoke MCP Codex sem evidência; auth Codex reportou token expirado. QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1131.md`.
+- Próximo chunk: retentar transporte Git/rede; após `main -> main`, validar backup `334951434`, `headSha` e produção. Aplicação factual segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial, push 403 e DNS de produção bloqueando publicação — 2026-08-23T11:08Z
 
 - Lock bounded adquirido/liberado. Bootstrap revalidado: HEAD local `dfb9094`, `main` 4 commits à frente de `origin/main`, worktree limpa.
