@@ -1,3 +1,10 @@
+## Tick contínuo — recon Câmara, gates verdes e publicação bloqueada — 2026-08-23T02:37Z
+
+- Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual permanece em dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os quatro casos Enio Carlos Terra continuam sem ID oficial/fonte exata. Câmara oficial consultada em 8 janelas trimestrais 2025–2026 com `--start/--end` explícitos e `--max-pages 1`: páginas `ok`, `blocked=null`; somente inventário de IDs, sem reconciliação/aplicação. Senado fail-closed sem envelope nominal/SHA verificável.
+- Auditoria estrita read-only retornou RC 2 pelos gaps reais: versões ALRS 1251 sem fonte, Câmara 3, Senado 112; eventos ALRS 1647, Câmara 2, Senado 188; votos ALRS 4, Câmara 2, Senado 455. Nenhuma evidência foi fabricada.
+- Publicação: nova tentativa de `git push origin main` falhou RC 128 com HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), apesar de `gh api user` identificar `Snerolino`; nenhum workflow novo. Produção não foi alterada.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0237.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu. Próximo chunk: revalidar identidade/permissão GitHub; após push aceito, validar backup `334951434`, `headSha` e produção.
+
 ## Tick contínuo — recon Câmara, gates verdes e publicação bloqueada — 2026-08-23T02:18Z
 
 - Lock bounded adquirido/liberado com `flock -n`. Dataset conferido contra `../dataset2026`: 1.003/1.003 IDs, diferença 0/0; CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
