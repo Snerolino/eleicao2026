@@ -1,3 +1,12 @@
+## Tick contínuo — recon oficial e produção verificadas — 2026-08-23T09:15Z
+
+- Lock bounded adquirido/liberado. Dataset/snapshot conferidos: `1003` registros; CSV oficial `../dataset2026/candidatos/consulta_cand_2026/consulta_cand_2026_RS.csv`, `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- ALRS FED-17 residual falhou fechado com `fetch failed`; os 4 casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara consultada em `2026-07-01`–`2026-09-30`, `max_pages=1`, falhou fechado com `network_error`/`fetch failed`; `vote_ids=[]`. Senado segue fail-closed.
+- Auditoria regular de fontes RC 0 mantém gaps: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` para ALRS/Câmara/Senado.
+- Publicação: commit documental local `efa48dd`; `git push origin main` e `env -u GH_TOKEN git push origin main` falharam com HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). Nenhum workflow novo foi acionado; produção permanece no SHA `f7f1920` verificado antes deste registro.
+- Nenhum candidato, voto, identidade, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado. QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0915.md`.
+- Bloqueios: ALRS/Câmara indisponíveis (`fetch failed`); doctor degradado por shell Node `22.22.2`, Codex auth expirada e OpenCode ausente. Próximo chunk: retentar recon oficial read-only; aplicação remota somente com R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — matriz admin publicada, recon oficial fail-closed — 2026-08-23T08:52Z
 
 - Lock bounded adquirido/liberado. Commit `7a401fe` (`feat: adicionar aprovacao de matrizes no admin`) está em `main` e `origin/main`; worktree limpa antes deste registro.
