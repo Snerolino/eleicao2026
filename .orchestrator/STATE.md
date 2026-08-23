@@ -1,3 +1,13 @@
+## Tick contínuo — recon Câmara, gates verdes e publicação bloqueada — 2026-08-23T03:41Z
+
+- Lock bounded adquirido/liberado com `flock -n`. Dataset conferido por `SQ_CANDIDATO`: CSV oficial `../dataset2026/candidatos/consulta_cand_2026/consulta_cand_2026_RS.csv` e snapshot têm `1.003/1.003` IDs, diferença `0/0`; CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- ALRS FED-17 residual dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial consultada em 8 janelas trimestrais, `8/8` páginas `ok`, `blocked=null`, `700` IDs transitórios; sem reconciliação/aplicação. Senado segue fail-closed sem envelope nominal com SHA verificável.
+- Auditoria de fontes read-only RC 0 preserva gaps reais: versões sem fonte ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`.
+- Gates explícitos com Node 24.19.0 verdes: `401` testes/`98` arquivos, TypeScript, schema, `data:check` `1.003` candidaturas/`988` fotos/`1` fonte TSE, build `224` módulos com sitemap `1003 + 2` e release local `c4f47e8-20260823T033915062Z`, `git diff --check` e smoke (`1002` cards, `0` HTTP failures, `0` erros online, service worker pronto).
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0341.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Publicação: `env -u GH_TOKEN git push origin main` falhou RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); `gh api` continua reportando `push=true/admin=true`, evidenciando divergência entre API e transporte Git HTTPS. Commit documental local atual segue `42` commits à frente de `origin/main`; nenhum workflow/deploy novo.
+- Doctor segue RC 1 por Node 22 padrão; gates usaram Node 24.19.0. Próximo chunk: corrigir/revalidar credencial efetiva do transporte Git e retentar; se aceitar, validar backup `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon Câmara, gates verdes e publicação bloqueada — 2026-08-23T03:19Z
 
 - Lock bounded adquirido/liberado com `flock -n`. Dataset e snapshot revalidados: 1.003 candidaturas públicas, snapshot SHA `a7db54b20bd1aa0d49003e278d48d1443617f00b772d004d711cd762d0c982cf`; nenhuma diferença de candidato foi aplicada.
