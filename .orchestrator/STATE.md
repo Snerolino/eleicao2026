@@ -1,9 +1,12 @@
-## Tick contínuo — recon Câmara, gates verdes e publicação bloqueada — 2026-08-23T02:37Z
+## Tick contínuo — recon Câmara, gates verdes e publicação bloqueada — 2026-08-23T02:57Z
 
-- Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual permanece em dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os quatro casos Enio Carlos Terra continuam sem ID oficial/fonte exata. Câmara oficial consultada em 8 janelas trimestrais 2025–2026 com `--start/--end` explícitos e `--max-pages 1`: páginas `ok`, `blocked=null`; somente inventário de IDs, sem reconciliação/aplicação. Senado fail-closed sem envelope nominal/SHA verificável.
+- Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual executou dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os quatro casos Enio Carlos Terra continuam sem ID oficial/fonte exata. Câmara oficial consultada em 8 janelas trimestrais 2025–2026 com `--start/--end` explícitos e `--max-pages 1`: 8/8 páginas `ok`, `blocked=null`; somente inventário de IDs, sem reconciliação/aplicação. Senado fail-closed sem envelope nominal/SHA verificável.
 - Auditoria estrita read-only retornou RC 2 pelos gaps reais: versões ALRS 1251 sem fonte, Câmara 3, Senado 112; eventos ALRS 1647, Câmara 2, Senado 188; votos ALRS 4, Câmara 2, Senado 455. Nenhuma evidência foi fabricada.
-- Publicação: nova tentativa de `git push origin main` falhou RC 128 com HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), apesar de `gh api user` identificar `Snerolino`; nenhum workflow novo. Produção não foi alterada.
-- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0237.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu. Próximo chunk: revalidar identidade/permissão GitHub; após push aceito, validar backup `334951434`, `headSha` e produção.
+- Dataset público validado por `npm run data:check`: 1.003 candidaturas, 988 fotos oficiais e 1 fonte TSE. Gates Node 24 verdes: 401 testes/98 arquivos, TypeScript, schema, build com 224 módulos, sitemap 1.003 + 2 e release local `5527c31-20260823T025648967Z`. Smoke falhou transitoriamente com `cards=0` e passou na repetição com 1.002 cards, 0 HTTP failures, 0 erros online e service worker pronto.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0257.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
+- Publicação: `git push origin main` falhou RC 128 com HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); `gh api` reporta usuário `Snerolino` e permissões remotas `admin/push`, evidenciando divergência no transporte HTTPS. HEAD local `5527c31` segue 37 commits à frente de `origin/main`; nenhum workflow novo. Produção permanece root HTTP 200 e `/release.json` HTTP 200 no release antigo `3aae2d0`/versão `0.2.835`.
+- Doctor RC 1 por Node 22 padrão, Codex 401/token expirado e OpenCode ausente; gates usaram Node 24. Próximo chunk: retentar `main -> main`; se aceitar, validar backup `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 
 ## Tick contínuo — recon Câmara, gates verdes e publicação bloqueada — 2026-08-23T02:18Z
 
