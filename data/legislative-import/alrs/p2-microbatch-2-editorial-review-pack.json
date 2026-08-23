@@ -1,0 +1,295 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "alrs_p2_microbatch_2_editorial_review_pack",
+  "review_status": "pending_review",
+  "source_manifest_present": true,
+  "remote_apply": false,
+  "public_approval": false,
+  "totals": {
+    "versions": 5,
+    "source_green": 5,
+    "dispositions_pending": 5
+  },
+  "items": [
+    {
+      "proposition_version_id": "ebc01302-3211-487b-b1bb-6d515936b2e0",
+      "review_key": "sha256:1e42772d23c2ec8019a4eb13504373b1e6d0e02c72db46f7ceda0d635bf3cbc9#ebc01302-3211-487b-b1bb-6d515936b2e0",
+      "title": "Dispõe sobre a obrigatoriedade de afixação, no âmbito do Estado do Rio Grande do Sul, de placas informativas com o número da Central de Atendimento à Mulher, Disque Denúncia da Violência Contra a Mulher (Disque 180). (SEI 8916-01.00/21-8)",
+      "priority": "P2",
+      "event_type": "merit_candidate",
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+          "event_external_id": "alrs_event_fb0b5bb15b12b7ea5ac9e77b",
+          "source_reference_id": "b301a4ee-52cc-4cab-9089-6c92e8a9ca13"
+        },
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_fb0b5bb15b12b7ea5ac9e77b",
+          "source_reference_id": "7739d2d8-4b18-49ad-ba85-610497376401"
+        },
+        {
+          "candidate_id": "733cef65-bf07-44ef-9521-36232ad0135c",
+          "event_external_id": "alrs_event_fb0b5bb15b12b7ea5ac9e77b",
+          "source_reference_id": "c034ce27-3daa-48fb-89d9-58bd520c890c"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_fb0b5bb15b12b7ea5ac9e77b",
+          "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
+        }
+      ],
+      "source_status": "green",
+      "editorial_disposition": "pending_review",
+      "human_review_required": true,
+      "remote_apply": false,
+      "official_match_key": "PL-43-2019",
+      "official_uuid": "60738d5e-5711-11ee-9cfe-0242c0a8a005",
+      "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/43/2019",
+      "page_http": 200,
+      "page_bytes": 178110,
+      "page_sha256": "e27cd30791303b3b640a6dc950717b442d5d58a98e2a691ce598ae696f52f70a",
+      "document_url": "https://api-nopaper.al.rs.gov.br/api/v1/blob-storage/documents-alrs-prod/20240701/84e24e90-e0fb-4dba-9520-d55d568cc2bf/507ecdf4-4284-40a2-ad64-93f702658e36.pdf?exp=2026-08-23T13%3a21%3a55Z&sp=r&sig=L6rf0a1lRCwKgFKxq37qRPlZ6M6DagtUUhw%2bqv%2b3im0%3d",
+      "document_http": 200,
+      "document_bytes": 601730,
+      "document_sha256": "ebc04a7532cb14148f388c68ba5be074d1b2970bb240a25e133ef539e0d06752",
+      "content_addressed_path": "data/legislative-import/alrs/source-corpus/p2-2/ebc04a7532cb14148f388c68ba5be074d1b2970bb240a25e133ef539e0d06752.pdf",
+      "source_bytes_preserved": true,
+      "renewable_locator_verified": true,
+      "durability_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": []
+    },
+    {
+      "proposition_version_id": "b1ec626b-8521-4cb5-9d62-e9f2301d5f22",
+      "review_key": "sha256:23f0fada3b2c0202e9def275e091a69763b35304182be3ca6e630bcf7003b4cd#b1ec626b-8521-4cb5-9d62-e9f2301d5f22",
+      "title": "Dispõe sobre o uso de assinaturas eletrônicas para os fins do artigo 68, incisos I e II, da Constituição do Estado do Rio Grande do Sul e dá outras providências.(SEI 5782-0100/21-1)",
+      "priority": "P2",
+      "event_type": "merit_candidate",
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
+      ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+          "event_external_id": "alrs_event_9297b28f1d4874626daac391",
+          "source_reference_id": "1dae4bf2-8792-4866-a127-0fa30d2bbfcb"
+        },
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_9297b28f1d4874626daac391",
+          "source_reference_id": "5709f19f-12ca-40a4-b6be-8b20499d4747"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_9297b28f1d4874626daac391",
+          "source_reference_id": "ea75820f-75ed-4aa7-a4db-a0c33f49344f"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_9297b28f1d4874626daac391",
+          "source_reference_id": "b87ec5c4-d836-417d-81c3-54cce82539bb"
+        }
+      ],
+      "source_status": "green",
+      "editorial_disposition": "pending_review",
+      "human_review_required": true,
+      "remote_apply": false,
+      "official_match_key": "PLC-204-2021",
+      "official_uuid": "4259be76-5974-11ee-9cfe-0242c0a8a005",
+      "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PLC/204/2021",
+      "page_http": 200,
+      "page_bytes": 144538,
+      "page_sha256": "cd55c393ca30bf194267549cf74160e3521f5c84bf993204fbc62a8d6476f37d",
+      "document_url": "https://api-nopaper.al.rs.gov.br/api/v1/blob-storage/documents-alrs-prod/20241021/5306921e-8148-4846-aef9-cbd6cd54d1eb/a4d9339d-7658-4184-8098-7db72bd4cc89.pdf?exp=2026-08-23T13%3a21%3a58Z&sp=r&sig=tOdwLYCj9gCmlwGYXaK4YCDQLDtahM3f4P395Q%2bbvtI%3d",
+      "document_http": 200,
+      "document_bytes": 39635,
+      "document_sha256": "c877cc6cf3e1d43c49d00c0b765fc648731f5fb87bbb4fa44d1d7f7042363b29",
+      "content_addressed_path": "data/legislative-import/alrs/source-corpus/p2-2/c877cc6cf3e1d43c49d00c0b765fc648731f5fb87bbb4fa44d1d7f7042363b29.pdf",
+      "source_bytes_preserved": true,
+      "renewable_locator_verified": true,
+      "durability_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": []
+    },
+    {
+      "proposition_version_id": "e80f5ad1-a8e0-49bd-8aa7-1f9fc122f7a9",
+      "review_key": "sha256:29a33d8ff43baf1679b213d8c215859a17ac7a345ad31b6df3c33018a1184385#e80f5ad1-a8e0-49bd-8aa7-1f9fc122f7a9",
+      "title": "Altera a Lei n.º 15.766, de 20 de dezembro de 2021, que dispõe sobre a parcela do produto da arrecadação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação – ICMS – pertencente aos municípios.",
+      "priority": "P2",
+      "event_type": "merit_candidate",
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
+      ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+          "event_external_id": "alrs_event_987932a8713bb024247681c4",
+          "source_reference_id": "1dae4bf2-8792-4866-a127-0fa30d2bbfcb"
+        },
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_987932a8713bb024247681c4",
+          "source_reference_id": "5709f19f-12ca-40a4-b6be-8b20499d4747"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_987932a8713bb024247681c4",
+          "source_reference_id": "ea75820f-75ed-4aa7-a4db-a0c33f49344f"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_987932a8713bb024247681c4",
+          "source_reference_id": "b87ec5c4-d836-417d-81c3-54cce82539bb"
+        }
+      ],
+      "source_status": "green",
+      "editorial_disposition": "pending_review",
+      "human_review_required": true,
+      "remote_apply": false,
+      "official_match_key": "PL-429-2019",
+      "official_uuid": "752eb8c0-5715-11ee-9cfe-0242c0a8a005",
+      "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/429/2019",
+      "page_http": 200,
+      "page_bytes": 129318,
+      "page_sha256": "18c4ae6414116fd069634024cadb08ca0bf793a435e37c49fb01e6e05a8df70a",
+      "document_url": "https://api-nopaper.al.rs.gov.br/api/v1/blob-storage/documents-alrs-prod/20241017/5306921e-8148-4846-aef9-cbd6cd54d1eb/4ea1c71c-7516-42e7-a7bf-dbc1000d8d15.pdf?exp=2026-08-23T13%3a21%3a59Z&sp=r&sig=Yn%2f%2fVRWxYq%2f7GTNZ8BsbPdFGvOE2VaQJJKurR9r7QGE%3d",
+      "document_http": 200,
+      "document_bytes": 33645,
+      "document_sha256": "65da0687eb9501fc97b666cba988094ac9c89c4bb9eff3cdd1b66999f941bcde",
+      "content_addressed_path": "data/legislative-import/alrs/source-corpus/p2-2/65da0687eb9501fc97b666cba988094ac9c89c4bb9eff3cdd1b66999f941bcde.pdf",
+      "source_bytes_preserved": true,
+      "renewable_locator_verified": true,
+      "durability_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": []
+    },
+    {
+      "proposition_version_id": "7393747f-1424-4e47-991a-72af1a8f2e77",
+      "review_key": "sha256:3516670c10141175a5799bc8245500f458cc9557f4301c47dd1c2399c3025d9e#7393747f-1424-4e47-991a-72af1a8f2e77",
+      "title": "Cria o Fundo Estadual de Proteção e Bem-estar de Animais Domésticos. (Tramitação conjunta com o PL 212/2024)",
+      "priority": "P2",
+      "event_type": "merit_candidate",
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "733cef65-bf07-44ef-9521-36232ad0135c",
+          "event_external_id": "alrs_event_e3f3844a4d477bd8f3066a9d",
+          "source_reference_id": "c034ce27-3daa-48fb-89d9-58bd520c890c"
+        },
+        {
+          "candidate_id": "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+          "event_external_id": "alrs_event_e3f3844a4d477bd8f3066a9d",
+          "source_reference_id": "ad396b72-6a02-4fd9-978b-20a97afa88d5"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_e3f3844a4d477bd8f3066a9d",
+          "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_e3f3844a4d477bd8f3066a9d",
+          "source_reference_id": "31249077-568e-4878-8e54-0c4b858e4a80"
+        }
+      ],
+      "source_status": "green",
+      "editorial_disposition": "pending_review",
+      "human_review_required": true,
+      "remote_apply": false,
+      "official_match_key": "PL-291-2025",
+      "official_uuid": "d07caf63-6f0f-11f0-8ebc-0242ac130005",
+      "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/291/2025",
+      "page_http": 200,
+      "page_bytes": 138562,
+      "page_sha256": "92a096371386fffce96de01c9feb2f1007a947ca5c5e8301f58f7c5c98e59394",
+      "document_url": "https://api-nopaper.al.rs.gov.br/api/v1/blob-storage/documents-alrs-prod/20250801/e905c262-543f-4693-af76-c0e3358481fa/ec2a7978-9278-4a76-b7dd-49be5e4973fb.pdf?exp=2026-08-23T13%3a22%3a23Z&sp=r&sig=AQKT3Dpu7oC%2fRhfemVR5vd6WENt9By41RuoP0gi5Jnc%3d",
+      "document_http": 200,
+      "document_bytes": 105660,
+      "document_sha256": "2d07b19372186194a274b69bccd049dbe28c0ee0ba790c96a394702e10e7b967",
+      "content_addressed_path": "data/legislative-import/alrs/source-corpus/p2-2/2d07b19372186194a274b69bccd049dbe28c0ee0ba790c96a394702e10e7b967.pdf",
+      "source_bytes_preserved": true,
+      "renewable_locator_verified": true,
+      "durability_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": []
+    },
+    {
+      "proposition_version_id": "3e53eb15-6ad9-4d34-b4eb-2d28ba3e4f53",
+      "review_key": "sha256:35ebff8305cf71dff58dfda7f5c36fae6c6f8a45fdcd83872609c1dff2a30cfb#3e53eb15-6ad9-4d34-b4eb-2d28ba3e4f53",
+      "title": "Institui a Política de combate ao abigeato e aos crimes em áreas rurais.(SEI 7452-0100/20-8)",
+      "priority": "P2",
+      "event_type": "merit_candidate",
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
+      ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+          "event_external_id": "alrs_event_01ec7f72e3aa60d93cc70a40",
+          "source_reference_id": "1dae4bf2-8792-4866-a127-0fa30d2bbfcb"
+        },
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_01ec7f72e3aa60d93cc70a40",
+          "source_reference_id": "5709f19f-12ca-40a4-b6be-8b20499d4747"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_01ec7f72e3aa60d93cc70a40",
+          "source_reference_id": "ea75820f-75ed-4aa7-a4db-a0c33f49344f"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_01ec7f72e3aa60d93cc70a40",
+          "source_reference_id": "b87ec5c4-d836-417d-81c3-54cce82539bb"
+        }
+      ],
+      "source_status": "green",
+      "editorial_disposition": "pending_review",
+      "human_review_required": true,
+      "remote_apply": false,
+      "official_match_key": "PL-270-2020",
+      "official_uuid": "3b41070a-595a-11ee-9cfe-0242c0a8a005",
+      "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/270/2020",
+      "page_http": 200,
+      "page_bytes": 151212,
+      "page_sha256": "4f0b7269acb226057995350f500747f39a9b8d1ee04c5798cb6c4503e81a4562",
+      "document_url": "https://api-nopaper.al.rs.gov.br/api/v1/blob-storage/documents-alrs-prod/20241118/5306921e-8148-4846-aef9-cbd6cd54d1eb/ce353eec-da52-4fb3-900c-a378d94024b5.pdf?exp=2026-08-23T13%3a22%3a24Z&sp=r&sig=P4AtfsZDbXsL4mCK3tBJQxC%2bWEf24m573R8RSaM2Y5U%3d",
+      "document_http": 200,
+      "document_bytes": 39257,
+      "document_sha256": "ecafeacbce1b8a4edcc81affaf061a919a1673c1c16e6e7fce38312f92fea89d",
+      "content_addressed_path": "data/legislative-import/alrs/source-corpus/p2-2/ecafeacbce1b8a4edcc81affaf061a919a1673c1c16e6e7fce38312f92fea89d.pdf",
+      "source_bytes_preserved": true,
+      "renewable_locator_verified": true,
+      "durability_gate": "green",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": []
+    }
+  ]
+}

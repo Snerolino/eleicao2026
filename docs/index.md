@@ -169,7 +169,8 @@
 | [`qa/lote-alrs-editorial-approval-and-pending-matrices-2026-08-23.md`](qa/lote-alrs-editorial-approval-and-pending-matrices-2026-08-23.md) | Aprovação editorial e matrizes pending_review |
 | [`qa/lote-alrs-remote-pending-matrices-2026-08-23.md`](qa/lote-alrs-remote-pending-matrices-2026-08-23.md) | Aplicação remota de matrizes pending_review |
 | [`qa/lote-alrs-final-approved-microbatch-2026-08-23.md`](qa/lote-alrs-final-approved-microbatch-2026-08-23.md) | Micro-lote ALRS aprovado e verificado |
-| [`qa/lote-alrs-p2-microbatch-source-status-2026-08-23.md`](qa/lote-alrs-p2-microbatch-source-status-2026-08-23.md) | Status de fontes do micro-lote P2 |
+| [`qa/lote-alrs-p2-microbatch-2-source-status-2026-08-23.md`](qa/lote-alrs-p2-microbatch-2-source-status-2026-08-23.md) | Status de fontes do P2-2 |
+| [`qa/lote-alrs-p2-microbatch-2-sources-2026-08-23.md`](qa/lote-alrs-p2-microbatch-2-sources-2026-08-23.md) | Fontes oficiais resolvidas do P2-2 |
 | [`qa/lote-alrs-substantive-source-request-pack-resolved-2026-08-23.md`](qa/lote-alrs-substantive-source-request-pack-resolved-2026-08-23.md) | Encerramento do request pack P1 |
 | [`qa/lote-continuous-ops-recon-2026-08-23-0915.md`](qa/lote-continuous-ops-recon-2026-08-23-0915.md) | Recon oficial e produção verificadas |
 | [`qa/lote-admin-pending-matrix-read-2026-08-23.md`](qa/lote-admin-pending-matrix-read-2026-08-23.md) | Correção de leitura de matrizes no admin |

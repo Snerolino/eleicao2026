@@ -2532,6 +2532,13 @@ Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; som
 - Bloqueio não afeta as 12 matrizes ALRS aprovadas.
 - QA: `docs/qa/lote-alrs-p2-microbatch-source-status-2026-08-23.md`.
 
+## Tick contínuo — P2-2 fontes resolvidas (2026-08-23)
+
+- 5/5 identidades oficiais resolvidas: PL 43/2019, PLC 204/2021, PL 429/2019, PL 291/2025, PL 270/2020.
+- 5/5 páginas/PDFs HTTP 200, bytes/SHA preservados, durability green.
+- Formulário editorial P2-2 pendente no `/admin`; nenhum assessment automático.
+- QA: `docs/qa/lote-alrs-p2-microbatch-2-sources-2026-08-23.md`.
+
 ## Tick contínuo — encerramento request pack P1 (2026-08-23)
 
 - Request pack antigo regenerado como `superseded_resolved`.
