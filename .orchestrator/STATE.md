@@ -1,3 +1,13 @@
+## Tick contínuo — aprovação editorial P0/P1, matrizes pending_review, gates verdes — 2026-08-23T06:45Z
+
+- Builders editoriais reexecutados com RC 0 e idempotência comprovada por hashes: `23` versões, `12` assess, `14` assessment rows, `5` revisões externas; `12` matrizes `pending_review`.
+- Pacotes permanecem fail-closed: `public_approval=false`, `remote_apply=false`, `apply_ready=false`; nenhuma escrita Supabase/Cloudflare ou fato novo foi publicado.
+- Gates locais RC 0: `401` testes/`98` arquivos, TypeScript, schema, `data:check` (`1003` candidaturas/`988` fotos/`1` fonte TSE), build `224` módulos, sitemap `1003 + 2`, smoke (`1002` cards, `0` falhas HTTP, `0` erros online, service worker pronto).
+- Diff read-only contra `../dataset2026`: `1003/1003`, diferença `0/0`, CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- Auditoria de fontes RC 0 preserva gaps reais: versões sem fonte `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` para ALRS/Câmara/Senado. ALRS FED-17 dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`.
+- Publicação ainda pendente: este tick precisa de commit/push e validação do backup Cloudflare/headSha; não há mudança factual remota.
+- QA: `docs/qa/lote-alrs-editorial-approval-and-pending-matrices-2026-08-23.md`.
+
 ## Tick contínuo — recon oficial, gates locais verdes, publicação bloqueada — 2026-08-23T06:22Z
 
 - Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os 4 casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial: `8/8` janelas `status=ok`, `blocked=null`; nenhum ID reconciliado/aplicado. Senado permanece fail-closed sem envelope nominal com SHA verificável.
