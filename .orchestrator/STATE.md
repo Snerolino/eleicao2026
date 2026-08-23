@@ -1,3 +1,14 @@
+## Tick contínuo — recon oficial, gates verdes, transporte Git bloqueado — 2026-08-23T14:49Z
+
+- Lock bounded adquirido/liberado. ALRS FED-17 residual dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os quatro Enio Carlos Terra seguem sem ID oficial/fonte exata.
+- Câmara oficial read-only: API oficial consultada em 8 janelas trimestrais 2025–2026, `8/8` `status=ok`, `blocked=null`; IDs apenas inventariados, sem reconciliação/aplicação. Senado permanece fail-closed.
+- Auditoria de fontes RC 0 preserva gaps reais: versões sem fonte ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`. Snapshot `data:check`: `1003` candidaturas, `988` fotos, `1` fonte TSE.
+- Gates Node 24.19.0 verdes: `401` testes/`98` arquivos, TypeScript, schema, `data:check`, build `225` módulos/sitemap `1003 + 2`; smoke falhou transitoriamente com `cards=0` e passou na repetição com `1002` cards, `0` HTTP failures, `0` erros online e service worker pronto.
+- Publicação retentada: `env -u GH_TOKEN git push origin main` falhou RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). HEAD local `4f1b49d` está 2 commits à frente de `origin/main`; nenhum workflow novo.
+- Produção verificada independentemente: raiz HTTP 200 e `/release.json` HTTP 200, live `692094f`, release `692094f-20260823T142503596Z`, versão `0.2.936`, snapshot `1003`. Nenhuma identidade, voto, FK, source reference, claim, Supabase ou Cloudflare foi alterado.
+- Doctor RC 1 permanece degradado por shell Node 22.22.2, OpenCode ausente e smoke MCP Codex sem evidência estruturada; gates do projeto usaram Node 24.19.0.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1449.md`. Próximo chunk: retentar `main -> main`; após aceitação, validar backup `334951434`, `headSha`, raiz e `/release.json`. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — P2 Admin publicado, QA documental local pendente de transporte — 2026-08-23T14:30Z
 
 - A fila editorial ALRS P2 foi publicada funcionalmente no commit remoto `692094f875844d977f8436b02c04dacaa6423068`; o workflow primário `32645269265` concluiu `success` nesse SHA. O backup `32645457872` concluiu `skipped` nesse mesmo SHA.
