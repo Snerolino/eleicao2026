@@ -1,3 +1,13 @@
+## Tick contínuo — recon Câmara parcial, gates verdes e push bloqueado por GitHub 403 — 2026-08-23T00:56Z
+
+- Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual executou dry-run com `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os 4 casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial consultou 8 janelas trimestrais 2025–2026 com `--max-pages 1`: 7 páginas `ok` e uma bloqueada por `network_error`/`fetch failed`; por fail-closed, `vote_ids=0`, sem reconciliação ou aplicação. Senado permanece fail-closed sem envelope nominal verificável.
+- Dataset conferido read-only: CSV oficial `consulta_cand_2026/consulta_cand_2026_RS.csv` com 1.003 linhas e SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; snapshot público 1.003 registros, SHA `a7db54b20bd1aa0d49003e278d48d1443617f00b772d004d711cd762d0c982cf`. Sincronizador permaneceu dry-run: banco 1.000, criar 3, atualizar 1.000, sem escrita.
+- Auditoria estrita de fontes read-only retornou RC 2 pelos gaps reais: versões sem fonte ALRS/Câmara/Senado `1251/3/112`; eventos `1647/2/188`; votos `4/2/455`.
+- Gates Node 24 verdes: 401 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build com 224 módulos, sitemap 1.003 + 2, `git diff --check` e smoke 1.002 cards/0 HTTP/0 erros de console online/service worker pronto.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0056.md`. Nenhum candidato, voto, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado.
+- Produção revalidada: raiz HTTP 200 e `/release.json` HTTP 200, live `3aae2d0`/SHA `3aae2d06338f81dc0b8c5df92ecc61ed8825dda3`, versão `0.2.835`, snapshot 1.003.
+- Commit documental local pendente; `git push origin main` falhou RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), sem workflow/deploy novo. Próximo chunk: criar commit documental local e retentar push quando a permissão efetiva permitir; depois validar backup `334951434`, `headSha` e produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon Câmara read-only, gates verdes e push bloqueado por DNS — 2026-08-23T00:32Z
 
 - Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual executou dry-run com `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os 4 casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial consultou 8 janelas trimestrais 2025–2026 com `--max-pages 1`: 8 páginas `ok`, `blocked=null`; IDs somente transitórios, sem reconciliação ou aplicação. Senado permanece fail-closed sem envelope nominal verificável.
