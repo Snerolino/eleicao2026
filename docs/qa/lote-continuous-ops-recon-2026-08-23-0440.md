@@ -15,6 +15,7 @@ Executar um tick bounded do control plane mantendo as lanes de reconhecimento of
 - `env -u GH_TOKEN git push origin main` falhou RC 128: GitHub respondeu HTTP 403, `Permission to Snerolino/eleicao2026.git denied to Snerolino`.
 - A API autenticada continua identificando `Snerolino` e listando o workflow backup `334951434`, mas a credencial efetiva do transporte Git não tem permissão aceita pelo remoto.
 - Por isso não houve novo workflow, deploy Cloudflare ou alteração remota neste tick.
+- Verificação independente pós-commit: `origin/main` continua em `3aae2d06338f81dc0b8c5df92ecc61ed8825dda3`; backup mais recente `32614074680` terminou `completed/skipped` nesse SHA antigo; produção raiz e `/release.json` responderam HTTP 200 e permanecem no release `3aae2d0` / versão `0.2.835`.
 
 ## Estado dos dados
 Nenhum candidato, voto, FK, `source_reference`, claim, Supabase ou Cloudflare foi alterado. Senado segue fail-closed sem envelope nominal com SHA verificável.

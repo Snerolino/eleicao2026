@@ -4,7 +4,7 @@
 - ALRS FED-17 residual falhou fechado com causa real `JWT issued at future`; os 4 casos Enio Carlos Terra seguem sem ID oficial/fonte exata. Senado permanece fail-closed sem envelope nominal com SHA verificável.
 - Auditoria de fontes RC 0 preserva gaps reais: versões sem fonte ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`. Dataset `npm run data:check` RC 0: `1003` candidaturas, `988` fotos oficiais, `1` fonte TSE.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0440.md`. Nenhuma escrita factual, Supabase ou Cloudflare ocorreu.
-- Publicação: `env -u GH_TOKEN git push origin main` falhou RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). Workflows API continuam listando backup `334951434`; nenhum run novo foi acionado.
+- Publicação: `env -u GH_TOKEN git push origin main` falhou RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). Workflows API continuam listando backup `334951434`; nenhum run novo foi acionado. `origin/main` permanece em `3aae2d06338f81dc0b8c5df92ecc61ed8825dda3`; backup mais recente `32614074680` está `completed/skipped` nesse SHA antigo; produção raiz e `/release.json` estão HTTP 200 no release `3aae2d0` / versão `0.2.835`.
 - Próximo chunk: corrigir/revalidar a permissão efetiva do transporte Git e retentar `main -> main`; se aceitar, validar backup/headSha/produção. Aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
 
 ## Tick contínuo — recon Câmara, gates verdes e publicação bloqueada — 2026-08-23T04:22Z
