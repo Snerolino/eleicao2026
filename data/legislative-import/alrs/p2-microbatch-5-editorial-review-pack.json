@@ -1,0 +1,234 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "alrs_p2_microbatch_5_editorial_review_pack",
+  "review_status": "pending_review",
+  "remote_apply": false,
+  "public_approval": false,
+  "totals": {
+    "versions": 5,
+    "source_green": 5,
+    "dispositions_pending": 5
+  },
+  "items": [
+    {
+      "proposition_version_id": "722c04ed-66af-4cc4-a1a2-210632cd5d7e",
+      "review_key": "sha256:9bb339103821dcd2e0c40910844dfd23065020ad45f07c326905983fc479d577#722c04ed-66af-4cc4-a1a2-210632cd5d7e",
+      "title": "Institui o Conselho Estadual de Acompanhamento e Controle Social do Fundo de Manutenção e Desenvolvimento da Educação Básica e de Valorização dos Profissionais da Educação - CACS-Fundeb.(SEI 6203-01.00/22-4)",
+      "priority": "P2",
+      "event_type": "merit_candidate",
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
+      ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+          "event_external_id": "alrs_event_76b79652f46a3bd4efb39187",
+          "source_reference_id": "1dae4bf2-8792-4866-a127-0fa30d2bbfcb"
+        },
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_76b79652f46a3bd4efb39187",
+          "source_reference_id": "5709f19f-12ca-40a4-b6be-8b20499d4747"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_76b79652f46a3bd4efb39187",
+          "source_reference_id": "ea75820f-75ed-4aa7-a4db-a0c33f49344f"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_76b79652f46a3bd4efb39187",
+          "source_reference_id": "b87ec5c4-d836-417d-81c3-54cce82539bb"
+        }
+      ],
+      "source_status": "green",
+      "editorial_disposition": "pending_review",
+      "human_review_required": true,
+      "remote_apply": false,
+      "official_match_key": "PL-140-2022",
+      "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/140/2022",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": []
+    },
+    {
+      "proposition_version_id": "60a58aa9-1d7a-4cd2-a08b-f4851156fdd6",
+      "review_key": "sha256:a89d31015f35514ed1c126ce977a4430159c536d13c9eaab9e0d9e38a09a8682#60a58aa9-1d7a-4cd2-a08b-f4851156fdd6",
+      "title": "Altera o parágrafo único do artigo 15 da Lei Estadual nº 12.495, de 18 de maio de 2006, modificando a competência da Vara de Execução Criminal Regional de Novo Hamburgo.(SEI 3711-0.100/21-1)",
+      "priority": "P2",
+      "event_type": "merit_candidate",
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
+      ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+          "event_external_id": "alrs_event_49d26bad5611488b7ae61fe9",
+          "source_reference_id": "1dae4bf2-8792-4866-a127-0fa30d2bbfcb"
+        },
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_49d26bad5611488b7ae61fe9",
+          "source_reference_id": "5709f19f-12ca-40a4-b6be-8b20499d4747"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_49d26bad5611488b7ae61fe9",
+          "source_reference_id": "ea75820f-75ed-4aa7-a4db-a0c33f49344f"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_49d26bad5611488b7ae61fe9",
+          "source_reference_id": "b87ec5c4-d836-417d-81c3-54cce82539bb"
+        }
+      ],
+      "source_status": "green",
+      "editorial_disposition": "pending_review",
+      "human_review_required": true,
+      "remote_apply": false,
+      "official_match_key": "PL-350-2011",
+      "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/350/2011",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": []
+    },
+    {
+      "proposition_version_id": "338e6d1b-c0e7-4d0a-96af-6870bd8cd642",
+      "review_key": "sha256:ade956dc8d97071286681365f25f89265ad92b2882152f0b004bdf71eccb3da0#338e6d1b-c0e7-4d0a-96af-6870bd8cd642",
+      "title": "Dispõe sobre o uso do nome social nas certidões de óbito de pessoas trans, travestis e não binárias no âmbito do estado do Rio Grande do Sul e dá outras providências.",
+      "priority": "P2",
+      "event_type": "merit_candidate",
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026"
+      ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+          "event_external_id": "alrs_event_85d0df5581349f7f0b5ebdad",
+          "source_reference_id": "b301a4ee-52cc-4cab-9089-6c92e8a9ca13"
+        },
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_85d0df5581349f7f0b5ebdad",
+          "source_reference_id": "7739d2d8-4b18-49ad-ba85-610497376401"
+        },
+        {
+          "candidate_id": "733cef65-bf07-44ef-9521-36232ad0135c",
+          "event_external_id": "alrs_event_85d0df5581349f7f0b5ebdad",
+          "source_reference_id": "c034ce27-3daa-48fb-89d9-58bd520c890c"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_85d0df5581349f7f0b5ebdad",
+          "source_reference_id": "bff266f0-04fa-49c7-980b-e910fb035752"
+        }
+      ],
+      "source_status": "green",
+      "editorial_disposition": "pending_review",
+      "human_review_required": true,
+      "remote_apply": false,
+      "official_match_key": "PL-27-2024",
+      "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/27/2024",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": []
+    },
+    {
+      "proposition_version_id": "c27fc016-0949-4810-bc81-f5effd461fe9",
+      "review_key": "sha256:b162751705d30f0bdc235761f1af92da5cfdc6d9f7229861fe1c7b257d743323#c27fc016-0949-4810-bc81-f5effd461fe9",
+      "title": "Altera a Resolução n.º 2.902, de 18 de março de 2004, que institui o prêmio “Assembleia Legislativa de Cinema Gaúcho”, de curta e média metragem. (SEI 8296-0100/22-3)",
+      "priority": "P2",
+      "event_type": "merit_candidate",
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
+      ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+          "event_external_id": "alrs_event_206d337a9d178810160fbbcb",
+          "source_reference_id": "1dae4bf2-8792-4866-a127-0fa30d2bbfcb"
+        },
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_206d337a9d178810160fbbcb",
+          "source_reference_id": "5709f19f-12ca-40a4-b6be-8b20499d4747"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_206d337a9d178810160fbbcb",
+          "source_reference_id": "ea75820f-75ed-4aa7-a4db-a0c33f49344f"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_206d337a9d178810160fbbcb",
+          "source_reference_id": "b87ec5c4-d836-417d-81c3-54cce82539bb"
+        }
+      ],
+      "source_status": "green",
+      "editorial_disposition": "pending_review",
+      "human_review_required": true,
+      "remote_apply": false,
+      "official_match_key": "PR-6-2022",
+      "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PR/6/2022",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": []
+    },
+    {
+      "proposition_version_id": "c632c7cb-32d3-482a-b7db-5eb2c99a33d0",
+      "review_key": "sha256:b345cf9c2c94e35c1baf27349f8e1476d8d3f9962f50bb1e3ae14a3c705321f1#c632c7cb-32d3-482a-b7db-5eb2c99a33d0",
+      "title": "Dispõe sobre a substituição da energia tradicional por energia solar fotovoltaica nos prédios públicos do Estado do Rio Grande do Sul. (SEI 6811.0100/20-3)",
+      "priority": "P2",
+      "event_type": "merit_candidate",
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
+      ],
+      "candidate_source_links": [
+        {
+          "candidate_id": "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+          "event_external_id": "alrs_event_5f6d0b2d89dbbf671a4963c4",
+          "source_reference_id": "1dae4bf2-8792-4866-a127-0fa30d2bbfcb"
+        },
+        {
+          "candidate_id": "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+          "event_external_id": "alrs_event_5f6d0b2d89dbbf671a4963c4",
+          "source_reference_id": "5709f19f-12ca-40a4-b6be-8b20499d4747"
+        },
+        {
+          "candidate_id": "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+          "event_external_id": "alrs_event_5f6d0b2d89dbbf671a4963c4",
+          "source_reference_id": "ea75820f-75ed-4aa7-a4db-a0c33f49344f"
+        },
+        {
+          "candidate_id": "d88234f9-33b6-43d4-a964-b0c5141d3621",
+          "event_external_id": "alrs_event_5f6d0b2d89dbbf671a4963c4",
+          "source_reference_id": "b87ec5c4-d836-417d-81c3-54cce82539bb"
+        }
+      ],
+      "source_status": "green",
+      "editorial_disposition": "pending_review",
+      "human_review_required": true,
+      "remote_apply": false,
+      "official_match_key": "PL-395-2019",
+      "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/395/2019",
+      "substantive_source_gate": "green",
+      "source_durability_gate": "green",
+      "assessments": []
+    }
+  ]
+}

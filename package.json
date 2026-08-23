@@ -72,6 +72,7 @@
     "impact:alrs:r4:p2:microbatch:4": "node scripts/build-alrs-p2-microbatch-4.mjs",
     "impact:alrs:r4:p2:microbatch:4:editorial": "node scripts/build-alrs-p2-microbatch-4-editorial-pack.mjs",
     "impact:alrs:r4:p2:microbatch:5": "node scripts/build-alrs-p2-microbatch-5.mjs",
+    "impact:alrs:r4:p2:microbatch:5:editorial": "node scripts/build-alrs-p2-microbatch-5-editorial-pack.mjs",
     "impact:alrs:r4:substantive": "node scripts/build-alrs-substantive-review-queue.mjs",
     "impact:alrs:r4:p1": "node scripts/build-alrs-p1-substantive-pack.mjs",
     "impact:alrs:r4:p1:evidence": "node scripts/extract-alrs-p1-official-evidence.mjs",

@@ -6,6 +6,7 @@ import { isSupabaseConfigured, supabase } from '@/lib/supabase';
 import { sanitizeUrl } from '@/utils/sanitizeUrl';
 import p2EditorialPack from '../../data/legislative-import/alrs/p2-microbatch-2-editorial-review-pack.json';
 import p2EditorialPack4 from '../../data/legislative-import/alrs/p2-microbatch-4-editorial-review-pack.json';
+import p2EditorialPack5 from '../../data/legislative-import/alrs/p2-microbatch-5-editorial-review-pack.json';
 
 const adminOwner = 'admin@votopraquem.org';
 
@@ -67,7 +68,7 @@ type P2EditorialItem = {
   source_urls: string[];
 };
 
-const p2EditorialItems = [...(p2EditorialPack.items ?? []), ...(p2EditorialPack4.items ?? [])] as P2EditorialItem[];
+const p2EditorialItems = [...(p2EditorialPack.items ?? []), ...(p2EditorialPack4.items ?? []), ...(p2EditorialPack5.items ?? [])] as P2EditorialItem[];
 
 type LoadState = 'idle' | 'loading' | 'ready' | 'error';
 
@@ -585,7 +586,7 @@ export function AdminPage() {
           <section className="mt-8 border-t border-[var(--color-border-editorial)] pt-6" aria-label="Lote P2 aguardando disposição editorial">
             <h2 className="text-2xl">Lote P2 — disposição editorial</h2>
             <p className="mt-2 text-sm text-[var(--color-muted-ink)]">
-              Dez versões ALRS têm fonte oficial preservada e aguardam decisão humana. A decisão apenas registra a triagem; nenhum voto ou matriz é publicado por esta fila.
+              Quinze versões ALRS têm fonte oficial preservada e aguardam decisão humana. A decisão apenas registra a triagem; nenhum voto ou matriz é publicado por esta fila.
             </p>
             <div className="mt-4 grid gap-4">
               {p2EditorialItems.map((item) => {
