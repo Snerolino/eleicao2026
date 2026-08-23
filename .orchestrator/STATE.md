@@ -1,3 +1,12 @@
+## Tick contínuo — recon oficial, gates verdes, Git 403 — 2026-08-23T16:10Z
+
+- Recon oficial read-only: Câmara `8/8` janelas trimestrais OK, `700` vote_ids inventariados, sem reconciliação/aplicação; auditoria do envelope `7/7` URLs HTTP 200.
+- Auditoria de fontes RC 2 preserva gaps reais: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`. ALRS FED-17 residual e Senado seguem fail-closed.
+- Gates locais RC 0: `401/401` testes, TypeScript, schema, `data:check` (`1003/988/1`), build `225` módulos/sitemap `1003 + 2`, `git diff --check`. Produção raiz e `/release.json` HTTP 200, live `3319c1d`, versão `0.2.942`, snapshot `1003`.
+- Backup `334951434` detectado no SHA atual em `completed/skipped` (`32650126358`); não houve novo deploy necessário. `git push origin main` falhou HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); local coincide com `origin/main`.
+- Doctor RC 1 permanece degradado por shell Node `22.22.2`, OpenCode ausente e smoke MCP Codex não exercitado. Nenhuma identidade, voto, FK, source reference, claim, matriz, assessment, Supabase ou Cloudflare foi alterado. QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1610.md`.
+- Próximo chunk: retentar transporte Git; manter recon read-only/fail-closed e aplicar fatos somente após R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial, Câmara parcial bloqueada, transporte Git bloqueado — 2026-08-23T15:12Z
 
 - Lock bounded adquirido/liberado. `npm run data:check` RC 0: `1003` candidaturas, `988` fotos, `1` fonte TSE. ALRS FED-17 residual dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os quatro Enio Carlos Terra seguem sem ID oficial/fonte exata.
