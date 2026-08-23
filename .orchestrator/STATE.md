@@ -1,3 +1,11 @@
+## Tick contínuo — P2-2 publicado localmente, transporte Git bloqueado — 2026-08-23T13:15Z
+
+- Commit local `7feb231ed7393fb695cb7b45ae7a917cec46ec64` contém o registro QA e o índice documental; worktree limpa, `main` está `1` commit à frente de `origin/main`.
+- `env -u GH_TOKEN git push origin main` e `git push origin main` falharam com HTTP 403: `Permission to Snerolino/eleicao2026.git denied to Snerolino`; não foi possível confirmar `main -> main` nem disparar publicação confiável.
+- GitHub listou um `Deploy` primário em fila/in_progress no SHA local, mas não foi tratado como deploy confirmado; backup `334951434` ainda não foi validado para este SHA.
+- Produção: raiz falhou por timeout DNS (`HTTP 000`); `/release.json` respondeu HTTP 200 na versão `0.2.927`, sem SHA exposto no payload observado. Nenhuma mudança factual remota foi aplicada.
+- Próximo chunk: retentar transporte Git; após `main -> main`, validar backup `334951434`, `headSha` e produção. Manter a revisão editorial P2-2 pendente no `/admin`.
+
 ## Tick contínuo — P2-2 editorial local verde, publicação pendente — 2026-08-23T13:15Z
 
 - Fontes oficiais P2-2 verificadas independentemente: `5/5` identidades ALRS, páginas/PDFs HTTP 200, bytes/SHA reproduzidos e `durability_gate=green`.
