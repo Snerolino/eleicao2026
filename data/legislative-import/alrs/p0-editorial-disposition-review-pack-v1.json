@@ -7,7 +7,8 @@
   "totals": {
     "versions": 5,
     "dispositions_pending": 0,
-    "decisions_incomplete": 3
+    "decisions_incomplete": 0,
+    "editorially_approved": 5
   },
   "items": [
     {
@@ -21,7 +22,8 @@
       "disposition_rationale": "A versão é instrumento fiscal e orçamentário transversal do Estado, abrangendo múltiplas funções, políticas e destinatários. Não há um grupo populacional v1 que constitua o beneficiário direto da versão como unidade legislativa, e decompor efeitos setoriais exigiria unidades normativas mais granulares do que a proposition_version atual.",
       "assessments": [],
       "human_review_required": true,
-      "remote_apply": false
+      "remote_apply": false,
+      "editorial_status": "approved"
     },
     {
       "proposition_version_id": "7c132ddc-b571-43ee-b2bc-e877f053480a",
@@ -31,21 +33,22 @@
       "substantive_source_gate": "green",
       "source_durability_gate": "green",
       "editorial_disposition": "assess",
-      "disposition_rationale": null,
+      "disposition_rationale": "A proposição altera diretamente o marco estadual de proteção às mulheres vítimas de violência, produzindo efeito normativo estrutural sobre esse grupo; o voto favorável é classificado como defesa de impacto positivo.",
       "assessments": [
         {
+          "group_slug": "mulheres",
           "impact_direction": "positive",
           "defending_vote": "sim",
           "severity": 4,
           "structural_type": "structural",
           "confidence": 0.96,
-          "group_slug": "mulheres",
-          "rationale": null,
-          "status": "needs_editorial_completion"
+          "rationale": "A proposição altera diretamente o marco estadual de proteção às mulheres vítimas de violência, produzindo efeito normativo estrutural sobre esse grupo; o voto favorável é classificado como defesa de impacto positivo.",
+          "status": "approved"
         }
       ],
       "human_review_required": true,
-      "remote_apply": false
+      "remote_apply": false,
+      "editorial_status": "approved"
     },
     {
       "proposition_version_id": "3d47b25e-aab7-4a22-a815-f03b96518682",
@@ -55,10 +58,11 @@
       "substantive_source_gate": "green",
       "source_durability_gate": "green",
       "editorial_disposition": "taxonomy_gap",
-      "disposition_rationale": null,
+      "disposition_rationale": "A proposição beneficia diretamente estudantes atendidos por cursos pré-universitários populares, mas a taxonomia v1 não possui grupo específico que represente esse público sem forçar enquadramento inadequado.",
       "assessments": [],
       "human_review_required": true,
-      "remote_apply": false
+      "remote_apply": false,
+      "editorial_status": "approved"
     },
     {
       "proposition_version_id": "a57b1c83-3749-4c45-85b7-2408db20f5a2",
@@ -68,21 +72,22 @@
       "substantive_source_gate": "green",
       "source_durability_gate": "green",
       "editorial_disposition": "assess",
-      "disposition_rationale": null,
+      "disposition_rationale": "A proposição cria programa estadual de defesa pessoal voltado especificamente às mulheres, institucionalizando política pública direcionada ao grupo; o voto favorável é classificado como defesa de impacto positivo.",
       "assessments": [
         {
+          "group_slug": "mulheres",
           "impact_direction": "positive",
           "defending_vote": "sim",
           "severity": 3,
           "structural_type": "structural",
           "confidence": 0.95,
-          "group_slug": "mulheres",
-          "rationale": null,
-          "status": "needs_editorial_completion"
+          "rationale": "A proposição cria programa estadual de defesa pessoal voltado especificamente às mulheres, institucionalizando política pública direcionada ao grupo; o voto favorável é classificado como defesa de impacto positivo.",
+          "status": "approved"
         }
       ],
       "human_review_required": true,
-      "remote_apply": false
+      "remote_apply": false,
+      "editorial_status": "approved"
     },
     {
       "proposition_version_id": "e297c2d0-84d6-4053-b42f-51e6450673d0",
@@ -95,7 +100,9 @@
       "disposition_rationale": "A versão é instrumento fiscal e orçamentário transversal do Estado, abrangendo múltiplas funções, políticas e destinatários. Não há um grupo populacional v1 que constitua o beneficiário direto da versão como unidade legislativa, e decompor efeitos setoriais exigiria unidades normativas mais granulares do que a proposition_version atual.",
       "assessments": [],
       "human_review_required": true,
-      "remote_apply": false
+      "remote_apply": false,
+      "editorial_status": "approved"
     }
-  ]
+  ],
+  "editorial_review_status": "approved"
 }

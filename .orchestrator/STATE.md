@@ -2283,8 +2283,9 @@ Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; som
 
 ## Tick contínuo — início da revisão editorial P0 (2026-08-22)
 
-- P0 revisado: 2 `assess`, 2 `no_direct_population_group`, 1 `taxonomy_gap`, 0 `excluded`.
-- Dois assessments receberam campos, mas 3 rationale ainda estão pendentes; planner permanece fail-closed.
+- P0 revisado e aprovado localmente: 2 `assess`, 2 `no_direct_population_group`, 1 `taxonomy_gap`, 0 `excluded`.
+- PL 262/2024 corrigido para PL 98/2024 com novo documento oficial/bytes/SHA; planner reconhece os dois assess P0.
+- Pacote global permanece fail-closed pelos 18 P1 pendentes e 2 gates globais.
 - QA: `docs/qa/lote-alrs-p0-editorial-review-pack-2026-08-22.md`.
 
 ## Tick contínuo — classificação oficial P0 ALRS (2026-08-21)

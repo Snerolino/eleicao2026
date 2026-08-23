@@ -304,15 +304,19 @@
       "official_version_confirmed": true,
       "substantive_sources": [
         {
-          "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/262/2024",
-          "document_url": "https://api-nopaper.al.rs.gov.br/api/v1/blob-storage/documents-alrs-prod/20241008/09cb4900-b24d-4593-950f-7d5077550e22/258bf73b-e6f5-4ce6-9e3b-19227a06db2f.pdf?exp=2026-08-21T03%3a49%3a55Z&sp=r&sig=XT68gpPJGig5YuPj3KsjyiWtLflA5915XJftJgsr8%2f0%3d",
+          "proposition_page": "https://ww4.al.rs.gov.br/proposicao/PL/98/2024",
+          "document_url": "https://api-nopaper.al.rs.gov.br/api/v1/blob-storage/documents-alrs-prod/20240926/09cb4900-b24d-4593-950f-7d5077550e22/32f90abc-933d-4521-aab4-675bb32a4015.pdf?exp=2026-08-23T05%3a24%3a31Z&sp=r&sig=jYNaKvXvGcoGwN9qV1zmNNHhrwrz5fXPzJXpLYT8AJA%3d",
           "http": 200,
-          "bytes": 101581,
-          "sha256": "69518d76b51e1af1fa27abc7fedbb6b496d73c0029f28ca0339a9765f8efab13",
+          "bytes": 103470,
+          "sha256": "45f05a42c687d76d8cc9005710be4352d43fee87e9198872bb6809eeac83d1bc",
           "source_bytes_preserved": true,
           "renewable_locator_verified": true,
-          "content_addressed_path": "data/legislative-import/alrs/source-corpus/69518d76b51e1af1fa27abc7fedbb6b496d73c0029f28ca0339a9765f8efab13.pdf",
-          "durability_gate": "green"
+          "content_addressed_path": "data/legislative-import/alrs/source-corpus/45f05a42c687d76d8cc9005710be4352d43fee87e9198872bb6809eeac83d1bc.pdf",
+          "durability_gate": "green",
+          "page_http": 200,
+          "page_bytes": 160241,
+          "page_sha256": "520dbd2f4159ef2863d113c60d151b202f5473956045ba51447a1d6a404b46ec",
+          "official_type": "PL 98/2024"
         }
       ],
       "substantive_source_gate": "green",

@@ -129,7 +129,7 @@
         }
       ],
       "review_status": "pending_review",
-      "editorial_status": "pending_review",
+      "editorial_status": "approved",
       "disposition_rationale": "A versão é instrumento fiscal e orçamentário transversal do Estado, abrangendo múltiplas funções, políticas e destinatários. Não há um grupo populacional v1 que constitua o beneficiário direto da versão como unidade legislativa, e decompor efeitos setoriais exigiria unidades normativas mais granulares do que a proposition_version atual.",
       "assessments": []
     },
@@ -221,18 +221,18 @@
         }
       ],
       "review_status": "pending_review",
-      "editorial_status": "pending_review",
-      "disposition_rationale": null,
+      "editorial_status": "approved",
+      "disposition_rationale": "A proposição altera diretamente o marco estadual de proteção às mulheres vítimas de violência, produzindo efeito normativo estrutural sobre esse grupo; o voto favorável é classificado como defesa de impacto positivo.",
       "assessments": [
         {
+          "group_slug": "mulheres",
           "impact_direction": "positive",
           "defending_vote": "sim",
           "severity": 4,
           "structural_type": "structural",
           "confidence": 0.96,
-          "group_slug": "mulheres",
-          "rationale": null,
-          "status": "needs_editorial_completion"
+          "rationale": "A proposição altera diretamente o marco estadual de proteção às mulheres vítimas de violência, produzindo efeito normativo estrutural sobre esse grupo; o voto favorável é classificado como defesa de impacto positivo.",
+          "status": "approved"
         }
       ]
     },
@@ -324,8 +324,8 @@
         }
       ],
       "review_status": "pending_review",
-      "editorial_status": "pending_review",
-      "disposition_rationale": null,
+      "editorial_status": "approved",
+      "disposition_rationale": "A proposição beneficia diretamente estudantes atendidos por cursos pré-universitários populares, mas a taxonomia v1 não possui grupo específico que represente esse público sem forçar enquadramento inadequado.",
       "assessments": []
     },
     {
@@ -416,18 +416,18 @@
         }
       ],
       "review_status": "pending_review",
-      "editorial_status": "pending_review",
-      "disposition_rationale": null,
+      "editorial_status": "approved",
+      "disposition_rationale": "A proposição cria programa estadual de defesa pessoal voltado especificamente às mulheres, institucionalizando política pública direcionada ao grupo; o voto favorável é classificado como defesa de impacto positivo.",
       "assessments": [
         {
+          "group_slug": "mulheres",
           "impact_direction": "positive",
           "defending_vote": "sim",
           "severity": 3,
           "structural_type": "structural",
           "confidence": 0.95,
-          "group_slug": "mulheres",
-          "rationale": null,
-          "status": "needs_editorial_completion"
+          "rationale": "A proposição cria programa estadual de defesa pessoal voltado especificamente às mulheres, institucionalizando política pública direcionada ao grupo; o voto favorável é classificado como defesa de impacto positivo.",
+          "status": "approved"
         }
       ]
     },
@@ -519,7 +519,7 @@
         }
       ],
       "review_status": "pending_review",
-      "editorial_status": "pending_review",
+      "editorial_status": "approved",
       "disposition_rationale": "A versão é instrumento fiscal e orçamentário transversal do Estado, abrangendo múltiplas funções, políticas e destinatários. Não há um grupo populacional v1 que constitua o beneficiário direto da versão como unidade legislativa, e decompor efeitos setoriais exigiria unidades normativas mais granulares do que a proposition_version atual.",
       "assessments": []
     },
@@ -2080,7 +2080,7 @@
       "taxonomy_gap": 1,
       "excluded": 0
     },
-    "completed_dispositions": 2,
-    "incomplete_decisions": 3
+    "completed_dispositions": 5,
+    "incomplete_decisions": 0
   }
 }
