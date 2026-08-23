@@ -171,6 +171,7 @@
 | [`qa/lote-alrs-final-approved-microbatch-2026-08-23.md`](qa/lote-alrs-final-approved-microbatch-2026-08-23.md) | Micro-lote ALRS aprovado e verificado |
 | [`qa/lote-alrs-p2-microbatch-2-source-status-2026-08-23.md`](qa/lote-alrs-p2-microbatch-2-source-status-2026-08-23.md) | Status de fontes do P2-2 |
 | [`qa/lote-alrs-p2-microbatch-2-sources-2026-08-23.md`](qa/lote-alrs-p2-microbatch-2-sources-2026-08-23.md) | Fontes oficiais resolvidas do P2-2 |
+| [`qa/lote-cobertura-deputados-estaduais-2026-08-23.md`](qa/lote-cobertura-deputados-estaduais-2026-08-23.md) | Cobertura factual e editorial dos deputados estaduais |
 | [`qa/lote-continuous-ops-p2-2-editorial-2026-08-23.md`](qa/lote-continuous-ops-p2-2-editorial-2026-08-23.md) | Operação contínua e gate editorial P2-2 |
 | [`qa/lote-alrs-substantive-source-request-pack-resolved-2026-08-23.md`](qa/lote-alrs-substantive-source-request-pack-resolved-2026-08-23.md) | Encerramento do request pack P1 |
 | [`qa/lote-continuous-ops-recon-2026-08-23-0915.md`](qa/lote-continuous-ops-recon-2026-08-23-0915.md) | Recon oficial e produção verificadas |

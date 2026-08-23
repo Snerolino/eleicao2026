@@ -121,6 +121,16 @@ export function AdminPage() {
 
     setRole(roleData.role as EditorialRole);
 
+    try {
+      const { data: p2Dispositions } = await (supabase as any)
+        .from('impact_editorial_dispositions')
+        .select('proposition_version_id, status')
+        .eq('status', 'approved');
+      setP2Completed(new Set((p2Dispositions ?? []).map((row: { proposition_version_id: string }) => row.proposition_version_id)));
+    } catch {
+      setP2Completed(new Set());
+    }
+
     const { data, error } = await supabase
       .from('claims')
       .select(`
