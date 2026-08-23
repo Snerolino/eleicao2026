@@ -22,5 +22,12 @@ Nenhum candidato, voto, identidade, FK, source reference, claim, snapshot, Supab
 - Doctor: shell padrão Node 22.22.2 incompatível com o requisito Node 24; OpenCode ausente. O tick usou Node 24.19.0 diretamente.
 - Publicação: `HEAD` local continua à frente de `origin/main`; transporte Git já rejeitou HTTP 403 no tick anterior. Não declarar deploy novo sem `main -> main` aceito.
 
+## Publicação e verificação
+- Gates locais verdes: 401 testes em 98 arquivos, TypeScript, schema, `data:check`, build, `git diff --check`.
+- Commit local criado: `c65c4e94474d5f8c798a942cb05b7fa0d6e1cd41` (`docs: registrar recon oficial bounded`).
+- `git push origin main` foi retentado 3 vezes e rejeitado em todas com RC 128 / HTTP 403: `Permission to Snerolino/eleicao2026.git denied to Snerolino`.
+- `gh api` continua reportando identidade `Snerolino` com `push=true` e `admin=true`, evidenciando divergência entre API e transporte HTTPS; `HEAD` local está 3 commits à frente de `origin/main`.
+- Produção existente revalidada: raiz HTTP 200; `/release.json` HTTP 200, `sha=0bc536152731c7244e48863f37d09aabb3012f94`, `row_count=1003`. Não houve deploy deste commit e não há `headSha` novo para validar.
+
 ## Próximo passo
-Retentar `git push origin main` após o checkpoint documental; se aceito, validar workflow backup Cloudflare `334951434`, `headSha`, `/release.json` e smoke remoto. Manter aplicação factual remota bloqueada até R0/schema/FK/fonte/dry-run/idempotência.
+Corrigir/revalidar o transporte Git HTTPS e retentar `main -> main`; somente após aceite validar workflow backup Cloudflare `334951434`, `headSha`, `/release.json` e smoke remoto. Manter aplicação factual remota bloqueada até R0/schema/FK/fonte/dry-run/idempotência.

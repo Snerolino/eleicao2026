@@ -4217,3 +4217,12 @@ Sem autorização humana explícita própria, não fazer:
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0743.md`.
 - Bloqueios: doctor shell Node 22.22.2/OpenCode ausente; publicação continua bloqueada pelo HTTP 403 do transporte Git registrado no tick anterior; remoto factual segue condicionado a R0/schema/FK/fonte/dry-run/idempotência.
 - Próximo chunk: retentar `git push origin main`; se aceito, validar backup `334951434`, `headSha`, `/release.json` e smoke remoto.
+
+## Verificação de publicação — 2026-08-23T07:43Z
+
+- Gates locais verdes: 401 testes/98 arquivos, TypeScript, schema, `data:check`, build e `git diff --check`.
+- Commit documental `c65c4e94474d5f8c798a942cb05b7fa0d6e1cd41` criado.
+- `git push origin main` retentado 3 vezes; todas falharam RC 128/HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). `gh api` ainda reporta `push=true/admin=true`; `HEAD` está 3 commits à frente de `origin/main`.
+- Produção existente: raiz HTTP 200 e `/release.json` HTTP 200; SHA live `0bc536152731c7244e48863f37d09aabb3012f94`, `row_count=1003`. Nenhum deploy novo nem validação de `headSha` deste commit.
+- QA atualizado: `docs/qa/lote-continuous-ops-recon-2026-08-23-0743.md`.
+- Próximo chunk: corrigir/revalidar transporte Git HTTPS, aceitar `main -> main`, e então validar backup Cloudflare `334951434`, `headSha`, `/release.json` e smoke remoto.
