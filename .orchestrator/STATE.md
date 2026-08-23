@@ -1,3 +1,12 @@
+## Tick contínuo — recon oficial, Câmara parcial bloqueada, transporte Git bloqueado — 2026-08-23T15:12Z
+
+- Lock bounded adquirido/liberado. `npm run data:check` RC 0: `1003` candidaturas, `988` fotos, `1` fonte TSE. ALRS FED-17 residual dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os quatro Enio Carlos Terra seguem sem ID oficial/fonte exata.
+- Auditoria de fontes RC 0 read-only preserva gaps reais: versões sem fonte ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`.
+- Câmara oficial read-only em 8 janelas com `--max-pages 1`: `7` OK; janela `2025-01-01`–`2025-03-31` bloqueada por `fetch failed`, saída fail-closed com `vote_ids=[]`, RC 2. Nenhum ID foi reconciliado/aplicado.
+- Doctor RC 1 permanece degradado por shell Node 22.22.2, OpenCode ausente e smoke MCP Codex sem evidência estruturada; Antigravity e demais checks disponíveis OK.
+- `env -u GH_TOKEN git push origin main` retentado 3 vezes e bloqueado: HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), DNS intermitente e HTTP 403. Nenhum workflow novo foi acionado. QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1512.md`.
+- Nenhum candidato, identidade, voto, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado. Próximo chunk: retentar transporte; após aceitação, validar backup `334951434`, `headSha`, raiz e `/release.json`. Aplicação factual segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial, gates verdes, transporte Git bloqueado — 2026-08-23T14:49Z
 
 - Lock bounded adquirido/liberado. ALRS FED-17 residual dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os quatro Enio Carlos Terra seguem sem ID oficial/fonte exata.
