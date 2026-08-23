@@ -1,3 +1,14 @@
+## Tick contínuo — recon read-only, produção verificada — 2026-08-23T23:41Z
+
+- Dataset oficial versus snapshot: `1003/1003` IDs, diferença `0/0`; CSV `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- `npm run data:check` RC 0: `1003` candidaturas, `988` fotos oficiais, `1` fonte TSE. Auditoria regular RC 0; strict RC 2 fail-closed mantém gaps ALRS/Câmara/Senado `1251/3/112`, `1647/2/188`, `4/2/455`.
+- `npm run impact:alrs:residual:repair` RC 0 dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`.
+- Câmara read-only: janela 2025-01-01—2025-03-31 teve `6/6` páginas oficiais `status=ok`; IDs somente inventariados.
+- `verify-cli-output --live`: `1000` claims publicadas auditadas, `0` sem fonte. Produção `/`, `/release.json` e `/admin` HTTP 200; release `51e05e6-20260823T233152903Z`, versão `0.2.978`.
+- Worktree limpa e `HEAD=51e05e6df2821c832ac940bf7ad0a964ccc90dea` alinhado com `origin/main`; tentativa de `git push origin main` retornou HTTP 403, sem workflow novo.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-2341.md`. Nenhuma identidade, FK, voto, source reference, claim, assessment, matriz, disposição editorial, Supabase ou Cloudflare foi alterada.
+- Doctor RC 1 por Node 22 no shell/OpenCode ausente; recon read-only não bloqueada. Próximo passo: retentar transporte Git e manter fontes ausentes fail-closed.
+
 ## Tick contínuo — recon read-only, produção verificada — 2026-08-23T22:28Z
 
 - Dataset oficial versus snapshot: `1003/1003` IDs, diferença `0/0`; CSV `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
