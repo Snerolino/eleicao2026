@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, useState } from 'react';
+import { FormEvent, Fragment, useEffect, useState } from 'react';
 import { Link } from 'react-router';
 import type { User } from '@supabase/supabase-js';
 import { usePageMetadata } from '@/hooks/usePageMetadata';
@@ -411,6 +411,10 @@ export function AdminPage() {
     setMessage(`Disposição registrada para ${item.official_match_key}.`);
   }
 
+  const pendingP2Items = p2EditorialItems.filter((item) => !p2Completed.has(item.proposition_version_id));
+  const reviewedP2Items = p2EditorialItems.filter((item) => p2Completed.has(item.proposition_version_id));
+  const sortedP2Items = [...pendingP2Items, ...reviewedP2Items];
+
   return (
     <main id="main-content" className="mx-auto max-w-6xl px-4 py-8">
       <Link
@@ -589,10 +593,15 @@ export function AdminPage() {
               Quinze versões ALRS têm fonte oficial preservada e aguardam decisão humana. A decisão apenas registra a triagem; nenhum voto ou matriz é publicado por esta fila.
             </p>
             <div className="mt-4 grid gap-4">
-              {p2EditorialItems.map((item) => {
+              {sortedP2Items.map((item, index) => {
                 const completed = p2Completed.has(item.proposition_version_id);
+                const showPendingHeading = index === 0 && pendingP2Items.length > 0;
+                const showReviewedHeading = index === pendingP2Items.length && reviewedP2Items.length > 0;
                 return (
-                  <article key={item.proposition_version_id} className="rounded-sm border border-[var(--color-border-editorial)] p-4">
+                  <Fragment key={item.proposition_version_id}>
+                    {showPendingHeading ? <h3 className="border-b-2 border-[var(--color-ink)] pb-2 font-mono text-xs uppercase tracking-widest">Precisam de atenção</h3> : null}
+                    {showReviewedHeading ? <h3 className="mt-6 border-b border-[var(--color-border-editorial)] pb-2 font-mono text-xs uppercase tracking-widest text-[var(--color-muted-ink)]">Já revisados</h3> : null}
+                    <article key={item.proposition_version_id} className="rounded-sm border border-[var(--color-border-editorial)] p-4">
                     <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                       <div>
                         <h3 className="text-lg">{item.official_match_key}</h3>
@@ -649,6 +658,7 @@ export function AdminPage() {
                       {completed ? 'Disposição registrada' : 'Registrar disposição protegida'}
                     </button>
                   </article>
+                  </Fragment>
                 );
               })}
             </div>
