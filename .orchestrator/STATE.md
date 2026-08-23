@@ -1,3 +1,13 @@
+## Tick contínuo — recon read-only, gates locais verdes, push bloqueado — 2026-08-23T20:38Z
+
+- Dataset oficial versus snapshot: `1003/1003` IDs, diferença `0/0`; CSV `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- `npm run data:check` RC 0: `1003` candidaturas, `988` fotos oficiais, `1` fonte TSE. Auditoria regular RC 0; strict RC 2 fail-closed mantém gaps ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos.
+- `npm run impact:alrs:residual:repair` RC 0 dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`.
+- Gates locais RC 0: `401/401` testes em `98` arquivos, TypeScript, schema, build `227` módulos/sitemap `1003 + 2`, `git diff --check`.
+- Produção raiz HTTP 200 e `/release.json` HTTP 200; live permanece `0a1a202b503f094d18feca19dc04704c7ca46d3c`, versão `0.2.961`, snapshot `1003`.
+- Doctor RC 1 por Node 22/OpenCode ausente/smoke MCP não exercitado; não bloqueia a recon read-only.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-2038.md`. HEAD local `f0de0c6` (commit documental deste tick) está 5 commits à frente de `origin/main`; três tentativas de push retornaram HTTP 403. Próximo passo é retentar transporte Git sem aplicar escrita remota.
+
 ## Tick contínuo — recon read-only, push bloqueado, publicação estável — 2026-08-23T20:18Z
 
 - `npm run data:check` RC 0: `1003` candidaturas, `988` fotos oficiais, `1` fonte TSE; dataset oficial versus snapshot permanece `1003/1003`, diferença `0`.
