@@ -1,3 +1,12 @@
+## Tick contínuo — recon read-only, filas limpas, publicação estável — 2026-08-23T19:59Z
+
+- Dataset oficial `consulta_cand_2026/consulta_cand_2026_RS.csv`: `1003/1003` IDs contra o snapshot, diferença `0/0`; CSV `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
+- `npm run data:check` RC 0: `1003` candidaturas, `988` fotos oficiais, `1` fonte TSE. `npm run impact:alrs:residual:repair` RC 0 dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`.
+- Auditoria de fontes regular RC 0; strict RC 2 fail-closed preserva gaps ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos. Os quatro votos ALRS residuais permanecem sem evidência vinculável.
+- Recon Supabase read-only: `2650` claims published, `33` pending_review (todas `historico_politico`, não-AI), `0` publicadas sem fonte; `14` matrizes approved/`0` pending; `10` disposições approved/`0` pending; `0` source references sem hash. Nenhuma decisão humana foi promovida.
+- Migrations local/remota alinhadas até `20260823110000`. Produção raiz e `/release.json` HTTP 200; live `0a1a202b503f094d18feca19dc04704c7ca46d3c`, versão `0.2.961`, snapshot `1003`. Backup `334951434`: run `32661013323` success no SHA live; duplicata `32661190014` skipped.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1959.md`. HEAD local `445f139fec6e06df8f5a99f0b70aabc8b8dad8cf` está 2 commits à frente de `origin/main`; transporte Git segue como próximo gate. Doctor RC 1 por shell Node 22/OpenCode ausente/smoke Codex não exercitado.
+
 ## Tick contínuo — recon ALRS residual, publicação remota estável — 2026-08-23T19:40Z
 
 - Auditoria read-only de fontes: `impact:sources:audit` RC 0; strict RC 2 fail-closed, preservando gaps ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos. A fila ALRS mantém exatamente `4` votos sem evidência vinculada: `alrs_pl134_2023`, `alrs_pl165_2025`, `alrs_pl361_2025`, `alrs_pl77_2025`.
