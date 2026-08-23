@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial, gates verdes e publicação bloqueada — 2026-08-23T10:01Z
+
+- Lock bounded adquirido/liberado. ALRS FED-17 residual dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro Enio Carlos Terra seguem sem ID oficial/fonte exata.
+- Câmara oficial read-only: `8/8` janelas trimestrais 2025–2026 `status=ok`, `blocked=null`; IDs somente inventariados, sem reconciliação/aplicação. Senado fail-closed: envelope nominal verificável ausente.
+- Dataset versus snapshot por `SQ_CANDIDATO`: `1003/1003`, diferença `0/0`; CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`. Auditoria de fontes RC 0 preserva gaps: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` para ALRS/Câmara/Senado.
+- Microbatch P2 local reexecutado RC 0: `5` versões, `0` votos factuais, `remote_apply=false`, `public_approval=false`. Nenhuma escrita factual remota.
+- Gates Node 24.19.0 RC 0: `401` testes/`98` arquivos, TypeScript, schema, `data:check` (`1003` candidaturas/`988` fotos/`1` fonte TSE), build (`224` módulos; sitemap `1003 + 2`), `git diff --check`; smoke RC 0 (`1002` cards, `0` falhas HTTP, `0` erros online, service worker pronto).
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1001.md`. Commit documental local `4037524`; `git push origin main` e `env -u GH_TOKEN git push origin main` falharam HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`). `main` local está 1 commit à frente de `origin/main`; nenhum deploy novo foi acionado.
+- Produção não pôde ser revalidada neste tick: DNS de `rs.votopraquem.org` retornou `curl` HTTP `000`/`Could not resolve host`. Último backup observado `32632385262` está `completed/skipped` no SHA remoto `23fa294`; aplicação remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — microbatch P2 local, recon oficial e gates verdes — 2026-08-23T09:38Z
 
 - Lock bounded adquirido/liberado. Dataset/snapshot conferidos sem alteração factual: `1003` candidaturas, `988` fotos, CSV oficial SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`, snapshot SHA `a7db54b20bd1aa0d49003e278d48d1443617f00b772d004d711cd762d0c982cf`.
