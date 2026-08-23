@@ -1,3 +1,14 @@
+## Tick contínuo — recon oficial, gates verdes, transporte Git bloqueado — 2026-08-23T17:43Z
+
+- Dataset oficial versus snapshot permanece `1003/1003` por `SQ_CANDIDATO`, diferença `0`; CSV `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`. `data:check` RC 0: `1003` candidaturas, `988` fotos, `1` fonte TSE.
+- Câmara oficial read-only: `8/8` janelas trimestrais 2025–2026 `status=ok`, `blocked=null`; IDs apenas inventariados. ALRS FED-17 residual dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`.
+- Auditoria de fontes RC 0 preserva gaps reais: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; quatro votos ALRS seguem sem evidência vinculada. Nenhuma escrita factual, identidade, FK, source reference, claim, matriz, assessment, Supabase ou Cloudflare.
+- Gates Node 24.19.0 RC 0: `401/401` testes em `98` arquivos, TypeScript, schema, build `226` módulos/sitemap `1003 + 2`, `git diff --check`.
+- Produção raiz e `/release.json` HTTP 200; live permanece `5a8a24013263b684384b17e003f9fd0d57ce92f4`, release `5a8a240-20260823T164257627Z`, snapshot `1003`.
+- `env -u GH_TOKEN git push origin main` retentado 3 vezes após o commit local `d4c0fa7` e bloqueado por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); nenhum workflow novo foi acionado. QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1743.md`.
+- Doctor RC 1 permanece degradado por shell Node 22.22.2/OpenCode ausente/smoke MCP não exercitado no rápido; gates do projeto usaram Node 24.19.0.
+- Próximo chunk: retentar transporte Git; após `main -> main`, validar backup `334951434`, `headSha`, raiz e `/release.json`. Aplicação factual segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial, gates locais verdes, transporte Git bloqueado — 2026-08-23T17:24Z
 
 - Bootstrap revalidado: HEAD local `8642734a366ea08be46b9c6bf0c42ac19da7fefa` em `main`, worktree limpa antes do registro; `npm run orch:doctor` RC 1 por Node 22.22.2/OpenCode ausente/smoke MCP não exercitado.
