@@ -21,8 +21,8 @@ Nenhum candidato, voto, identidade, FK, source reference, claim, snapshot, Supab
 - Câmara: uma janela oficial bloqueada por `fetch failed`; nenhum resultado parcial foi promovido.
 - Senado: ausência de envelope nominal com SHA verificável.
 - Auditoria estrita continua com lacunas substantivas de fontes; não houve inferência.
-- Doctor RC 1: shell padrão Node `22.22.2` incompatível com requisito Node 24, OpenCode ausente e smoke MCP Codex sem evidência estruturada; os gates do projeto foram executados explicitamente com Node 24.19.0.
-- Publicação: `HEAD` local está à frente de `origin/main`; transporte Git precisa ser retestado antes de qualquer deploy. Nenhum deploy foi declarado.
+- Doctor RC 1: shell padrão Node `22.22.2` incompatível com requisito Node 24, OpenCode ausente e smoke MCP Codex sem evidência estruturada; os gates do projeto foram executados explicitamente com Node `24.19.0`.
+- Publicação: commit documental `cca395a` foi criado após os gates; `git push origin main` e `env -u GH_TOKEN git push origin main` falharam com HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), deixando `main` local 1 commit à frente de `origin/main`. Produção foi verificada independentemente: raiz e `/release.json` HTTP 200, live `0bc5361` / versão `0.2.892`, snapshot `1003`; nenhum deploy novo foi acionado.
 
 ## Próximo passo
-Retestar boundedmente `git push origin main`; se aceito, validar workflow backup Cloudflare `334951434`, `headSha`, `/release.json` e smoke remoto. Manter `remote_factual_apply` condicionado a R0, schema/FK, fonte oficial exata, dry-run e idempotência.
+Retestar boundedmente o transporte Git; se aceitar, validar workflow backup Cloudflare `334951434`, `headSha`, `/release.json` e smoke remoto. Manter `remote_factual_apply` condicionado a R0, schema/FK, fonte oficial exata, dry-run e idempotência.
