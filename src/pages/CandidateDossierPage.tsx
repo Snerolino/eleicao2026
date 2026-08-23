@@ -213,6 +213,19 @@ export function CandidateDossierPage() {
             );
           })}
 
+          {candidate.position === 'deputado_estadual' && !(candidate.voting_profiles ?? []).some((profile) => profile.total_votes > 0) ? (
+            <section className="border-y border-[var(--color-border-editorial)] py-5" aria-label="Cobertura de votações nominais">
+              <p className="font-mono text-[0.68rem] uppercase tracking-[0.14em] text-[var(--color-muted-ink)]">Registro legislativo · ALRS</p>
+              <h2 className="mt-1 text-2xl">Votações nominais</h2>
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[var(--color-muted-ink)]">
+                Nenhum registro nominal oficial está disponível no corpus publicado para este candidato. Isso não representa voto zero nem ausência de participação.
+              </p>
+              <a href="https://transparencia.al.rs.gov.br/parlamentares/votos-plenario" target="_blank" rel="noreferrer noopener" className="mt-3 inline-block font-mono text-xs text-[var(--color-institutional)] underline underline-offset-4">
+                Consultar fonte oficial ALRS ↗
+              </a>
+            </section>
+          ) : null}
+
           {DOSSIER_SECTIONS.map((section) => {
             const claims = claimsForSection(
               candidate.claims,
