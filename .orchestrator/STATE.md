@@ -1,3 +1,13 @@
+## Tick contínuo — recon oficial e gates locais verdes, publicação pendente — 2026-08-23T08:22Z
+
+- Lock bounded adquirido/liberado. ALRS FED-17 dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata.
+- Câmara oficial em 8 janelas trimestrais 2025–2026: 7 `status=ok`; a janela `2025-01-01`–`2025-03-31` retornou `network_error`/`fetch failed`; fail-closed produziu `vote_ids=[]`, sem reconciliação/aplicação. Senado segue fail-closed sem envelope nominal com SHA verificável.
+- Dataset/snapshot por `SQ_CANDIDATO`: `1003/1003`, diferença `0/0`, CSV SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`. Auditoria regular RC 0; strict preserva gaps de fontes: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` para ALRS/Câmara/Senado.
+- Gates Node 24.19.0 RC 0: testes, TypeScript, schema, `data:check` (`1003` candidaturas/`988` fotos/`1` fonte TSE), build (`224` módulos; sitemap `1003 + 2`; release local `c1bd0fc-20260823T082508547Z`), `git diff --check`, sintaxe do writer editorial não rastreado e smoke (`1002` cards, `0` falhas HTTP, `0` erros online, service worker pronto).
+- Nenhum candidato, voto, identidade, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado. `scripts/apply-alrs-editorial-matrices.mjs` foi apenas validado com `node --check`; não foi executado nem será promovido neste tick.
+- Doctor segue RC 1 por Node 22.22.2/OpenCode ausente e smoke MCP Codex sem evidência estruturada; gates do projeto usaram Node 24.19.0.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0822.md`. Próximo chunk: retestar `main -> main`; se aceitar, validar backup/headSha/produção. Aplicação remota continua condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial, gates locais verdes e publicação bloqueada — 2026-08-23T08:04Z
 
 - Lock bounded adquirido/liberado. ALRS FED-17 dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os quatro casos Enio Carlos Terra seguem sem ID oficial/fonte exata.
