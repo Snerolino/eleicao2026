@@ -23,7 +23,9 @@ Executar tick bounded do control plane: manter recon oficial read-only ativo, ve
 Nenhum candidato, identidade, voto, FK, source reference, claim, Supabase remoto ou Cloudflare foi alterado. Senado permanece fail-closed por ausência de envelope nominal com SHA verificável; IDs transitórios da Câmara não foram vinculados a candidatos.
 
 ## Publicação
-HEAD local `6143abcd1da774e30335b30d8b8100d047e73830`; `main` está 7 commits à frente de `origin/main`. O push permanece pendente para o próximo chunk; nenhum workflow novo ou deploy foi acionado neste tick.
+Após os gates, foi criado o commit documental `5ee8ce4c810b89500f1c8b54f1fcbc9c64961b0b`. Foram feitas 3 tentativas de `env -u GH_TOKEN git push origin main`; todas falharam com RC 128 e HTTP 403: `Permission to Snerolino/eleicao2026.git denied to Snerolino`. HEAD local está 8 commits à frente de `origin/main` (`23fa294e9811c3aa69a41fdf44e168beb6f6e86e`). Nenhum workflow novo foi acionado.
+
+A verificação independente encontrou os workflows backup `334951434` (`Deploy to Cloudflare Pages (backup)`) e primário `320564705` ativos. Produção: raiz DNS expirou (`HTTP 000`), mas `/release.json` respondeu HTTP 200 e reportou SHA antigo `23fa294e9811c3aa69a41fdf44e168beb6f6e86e`, release `23fa294-20260823T095444467Z`, snapshot `1003`.
 
 ## Bloqueios
 - Transporte Git HTTPS/permissão efetiva continua bloqueando `main -> main` (histórico recente: HTTP 403).
