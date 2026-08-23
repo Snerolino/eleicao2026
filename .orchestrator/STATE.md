@@ -1,3 +1,12 @@
+## Tick contínuo — recon Câmara, gates verdes e publicação bloqueada — 2026-08-23T03:19Z
+
+- Lock bounded adquirido/liberado com `flock -n`. Dataset e snapshot revalidados: 1.003 candidaturas públicas, snapshot SHA `a7db54b20bd1aa0d49003e278d48d1443617f00b772d004d711cd762d0c982cf`; nenhuma diferença de candidato foi aplicada.
+- Reconhecimento read-only: auditoria de fontes RC 0 preserva gaps ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; ALRS FED-17 dry-run `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; Câmara consultou 8 janelas trimestrais oficiais, todas `ok`, `blocked=null`, sem reconciliação/aplicação.
+- Gates Node 24.19.0 verdes: 401 testes/98 arquivos, TypeScript, schema, `data:check` 1.003 candidaturas/988 fotos/1 fonte TSE, build 224 módulos com sitemap 1.003 + 2 e release local `5527c31-20260823T031945222Z`; `git diff --check` verde.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-0318.md`. Commit documental local `1c6af24` criado.
+- Publicação bloqueada: `git push origin main` retornou HTTP 403; tentativas com helper padrão, token de `gh auth token`, helper inline e SSH falharam. `gh api` ainda reporta `permissions.push=true/admin=true`, evidenciando divergência entre API e transporte Git. HEAD local `1c6af24` segue à frente de `origin/main`; nenhuma escrita remota/deploy ocorreu.
+- Produção revalidada: root HTTP 200 e `/release.json` HTTP 200, live `3aae2d0` / versão `0.2.835`. Próximo chunk: corrigir/revalidar a credencial efetiva do transporte Git e retentar; se aceitar, validar backup `334951434`, `headSha` e produção. ALRS/Senado continuam fail-closed por falta de evidência oficial exata.
+
 ## Tick contínuo — recon Câmara, gates verdes e publicação bloqueada — 2026-08-23T02:57Z
 
 - Lock bounded adquirido/liberado com `flock -n`. ALRS FED-17 residual executou dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; os quatro casos Enio Carlos Terra continuam sem ID oficial/fonte exata. Câmara oficial consultada em 8 janelas trimestrais 2025–2026 com `--start/--end` explícitos e `--max-pages 1`: 8/8 páginas `ok`, `blocked=null`; somente inventário de IDs, sem reconciliação/aplicação. Senado fail-closed sem envelope nominal/SHA verificável.
