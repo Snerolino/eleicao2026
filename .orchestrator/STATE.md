@@ -1,3 +1,13 @@
+## Tick contínuo — microbatch P2 local, recon oficial e gates verdes — 2026-08-23T09:38Z
+
+- Lock bounded adquirido/liberado. Dataset/snapshot conferidos sem alteração factual: `1003` candidaturas, `988` fotos, CSV oficial SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`, snapshot SHA `a7db54b20bd1aa0d49003e278d48d1443617f00b772d004d711cd762d0c982cf`.
+- ALRS FED-17 residual dry-run RC 0: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`; quatro Enio Carlos Terra seguem sem ID oficial/fonte exata. Câmara oficial read-only: `8/8` janelas ok, `blocked=null`, `700` IDs transitórios; nenhum fato reconciliado/aplicado. Senado fail-closed sem envelope nominal com SHA verificável.
+- Microbatch local `data/legislative-import/alrs/p2-microbatch-2026-08-23.json` gerado e validado: `5` versões P2, `factual_votes=0`, `remote_apply=false`, `public_approval=false`, todos `pending_review` com revisão humana requerida. Nenhuma escrita Supabase/Cloudflare.
+- Auditoria de fontes RC 0 mantém gaps: versões `1251/3/112`, eventos `1647/2/188`, votos `4/2/455` para ALRS/Câmara/Senado.
+- Gates Node 24.19.0 RC 0: `401` testes/`98` arquivos, TypeScript, schema, `data:check` (`1003/988/1`), build (`224` módulos; sitemap `1003 + 2`; release local `48eebb9-20260823T093722923Z`), `git diff --check`; smoke passou na segunda tentativa com `1002` cards, `0` falhas HTTP, `0` erros online e service worker pronto.
+- Doctor continua degradado por Node 22.22.2 no shell padrão, OpenCode ausente e Codex MCP não exercitado no rápido; gates explícitos usaram Node 24.19.0. QA: `docs/qa/lote-continuous-ops-p2-recon-2026-08-23-0638.md`.
+- Próximo passo: commit/push dos artefatos locais/documentais; se o transporte aceitar, validar backup `334951434`, `headSha` e produção. Aplicação factual remota segue condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e produção verificadas — 2026-08-23T09:15Z
 
 - Lock bounded adquirido/liberado. Dataset/snapshot conferidos: `1003` registros; CSV oficial `../dataset2026/candidatos/consulta_cand_2026/consulta_cand_2026_RS.csv`, `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
