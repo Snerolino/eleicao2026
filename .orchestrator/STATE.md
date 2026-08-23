@@ -1,3 +1,12 @@
+## Tick contínuo — recon oficial, publicação verificada — 2026-08-23T16:47Z
+
+- Recon Câmara oficial read-only: 8/8 janelas trimestrais 2025–2026 `status=ok`; inventário com `--max-pages 1`, sem reconciliação ou aplicação. Auditoria estrita de fontes preserva gaps reais: versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`.
+- `npm run data:check` RC 0: `1003` candidaturas, `988` fotos, `1` fonte TSE. A comparação correta usa `consulta_cand_2026_RS.csv`; `lista_candidatos_2026.csv` é subconjunto de `322` linhas e não deve ser usado como universo do snapshot.
+- Produção raiz e `/release.json` HTTP 200; live `5a8a240`, versão `0.2.950`, snapshot `1003`. Primário `32652443864` e backup `32652456631` concluíram `success` no mesmo SHA; backup duplicado `32652619267` ficou `skipped`.
+- Nenhum candidato, identidade, voto, FK, source reference, claim, matriz, assessment, Supabase ou Cloudflare foi alterado. QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-1647.md`.
+- Doctor RC 1 permanece degradado por shell Node `22.22.2`, OpenCode ausente e smoke MCP Codex não exercitado no rápido. Auditoria estrita RC 2 é gap de fonte real, fail-closed.
+- Próximo chunk: recon bounded e recuperação de fontes oficiais dos quatro votos ALRS sem vínculo; manter aplicação factual condicionada a R0/schema/FK/fonte/dry-run/idempotência.
+
 ## Tick contínuo — recon oficial e gates verdes — 2026-08-23T16:28Z
 
 - Recon oficial read-only: Câmara `8/8` janelas trimestrais OK, `700` vote_ids inventariados, sem reconciliação/aplicação; ALRS FED-17 residual dry-run RC 0 (`planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`).
