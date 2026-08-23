@@ -1,3 +1,12 @@
+## Tick contínuo — P2-2 editorial local verde, publicação pendente — 2026-08-23T13:15Z
+
+- Fontes oficiais P2-2 verificadas independentemente: `5/5` identidades ALRS, páginas/PDFs HTTP 200, bytes/SHA reproduzidos e `durability_gate=green`.
+- Pacote editorial local gerado com `5` versões, `source_green=5`, `5` disposições `pending_review`, `0` assessments automáticos, `remote_apply=false` e `public_approval=false`.
+- Gerador corrigido para fail-closed quando o manifesto não existir; idempotência comprovada em duas execuções consecutivas com SHA igual.
+- Gates Node 24.19.0 RC 0: `401` testes/`98` arquivos, TypeScript, schema, `data:check` (`1003/988/1`), build `224` módulos/sitemap `1003 + 2`, `node --check` e `git diff --check`.
+- Nenhuma matriz, assessment, voto, FK, source reference, claim, Supabase ou Cloudflare foi alterado. Próximo gate é revisão editorial humana no `/admin`; publicação GitHub segue pendente por transporte HTTP 403 observado nos ticks anteriores.
+- QA: `docs/qa/lote-continuous-ops-p2-2-editorial-2026-08-23.md`.
+
 ## Tick contínuo — recon Câmara ok, ALRS fail-closed e gates locais verdes — 2026-08-23T12:53Z
 
 - Lock bounded adquirido/liberado. Dataset vivo versus snapshot por `SQ_CANDIDATO`: `1003/1003`, diferença `0`; CSV oficial `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
