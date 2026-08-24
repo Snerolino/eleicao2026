@@ -4,7 +4,7 @@
 - Gates Node 24.19.0 RC 0: `404/404` testes em `98` arquivos, TypeScript, schema, `data:check` `1003/988/1`, build `231` módulos/sitemap `1003 + 2`, smoke `1002` cards/0 HTTP/0 erros online/service worker e `git diff --check`.
 - Auditoria strict de fontes RC 2 fail-closed mantém gaps ALRS/Câmara/Senado `1251/3/112`, `1647/2/188`, `4/2/455`. Residual ALRS RC 0 dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`.
 - Produção `/` e `/release.json` HTTP 200; release ainda `9cc5487-20260823T235158520Z`, live `9cc5487d010116d7cc9b50d647f5fedec3cde305`, snapshot `1003`.
-- Worktree limpa, HEAD local `7c149e1` 1 commit à frente de `origin/main`; `git push origin main` falhou HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), nenhum workflow novo.
+- Worktree limpa, HEAD local `baa2fbb` 2 commits à frente de `origin/main`; `git push origin main` falhou HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), nenhum workflow novo.
 - Doctor bloqueado pelo próprio gateway ao tentar reiniciar/parar o gateway; não houve mutação. QA: `docs/qa/lote-continuous-ops-recon-2026-08-24-0022.md`.
 - Nenhum candidato, identidade, FK, voto, source reference, claim, assessment, matriz, disposição editorial, Supabase ou Cloudflare foi alterado. Próximo passo: retentar transporte Git e manter os quatro votos ALRS fail-closed.
 

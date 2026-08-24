@@ -37,8 +37,8 @@ promoção automática de fila editorial nem aplicação factual.
 ## Bloqueios reais
 - `git push origin main` continua bloqueado por HTTP 403: `Permission to
   Snerolino/eleicao2026.git denied to Snerolino`. O HEAD local
-  `7c149e18f0201633e74e5a0de26d3a9f5cd85751` permanece 1 commit à frente de
-  `origin/main` (`9cc5487d...`); nenhum workflow novo foi acionado.
+  `baa2fbb` permanece 2 commits à frente de `origin/main` (`9cc5487d...`);
+  nenhum workflow novo foi acionado.
 - `npm run impact:sources:audit -- --strict` permanece RC 2 porque as fontes
   oficiais dos gaps ainda não estão vinculadas; não é seguro inventar URLs,
   hashes ou votos.
