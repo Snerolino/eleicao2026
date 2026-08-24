@@ -55,7 +55,7 @@ const resolvedIds = new Set(resolvedCatalog.resolved_version_ids ?? []);
 const existingMatrixIds = new Set(resolvedCatalog.existing_matrix_version_ids ?? []);
 const resolvedCanonicalKeys = new Set(resolvedCatalog.resolved_canonical_keys ?? []);
 const sourceGreenIds = canonicalSourceGreenIds();
-const baseItems = (queue.items ?? []).filter((item) => item.house === 'alrs' && !item.version_key_collision && item.editorial_disposition === 'pending_review' && !resolvedIds.has(item.proposition_version_id) && !existingMatrixIds.has(item.proposition_version_id) && !resolvedCanonicalKeys.has(canonicalEditorialKey(item)) && !isResolvedAlias(item));
+const baseItems = (queue.items ?? []).filter((item) => item.house === 'alrs' && item.event_type !== 'procedural_confirmed' && !item.version_key_collision && item.editorial_disposition === 'pending_review' && !resolvedIds.has(item.proposition_version_id) && !existingMatrixIds.has(item.proposition_version_id) && !resolvedCanonicalKeys.has(canonicalEditorialKey(item)) && !isResolvedAlias(item));
 const deduplicatedItems = [...new Map(baseItems.map((item) => [canonicalEditorialKey(item) ?? `${item.house}:${item.proposition_version_id}`, item])).values()];
 const acquisitionItems = deduplicatedItems.filter((item) => !sourceGreenIds.has(item.proposition_version_id));
 const candidates = deduplicatedItems.filter((item) => sourceGreenIds.has(item.proposition_version_id))
