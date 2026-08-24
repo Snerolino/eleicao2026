@@ -85,6 +85,7 @@
     "impact:alrs:r4:substantive:sources": "node scripts/validate-alrs-substantive-sources.mjs",
     "impact:alrs:r4:substantive:requests": "node scripts/build-alrs-substantive-source-request-pack.mjs",
     "impact:batch:proposals": "node scripts/build-alrs-impact-batch-proposals.mjs",
+    "impact:batch:validate": "node scripts/validate-editorial-batch-decisions.mjs",
     "impact:continuous:monitor": "node scripts/continuous-progress-monitor.mjs",
     "orch:setup": "bash scripts/orchestrator/setup-local.sh",
     "orch:doctor": "bash scripts/orchestrator/doctor.sh",
