@@ -12,34 +12,30 @@
 - métricas diferenciam ocorrências, candidatos únicos e perfis novos;
 - decisões são validadas por `batch_id`, `batch_sha256` e `review_key`.
 
-## Batch regenerado
+## Batch regenerado após canonicalização
 
 ```text
 batch_id=alrs-impact-editorial-batch-001-v2
-batch_sha256=51bd632f15040ca90351f65fe1b9ddc7fe36511a125147f9189885e11d3540c0
-proposals=3
-candidate_occurrences=21
+batch_sha256=0dc53bc94b568b9d0fdc90260e70aec1cf3438f970077af6f6ccc178dbd466a7
+proposals=2
+candidate_occurrences=14
 unique_candidates=7
 new_profiles_impacted=0
-factual_votes=26
+factual_votes=19
 ```
 
-Idempotência:
+A palavra `transversalidade` não aciona mais `assess`; a matéria foi classificada
+como `taxonomy_gap` por recomendação conservadora.
+
+A aquisição automática permanece separada:
 
 ```text
-a segunda execução produziu diff zero
+1173 itens
 ```
 
-Lane paralela:
+Idempotência: segunda execução produziu diff zero.
 
-```text
-impact-source-acquisition-queue-v1.json
-1173 itens sem fonte verde ocupando slots do reviewer
-```
-
-## Apply autenticado
-
-O `/admin` agora aceita JSON de decisão externa e valida o lote antes de aplicar:
+## Apply autenticado aceita JSON de decisão externa e valida o lote antes de aplicar:
 
 ```text
 batch_id

@@ -17,7 +17,8 @@ function parseSupabase(outputText) {
 function canonicalKey(row) {
   const identity = String(row.external_id ?? '').match(/\b(PEC|PLC|PL|PR)\s*-?\s*(\d+)\s*[\/-]\s*(\d{4})\b/i) ?? String(row.title ?? '').match(/\b(PEC|PLC|PL|PR)\s+(\d+)\s*[\/-]\s*(\d{4})\b/i);
   if (!identity) return null;
-  const textHash = createHash('sha256').update(String(row.title ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/\s+/g, ' ').trim()).digest('hex');
+  const textHash = String(row.version_key ?? '').startsWith('sha256:') ? String(row.version_key).slice(7) : null;
+  if (!textHash) return null;
   return `${row.house}:${identity[1].toUpperCase()}:${identity[2]}:${identity[3]}:${textHash}`;
 }
 
@@ -34,7 +35,7 @@ const rows = parseSupabase(raw).rows ?? [];
 const profileRaw = execFileSync('npx', ['supabase', 'db', 'query', '--linked', '--output', 'json', profileSql], { cwd: root, encoding: 'utf8', maxBuffer: 8 * 1024 * 1024 });
 const profileRows = parseSupabase(profileRaw).rows ?? [];
 const resolved = [...new Set(rows.map((row) => row.proposition_version_id))].sort();
-const detailSql = `select pv.id::text as proposition_version_id, lp.house, lp.external_id, lp.title from public.proposition_versions pv join public.legislative_propositions lp on lp.id=pv.proposition_id where pv.id in (${resolved.map((id) => `'${id}'`).join(',') || 'null'});`;
+const detailSql = `select pv.id::text as proposition_version_id, pv.version_key, lp.house, lp.external_id, lp.title from public.proposition_versions pv join public.legislative_propositions lp on lp.id=pv.proposition_id where pv.id in (${resolved.map((id) => `'${id}'`).join(',') || 'null'});`;
 const detailRaw = execFileSync('npx', ['supabase', 'db', 'query', '--linked', '--output', 'json', detailSql], { cwd: root, encoding: 'utf8', maxBuffer: 8 * 1024 * 1024 });
 const details = parseSupabase(detailRaw).rows ?? [];
 const resolvedCanonicalKeys = [...new Set(details.map(canonicalKey).filter(Boolean))].sort();

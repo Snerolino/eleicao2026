@@ -27,8 +27,8 @@ function canonicalSourceGreenIds() {
 
 function canonicalEditorialKey(item) {
   const identity = String(item.proposition_external_id ?? '').match(/\b(PEC|PLC|PL|PR)\s*-?\s*(\d+)\s*[\/-]\s*(\d{4})\b/i) ?? String(item.title ?? '').match(/\b(PEC|PLC|PL|PR)\s+(\d+)\s*[\/-]\s*(\d{4})\b/i);
-  const textHash = createHash('sha256').update(String(item.title ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/\s+/g, ' ').trim()).digest('hex');
-  return `${item.house}:${identity?.[1]?.toUpperCase() ?? 'UNKNOWN'}:${identity?.[2] ?? 'UNKNOWN'}:${identity?.[3] ?? 'UNKNOWN'}:${textHash}`;
+  const textHash = item.text_hash ?? (String(item.version_key ?? '').startsWith('sha256:') ? String(item.version_key).slice(7) : null);
+  return textHash ? `${item.house}:${identity?.[1]?.toUpperCase() ?? 'UNKNOWN'}:${identity?.[2] ?? 'UNKNOWN'}:${identity?.[3] ?? 'UNKNOWN'}:${textHash}` : null;
 }
 
 function isResolvedAlias(item) {
@@ -40,7 +40,7 @@ function recommendation(item) {
   if (item.event_type === 'procedural_confirmed') {
     return { disposition: 'excluded', rationale: 'Evento classificado como procedural; não deve gerar matriz de mérito.', confidence: 0.9 };
   }
-  if (/mulher|violên|violenc|matern|lgbt|trans|travesti|gênero|genero/.test(title)) {
+  if (/mulher|violên|violenc|matern|lgbt|pessoas?\s+trans|transexual|transgêner|transgener|travesti|não\s+binár|nao\s+binar/.test(title)) {
     return { disposition: 'assess', rationale: 'Título indica possível efeito direto sobre grupo populacional; exige confirmação editorial e assessment completo.', confidence: 0.62 };
   }
   if (/estud|educa|agric|rural|abigeato|turismo|cultura|desporto/.test(title)) {
@@ -56,8 +56,9 @@ const existingMatrixIds = new Set(resolvedCatalog.existing_matrix_version_ids ??
 const resolvedCanonicalKeys = new Set(resolvedCatalog.resolved_canonical_keys ?? []);
 const sourceGreenIds = canonicalSourceGreenIds();
 const baseItems = (queue.items ?? []).filter((item) => item.house === 'alrs' && !item.version_key_collision && item.editorial_disposition === 'pending_review' && !resolvedIds.has(item.proposition_version_id) && !existingMatrixIds.has(item.proposition_version_id) && !resolvedCanonicalKeys.has(canonicalEditorialKey(item)) && !isResolvedAlias(item));
-const acquisitionItems = baseItems.filter((item) => !sourceGreenIds.has(item.proposition_version_id));
-const candidates = baseItems.filter((item) => sourceGreenIds.has(item.proposition_version_id))
+const deduplicatedItems = [...new Map(baseItems.map((item) => [canonicalEditorialKey(item) ?? `${item.house}:${item.proposition_version_id}`, item])).values()];
+const acquisitionItems = deduplicatedItems.filter((item) => !sourceGreenIds.has(item.proposition_version_id));
+const candidates = deduplicatedItems.filter((item) => sourceGreenIds.has(item.proposition_version_id))
   .map((item) => ({
     ...item,
     coverage_priority: Number(item.candidate_count ?? 0) * Number(item.factual_vote_count ?? 0),

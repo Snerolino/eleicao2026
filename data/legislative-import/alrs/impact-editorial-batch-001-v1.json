@@ -8,17 +8,17 @@
   "remote_apply": false,
   "public_approval": false,
   "totals": {
-    "proposals": 3,
-    "candidate_occurrences": 21,
+    "proposals": 2,
+    "candidate_occurrences": 14,
     "unique_candidates": 7,
     "new_profiles_impacted": 0,
-    "factual_votes": 26
+    "factual_votes": 19
   },
   "items": [
     {
       "proposition_version_id": "c82f08c4-188d-4361-961e-4d56fee4c4e3",
       "review_key": "sha256:c3f815aab7b9674552394fdfdeb286ca720cb9d17db55b7eb107358c8c8ad7c8#c82f08c4-188d-4361-961e-4d56fee4c4e3",
-      "canonical_editorial_key": "alrs:UNKNOWN:UNKNOWN:UNKNOWN:be52557336cab846b4dda4aad4211cf9c2f4e92613a6a95bb28ccc19a5007015",
+      "canonical_editorial_key": "alrs:UNKNOWN:UNKNOWN:UNKNOWN:c3f815aab7b9674552394fdfdeb286ca720cb9d17db55b7eb107358c8c8ad7c8",
       "title": "Altera a Constituição do Estado do Rio Grande do Sul para instituir mecanismos de promoção e garantia de fomento ao Turismo, e transversalidade de ações com a Cultura e o Desporto, e dá outras providências.",
       "official_event_type": "merit_confirmed",
       "candidate_count": 7,
@@ -45,9 +45,9 @@
       ],
       "unique_candidates": 7,
       "new_profiles_impacted": 0,
-      "recommended_disposition": "assess",
-      "recommended_rationale": "Título indica possível efeito direto sobre grupo populacional; exige confirmação editorial e assessment completo.",
-      "recommendation_confidence": 0.62,
+      "recommended_disposition": "taxonomy_gap",
+      "recommended_rationale": "Título sugere público específico que pode não estar representado com segurança na taxonomia v1; confirmar antes de forçar grupo.",
+      "recommendation_confidence": 0.58,
       "review_status": "pending_review",
       "remote_apply": false,
       "public_approval": false
@@ -55,45 +55,8 @@
     {
       "proposition_version_id": "3d47b25e-aab7-4a22-a815-f03b96518682",
       "review_key": "sha256:9c2102e251a41e1458eacf75d46dda085a606e63fb04f9dfed211ccbe70252a5#3d47b25e-aab7-4a22-a815-f03b96518682",
-      "canonical_editorial_key": "alrs:UNKNOWN:UNKNOWN:UNKNOWN:3930fdbeb3133b7776bc87d99f2c517542d14336f02cd8e3e310a9169305d02e",
+      "canonical_editorial_key": "alrs:UNKNOWN:UNKNOWN:UNKNOWN:9c2102e251a41e1458eacf75d46dda085a606e63fb04f9dfed211ccbe70252a5",
       "title": "Permite a cessão gratuita dos espaços físicos das unidades da rede pública estadual de ensino do Estado do Rio Grande do Sul para o funcionamento de cursos pré-universitários populares e dá outras providências. (SEI 14400-01.00/23-2)",
-      "official_event_type": "merit_confirmed",
-      "candidate_count": 7,
-      "factual_vote_count": 7,
-      "coverage_priority": 49,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
-        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
-        "733cef65-bf07-44ef-9521-36232ad0135c",
-        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
-        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
-        "d88234f9-33b6-43d4-a964-b0c5141d3621",
-        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
-      ],
-      "unique_candidates": 7,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "e297c2d0-84d6-4053-b42f-51e6450673d0",
-      "review_key": "sha256:cdfa161d6326bf4cc660af4aa8eaa4ca7c9bae0f9bf83b119ad8409b5f01e9e2#e297c2d0-84d6-4053-b42f-51e6450673d0",
-      "canonical_editorial_key": "alrs:UNKNOWN:UNKNOWN:UNKNOWN:c4297e5886ac9368edf5b54a22b849a62c95d36736c0a4e2fcf70abbbf6fc160",
-      "title": "Dispõe sobre as diretrizes para a elaboração da Lei Orçamentária para o exercício econômico-financeiro de 2027 e dá outras providências.",
       "official_event_type": "merit_confirmed",
       "candidate_count": 7,
       "factual_vote_count": 7,
@@ -127,5 +90,5 @@
       "public_approval": false
     }
   ],
-  "batch_sha256": "51bd632f15040ca90351f65fe1b9ddc7fe36511a125147f9189885e11d3540c0"
+  "batch_sha256": "0dc53bc94b568b9d0fdc90260e70aec1cf3438f970077af6f6ccc178dbd466a7"
 }
