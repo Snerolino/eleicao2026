@@ -8,10 +8,16 @@ const input = resolve(root, 'data/legislative-import/alrs/impact-review-queue-v1
 const output = resolve(root, 'data/legislative-import/alrs/impact-editorial-batch-001-v1.json');
 const batchSize = 25;
 const resolvedCatalogFile = resolve(root, 'data/legislative-import/alrs/impact-resolved-version-catalog-v1.json');
+const metadataFile = resolve(root, 'data/legislative-import/alrs/proposition-version-metadata-v1.json');
 
 function loadResolvedCatalog() {
   if (!existsSync(resolvedCatalogFile)) return { resolved_version_ids: [], existing_matrix_version_ids: [], profile_candidate_ids: [] };
   return JSON.parse(readFileSync(resolvedCatalogFile, 'utf8'));
+}
+
+function loadMetadata() {
+  if (!existsSync(metadataFile)) return {};
+  return JSON.parse(readFileSync(metadataFile, 'utf8')).items ?? {};
 }
 
 function canonicalSourceGreenIds() {
@@ -25,19 +31,22 @@ function canonicalSourceGreenIds() {
   return ids;
 }
 
-function canonicalEditorialKey(item) {
-  const identity = String(item.proposition_external_id ?? '').match(/\b(PEC|PLC|PL|PR)\s*-?\s*(\d+)\s*[\/-]\s*(\d{4})\b/i) ?? String(item.title ?? '').match(/\b(PEC|PLC|PL|PR)\s+(\d+)\s*[\/-]\s*(\d{4})\b/i);
-  const textHash = item.text_hash ?? (String(item.version_key ?? '').startsWith('sha256:') ? String(item.version_key).slice(7) : null);
-  return textHash ? `${item.house}:${identity?.[1]?.toUpperCase() ?? 'UNKNOWN'}:${identity?.[2] ?? 'UNKNOWN'}:${identity?.[3] ?? 'UNKNOWN'}:${textHash}` : null;
+function canonicalEditorialKey(item, metadata) {
+  const real = metadata[item.proposition_version_id] ?? {};
+  const identity = real.proposition_type && real.number && real.year ? [null, real.proposition_type, real.number, real.year] : null;
+  const textHash = real.version_key?.startsWith('sha256:') ? real.version_key.slice(7) : item.text_hash ?? (String(item.version_key ?? '').startsWith('sha256:') ? String(item.version_key).slice(7) : null);
+  if (!identity || !textHash) return null;
+  return `${item.house}:${identity[1].toUpperCase()}:${identity[2]}:${identity[3]}:${textHash}`;
 }
 
 function isResolvedAlias(item) {
-  return /(?:PEC|PL|PLC)\s*(?:98\/2024|125\/2021|10\/2022|100\/2025|302\/2025|172\/2026|432\/2023|169\/2025|188\/2024)/i.test(`${item.proposition_external_id ?? ''} ${item.title ?? ''}`);
+  return /(?:PEC|PL|PLC)[-_ ]?(?:98[-\/]2024|125[-\/]2021|10[-\/]2022|100[-\/]2025|302[-\/]2025|172[-\/]2026|432[-\/]2023|169[-\/]2025|188[-\/]2024|160[-\/]2026)/i.test(String(item.proposition_external_id ?? ''));
 }
 
 function recommendation(item) {
   const title = String(item.title ?? '').toLowerCase();
-  if (item.event_type === 'procedural_confirmed') {
+  const eventType = item.official_event_type ?? item.event_type;
+  if (eventType === 'procedural_confirmed') {
     return { disposition: 'excluded', rationale: 'Evento classificado como procedural; não deve gerar matriz de mérito.', confidence: 0.9 };
   }
   if (/mulher|violên|violenc|matern|lgbt|pessoas?\s+trans|transexual|transgêner|transgener|travesti|não\s+binár|nao\s+binar/.test(title)) {
@@ -50,13 +59,14 @@ function recommendation(item) {
 }
 
 const queue = JSON.parse(readFileSync(input, 'utf8'));
+const metadata = loadMetadata();
 const resolvedCatalog = loadResolvedCatalog();
 const resolvedIds = new Set(resolvedCatalog.resolved_version_ids ?? []);
 const existingMatrixIds = new Set(resolvedCatalog.existing_matrix_version_ids ?? []);
 const resolvedCanonicalKeys = new Set(resolvedCatalog.resolved_canonical_keys ?? []);
 const sourceGreenIds = canonicalSourceGreenIds();
-const baseItems = (queue.items ?? []).filter((item) => item.house === 'alrs' && item.event_type !== 'procedural_confirmed' && !item.version_key_collision && item.editorial_disposition === 'pending_review' && !resolvedIds.has(item.proposition_version_id) && !existingMatrixIds.has(item.proposition_version_id) && !resolvedCanonicalKeys.has(canonicalEditorialKey(item)) && !isResolvedAlias(item));
-const deduplicatedItems = [...new Map(baseItems.map((item) => [canonicalEditorialKey(item) ?? `${item.house}:${item.proposition_version_id}`, item])).values()];
+const baseItems = (queue.items ?? []).filter((item) => item.house === 'alrs' && (item.official_event_type ?? item.event_type) !== 'procedural_confirmed' && !item.version_key_collision && item.editorial_disposition === 'pending_review' && !resolvedIds.has(item.proposition_version_id) && !existingMatrixIds.has(item.proposition_version_id) && !resolvedCanonicalKeys.has(canonicalEditorialKey(item, metadata)) && !isResolvedAlias(item));
+const deduplicatedItems = [...new Map(baseItems.map((item) => [canonicalEditorialKey(item, metadata) ?? `${item.house}:${item.proposition_version_id}`, item])).values()];
 const acquisitionItems = deduplicatedItems.filter((item) => !sourceGreenIds.has(item.proposition_version_id));
 const candidates = deduplicatedItems.filter((item) => sourceGreenIds.has(item.proposition_version_id))
   .map((item) => ({
@@ -72,7 +82,7 @@ const candidates = deduplicatedItems.filter((item) => sourceGreenIds.has(item.pr
     return {
       proposition_version_id: item.proposition_version_id,
       review_key: item.review_key,
-      canonical_editorial_key: canonicalEditorialKey(item),
+      canonical_editorial_key: canonicalEditorialKey(item, metadata),
       title: item.title,
       official_event_type: item.official_event_type,
       candidate_count: item.candidate_count,
