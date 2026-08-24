@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 const STORAGE_KEY = 'votopraquem:saved-candidates:v1';
 
@@ -35,5 +35,7 @@ export function useSavedCandidates(validIds: Set<string>) {
 
   const clearSaved = useCallback(() => setSavedIds([]), []);
 
-  return { savedIds, savedSet: new Set(savedIds), toggleSaved, clearSaved };
+  const savedSet = useMemo(() => new Set(savedIds), [savedIds]);
+
+  return { savedIds, savedSet, toggleSaved, clearSaved };
 }

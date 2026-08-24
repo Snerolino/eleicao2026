@@ -4,3 +4,6 @@
 ## 2024-05-19 - [Deferred Search Input]
 **Learning:** Using `useDeferredValue` for a search query that filters a large list (`filterCandidates` on all candidates) improves typing responsiveness. Crucially, any downstream grouping or mapping logic that depends on the filtered results should be wrapped in `useMemo` so it doesn't unnecessarily re-compute on every single keystroke.
 **Action:** When filtering complex lists, wrap the query passed to the filter function with `useDeferredValue` and use `useMemo` for any derived computations based on the filtered output. Ensure UI elements showing counts sync with the deferred query to prevent visual mismatches.
+## 2024-05-20 - [Stable Set/Object references in Hooks]
+**Learning:** Returning a new `Set` or `Object` reference on every render from a custom hook (e.g., `new Set(ids)`) causes downstream `useMemo` hooks that depend on it to break and re-compute on every single render. This leads to massive O(N) re-computations when processing large lists of data.
+**Action:** Always wrap derived objects or sets returned by custom hooks in `useMemo` (e.g., `useMemo(() => new Set(ids), [ids])`). Additionally, ensure list item components are wrapped in `React.memo` and receive stable callbacks to prevent re-rendering identical rows.
