@@ -25,6 +25,16 @@ function canonicalSourceGreenIds() {
   return ids;
 }
 
+function canonicalEditorialKey(item) {
+  const identity = String(item.proposition_external_id ?? '').match(/\b(PEC|PLC|PL|PR)\s*-?\s*(\d+)\s*[\/-]\s*(\d{4})\b/i) ?? String(item.title ?? '').match(/\b(PEC|PLC|PL|PR)\s+(\d+)\s*[\/-]\s*(\d{4})\b/i);
+  const textHash = createHash('sha256').update(String(item.title ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/\s+/g, ' ').trim()).digest('hex');
+  return `${item.house}:${identity?.[1]?.toUpperCase() ?? 'UNKNOWN'}:${identity?.[2] ?? 'UNKNOWN'}:${identity?.[3] ?? 'UNKNOWN'}:${textHash}`;
+}
+
+function isResolvedAlias(item) {
+  return /(?:PEC|PL|PLC)\s*(?:98\/2024|125\/2021|10\/2022|100\/2025|302\/2025|172\/2026|432\/2023|169\/2025|188\/2024)/i.test(`${item.proposition_external_id ?? ''} ${item.title ?? ''}`);
+}
+
 function recommendation(item) {
   const title = String(item.title ?? '').toLowerCase();
   if (item.event_type === 'procedural_confirmed') {
@@ -43,9 +53,11 @@ const queue = JSON.parse(readFileSync(input, 'utf8'));
 const resolvedCatalog = loadResolvedCatalog();
 const resolvedIds = new Set(resolvedCatalog.resolved_version_ids ?? []);
 const existingMatrixIds = new Set(resolvedCatalog.existing_matrix_version_ids ?? []);
+const resolvedCanonicalKeys = new Set(resolvedCatalog.resolved_canonical_keys ?? []);
 const sourceGreenIds = canonicalSourceGreenIds();
-const candidates = (queue.items ?? [])
-  .filter((item) => item.house === 'alrs' && !item.version_key_collision && item.editorial_disposition === 'pending_review' && !resolvedIds.has(item.proposition_version_id) && !existingMatrixIds.has(item.proposition_version_id))
+const baseItems = (queue.items ?? []).filter((item) => item.house === 'alrs' && !item.version_key_collision && item.editorial_disposition === 'pending_review' && !resolvedIds.has(item.proposition_version_id) && !existingMatrixIds.has(item.proposition_version_id) && !resolvedCanonicalKeys.has(canonicalEditorialKey(item)) && !isResolvedAlias(item));
+const acquisitionItems = baseItems.filter((item) => !sourceGreenIds.has(item.proposition_version_id));
+const candidates = baseItems.filter((item) => sourceGreenIds.has(item.proposition_version_id))
   .map((item) => ({
     ...item,
     coverage_priority: Number(item.candidate_count ?? 0) * Number(item.factual_vote_count ?? 0),
@@ -59,6 +71,7 @@ const candidates = (queue.items ?? [])
     return {
       proposition_version_id: item.proposition_version_id,
       review_key: item.review_key,
+      canonical_editorial_key: canonicalEditorialKey(item),
       title: item.title,
       official_event_type: item.official_event_type,
       candidate_count: item.candidate_count,
@@ -100,4 +113,5 @@ const result = {
 result.batch_sha256 = createHash('sha256').update(JSON.stringify({ batch_id: result.batch_id, items: result.items })).digest('hex');
 
 writeFileSync(output, `${JSON.stringify(result, null, 2)}\n`);
+writeFileSync(resolve(root, 'data/legislative-import/alrs/impact-source-acquisition-queue-v1.json'), `${JSON.stringify({ schema_version: '1.0.0', packet_type: 'alrs_source_acquisition_queue', remote_apply: false, totals: { items: acquisitionItems.length }, items: acquisitionItems.map((item) => ({ proposition_version_id: item.proposition_version_id, review_key: item.review_key, title: item.title, source_urls: item.source_urls ?? [], lane: 'automatic_source_acquisition' })) }, null, 2)}\n`);
 console.log(JSON.stringify({ output, ...result.totals, batch_id: result.batch_id, batch_sha256: result.batch_sha256 }));

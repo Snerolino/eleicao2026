@@ -64,6 +64,9 @@
     "e80f5ad1-a8e0-49bd-8aa7-1f9fc122f7a9",
     "ebc01302-3211-487b-b1bb-6d515936b2e0"
   ],
+  "resolved_canonical_keys": [
+    "alrs:PL:212:2024:b9ed40ba4b1931d5f28807664147b2e3050a2f3f5ad886720ea580bbb25b350d"
+  ],
   "profile_candidate_ids": [
     "0a399b37-0c0d-4db9-9466-d4f02d942fa3",
     "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
@@ -82,6 +85,7 @@
   "totals": {
     "resolved_versions": 29,
     "existing_matrix_versions": 29,
+    "resolved_canonical_keys": 1,
     "profile_candidates": 13
   }
 }
