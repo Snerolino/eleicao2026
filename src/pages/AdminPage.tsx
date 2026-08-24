@@ -612,14 +612,26 @@ export function AdminPage() {
                       </span>
                     </div>
                     <div className="mt-3 flex flex-wrap gap-3 font-mono text-xs uppercase tracking-wider">
-                      <a href={item.proposition_page} target="_blank" rel="noreferrer" className="text-[var(--color-institutional)] underline-offset-4 hover:underline">
-                        Fonte da proposição
-                      </a>
-                      {item.source_urls.slice(0, 2).map((sourceUrl) => (
-                        <a key={sourceUrl} href={sourceUrl} target="_blank" rel="noreferrer" className="text-[var(--color-institutional)] underline-offset-4 hover:underline">
-                          Fonte do voto
-                        </a>
-                      ))}
+                      {(() => {
+                        const safePropPage = sanitizeUrl(item.proposition_page);
+                        return safePropPage ? (
+                          <a href={safePropPage} target="_blank" rel="noreferrer" className="text-[var(--color-institutional)] underline-offset-4 hover:underline">
+                            Fonte da proposição
+                          </a>
+                        ) : (
+                          <span className="text-gray-400">Fonte da proposição</span>
+                        );
+                      })()}
+                      {item.source_urls.slice(0, 2).map((sourceUrl) => {
+                        const safeSourceUrl = sanitizeUrl(sourceUrl);
+                        return safeSourceUrl ? (
+                          <a key={sourceUrl} href={safeSourceUrl} target="_blank" rel="noreferrer" className="text-[var(--color-institutional)] underline-offset-4 hover:underline">
+                            Fonte do voto
+                          </a>
+                        ) : (
+                          <span key={sourceUrl} className="text-gray-400">Fonte do voto</span>
+                        );
+                      })}
                     </div>
                     <div className="mt-4 grid gap-3 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
                       <label className="grid gap-1 text-sm">
