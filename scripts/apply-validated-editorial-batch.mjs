@@ -62,11 +62,30 @@ if (!apply) {
   process.exit(0);
 }
 
-const email = process.env.SUPABASE_EDITOR_EMAIL;
-const password = process.env.SUPABASE_EDITOR_PASSWORD;
-const url = process.env.VITE_SUPABASE_URL;
-const anonKey = process.env.VITE_SUPABASE_ANON_KEY;
-if (!email || !password || !url || !anonKey) throw new Error('SUPABASE_EDITOR_EMAIL, SUPABASE_EDITOR_PASSWORD, VITE_SUPABASE_URL e VITE_SUPABASE_ANON_KEY são obrigatórios; nenhum service_role é aceito.');
+const email = process.env.SUPABASE_EDITOR_EMAIL || 'admin@votopraquem.org';
+let password = process.env.SUPABASE_EDITOR_PASSWORD;
+const url = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
+const anonKey = process.env.SUPABASE_PUBLISHABLE_KEY || process.env.VITE_SUPABASE_ANON_KEY;
+if (!password && apply) {
+  if (!process.stdin.isTTY || !process.stdout.isTTY) throw new Error('SUPABASE_EDITOR_PASSWORD ausente e terminal não interativo; exporte a variável no shell local.');
+  password = await new Promise((resolvePassword, reject) => {
+    let value = '';
+    const stdin = process.stdin;
+    const onData = (chunk) => {
+      for (const char of String(chunk)) {
+        if (char === '\u0003') { stdin.setRawMode(false); stdin.pause(); reject(new Error('entrada cancelada')); return; }
+        if (char === '\r' || char === '\n') { stdin.setRawMode(false); stdin.pause(); process.stdout.write('\n'); resolvePassword(value); return; }
+        if (char === '\u007f') value = value.slice(0, -1);
+        else value += char;
+      }
+    };
+    process.stdout.write(`Senha Supabase Auth para ${email}: `);
+    stdin.setRawMode(true);
+    stdin.resume();
+    stdin.on('data', onData);
+  });
+}
+if (!email || !password || !url || !anonKey) throw new Error('SUPABASE_EDITOR_PASSWORD, SUPABASE_URL e SUPABASE_PUBLISHABLE_KEY são obrigatórios; nenhum service_role é aceito.');
 const supabase = createClient(url, anonKey, { auth: { persistSession: false, autoRefreshToken: false } });
 const { data: authData, error: authError } = await supabase.auth.signInWithPassword({ email, password });
 if (authError || !authData.user) throw new Error(`Supabase Auth falhou: ${authError?.message ?? 'usuário ausente'}`);

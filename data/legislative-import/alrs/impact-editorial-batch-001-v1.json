@@ -8,87 +8,12 @@
   "remote_apply": false,
   "public_approval": false,
   "totals": {
-    "proposals": 2,
-    "candidate_occurrences": 14,
-    "unique_candidates": 7,
+    "proposals": 0,
+    "candidate_occurrences": 0,
+    "unique_candidates": 0,
     "new_profiles_impacted": 0,
-    "factual_votes": 19
+    "factual_votes": 0
   },
-  "items": [
-    {
-      "proposition_version_id": "c82f08c4-188d-4361-961e-4d56fee4c4e3",
-      "review_key": "sha256:c3f815aab7b9674552394fdfdeb286ca720cb9d17db55b7eb107358c8c8ad7c8#c82f08c4-188d-4361-961e-4d56fee4c4e3",
-      "canonical_editorial_key": "alrs:PEC:302:2025:c3f815aab7b9674552394fdfdeb286ca720cb9d17db55b7eb107358c8c8ad7c8",
-      "title": "Altera a Constituição do Estado do Rio Grande do Sul para instituir mecanismos de promoção e garantia de fomento ao Turismo, e transversalidade de ações com a Cultura e o Desporto, e dá outras providências.",
-      "official_event_type": "merit_confirmed",
-      "candidate_count": 7,
-      "factual_vote_count": 12,
-      "coverage_priority": 84,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
-        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
-        "733cef65-bf07-44ef-9521-36232ad0135c",
-        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
-        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
-        "d88234f9-33b6-43d4-a964-b0c5141d3621",
-        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
-      ],
-      "unique_candidates": 7,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "taxonomy_gap",
-      "recommended_rationale": "Título sugere público específico que pode não estar representado com segurança na taxonomia v1; confirmar antes de forçar grupo.",
-      "recommendation_confidence": 0.58,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "3d47b25e-aab7-4a22-a815-f03b96518682",
-      "review_key": "sha256:9c2102e251a41e1458eacf75d46dda085a606e63fb04f9dfed211ccbe70252a5#3d47b25e-aab7-4a22-a815-f03b96518682",
-      "canonical_editorial_key": "alrs:PL:432:2023:9c2102e251a41e1458eacf75d46dda085a606e63fb04f9dfed211ccbe70252a5",
-      "title": "Permite a cessão gratuita dos espaços físicos das unidades da rede pública estadual de ensino do Estado do Rio Grande do Sul para o funcionamento de cursos pré-universitários populares e dá outras providências. (SEI 14400-01.00/23-2)",
-      "official_event_type": "merit_confirmed",
-      "candidate_count": 7,
-      "factual_vote_count": 7,
-      "coverage_priority": 49,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
-        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
-        "733cef65-bf07-44ef-9521-36232ad0135c",
-        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
-        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
-        "d88234f9-33b6-43d4-a964-b0c5141d3621",
-        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
-      ],
-      "unique_candidates": 7,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    }
-  ],
-  "batch_sha256": "d9cdc79a43aad68516a853900d9b4edc173608dc5e628589f3afd38af22b4107"
+  "items": [],
+  "batch_sha256": "a14f7edb230b3f501e48020b6c43cd620581d28f340d71b086004206a06c4c91"
 }
