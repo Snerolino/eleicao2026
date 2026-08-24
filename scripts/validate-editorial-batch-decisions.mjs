@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import { readFileSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { resolve } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
@@ -20,6 +21,9 @@ const batchIds = new Set((batch.items ?? []).map((item) => item.proposition_vers
 const rows = decisions.items ?? decisions.decisions ?? [];
 const errors = [];
 const seen = new Set();
+const expectedBatchSha = createHash('sha256').update(JSON.stringify({ batch_id: batch.batch_id, items: batch.items })).digest('hex');
+if (decisions.batch_id !== batch.batch_id) errors.push('batch_id_mismatch');
+if (decisions.batch_sha256 !== expectedBatchSha) errors.push('batch_sha256_mismatch');
 
 for (const row of rows) {
   const id = row.proposition_version_id;
@@ -28,6 +32,8 @@ for (const row of rows) {
   seen.add(id);
   if (!allowed.has(row.decision)) errors.push(`${id}:invalid_decision`);
   if (row.decision === 'needs_changes' && String(row.notes ?? '').trim().length < 20) errors.push(`${id}:needs_changes_requires_notes`);
+  const expected = (batch.items ?? []).find((item) => item.proposition_version_id === id);
+  if (!expected || row.review_key !== expected.review_key) errors.push(`${id}:review_key_mismatch`);
 }
 for (const id of batchIds) if (!seen.has(id)) errors.push(`${id}:missing_decision`);
 
@@ -35,6 +41,8 @@ const result = {
   schema_version: '1.0.0',
   packet_type: 'alrs_editorial_batch_decision_validation',
   batch_packet_type: batch.packet_type,
+  batch_id: batch.batch_id,
+  batch_sha256: expectedBatchSha,
   remote_apply: false,
   valid: errors.length === 0,
   totals: { expected: batchIds.size, received: rows.length, approved: rows.filter((row) => row.decision === 'approved').length, needs_changes: rows.filter((row) => row.decision === 'needs_changes').length, errors: errors.length },

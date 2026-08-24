@@ -2,14 +2,17 @@
   "schema_version": "1.0.0",
   "packet_type": "alrs_impact_editorial_batch_proposals",
   "unit_of_work": "one_proposition_version_fanout_to_all_voters",
+  "batch_id": "alrs-impact-editorial-batch-001-v2",
   "batch_size": 25,
   "review_status": "pending_review",
   "remote_apply": false,
   "public_approval": false,
   "totals": {
     "proposals": 25,
-    "candidate_coverage": 161,
-    "factual_votes": 171
+    "candidate_occurrences": 159,
+    "unique_candidates": 7,
+    "new_profiles_impacted": 0,
+    "factual_votes": 169
   },
   "items": [
     {
@@ -29,7 +32,18 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
       ],
-      "source_gate": "needs_substantive_source_check",
+      "source_gate": "green",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 7,
+      "new_profiles_impacted": 0,
       "recommended_disposition": "assess",
       "recommended_rationale": "Título indica possível efeito direto sobre grupo populacional; exige confirmação editorial e assessment completo.",
       "recommendation_confidence": 0.62,
@@ -55,34 +69,20 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
       ],
       "source_gate": "needs_substantive_source_check",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 7,
+      "new_profiles_impacted": 0,
       "recommended_disposition": "no_direct_population_group",
       "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
       "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "7c132ddc-b571-43ee-b2bc-e877f053480a",
-      "review_key": "sha256:7cf39a1e311538faa0de87845c8535ad54b09c3760f94837682c5d81a335ad31#7c132ddc-b571-43ee-b2bc-e877f053480a",
-      "title": "Altera a Lei Ordinária n.º 15.988 de 07 de agosto de 2023, que consolida a legislação relativa às mulheres vítimas de violência no âmbito do Estado do Rio Grande do Sul.",
-      "official_event_type": "merit_confirmed",
-      "candidate_count": 7,
-      "factual_vote_count": 7,
-      "coverage_priority": 49,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
-      ],
-      "source_gate": "needs_substantive_source_check",
-      "recommended_disposition": "assess",
-      "recommended_rationale": "Título indica possível efeito direto sobre grupo populacional; exige confirmação editorial e assessment completo.",
-      "recommendation_confidence": 0.62,
       "review_status": "pending_review",
       "remote_apply": false,
       "public_approval": false
@@ -104,35 +104,21 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
       ],
-      "source_gate": "needs_substantive_source_check",
+      "source_gate": "green",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 7,
+      "new_profiles_impacted": 0,
       "recommended_disposition": "no_direct_population_group",
       "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
       "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "a57b1c83-3749-4c45-85b7-2408db20f5a2",
-      "review_key": "sha256:c1f571e5077d13d1486261d3db0fb706cee52efd00465184fef79a872f0772ee#a57b1c83-3749-4c45-85b7-2408db20f5a2",
-      "title": "Dispõe sobre a criação do Programa de Defesa pessoal para Mulheres “RS POR ELAS” no âmbito do Estado do Rio Grande do Sul e dá outras providências.(SEI 4237-0100/21-8)",
-      "official_event_type": "merit_confirmed",
-      "candidate_count": 7,
-      "factual_vote_count": 7,
-      "coverage_priority": 49,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
-      ],
-      "source_gate": "needs_substantive_source_check",
-      "recommended_disposition": "assess",
-      "recommended_rationale": "Título indica possível efeito direto sobre grupo populacional; exige confirmação editorial e assessment completo.",
-      "recommendation_confidence": 0.62,
       "review_status": "pending_review",
       "remote_apply": false,
       "public_approval": false
@@ -154,7 +140,18 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
       ],
-      "source_gate": "needs_substantive_source_check",
+      "source_gate": "green",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 7,
+      "new_profiles_impacted": 0,
       "recommended_disposition": "no_direct_population_group",
       "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
       "recommendation_confidence": 0.55,
@@ -180,6 +177,17 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
       ],
       "source_gate": "needs_substantive_source_check",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 7,
+      "new_profiles_impacted": 0,
       "recommended_disposition": "no_direct_population_group",
       "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
       "recommendation_confidence": 0.55,
@@ -205,6 +213,17 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
       ],
       "source_gate": "needs_substantive_source_check",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 7,
+      "new_profiles_impacted": 0,
       "recommended_disposition": "no_direct_population_group",
       "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
       "recommendation_confidence": 0.55,
@@ -230,6 +249,17 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
       ],
       "source_gate": "needs_substantive_source_check",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 7,
+      "new_profiles_impacted": 0,
       "recommended_disposition": "no_direct_population_group",
       "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
       "recommendation_confidence": 0.55,
@@ -255,6 +285,17 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
       ],
       "source_gate": "needs_substantive_source_check",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 7,
+      "new_profiles_impacted": 0,
       "recommended_disposition": "no_direct_population_group",
       "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
       "recommendation_confidence": 0.55,
@@ -280,30 +321,17 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
       ],
       "source_gate": "needs_substantive_source_check",
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "1eb30d74-271c-4315-b7f6-54849d31c9bc",
-      "review_key": "sha256:0d0b779976354f6bd951ce8d8bff213f63b1b515712734564144254577e6aa51#1eb30d74-271c-4315-b7f6-54849d31c9bc",
-      "title": "Institui a política de prevenção a crimes sexuais contra adolescentes, no Estado do Rio Grande do Sul, denominado “Projeto Libertar”.",
-      "official_event_type": null,
-      "candidate_count": 6,
-      "factual_vote_count": 6,
-      "coverage_priority": 36,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
       ],
-      "source_gate": "needs_substantive_source_check",
+      "unique_candidates": 7,
+      "new_profiles_impacted": 0,
       "recommended_disposition": "no_direct_population_group",
       "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
       "recommendation_confidence": 0.55,
@@ -328,33 +356,19 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
       ],
       "source_gate": "needs_substantive_source_check",
+      "candidate_ids": [
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 6,
+      "new_profiles_impacted": 0,
       "recommended_disposition": "no_direct_population_group",
       "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
       "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "10887f06-837a-47ed-aa52-f05560d17742",
-      "review_key": "sha256:1a61707c7c826f5b75d1b3e2725f6d4c473e3852568f5d3fac7a94540c5cab1a#10887f06-837a-47ed-aa52-f05560d17742",
-      "title": "Dispõe sobre a criação da Patrulha Estadual de Prevenção à Violência Doméstica e Familiar contra Crianças e Adolescentes.",
-      "official_event_type": null,
-      "candidate_count": 6,
-      "factual_vote_count": 6,
-      "coverage_priority": 36,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
-      ],
-      "source_gate": "needs_substantive_source_check",
-      "recommended_disposition": "assess",
-      "recommended_rationale": "Título indica possível efeito direto sobre grupo populacional; exige confirmação editorial e assessment completo.",
-      "recommendation_confidence": 0.62,
       "review_status": "pending_review",
       "remote_apply": false,
       "public_approval": false
@@ -376,6 +390,16 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
       ],
       "source_gate": "needs_substantive_source_check",
+      "candidate_ids": [
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 6,
+      "new_profiles_impacted": 0,
       "recommended_disposition": "no_direct_population_group",
       "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
       "recommendation_confidence": 0.55,
@@ -400,6 +424,16 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
       ],
       "source_gate": "needs_substantive_source_check",
+      "candidate_ids": [
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 6,
+      "new_profiles_impacted": 0,
       "recommended_disposition": "taxonomy_gap",
       "recommended_rationale": "Título sugere público específico que pode não estar representado com segurança na taxonomia v1; confirmar antes de forçar grupo.",
       "recommendation_confidence": 0.58,
@@ -424,6 +458,16 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
       ],
       "source_gate": "needs_substantive_source_check",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 6,
+      "new_profiles_impacted": 0,
       "recommended_disposition": "no_direct_population_group",
       "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
       "recommendation_confidence": 0.55,
@@ -448,6 +492,16 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
       ],
       "source_gate": "needs_substantive_source_check",
+      "candidate_ids": [
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 6,
+      "new_profiles_impacted": 0,
       "recommended_disposition": "no_direct_population_group",
       "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
       "recommendation_confidence": 0.55,
@@ -472,57 +526,19 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
       ],
       "source_gate": "needs_substantive_source_check",
+      "candidate_ids": [
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 6,
+      "new_profiles_impacted": 0,
       "recommended_disposition": "assess",
       "recommended_rationale": "Título indica possível efeito direto sobre grupo populacional; exige confirmação editorial e assessment completo.",
       "recommendation_confidence": 0.62,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "7dd6f932-3e02-4eaa-8f5c-b7363545000c",
-      "review_key": "sha256:6e9b052a90e83cedccb28d63b11f3bbe4b46173f5d4ed899dd8236083f2c33dc#7dd6f932-3e02-4eaa-8f5c-b7363545000c",
-      "title": "Altera a Lei n.º 15.950, de 9 de janeiro de 2023, que consolida a legislação estadual relativa a eventos e datas estaduais, instituindo o Calendário Oficial de Eventos e Datas Comemorativas do Estado do Rio Grande do Sul, para incluir o Março Lilás, o dia de conscientização sobre HPV, o dia da prevenção ao câncer de colo do útero, e dá outras providências.",
-      "official_event_type": null,
-      "candidate_count": 6,
-      "factual_vote_count": 6,
-      "coverage_priority": 36,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
-      ],
-      "source_gate": "needs_substantive_source_check",
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "4b72b569-1ad0-4c3e-af07-9062f49f4a76",
-      "review_key": "sha256:96d57b4c1dd856d40c32b886606687bf188d6cbbb26f1eda628d0402fe0f0428#4b72b569-1ad0-4c3e-af07-9062f49f4a76",
-      "title": "Altera a Lei nº 15.606, de 29 de abril de 2021, que institui a Política Estadual de Proteção dos Direitos da Pessoa com Fibromialgia – Lei Daniel Lenz, tornando obrigatória a inclusão do símbolo mundial da Fibromialgia nas placas ou avisos de atendimento prioritário no Estado do Rio Grande do Sul.",
-      "official_event_type": null,
-      "candidate_count": 6,
-      "factual_vote_count": 6,
-      "coverage_priority": 36,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
-      ],
-      "source_gate": "needs_substantive_source_check",
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
       "review_status": "pending_review",
       "remote_apply": false,
       "public_approval": false
@@ -544,6 +560,16 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
       ],
       "source_gate": "needs_substantive_source_check",
+      "candidate_ids": [
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 6,
+      "new_profiles_impacted": 0,
       "recommended_disposition": "no_direct_population_group",
       "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
       "recommendation_confidence": 0.55,
@@ -568,6 +594,16 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
       ],
       "source_gate": "needs_substantive_source_check",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 6,
+      "new_profiles_impacted": 0,
       "recommended_disposition": "no_direct_population_group",
       "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
       "recommendation_confidence": 0.55,
@@ -592,6 +628,16 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
       ],
       "source_gate": "needs_substantive_source_check",
+      "candidate_ids": [
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 6,
+      "new_profiles_impacted": 0,
       "recommended_disposition": "assess",
       "recommended_rationale": "Título indica possível efeito direto sobre grupo populacional; exige confirmação editorial e assessment completo.",
       "recommendation_confidence": 0.62,
@@ -616,6 +662,220 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
       ],
       "source_gate": "needs_substantive_source_check",
+      "candidate_ids": [
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 6,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
+      "recommendation_confidence": 0.55,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "503d8a0a-cada-4173-91bd-16351a908099",
+      "review_key": "sha256:d216dcaf4063cb6819eda4e98e7b890dd976330f593a3b84dcdfaeba50e603e4#503d8a0a-cada-4173-91bd-16351a908099",
+      "title": "Altera a Lei nº 15.266, de 24 de janeiro de 2019, que dispõe sobre o Estatuto do Concurso Público no âmbito do Estado do Rio Grande do Sul e dá outras providências.",
+      "official_event_type": null,
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "coverage_priority": 36,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "source_gate": "needs_substantive_source_check",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 6,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
+      "recommendation_confidence": 0.55,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "8409e305-f84c-4d37-80a5-da404955ce03",
+      "review_key": "texto-PL-10-2022#8409e305-f84c-4d37-80a5-da404955ce03",
+      "title": "PL 10/2022",
+      "official_event_type": null,
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "coverage_priority": 36,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "source_gate": "needs_substantive_source_check",
+      "candidate_ids": [
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 6,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
+      "recommendation_confidence": 0.55,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "d7c89692-390a-4ae4-9e44-80cfa00700b7",
+      "review_key": "texto-PL-100-2025#d7c89692-390a-4ae4-9e44-80cfa00700b7",
+      "title": "PL 100/2025",
+      "official_event_type": null,
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "coverage_priority": 36,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "source_gate": "needs_substantive_source_check",
+      "candidate_ids": [
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 6,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
+      "recommendation_confidence": 0.55,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "fac961e2-5f5b-408f-9a84-73db467f7b2c",
+      "review_key": "texto-PL-160-2026#fac961e2-5f5b-408f-9a84-73db467f7b2c",
+      "title": "PL 160/2026",
+      "official_event_type": null,
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "coverage_priority": 36,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "source_gate": "needs_substantive_source_check",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 6,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
+      "recommendation_confidence": 0.55,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "c3261579-d4c1-4df3-8e5a-082243d76d47",
+      "review_key": "texto-PL-169-2025#c3261579-d4c1-4df3-8e5a-082243d76d47",
+      "title": "PL 169/2025",
+      "official_event_type": null,
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "coverage_priority": 36,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "source_gate": "needs_substantive_source_check",
+      "candidate_ids": [
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 6,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
+      "recommendation_confidence": 0.55,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "b56b8cf3-df5d-4b72-8bac-10d3cb95de8e",
+      "review_key": "texto-PL-188-2024#b56b8cf3-df5d-4b72-8bac-10d3cb95de8e",
+      "title": "PL 188/2024",
+      "official_event_type": null,
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "coverage_priority": 36,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "source_gate": "needs_substantive_source_check",
+      "candidate_ids": [
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "78b93657-f3a2-4242-9d39-d517c45ce6dd",
+        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621",
+        "ed7adfba-ad12-47d9-8eb5-1cf91184e3b1"
+      ],
+      "unique_candidates": 6,
+      "new_profiles_impacted": 0,
       "recommended_disposition": "no_direct_population_group",
       "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
       "recommendation_confidence": 0.55,
@@ -623,5 +883,6 @@
       "remote_apply": false,
       "public_approval": false
     }
-  ]
+  ],
+  "batch_sha256": "74cd2b42f0f3188e91adf6572330fc081287870ec2eafd4598915c40980d33b2"
 }

@@ -7,6 +7,7 @@ import { sanitizeUrl } from '@/utils/sanitizeUrl';
 import p2EditorialPack from '../../data/legislative-import/alrs/p2-microbatch-2-editorial-review-pack.json';
 import p2EditorialPack4 from '../../data/legislative-import/alrs/p2-microbatch-4-editorial-review-pack.json';
 import p2EditorialPack5 from '../../data/legislative-import/alrs/p2-microbatch-5-editorial-review-pack.json';
+import editorialBatch001 from '../../data/legislative-import/alrs/impact-editorial-batch-001-v1.json';
 
 const adminOwner = 'admin@votopraquem.org';
 
@@ -70,6 +71,14 @@ type P2EditorialItem = {
 
 const p2EditorialItems = [...(p2EditorialPack.items ?? []), ...(p2EditorialPack4.items ?? []), ...(p2EditorialPack5.items ?? [])] as P2EditorialItem[];
 
+type BatchDecision = {
+  proposition_version_id: string;
+  review_key: string;
+  decision: 'approved' | 'needs_changes';
+  notes?: string;
+  rationale?: string;
+};
+
 type LoadState = 'idle' | 'loading' | 'ready' | 'error';
 
 function formatCategory(category: string) {
@@ -94,6 +103,8 @@ export function AdminPage() {
   const [p2Decisions, setP2Decisions] = useState<Record<string, P2Disposition>>({});
   const [p2Notes, setP2Notes] = useState<Record<string, string>>({});
   const [p2Completed, setP2Completed] = useState<Set<string>>(new Set());
+  const [batchDecisions, setBatchDecisions] = useState<BatchDecision[] | null>(null);
+  const [batchBusy, setBatchBusy] = useState(false);
 
   usePageMetadata(
     'Administração — Portal Transparência Eleitoral RS',
@@ -411,6 +422,52 @@ export function AdminPage() {
     setMessage(`Disposição registrada para ${item.official_match_key}.`);
   }
 
+  async function loadBatchDecisions(event: FormEvent<HTMLInputElement>) {
+    const file = event.currentTarget.files?.[0];
+    if (!file) return;
+    try {
+      const payload = JSON.parse(await file.text()) as { batch_id?: string; batch_sha256?: string; items?: BatchDecision[]; decisions?: BatchDecision[] };
+      const items = payload.items ?? payload.decisions ?? [];
+      const expectedItems = editorialBatch001.items as Array<{ proposition_version_id: string; review_key: string }>;
+      const expectedIds = new Set(expectedItems.map((item) => item.proposition_version_id));
+      const valid = payload.batch_id === editorialBatch001.batch_id
+        && payload.batch_sha256 === editorialBatch001.batch_sha256
+        && items.length === expectedItems.length
+        && items.every((item) => expectedIds.has(item.proposition_version_id) && expectedItems.find((expected) => expected.proposition_version_id === item.proposition_version_id)?.review_key === item.review_key && ['approved', 'needs_changes'].includes(item.decision));
+      if (!valid) {
+        setBatchDecisions(null);
+        setMessage('Lote recusado: batch_id, batch_sha256, IDs ou review_keys não correspondem exatamente ao pacote atual.');
+        return;
+      }
+      setBatchDecisions(items);
+      setMessage(`Lote válido carregado: ${items.filter((item) => item.decision === 'approved').length} decisões approved e ${items.filter((item) => item.decision === 'needs_changes').length} exceções.`);
+    } catch {
+      setBatchDecisions(null);
+      setMessage('JSON de decisões inválido.');
+    }
+  }
+
+  async function applyBatchDecisions() {
+    if (!supabase || !batchDecisions) return;
+    setBatchBusy(true);
+    const approved = batchDecisions.filter((item) => item.decision === 'approved');
+    const results = await Promise.all(approved.map(async (decision) => {
+      const item = (editorialBatch001.items as Array<{ proposition_version_id: string; title: string; recommended_rationale: string }>).find((candidate) => candidate.proposition_version_id === decision.proposition_version_id);
+      if (!item) return { ok: false };
+      const { error } = await (supabase as any).rpc('record_impact_editorial_disposition', {
+        p_proposition_version_id: item.proposition_version_id,
+        p_review_key: decision.review_key,
+        p_title: item.title,
+        p_disposition: (editorialBatch001.items as any[]).find((candidate) => candidate.proposition_version_id === item.proposition_version_id)?.recommended_disposition,
+        p_rationale: decision.rationale ?? decision.notes ?? item.recommended_rationale,
+      });
+      return { ok: !error };
+    }));
+    setP2Completed((current) => new Set([...current, ...approved.filter((_, index) => results[index]?.ok).map((item) => item.proposition_version_id)]));
+    setBatchBusy(false);
+    setMessage(`Aplicação em lote concluída: ${results.filter((result) => result.ok).length}/${approved.length} decisões approved via RPC; ${batchDecisions.length - approved.length} exceções mantidas.`);
+  }
+
   const pendingP2Items = p2EditorialItems.filter((item) => !p2Completed.has(item.proposition_version_id));
   const reviewedP2Items = p2EditorialItems.filter((item) => p2Completed.has(item.proposition_version_id));
   const sortedP2Items = [...pendingP2Items, ...reviewedP2Items];
@@ -585,6 +642,16 @@ export function AdminPage() {
                 ))}
               </div>
             )}
+          </section>
+
+          <section className="mt-8 border-t-2 border-[var(--color-ink)] pt-6" aria-label="Aplicação editorial em lote">
+            <h2 className="text-2xl">Aplicação editorial em lote</h2>
+            <p className="mt-2 text-sm text-[var(--color-muted-ink)]">Carregue o JSON revisado externamente. O portal valida batch_id, batch_sha256 e review_key antes de chamar as RPCs autenticadas. Apenas decisões approved são aplicadas; needs_changes permanece como exceção.</p>
+            <label className="mt-4 grid gap-2 text-sm">
+              <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">JSON de decisões do lote {editorialBatch001.batch_id}</span>
+              <input type="file" accept="application/json,.json" onChange={(event) => void loadBatchDecisions(event)} className="block w-full text-sm" />
+            </label>
+            {batchDecisions ? <div className="mt-4 flex flex-wrap items-center gap-3"><span className="font-mono text-xs uppercase tracking-wider text-green-800">{batchDecisions.length} decisões validadas</span><button type="button" disabled={batchBusy} onClick={() => void applyBatchDecisions()} className="rounded-sm border border-green-700 px-3 py-2 font-mono text-xs uppercase tracking-wider text-green-800 disabled:opacity-60">{batchBusy ? 'Aplicando…' : 'Aplicar approved do lote via RPC'}</button></div> : null}
           </section>
 
           <section className="mt-8 border-t border-[var(--color-border-editorial)] pt-6" aria-label="Lote P2 aguardando disposição editorial">
