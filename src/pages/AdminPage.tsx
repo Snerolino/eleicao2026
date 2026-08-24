@@ -434,7 +434,7 @@ export function AdminPage() {
       const context = contexts.find((candidate) => candidate.batch_id === payload.batch_id && candidate.batch_sha256 === payload.batch_sha256);
       const items = payload.items ?? payload.decisions ?? [];
       const expectedItems = context?.items ?? [];
-      const valid = Boolean(context) && items.length === expectedItems.length && items.every((item) => expectedItems.some((expected) => expected.proposition_version_id === item.proposition_version_id && expected.review_key === item.review_key) && ['approved', 'needs_changes'].includes(item.decision));
+      const valid = Boolean(context) && items.length === expectedItems.length && items.every((item) => expectedItems.some((expected) => expected.proposition_version_id === item.proposition_version_id && expected.review_key === item.review_key) && ['approved', 'needs_changes'].includes(item.decision) && (item.decision === 'approved' || (Boolean(item.disposition) && String(item.notes ?? '').trim().length >= 20)));
       if (!valid || !context) {
         setBatchDecisions(null);
         setBatchContext(null);

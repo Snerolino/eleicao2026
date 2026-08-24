@@ -31,7 +31,7 @@ for (const row of rows) {
   if (seen.has(id)) errors.push(`${id}:duplicate_decision`);
   seen.add(id);
   if (!allowed.has(row.decision)) errors.push(`${id}:invalid_decision`);
-  if (row.decision === 'needs_changes' && String(row.notes ?? '').trim().length < 20) errors.push(`${id}:needs_changes_requires_notes`);
+  if (row.decision === 'needs_changes' && (!row.disposition || String(row.notes ?? '').trim().length < 20)) errors.push(`${id}:needs_changes_requires_disposition_and_notes`);
   const expected = (batch.items ?? []).find((item) => item.proposition_version_id === id);
   if (!expected || row.review_key !== expected.review_key) errors.push(`${id}:review_key_mismatch`);
 }
