@@ -457,7 +457,7 @@ export function AdminPage() {
     const results = await Promise.all(batchDecisions.map(async (decision) => {
       const item = batchContext.items.find((candidate) => candidate.proposition_version_id === decision.proposition_version_id);
       if (!item) return { ok: false, id: decision.proposition_version_id };
-      const disposition = decision.disposition ?? item.disposition ?? item.recommended_disposition;
+      const disposition = decision.disposition ?? item.disposition ?? (decision.decision === 'needs_changes' && /taxonomy_gap|lacuna de taxonomia/i.test(decision.notes ?? '') ? 'taxonomy_gap' : decision.decision === 'needs_changes' && /no_direct_population_group|no destinatário populacional direto|sem destinatário populacional direto/i.test(decision.notes ?? '') ? 'no_direct_population_group' : item.recommended_disposition);
       const rpcName = decision.decision === 'needs_changes' ? 'record_impact_editorial_exception' : 'record_impact_editorial_disposition';
       const { error } = await (supabase as any).rpc(rpcName, {
         p_proposition_version_id: item.proposition_version_id,
