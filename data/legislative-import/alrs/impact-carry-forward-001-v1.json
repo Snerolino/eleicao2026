@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "alrs_editorial_carry_forward_batch",
+  "batch_id": "alrs-impact-carry-forward-001-v1",
+  "source_batch_id": "alrs-impact-editorial-batch-001-v2",
+  "source_batch_sha256": "0dc53bc94b568b9d0fdc90260e70aec1cf3438f970077af6f6ccc178dbd466a7",
+  "remote_apply": false,
+  "items": [
+    {
+      "proposition_version_id": "c82f08c4-188d-4361-961e-4d56fee4c4e3",
+      "title": "PEC 302/2025",
+      "review_key": "sha256:c3f815aab7b9674552394fdfdeb286ca720cb9d17db55b7eb107358c8c8ad7c8#c82f08c4-188d-4361-961e-4d56fee4c4e3",
+      "decision": "approved",
+      "disposition": "no_direct_population_group",
+      "rationale": "A PEC institui mecanismos gerais de fomento ao turismo, cultura e desporto, sem destinatário populacional direto específico da taxonomia v1. Não criar assessment para este item.",
+      "source_reopen": false
+    },
+    {
+      "proposition_version_id": "3d47b25e-aab7-4a22-a815-f03b96518682",
+      "title": "Cursos pré-universitários populares",
+      "review_key": "sha256:9c2102e251a41e1458eacf75d46dda085a606e63fb04f9dfed211ccbe70252a5#3d47b25e-aab7-4a22-a815-f03b96518682",
+      "decision": "approved",
+      "disposition": "taxonomy_gap",
+      "rationale": "A proposição beneficia diretamente participantes de cursos pré-universitários populares, mas a taxonomia v1 não possui grupo geral adequado para estudantes ou acesso educacional. Não forçar grupo existente e não criar assessment na v1.",
+      "source_reopen": false
+    },
+    {
+      "proposition_version_id": "f209f023-b385-4975-b59e-02d33a91fcdc",
+      "title": "PL 172/2026",
+      "review_key": "texto-PL-172-2026#f209f023-b385-4975-b59e-02d33a91fcdc",
+      "decision": "approved",
+      "disposition": "no_direct_population_group",
+      "rationale": "Decisão humana aprovada anteriormente: PL 172/2026 não possui grupo populacional direto aplicável na taxonomia v1 e não deve gerar assessment.",
+      "source_reopen": false
+    }
+  ],
+  "batch_sha256": "ff092c7a41b66df68100009664272898ee726c18b71dbaebdf5ad344b563d1a3"
+}

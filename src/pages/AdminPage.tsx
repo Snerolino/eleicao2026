@@ -8,6 +8,7 @@ import p2EditorialPack from '../../data/legislative-import/alrs/p2-microbatch-2-
 import p2EditorialPack4 from '../../data/legislative-import/alrs/p2-microbatch-4-editorial-review-pack.json';
 import p2EditorialPack5 from '../../data/legislative-import/alrs/p2-microbatch-5-editorial-review-pack.json';
 import editorialBatch001 from '../../data/legislative-import/alrs/impact-editorial-batch-001-v1.json';
+import editorialCarryForward from '../../data/legislative-import/alrs/impact-carry-forward-001-v1.json';
 
 const adminOwner = 'admin@votopraquem.org';
 
@@ -77,6 +78,7 @@ type BatchDecision = {
   decision: 'approved' | 'needs_changes';
   notes?: string;
   rationale?: string;
+  disposition?: P2Disposition;
 };
 
 type LoadState = 'idle' | 'loading' | 'ready' | 'error';
@@ -105,6 +107,7 @@ export function AdminPage() {
   const [p2Completed, setP2Completed] = useState<Set<string>>(new Set());
   const [batchDecisions, setBatchDecisions] = useState<BatchDecision[] | null>(null);
   const [batchBusy, setBatchBusy] = useState(false);
+  const [batchContext, setBatchContext] = useState<{ batch_id: string; batch_sha256: string; items: Array<{ proposition_version_id: string; review_key: string; title?: string; recommended_disposition?: P2Disposition; rationale?: string; recommended_rationale?: string; disposition?: P2Disposition }> } | null>(null);
 
   usePageMetadata(
     'Administração — Portal Transparência Eleitoral RS',
@@ -427,45 +430,49 @@ export function AdminPage() {
     if (!file) return;
     try {
       const payload = JSON.parse(await file.text()) as { batch_id?: string; batch_sha256?: string; items?: BatchDecision[]; decisions?: BatchDecision[] };
+      const contexts = [editorialBatch001, editorialCarryForward] as Array<{ batch_id: string; batch_sha256: string; items: Array<{ proposition_version_id: string; review_key: string; title?: string; recommended_disposition?: P2Disposition; rationale?: string; recommended_rationale?: string; disposition?: P2Disposition }> }>;
+      const context = contexts.find((candidate) => candidate.batch_id === payload.batch_id && candidate.batch_sha256 === payload.batch_sha256);
       const items = payload.items ?? payload.decisions ?? [];
-      const expectedItems = editorialBatch001.items as Array<{ proposition_version_id: string; review_key: string }>;
-      const expectedIds = new Set(expectedItems.map((item) => item.proposition_version_id));
-      const valid = payload.batch_id === editorialBatch001.batch_id
-        && payload.batch_sha256 === editorialBatch001.batch_sha256
-        && items.length === expectedItems.length
-        && items.every((item) => expectedIds.has(item.proposition_version_id) && expectedItems.find((expected) => expected.proposition_version_id === item.proposition_version_id)?.review_key === item.review_key && ['approved', 'needs_changes'].includes(item.decision));
-      if (!valid) {
+      const expectedItems = context?.items ?? [];
+      const valid = Boolean(context) && items.length === expectedItems.length && items.every((item) => expectedItems.some((expected) => expected.proposition_version_id === item.proposition_version_id && expected.review_key === item.review_key) && ['approved', 'needs_changes'].includes(item.decision));
+      if (!valid || !context) {
         setBatchDecisions(null);
-        setMessage('Lote recusado: batch_id, batch_sha256, IDs ou review_keys não correspondem exatamente ao pacote atual.');
+        setBatchContext(null);
+        setMessage('Lote recusado: batch_id, batch_sha256, IDs ou review_keys não correspondem exatamente a um pacote atual.');
         return;
       }
+      setBatchContext(context);
       setBatchDecisions(items);
-      setMessage(`Lote válido carregado: ${items.filter((item) => item.decision === 'approved').length} decisões approved e ${items.filter((item) => item.decision === 'needs_changes').length} exceções.`);
+      setMessage(`Lote válido carregado: ${items.filter((item) => item.decision === 'approved').length} approved e ${items.filter((item) => item.decision === 'needs_changes').length} exceções.`);
     } catch {
       setBatchDecisions(null);
+      setBatchContext(null);
       setMessage('JSON de decisões inválido.');
     }
   }
 
   async function applyBatchDecisions() {
-    if (!supabase || !batchDecisions) return;
+    if (!supabase || !batchDecisions || !batchContext) return;
     setBatchBusy(true);
-    const approved = batchDecisions.filter((item) => item.decision === 'approved');
-    const results = await Promise.all(approved.map(async (decision) => {
-      const item = (editorialBatch001.items as Array<{ proposition_version_id: string; title: string; recommended_rationale: string }>).find((candidate) => candidate.proposition_version_id === decision.proposition_version_id);
-      if (!item) return { ok: false };
-      const { error } = await (supabase as any).rpc('record_impact_editorial_disposition', {
+    const results = await Promise.all(batchDecisions.map(async (decision) => {
+      const item = batchContext.items.find((candidate) => candidate.proposition_version_id === decision.proposition_version_id);
+      if (!item) return { ok: false, id: decision.proposition_version_id };
+      const disposition = decision.disposition ?? item.disposition ?? item.recommended_disposition;
+      const rpcName = decision.decision === 'needs_changes' ? 'record_impact_editorial_exception' : 'record_impact_editorial_disposition';
+      const { error } = await (supabase as any).rpc(rpcName, {
         p_proposition_version_id: item.proposition_version_id,
         p_review_key: decision.review_key,
-        p_title: item.title,
-        p_disposition: (editorialBatch001.items as any[]).find((candidate) => candidate.proposition_version_id === item.proposition_version_id)?.recommended_disposition,
-        p_rationale: decision.rationale ?? decision.notes ?? item.recommended_rationale,
+        p_title: item.title ?? item.proposition_version_id,
+        p_disposition: disposition,
+        p_rationale: decision.rationale ?? decision.notes ?? item.rationale ?? item.recommended_rationale,
+        p_notes: decision.notes,
       });
-      return { ok: !error };
+      return { ok: !error, id: decision.proposition_version_id };
     }));
-    setP2Completed((current) => new Set([...current, ...approved.filter((_, index) => results[index]?.ok).map((item) => item.proposition_version_id)]));
+    const applied = results.filter((result) => result.ok);
+    setP2Completed((current) => new Set([...current, ...applied.map((item) => item.id)]));
     setBatchBusy(false);
-    setMessage(`Aplicação em lote concluída: ${results.filter((result) => result.ok).length}/${approved.length} decisões approved via RPC; ${batchDecisions.length - approved.length} exceções mantidas.`);
+    setMessage(`Lote aplicado via RPC: ${applied.length}/${results.length}; exceções permanecem registradas para revisão.`);
   }
 
   const pendingP2Items = p2EditorialItems.filter((item) => !p2Completed.has(item.proposition_version_id));
