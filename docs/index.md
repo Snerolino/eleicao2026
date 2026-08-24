@@ -172,6 +172,7 @@
 | [`qa/lote-alrs-p2-microbatch-2-source-status-2026-08-23.md`](qa/lote-alrs-p2-microbatch-2-source-status-2026-08-23.md) | Status de fontes do P2-2 |
 | [`qa/lote-alrs-p2-microbatch-2-sources-2026-08-23.md`](qa/lote-alrs-p2-microbatch-2-sources-2026-08-23.md) | Fontes oficiais resolvidas do P2-2 |
 | [`qa/lote-cobertura-deputados-estaduais-2026-08-23.md`](qa/lote-cobertura-deputados-estaduais-2026-08-23.md) | Cobertura factual e editorial dos deputados estaduais |
+| [`qa/lote-throughput-editorial-batch-001-2026-08-23.md`](qa/lote-throughput-editorial-batch-001-2026-08-23.md) | Lote editorial por matéria e circuit breaker |
 | [`qa/lote-alrs-p2-microbatch-3-source-status-2026-08-23.md`](qa/lote-alrs-p2-microbatch-3-source-status-2026-08-23.md) | Status de fontes do P2-3 |
 | [`qa/lote-alrs-p2-microbatch-4-sources-2026-08-23.md`](qa/lote-alrs-p2-microbatch-4-sources-2026-08-23.md) | Fontes oficiais resolvidas do P2-4 |
 | [`qa/lote-alrs-p2-microbatch-5-sources-2026-08-23.md`](qa/lote-alrs-p2-microbatch-5-sources-2026-08-23.md) | Fontes oficiais resolvidas do P2-5 |
