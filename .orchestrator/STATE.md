@@ -1,3 +1,12 @@
+## Tick contínuo — recon read-only, produção verificada — 2026-08-24T00:02Z
+
+- Dataset oficial versus snapshot: CSV `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; `data:check` RC 0 com `1003` candidaturas e `988` fotos. Geração read-only encontrou `1002` candidatos e perdas de fotos; safety gate rejeitou refresh, sem promoção.
+- Auditoria regular de fontes RC 0; strict RC 2 fail-closed mantém gaps ALRS/Câmara/Senado `1251/3/112`, `1647/2/188`, `4/2/455`. Residual ALRS RC 0 dry-run: `planned_votes=0`, `planned_event_date_fixes=0`, `blocked_remaining=4`, `impact_touched=false`.
+- Gates Node 24.19.0 RC 0: `404/404` testes em `98` arquivos, TypeScript, schema, `data:check`, build `231` módulos/sitemap `1003 + 2`, `git diff --check`; smoke `1002` cards, `0` HTTP failures, `0` erros online, service worker pronto.
+- `verify-cli-output --live`: `1000` claims publicadas, `0` sem fonte. Produção `/`, `/release.json` e `/admin` HTTP 200; release `9cc5487-20260823T235158520Z`, versão `0.2.980`, live `9cc5487d010116d7cc9b50d647f5fedec3cde305`.
+- Backup `334951434` run `32674851611` success no mesmo `headSha`; primário falhou no mesmo SHA conforme padrão conhecido. Nenhum candidato, identidade, FK, voto, source reference, claim, assessment, matriz ou disposição editorial foi alterado.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-24-0002.md`. Doctor RC 1 por shell Node 22/OpenCode ausente; gates do projeto usaram Node 24. Próximo passo: continuar recon read-only e manter os quatro votos ALRS fail-closed.
+
 ## Tick contínuo — recon read-only, produção verificada — 2026-08-23T23:41Z
 
 - Dataset oficial versus snapshot: `1003/1003` IDs, diferença `0/0`; CSV `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`.
