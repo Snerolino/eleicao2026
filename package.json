@@ -89,6 +89,7 @@
     "impact:batch:reconcile": "node scripts/reconcile-impact-resolved-versions.mjs",
     "impact:batch:metadata": "node scripts/reconcile-legislative-version-metadata.mjs",
     "impact:alrs:discover": "node scripts/discover-alrs-nominal-votes.mjs",
+    "impact:alrs:reconcile": "node scripts/reconcile-alrs-nominal-votes.mjs",
     "impact:batch:classify": "node scripts/classify-editorial-batch.mjs",
     "impact:batch:review": "node scripts/review-editorial-batch.mjs",
     "impact:batch:apply": "node scripts/apply-validated-editorial-batch.mjs",

@@ -24,6 +24,7 @@ const discoveryAgeHours = existsSync(discoveryManifest) ? (Date.now() - statSync
 if (discoveryAgeHours >= 6) run('official_discovery', 'scripts/discover-alrs-nominal-votes.mjs', [], true);
 else report.steps.push({ label: 'official_discovery', status: 'deferred_manifest_fresh', age_hours: Number(discoveryAgeHours.toFixed(2)) });
 run('reconcile', 'scripts/reconcile-impact-resolved-versions.mjs');
+if (existsSync(discoveryManifest)) run('nominal_reconcile', 'scripts/reconcile-alrs-nominal-votes.mjs');
 run('metadata', 'scripts/reconcile-legislative-version-metadata.mjs');
 run('build_batch', 'scripts/build-alrs-impact-batch-proposals.mjs');
 const batchFile = resolve(root, 'data/legislative-import/alrs/impact-editorial-batch-001-v1.json');
@@ -32,7 +33,7 @@ const reviewerFile = resolve(root, 'data/legislative-import/alrs/impact-editoria
 const batch = JSON.parse(readFileSync(batchFile, 'utf8'));
 if (batch.items.length) {
   run('classifier', 'scripts/classify-editorial-batch.mjs', [batchFile]);
-  run('reviewer', 'scripts/review-editorial-batch.mjs', [classifierFile]);
+  run('reviewer', 'scripts/review-editorial-batch.mjs', [batchFile, classifierFile]);
   if (apply) {
     run('apply', 'scripts/apply-validated-editorial-batch.mjs', [batchFile, reviewerFile, '--apply', '--output=/tmp/autonomous-editorial-apply.json']);
     report.remote_apply = true;
