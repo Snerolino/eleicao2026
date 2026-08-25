@@ -686,14 +686,26 @@ export function AdminPage() {
                       </span>
                     </div>
                     <div className="mt-3 flex flex-wrap gap-3 font-mono text-xs uppercase tracking-wider">
-                      <a href={item.proposition_page} target="_blank" rel="noreferrer" className="text-[var(--color-institutional)] underline-offset-4 hover:underline">
-                        Fonte da proposição
-                      </a>
-                      {item.source_urls.slice(0, 2).map((sourceUrl) => (
-                        <a key={sourceUrl} href={sourceUrl} target="_blank" rel="noreferrer" className="text-[var(--color-institutional)] underline-offset-4 hover:underline">
-                          Fonte do voto
-                        </a>
-                      ))}
+                      {(() => {
+                        const safePropUrl = sanitizeUrl(item.proposition_page);
+                        return safePropUrl ? (
+                          <a href={safePropUrl} target="_blank" rel="noopener noreferrer" className="text-[var(--color-institutional)] underline-offset-4 hover:underline">
+                            Fonte da proposição
+                          </a>
+                        ) : (
+                          <span className="text-[var(--color-muted-ink)]">Fonte da proposição (Link inválido)</span>
+                        );
+                      })()}
+                      {item.source_urls.slice(0, 2).map((sourceUrl) => {
+                        const safeSrcUrl = sanitizeUrl(sourceUrl);
+                        return safeSrcUrl ? (
+                          <a key={sourceUrl} href={safeSrcUrl} target="_blank" rel="noopener noreferrer" className="text-[var(--color-institutional)] underline-offset-4 hover:underline">
+                            Fonte do voto
+                          </a>
+                        ) : (
+                          <span key={sourceUrl} className="text-[var(--color-muted-ink)]">Fonte do voto (Link inválido)</span>
+                        );
+                      })}
                     </div>
                     <div className="mt-4 grid gap-3 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
                       <label className="grid gap-1 text-sm">
@@ -754,7 +766,7 @@ export function AdminPage() {
                       <a
                         href={safeUrl}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className="font-mono text-xs uppercase tracking-wider text-[var(--color-institutional)] underline-offset-4 hover:underline"
                       >
                         Fonte: {claim.source_references?.source_name}
