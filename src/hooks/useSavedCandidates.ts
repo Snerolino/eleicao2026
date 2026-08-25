@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState, useMemo } from 'react';
 
 const STORAGE_KEY = 'votopraquem:saved-candidates:v1';
 
@@ -35,5 +35,11 @@ export function useSavedCandidates(validIds: Set<string>) {
 
   const clearSaved = useCallback(() => setSavedIds([]), []);
 
-  return { savedIds, savedSet: new Set(savedIds), toggleSaved, clearSaved };
+  // ⚡ Bolt Optimization: Memoize the Set creation to avoid O(N) operations on every render
+  // and maintain referential stability for downstream components.
+  // Expected Impact: Reduces unnecessary re-renders in components depending on `savedSet`
+  // and eliminates the overhead of recreating the Set on every single hook invocation.
+  const savedSet = useMemo(() => new Set(savedIds), [savedIds]);
+
+  return { savedIds, savedSet, toggleSaved, clearSaved };
 }
