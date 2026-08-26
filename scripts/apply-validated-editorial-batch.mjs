@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { createClient } from '@supabase/supabase-js';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { homedir } from 'node:os';
 import { resolve } from 'node:path';
 import { createHash } from 'node:crypto';
 
@@ -63,11 +64,13 @@ if (!apply) {
 }
 
 const email = process.env.SUPABASE_EDITOR_EMAIL || 'admin@votopraquem.org';
-let password = process.env.SUPABASE_EDITOR_PASSWORD;
 const url = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
 const anonKey = process.env.SUPABASE_PUBLISHABLE_KEY || process.env.VITE_SUPABASE_ANON_KEY;
+let password = process.env.SUPABASE_EDITOR_PASSWORD;
+const stateFile = resolve(process.env.XDG_STATE_HOME || resolve(homedir(), '.local', 'state'), 'eleicao2026/supabase-editor-session.json');
+if (!password && apply && process.stdin.isTTY && process.stdout.isTTY && existsSync(stateFile)) password = 'use_session_file';
 if (!password && apply) {
-  if (!process.stdin.isTTY || !process.stdout.isTTY) throw new Error('SUPABASE_EDITOR_PASSWORD ausente e terminal não interativo; exporte a variável no shell local.');
+  if (!process.stdin.isTTY || !process.stdout.isTTY) throw new Error('SUPABASE_EDITOR_PASSWORD ausente, sessão remota não encontrada e terminal não interativo; execute scripts/auth-editor-bootstrap.mjs localmente.');
   password = await new Promise((resolvePassword, reject) => {
     let value = '';
     const stdin = process.stdin;
@@ -85,9 +88,20 @@ if (!password && apply) {
     stdin.on('data', onData);
   });
 }
-if (!email || !password || !url || !anonKey) throw new Error('SUPABASE_EDITOR_PASSWORD, SUPABASE_URL e SUPABASE_PUBLISHABLE_KEY são obrigatórios; nenhum service_role é aceito.');
+if (!email || !url || !anonKey) throw new Error('SUPABASE_URL e SUPABASE_PUBLISHABLE_KEY são obrigatórios; nenhum service_role é aceito.');
 const supabase = createClient(url, anonKey, { auth: { persistSession: false, autoRefreshToken: false } });
-const { data: authData, error: authError } = await supabase.auth.signInWithPassword({ email, password });
+let authData;
+let authError;
+if (password === 'use_session_file') {
+  try {
+    const session = JSON.parse(readFileSync(stateFile, 'utf8'));
+    if (!session.refresh_token || !session.access_token) throw new Error('sessão editor incompleta');
+    ({ data: authData, error: authError } = await supabase.auth.setSession({ access_token: session.access_token, refresh_token: session.refresh_token }));
+  } catch (error) { authError = error; }
+} else {
+  ({ data: authData, error: authError } = await supabase.auth.signInWithPassword({ email, password }));
+  password = '';
+}
 if (authError || !authData.user) throw new Error(`Supabase Auth falhou: ${authError?.message ?? 'usuário ausente'}`);
 const { data: role, error: roleError } = await supabase.from('editor_roles').select('role').eq('user_id', authData.user.id).maybeSingle();
 if (roleError || !role || !['editor', 'admin'].includes(role.role)) throw new Error('usuário técnico sem papel editor/admin em editor_roles');
@@ -95,8 +109,8 @@ if (roleError || !role || !['editor', 'admin'].includes(role.role)) throw new Er
 const results = await Promise.all(rows.map(async (row) => {
   const item = byId.get(row.proposition_version_id);
   const rpc = row.decision === 'needs_changes' ? 'record_impact_editorial_exception' : 'record_impact_editorial_disposition';
-  const args = { p_proposition_version_id: row.proposition_version_id, p_review_key: row.review_key, p_title: item.title ?? row.proposition_version_id, p_disposition: row.disposition ?? item.disposition ?? item.recommended_disposition, p_rationale: row.rationale ?? row.notes ?? item.rationale ?? item.recommended_rationale, p_notes: row.notes };
-  const { error } = await supabase.rpc(rpc, args);
+  const rpcArgs = { p_proposition_version_id: row.proposition_version_id, p_review_key: row.review_key, p_title: item.title ?? row.proposition_version_id, p_disposition: row.disposition ?? item.disposition ?? item.recommended_disposition, p_rationale: row.rationale ?? row.notes ?? item.rationale ?? item.recommended_rationale, p_notes: row.notes };
+  const { error } = await supabase.rpc(rpc, rpcArgs);
   return { proposition_version_id: row.proposition_version_id, decision: row.decision, rpc, status: error ? 'error' : 'applied', error: error?.message ?? null };
 }));
 report.remote_apply = true;
