@@ -57,6 +57,21 @@ describe('H6.1 release metadata e health-check', () => {
     expect(report.correlation_id).toBe('health-123');
   });
 
+  it('aceita Home inicial com resumo por cargo sem exigir 69 cards abertos', () => {
+    const report = buildHealthReport({
+      correlationId: 'health-summary',
+      release: { release_id: 'rel-summary' },
+      html: { ok: true },
+      candidates: { count: 6, mode: 'summary', expectedMinCount: 69 },
+      claims: { degraded: false },
+      httpFailures: [],
+    });
+
+    expect(report.status).toBe('ok');
+    expect(report.blocks_release).toBe(false);
+    expect(report.components.candidates).toMatchObject({ count: 6, mode: 'summary', expected_min_count: 1, snapshot_expected_min_count: 69 });
+  });
+
   it('release metadata ausente/ilegível gera warning sem derrubar app saudável', () => {
     const report = buildHealthReport({
       correlationId: 'health-release-missing',

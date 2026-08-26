@@ -91,15 +91,18 @@ export function buildHealthReport({
   const alerts = [];
   const expectedMinCount = Number(candidates.expectedMinCount ?? 69);
   const candidateCount = Number(candidates.count ?? 0);
+  const effectiveMinCount = candidates.mode === 'summary' ? 1 : expectedMinCount;
 
   const components = {
     deploy: html.ok ? okComponent() : failComponent(html.reason ?? 'HTML indisponível.'),
     release: release?.release_id ? okComponent({ release_id: release.release_id }) : warnComponent('release.json ausente ou inválido.'),
-    candidates: candidateCount >= expectedMinCount
-      ? okComponent({ count: candidateCount, expected_min_count: expectedMinCount })
+    candidates: candidateCount >= effectiveMinCount
+      ? okComponent({ count: candidateCount, mode: candidates.mode ?? 'candidate-list', expected_min_count: effectiveMinCount, snapshot_expected_min_count: expectedMinCount })
       : failComponent('Home vazia ou abaixo da contagem plausível.', {
           count: candidateCount,
-          expected_min_count: expectedMinCount,
+          mode: candidates.mode ?? 'candidate-list',
+          expected_min_count: effectiveMinCount,
+          snapshot_expected_min_count: expectedMinCount,
         }),
     claims: claims.degraded
       ? warnComponent('Claims/editoria degradadas; lista oficial segue disponível.')
@@ -178,7 +181,10 @@ async function runBrowserProbe({ baseUrl, expectedMinCount }) {
   try {
     await page.goto(baseUrl, { waitUntil: 'networkidle', timeout: 30_000 });
     const bodyText = await page.locator('body').innerText({ timeout: 10_000 }).catch(() => '');
-    const count = await page.locator('main article').count();
+    const summaryCount = await page.locator('[aria-label="Resumo por cargo"] article').count();
+    const candidateCardCount = await page.locator('main article').count() - summaryCount;
+    const mode = summaryCount > 0 ? 'summary' : 'candidate-list';
+    const count = mode === 'summary' ? summaryCount : candidateCardCount;
     const serviceWorkerReady = await page.evaluate(async () => {
       if (!('serviceWorker' in navigator)) return false;
       try {
@@ -191,7 +197,7 @@ async function runBrowserProbe({ baseUrl, expectedMinCount }) {
 
     return {
       html: { ok: bodyText.includes('Portal Transparência Eleitoral RS') || bodyText.length > 0 },
-      candidates: { count, expectedMinCount },
+      candidates: { count, expectedMinCount, mode },
       claims: { degraded: bodyText.includes('Informações editoriais temporariamente indisponíveis') },
       cache: { serviceWorkerReady },
       httpFailures: [...httpFailures, ...requestFailures],
