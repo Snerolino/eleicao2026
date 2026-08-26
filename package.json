@@ -96,6 +96,7 @@
     "impact:batch:apply": "node scripts/apply-validated-editorial-batch.mjs",
     "impact:cycle": "node scripts/run-impact-cycle.mjs",
     "impact:cycle:autonomous": "node scripts/run-autonomous-editorial-cycle.mjs",
+    "portal:publication:verify": "node scripts/verify-portal-publication.mjs",
     "impact:continuous:monitor": "node scripts/continuous-progress-monitor.mjs",
     "orch:setup": "bash scripts/orchestrator/setup-local.sh",
     "orch:doctor": "bash scripts/orchestrator/doctor.sh",

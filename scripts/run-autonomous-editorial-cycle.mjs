@@ -27,6 +27,7 @@ run('reconcile', 'scripts/reconcile-impact-resolved-versions.mjs');
 if (existsSync(discoveryManifest)) run('nominal_reconcile', 'scripts/reconcile-alrs-nominal-votes.mjs');
 run('metadata', 'scripts/reconcile-legislative-version-metadata.mjs');
 run('build_batch', 'scripts/build-alrs-impact-batch-proposals.mjs');
+run('publish_portal', 'scripts/verify-portal-publication.mjs', [], true);
 const batchFile = resolve(root, 'data/legislative-import/alrs/impact-editorial-batch-001-v1.json');
 const classifierFile = resolve(root, 'data/legislative-import/alrs/impact-editorial-classifier-decisions-v1.json');
 const reviewerFile = resolve(root, 'data/legislative-import/alrs/impact-editorial-reviewed-decisions-v1.json');
@@ -40,6 +41,7 @@ if (batch.items.length) {
     run('reconcile_after_apply', 'scripts/reconcile-impact-resolved-versions.mjs');
     run('metadata_after_apply', 'scripts/reconcile-legislative-version-metadata.mjs');
     run('next_batch', 'scripts/build-alrs-impact-batch-proposals.mjs');
+    run('publish_portal_after_apply', 'scripts/verify-portal-publication.mjs', [], true);
   }
 } else report.steps.push({ label: 'classifier_reviewer_apply', status: 'idle_no_green_matter' });
 console.log(JSON.stringify(report));
