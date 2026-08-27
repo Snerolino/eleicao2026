@@ -44,6 +44,6 @@ describe('SiteNavigation', () => {
     expect(screen.getByText('Fonte, data e confiança em cada informação')).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /transparência eleitoral rs — página inicial/i })).toBeInTheDocument();
     expect(screen.getByRole('navigation', { name: /navegação principal/i })).toBeInTheDocument();
-    expect(screen.getByRole('switch', { name: /ativar modo escuro/i })).toBeInTheDocument();
+    expect(screen.getByRole('switch', { name: /alternar tema/i })).toBeInTheDocument();
   });
 });
