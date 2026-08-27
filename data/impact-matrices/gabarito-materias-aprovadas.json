@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.0.0",
+  "methodology_version": "1.0.0",
+  "title": "Matriz Gabarito de Proposições Legislativas Aprovadas",
+  "description": "Fonte de verdade consolidada das avaliações de impacto populacional de matérias legislativas da ALRS, Câmara dos Deputados e Senado Federal para referência e expansão por todos os agentes.",
+  "updated_at": "2026-08-27T17:00:48.086Z",
+  "rules": {
+    "immutability": "Proposições com status approved possuem gabarito imutável de direção e defending_vote.",
+    "reusability": "O gabarito de uma matéria é aplicado automaticamente a todas as votações nominais registradas para qualquer candidato que votou nela.",
+    "scoring_logic": {
+      "positive": "Voto no defending_vote gera pontuação positiva (+1) para o grupo; voto oposto gera pontuação negativa (-1).",
+      "negative": "Voto no defending_vote gera pontuação positiva (+1) para o grupo; voto oposto gera pontuação negativa (-1).",
+      "unclear": "defending_vote é null; não altera score numérico, servindo como registro descritivo/contextual.",
+      "mixed": "Efeito multidirecional explicado detalhadamente no rationale."
+    }
+  },
+  "propositions": [
+    {
+      "proposition_id": "alrs:pl-77-2025",
+      "house": "alrs",
+      "type": "pl",
+      "number": "77",
+      "year": 2025,
+      "title": "Ampliação de mecanismos de proteção a vítimas com medidas protetivas de urgência",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario",
+      "official_source_label": "ALRS Sistema Legis — votação 10/03/2026; Diário Oficial de 11/03/2026",
+      "severity": 4,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "mulheres",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.95,
+          "rationale": "O projeto estabelece ampliação direta dos mecanismos estaduais de proteção a mulheres vítimas de violência doméstica com medidas protetivas de urgência, fortalecendo a rede de acolhimento e resposta rápida da segurança pública.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:pl-134-2023",
+      "house": "alrs",
+      "type": "pl",
+      "number": "134",
+      "year": 2023,
+      "title": "Selo Tolerância Zero com Assédio no comércio gaúcho",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario",
+      "official_source_label": "ALRS Sistema Legis — votação 10/03/2026; Diário da Assembleia RS de 11/03/2026",
+      "severity": 2,
+      "structural_type": "symbolic",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "mulheres",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.9,
+          "rationale": "Criação de certificação e incentivo para estabelecimentos comerciais que adotem protocolos ativos de combate ao assédio sexual e importunação contra mulheres e trabalhadoras.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario"
+          ]
+        },
+        {
+          "group": "trabalhadores_informais",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.85,
+          "rationale": "Promove ambientes de trabalho mais seguros no setor de comércio e serviços para atendentes, comerciárias e prestadoras de serviço.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:pl-165-2025",
+      "house": "alrs",
+      "type": "pl",
+      "number": "165",
+      "year": 2025,
+      "title": "Sistema de inteligência preditiva de monitoramento de agressores reincidentes",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario",
+      "official_source_label": "ALRS Diário da Assembleia — 15/04/2026",
+      "severity": 4,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "mulheres",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.95,
+          "rationale": "Implementação de monitoramento tecnológico e integração de bases da segurança pública para prevenção de feminicídios por agressores reincidentes no Rio Grande do Sul.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:pl-361-2025",
+      "house": "alrs",
+      "type": "pl",
+      "number": "361",
+      "year": 2025,
+      "title": "Reserva de 5% de vagas em contratos terceirizados para mulheres vítimas de violência",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario",
+      "official_source_label": "ALRS Diário Oficial — 28/04/2026; GZH 10/05/2026",
+      "severity": 3,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "mulheres",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.95,
+          "rationale": "Garantia de autonomia financeira e inserção no mercado formal de trabalho para mulheres em situação de vulnerabilidade e violência doméstica em contratos públicos estaduais.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:pl-38-2026",
+      "house": "alrs",
+      "type": "pl",
+      "number": "38",
+      "year": 2026,
+      "title": "Reajuste de 5,4% no subsídio do magistério (texto original)",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario",
+      "official_source_label": "ALRS Sistema Legis — 24/03/2026",
+      "severity": 4,
+      "structural_type": "budgetary",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "servidores_publicos",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.9,
+          "rationale": "Reajuste remuneratório para os professores e especialistas da rede pública estadual de ensino básico do Rio Grande do Sul.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:pec-305-2026",
+      "house": "alrs",
+      "type": "pec",
+      "number": "305",
+      "year": 2026,
+      "title": "Data-base revisão anual do funcionalismo (admissibilidade CCJ)",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario",
+      "official_source_label": "ALRS — CCJ 15/07/2026; Sintergs/SIMPE-RS",
+      "severity": 5,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "servidores_publicos",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.95,
+          "rationale": "Instituição constitucional de data-base anual para revisão geral de vencimentos dos servidores públicos civis e militares do Estado do RS.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "camara:plp-230-2025",
+      "house": "camara",
+      "type": "plp",
+      "number": "230",
+      "year": 2025,
+      "title": "Fundo de Universalização dos Serviços de Telecomunicações (FUST)",
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2580259",
+      "official_source_label": "Câmara dos Deputados — PLP 230/2025; Votação 2580259-24",
+      "severity": 2,
+      "structural_type": "budgetary",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "pessoas_com_deficiencia",
+          "impact_direction": "unclear",
+          "defending_vote": null,
+          "confidence": 0.55,
+          "rationale": "O PLP 230/2025 trata do Fundo de Universalização dos Serviços de Telecomunicações e pode afetar políticas de conectividade relevantes para acessibilidade e inclusão digital, mas o texto oficial votado não segmenta explicitamente pessoas com deficiência; por isso a direção do impacto foi publicada de forma conservadora como unclear, com revisão humana registrada.",
+          "sources": [
+            "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2580259",
+            "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3170169",
+            "https://dadosabertos.camara.leg.br/api/v2/votacoes/2580259-24/votos"
+          ]
+        }
+      ]
+    }
+  ]
+}
