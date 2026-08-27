@@ -114,15 +114,26 @@ describe("VoteCategoryScoreTableBar component", () => {
     expect(screen.queryByText("Pessoas LGBTQIA+")).not.toBeInTheDocument();
   });
 
-  it("exibe estado vazio seguro se não houver scores", () => {
+  it("renderiza os grupos canônicos com não avaliado quando os candidatos ainda não têm scores", () => {
     render(
       <MemoryRouter>
         <VoteCategoryScoreTableBar scores={[]} candidates={candidates} />
       </MemoryRouter>
     );
 
+    expect(screen.getByText("Mulheres")).toBeInTheDocument();
+    expect(screen.getAllByText("não avaliado").length).toBeGreaterThan(0);
+  });
+
+  it("exibe mensagem quando a lista de candidatos for vazia", () => {
+    render(
+      <MemoryRouter>
+        <VoteCategoryScoreTableBar scores={[]} candidates={[]} />
+      </MemoryRouter>
+    );
+
     expect(
-      screen.getByText(/saldo por categoria não avaliado para este recorte/i)
+      screen.getByText(/selecione candidatos para visualizar a comparação/i)
     ).toBeInTheDocument();
   });
 });

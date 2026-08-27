@@ -15,6 +15,10 @@ import { candidatePublicPath } from '@/utils/candidateIdentity';
 import { fetchVoteCategoryComparisons, fetchVoteCategoryScores } from '@/services/voteCategoryComparison';
 import type { VoteCategoryComparison } from '@/domain/impact/vote-category-comparison';
 import { formatCategoryScore, type VoteCategoryScore } from '@/domain/impact/vote-category-score';
+import {
+  BENEFICIARY_GROUPS_CANONICAL_ORDER,
+  getBeneficiaryGroupLabel,
+} from '@/domain/impact/beneficiary-groups';
 import { VoteCategoryScoreTableBar } from '@/components/impact/VoteCategoryScoreTableBar';
 
 function claimsForSection(
@@ -99,9 +103,58 @@ function VoteCategoryTable({
 
 function VoteCategoryScoreTableLegacy({ scores, candidates }: { scores: VoteCategoryScore[]; candidates: CandidateWithClaims[] }) {
   const safeScores = scores.filter((score) => typeof score?.group_slug === 'string' && typeof score?.candidate_id === 'string' && ('score' in score));
-  if (safeScores.length === 0) return <p className="font-mono text-xs uppercase tracking-wide text-[var(--color-muted-ink)]">Saldo por categoria não avaliado para este recorte.</p>;
-  const keys = [...new Set(safeScores.map((score) => `${score.house}|${score.group_slug}`))];
-  return <div className="overflow-auto rounded-sm border border-[var(--color-border-editorial)]"><table className="w-full border-collapse text-sm"><thead><tr className="bg-[var(--color-paper)]"><th className="p-3 text-left font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">Saldo / categoria</th>{candidates.map((candidate) => <th key={candidate.id} className="border-l border-[var(--color-border-editorial)] p-3 text-left">{candidate.full_name}</th>)}</tr></thead><tbody>{keys.map((key) => { const [house, group] = key.split('|'); return <tr key={key} className="border-t border-[var(--color-border-editorial)]"><th className="p-3 text-left font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">{group.replaceAll('_', ' ')} · {house}</th>{candidates.map((candidate) => { const score = scores.find((item) => item.candidate_id === candidate.id && item.house === house && item.group_slug === group); return <td key={candidate.id} className="border-l border-[var(--color-border-editorial)] p-3"><strong className="font-mono text-base">{formatCategoryScore(score?.score ?? null)}</strong>{score && <span className="ml-2 font-mono text-[0.65rem] text-[var(--color-muted-ink)]">{score.evaluated_propositions} item(s)</span>}</td>})}</tr>})}</tbody></table></div>;
+  if (candidates.length === 0) return <p className="font-mono text-xs uppercase tracking-wide text-[var(--color-muted-ink)]">Selecione candidatos para visualizar a comparação.</p>;
+  
+  const houses = [...new Set(safeScores.map((score) => score.house).filter(Boolean))];
+  const targetHouses = houses.length > 0 ? houses : ['alrs'];
+  const keys = targetHouses.flatMap((house) =>
+    BENEFICIARY_GROUPS_CANONICAL_ORDER.map((group) => `${house}|${group}`)
+  );
+
+  return (
+    <div className="overflow-auto rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)]">
+      <table className="w-full border-collapse text-sm">
+        <thead>
+          <tr className="bg-[var(--color-paper)]">
+            <th className="p-3 text-left font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">
+              Saldo / categoria
+            </th>
+            {candidates.map((candidate) => (
+              <th key={candidate.id} className="border-l border-[var(--color-border-editorial)] p-3 text-left">
+                {candidate.full_name}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {keys.map((key) => {
+            const [house, group] = key.split('|');
+            const label = getBeneficiaryGroupLabel(group);
+            return (
+              <tr key={key} className="border-t border-[var(--color-border-editorial)]">
+                <th className="p-3 text-left font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">
+                  {label} · {house}
+                </th>
+                {candidates.map((candidate) => {
+                  const score = safeScores.find((item) => item.candidate_id === candidate.id && item.house === house && item.group_slug === group);
+                  return (
+                    <td key={candidate.id} className="border-l border-[var(--color-border-editorial)] p-3">
+                      <strong className="font-mono text-base">{formatCategoryScore(score?.score ?? null)}</strong>
+                      {score && score.evaluated_propositions > 0 && (
+                        <span className="ml-2 font-mono text-[0.65rem] text-[var(--color-muted-ink)]">
+                          {score.evaluated_propositions} item(s)
+                        </span>
+                      )}
+                    </td>
+                  );
+                })}
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
 }
 
 function parseSharedCandidateIds(

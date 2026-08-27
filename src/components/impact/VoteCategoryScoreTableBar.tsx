@@ -34,26 +34,30 @@ export function VoteCategoryScoreTableBar({
     [scores]
   );
 
-  // Chaves únicas (house + group_slug) ordenadas canonicamente
+  // Chaves únicas para os 14 grupos canônicos da metodologia v1 (combinadas com casas dos dados)
   const rowKeys = useMemo(() => {
-    const rawKeys = [...new Set(safeScores.map((score) => `${score.house}|${score.group_slug}`))];
-    return rawKeys.sort((a, b) => {
-      const [houseA, groupA] = a.split("|");
-      const [houseB, groupB] = b.split("|");
-      if (houseA !== houseB) return houseA.localeCompare(houseB);
-      const idxA = BENEFICIARY_GROUPS_CANONICAL_ORDER.indexOf(groupA as any);
-      const idxB = BENEFICIARY_GROUPS_CANONICAL_ORDER.indexOf(groupB as any);
-      if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-      if (idxA !== -1) return -1;
-      if (idxB !== -1) return 1;
-      return groupA.localeCompare(groupB);
-    });
+    const houses = [...new Set(safeScores.map((score) => score.house).filter(Boolean))];
+    const targetHouses = houses.length > 0 ? houses : ["alrs"];
+
+    const canonicalKeys = targetHouses.flatMap((house) =>
+      BENEFICIARY_GROUPS_CANONICAL_ORDER.map((group) => `${house}|${group}`)
+    );
+
+    const existingKeys = new Set(canonicalKeys);
+    for (const score of safeScores) {
+      const key = `${score.house}|${score.group_slug}`;
+      if (!existingKeys.has(key)) {
+        canonicalKeys.push(key);
+        existingKeys.add(key);
+      }
+    }
+    return canonicalKeys;
   }, [safeScores]);
 
-  if (safeScores.length === 0 || candidates.length === 0) {
+  if (candidates.length === 0) {
     return (
       <p className="font-mono text-xs uppercase tracking-wide text-[var(--color-muted-ink)]">
-        Saldo por categoria não avaliado para este recorte.
+        Selecione candidatos para visualizar a comparação.
       </p>
     );
   }

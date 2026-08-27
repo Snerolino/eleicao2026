@@ -109,7 +109,7 @@ describe('ComparePage H5.3', () => {
       'href',
       '#comparacao'
     );
-    expect(screen.getByRole('table')).toBeInTheDocument();
+    expect(screen.getAllByRole('table').length).toBeGreaterThan(0);
   });
 
   it('mostra o resumo e a tabela de comparação antes da lista completa de seleção', () => {
@@ -130,7 +130,7 @@ describe('ComparePage H5.3', () => {
     fireEvent.click(screen.getByRole('button', { name: /joão batista garcia dias/i }));
 
     expect(screen.getByLabelText(/url atual/i)).toHaveTextContent('/comparar?candidatos=tse-1,tse-2');
-    expect(screen.getByRole('table')).toBeInTheDocument();
+    expect(screen.getAllByRole('table').length).toBeGreaterThan(0);
   });
 
   it('limita rota compartilhável a 4 candidaturas válidas', () => {
