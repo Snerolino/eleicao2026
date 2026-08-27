@@ -1,3 +1,16 @@
+## Tick contínuo — workflow autônomo com auto-aprovação e análise de assessments — 2026-08-27T11:15Z
+
+- Implementado e formalizado o novo modo de workflow contínuo ininterrupto do Hermes (`docs/workflow-autonomo-hermes-autoaprovacao-assessments.md`) com base em `INSTRUCAO-AGENTE-REVISOR-ASSESSMENTS-VOTOS-RS2026-v1.md`.
+- Regras metodológicas integradas:
+  - Voto Defensor (`defending_vote`): `sim` para matérias protetivas/positivas; `nao` para matérias restritivas/negativas (o voto contra defende o grupo).
+  - Tabela canônica de sinais: `a_favor` (+1), `contra` (-1), `neutro_declarado` (0), `omissao_estrategica` (-0.5), `omissao_coordenada` (0), `sem_dado`/`nao_avaliavel` (excluídos).
+  - Taxonomia estrita fechada dos 14 grupos canônicos da Metodologia v1.
+  - Auto-aprovação determinística sem paradas para matérias `source_gate: 'green'`, de mérito e com severidade controlada (`severity < 4`).
+  - Isolamento granular de itens com `severity >= 4` ou `confidence < 0.60` via `requires_external_review: true`, sem bloquear o fluxo das demais proposições do lote.
+- Scripts atualizados e validados: `classify-editorial-batch.mjs`, `review-editorial-batch.mjs` e `run-autonomous-editorial-cycle.mjs`.
+- Gates locais verdes: `430/430` testes em `105` arquivos, TypeScript, schema, `data:check`.
+- Próximo passo: manter execução contínua da esteira autônoma e monitorar publicação em produção.
+
 ## Tick contínuo — comparação por barras verificada, transporte Git bloqueado — 2026-08-27T09:28Z
 
 - Alteração local `7bdaa452` implementa perfil visual de votação por grupo populacional, fallback de tabela numérica, testes e paginação paralela do materializador de perfis.

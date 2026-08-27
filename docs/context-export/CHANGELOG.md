@@ -2,6 +2,9 @@
 
 ## 2026-08-27
 
+- Documentado e formalizado o workflow autônomo do Hermes (`docs/workflow-autonomo-hermes-autoaprovacao-assessments.md`) com auto-aprovação ininterrupta para matérias com fonte verde e sem necessidade de painel externo, isolando granularmente matérias com `severity >= 4` ou `confidence < 0.60`.
+- Formalizadas regras de `defending_vote = 'nao'` para matérias com impacto negativo sobre grupos populacionais, mantendo alinhamento derivado (+1 / -1) e taxonomia fechada de 14 grupos canônicos.
+
 - Migration `20260827090000_import_alrs_nominal_votes_rpc.sql` aplicada no Supabase remoto: RPC factual `import_alrs_nominal_votes(jsonb)` restrita a `authenticated` com papel `editor/admin`, sem `service_role` e sem escrita em impacto/score.
 - Reconciliador ALRS corrigido para comparar datas de calendário `DD/MM/YYYY` contra timestamps ISO; os 795 registros antes classificados como faltantes foram confirmados como `already_present_exact`, sem conflitos.
 - Resolvida a pendência factual do `VT 599/2023`: versão oficial criada por RPC idempotente e 3 votos nominais importados; reconciliação final sem ambíguos, bloqueios, faltantes ou conflitos.
