@@ -97,6 +97,7 @@
     "auth:editor:bootstrap": "node scripts/auth-editor-bootstrap.mjs",
     "impact:batch:classify": "node scripts/classify-editorial-batch.mjs",
     "impact:batch:review": "node scripts/review-editorial-batch.mjs",
+    "impact:batch:assessment-drafts": "node scripts/build-alrs-assessment-auto-review-pack.mjs",
     "impact:batch:apply": "node scripts/apply-validated-editorial-batch.mjs",
     "impact:cycle": "node scripts/run-impact-cycle.mjs",
     "impact:cycle:autonomous": "node scripts/run-autonomous-editorial-cycle.mjs",
