@@ -28,6 +28,8 @@ import {
 import { usePageMetadata } from '@/hooks/usePageMetadata';
 import { useSavedCandidates } from '@/hooks/useSavedCandidates';
 
+import { type CandidateExperienceFilter, hasPreviousMandate } from '@/utils/candidateExperience';
+
 function normalize(text: string) {
   return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 }
@@ -47,7 +49,8 @@ function filterCandidates(
   cargoFilter: '' | Position,
   partyFilter: string,
   womenOnly: boolean,
-  raceFilter: string
+  raceFilter: string,
+  experienceFilter: CandidateExperienceFilter = ''
 ): CandidateWithClaims[] {
   const normalized = normalize(query);
 
@@ -56,6 +59,8 @@ function filterCandidates(
     if (partyFilter && c.party !== partyFilter) return false;
     if (womenOnly && c.gender !== 'FEMININO') return false;
     if (raceFilter && (c.race ?? 'NÃO INFORMADO') !== raceFilter) return false;
+    if (experienceFilter === 'mandato_anterior' && !hasPreviousMandate(c)) return false;
+    if (experienceFilter === 'estreante' && hasPreviousMandate(c)) return false;
     if (!normalized) return true;
 
     let cached = cache.get(c.id);
@@ -96,6 +101,7 @@ export function HomePage() {
   const [partyFilter, setPartyFilter] = useState('');
   const [womenOnly, setWomenOnly] = useState(false);
   const [raceFilter, setRaceFilter] = useState('');
+  const [experienceFilter, setExperienceFilter] = useState<CandidateExperienceFilter>('');
   const [selectedPosition, setSelectedPosition] = useState<Position | 'saved' | ''>('');
   const [browseAllCandidates, setBrowseAllCandidates] = useState(false);
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -125,8 +131,8 @@ export function HomePage() {
   const searchCache = useMemo(() => new Map<string, CandidateSearchCache>(), [allCandidates]);
 
   const filtered = useMemo(
-    () => filterCandidates(allCandidates, searchCache, deferredSearchQuery, cargoFilter, partyFilter, womenOnly, raceFilter),
-    [allCandidates, searchCache, deferredSearchQuery, cargoFilter, partyFilter, womenOnly, raceFilter]
+    () => filterCandidates(allCandidates, searchCache, deferredSearchQuery, cargoFilter, partyFilter, womenOnly, raceFilter, experienceFilter),
+    [allCandidates, searchCache, deferredSearchQuery, cargoFilter, partyFilter, womenOnly, raceFilter, experienceFilter]
   );
 
   const cargoCounts = useMemo(() => {
@@ -171,7 +177,7 @@ export function HomePage() {
     }
   }
 
-  const hasActiveFilter = searchQuery !== '' || cargoFilter !== '' || partyFilter !== '' || womenOnly || raceFilter !== '';
+  const hasActiveFilter = searchQuery !== '' || cargoFilter !== '' || partyFilter !== '' || womenOnly || raceFilter !== '' || experienceFilter !== '';
 
   if (query.isLoading) {
     return (
@@ -187,7 +193,6 @@ export function HomePage() {
         <ErrorState
           onRetry={() => query.refetch()}
           title="Indisponibilidade temporária"
-          message="Não foi possível confirmar a lista oficial agora. Tente novamente em instantes."
         />
       </main>
     );
@@ -195,8 +200,8 @@ export function HomePage() {
 
   return (
     <main id="main-content" className="mx-auto max-w-6xl px-4 py-8">
-      <section className="mb-6 max-w-3xl">
-        <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-muted-ink)]">
+      <section className="mb-6 border-b border-[var(--color-border-editorial)] pb-6">
+        <p className="font-mono text-xs uppercase tracking-widest text-[var(--color-muted-ink)]">
           Eleições 2026 · Rio Grande do Sul
         </p>
         <h1 className="mt-2 text-3xl sm:text-4xl">
@@ -236,11 +241,13 @@ export function HomePage() {
                 partyFilter={partyFilter}
                 womenOnly={womenOnly}
                 raceFilter={raceFilter}
+                experienceFilter={experienceFilter}
                 onQueryChange={setSearchQuery}
                 onCargoFilterChange={setCargoFilter}
                 onPartyFilterChange={setPartyFilter}
                 onWomenOnlyChange={setWomenOnly}
                 onRaceFilterChange={setRaceFilter}
+                onExperienceFilterChange={setExperienceFilter}
                 showCargoFilter={false}
                 showSecondaryFilters={filtersOpen}
               />
@@ -288,6 +295,8 @@ export function HomePage() {
               {partyFilter && ` do ${partyFilter}`}
               {womenOnly && ' · mulheres'}
               {raceFilter && ` · cor/raça ${raceFilter.toLowerCase()}`}
+              {experienceFilter === 'mandato_anterior' && ' · com mandato anterior'}
+              {experienceFilter === 'estreante' && ' · 1ª candidatura / estreantes'}
             </p>
           )}
         </div>
@@ -296,7 +305,7 @@ export function HomePage() {
       {selectedCandidates.length === 0 ? (
         <div className="mt-20 text-center">
           {hasActiveFilter || selectedPosition === 'saved' ? <p className="font-mono text-sm text-[var(--color-muted-ink)]">{selectedPosition === 'saved' ? 'Nenhum candidato salvo neste navegador.' : 'Nenhum candidato corresponde aos filtros atuais.'}</p> : <EmptyState ariaLabel="Estado da lista"><p>Nenhuma candidatura oficial encontrada na fonte atual.</p><p className="mt-2">Isso indica snapshot oficial vazio, não erro de conexão. Verifique a origem dos dados no pipeline TSE.</p></EmptyState>}
-          {(hasActiveFilter || selectedPosition === 'saved') ? <button type="button" onClick={() => { setSearchQuery(''); setCargoFilter(''); setSelectedPosition(''); setBrowseAllCandidates(false); setPartyFilter(''); setWomenOnly(false); setRaceFilter(''); }} className="mt-4 rounded-sm bg-[var(--color-institutional)] px-4 py-2 text-sm font-semibold text-white">Limpar seleção</button> : null}
+          {(hasActiveFilter || selectedPosition === 'saved') ? <button type="button" onClick={() => { setSearchQuery(''); setCargoFilter(''); setSelectedPosition(''); setBrowseAllCandidates(false); setPartyFilter(''); setWomenOnly(false); setRaceFilter(''); setExperienceFilter(''); }} className="mt-4 rounded-sm bg-[var(--color-institutional)] px-4 py-2 text-sm font-semibold text-white">Limpar seleção</button> : null}
         </div>
       ) : selectedPosition === '' && !browseAllCandidates && !hasActiveFilter ? (
         <section className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3" aria-label="Resumo por cargo">

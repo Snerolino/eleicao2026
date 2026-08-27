@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 import type { CandidateWithClaims, Position } from '@/types/election';
 import { POSITION_LABEL } from '@/types/election';
+import { type CandidateExperienceFilter, hasPreviousMandate } from '@/utils/candidateExperience';
 
 interface CandidateSearchProps {
   candidates: CandidateWithClaims[];
@@ -9,11 +10,13 @@ interface CandidateSearchProps {
   partyFilter: string;
   womenOnly: boolean;
   raceFilter: string;
+  experienceFilter?: CandidateExperienceFilter;
   onQueryChange: (value: string) => void;
   onCargoFilterChange: (value: '' | Position) => void;
   onPartyFilterChange: (value: string) => void;
   onWomenOnlyChange: (value: boolean) => void;
   onRaceFilterChange: (value: string) => void;
+  onExperienceFilterChange?: (value: CandidateExperienceFilter) => void;
   showCargoFilter?: boolean;
   showSecondaryFilters?: boolean;
 }
@@ -36,24 +39,30 @@ export function CandidateSearch({
   partyFilter,
   womenOnly,
   raceFilter,
+  experienceFilter = '',
   onQueryChange,
   onCargoFilterChange,
   onPartyFilterChange,
   onWomenOnlyChange,
   onRaceFilterChange,
+  onExperienceFilterChange,
   showCargoFilter = true,
   showSecondaryFilters = true,
 }: CandidateSearchProps) {
   const selectClass = 'w-full appearance-none cursor-pointer rounded-sm border border-[var(--color-border-editorial)] bg-card px-3 py-2 pr-8 font-mono text-[0.72rem] uppercase tracking-[0.06em] text-[var(--color-ink)] focus:border-[var(--color-institutional)] focus:outline-none sm:w-auto';
-  const { positions, parties, races } = useMemo(() => {
+  const { positions, parties, races, experienceCounts } = useMemo(() => {
     const posSet = new Set<Position>();
     const partySet = new Set<string>();
     const raceSet = new Set<string>(OFFICIAL_RACE_FILTERS);
+    let withMandate = 0;
+    let firstTime = 0;
 
     for (const c of candidates) {
       posSet.add(c.position);
       partySet.add(c.party);
       raceSet.add(candidateRaceFilterValue(c));
+      if (hasPreviousMandate(c)) withMandate += 1;
+      else firstTime += 1;
     }
 
     const order: Position[] = ['governador', 'senador', 'deputado_federal', 'deputado_estadual'];
@@ -64,7 +73,12 @@ export function CandidateSearch({
         - OFFICIAL_RACE_FILTERS.indexOf(b as (typeof OFFICIAL_RACE_FILTERS)[number]),
     );
 
-    return { positions: sortedPositions, parties: sortedParties, races: sortedRaces };
+    return {
+      positions: sortedPositions,
+      parties: sortedParties,
+      races: sortedRaces,
+      experienceCounts: { withMandate, firstTime },
+    };
   }, [candidates]);
 
   return (
@@ -138,6 +152,23 @@ export function CandidateSearch({
         </select>
         <span aria-hidden="true" className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[0.65rem] text-[var(--color-institutional)]">▼</span>
       </div>
+
+      {onExperienceFilterChange ? (
+        <div className="relative">
+          <select
+            value={experienceFilter}
+            onChange={(e) => onExperienceFilterChange(e.target.value as CandidateExperienceFilter)}
+            className={selectClass}
+            aria-label="Filtrar por histórico de mandato"
+            title="Filtra entre candidatos já eleitos anteriormente e candidatos concorrendo pela primeira vez."
+          >
+            <option value="">Todos os históricos</option>
+            <option value="mandato_anterior">Já eleito(a) anteriormente ({experienceCounts.withMandate})</option>
+            <option value="estreante">1ª candidatura / Estreante ({experienceCounts.firstTime})</option>
+          </select>
+          <span aria-hidden="true" className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[0.65rem] text-[var(--color-institutional)]">▼</span>
+        </div>
+      ) : null}
 
       <label className={`inline-flex cursor-pointer items-center justify-center rounded-full border px-3.5 py-2 font-mono text-[0.7rem] uppercase tracking-[0.06em] focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-[var(--color-institutional)] ${
         womenOnly

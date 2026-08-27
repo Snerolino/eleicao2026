@@ -261,6 +261,46 @@ describe('HomePage estados honestos H5.2', () => {
     expect(screen.getByRole('option', { name: 'Não informado' })).toBeInTheDocument();
   });
 
+  it('filtra por candidatos com mandato anterior vs estreantes', async () => {
+    const candidateWithVotes: CandidateWithClaims = {
+      ...officialCandidate,
+      id: 'candidate-votes',
+      slug: 'com_votos',
+      full_name: 'Deputada com Votos',
+      voting_profiles: [
+        {
+          house: 'alrs',
+          total_votes: 10,
+          votos_sim: 8,
+          votos_nao: 2,
+          votos_abstencao: 0,
+          votos_ausente: 0,
+          votos_obstrucao: 0,
+          nominal_balance: 0.6,
+        },
+      ],
+    };
+    queryState.value = {
+      ...queryState.value,
+      data: [candidateWithVotes, accentCandidate],
+    };
+    renderHome();
+
+    // Filtra por mandato anterior
+    fireEvent.change(screen.getByRole('combobox', { name: /filtrar por histórico de mandato/i }), {
+      target: { value: 'mandato_anterior' },
+    });
+    expect(await screen.findByText('Deputada com Votos')).toBeInTheDocument();
+    expect(screen.queryByText('José Ademar')).not.toBeInTheDocument();
+
+    // Filtra por estreante
+    fireEvent.change(screen.getByRole('combobox', { name: /filtrar por histórico de mandato/i }), {
+      target: { value: 'estreante' },
+    });
+    expect(await screen.findByText('José Ademar')).toBeInTheDocument();
+    expect(screen.queryByText('Deputada com Votos')).not.toBeInTheDocument();
+  });
+
   it('renderiza Todos como resumo de cargos e abre um cargo sem despejar a lista inteira', () => {
     queryState.value = { ...queryState.value, data: [officialCandidate, accentCandidate, viceGovernorCandidate] };
     renderHome();

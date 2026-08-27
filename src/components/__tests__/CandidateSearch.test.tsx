@@ -49,6 +49,32 @@ describe('CandidateSearch editorial e acessível', () => {
     expect(screen.getByRole('combobox', { name: /filtrar por cor\/raça/i })).toBeInTheDocument();
   });
 
+  it('renderiza filtro de histórico de mandato quando callback fornecido', () => {
+    const onExperienceFilterChange = vi.fn();
+    render(
+      <CandidateSearch
+        candidates={candidates}
+        query=""
+        cargoFilter=""
+        partyFilter=""
+        womenOnly={false}
+        raceFilter=""
+        experienceFilter=""
+        onQueryChange={vi.fn()}
+        onCargoFilterChange={vi.fn()}
+        onPartyFilterChange={vi.fn()}
+        onWomenOnlyChange={vi.fn()}
+        onRaceFilterChange={vi.fn()}
+        onExperienceFilterChange={onExperienceFilterChange}
+      />,
+    );
+
+    const select = screen.getByRole('combobox', { name: /filtrar por histórico de mandato/i });
+    expect(select).toBeInTheDocument();
+    fireEvent.change(select, { target: { value: 'mandato_anterior' } });
+    expect(onExperienceFilterChange).toHaveBeenCalledWith('mandato_anterior');
+  });
+
   it('mantém checkbox real dentro do chip e comunica a alteração', () => {
     const { onWomenOnlyChange } = renderSearch(true);
     const checkbox = screen.getByRole('checkbox', { name: /mulheres/i });

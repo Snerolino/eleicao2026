@@ -87,9 +87,37 @@ describe('CandidateCard acessibilidade/performance', () => {
       }],
     };
     const { container } = renderCard(withPressClaim);
-
     expect(container.querySelector('article')).toHaveAttribute('data-source-category', 'imprensa');
     expect(container.querySelector('article')).toHaveStyle({ borderLeftColor: 'var(--color-press)' });
     expect(screen.getByText(/resumo publicado/i)).toBeInTheDocument();
+  });
+
+  it('exibe badge de mandato anterior para candidato com histórico legislativo ou eletivo', () => {
+    const withMandate: CandidateWithClaims = {
+      ...candidate,
+      voting_profiles: [
+        {
+          house: 'alrs',
+          total_votes: 5,
+          votos_sim: 3,
+          votos_nao: 2,
+          votos_abstencao: 0,
+          votos_ausente: 0,
+          votos_obstrucao: 0,
+          nominal_balance: 0.2,
+        },
+      ],
+    };
+    const { container } = renderCard(withMandate);
+
+    expect(container.querySelector('article')).toHaveAttribute('data-experience-type', 'mandato_anterior');
+    expect(screen.getByText(/mandato anterior/i)).toBeInTheDocument();
+  });
+
+  it('exibe badge de 1ª candidatura para candidato estreante', () => {
+    const { container } = renderCard(candidate);
+
+    expect(container.querySelector('article')).toHaveAttribute('data-experience-type', 'estreante');
+    expect(screen.getByText(/1ª candidatura/i)).toBeInTheDocument();
   });
 });
