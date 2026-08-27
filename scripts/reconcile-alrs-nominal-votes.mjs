@@ -7,6 +7,13 @@ import { resolve } from 'node:path';
 const root = resolve(import.meta.dirname, '..');
 const manifestFile = resolve(root, process.argv[2] ?? 'data/legislative-import/alrs/alrs-nominal-discovery-manifest-v1.json');
 const output = resolve(root, process.argv.find((arg) => arg.startsWith('--output='))?.slice(9) ?? 'data/legislative-import/alrs/alrs-nominal-vote-reconciliation-v1.json');
+function normalizeCalendarDate(value) {
+  const text = String(value ?? '');
+  const br = text.match(/^(\d{2})\/(\d{2})\/(\d{4})/);
+  if (br) return `${br[3]}-${br[2]}-${br[1]}`;
+  return text.slice(0, 10);
+}
+
 function query(sql) {
   const raw = execFileSync('npx', ['supabase', 'db', 'query', '--linked', '--output', 'json', sql], { cwd: root, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
   const start = raw.indexOf('{'); const end = raw.lastIndexOf('}');
@@ -30,7 +37,7 @@ for (const row of versions) {
   const key = `${row.proposition_type}:${row.number}:${row.year}`;
   const list = versionByNatural.get(key) ?? []; list.push(row); versionByNatural.set(key, list);
 }
-const existingKeys = new Set(existing.map((row) => `${row.candidate_id}|${row.proposition_version_id}|${String(row.occurred_at).slice(0, 10)}|${row.value}`));
+const existingKeys = new Set(existing.map((row) => `${row.candidate_id}|${row.proposition_version_id}|${normalizeCalendarDate(row.occurred_at)}|${row.value}`));
 const results = [];
 for (const row of sourceRows) {
   const candidate = candidateByTse.get(String(row.candidate.tse_candidate_id));
@@ -41,7 +48,7 @@ for (const row of sourceRows) {
   if (!candidate) status = 'blocked_identity';
   else if (!value) status = 'blocked_identity';
   else if (versionsForMatter.length !== 1) status = versionsForMatter.length === 0 ? 'blocked_proposition_version' : 'ambiguous';
-  else if (existingKeys.has(`${candidate.id}|${versionsForMatter[0].proposition_version_id}|${String(row.dataVotacao).slice(0, 10)}|${value}`)) status = 'already_present_exact';
+  else if (existingKeys.has(`${candidate.id}|${versionsForMatter[0].proposition_version_id}|${normalizeCalendarDate(row.dataVotacao)}|${value}`)) status = 'already_present_exact';
   results.push({ status, candidate_id: candidate?.id ?? null, tse_candidate_id: row.candidate.tse_candidate_id, politician_name: row.politician_name, proposition_version_id: versionsForMatter.length === 1 ? versionsForMatter[0].proposition_version_id : null, proposition_type: type, proposition_number: Number(row.numProposicao), proposition_year: Number(row.anoProposicao), occurred_at: row.dataVotacao, value, source_url: row.source_url, source_sha256: row.source_sha256 });
 }
 const counts = Object.fromEntries(['source_rows', 'exact_candidate_rows', 'candidate_matches', 'resolved_proposition_versions', 'already_present', 'missing', 'conflicts', 'ambiguous', 'blocked_identity', 'blocked_proposition'].map((key) => [key, 0]));

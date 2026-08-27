@@ -94,6 +94,7 @@ Novas tabelas da Matriz de Impacto Populacional v1 (todas com RLS habilitado):
 - `proposition_versions` — texto votado imutavel (`version_key`, `text_hash`, `effective_from`; unico por proposicao+versao).
 - `voting_events` — evento de votacao ligado a versao votada.
 - `legislative_votes` — SOMENTE fato: `value` (`sim|nao|abstencao|ausente|obstrucao`) e `absence_type` condicionado (`sim/nao/abstencao` → null; `ausente/obstrucao` → `estrategica|obstrucao_coordenada|justificada`). Nunca armazena impacto/alinhamento/grupo/score.
+- RPC `import_alrs_nominal_votes(jsonb)` — escrita factual idempotente somente para `authenticated` com `editor_roles`; aceita apenas `candidate_id`, `proposition_version_id`, valor normalizado, data e URL/hash oficial. Não cria matriz, assessment ou score; `anon` não executa.
 - `beneficiary_groups` — catalogo versionado (14 slugs v1). Slugs nunca renomeados; evolucao via `deprecated_at` + `replacement_slug`. `geral` nao e grupo pontuavel.
 - `beneficiary_group_aliases` — variantes de grafia.
 - `impact_matrices` — matriz por `proposition_version_id` + `methodology_version` (unico); `severity` 1..5; `structural_type` (`structural|budgetary|symbolic`); `review_status` (`rascunho|pending_review|approved|contested`). A disposição editorial ocorre antes da matriz: `assess`, `no_direct_population_group`, `taxonomy_gap` ou `excluded`; somente `assess` pode gerar matriz.

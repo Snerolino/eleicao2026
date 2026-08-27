@@ -1,5 +1,10 @@
 # Changelog do contexto exportado
 
+## 2026-08-27
+
+- Migration `20260827090000_import_alrs_nominal_votes_rpc.sql` aplicada no Supabase remoto: RPC factual `import_alrs_nominal_votes(jsonb)` restrita a `authenticated` com papel `editor/admin`, sem `service_role` e sem escrita em impacto/score.
+- Reconciliador ALRS corrigido para comparar datas de calendário `DD/MM/YYYY` contra timestamps ISO; os 795 registros antes classificados como faltantes foram confirmados como `already_present_exact`, sem conflitos.
+
 ## 2026-08-23
 
 - Migration `20260823110000_create_editorial_disposition_queue.sql` aplicada no Supabase remoto `eleicao2026`: tabela `impact_editorial_dispositions`, RLS de leitura para editores e RPC protegida `record_impact_editorial_disposition(uuid,text,text,text,text)`.
