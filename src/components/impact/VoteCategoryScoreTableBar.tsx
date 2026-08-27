@@ -70,7 +70,7 @@ export function VoteCategoryScoreTableBar({
       </div>
 
       {/* Grade de Comparação com Barras */}
-      <div className="overflow-x-auto rounded-[2px] border border-[var(--color-border-editorial)] bg-white">
+      <div className="overflow-x-auto rounded-[2px] border border-[var(--color-border-editorial)] bg-[var(--color-paper)] text-[var(--color-ink)]">
         <table className="w-full min-w-[720px] border-collapse text-left text-sm">
           <thead>
             <tr>
@@ -122,10 +122,10 @@ export function VoteCategoryScoreTableBar({
 
               return (
                 <tr key={key} className="border-b border-[var(--color-border-editorial)] last:border-b-0">
-                  {/* Rótulo de grupo na primeira coluna (sticky) */}
+                  {/* Rótulo de grupo na primeira coluna (sticky com sombra sutil de separação) */}
                   <th
                     scope="row"
-                    className="sticky left-0 z-10 border-r border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3.5 py-2.5 font-mono text-[0.7rem] font-medium text-[var(--color-ink)]"
+                    className="sticky left-0 z-10 border-r border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3.5 py-3 font-mono text-[0.72rem] font-medium text-[var(--color-ink)] shadow-[1px_0_0_0_var(--color-border-editorial)]"
                   >
                     <span>{label}</span>
                     {isMultiHouse && (
@@ -147,7 +147,7 @@ export function VoteCategoryScoreTableBar({
                     return (
                       <td
                         key={c.id}
-                        className="border-r border-[var(--color-border-editorial)] px-3.5 py-2 last:border-r-0 align-middle"
+                        className="border-r border-[var(--color-border-editorial)] px-3.5 py-2.5 last:border-r-0 align-middle transition-colors duration-150 hover:bg-[color-mix(in_srgb,var(--color-institutional)_6%,var(--color-paper))]"
                       >
                         <DivergentScoreBar
                           score={scoreObj?.score ?? null}
@@ -166,18 +166,19 @@ export function VoteCategoryScoreTableBar({
         </table>
       </div>
 
-      {/* Botão de Expansão / Recolhimento */}
+      {/* Botão de Expansão / Recolhimento acessível (touch-target >= 44px) */}
       {rowKeys.length > initialVisibleCount && (
-        <div className="flex items-center justify-between pt-1">
+        <div className="flex flex-wrap items-center justify-between gap-2 pt-1">
           <p className="font-mono text-xs text-[var(--color-muted-ink)]">
-            Mostrando {visibleKeys.length} de {rowKeys.length} grupos
+            Mostrando {visibleKeys.length} de {rowKeys.length} grupos populacionais
           </p>
           <button
             type="button"
             onClick={() => setExpanded(!expanded)}
-            className="cursor-pointer font-mono text-xs text-[var(--color-institutional)] underline underline-offset-4 hover:opacity-80"
+            aria-expanded={expanded}
+            className="inline-flex min-h-[44px] cursor-pointer items-center gap-1.5 rounded-sm px-3 py-2 font-mono text-xs font-medium text-[var(--color-institutional)] underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-[var(--color-institutional)] transition-colors duration-150"
           >
-            {expanded ? "Recolher grupos" : "Expandir todos os grupos"}
+            {expanded ? "Recolher grupos ↑" : "Expandir todos os 14 grupos ↓"}
           </button>
         </div>
       )}

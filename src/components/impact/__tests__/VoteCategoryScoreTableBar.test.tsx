@@ -102,13 +102,13 @@ describe("VoteCategoryScoreTableBar component", () => {
     expect(screen.getByText("Povos indígenas")).toBeInTheDocument();
     expect(screen.queryByText("Pessoas LGBTQIA+")).not.toBeInTheDocument();
 
-    const expandBtn = screen.getByRole("button", { name: /expandir todos os grupos/i });
+    const expandBtn = screen.getByRole("button", { name: /expandir/i });
     fireEvent.click(expandBtn);
 
     // Após expandir, o terceiro grupo deve aparecer
     expect(screen.getByText("Pessoas LGBTQIA+")).toBeInTheDocument();
 
-    const collapseBtn = screen.getByRole("button", { name: /recolher grupos/i });
+    const collapseBtn = screen.getByRole("button", { name: /recolher/i });
     fireEvent.click(collapseBtn);
 
     expect(screen.queryByText("Pessoas LGBTQIA+")).not.toBeInTheDocument();

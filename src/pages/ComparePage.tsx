@@ -274,16 +274,19 @@ export function ComparePage() {
             {selected.map((c) => (
               <span
                 key={c.id}
-                className="inline-flex items-center gap-2 rounded-sm bg-[color-mix(in_srgb,var(--color-institutional)_12%,var(--color-paper))] px-3 py-1.5 text-sm"
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border-editorial)] bg-[color-mix(in_srgb,var(--color-institutional)_14%,var(--color-paper))] text-[var(--color-ink)] px-3 py-1 text-sm shadow-xs transition-colors"
               >
-                <span className="truncate max-w-[180px]">{c.full_name}</span>
+                <span className="truncate max-w-[180px] font-medium text-[var(--color-ink)]">{c.full_name}</span>
                 <button
                   type="button"
                   onClick={() => toggleCandidate(c.id)}
-                  className="text-[var(--color-muted-ink)] hover:text-[var(--color-ink)]"
+                  className="inline-flex h-5 w-5 cursor-pointer items-center justify-center rounded-full text-[var(--color-muted-ink)] hover:bg-[var(--color-ink)]/10 hover:text-[var(--color-ink)] focus-visible:outline-2 focus-visible:outline-[var(--color-institutional)] transition-colors duration-150"
                   aria-label={`Remover ${c.full_name}`}
                 >
-                  ✕
+                  <svg className="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
                 </button>
               </span>
             ))}
@@ -531,8 +534,10 @@ export function ComparePage() {
                     </p>
                   </div>
                   {isSelected && (
-                    <span className="shrink-0 font-mono text-sm font-bold text-[var(--color-institutional)]">
-                      ✓
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-institutional)] text-white shadow-xs">
+                      <svg className="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
                     </span>
                   )}
                 </button>
