@@ -1,3 +1,13 @@
+## Tick contínuo — lote editorial ALRS aplicado e próximo lote reconstruído — 2026-08-27T12:53Z
+
+- Reconciliação remota confirmou `407` versões resolvidas e já presentes em matrizes, avanço de `382` para `407` após o lote anterior.
+- Reconciliação nominal: `25.616` linhas, `25.616` já presentes, `missing=0`, conflitos/ambíguos/bloqueios `0`.
+- Lote `alrs-impact-editorial-batch-001-v2` validado independentemente: `25/25` aprovadas, `0` needs_changes, hash exato; aplicação anterior executou `25/25` RPCs `record_impact_editorial_disposition` autenticadas com `status=applied`, `0` erros.
+- Fontes oficiais ALRS: `24` URLs HTTP 200, `3.456` itens, `0` bloqueios; portal `published_verified` HTTP 200.
+- Gates Node 24.19.0 verdes: `438/438` testes em `106` arquivos, TypeScript, schema, `data:check` `1003/988`, build `237` módulos/sitemap `1003 + 2`, `git diff --check`.
+- QA: `docs/qa/lote-continuous-ops-editorial-batch-002-2026-08-27.md`.
+- Próximo passo: revisar/aplicar somente o novo lote com hash exato e RPC autenticada; retestar transporte Git e, se aceito, validar backup Cloudflare/headSha/produção.
+
 ## Tick contínuo — badges de mandato e filtro por histórico na página de comparação — 2026-08-27T12:48Z
 
 - Alteração `afb5cb5` estende a identificação de mandato anterior e estreantes à página `/comparar`:
