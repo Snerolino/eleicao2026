@@ -118,7 +118,7 @@ export function HomePage() {
 
   const allCandidates = query.data ?? EMPTY_CANDIDATES;
   const validCandidateIds = useMemo(() => new Set(allCandidates.map((candidate) => candidate.tse_candidate_id ?? candidate.id)), [allCandidates]);
-  const { savedIds, savedSet, toggleSaved, clearSaved } = useSavedCandidates(validCandidateIds);
+  const { savedIds, savedSet, toggleSaved, clearSaved } = useSavedCandidates(validCandidateIds, query.isSuccess);
   const claimsDegraded = query.isSuccess && wasLastClaimsFetchDegraded();
   const usingSnapshotFallback = query.isSuccess && wasLastCandidatesFetchFromSnapshot();
 

@@ -280,6 +280,19 @@ describe('HomePage estados honestos H5.2', () => {
     expect(JSON.parse(window.localStorage.getItem('votopraquem:saved-candidates:v1') ?? '[]')).toEqual(['1']);
   });
 
+  it('preserva candidatos salvos enquanto a lista oficial ainda está carregando', () => {
+    window.localStorage.setItem('votopraquem:saved-candidates:v1', JSON.stringify(['1']));
+    queryState.value = { data: undefined, dataUpdatedAt: 0, isLoading: true, isError: false, isSuccess: false, refetch: vi.fn() };
+    const view = renderHome();
+    queryState.value = { ...queryState.value, data: [officialCandidate], isLoading: false, isSuccess: true };
+    view.rerender(
+      <MemoryRouter>
+        <HomePage />
+      </MemoryRouter>,
+    );
+    expect(JSON.parse(window.localStorage.getItem('votopraquem:saved-candidates:v1') ?? '[]')).toEqual(['1']);
+  });
+
   it('mostra estado vazio de Salvos sem tratar como indisponibilidade', () => {
     queryState.value = { ...queryState.value, data: [officialCandidate] };
     renderHome();
