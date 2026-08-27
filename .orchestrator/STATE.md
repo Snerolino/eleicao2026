@@ -1,3 +1,17 @@
+## Tick contínuo — identificação de mandato anterior vs estreantes e filtro de histórico publicados — 2026-08-27T12:28Z
+
+- Alteração `150c13b` implementa classificação de experiência e histórico de mandato:
+  - Utility `src/utils/candidateExperience.ts` com identificador `hasPreviousMandate` e gerador de badges `candidateExperienceBadge`.
+  - Badges visuais diferenciados:
+    - **"Mandato anterior"** (tom institucional destacado com ícone de marco legislativo) para candidatos com votos nominais em plenário ou mandato/eleição anterior documentada.
+    - **"1ª candidatura"** (tom sutil neutro editorial) para candidatos estreantes sem mandato eletivo prévio.
+  - Badges integrados no `CandidateCard` e `CandidateCompactRow`.
+  - Novo filtro nativo acessível de histórico no `CandidateSearch` e `HomePage`, com contagens dinâmicas de candidatos em cada grupo.
+- Gates locais verdes: `437/437` testes em `106` arquivos, TypeScript `tsc -b`, schema, `data:check` `1003/988`, build `237` módulos / sitemap `1003 + 2`.
+- Deploy no Cloudflare Pages concluído com sucesso via GitHub Actions (`33071397021` success).
+- Produção atualizada: Release `150c13b-20260827T122229951Z`, versão `0.2.1027`, HTTP 200 na raiz e em `/release.json`.
+- Próximo passo: manter monitoramento contínuo e progressão autônoma de lotes.
+
 ## Tick contínuo — workflow autônomo com auto-aprovação e análise de assessments — 2026-08-27T11:15Z
 
 - Implementado e formalizado o novo modo de workflow contínuo ininterrupto do Hermes (`docs/workflow-autonomo-hermes-autoaprovacao-assessments.md`) com base em `INSTRUCAO-AGENTE-REVISOR-ASSESSMENTS-VOTOS-RS2026-v1.md`.
