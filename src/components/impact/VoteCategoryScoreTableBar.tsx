@@ -16,6 +16,52 @@ export interface VoteCategoryScoreTableBarProps {
   initialVisibleCount?: number;
 }
 
+export interface CandidateCategoryScoreResult {
+  score: number | null;
+  evaluatedPropositions: number;
+  contestedAssessments: number;
+  house?: string;
+}
+
+export function getCandidateCategoryScore(
+  scores: VoteCategoryScore[],
+  candidateId: string,
+  groupSlug: string
+): CandidateCategoryScoreResult {
+  const matches = scores.filter(
+    (s) => s.candidate_id === candidateId && s.group_slug === groupSlug
+  );
+  if (matches.length === 0) {
+    return { score: null, evaluatedPropositions: 0, contestedAssessments: 0 };
+  }
+  if (matches.length === 1) {
+    return {
+      score: matches[0].score,
+      evaluatedPropositions: matches[0].evaluated_propositions,
+      contestedAssessments: matches[0].contested_assessments,
+      house: matches[0].house,
+    };
+  }
+  const evaluatedTotal = matches.reduce((acc, m) => acc + m.evaluated_propositions, 0);
+  const contestedTotal = matches.reduce((acc, m) => acc + m.contested_assessments, 0);
+  const validScores = matches.filter((m) => m.score !== null);
+  if (validScores.length === 0) {
+    return { score: null, evaluatedPropositions: 0, contestedAssessments: contestedTotal };
+  }
+  const weightedSum = validScores.reduce(
+    (acc, m) => acc + (m.score ?? 0) * m.evaluated_propositions,
+    0
+  );
+  const combinedScore = evaluatedTotal > 0 ? weightedSum / evaluatedTotal : validScores[0].score;
+  const houses = [...new Set(matches.map((m) => m.house).filter(Boolean))].join(', ');
+  return {
+    score: combinedScore,
+    evaluatedPropositions: evaluatedTotal,
+    contestedAssessments: contestedTotal,
+    house: houses,
+  };
+}
+
 export function VoteCategoryScoreTableBar({
   scores,
   candidates,
@@ -34,24 +80,18 @@ export function VoteCategoryScoreTableBar({
     [scores]
   );
 
-  // Chaves únicas para os 14 grupos canônicos da metodologia v1 (combinadas com casas dos dados)
+  // Sempre as 14 categorias canônicas da metodologia v1 (sem repetição por casa legislativa)
   const rowKeys = useMemo(() => {
-    const houses = [...new Set(safeScores.map((score) => score.house).filter(Boolean))];
-    const targetHouses = houses.length > 0 ? houses : ["alrs"];
+    const canonical = [...BENEFICIARY_GROUPS_CANONICAL_ORDER];
+    const existing = new Set<string>(canonical);
 
-    const canonicalKeys = targetHouses.flatMap((house) =>
-      BENEFICIARY_GROUPS_CANONICAL_ORDER.map((group) => `${house}|${group}`)
-    );
-
-    const existingKeys = new Set(canonicalKeys);
     for (const score of safeScores) {
-      const key = `${score.house}|${score.group_slug}`;
-      if (!existingKeys.has(key)) {
-        canonicalKeys.push(key);
-        existingKeys.add(key);
+      if (score.group_slug && !existing.has(score.group_slug)) {
+        canonical.push(score.group_slug as (typeof BENEFICIARY_GROUPS_CANONICAL_ORDER)[number]);
+        existing.add(score.group_slug);
       }
     }
-    return canonicalKeys;
+    return canonical;
   }, [safeScores]);
 
   if (candidates.length === 0) {
@@ -119,34 +159,22 @@ export function VoteCategoryScoreTableBar({
             </tr>
           </thead>
           <tbody>
-            {visibleKeys.map((key) => {
-              const [house, groupSlug] = key.split("|");
+            {visibleKeys.map((groupSlug) => {
               const label = getBeneficiaryGroupLabel(groupSlug);
-              const isMultiHouse = new Set(rowKeys.map((k) => k.split("|")[0])).size > 1;
 
               return (
-                <tr key={key} className="border-b border-[var(--color-border-editorial)] last:border-b-0">
-                  {/* Rótulo de grupo na primeira coluna (sticky com sombra sutil de separação) */}
+                <tr key={groupSlug} className="border-b border-[var(--color-border-editorial)] last:border-b-0">
+                  {/* Rótulo de grupo na primeira coluna */}
                   <th
                     scope="row"
                     className="sticky left-0 z-10 border-r border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3.5 py-3 font-mono text-[0.72rem] font-medium text-[var(--color-ink)] shadow-[1px_0_0_0_var(--color-border-editorial)]"
                   >
                     <span>{label}</span>
-                    {isMultiHouse && (
-                      <span className="ml-1.5 font-mono text-[0.6rem] uppercase text-[var(--color-muted-ink)]">
-                        ({house})
-                      </span>
-                    )}
                   </th>
 
                   {/* Células de barra para cada candidato */}
                   {candidates.map((c) => {
-                    const scoreObj = safeScores.find(
-                      (item) =>
-                        item.candidate_id === c.id &&
-                        item.house === house &&
-                        item.group_slug === groupSlug
-                    );
+                    const scoreObj = getCandidateCategoryScore(safeScores, c.id, groupSlug);
 
                     return (
                       <td
@@ -154,9 +182,9 @@ export function VoteCategoryScoreTableBar({
                         className="border-r border-[var(--color-border-editorial)] px-3.5 py-2.5 last:border-r-0 align-middle transition-colors duration-150 hover:bg-[color-mix(in_srgb,var(--color-institutional)_6%,var(--color-paper))]"
                       >
                         <DivergentScoreBar
-                          score={scoreObj?.score ?? null}
-                          evaluatedPropositions={scoreObj?.evaluated_propositions ?? 0}
-                          contestedAssessments={scoreObj?.contested_assessments ?? 0}
+                          score={scoreObj.score}
+                          evaluatedPropositions={scoreObj.evaluatedPropositions}
+                          contestedAssessments={scoreObj.contestedAssessments}
                           candidateName={c.full_name}
                           groupLabel={label}
                         />

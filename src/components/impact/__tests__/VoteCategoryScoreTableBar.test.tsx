@@ -136,4 +136,41 @@ describe("VoteCategoryScoreTableBar component", () => {
       screen.getByText(/selecione candidatos para visualizar a comparação/i)
     ).toBeInTheDocument();
   });
+
+  it("NÃO duplica categorias quando candidatos pertencem a casas diferentes (ex: Câmara vs ALRS vs Senado)", () => {
+    const multiHouseScores: VoteCategoryScore[] = [
+      // Candidato ao Senado / ex-deputado federal (Câmara)
+      { candidate_id: "cand-1", house: "camara", group_slug: "mulheres", score: 0.80, evaluated_propositions: 4, eligible_weight: 8, excluded_no_data: 0, contested_assessments: 0 },
+      { candidate_id: "cand-1", house: "camara", group_slug: "povos_indigenas", score: 0.50, evaluated_propositions: 2, eligible_weight: 4, excluded_no_data: 0, contested_assessments: 0 },
+      // Candidato a deputado estadual (ALRS)
+      { candidate_id: "cand-2", house: "alrs", group_slug: "mulheres", score: -0.30, evaluated_propositions: 6, eligible_weight: 10, excluded_no_data: 0, contested_assessments: 0 },
+      { candidate_id: "cand-2", house: "alrs", group_slug: "povos_indigenas", score: 0.20, evaluated_propositions: 3, eligible_weight: 5, excluded_no_data: 0, contested_assessments: 0 },
+      // Candidato a senador (Senado)
+      { candidate_id: "cand-3", house: "senado", group_slug: "mulheres", score: 0.10, evaluated_propositions: 1, eligible_weight: 2, excluded_no_data: 0, contested_assessments: 0 },
+    ];
+
+    render(
+      <MemoryRouter>
+        <VoteCategoryScoreTableBar
+          scores={multiHouseScores}
+          candidates={candidates}
+          initialVisibleCount={14}
+        />
+      </MemoryRouter>
+    );
+
+    // Deve conter exatamente 1 ocorrência do rótulo "Mulheres" na tabela
+    const mulheresHeaders = screen.getAllByRole("rowheader", { name: /^mulheres$/i });
+    expect(mulheresHeaders).toHaveLength(1);
+
+    // Deve conter exatamente 1 ocorrência do rótulo "Povos indígenas"
+    const povosHeaders = screen.getAllByRole("rowheader", { name: /^povos indígenas$/i });
+    expect(povosHeaders).toHaveLength(1);
+
+    // Na linha de Mulheres, cand-1 deve ter +0,80, cand-2 deve ter -0,30, cand-3 deve ter +0,10
+    const rowMulheres = mulheresHeaders[0].closest("tr")!;
+    expect(within(rowMulheres).getByText("+0,80")).toBeInTheDocument();
+    expect(within(rowMulheres).getByText("-0,30")).toBeInTheDocument();
+    expect(within(rowMulheres).getByText("+0,10")).toBeInTheDocument();
+  });
 });
