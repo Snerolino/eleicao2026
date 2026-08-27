@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve, join } from "node:path";
 import { validatePublicCandidateSnapshot } from "./public-candidate-snapshot.mjs";
 
@@ -8,62 +8,72 @@ export function loadAllCamaraVotes(root = ROOT) {
   const camaraVotes = [];
 
   function readJson(p) {
+    if (!existsSync(p)) return null;
     return JSON.parse(readFileSync(p, "utf8"));
   }
 
   // Q1
   const q1Dir = resolve(root, "data/legislative-import/camara/collector-2026-q1");
-  const q1Files = readdirSync(q1Dir).filter((f) => f.endsWith(".json") && /^\d/.test(f));
-  for (const f of q1Files) {
-    const content = readJson(join(q1Dir, f));
-    if (Array.isArray(content)) camaraVotes.push(...content);
-    else if (content.votes) camaraVotes.push(...content.votes);
+  if (existsSync(q1Dir)) {
+    const q1Files = readdirSync(q1Dir).filter((f) => f.endsWith(".json") && /^\d/.test(f));
+    for (const f of q1Files) {
+      const content = readJson(join(q1Dir, f));
+      if (Array.isArray(content)) camaraVotes.push(...content);
+      else if (content?.votes) camaraVotes.push(...content.votes);
+    }
   }
 
   // Q2
   const q2Dir = resolve(root, "data/legislative-import/camara/collector-2026-q2/nominal");
-  const q2Files = readdirSync(q2Dir).filter((f) => f.endsWith(".json") && /^\d/.test(f));
-  for (const f of q2Files) {
-    const content = readJson(join(q2Dir, f));
-    if (Array.isArray(content)) camaraVotes.push(...content);
-    else if (content.votes) camaraVotes.push(...content.votes);
+  if (existsSync(q2Dir)) {
+    const q2Files = readdirSync(q2Dir).filter((f) => f.endsWith(".json") && /^\d/.test(f));
+    for (const f of q2Files) {
+      const content = readJson(join(q2Dir, f));
+      if (Array.isArray(content)) camaraVotes.push(...content);
+      else if (content?.votes) camaraVotes.push(...content.votes);
+    }
   }
 
   // Q3
   const q3Dir = resolve(root, "data/legislative-import/camara/collector-2026-q3/nominal");
-  const q3Files = readdirSync(q3Dir).filter((f) => f.endsWith(".json") && /^\d/.test(f));
-  for (const f of q3Files) {
-    const content = readJson(join(q3Dir, f));
-    if (Array.isArray(content)) camaraVotes.push(...content);
-    else if (content.votes) camaraVotes.push(...content.votes);
+  if (existsSync(q3Dir)) {
+    const q3Files = readdirSync(q3Dir).filter((f) => f.endsWith(".json") && /^\d/.test(f));
+    for (const f of q3Files) {
+      const content = readJson(join(q3Dir, f));
+      if (Array.isArray(content)) camaraVotes.push(...content);
+      else if (content?.votes) camaraVotes.push(...content.votes);
+    }
   }
 
   // Q3 Extra
   const q3ExtraDir = resolve(root, "data/legislative-import/camara/collector-2026-q3/nominal-extra");
-  const q3ExtraFiles = readdirSync(q3ExtraDir).filter((f) => f.endsWith(".json") && /^\d/.test(f));
-  for (const f of q3ExtraFiles) {
-    const content = readJson(join(q3ExtraDir, f));
-    if (Array.isArray(content)) camaraVotes.push(...content);
-    else if (content.votes) camaraVotes.push(...content.votes);
+  if (existsSync(q3ExtraDir)) {
+    const q3ExtraFiles = readdirSync(q3ExtraDir).filter((f) => f.endsWith(".json") && /^\d/.test(f));
+    for (const f of q3ExtraFiles) {
+      const content = readJson(join(q3ExtraDir, f));
+      if (Array.isArray(content)) camaraVotes.push(...content);
+      else if (content?.votes) camaraVotes.push(...content.votes);
+    }
   }
 
   // Historical
   const histEnvelopePath = resolve(root, "data/legislative-import/camara/historical-resolved-envelope.json");
   const histEnvelope = readJson(histEnvelopePath);
-  if (histEnvelope.votes) camaraVotes.push(...histEnvelope.votes);
+  if (histEnvelope?.votes) camaraVotes.push(...histEnvelope.votes);
 
   return camaraVotes;
 }
 
 export function buildDeputyToTseMapping(root = ROOT) {
   function readJson(p) {
+    if (!existsSync(p)) return null;
     return JSON.parse(readFileSync(p, "utf8"));
   }
 
-  const q1Id = readJson(resolve(root, "data/legislative-import/camara/collector-2026-q1/identity-reconciliation.json")).entries;
-  const q2Id = readJson(resolve(root, "data/legislative-import/camara/collector-2026-q2/identity-reconciliation-official.json")).entries;
-  const q3Id = readJson(resolve(root, "data/legislative-import/camara/collector-2026-q3/identity-reconciliation-official.json")).entries;
-  const q3ExtraId = readJson(resolve(root, "data/legislative-import/camara/collector-2026-q3/identity-reconciliation-extra-official.json")).entries;
+  const q1Id = readJson(resolve(root, "data/legislative-import/camara/collector-2026-q1/identity-reconciliation.json"))?.entries ?? [];
+  const q2Id = readJson(resolve(root, "data/legislative-import/camara/collector-2026-q2/identity-reconciliation-official.json"))?.entries ?? [];
+  const q3Id = readJson(resolve(root, "data/legislative-import/camara/collector-2026-q3/identity-reconciliation-official.json"))?.entries ?? [];
+  const q3ExtraId = readJson(resolve(root, "data/legislative-import/camara/collector-2026-q3/identity-reconciliation-extra-official.json"))?.entries ?? [];
 
   const deputyToTse = new Map();
   for (const e of [...q1Id, ...q2Id, ...q3Id, ...q3ExtraId]) {
@@ -86,7 +96,9 @@ export function buildDeputyToTseMapping(root = ROOT) {
 
 export function buildProfilesByTse(root = ROOT) {
   const alrsReconPath = resolve(root, "data/legislative-import/alrs/alrs-nominal-vote-reconciliation-v1.json");
-  const alrsRows = JSON.parse(readFileSync(alrsReconPath, "utf8")).rows;
+  const alrsRows = existsSync(alrsReconPath)
+    ? JSON.parse(readFileSync(alrsReconPath, "utf8"))?.rows ?? []
+    : [];
   const camaraVotes = loadAllCamaraVotes(root);
   const deputyToTse = buildDeputyToTseMapping(root);
 
@@ -168,7 +180,7 @@ export function enrichCandidateList(candidates, root = ROOT) {
 
     return {
       ...candidate,
-      voting_profiles: [],
+      voting_profiles: candidate.voting_profiles ?? [],
     };
   });
 }
