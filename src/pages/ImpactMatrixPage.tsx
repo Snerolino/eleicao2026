@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { sanitizeUrl } from '@/utils/sanitizeUrl';
 
 interface Assessment {
   group: string;
@@ -109,13 +110,20 @@ export function ImpactMatrixPage() {
                     <div className="mt-3 pt-3 border-t border-gray-600">
                       <p className="text-xs text-gray-400 mb-2">Fontes</p>
                       <ol className="list-decimal list-inside text-xs text-gray-300">
-                        {assessment.sources.map((src, i) => (
-                          <li key={i} className="break-all">
-                            <a href={src} target="_blank" rel="noopener" className="underline text-blue-400">
-                              Fonte {i + 1}
-                            </a>
-                          </li>
-                        ))}
+                        {assessment.sources.map((src, i) => {
+                          const safeSrc = sanitizeUrl(src);
+                          return safeSrc ? (
+                            <li key={i} className="break-all">
+                              <a href={safeSrc} target="_blank" rel="noopener noreferrer" className="underline text-blue-400">
+                                Fonte {i + 1}
+                              </a>
+                            </li>
+                          ) : (
+                            <li key={i} className="break-all text-gray-400 italic">
+                              Fonte {i + 1} (inválida)
+                            </li>
+                          );
+                        })}
                       </ol>
                     </div>
                   )}
