@@ -9,7 +9,7 @@ const args = process.argv.slice(2);
 const apply = args.includes('--apply');
 const reconciliationFile = resolve(root, args.find((arg) => arg.endsWith('.json') && !arg.startsWith('--')) ?? 'data/legislative-import/alrs/alrs-nominal-vote-reconciliation-v1.json');
 const outputFile = resolve(root, args.find((arg) => arg.startsWith('--output='))?.slice(9) ?? '/tmp/alrs-nominal-vote-import.json');
-const chunkSize = 100;
+const chunkSize = Number(process.env.ALRS_IMPORT_CHUNK_SIZE ?? process.argv.find((arg) => arg.startsWith('--chunk-size='))?.slice(13) ?? 500);
 
 function loadEnv(file) {
   if (!existsSync(file)) return;
