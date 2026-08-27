@@ -6,7 +6,8 @@
 - Gates Node 24.19.0 verdes: `413/413` testes em `102` arquivos, TypeScript, schema, `data:check` `1003/988`, build `233` módulos/sitemap `1003 + 2`, `git diff --check`.
 - Commit `770845f` alinhado a `origin/main`; Deploy primário `33053258144` success no mesmo `headSha`, backup `33053279176` skipped por duplicidade. Produção `/` e `/release.json` HTTP 200, release `770845f`, `portal:publication:verify=published_verified`, claims live `1000` publicadas e `0` sem fonte.
 - QA: `docs/qa/lote-continuous-ops-editorial-batch-001-2026-08-27.md`. Strict source audit segue fail-closed com gaps ALRS/Câmara/Senado `1251/3/112`, `1647/2/188`, `4/2/455`; as `160` proposições bloqueadas não geraram fato inventado.
-- Próximo passo: recuperar read-only fontes/vínculos exatos das `160` bloqueadas e manter revisão humana; doctor segue RC 1 por Node 22/OpenCode ausente.
+- Auditoria strict repetida mantém gaps `1251/3/112`, `1647/2/188`, `4/2/455`; `npm run impact:alrs:residual:repair` RC 1 fail-closed porque a evidência oficial mudou (`https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=93&ano=2026`), sem aplicar voto.
+- Próximo passo: recuperar read-only fontes/vínculos exatos das `160` bloqueadas e revalidar o manifesto residual; manter revisão humana; doctor segue RC 1 por Node 22/OpenCode ausente.
 
 ## Tick contínuo — reconciliação ALRS otimizada, gates locais verdes — 2026-08-27T07:40Z
 

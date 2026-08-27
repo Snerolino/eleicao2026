@@ -31,5 +31,9 @@ Registrar a reconciliação nominal ALRS e a preparação do primeiro lote edito
 - As `160` proposições bloqueadas não geraram voto inventado nem promoção editorial. Nenhuma matriz/assessment/disposição foi aprovada automaticamente.
 - `npm run orch:doctor` permanece degradado por Node 22 no shell e OpenCode ausente; os gates do projeto foram executados em Node 24.19.0.
 
+## Reconciliação residual posterior
+- Auditoria read-only strict repetida: RC 2, mantendo os gaps `1251/3/112`, `1647/2/188` e `4/2/455` por casa/fase.
+- `npm run impact:alrs:residual:repair`: RC 1, bloqueado porque a evidência oficial mudou (`https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=93&ano=2026`); nenhum voto foi aplicado.
+
 ## Próximo passo
-Continuar a recuperação read-only das fontes e dos vínculos exatos das `160` proposições bloqueadas; manter decisões do batch sob revisão humana e não publicar score/matriz sem gate editorial autenticado.
+Continuar a recuperação read-only das fontes e dos vínculos exatos das `160` proposições bloqueadas; revalidar o manifesto do residual após a mudança da evidência; manter decisões do batch sob revisão humana e não publicar score/matriz sem gate editorial autenticado.
