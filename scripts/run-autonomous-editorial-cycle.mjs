@@ -28,6 +28,7 @@ if (existsSync(discoveryManifest)) run('nominal_reconcile', 'scripts/reconcile-a
 run('nominal_import', 'scripts/import-alrs-nominal-votes.mjs', ['--apply', '--output=/tmp/autonomous-alrs-import.json'], true);
 run('metadata', 'scripts/reconcile-legislative-version-metadata.mjs');
 run('build_batch', 'scripts/build-alrs-impact-batch-proposals.mjs');
+run('source_acquisition', 'scripts/acquire-alrs-source-queue.mjs', [], true);
 run('publish_portal', 'scripts/verify-portal-publication.mjs', [], true);
 const batchFile = resolve(root, 'data/legislative-import/alrs/impact-editorial-batch-001-v1.json');
 const classifierFile = resolve(root, 'data/legislative-import/alrs/impact-editorial-classifier-decisions-v1.json');
