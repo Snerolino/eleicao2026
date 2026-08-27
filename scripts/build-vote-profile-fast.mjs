@@ -21,8 +21,17 @@ async function fetchAll(select, table='legislative_votes') {
 const votes=await fetchAll('candidate_id,value,voting_events!inner(id,house)');
 const relevant=votes.filter((v)=>v.candidate_id && v.voting_events?.house);
 const indexRows=relevant.map((v)=>({candidate_id:v.candidate_id,voting_event_id:v.voting_events.id??null,value:v.value,direction:v.value==='sim'?1:v.value==='nao'?-1:0})).filter((v)=>v.voting_event_id);
+async function upsertChunks(table, rows, onConflict) {
+  let written = 0;
+  for (let offset = 0; offset < rows.length; offset += 500) {
+    const { error } = await sb.from(table).upsert(rows.slice(offset, offset + 500), { onConflict });
+    if (error) throw new Error(`${table} chunk ${offset}-${Math.min(offset + 500, rows.length)}: ${error.message}`);
+    written += Math.min(500, rows.length - offset);
+  }
+  return written;
+}
 const grouped=new Map(); for(const v of relevant){const house=v.voting_events.house;const k=`${v.candidate_id}|${house}`;const g=grouped.get(k)??{candidate_id:v.candidate_id,house,total_votes:0,votos_sim:0,votos_nao:0,votos_abstencao:0,votos_ausente:0,votos_obstrucao:0};g.total_votes++;g[`votos_${v.value}`]++;grouped.set(k,g);}
 const profileRows=[...grouped.values()].map((r)=>({...r,profile_score:(r.votos_sim-r.votos_nao)/Math.max(r.total_votes,1)}));
 const report={schema_version:'1.0.0',packet_type:'legislator_vote_profile_materialization',mode:apply?'apply':'dry-run',remote_apply:false,votes:relevant.length,index_rows:indexRows.length,profile_rows:profileRows.length};
-if(apply){const {error:e1}=await sb.from('legislator_vote_index').upsert(indexRows,{onConflict:'candidate_id,voting_event_id'});if(e1)throw e1;const {error:e2}=await sb.from('legislator_vote_profile').upsert(profileRows,{onConflict:'candidate_id,house'});if(e2)throw e2;report.remote_apply=true;}
+if(apply){report.index_rows_written=await upsertChunks('legislator_vote_index',indexRows,'candidate_id,voting_event_id');report.profile_rows_written=await upsertChunks('legislator_vote_profile',profileRows,'candidate_id,house');report.remote_apply=true;}
 console.log(JSON.stringify(report));
