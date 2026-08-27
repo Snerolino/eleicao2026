@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { execFileSync } from 'node:child_process';
-import { existsSync, readFileSync, statSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, readFileSync, statSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
@@ -39,7 +39,11 @@ const batch = JSON.parse(readFileSync(batchFile, 'utf8'));
 if (batch.items.length) {
   run('classifier', 'scripts/classify-editorial-batch.mjs', [batchFile]);
   run('reviewer', 'scripts/review-editorial-batch.mjs', [batchFile, classifierFile]);
+  run('independent_validation', 'scripts/validate-editorial-batch-decisions.mjs', [batchFile, reviewerFile, '/tmp/autonomous-editorial-validation.json']);
   if (apply) {
+    const archiveDir = resolve(root, '.orchestrator/runtime/editorial-batches', batch.batch_id);
+    mkdirSync(archiveDir, { recursive: true });
+    for (const file of [batchFile, classifierFile, reviewerFile]) copyFileSync(file, resolve(archiveDir, file.split('/').at(-1)));
     run('apply', 'scripts/apply-validated-editorial-batch.mjs', [batchFile, reviewerFile, '--apply', '--output=/tmp/autonomous-editorial-apply.json']);
     report.remote_apply = true;
     run('reconcile_after_apply', 'scripts/reconcile-impact-resolved-versions.mjs');

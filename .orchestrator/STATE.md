@@ -1,3 +1,11 @@
+## Tick contínuo — lote editorial ALRS 002 aplicado, rollover protegido — 2026-08-27T13:19Z
+
+- Ciclo autônomo com `--apply` executado: `25/25` RPCs `record_impact_editorial_disposition` autenticadas com `status=applied`, `0` erros; reconciliação pós-apply `607` versões e `51` perfis ALRS; metadados `1288` versões.
+- Próximo lote reconstruído: `25` proposições, `75` ocorrências/votos factuais, `6` candidatos; permanece `pending_review` e não foi aplicado.
+- Gates locais verdes: `438/438` testes em `106` arquivos, TypeScript, schema, `data:check` `1003/988`, build `237` módulos/sitemap `1003 + 2`, `git diff --check`; portal `published_verified`, raiz e `/release.json` HTTP 200.
+- Auditoria pós-ciclo detectou rollover de artefatos: batch/reviewer persistentes representam lotes diferentes, causando `batch_sha256_mismatch`, `25` IDs desconhecidos e `25` decisões ausentes. Nenhuma nova RPC foi feita após essa detecção. O maestro foi corrigido para validar independentemente antes do apply e arquivar artefatos por `batch_id` em `.orchestrator/runtime/editorial-batches/`.
+- QA atualizado: `docs/qa/lote-continuous-ops-editorial-batch-002-2026-08-27.md`. Worktree agora contém os dois catálogos derivados, o maestro e o QA; commit/push/deploy ficam para o próximo gate após validação final.
+
 ## Tick contínuo — lote editorial ALRS aplicado e próximo lote reconstruído — 2026-08-27T12:53Z
 
 - Reconciliação remota confirmou `407` versões resolvidas e já presentes em matrizes, avanço de `382` para `407` após o lote anterior.
