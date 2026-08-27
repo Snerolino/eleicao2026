@@ -164,4 +164,24 @@ describe('ComparePage H5.3', () => {
     expect(screen.getByText(/1 de 3 candidatos disponíveis/i)).toHaveTextContent(/mulheres/i);
     expect(screen.getByRole('option', { name: 'Não informado' })).toBeInTheDocument();
   });
+
+  it('permite alternar entre o modo de barras e a tabela numérica legada como fallback', () => {
+    renderCompare('/comparar?candidatos=tse-1,tse-2');
+
+    const barsBtn = screen.getByRole('button', { name: /gráfico de barras/i });
+    const legacyBtn = screen.getByRole('button', { name: /tabela numérica/i });
+
+    expect(barsBtn).toHaveAttribute('aria-pressed', 'true');
+    expect(legacyBtn).toHaveAttribute('aria-pressed', 'false');
+
+    // Alterna para o modo de tabela numérica
+    fireEvent.click(legacyBtn);
+    expect(legacyBtn).toHaveAttribute('aria-pressed', 'true');
+    expect(barsBtn).toHaveAttribute('aria-pressed', 'false');
+
+    // Retorna para o gráfico de barras
+    fireEvent.click(barsBtn);
+    expect(barsBtn).toHaveAttribute('aria-pressed', 'true');
+    expect(legacyBtn).toHaveAttribute('aria-pressed', 'false');
+  });
 });

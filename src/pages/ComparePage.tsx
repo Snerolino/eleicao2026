@@ -15,6 +15,7 @@ import { candidatePublicPath } from '@/utils/candidateIdentity';
 import { fetchVoteCategoryComparisons, fetchVoteCategoryScores } from '@/services/voteCategoryComparison';
 import type { VoteCategoryComparison } from '@/domain/impact/vote-category-comparison';
 import { formatCategoryScore, type VoteCategoryScore } from '@/domain/impact/vote-category-score';
+import { VoteCategoryScoreTableBar } from '@/components/impact/VoteCategoryScoreTableBar';
 
 function claimsForSection(
   claims: Claim[],
@@ -96,7 +97,7 @@ function VoteCategoryTable({
   );
 }
 
-function VoteCategoryScoreTable({ scores, candidates }: { scores: VoteCategoryScore[]; candidates: CandidateWithClaims[] }) {
+function VoteCategoryScoreTableLegacy({ scores, candidates }: { scores: VoteCategoryScore[]; candidates: CandidateWithClaims[] }) {
   const safeScores = scores.filter((score) => typeof score?.group_slug === 'string' && typeof score?.candidate_id === 'string' && ('score' in score));
   if (safeScores.length === 0) return <p className="font-mono text-xs uppercase tracking-wide text-[var(--color-muted-ink)]">Saldo por categoria não avaliado para este recorte.</p>;
   const keys = [...new Set(safeScores.map((score) => `${score.house}|${score.group_slug}`))];
@@ -163,6 +164,7 @@ export function ComparePage() {
   const [womenOnly, setWomenOnly] = useState(false);
   const [raceFilter, setRaceFilter] = useState('');
   const [positionFilter, setPositionFilter] = useState('');
+  const [scoreViewMode, setScoreViewMode] = useState<'bars' | 'legacy'>('bars');
   const showDocsHint = true;
 
   const query = useQuery<CandidateWithClaims[]>({
@@ -385,9 +387,47 @@ export function ComparePage() {
                 </p>
               </div>
               {voteCategoryQuery.isLoading ? <LoadingSkeleton label="Carregando comparação factual" /> : <VoteCategoryTable comparisons={voteCategoryQuery.data ?? []} candidates={selected} />}
-              <h3 className="pt-3 text-lg">Saldo metodológico por categoria</h3>
-              <p className="font-mono text-xs text-[var(--color-muted-ink)]">Fórmula v1: peso × sinal / peso elegível. `não avaliado` não é zero.</p>
-              {voteCategoryScoreQuery.isLoading ? <LoadingSkeleton label="Calculando saldos por categoria" /> : <VoteCategoryScoreTable scores={voteCategoryScoreQuery.data ?? []} candidates={selected} />}
+              <div className="flex flex-col gap-2 pt-3 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <h3 className="text-lg">Perfil de votações por grupo populacional</h3>
+                  <p className="font-mono text-xs text-[var(--color-muted-ink)]">
+                    Metodologia v1: saldo ponderado (−1 a +1) por grupo. &ldquo;Não avaliado&rdquo; não é zero.
+                  </p>
+                </div>
+                <div className="flex items-center gap-1 rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-0.5" role="group" aria-label="Modo de visualização dos saldos">
+                  <button
+                    type="button"
+                    onClick={() => setScoreViewMode('bars')}
+                    aria-pressed={scoreViewMode === 'bars'}
+                    className={`cursor-pointer rounded-[2px] px-2.5 py-1 font-mono text-xs transition-colors ${
+                      scoreViewMode === 'bars'
+                        ? 'bg-[var(--color-institutional)] text-white font-medium'
+                        : 'text-[var(--color-muted-ink)] hover:text-[var(--color-ink)]'
+                    }`}
+                  >
+                    Gráfico de barras
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setScoreViewMode('legacy')}
+                    aria-pressed={scoreViewMode === 'legacy'}
+                    className={`cursor-pointer rounded-[2px] px-2.5 py-1 font-mono text-xs transition-colors ${
+                      scoreViewMode === 'legacy'
+                        ? 'bg-[var(--color-institutional)] text-white font-medium'
+                        : 'text-[var(--color-muted-ink)] hover:text-[var(--color-ink)]'
+                    }`}
+                  >
+                    Tabela numérica
+                  </button>
+                </div>
+              </div>
+              {voteCategoryScoreQuery.isLoading ? (
+                <LoadingSkeleton label="Calculando saldos por categoria" />
+              ) : scoreViewMode === 'bars' ? (
+                <VoteCategoryScoreTableBar scores={voteCategoryScoreQuery.data ?? []} candidates={selected} />
+              ) : (
+                <VoteCategoryScoreTableLegacy scores={voteCategoryScoreQuery.data ?? []} candidates={selected} />
+              )}
             </section>
           )}
         </section>
