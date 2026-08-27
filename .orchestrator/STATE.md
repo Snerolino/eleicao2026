@@ -1,3 +1,12 @@
+## Tick contínuo — lote editorial ALRS 003 aplicado, push bloqueado — 2026-08-27T13:30Z
+
+- Ciclo bounded executado: manifesto ALRS fresco (`2,2h`) sem nova descoberta; reconciliação de versões `782/782`; nominal `25.616/25.616` já presente, `missing=0`, conflitos/ambíguos/bloqueios `0`.
+- Materialização Auth: `28.839` votos, `28.839` índices e `79` perfis. Fontes substantivas: `767` proposições e `959` versões verdes.
+- Lote editorial validado independentemente: `25/25` aprovadas, `0` needs_changes, `0` erros; aplicação `25/25` RPCs `record_impact_editorial_disposition` com `status=applied`; nenhum voto factual, score ou matriz aprovada alterado.
+- Próximo lote reconstruído: `25` proposições, `50` ocorrências/votos, `6` candidatos; permanece `pending_review`. Portal `published_verified`, raiz e `/release.json` HTTP 200.
+- Gates locais verdes: `438/438` testes em `106` arquivos, TypeScript, schema, `data:check` `1003/988`, build `237` módulos/sitemap `1003 + 2`, `git diff --check`.
+- QA: `docs/qa/lote-continuous-ops-editorial-batch-003-2026-08-27.md`. Commit local `af9e702`; `git push origin main` falhou 3 vezes por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), portanto nenhum deploy novo foi acionado. Próximo passo: retentar transporte Git; manter reconciliação e aplicação fail-closed.
+
 ## Tick contínuo — lote editorial ALRS 002 aplicado, rollover protegido — 2026-08-27T13:19Z
 
 - Ciclo autônomo com `--apply` executado: `25/25` RPCs `record_impact_editorial_disposition` autenticadas com `status=applied`, `0` erros; reconciliação pós-apply `607` versões e `51` perfis ALRS; metadados `1288` versões.
