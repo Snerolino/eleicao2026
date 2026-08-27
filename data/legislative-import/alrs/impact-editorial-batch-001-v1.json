@@ -10,70 +10,16 @@
   "totals": {
     "proposals": 25,
     "candidate_occurrences": 50,
-    "unique_candidates": 6,
+    "unique_candidates": 4,
     "new_profiles_impacted": 0,
     "factual_votes": 50
   },
   "items": [
     {
-      "proposition_version_id": "faaee620-edac-47af-b213-f7c07e6cb09e",
-      "review_key": "sha256:44e25e7c1c8fcc6018fda8e534771fad55866dd3c90e9a9a9b62982ca80ed2e8#faaee620-edac-47af-b213-f7c07e6cb09e",
-      "canonical_editorial_key": "alrs:PL:89:2022:44e25e7c1c8fcc6018fda8e534771fad55866dd3c90e9a9a9b62982ca80ed2e8",
-      "title": "Dispõe sobre o serviço de Capelania e a prestação de assistência religiosa nas entidades civis e militares situadas no Estado do Rio Grande do Sul. (SEI 3201-0100/22-7)",
-      "official_event_type": null,
-      "candidate_count": 2,
-      "factual_vote_count": 2,
-      "coverage_priority": 4,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
-        "733cef65-bf07-44ef-9521-36232ad0135c"
-      ],
-      "unique_candidates": 2,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "d68e23ac-8a5f-4392-86d5-975aa8973b81",
-      "review_key": "sha256:48714b1d01eb6be068f797c7882699868bd251baf67d4760ea2c27b317309494#d68e23ac-8a5f-4392-86d5-975aa8973b81",
-      "canonical_editorial_key": "alrs:PL:369:2021:48714b1d01eb6be068f797c7882699868bd251baf67d4760ea2c27b317309494",
-      "title": "Dispõe sobre a parcela do produto da arrecadação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação (ICMS) pertencente aos municípios. (SEI 9254-0100/21-0)",
-      "official_event_type": null,
-      "candidate_count": 2,
-      "factual_vote_count": 2,
-      "coverage_priority": 4,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
-        "d88234f9-33b6-43d4-a964-b0c5141d3621"
-      ],
-      "unique_candidates": 2,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "3263cd27-786f-4014-9e43-34cb009a22fb",
-      "review_key": "sha256:48aee87178ed4dff892d4f34aa3a45f58cf0e1b314de435fc2c56966981a938c#3263cd27-786f-4014-9e43-34cb009a22fb",
-      "canonical_editorial_key": "alrs:PL:280:2025:48aee87178ed4dff892d4f34aa3a45f58cf0e1b314de435fc2c56966981a938c",
-      "title": "Autoriza o Poder Executivo do Estado do Rio Grande do Sul a doar imóvel ao Município de Viamão.",
+      "proposition_version_id": "cf363411-77e6-4c00-a33d-1fb7f1e3af9e",
+      "review_key": "sha256:75d75dcd95b26137348bd4f9cac9bd6d9832626042267dae2f195fc275d3febe#cf363411-77e6-4c00-a33d-1fb7f1e3af9e",
+      "canonical_editorial_key": "alrs:PL:109:2025:75d75dcd95b26137348bd4f9cac9bd6d9832626042267dae2f195fc275d3febe",
+      "title": "Requer, com base nos arts. 138, § 3.º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação da emenda 7 e do texto do Projeto de Lei nº 109/2025.",
       "official_event_type": null,
       "candidate_count": 2,
       "factual_vote_count": 2,
@@ -97,10 +43,253 @@
       "public_approval": false
     },
     {
-      "proposition_version_id": "04f125f6-8091-4794-9ef7-7039c150a3d9",
-      "review_key": "sha256:49b519cae8be0465307ae237f7c40f6b7726ec49977f16562f7bedb5e5c1a107#04f125f6-8091-4794-9ef7-7039c150a3d9",
-      "canonical_editorial_key": "alrs:PL:130:2023:49b519cae8be0465307ae237f7c40f6b7726ec49977f16562f7bedb5e5c1a107",
-      "title": "Declara o município de Cruz Alta “Capital da Irrigação” no Estado do Rio Grande do Sul.(SEI 5366-0100/23-2) (Tramitação Conclusiva CAM)",
+      "proposition_version_id": "f16a0962-c155-4db2-8621-13c61ef6e43a",
+      "review_key": "sha256:779d7afd94302ca7cb8d584281f06095730c5876b0230faf77b9080a768f4555#f16a0962-c155-4db2-8621-13c61ef6e43a",
+      "canonical_editorial_key": "alrs:PL:80:2023:779d7afd94302ca7cb8d584281f06095730c5876b0230faf77b9080a768f4555",
+      "title": "Altera a Lei n.º 15.950, de 9 de janeiro de 2023, que\r\nconsolida a legislação estadual relativa a eventos e\r\ndatas estaduais, instituindo o Calendário Oficial de\r\nEventos e Datas Comemorativas do Estado do Rio\r\nGrande do Sul, e dá outras providências",
+      "official_event_type": null,
+      "candidate_count": 2,
+      "factual_vote_count": 2,
+      "coverage_priority": 4,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024"
+      ],
+      "source_gate": "green",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "733cef65-bf07-44ef-9521-36232ad0135c"
+      ],
+      "unique_candidates": 2,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
+      "recommendation_confidence": 0.55,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "7e59014a-7fc1-461e-bc11-2b37b02fdd73",
+      "review_key": "sha256:78f7049a8a6647c4b9c619b7a077edc2740efb547cc196f133faf8dabd97a7a6#7e59014a-7fc1-461e-bc11-2b37b02fdd73",
+      "canonical_editorial_key": "alrs:PL:283:2025:78f7049a8a6647c4b9c619b7a077edc2740efb547cc196f133faf8dabd97a7a6",
+      "title": "Requer, com base no art. 176, § 2º, do Regimento Interno da Assembleia Legislativa, a retirada da ordem do dia do Projeto de Lei 283/2025.",
+      "official_event_type": null,
+      "candidate_count": 2,
+      "factual_vote_count": 2,
+      "coverage_priority": 4,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
+      ],
+      "source_gate": "green",
+      "candidate_ids": [
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621"
+      ],
+      "unique_candidates": 2,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
+      "recommendation_confidence": 0.55,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "b2c1b2c1-6a18-4421-8574-b75a30e0d76e",
+      "review_key": "sha256:7a389d2ab3c1deffb9f20ecf2289d253fb1144256438dc81c33c489a4f81acd3#b2c1b2c1-6a18-4421-8574-b75a30e0d76e",
+      "canonical_editorial_key": "alrs:PL:532:2019:7a389d2ab3c1deffb9f20ecf2289d253fb1144256438dc81c33c489a4f81acd3",
+      "title": "Institui a “Semana Estadual de Prevenção à Saúde Mental na escola” no Estado do Rio Grande do Sul.(SEI 4563.0100/20-9)",
+      "official_event_type": null,
+      "candidate_count": 2,
+      "factual_vote_count": 2,
+      "coverage_priority": 4,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
+      ],
+      "source_gate": "green",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621"
+      ],
+      "unique_candidates": 2,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
+      "recommendation_confidence": 0.55,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "0abe7e68-9141-43bb-a478-9536073c2311",
+      "review_key": "sha256:7ab43e23c26742be1a87d607459c5c2b95176ec060e27bff748f76d9f97fb90b#0abe7e68-9141-43bb-a478-9536073c2311",
+      "canonical_editorial_key": "alrs:PL:420:2019:7ab43e23c26742be1a87d607459c5c2b95176ec060e27bff748f76d9f97fb90b",
+      "title": "Dispõe sobre a realização de curso de primeiros socorros e de prevenção de acidentes durante o acompanhamento pré-natal, e o reforço dessas informações na maternidade e nas consultas de acompanhamento da criança recém-nascida.(SEI 5061.0100/20-0)",
+      "official_event_type": null,
+      "candidate_count": 2,
+      "factual_vote_count": 2,
+      "coverage_priority": 4,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
+      ],
+      "source_gate": "green",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621"
+      ],
+      "unique_candidates": 2,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "assess",
+      "recommended_rationale": "Título indica possível efeito direto sobre grupo populacional; exige confirmação editorial e assessment completo.",
+      "recommendation_confidence": 0.62,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "bfa62b4d-a0ce-45e1-94af-3e98de369b80",
+      "review_key": "sha256:7b693e805bb86189d0f286d84534474f001d894efbceb5f4eb2b4a40cc9ed4ff#bfa62b4d-a0ce-45e1-94af-3e98de369b80",
+      "canonical_editorial_key": "alrs:PL:11:2018:7b693e805bb86189d0f286d84534474f001d894efbceb5f4eb2b4a40cc9ed4ff",
+      "title": "Dispõe sobre a reserva de vagas para negros nos concursos públicos para ingresso à carreira do Ministério Público do Estado do Rio Grande do Sul e para provimento de cargos efetivos da Procuradoria-Geral de Justiça – Serviços Auxiliares do Ministério Público do Estado do Rio Grande do Sul. (SEI 4965-0100/21-5)",
+      "official_event_type": null,
+      "candidate_count": 2,
+      "factual_vote_count": 2,
+      "coverage_priority": 4,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
+      ],
+      "source_gate": "green",
+      "candidate_ids": [
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621"
+      ],
+      "unique_candidates": 2,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
+      "recommendation_confidence": 0.55,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "f263c439-8aad-4ea8-b6fc-9ff0a028bd70",
+      "review_key": "sha256:7b7bb3302bb0e4b1cce9fc59297eb7e78d1366641d0b933d4598c473210b8d43#f263c439-8aad-4ea8-b6fc-9ff0a028bd70",
+      "canonical_editorial_key": "alrs:PL:523:2019:7b7bb3302bb0e4b1cce9fc59297eb7e78d1366641d0b933d4598c473210b8d43",
+      "title": "Institui o dia 25 de novembro como Dia Estadual da Não-Violência contra Mulheres e Meninas. (SEI 6329.0100/20-6)",
+      "official_event_type": null,
+      "candidate_count": 2,
+      "factual_vote_count": 2,
+      "coverage_priority": 4,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
+      ],
+      "source_gate": "green",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621"
+      ],
+      "unique_candidates": 2,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "assess",
+      "recommended_rationale": "Título indica possível efeito direto sobre grupo populacional; exige confirmação editorial e assessment completo.",
+      "recommendation_confidence": 0.62,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "64a5634f-a2ad-4b00-ad88-ea7d2f73fd0a",
+      "review_key": "sha256:811466f4b8553d001aed6eae254c94adaa4ec04223efd3b940e8a5df506eb7f8#64a5634f-a2ad-4b00-ad88-ea7d2f73fd0a",
+      "canonical_editorial_key": "alrs:PL:319:2025:811466f4b8553d001aed6eae254c94adaa4ec04223efd3b940e8a5df506eb7f8",
+      "title": "Altera o Anexo da lei 16.005, de 20 de outubro de 2023, que dispõe sobre o Plano Plurianual para o quadriênio 2024-2027, e dá outras providências.",
+      "official_event_type": null,
+      "candidate_count": 2,
+      "factual_vote_count": 2,
+      "coverage_priority": 4,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
+      ],
+      "source_gate": "green",
+      "candidate_ids": [
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621"
+      ],
+      "unique_candidates": 2,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
+      "recommendation_confidence": 0.55,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "f100f386-0310-4ecb-b929-32bdc5f33896",
+      "review_key": "sha256:828681197e0ea558bcc97b1cd5f1d9a17e596ab0f69cee2479966f69790e41b5#f100f386-0310-4ecb-b929-32bdc5f33896",
+      "canonical_editorial_key": "alrs:PL:392:2023:828681197e0ea558bcc97b1cd5f1d9a17e596ab0f69cee2479966f69790e41b5",
+      "title": "Institui o Marco Legal do Cooperativismo. (SEI 13478-0100/23-0)",
+      "official_event_type": null,
+      "candidate_count": 2,
+      "factual_vote_count": 2,
+      "coverage_priority": 4,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
+      ],
+      "source_gate": "green",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621"
+      ],
+      "unique_candidates": 2,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
+      "recommendation_confidence": 0.55,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "c5f42564-cc4d-43ad-b7a6-dbb542d1b444",
+      "review_key": "sha256:8574771a559d5c8bbbe29a0df3da268fc7df56413ce99609d3c35bf6fc84e034#c5f42564-cc4d-43ad-b7a6-dbb542d1b444",
+      "canonical_editorial_key": "alrs:PL:102:2019:8574771a559d5c8bbbe29a0df3da268fc7df56413ce99609d3c35bf6fc84e034",
+      "title": "Requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação da Emenda nº 4 e do Texto do Projeto de Lei 102/2019.",
+      "official_event_type": null,
+      "candidate_count": 2,
+      "factual_vote_count": 2,
+      "coverage_priority": 4,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
+      ],
+      "source_gate": "green",
+      "candidate_ids": [
+        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621"
+      ],
+      "unique_candidates": 2,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
+      "recommendation_confidence": 0.55,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "5bdc067e-8314-4896-a397-e8db8fe4f9ac",
+      "review_key": "sha256:88e63c6c5af5ce74f00e7937ea67cecbf65c6555ae31d8417387eb47934e6f6c#5bdc067e-8314-4896-a397-e8db8fe4f9ac",
+      "canonical_editorial_key": "alrs:PL:386:2023:88e63c6c5af5ce74f00e7937ea67cecbf65c6555ae31d8417387eb47934e6f6c",
+      "title": "Requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação da Emenda nº 1 e do Texto do Projeto de Lei 386/2023.",
       "official_event_type": null,
       "candidate_count": 2,
       "factual_vote_count": 2,
@@ -124,21 +313,48 @@
       "public_approval": false
     },
     {
-      "proposition_version_id": "d3702891-ffa2-4bc7-8053-bf60c248d63a",
-      "review_key": "sha256:4b4c0c80267b0133018c19681c00c2f411c1f80a473ace17b3ba37a278e387f1#d3702891-ffa2-4bc7-8053-bf60c248d63a",
-      "canonical_editorial_key": "alrs:PL:54:2022:4b4c0c80267b0133018c19681c00c2f411c1f80a473ace17b3ba37a278e387f1",
-      "title": "Autoriza o Departamento Autônomo de Estradas de Rodagem – DAER/RS a transferir ao Município de Alpestre a titularidade de segmento da rodovia ERS-504. (SEI 3519-0100/22-5)",
+      "proposition_version_id": "9fbfa5c6-655a-4585-853f-c583efd4d4c3",
+      "review_key": "sha256:89c84d2f001254afaf2bd856719e39338d2f4bef025a954bdfabf6ad497c0f3b#9fbfa5c6-655a-4585-853f-c583efd4d4c3",
+      "canonical_editorial_key": "alrs:PL:23:2024:89c84d2f001254afaf2bd856719e39338d2f4bef025a954bdfabf6ad497c0f3b",
+      "title": "Requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação do Texto do Projeto de Lei 23/2024.",
       "official_event_type": null,
       "candidate_count": 2,
       "factual_vote_count": 2,
       "coverage_priority": 4,
       "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024"
       ],
       "source_gate": "green",
       "candidate_ids": [
-        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "733cef65-bf07-44ef-9521-36232ad0135c"
+      ],
+      "unique_candidates": 2,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
+      "recommendation_confidence": 0.55,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "12e5f7e0-2b50-4151-931b-ec3b5f2cfa8e",
+      "review_key": "sha256:8a69c6f64468100dfc094cfd1181825bb30b71f2f2f715b0977f8ff9b4c598e4#12e5f7e0-2b50-4151-931b-ec3b5f2cfa8e",
+      "canonical_editorial_key": "alrs:PL:383:2023:8a69c6f64468100dfc094cfd1181825bb30b71f2f2f715b0977f8ff9b4c598e4",
+      "title": "Institui o Programa Bolsa-Atleta no âmbito do Estado do Rio Grande do Sul. (SEI 13595-0100/23-3)",
+      "official_event_type": null,
+      "candidate_count": 2,
+      "factual_vote_count": 2,
+      "coverage_priority": 4,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
+      ],
+      "source_gate": "green",
+      "candidate_ids": [
+        "733cef65-bf07-44ef-9521-36232ad0135c",
         "d88234f9-33b6-43d4-a964-b0c5141d3621"
       ],
       "unique_candidates": 2,
@@ -151,22 +367,22 @@
       "public_approval": false
     },
     {
-      "proposition_version_id": "bbc389af-8ba5-4656-8471-9219e046fb14",
-      "review_key": "sha256:4f1cd65273b57ef2ae52d3b779f054626c5cf94f764598d67dc88f8d320fdd76#bbc389af-8ba5-4656-8471-9219e046fb14",
-      "canonical_editorial_key": "alrs:PL:363:2019:4f1cd65273b57ef2ae52d3b779f054626c5cf94f764598d67dc88f8d320fdd76",
-      "title": "Dispõe sobre o registro do número de série da bicicleta no documento fiscal emitido ao consumidor. (SEI 8869-01.00/21-7)",
+      "proposition_version_id": "001eb261-5229-40ce-aaf7-851811941385",
+      "review_key": "sha256:8b179778c742de7117b632d03fe5235a7f83db322ec05db69d4dda25f6afea55#001eb261-5229-40ce-aaf7-851811941385",
+      "canonical_editorial_key": "alrs:PL:386:2023:8b179778c742de7117b632d03fe5235a7f83db322ec05db69d4dda25f6afea55",
+      "title": "Dispõe sobre o Sistema Único de Assistência Social - SUAS no Estado do Rio Grande do Sul, altera a Lei nº. 10.719, de 17 de janeiro de 1996, que cria o Fundo Estadual de Assistência Social, e a Lei nº. 10.716, de 16 de janeiro de 1996, que cria o Conselho Estadual de Assistência Social. (SEI 13599-0100/23-4)",
       "official_event_type": null,
       "candidate_count": 2,
       "factual_vote_count": 2,
       "coverage_priority": 4,
       "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024"
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
       ],
       "source_gate": "green",
       "candidate_ids": [
-        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
-        "733cef65-bf07-44ef-9521-36232ad0135c"
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621"
       ],
       "unique_candidates": 2,
       "new_profiles_impacted": 0,
@@ -178,37 +394,10 @@
       "public_approval": false
     },
     {
-      "proposition_version_id": "7b84b492-0f4a-4bdf-8ed6-eb3de472e9a7",
-      "review_key": "sha256:518e654dd184e22f8ce8b6ef49a20c1046f3f8f86e47204da6e79dd96d1429e2#7b84b492-0f4a-4bdf-8ed6-eb3de472e9a7",
-      "canonical_editorial_key": "alrs:PL:442:2023:518e654dd184e22f8ce8b6ef49a20c1046f3f8f86e47204da6e79dd96d1429e2",
-      "title": "Declara a Aviação Agrícola como de Relevante Interesse Social, Público e Econômico no Estado do Rio Grande do Sul. (14466-01.00/23-0)",
-      "official_event_type": null,
-      "candidate_count": 2,
-      "factual_vote_count": 2,
-      "coverage_priority": 4,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
-        "733cef65-bf07-44ef-9521-36232ad0135c"
-      ],
-      "unique_candidates": 2,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "9388315c-a10f-44a7-9b9e-925e622c3125",
-      "review_key": "sha256:5673577e8b9ba0385881472576d0b989a2e30df634e0ee6fa8474dd74793ee7c#9388315c-a10f-44a7-9b9e-925e622c3125",
-      "canonical_editorial_key": "alrs:PL:65:2021:5673577e8b9ba0385881472576d0b989a2e30df634e0ee6fa8474dd74793ee7c",
-      "title": "Institui o auxílio emergencial de apoio à atividade econômica e de proteção social, bem como estabelece medidas excepcionais de enfrentamento às consequências econômicas e sociais decorrentes da pandemia de COVID-19. (SEI 3197-0100/21-3)",
+      "proposition_version_id": "8db83ff7-335d-401c-94ee-bbcde6e6570f",
+      "review_key": "sha256:8b251e9085f6878ee5d1a5a51a9078763456b2d0544a34fec01e9e1c811e3b6a#8db83ff7-335d-401c-94ee-bbcde6e6570f",
+      "canonical_editorial_key": "alrs:PL:344:2021:8b251e9085f6878ee5d1a5a51a9078763456b2d0544a34fec01e9e1c811e3b6a",
+      "title": "Altera a Lei nº 9.186, de 27 de dezembro de 1990, que dispõe sobre a cedência de áreas em instituições estaduais de cultura e dá outras providências. (SEI 8736-0100/21-5)",
       "official_event_type": null,
       "candidate_count": 2,
       "factual_vote_count": 2,
@@ -220,114 +409,6 @@
       "source_gate": "green",
       "candidate_ids": [
         "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
-        "d88234f9-33b6-43d4-a964-b0c5141d3621"
-      ],
-      "unique_candidates": 2,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "0518ce7c-0bdd-4d47-95d4-a6d842d18062",
-      "review_key": "sha256:5881a5d6837e99e7f24cf8e342e428ccfd24ada7edcafe90b394d256c859c1e2#0518ce7c-0bdd-4d47-95d4-a6d842d18062",
-      "canonical_editorial_key": "alrs:PL:319:2025:5881a5d6837e99e7f24cf8e342e428ccfd24ada7edcafe90b394d256c859c1e2",
-      "title": "Requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação  do texto do Projeto de Lei nº  319/2025.",
-      "official_event_type": null,
-      "candidate_count": 2,
-      "factual_vote_count": 2,
-      "coverage_priority": 4,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "733cef65-bf07-44ef-9521-36232ad0135c",
-        "d88234f9-33b6-43d4-a964-b0c5141d3621"
-      ],
-      "unique_candidates": 2,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "a6d41d89-7eac-469a-a43b-aa2db865ff11",
-      "review_key": "sha256:588ed7b34e61cc698fcbb2543327f6df7b45dd8be16f5bb820d15e493e2ea3ed#a6d41d89-7eac-469a-a43b-aa2db865ff11",
-      "canonical_editorial_key": "alrs:PL:291:2025:588ed7b34e61cc698fcbb2543327f6df7b45dd8be16f5bb820d15e493e2ea3ed",
-      "title": "Requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação da Emenda 1 e do texto do Projeto de Lei nº  291/2025.",
-      "official_event_type": null,
-      "candidate_count": 2,
-      "factual_vote_count": 2,
-      "coverage_priority": 4,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "733cef65-bf07-44ef-9521-36232ad0135c",
-        "78b93657-f3a2-4242-9d39-d517c45ce6dd"
-      ],
-      "unique_candidates": 2,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "f700536d-a150-48e8-bef2-48987d7d4a88",
-      "review_key": "sha256:5c503608c3a4ca06ad843eb74ef753d5ec93048e4636b50de39b6a85a0f47bcd#f700536d-a150-48e8-bef2-48987d7d4a88",
-      "canonical_editorial_key": "alrs:PL:357:2024:5c503608c3a4ca06ad843eb74ef753d5ec93048e4636b50de39b6a85a0f47bcd",
-      "title": "Requerimento de preferência de votação da Emenda Nº 1/2024. Proposição principal: Projeto de Lei Nº 357/2024",
-      "official_event_type": null,
-      "candidate_count": 2,
-      "factual_vote_count": 2,
-      "coverage_priority": 4,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
-        "733cef65-bf07-44ef-9521-36232ad0135c"
-      ],
-      "unique_candidates": 2,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "5ce9306f-0bcc-4d52-86d3-0ad6cf275468",
-      "review_key": "sha256:5dcbb4a32ebaf2bf6bdddbc18f806718d814e1ab8c33202d2810956f5426d7fc#5ce9306f-0bcc-4d52-86d3-0ad6cf275468",
-      "canonical_editorial_key": "alrs:PL:170:2019:5dcbb4a32ebaf2bf6bdddbc18f806718d814e1ab8c33202d2810956f5426d7fc",
-      "title": "Dispõe sobre educação domiciliar e dá outras providências. (SEI 4839-0100/20-4)",
-      "official_event_type": null,
-      "candidate_count": 2,
-      "factual_vote_count": 2,
-      "coverage_priority": 4,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5",
         "d88234f9-33b6-43d4-a964-b0c5141d3621"
       ],
       "unique_candidates": 2,
@@ -340,334 +421,10 @@
       "public_approval": false
     },
     {
-      "proposition_version_id": "393509e7-3634-4944-9c7a-75dec04980c5",
-      "review_key": "sha256:5f017484444f226352f91656c6677f2881958dc17a2688d83c443ae4ce1d36e0#393509e7-3634-4944-9c7a-75dec04980c5",
-      "canonical_editorial_key": "alrs:PL:420:2021:5f017484444f226352f91656c6677f2881958dc17a2688d83c443ae4ce1d36e0",
-      "title": "Autoriza o Poder Executivo a doar, com encargos, imóveis ao Município de Lajeado.(SEI 9996-0100/21-0)",
-      "official_event_type": null,
-      "candidate_count": 2,
-      "factual_vote_count": 2,
-      "coverage_priority": 4,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
-        "1ee310d9-2bb7-41f6-a736-37d3483d1cc5"
-      ],
-      "unique_candidates": 2,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "11036757-7d81-4bca-9d01-c11ee4e96173",
-      "review_key": "sha256:60ec2c54c9a96a7570bc0f332045d78e260ad30dcdadda1bcdfe374276efd9eb#11036757-7d81-4bca-9d01-c11ee4e96173",
-      "canonical_editorial_key": "alrs:PL:203:2022:60ec2c54c9a96a7570bc0f332045d78e260ad30dcdadda1bcdfe374276efd9eb",
-      "title": "Requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação do Texto do Projeto de Lei 203/2022.",
-      "official_event_type": null,
-      "candidate_count": 2,
-      "factual_vote_count": 2,
-      "coverage_priority": 4,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
-        "b969ffd9-d3fd-4b4c-8eb9-9f5e9996af8f"
-      ],
-      "unique_candidates": 2,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "64fe1395-4a63-4a26-a7e4-c86b8116f26f",
-      "review_key": "sha256:61b8c7a224f2df25c345e0da5a64dbe28457249a7f55e43fac5cc314a1edc88c#64fe1395-4a63-4a26-a7e4-c86b8116f26f",
-      "canonical_editorial_key": "alrs:PL:222:2019:61b8c7a224f2df25c345e0da5a64dbe28457249a7f55e43fac5cc314a1edc88c",
-      "title": "Institui o Programa Futebol para Todos no Estado do Rio Grande do Sul e dá outras providências. (SEI 5413.0100/20-9)",
-      "official_event_type": null,
-      "candidate_count": 2,
-      "factual_vote_count": 2,
-      "coverage_priority": 4,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
-        "d88234f9-33b6-43d4-a964-b0c5141d3621"
-      ],
-      "unique_candidates": 2,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "32bdc72a-d9b8-4438-a877-03c1c64fe434",
-      "review_key": "sha256:6239f28ed24ae6d263cdcf7f776fbcc00ac64666d9ce540744898d1777e5a76d#32bdc72a-d9b8-4438-a877-03c1c64fe434",
-      "canonical_editorial_key": "alrs:PL:48:2020:6239f28ed24ae6d263cdcf7f776fbcc00ac64666d9ce540744898d1777e5a76d",
-      "title": "Inclui no Calendário Oficial de Eventos do Estado do Rio Grande do Sul a “Kuchenfest” e declara o município de Rolante Capital Estadual das Cucas. (SEI 8927-0100/21-2)",
-      "official_event_type": null,
-      "candidate_count": 2,
-      "factual_vote_count": 2,
-      "coverage_priority": 4,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
-        "d88234f9-33b6-43d4-a964-b0c5141d3621"
-      ],
-      "unique_candidates": 2,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "770478e2-a7ce-45c3-9adf-1ecc799979e1",
-      "review_key": "sha256:63604f06211933240e222cd4b6a656ee88accea97ed72c63118f32597d616310#770478e2-a7ce-45c3-9adf-1ecc799979e1",
-      "canonical_editorial_key": "alrs:PL:107:2025:63604f06211933240e222cd4b6a656ee88accea97ed72c63118f32597d616310",
-      "title": "Autoriza o Poder Executivo a doar imóvel ao Município de Caxias do Sul.",
-      "official_event_type": null,
-      "candidate_count": 2,
-      "factual_vote_count": 2,
-      "coverage_priority": 4,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "733cef65-bf07-44ef-9521-36232ad0135c",
-        "d88234f9-33b6-43d4-a964-b0c5141d3621"
-      ],
-      "unique_candidates": 2,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "e56a09e8-6059-45e2-bf8a-6aad651025cd",
-      "review_key": "sha256:6a35f912174dfa549426c2c8f88eda68e66ea209279a8a3d681737e307eff2da#e56a09e8-6059-45e2-bf8a-6aad651025cd",
-      "canonical_editorial_key": "alrs:PL:437:2023:6a35f912174dfa549426c2c8f88eda68e66ea209279a8a3d681737e307eff2da",
-      "title": "Altera a Lei nº 8.115, de 30 de dezembro de 1985, que institui o Imposto sobre a Propriedade de Veículos Automotores. (SEI 14527-01.00/23-3)",
-      "official_event_type": null,
-      "candidate_count": 2,
-      "factual_vote_count": 2,
-      "coverage_priority": 4,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "733cef65-bf07-44ef-9521-36232ad0135c",
-        "d88234f9-33b6-43d4-a964-b0c5141d3621"
-      ],
-      "unique_candidates": 2,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "4032b421-3839-4a09-ac32-0c17c869011e",
-      "review_key": "sha256:6bc2fa83f51b1cd81d51d027efce17a172ea62fa8adffa3d9255f468f7ed338b#4032b421-3839-4a09-ac32-0c17c869011e",
-      "canonical_editorial_key": "alrs:PL:257:2021:6bc2fa83f51b1cd81d51d027efce17a172ea62fa8adffa3d9255f468f7ed338b",
-      "title": "Requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação do Texto do Projeto de Lei 257/2021.",
-      "official_event_type": null,
-      "candidate_count": 2,
-      "factual_vote_count": 2,
-      "coverage_priority": 4,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
-        "d88234f9-33b6-43d4-a964-b0c5141d3621"
-      ],
-      "unique_candidates": 2,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "c053d632-5c1a-4609-aa81-cef8858276fd",
-      "review_key": "sha256:6c2fe41d71093d08b49ae96e8b5c19913effb85ab257490bf8163a596192d120#c053d632-5c1a-4609-aa81-cef8858276fd",
-      "canonical_editorial_key": "alrs:PL:56:2024:6c2fe41d71093d08b49ae96e8b5c19913effb85ab257490bf8163a596192d120",
-      "title": "Declara a Gruta Subterrânea Nossa Senhora de Fátima, localizada no Município de Nova Esperança do Sul, como de relevante interesse histórico e turístico do Estado do Rio Grande do Sul.",
-      "official_event_type": null,
-      "candidate_count": 2,
-      "factual_vote_count": 2,
-      "coverage_priority": 4,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
-        "733cef65-bf07-44ef-9521-36232ad0135c"
-      ],
-      "unique_candidates": 2,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "89e94f28-1544-4e27-86d5-2242049be4e2",
-      "review_key": "sha256:6dfe3517a835848e1d49c5c5f587a1577f1182f2742e8bae68ef1470b3d54f96#89e94f28-1544-4e27-86d5-2242049be4e2",
-      "canonical_editorial_key": "alrs:PL:345:2021:6dfe3517a835848e1d49c5c5f587a1577f1182f2742e8bae68ef1470b3d54f96",
-      "title": "Autoriza o Departamento Autônomo de Estradas de Rodagem – DAER/RS transferir ao Município de Dom Pedro de Alcântara a titularidade de segmento da rodovia BRS-101. (SEI 8739-0100/21-3)",
-      "official_event_type": null,
-      "candidate_count": 2,
-      "factual_vote_count": 2,
-      "coverage_priority": 4,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
-        "d88234f9-33b6-43d4-a964-b0c5141d3621"
-      ],
-      "unique_candidates": 2,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "260d8fb3-1713-4e2d-9939-6f041ec14e7e",
-      "review_key": "sha256:70753b1ea238aa035c29e8e138bd6bdd166edb056e0370bad344c392da709264#260d8fb3-1713-4e2d-9939-6f041ec14e7e",
-      "canonical_editorial_key": "alrs:PL:389:2023:70753b1ea238aa035c29e8e138bd6bdd166edb056e0370bad344c392da709264",
-      "title": "Dispõe sobre a validade de laudo médico que atesta o Diabetes Mellitus tipo 1-DM1. (SEI 13486-01.00/23-6)",
-      "official_event_type": null,
-      "candidate_count": 2,
-      "factual_vote_count": 2,
-      "coverage_priority": 4,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
-        "733cef65-bf07-44ef-9521-36232ad0135c"
-      ],
-      "unique_candidates": 2,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "bac0beab-0f18-48c4-9770-026a53f37bc3",
-      "review_key": "sha256:74024b2304eb3143274a2bd7f0952ced1077ecf608df365d903a478ecd8699ea#bac0beab-0f18-48c4-9770-026a53f37bc3",
-      "canonical_editorial_key": "alrs:PL:515:2025:74024b2304eb3143274a2bd7f0952ced1077ecf608df365d903a478ecd8699ea",
-      "title": "Altera a Lei 8.109, de 19 de dezembro de 1985, que dispõe sobre a Taxa de Serviços Diversos.",
-      "official_event_type": null,
-      "candidate_count": 2,
-      "factual_vote_count": 2,
-      "coverage_priority": 4,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "733cef65-bf07-44ef-9521-36232ad0135c",
-        "d88234f9-33b6-43d4-a964-b0c5141d3621"
-      ],
-      "unique_candidates": 2,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "b39ace88-82ea-4201-b7f7-5f656ed64434",
-      "review_key": "sha256:755d5d16867eb9d4c291b9ab3bebd132185b6a818f1375a7751d95f2e3eef136#b39ace88-82ea-4201-b7f7-5f656ed64434",
-      "canonical_editorial_key": "alrs:PL:97:2018:755d5d16867eb9d4c291b9ab3bebd132185b6a818f1375a7751d95f2e3eef136",
-      "title": "Introduz modificação na Lei nº 10.350, de 30 de dezembro de 1994, que institui o Sistema Estadual de Recursos Hídricos, regulamentando o artigo 171 da Constituição do Estado do Rio Grande do Sul. (SEI 11354-01.00/21-6)",
-      "official_event_type": null,
-      "candidate_count": 2,
-      "factual_vote_count": 2,
-      "coverage_priority": 4,
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "source_gate": "green",
-      "candidate_ids": [
-        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
-        "d88234f9-33b6-43d4-a964-b0c5141d3621"
-      ],
-      "unique_candidates": 2,
-      "new_profiles_impacted": 0,
-      "recommended_disposition": "no_direct_population_group",
-      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
-      "recommendation_confidence": 0.55,
-      "review_status": "pending_review",
-      "remote_apply": false,
-      "public_approval": false
-    },
-    {
-      "proposition_version_id": "7bb275fa-b987-4aa8-86ea-5cf36406c25b",
-      "review_key": "sha256:7594d402fd55058c5ee467c53412b1812a8cfb046fa354707d31aae3c800484a#7bb275fa-b987-4aa8-86ea-5cf36406c25b",
-      "canonical_editorial_key": "alrs:PL:223:2019:7594d402fd55058c5ee467c53412b1812a8cfb046fa354707d31aae3c800484a",
-      "title": "Estabelece a obrigatoriedade da adoção de medidas de auxílio à mulher que se sinta em situação de risco, por restaurantes, bares, casas noturnas de entretenimento e demais estabelecimentos similares no Estado do Rio Grande do Sul. (SEI 8907-01.00/21-9)(Tramitação Conjunta com o PL 43/23)",
+      "proposition_version_id": "67faf652-044a-4666-bb08-b9bf2a46d22a",
+      "review_key": "sha256:8dd2d085298cddde21e300f6ed906316458f3b729cd50f4783a866d53562b847#67faf652-044a-4666-bb08-b9bf2a46d22a",
+      "canonical_editorial_key": "alrs:PL:388:2023:8dd2d085298cddde21e300f6ed906316458f3b729cd50f4783a866d53562b847",
+      "title": "Dispõe sobre a utilização  das Areias Descartadas de Fundição (ADF).",
       "official_event_type": null,
       "candidate_count": 2,
       "factual_vote_count": 2,
@@ -683,13 +440,256 @@
       ],
       "unique_candidates": 2,
       "new_profiles_impacted": 0,
-      "recommended_disposition": "assess",
-      "recommended_rationale": "Título indica possível efeito direto sobre grupo populacional; exige confirmação editorial e assessment completo.",
-      "recommendation_confidence": 0.62,
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
+      "recommendation_confidence": 0.55,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "04dbc444-2f9b-4361-bc0c-055b856079d2",
+      "review_key": "sha256:90822ed1ec50bc6df9ce4aa4e1a6b62690399fa69780dd1d5495af3e0fcbc3f5#04dbc444-2f9b-4361-bc0c-055b856079d2",
+      "canonical_editorial_key": "alrs:PL:36:2021:90822ed1ec50bc6df9ce4aa4e1a6b62690399fa69780dd1d5495af3e0fcbc3f5",
+      "title": "Altera a Lei nº 8.109, de 19 de dezembro de 1985, que dispõe sobre a Taxa de Serviços Diversos, e dá outras providências.(SEI 1941-0100/21-9)",
+      "official_event_type": null,
+      "candidate_count": 2,
+      "factual_vote_count": 2,
+      "coverage_priority": 4,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
+      ],
+      "source_gate": "green",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621"
+      ],
+      "unique_candidates": 2,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
+      "recommendation_confidence": 0.55,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "61393e81-af04-44f7-8057-99013a3aa479",
+      "review_key": "sha256:9225b0c56eeb8f94f27c27107b5accd28d38e84ba896ebfbcb672b972d376374#61393e81-af04-44f7-8057-99013a3aa479",
+      "canonical_editorial_key": "alrs:PL:286:2024:9225b0c56eeb8f94f27c27107b5accd28d38e84ba896ebfbcb672b972d376374",
+      "title": "Reconhece a “Atividade de Talhe de Basalto” e o “Ofício de Talhador de Basalto” como de Relevante Interesse Cultural, Artístico, Histórico e Socioeconômico no Estado do Rio Grande do Sul.",
+      "official_event_type": null,
+      "candidate_count": 2,
+      "factual_vote_count": 2,
+      "coverage_priority": 4,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
+      ],
+      "source_gate": "green",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621"
+      ],
+      "unique_candidates": 2,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "taxonomy_gap",
+      "recommended_rationale": "Título sugere público específico que pode não estar representado com segurança na taxonomia v1; confirmar antes de forçar grupo.",
+      "recommendation_confidence": 0.58,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "2a30d899-fbaf-4b0b-ab95-d1bbf73088b4",
+      "review_key": "sha256:92e8e3f75898e4681e3996534c3d4599b39e495a7243923d5b07aa4163c23bd1#2a30d899-fbaf-4b0b-ab95-d1bbf73088b4",
+      "canonical_editorial_key": "alrs:PL:28:2023:92e8e3f75898e4681e3996534c3d4599b39e495a7243923d5b07aa4163c23bd1",
+      "title": "Altera a Lei 15.322, de 25 de setembro de 2019, para estabelecer penalidades administrativas às pessoas físicas ou jurídicas e agentes públicos que discriminarem pessoas com Transtorno de Espectro Autista (TEA), no Rio Grande do Sul e dar outras providências. (SEI 2727-0100/23-9)",
+      "official_event_type": null,
+      "candidate_count": 2,
+      "factual_vote_count": 2,
+      "coverage_priority": 4,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024"
+      ],
+      "source_gate": "green",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "733cef65-bf07-44ef-9521-36232ad0135c"
+      ],
+      "unique_candidates": 2,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
+      "recommendation_confidence": 0.55,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "227bf96f-3dc7-4d9a-9f52-abd3b9cf3748",
+      "review_key": "sha256:933ca2630d8c5de0366feaddfbc0311cb4e26cf2828a9e11d9fc3b9c7a834079#227bf96f-3dc7-4d9a-9f52-abd3b9cf3748",
+      "canonical_editorial_key": "alrs:PL:160:2023:933ca2630d8c5de0366feaddfbc0311cb4e26cf2828a9e11d9fc3b9c7a834079",
+      "title": "Institui normas protetivas ao consumidor associadas ao direito à informação e regulamenta o sistema de inclusão e exclusão dos nomes dos consumidores nos cadastros de proteção ao crédito.",
+      "official_event_type": null,
+      "candidate_count": 2,
+      "factual_vote_count": 2,
+      "coverage_priority": 4,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
+      ],
+      "source_gate": "green",
+      "candidate_ids": [
+        "733cef65-bf07-44ef-9521-36232ad0135c",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621"
+      ],
+      "unique_candidates": 2,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
+      "recommendation_confidence": 0.55,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "570fcc4c-8b63-4f52-903a-dc2bec70f6fe",
+      "review_key": "sha256:93db0e43dfcbd27b81baddc3f0e1b0b37ff2b369c4bca0b6a6ce0375ff44b22e#570fcc4c-8b63-4f52-903a-dc2bec70f6fe",
+      "canonical_editorial_key": "alrs:PL:150:2017:93db0e43dfcbd27b81baddc3f0e1b0b37ff2b369c4bca0b6a6ce0375ff44b22e",
+      "title": "Altera a Lei n.º 13.320, de 21 de dezembro de 2009, que consolida a legislação relativa à pessoa com deficiência no Estado do Rio Grande do Sul. (SEI 6555.0100/20-7)",
+      "official_event_type": null,
+      "candidate_count": 2,
+      "factual_vote_count": 2,
+      "coverage_priority": 4,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
+      ],
+      "source_gate": "green",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621"
+      ],
+      "unique_candidates": 2,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
+      "recommendation_confidence": 0.55,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "2dbaf54f-e5c4-4460-9afd-545281eea965",
+      "review_key": "sha256:98f328e6b83ca5124cf5e9900f131f9905a0f7a67612fe06b1e77a7b24cf7df1#2dbaf54f-e5c4-4460-9afd-545281eea965",
+      "canonical_editorial_key": "alrs:PL:316:2023:98f328e6b83ca5124cf5e9900f131f9905a0f7a67612fe06b1e77a7b24cf7df1",
+      "title": "Cria e reorganiza serventias extrajudiciais em diversos municípios do Estado do Rio Grande do Sul e dá outras providências. (SEI 11422-0100/23-0)",
+      "official_event_type": null,
+      "candidate_count": 2,
+      "factual_vote_count": 2,
+      "coverage_priority": 4,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
+      ],
+      "source_gate": "green",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621"
+      ],
+      "unique_candidates": 2,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
+      "recommendation_confidence": 0.55,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "a1153a0e-d930-4d27-b49b-9fc54985aecf",
+      "review_key": "sha256:9917c25414e32f08029d1535cd1db12f9a5e93dd834eb00285f033f80800f2e6#a1153a0e-d930-4d27-b49b-9fc54985aecf",
+      "canonical_editorial_key": "alrs:PL:592:2023:9917c25414e32f08029d1535cd1db12f9a5e93dd834eb00285f033f80800f2e6",
+      "title": "Declara a “Cavalgada do Mar” como de Relevante Interesse Artístico e Cultural no Estado do Rio Grande do Sul. (SEI 17838-01.00/23-4)",
+      "official_event_type": null,
+      "candidate_count": 2,
+      "factual_vote_count": 2,
+      "coverage_priority": 4,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024"
+      ],
+      "source_gate": "green",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "733cef65-bf07-44ef-9521-36232ad0135c"
+      ],
+      "unique_candidates": 2,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "taxonomy_gap",
+      "recommended_rationale": "Título sugere público específico que pode não estar representado com segurança na taxonomia v1; confirmar antes de forçar grupo.",
+      "recommendation_confidence": 0.58,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "dba99d20-feb7-4620-a910-1ac5866524bf",
+      "review_key": "sha256:9a315bf1918172b47a16c94f3c78d090a9210a62db716f5f01cff89f41ed1453#dba99d20-feb7-4620-a910-1ac5866524bf",
+      "canonical_editorial_key": "alrs:PL:230:2024:9a315bf1918172b47a16c94f3c78d090a9210a62db716f5f01cff89f41ed1453",
+      "title": "Institui o Programa Escola Amiga do Agro na rede de educação básica do Estado do Rio Grande do Sul.",
+      "official_event_type": null,
+      "candidate_count": 2,
+      "factual_vote_count": 2,
+      "coverage_priority": 4,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
+      ],
+      "source_gate": "green",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "d88234f9-33b6-43d4-a964-b0c5141d3621"
+      ],
+      "unique_candidates": 2,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "taxonomy_gap",
+      "recommended_rationale": "Título sugere público específico que pode não estar representado com segurança na taxonomia v1; confirmar antes de forçar grupo.",
+      "recommendation_confidence": 0.58,
+      "review_status": "pending_review",
+      "remote_apply": false,
+      "public_approval": false
+    },
+    {
+      "proposition_version_id": "7d71498e-3c55-4e1a-9599-f1388269830a",
+      "review_key": "sha256:9f3aa47785b773782168d1138584882ea6ae3282c86341e5bdaaa816f8b2bdfe#7d71498e-3c55-4e1a-9599-f1388269830a",
+      "canonical_editorial_key": "alrs:PL:105:2024:9f3aa47785b773782168d1138584882ea6ae3282c86341e5bdaaa816f8b2bdfe",
+      "title": "Dispõe sobre a promoção do Registro Civil de Nascimento e da ampliação do acesso à documentação básica no Estado do Rio Grande do Sul.",
+      "official_event_type": null,
+      "candidate_count": 2,
+      "factual_vote_count": 2,
+      "coverage_priority": 4,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024"
+      ],
+      "source_gate": "green",
+      "candidate_ids": [
+        "0f7bd15d-eca1-4915-b742-b0c9dd093b7f",
+        "733cef65-bf07-44ef-9521-36232ad0135c"
+      ],
+      "unique_candidates": 2,
+      "new_profiles_impacted": 0,
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Não há grupo populacional direto identificável com segurança apenas na unidade normativa atual; confirmar editorialmente.",
+      "recommendation_confidence": 0.55,
       "review_status": "pending_review",
       "remote_apply": false,
       "public_approval": false
     }
   ],
-  "batch_sha256": "ea7ff134979096898838ddb3f21dfaec5d843eed5ac2a54b7685616949027092"
+  "batch_sha256": "b0704cc9c6fcff8c5bb8d2229993baa9d95499bb4da000e03d89ba35c671b1d6"
 }
