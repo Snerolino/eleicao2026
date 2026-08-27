@@ -4,3 +4,6 @@
 ## 2024-05-19 - [Deferred Search Input]
 **Learning:** Using `useDeferredValue` for a search query that filters a large list (`filterCandidates` on all candidates) improves typing responsiveness. Crucially, any downstream grouping or mapping logic that depends on the filtered results should be wrapped in `useMemo` so it doesn't unnecessarily re-compute on every single keystroke.
 **Action:** When filtering complex lists, wrap the query passed to the filter function with `useDeferredValue` and use `useMemo` for any derived computations based on the filtered output. Ensure UI elements showing counts sync with the deferred query to prevent visual mismatches.
+## 2025-01-22 - [React.memo in large lists]
+**Learning:** Wrapping list items (like `CandidateCompactRow`) in `React.memo()` prevents re-rendering all items when parent state changes. This is effective, but requires stable callback references from the parent component (e.g. using `useCallback` or passing setState functions directly).
+**Action:** In lists that can render hundreds of elements, extract the row to a separate component, wrap it in `React.memo()`, and ensure all props passed down are reference-stable.
