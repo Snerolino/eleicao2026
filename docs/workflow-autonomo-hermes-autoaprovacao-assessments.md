@@ -16,6 +16,7 @@ O **Ciclo Editorial Autônomo do Hermes** foi desenhado para operar em modo cont
 2. **Auto-Aprovação Determinística**: Matérias que atendem aos critérios de integridade da Metodologia v1 são classificadas, validadas e auto-aprovadas diretamente pelo agente revisor, permitindo que a esteira continue sem pausas.
 3. **Isolamento Granular de Blockers**: Quando uma proposição possui alta severidade (`severity >= 4`) ou incerteza estatística (`confidence < 0.60`), ela é isolada com `requires_external_review: true` para apreciação em painel externo, **sem travar** o lote nem as demais proposições do pipeline.
 4. **Neutralidade e Fidelidade Factual**: O revisor classifica o efeito documentado da matéria na lei, sem emitir juízo de valor, ranking eleitoral ou rotulagem moral sobre parlamentares.
+5. **Uma Única Matriz Canônica para Todos os Agentes**: Todos os executores (Hermes, Codex MCP, Google Antigravity, OpenCode, DeepSeek) compartilham estritamente a mesma Matriz de Impacto Populacional v1 (`impact-matrix-v1.schema.json`), os mesmos 14 grupos canônicos e o mesmo catálogo de avaliações. É proibida a criação de matrizes paralelas, por casa ou por candidato.
 
 ---
 

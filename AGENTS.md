@@ -51,6 +51,19 @@ Regras:
 9. OpenCode/Antigravity trabalham sobre `git archive HEAD`. Se a tarefa depende de alterações ainda não commitadas, não fingir que esses executores as enxergam: usar Codex na worktree viva ou criar checkpoint autorizado.
 10. O fluxo é `CONTINUOUS_PROGRESS`: não esperar prompt entre gates. Com writer bloqueado por drift, fonte ou executor, scouts CLI read-only podem pesquisar portais oficiais em paralelo e preparar manifests/handoffs, sem escrever na worktree ou em serviços remotos.
 
+## Matriz Canônica Única para Todos os Agentes
+
+Todos os executores e agentes (Hermes Control Plane, Codex MCP, Google Antigravity, OpenCode, DeepSeek, Ollama) operam sob **UMA ÚNICA E MESMA MATRIZ CANÔNICA DE IMPACTO POPULACIONAL**:
+
+1. **Unidade Central Única**: A matriz é indexada exclusivamente por `proposition_version` (versão da matéria votada) com schema versionado `impact-matrix-v1.schema.json`.
+2. **Sem Matrizes Paralelas ou Fragmentadas**: É estritamente proibido criar matrizes paralelas, matrizes por casa legislativa separadas (ALRS vs Câmara vs Senado) ou matrizes locais por candidato. A matriz pertence à matéria votada, e seus efeitos são distribuídos via *fan-out* determinístico para todos os parlamentares de todas as casas.
+3. **Taxonomia Fechada Imutável**: Todos os agentes utilizam a mesma coleção fechada de 14 grupos canônicos (`BENEFICIARY_GROUPS_CANONICAL_ORDER`). É proibido inventar grupos genéricos ("população geral", "sociedade").
+4. **Ponderação e Sinais Universais**:
+   - Tipo estrutural: `structural` (1.5×), `budgetary` (1.0×), `symbolic` (0.5×).
+   - Severidade: 1 a 5 (com isolamento para painel externo quando `severity >= 4` ou `confidence < 0.60`).
+   - Sinais de alinhamento: A favor (+1.0), Contra (−1.0), Abstenção (0.0), Ausência Estratégica (−0.5), Obstrução (0.0), Sem dado/Excluído (`não avaliado`).
+5. **Gabarito Compartilhado**: Avaliações aprovadas alimentam o mesmo catálogo canônico e são reutilizadas por todos os agentes em reconciliações, auditorias, comparadores e relatórios.
+
 ## Regras de dados e segurança
 
 - Nunca commitar `.env*`, tokens, service role, Cloudflare/GitHub tokens, connection strings ou segredos.
