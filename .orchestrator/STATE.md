@@ -1,3 +1,14 @@
+## Tick contínuo — badges de mandato e filtro por histórico na página de comparação — 2026-08-27T12:48Z
+
+- Alteração `afb5cb5` estende a identificação de mandato anterior e estreantes à página `/comparar`:
+  - Cabeçalho das colunas da tabela de comparação (`#comparacao`) com badges de `Mandato anterior` (tom institucional destacado com ícone) e `1ª cand.` (tom neutro sutil).
+  - Cards da lista seletora de candidatos (`Adicionar à comparação`) com identificação visual do histórico.
+  - Filtro por histórico de mandato adicionado na barra de filtros de `/comparar`, com contagens dinâmicas de candidatos.
+- Gates locais verdes: `438/438` testes em `106` arquivos, TypeScript `tsc -b`, schema, `data:check` `1003/988`, build `237` módulos / sitemap `1003 + 2`.
+- Deploy no Cloudflare Pages concluído com sucesso via GitHub Actions (`33073179419` success).
+- Produção atualizada: Release `afb5cb5-20260827T124503810Z`, versão `0.2.1031`, HTTP 200 na raiz, em `/comparar` e em `/release.json`.
+- Próximo passo: manter monitoramento contínuo e progressão autônoma de lotes.
+
 ## Tick contínuo — identificação de mandato anterior vs estreantes e filtro de histórico publicados — 2026-08-27T12:28Z
 
 - Alteração `150c13b` implementa classificação de experiência e histórico de mandato:
