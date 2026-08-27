@@ -1,3 +1,12 @@
+## Tick contínuo — reconciliação ALRS otimizada, gates locais verdes — 2026-08-27T07:40Z
+
+- Alteração local verificada: pool HTTP bounded/retry para descoberta ALRS e reconciliação Supabase read-only paginada em blocos de 1000; teste manual confirmou concorrência máxima configurada.
+- Reconciliação fresca: `2092` linhas, `2092` já presentes exatamente, `missing_safe_to_import=0`, conflitos/ambíguos/bloqueios `0`. Manifesto tem menos de 6h; descoberta não foi executada.
+- Gates Node 24.19.0 verdes: `413/413` testes em `102` arquivos, TypeScript, schema, `data:check` `1003/988`, build `233` módulos/sitemap `1003 + 2`, smoke `1002` cards/0 HTTP/0 erros online/service worker, `git diff --check`.
+- Auditoria de fontes read-only mantém gaps ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos; nenhuma escrita factual/editorial remota.
+- QA: `docs/qa/lote-continuous-ops-throughput-recon-2026-08-27.md`. Doctor segue RC 1 por shell Node 22/OpenCode ausente; gates do projeto usaram Node 24.
+- Próximo passo: commit/push desta melhoria; depois validar workflow backup/headSha/produção se o transporte Git aceitar. Manter facts sem fonte fail-closed.
+
 ## Tick contínuo — fontes ALRS adquiridas, publicação verificada — 2026-08-27T07:20Z
 
 - Fingerprint mudou por reconciliação nominal ALRS. Manifesto vigente (com menos de 6h no tick) não foi redescoberto; reconciliação read-only fechou `2092` linhas: `2092` já presentes exatamente, `missing_safe_to_import=0`, conflitos/ambíguos/bloqueios `0`.
