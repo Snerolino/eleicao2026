@@ -39,6 +39,12 @@ for (const row of sourceRows) {
   if (!seen.has(key)) { seen.add(key); rows.push(normalized); }
 }
 const report = { schema_version: '1.0.0', packet_type: 'alrs_nominal_vote_import', mode: apply ? 'apply' : 'dry-run', remote_apply: false, source_reconciliation: reconciliationFile, source_rows: sourceRows.length, deduplicated_rows: rows.length, chunk_size: chunkSize, chunks: [] };
+if (apply && rows.length === 0) {
+  report.status = 'idle_no_missing_safe_rows';
+  writeFileSync(outputFile, `${JSON.stringify(report, null, 2)}\n`);
+  console.log(JSON.stringify(report));
+  process.exit(0);
+}
 if (!apply) {
   report.chunks = Array.from({ length: Math.ceil(rows.length / chunkSize) }, (_, index) => ({ chunk: index + 1, rows: Math.min(chunkSize, rows.length - index * chunkSize), status: 'validated_not_applied' }));
   writeFileSync(outputFile, `${JSON.stringify(report, null, 2)}\n`);

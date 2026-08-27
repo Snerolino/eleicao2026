@@ -25,6 +25,7 @@ if (discoveryAgeHours >= 6) run('official_discovery', 'scripts/discover-alrs-nom
 else report.steps.push({ label: 'official_discovery', status: 'deferred_manifest_fresh', age_hours: Number(discoveryAgeHours.toFixed(2)) });
 run('reconcile', 'scripts/reconcile-impact-resolved-versions.mjs');
 if (existsSync(discoveryManifest)) run('nominal_reconcile', 'scripts/reconcile-alrs-nominal-votes.mjs');
+run('nominal_import', 'scripts/import-alrs-nominal-votes.mjs', ['--apply', '--output=/tmp/autonomous-alrs-import.json'], true);
 run('metadata', 'scripts/reconcile-legislative-version-metadata.mjs');
 run('build_batch', 'scripts/build-alrs-impact-batch-proposals.mjs');
 run('publish_portal', 'scripts/verify-portal-publication.mjs', [], true);

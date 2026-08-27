@@ -7,11 +7,19 @@ import { resolve } from 'node:path';
 const root = resolve(import.meta.dirname, '..');
 const manifestFile = resolve(root, process.argv[2] ?? 'data/legislative-import/alrs/alrs-nominal-discovery-manifest-v1.json');
 const output = resolve(root, process.argv.find((arg) => arg.startsWith('--output='))?.slice(9) ?? 'data/legislative-import/alrs/alrs-nominal-vote-reconciliation-v1.json');
+
 function normalizeCalendarDate(value) {
   const text = String(value ?? '');
   const br = text.match(/^(\d{2})\/(\d{2})\/(\d{4})/);
   if (br) return `${br[3]}-${br[2]}-${br[1]}`;
   return text.slice(0, 10);
+}
+
+function normalizeTitle(value) {
+  return String(value ?? '')
+    .normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase()
+    .replace(/[.;:,]+$/, '');
 }
 
 function query(sql) {
@@ -20,6 +28,7 @@ function query(sql) {
   if (start < 0 || end <= start) throw new Error('resposta JSON ausente');
   return JSON.parse(raw.slice(start, end + 1)).rows ?? [];
 }
+
 const manifest = JSON.parse(readFileSync(manifestFile, 'utf8'));
 const exact = new Map((manifest.catalog ?? []).filter((row) => row.exact_candidate_matches?.length === 1).map((row) => [row.solicitante_id, row]));
 const sourceRows = [];
@@ -33,20 +42,24 @@ const versions = query(`select pv.id::text as proposition_version_id, pv.version
 const existing = query(`select lv.candidate_id::text as candidate_id, pv.id::text as proposition_version_id, ve.occurred_at::text as occurred_at, lv.value, ve.external_id as event_external_id from public.legislative_votes lv join public.voting_events ve on ve.id=lv.voting_event_id join public.proposition_versions pv on pv.id=ve.proposition_version_id where ve.house='alrs';`);
 const candidateByTse = new Map(candidates.map((row) => [String(row.tse_candidate_id), row]));
 const versionByNatural = new Map();
+const versionByTitle = new Map();
 for (const row of versions) {
-  const key = `${row.proposition_type}:${row.number}:${row.year}`;
-  const list = versionByNatural.get(key) ?? []; list.push(row); versionByNatural.set(key, list);
+  const naturalKey = `${row.proposition_type}:${row.number}:${row.year}`;
+  const list = versionByNatural.get(naturalKey) ?? []; list.push(row); versionByNatural.set(naturalKey, list);
+  const titleKey = `${row.number}:${row.year}:${normalizeTitle(row.title)}`;
+  const titleList = versionByTitle.get(titleKey) ?? []; titleList.push(row); versionByTitle.set(titleKey, titleList);
 }
 const existingKeys = new Set(existing.map((row) => `${row.candidate_id}|${row.proposition_version_id}|${normalizeCalendarDate(row.occurred_at)}|${row.value}`));
 const results = [];
 for (const row of sourceRows) {
   const candidate = candidateByTse.get(String(row.candidate.tse_candidate_id));
-  const type = String(row.tipoProjeto ?? '').toLowerCase() === 'pec' ? 'pec' : 'pl';
-  const versionsForMatter = versionByNatural.get(`${type}:${Number(row.numProposicao)}:${Number(row.anoProposicao)}`) ?? [];
+  const type = String(row.tipoProjeto ?? '').toLowerCase() === 'pec' ? 'pec' : 'outro';
+  const titleMatches = versionByTitle.get(`${Number(row.numProposicao)}:${Number(row.anoProposicao)}:${normalizeTitle(row.materia)}`) ?? [];
+  const naturalMatches = versionByNatural.get(`${type}:${Number(row.numProposicao)}:${Number(row.anoProposicao)}`) ?? [];
+  const versionsForMatter = titleMatches.length > 0 ? titleMatches : naturalMatches;
   const value = ({ Sim: 'sim', 'Não': 'nao', Abstenção: 'abstencao', Ausente: 'ausente', Obstrução: 'obstrucao' })[String(row.voto).trim()] ?? null;
   let status = 'missing_safe_to_import';
-  if (!candidate) status = 'blocked_identity';
-  else if (!value) status = 'blocked_identity';
+  if (!candidate || !value) status = 'blocked_identity';
   else if (versionsForMatter.length !== 1) status = versionsForMatter.length === 0 ? 'blocked_proposition_version' : 'ambiguous';
   else if (existingKeys.has(`${candidate.id}|${versionsForMatter[0].proposition_version_id}|${normalizeCalendarDate(row.dataVotacao)}|${value}`)) status = 'already_present_exact';
   results.push({ status, candidate_id: candidate?.id ?? null, tse_candidate_id: row.candidate.tse_candidate_id, politician_name: row.politician_name, proposition_version_id: versionsForMatter.length === 1 ? versionsForMatter[0].proposition_version_id : null, proposition_type: type, proposition_number: Number(row.numProposicao), proposition_year: Number(row.anoProposicao), occurred_at: row.dataVotacao, value, source_url: row.source_url, source_sha256: row.source_sha256 });

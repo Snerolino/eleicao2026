@@ -4,6 +4,7 @@
 
 - Migration `20260827090000_import_alrs_nominal_votes_rpc.sql` aplicada no Supabase remoto: RPC factual `import_alrs_nominal_votes(jsonb)` restrita a `authenticated` com papel `editor/admin`, sem `service_role` e sem escrita em impacto/score.
 - Reconciliador ALRS corrigido para comparar datas de calendário `DD/MM/YYYY` contra timestamps ISO; os 795 registros antes classificados como faltantes foram confirmados como `already_present_exact`, sem conflitos.
+- Resolvida a pendência factual do `VT 599/2023`: versão oficial criada por RPC idempotente e 3 votos nominais importados; reconciliação final sem ambíguos, bloqueios, faltantes ou conflitos.
 
 ## 2026-08-23
 
