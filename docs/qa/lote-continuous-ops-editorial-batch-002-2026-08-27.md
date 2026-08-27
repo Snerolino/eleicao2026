@@ -1,38 +1,32 @@
-# Lote continuous ops — editorial ALRS batch 002 — 2026-08-27
+# QA — lote contínuo editorial ALRS 002 — 2026-08-27
 
 ## Objetivo
-Executar o próximo ciclo bounded de reconciliação, revisar independentemente um lote editorial ALRS e aplicar somente decisões com hash exato por RPC autenticada editor/admin.
+
+Processar o próximo lote editorial ALRS somente com classificação/revisão independentes, hash exato e RPC autenticada de editor/admin.
 
 ## Entregue e verificado
-- Reconciliação remota read-only: `407` versões resolvidas e `407` versões já presentes em matrizes; `51` candidatos de perfil.
-- Reconciliação nominal ALRS: `25.616` linhas; `25.616` matches exatos; `25.616` já presentes; `missing=0`, `conflicts=0`, `ambiguous=0`, `blocked_identity=0`, `blocked_proposition=0`.
-- Materialização derivada: `28.839` votos, `28.839` índices e `79` perfis; sem alteração de score/matriz aprovada.
-- Lote `alrs-impact-editorial-batch-001-v2`: `25` proposições, `75` ocorrências/votos factuais, hash validado pelo reviewer; `25/25` decisões aprovadas, `0` needs_changes e `0` external_review_required.
-- Aplicação do lote anterior exatamente validado: `25/25` chamadas `record_impact_editorial_disposition` autenticadas retornaram `applied`, `0` erros. A reconciliação seguinte confirmou `407` versões já presentes, incluindo o avanço de `382` para `407`.
-- Novo lote foi reconstruído após a aplicação e permanece separado para revisão; nenhuma aplicação automática foi feita sobre ele.
-- Fontes ALRS: `24` URLs oficiais OK, `3.456` `data-item`, `0` bloqueios e `0` candidatos substantivos novos.
-- Portal: `published_verified`; produção raiz e `/release.json` HTTP `200`.
+
+- Lote `alrs-impact-editorial-batch-001-v2` reconstruído com 25 proposições e 75 ocorrências/votos factuais.
+- Classificador gerou 25 decisões.
+- Reviewer independente: `valid=true`, 25 decisões, 25 aprovadas, 0 `needs_changes`, 0 erros, 0 itens exigindo revisão externa.
+- Hash validado: `51526590c213fe14cf0988011cf8f0eadb24f07edda775a9de19f810024fb620`.
+- Aplicação remota feita exclusivamente pela RPC `record_impact_editorial_disposition`, com sessão Supabase Auth e papel editor/admin: 25/25 `applied`, 0 erros.
+- Read-back via Supabase REST autenticado: 25 esperadas, 25 retornadas, 0 ausentes, 0 não aprovadas, 0 divergências de `review_key`; metodologia `1.0.0`.
+- Portal público verificado: `published_verified`; raiz e `/release.json` HTTP 200.
 
 ## Estado dos dados
-- Snapshot público: `1.003` candidaturas e `988` fotos; `npm run data:check` verde.
-- Votos factuais e perfis foram apenas reconciliados/materializados; não houve inserção factual nominal neste ciclo (`missing=0`).
-- Nenhuma matriz/score aprovada foi alterada; decisões editoriais foram gravadas apenas pelo RPC autenticado.
 
-## Gates locais
-- Node `v24.19.0`.
-- Testes: `438/438` em `106` arquivos.
-- TypeScript, schema de impacto, `data:check`, build e `git diff --check`: verdes.
-- Build: `237` módulos; sitemap `1.003 + 2` URLs; release local regenerado.
-
-## Transporte e publicação
-- Commit local: `63b7c97`.
-- `git push origin main` foi retentado `3` vezes e falhou em todas com HTTP `403`: `Permission to Snerolino/eleicao2026.git denied to Snerolino`.
-- Por isso, nenhum workflow novo foi acionado e não há `headSha` novo para validar em produção. A produção HTTP 200 verificada é a já publicada, não este commit.
+- Monitor: fingerprint `271e0e77ceae9938f05136355436dbc164ed346dabd9a93e2f007d0f2b76362d`.
+- Itens editoriais pendentes no monitor: 1261.
+- Votos factuais: 4000.
+- Descoberta nominal: 27723 itens; reconciliação nominal: 25616 linhas resolvidas, 0 missing, 0 ambíguas e 0 bloqueadas por proposição.
+- Auditoria estrita de fontes permanece fail-closed: versões sem fonte ALRS/Câmara/Senado `1251/3/112`; eventos `1647/2/188`; votos `4/2/455`. Nenhum fato sem fonte foi criado.
 
 ## Bloqueios
-- `npm run orch:doctor`: `FAIL` apenas porque o shell cron usa Node `v22.22.2` enquanto o projeto exige Node 24; OpenCode ausente é `WARN`. Gates do projeto foram executados explicitamente com Node 24.
-- Auditoria estrita de fontes substantivas continua fail-closed nos gaps registrados anteriormente; nenhum fato sem fonte foi criado.
-- Transporte Git/deploy deve ser retestado após o commit; não declarar produção atualizada por este lote sem `headSha` correspondente.
+
+- O ciclo autônomo completo não concluiu a reconciliação pós-apply porque `npx supabase db query --linked` falhou com autenticação PostgreSQL da role temporária (`FATAL: password authentication failed for user cli_login_postgres...`). Isso bloqueia somente a reconciliação CLI/metadados e a reconstrução automática do próximo lote; não afetou a RPC Auth nem o read-back REST autenticado deste lote.
+- Commit local criado: `637a7398adffa45bc75306ef1dd3db123df187f2` (`feat: aplica lote editorial alrs 002`). O `git push origin main` foi retestado e bloqueado novamente por HTTP 403: `Permission to Snerolino/eleicao2026.git denied to Snerolino`. Nenhum deploy foi iniciado neste tick; produção permanece no commit remoto anterior.
 
 ## Próximo passo
-Reconciliar/revisar o novo lote mantendo fonte, hash e RPC autenticados; aplicar somente após validação independente. Depois tentar `main -> main`, verificar workflow backup Cloudflare `334951434`, `headSha`, produção e `release.json`.
+
+Retestar transporte Git; se aceitar, acompanhar CI/deploy backup Cloudflare, validar `headSha` e produção. Em paralelo, corrigir/revalidar a credencial da CLI Supabase para permitir reconciliação e reconstrução do próximo lote. Manter gaps de fonte em recuperação fail-closed, sem fuzzy matching ou publicação automática.
