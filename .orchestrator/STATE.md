@@ -1,3 +1,14 @@
+## Tick contínuo — categorias canônicas únicas sem duplicação por casa legislativa na comparação — 2026-08-27T17:05Z
+
+- Alteração `792e869` unifica e normaliza a renderização de grupos populacionais nas tabelas de comparação (`VoteCategoryScoreTableBar` e `VoteCategoryScoreTableLegacy`):
+  - Elimina a multiplicação/duplicação de linhas de categorias quando candidatos comparados pertencem a casas legislativas distintas (ex.: candidato ao Senado/ex-Câmara como Marcel van Hattem comparado a candidatos da ALRS ou novos estreantes).
+  - Garante que a tabela exiba estritamente as **14 categorias canônicas da metodologia v1** (uma linha por grupo na ordem canônica estrita).
+  - Célula de cada candidato mapeia o score correspondente com suporte a agregação e indicação de proposições avaliadas.
+- Gates locais verdes: `443/443` testes em `107` arquivos (`VoteCategoryScoreTableBar.test.tsx` atualizado), TypeScript `tsc -b`, schema, `data:check` `1003/988`, build `237` módulos / sitemap `1003 + 2`.
+- Deploy no Cloudflare Pages concluído com sucesso via GitHub Actions (`33096235102` success).
+- Produção atualizada: Release `792e869-20260827T170311493Z`, versão `0.2.1044`, HTTP 200 na raiz, em `/comparar` e em `/release.json`.
+- Próximo passo: manter monitoramento contínuo e progressão autônoma de lotes.
+
 ## Tick contínuo — reconciliação ALRS sem novos itens, push bloqueado — 2026-08-27T13:44Z
 
 - Fingerprint monitorado mudou, mas a reconciliação confirmou estado estável: versões `916/916` já presentes; nominal `25.616/25.616`, `missing=0`, conflitos/ambíguos/bloqueios `0`.
