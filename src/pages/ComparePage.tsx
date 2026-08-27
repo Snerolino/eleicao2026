@@ -15,6 +15,11 @@ import { candidatePublicPath } from '@/utils/candidateIdentity';
 import { fetchVoteCategoryComparisons, fetchVoteCategoryScores } from '@/services/voteCategoryComparison';
 import type { VoteCategoryComparison } from '@/domain/impact/vote-category-comparison';
 import { formatCategoryScore, type VoteCategoryScore } from '@/domain/impact/vote-category-score';
+import {
+  BENEFICIARY_GROUPS_CANONICAL_ORDER,
+  getBeneficiaryGroupLabel,
+} from '@/domain/impact/beneficiary-groups';
+import { VoteCategoryScoreTableBar } from '@/components/impact/VoteCategoryScoreTableBar';
 
 function claimsForSection(
   claims: Claim[],
@@ -96,11 +101,60 @@ function VoteCategoryTable({
   );
 }
 
-function VoteCategoryScoreTable({ scores, candidates }: { scores: VoteCategoryScore[]; candidates: CandidateWithClaims[] }) {
+function VoteCategoryScoreTableLegacy({ scores, candidates }: { scores: VoteCategoryScore[]; candidates: CandidateWithClaims[] }) {
   const safeScores = scores.filter((score) => typeof score?.group_slug === 'string' && typeof score?.candidate_id === 'string' && ('score' in score));
-  if (safeScores.length === 0) return <p className="font-mono text-xs uppercase tracking-wide text-[var(--color-muted-ink)]">Saldo por categoria não avaliado para este recorte.</p>;
-  const keys = [...new Set(safeScores.map((score) => `${score.house}|${score.group_slug}`))];
-  return <div className="overflow-auto rounded-sm border border-[var(--color-border-editorial)]"><table className="w-full border-collapse text-sm"><thead><tr className="bg-[var(--color-paper)]"><th className="p-3 text-left font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">Saldo / categoria</th>{candidates.map((candidate) => <th key={candidate.id} className="border-l border-[var(--color-border-editorial)] p-3 text-left">{candidate.full_name}</th>)}</tr></thead><tbody>{keys.map((key) => { const [house, group] = key.split('|'); return <tr key={key} className="border-t border-[var(--color-border-editorial)]"><th className="p-3 text-left font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">{group.replaceAll('_', ' ')} · {house}</th>{candidates.map((candidate) => { const score = scores.find((item) => item.candidate_id === candidate.id && item.house === house && item.group_slug === group); return <td key={candidate.id} className="border-l border-[var(--color-border-editorial)] p-3"><strong className="font-mono text-base">{formatCategoryScore(score?.score ?? null)}</strong>{score && <span className="ml-2 font-mono text-[0.65rem] text-[var(--color-muted-ink)]">{score.evaluated_propositions} item(s)</span>}</td>})}</tr>})}</tbody></table></div>;
+  if (candidates.length === 0) return <p className="font-mono text-xs uppercase tracking-wide text-[var(--color-muted-ink)]">Selecione candidatos para visualizar a comparação.</p>;
+  
+  const houses = [...new Set(safeScores.map((score) => score.house).filter(Boolean))];
+  const targetHouses = houses.length > 0 ? houses : ['alrs'];
+  const keys = targetHouses.flatMap((house) =>
+    BENEFICIARY_GROUPS_CANONICAL_ORDER.map((group) => `${house}|${group}`)
+  );
+
+  return (
+    <div className="overflow-auto rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)]">
+      <table className="w-full border-collapse text-sm">
+        <thead>
+          <tr className="bg-[var(--color-paper)]">
+            <th className="p-3 text-left font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">
+              Saldo / categoria
+            </th>
+            {candidates.map((candidate) => (
+              <th key={candidate.id} className="border-l border-[var(--color-border-editorial)] p-3 text-left">
+                {candidate.full_name}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {keys.map((key) => {
+            const [house, group] = key.split('|');
+            const label = getBeneficiaryGroupLabel(group);
+            return (
+              <tr key={key} className="border-t border-[var(--color-border-editorial)]">
+                <th className="p-3 text-left font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">
+                  {label} · {house}
+                </th>
+                {candidates.map((candidate) => {
+                  const score = safeScores.find((item) => item.candidate_id === candidate.id && item.house === house && item.group_slug === group);
+                  return (
+                    <td key={candidate.id} className="border-l border-[var(--color-border-editorial)] p-3">
+                      <strong className="font-mono text-base">{formatCategoryScore(score?.score ?? null)}</strong>
+                      {score && score.evaluated_propositions > 0 && (
+                        <span className="ml-2 font-mono text-[0.65rem] text-[var(--color-muted-ink)]">
+                          {score.evaluated_propositions} item(s)
+                        </span>
+                      )}
+                    </td>
+                  );
+                })}
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
 }
 
 function parseSharedCandidateIds(
@@ -163,6 +217,7 @@ export function ComparePage() {
   const [womenOnly, setWomenOnly] = useState(false);
   const [raceFilter, setRaceFilter] = useState('');
   const [positionFilter, setPositionFilter] = useState('');
+  const [scoreViewMode, setScoreViewMode] = useState<'bars' | 'legacy'>('bars');
   const showDocsHint = true;
 
   const query = useQuery<CandidateWithClaims[]>({
@@ -272,16 +327,19 @@ export function ComparePage() {
             {selected.map((c) => (
               <span
                 key={c.id}
-                className="inline-flex items-center gap-2 rounded-sm bg-[color-mix(in_srgb,var(--color-institutional)_12%,var(--color-paper))] px-3 py-1.5 text-sm"
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border-editorial)] bg-[color-mix(in_srgb,var(--color-institutional)_14%,var(--color-paper))] text-[var(--color-ink)] px-3 py-1 text-sm shadow-xs transition-colors"
               >
-                <span className="truncate max-w-[180px]">{c.full_name}</span>
+                <span className="truncate max-w-[180px] font-medium text-[var(--color-ink)]">{c.full_name}</span>
                 <button
                   type="button"
                   onClick={() => toggleCandidate(c.id)}
-                  className="text-[var(--color-muted-ink)] hover:text-[var(--color-ink)]"
+                  className="inline-flex h-5 w-5 cursor-pointer items-center justify-center rounded-full text-[var(--color-muted-ink)] hover:bg-[var(--color-ink)]/10 hover:text-[var(--color-ink)] focus-visible:outline-2 focus-visible:outline-[var(--color-institutional)] transition-colors duration-150"
                   aria-label={`Remover ${c.full_name}`}
                 >
-                  ✕
+                  <svg className="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
                 </button>
               </span>
             ))}
@@ -385,9 +443,47 @@ export function ComparePage() {
                 </p>
               </div>
               {voteCategoryQuery.isLoading ? <LoadingSkeleton label="Carregando comparação factual" /> : <VoteCategoryTable comparisons={voteCategoryQuery.data ?? []} candidates={selected} />}
-              <h3 className="pt-3 text-lg">Saldo metodológico por categoria</h3>
-              <p className="font-mono text-xs text-[var(--color-muted-ink)]">Fórmula v1: peso × sinal / peso elegível. `não avaliado` não é zero.</p>
-              {voteCategoryScoreQuery.isLoading ? <LoadingSkeleton label="Calculando saldos por categoria" /> : <VoteCategoryScoreTable scores={voteCategoryScoreQuery.data ?? []} candidates={selected} />}
+              <div className="flex flex-col gap-2 pt-3 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <h3 className="text-lg">Perfil de votações por grupo populacional</h3>
+                  <p className="font-mono text-xs text-[var(--color-muted-ink)]">
+                    Metodologia v1: saldo ponderado (−1 a +1) por grupo. &ldquo;Não avaliado&rdquo; não é zero.
+                  </p>
+                </div>
+                <div className="flex items-center gap-1 rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-0.5" role="group" aria-label="Modo de visualização dos saldos">
+                  <button
+                    type="button"
+                    onClick={() => setScoreViewMode('bars')}
+                    aria-pressed={scoreViewMode === 'bars'}
+                    className={`cursor-pointer rounded-[2px] px-2.5 py-1 font-mono text-xs transition-colors ${
+                      scoreViewMode === 'bars'
+                        ? 'bg-[var(--color-institutional)] text-white font-medium'
+                        : 'text-[var(--color-muted-ink)] hover:text-[var(--color-ink)]'
+                    }`}
+                  >
+                    Gráfico de barras
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setScoreViewMode('legacy')}
+                    aria-pressed={scoreViewMode === 'legacy'}
+                    className={`cursor-pointer rounded-[2px] px-2.5 py-1 font-mono text-xs transition-colors ${
+                      scoreViewMode === 'legacy'
+                        ? 'bg-[var(--color-institutional)] text-white font-medium'
+                        : 'text-[var(--color-muted-ink)] hover:text-[var(--color-ink)]'
+                    }`}
+                  >
+                    Tabela numérica
+                  </button>
+                </div>
+              </div>
+              {voteCategoryScoreQuery.isLoading ? (
+                <LoadingSkeleton label="Calculando saldos por categoria" />
+              ) : scoreViewMode === 'bars' ? (
+                <VoteCategoryScoreTableBar scores={voteCategoryScoreQuery.data ?? []} candidates={selected} />
+              ) : (
+                <VoteCategoryScoreTableLegacy scores={voteCategoryScoreQuery.data ?? []} candidates={selected} />
+              )}
             </section>
           )}
         </section>
@@ -491,8 +587,10 @@ export function ComparePage() {
                     </p>
                   </div>
                   {isSelected && (
-                    <span className="shrink-0 font-mono text-sm font-bold text-[var(--color-institutional)]">
-                      ✓
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-institutional)] text-white shadow-xs">
+                      <svg className="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
                     </span>
                   )}
                 </button>

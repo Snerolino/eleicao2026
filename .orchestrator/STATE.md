@@ -1,3 +1,11 @@
+## Tick contínuo — comparação por barras verificada, transporte Git bloqueado — 2026-08-27T09:28Z
+
+- Alteração local `7bdaa452` implementa perfil visual de votação por grupo populacional, fallback de tabela numérica, testes e paginação paralela do materializador de perfis.
+- Gates locais verdes: `426/426` testes em `105` arquivos, TypeScript, schema, `data:check` `1003/988`, build `236` módulos/sitemap `1003 + 2`, smoke `1002` cards/0 HTTP/0 erros online/service worker, `git diff --check`.
+- Monitor: fingerprint `271e0e77ceae9938f05136355436dbc164ed346dabd9a93e2f007d0f2b76362d`, `1261` itens editoriais pendentes, `4000` votos factuais. Strict source audit segue fail-closed (`1251/3/112`, `1647/2/188`, `4/2/455`); reparo residual ALRS bloqueado por evidência oficial alterada, sem escrita.
+- Push da branch `feature/evolucao-comparacao-votacao-barras` bloqueado por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); produção permanece `dc233bcc5dacc8fb26c5321b48d08c9068e60b18`, raiz e `/release.json` HTTP 200.
+- QA: `docs/qa/lote-comparacao-votacao-barras-2026-08-27.md`. Próximo passo: retentar transporte Git; não aplicar votos residuais sem URL/hash/bytes/match exatos.
+
 ## Tick contínuo — primeiro batch editorial ALRS publicado, fontes fail-closed — 2026-08-27T08:18Z
 
 - Fingerprint atual: `74d704aeb866e7c73cb2a4fda6307718b65b668bc6ed18d3288e5d82abc413bc`; batch proposals `25`, votos factuais `4000`, descoberta `27723`, linhas nominais resolvidas `25456`, bloqueadas por proposição `160`, sem missing/ambiguous.

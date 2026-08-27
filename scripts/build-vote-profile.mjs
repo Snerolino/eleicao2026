@@ -47,17 +47,32 @@ const sb = createClient(url, key, { auth: { persist: false } });
 const PAGE_SIZE = 1000;
 
 async function fetchAllVotes() {
-  const rows = [];
-  for (let from = 0; ; from += PAGE_SIZE) {
-    const { data, error } = await sb
-      .from('legislative_votes')
-      .select('id, candidate_id, voting_event_id, value, voting_events(house)')
-      .not('candidate_id', 'is', null)
-      .range(from, from + PAGE_SIZE - 1);
-    if (error) throw error;
-    rows.push(...(data ?? []));
-    if ((data ?? []).length < PAGE_SIZE) return rows;
-  }
+  const countQuery = sb
+    .from('legislative_votes')
+    .select('*', { count: 'exact', head: true })
+    .not('candidate_id', 'is', null);
+  const { count, error: countError } = await countQuery;
+  if (countError) throw countError;
+  if (!count || count === 0) return [];
+
+  const ranges = Array.from(
+    { length: Math.ceil(count / PAGE_SIZE) },
+    (_, index) => [index * PAGE_SIZE, index * PAGE_SIZE + PAGE_SIZE - 1]
+  );
+
+  const pages = await Promise.all(
+    ranges.map(async ([from, to]) => {
+      const { data, error } = await sb
+        .from('legislative_votes')
+        .select('id, candidate_id, voting_event_id, value, voting_events(house)')
+        .not('candidate_id', 'is', null)
+        .range(from, to);
+      if (error) throw error;
+      return data ?? [];
+    })
+  );
+
+  return pages.flat();
 }
 
 async function main() {

@@ -109,7 +109,7 @@ describe('ComparePage H5.3', () => {
       'href',
       '#comparacao'
     );
-    expect(screen.getByRole('table')).toBeInTheDocument();
+    expect(screen.getAllByRole('table').length).toBeGreaterThan(0);
   });
 
   it('mostra o resumo e a tabela de comparação antes da lista completa de seleção', () => {
@@ -130,7 +130,7 @@ describe('ComparePage H5.3', () => {
     fireEvent.click(screen.getByRole('button', { name: /joão batista garcia dias/i }));
 
     expect(screen.getByLabelText(/url atual/i)).toHaveTextContent('/comparar?candidatos=tse-1,tse-2');
-    expect(screen.getByRole('table')).toBeInTheDocument();
+    expect(screen.getAllByRole('table').length).toBeGreaterThan(0);
   });
 
   it('limita rota compartilhável a 4 candidaturas válidas', () => {
@@ -163,5 +163,25 @@ describe('ComparePage H5.3', () => {
     expect(screen.getByLabelText(/url atual/i)).toHaveTextContent('/comparar?candidatos=tse-1,tse-2');
     expect(screen.getByText(/1 de 3 candidatos disponíveis/i)).toHaveTextContent(/mulheres/i);
     expect(screen.getByRole('option', { name: 'Não informado' })).toBeInTheDocument();
+  });
+
+  it('permite alternar entre o modo de barras e a tabela numérica legada como fallback', () => {
+    renderCompare('/comparar?candidatos=tse-1,tse-2');
+
+    const barsBtn = screen.getByRole('button', { name: /gráfico de barras/i });
+    const legacyBtn = screen.getByRole('button', { name: /tabela numérica/i });
+
+    expect(barsBtn).toHaveAttribute('aria-pressed', 'true');
+    expect(legacyBtn).toHaveAttribute('aria-pressed', 'false');
+
+    // Alterna para o modo de tabela numérica
+    fireEvent.click(legacyBtn);
+    expect(legacyBtn).toHaveAttribute('aria-pressed', 'true');
+    expect(barsBtn).toHaveAttribute('aria-pressed', 'false');
+
+    // Retorna para o gráfico de barras
+    fireEvent.click(barsBtn);
+    expect(barsBtn).toHaveAttribute('aria-pressed', 'true');
+    expect(legacyBtn).toHaveAttribute('aria-pressed', 'false');
   });
 });

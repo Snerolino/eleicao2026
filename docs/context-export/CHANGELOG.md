@@ -6,6 +6,7 @@
 - Reconciliador ALRS corrigido para comparar datas de calendário `DD/MM/YYYY` contra timestamps ISO; os 795 registros antes classificados como faltantes foram confirmados como `already_present_exact`, sem conflitos.
 - Resolvida a pendência factual do `VT 599/2023`: versão oficial criada por RPC idempotente e 3 votos nominais importados; reconciliação final sem ambíguos, bloqueios, faltantes ou conflitos.
 - Pipeline ALRS acelerado: discovery concorrente, reconciliação Supabase JS paginada, matching oficial multi-campo TSE, harvester de proposições/PDFs com hash e materialização de perfis em chunks paralelos; autorização derivada aplicada por RLS para editor/admin.
+- Cinco matérias restantes (`PLC 207/2023`, `PLC 302/2019`, `PLC 360/2023`, `PL 428/2021`, `PL 168/2023`) foram resolvidas por título oficial e seus 160 votos nominais importados; perfil rápido recalculado com 28.839 fatos.
 
 ## 2026-08-23
 

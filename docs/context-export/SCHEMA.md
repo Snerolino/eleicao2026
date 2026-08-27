@@ -96,6 +96,7 @@ Novas tabelas da Matriz de Impacto Populacional v1 (todas com RLS habilitado):
 - `legislative_votes` — SOMENTE fato: `value` (`sim|nao|abstencao|ausente|obstrucao`) e `absence_type` condicionado (`sim/nao/abstencao` → null; `ausente/obstrucao` → `estrategica|obstrucao_coordenada|justificada`). Nunca armazena impacto/alinhamento/grupo/score.
 - RPC `import_alrs_nominal_votes(jsonb)` — escrita factual idempotente somente para `authenticated` com `editor_roles`; aceita apenas `candidate_id`, `proposition_version_id`, valor normalizado, data e URL/hash oficial. Não cria matriz, assessment ou score; `anon` não executa.
 - RPC `ensure_alrs_nominal_proposition_version(jsonb)` — cria/recupera proposição e versão factual ALRS identificadas por número, ano e título oficial; restrita a `authenticated` com `editor_roles`, sem alterar impacto ou score.
+- A RPC de resolução aceita tipos normalizados do schema (`pec`, `pl`, `plp`, `pld`, `lei`, `outro`); siglas ALRS sem coluna própria preservam a sigla no `external_id`.
 - RPC `materialize_legislator_vote_profiles()` não foi criada: a materialização usa `scripts/build-vote-profile-fast.mjs` com cliente Supabase JS e escrita RLS restrita a editor/admin.
 - `beneficiary_groups` — catalogo versionado (14 slugs v1). Slugs nunca renomeados; evolucao via `deprecated_at` + `replacement_slug`. `geral` nao e grupo pontuavel.
 - `beneficiary_group_aliases` — variantes de grafia.
