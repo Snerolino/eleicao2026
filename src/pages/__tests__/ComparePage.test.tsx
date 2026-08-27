@@ -184,4 +184,47 @@ describe('ComparePage H5.3', () => {
     expect(barsBtn).toHaveAttribute('aria-pressed', 'true');
     expect(legacyBtn).toHaveAttribute('aria-pressed', 'false');
   });
+
+  it('filtra candidatos por histórico de mandato e exibe badges de experiência', () => {
+    const candidateWithVotes: CandidateWithClaims = {
+      ...candidate('tse-votes', 'Candidata com Mandato', 'PDT', 7777),
+      voting_profiles: [
+        {
+          house: 'alrs',
+          total_votes: 12,
+          votos_sim: 10,
+          votos_nao: 2,
+          votos_abstencao: 0,
+          votos_ausente: 0,
+          votos_obstrucao: 0,
+          nominal_balance: 0.8,
+        },
+      ],
+    };
+    queryState.value = {
+      ...queryState.value,
+      data: [candidateWithVotes, candidates[0]],
+    };
+
+    renderCompare('/comparar?candidatos=tse-votes,tse-1');
+
+    // Verifica se os badges de experiência aparecem na tabela de comparação
+    expect(screen.getAllByText(/mandato/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/1ª cand\./i).length).toBeGreaterThan(0);
+
+    // Filtra por mandato anterior no seletor
+    fireEvent.change(screen.getByRole('combobox', { name: /filtrar por histórico de mandato/i }), {
+      target: { value: 'mandato_anterior' },
+    });
+    const selectorRegion = screen.getByRole('region', { name: /lista de candidatos/i });
+    expect(within(selectorRegion).getByText('Candidata com Mandato')).toBeInTheDocument();
+    expect(within(selectorRegion).queryByText('Ada Cristina Munaretto')).not.toBeInTheDocument();
+
+    // Filtra por estreante no seletor
+    fireEvent.change(screen.getByRole('combobox', { name: /filtrar por histórico de mandato/i }), {
+      target: { value: 'estreante' },
+    });
+    expect(within(selectorRegion).getByText('Ada Cristina Munaretto')).toBeInTheDocument();
+    expect(within(selectorRegion).queryByText('Candidata com Mandato')).not.toBeInTheDocument();
+  });
 });

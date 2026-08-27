@@ -20,6 +20,11 @@ import {
   getBeneficiaryGroupLabel,
 } from '@/domain/impact/beneficiary-groups';
 import { VoteCategoryScoreTableBar } from '@/components/impact/VoteCategoryScoreTableBar';
+import {
+  type CandidateExperienceFilter,
+  candidateExperienceBadge,
+  hasPreviousMandate,
+} from '@/utils/candidateExperience';
 
 function claimsForSection(
   claims: Claim[],
@@ -217,6 +222,7 @@ export function ComparePage() {
   const [womenOnly, setWomenOnly] = useState(false);
   const [raceFilter, setRaceFilter] = useState('');
   const [positionFilter, setPositionFilter] = useState('');
+  const [experienceFilter, setExperienceFilter] = useState<CandidateExperienceFilter>('');
   const [scoreViewMode, setScoreViewMode] = useState<'bars' | 'legacy'>('bars');
   const showDocsHint = true;
 
@@ -229,12 +235,16 @@ export function ComparePage() {
 
   const candidates = query.data ?? [];
   const validCandidateIds = useMemo(() => new Set(candidates.map((c) => c.id)), [candidates]);
-  const { parties, races } = useMemo(() => {
+  const { parties, races, experienceCounts } = useMemo(() => {
     const partySet = new Set<string>();
     const raceSet = new Set<string>(OFFICIAL_RACE_FILTERS);
+    let withMandate = 0;
+    let firstTime = 0;
     for (const candidate of candidates) {
       partySet.add(candidate.party);
       raceSet.add(candidateRaceFilterValue(candidate));
+      if (hasPreviousMandate(candidate)) withMandate += 1;
+      else firstTime += 1;
     }
     return {
       parties: [...partySet].sort(),
@@ -242,6 +252,7 @@ export function ComparePage() {
         (a, b) => OFFICIAL_RACE_FILTERS.indexOf(a as (typeof OFFICIAL_RACE_FILTERS)[number])
           - OFFICIAL_RACE_FILTERS.indexOf(b as (typeof OFFICIAL_RACE_FILTERS)[number]),
       ),
+      experienceCounts: { withMandate, firstTime },
     };
   }, [candidates]);
 
@@ -250,8 +261,10 @@ export function ComparePage() {
     if (womenOnly && candidate.gender !== 'FEMININO') return false;
     if (raceFilter && candidateRaceFilterValue(candidate) !== raceFilter) return false;
     if (positionFilter && candidate.position !== positionFilter) return false;
+    if (experienceFilter === 'mandato_anterior' && !hasPreviousMandate(candidate)) return false;
+    if (experienceFilter === 'estreante' && hasPreviousMandate(candidate)) return false;
     return true;
-  }), [candidates, partyFilter, womenOnly, raceFilter, positionFilter]);
+  }), [candidates, partyFilter, womenOnly, raceFilter, positionFilter, experienceFilter]);
 
   const sharedIds = useMemo(
     () => parseSharedCandidateIds(searchParams.get('candidatos'), validCandidateIds),
@@ -378,41 +391,65 @@ export function ComparePage() {
                 <thead>
                   <tr>
                     <th className="sticky top-0 min-w-[120px] bg-[var(--color-paper)] p-3 text-left font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]" />
-                    {selected.map((c) => (
-                      <th
-                        key={c.id}
-                        className="sticky top-0 min-w-[240px] border-l border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-3 text-left"
-                      >
-                        <div className="flex items-center gap-3">
-                          <div className="h-12 w-12 shrink-0 overflow-hidden rounded-sm bg-[var(--color-skeleton)]">
-                            <CandidatePhoto
-                              name={c.full_name}
-                              photoUrl={c.photo_url}
-                              className="h-full w-full object-cover"
-                            />
+                    {selected.map((c) => {
+                      const exp = candidateExperienceBadge(c);
+                      return (
+                        <th
+                          key={c.id}
+                          className="sticky top-0 min-w-[240px] border-l border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-3 text-left"
+                          data-experience-type={exp.type}
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className="h-12 w-12 shrink-0 overflow-hidden rounded-sm bg-[var(--color-skeleton)]">
+                              <CandidatePhoto
+                                name={c.full_name}
+                                photoUrl={c.photo_url}
+                                className="h-full w-full object-cover"
+                              />
+                            </div>
+                            <div className="min-w-0 flex-1">
+                              <div className="flex flex-wrap items-center gap-1">
+                                <p className="font-mono text-[0.6rem] uppercase tracking-wider text-[var(--color-muted-ink)]">
+                                  {c.position_label}
+                                </p>
+                                {exp.type === 'mandato_anterior' ? (
+                                  <span
+                                    className="inline-flex items-center gap-0.5 rounded-full border border-[color-mix(in_srgb,var(--color-institutional)_30%,transparent)] bg-[color-mix(in_srgb,var(--color-institutional)_10%,var(--color-paper))] px-1.5 py-0.2 font-mono text-[0.55rem] font-semibold uppercase tracking-wider text-[var(--color-institutional)]"
+                                    title={exp.tooltip}
+                                  >
+                                    <svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" className="h-2 w-2 shrink-0">
+                                      <path d="M8 1a1 1 0 0 1 .7.3l2.8 2.8H14a1 1 0 0 1 1 1v2.5l2.8 2.8a1 1 0 0 1 0 1.4L15 11.8V14a1 1 0 0 1-1 1h-2.5l-2.8 2.8a1 1 0 0 1-1.4 0L4.5 15H2a1 1 0 0 1-1-1v-2.2L.2 10.5a1 1 0 0 1 0-1.4L2 6.3V4a1 1 0 0 1 1-1h2.5L8.3 1.3A1 1 0 0 1 8 1zm0 4.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z" />
+                                    </svg>
+                                    Mandato
+                                  </span>
+                                ) : (
+                                  <span
+                                    className="inline-flex items-center gap-0.5 rounded-full border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-1.5 py-0.2 font-mono text-[0.55rem] font-medium uppercase tracking-wider text-[var(--color-muted-ink)]"
+                                    title={exp.tooltip}
+                                  >
+                                    1ª cand.
+                                  </span>
+                                )}
+                              </div>
+                              <p className="font-medium leading-tight">
+                                <Link
+                                  to={candidatePublicPath(c)}
+                                  className="text-[var(--color-institutional)] underline-offset-2 hover:underline"
+                                >
+                                  {c.full_name}
+                                </Link>
+                              </p>
+                              <p className="font-mono text-[0.65rem] text-[var(--color-muted-ink)]">
+                                {c.party}
+                                {c.ballot_number != null
+                                  ? ` · nº ${c.ballot_number}`
+                                  : ''}
+                              </p>
+                            </div>
                           </div>
-                          <div>
-                            <p className="font-mono text-[0.6rem] uppercase tracking-wider text-[var(--color-muted-ink)]">
-                              {c.position_label}
-                            </p>
-                            <p className="font-medium leading-tight">
-                              <Link
-                                to={candidatePublicPath(c)}
-                                className="text-[var(--color-institutional)] underline-offset-2 hover:underline"
-                              >
-                                {c.full_name}
-                              </Link>
-                            </p>
-                            <p className="font-mono text-[0.65rem] text-[var(--color-muted-ink)]">
-                              {c.party}
-                              {c.ballot_number != null
-                                ? ` · nº ${c.ballot_number}`
-                                : ''}
-                            </p>
-                          </div>
-                        </div>
-                      </th>
-                    ))}
+                        </th>
+                      );
+                    })}
                   </tr>
                 </thead>
                 <tbody>
@@ -500,6 +537,8 @@ export function ComparePage() {
               {womenOnly && ' · mulheres'}
               {raceFilter && ` · cor/raça ${raceFilter.toLowerCase()}`}
               {positionFilter && ` · cargo ${positionLabel(positionFilter)}`}
+              {experienceFilter === 'mandato_anterior' && ' · com mandato anterior'}
+              {experienceFilter === 'estreante' && ' · 1ª candidatura / estreantes'}
             </p>
           </div>
           <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
@@ -546,12 +585,24 @@ export function ComparePage() {
                 <option key={position} value={position}>{positionLabel(position)}</option>
               ))}
             </select>
+            <select
+              value={experienceFilter}
+              onChange={(event) => setExperienceFilter(event.target.value as CandidateExperienceFilter)}
+              className="cursor-pointer rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
+              aria-label="Filtrar por histórico de mandato"
+              title="Filtra entre candidatos já eleitos anteriormente e candidatos concorrendo pela primeira vez."
+            >
+              <option value="">Todos os históricos</option>
+              <option value="mandato_anterior">Já eleito(a) anteriormente ({experienceCounts.withMandate})</option>
+              <option value="estreante">1ª candidatura / Estreante ({experienceCounts.firstTime})</option>
+            </select>
           </div>
         </div>
         <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {filteredCandidates.map((c) => {
             const isSelected = selectedIds.has(c.id);
             const isMaxed = !isSelected && selectedIds.size >= 4;
+            const exp = candidateExperienceBadge(c);
             return (
               <li key={c.id}>
                 <button
@@ -561,6 +612,7 @@ export function ComparePage() {
                   }}
                   disabled={isMaxed}
                   aria-pressed={isSelected}
+                  data-experience-type={exp.type}
                   className={`flex w-full items-center gap-3 rounded-sm border p-3 text-left transition-colors ${
                     isSelected
                       ? 'border-[var(--color-institutional)] bg-[color-mix(in_srgb,var(--color-institutional)_8%,var(--color-paper))]'
@@ -575,9 +627,26 @@ export function ComparePage() {
                     />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <p className="font-mono text-[0.65rem] uppercase tracking-wider text-[var(--color-muted-ink)]">
-                      {c.position_label}
-                    </p>
+                    <div className="flex items-center justify-between gap-1">
+                      <p className="font-mono text-[0.65rem] uppercase tracking-wider text-[var(--color-muted-ink)]">
+                        {c.position_label}
+                      </p>
+                      {exp.type === 'mandato_anterior' ? (
+                        <span
+                          className="shrink-0 rounded-full border border-[color-mix(in_srgb,var(--color-institutional)_30%,transparent)] bg-[color-mix(in_srgb,var(--color-institutional)_12%,var(--color-paper))] px-1.5 py-0.2 font-mono text-[0.55rem] font-semibold uppercase tracking-wider text-[var(--color-institutional)]"
+                          title={exp.tooltip}
+                        >
+                          Mandato
+                        </span>
+                      ) : (
+                        <span
+                          className="shrink-0 rounded-full border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-1.5 py-0.2 font-mono text-[0.55rem] font-medium uppercase tracking-wider text-[var(--color-muted-ink)]"
+                          title={exp.tooltip}
+                        >
+                          1ª cand.
+                        </span>
+                      )}
+                    </div>
                     <p className="truncate font-semibold">{c.full_name}</p>
                     <p className="font-mono text-xs text-[var(--color-muted-ink)]">
                       {c.party}
