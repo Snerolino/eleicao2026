@@ -12,6 +12,16 @@
 - Produção atualizada: Release `150c13b-20260827T122229951Z`, versão `0.2.1027`, HTTP 200 na raiz e em `/release.json`.
 - Próximo passo: manter monitoramento contínuo e progressão autônoma de lotes.
 
+## Tick contínuo — dois lotes editoriais ALRS aplicados, transporte Git bloqueado — 2026-08-27T12:30Z
+
+- Dois lotes consecutivos de 25 decisões foram classificados/revistos/validados com hash exato e aplicados via `record_impact_editorial_disposition` autenticado: `50/50` RPCs `applied`, `0` erros, `0` needs_changes.
+- Reconciliação pós-apply: `132` versões resolvidas e `51` perfis ALRS. Novo lote de `25` proposições (`100` ocorrências, `100` votos factuais) foi reconstruído e permanece `pending_review`.
+- Gates verdes: `437/437` testes, TypeScript, schema, `data:check` (`1003` candidaturas/`988` fotos), build (`237` módulos; sitemap `1003 + 2`) e `git diff --check`.
+- `portal:publication:verify` permanece `published_verified`, portal e `/release.json` HTTP 200. Nenhuma matriz/score aprovada ou voto factual foi alterado.
+- Auditoria strict permanece fail-closed: sem fonte versões ALRS/Câmara/Senado `1251/3/112`, eventos `1647/2/188`, votos `4/2/455`; reparo residual ALRS bloqueado por evidência oficial alterada, sem inventar/aplicar voto.
+- Commit local `857dea2` criado. `git push origin main` retentado 3 vezes e bloqueado por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); produção não mudou.
+- QA: `docs/qa/lote-continuous-ops-editorial-autoapprove-2026-08-27.md`. Próximo passo: manter reconciliação read-only e retentar transporte Git; não aplicar itens sem fonte/hash/match exatos.
+
 ## Tick contínuo — workflow autônomo com auto-aprovação e análise de assessments — 2026-08-27T11:15Z
 
 - Implementado e formalizado o novo modo de workflow contínuo ininterrupto do Hermes (`docs/workflow-autonomo-hermes-autoaprovacao-assessments.md`) com base em `INSTRUCAO-AGENTE-REVISOR-ASSESSMENTS-VOTOS-RS2026-v1.md`.
