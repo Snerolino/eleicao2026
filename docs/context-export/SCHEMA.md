@@ -98,6 +98,7 @@ Novas tabelas da Matriz de Impacto Populacional v1 (todas com RLS habilitado):
 - RPC `ensure_alrs_nominal_proposition_version(jsonb)` — cria/recupera proposição e versão factual ALRS identificadas por número, ano e título oficial; restrita a `authenticated` com `editor_roles`, sem alterar impacto ou score.
 - A RPC de resolução aceita tipos normalizados do schema (`pec`, `pl`, `plp`, `pld`, `lei`, `outro`); siglas ALRS sem coluna própria preservam a sigla no `external_id`.
 - RPC `materialize_legislator_vote_profiles()` não foi criada: a materialização usa `scripts/build-vote-profile-fast.mjs` com cliente Supabase JS e escrita RLS restrita a editor/admin.
+- RPC `record_impact_assessment_draft(...)` registra assessment com fonte vinculada e matriz `pending_review`; não aprova nem publica a matriz.
 - `beneficiary_groups` — catalogo versionado (14 slugs v1). Slugs nunca renomeados; evolucao via `deprecated_at` + `replacement_slug`. `geral` nao e grupo pontuavel.
 - `beneficiary_group_aliases` — variantes de grafia.
 - `impact_matrices` — matriz por `proposition_version_id` + `methodology_version` (unico); `severity` 1..5; `structural_type` (`structural|budgetary|symbolic`); `review_status` (`rascunho|pending_review|approved|contested`). A disposição editorial ocorre antes da matriz: `assess`, `no_direct_population_group`, `taxonomy_gap` ou `excluded`; somente `assess` pode gerar matriz.
