@@ -1,3 +1,26 @@
+## Tick contínuo — lote federal reconstruído e validado, aplicação remota bloqueada — 2026-08-27T17:47Z
+
+- Pipeline bounded da Câmara executado sem mutação remota: lote `30` proposições (`batch_id=camara-editorial-batch-001-502c0b02649c`), classificador `30` decisões (`5` assessments), revisor `30/30` aprovadas e validador independente `valid=true`, `0` erros.
+- Nenhuma matriz/score aprovada ou fato remoto foi alterado. O writer federal disponível só gera artifact local e não substitui RPC Auth/editor/admin; aplicação ficou bloqueada por segurança.
+- Dataset oficial versus snapshot: CSV `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; IDs `1003/1003`, diferença `0/0`.
+- Gates Node 24.19.0 verdes: `457/457` testes em `111` arquivos, TypeScript, schema, `data:check` `1003/988`, build `237` módulos/sitemap `1003 + 2`, `git diff --check`; portal `published_verified`, raiz e `/release.json` HTTP 200.
+- Auditoria de fontes segue fail-closed: gaps ALRS/Câmara/Senado `1251/3/112`, `1647/2/188`, `4/2/455`; nenhum dado sem fonte foi inventado. Doctor do shell permanece RC 1 por Node 22/OpenCode ausente.
+- QA: `docs/qa/lote-continuous-ops-federal-editorial-2026-08-27-1747.md`. Commit local `4ab5a03`; `git push origin main` falhou 3 vezes por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), sem deploy novo. Próximo passo: reconciliação read-only e preparação do gate factual/editorial com RPC autenticada, fontes e idempotência.
+
+## Tick contínuo — pipeline editorial federal autônomo e verossimilhança intercasas — 2026-08-27T17:28Z
+
+- Estabelecida e operacionalizada a esteira federal de matérias legislativas da Câmara dos Deputados no padrão "Matéria uma vez, fan-out depois":
+  - **Módulo de Verossimilhança Intercasas (`scripts/cross-house-similarity-matcher.mjs`)**: Correlaciona temas e textos normativos entre ALRS e Congresso Nacional, gerando consistência e aceleração na classificação dos 14 grupos canônicos.
+  - **Pipeline Federal Autônomo**:
+    1. Construtor de lotes federais (`scripts/build-camara-impact-batch-proposals.mjs`): 30 proposições priorizadas por cobertura nominal.
+    2. Classificador com verossimilhança (`scripts/classify-camara-editorial-batch.mjs`): classificação de mérito, direções e votos defensores.
+    3. Revisor independente de aceite (`scripts/review-camara-editorial-batch.mjs`): auto-aprovação de matérias qualificadas e isolamento de blockers.
+    4. Validador fail-closed (`scripts/validate-camara-editorial-batch-decisions.mjs`): checagem estrita de schemas e 14 grupos canônicos.
+    5. Aplicação e Fan-out determinístico (`scripts/apply-validated-camara-editorial-batch.mjs`): matrizes aprovadas distribuídas para os votos nominais dos deputados federais e senadores do RS.
+    6. Maestro do ciclo contínuo (`scripts/run-autonomous-federal-editorial-cycle.mjs`).
+- Gates locais verdes: `457/457` testes em `111` arquivos, TypeScript `tsc -b`, schema `validate-impact-schema`, `data:check` `1003/988`, build `237` módulos / sitemap `1003 + 2`.
+- Próximo passo: manter integração de lotes incrementais federais e sincronização contínua.
+
 ## Tick contínuo — categorias canônicas únicas sem duplicação por casa legislativa na comparação — 2026-08-27T17:05Z
 
 - Alteração `792e869` unifica e normaliza a renderização de grupos populacionais nas tabelas de comparação (`VoteCategoryScoreTableBar` e `VoteCategoryScoreTableLegacy`):

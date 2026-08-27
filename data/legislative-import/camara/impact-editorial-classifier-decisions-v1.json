@@ -1,0 +1,516 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "camara-editorial-batch-001-502c0b02649c",
+  "classifier": "hermes-federal-autonomous-classifier-v1",
+  "house": "camara",
+  "classified_at": "2026-08-27T17:48:34.185Z",
+  "total_items": 30,
+  "summary": {
+    "assess": 5,
+    "no_direct_population_group": 15,
+    "taxonomy_gap": 1,
+    "excluded": 9,
+    "requires_external_review": 0
+  },
+  "decisions": [
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2618177-plp:event-2618177-71",
+      "canonical_editorial_key": "camara:PLP:114:2026:event-2618177-71:f3b119d0d21d",
+      "title": "PLP 114",
+      "disposition": "no_direct_population_group",
+      "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.8,
+      "cross_house_precedent": "ALRS Regulação Institucional e Tributária Difusa"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2606313-plp:event-2606313-36",
+      "canonical_editorial_key": "camara:PLP:41:2026:event-2606313-36:210b103c8cf4",
+      "title": "PLP 41",
+      "disposition": "assess",
+      "rationale": "Texto normativo federal correlacionado diretamente com mulheres, criancas_adolescentes_vulnerabilidade. Direção: ampliadora. Voto defensor: SIM.",
+      "matrix": {
+        "methodology_version": "1.0",
+        "severity": 3,
+        "structural_type": "structural"
+      },
+      "assessments": [
+        {
+          "group_slug": "mulheres",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.95,
+          "rationale": "Texto normativo federal (Câmara dos Deputados) com efeito documentado sobre mulheres (ampliação/garantia). Voto defensor: SIM.",
+          "source_refs": [
+            {
+              "kind": "official_substantive_source",
+              "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2606313",
+              "content_hash": "210b103c8cf4"
+            },
+            {
+              "kind": "official_substantive_source",
+              "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2606313-36",
+              "content_hash": "210b103c8cf4"
+            }
+          ]
+        },
+        {
+          "group_slug": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.95,
+          "rationale": "Texto normativo federal (Câmara dos Deputados) com efeito documentado sobre criancas_adolescentes_vulnerabilidade (ampliação/garantia). Voto defensor: SIM.",
+          "source_refs": [
+            {
+              "kind": "official_substantive_source",
+              "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2606313",
+              "content_hash": "210b103c8cf4"
+            },
+            {
+              "kind": "official_substantive_source",
+              "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2606313-36",
+              "content_hash": "210b103c8cf4"
+            }
+          ]
+        }
+      ],
+      "requires_external_review": false,
+      "confidence": 0.95,
+      "cross_house_precedent": "Reserva de 5% de vagas em contratos terceirizados para mulheres vítimas de violência"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2481715-pl:event-2596339-8",
+      "canonical_editorial_key": "camara:PL:3278:2021:event-2596339-8:9c6f4775392e",
+      "title": "PL 3278",
+      "disposition": "excluded",
+      "rationale": "Matéria ou votação estritamente procedimental/regimental (Urgência Art. 155 RICD ou retirada de pauta). Sem mérito normativo.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.98,
+      "cross_house_precedent": "ALRS Procedurais Regimentais"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2601040-plp:event-2601522-8",
+      "canonical_editorial_key": "camara:PLP:14:2026:event-2601522-8:066648aaeee0",
+      "title": "PLP 14",
+      "disposition": "excluded",
+      "rationale": "Matéria ou votação estritamente procedimental/regimental (Urgência Art. 155 RICD ou retirada de pauta). Sem mérito normativo.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.98,
+      "cross_house_precedent": "ALRS Procedurais Regimentais"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2557414-mpv:event-2557414-41",
+      "canonical_editorial_key": "camara:OUTRO:1313:2025:event-2557414-41:4547be409874",
+      "title": "MPV 1313",
+      "disposition": "assess",
+      "rationale": "Texto normativo federal correlacionado diretamente com trabalhadores_informais. Direção: ampliadora. Voto defensor: SIM.",
+      "matrix": {
+        "methodology_version": "1.0",
+        "severity": 2,
+        "structural_type": "structural"
+      },
+      "assessments": [
+        {
+          "group_slug": "trabalhadores_informais",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.85,
+          "rationale": "Texto normativo federal (Câmara dos Deputados) com efeito documentado sobre trabalhadores_informais (ampliação/garantia). Voto defensor: SIM.",
+          "source_refs": [
+            {
+              "kind": "official_substantive_source",
+              "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2557414",
+              "content_hash": "4547be409874"
+            },
+            {
+              "kind": "official_substantive_source",
+              "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2557414-41",
+              "content_hash": "4547be409874"
+            }
+          ]
+        }
+      ],
+      "requires_external_review": false,
+      "confidence": 0.85,
+      "cross_house_precedent": "Metodologia v1 Diretrizes Canônicas"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2562173-mpv:event-2562173-21",
+      "canonical_editorial_key": "camara:OUTRO:1317:2025:event-2562173-21:f8c0f6e6c9e5",
+      "title": "MPV 1317",
+      "disposition": "no_direct_population_group",
+      "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.8,
+      "cross_house_precedent": "ALRS Regulação Institucional e Tributária Difusa"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2581700-mpv:event-2581700-31",
+      "canonical_editorial_key": "camara:OUTRO:1323:2025:event-2581700-31:0a7191068340",
+      "title": "MPV 1323",
+      "disposition": "assess",
+      "rationale": "Texto normativo federal correlacionado diretamente com trabalhadores_informais. Direção: ampliadora. Voto defensor: SIM.",
+      "matrix": {
+        "methodology_version": "1.0",
+        "severity": 3,
+        "structural_type": "structural"
+      },
+      "assessments": [
+        {
+          "group_slug": "trabalhadores_informais",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.85,
+          "rationale": "Texto normativo federal (Câmara dos Deputados) com efeito documentado sobre trabalhadores_informais (ampliação/garantia). Voto defensor: SIM.",
+          "source_refs": [
+            {
+              "kind": "official_substantive_source",
+              "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2581700",
+              "content_hash": "0a7191068340"
+            },
+            {
+              "kind": "official_substantive_source",
+              "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2581700-31",
+              "content_hash": "0a7191068340"
+            }
+          ]
+        }
+      ],
+      "requires_external_review": false,
+      "confidence": 0.85,
+      "cross_house_precedent": "Metodologia v1 Diretrizes Canônicas"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2432865-pl:event-2601794-5",
+      "canonical_editorial_key": "camara:PL:1743:2024:event-2601794-5:849f183ddb87",
+      "title": "PL 1743",
+      "disposition": "taxonomy_gap",
+      "rationale": "Público profissional ou setorial específico sem correspondência direta nos 14 grupos canônicos v1.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.85,
+      "cross_house_precedent": "ALRS Taxonomia Profissões Setoriais"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2618177-plp:event-2618177-73",
+      "canonical_editorial_key": "camara:PLP:114:2026:event-2618177-73:f3b119d0d21d",
+      "title": "PLP 114",
+      "disposition": "no_direct_population_group",
+      "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.8,
+      "cross_house_precedent": "ALRS Regulação Institucional e Tributária Difusa"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2612930-pl:event-2636281-8",
+      "canonical_editorial_key": "camara:PL:896:2023:event-2636281-8:346d44019715",
+      "title": "PL 896",
+      "disposition": "excluded",
+      "rationale": "Matéria ou votação estritamente procedimental/regimental (Urgência Art. 155 RICD ou retirada de pauta). Sem mérito normativo.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.98,
+      "cross_house_precedent": "ALRS Procedurais Regimentais"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2557414-mpv:event-2557414-32",
+      "canonical_editorial_key": "camara:OUTRO:1313:2025:event-2557414-32:4547be409874",
+      "title": "MPV 1313",
+      "disposition": "assess",
+      "rationale": "Texto normativo federal correlacionado diretamente com trabalhadores_informais. Direção: ampliadora. Voto defensor: SIM.",
+      "matrix": {
+        "methodology_version": "1.0",
+        "severity": 2,
+        "structural_type": "structural"
+      },
+      "assessments": [
+        {
+          "group_slug": "trabalhadores_informais",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.85,
+          "rationale": "Texto normativo federal (Câmara dos Deputados) com efeito documentado sobre trabalhadores_informais (ampliação/garantia). Voto defensor: SIM.",
+          "source_refs": [
+            {
+              "kind": "official_substantive_source",
+              "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2557414",
+              "content_hash": "4547be409874"
+            },
+            {
+              "kind": "official_substantive_source",
+              "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2557414-32",
+              "content_hash": "4547be409874"
+            }
+          ]
+        }
+      ],
+      "requires_external_review": false,
+      "confidence": 0.85,
+      "cross_house_precedent": "Ampliação de mecanismos de proteção a vítimas com medidas protetivas de urgência"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2598651-pl:event-2600122-8",
+      "canonical_editorial_key": "camara:PL:6601:2025:event-2600122-8:8ba226643b14",
+      "title": "PL 6601",
+      "disposition": "excluded",
+      "rationale": "Matéria ou votação estritamente procedimental/regimental (Urgência Art. 155 RICD ou retirada de pauta). Sem mérito normativo.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.98,
+      "cross_house_precedent": "ALRS Procedurais Regimentais"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2486315-pl:event-2606189-10",
+      "canonical_editorial_key": "camara:PL:849:2025:event-2606189-10:0ebbcbea422a",
+      "title": "PL 849",
+      "disposition": "excluded",
+      "rationale": "Matéria ou votação estritamente procedimental/regimental (Urgência Art. 155 RICD ou retirada de pauta). Sem mérito normativo.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.98,
+      "cross_house_precedent": "ALRS Procedurais Regimentais"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2503998-plp:event-2503998-75",
+      "canonical_editorial_key": "camara:PLP:109:2025:event-2503998-75:905237dbc4f8",
+      "title": "PLP 109",
+      "disposition": "no_direct_population_group",
+      "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.8,
+      "cross_house_precedent": "ALRS Regulação Institucional e Tributária Difusa"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9002",
+      "canonical_editorial_key": "camara:PEC:6:2019:event-9002:1e7e76c9da66",
+      "title": "PEC 6/2019",
+      "disposition": "no_direct_population_group",
+      "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.8,
+      "cross_house_precedent": "ALRS Regulação Institucional e Tributária Difusa"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9227",
+      "canonical_editorial_key": "camara:PL:3723:2019:event-9227:b87af4715636",
+      "title": "PL 3723/2019",
+      "disposition": "no_direct_population_group",
+      "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.8,
+      "cross_house_precedent": "ALRS Regulação Institucional e Tributária Difusa"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2525620-pl:event-2610579-7",
+      "canonical_editorial_key": "camara:PL:2898:2025:event-2610579-7:f3e6ff33ff07",
+      "title": "PL 2898",
+      "disposition": "excluded",
+      "rationale": "Matéria ou votação estritamente procedimental/regimental (Urgência Art. 155 RICD ou retirada de pauta). Sem mérito normativo.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.98,
+      "cross_house_precedent": "ALRS Procedurais Regimentais"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2638483-pl:event-2638483-34",
+      "canonical_editorial_key": "camara:PL:3085:2026:event-2638483-34:25b404bf9fa8",
+      "title": "PL 3085",
+      "disposition": "no_direct_population_group",
+      "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.8,
+      "cross_house_precedent": "ALRS Regulação Institucional e Tributária Difusa"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2503998-plp:event-2503998-70",
+      "canonical_editorial_key": "camara:PLP:109:2025:event-2503998-70:905237dbc4f8",
+      "title": "PLP 109",
+      "disposition": "no_direct_population_group",
+      "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.8,
+      "cross_house_precedent": "ALRS Regulação Institucional e Tributária Difusa"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2562173-mpv:event-2562173-30",
+      "canonical_editorial_key": "camara:OUTRO:1317:2025:event-2562173-30:f8c0f6e6c9e5",
+      "title": "MPV 1317",
+      "disposition": "no_direct_population_group",
+      "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.8,
+      "cross_house_precedent": "ALRS Regulação Institucional e Tributária Difusa"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2501880-plp:event-2562289-8",
+      "canonical_editorial_key": "camara:PLP:104:2025:event-2562289-8:05e21f6681a8",
+      "title": "PLP 104",
+      "disposition": "excluded",
+      "rationale": "Matéria ou votação estritamente procedimental/regimental (Urgência Art. 155 RICD ou retirada de pauta). Sem mérito normativo.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.98,
+      "cross_house_precedent": "ALRS Procedurais Regimentais"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2612908-pdl:event-2637721-10",
+      "canonical_editorial_key": "camara:OUTRO:171:2026:event-2637721-10:ddef0ff97415",
+      "title": "PDL 171",
+      "disposition": "excluded",
+      "rationale": "Matéria ou votação estritamente procedimental/regimental (Urgência Art. 155 RICD ou retirada de pauta). Sem mérito normativo.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.98,
+      "cross_house_precedent": "ALRS Procedurais Regimentais"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2557414-mpv:event-2557414-24",
+      "canonical_editorial_key": "camara:OUTRO:1313:2025:event-2557414-24:4547be409874",
+      "title": "MPV 1313",
+      "disposition": "assess",
+      "rationale": "Texto normativo federal correlacionado diretamente com trabalhadores_informais. Direção: ampliadora. Voto defensor: SIM.",
+      "matrix": {
+        "methodology_version": "1.0",
+        "severity": 2,
+        "structural_type": "structural"
+      },
+      "assessments": [
+        {
+          "group_slug": "trabalhadores_informais",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.85,
+          "rationale": "Texto normativo federal (Câmara dos Deputados) com efeito documentado sobre trabalhadores_informais (ampliação/garantia). Voto defensor: SIM.",
+          "source_refs": [
+            {
+              "kind": "official_substantive_source",
+              "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2557414",
+              "content_hash": "4547be409874"
+            },
+            {
+              "kind": "official_substantive_source",
+              "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2557414-24",
+              "content_hash": "4547be409874"
+            }
+          ]
+        }
+      ],
+      "requires_external_review": false,
+      "confidence": 0.85,
+      "cross_house_precedent": "Metodologia v1 Diretrizes Canônicas"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2580259-plp:event-2580259-24",
+      "canonical_editorial_key": "camara:PLP:230:2025:event-2580259-24:b989bd0e5bf9",
+      "title": "PLP 230",
+      "disposition": "no_direct_population_group",
+      "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.8,
+      "cross_house_precedent": "ALRS Regulação Institucional e Tributária Difusa"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2600127-pl:event-2601223-8",
+      "canonical_editorial_key": "camara:PL:68:2026:event-2601223-8:d6a68834e64a",
+      "title": "PL 68",
+      "disposition": "excluded",
+      "rationale": "Matéria ou votação estritamente procedimental/regimental (Urgência Art. 155 RICD ou retirada de pauta). Sem mérito normativo.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.98,
+      "cross_house_precedent": "ALRS Procedurais Regimentais"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2618177-plp:event-2618177-82",
+      "canonical_editorial_key": "camara:PLP:114:2026:event-2618177-82:f3b119d0d21d",
+      "title": "PLP 114",
+      "disposition": "no_direct_population_group",
+      "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.8,
+      "cross_house_precedent": "ALRS Regulação Institucional e Tributária Difusa"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2611992-plp:event-2611992-24",
+      "canonical_editorial_key": "camara:PLP:80:2026:event-2611992-24:3be8ec3afee6",
+      "title": "PLP 80",
+      "disposition": "no_direct_population_group",
+      "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.8,
+      "cross_house_precedent": "ALRS Regulação Institucional e Tributária Difusa"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2192459:event-9003",
+      "canonical_editorial_key": "camara:PEC:6:2019:event-9003:de2075a3559e",
+      "title": "PEC 6/2019",
+      "disposition": "no_direct_population_group",
+      "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.8,
+      "cross_house_precedent": "ALRS Regulação Institucional e Tributária Difusa"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9225",
+      "canonical_editorial_key": "camara:PL:3723:2019:event-9225:22fa0ace0032",
+      "title": "PL 3723/2019",
+      "disposition": "no_direct_population_group",
+      "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.8,
+      "cross_house_precedent": "ALRS Regulação Institucional e Tributária Difusa"
+    },
+    {
+      "proposition_version_id": "proposition_versions:camara:camara-proposicao-2209381:event-9226",
+      "canonical_editorial_key": "camara:PL:3723:2019:event-9226:7606555cbe15",
+      "title": "PL 3723/2019",
+      "disposition": "no_direct_population_group",
+      "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "matrix": null,
+      "assessments": [],
+      "requires_external_review": false,
+      "confidence": 0.8,
+      "cross_house_precedent": "ALRS Regulação Institucional e Tributária Difusa"
+    }
+  ]
+}
