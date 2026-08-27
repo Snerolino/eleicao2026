@@ -3,35 +3,9 @@
   "packet_type": "alrs_source_acquisition_queue",
   "remote_apply": false,
   "totals": {
-    "items": 288
+    "items": 136
   },
   "items": [
-    {
-      "proposition_version_id": "5a2d3d07-2a78-4029-98f1-6ef225511c52",
-      "review_key": "sha256:6a583d3071eaca778de98d00dae0d785f55af66a677ff21711aa9b6fdd82faa4#5a2d3d07-2a78-4029-98f1-6ef225511c52",
-      "title": "Encaminha indicação de Deputados para eleição de cargos vagos da Mesa Diretora eleita para o período de 3 de fevereiro de 2026 a 31 de janeiro de 2027.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "18344ba9-cdf0-4e4e-8608-ec63a13b50eb",
-      "review_key": "sha256:6d95ffa0c6d3b6d95310964399a7ccb808757cb9518135a25189897de6a35c9f#18344ba9-cdf0-4e4e-8608-ec63a13b50eb",
-      "title": "Requerem, nos termos do artigo 79 do Regimento Interno, a instalação de uma Comissão Especial de combate ao feminicídio no Estado do Rio Grande do Sul.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
     {
       "proposition_version_id": "d00a7687-5a06-42a4-a998-794bf5f996b1",
       "review_key": "sha256:893fba22da23f7a5023116d75150a6aad9f444c552b0ab0d20b6b301bf8ce2a6#d00a7687-5a06-42a4-a998-794bf5f996b1",
@@ -160,18 +134,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "cba9a8b6-d3d1-46cc-8619-5434a6df67bf",
-      "review_key": "sha256:6bbc6a3e912a0c549204429b39573e6f30c0ef3262456d181f68f521913f6dc2#cba9a8b6-d3d1-46cc-8619-5434a6df67bf",
-      "title": "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 17 a 31 de julho de 2022. (SEI 4358-01.00/22-0)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "4d9cdfe1-7602-410e-94ee-38b7101bc7f6",
       "review_key": "sha256:6f2c08b443852d7d32f035b7b2f1f026fe7025426e29ecd21390be3e23bb212c#4d9cdfe1-7602-410e-94ee-38b7101bc7f6",
       "title": "Altera a Lei Complementar n.º 15.224, de 10 de setembro de 2018, que cria o Programa de Incentivo ao Aparelhamento da Segurança Pública do Estado do Rio Grande do Sul – PISEG/RS.(SEI 10776-0100/23-7)",
@@ -180,78 +142,6 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "a60c4ba3-5b58-4e6c-bd8b-326bd832d358",
-      "review_key": "sha256:77d402bc8b66a503f67e62c485e2d96dbcc793cc27c712db64a01f76aa57c71b#a60c4ba3-5b58-4e6c-bd8b-326bd832d358",
-      "title": "Requer, nos termos do artigo 84 do Regimento Interno da Assembleia Legislativa, a prorrogação de seus trabalhos por 60 (sessenta) dias..",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "6a138746-02c6-453b-91cb-11c4757b21fa",
-      "review_key": "sha256:82178f4155c7d30508739e05d9e824a3d35142e4166e50f23fdfad185034ba69#6a138746-02c6-453b-91cb-11c4757b21fa",
-      "title": "Requer, com base no art. 176, § 2º, do Regimento Interno da Assembleia Legislativa do Estado, a retirada da ordem do dia do Projeto de Lei 51/2022. (SEI 3514-0100/22-1)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "0578b23f-7a1d-4def-811c-e9912bbdda30",
-      "review_key": "sha256:916e88120a55bd8cecc7cc31a92c3e9bd202a2b953d684373404186abcd77d30#0578b23f-7a1d-4def-811c-e9912bbdda30",
-      "title": "Encaminha indicação de Deputados para comporem a chapa para os cargos da Mesa Diretora para o período de 3 de fevereiro de 2026 a 31 janeiro de 2027.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "02617d08-f5f4-44b8-91c6-5dd63811f0d7",
-      "review_key": "sha256:989485ac82fa212c235beb876c6f0b7837ed100fa28e8c55da4564ccebb120c8#02617d08-f5f4-44b8-91c6-5dd63811f0d7",
-      "title": "Requerem a instalação de uma Comissão Especial para tratar de Monitoramento e Verificação do cumprimento das Metas estabelecidas no Plano Estadual de Educação (PEE), Lei Estadual de nº 14.705/2015, com vigência de 10 anos a contar da publicação da Lei. (SEI 1885-0100/22-7)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "d9afa6ec-76ea-4063-b826-cb5686e07b3d",
-      "review_key": "sha256:a877ab1964cd5134f5098309817a5212ce042916d29dfad5dbd88c39428f5b0e#d9afa6ec-76ea-4063-b826-cb5686e07b3d",
-      "title": "Requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação da Emenda nº 1 e Texto do Projeto Lei Complementar 468/2021.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "1e9bb83b-bc36-4fed-a5b7-8167283a1155",
-      "review_key": "sha256:a968ed2dbdc8216332961c855a73b758f43fd36d82e36b2831ada49eb0c9ee5f#1e9bb83b-bc36-4fed-a5b7-8167283a1155",
-      "title": "Aprova a indicação do nome do Senhor ROBSON OLIVEIRA DOS SANTOS para exercer o cargo de Diretor do Banco do Estado do Rio Grande do Sul S/A - BANRISUL.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026"
       ],
       "lane": "automatic_source_acquisition"
     },
@@ -280,18 +170,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "0aba5a5e-dfe4-4c09-ae44-204029bc4d1e",
-      "review_key": "sha256:e55cf10f8d9f3d6a00dec4cfd1bf9282703a1b540300890d6b1acbd68e0d7a4f#0aba5a5e-dfe4-4c09-ae44-204029bc4d1e",
-      "title": "Requer, com base nos arts. art. 176, § 2º, do Regimento Interno da Assembleia Legislativa do Estado, a retirada da ordem do dia do Projeto de Lei 59/2020.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "3cca69cf-f495-47cf-abbb-3c19a3bfef66",
       "review_key": "sha256:f382819c6c18bd9e43e5d63f060d897c0e980aed7693dde04ad4e9c16d88c403#3cca69cf-f495-47cf-abbb-3c19a3bfef66",
       "title": "Altera a Resolução n.º 3.035, de 8 de abril de 2009, que cria o Troféu Educacional Governador Leonel de Moura Brizola e dá outras providências. (SEI 7457-0100/22-8)",
@@ -307,18 +185,6 @@
       "proposition_version_id": "a58fa649-cc66-4e2f-8ff1-6aaefaa4e5f2",
       "review_key": "sha256:f65a9dcf4bed0901f2590706f85f644497bb4176d39cf0025826d06ea59ee55e#a58fa649-cc66-4e2f-8ff1-6aaefaa4e5f2",
       "title": "Dispõe sobre a instalação da Assembleia Legislativa na Exposição Internacional de Animais, Máquinas, Implementos e Produtos Agropecuários - Expointer 2022. (SEI 8249-0100/22-2)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "aef84ca3-58a7-4c5d-91e3-382771ee6b8f",
-      "review_key": "sha256:fb0722c88d31447334562fb4a6711b6b7a4f6a312822705f70101e95e77f03f0#aef84ca3-58a7-4c5d-91e3-382771ee6b8f",
-      "title": "Aprova a indicação do nome da Senhora Luciana Luso de Carvalho para compor o Conselho Superior da Agência Estadual de Regulação dos Serviços Públicos Delegados do Rio Grande do Sul - AGERGS. (SEI 9142-0100/22-2)",
       "source_urls": [
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
@@ -412,17 +278,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "7a744d35-b81a-4f06-bda5-548c6ecdc9a0",
-      "review_key": "sha256:026da9ddc08afd669264d3e7226299b6a99c6d5b9e4162f22238386751bcc060#7a744d35-b81a-4f06-bda5-548c6ecdc9a0",
-      "title": "Requerem, na forma dos artigos 79 a 82 do Regimento Interno da Assembleia Legislativa do Estado do Rio Grande do Sul, a formação de uma Comissão Especial com a finalidade de tratar o papel das Universidades Comunitárias no Estado do Rio Grande do Sul e a facilitação do acesso ao ensino Superior.(SEI 4952-0100/23-1)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "38d46213-3dc2-425d-95fb-6fc4344a28ba",
       "review_key": "sha256:05ff81dde8447495634ce034ffdbd665a219730fe8829feceb706fbdc4134447#38d46213-3dc2-425d-95fb-6fc4344a28ba",
       "title": "Altera a Resolução n.º 2.608, de 3 de outubro de 1995, que institui o Prêmio “FOLHA VERDE”, a ser conferido pela Assembleia Legislativa e dá outras providências.(SEI 9862-01.00/23-1)",
@@ -430,17 +285,6 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "1b67b0e2-0b40-432c-973c-3824ab125904",
-      "review_key": "sha256:069c9a0666136ad8dd48edd7dda2990d9d32435bfb72482bdfccc0445aa5c623#1b67b0e2-0b40-432c-973c-3824ab125904",
-      "title": "Requerimento de preferência para a votação do texto do Projeto de Lei Complementar nº 256/2024.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
       ],
       "lane": "automatic_source_acquisition"
     },
@@ -456,17 +300,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "e0d6970b-a6f3-453e-9964-0fe1c73f4d87",
-      "review_key": "sha256:06eb7a18ab97fe5c0a7ea53e37a614e497ac0cd41e378a8aea906410d944d6d9#e0d6970b-a6f3-453e-9964-0fe1c73f4d87",
-      "title": "Aprova o Relatório Final da Comissão Especial sobre a Regulação de Leitos e Serviços de Saúde no Rio Grande do Sul. (SEI 8740-0100/22-9)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "cba15188-dd62-4478-ba7d-f8c6ef2d7181",
       "review_key": "sha256:080c72288c6e23de7bee2553b51ae458476ff8cc86f767148e1ee94e708bbd3e#cba15188-dd62-4478-ba7d-f8c6ef2d7181",
       "title": "Altera a Lei nº 14.733, de 15 de setembro de 2015, que dispõe sobre a estrutura administrativa e diretrizes do Poder Executivo do Estado do Rio Grande do Sul e dá outras providências; a Lei Complementar nº 10.098, de 3 de fevereiro de 1994, que dispõe sobre o estatuto e regime jurídico único dos servidores públicos civis do Estado do Rio Grande do Sul; a Lei nº 11.127, de 09 de fevereiro de 1998,",
@@ -474,17 +307,6 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "aa9cd7ac-eefd-4272-8183-90976e8111c0",
-      "review_key": "sha256:0b830c11599fb89319adb459089e9694fb0b051357210a8044041fa3b9602da5#aa9cd7ac-eefd-4272-8183-90976e8111c0",
-      "title": "Indica o Senhor Raul Jorge Anglada Pont para ser agraciado com a distinção ”Deputado Emérito”. (SEI 4442-01.00/23-9)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
       ],
       "lane": "automatic_source_acquisition"
     },
@@ -500,17 +322,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "fb046c5c-9139-433b-b186-34ab640785d1",
-      "review_key": "sha256:0c1460873838c1837cfc12715b30c4d13918489e8d3a7fc45427596d703171f8#fb046c5c-9139-433b-b186-34ab640785d1",
-      "title": "Aprova o Relatório Final da Comissão Parlamentar de Inquérito dos Medicamentos e Insumos Covid-19.(SEI 8646-01.00/21-9)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "e1fb6d2c-b283-4ce8-ba9d-1587a04d6b77",
       "review_key": "sha256:0cedcb9abe33130f7f187e78b186c9bc8b9ccffd73814d003b781df532764371#e1fb6d2c-b283-4ce8-ba9d-1587a04d6b77",
       "title": "Indica Deputados para comporem a Comissão de Ética Parlamentar para o Biênio 2025/2027",
@@ -518,17 +329,6 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "6803b7ae-71cf-4370-b81e-5b190c1c12ba",
-      "review_key": "sha256:11f4d9dd3819a158d29b6512b270ceea3e3809d44bfe627bce3f39fc8f4da61c#6803b7ae-71cf-4370-b81e-5b190c1c12ba",
-      "title": "Aprova o Relatório Final da Comissão Especial com a Finalidade de Averiguar a Situação das Rodovias Concedidas em todo o Estado do Rio Grande do Sul(SEI 11730-0100/23-0)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
       ],
       "lane": "automatic_source_acquisition"
     },
@@ -547,39 +347,6 @@
       "proposition_version_id": "026c45b3-b282-489d-8943-eb271a87002d",
       "review_key": "sha256:147919859035f549eae296636e801c1593362e4ae15ac627e31d5150f18d2247#026c45b3-b282-489d-8943-eb271a87002d",
       "title": "Reconhece, para os fins do disposto no art. 65 da Lei Complementar Federal n.º 101, de 4 de maio de 2000, a ocorrência do estado de calamidade pública no Estado do Rio Grande do Sul.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "c9cfd693-d205-4457-b151-f8ade599bf3c",
-      "review_key": "sha256:147942bb187c714d18992fa6a31882f1fd67b7efab4b2a7777ad559704172dc6#c9cfd693-d205-4457-b151-f8ade599bf3c",
-      "title": "Requer a votação da composição da Comissão Representativa para o recesso da 1ª Sessão Legislativa da 56ª Legislatura, de 23 de dezembro de 2023 a 31 de janeiro de 2024.(SEI 16896-0100/23-2)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "b3975c73-421d-4fca-8e7c-8c036c81970c",
-      "review_key": "sha256:1509d568db167eacf6ddce09881cd97ce0cb68c9c4cd448dcc22c3de91d67377#b3975c73-421d-4fca-8e7c-8c036c81970c",
-      "title": "Requer, com base nos arts. 138, § 3º, e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação do texto do Projeto de Lei Complementar nº 332/2024.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "337921e1-13dd-4647-ac98-f655d898f2e7",
-      "review_key": "sha256:171584c168ff6b0b04e9f33c35625bb020b036c309796da21237b82e514ad753#337921e1-13dd-4647-ac98-f655d898f2e7",
-      "title": "Indica o Sr. Deputado Dimas Costa, do PSD, para o cargo de 3.º Suplente de Secretário da Mesa Diretora.",
       "source_urls": [
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
@@ -610,28 +377,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "35433a30-c33c-461c-b7c8-b6db39d45ba5",
-      "review_key": "sha256:18e5c8884aea000340d3b7e54d72dd92ec197e73c8289b8ad9b9dd99770a524b#35433a30-c33c-461c-b7c8-b6db39d45ba5",
-      "title": "Requer, com base no art. 176, § 2º, do Regimento Interno da Assembleia Legislativa do Estado, a retirada da ordem do dia da sessão do Projeto de Lei 364/2024.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "00fe4c0e-10b6-407c-8d06-0416f02a0eed",
-      "review_key": "sha256:19d01d296534be0bc801ccbee9ac0d4674876d14232f425d210e94b35f7b376f#00fe4c0e-10b6-407c-8d06-0416f02a0eed",
-      "title": "Aprova a indicação do nome do Senhor MARCELO SPILKI, para compor o Conselho Superior da Agência Estadual de Regulação dos Serviços Públicos Delegados do Rio Grande do Sul - AGERGS, de acordo com o artigo 6º, inciso I, da Lei nº 10.931, de 09 de janeiro de 1997, e alterações. (SEI 10529-01.00/23-0)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "1e8ddedf-6150-4ea5-a106-edee009c5aeb",
       "review_key": "sha256:1bd3e49365e84506bcc231f277208ac1a636200d8233621c3347b1ba1d6fa44d#1e8ddedf-6150-4ea5-a106-edee009c5aeb",
       "title": "Dispõe sobre a criação do cargo de 4.º Promotor de Justiça da Promotoria de Justiça de Estrela, de Entrância Intermediária - Lei n. 7.669, de 17 de junho de 1982 – Lei Orgânica do Ministério Público do Estado do Rio Grande do Sul.",
@@ -639,17 +384,6 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "11caa20a-9377-4a10-80b9-7bd97baa04aa",
-      "review_key": "sha256:1bea67080f9348e8900a15fffe1a9ae60f62514bc253e952d6a92f526a66d721#11caa20a-9377-4a10-80b9-7bd97baa04aa",
-      "title": "Aprova a indicação do nome do Senhor ROBSON DIEGO FERREIRA para exercer o cargo de Diretor do BADESUL Desenvolvimento S/A – Agência de Fomento/RS. (SEI 16941-01.00/23-8)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
       ],
       "lane": "automatic_source_acquisition"
     },
@@ -665,50 +399,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "41d1c561-610b-49ef-85f7-f1e6dd370e90",
-      "review_key": "sha256:242ab5a1aa1332ab73175fcfee1ff5b58f249cc547ceaf8d8797defe57e8821e#41d1c561-610b-49ef-85f7-f1e6dd370e90",
-      "title": "Dispõe sobre o Regulamento Geral da Assembleia Legislativa do Estado do Rio Grande do Sul, nos termos do art. 267 da Resolução n.º 2.288, de 18 de janeiro de 1991 – Regimento Interno –, e dá outras providências.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "be91f558-ede3-49ec-be17-2dfafe2b000f",
-      "review_key": "sha256:24f19ce0b8eea6e2f6db0d4d413d1dd0ef3a89fef76ca2a39fa2e2fb9cbde86e#be91f558-ede3-49ec-be17-2dfafe2b000f",
-      "title": "Aprova o Relatório Final da Comissão Especial para tratar das ações dirigidas ao setor industrial na retomada do crescimento econômico (CEI). (SEI 3868-0100/22-6)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "5353df96-3bf1-483c-9195-7703a3bfb261",
-      "review_key": "sha256:270c9246bf9d9ce2c37671cf6e92a5189f9ba9d3473c7c495d348b173aa0210f#5353df96-3bf1-483c-9195-7703a3bfb261",
-      "title": "Aprova a indicação do nome do Senhor ALEXANDRE PEDRO PONZI para o cargo de Diretor-Presidente do Banrisul S.A. Corretora de Valores Mobiliários e Câmbio. (SEI 1609-0100/21-9)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "403b3c8e-96d2-4044-b0dd-4d7259417af2",
-      "review_key": "sha256:28d710f17b0e441c65b55baf0c24832318eeb5bf80da782c89ca8b9d59aad2e3#403b3c8e-96d2-4044-b0dd-4d7259417af2",
-      "title": "Aprova o Relatório Final da Comissão Especial Destinada a Acompanhar e Debater a Reforma Tributária.(SEI 12699-01.00/23/5)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "6f4127aa-75e3-40d3-938e-5bc1ec91dcfb",
       "review_key": "sha256:291dd79d7208f07fef31b8188bdcd7f3a73ad4100e5533ea1e9f5968b4b60fae#6f4127aa-75e3-40d3-938e-5bc1ec91dcfb",
       "title": "Declara a perda de mandato parlamentar do Deputado Ruy Irigaray. (SEI 10331-0100/21-7)",
@@ -716,50 +406,6 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "84e52926-e692-4003-9a28-0c1291d010e2",
-      "review_key": "sha256:29c23dfc8d2fed10941ba6b58c67f2f5526a62130068e811c37ca889d3e94a9f#84e52926-e692-4003-9a28-0c1291d010e2",
-      "title": "Requer, com base no art. 176, § 2º, do Regimento Interno da Assembleia Legislativa do Estado, a retirada da ordem do dia e o arquivamento da PEC 279/2019.\r\n(SEI 5709-0100/20-8)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "f9547d75-6679-430c-8e13-caa5df4ecc7d",
-      "review_key": "sha256:2b094c07b535aec7d3de93cae51e3dc7b460a11f4bfd009824740d4b66490177#f9547d75-6679-430c-8e13-caa5df4ecc7d",
-      "title": "Requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação da Emenda  1 e do texto do  Projeto de Lei Complementar  nº 279/2025.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "a04f0f4a-2495-4832-86bf-66015084d1f8",
-      "review_key": "sha256:2e069a8ededd8357326949fb80ed7089818900f05ac9b8ffa7c4621474990ad6#a04f0f4a-2495-4832-86bf-66015084d1f8",
-      "title": "Requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação do Texto do Projeto de Lei Complementar 13/2021.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "0aa2c125-150c-4541-b6f6-0957832d31f8",
-      "review_key": "sha256:2e9287301eacb37bc37b4e9d7f0f764c3beba543019d637b5d3bc8b2dbbec09e#0aa2c125-150c-4541-b6f6-0957832d31f8",
-      "title": "Requer a votação da composição da Comissão Representativa para o recesso da 3.ª Sessão Legislativa da 56.ª  Legislatura,  de 17 de julho a 31 de julho de 2025 e de 23 de dezembro de 2025 a 31 de janeiro de 2026.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
       ],
       "lane": "automatic_source_acquisition"
     },
@@ -786,17 +432,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "2e061bfb-3d1f-4ac1-a1db-ceda00c771f9",
-      "review_key": "sha256:3409385a7ce63235af51883fe526750266adcf2ac8f22cd86bb84c50ef96b23f#2e061bfb-3d1f-4ac1-a1db-ceda00c771f9",
-      "title": "Indica o Senhor Caetano Borges Peruchin para ser agraciado com a distinção ”Deputado Emérito”. (SEI 1063-0100/22-2)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "40fb1e67-a57e-485d-9b58-0c3e7d07e7e1",
       "review_key": "sha256:355507f51cf1cfe52378cb8fa098cd40f020603d8d6e8a75f348c4be77eace2a#40fb1e67-a57e-485d-9b58-0c3e7d07e7e1",
       "title": "Dispõe sobre a suspensão dos prazos para interposição de recursos e prática de atos processuais pelas partes e seus advogados no âmbito de processos administrativos, inclusive disciplinares e sindicâncias punitivas, inquéritos e conselhos de justificação e disciplina referentes à apuração e aplicação de sanções disciplinares aos servidores públicos e aos militares estaduais, previstos no regime ún",
@@ -808,17 +443,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "c6cb6853-801a-480f-9064-2b681291b400",
-      "review_key": "sha256:369cd503416c39413e419fe8bbae7f6389ddc811cf69d4cb9bfd96171ad80d3d#c6cb6853-801a-480f-9064-2b681291b400",
-      "title": "Requer a criação de uma Comissão Especial para tratar da Cadeia Produtiva da Apicultura e da Meliponicultura no Estado do Rio Grande do Sul, a fim de estimular a criação de abelhas, a produção e comercialização de produtos apícolas e da meliponicultura, bem como a capacitação dos produtores, apicultores e meliponicultores. (SEI 3153.0100/23-1)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "5daec534-9907-43e6-a692-1e05183576f7",
       "review_key": "sha256:37450833fc086fb04d3938f452ff4c04d50309011cc0caff97bfb62438b7a07b#5daec534-9907-43e6-a692-1e05183576f7",
       "title": "Altera a Lei nº 16.165, de 31 de julho de 2024; a Lei Complementar nº 11.742, de 17 de janeiro de 2002; a Lei Complementar nº 10.990, de 18 de agosto de 1997; a Lei Complementar nº 10.992, de 18 de agosto de 1997; a Lei Complementar nº 15.454, de 17 de fevereiro de 2020; a Lei Complementar n.º 13.259, de 20 de outubro de 2009; a Lei Complementar nº 13.452, de 26 de abril de 2010; a Lei nº 7.366, d",
@@ -826,28 +450,6 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "7ff7119d-3af8-4657-8760-fdb0d92c2852",
-      "review_key": "sha256:3a409c2b1792822e51927071791602bcad4bbed3eff6ba984cda232ea12e1c58#7ff7119d-3af8-4657-8760-fdb0d92c2852",
-      "title": "Requer, nos termos dos artigos 79, 80, 81 e 82 do Regimento Interno desta Casa, a criação de uma Comissão Especial tendo por objeto analisar: ”O Desenvolvimento Econômico removendo barreiras legais e incentivando o crescimento das pequenas e médias empresas no Estado do Rio Grande do Sul”.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "8c950e05-22f2-4a80-860b-f2e83c8232a1",
-      "review_key": "sha256:40557ca4231fcce78492f573b208b9ccece3c2074802a7a698eea108748f3390#8c950e05-22f2-4a80-860b-f2e83c8232a1",
-      "title": "Aprova o Relatório Final da Comissão Especial para tratar da Cadeia Produtiva da Piscicultura do RS (CECPPRS).(SEI 10041-0100/21-4)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
       ],
       "lane": "automatic_source_acquisition"
     },
@@ -874,17 +476,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "144aab5e-6134-4d07-99f0-a48811f764e8",
-      "review_key": "sha256:42dda99df7ddddd6c56e66e5dc9e5fdd630ec7c94f67422ff2615c9167a699dd#144aab5e-6134-4d07-99f0-a48811f764e8",
-      "title": "Requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação do texto do Projeto de Complementar nº 59/2023.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "37114891-4d67-4ac3-8d8e-5b10d16201b2",
       "review_key": "sha256:43b83358693f0e55ea8862941abb7ef1e2eef38635a7452f02ffd3a3b8e92ce8#37114891-4d67-4ac3-8d8e-5b10d16201b2",
       "title": "Estabelece normas de finanças públicas no âmbito do Estado voltadas para a responsabilidade na gestão fiscal com a adoção de mecanismos de limitação do gasto público e de controle e manutenção do equilíbrio das contas públicas.(SEI 9483-0100/21-9)",
@@ -892,17 +483,6 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "f1122280-08f7-47f7-a721-a1ba6823dedb",
-      "review_key": "sha256:4403f606edc436e8ab14ff92b3c18abe3db7f27cdad95cd757f3885557b23edb#f1122280-08f7-47f7-a721-a1ba6823dedb",
-      "title": "Requer a criação de Comissão Especial destinada a avaliar a necessidade de modernização e reestruturação da Segurança Pública no Estado do Rio Grande do Sul. (SEI 3142.0100/23-7)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
       ],
       "lane": "automatic_source_acquisition"
     },
@@ -918,39 +498,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "dae7f794-6989-4473-b670-5aa4ca6aa436",
-      "review_key": "sha256:46d230d5ca7b761c158eff0b971fc87ef44abbc4ec43e5995ef4c314cd778b3f#dae7f794-6989-4473-b670-5aa4ca6aa436",
-      "title": "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 17 a 31 de julho de 2021. (SEI 5837/0100-21-4)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "abe3b453-bcb6-40a4-bde3-10bcbee88572",
-      "review_key": "sha256:4760c600433e481e8df49ce4d70e974ae85e13d1b48045e2ecef5fa60f5fd00a#abe3b453-bcb6-40a4-bde3-10bcbee88572",
-      "title": "Requer a votação da composição da Comissão Representativa para o recesso da 4ª Sessão Legislativa da 55ª Legislatura, de dezembro de 2022 e janeiro de 2023.(SEI 11566-0100/22-8)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "aca4135f-2a69-4d14-91b6-e69008d31dac",
-      "review_key": "sha256:4885c90513205465fb53f5d7a13c0025753964658ba649972a5dd952ceea39a4#aca4135f-2a69-4d14-91b6-e69008d31dac",
-      "title": "Requer, com base nos arts. 138, § 3º, e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação das emendas 3 e 5 e do Projeto de Lei Complementar nº 163/2021.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "97c25ed2-df3e-49d2-bb2f-6e7f8942b535",
       "review_key": "sha256:48c85a2860d9c6a691b9cd1ef33a444773ddb79cffeaee89b4a3aa9ea12c52fb#97c25ed2-df3e-49d2-bb2f-6e7f8942b535",
       "title": "Altera a Lei Estadual n. 7.669, de 17 de junho de 1982 – Lei Orgânica do Ministério Público do Rio Grande do Sul.",
@@ -962,39 +509,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "f988a206-7690-4c37-a73a-9983bd3651c1",
-      "review_key": "sha256:4955855186588f0136a676b953a5cf7abac3c3b33b2ca57bc8a86344137ed236#f988a206-7690-4c37-a73a-9983bd3651c1",
-      "title": "Aprova a indicação do nome do Senhor WAGNER LENHART para o cargo de Diretor do Banco do Estado do Rio Grande do Sul S/A – BANRISUL.\r\n(SEI 5063-0100/21-3)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "328b3f74-50ca-4ef5-a025-1512f767a34e",
-      "review_key": "sha256:4aae8a3ae8047649cda01fb7af3927155a917c71f67594f947cc4cd0f3b70334#328b3f74-50ca-4ef5-a025-1512f767a34e",
-      "title": "Aprova o Relatório Final da Comissão Especial para Analisar a Equidade nos Serviços Hospitalares do Rio Grande do Sul.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "e1ed393e-17a8-4df7-b97c-e9636dfcaa2a",
-      "review_key": "sha256:4ab2fac2b1dd0d4ae17536c68416cea2cee462dce1fd5f6a4256d973ca120497#e1ed393e-17a8-4df7-b97c-e9636dfcaa2a",
-      "title": "O Deputado signatário requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação do texto do Projeto de Lei Complementar 368/2023.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "dc6c010c-9455-4c54-9bdb-e935a1a33b7a",
       "review_key": "sha256:4af86af28e5c727ca196206f4e962c1856266b02a6c3c2c0f1ca1a12b428d939#dc6c010c-9455-4c54-9bdb-e935a1a33b7a",
       "title": "Reconhece, para os fins do disposto no art. 65 da Lei Complementar Federal n.º 101, de 4 de maio de 2000, a ocorrência do estado de calamidade pública no Estado do Rio Grande do Sul e nos municípios que especifica. (SEI 14960-0100/23-4)",
@@ -1002,50 +516,6 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "e48359b2-5d7e-41bf-80e9-6bb518cf97fa",
-      "review_key": "sha256:4c55544abed6bbb1ada9a02bfc90a0e8034b2e46945e9b8907a06f442fd41630#e48359b2-5d7e-41bf-80e9-6bb518cf97fa",
-      "title": "Eleição para os cargos vagos da Mesa Diretora para o período de 31 de janeiro de 2022 a 31 de janeiro de 2023.(SEI 832-0100/22-2)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "8fa8935f-1d74-4868-87c8-c17e3984b017",
-      "review_key": "sha256:4cc538621b8fe61fe1592793b02fe2afe7043183ad8833c98270c7b6c1b3bd26#8fa8935f-1d74-4868-87c8-c17e3984b017",
-      "title": "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 23 de dezembro de 2024 a 31 de janeiro de 2025.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "c4d1747e-9d6f-4390-aea4-6b1fa1e5f039",
-      "review_key": "sha256:4ce78a861143a4b322f86ba954b448b33f59bfeb0ad856967ff27015eca93a98#c4d1747e-9d6f-4390-aea4-6b1fa1e5f039",
-      "title": "Requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação do Texto do Projeto de Lei Complementar 248/2022.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "033258e3-f0fe-444b-ad9b-268890d5f778",
-      "review_key": "sha256:4dde162012fa4c1814304873303ee9449e81ca1ffca25c06ead751015995fe42#033258e3-f0fe-444b-ad9b-268890d5f778",
-      "title": "Aprova o Relatório Final da Comissão Especial para tratar dos Benefícios Fiscais Concedidos no RS.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
       ],
       "lane": "automatic_source_acquisition"
     },
@@ -1072,39 +542,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "e90e8260-215e-4e03-b306-f6dab4162699",
-      "review_key": "sha256:54b36ed962b13f0d339534fb4b3b64727c1aee62c1349fdf546f984c5a2121ed#e90e8260-215e-4e03-b306-f6dab4162699",
-      "title": "Indica o Senhor Deputado Rafael Braga, do MDB, para o cargo de 1.º Suplente de Secretário da Mesa Diretora. (SEI 5550-0100/23-0)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "1b818313-ae62-4276-808a-e8fdb61b954e",
-      "review_key": "sha256:54b7e4da50e6f5a83bfe3c3e9971265231562aa551bedd7d0f0e1a796c5154cd#1b818313-ae62-4276-808a-e8fdb61b954e",
-      "title": "Requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação do Texto do Projeto de Lei Complementar 182/2023.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "1379dfb6-cbe5-4327-af07-be29a6273889",
-      "review_key": "sha256:55533b782763c1a88da629a36905fc1c8e0ccc57415588a27ec1bd63badb3cf7#1379dfb6-cbe5-4327-af07-be29a6273889",
-      "title": "Aprova o Relatório Final da Comissão Especial destinada a debater o papel das Universidades Comunitárias no RS e a facilitação do acesso ao ensino superior. (SEI 13529-01.00/23-1)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "612dba5b-03b0-4321-8d4c-990bef8f3dbd",
       "review_key": "sha256:55ae30e4759d13fbd2de280442d5c051c8f5df915da6a56343cad9974594e979#612dba5b-03b0-4321-8d4c-990bef8f3dbd",
       "title": "Altera a Lei Complementar nº 15.142, de 5 de abril de 2018, que dispõe sobre o Regime Próprio de Previdência Social do Estado do Rio Grande do Sul – RPPS/RS - e dá outras providências; a Lei Complementar nº 15.143, de 5 de abril de 2018, que dispõe sobre a reestruturação do Instituto de Previdência do Estado do Rio Grande do Sul – IPE Prev -, unidade gestora do Regime Próprio de Previdência Social",
@@ -1127,17 +564,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "4365bff4-4e13-4bb0-8187-2f2e8b209f01",
-      "review_key": "sha256:57426c503d5581ee4c55411aa63635907a124784447557d37f89524c014b97b9#4365bff4-4e13-4bb0-8187-2f2e8b209f01",
-      "title": "Requer, com base nos arts.138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação do Texto do Projeto de Lei Complementar 148/2024.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "7727aae5-a3be-417a-ae05-9af017050049",
       "review_key": "sha256:57d9557eb36507f8ef6165bdf2266ed3d0b91bef2d66e78e12323f0cb6fa637b#7727aae5-a3be-417a-ae05-9af017050049",
       "title": "Altera a Resolução n.º 2.766, de 11 de maio de 1999, que institui, na Assembleia Legislativa, o evento “Deputado por um Dia” e cria a Sessão Plenária do Estudante.",
@@ -1149,97 +575,9 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "560a50e5-bb22-4bde-aa3f-0847e08a9b35",
-      "review_key": "sha256:58b759f9d5ea7b95ad9fa4521ae6d225f8b50ca77dcbdfba43af0c4a6d557cef#560a50e5-bb22-4bde-aa3f-0847e08a9b35",
-      "title": "Requer, com base nos arts. 89 e 89-A do Regimento Interno da Assembleia Legislativa do Estado, a constituição de uma Comissão de Representação Externa para tratar, junto ao Poder Executivo, da efetiva implantação da Modernização do Plano de Carreira da Brigada Militar. (SEI 4224-0100/21-8)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "66055793-2492-4706-a5c8-a83d6bfed3e1",
       "review_key": "sha256:5b09920a1ba52db6e3cd397b48afd45d6b4458966b5eed0218467bad1fffc99c#66055793-2492-4706-a5c8-a83d6bfed3e1",
       "title": "Altera a Resolução n.º 2.708, de 19 de agosto de 1997, que institui o Prêmio “Vitor Mateus Teixeira” e o Troféu “José Mendes” a serem conferidos pela Assembleia Legislativa e dá outras providências.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "ea6933a7-8778-4c4c-b41c-087654460d32",
-      "review_key": "sha256:5ca2574c2c4fa990f55ffceb249d37d48645695898b5a443c5e018abf582d7a3#ea6933a7-8778-4c4c-b41c-087654460d32",
-      "title": "Aprova a indicação do nome do Senhor Alexandre Alves Porsse, pelo prazo faltante para completar 6 (seis) anos, para compor o Conselho Superior da Agência Estadual de Regulação dos Serviços Públicos Delegados do Rio Grande do Sul - AGERGS.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "a279277d-7542-4071-b92f-a0c2ddf82c5e",
-      "review_key": "sha256:5d2e5c113a1f29ea96b797c99d7d4aefa6a8b2d93f186e5c8443d35d4948bdc4#a279277d-7542-4071-b92f-a0c2ddf82c5e",
-      "title": "Requer, nos termos dos arts. 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 17 a 31 de julho de 2021. (SEI \r\n4362-0100/21-8)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "986440a8-eb14-4299-a833-4b880b155b98",
-      "review_key": "sha256:5d917651724ebabc99d1cd308a8f80db3ba86c360d37f4c6ef1e04d304fa4832#986440a8-eb14-4299-a833-4b880b155b98",
-      "title": "Requerem, com fundamento nos arts. 79 e 80, do Regimento Interno desta Casa, a criação de uma Comissão Especial tendo como objeto analisar a equidade nos serviços hospitalares dos hospitais públicos e filantrópicos do Rio Grande do Sul.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "fdba0aa3-2695-43b0-b2ff-1cf459025b3d",
-      "review_key": "sha256:5df1ea2d619c9b16306f893db88a6964d8196267614a254836cb6346b483ff86#fdba0aa3-2695-43b0-b2ff-1cf459025b3d",
-      "title": "Requer, com base nos arts. 89 e 89-A do Regimento Interno da Assembleia Legislativa do Estado, a constituição de uma Comissão de Representação Externa para acompanhar os serviços e ações realizados e os encaminhamentos que ainda se fazem necessários nas cidades gaúchas atingidas pelo ciclone extratropical. (SEI 11489-0100/23-0)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "d53bd4e0-0c89-4c45-a663-b51f95f88811",
-      "review_key": "sha256:5e5b3dabc2169966912a1fb4255b78671bcf6836920dc5a46d429bfe9706016d#d53bd4e0-0c89-4c45-a663-b51f95f88811",
-      "title": "Requerer nos termos do Art. 79 do Regimento Interno desta Casa Legislativa a criação da Comissão Especial dos Benefícios Fiscais concedidos no Estado do Rio Grande do Sul.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "2ab4d368-d44e-4b16-959b-a869dbbd5c64",
-      "review_key": "sha256:5f6e953b604dda621c13404a46add3d0c3241aef768f2c840eb1775e97e8a5be#2ab4d368-d44e-4b16-959b-a869dbbd5c64",
-      "title": "Requerem, nos termos dos artigos 79 do Regimento Interno da Assembleia Legislativa, a criação de uma Comissão Especial tendo por objeto \" Tratar da situação da malha ferroviária inativa no Estado do Rio Grande do Sul\".",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "61b7da1d-2375-4bc8-b011-37c377e88f9e",
-      "review_key": "sha256:607e671f53dd97620ce350fca1d8cb2c7b81c993d34b320ea8b23e822f9c55a9#61b7da1d-2375-4bc8-b011-37c377e88f9e",
-      "title": "Aprova a indicação do nome do Senhor KALIL SEHBE NETO para exercer o cargo de Diretor do Banco do Estado do Rio Grande do Sul S/A - BANRISUL.",
       "source_urls": [
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
@@ -1259,53 +597,9 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "c23c48f6-8f1b-4c74-b96b-a6a81e2f6a97",
-      "review_key": "sha256:6349be03015585723bbe8486cd7db46847cfa77f08d5d97ed1741a954a0e773a#c23c48f6-8f1b-4c74-b96b-a6a81e2f6a97",
-      "title": "Requer, com base nos arts. 138, § 3º, e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação da emenda 4 do PLC nº 163/2021.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "5688ec72-722b-4cad-90b1-bef9d1d97a3a",
       "review_key": "sha256:63dddf348d78bb43086b57bd9cced7f5d128ed78ec973dbe106c83455e6582fa#5688ec72-722b-4cad-90b1-bef9d1d97a3a",
       "title": "Encaminha Veto Parcial ao Projeto de Lei nº 378/2019, de iniciativa do Deputado Pepe Vargas, que estabelece critérios de transparência para a cobrança de dívidas dos consumidores gaúchos, e dá providências correlatas. (Prazo Fatal: 24/4/2025)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "6af836fc-fa17-4502-a579-0722179b1762",
-      "review_key": "sha256:643d6880aa733e27b4cefd55ebb880a92bba73441c6497a1b5e4420d5c72a0c5#6af836fc-fa17-4502-a579-0722179b1762",
-      "title": "Aprova o Relatório Final da Comissão Especial do Desenvolvimento Econômico no Estado do Rio Grande do Sul.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "875837ae-deee-4a74-949b-7ae8fa6eff14",
-      "review_key": "sha256:6473593ab3eca169ceed4da74925e4d92ae957b89c8f54afbcdba2ed4cc15181#875837ae-deee-4a74-949b-7ae8fa6eff14",
-      "title": "Aprova o Relatório Final da Comissão Especial sobre a Situação Econômica da População Negra do Rio Grande do Sul.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "c045ae3b-973c-450d-996b-6d2fb3eba0ca",
-      "review_key": "sha256:6699d7718c3ccb7b6ab8d60ae343ac66f8ddce601679f731f6ffb3631d7dc03d#c045ae3b-973c-450d-996b-6d2fb3eba0ca",
-      "title": "Requer, nos termos do art. 79 do Regimento Interno da Assembleia Legislativa, a criação de uma Comissão Especial como objetivo de tratar da Implementação do Piso Nacional da Enfermagem e das condições de trabalho dos Profissionais  da Saúde no Estado do Rio Grande do Sul.",
       "source_urls": [
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
@@ -1321,17 +615,6 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "b44423cf-30e7-4beb-a8b4-d9bf8e824668",
-      "review_key": "sha256:6c80c578ebadb8c9fb7f2384731817c319600900a134e16b4e4ffb75bab6f2be#b44423cf-30e7-4beb-a8b4-d9bf8e824668",
-      "title": "Requer, com base nos arts. 138, § 3º, e 194, inc. VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação da emenda 8 de origem da Mesa e do texto do Projeto de Resolução nº 08/2021.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
       ],
       "lane": "automatic_source_acquisition"
     },
@@ -1369,31 +652,9 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "4346aac3-b412-44c5-a6cd-dc805c107641",
-      "review_key": "sha256:6ee2370022d9bf5aec2044773dc6ac3217743deb49db506b1b6fc8650cab9087#4346aac3-b412-44c5-a6cd-dc805c107641",
-      "title": "Aprova a indicação do nome do Senhor Edson Meurer Brum para exercer o cargo de Conselheiro do Tribunal de Contas do Estado.(SEI 2563-0100/22-0)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "ce206a60-7313-46c0-8056-ef01cf6d2ab2",
       "review_key": "sha256:7096b890b1614b0163aee2f2743740d3d76de2058720966e713d4711229cf3e3#ce206a60-7313-46c0-8056-ef01cf6d2ab2",
       "title": "Altera a Lei Complementar nº 15.224, de 10 de setembro de 2018, que “Cria o Programa de Incentivo ao Aparelhamento da Segurança Pública do Estado do Rio Grande do Sul – PISEG/RS”. (SEI 3852-0100/23-6)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "211acf29-e271-4428-9227-8119edb0b36c",
-      "review_key": "sha256:7435b29027c026995fc9eabe611914159f8b95fab62003f85741ed937316fed5#211acf29-e271-4428-9227-8119edb0b36c",
-      "title": "Requer, com base nos Arts.138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação do Texto do Projeto de Lei Complementar 259/2023.",
       "source_urls": [
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
@@ -1468,28 +729,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "615331f1-66dd-4b32-b62b-723b8671626d",
-      "review_key": "sha256:85e36637d0990b7082bf65cd46da3013a7a2aad61ffac4fdd12ad2369d9e85f6#615331f1-66dd-4b32-b62b-723b8671626d",
-      "title": "Aprova a indicação do nome do Senhor LEONARDO MARANHÃO BUSATTO para exercer o cargo de Diretor de Planejamento, como representante do Estado do Rio Grande do Sul no Banco Regional de Desenvolvimento do Extremo Sul - BRDE.(SEI 6756-0100/23-0)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "b3a4618b-fc4c-4bea-8b15-9dbc3007c135",
-      "review_key": "sha256:879c2cb44fcd92678dce4d62e872a791608c58e75e46af6d76ee0ffde7e0b324#b3a4618b-fc4c-4bea-8b15-9dbc3007c135",
-      "title": "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 23 de dezembro de 2023 a 31 de janeiro de 2024. (SEI 17142-0100/23-2 e SEI 3127-0100/23-7)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "efab53d6-e19d-4c5f-9ce4-19c03743bd8a",
       "review_key": "sha256:88c7d30cf789c766084b0b4141a7f0fce9b2622997dc2a14440be787be570c44#efab53d6-e19d-4c5f-9ce4-19c03743bd8a",
       "title": "Dispõe sobre incentivos à pesquisa, ao desenvolvimento científico e tecnológico e à inovação no âmbito produtivo do Estado do Rio Grande do Sul e institui o Sistema Estadual de Ciência, Tecnologia e Inovação, e dá outras providências. (SEI 7345-0100/20-6)",
@@ -1501,28 +740,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "71bb22d9-d0ec-4d72-b528-10be4500ec86",
-      "review_key": "sha256:88d94abc5e92c9549838ce91d0c937e04e0e72f2d92d533ed6d0c22a4095aa2a#71bb22d9-d0ec-4d72-b528-10be4500ec86",
-      "title": "Requerem a criação de uma COMISSÃO ESPECIAL para tratar da Cadeia Produtiva da Piscicultura no Estado do Rio Grande do Sul, a fim de estimular a produção e comercialização de peixes, bem como a capacitação dos produtores e pescadores.(SEI 1476-0100/21-7)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "728dede7-ff0b-4f5b-9b44-f7f8bbd079ce",
-      "review_key": "sha256:89d1071c58b5349cd515e9dbca930250e5cbcc00b0e6d937ca186ea972e927f5#728dede7-ff0b-4f5b-9b44-f7f8bbd079ce",
-      "title": "Encaminha indicação de Deputados para comporem a chapa para os cargos da Mesa Diretora para o período de 31 de janeiro de 2024 a 31 janeiro de 2025.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "2eab07ae-b449-44d2-a000-18dcdad1eeef",
       "review_key": "sha256:8a0b5e93e8ab8a291df3a6d6d2e294a186cf88241c232488312c3c00c4781e6b#2eab07ae-b449-44d2-a000-18dcdad1eeef",
       "title": "Reconhece, para os fins do disposto no art. 65 da Lei Complementar Federal n.º 101, de 4 de maio de 2000, a ocorrência do estado de calamidade pública em municípios do Estado do Rio Grande do Sul. (SEI 1490-0100/21-4)",
@@ -1530,17 +747,6 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "43d8e62d-2ff7-467d-95de-0a4ab8d56bf0",
-      "review_key": "sha256:8a46554d93246167b9645fcbda6def0c1620bb8f7adccb7bbca08b1d1ed63c3e#43d8e62d-2ff7-467d-95de-0a4ab8d56bf0",
-      "title": "Requerem, com fundamento nos arts. 75, 89, 89- A e 90, do Regimento Interno da Assembleia Legislativa, requerer a criação de uma COMISSÃO DE REPRESENTAÇÃO EXTERNA com o objetivo de ”Avaliar as condições de funcionamento do sistema estadual de combate à escravidão e às suas formas análogas a partir da operação na Serra Gaúcha”.(SEI 05281-0100/23-4)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
       ],
       "lane": "automatic_source_acquisition"
     },
@@ -1567,72 +773,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "2ad18bf2-0b5e-44e6-9bb3-7f5f8eb860f0",
-      "review_key": "sha256:9423da2d91ead8f8cf6f6377e4f5138adc0a4e46791a3ea20f1275218b2c803f#2ad18bf2-0b5e-44e6-9bb3-7f5f8eb860f0",
-      "title": "Eleição para os cargos vagos da Mesa Diretora para o Biênio 2025/2027.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "f99132d7-1439-4e09-80a1-fcb5ac5e41be",
-      "review_key": "sha256:961c46e90cbee70b51d1c5abf1107c56834470ac6000694b481cac1b82ba6190#f99132d7-1439-4e09-80a1-fcb5ac5e41be",
-      "title": "Aprova o Relatório Final da Comissão Especial de Monitoramento e Verificação do cumprimento das Metas estabelecidas no Plano Estadual de Educação (PEE), Lei Estadual de nº 14.705/2015. (SEI 9884-01.00/22-2)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "842841d9-b36a-4a7a-b59b-46bacfab0df0",
-      "review_key": "sha256:98e8a81b82177baec8dfbc07422febba383904ff64470b983a3b8d37df0aacbc#842841d9-b36a-4a7a-b59b-46bacfab0df0",
-      "title": "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 23 de dezembro de 2021 a 31 de janeiro de 2022. (SEI 9951-01.00/21-9)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "7c816dd5-07f8-433f-9d82-1ae7cff3e413",
-      "review_key": "sha256:9c957bef3cb0b2f459a0dc10c420526b50eb7fbab7492b2bb6cfbc35b5b2f637#7c816dd5-07f8-433f-9d82-1ae7cff3e413",
-      "title": "Requer, nos termos do art. 84 da Resolução 2.288, de 18 de janeiro de 1991 - Regimento Interno da Assembleia Legislativa, a prorrogação de seus trabalhos por 60 (sessenta) dias, justificada pela necessidade de maior aprofundamento na análise dos fatos e questões abordadas ao longo dos trabalhos, com vistas à elaboração de seu relatório final. (SEI 5013-0100/21-4)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "a8907a9a-9012-4bf6-a924-59fdbe79a07b",
-      "review_key": "sha256:9cfab161cbe69907eaf49a3c4cee8eaf3bf25618613274e939ced39ef325e821#a8907a9a-9012-4bf6-a924-59fdbe79a07b",
-      "title": "Requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação do texto do Projeto de Lei Complementar nº  465/2025.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "cd3d0d89-0378-455a-8f08-4e4513e014f0",
-      "review_key": "sha256:a1035f5f0a16b1f22b107d73bca014d1827379861b0299a478e300eb9cabf425#cd3d0d89-0378-455a-8f08-4e4513e014f0",
-      "title": "Convoca extraordinariamente a Assembleia Legislativa no período do recesso parlamentar.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "aaf5c9b5-bc38-4c1b-87d8-3573abde4397",
       "review_key": "sha256:a214606bcbaa8e54482a398e76d14514926773a69e8dc3619015e4d5d0a4e13e#aaf5c9b5-bc38-4c1b-87d8-3573abde4397",
       "title": "Altera disposições da Lei nº 7.669, de 17 de junho de 1982 – Lei Orgânica do Ministério Público do Estado do Rio Grande do Sul, e dá outras providências. (SEI \r\n4852-0100/21-7)",
@@ -1640,28 +780,6 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "3e1ee866-a3b3-4bc9-9bfe-1b3f3d18877d",
-      "review_key": "sha256:a21d4111562c9a8f3b34f184607dd803d572a758f0c434d95991ae4a824eee9d#3e1ee866-a3b3-4bc9-9bfe-1b3f3d18877d",
-      "title": "Aprova a indicação do nome do Senhor RANOLFO VIEIRA JÚNIOR para exercer o cargo de Diretor-Presidente no Banco Regional de Desenvolvimento do Extremo Sul - BRDE. (SEI 6759-0100/23-9)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "60ea3426-1ca3-4db8-bf61-c138f7a3fb07",
-      "review_key": "sha256:a3593bffbd866e2da617490e9c3af181c41375b0d8985887eaa2cbdb3b414f5c#60ea3426-1ca3-4db8-bf61-c138f7a3fb07",
-      "title": "Requer a votação da composição da Comissão Representativa para o recesso da 1ª Sessão Legislativa da 56ª Legislatura, de julho de 2023.(SEI 10928-0100/23-0)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
       ],
       "lane": "automatic_source_acquisition"
     },
@@ -1710,64 +828,9 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "8c0f5a96-835b-479d-b889-63ee9410886d",
-      "review_key": "sha256:abeb63b3c2ea032aa49c0a3e4708d9902859d8cbbbbf70ff6a2ebc3343a11049#8c0f5a96-835b-479d-b889-63ee9410886d",
-      "title": "Aprova a indicação do nome da Senhora MARIVANIA GHISLENI FONTANA para exercer o cargo de Diretora Administrativa do BANRISUL S.A. (SEI 1604-0100/21-5)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "e2a6c68d-5faa-4436-9986-73a10b07d125",
-      "review_key": "sha256:ac169cf7d253a16fbfc726dc184e9544a3fbfc4fbdf6355079065d2a1393788c#e2a6c68d-5faa-4436-9986-73a10b07d125",
-      "title": "Requerem, com fundamento nos artigos 75, inciso I, e 79 a 82 da Resolução nº 2288, de 18 de janeiro de 1991, a criação de uma Comissão Especial tendo por objeto analisar: A atuação das empresas concessionárias de energia elétrica CEEE  - EQUATORIAL e RIO GRANDE ENERGIA - RGE, na solução dos problemas de fornecimento e restabelecimento dos seus serviços após o temporal ocorrido no mês de janeiro n",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "d6556fa4-6f93-4d1a-9678-6df57c74de9e",
       "review_key": "sha256:ac738936574f92aa8270b9aba59244ca450113dd813bd7cd10d5513653b591f6#d6556fa4-6f93-4d1a-9678-6df57c74de9e",
       "title": "Altera a Lei Complementar nº 15.677, de 13 de agosto de 2021, que suspende o prazo de validade dos concursos públicos durante o período de ocorrência do estado de calamidade pública no Estado do Rio Grande do Sul reconhecido pelo Decreto Legislativo nº 11.220, de 19 de março de 2020. (SEI 7087-0100/23-9)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "f227209a-1996-4a0f-adae-1296149bc4db",
-      "review_key": "sha256:ada1388ceeef1730ab3b4703448cb947e8e028a4391c185878685f0284286d7e#f227209a-1996-4a0f-adae-1296149bc4db",
-      "title": "Requer, nos termos dos arts. 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 17 a 31 de julho de 2021. (SEI \r\n3493-0100/21-7)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "3c69db67-72e1-4e67-8411-407246421daa",
-      "review_key": "sha256:af311b86840447e9fba82c130842cb61c0575214b28928c4ef9f52bb6bac5130#3c69db67-72e1-4e67-8411-407246421daa",
-      "title": "Interpõem, com fulcro no art. 229, § 5.º, do Regimento Interno da Assembleia Legislativa, recurso contra a decisão que indeferiu a questão de ordem suscitada pelo Deputado Gerson Burmann, seguido pela irresignação de outros Líderes partidários e de outros Deputados, relativo ao cômputo de votos na apreciação e proclamação do resultado final de votação em primeiro turno da PEC 280/2019, ocorrido na",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "d9df3b95-f94d-4ed5-8d07-01e83b2f2069",
-      "review_key": "sha256:af41f41071c139c7f1791fd19dc0ebc261266d89d99a906d30e22dbea75bd31f#d9df3b95-f94d-4ed5-8d07-01e83b2f2069",
-      "title": "Requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação da Emenda nº 2 do Projeto de Lei Complementar 259/2023.",
       "source_urls": [
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
@@ -1798,17 +861,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "dcf10d72-1eb0-41b2-9029-d7f0fad00e6a",
-      "review_key": "sha256:b0764bcd5fdbaf6038be5a7c8adeeee66c88806f5fd6b4e300cc732e690ef96e#dcf10d72-1eb0-41b2-9029-d7f0fad00e6a",
-      "title": "Requer, com base nos arts. 89 e 89-A do Regimento Interno da Assembleia Legislativa do Estado do Rio Grande do Sul, a pedido do Deputado Edegar Pretto, Presidente da Comissão de Segurança, Serviços Públicos e Modernização do Estado, a constituição de uma Comissão de Representação Externa para acompanhar os impactos gerados pelo longo período de estiagem que ocorre em nosso Estado e sugerir alterna",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "8727b694-5a5d-402b-82f3-a6a6722916e5",
       "review_key": "sha256:b0e41b947eb4adde8bc019341284bbaf22b2c8c5f72ee064bb1a77884d1283a2#8727b694-5a5d-402b-82f3-a6a6722916e5",
       "title": "Dispõe sobre a instalação da Assembleia Legislativa do Estado do Rio Grande do Sul na Exposição Internacional de Animais, Máquinas, Implementos e Produtos Agropecuários – Expointer 2024.",
@@ -1816,72 +868,6 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "389d178e-f048-49cf-b343-32a140f29d26",
-      "review_key": "sha256:b11f19c704739ddaabbb934f8a1b4879e9ce146f04a3f1e056cbf6ecb3daea6b#389d178e-f048-49cf-b343-32a140f29d26",
-      "title": "Aprova o Relatório Final da Comissão Especial para tratar da atuação das empresas Concessionárias de Energia Elétrica CEEE – Equatorial e Rio Grande Energia – RGE, na solução dos problemas de fornecimento e restabelecimento dos seus serviços após o temporal, ocorrido no mês de janeiro de 2024 no Estado.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "c15b8ef4-752b-4a68-be6c-68f55191c305",
-      "review_key": "sha256:b2046b2d9d42640f84c8fb6a85eb6cd7ead542f01ee5a15fa680ab645e4e024d#c15b8ef4-752b-4a68-be6c-68f55191c305",
-      "title": "Apresenta recurso para impugnar, com base no art. 228 do Regimento Interno desta Casa, a decisão pelo arquivamento do RDI nº 76/2023 – que visa sustar os efeitos dos Decretos nº 57.363, 57.364, 57.365, 57.366 e 57.367 de 16 de dezembro de 2023, publicados pelo Governador do Estado do Rio Grande Sul.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "97a625d9-fa0f-475b-a403-b8b7ac447359",
-      "review_key": "sha256:b5aaafe1ca18d62aef38477f571fdfcd16da679e4e8e6e3681de57e5fd0ae390#97a625d9-fa0f-475b-a403-b8b7ac447359",
-      "title": "Requer, com base no art. 176, § 2º, do Regimento Interno da Assembleia Legislativa do Estado, a retirada da ordem do dia da sessão do Projeto de Lei 151/23.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "8eb8dd5c-d90e-4797-b587-9d21b869db16",
-      "review_key": "sha256:b65eab46d0a53760ee5c682c6921dcc47ac2030efc0014d0292733f0ed8a5635#8eb8dd5c-d90e-4797-b587-9d21b869db16",
-      "title": "Aprova a indicação do nome do Senhor Maurício Alexandre Dziedricki para exercer o cargo de Diretor do BADESUL Desenvolvimento S/A – Agência de Fomento/RS. (SEI 17294-01.00/23-5)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "3339bc59-5028-4687-aaff-f6b06c58bf69",
-      "review_key": "sha256:b785c76007b85b51555d9573fce422485345b20f84752d022f618fef67c694d2#3339bc59-5028-4687-aaff-f6b06c58bf69",
-      "title": "Requer a criação de Comissão Especial destinada a acompanhar e a debater a reforma tributária. (SEI 2214.0100/23-8)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "8ce6a40b-210f-46f2-94de-a380912b13fe",
-      "review_key": "sha256:b7baa7a376eab722cca30abd583bced3e59bbe0a160791938b318bee6fb2dfef#8ce6a40b-210f-46f2-94de-a380912b13fe",
-      "title": "Aprova a indicação do nome do Senhor Algir Lorenzon para compor o Conselho Superior da Agência Estadual de Regulação dos Serviços Públicos Delegados do Rio Grande do Sul - AGERGS. (SEI 1484-0100/22-1)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
       ],
       "lane": "automatic_source_acquisition"
     },
@@ -1930,17 +916,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "fa2686b7-bfb3-4fd0-991e-bb752a7225c8",
-      "review_key": "sha256:bec04b5ae1def97827f7f897a74f791f2a021c58d749ed6e1aa67ccf0d964b7b#fa2686b7-bfb3-4fd0-991e-bb752a7225c8",
-      "title": "Requer, nos termos dos arts. 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 17 a 31 de julho de 2021. (SEI \r\n4353-0100/21-9)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "2ae43351-6f9d-44b5-ad4c-b1d2c7d0b221",
       "review_key": "sha256:bfb145dc1290d5ef7d6ebd3fd26588cf241e3aff533df97c6c21ca20e2307c1c#2ae43351-6f9d-44b5-ad4c-b1d2c7d0b221",
       "title": "Altera a Lei Complementar nº 13.757, de 15 de julho de 2011, que dispõe sobre o Regime Próprio de Previdência Social dos Servidores Militares do Estado do Rio Grande do Sul, institui o Fundo Previdenciário dos Servidores Militares – FUNDOPREV/MILITAR, e dá outras providências. \r\n(SEI 1208-0100/21-3)",
@@ -1963,64 +938,9 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "7873dba1-611a-4611-9602-d644211f4237",
-      "review_key": "sha256:c422a219c1d4aa3bf8ea8d92d5e82616e584e678d3aff4d43e31c3d7493de8ec#7873dba1-611a-4611-9602-d644211f4237",
-      "title": "Requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação  do texto do Projeto de Lei Complementar nº  437/2025.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "9bcebad1-d01b-42ed-a4ac-5034fbd4ae43",
-      "review_key": "sha256:c4419e4bde94aed4691932d00d219c4d4921726c33ee6008a8ae49517820fc9a#9bcebad1-d01b-42ed-a4ac-5034fbd4ae43",
-      "title": "Requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação do Texto do Projeto de Lei Complementar 49/2022.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "4068d69f-d0ff-4b99-8c61-3864356a953d",
-      "review_key": "sha256:c4cd1e7806581388ab9e3dd800901e205ffc3996666ac5bbd117d07d8a150ac9#4068d69f-d0ff-4b99-8c61-3864356a953d",
-      "title": "Requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação do Texto do Projeto de Lei Complementar 182/2022.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "26ef6727-908e-47c7-81ff-953880d8adff",
-      "review_key": "sha256:c588b0b5ea7e860d00c6c92a060d0cdb917f5d20548b1c5d940e8a6e8eddb551#26ef6727-908e-47c7-81ff-953880d8adff",
-      "title": "Requerem a criação da Comissão Especial para tratar do Transporte Público Metropolitano no Estado do Rio Grande do Sul, a fim de buscar soluções entre os fornecedores do serviço e os entes públicos contratantes, tendo em vista a proteção do cidadão gaúcho contra uma possível e iminente ameaça de desabastecimento.(SEI 7651-0.100/21-0)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "e27d76cb-1071-41f6-845b-d23507bb95c5",
       "review_key": "sha256:c5a8431566b5201d352ef8c17c54066a7b37043c0ab3a227ed29a52b01d6b6ac#e27d76cb-1071-41f6-845b-d23507bb95c5",
       "title": "Altera a Lei Complementar nº 12.066, de 29 de março de 2004, que dispõe sobre o Fundo de Assistência à Saúde – FAS/RS, e dá outras providências, e a Lei Complementar nº 15.145, de 5 de abril de 2018, que dispõe sobre o Sistema de Assistência à Saúde dos Servidores Públicos do Rio Grande do Sul – Sistema IPE Saúde –, altera a Lei Complementar n.º 12.066, de 29 de março de 2004, que dispõe sobre o F",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "9251077a-d45b-4e71-bea3-857c4ac92b9d",
-      "review_key": "sha256:c5e8bc8a54f241de507abe36e647252b39eaef78367ab0855d11aff4a95da920#9251077a-d45b-4e71-bea3-857c4ac92b9d",
-      "title": "Requer, com base nos arts. 89 e 89-A do Regimento Interno da Assembleia Legislativa do Estado, a constituição de uma Comissão de Representação Externa para acompanhar os impactos causados pelas enchentes que atingiram o Estado no início do mês de setembro de 2023 e as medidas que estão sendo anunciadas, bem como sugerir alternativas capazes de amenizar as perdas ambientais, sociais e econômicas ad",
       "source_urls": [
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
@@ -2051,28 +971,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "502d17a7-ceaf-4f4c-ac9c-e9901ecac66e",
-      "review_key": "sha256:c8d5d1428024937d88f8c5dd1f8dabcb0af36e717665fb08abae8d5edcea5615#502d17a7-ceaf-4f4c-ac9c-e9901ecac66e",
-      "title": "Requer, com base nos Arts.138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação da emenda 1 e do Texto do Projeto de Lei Complementar 517/2023.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "a9f16a02-fcd8-44e2-9abf-d9e2b4ae5355",
-      "review_key": "sha256:c96fdeb25487feebb38570da6d946e1b3fea54a1997bd5dfb440442f04f1706d#a9f16a02-fcd8-44e2-9abf-d9e2b4ae5355",
-      "title": "Aprova a indicação do nome do Senhor JOSÉ LUIS DA SILVA NUNES para exercer o cargo de Diretor do BADESUL Desenvolvimento – Agência de Fomento/RS. (SEI 6869-0100/23-9)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "8e2ce605-2f21-4265-8b1f-6146837a9388",
       "review_key": "sha256:cae24539e1d831b27487b165f33b2d159ea1c15e1b33e620ab53b16f568b2c9c#8e2ce605-2f21-4265-8b1f-6146837a9388",
       "title": "Encaminha Veto Total, de iniciativa do Poder Executivo, ao PL 119/2020, que ”dispõe sobre a inserção da atividade de Biomedicina no quadro de servidores do Estado do Rio Grande do Sul e dá outras providências”. (SEI 3770.0100/20-1)",
@@ -2091,39 +989,6 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "3772e3b9-16b4-48c8-bc5a-f4c33e95aa65",
-      "review_key": "sha256:cb897795ffa12a3f09c6174ecdfdeb3ef2b303791637bccca7969955e1bca41c#3772e3b9-16b4-48c8-bc5a-f4c33e95aa65",
-      "title": "Requer, com base nos arts. 138, § 3º, e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação da emenda 3  e do texto do PLC nº 163/2021.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "ce55ec4a-256e-44eb-95e3-a65ae8df5bd8",
-      "review_key": "sha256:cba923e54a77d8ffbbedd5b6bd20527082ea9aa720a7ae63bf368e35bf60255c#ce55ec4a-256e-44eb-95e3-a65ae8df5bd8",
-      "title": "Aprova o Relatório Final da Comissão Especial para a adesão do Estado ao Regime de Recuperação Fiscal (RRF).(SEI 7829-0100/21-2)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "c333b4d1-7fc9-4041-8cde-58613a1549a9",
-      "review_key": "sha256:cbd9b65822cd29a97edd1dc2a53847d3d2d66a412fceda9a9640d0cbf4e94053#c333b4d1-7fc9-4041-8cde-58613a1549a9",
-      "title": "Aprova a indicação do nome do Senhor CLÁUDIO LEITE GASTAL para exercer o cargo de Diretor-Presidente do BADESUL Desenvolvimento SA – Agência de Fomento/RS. (SEI 6755-0100/23-8)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
       ],
       "lane": "automatic_source_acquisition"
     },
@@ -2153,17 +1018,6 @@
       "proposition_version_id": "16a51d2a-b519-40c9-9cba-6c4ab037f635",
       "review_key": "sha256:d0cb4ec1cb40498eb6b7a5ad5bd21f754b7291a9bf97896a1c88dc5a63bc4696#16a51d2a-b519-40c9-9cba-6c4ab037f635",
       "title": "Institui o Cresce/RS na Assembleia Legislativa do Estado do Rio Grande do Sul. (SEI 5235-0100/21-0)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "70130ade-2cdd-426c-9292-8b7210cf0979",
-      "review_key": "sha256:d11f4ec358612ab60d67c4f66282fd90fb92d584f2fb6291224be37257a8f315#70130ade-2cdd-426c-9292-8b7210cf0979",
-      "title": "Indica o Senhor Celso Bernardi para ser agraciado com a distinção ”Deputado Emérito”. (SEI 1125-0100/21-0)",
       "source_urls": [
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
@@ -2205,53 +1059,9 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "6bd122da-4fbe-461b-8171-da2dc98e92d0",
-      "review_key": "sha256:d8699ffc177620ca774370a433a37abf1fafdff914965e8a472f7f76ef34e7a9#6bd122da-4fbe-461b-8171-da2dc98e92d0",
-      "title": "Indica o Deputado Luiz Marenco, como membro titular, e o Deputado Gerson Burmann, como membro suplente, para comporem a Comissão de Ética Parlamentar para o Biênio 2025/2027",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "3c9bffe8-052a-4a47-97b6-13c47396e995",
       "review_key": "sha256:dd677e2b12bbfa17cb44bf38128506447a167ca34200d06b840acaa984e704a9#3c9bffe8-052a-4a47-97b6-13c47396e995",
       "title": "Altera a Lei Complementar nº 15.138, de 26 de março de 2018, que dispõe sobre o Regime de Recuperação Fiscal do Estado do Rio Grande do Sul e dá outras providências.(SEI 6557-0.100/21-0)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "3e590f83-9e05-457d-adff-7564cc033c14",
-      "review_key": "sha256:dd70fe0f6e701eba83aaf8b704601407c7d9d561449dab43b37beb5f00a683fe#3e590f83-9e05-457d-adff-7564cc033c14",
-      "title": "Aprova a indicação do nome do Senhor ODACIR KLEIN, para o cargo de Diretor-Presidente do BADESUL Desenvolvimento S.A – Agência de Fomento/RS. (SEI 3358-0100/21-5)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "692a653c-1030-420a-9fa3-5d2ec8470d6e",
-      "review_key": "sha256:dd93d8ba71c90a76827bdf6b14177cb99d2fc46cf4c66b314f81b3a63f7b5c38#692a653c-1030-420a-9fa3-5d2ec8470d6e",
-      "title": "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 23 de dezembro de 2023 a 31 de janeiro de 2024. (SEI 16148-0100/23-1 e SEI 3153-0100/23-1))",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "daf26bcd-6068-444c-a14c-4fd65995175f",
-      "review_key": "sha256:de04db913eae0ca773529f224660ba9f51b6149bad208d374cbdd7567bf54222#daf26bcd-6068-444c-a14c-4fd65995175f",
-      "title": "Altera a Resolução n.º 2.288, de 18 de janeiro de 1991, que dispõe sobre o Regimento Interno da Assembleia Legislativa do Estado do Rio Grande do Sul.(SEI 5996-0100/21-0)",
       "source_urls": [
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
@@ -2293,50 +1103,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "f00f6b44-6d29-4406-99ac-96e5639296e8",
-      "review_key": "sha256:e48811e0b62b7fd4052e5504e6a1c63b1674b6c3f8a40d2865f56bff3896a9cb#f00f6b44-6d29-4406-99ac-96e5639296e8",
-      "title": "Aprova a indicação do nome do Senhor Lucas Salomón da Silva Fuhr para compor o Conselho Superior da Agência Estadual de Regulação dos Serviços Públicos Delegados do Rio Grande do Sul – AGERGS.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "7a51ba54-264d-4ced-a4bb-b2ca65295f17",
-      "review_key": "sha256:e5783d034523ce134a87c413ad8c09ec4a5fff1a936e27468580dc2f57f221ac#7a51ba54-264d-4ced-a4bb-b2ca65295f17",
-      "title": "Aprova a indicação do nome do Senhor FERNANDO GUERREIRO DE LEMOS para exercer o cargo de Presidente do Banco do Estado do Rio Grande do Sul S/A – BANRISUL. (SEI 10212-01.00/23-4)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "b5d6b48e-0e64-4f79-8cfd-4c62aa47df6e",
-      "review_key": "sha256:e6838d336fffecd74a9adec46f66e1771b68466ae321ebf378d39c0a47da3aa1#b5d6b48e-0e64-4f79-8cfd-4c62aa47df6e",
-      "title": "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 17 a 31 de julho de 2023. (SEI 7920-0100/23-2)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "72f69a45-5182-4bcc-898c-9f1fcc4fc50a",
-      "review_key": "sha256:e6cfd4c0a102dfc61cc207055e0d919a6a171c19349e7de750f399eae54de6fc#72f69a45-5182-4bcc-898c-9f1fcc4fc50a",
-      "title": "Requerem,com fundamento nos arts. 75, 89, 89-A e 90, do Regimento Interno da Assembleia Legislativa, a criação de uma COMISSÃO DE REPRESENTAÇÃO EXTERNA com o objetivo de ”Acompanhar as investigações relativas ao incêndio da edifício da Secretaria de Segurança Pública”, que resultou no desaparecimento de dois servidores do CBM e na destruição do centro de comando da pasta.(SEI 6074-01.00/21-5)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "974ca89d-5482-47e7-a7bb-c71350f2f1c0",
       "review_key": "sha256:e793c6e541e4a95e14cd67c8fb853b48c985a5d55532771b8d9b6824476947eb#974ca89d-5482-47e7-a7bb-c71350f2f1c0",
       "title": "Altera a Lei Complementar nº 14.836, de 14 de janeiro de 2016, que estabelece normas de finanças públicas no âmbito do Estado, voltadas para a responsabilidade da gestão fiscal, cria mecanismos prudenciais de controle com objetivo de alcançar o equilíbrio financeiro das contas públicas e dá outras providências. (Prazo Fatal: 11/12/2024)",
@@ -2344,39 +1110,6 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "6f589914-9067-4db3-97af-3a3f6807d648",
-      "review_key": "sha256:e7ca21d3b372def79a5e6507e71fb877212cdd66726ec033aca7f4b4bef62ad4#6f589914-9067-4db3-97af-3a3f6807d648",
-      "title": "Requer, com base no art. 176, § 2º, do Regimento Interno da Assembleia Legislativa do Estado, a retirada da ordem do dia do Projeto de Lei 210/2021.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "e5355595-5406-4e28-9bdd-b92755dd85f0",
-      "review_key": "sha256:e7e5f63524b31113db740f9ba18db3ac4d736660da42bc84d17b1ccefb109194#e5355595-5406-4e28-9bdd-b92755dd85f0",
-      "title": "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 17 a 31 de julho de 2022. (SEI 6431-01.00/22-0)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "9b12ea46-672d-4804-87bb-d37ac62b5d40",
-      "review_key": "sha256:e7e72831fdfe4b8fe61cc3d6c6323abe0980ca68b8b28c46e11be7f6a7601fd1#9b12ea46-672d-4804-87bb-d37ac62b5d40",
-      "title": "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 17 a 31 de julho de 2023.(SEI 8660-01.00/23-2)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
       ],
       "lane": "automatic_source_acquisition"
     },
@@ -2403,17 +1136,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "e36b4286-248e-4bb6-8d82-78dfad522297",
-      "review_key": "sha256:ee40ab5999661b8dac15bebcc87743b16c26522774a2a5195bef2f966cccc075#e36b4286-248e-4bb6-8d82-78dfad522297",
-      "title": "Altera a Resolução n.º 3.137, de 14 de julho de 2015, que institui o Regulamento Geral da Assembleia Legislativa do Estado do Rio Grande do Sul, nos termos do art. 267 da Resolução n.º 2.288, de 18 de janeiro de 1991 – Regimento Interno –, e dá outras providências.(SEI 9292-01.00/23-8)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "5895527d-fc63-4132-b1db-c725041b9970",
       "review_key": "sha256:eea45f16420b8fd3e1d7f044f4fd18ac37dceb7c73e47353e3ca5561b24861e5#5895527d-fc63-4132-b1db-c725041b9970",
       "title": "Altera a Lei Complementar nº 10.098, de 3 de fevereiro de 1994, que dispõe sobre o estatuto e regime jurídico único dos servidores públicos civis do Estado do Rio Grande do Sul. (SEI 1204-0100/21-2)",
@@ -2432,17 +1154,6 @@
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "f4075f1e-c513-4262-980b-56aafd4ccb1f",
-      "review_key": "sha256:f06dbc3d81869424373d78b6e992a229a29c1ca2c639787343d8240872140cf3#f4075f1e-c513-4262-980b-56aafd4ccb1f",
-      "title": "Requer, com base no art. 176, § 2º, do Regimento Interno da Assembleia Legislativa do Estado, a retirada da ordem do dia da sessão do Projeto de Lei 363/2024.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
       ],
       "lane": "automatic_source_acquisition"
     },
@@ -2469,94 +1180,11 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "394ba06f-6eec-4f59-90ae-a0483d05c8ce",
-      "review_key": "sha256:f6534385e831397d8969325cdae9599cb7098613620625772ebb372be7c82f74#394ba06f-6eec-4f59-90ae-a0483d05c8ce",
-      "title": "Requer a criação de uma Comissão Especial para tratar das ações dirigidas ao setor industrial na retomada do crescimento econômico.(SEI 925-01.00/21-9)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "b86c8562-3176-4c03-ae5f-05c084a21b1c",
-      "review_key": "sha256:fa3fe259fafffb1c3fe664ab3d4effd630c4aab5c5bc186e14cec277cf528789#b86c8562-3176-4c03-ae5f-05c084a21b1c",
-      "title": "Aprova a indicação do nome do Senhor MARCUS VINÍCIUS FEIJÓ STAFFEN para exercer o cargo de Diretor-Presidente da Banrisul S.A. Corretora de Valores Mobiliários e Câmbio.(SEI 16940-01.00/23-5)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "237cf7aa-67f7-4bee-9310-42a856efc3c2",
       "review_key": "sha256:fb4f819798ffd0b62ca03beb45105419c17635282eed80a637222493a5170ad1#237cf7aa-67f7-4bee-9310-42a856efc3c2",
       "title": "Altera disposições da Lei n. 7.669, de 17 de junho de 1982 – Lei Orgânica do Ministério Público, e dá outras providências. (SEI 3285-0100/21-4)",
       "source_urls": [
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "547dc68f-7617-4467-a765-dde4ba54814a",
-      "review_key": "sha256:fbf18fd422b1c73acfe754d42c3c45e8a02fad6940cc390354524089d8878276#547dc68f-7617-4467-a765-dde4ba54814a",
-      "title": "Requerem a instalação de uma Comissão Especial para tratar da regulação de leitos e dos serviços de saúde no Estado do Rio Grande do Sul.(SEI 2020-01.00/22-4)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "4c23480f-1989-4867-99d2-0e4634ca0a6d",
-      "review_key": "sha256:0224befe2df1574dd4547922f549b91cd6f59f9b92100c9b6918134faebe9003#4c23480f-1989-4867-99d2-0e4634ca0a6d",
-      "title": "Requer a votação da composição da Comissão Representativa para o recesso da 2.ª Sessão Legislativa da 56.ª Legislatura, de 23 de dezembro de 2024 a 31 de janeiro de 2025.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "5009e262-64c3-4b6b-9b72-010bcdaed6b2",
-      "review_key": "sha256:0612074b38723b80a2b66153bcd3fca574c58cce1e0195e6e47063717081a1f6#5009e262-64c3-4b6b-9b72-010bcdaed6b2",
-      "title": "Indica o Senhor Deputado Gustavo Victorino, como membro titular, para compor a Comissão de Ética Parlamentar, no lugar do Deputado Delegado Zucco, com a permanência do atual membro suplente (Deputado Sérgio Peres), conforme indicação do Líder da Bancada do Republicanos.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "e14b2112-b32f-4796-b42a-624e17115d83",
-      "review_key": "sha256:085b275d291b0f257d3a1b3a2f65bed351288295fcc44f4bb0407d4b954d717d#e14b2112-b32f-4796-b42a-624e17115d83",
-      "title": "Requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação da Emenda nº 1 e do Texto do Projeto de Lei Complementar 378/2021.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "abb95df7-fb65-4409-9919-8d890d5f0abe",
-      "review_key": "sha256:0d996e4552bed71460fd512a85e4d90c54bfb508290e8680938db672291814f1#abb95df7-fb65-4409-9919-8d890d5f0abe",
-      "title": "Requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação da Emenda 2  e do texto  do Projeto de Lei  Complementar  nº 317/2021.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "39bff1b7-8c45-4807-bfa0-12af225a89a9",
-      "review_key": "sha256:0f0c5b9f9572816d9e37382cfbd38e73f58892470154f84a8595e071c0614dcc#39bff1b7-8c45-4807-bfa0-12af225a89a9",
-      "title": "Aprova o Relatório Final da Comissão Especial sobre a Crise das Finanças e a Reforma Tributária.(SEI 8065-0100/21-0)",
-      "source_urls": [
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
       ],
@@ -2573,42 +1201,12 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "17ced44f-2cb9-462c-9d78-e0acdd2d4f0f",
-      "review_key": "sha256:1f8641dc6c8a8bfb7f1f963cde952efec7a4c17b4279f8ccb6d11922ba151a11#17ced44f-2cb9-462c-9d78-e0acdd2d4f0f",
-      "title": "Apresenta recurso para impugnar, com base no art. 228 do Regimento Interno desta Casa, a decisão pelo arquivamento do RDI nº 77/2023 – que visa sustar os efeitos dos Decretos nº 57.365, 57.366 e 57.367 de 16 de dezembro de 2023, publicados pelo Governador do Estado do Rio Grande Sul.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "8b11c9ca-eccc-4ba6-8aea-1ad6f9d42694",
-      "review_key": "sha256:275533e22fbdc2336040899ba0cb14d5ddb9604e9b65bc8a8cc94abefbc4ea80#8b11c9ca-eccc-4ba6-8aea-1ad6f9d42694",
-      "title": "Aprova o Relatório Final da Comissão Especial com o objetivo de tratar da Implementação do Piso Nacional da Enfermagem e das condições de trabalho dos Profissionais da Saúde no Estado do Rio Grande do Sul.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "bc6d90db-beb4-4d35-a7da-37f69c5be670",
       "review_key": "sha256:2cbc93e928b97399bb03bb5cdbbef5058f52010defff3658cb2013cfc22e8fd5#bc6d90db-beb4-4d35-a7da-37f69c5be670",
       "title": "Autoriza o ajuizamento de ação direta de inconstitucionalidade ou arguição de descumprimento de preceito fundamental em face do § 4.º do art. 2.º da Lei Complementar Federal n.º 159, de 19 de maio de 2017, com a redação conferida pela Lei Complementar Federal n.º 178, de 13 de janeiro de 2021, pela Mesa da Assembleia Legislativa do Estado do Rio Grande do Sul.",
       "source_urls": [
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "b0a23d51-84ac-4a77-ad27-268e8a5f7b01",
-      "review_key": "sha256:2e98963f6ecd53bf6725ede05ef8deb41fdc63b3d174f966d9aaa3b56d7c6e41#b0a23d51-84ac-4a77-ad27-268e8a5f7b01",
-      "title": "Requer a criação de Comissão Especial destinada a debater as causas da crise financeira do Estado e a reforma tributária necessária. (SEI 1000-0100/21-5)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
       ],
       "lane": "automatic_source_acquisition"
     },
@@ -2643,132 +1241,12 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "387d6f32-36d0-4de4-90bd-2264b272ab6b",
-      "review_key": "sha256:3c17454e34921071a36e0cb2bad5b2294638bd1c42866f996adb0fc499a6dd1b#387d6f32-36d0-4de4-90bd-2264b272ab6b",
-      "title": "Requer, com base nos arts. 89 e 89-A do Regimento Interno da Assembleia Legislativa do Estado, a constituição de uma Comissão de Representação Externa com vista a acompanhar o processo de planejamento e execução das ações que visam a imunização contra o coronavírus na população do Estado do Rio Grande do Sul. (SEI 290-0100/21-0)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "a2eac04e-fba2-41e0-bfbf-07f54c270012",
-      "review_key": "sha256:3f029c323f079d7ff83bffda4a8e2c5cd66ec4689b6196efa0a1a6f2fec15181#a2eac04e-fba2-41e0-bfbf-07f54c270012",
-      "title": "Aprova o Relatório Final da Comissão Especial destinada para tratar da Cadeia Produtiva da Apicultura e Meliponicultura.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "01ccf7e5-cc31-414f-8406-b966dc6cfef3",
-      "review_key": "sha256:4380975c50c4a5dce8f659798ed3a9d0ef5f702b13bc5a84082b3811b7469879#01ccf7e5-cc31-414f-8406-b966dc6cfef3",
-      "title": "Aprova a indicação do nome do Senhor ELIAS GRAZIOTTIN RIGON para exercer o cargo de Diretor do BADESUL Desenvolvimento S/A – Agência de Fomento/RS.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "e4ec0c08-1f3a-46f8-a95a-16c59f315e37",
-      "review_key": "sha256:4606471e63b8d0be0bccc213cc66d07275da385f09d17e77f1f0d79371815f8c#e4ec0c08-1f3a-46f8-a95a-16c59f315e37",
-      "title": "Requerem, nos termos dos artigos 79, 80 e seguintes do Regimento Interno da Assembleia Legislativa, a criação de uma Comissão Especial tendo por objeto  Analisar os impactos de Acordo de Parceria Mercosul - União Europeia no setor produtivo do Estado do Rio Grande do Sul.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "433a817f-9480-443d-89ce-fcf8d2dcbf77",
-      "review_key": "sha256:4ccad0d83ab4aca1beea76a81588ef10ffce616c110e32359d353a2abb4f4875#433a817f-9480-443d-89ce-fcf8d2dcbf77",
-      "title": "Aprova a indicação do nome do Senhor OTOMAR OLEQUES VIVIAN, para exercer o cargo de Diretor representante do Estado do Rio Grande do Sul no Banco Regional de Desenvolvimento do Extremo Sul - BRDE S/A.(SEI 1280-0100/21-6)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "76194230-c8f5-42fb-8987-eb88c042e0d1",
-      "review_key": "sha256:4ed12b176e801882413432d0c2da6c929231f2f7eac8b08e1c16feede55e883d#76194230-c8f5-42fb-8987-eb88c042e0d1",
-      "title": "Aprova o Relatório Final da Comissão Especial destinada para analisar os impactos econômicos do Acordo de Parceria Mercosul - União Europeia, no Estado.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "ff44add6-8484-45d6-82c0-a6075f6accb5",
-      "review_key": "sha256:51262775b9d0bfebe164dfeb61ba1627bed45df877008df0cea870d6ef44f0f9#ff44add6-8484-45d6-82c0-a6075f6accb5",
-      "title": "Requer, com base nos arts. 138, § 3º e 194, VIII, do Regimento Interno da Assembleia Legislativa do Estado, a preferência para a votação  da Emenda 2 e do texto do Projeto de Lei  Complementar nº  497/2025.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "68077573-2f4c-40e0-a0cc-72199e0787d8",
-      "review_key": "sha256:52aa25116519dc32ccd4939a9afbac8853c48e1a06d1777e4788848a2db0b6f7#68077573-2f4c-40e0-a0cc-72199e0787d8",
-      "title": "Concede anistia das perdas dos tempos de Comunicações de Liderança previstas na Resolução n.º 2.288, de 18 de janeiro de 1991, que dispõe sobre o Regimento Interno da Assembleia Legislativa do Estado do Rio Grande do Sul, ocorridas no período de 3 de abril de 2020 a 8 de novembro de 2021.(SEI 10686-0100/21-4)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "c7b4bbfc-6a6f-403d-8304-dd0499185891",
-      "review_key": "sha256:5c25d7ae18a4443eea50871079362587ac8928af2681f6001dacd8f23a32eb70#c7b4bbfc-6a6f-403d-8304-dd0499185891",
-      "title": "Requer a formação de uma Comissão Especial com a finalidade de averiguar a situação das rodovias concedidas em todo o território do Estado do Rio Grande do Sul. (SEI 3041.0100/23-6)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "811a5a81-40b9-4742-95fd-88aa78a71c43",
       "review_key": "sha256:5d0a65ba3c6d66252fbc5edb255e419942501cc95f701721c4e14f60139e70a3#811a5a81-40b9-4742-95fd-88aa78a71c43",
       "title": "Encaminha Veto Total, de iniciativa do Poder Executivo,  ao PL 170/2019, que ”dispõe sobre educação domiciliar e dá outras providências.”(SEI 5574-0100/21-9)",
       "source_urls": [
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "f490109c-1cf1-4cd7-bf00-60321c18ab50",
-      "review_key": "sha256:62a0a3b04f163c7184786c3d78f152a5a1b7089ca8b869b90ef0742c0cf53a81#f490109c-1cf1-4cd7-bf00-60321c18ab50",
-      "title": "Aprova a indicação do nome do Senhor Luiz Henrique Cordeiro Viana para o cargo de Ouvidor da Agência Estadual de Regulação dos Serviços Públicos Delegados do Rio Grande do Sul - AGERGS.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "ad5a74c8-b2d4-4ed1-8851-eb8099cf954d",
-      "review_key": "sha256:68323d3dff4a084511662bceb4051415838c7d15dac50e2082262a5332108836#ad5a74c8-b2d4-4ed1-8851-eb8099cf954d",
-      "title": "Requer a criação de uma Comissão Especial tendo por objeto o acompanhamento das negociações entre o Governo do Rio Grande do Sul e o Governo Federal, visando à adesão do nosso Estado ao Programa do Regime de Recuperação Fiscal (RRF). (SEI 998-0100/21-0)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "0dce6032-58ba-4ab3-86e9-4df6bf6f8421",
-      "review_key": "sha256:6b54f7c1b8ec106c275b4c004017a403b9210f88ba6d0056f2b0795834460db6#0dce6032-58ba-4ab3-86e9-4df6bf6f8421",
-      "title": "Requer, nos termos do Art. 79 do Regimento Interno desta Casa Legislativa, a criação da “Comissão Especial para tratar da Saúde Mental no RS”.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
       ],
       "lane": "automatic_source_acquisition"
     },
@@ -2823,16 +1301,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "4c48513a-ad13-4c3d-9ddf-47a6cbf18e26",
-      "review_key": "sha256:79521899e895f285dc2bc500b2912d09fb712ab1e2bcf0b14351507e67c34aa1#4c48513a-ad13-4c3d-9ddf-47a6cbf18e26",
-      "title": "Aprova o Relatório Final da Comissão Especial para tratar do Transporte Público Metropolitano no Estado do Rio Grande do Sul. (SEI 6077-0100/22-1)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "76e459ef-c9ec-4250-8e8c-6995300750db",
       "review_key": "sha256:8085800e43793b867706804ec754f695590ab564ce63dbe871a4f673e0d890e5#76e459ef-c9ec-4250-8e8c-6995300750db",
       "title": "Prorroga o período estabelecido na Resolução n.º 3.246, de 12 de julho de 2023. (SEI 14064-01.00/23-1)",
@@ -2849,36 +1317,6 @@
       "source_urls": [
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "bc30a997-9576-433f-9f41-d22aa27d8403",
-      "review_key": "sha256:8c42c5d25731c4ac96889e4b7452606c20631c65534a9a5bf5b068aedbb2aa3b#bc30a997-9576-433f-9f41-d22aa27d8403",
-      "title": "Eleição para os cargos vagos da Mesa Diretora para o período de 3 de fevereiro de 2021 a 31 de janeiro de 2022. (SEI 920-0100/21-5)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "de3dbd48-dabc-4c29-9481-f1f124de897e",
-      "review_key": "sha256:8dbd2f558143ab6d2e69c5bdb49ee88e3739ab8c3509fc848d184f0639e69a50#de3dbd48-dabc-4c29-9481-f1f124de897e",
-      "title": "Aprova a indicação do nome do Senhor Ricardo Giuliani Neto para compor o Conselho Superior da Agência Estadual de Regulação dos Serviços Públicos Delegados do Rio Grande do Sul - AGERGS.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "3b475ff5-4c00-4a32-9ef8-5a237ec2e4d0",
-      "review_key": "sha256:9a1b234a08a5f088706fd26908caaa00682d53600c44a27ad9241dab730a6624#3b475ff5-4c00-4a32-9ef8-5a237ec2e4d0",
-      "title": "Requer, com base nos arts. 89 e 89-A do Regimento Interno da Assembleia Legislativa do Estado, a constituição de uma Comissão de Representação Externa para acompanhar os impactos gerados pelo longo período de estiagem em nosso Estado e sugerir alternativas capazes de amenizar as perdas ambientais, sociais e econômicas advindas. (SEI 4128-01.00/23-7)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023"
       ],
       "lane": "automatic_source_acquisition"
     },
@@ -2906,36 +1344,6 @@
       "proposition_version_id": "b0e1dce1-289e-45b2-9750-a6fd192c6523",
       "review_key": "sha256:9fa5c3ece4cde05e6b45fe6fc8d9d020491260f5f7f46bb4a73a282434384761#b0e1dce1-289e-45b2-9750-a6fd192c6523",
       "title": "Dispõe sobre a criação de cargos de Promotor de Justiça Substituto de Entrância Intermediária, na Lei n. 7.669, de 17 de junho de 1982 – Lei Orgânica do Ministério Público do Estado do Rio Grande do Sul, e dá outras providências. (SEI 14798-01.00/23-5)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "1c12a3c8-746e-4e6b-abf4-f21534f89622",
-      "review_key": "sha256:ae32cfb24bda37e469eb1c77ca189629cc9a10af6a5f56aaacb5de9822774642#1c12a3c8-746e-4e6b-abf4-f21534f89622",
-      "title": "Requerem a criação de uma Comissão de Representação Externa para tratar sobre o Programa ASSISTIR do Estado do Rio Grande do Sul, a fim de debater-se os assuntos pertinentes aos hospitais dos municípios da região metropolitana e os que fazem parte da Associação dos Municípios da Região Metropolitana de Porto Alegre – GRANPAL. (SEI 8070-0100/21-9)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "53c02063-0129-45c9-b5d8-59e36261177d",
-      "review_key": "sha256:b70194312de25d3442410f5afd65cb42dfa22ed74e5b320ff8c8ac0fa8cd42f4#53c02063-0129-45c9-b5d8-59e36261177d",
-      "title": "Requer a prorrogação do prazo previsto no RDI n.º 75/2023, para o recesso da 2.ª Sessão Legislativa da 56.ª Legislatura, de 17 a 31 de julho de 2024.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "31a8b953-5a0e-4c93-923d-0f63e3bf5b71",
-      "review_key": "sha256:be79ee6637676019e85972160e9cb54cda39a9b4a69556b2615b371a8c902b87#31a8b953-5a0e-4c93-923d-0f63e3bf5b71",
-      "title": "Aprova a indicação do nome do Senhor ATILO DA LUZ ESCOBAR para exercer o cargo de Diretor do BADESUL Desenvolvimento S/A – Agência de Fomento/RS.",
       "source_urls": [
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
@@ -2973,16 +1381,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "d980f9e4-82eb-4e70-bce2-1562deeb5e49",
-      "review_key": "sha256:e1548a7ecb5019350a99c8790e5067af343533db21a23fb45be1497e072d75e5#d980f9e4-82eb-4e70-bce2-1562deeb5e49",
-      "title": "Requer, com fundamento no Art. 79 do Regimento Interno da Assembleia Legislativa, a criação de uma Comissão Especial de Apoio às Maternidades, e UTIs Neonatais.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "cea1b8d3-ff19-4d2b-a0cf-d425247b0c34",
       "review_key": "sha256:e35924be4c9f5f9f3f534ed0c45c62539cb4f52e839e22f1aefff4879737acb1#cea1b8d3-ff19-4d2b-a0cf-d425247b0c34",
       "title": "Susta o Provimento nº 07/2021 - PGJ, de 07 de março de 2021, da Procuradoria-Geral de Justiça.(SEI 2475-0100/21-1)(Tramitação conjunta com os PDLs 9, 11, 12, 13 e 14/2021)",
@@ -3003,32 +1401,12 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "dc2b7eda-7925-46bf-945b-dc15ca8e3d11",
-      "review_key": "sha256:e836ba55f28893e03e23058c9378e1f673e3f3e6f7c4a0deb8318cbea71d0702#dc2b7eda-7925-46bf-945b-dc15ca8e3d11",
-      "title": "Altera a Resolução n.º 2.288, de 18 de janeiro de 1991, que dispõe sobre o Regimento Interno da Assembleia Legislativa do Estado do Rio Grande do Sul. (SEI 4625-0100/23-0)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "d7ea8737-fa61-42d9-ab44-9de45c9f8113",
       "review_key": "sha256:efb0e2ab8a2acc97e188192371664e720c02a7502f2036093c661a84346d0a06#d7ea8737-fa61-42d9-ab44-9de45c9f8113",
       "title": "Aprova a indicação dos nomes dos Senhores Carlos Aluisio Vaz Malafaia, Elizabete Rejane Sodré Tavares, Gaspar Saikoski, Ivanor Antônio Duranti, Luiz Gonzaga Veras Mota e Marcia Adriana Celestino para exercerem os cargos de Diretores do Banco do Estado do Rio Grande do Sul S/A – BANRISUL. (SEI 13789-01.00/23-9)",
       "source_urls": [
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "e8ab512e-b326-4c1c-901d-57982d583b59",
-      "review_key": "sha256:f582e5273f4a6b0fd6e795d6a3ce3c9a56627059c4ed1e31247cf75fdd099e0a#e8ab512e-b326-4c1c-901d-57982d583b59",
-      "title": "Dispõe sobre a Ouvidoria Legislativa da Assembleia Legislativa do Estado do Rio Grande do Sul e altera a Resolução n.º 3.281, de 30 de outubro de 2025, que dispõe sobre o Regulamento Geral da Assembleia Legislativa do Estado do Rio Grande do Sul, nos termos do art. 267 da Resolução n.º 2.288, de 18 de janeiro de 1991 – Regimento Interno, e dá outras providências.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
       ],
       "lane": "automatic_source_acquisition"
     },
@@ -3088,15 +1466,6 @@
       "lane": "automatic_source_acquisition"
     },
     {
-      "proposition_version_id": "f470f115-2dd4-4ea7-80be-4d156419cc7c",
-      "review_key": "sha256:0f1c7b38209d97536d5543a15b3d6fa55afb27c3f0041ca8ffeac50f20abe4da#f470f115-2dd4-4ea7-80be-4d156419cc7c",
-      "title": "Indica os Senhores Deputados Jeferson Fernandes, como membro titular, e Edegar Pretto, como membro suplente, para comporem a Comissão de Ética Parlamentar, conforme indicação do Líder da Bancada do PT. (SEI 2459-0100/22-7)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
       "proposition_version_id": "8badac34-4a0e-4c19-a5ef-b9464b2cb6fd",
       "review_key": "sha256:5302a2383911f342094a242caff9176f2e5c6b403261b7a6d7a6d96b35f4a684#8badac34-4a0e-4c19-a5ef-b9464b2cb6fd",
       "title": "Regulamenta o art. 23, § 9.º, da Lei Estadual n. 7.669, de 17 de junho de 1982, promovendo a elevação de Promotorias de Justiça de Entrância Inicial para Intermediária e de Entrância Intermediária para Final.(11474-01.00/23-4)",
@@ -3118,24 +1487,6 @@
       "proposition_version_id": "82f4ed9a-784d-40a7-ae6c-d6f6b8b4293f",
       "review_key": "sha256:ac6efa91d248cd58a76a1ca4fd8b4753e2e622bbebce9dd38d929ab54d2c6287#82f4ed9a-784d-40a7-ae6c-d6f6b8b4293f",
       "title": "Altera a Lei Complementar nº 11.795, de 22 de maio de 2002 e alterações, que Dispõe sobre o Estatuto dos Defensores Públicos do Estado do Rio Grande do Sul e dá outras providências.(SEI 6523-0100/20-6)",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "3af35b21-562b-4d12-8583-5b7a045670ad",
-      "review_key": "sha256:c74f43da767b85a3dcc8e1b15994cae9cbd35d28b39fdff8948699f9546862c8#3af35b21-562b-4d12-8583-5b7a045670ad",
-      "title": "Requer, com base no art. 176, § 2º, do Regimento Interno da Assembleia Legislativa do Estado, a retirada da ordem do dia do Projeto de Lei 26/2020.",
-      "source_urls": [
-        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
-      ],
-      "lane": "automatic_source_acquisition"
-    },
-    {
-      "proposition_version_id": "52539cfd-94c6-4a46-af82-e8ae647b4f9f",
-      "review_key": "sha256:de250a42bd37ccae032b756cddee00ce72324fe15181b4c6fa84501c91f20bd0#52539cfd-94c6-4a46-af82-e8ae647b4f9f",
-      "title": "Requer a criação de uma Comissão Especial tendo como objeto analisar a situação econômica da população negra no Estado do Rio Grande do Sul. (SEI 3127.0100/23-7)",
       "source_urls": [
         "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
       ],
