@@ -1,3 +1,12 @@
+## Tick contínuo — fontes ALRS adquiridas, publicação verificada — 2026-08-27T07:20Z
+
+- Fingerprint mudou por reconciliação nominal ALRS. Manifesto vigente (com menos de 6h no tick) não foi redescoberto; reconciliação read-only fechou `2092` linhas: `2092` já presentes exatamente, `missing_safe_to_import=0`, conflitos/ambíguos/bloqueios `0`.
+- Aquisição read-only de fontes oficiais ALRS executada em `24` URLs: `24` HTTP OK e `3456` `data-item`; sem candidatos substantivos no lote. Import factual ficou `idle_no_missing_safe_rows`, sem escrita remota.
+- Auditoria strict permanece fail-closed pelos gaps ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos. FED-17 continua bloqueado por divergência real de evidência reproduzida; nenhum voto residual foi alterado.
+- Gates Node 24.19.0 verdes: `413/413` testes em `102` arquivos, TypeScript, schema, `data:check` `1003/988`, build `233` módulos/sitemap `1003 + 2`, smoke `1002` cards/0 HTTP/0 erros online/service worker, `git diff --check`.
+- Commit `b86d114` está em `main` e `origin/main`; Deploy `33049089441` success e backup `33049319326` skipped no mesmo `headSha`. Produção `/` e `/release.json` HTTP 200; `portal:publication:verify=published_verified`; claims live `1000` publicadas e `0` sem fonte.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-27-0412.md`. Doctor segue com FAIL Node 22 no shell/OpenCode ausente; gates do projeto usaram Node 24. Próximo passo: manter recuperação read-only e não aplicar os quatro votos ALRS sem evidência exata.
+
 ## Tick contínuo — recon read-only, gates locais verdes, push bloqueado — 2026-08-24T00:22Z
 
 - Dataset oficial `consulta_cand_2026/consulta_cand_2026_RS.csv`: `1003` IDs, `553194` bytes, SHA `443eac3d55aa7f671a626525e30d68e191a4bd4da5b62c7a334844a1dcbc1de9`; snapshot também `1003`, diferença `0/0`.
