@@ -1,3 +1,13 @@
+## Tick contínuo — primeiro batch editorial ALRS publicado, fontes fail-closed — 2026-08-27T08:18Z
+
+- Fingerprint atual: `74d704aeb866e7c73cb2a4fda6307718b65b668bc6ed18d3288e5d82abc413bc`; batch proposals `25`, votos factuais `4000`, descoberta `27723`, linhas nominais resolvidas `25456`, bloqueadas por proposição `160`, sem missing/ambiguous.
+- Batch `alrs-impact-editorial-batch-001-v2` validado: `25` proposições, `151` ocorrências, `7` candidatos, hash `a871c36b706d5b4c7eba7828408bcdf73abeab063d3b33b9e715a57f11a6b548`; reviewer `valid=true`, `25` decisões, `0` erros.
+- Manifesto substantivo oficial ALRS fresco: `767` proposições e `959` versões verdes. Materialização Auth editor/admin: `28679` votos, `28679` índices e `79` perfis; nenhuma matriz/score editorial foi alterada.
+- Gates Node 24.19.0 verdes: `413/413` testes em `102` arquivos, TypeScript, schema, `data:check` `1003/988`, build `233` módulos/sitemap `1003 + 2`, `git diff --check`.
+- Commit `770845f` alinhado a `origin/main`; Deploy primário `33053258144` success no mesmo `headSha`, backup `33053279176` skipped por duplicidade. Produção `/` e `/release.json` HTTP 200, release `770845f`, `portal:publication:verify=published_verified`, claims live `1000` publicadas e `0` sem fonte.
+- QA: `docs/qa/lote-continuous-ops-editorial-batch-001-2026-08-27.md`. Strict source audit segue fail-closed com gaps ALRS/Câmara/Senado `1251/3/112`, `1647/2/188`, `4/2/455`; as `160` proposições bloqueadas não geraram fato inventado.
+- Próximo passo: recuperar read-only fontes/vínculos exatos das `160` bloqueadas e manter revisão humana; doctor segue RC 1 por Node 22/OpenCode ausente.
+
 ## Tick contínuo — reconciliação ALRS otimizada, gates locais verdes — 2026-08-27T07:40Z
 
 - Alteração local verificada: pool HTTP bounded/retry para descoberta ALRS e reconciliação Supabase read-only paginada em blocos de 1000; teste manual confirmou concorrência máxima configurada.
