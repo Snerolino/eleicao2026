@@ -92,6 +92,8 @@
     "impact:alrs:reconcile": "node scripts/reconcile-alrs-nominal-votes.mjs",
     "impact:alrs:import": "node scripts/import-alrs-nominal-votes.mjs",
     "impact:alrs:sources": "node scripts/acquire-alrs-source-queue.mjs",
+    "impact:alrs:substantive:sources": "node scripts/acquire-alrs-substantive-sources.mjs",
+    "impact:profile:fast": "node scripts/build-vote-profile-fast.mjs",
     "auth:editor:bootstrap": "node scripts/auth-editor-bootstrap.mjs",
     "impact:batch:classify": "node scripts/classify-editorial-batch.mjs",
     "impact:batch:review": "node scripts/review-editorial-batch.mjs",

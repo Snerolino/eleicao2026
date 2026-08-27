@@ -27,6 +27,8 @@ run('reconcile', 'scripts/reconcile-impact-resolved-versions.mjs');
 if (existsSync(discoveryManifest)) run('nominal_reconcile', 'scripts/reconcile-alrs-nominal-votes.mjs');
 run('nominal_import', 'scripts/import-alrs-nominal-votes.mjs', ['--apply', '--output=/tmp/autonomous-alrs-import.json'], true);
 run('metadata', 'scripts/reconcile-legislative-version-metadata.mjs');
+run('substantive_sources', 'scripts/acquire-alrs-substantive-sources.mjs', [], true);
+run('vote_profiles', 'scripts/build-vote-profile-fast.mjs', ['--apply'], true);
 run('build_batch', 'scripts/build-alrs-impact-batch-proposals.mjs');
 run('source_acquisition', 'scripts/acquire-alrs-source-queue.mjs', [], true);
 run('publish_portal', 'scripts/verify-portal-publication.mjs', [], true);

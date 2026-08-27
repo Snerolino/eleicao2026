@@ -22,7 +22,7 @@ function loadMetadata() {
 
 function canonicalSourceGreenIds() {
   const ids = new Set();
-  for (const name of ['p0-substantive-source-manifest.json', 'p1-substantive-source-manifest.json', 'p2-microbatch-2-source-manifest.json', 'p2-microbatch-4-source-manifest.json', 'p2-microbatch-5-source-manifest.json']) {
+  for (const name of ['p0-substantive-source-manifest.json', 'p1-substantive-source-manifest.json', 'p2-microbatch-2-source-manifest.json', 'p2-microbatch-4-source-manifest.json', 'p2-microbatch-5-source-manifest.json', 'alrs-substantive-source-manifest-v1.json']) {
     const file = resolve(root, 'data/legislative-import/alrs', name);
     if (!existsSync(file)) continue;
     const data = JSON.parse(readFileSync(file, 'utf8'));
