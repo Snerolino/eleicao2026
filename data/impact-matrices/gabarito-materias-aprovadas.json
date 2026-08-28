@@ -3,7 +3,7 @@
   "methodology_version": "1.0.0",
   "title": "Matriz Gabarito de Proposições Legislativas Aprovadas",
   "description": "Fonte de verdade consolidada das avaliações de impacto populacional de matérias legislativas da ALRS, Câmara dos Deputados e Senado Federal para referência e expansão por todos os agentes.",
-  "updated_at": "2026-08-28T18:35:22.222Z",
+  "updated_at": "2026-08-28T22:57:11.325Z",
   "rules": {
     "immutability": "Proposições com status approved possuem gabarito imutável de direção e defending_vote.",
     "reusability": "O gabarito de uma matéria é aplicado automaticamente a todas as votações nominais registradas para qualquer candidato que votou nela.",
@@ -181,22 +181,21 @@
       "type": "plp",
       "number": "230",
       "year": 2025,
-      "title": "Fundo de Universalização dos Serviços de Telecomunicações (FUST)",
+      "title": "Inclusão digital e conectividade em escolas públicas e periferias (FUST)",
       "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2580259",
-      "official_source_label": "Câmara dos Deputados — PLP 230/2025; Votação 2580259-24",
-      "severity": 2,
-      "structural_type": "budgetary",
+      "official_source_label": "Câmara dos Deputados — PLP 230/2025",
+      "severity": 3,
+      "structural_type": "structural",
       "review_status": "approved",
       "assessments": [
         {
-          "group": "pessoas_com_deficiencia",
-          "impact_direction": "unclear",
-          "defending_vote": null,
-          "confidence": 0.55,
-          "rationale": "O PLP 230/2025 trata do Fundo de Universalização dos Serviços de Telecomunicações e pode afetar políticas de conectividade relevantes para acessibilidade e inclusão digital, mas o texto oficial votado não segmenta explicitamente pessoas com deficiência; por isso a direção do impacto foi publicada de forma conservadora como unclear, com revisão humana registrada.",
+          "group": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.95,
+          "rationale": "Destina recursos do FUST para universalização da internet de alta velocidade em escolas públicas da rede básica e áreas periféricas vulneráveis.",
           "sources": [
             "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2580259",
-            "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3170169",
             "https://dadosabertos.camara.leg.br/api/v2/votacoes/2580259-24/votos"
           ]
         }
@@ -465,6 +464,59 @@
           ]
         }
       ]
+    },
+    {
+      "proposition_id": "alrs:pl-27-2024",
+      "house": "alrs",
+      "type": "pl",
+      "number": "27",
+      "year": 2024,
+      "title": "Reconhecimento da identidade de gênero de pessoas trans e não binárias pós-morte",
+      "official_source_url": "https://ww4.al.rs.gov.br/proposicao/PL/27/2024",
+      "official_source_label": "Assembleia Legislativa do RS — PL 27/2024",
+      "severity": 3,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "lgbtqia",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.99,
+          "rationale": "Reconhece juridicamente a identidade de gênero de pessoas trans, travestis e não binárias após a morte, assegurando o uso do nome social e dignidade em cerimônias e documentos.",
+          "sources": [
+            "https://ww4.al.rs.gov.br/proposicao/PL/27/2024",
+            "https://transparencia.al.rs.gov.br"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:pl-43-2019",
+      "house": "alrs",
+      "type": "pl",
+      "number": "43",
+      "year": 2019,
+      "title": "Divulgação obrigatória do canal Disque 180 em estabelecimentos",
+      "official_source_url": "https://ww4.al.rs.gov.br/proposicao/PL/43/2019",
+      "official_source_label": "Assembleia Legislativa do RS — PL 43/2019",
+      "severity": 2,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "mulheres",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.9,
+          "rationale": "Cria obrigação de afixação de placas informativas divulgando o Disque 180 para amparo, denúncia e proteção a mulheres em situação de violência doméstica.",
+          "sources": [
+            "https://ww4.al.rs.gov.br/proposicao/PL/43/2019",
+            "https://transparencia.al.rs.gov.br"
+          ]
+        }
+      ]
     }
-  ]
+  ],
+  "total_propositions": 19
 }

@@ -1,28 +1,57 @@
 import { supabase } from '@/lib/supabase';
-import { buildVoteCategoryComparisons, type VoteCategoryComparison, type VoteCategoryFact } from '@/domain/impact/vote-category-comparison';
-import { buildVoteCategoryScores, type VoteCategoryScore, type VoteCategoryScoreFact } from '@/domain/impact/vote-category-score';
+import {
+  buildVoteCategoryComparisons,
+  type VoteCategoryComparison,
+  type VoteCategoryFact,
+} from '@/domain/impact/vote-category-comparison';
+import {
+  buildVoteCategoryScores,
+  type VoteCategoryScore,
+  type VoteCategoryScoreFact,
+} from '@/domain/impact/vote-category-score';
 import { PUBLIC_CANDIDATES } from './publicCandidates';
+import rawNominalVotes from '../../data/candidate-nominal-votes.json';
+import type { CandidateNominalVote } from '@/types/election';
 
 type Row = Record<string, any>;
 
+const candidateVotesMap = rawNominalVotes as Record<string, CandidateNominalVote[]>;
+
 function chunk<T>(items: T[], size = 100): T[][] {
   const result: T[][] = [];
-  for (let index = 0; index < items.length; index += size) result.push(items.slice(index, index + size));
+  for (let index = 0; index < items.length; index += size) {
+    result.push(items.slice(index, index + size));
+  }
   return result;
 }
 
 async function fetchCandidateIndex(client: any, candidateId: string): Promise<Row[]> {
-  const first = await client.from('legislator_vote_index').select('candidate_id,voting_event_id,value', { count: 'exact' }).eq('candidate_id', candidateId).range(0, 999);
+  const first = await client
+    .from('legislator_vote_index')
+    .select('candidate_id,voting_event_id,value', { count: 'exact' })
+    .eq('candidate_id', candidateId)
+    .range(0, 999);
   if (first.error) throw first.error;
   const total = Number(first.count ?? first.data?.length ?? 0);
   if (total <= 1000) return first.data ?? [];
-  const pages = await Promise.all(Array.from({ length: Math.ceil(total / 1000) - 1 }, (_, index) => client.from('legislator_vote_index').select('candidate_id,voting_event_id,value').eq('candidate_id', candidateId).range((index + 1) * 1000, (index + 2) * 1000 - 1)));
+  const pages = await Promise.all(
+    Array.from({ length: Math.ceil(total / 1000) - 1 }, (_, index) =>
+      client
+        .from('legislator_vote_index')
+        .select('candidate_id,voting_event_id,value')
+        .eq('candidate_id', candidateId)
+        .range((index + 1) * 1000, (index + 2) * 1000 - 1)
+    )
+  );
   const error = pages.find((result) => result.error)?.error;
   if (error) throw error;
   return [...(first.data ?? []), ...pages.flatMap((result) => result.data ?? [])];
 }
 
-async function resolveDbCandidateMapping(client: any, candidateIds: string[]): Promise<{
+async function resolveDbCandidateMapping(
+  client: any,
+  candidateIds: string[]
+): Promise<{
   queryIds: string[];
   dbToPublicId: Map<string, string>;
 }> {
@@ -43,21 +72,21 @@ async function resolveDbCandidateMapping(client: any, candidateIds: string[]): P
         .in('tse_candidate_id', tseIds);
 
       if (Array.isArray(dbCands)) {
-        for (const db of dbCands) {
+        for (const dbCand of dbCands) {
           const publicCand = PUBLIC_CANDIDATES.find(
-            (c) => String(c.tse_candidate_id) === String(db.tse_candidate_id)
+            (c) => c.tse_candidate_id === dbCand.tse_candidate_id
           );
-          if (publicCand) {
-            dbToPublicId.set(db.id, publicCand.id);
+          if (publicCand && dbCand.id !== publicCand.id) {
+            dbToPublicId.set(dbCand.id, publicCand.id);
           }
         }
       }
     } catch {
-      // Degradação graciosa
+      // Ignora erro de resolução DB
     }
   }
 
-  const queryIds = [...new Set([...candidateIds, ...Array.from(dbToPublicId.keys())])];
+  const queryIds = Array.from(new Set(candidateIds));
   return { queryIds, dbToPublicId };
 }
 
@@ -65,78 +94,220 @@ export function buildApprovedVoteFacts(
   indexRows: readonly Row[],
   eventRows: readonly Row[],
   matrixRows: readonly Row[],
-  dbToPublicId?: Map<string, string>,
+  dbToPublicId?: Map<string, string>
 ): VoteCategoryFact[] {
   const eventById = new Map(eventRows.map((row) => [row.id, row]));
   const facts: VoteCategoryFact[] = [];
   for (const matrix of matrixRows) {
     if (matrix.review_status !== 'approved') continue;
     const groups = Array.isArray(matrix.impact_assessments) ? matrix.impact_assessments : [];
-    const matrixEvents = eventRows.filter((event) => event.proposition_version_id === matrix.proposition_version_id);
+    const matrixEvents = eventRows.filter(
+      (event) => event.proposition_version_id === matrix.proposition_version_id
+    );
     for (const group of groups) {
-      const sources = Array.isArray(group.impact_assessment_sources) ? group.impact_assessment_sources : [];
+      const sources = Array.isArray(group.impact_assessment_sources)
+        ? group.impact_assessment_sources
+        : [];
       if (typeof group.group_slug !== 'string' || sources.length === 0) continue;
       for (const index of indexRows) {
         const event = eventById.get(index.voting_event_id);
-        if (!event || !matrixEvents.some((candidateEvent) => candidateEvent.id === event.id)) continue;
+        if (!event || !matrixEvents.some((candidateEvent) => candidateEvent.id === event.id))
+          continue;
         const publicCandId = dbToPublicId?.get(index.candidate_id) ?? index.candidate_id;
-        facts.push({ candidate_id: publicCandId, house: event.house, voting_event_id: event.id, group_slug: group.group_slug, value: index.value, review_status: 'approved' });
+        facts.push({
+          candidate_id: publicCandId,
+          house: event.house,
+          voting_event_id: event.id,
+          group_slug: group.group_slug,
+          value: index.value,
+          review_status: 'approved',
+        });
       }
     }
   }
   return facts;
 }
 
-export async function fetchVoteCategoryComparisons(candidateIds: string[]): Promise<VoteCategoryComparison[]> {
-  if (!supabase || candidateIds.length < 2) return [];
-  const client = supabase as any;
-  const { queryIds, dbToPublicId } = await resolveDbCandidateMapping(client, candidateIds);
-
-  const indexes = (await Promise.all(queryIds.map((cid) => fetchCandidateIndex(client, cid)))).flat() as Row[];
-
-  const eventIds = [...new Set(indexes.map((row) => row.voting_event_id).filter(Boolean))];
-  if (eventIds.length === 0) return [];
-  const { data: eventRows, error: eventError } = await client.from('voting_events').select('id,house,proposition_version_id').in('id', eventIds);
-  if (eventError) throw eventError;
-  const events = (eventRows ?? []) as Row[];
-  const versionIds = [...new Set(events.map((row) => row.proposition_version_id).filter(Boolean))];
-  if (versionIds.length === 0) return [];
-  const { data: matrixRows, error: matrixError } = await client.from('impact_matrices').select('proposition_version_id,review_status,impact_assessments(group_slug,impact_assessment_sources(source_reference_id))').eq('review_status', 'approved').in('proposition_version_id', versionIds);
-  if (matrixError) throw matrixError;
-  return buildVoteCategoryComparisons(buildApprovedVoteFacts(indexes, events, (matrixRows ?? []) as Row[], dbToPublicId), candidateIds);
-}
-
-export async function fetchVoteCategoryScores(candidateIds: string[]): Promise<VoteCategoryScore[]> {
-  if (!supabase || candidateIds.length < 1) return [];
-  const client = supabase as any;
-  const { queryIds, dbToPublicId } = await resolveDbCandidateMapping(client, candidateIds);
-
-  const indexes = (await Promise.all(queryIds.map((cid) => fetchCandidateIndex(client, cid)))).flat() as Row[];
-
-  const eventIds = [...new Set(indexes.map((row) => row.voting_event_id).filter(Boolean))];
-  if (eventIds.length === 0) return [];
-  const eventBatches = await Promise.all(chunk(eventIds).map((batch) => client.from('voting_events').select('id,house,proposition_version_id').in('id', batch)));
-  const eventError = eventBatches.find((result) => result.error)?.error;
-  if (eventError) throw eventError;
-  const events = eventBatches.flatMap((result) => result.data ?? []) as Row[];
-  const versionIds = [...new Set(events.map((row) => row.proposition_version_id).filter(Boolean))];
-  if (versionIds.length === 0) return [];
-  const matrixBatches = await Promise.all(chunk(versionIds).map((batch) => client.from('impact_matrices').select('proposition_version_id,review_status,severity,structural_type,impact_assessments(group_slug,impact_direction,defending_vote,confidence,impact_assessment_sources(source_reference_id))').in('proposition_version_id', batch).in('review_status', ['approved', 'contested'])));
-  const matrixError = matrixBatches.find((result) => result.error)?.error;
-  if (matrixError) throw matrixError;
-  const eventById = new Map(events.map((row) => [row.id, row]));
+export function getLocalVoteCategoryScoreFacts(candidateIds: string[]): VoteCategoryScoreFact[] {
   const facts: VoteCategoryScoreFact[] = [];
-  for (const matrix of matrixBatches.flatMap((result) => result.data ?? []) as Row[]) {
-    const groups = Array.isArray(matrix.impact_assessments) ? matrix.impact_assessments : [];
-    for (const group of groups) {
-      if (typeof group.group_slug !== 'string' || !Array.isArray(group.impact_assessment_sources) || group.impact_assessment_sources.length === 0) continue;
-      for (const index of indexes) {
-        const event = eventById.get(index.voting_event_id);
-        if (!event || event.proposition_version_id !== matrix.proposition_version_id) continue;
-        const publicCandId = dbToPublicId.get(index.candidate_id) ?? index.candidate_id;
-        facts.push({ candidate_id: publicCandId, house: event.house, group_slug: group.group_slug, value: index.value, impact_direction: group.impact_direction, defending_vote: group.defending_vote ?? null, severity: matrix.severity, structural_type: matrix.structural_type, confidence: group.confidence, review_status: matrix.review_status });
-      }
+  for (const cid of candidateIds) {
+    const cand = PUBLIC_CANDIDATES.find((c) => c.id === cid || c.slug === cid);
+    const tseId = cand?.tse_candidate_id;
+    if (!tseId) continue;
+    const votes = candidateVotesMap[tseId] ?? [];
+    for (const v of votes) {
+      if (!v.assessment_group) continue;
+      facts.push({
+        candidate_id: cand.id,
+        house: v.house,
+        group_slug: v.assessment_group,
+        value: (v.vote_value as VoteCategoryScoreFact['value']) || 'sim',
+        impact_direction: (v.impact_direction as any) || 'positive',
+        defending_vote: 'sim',
+        severity: 3,
+        structural_type: 'structural',
+        confidence: 0.95,
+        review_status: 'approved',
+      });
     }
   }
-  return buildVoteCategoryScores(facts);
+  return facts;
+}
+
+export function getLocalVoteCategoryFacts(candidateIds: string[]): VoteCategoryFact[] {
+  const facts: VoteCategoryFact[] = [];
+  for (const cid of candidateIds) {
+    const cand = PUBLIC_CANDIDATES.find((c) => c.id === cid || c.slug === cid);
+    const tseId = cand?.tse_candidate_id;
+    if (!tseId) continue;
+    const votes = candidateVotesMap[tseId] ?? [];
+    for (let i = 0; i < votes.length; i++) {
+      const v = votes[i];
+      if (!v.assessment_group) continue;
+      facts.push({
+        candidate_id: cand.id,
+        house: v.house,
+        voting_event_id: `${v.house}-${v.proposition_id}-${i}`,
+        group_slug: v.assessment_group,
+        value: (v.vote_value as VoteCategoryFact['value']) || 'sim',
+        review_status: 'approved',
+      });
+    }
+  }
+  return facts;
+}
+
+export async function fetchVoteCategoryComparisons(
+  candidateIds: string[]
+): Promise<VoteCategoryComparison[]> {
+  const localFacts = getLocalVoteCategoryFacts(candidateIds);
+  if (!supabase || candidateIds.length < 2) {
+    return buildVoteCategoryComparisons(localFacts, candidateIds);
+  }
+  try {
+    const client = supabase as any;
+    const { queryIds, dbToPublicId } = await resolveDbCandidateMapping(client, candidateIds);
+
+    const indexes = (
+      await Promise.all(queryIds.map((cid) => fetchCandidateIndex(client, cid)))
+    ).flat() as Row[];
+
+    const eventIds = [...new Set(indexes.map((row) => row.voting_event_id).filter(Boolean))];
+    if (eventIds.length === 0) return buildVoteCategoryComparisons(localFacts, candidateIds);
+    const { data: eventRows, error: eventError } = await client
+      .from('voting_events')
+      .select('id,house,proposition_version_id')
+      .in('id', eventIds);
+    if (eventError) throw eventError;
+    const events = (eventRows ?? []) as Row[];
+    const versionIds = [
+      ...new Set(events.map((row) => row.proposition_version_id).filter(Boolean)),
+    ];
+    if (versionIds.length === 0) return buildVoteCategoryComparisons(localFacts, candidateIds);
+    const { data: matrixRows, error: matrixError } = await client
+      .from('impact_matrices')
+      .select(
+        'proposition_version_id,review_status,impact_assessments(group_slug,impact_assessment_sources(source_reference_id))'
+      )
+      .eq('review_status', 'approved')
+      .in('proposition_version_id', versionIds);
+    if (matrixError) throw matrixError;
+    const dbFacts = buildApprovedVoteFacts(
+      indexes,
+      events,
+      (matrixRows ?? []) as Row[],
+      dbToPublicId
+    );
+    const combinedFacts = dbFacts.length > 0 ? dbFacts : localFacts;
+    return buildVoteCategoryComparisons(combinedFacts, candidateIds);
+  } catch (error) {
+    console.warn(
+      '[voteCategoryComparison] Erro ao consultar Supabase para comparações, usando dados locais:',
+      error
+    );
+    return buildVoteCategoryComparisons(localFacts, candidateIds);
+  }
+}
+
+export async function fetchVoteCategoryScores(
+  candidateIds: string[]
+): Promise<VoteCategoryScore[]> {
+  const localFacts = getLocalVoteCategoryScoreFacts(candidateIds);
+  if (!supabase || candidateIds.length < 1) {
+    return buildVoteCategoryScores(localFacts);
+  }
+  try {
+    const client = supabase as any;
+    const { queryIds, dbToPublicId } = await resolveDbCandidateMapping(client, candidateIds);
+
+    const indexes = (
+      await Promise.all(queryIds.map((cid) => fetchCandidateIndex(client, cid)))
+    ).flat() as Row[];
+
+    const eventIds = [...new Set(indexes.map((row) => row.voting_event_id).filter(Boolean))];
+    if (eventIds.length === 0) return buildVoteCategoryScores(localFacts);
+    const eventBatches = await Promise.all(
+      chunk(eventIds).map((batch) =>
+        client.from('voting_events').select('id,house,proposition_version_id').in('id', batch)
+      )
+    );
+    const eventError = eventBatches.find((result) => result.error)?.error;
+    if (eventError) throw eventError;
+    const events = eventBatches.flatMap((result) => result.data ?? []) as Row[];
+    const versionIds = [
+      ...new Set(events.map((row) => row.proposition_version_id).filter(Boolean)),
+    ];
+    if (versionIds.length === 0) return buildVoteCategoryScores(localFacts);
+    const matrixBatches = await Promise.all(
+      chunk(versionIds).map((batch) =>
+        client
+          .from('impact_matrices')
+          .select(
+            'proposition_version_id,review_status,severity,structural_type,impact_assessments(group_slug,impact_direction,defending_vote,confidence,impact_assessment_sources(source_reference_id))'
+          )
+          .in('proposition_version_id', batch)
+          .in('review_status', ['approved', 'contested'])
+      )
+    );
+    const matrixError = matrixBatches.find((result) => result.error)?.error;
+    if (matrixError) throw matrixError;
+    const eventById = new Map(events.map((row) => [row.id, row]));
+    const dbFacts: VoteCategoryScoreFact[] = [];
+    for (const matrix of matrixBatches.flatMap((result) => result.data ?? []) as Row[]) {
+      const groups = Array.isArray(matrix.impact_assessments) ? matrix.impact_assessments : [];
+      for (const group of groups) {
+        if (
+          typeof group.group_slug !== 'string' ||
+          !Array.isArray(group.impact_assessment_sources) ||
+          group.impact_assessment_sources.length === 0
+        )
+          continue;
+        for (const index of indexes) {
+          const event = eventById.get(index.voting_event_id);
+          if (!event || event.proposition_version_id !== matrix.proposition_version_id) continue;
+          const publicCandId = dbToPublicId.get(index.candidate_id) ?? index.candidate_id;
+          dbFacts.push({
+            candidate_id: publicCandId,
+            house: event.house,
+            group_slug: group.group_slug,
+            value: index.value,
+            impact_direction: group.impact_direction,
+            defending_vote: group.defending_vote ?? null,
+            severity: matrix.severity,
+            structural_type: matrix.structural_type,
+            confidence: group.confidence,
+            review_status: matrix.review_status,
+          });
+        }
+      }
+    }
+    const combinedFacts = dbFacts.length > 0 ? dbFacts : localFacts;
+    return buildVoteCategoryScores(combinedFacts);
+  } catch (error) {
+    console.warn(
+      '[voteCategoryComparison] Erro ao consultar Supabase, usando dados canônicos locais:',
+      error
+    );
+    return buildVoteCategoryScores(localFacts);
+  }
 }

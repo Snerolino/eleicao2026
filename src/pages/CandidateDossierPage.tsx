@@ -25,6 +25,9 @@ import { getCandidateNominalVotes } from '@/services/candidateVotes';
 import { CandidateDeclaredAssetsCard } from '@/components/candidates/CandidateDeclaredAssetsCard';
 import { getCandidateDeclaredAssets } from '@/services/candidateAssets';
 
+import { DivergentScoreBar } from '@/components/impact/DivergentScoreBar';
+import { getBeneficiaryGroupLabel } from '@/domain/impact/beneficiary-groups';
+
 function claimsForSection(
   claims: Claim[],
   matchersSet: ReadonlySet<string>
@@ -34,9 +37,51 @@ function claimsForSection(
   );
 }
 
-function CategoryScoreList({ scores, house }: { scores: VoteCategoryScore[]; house: string }) {
-  if (scores.length === 0) return <p className="font-mono text-xs uppercase tracking-wide text-[var(--color-muted-ink)]">Há votos factuais na casa {house}, mas ainda não há avaliações populacionais aprovadas para gerar score por categoria.</p>;
-  return <div className="grid gap-2 sm:grid-cols-2">{scores.map((score) => <div key={`${score.house}-${score.group_slug}`} className="flex items-center justify-between border-b border-[var(--color-border-editorial)] py-2"><span className="text-sm">{score.group_slug.replaceAll('_', ' ')}</span><strong className="font-mono text-lg text-[var(--color-institutional)]">{formatCategoryScore(score.score)}</strong></div>)}</div>;
+function CategoryScoreList({
+  scores,
+  house,
+  candidateName,
+}: {
+  scores: VoteCategoryScore[];
+  house: string;
+  candidateName: string;
+}) {
+  if (scores.length === 0) {
+    return (
+      <p className="font-mono text-xs uppercase tracking-wide text-[var(--color-muted-ink)]">
+        Há votos factuais na casa {house}, mas ainda não há avaliações populacionais aprovadas para gerar score por categoria.
+      </p>
+    );
+  }
+  return (
+    <div className="grid gap-3 sm:grid-cols-2">
+      {scores.map((score) => {
+        const label = getBeneficiaryGroupLabel(score.group_slug);
+        return (
+          <div
+            key={`${score.house}-${score.group_slug}`}
+            className="rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-3"
+          >
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-sm font-medium leading-tight">{label}</span>
+              <strong className="font-mono text-sm text-[var(--color-institutional)]">
+                {formatCategoryScore(score.score)}
+              </strong>
+            </div>
+            <div className="mt-2">
+              <DivergentScoreBar
+                score={score.score}
+                evaluatedPropositions={score.evaluated_propositions}
+                contestedAssessments={score.contested_assessments}
+                candidateName={candidateName}
+                groupLabel={label}
+              />
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
 }
 
 export function CandidateDossierPage() {
@@ -183,7 +228,19 @@ export function CandidateDossierPage() {
               <div className="mt-5 border border-[var(--color-border-editorial)] p-4">
                 <h3 className="font-mono text-xs uppercase tracking-widest text-[var(--color-muted-ink)]">Impacto populacional por categoria</h3>
                 <p className="mt-2 text-sm text-[var(--color-muted-ink)]">O valor considera somente proposições com assessment aprovado, grupo identificado e voto elegível.</p>
-                {categoryScoresQuery.isLoading ? <LoadingSkeleton label="Calculando avaliação por categoria" /> : <div className="mt-3"><CategoryScoreList scores={(categoryScoresQuery.data ?? []).filter((score) => score.house === profile.house)} house={house.label} /></div>}
+                {categoryScoresQuery.isLoading ? (
+                  <LoadingSkeleton label="Calculando avaliação por categoria" />
+                ) : (
+                  <div className="mt-3">
+                    <CategoryScoreList
+                      scores={(categoryScoresQuery.data ?? []).filter(
+                        (score) => score.house === profile.house
+                      )}
+                      house={house.label}
+                      candidateName={candidate.full_name}
+                    />
+                  </div>
+                )}
               </div>
               <dl className="mt-5 grid grid-cols-2 gap-px border border-[var(--color-border-editorial)] bg-[var(--color-border-editorial)] sm:grid-cols-5">
                 {[
