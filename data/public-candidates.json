@@ -18930,7 +18930,18 @@
     "gender": "MASCULINO",
     "race": "BRANCA",
     "indigenous_ethnicity": null,
-    "voting_profiles": []
+    "voting_profiles": [
+      {
+        "house": "camara",
+        "total_votes": 21,
+        "votos_sim": 12,
+        "votos_nao": 9,
+        "votos_abstencao": 0,
+        "votos_ausente": 0,
+        "votos_obstrucao": 0,
+        "nominal_balance": 3
+      }
+    ]
   },
   {
     "id": "a3dfa5a2-b37e-5249-978b-019458d25822",

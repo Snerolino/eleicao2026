@@ -91,6 +91,10 @@ export function buildDeputyToTseMapping(root = ROOT) {
   deputyToTse.set("204416", "210002547816"); // Sanderson
   deputyToTse.set("camara-deputado-204416", "210002547816");
 
+  // Candidatos ao Governo que exerceram mandato de Deputado Federal
+  deputyToTse.set("220552", "210002547857"); // Luciano Zucco (Governador - PL)
+  deputyToTse.set("camara-deputado-220552", "210002547857");
+
   return deputyToTse;
 }
 
