@@ -75,10 +75,34 @@ export interface CandidateNominalVote {
   impact_direction?: 'positive' | 'negative' | 'mixed' | 'unclear' | null;
 }
 
+export interface DeclaredAssetItem {
+  tipo: string;
+  categoria: string;
+  descricao: string;
+  valor: number;
+}
+
+export interface AssetYearDeclaration {
+  ano: number;
+  total: number;
+  itens_count: number;
+  itens: DeclaredAssetItem[];
+  por_categoria: Record<string, number>;
+}
+
+export interface CandidateDeclaredAssets {
+  tse_candidate_id: string;
+  ano_recente: number;
+  total_declarado: number;
+  declaracoes_por_ano: AssetYearDeclaration[];
+  evolucao_percentual?: number | null;
+}
+
 export interface CandidateWithClaims extends Candidate {
   claims: Claim[];
   voting_profiles?: VotingProfile[];
   nominal_votes?: CandidateNominalVote[];
+  declared_assets?: CandidateDeclaredAssets | null;
 }
 
 export interface VotingProfile {

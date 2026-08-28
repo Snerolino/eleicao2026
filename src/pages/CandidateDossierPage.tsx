@@ -22,6 +22,8 @@ import {
 } from '@/types/election';
 import { CandidateNominalVotesList } from '@/components/candidates/CandidateNominalVotesList';
 import { getCandidateNominalVotes } from '@/services/candidateVotes';
+import { CandidateDeclaredAssetsCard } from '@/components/candidates/CandidateDeclaredAssetsCard';
+import { getCandidateDeclaredAssets } from '@/services/candidateAssets';
 
 function claimsForSection(
   claims: Claim[],
@@ -234,6 +236,12 @@ export function CandidateDossierPage() {
               </a>
             </section>
           ) : null}
+
+          {/* Patrimônio e Bens Declarados ao TSE */}
+          <CandidateDeclaredAssetsCard
+            assets={getCandidateDeclaredAssets(candidate.tse_candidate_id)}
+            candidateName={candidate.ballot_name || candidate.full_name}
+          />
 
           {DOSSIER_SECTIONS.map((section) => {
             const claims = claimsForSection(
