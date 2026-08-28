@@ -50,6 +50,7 @@ Regras:
 8. O runtime global do Hermes permanece o padrão. Não ativar Codex App-Server como runtime global sem decisão específica, pois Hermes deve preservar suas próprias ferramentas de memória/delegação.
 9. OpenCode/Antigravity trabalham sobre `git archive HEAD`. Se a tarefa depende de alterações ainda não commitadas, não fingir que esses executores as enxergam: usar Codex na worktree viva ou criar checkpoint autorizado.
 10. O fluxo é `CONTINUOUS_PROGRESS`: não esperar prompt entre gates. Com writer bloqueado por drift, fonte ou executor, scouts CLI read-only podem pesquisar portais oficiais em paralelo e preparar manifests/handoffs, sem escrever na worktree ou em serviços remotos.
+11. **Execução Bash Pré-Aprovada**: Todos os comandos no shell/Bash necessários para build, testes, linters, scripts utilitários (ex.: node/npm/tsc/vitest), reconciliação de dados legislativos e empacotamento local estão expressamente pré-aprovados pelo usuário para execução direta e autônoma, sem necessidade de interrupção ou pedido repetitivo de permissão.
 
 ## Matriz Canônica Única para Todos os Agentes
 

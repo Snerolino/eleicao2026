@@ -1,21 +1,18 @@
-import { supabase } from '@/lib/supabase';
+import { supabase } from "@/lib/supabase";
 import {
   buildVoteCategoryComparisons,
   type VoteCategoryComparison,
   type VoteCategoryFact,
-} from '@/domain/impact/vote-category-comparison';
+} from "@/domain/impact/vote-category-comparison";
 import {
   buildVoteCategoryScores,
   type VoteCategoryScore,
   type VoteCategoryScoreFact,
-} from '@/domain/impact/vote-category-score';
-import { PUBLIC_CANDIDATES } from './publicCandidates';
-import rawNominalVotes from '../../data/candidate-nominal-votes.json';
-import type { CandidateNominalVote } from '@/types/election';
+} from "@/domain/impact/vote-category-score";
+import { PUBLIC_CANDIDATES } from "./publicCandidates";
+import { getCandidateNominalVotes } from "./candidateVotes";
 
 type Row = Record<string, any>;
-
-const candidateVotesMap = rawNominalVotes as Record<string, CandidateNominalVote[]>;
 
 function chunk<T>(items: T[], size = 100): T[][] {
   const result: T[][] = [];
@@ -27,9 +24,9 @@ function chunk<T>(items: T[], size = 100): T[][] {
 
 async function fetchCandidateIndex(client: any, candidateId: string): Promise<Row[]> {
   const first = await client
-    .from('legislator_vote_index')
-    .select('candidate_id,voting_event_id,value', { count: 'exact' })
-    .eq('candidate_id', candidateId)
+    .from("legislator_vote_index")
+    .select("candidate_id,voting_event_id,value", { count: "exact" })
+    .eq("candidate_id", candidateId)
     .range(0, 999);
   if (first.error) throw first.error;
   const total = Number(first.count ?? first.data?.length ?? 0);
@@ -37,9 +34,9 @@ async function fetchCandidateIndex(client: any, candidateId: string): Promise<Ro
   const pages = await Promise.all(
     Array.from({ length: Math.ceil(total / 1000) - 1 }, (_, index) =>
       client
-        .from('legislator_vote_index')
-        .select('candidate_id,voting_event_id,value')
-        .eq('candidate_id', candidateId)
+        .from("legislator_vote_index")
+        .select("candidate_id,voting_event_id,value")
+        .eq("candidate_id", candidateId)
         .range((index + 1) * 1000, (index + 2) * 1000 - 1)
     )
   );
@@ -62,14 +59,14 @@ async function resolveDbCandidateMapping(
 
   const tseIds = candidateIds
     .map((id) => PUBLIC_CANDIDATES.find((c) => c.id === id)?.tse_candidate_id)
-    .filter((tse): tse is string => typeof tse === 'string' && tse.length > 0);
+    .filter((tse): tse is string => typeof tse === "string" && tse.length > 0);
 
   if (tseIds.length > 0) {
     try {
       const { data: dbCands } = await client
-        .from('candidates')
-        .select('id, tse_candidate_id')
-        .in('tse_candidate_id', tseIds);
+        .from("candidates")
+        .select("id, tse_candidate_id")
+        .in("tse_candidate_id", tseIds);
 
       if (Array.isArray(dbCands)) {
         for (const dbCand of dbCands) {
@@ -99,7 +96,7 @@ export function buildApprovedVoteFacts(
   const eventById = new Map(eventRows.map((row) => [row.id, row]));
   const facts: VoteCategoryFact[] = [];
   for (const matrix of matrixRows) {
-    if (matrix.review_status !== 'approved') continue;
+    if (matrix.review_status !== "approved") continue;
     const groups = Array.isArray(matrix.impact_assessments) ? matrix.impact_assessments : [];
     const matrixEvents = eventRows.filter(
       (event) => event.proposition_version_id === matrix.proposition_version_id
@@ -108,7 +105,7 @@ export function buildApprovedVoteFacts(
       const sources = Array.isArray(group.impact_assessment_sources)
         ? group.impact_assessment_sources
         : [];
-      if (typeof group.group_slug !== 'string' || sources.length === 0) continue;
+      if (typeof group.group_slug !== "string" || sources.length === 0) continue;
       for (const index of indexRows) {
         const event = eventById.get(index.voting_event_id);
         if (!event || !matrixEvents.some((candidateEvent) => candidateEvent.id === event.id))
@@ -120,7 +117,7 @@ export function buildApprovedVoteFacts(
           voting_event_id: event.id,
           group_slug: group.group_slug,
           value: index.value,
-          review_status: 'approved',
+          review_status: "approved",
         });
       }
     }
@@ -134,20 +131,20 @@ export function getLocalVoteCategoryScoreFacts(candidateIds: string[]): VoteCate
     const cand = PUBLIC_CANDIDATES.find((c) => c.id === cid || c.slug === cid);
     const tseId = cand?.tse_candidate_id;
     if (!tseId) continue;
-    const votes = candidateVotesMap[tseId] ?? [];
+    const votes = getCandidateNominalVotes(tseId);
     for (const v of votes) {
       if (!v.assessment_group) continue;
       facts.push({
         candidate_id: cand.id,
         house: v.house,
         group_slug: v.assessment_group,
-        value: (v.vote_value as VoteCategoryScoreFact['value']) || 'sim',
-        impact_direction: (v.impact_direction as any) || 'positive',
-        defending_vote: 'sim',
+        value: (v.vote_value as VoteCategoryScoreFact["value"]) || "sim",
+        impact_direction: (v.impact_direction as any) || "positive",
+        defending_vote: "sim",
         severity: 3,
-        structural_type: 'structural',
+        structural_type: "structural",
         confidence: 0.95,
-        review_status: 'approved',
+        review_status: "approved",
       });
     }
   }
@@ -160,7 +157,7 @@ export function getLocalVoteCategoryFacts(candidateIds: string[]): VoteCategoryF
     const cand = PUBLIC_CANDIDATES.find((c) => c.id === cid || c.slug === cid);
     const tseId = cand?.tse_candidate_id;
     if (!tseId) continue;
-    const votes = candidateVotesMap[tseId] ?? [];
+    const votes = getCandidateNominalVotes(tseId);
     for (let i = 0; i < votes.length; i++) {
       const v = votes[i];
       if (!v.assessment_group) continue;
@@ -169,8 +166,8 @@ export function getLocalVoteCategoryFacts(candidateIds: string[]): VoteCategoryF
         house: v.house,
         voting_event_id: `${v.house}-${v.proposition_id}-${i}`,
         group_slug: v.assessment_group,
-        value: (v.vote_value as VoteCategoryFact['value']) || 'sim',
-        review_status: 'approved',
+        value: (v.vote_value as VoteCategoryFact["value"]) || "sim",
+        review_status: "approved",
       });
     }
   }
@@ -195,9 +192,9 @@ export async function fetchVoteCategoryComparisons(
     const eventIds = [...new Set(indexes.map((row) => row.voting_event_id).filter(Boolean))];
     if (eventIds.length === 0) return buildVoteCategoryComparisons(localFacts, candidateIds);
     const { data: eventRows, error: eventError } = await client
-      .from('voting_events')
-      .select('id,house,proposition_version_id')
-      .in('id', eventIds);
+      .from("voting_events")
+      .select("id,house,proposition_version_id")
+      .in("id", eventIds);
     if (eventError) throw eventError;
     const events = (eventRows ?? []) as Row[];
     const versionIds = [
@@ -205,12 +202,12 @@ export async function fetchVoteCategoryComparisons(
     ];
     if (versionIds.length === 0) return buildVoteCategoryComparisons(localFacts, candidateIds);
     const { data: matrixRows, error: matrixError } = await client
-      .from('impact_matrices')
+      .from("impact_matrices")
       .select(
-        'proposition_version_id,review_status,impact_assessments(group_slug,impact_assessment_sources(source_reference_id))'
+        "proposition_version_id,review_status,impact_assessments(group_slug,impact_assessment_sources(source_reference_id))"
       )
-      .eq('review_status', 'approved')
-      .in('proposition_version_id', versionIds);
+      .eq("review_status", "approved")
+      .in("proposition_version_id", versionIds);
     if (matrixError) throw matrixError;
     const dbFacts = buildApprovedVoteFacts(
       indexes,
@@ -222,7 +219,7 @@ export async function fetchVoteCategoryComparisons(
     return buildVoteCategoryComparisons(combinedFacts, candidateIds);
   } catch (error) {
     console.warn(
-      '[voteCategoryComparison] Erro ao consultar Supabase para comparações, usando dados locais:',
+      "[voteCategoryComparison] Erro ao consultar Supabase para comparações, usando dados locais:",
       error
     );
     return buildVoteCategoryComparisons(localFacts, candidateIds);
@@ -248,7 +245,7 @@ export async function fetchVoteCategoryScores(
     if (eventIds.length === 0) return buildVoteCategoryScores(localFacts);
     const eventBatches = await Promise.all(
       chunk(eventIds).map((batch) =>
-        client.from('voting_events').select('id,house,proposition_version_id').in('id', batch)
+        client.from("voting_events").select("id,house,proposition_version_id").in("id", batch)
       )
     );
     const eventError = eventBatches.find((result) => result.error)?.error;
@@ -261,12 +258,12 @@ export async function fetchVoteCategoryScores(
     const matrixBatches = await Promise.all(
       chunk(versionIds).map((batch) =>
         client
-          .from('impact_matrices')
+          .from("impact_matrices")
           .select(
-            'proposition_version_id,review_status,severity,structural_type,impact_assessments(group_slug,impact_direction,defending_vote,confidence,impact_assessment_sources(source_reference_id))'
+            "proposition_version_id,review_status,severity,structural_type,impact_assessments(group_slug,impact_direction,defending_vote,confidence,impact_assessment_sources(source_reference_id))"
           )
-          .in('proposition_version_id', batch)
-          .in('review_status', ['approved', 'contested'])
+          .in("proposition_version_id", batch)
+          .in("review_status", ["approved", "contested"])
       )
     );
     const matrixError = matrixBatches.find((result) => result.error)?.error;
@@ -277,7 +274,7 @@ export async function fetchVoteCategoryScores(
       const groups = Array.isArray(matrix.impact_assessments) ? matrix.impact_assessments : [];
       for (const group of groups) {
         if (
-          typeof group.group_slug !== 'string' ||
+          typeof group.group_slug !== "string" ||
           !Array.isArray(group.impact_assessment_sources) ||
           group.impact_assessment_sources.length === 0
         )
@@ -305,7 +302,7 @@ export async function fetchVoteCategoryScores(
     return buildVoteCategoryScores(combinedFacts);
   } catch (error) {
     console.warn(
-      '[voteCategoryComparison] Erro ao consultar Supabase, usando dados canônicos locais:',
+      "[voteCategoryComparison] Erro ao consultar Supabase, usando dados canônicos locais:",
       error
     );
     return buildVoteCategoryScores(localFacts);
