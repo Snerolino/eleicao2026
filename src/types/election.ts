@@ -63,9 +63,22 @@ export interface Candidate {
   indigenous_ethnicity?: string | null;
 }
 
+export interface CandidateNominalVote {
+  house: 'alrs' | 'camara' | 'senado' | string;
+  proposition_id: string;
+  title: string;
+  vote_value: 'sim' | 'nao' | 'abstencao' | 'ausente' | 'obstrucao' | string;
+  date: string;
+  source_url: string;
+  source_label: string;
+  assessment_group?: string | null;
+  impact_direction?: 'positive' | 'negative' | 'mixed' | 'unclear' | null;
+}
+
 export interface CandidateWithClaims extends Candidate {
   claims: Claim[];
   voting_profiles?: VotingProfile[];
+  nominal_votes?: CandidateNominalVote[];
 }
 
 export interface VotingProfile {

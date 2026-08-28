@@ -20,6 +20,8 @@ import {
   type CandidateWithClaims,
   type Claim
 } from '@/types/election';
+import { CandidateNominalVotesList } from '@/components/candidates/CandidateNominalVotesList';
+import { getCandidateNominalVotes } from '@/services/candidateVotes';
 
 function claimsForSection(
   claims: Claim[],
@@ -209,6 +211,13 @@ export function CandidateDossierPage() {
                   Fonte: {house.sourceLabel}
                 </p>
               )}
+
+              {/* Lista Detalhada de Votações Nominais por Matéria */}
+              {(() => {
+                const nominalVotes = getCandidateNominalVotes(candidate.tse_candidate_id, profile.house);
+                if (nominalVotes.length === 0) return null;
+                return <CandidateNominalVotesList votes={nominalVotes} houseLabel={house.label} />;
+              })()}
             </section>
             );
           })}
