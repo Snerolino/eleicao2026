@@ -3,7 +3,7 @@
   "methodology_version": "1.0.0",
   "title": "Matriz Gabarito de Proposições Legislativas Aprovadas",
   "description": "Fonte de verdade consolidada das avaliações de impacto populacional de matérias legislativas da ALRS, Câmara dos Deputados e Senado Federal para referência e expansão por todos os agentes.",
-  "updated_at": "2026-08-28T17:20:32.811Z",
+  "updated_at": "2026-08-28T18:35:22.222Z",
   "rules": {
     "immutability": "Proposições com status approved possuem gabarito imutável de direção e defending_vote.",
     "reusability": "O gabarito de uma matéria é aplicado automaticamente a todas as votações nominais registradas para qualquer candidato que votou nela.",
@@ -225,6 +225,243 @@
             "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2606313",
             "https://dadosabertos.camara.leg.br/api/v2/votacoes/2606313-36",
             "https://dadosabertos.camara.leg.br/api/v2/votacoes/2606313-36/votos"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:pl-510-2025",
+      "house": "alrs",
+      "type": "pl",
+      "number": "510",
+      "year": 2025,
+      "title": "Consolidação e ampliação da legislação relativa a mulheres vítimas de violência no RS",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario",
+      "official_source_label": "ALRS Sistema Legis — PL 510/2025; Diário Oficial RS",
+      "severity": 4,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "mulheres",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.95,
+          "rationale": "O PL 510/2025 fortalece e consolida os mecanismos de amparo legal e atendimento prioritário a mulheres vítimas de violência doméstica e de gênero no Rio Grande do Sul.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:pl-125-2021",
+      "house": "alrs",
+      "type": "pl",
+      "number": "125",
+      "year": 2021,
+      "title": "Criação do Programa Estadual de Defesa Pessoal para Mulheres RS POR ELAS",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario",
+      "official_source_label": "ALRS Sistema Legis — PL 125/2021",
+      "severity": 3,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "mulheres",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.9,
+          "rationale": "Institui programa público estadual focado na integridade física e prevenção de agressões contra mulheres através de capacitação e defesa pessoal preventiva.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:pl-432-2023",
+      "house": "alrs",
+      "type": "pl",
+      "number": "432",
+      "year": 2023,
+      "title": "Cessão gratuita de espaços da rede pública para cursos pré-universitários populares",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario",
+      "official_source_label": "ALRS Sistema Legis — PL 432/2023",
+      "severity": 3,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.92,
+          "rationale": "Garante infraestrutura educacional pública para jovens de baixa renda e periferias acessarem cursos preparatórios para ingresso no ensino superior.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario"
+          ]
+        },
+        {
+          "group": "populacao_negra_periferica",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.88,
+          "rationale": "Fomenta a inclusão sociorracial e democratização do acesso à universidade pública para estudantes de escolas estaduais da periferia.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:pl-libertar-2024",
+      "house": "alrs",
+      "type": "pl",
+      "number": "libertar",
+      "year": 2024,
+      "title": "Projeto Libertar — Política de prevenção a crimes sexuais contra crianças e adolescentes",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario",
+      "official_source_label": "ALRS Sistema Legis — Projeto Libertar",
+      "severity": 4,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.95,
+          "rationale": "Estabelece diretrizes e ações integradas de proteção integral da infância e adolescência contra violência e exploração sexual no estado.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:pl-patrulha-infancia-2024",
+      "house": "alrs",
+      "type": "pl",
+      "number": "patrulha-infancia",
+      "year": 2024,
+      "title": "Patrulha Estadual de Prevenção à Violência Doméstica contra Crianças e Adolescentes",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario",
+      "official_source_label": "ALRS Sistema Legis — Patrulha Infância",
+      "severity": 4,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.95,
+          "rationale": "Cria grupamento especializado de segurança pública para monitorar cumprimento de medidas de proteção a menores em situação de violência doméstica.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:pl-fibromialgia-2023",
+      "house": "alrs",
+      "type": "pl",
+      "number": "fibromialgia",
+      "year": 2023,
+      "title": "Lei Daniel Lenz — Atendimento prioritário e direitos para pessoas com fibromialgia",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario",
+      "official_source_label": "ALRS Sistema Legis — Lei Daniel Lenz",
+      "severity": 2,
+      "structural_type": "symbolic",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "pessoas_com_deficiencia",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.9,
+          "rationale": "Equipara portadores de fibromialgia crônica aos direitos de atendimento preferencial e inclusão assistencial.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:pl-orfandade-covid-2023",
+      "house": "alrs",
+      "type": "pl",
+      "number": "orfandade-covid",
+      "year": 2023,
+      "title": "Proteção social e auxílio às crianças e adolescentes em situação de orfandade",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario",
+      "official_source_label": "ALRS Sistema Legis — Orfandade Covid",
+      "severity": 3,
+      "structural_type": "budgetary",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.95,
+          "rationale": "Garante acompanhamento psicossocial e benefício financeiro continuado para crianças e jovens órfãos vulneráveis.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "camara:mpv-1313-2025",
+      "house": "camara",
+      "type": "mpv",
+      "number": "1313",
+      "year": 2025,
+      "title": "Apoio emergencial e amparo aos trabalhadores informais e autônomos",
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2557414",
+      "official_source_label": "Câmara dos Deputados — MPV 1313/2025",
+      "severity": 2,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "trabalhadores_informais",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.85,
+          "rationale": "Texto normativo federal com efeito de garantia e suporte financeiro/produtivo para trabalhadores autônomos e informais.",
+          "sources": [
+            "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2557414",
+            "https://dadosabertos.camara.leg.br/api/v2/votacoes/2557414-41"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "camara:mpv-1323-2025",
+      "house": "camara",
+      "type": "mpv",
+      "number": "1323",
+      "year": 2025,
+      "title": "Linhas de crédito e amparo produtivo a microempreendedores e trabalhadores informais",
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2581700",
+      "official_source_label": "Câmara dos Deputados — MPV 1323/2025",
+      "severity": 3,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "trabalhadores_informais",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.85,
+          "rationale": "Medida provisória de fomento e crédito orientado a microatividades e prestadores autônomos de serviços.",
+          "sources": [
+            "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2581700",
+            "https://dadosabertos.camara.leg.br/api/v2/votacoes/2581700-31"
           ]
         }
       ]
