@@ -3,7 +3,7 @@
   "methodology_version": "1.0.0",
   "title": "Matriz Gabarito de Proposições Legislativas Aprovadas",
   "description": "Fonte de verdade consolidada das avaliações de impacto populacional de matérias legislativas da ALRS, Câmara dos Deputados e Senado Federal para referência e expansão por todos os agentes.",
-  "updated_at": "2026-08-27T17:00:48.086Z",
+  "updated_at": "2026-08-28T17:20:32.811Z",
   "rules": {
     "immutability": "Proposições com status approved possuem gabarito imutável de direção e defending_vote.",
     "reusability": "O gabarito de uma matéria é aplicado automaticamente a todas as votações nominais registradas para qualquer candidato que votou nela.",
@@ -198,6 +198,33 @@
             "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2580259",
             "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3170169",
             "https://dadosabertos.camara.leg.br/api/v2/votacoes/2580259-24/votos"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "camara:plp-41-2024",
+      "house": "camara",
+      "type": "plp",
+      "number": "41",
+      "year": 2024,
+      "title": "Política Nacional de Prevenção e Enfrentamento da Violência contra Mulheres e Feminicídio",
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2606313",
+      "official_source_label": "Câmara dos Deputados — PLP 41/2024; Votação 2606313-36",
+      "severity": 4,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "mulheres",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.99,
+          "rationale": "O substitutivo cria estrutura nacional de prevenção e enfrentamento da violência contra meninas e mulheres, incluindo feminicídio; voto SIM aprova o instrumento de proteção.",
+          "sources": [
+            "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2606313",
+            "https://dadosabertos.camara.leg.br/api/v2/votacoes/2606313-36",
+            "https://dadosabertos.camara.leg.br/api/v2/votacoes/2606313-36/votos"
           ]
         }
       ]

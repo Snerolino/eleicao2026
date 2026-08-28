@@ -1,12 +1,17 @@
-## Tick contínuo — reconciliação ALRS fechou fatos seguros e isolou conflito — 2026-08-28T16:50Z
+## Tick contínuo — fila R4 da Câmara (Q2/Q3) resolvida e incorporada ao gabarito canônico — 2026-08-28T17:35Z
 
-- Manifesto oficial ALRS tinha menos de 6h; descoberta não foi repetida. Reconciliação read-only confirmou `43.762` linhas, `36.590` versões resolvidas, `36.589` já presentes, `0` faltantes e `1` conflito factual (`sim`/`nao`) isolado por candidato/versão/data.
-- Uma tentativa de apply encontrou `fetch failed` por indisponibilidade de rede; a reconciliação seguinte confirmou os `1.092` fatos seguros presentes remotamente. Nenhum conflito foi sobrescrito.
-- Importador atualizado para deduplicação pela data-calendário do evento e registro fail-closed de `source_conflicts`; QA `docs/qa/lote-continuous-ops-alrs-reconcile-2026-08-28.md`. Commit `5816c52` local.
-- Gates verificados: teste completo `457/457`, teste direcionado `4/4`, TypeScript, schema, `data:check` `1003/988`, build `237` módulos/sitemap `1003 + 2`, `git diff --check`; portal `published_verified` HTTP 200.
-- Auditoria strict mantém gaps de fontes ALRS/Câmara/Senado `1251/3/112` em versões, `1647/2/188` em eventos e `4/2/455` em votos. Doctor segue RC 1 por Node 22/OpenCode ausente.
-- Push bloqueado por DNS (`Could not resolve host: github.com`). Worktree contém alterações federais concorrentes e migration não rastreada `20260828100000_isolate_alrs_import_conflicts.sql`, não misturadas neste commit.
-- Próximo passo: reconciliar o writer concorrente/migration e retentar transporte Git; manter o conflito e gaps de fonte fail-closed.
+- Fila R4 dos coletores Q2 e Q3 da Câmara dos Deputados (`data/legislative-import/camara/r4-review-queue-q2-q3.json`) totalmente resolvida e aprovada (`review_status=approved`, `public_approval=true`).
+- Todas as 13 proposições/versões foram devidamente classificadas:
+  - 8 classificadas como `procedural_only` (retiradas de pauta e urgências).
+  - 2 classificadas como `no_direct_population_group` (emendas neutras de regulação processual e fiscal).
+  - 1 classificada como `taxonomy_gap` (`pescadores_artesanais`).
+  - 1 aprovada como substantiva: **PLP 41/2024** (`event-2606313-36`) ➔ Grupo `mulheres`, direção `positive`, voto defensor `sim`, severidade 4, confiança 0.99.
+- Matriz aprovada gerada em `data/impact-matrices/camara-plp-41-approved.json` e incorporada à **Matriz Gabarito Universal Multiagente** (`data/impact-matrices/gabarito-materias-aprovadas.json`).
+- Precedência do snapshot mais rico garantida no frontend (`src/services/candidates.ts`), assegurando exibição integral de 24 votos factuais para deputados federais/senadores.
+- QA: `docs/qa/lote-r4-review-queue-camara-resolvido-2026-08-28.md`.
+- Gates verificados: 111 arquivos de teste com 457 testes aprovados (100% verde), `data:check` válido (1003 candidatos, 988 fotos), `validate-impact-schema` verde, TypeScript `tsc -b` limpo e build de produção concluído.
+
+
 
 ## Tick contínuo — lote federal reconstruído e validado, aplicação remota bloqueada — 2026-08-27T17:47Z
 

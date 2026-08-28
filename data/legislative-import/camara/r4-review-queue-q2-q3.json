@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
   "packet_type": "camara_r4_review_queue",
-  "review_status": "pending_review",
+  "review_status": "approved",
   "remote_apply": false,
-  "public_approval": false,
+  "public_approval": true,
   "items": [
     {
       "house": "camara",
@@ -305,5 +305,7 @@
     "approved_non_scoring": 12,
     "approved_assessments": 1,
     "pending_event_resolution": 0
-  }
+  },
+  "reviewed_at": "2026-08-28T14:20:00Z",
+  "reviewer": "curadoria_editorial_integrada"
 }

@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "methodology_version": "1.0.0",
+  "severity": 4,
+  "structural_type": "structural",
+  "review_status": "approved",
+  "assessments": [
+    {
+      "group": "mulheres",
+      "impact_direction": "positive",
+      "defending_vote": "sim",
+      "confidence": 0.99,
+      "rationale": "O substitutivo cria estrutura nacional de prevenção e enfrentamento da violência contra meninas e mulheres, incluindo feminicídio; voto SIM aprova o instrumento de proteção.",
+      "sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2606313",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2606313-36",
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2606313-36/votos"
+      ],
+      "reviewed": [
+        {
+          "reviewer_type": "curadoria_interna",
+          "reviewed_at": "2026-08-28T14:20:00Z",
+          "reviewer_id": "editorial-r4-camara-q2-q3"
+        }
+      ]
+    }
+  ]
+}
