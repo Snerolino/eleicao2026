@@ -36,18 +36,101 @@ const [candidates, versionRows, existing] = await Promise.all([
 ]);
 const versions = versionRows.map((row) => ({ proposition_version_id: row.id, version_key: row.version_key, ...row.legislative_propositions }));
 const candidateByTse = new Map(candidates.map((row) => [String(row.tse_candidate_id), row]));
-const versionByNatural = new Map(); const versionByTitle = new Map();
-for (const row of versions) { const naturalKey = `${row.proposition_type}:${row.number}:${row.year}`; const list = versionByNatural.get(naturalKey) ?? []; list.push(row); versionByNatural.set(naturalKey, list); const titleKey = `${row.number}:${row.year}:${normalizeTitle(row.title)}`; const titleList = versionByTitle.get(titleKey) ?? []; titleList.push(row); versionByTitle.set(titleKey, titleList); }
+const versionByNatural = new Map(); const versionByNumberYear = new Map(); const versionByTitle = new Map();
+for (const row of versions) {
+  const naturalKey = `${String(row.proposition_type ?? '').toLowerCase()}:${row.number}:${row.year}`;
+  const list = versionByNatural.get(naturalKey) ?? [];
+  list.push(row);
+  versionByNatural.set(naturalKey, list);
+
+  const nyKey = `${row.number}:${row.year}`;
+  const nyList = versionByNumberYear.get(nyKey) ?? [];
+  nyList.push(row);
+  versionByNumberYear.set(nyKey, nyList);
+
+  const titleKey = `${row.number}:${row.year}:${normalizeTitle(row.title)}`;
+  const titleList = versionByTitle.get(titleKey) ?? [];
+  titleList.push(row);
+  versionByTitle.set(titleKey, titleList);
+}
 const existingKeys = new Set(existing.map((row) => `${row.candidate_id}|${row.voting_events?.proposition_version_id}|${normalizeCalendarDate(row.voting_events?.occurred_at)}|${row.value}`));
 const existingIdentityKeys = new Set(existing.map((row) => `${row.candidate_id}|${row.voting_events?.proposition_version_id}|${normalizeCalendarDate(row.voting_events?.occurred_at)}`));
 const existingVersionIds = new Set(existing.map((row) => row.voting_events?.proposition_version_id).filter(Boolean));
 function chooseVersion(matches) {
   return [...matches].sort((a, b) => Number(existingVersionIds.has(b.proposition_version_id)) - Number(existingVersionIds.has(a.proposition_version_id)) || Number(String(b.version_key).startsWith('sha256:')) - Number(String(a.version_key).startsWith('sha256:')) || String(a.proposition_version_id).localeCompare(String(b.proposition_version_id)))[0];
 }
+function resolveType(rawType) {
+  const t = String(rawType ?? '').trim().toLowerCase();
+  if (t.includes('pec')) return 'pec';
+  if (t.includes('pl') || t.includes('plc') || t.includes('pld') || t.includes('pdl')) return 'pl';
+  return 'outro';
+}
 const results = [];
-for (const row of sourceRows) { const candidate = candidateByTse.get(String(row.candidate.tse_candidate_id)); const type = String(row.tipoProjeto ?? '').trim().toLowerCase() === 'pec' ? 'pec' : 'outro'; const titleMatches = versionByTitle.get(`${Number(row.numProposicao)}:${Number(row.anoProposicao)}:${normalizeTitle(row.materia)}`) ?? []; const naturalMatches = versionByNatural.get(`${type}:${Number(row.numProposicao)}:${Number(row.anoProposicao)}`) ?? []; const versionsForMatter = titleMatches.length > 0 ? titleMatches : naturalMatches; const chosenVersion = versionsForMatter.length > 1 ? chooseVersion(versionsForMatter) : versionsForMatter[0]; const value = ({ Sim: 'sim', 'Não': 'nao', Abstenção: 'abstencao', Ausente: 'ausente', Obstrução: 'obstrucao' })[String(row.voto).trim()] ?? null; let status = 'missing_safe_to_import'; if (!candidate || !value) status = 'blocked_identity'; else if (!chosenVersion) status = 'blocked_proposition_version'; else { const identityKey = `${candidate.id}|${chosenVersion.proposition_version_id}|${normalizeCalendarDate(row.dataVotacao)}`; if (existingKeys.has(`${identityKey}|${value}`)) status = 'already_present_exact'; else if (existingIdentityKeys.has(identityKey)) status = 'conflict_existing_value'; } results.push({ status, candidate_id: candidate?.id ?? null, tse_candidate_id: row.candidate.tse_candidate_id, politician_name: row.politician_name, proposition_version_id: chosenVersion?.proposition_version_id ?? null, proposition_type: type, proposition_number: Number(row.numProposicao), proposition_year: Number(row.anoProposicao), occurred_at: row.dataVotacao, value, source_url: row.source_url, source_sha256: row.source_sha256 }); }
+for (const row of sourceRows) {
+  const candidate = candidateByTse.get(String(row.candidate.tse_candidate_id));
+  const rawType = resolveType(row.tipoProjeto);
+  const num = Number(row.numProposicao);
+  const yr = Number(row.anoProposicao);
+  const value = ({ Sim: 'sim', 'Não': 'nao', Abstenção: 'abstencao', Ausente: 'ausente', Obstrução: 'obstrucao' })[String(row.voto).trim()] ?? null;
+  const date = normalizeCalendarDate(row.dataVotacao);
+
+  const titleMatches = versionByTitle.get(`${num}:${yr}:${normalizeTitle(row.materia)}`) ?? [];
+  const naturalMatches = versionByNatural.get(`${rawType}:${num}:${yr}`) ?? [];
+  const nyMatches = versionByNumberYear.get(`${num}:${yr}`) ?? [];
+  const candidateMatches = titleMatches.length > 0 ? titleMatches : (naturalMatches.length > 0 ? naturalMatches : nyMatches);
+
+  let chosenVersion = null;
+  if (candidateMatches.length === 1) {
+    chosenVersion = candidateMatches[0];
+  } else if (candidateMatches.length > 1) {
+    if (candidate && value) {
+      const exactMatch = candidateMatches.find((v) => existingKeys.has(`${candidate.id}|${v.proposition_version_id}|${date}|${value}`));
+      if (exactMatch) {
+        chosenVersion = exactMatch;
+      } else {
+        const nonConflicting = candidateMatches.filter((v) => !existingIdentityKeys.has(`${candidate.id}|${v.proposition_version_id}|${date}`));
+        chosenVersion = nonConflicting.length > 0 ? chooseVersion(nonConflicting) : chooseVersion(candidateMatches);
+      }
+    } else {
+      chosenVersion = chooseVersion(candidateMatches);
+    }
+  }
+
+  let status = 'missing_safe_to_import';
+  if (!candidate || !value) status = 'blocked_identity';
+  else if (!chosenVersion) status = 'blocked_proposition_version';
+  else {
+    const identityKey = `${candidate.id}|${chosenVersion.proposition_version_id}|${date}`;
+    if (existingKeys.has(`${identityKey}|${value}`)) status = 'already_present_exact';
+    else if (existingIdentityKeys.has(identityKey)) status = 'conflict_existing_value';
+  }
+
+  results.push({
+    status,
+    candidate_id: candidate?.id ?? null,
+    tse_candidate_id: row.candidate.tse_candidate_id,
+    politician_name: row.politician_name,
+    proposition_version_id: chosenVersion?.proposition_version_id ?? null,
+    proposition_type: rawType,
+    proposition_number: num,
+    proposition_year: yr,
+    occurred_at: row.dataVotacao,
+    value,
+    source_url: row.source_url,
+    source_sha256: row.source_sha256,
+  });
+}
 const counts = Object.fromEntries(['source_rows', 'exact_candidate_rows', 'candidate_matches', 'resolved_proposition_versions', 'already_present', 'missing', 'conflicts', 'ambiguous', 'blocked_identity', 'blocked_proposition'].map((key) => [key, 0]));
-counts.source_rows = sourceRows.length; counts.exact_candidate_rows = sourceRows.length; counts.candidate_matches = results.filter((row) => row.candidate_id).length; counts.resolved_proposition_versions = results.filter((row) => row.proposition_version_id).length; counts.already_present = results.filter((row) => row.status === 'already_present_exact').length; counts.missing = results.filter((row) => row.status === 'missing_safe_to_import').length; counts.conflicts = results.filter((row) => row.status === 'conflict_existing_value').length; counts.ambiguous = results.filter((row) => row.status === 'ambiguous').length; counts.blocked_identity = results.filter((row) => row.status === 'blocked_identity').length; counts.blocked_proposition = results.filter((row) => row.status === 'blocked_proposition_version').length;
+counts.source_rows = sourceRows.length;
+counts.exact_candidate_rows = sourceRows.length;
+counts.candidate_matches = results.filter((row) => row.candidate_id).length;
+counts.resolved_proposition_versions = results.filter((row) => row.proposition_version_id).length;
+counts.already_present = results.filter((row) => row.status === 'already_present_exact').length;
+counts.missing = results.filter((row) => row.status === 'missing_safe_to_import').length;
+counts.conflicts = results.filter((row) => row.status === 'conflict_existing_value').length;
+counts.ambiguous = results.filter((row) => row.status === 'ambiguous').length;
+counts.blocked_identity = results.filter((row) => row.status === 'blocked_identity').length;
+counts.blocked_proposition = results.filter((row) => row.status === 'blocked_proposition_version').length;
 const outputData = { schema_version: '1.0.0', packet_type: 'alrs_nominal_vote_reconciliation', remote_apply: false, source_manifest_sha256: createHash('sha256').update(readFileSync(manifestFile)).digest('hex'), counts, rows: results };
 writeFileSync(output, `${JSON.stringify(outputData, null, 2)}\n`);
 console.log(JSON.stringify({ output, counts }));
