@@ -7,7 +7,7 @@ import { fetchConcurrent } from './lib/http-pool.mjs';
 const root = resolve(import.meta.dirname, '..');
 const output = resolve(root, 'data/legislative-import/alrs/alrs-nominal-discovery-manifest-v1.json');
 const candidatesFile = resolve(root, 'data/public-candidates.json');
-const years = (process.argv.find((arg) => arg.startsWith('--years='))?.slice(8) ?? '2023,2024,2025,2026').split(',').map(Number);
+const years = (process.argv.find((arg) => arg.startsWith('--years='))?.slice(8) ?? '2019,2020,2021,2022,2023,2024,2025,2026').split(',').map(Number);
 const base = 'https://transparencia.al.rs.gov.br/parlamentares/votos-plenario';
 const headers = { accept: 'text/html', 'user-agent': 'eleicao2026-alrs-discovery/1.0' };
 

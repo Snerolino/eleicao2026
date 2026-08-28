@@ -2,6 +2,8 @@
 
 ## 2026-08-27
 
+- Discovery ALRS ampliado para 2019–2026: `43.762` linhas nominais com identidade exata, `36.589` já presentes após importação histórica, `1` conflito isolado e `7.172` proposition_versions ainda sem resolução oficial.
+
 - Documentado e formalizado o workflow autônomo do Hermes (`docs/workflow-autonomo-hermes-autoaprovacao-assessments.md`) com auto-aprovação ininterrupta para matérias com fonte verde e sem necessidade de painel externo, isolando granularmente matérias com `severity >= 4` ou `confidence < 0.60`.
 - Formalizadas regras de `defending_vote = 'nao'` para matérias com impacto negativo sobre grupos populacionais, mantendo alinhamento derivado (+1 / -1) e taxonomia fechada de 14 grupos canônicos.
 
