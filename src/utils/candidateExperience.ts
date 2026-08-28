@@ -5,21 +5,35 @@ const MANDATE_KEYWORDS_REGEX = /\b(eleit[oa]|deputad[oa]|senador[a]?|governador[
 export type CandidateExperienceFilter = '' | 'mandato_anterior' | 'estreante';
 
 /**
+ * Cache to avoid redundant expensive regex evaluations across re-renders.
+ */
+const mandateCache = new WeakMap<CandidateWithClaims, boolean>();
+
+/**
  * Identifica se o candidato já foi eleito anteriormente ou exerceu cargo eletivo / mandato parlamentar.
+ * ⚡ Bolt Optimization: Uses WeakMap caching to avoid repeated O(N) regex evaluations during list filtering.
  */
 export function hasPreviousMandate(candidate: CandidateWithClaims): boolean {
+  if (mandateCache.has(candidate)) {
+    return mandateCache.get(candidate)!;
+  }
+
   // 1. Possui votos nominais em qualquer casa legislativa oficial
   if ((candidate.voting_profiles ?? []).some((profile) => profile.total_votes > 0)) {
+    mandateCache.set(candidate, true);
     return true;
   }
 
   // 2. Possui claims de histórico político confirmando cargo eletivo / eleição prévia
   const claims = candidate.claims ?? [];
-  return claims.some(
+  const hasMandate = claims.some(
     (claim) =>
       (claim.category === 'historico_politico' || claim.category === 'historico') &&
       MANDATE_KEYWORDS_REGEX.test(claim.content)
   );
+
+  mandateCache.set(candidate, hasMandate);
+  return hasMandate;
 }
 
 export function candidateExperienceFilterType(candidate: CandidateWithClaims): 'mandato_anterior' | 'estreante' {
