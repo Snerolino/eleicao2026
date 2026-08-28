@@ -11,6 +11,17 @@ function chunk<T>(items: T[], size = 100): T[][] {
   return result;
 }
 
+async function fetchCandidateIndex(client: any, candidateId: string): Promise<Row[]> {
+  const first = await client.from('legislator_vote_index').select('candidate_id,voting_event_id,value', { count: 'exact' }).eq('candidate_id', candidateId).range(0, 999);
+  if (first.error) throw first.error;
+  const total = Number(first.count ?? first.data?.length ?? 0);
+  if (total <= 1000) return first.data ?? [];
+  const pages = await Promise.all(Array.from({ length: Math.ceil(total / 1000) - 1 }, (_, index) => client.from('legislator_vote_index').select('candidate_id,voting_event_id,value').eq('candidate_id', candidateId).range((index + 1) * 1000, (index + 2) * 1000 - 1)));
+  const error = pages.find((result) => result.error)?.error;
+  if (error) throw error;
+  return [...(first.data ?? []), ...pages.flatMap((result) => result.data ?? [])];
+}
+
 async function resolveDbCandidateMapping(client: any, candidateIds: string[]): Promise<{
   queryIds: string[];
   dbToPublicId: Map<string, string>;
@@ -81,14 +92,7 @@ export async function fetchVoteCategoryComparisons(candidateIds: string[]): Prom
   const client = supabase as any;
   const { queryIds, dbToPublicId } = await resolveDbCandidateMapping(client, candidateIds);
 
-  const indexBatches = await Promise.all(
-    queryIds.map((cid) =>
-      client.from('legislator_vote_index').select('candidate_id,voting_event_id,value').eq('candidate_id', cid)
-    )
-  );
-  const indexError = indexBatches.find((result) => result.error)?.error;
-  if (indexError) throw indexError;
-  const indexes = indexBatches.flatMap((result) => result.data ?? []) as Row[];
+  const indexes = (await Promise.all(queryIds.map((cid) => fetchCandidateIndex(client, cid)))).flat() as Row[];
 
   const eventIds = [...new Set(indexes.map((row) => row.voting_event_id).filter(Boolean))];
   if (eventIds.length === 0) return [];
@@ -107,14 +111,7 @@ export async function fetchVoteCategoryScores(candidateIds: string[]): Promise<V
   const client = supabase as any;
   const { queryIds, dbToPublicId } = await resolveDbCandidateMapping(client, candidateIds);
 
-  const indexBatches = await Promise.all(
-    queryIds.map((cid) =>
-      client.from('legislator_vote_index').select('candidate_id,voting_event_id,value').eq('candidate_id', cid)
-    )
-  );
-  const indexError = indexBatches.find((result) => result.error)?.error;
-  if (indexError) throw indexError;
-  const indexes = indexBatches.flatMap((result) => result.data ?? []) as Row[];
+  const indexes = (await Promise.all(queryIds.map((cid) => fetchCandidateIndex(client, cid)))).flat() as Row[];
 
   const eventIds = [...new Set(indexes.map((row) => row.voting_event_id).filter(Boolean))];
   if (eventIds.length === 0) return [];
