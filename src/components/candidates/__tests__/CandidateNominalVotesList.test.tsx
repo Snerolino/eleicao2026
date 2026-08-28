@@ -29,10 +29,17 @@ const mockVotes: CandidateNominalVote[] = [
 ];
 
 describe("CandidateNominalVotesList", () => {
-  it("renderiza lista de votos nominais com badges e fontes oficiais", () => {
+  it("inicia recolhido por padrão e expande ao clicar no cabeçalho", () => {
     render(<CandidateNominalVotesList votes={mockVotes} houseLabel="Câmara dos Deputados" />);
 
     expect(screen.getByText(/Registro Detalhado de Votações · Câmara dos Deputados/i)).toBeInTheDocument();
+    expect(screen.getByText(/Ver registro detalhado/i)).toBeInTheDocument();
+    expect(screen.queryByText("PLP 41/2024")).not.toBeInTheDocument();
+
+    const toggleButton = screen.getByRole("button", { name: /Registro Detalhado de Votações/i });
+    fireEvent.click(toggleButton);
+
+    expect(screen.getByText(/Ocultar votações/i)).toBeInTheDocument();
     expect(screen.getByText("PLP 41/2024")).toBeInTheDocument();
     expect(screen.getByText(/Política Nacional de Prevenção/i)).toBeInTheDocument();
     expect(screen.getByText("Voto: sim")).toBeInTheDocument();
@@ -40,8 +47,8 @@ describe("CandidateNominalVotesList", () => {
     expect(screen.getByText(/Mulheres · Ampliadora/i)).toBeInTheDocument();
   });
 
-  it("filtra por voto Sim e Não", () => {
-    render(<CandidateNominalVotesList votes={mockVotes} houseLabel="Câmara dos Deputados" />);
+  it("filtra por voto Sim e Não quando expandido", () => {
+    render(<CandidateNominalVotesList votes={mockVotes} houseLabel="Câmara dos Deputados" defaultExpanded />);
 
     const simButton = screen.getByRole("button", { name: /^Sim/i });
     fireEvent.click(simButton);
@@ -57,7 +64,7 @@ describe("CandidateNominalVotesList", () => {
   });
 
   it("filtra por termo de busca no input", () => {
-    render(<CandidateNominalVotesList votes={mockVotes} houseLabel="Câmara dos Deputados" />);
+    render(<CandidateNominalVotesList votes={mockVotes} houseLabel="Câmara dos Deputados" defaultExpanded />);
 
     const input = screen.getByPlaceholderText(/Buscar por nome da lei/i);
     fireEvent.change(input, { target: { value: "Mulheres" } });
