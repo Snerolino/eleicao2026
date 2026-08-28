@@ -416,6 +416,18 @@ function fetchAllFromMock(): CandidateWithClaims[] {
   }));
 }
 
+function selectRicherVotingProfiles(
+  snapshotProfiles?: VotingProfile[],
+  remoteProfiles?: VotingProfile[],
+): VotingProfile[] {
+  const snapshotTotal = (snapshotProfiles ?? []).reduce((acc, p) => acc + p.total_votes, 0);
+  const remoteTotal = (remoteProfiles ?? []).reduce((acc, p) => acc + p.total_votes, 0);
+  if (snapshotTotal >= remoteTotal && snapshotTotal > 0) {
+    return snapshotProfiles ?? [];
+  }
+  return remoteProfiles && remoteProfiles.length > 0 ? remoteProfiles : (snapshotProfiles ?? []);
+}
+
 function mergeSupabaseEditorialData(supabaseData: CandidateWithClaims[]): CandidateWithClaims[] {
   const byTse = new Map(
     supabaseData
@@ -429,7 +441,7 @@ function mergeSupabaseEditorialData(supabaseData: CandidateWithClaims[]): Candid
     return applyPublicCandidateWithClaimsOverrides({
       ...snapshotCandidate,
       claims: remoteCandidate?.claims ?? onlyPublished(snapshotCandidate.claims),
-      voting_profiles: remoteCandidate?.voting_profiles ?? [],
+      voting_profiles: selectRicherVotingProfiles(snapshotCandidate.voting_profiles, remoteCandidate?.voting_profiles),
     });
   });
 }
@@ -460,14 +472,12 @@ export async function fetchCandidateById(
     const candidate = await fetchCandidateFromSupabase(id);
     if (candidate) {
       const snapshotCandidate = findInMock(id);
-      if (!candidate.photo_url && snapshotCandidate?.photo_url) {
-        return {
-          ...candidate,
-          photo_url: snapshotCandidate.photo_url,
-          photo_source_url: snapshotCandidate.photo_source_url,
-        };
-      }
-      return candidate;
+      return {
+        ...candidate,
+        photo_url: candidate.photo_url || snapshotCandidate?.photo_url || null,
+        photo_source_url: candidate.photo_source_url || snapshotCandidate?.photo_source_url || null,
+        voting_profiles: selectRicherVotingProfiles(snapshotCandidate?.voting_profiles, candidate.voting_profiles),
+      };
     }
   } catch {
     // Supabase unavailable — fall through to mock
