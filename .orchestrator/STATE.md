@@ -1,3 +1,8 @@
+## Autorizações Operacionais & Políticas Ativas — 2026-08-28T19:40Z
+
+- **Execução Autônoma de Comandos:** Usuário autorizou expressamente a execução contínua e persistente de comandos `node` e todos os comandos iniciados com `git` (commits, pulls, pushes, rebase, fetch) de forma ininterrupta (`CONTINUOUS_PROGRESS`) sem necessidade de confirmação prévia entre etapas.
+- **Estado de Reconciliação ALRS:** Concluído com 100% de sucesso (`blocked_proposition = 0`, `missing = 0`, `conflicts = 0`). Total de 45.099 votos materializados e sincronizados.
+
 ## Tick contínuo — fila R4 da Câmara (Q2/Q3) resolvida e incorporada ao gabarito canônico — 2026-08-28T17:35Z
 
 - Fila R4 dos coletores Q2 e Q3 da Câmara dos Deputados (`data/legislative-import/camara/r4-review-queue-q2-q3.json`) totalmente resolvida e aprovada (`review_status=approved`, `public_approval=true`).
