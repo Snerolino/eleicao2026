@@ -26,6 +26,11 @@ const anonKey = process.env.SUPABASE_PUBLISHABLE_KEY || process.env.VITE_SUPABAS
 const stateFile = resolve(process.env.XDG_STATE_HOME || resolve(homedir(), '.local', 'state'), 'eleicao2026/supabase-editor-session.json');
 const reconciliation = JSON.parse(readFileSync(reconciliationFile, 'utf8'));
 const sourceRows = (reconciliation.rows ?? []).filter((row) => row.status === 'missing_safe_to_import');
+function calendarDate(value) {
+  const match = String(value).match(/^(?:([0-9]{2})\/([0-9]{2})\/([0-9]{4})|([0-9]{4})-([0-9]{2})-([0-9]{2}))/);
+  if (!match) throw new Error(`data ALRS inválida: ${value}`);
+  return match[3] ? `${match[3]}-${match[2]}-${match[1]}` : `${match[4]}-${match[5]}-${match[6]}`;
+}
 function isoDate(value) {
   const match = String(value).match(/^(\d{2})\/(\d{2})\/(\d{4})(?:\s+(\d{2}):(\d{2}))?/);
   if (!match) throw new Error(`data ALRS inválida: ${value}`);
@@ -33,12 +38,18 @@ function isoDate(value) {
 }
 const rows = [];
 const seen = new Set();
+const valuesByIdentity = new Map();
+const sourceConflicts = [];
 for (const row of sourceRows) {
   const normalized = { candidate_id: row.candidate_id, proposition_version_id: row.proposition_version_id, value: row.value, occurred_at: isoDate(row.occurred_at), source_url: row.source_url, source_sha256: row.source_sha256 };
-  const key = `${normalized.candidate_id}|${normalized.proposition_version_id}|${normalized.occurred_at}|${normalized.value}`;
+  const identity = `${normalized.candidate_id}|${normalized.proposition_version_id}|${calendarDate(row.occurred_at)}`;
+  const prior = valuesByIdentity.get(identity);
+  if (prior && prior !== normalized.value) { sourceConflicts.push({ identity, values: [prior, normalized.value] }); continue; }
+  valuesByIdentity.set(identity, normalized.value);
+  const key = `${identity}|${normalized.value}`;
   if (!seen.has(key)) { seen.add(key); rows.push(normalized); }
 }
-const report = { schema_version: '1.0.0', packet_type: 'alrs_nominal_vote_import', mode: apply ? 'apply' : 'dry-run', remote_apply: false, source_reconciliation: reconciliationFile, source_rows: sourceRows.length, deduplicated_rows: rows.length, chunk_size: chunkSize, chunks: [] };
+const report = { schema_version: '1.0.0', packet_type: 'alrs_nominal_vote_import', mode: apply ? 'apply' : 'dry-run', remote_apply: false, source_reconciliation: reconciliationFile, source_rows: sourceRows.length, deduplicated_rows: rows.length, source_conflicts: sourceConflicts, chunk_size: chunkSize, chunks: [] };
 if (apply && rows.length === 0) {
   report.status = 'idle_no_missing_safe_rows';
   writeFileSync(outputFile, `${JSON.stringify(report, null, 2)}\n`);
