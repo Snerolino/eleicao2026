@@ -27,6 +27,8 @@ import { getCandidateDeclaredAssets } from '@/services/candidateAssets';
 
 import { DivergentScoreBar } from '@/components/impact/DivergentScoreBar';
 import { getBeneficiaryGroupLabel } from '@/domain/impact/beneficiary-groups';
+import { SavedCandidateButton } from '@/components/candidates/SavedCandidateButton';
+import { useSavedCandidates } from '@/hooks/useSavedCandidates';
 
 function claimsForSection(
   claims: Claim[],
@@ -97,6 +99,10 @@ export function CandidateDossierPage() {
   });
 
   const candidate = query.data;
+  const { savedSet, toggleSaved } = useSavedCandidates();
+  const candidateUniqueId = candidate ? (candidate.tse_candidate_id ?? candidate.id) : '';
+  const isSaved = candidateUniqueId ? savedSet.has(candidateUniqueId) : false;
+
   const categoryScoresQuery = useQuery({
     queryKey: ['candidate-category-scores', candidate?.id],
     queryFn: () => fetchVoteCategoryScores(candidate?.id ? [candidate.id] : []),
@@ -155,45 +161,58 @@ export function CandidateDossierPage() {
         <article className="mt-6 space-y-10">
           <DataFreshness updatedAt={query.dataUpdatedAt} />
 
-          <header className="flex flex-col gap-5 border-b border-[var(--color-border-editorial)] pb-7 sm:flex-row sm:items-center">
-            <div className="h-32 w-32 shrink-0 overflow-hidden rounded-sm bg-[var(--color-skeleton)]">
-              <CandidatePhoto
-                name={candidate.full_name}
-                photoUrl={candidate.photo_url}
-                className="h-full w-full object-cover"
-              />
+          <header className="flex flex-col gap-5 border-b border-[var(--color-border-editorial)] pb-7 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
+              <div className="h-32 w-32 shrink-0 overflow-hidden rounded-sm bg-[var(--color-skeleton)]">
+                <CandidatePhoto
+                  name={candidate.full_name}
+                  photoUrl={candidate.photo_url}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+
+              <div>
+                <p className="font-mono text-xs uppercase tracking-widest text-[var(--color-muted-ink)]">
+                  {candidate.position_label}
+                </p>
+                <h1 className="mt-1 text-4xl leading-tight">
+                  {candidate.full_name}
+                </h1>
+                <p className="mt-2 font-mono text-sm text-[var(--color-muted-ink)]">
+                  {candidate.party}
+                  {candidate.ballot_number != null
+                    ? ` · nº ${candidate.ballot_number}`
+                    : ''}
+                </p>
+
+                {
+                  (() => {
+                    const safePhotoSourceUrl = sanitizeUrl(candidate.photo_source_url);
+                    return safePhotoSourceUrl ? (
+                      <a
+                        href={safePhotoSourceUrl}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="mt-3 inline-block font-mono text-xs text-[var(--color-institutional)] underline underline-offset-2"
+                        aria-label={`Abrir fonte da foto de ${candidate.full_name}`}
+                      >
+                        fonte da foto <span aria-hidden="true">↗</span>
+                      </a>
+                    ) : null;
+                  })()
+                }
+              </div>
             </div>
 
-            <div>
-              <p className="font-mono text-xs uppercase tracking-widest text-[var(--color-muted-ink)]">
-                {candidate.position_label}
-              </p>
-              <h1 className="mt-1 text-4xl leading-tight">
-                {candidate.full_name}
-              </h1>
-              <p className="mt-2 font-mono text-sm text-[var(--color-muted-ink)]">
-                {candidate.party}
-                {candidate.ballot_number != null
-                  ? ` · nº ${candidate.ballot_number}`
-                  : ''}
-              </p>
-
-              {
-                (() => {
-                  const safePhotoSourceUrl = sanitizeUrl(candidate.photo_source_url);
-                  return safePhotoSourceUrl ? (
-                    <a
-                      href={safePhotoSourceUrl}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="mt-3 inline-block font-mono text-xs text-[var(--color-institutional)] underline underline-offset-2"
-                      aria-label={`Abrir fonte da foto de ${candidate.full_name}`}
-                    >
-                      fonte da foto <span aria-hidden="true">↗</span>
-                    </a>
-                  ) : null;
-                })()
-              }
+            <div className="flex shrink-0 items-center gap-3">
+              <SavedCandidateButton
+                candidateName={candidate.full_name}
+                saved={isSaved}
+                onToggle={() => toggleSaved(candidateUniqueId)}
+              />
+              <span className="font-mono text-xs text-[var(--color-muted-ink)]">
+                {isSaved ? 'Salvo nos favoritos' : 'Favoritar candidato'}
+              </span>
             </div>
           </header>
 

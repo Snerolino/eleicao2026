@@ -8,13 +8,25 @@ import { candidatePublicPath } from '@/utils/candidateIdentity';
 import { candidateExperienceBadge } from '@/utils/candidateExperience';
 import { SOURCE_CATEGORY_COLOR } from '@/utils/sourceCategory';
 
+import { SavedCandidateButton } from './SavedCandidateButton';
+import { useSavedCandidates } from '@/hooks/useSavedCandidates';
+
 interface CandidateCardProps {
   candidate: CandidateWithClaims;
+  saved?: boolean;
+  onToggleSaved?: (id: string) => void;
 }
 
 export const CandidateCard = memo(function CandidateCard({
-  candidate
+  candidate,
+  saved: propSaved,
+  onToggleSaved: propOnToggleSaved,
 }: CandidateCardProps) {
+  const { savedSet, toggleSaved } = useSavedCandidates();
+  const candId = candidate.tse_candidate_id ?? candidate.id;
+  const isSaved = propSaved !== undefined ? propSaved : savedSet.has(candId);
+  const handleToggle = () => (propOnToggleSaved ? propOnToggleSaved(candId) : toggleSaved(candId));
+
   const published = candidate.claims.filter((claim) => claim.status === 'published');
   const SUMMARY_PRIORITY = [
     'summary',
@@ -44,7 +56,15 @@ export const CandidateCard = memo(function CandidateCard({
       data-source-category={sourceDoc?.source_category ?? 'outro'}
       data-experience-type={experience.type}
     >
-      <div className="flex gap-4 p-4">
+      <div className="absolute right-3 top-3 z-20">
+        <SavedCandidateButton
+          candidateName={candidate.full_name}
+          saved={isSaved}
+          onToggle={handleToggle}
+        />
+      </div>
+
+      <div className="flex gap-4 p-4 pr-12">
         <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-sm bg-[var(--color-skeleton)]">
           <CandidatePhoto
             name={candidate.full_name}

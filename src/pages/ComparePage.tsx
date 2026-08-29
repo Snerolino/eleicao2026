@@ -28,6 +28,8 @@ import {
   candidateExperienceBadge,
   hasPreviousMandate,
 } from '@/utils/candidateExperience';
+import { SavedCandidateButton } from '@/components/candidates/SavedCandidateButton';
+import { useSavedCandidates } from '@/hooks/useSavedCandidates';
 
 function claimsForSection(
   claims: Claim[],
@@ -218,6 +220,7 @@ export function ComparePage() {
   const navigate = useNavigate();
   const [partyFilter, setPartyFilter] = useState('');
   const [womenOnly, setWomenOnly] = useState(false);
+  const [favoritesOnly, setFavoritesOnly] = useState(false);
   const [raceFilter, setRaceFilter] = useState('');
   const [positionFilter, setPositionFilter] = useState('');
   const [experienceFilter, setExperienceFilter] = useState<CandidateExperienceFilter>('');
@@ -233,6 +236,8 @@ export function ComparePage() {
 
   const candidates = query.data ?? [];
   const validCandidateIds = useMemo(() => new Set(candidates.map((c) => c.id)), [candidates]);
+  const { savedSet, toggleSaved } = useSavedCandidates(validCandidateIds, query.isSuccess);
+
   const { parties, races, experienceCounts } = useMemo(() => {
     const partySet = new Set<string>();
     const raceSet = new Set<string>(OFFICIAL_RACE_FILTERS);
@@ -257,12 +262,13 @@ export function ComparePage() {
   const filteredCandidates = useMemo(() => candidates.filter((candidate) => {
     if (partyFilter && candidate.party !== partyFilter) return false;
     if (womenOnly && candidate.gender !== 'FEMININO') return false;
+    if (favoritesOnly && !savedSet.has(candidate.tse_candidate_id ?? candidate.id)) return false;
     if (raceFilter && candidateRaceFilterValue(candidate) !== raceFilter) return false;
     if (positionFilter && candidate.position !== positionFilter) return false;
     if (experienceFilter === 'mandato_anterior' && !hasPreviousMandate(candidate)) return false;
     if (experienceFilter === 'estreante' && hasPreviousMandate(candidate)) return false;
     return true;
-  }), [candidates, partyFilter, womenOnly, raceFilter, positionFilter, experienceFilter]);
+  }), [candidates, partyFilter, womenOnly, favoritesOnly, savedSet, raceFilter, positionFilter, experienceFilter]);
 
   const sharedIds = useMemo(
     () => parseSharedCandidateIds(searchParams.get('candidatos'), validCandidateIds),
@@ -397,52 +403,61 @@ export function ComparePage() {
                           className="sticky top-0 min-w-[240px] border-l border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-3 text-left"
                           data-experience-type={exp.type}
                         >
-                          <div className="flex items-center gap-3">
-                            <div className="h-12 w-12 shrink-0 overflow-hidden rounded-sm bg-[var(--color-skeleton)]">
-                              <CandidatePhoto
-                                name={c.full_name}
-                                photoUrl={c.photo_url}
-                                className="h-full w-full object-cover"
-                              />
-                            </div>
-                            <div className="min-w-0 flex-1">
-                              <div className="flex flex-wrap items-center gap-1">
-                                <p className="font-mono text-[0.6rem] uppercase tracking-wider text-[var(--color-muted-ink)]">
-                                  {c.position_label}
-                                </p>
-                                {exp.type === 'mandato_anterior' ? (
-                                  <span
-                                    className="inline-flex items-center gap-0.5 rounded-full border border-[color-mix(in_srgb,var(--color-institutional)_30%,transparent)] bg-[color-mix(in_srgb,var(--color-institutional)_10%,var(--color-paper))] px-1.5 py-0.2 font-mono text-[0.55rem] font-semibold uppercase tracking-wider text-[var(--color-institutional)]"
-                                    title={exp.tooltip}
-                                  >
-                                    <svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" className="h-2 w-2 shrink-0">
-                                      <path d="M8 1a1 1 0 0 1 .7.3l2.8 2.8H14a1 1 0 0 1 1 1v2.5l2.8 2.8a1 1 0 0 1 0 1.4L15 11.8V14a1 1 0 0 1-1 1h-2.5l-2.8 2.8a1 1 0 0 1-1.4 0L4.5 15H2a1 1 0 0 1-1-1v-2.2L.2 10.5a1 1 0 0 1 0-1.4L2 6.3V4a1 1 0 0 1 1-1h2.5L8.3 1.3A1 1 0 0 1 8 1zm0 4.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z" />
-                                    </svg>
-                                    Mandato
-                                  </span>
-                                ) : (
-                                  <span
-                                    className="inline-flex items-center gap-0.5 rounded-full border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-1.5 py-0.2 font-mono text-[0.55rem] font-medium uppercase tracking-wider text-[var(--color-muted-ink)]"
-                                    title={exp.tooltip}
-                                  >
-                                    1ª cand.
-                                  </span>
-                                )}
+                          <div className="flex items-start justify-between gap-2">
+                            <div className="flex items-center gap-3 min-w-0">
+                              <div className="h-12 w-12 shrink-0 overflow-hidden rounded-sm bg-[var(--color-skeleton)]">
+                                <CandidatePhoto
+                                  name={c.full_name}
+                                  photoUrl={c.photo_url}
+                                  className="h-full w-full object-cover"
+                                />
                               </div>
-                              <p className="font-medium leading-tight">
-                                <Link
-                                  to={candidatePublicPath(c)}
-                                  className="text-[var(--color-institutional)] underline-offset-2 hover:underline"
-                                >
-                                  {c.full_name}
-                                </Link>
-                              </p>
-                              <p className="font-mono text-[0.65rem] text-[var(--color-muted-ink)]">
-                                {c.party}
-                                {c.ballot_number != null
-                                  ? ` · nº ${c.ballot_number}`
-                                  : ''}
-                              </p>
+                              <div className="min-w-0 flex-1">
+                                <div className="flex flex-wrap items-center gap-1">
+                                  <p className="font-mono text-[0.6rem] uppercase tracking-wider text-[var(--color-muted-ink)]">
+                                    {c.position_label}
+                                  </p>
+                                  {exp.type === 'mandato_anterior' ? (
+                                    <span
+                                      className="inline-flex items-center gap-0.5 rounded-full border border-[color-mix(in_srgb,var(--color-institutional)_30%,transparent)] bg-[color-mix(in_srgb,var(--color-institutional)_10%,var(--color-paper))] px-1.5 py-0.2 font-mono text-[0.55rem] font-semibold uppercase tracking-wider text-[var(--color-institutional)]"
+                                      title={exp.tooltip}
+                                    >
+                                      <svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" className="h-2 w-2 shrink-0">
+                                        <path d="M8 1a1 1 0 0 1 .7.3l2.8 2.8H14a1 1 0 0 1 1 1v2.5l2.8 2.8a1 1 0 0 1 0 1.4L15 11.8V14a1 1 0 0 1-1 1h-2.5l-2.8 2.8a1 1 0 0 1-1.4 0L4.5 15H2a1 1 0 0 1-1-1v-2.2L.2 10.5a1 1 0 0 1 0-1.4L2 6.3V4a1 1 0 0 1 1-1h2.5L8.3 1.3A1 1 0 0 1 8 1zm0 4.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z" />
+                                      </svg>
+                                      Mandato
+                                    </span>
+                                  ) : (
+                                    <span
+                                      className="inline-flex items-center gap-0.5 rounded-full border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-1.5 py-0.2 font-mono text-[0.55rem] font-medium uppercase tracking-wider text-[var(--color-muted-ink)]"
+                                      title={exp.tooltip}
+                                    >
+                                      1ª cand.
+                                    </span>
+                                  )}
+                                </div>
+                                <p className="font-medium leading-tight">
+                                  <Link
+                                    to={candidatePublicPath(c)}
+                                    className="text-[var(--color-institutional)] underline-offset-2 hover:underline"
+                                  >
+                                    {c.full_name}
+                                  </Link>
+                                </p>
+                                <p className="font-mono text-[0.65rem] text-[var(--color-muted-ink)]">
+                                  {c.party}
+                                  {c.ballot_number != null
+                                    ? ` · nº ${c.ballot_number}`
+                                    : ''}
+                                </p>
+                              </div>
+                            </div>
+                            <div className="shrink-0">
+                              <SavedCandidateButton
+                                candidateName={c.full_name}
+                                saved={savedSet.has(c.tse_candidate_id ?? c.id)}
+                                onToggle={() => toggleSaved(c.tse_candidate_id ?? c.id)}
+                              />
                             </div>
                           </div>
                         </th>
@@ -560,6 +575,15 @@ export function ComparePage() {
               />
               Mostrar somente mulheres
             </label>
+            <label className="inline-flex cursor-pointer items-center gap-2 rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)] focus-within:border-[var(--color-institutional)]">
+              <input
+                type="checkbox"
+                checked={favoritesOnly}
+                onChange={(event) => setFavoritesOnly(event.target.checked)}
+                className="accent-[var(--color-institutional)]"
+              />
+              Apenas favoritos ({savedSet.size})
+            </label>
             <select
               value={raceFilter}
               onChange={(event) => setRaceFilter(event.target.value)}
@@ -601,8 +625,9 @@ export function ComparePage() {
             const isSelected = selectedIds.has(c.id);
             const isMaxed = !isSelected && selectedIds.size >= 4;
             const exp = candidateExperienceBadge(c);
+            const candId = c.tse_candidate_id ?? c.id;
             return (
-              <li key={c.id}>
+              <li key={c.id} className="relative">
                 <button
                   type="button"
                   onClick={() => {
@@ -611,7 +636,7 @@ export function ComparePage() {
                   disabled={isMaxed}
                   aria-pressed={isSelected}
                   data-experience-type={exp.type}
-                  className={`flex w-full items-center gap-3 rounded-sm border p-3 text-left transition-colors ${
+                  className={`flex w-full items-center gap-3 rounded-sm border p-3 pr-14 text-left transition-colors ${
                     isSelected
                       ? 'border-[var(--color-institutional)] bg-[color-mix(in_srgb,var(--color-institutional)_8%,var(--color-paper))]'
                       : 'border-[var(--color-border-editorial)] bg-[var(--color-paper)] hover:border-[var(--color-institutional)]'
@@ -661,6 +686,13 @@ export function ComparePage() {
                     </span>
                   )}
                 </button>
+                <div className="absolute right-2 top-1/2 -translate-y-1/2 z-20">
+                  <SavedCandidateButton
+                    candidateName={c.full_name}
+                    saved={savedSet.has(candId)}
+                    onToggle={() => toggleSaved(candId)}
+                  />
+                </div>
               </li>
             );
           })}

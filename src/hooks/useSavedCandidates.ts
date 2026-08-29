@@ -14,11 +14,11 @@ function readSavedIds(): string[] {
   }
 }
 
-export function useSavedCandidates(validIds: Set<string>, validIdsReady = true) {
+export function useSavedCandidates(validIds?: Set<string>, validIdsReady = true) {
   const [savedIds, setSavedIds] = useState<string[]>(() => (typeof window === 'undefined' ? [] : readSavedIds()));
 
   useEffect(() => {
-    if (!validIdsReady) return;
+    if (!validIdsReady || !validIds) return;
     setSavedIds((current) => current.filter((id) => validIds.has(id)));
   }, [validIds, validIdsReady]);
 
