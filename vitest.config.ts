@@ -11,7 +11,6 @@ export default defineConfig({
       '**/dist/**',
       '**/.orchestrator/runtime/**',
     ],
-    isolate: false,
   },
   resolve: {
     alias: {

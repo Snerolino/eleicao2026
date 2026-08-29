@@ -126,8 +126,8 @@ describe('ComparePage H5.3', () => {
   it('atualiza a rota compartilhável ao selecionar candidaturas', async () => {
     renderCompare('/comparar');
 
-    fireEvent.click(screen.getByRole('button', { name: /ada cristina munaretto/i }));
-    fireEvent.click(screen.getByRole('button', { name: /joão batista garcia dias/i }));
+    fireEvent.click(screen.getByRole('button', { name: /Foto de Ada Cristina Munaretto/i }));
+    fireEvent.click(screen.getByRole('button', { name: /Foto de João Batista Garcia Dias/i }));
 
     expect(screen.getByLabelText(/url atual/i)).toHaveTextContent('/comparar?candidatos=tse-1,tse-2');
     expect(screen.getAllByRole('table').length).toBeGreaterThan(0);

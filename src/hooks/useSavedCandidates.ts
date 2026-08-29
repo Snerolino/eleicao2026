@@ -19,7 +19,13 @@ export function useSavedCandidates(validIds?: Set<string>, validIdsReady = true)
 
   useEffect(() => {
     if (!validIdsReady || !validIds) return;
-    setSavedIds((current) => current.filter((id) => validIds.has(id)));
+    setSavedIds((current) => {
+      const filtered = current.filter((id) => validIds.has(id));
+      if (filtered.length === current.length && filtered.every((id, i) => id === current[i])) {
+        return current;
+      }
+      return filtered;
+    });
   }, [validIds, validIdsReady]);
 
   useEffect(() => {
