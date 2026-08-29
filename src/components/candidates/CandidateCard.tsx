@@ -23,14 +23,23 @@ export const CandidateCard = memo(function CandidateCard({
     'reputacao',
     'votacao_scrutiny',
   ];
-  const summary =
-    published.find((claim) => claim.category.toLowerCase() === 'summary') ??
-    [...published].sort(
-      (a, b) =>
-        SUMMARY_PRIORITY.indexOf(a.category.toLowerCase()) -
-        SUMMARY_PRIORITY.indexOf(b.category.toLowerCase())
-    )[0] ??
-    null;
+  // ⚡ Bolt Optimization: Replaced declarative chained find/sort (O(N log N)) with an iterative O(N) loop to resolve the summary claim with highest priority.
+  const summary = (() => {
+    let bestScore = Infinity;
+    let bestClaim = null;
+    let fallbackClaim = null;
+    for (const claim of published) {
+      if (!fallbackClaim) fallbackClaim = claim;
+      const cat = claim.category.toLowerCase();
+      if (cat === 'summary') return claim;
+      const score = SUMMARY_PRIORITY.indexOf(cat);
+      if (score !== -1 && score < bestScore) {
+        bestScore = score;
+        bestClaim = claim;
+      }
+    }
+    return bestClaim ?? fallbackClaim ?? null;
+  })();
 
   const sourceDoc = summary?.source_document ?? null;
   const hasSource = Boolean(sourceDoc);
