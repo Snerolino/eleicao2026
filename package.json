@@ -35,6 +35,7 @@
     "impact:camara:envelope:build": "node scripts/build-camara-q1-resolved-envelope.mjs",
     "impact:camara:historical:envelope:build": "node scripts/build-camara-historical-resolved-envelope.mjs",
     "impact:camara:historical:prospect": "node scripts/prospect-camara-historical-candidates.mjs",
+    "impact:camara:historical:collect": "node scripts/collect-camara-historical-candidate-votes.mjs",
     "impact:camara:historical:write": "node scripts/apply-camara-historical-resolved.mjs",
     "impact:camara:sources:audit": "node scripts/audit-camara-envelope-sources.mjs",
     "impact:camara:sources:apply": "node scripts/apply-camara-q1-sources.mjs",
