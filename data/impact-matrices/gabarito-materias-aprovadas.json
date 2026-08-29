@@ -9183,6 +9183,106 @@
           ]
         }
       ]
+    },
+    {
+      "proposition_id": "camara:pl-3278-2024",
+      "house": "camara",
+      "type": "pl",
+      "number": "3278",
+      "year": 2024,
+      "title": "Política Nacional de Transição Energética Justa e Combate à Pobreza Energética",
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2601522",
+      "official_source_label": "Câmara dos Deputados — PL 3278/2024",
+      "severity": 3,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "populacao_negra_periferica",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.98,
+          "rationale": "Institui tarifas sociais diferenciadas e subsídios para implantação de energia limpa em comunidades de baixa renda e periferias.",
+          "sources": [
+            "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2601522"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "camara:pl-896-2023",
+      "house": "camara",
+      "type": "pl",
+      "number": "896",
+      "year": 2023,
+      "title": "Tipificação Penal e Agravamento de Penas para Injúria Racial e Crimes de Ódio",
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2636281",
+      "official_source_label": "Câmara dos Deputados — PL 896/2023",
+      "severity": 4,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "populacao_negra_periferica",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.98,
+          "rationale": "Fortalece a resposta penal contra o racismo e a discriminação racial, ampliando a proteção de vítimas de crimes de ódio.",
+          "sources": [
+            "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2636281"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "camara:pl-68-2026",
+      "house": "camara",
+      "type": "pl",
+      "number": "68",
+      "year": 2026,
+      "title": "Acesso a Medicamentos Inovadores para Diabetes e Doenças Crônicas no SUS",
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2601223",
+      "official_source_label": "Câmara dos Deputados — PL 68/2026",
+      "severity": 3,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "pessoas_com_deficiencia",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.98,
+          "rationale": "Declara interesse público e viabiliza a incorporação tecnológica no SUS de tratamentos para controle de diabetes severo e obesidade.",
+          "sources": [
+            "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2601223"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "camara:pdl-171-2026",
+      "house": "camara",
+      "type": "pdl",
+      "number": "171",
+      "year": 2026,
+      "title": "Tentativa de Sustação da Ampliação de Estação Ecológica e Proteção Ambiental",
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2637721",
+      "official_source_label": "Câmara dos Deputados — PDL 171/2026",
+      "severity": 4,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "povos_indigenas",
+          "impact_direction": "negative",
+          "defending_vote": "nao",
+          "confidence": 0.98,
+          "rationale": "Proposta visa revogar ato executivo de proteção e ampliação de unidade de conservação ambiental em área contígua a terras tradicionais.",
+          "sources": [
+            "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2637721"
+          ]
+        }
+      ]
     }
   ],
   "total_propositions": 19

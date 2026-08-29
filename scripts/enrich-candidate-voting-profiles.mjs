@@ -83,6 +83,14 @@ export function buildDeputyToTseMapping(root = ROOT) {
     }
   }
 
+  const historicalProspecting = readJson(resolve(root, "data/legislative-import/camara/historical-candidate-prospecting-v1.json"));
+  for (const match of historicalProspecting?.matches ?? []) {
+    for (const deputyId of match.camara_ids ?? []) {
+      deputyToTse.set(String(deputyId), match.tse_candidate_id);
+      deputyToTse.set(`camara-deputado-${deputyId}`, match.tse_candidate_id);
+    }
+  }
+
   // Candidatos ao Senado que exerceram mandato de Deputado Federal
   deputyToTse.set("156190", "210002547819"); // Marcel van Hattem
   deputyToTse.set("camara-deputado-156190", "210002547819");

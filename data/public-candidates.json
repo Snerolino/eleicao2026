@@ -281,8 +281,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 7,
         "profile_score": 0.304,
-        "substantive_votes": 6,
-        "procedural_votes": 17
+        "substantive_votes": 9,
+        "procedural_votes": 14
       }
     ],
     "category_scores": [
@@ -293,6 +293,22 @@
         "divergences_count": 1,
         "favorable_votes": 3,
         "unfavorable_votes": 1
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
       },
       {
         "group": "mulheres",
@@ -1339,8 +1355,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 3,
         "profile_score": 0.143,
-        "substantive_votes": 5,
-        "procedural_votes": 16
+        "substantive_votes": 9,
+        "procedural_votes": 12
       }
     ],
     "category_scores": [
@@ -1353,6 +1369,22 @@
         "unfavorable_votes": 1
       },
       {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
         "group": "mulheres",
         "score": 1,
         "evaluated_propositions_count": 1,
@@ -1363,10 +1395,10 @@
       {
         "group": "povos_indigenas",
         "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 2,
         "favorable_votes": 0,
-        "unfavorable_votes": 1
+        "unfavorable_votes": 2
       }
     ]
   },
@@ -1993,11 +2025,27 @@
         "votos_obstrucao": 0,
         "nominal_balance": 6,
         "profile_score": 0.3,
-        "substantive_votes": 3,
-        "procedural_votes": 17
+        "substantive_votes": 7,
+        "procedural_votes": 13
       }
     ],
     "category_scores": [
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 0,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 1,
+        "favorable_votes": 1,
+        "unfavorable_votes": 1
+      },
       {
         "group": "trabalhadores_informais",
         "score": 1,
@@ -2017,9 +2065,9 @@
       {
         "group": "povos_indigenas",
         "score": 1,
-        "evaluated_propositions_count": 1,
+        "evaluated_propositions_count": 2,
         "divergences_count": 0,
-        "favorable_votes": 1,
+        "favorable_votes": 2,
         "unfavorable_votes": 0
       }
     ]
@@ -2634,8 +2682,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 5,
         "profile_score": 0.385,
-        "substantive_votes": 3,
-        "procedural_votes": 10
+        "substantive_votes": 4,
+        "procedural_votes": 9
       }
     ],
     "category_scores": [
@@ -2645,6 +2693,14 @@
         "evaluated_propositions_count": 3,
         "divergences_count": 0,
         "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
         "unfavorable_votes": 0
       }
     ]
@@ -5434,8 +5490,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 7,
         "profile_score": 0.304,
-        "substantive_votes": 6,
-        "procedural_votes": 17
+        "substantive_votes": 10,
+        "procedural_votes": 13
       }
     ],
     "category_scores": [
@@ -5448,6 +5504,22 @@
         "unfavorable_votes": 1
       },
       {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
         "group": "mulheres",
         "score": 1,
         "evaluated_propositions_count": 1,
@@ -5458,10 +5530,10 @@
       {
         "group": "povos_indigenas",
         "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 2,
         "favorable_votes": 0,
-        "unfavorable_votes": 1
+        "unfavorable_votes": 2
       }
     ]
   },
@@ -8680,8 +8752,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 4,
         "profile_score": 0.182,
-        "substantive_votes": 5,
-        "procedural_votes": 17
+        "substantive_votes": 8,
+        "procedural_votes": 14
       }
     ],
     "category_scores": [
@@ -8694,6 +8766,14 @@
         "unfavorable_votes": 1
       },
       {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
         "group": "mulheres",
         "score": 1,
         "evaluated_propositions_count": 1,
@@ -8704,10 +8784,10 @@
       {
         "group": "povos_indigenas",
         "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 2,
         "favorable_votes": 0,
-        "unfavorable_votes": 1
+        "unfavorable_votes": 2
       }
     ]
   },
@@ -8741,8 +8821,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": -1,
         "profile_score": -0.048,
-        "substantive_votes": 6,
-        "procedural_votes": 15
+        "substantive_votes": 9,
+        "procedural_votes": 12
       }
     ],
     "category_scores": [
@@ -8753,6 +8833,22 @@
         "divergences_count": 4,
         "favorable_votes": 0,
         "unfavorable_votes": 4
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": -1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 2,
+        "favorable_votes": 0,
+        "unfavorable_votes": 2
       },
       {
         "group": "mulheres",
@@ -8823,8 +8919,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 3,
         "profile_score": 0.158,
-        "substantive_votes": 4,
-        "procedural_votes": 15
+        "substantive_votes": 6,
+        "procedural_votes": 13
       }
     ],
     "category_scores": [
@@ -8835,6 +8931,14 @@
         "divergences_count": 1,
         "favorable_votes": 1,
         "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": -1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 2,
+        "favorable_votes": 0,
+        "unfavorable_votes": 2
       },
       {
         "group": "mulheres",
@@ -9467,8 +9571,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 4,
         "profile_score": 0.2,
-        "substantive_votes": 6,
-        "procedural_votes": 14
+        "substantive_votes": 10,
+        "procedural_votes": 10
       }
     ],
     "category_scores": [
@@ -9481,6 +9585,22 @@
         "unfavorable_votes": 2
       },
       {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 0,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 1,
+        "favorable_votes": 1,
+        "unfavorable_votes": 1
+      },
+      {
         "group": "mulheres",
         "score": 1,
         "evaluated_propositions_count": 1,
@@ -9491,9 +9611,9 @@
       {
         "group": "povos_indigenas",
         "score": 1,
-        "evaluated_propositions_count": 1,
+        "evaluated_propositions_count": 2,
         "divergences_count": 0,
-        "favorable_votes": 1,
+        "favorable_votes": 2,
         "unfavorable_votes": 0
       }
     ]
@@ -9528,8 +9648,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 3,
         "profile_score": 0.143,
-        "substantive_votes": 5,
-        "procedural_votes": 16
+        "substantive_votes": 9,
+        "procedural_votes": 12
       }
     ],
     "category_scores": [
@@ -9542,7 +9662,31 @@
         "unfavorable_votes": 1
       },
       {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": -1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 2,
+        "favorable_votes": 0,
+        "unfavorable_votes": 2
+      },
+      {
         "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
@@ -10394,8 +10538,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 4,
         "profile_score": 0.167,
-        "substantive_votes": 6,
-        "procedural_votes": 18
+        "substantive_votes": 10,
+        "procedural_votes": 14
       }
     ],
     "category_scores": [
@@ -10408,6 +10552,22 @@
         "unfavorable_votes": 2
       },
       {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 0,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 1,
+        "favorable_votes": 1,
+        "unfavorable_votes": 1
+      },
+      {
         "group": "mulheres",
         "score": 1,
         "evaluated_propositions_count": 1,
@@ -10418,9 +10578,9 @@
       {
         "group": "povos_indigenas",
         "score": 1,
-        "evaluated_propositions_count": 1,
+        "evaluated_propositions_count": 2,
         "divergences_count": 0,
-        "favorable_votes": 1,
+        "favorable_votes": 2,
         "unfavorable_votes": 0
       }
     ]
@@ -12635,8 +12795,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 8,
         "profile_score": 0.364,
-        "substantive_votes": 6,
-        "procedural_votes": 16
+        "substantive_votes": 10,
+        "procedural_votes": 12
       }
     ],
     "category_scores": [
@@ -12649,6 +12809,22 @@
         "unfavorable_votes": 1
       },
       {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
         "group": "mulheres",
         "score": 1,
         "evaluated_propositions_count": 1,
@@ -12658,11 +12834,11 @@
       },
       {
         "group": "povos_indigenas",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
+        "score": 0,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 1,
         "favorable_votes": 1,
-        "unfavorable_votes": 0
+        "unfavorable_votes": 1
       }
     ]
   },
@@ -14778,8 +14954,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 3,
         "profile_score": 0.13,
-        "substantive_votes": 6,
-        "procedural_votes": 17
+        "substantive_votes": 10,
+        "procedural_votes": 13
       }
     ],
     "category_scores": [
@@ -14792,6 +14968,22 @@
         "unfavorable_votes": 3
       },
       {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": -1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 2,
+        "favorable_votes": 0,
+        "unfavorable_votes": 2
+      },
+      {
         "group": "mulheres",
         "score": 1,
         "evaluated_propositions_count": 1,
@@ -14802,9 +14994,9 @@
       {
         "group": "povos_indigenas",
         "score": 1,
-        "evaluated_propositions_count": 1,
+        "evaluated_propositions_count": 2,
         "divergences_count": 0,
-        "favorable_votes": 1,
+        "favorable_votes": 2,
         "unfavorable_votes": 0
       }
     ]
@@ -16789,8 +16981,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 6,
         "profile_score": 0.375,
-        "substantive_votes": 5,
-        "procedural_votes": 11
+        "substantive_votes": 7,
+        "procedural_votes": 9
       }
     ],
     "category_scores": [
@@ -16813,10 +17005,18 @@
       {
         "group": "povos_indigenas",
         "score": 1,
-        "evaluated_propositions_count": 1,
+        "evaluated_propositions_count": 2,
         "divergences_count": 0,
-        "favorable_votes": 1,
+        "favorable_votes": 2,
         "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
       }
     ]
   },
@@ -19769,8 +19969,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 6,
         "profile_score": 0.273,
-        "substantive_votes": 6,
-        "procedural_votes": 16
+        "substantive_votes": 9,
+        "procedural_votes": 13
       }
     ],
     "category_scores": [
@@ -19783,6 +19983,14 @@
         "unfavorable_votes": 1
       },
       {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
         "group": "mulheres",
         "score": 1,
         "evaluated_propositions_count": 1,
@@ -19793,10 +20001,10 @@
       {
         "group": "povos_indigenas",
         "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 2,
         "favorable_votes": 0,
-        "unfavorable_votes": 1
+        "unfavorable_votes": 2
       }
     ]
   },
@@ -20066,8 +20274,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 5,
         "profile_score": 0.263,
-        "substantive_votes": 5,
-        "procedural_votes": 14
+        "substantive_votes": 7,
+        "procedural_votes": 12
       }
     ],
     "category_scores": [
@@ -20078,6 +20286,22 @@
         "divergences_count": 2,
         "favorable_votes": 2,
         "unfavorable_votes": 2
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
       },
       {
         "group": "mulheres",
@@ -20140,8 +20364,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 5,
         "profile_score": 0.238,
-        "substantive_votes": 5,
-        "procedural_votes": 16
+        "substantive_votes": 8,
+        "procedural_votes": 13
       }
     ],
     "category_scores": [
@@ -20154,6 +20378,14 @@
         "unfavorable_votes": 1
       },
       {
+        "group": "populacao_negra_periferica",
+        "score": -1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 2,
+        "favorable_votes": 0,
+        "unfavorable_votes": 2
+      },
+      {
         "group": "mulheres",
         "score": 1,
         "evaluated_propositions_count": 1,
@@ -20164,9 +20396,9 @@
       {
         "group": "povos_indigenas",
         "score": 1,
-        "evaluated_propositions_count": 1,
+        "evaluated_propositions_count": 2,
         "divergences_count": 0,
-        "favorable_votes": 1,
+        "favorable_votes": 2,
         "unfavorable_votes": 0
       }
     ]
@@ -20642,8 +20874,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 0,
         "profile_score": 0,
-        "substantive_votes": 2,
-        "procedural_votes": 8
+        "substantive_votes": 4,
+        "procedural_votes": 6
       }
     ],
     "category_scores": [
@@ -20653,6 +20885,22 @@
         "evaluated_propositions_count": 2,
         "divergences_count": 1,
         "favorable_votes": 1,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
         "unfavorable_votes": 1
       }
     ]
@@ -20813,8 +21061,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 9,
         "profile_score": 0.333,
-        "substantive_votes": 6,
-        "procedural_votes": 21
+        "substantive_votes": 10,
+        "procedural_votes": 17
       }
     ],
     "category_scores": [
@@ -20827,6 +21075,22 @@
         "unfavorable_votes": 2
       },
       {
+        "group": "pessoas_com_deficiencia",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
         "group": "mulheres",
         "score": 1,
         "evaluated_propositions_count": 1,
@@ -20837,9 +21101,9 @@
       {
         "group": "povos_indigenas",
         "score": 1,
-        "evaluated_propositions_count": 1,
+        "evaluated_propositions_count": 2,
         "divergences_count": 0,
-        "favorable_votes": 1,
+        "favorable_votes": 2,
         "unfavorable_votes": 0
       }
     ]
@@ -21714,8 +21978,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": -2,
         "profile_score": -0.083,
-        "substantive_votes": 6,
-        "procedural_votes": 18
+        "substantive_votes": 10,
+        "procedural_votes": 14
       }
     ],
     "category_scores": [
@@ -21728,6 +21992,22 @@
         "unfavorable_votes": 3
       },
       {
+        "group": "pessoas_com_deficiencia",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": -1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 2,
+        "favorable_votes": 0,
+        "unfavorable_votes": 2
+      },
+      {
         "group": "mulheres",
         "score": 1,
         "evaluated_propositions_count": 1,
@@ -21738,9 +22018,9 @@
       {
         "group": "povos_indigenas",
         "score": 1,
-        "evaluated_propositions_count": 1,
+        "evaluated_propositions_count": 2,
         "divergences_count": 0,
-        "favorable_votes": 1,
+        "favorable_votes": 2,
         "unfavorable_votes": 0
       }
     ]
@@ -23244,8 +23524,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 2,
         "profile_score": 0.083,
-        "substantive_votes": 6,
-        "procedural_votes": 18
+        "substantive_votes": 10,
+        "procedural_votes": 14
       }
     ],
     "category_scores": [
@@ -23258,6 +23538,22 @@
         "unfavorable_votes": 3
       },
       {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": -1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 2,
+        "favorable_votes": 0,
+        "unfavorable_votes": 2
+      },
+      {
         "group": "mulheres",
         "score": 1,
         "evaluated_propositions_count": 1,
@@ -23268,9 +23564,9 @@
       {
         "group": "povos_indigenas",
         "score": 1,
-        "evaluated_propositions_count": 1,
+        "evaluated_propositions_count": 2,
         "divergences_count": 0,
-        "favorable_votes": 1,
+        "favorable_votes": 2,
         "unfavorable_votes": 0
       }
     ]
@@ -23893,13 +24189,21 @@
         "votos_obstrucao": 0,
         "nominal_balance": 8,
         "profile_score": 0.5,
-        "substantive_votes": 4,
-        "procedural_votes": 12
+        "substantive_votes": 7,
+        "procedural_votes": 9
       }
     ],
     "category_scores": [
       {
         "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
         "score": 1,
         "evaluated_propositions_count": 2,
         "divergences_count": 0,
@@ -23916,11 +24220,11 @@
       },
       {
         "group": "povos_indigenas",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
+        "score": 0,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 1,
         "favorable_votes": 1,
-        "unfavorable_votes": 0
+        "unfavorable_votes": 1
       }
     ]
   },
@@ -25471,8 +25775,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 3,
         "profile_score": 0.143,
-        "substantive_votes": 6,
-        "procedural_votes": 15
+        "substantive_votes": 8,
+        "procedural_votes": 13
       }
     ],
     "category_scores": [
@@ -25483,6 +25787,22 @@
         "divergences_count": 2,
         "favorable_votes": 2,
         "unfavorable_votes": 2
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       },
       {
         "group": "mulheres",
@@ -26015,8 +26335,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 0,
         "profile_score": 0,
-        "substantive_votes": 6,
-        "procedural_votes": 17
+        "substantive_votes": 10,
+        "procedural_votes": 13
       }
     ],
     "category_scores": [
@@ -26026,6 +26346,22 @@
         "evaluated_propositions_count": 4,
         "divergences_count": 1,
         "favorable_votes": 3,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 0,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 1,
+        "favorable_votes": 1,
         "unfavorable_votes": 1
       },
       {
@@ -26039,10 +26375,10 @@
       {
         "group": "povos_indigenas",
         "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 2,
         "favorable_votes": 0,
-        "unfavorable_votes": 1
+        "unfavorable_votes": 2
       }
     ]
   },
@@ -26719,8 +27055,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 3,
         "profile_score": 0.176,
-        "substantive_votes": 5,
-        "procedural_votes": 12
+        "substantive_votes": 7,
+        "procedural_votes": 10
       }
     ],
     "category_scores": [
@@ -26731,6 +27067,14 @@
         "divergences_count": 1,
         "favorable_votes": 3,
         "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
       },
       {
         "group": "mulheres",
@@ -26793,11 +27137,27 @@
         "votos_obstrucao": 0,
         "nominal_balance": 1,
         "profile_score": 0.048,
-        "substantive_votes": 3,
-        "procedural_votes": 18
+        "substantive_votes": 7,
+        "procedural_votes": 14
       }
     ],
     "category_scores": [
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
       {
         "group": "trabalhadores_informais",
         "score": 1,
@@ -26817,10 +27177,10 @@
       {
         "group": "povos_indigenas",
         "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 2,
         "favorable_votes": 0,
-        "unfavorable_votes": 1
+        "unfavorable_votes": 2
       }
     ]
   },
@@ -27832,8 +28192,8 @@
         "votos_obstrucao": 0,
         "nominal_balance": 8,
         "profile_score": 0.5,
-        "substantive_votes": 3,
-        "procedural_votes": 13
+        "substantive_votes": 6,
+        "procedural_votes": 10
       }
     ],
     "category_scores": [
@@ -27846,6 +28206,22 @@
         "unfavorable_votes": 0
       },
       {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
         "group": "mulheres",
         "score": 1,
         "evaluated_propositions_count": 1,
@@ -27856,9 +28232,9 @@
       {
         "group": "povos_indigenas",
         "score": 1,
-        "evaluated_propositions_count": 1,
+        "evaluated_propositions_count": 2,
         "divergences_count": 0,
-        "favorable_votes": 1,
+        "favorable_votes": 2,
         "unfavorable_votes": 0
       }
     ]
