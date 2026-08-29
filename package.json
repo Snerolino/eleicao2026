@@ -22,7 +22,7 @@
     "smoke:preview": "node scripts/smoke-browser.mjs",
     "health:preview": "node scripts/health-check.mjs",
     "security:audit": "bash -lc 'npm audit --omit=dev --audit-level=high'",
-    "test": "NODE_OPTIONS=\"--max-old-space-size=4096\" NODE_ENV=test vitest run",
+    "test": "NODE_OPTIONS=\"--max-old-space-size=2048\" NODE_ENV=test vitest run",
     "test:watch": "NODE_ENV=test vitest",
     "impact:dryrun": "node scripts/import-legislative-dry-run.mjs",
     "impact:alrs": "node scripts/import-alrs-votes.mjs",
