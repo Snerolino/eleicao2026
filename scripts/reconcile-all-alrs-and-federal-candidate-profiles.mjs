@@ -17,7 +17,11 @@ function classifyText(title, desc) {
     text.includes('menina') ||
     text.includes('mamografia') ||
     text.includes('câncer de mama') ||
-    text.includes('colo do útero')
+    text.includes('colo do útero') ||
+    text.includes('parto') ||
+    text.includes('puerpério') ||
+    text.includes('dignidade menstrual') ||
+    text.includes('absorvente')
   ) {
     return {
       group: 'mulheres',
@@ -31,37 +35,76 @@ function classifyText(title, desc) {
     };
   }
 
-  // 2. Servidores Públicos e Segurança Pública
+  // 2. LGBTQIA+
   if (
-    text.includes('magistério') ||
-    text.includes('servidor') ||
-    text.includes('funcionalismo') ||
-    text.includes('reajuste') ||
-    text.includes('subsídio') ||
-    text.includes('plano de carreira') ||
-    text.includes('data-base') ||
-    text.includes('quadro de pessoal') ||
-    text.includes('concurso público') ||
-    text.includes('polícia civil') ||
-    text.includes('brigada militar') ||
-    text.includes('bombeiro') ||
-    text.includes('perito') ||
-    text.includes('policial') ||
-    text.includes('estatuto')
+    text.includes('lgbt') ||
+    text.includes('diversidade sexual') ||
+    text.includes('identidade de gênero') ||
+    text.includes('homofobia') ||
+    text.includes('transfobia') ||
+    text.includes('nome social') ||
+    text.includes('lgbtfobia')
   ) {
     return {
-      group: 'servidores_publicos',
+      group: 'lgbtqia',
       direction: 'positive',
       defending_vote: 'sim',
       severity: 3,
-      type: text.includes('reajuste') || text.includes('subsídio') ? 'budgetary' : 'structural',
+      type: 'structural',
       confidence: 0.92,
       rationale:
-        'Norma regulamentadora de direitos, valorização, remuneração e estruturação das carreiras do serviço público e segurança estadual.',
+        'Garantia de direitos civis, cidadania e combate à discriminação por orientação sexual e identidade de gênero.',
     };
   }
 
-  // 3. Crianças e Adolescentes em Vulnerabilidade
+  // 3. População Negra e Periférica
+  if (
+    text.includes('população negra') ||
+    text.includes('igualdade racial') ||
+    text.includes('periferia') ||
+    text.includes('quilombola') ||
+    text.includes('antirracista') ||
+    text.includes('racismo') ||
+    text.includes('comunidade carente') ||
+    text.includes('habitação popular') ||
+    text.includes('moradia') ||
+    text.includes('regularização fundiária urbana')
+  ) {
+    return {
+      group: 'populacao_negra_periferica',
+      direction: 'positive',
+      defending_vote: 'sim',
+      severity: 3,
+      type: 'structural',
+      confidence: 0.9,
+      rationale:
+        'Políticas de promoção da igualdade racial, habitação digna e inclusão social de comunidades periféricas.',
+    };
+  }
+
+  // 4. Povos Indígenas e Comunidades Tradicionais
+  if (
+    text.includes('indígena') ||
+    text.includes('aldeia') ||
+    text.includes('guarani') ||
+    text.includes('kaingang') ||
+    text.includes('tradicionais') ||
+    text.includes('povo originário') ||
+    text.includes('demarcação')
+  ) {
+    return {
+      group: 'povos_indigenas_comunidades_tradicionais',
+      direction: 'positive',
+      defending_vote: 'sim',
+      severity: 3,
+      type: 'structural',
+      confidence: 0.9,
+      rationale:
+        'Defesa dos direitos territoriais, saúde indígena e salvaguarda das tradições culturais originárias.',
+    };
+  }
+
+  // 5. Crianças e Adolescentes em Vulnerabilidade
   if (
     text.includes('criança') ||
     text.includes('adolescente') ||
@@ -73,7 +116,10 @@ function classifyText(title, desc) {
     text.includes('pediatria') ||
     text.includes('conselho tutelar') ||
     text.includes('jovem') ||
-    text.includes('juventude')
+    text.includes('juventude') ||
+    text.includes('amparo à vítima') ||
+    text.includes('vulnerabilidade social') ||
+    text.includes('proteção social')
   ) {
     return {
       group: 'criancas_adolescentes_vulnerabilidade',
@@ -83,11 +129,34 @@ function classifyText(title, desc) {
       type: 'structural',
       confidence: 0.95,
       rationale:
-        'Política pública de proteção integral, amparo social e prevenção à violência contra crianças e jovens.',
+        'Política pública de proteção integral, amparo social e prevenção à violência contra crianças e jovens vulneráveis.',
     };
   }
 
-  // 4. Pessoas com Deficiência e Condições Crônicas
+  // 6. Idosos
+  if (
+    text.includes('idoso') ||
+    text.includes('terceira idade') ||
+    text.includes('envelhecimento') ||
+    text.includes('estatuto do idoso') ||
+    text.includes('asilo') ||
+    text.includes('ilpi') ||
+    text.includes('geriatria') ||
+    text.includes('centro-dia')
+  ) {
+    return {
+      group: 'idosos',
+      direction: 'positive',
+      defending_vote: 'sim',
+      severity: 3,
+      type: 'structural',
+      confidence: 0.92,
+      rationale:
+        'Proteção, assistência integral e garantia de prioridade e dignidade à população idosa.',
+    };
+  }
+
+  // 7. Pessoas com Deficiência e Condições Crônicas
   if (
     text.includes('deficiência') ||
     text.includes('pcd') ||
@@ -100,7 +169,8 @@ function classifyText(title, desc) {
     text.includes('visão monocular') ||
     text.includes('mobilidade reduzida') ||
     text.includes('down') ||
-    text.includes('doença rara')
+    text.includes('doença rara') ||
+    text.includes('cordão de girassol')
   ) {
     return {
       group: 'pessoas_com_deficiencia',
@@ -114,7 +184,38 @@ function classifyText(title, desc) {
     };
   }
 
-  // 5. Saúde e Usuários do SUS
+  // 8. Educação e Estudantes
+  if (
+    text.includes('educação') ||
+    text.includes('escola') ||
+    text.includes('ensino') ||
+    text.includes('estudante') ||
+    text.includes('aluno') ||
+    text.includes('transporte escolar') ||
+    text.includes('merenda') ||
+    text.includes('pré-universitário') ||
+    text.includes('universidade') ||
+    text.includes('uergs') ||
+    text.includes('pedagógico') ||
+    text.includes('alfabetização') ||
+    text.includes('livro') ||
+    text.includes('biblioteca') ||
+    text.includes('passe livre estudantil') ||
+    text.includes('bolsa de estudo')
+  ) {
+    return {
+      group: 'educacao_estudantes',
+      direction: 'positive',
+      defending_vote: 'sim',
+      severity: 3,
+      type: 'structural',
+      confidence: 0.92,
+      rationale:
+        'Fomento à educação pública, passe livre estudantil, merenda e infraestrutura da rede de ensino.',
+    };
+  }
+
+  // 9. Saúde e Usuários do SUS
   if (
     text.includes('saúde') ||
     text.includes('hospital') ||
@@ -132,7 +233,10 @@ function classifyText(title, desc) {
     text.includes('psicológico') ||
     text.includes('mental') ||
     text.includes('caps') ||
-    text.includes('atendimento médico')
+    text.includes('atendimento médico') ||
+    text.includes('ipergs') ||
+    text.includes('ipe saúde') ||
+    text.includes('plano de saúde')
   ) {
     return {
       group: 'saude_usuarios_sus',
@@ -142,40 +246,11 @@ function classifyText(title, desc) {
       type: 'budgetary',
       confidence: 0.9,
       rationale:
-        'Fortalecimento do sistema público de saúde, assistência farmacêutica e ampliação da rede de atendimento do SUS.',
+        'Fortalecimento do sistema público de saúde, assistência médica/farmacêutica e atendimento aos usuários do SUS.',
     };
   }
 
-  // 6. Educação e Estudantes
-  if (
-    text.includes('educação') ||
-    text.includes('escola') ||
-    text.includes('ensino') ||
-    text.includes('estudante') ||
-    text.includes('aluno') ||
-    text.includes('transporte escolar') ||
-    text.includes('merenda') ||
-    text.includes('pré-universitário') ||
-    text.includes('universidade') ||
-    text.includes('uergs') ||
-    text.includes('pedagógico') ||
-    text.includes('alfabetização') ||
-    text.includes('livro') ||
-    text.includes('biblioteca')
-  ) {
-    return {
-      group: 'educacao_estudantes',
-      direction: 'positive',
-      defending_vote: 'sim',
-      severity: 3,
-      type: 'structural',
-      confidence: 0.9,
-      rationale:
-        'Fomento à educação pública, acesso estudantil, transporte escolar e infraestrutura da rede de ensino.',
-    };
-  }
-
-  // 7. Meio Ambiente e Clima
+  // 10. Meio Ambiente, Clima e Proteção Animal
   if (
     text.includes('meio ambiente') ||
     text.includes('clima') ||
@@ -187,12 +262,16 @@ function classifyText(title, desc) {
     text.includes('resíduos sólidos') ||
     text.includes('saneamento') ||
     text.includes('proteção animal') ||
+    text.includes('animais') ||
+    text.includes('animal') ||
+    text.includes('bem-estar') ||
     text.includes('fauna') ||
     text.includes('flora') ||
     text.includes('rio') ||
     text.includes('água') ||
     text.includes('desastre') ||
-    text.includes('reciclagem')
+    text.includes('reciclagem') ||
+    text.includes('preservação')
   ) {
     return {
       group: 'meio_ambiente_clima',
@@ -202,11 +281,11 @@ function classifyText(title, desc) {
       type: 'structural',
       confidence: 0.9,
       rationale:
-        'Medidas de conservação ambiental, resiliência climática, prevenção a cheias e proteção de recursos hídricos e fauna.',
+        'Medidas de conservação ambiental, resiliência climática, prevenção a cheias e proteção e bem-estar animal.',
     };
   }
 
-  // 8. Agricultores Familiares e Meio Rural
+  // 11. Agricultores Familiares e Meio Rural
   if (
     text.includes('agricultura familiar') ||
     text.includes('pequeno produtor') ||
@@ -219,7 +298,10 @@ function classifyText(title, desc) {
     text.includes('agropecuária') ||
     text.includes('pesca') ||
     text.includes('colono') ||
-    text.includes('safra')
+    text.includes('safra') ||
+    text.includes('abigeato') ||
+    text.includes('estradas rurais') ||
+    text.includes('porteira para dentro')
   ) {
     return {
       group: 'agricultores_familiares',
@@ -229,11 +311,11 @@ function classifyText(title, desc) {
       type: 'structural',
       confidence: 0.88,
       rationale:
-        'Fomento à produção rural familiar, assistência técnica e enfrentamento de perdas por estiagem no campo.',
+        'Fomento à produção rural familiar, combate ao abigeato, assistência técnica e enfrentamento de perdas no campo.',
     };
   }
 
-  // 9. Micro e Pequenos Empreendedores
+  // 12. Micro e Pequenos Empreendedores
   if (
     text.includes('microempresa') ||
     text.includes('pequeno porte') ||
@@ -245,7 +327,10 @@ function classifyText(title, desc) {
     text.includes('comércio') ||
     text.includes('inovação') ||
     text.includes('startup') ||
-    text.includes('cooperativa')
+    text.includes('cooperativa') ||
+    text.includes('polo industrial') ||
+    text.includes('artesanato regional') ||
+    text.includes('icms pertencente aos municípios')
   ) {
     return {
       group: 'micro_pequenos_empreendedores',
@@ -255,97 +340,11 @@ function classifyText(title, desc) {
       type: 'structural',
       confidence: 0.88,
       rationale:
-        'Incentivo e facilitação de crédito, regime simplificado e apoio a pequenos empreendimentos e cooperativas locais.',
+        'Incentivo e facilitação tributária, fomento a pequenos negócios e fortalecimento do desenvolvimento econômico local.',
     };
   }
 
-  // 10. Idosos
-  if (
-    text.includes('idoso') ||
-    text.includes('terceira idade') ||
-    text.includes('envelhecimento') ||
-    text.includes('estatuto do idoso') ||
-    text.includes('asilo') ||
-    text.includes('ilpi')
-  ) {
-    return {
-      group: 'idosos',
-      direction: 'positive',
-      defending_vote: 'sim',
-      severity: 3,
-      type: 'structural',
-      confidence: 0.92,
-      rationale:
-        'Proteção, assistência integral e garantia de prioridade e dignidade à população idosa.',
-    };
-  }
-
-  // 11. População Negra e Periférica
-  if (
-    text.includes('população negra') ||
-    text.includes('igualdade racial') ||
-    text.includes('periferia') ||
-    text.includes('quilombola') ||
-    text.includes('antirracista') ||
-    text.includes('comunidade carente') ||
-    text.includes('habitação popular') ||
-    text.includes('moradia')
-  ) {
-    return {
-      group: 'populacao_negra_periferica',
-      direction: 'positive',
-      defending_vote: 'sim',
-      severity: 3,
-      type: 'structural',
-      confidence: 0.9,
-      rationale:
-        'Políticas de promoção da igualdade racial, habitação digna e inclusão social de comunidades periféricas.',
-    };
-  }
-
-  // 12. Povos Indígenas e Comunidades Tradicionais
-  if (
-    text.includes('indígena') ||
-    text.includes('aldeia') ||
-    text.includes('guarani') ||
-    text.includes('kaingang') ||
-    text.includes('tradicionais') ||
-    text.includes('povo originário')
-  ) {
-    return {
-      group: 'povos_indigenas_comunidades_tradicionais',
-      direction: 'positive',
-      defending_vote: 'sim',
-      severity: 3,
-      type: 'structural',
-      confidence: 0.9,
-      rationale:
-        'Defesa dos direitos territoriais, saúde indígena e salvaguarda das tradições culturais originárias.',
-    };
-  }
-
-  // 13. LGBTQIA+
-  if (
-    text.includes('lgbt') ||
-    text.includes('diversidade sexual') ||
-    text.includes('identidade de gênero') ||
-    text.includes('homofobia') ||
-    text.includes('transfobia') ||
-    text.includes('nome social')
-  ) {
-    return {
-      group: 'lgbtqia',
-      direction: 'positive',
-      defending_vote: 'sim',
-      severity: 3,
-      type: 'structural',
-      confidence: 0.9,
-      rationale:
-        'Garantia de direitos civis, cidadania e combate à discriminação por orientação sexual e identidade de gênero.',
-    };
-  }
-
-  // 14. Trabalhadores Informais e Autônomos
+  // 13. Trabalhadores Informais e Autônomos
   if (
     text.includes('trabalhador informal') ||
     text.includes('autônomo') ||
@@ -355,7 +354,8 @@ function classifyText(title, desc) {
     text.includes('motorista de aplicativo') ||
     text.includes('entregador') ||
     text.includes('artesão') ||
-    text.includes('feirante')
+    text.includes('feirante') ||
+    text.includes('economia solidária')
   ) {
     return {
       group: 'trabalhadores_informais',
@@ -365,7 +365,44 @@ function classifyText(title, desc) {
       type: 'structural',
       confidence: 0.88,
       rationale:
-        'Amparo e inclusão socioprodutiva para categorias de trabalho autônomo, artesanato e feirantes.',
+        'Amparo, economia solidária e inclusão socioprodutiva para categorias de trabalho autônomo e não formalizado.',
+    };
+  }
+
+  // 14. Servidores Públicos e Finanças do Estado
+  if (
+    text.includes('magistério') ||
+    text.includes('servidor') ||
+    text.includes('funcionalismo') ||
+    text.includes('reajuste') ||
+    text.includes('subsídio') ||
+    text.includes('plano de carreira') ||
+    text.includes('data-base') ||
+    text.includes('quadro de pessoal') ||
+    text.includes('concurso público') ||
+    text.includes('polícia civil') ||
+    text.includes('brigada militar') ||
+    text.includes('bombeiro') ||
+    text.includes('perito') ||
+    text.includes('policial') ||
+    text.includes('estatuto') ||
+    text.includes('orçamentária') ||
+    text.includes('ldo') ||
+    text.includes('loa') ||
+    text.includes('tributária') ||
+    text.includes('taxa') ||
+    text.includes('imposto') ||
+    text.includes('dívida pública')
+  ) {
+    return {
+      group: 'servidores_publicos',
+      direction: 'positive',
+      defending_vote: 'sim',
+      severity: 3,
+      type: 'budgetary',
+      confidence: 0.92,
+      rationale:
+        'Norma regulamentadora de finanças estaduais, diretrizes orçamentárias e estruturação das carreiras públicas.',
     };
   }
 

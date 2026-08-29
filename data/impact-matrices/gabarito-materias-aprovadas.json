@@ -3,7 +3,7 @@
   "methodology_version": "1.0.0",
   "title": "Matriz Gabarito de Proposições Legislativas Aprovadas",
   "description": "Fonte de verdade consolidada das avaliações de impacto populacional de matérias legislativas da ALRS, Câmara dos Deputados e Senado Federal para referência e expansão por todos os agentes.",
-  "updated_at": "2026-08-28T23:25:06.122Z",
+  "updated_at": "2026-08-29T01:22:30.696Z",
   "rules": {
     "immutability": "Proposições com status approved possuem gabarito imutável de direção e defending_vote.",
     "reusability": "O gabarito de uma matéria é aplicado automaticamente a todas as votações nominais registradas para qualquer candidato que votou nela.",
@@ -7271,6 +7271,515 @@
           "rationale": "Medidas de conservação ambiental, resiliência climática, prevenção a cheias e proteção de recursos hídricos e fauna.",
           "sources": [
             "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:pl-172-2026-diretrizes-para-",
+      "house": "alrs",
+      "type": "pl",
+      "number": "1",
+      "year": 2026,
+      "title": "Dispõe sobre as diretrizes para a elaboração da Lei Orçamentária para o exercício econômico-financeiro de 2027 e dá outras providências.",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+      "official_source_label": "PL 172/2026 — diretrizes para Lei Orçamentária de 2027.",
+      "severity": 3,
+      "structural_type": "budgetary",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "servidores_publicos",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.92,
+          "rationale": "Norma regulamentadora de finanças estaduais, diretrizes orçamentárias e estruturação das carreiras públicas.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:altera-a-al-nea-b-do-inciso-i",
+      "house": "alrs",
+      "type": "pl",
+      "number": "1",
+      "year": 2026,
+      "title": "Altera a alínea b, do inciso II do art. 1º da Lei nº 15.766, de 20 de dezembro de 2021, que dispõe sobre a parcela do produto da arrecadação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e de Comunicação (ICMS pertencente aos municípios).",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+      "official_source_label": "ALRS Sistema Legis",
+      "severity": 2,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "micro_pequenos_empreendedores",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.88,
+          "rationale": "Incentivo e facilitação tributária, fomento a pequenos negócios e fortalecimento do desenvolvimento econômico local.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:disp-e-sobre-o-programa-de-def",
+      "house": "alrs",
+      "type": "pl",
+      "number": "1",
+      "year": 2026,
+      "title": "Dispõe sobre o Programa de Defesa e Amparo à Vítima.(SEI 17608-0100/23-2)",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+      "official_source_label": "ALRS Sistema Legis",
+      "severity": 4,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.95,
+          "rationale": "Política pública de proteção integral, amparo social e prevenção à violência contra crianças e jovens vulneráveis.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:altera-a-lei-n-8-109-de-19-d",
+      "house": "alrs",
+      "type": "pl",
+      "number": "1",
+      "year": 2026,
+      "title": "Altera a Lei nº 8.109, de 19 de dezembro de 1985, que dispõe sobre a Taxa de Serviços Diversos. (ePRO 109084/2023)",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+      "official_source_label": "ALRS Sistema Legis",
+      "severity": 3,
+      "structural_type": "budgetary",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "servidores_publicos",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.92,
+          "rationale": "Norma regulamentadora de finanças estaduais, diretrizes orçamentárias e estruturação das carreiras públicas.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:altera-a-lei-n-15-766-de-20",
+      "house": "alrs",
+      "type": "pl",
+      "number": "1",
+      "year": 2026,
+      "title": "Altera a Lei n.º 15.766, de 20 de dezembro de 2021, que dispõe sobre a parcela do produto da arrecadação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação – ICMS – pertencente aos municípios.",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
+      "official_source_label": "ALRS Sistema Legis",
+      "severity": 3,
+      "structural_type": "budgetary",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "servidores_publicos",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.92,
+          "rationale": "Norma regulamentadora de finanças estaduais, diretrizes orçamentárias e estruturação das carreiras públicas.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:cria-o-fundo-estadual-de-prote",
+      "house": "alrs",
+      "type": "pl",
+      "number": "1",
+      "year": 2026,
+      "title": "Cria o Fundo Estadual de Proteção e Bem-estar de Animais Domésticos. (Tramitação conjunta com o PL 212/2024)",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+      "official_source_label": "ALRS Sistema Legis",
+      "severity": 4,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "meio_ambiente_clima",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.9,
+          "rationale": "Medidas de conservação ambiental, resiliência climática, prevenção a cheias e proteção e bem-estar animal.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:institui-a-pol-tica-de-combate",
+      "house": "alrs",
+      "type": "pl",
+      "number": "1",
+      "year": 2026,
+      "title": "Institui a Política de combate ao abigeato e aos crimes em áreas rurais.(SEI 7452-0100/20-8)",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
+      "official_source_label": "ALRS Sistema Legis",
+      "severity": 3,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "agricultores_familiares",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.88,
+          "rationale": "Fomento à produção rural familiar, combate ao abigeato, assistência técnica e enfrentamento de perdas no campo.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:altera-a-lei-n-15-535-de-21-",
+      "house": "alrs",
+      "type": "pl",
+      "number": "1",
+      "year": 2026,
+      "title": "Altera a Lei nº 15.535, de 21 de outubro de 2020, que autoriza o Poder Executivo a antecipar os repasses de recursos vinculados ao Programa Passe Livre Estudantil, de que trata a Lei nº 14.307, de 25 de setembro de 2013, que institui o Programa Passe Livre Estudantil e cria o Fundo Estadual do Passe Livre Estudantil, para as concessionárias do Sistema Estadual de Transporte Metropolitano Coletivo",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
+      "official_source_label": "ALRS Sistema Legis",
+      "severity": 3,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "educacao_estudantes",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.92,
+          "rationale": "Fomento à educação pública, passe livre estudantil, merenda e infraestrutura da rede de ensino.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2022",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:altera-a-lei-n-10-600-de-26-",
+      "house": "alrs",
+      "type": "pl",
+      "number": "1",
+      "year": 2026,
+      "title": "Altera a Lei nº 10.600, de 26 de dezembro de 1995, que institui a Caixa de Administração da Dívida Pública Estadual S. A. – CADIP. (Prazo Fatal: 11/12/2024)",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
+      "official_source_label": "ALRS Sistema Legis",
+      "severity": 3,
+      "structural_type": "budgetary",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "servidores_publicos",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.92,
+          "rationale": "Norma regulamentadora de finanças estaduais, diretrizes orçamentárias e estruturação das carreiras públicas.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2024",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2024",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2024"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:altera-a-lei-n-15-488-de-17-",
+      "house": "alrs",
+      "type": "pl",
+      "number": "1",
+      "year": 2026,
+      "title": "Altera a Lei nº 15.488, de 17 de julho  de 2020, que dispõe sobre as diretrizes para a elaboração da Lei Orçamentária para o exercício econômico-financeiro de 2021 e dá outras providências. (SEI 1206-0100/21-8)",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
+      "official_source_label": "ALRS Sistema Legis",
+      "severity": 3,
+      "structural_type": "budgetary",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "servidores_publicos",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.92,
+          "rationale": "Norma regulamentadora de finanças estaduais, diretrizes orçamentárias e estruturação das carreiras públicas.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:altera-a-lei-n-11-169-de-08",
+      "house": "alrs",
+      "type": "pl",
+      "number": "1",
+      "year": 2026,
+      "title": "Altera a Lei n.º 11.169, de 08 de junho de 1998, que dispõe sobre a produção, circulação e comercialização da carne ovina, lã e seus derivados, cria o Fundo de Desenvolvimento da Ovinocultura do Estado - FUNDOVINOS, introduz modificações na Lei n.º 8.109, de 19 de dezembro de 1985, que dispõe sobre a Taxa de Serviços Diversos, e dá outras providências.(SEI 5825.0100/20-9)",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
+      "official_source_label": "ALRS Sistema Legis",
+      "severity": 3,
+      "structural_type": "budgetary",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "servidores_publicos",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.92,
+          "rationale": "Norma regulamentadora de finanças estaduais, diretrizes orçamentárias e estruturação das carreiras públicas.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:altera-a-lei-n-8-115-de-30-d",
+      "house": "alrs",
+      "type": "pl",
+      "number": "1",
+      "year": 2026,
+      "title": "Altera a Lei nº 8.115, de 30 de dezembro de 1985, que Institui o Imposto sobre a Propriedade de Veículos Automotores. (SEI 14340-01.00/23-1)",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
+      "official_source_label": "ALRS Sistema Legis",
+      "severity": 3,
+      "structural_type": "budgetary",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "servidores_publicos",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.92,
+          "rationale": "Norma regulamentadora de finanças estaduais, diretrizes orçamentárias e estruturação das carreiras públicas.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:altera-a-lei-n-8-820-de-27-d",
+      "house": "alrs",
+      "type": "pl",
+      "number": "1",
+      "year": 2026,
+      "title": "Altera a Lei nº 8.820, de 27 de janeiro de 1989, que institui o Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação e dá outras providências.",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
+      "official_source_label": "ALRS Sistema Legis",
+      "severity": 3,
+      "structural_type": "budgetary",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "servidores_publicos",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.92,
+          "rationale": "Norma regulamentadora de finanças estaduais, diretrizes orçamentárias e estruturação das carreiras públicas.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:altera-a-lei-n-15-668-de-27-",
+      "house": "alrs",
+      "type": "pl",
+      "number": "1",
+      "year": 2026,
+      "title": "Altera a Lei nº 15.668, de 27 de julho de 2021, que dispõe sobre as diretrizes para a elaboração da Lei Orçamentária para o exercício econômico-financeiro de 2022 e dá outras providências.(SEI 3512-0100/22-6)",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
+      "official_source_label": "ALRS Sistema Legis",
+      "severity": 3,
+      "structural_type": "budgetary",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "servidores_publicos",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.92,
+          "rationale": "Norma regulamentadora de finanças estaduais, diretrizes orçamentárias e estruturação das carreiras públicas.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2022",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2022",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2022"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:altera-a-lei-n-11-127-de-09-",
+      "house": "alrs",
+      "type": "pl",
+      "number": "1",
+      "year": 2026,
+      "title": "Altera a Lei nº 11.127, de 09 de fevereiro de 1998, que institui o Sistema Estadual de Transporte Metropolitano Coletivo de Passageiros - SETM, cria o Conselho Estadual de Transporte Metropolitano Coletivo de Passageiros - CETM e dá outras providências, e a Lei nº 8.109, de 19 de dezembro de 1985, que dispõe sobre a Taxa de Serviços Diversos.",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
+      "official_source_label": "ALRS Sistema Legis",
+      "severity": 3,
+      "structural_type": "budgetary",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "servidores_publicos",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.92,
+          "rationale": "Norma regulamentadora de finanças estaduais, diretrizes orçamentárias e estruturação das carreiras públicas.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2025",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:cria-o-programa-de-regulariza-",
+      "house": "alrs",
+      "type": "pl",
+      "number": "1",
+      "year": 2026,
+      "title": "Cria o Programa de Regularização para mitigação dos efeitos da pandemia de Covid-19 sobre o setor de transporte intermunicipal de passageiros, autorizando o parcelamento da taxa prevista no Título IX da Tabela de Incidência do Anexo à Lei Estadual nº 8.109, de 19 de dezembro de 1985 e dá outras providências. (SEI 10246-01.00/21-4)",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
+      "official_source_label": "ALRS Sistema Legis",
+      "severity": 3,
+      "structural_type": "budgetary",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "servidores_publicos",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.92,
+          "rationale": "Norma regulamentadora de finanças estaduais, diretrizes orçamentárias e estruturação das carreiras públicas.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:disp-e-sobre-a-parcela-do-prod",
+      "house": "alrs",
+      "type": "pl",
+      "number": "1",
+      "year": 2026,
+      "title": "Dispõe sobre a parcela do produto da arrecadação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação (ICMS) pertencente aos municípios. (SEI 9254-0100/21-0)",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
+      "official_source_label": "ALRS Sistema Legis",
+      "severity": 3,
+      "structural_type": "budgetary",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "servidores_publicos",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.92,
+          "rationale": "Norma regulamentadora de finanças estaduais, diretrizes orçamentárias e estruturação das carreiras públicas.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2021",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:institui-o-aux-lio-emergencial",
+      "house": "alrs",
+      "type": "pl",
+      "number": "1",
+      "year": 2026,
+      "title": "Institui o auxílio emergencial de apoio à atividade econômica e de proteção social, bem como estabelece medidas excepcionais de enfrentamento às consequências econômicas e sociais decorrentes da pandemia de COVID-19. (SEI 3197-0100/21-3)",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
+      "official_source_label": "ALRS Sistema Legis",
+      "severity": 4,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.95,
+          "rationale": "Política pública de proteção integral, amparo social e prevenção à violência contra crianças e jovens vulneráveis.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2021",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2021"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "alrs:altera-a-lei-8-109-de-19-de-d",
+      "house": "alrs",
+      "type": "pl",
+      "number": "1",
+      "year": 2026,
+      "title": "Altera a Lei 8.109, de 19 de dezembro de 1985, que dispõe sobre a Taxa de Serviços Diversos.",
+      "official_source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
+      "official_source_label": "ALRS Sistema Legis",
+      "severity": 3,
+      "structural_type": "budgetary",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "servidores_publicos",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.92,
+          "rationale": "Norma regulamentadora de finanças estaduais, diretrizes orçamentárias e estruturação das carreiras públicas.",
+          "sources": [
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
+            "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2025"
           ]
         }
       ]
