@@ -279,7 +279,34 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 7
+        "nominal_balance": 7,
+        "profile_score": 0.304
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 0.5,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 1,
+        "favorable_votes": 3,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
       }
     ]
   },
@@ -437,7 +464,122 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 431
+        "nominal_balance": 431,
+        "profile_score": 0.67
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 12,
+        "divergences_count": 0,
+        "favorable_votes": 12,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 24,
+        "divergences_count": 0,
+        "favorable_votes": 24,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.768,
+        "evaluated_propositions_count": 112,
+        "divergences_count": 13,
+        "favorable_votes": 99,
+        "unfavorable_votes": 13
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 0.636,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 2,
+        "favorable_votes": 9,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.25,
+        "evaluated_propositions_count": 16,
+        "divergences_count": 6,
+        "favorable_votes": 10,
+        "unfavorable_votes": 6
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.444,
+        "evaluated_propositions_count": 18,
+        "divergences_count": 5,
+        "favorable_votes": 13,
+        "unfavorable_votes": 5
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 8,
+        "divergences_count": 0,
+        "favorable_votes": 8,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -511,7 +653,122 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 794
+        "nominal_balance": 794,
+        "profile_score": 0.653
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.745,
+        "evaluated_propositions_count": 157,
+        "divergences_count": 20,
+        "favorable_votes": 137,
+        "unfavorable_votes": 20
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.697,
+        "evaluated_propositions_count": 33,
+        "divergences_count": 5,
+        "favorable_votes": 28,
+        "unfavorable_votes": 5
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 0.579,
+        "evaluated_propositions_count": 19,
+        "divergences_count": 4,
+        "favorable_votes": 15,
+        "unfavorable_votes": 4
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 32,
+        "divergences_count": 0,
+        "favorable_votes": 32,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.429,
+        "evaluated_propositions_count": 21,
+        "divergences_count": 6,
+        "favorable_votes": 15,
+        "unfavorable_votes": 6
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 0,
+        "favorable_votes": 9,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 12,
+        "divergences_count": 0,
+        "favorable_votes": 12,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -585,7 +842,122 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 509
+        "nominal_balance": 509,
+        "profile_score": 0.681
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.786,
+        "evaluated_propositions_count": 131,
+        "divergences_count": 14,
+        "favorable_votes": 117,
+        "unfavorable_votes": 14
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.571,
+        "evaluated_propositions_count": 28,
+        "divergences_count": 6,
+        "favorable_votes": 22,
+        "unfavorable_votes": 6
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 0.733,
+        "evaluated_propositions_count": 15,
+        "divergences_count": 2,
+        "favorable_votes": 13,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.4,
+        "evaluated_propositions_count": 20,
+        "divergences_count": 6,
+        "favorable_votes": 14,
+        "unfavorable_votes": 6
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 26,
+        "divergences_count": 0,
+        "favorable_votes": 26,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 0,
+        "favorable_votes": 9,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 0,
+        "favorable_votes": 11,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 0.333,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 1,
+        "favorable_votes": 2,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -869,7 +1241,34 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 3
+        "nominal_balance": 3,
+        "profile_score": 0.143
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 0.333,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 1,
+        "favorable_votes": 2,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
       }
     ]
   },
@@ -1111,7 +1510,114 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1055
+        "nominal_balance": 1055,
+        "profile_score": 0.918
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.972,
+        "evaluated_propositions_count": 145,
+        "divergences_count": 2,
+        "favorable_votes": 143,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.944,
+        "evaluated_propositions_count": 36,
+        "divergences_count": 1,
+        "favorable_votes": 35,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 13,
+        "divergences_count": 0,
+        "favorable_votes": 13,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 19,
+        "divergences_count": 0,
+        "favorable_votes": 19,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 10,
+        "divergences_count": 0,
+        "favorable_votes": 10,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.692,
+        "evaluated_propositions_count": 13,
+        "divergences_count": 2,
+        "favorable_votes": 11,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 8,
+        "divergences_count": 0,
+        "favorable_votes": 8,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -1353,7 +1859,34 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 6
+        "nominal_balance": 6,
+        "profile_score": 0.3
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -1679,7 +2212,122 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 843
+        "nominal_balance": 843,
+        "profile_score": 0.898
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.923,
+        "evaluated_propositions_count": 130,
+        "divergences_count": 5,
+        "favorable_votes": 125,
+        "unfavorable_votes": 5
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 26,
+        "divergences_count": 0,
+        "favorable_votes": 26,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 12,
+        "divergences_count": 0,
+        "favorable_votes": 12,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.8,
+        "evaluated_propositions_count": 20,
+        "divergences_count": 2,
+        "favorable_votes": 18,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "mulheres",
+        "score": 0.913,
+        "evaluated_propositions_count": 23,
+        "divergences_count": 1,
+        "favorable_votes": 22,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 0,
+        "favorable_votes": 9,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 0.818,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 1,
+        "favorable_votes": 10,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 0.333,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 1,
+        "favorable_votes": 2,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "idosos",
+        "score": 0.333,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 1,
+        "favorable_votes": 2,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -1816,7 +2464,18 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 5
+        "nominal_balance": 5,
+        "profile_score": 0.385
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -1890,7 +2549,122 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 576
+        "nominal_balance": 576,
+        "profile_score": 0.9
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 18,
+        "divergences_count": 0,
+        "favorable_votes": 18,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.929,
+        "evaluated_propositions_count": 113,
+        "divergences_count": 4,
+        "favorable_votes": 109,
+        "unfavorable_votes": 4
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 0,
+        "favorable_votes": 11,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 0,
+        "favorable_votes": 11,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.789,
+        "evaluated_propositions_count": 19,
+        "divergences_count": 2,
+        "favorable_votes": 17,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.9,
+        "evaluated_propositions_count": 20,
+        "divergences_count": 1,
+        "favorable_votes": 19,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 8,
+        "divergences_count": 0,
+        "favorable_votes": 8,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -2531,7 +3305,106 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 217
+        "nominal_balance": 217,
+        "profile_score": 0.982
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 1,
+        "evaluated_propositions_count": 38,
+        "divergences_count": 0,
+        "favorable_votes": 38,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 12,
+        "divergences_count": 0,
+        "favorable_votes": 12,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 5,
+        "divergences_count": 0,
+        "favorable_votes": 5,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 1,
+        "evaluated_propositions_count": 8,
+        "divergences_count": 0,
+        "favorable_votes": 8,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 0,
+        "favorable_votes": 9,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 7,
+        "divergences_count": 0,
+        "favorable_votes": 7,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -2563,7 +3436,114 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1061
+        "nominal_balance": 1061,
+        "profile_score": 0.943
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 1,
+        "evaluated_propositions_count": 141,
+        "divergences_count": 0,
+        "favorable_votes": 141,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 37,
+        "divergences_count": 0,
+        "favorable_votes": 37,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 15,
+        "divergences_count": 0,
+        "favorable_votes": 15,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 1,
+        "evaluated_propositions_count": 21,
+        "divergences_count": 0,
+        "favorable_votes": 21,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 14,
+        "divergences_count": 0,
+        "favorable_votes": 14,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 20,
+        "divergences_count": 0,
+        "favorable_votes": 20,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 10,
+        "divergences_count": 0,
+        "favorable_votes": 10,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -2595,7 +3575,130 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 933
+        "nominal_balance": 933,
+        "profile_score": 0.917
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.957,
+        "evaluated_propositions_count": 186,
+        "divergences_count": 4,
+        "favorable_votes": 182,
+        "unfavorable_votes": 4
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.886,
+        "evaluated_propositions_count": 35,
+        "divergences_count": 2,
+        "favorable_votes": 33,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 18,
+        "divergences_count": 0,
+        "favorable_votes": 18,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 33,
+        "divergences_count": 0,
+        "favorable_votes": 33,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 1,
+        "evaluated_propositions_count": 27,
+        "divergences_count": 0,
+        "favorable_votes": 27,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 14,
+        "divergences_count": 0,
+        "favorable_votes": 14,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 0,
+        "favorable_votes": 11,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -4055,7 +5158,34 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 7
+        "nominal_balance": 7,
+        "profile_score": 0.304
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 0.5,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 1,
+        "favorable_votes": 3,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
       }
     ]
   },
@@ -4297,7 +5427,122 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 631
+        "nominal_balance": 631,
+        "profile_score": 0.969
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 12,
+        "divergences_count": 0,
+        "favorable_votes": 12,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 21,
+        "divergences_count": 0,
+        "favorable_votes": 21,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.983,
+        "evaluated_propositions_count": 116,
+        "divergences_count": 1,
+        "favorable_votes": 115,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 8,
+        "divergences_count": 0,
+        "favorable_votes": 8,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 1,
+        "evaluated_propositions_count": 17,
+        "divergences_count": 0,
+        "favorable_votes": 17,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 19,
+        "divergences_count": 0,
+        "favorable_votes": 19,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 0,
+        "favorable_votes": 9,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -4665,7 +5910,122 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1202
+        "nominal_balance": 1202,
+        "profile_score": 0.948
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 1,
+        "evaluated_propositions_count": 165,
+        "divergences_count": 0,
+        "favorable_votes": 165,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.939,
+        "evaluated_propositions_count": 33,
+        "divergences_count": 1,
+        "favorable_votes": 32,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 16,
+        "divergences_count": 0,
+        "favorable_votes": 16,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 27,
+        "divergences_count": 0,
+        "favorable_votes": 27,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 1,
+        "evaluated_propositions_count": 23,
+        "divergences_count": 0,
+        "favorable_votes": 23,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 0,
+        "favorable_votes": 11,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 0,
+        "favorable_votes": 11,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -4949,7 +6309,122 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1011
+        "nominal_balance": 1011,
+        "profile_score": 0.915
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.974,
+        "evaluated_propositions_count": 156,
+        "divergences_count": 2,
+        "favorable_votes": 154,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.941,
+        "evaluated_propositions_count": 34,
+        "divergences_count": 1,
+        "favorable_votes": 33,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 17,
+        "divergences_count": 0,
+        "favorable_votes": 17,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 14,
+        "divergences_count": 0,
+        "favorable_votes": 14,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 0,
+        "favorable_votes": 9,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.882,
+        "evaluated_propositions_count": 17,
+        "divergences_count": 1,
+        "favorable_votes": 16,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 0,
+        "favorable_votes": 11,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -5002,7 +6477,114 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 540
+        "nominal_balance": 540,
+        "profile_score": 0.961
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 20,
+        "divergences_count": 0,
+        "favorable_votes": 20,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.981,
+        "evaluated_propositions_count": 103,
+        "divergences_count": 1,
+        "favorable_votes": 102,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 0,
+        "favorable_votes": 9,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 10,
+        "divergences_count": 0,
+        "favorable_votes": 10,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.882,
+        "evaluated_propositions_count": 17,
+        "divergences_count": 1,
+        "favorable_votes": 16,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 16,
+        "divergences_count": 0,
+        "favorable_votes": 16,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 8,
+        "divergences_count": 0,
+        "favorable_votes": 8,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -5580,7 +7162,122 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1341
+        "nominal_balance": 1341,
+        "profile_score": 0.965
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.989,
+        "evaluated_propositions_count": 185,
+        "divergences_count": 1,
+        "favorable_votes": 184,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 40,
+        "divergences_count": 0,
+        "favorable_votes": 40,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 18,
+        "divergences_count": 0,
+        "favorable_votes": 18,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 32,
+        "divergences_count": 0,
+        "favorable_votes": 32,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 1,
+        "evaluated_propositions_count": 27,
+        "divergences_count": 0,
+        "favorable_votes": 27,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 16,
+        "divergences_count": 0,
+        "favorable_votes": 16,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 0,
+        "favorable_votes": 11,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -6179,7 +7876,114 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 301
+        "nominal_balance": 301,
+        "profile_score": 0.515
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 0.833,
+        "evaluated_propositions_count": 12,
+        "divergences_count": 1,
+        "favorable_votes": 11,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.574,
+        "evaluated_propositions_count": 94,
+        "divergences_count": 20,
+        "favorable_votes": 74,
+        "unfavorable_votes": 20
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": -0.2,
+        "evaluated_propositions_count": 15,
+        "divergences_count": 9,
+        "favorable_votes": 6,
+        "unfavorable_votes": 9
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 0.5,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 1,
+        "favorable_votes": 3,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 0.4,
+        "evaluated_propositions_count": 10,
+        "divergences_count": 3,
+        "favorable_votes": 7,
+        "unfavorable_votes": 3
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.2,
+        "evaluated_propositions_count": 15,
+        "divergences_count": 6,
+        "favorable_votes": 9,
+        "unfavorable_votes": 6
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 7,
+        "divergences_count": 0,
+        "favorable_votes": 7,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 23,
+        "divergences_count": 0,
+        "favorable_votes": 23,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -6442,7 +8246,34 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 4
+        "nominal_balance": 4,
+        "profile_score": 0.182
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 0.333,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 1,
+        "favorable_votes": 2,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
       }
     ]
   },
@@ -6474,7 +8305,34 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": -1
+        "nominal_balance": -1,
+        "profile_score": -0.048
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": -1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 4,
+        "favorable_votes": 0,
+        "unfavorable_votes": 4
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -6527,7 +8385,34 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 3
+        "nominal_balance": 3,
+        "profile_score": 0.158
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 0,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 1,
+        "favorable_votes": 1,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -6727,7 +8612,18 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1
+        "nominal_balance": 1,
+        "profile_score": 0.333
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 0.333,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 1,
+        "favorable_votes": 2,
+        "unfavorable_votes": 1
       }
     ]
   },
@@ -6948,7 +8844,114 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1024
+        "nominal_balance": 1024,
+        "profile_score": 0.911
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.959,
+        "evaluated_propositions_count": 145,
+        "divergences_count": 3,
+        "favorable_votes": 142,
+        "unfavorable_votes": 3
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 33,
+        "divergences_count": 0,
+        "favorable_votes": 33,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 16,
+        "divergences_count": 0,
+        "favorable_votes": 16,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 21,
+        "divergences_count": 0,
+        "favorable_votes": 21,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 1,
+        "evaluated_propositions_count": 21,
+        "divergences_count": 0,
+        "favorable_votes": 21,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 13,
+        "divergences_count": 0,
+        "favorable_votes": 13,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 6,
+        "divergences_count": 0,
+        "favorable_votes": 6,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -6980,7 +8983,34 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 4
+        "nominal_balance": 4,
+        "profile_score": 0.2
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 0,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 2,
+        "favorable_votes": 2,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -7012,7 +9042,26 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 3
+        "nominal_balance": 3,
+        "profile_score": 0.143
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 0.5,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 1,
+        "favorable_votes": 3,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -7212,7 +9261,122 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1167
+        "nominal_balance": 1167,
+        "profile_score": 0.96
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 1,
+        "evaluated_propositions_count": 167,
+        "divergences_count": 0,
+        "favorable_votes": 167,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 17,
+        "divergences_count": 0,
+        "favorable_votes": 17,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 28,
+        "divergences_count": 0,
+        "favorable_votes": 28,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 33,
+        "divergences_count": 0,
+        "favorable_votes": 33,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 1,
+        "evaluated_propositions_count": 24,
+        "divergences_count": 0,
+        "favorable_votes": 24,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 15,
+        "divergences_count": 0,
+        "favorable_votes": 15,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 13,
+        "divergences_count": 0,
+        "favorable_votes": 13,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -7475,7 +9639,98 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 564
+        "nominal_balance": 564,
+        "profile_score": 0.962
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 0,
+        "favorable_votes": 11,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 24,
+        "divergences_count": 0,
+        "favorable_votes": 24,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "meio_ambiente_clima",
+        "score": 1,
+        "evaluated_propositions_count": 101,
+        "divergences_count": 0,
+        "favorable_votes": 101,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 10,
+        "divergences_count": 0,
+        "favorable_votes": 10,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 1,
+        "evaluated_propositions_count": 14,
+        "divergences_count": 0,
+        "favorable_votes": 14,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 18,
+        "divergences_count": 0,
+        "favorable_votes": 18,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 8,
+        "divergences_count": 0,
+        "favorable_votes": 8,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -7591,7 +9846,34 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 4
+        "nominal_balance": 4,
+        "profile_score": 0.167
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 0,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 2,
+        "favorable_votes": 2,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -8589,7 +10871,114 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 408
+        "nominal_balance": 408,
+        "profile_score": 0.664
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 12,
+        "divergences_count": 0,
+        "favorable_votes": 12,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 24,
+        "divergences_count": 0,
+        "favorable_votes": 24,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.786,
+        "evaluated_propositions_count": 112,
+        "divergences_count": 12,
+        "favorable_votes": 100,
+        "unfavorable_votes": 12
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 0.636,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 2,
+        "favorable_votes": 9,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.25,
+        "evaluated_propositions_count": 16,
+        "divergences_count": 6,
+        "favorable_votes": 10,
+        "unfavorable_votes": 6
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.412,
+        "evaluated_propositions_count": 17,
+        "divergences_count": 5,
+        "favorable_votes": 12,
+        "unfavorable_votes": 5
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 0,
+        "favorable_votes": 9,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -8915,7 +11304,114 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 337
+        "nominal_balance": 337,
+        "profile_score": 0.639
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 10,
+        "divergences_count": 0,
+        "favorable_votes": 10,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 23,
+        "divergences_count": 0,
+        "favorable_votes": 23,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.75,
+        "evaluated_propositions_count": 88,
+        "divergences_count": 11,
+        "favorable_votes": 77,
+        "unfavorable_votes": 11
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 0.429,
+        "evaluated_propositions_count": 7,
+        "divergences_count": 2,
+        "favorable_votes": 5,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.231,
+        "evaluated_propositions_count": 13,
+        "divergences_count": 5,
+        "favorable_votes": 8,
+        "unfavorable_votes": 5
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.333,
+        "evaluated_propositions_count": 12,
+        "divergences_count": 4,
+        "favorable_votes": 8,
+        "unfavorable_votes": 4
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 7,
+        "divergences_count": 0,
+        "favorable_votes": 7,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -9073,7 +11569,130 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1221
+        "nominal_balance": 1221,
+        "profile_score": 0.947
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.989,
+        "evaluated_propositions_count": 176,
+        "divergences_count": 1,
+        "favorable_votes": 175,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 37,
+        "divergences_count": 0,
+        "favorable_votes": 37,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 15,
+        "divergences_count": 0,
+        "favorable_votes": 15,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 33,
+        "divergences_count": 0,
+        "favorable_votes": 33,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.826,
+        "evaluated_propositions_count": 23,
+        "divergences_count": 2,
+        "favorable_votes": 21,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 0,
+        "favorable_votes": 11,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 13,
+        "divergences_count": 0,
+        "favorable_votes": 13,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -9189,7 +11808,114 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 547
+        "nominal_balance": 547,
+        "profile_score": 0.867
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 12,
+        "divergences_count": 0,
+        "favorable_votes": 12,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 0.913,
+        "evaluated_propositions_count": 23,
+        "divergences_count": 1,
+        "favorable_votes": 22,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.908,
+        "evaluated_propositions_count": 109,
+        "divergences_count": 5,
+        "favorable_votes": 104,
+        "unfavorable_votes": 5
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 0.8,
+        "evaluated_propositions_count": 10,
+        "divergences_count": 1,
+        "favorable_votes": 9,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.667,
+        "evaluated_propositions_count": 18,
+        "divergences_count": 3,
+        "favorable_votes": 15,
+        "unfavorable_votes": 3
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 21,
+        "divergences_count": 0,
+        "favorable_votes": 21,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 0,
+        "favorable_votes": 9,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -9263,7 +11989,34 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 8
+        "nominal_balance": 8,
+        "profile_score": 0.364
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 0.5,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 1,
+        "favorable_votes": 3,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -9379,7 +12132,106 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 566
+        "nominal_balance": 566,
+        "profile_score": 0.943
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 10,
+        "divergences_count": 0,
+        "favorable_votes": 10,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 17,
+        "divergences_count": 0,
+        "favorable_votes": 17,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.962,
+        "evaluated_propositions_count": 104,
+        "divergences_count": 2,
+        "favorable_votes": 102,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 10,
+        "divergences_count": 0,
+        "favorable_votes": 10,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.875,
+        "evaluated_propositions_count": 16,
+        "divergences_count": 1,
+        "favorable_votes": 15,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 20,
+        "divergences_count": 0,
+        "favorable_votes": 20,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 8,
+        "divergences_count": 0,
+        "favorable_votes": 8,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -9495,7 +12347,106 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 545
+        "nominal_balance": 545,
+        "profile_score": 0.889
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 0.75,
+        "evaluated_propositions_count": 8,
+        "divergences_count": 1,
+        "favorable_votes": 7,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.891,
+        "evaluated_propositions_count": 110,
+        "divergences_count": 6,
+        "favorable_votes": 104,
+        "unfavorable_votes": 6
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 10,
+        "divergences_count": 0,
+        "favorable_votes": 10,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.889,
+        "evaluated_propositions_count": 18,
+        "divergences_count": 1,
+        "favorable_votes": 17,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 19,
+        "divergences_count": 0,
+        "favorable_votes": 19,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 8,
+        "divergences_count": 0,
+        "favorable_votes": 8,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 0.81,
+        "evaluated_propositions_count": 21,
+        "divergences_count": 2,
+        "favorable_votes": 19,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 0.333,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 1,
+        "favorable_votes": 2,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -9695,7 +12646,114 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 510
+        "nominal_balance": 510,
+        "profile_score": 0.864
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 0.818,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 1,
+        "favorable_votes": 10,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "mulheres",
+        "score": 0.818,
+        "evaluated_propositions_count": 22,
+        "divergences_count": 2,
+        "favorable_votes": 20,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.88,
+        "evaluated_propositions_count": 100,
+        "divergences_count": 6,
+        "favorable_votes": 94,
+        "unfavorable_votes": 6
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 0.818,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 1,
+        "favorable_votes": 10,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.667,
+        "evaluated_propositions_count": 18,
+        "divergences_count": 3,
+        "favorable_votes": 15,
+        "unfavorable_votes": 3
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.889,
+        "evaluated_propositions_count": 18,
+        "divergences_count": 1,
+        "favorable_votes": 17,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 7,
+        "divergences_count": 0,
+        "favorable_votes": 7,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -9832,7 +12890,122 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 964
+        "nominal_balance": 964,
+        "profile_score": 0.789
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.899,
+        "evaluated_propositions_count": 158,
+        "divergences_count": 8,
+        "favorable_votes": 150,
+        "unfavorable_votes": 8
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 38,
+        "divergences_count": 0,
+        "favorable_votes": 38,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 19,
+        "divergences_count": 0,
+        "favorable_votes": 19,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 29,
+        "divergences_count": 0,
+        "favorable_votes": 29,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.826,
+        "evaluated_propositions_count": 23,
+        "divergences_count": 2,
+        "favorable_votes": 21,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 10,
+        "divergences_count": 0,
+        "favorable_votes": 10,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 0,
+        "favorable_votes": 9,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -9906,7 +13079,122 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1117
+        "nominal_balance": 1117,
+        "profile_score": 0.823
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.904,
+        "evaluated_propositions_count": 188,
+        "divergences_count": 9,
+        "favorable_votes": 179,
+        "unfavorable_votes": 9
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 40,
+        "divergences_count": 0,
+        "favorable_votes": 40,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 17,
+        "divergences_count": 0,
+        "favorable_votes": 17,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 34,
+        "divergences_count": 0,
+        "favorable_votes": 34,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.92,
+        "evaluated_propositions_count": 25,
+        "divergences_count": 1,
+        "favorable_votes": 24,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 15,
+        "divergences_count": 0,
+        "favorable_votes": 15,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 0,
+        "favorable_votes": 11,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -10379,7 +13667,114 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 655
+        "nominal_balance": 655,
+        "profile_score": 0.945
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.976,
+        "evaluated_propositions_count": 85,
+        "divergences_count": 1,
+        "favorable_votes": 84,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 0,
+        "favorable_votes": 9,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 13,
+        "divergences_count": 0,
+        "favorable_votes": 13,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.913,
+        "evaluated_propositions_count": 23,
+        "divergences_count": 1,
+        "favorable_votes": 22,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 1,
+        "evaluated_propositions_count": 10,
+        "divergences_count": 0,
+        "favorable_votes": 10,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 6,
+        "divergences_count": 0,
+        "favorable_votes": 6,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -10579,7 +13974,34 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 3
+        "nominal_balance": 3,
+        "profile_score": 0.13
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": -0.5,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 3,
+        "favorable_votes": 1,
+        "unfavorable_votes": 3
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -11283,7 +14705,122 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 882
+        "nominal_balance": 882,
+        "profile_score": 0.664
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.761,
+        "evaluated_propositions_count": 176,
+        "divergences_count": 21,
+        "favorable_votes": 155,
+        "unfavorable_votes": 21
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.647,
+        "evaluated_propositions_count": 34,
+        "divergences_count": 6,
+        "favorable_votes": 28,
+        "unfavorable_votes": 6
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 32,
+        "divergences_count": 0,
+        "favorable_votes": 32,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 0.765,
+        "evaluated_propositions_count": 17,
+        "divergences_count": 2,
+        "favorable_votes": 15,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.36,
+        "evaluated_propositions_count": 25,
+        "divergences_count": 8,
+        "favorable_votes": 17,
+        "unfavorable_votes": 8
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 13,
+        "divergences_count": 0,
+        "favorable_votes": 13,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 0,
+        "favorable_votes": 11,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 0.333,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 1,
+        "favorable_votes": 2,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -11315,7 +14852,122 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 883
+        "nominal_balance": 883,
+        "profile_score": 0.635
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.738,
+        "evaluated_propositions_count": 183,
+        "divergences_count": 24,
+        "favorable_votes": 159,
+        "unfavorable_votes": 24
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.6,
+        "evaluated_propositions_count": 40,
+        "divergences_count": 8,
+        "favorable_votes": 32,
+        "unfavorable_votes": 8
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 0.684,
+        "evaluated_propositions_count": 19,
+        "divergences_count": 3,
+        "favorable_votes": 16,
+        "unfavorable_votes": 3
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 33,
+        "divergences_count": 0,
+        "favorable_votes": 33,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.333,
+        "evaluated_propositions_count": 24,
+        "divergences_count": 8,
+        "favorable_votes": 16,
+        "unfavorable_votes": 8
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 14,
+        "divergences_count": 0,
+        "favorable_votes": 14,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 13,
+        "divergences_count": 0,
+        "favorable_votes": 13,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 0.333,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 1,
+        "favorable_votes": 2,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -11704,7 +15356,122 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 522
+        "nominal_balance": 522,
+        "profile_score": 0.96
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 0,
+        "favorable_votes": 9,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 16,
+        "divergences_count": 0,
+        "favorable_votes": 16,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "meio_ambiente_clima",
+        "score": 1,
+        "evaluated_propositions_count": 94,
+        "divergences_count": 0,
+        "favorable_votes": 94,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 0.75,
+        "evaluated_propositions_count": 8,
+        "divergences_count": 1,
+        "favorable_votes": 7,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 1,
+        "evaluated_propositions_count": 14,
+        "divergences_count": 0,
+        "favorable_votes": 14,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 17,
+        "divergences_count": 0,
+        "favorable_votes": 17,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 7,
+        "divergences_count": 0,
+        "favorable_votes": 7,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -12114,7 +15881,34 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 6
+        "nominal_balance": 6,
+        "profile_score": 0.375
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 0.333,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 1,
+        "favorable_votes": 2,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -12146,7 +15940,122 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1051
+        "nominal_balance": 1051,
+        "profile_score": 0.958
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.986,
+        "evaluated_propositions_count": 144,
+        "divergences_count": 1,
+        "favorable_votes": 143,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 31,
+        "divergences_count": 0,
+        "favorable_votes": 31,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 12,
+        "divergences_count": 0,
+        "favorable_votes": 12,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 1,
+        "evaluated_propositions_count": 24,
+        "divergences_count": 0,
+        "favorable_votes": 24,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 15,
+        "divergences_count": 0,
+        "favorable_votes": 15,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 19,
+        "divergences_count": 0,
+        "favorable_votes": 19,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 0,
+        "favorable_votes": 9,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 0.333,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 1,
+        "favorable_votes": 2,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -12745,7 +16654,114 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1239
+        "nominal_balance": 1239,
+        "profile_score": 0.931
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.977,
+        "evaluated_propositions_count": 177,
+        "divergences_count": 2,
+        "favorable_votes": 175,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 40,
+        "divergences_count": 0,
+        "favorable_votes": 40,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 19,
+        "divergences_count": 0,
+        "favorable_votes": 19,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 29,
+        "divergences_count": 0,
+        "favorable_votes": 29,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 1,
+        "evaluated_propositions_count": 27,
+        "divergences_count": 0,
+        "favorable_votes": 27,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 14,
+        "divergences_count": 0,
+        "favorable_votes": 14,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 0,
+        "favorable_votes": 9,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -12798,7 +16814,114 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1213
+        "nominal_balance": 1213,
+        "profile_score": 0.935
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.976,
+        "evaluated_propositions_count": 170,
+        "divergences_count": 2,
+        "favorable_votes": 168,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.944,
+        "evaluated_propositions_count": 36,
+        "divergences_count": 1,
+        "favorable_votes": 35,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 30,
+        "divergences_count": 0,
+        "favorable_votes": 30,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 17,
+        "divergences_count": 0,
+        "favorable_votes": 17,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.917,
+        "evaluated_propositions_count": 24,
+        "divergences_count": 1,
+        "favorable_votes": 23,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 16,
+        "divergences_count": 0,
+        "favorable_votes": 16,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 12,
+        "divergences_count": 0,
+        "favorable_votes": 12,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -13481,7 +17604,114 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 399
+        "nominal_balance": 399,
+        "profile_score": 0.687
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 0.818,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 1,
+        "favorable_votes": 10,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.551,
+        "evaluated_propositions_count": 98,
+        "divergences_count": 22,
+        "favorable_votes": 76,
+        "unfavorable_votes": 22
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 0.8,
+        "evaluated_propositions_count": 10,
+        "divergences_count": 1,
+        "favorable_votes": 9,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.625,
+        "evaluated_propositions_count": 16,
+        "divergences_count": 3,
+        "favorable_votes": 13,
+        "unfavorable_votes": 3
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.368,
+        "evaluated_propositions_count": 19,
+        "divergences_count": 6,
+        "favorable_votes": 13,
+        "unfavorable_votes": 6
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 0,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 2,
+        "favorable_votes": 2,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 0,
+        "favorable_votes": 9,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 0.6,
+        "evaluated_propositions_count": 10,
+        "divergences_count": 2,
+        "favorable_votes": 8,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 0.333,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 1,
+        "favorable_votes": 2,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -13765,7 +17995,130 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 803
+        "nominal_balance": 803,
+        "profile_score": 0.564
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.653,
+        "evaluated_propositions_count": 196,
+        "divergences_count": 34,
+        "favorable_votes": 162,
+        "unfavorable_votes": 34
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.409,
+        "evaluated_propositions_count": 44,
+        "divergences_count": 13,
+        "favorable_votes": 31,
+        "unfavorable_votes": 13
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 0.6,
+        "evaluated_propositions_count": 20,
+        "divergences_count": 4,
+        "favorable_votes": 16,
+        "unfavorable_votes": 4
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.214,
+        "evaluated_propositions_count": 28,
+        "divergences_count": 11,
+        "favorable_votes": 17,
+        "unfavorable_votes": 11
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 0.875,
+        "evaluated_propositions_count": 16,
+        "divergences_count": 1,
+        "favorable_votes": 15,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 34,
+        "divergences_count": 0,
+        "favorable_votes": 34,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 13,
+        "divergences_count": 0,
+        "favorable_votes": 13,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 0.333,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 1,
+        "favorable_votes": 2,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 0.5,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 1,
+        "favorable_votes": 3,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -13881,7 +18234,122 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 419
+        "nominal_balance": 419,
+        "profile_score": 0.695
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 0,
+        "favorable_votes": 11,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 24,
+        "divergences_count": 0,
+        "favorable_votes": 24,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.816,
+        "evaluated_propositions_count": 98,
+        "divergences_count": 9,
+        "favorable_votes": 89,
+        "unfavorable_votes": 9
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 0.6,
+        "evaluated_propositions_count": 10,
+        "divergences_count": 2,
+        "favorable_votes": 8,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.333,
+        "evaluated_propositions_count": 18,
+        "divergences_count": 6,
+        "favorable_votes": 12,
+        "unfavorable_votes": 6
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.444,
+        "evaluated_propositions_count": 18,
+        "divergences_count": 5,
+        "favorable_votes": 13,
+        "unfavorable_votes": 5
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 7,
+        "divergences_count": 0,
+        "favorable_votes": 7,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -14039,7 +18507,74 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 113
+        "nominal_balance": 113,
+        "profile_score": 0.934
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.857,
+        "evaluated_propositions_count": 14,
+        "divergences_count": 1,
+        "favorable_votes": 13,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 6,
+        "divergences_count": 0,
+        "favorable_votes": 6,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 6,
+        "divergences_count": 0,
+        "favorable_votes": 6,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 6,
+        "divergences_count": 0,
+        "favorable_votes": 6,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -14134,7 +18669,34 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 6
+        "nominal_balance": 6,
+        "profile_score": 0.273
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 0.5,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 1,
+        "favorable_votes": 3,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
       }
     ]
   },
@@ -14166,7 +18728,122 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 722
+        "nominal_balance": 722,
+        "profile_score": 0.634
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.767,
+        "evaluated_propositions_count": 129,
+        "divergences_count": 15,
+        "favorable_votes": 114,
+        "unfavorable_votes": 15
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.613,
+        "evaluated_propositions_count": 31,
+        "divergences_count": 6,
+        "favorable_votes": 25,
+        "unfavorable_votes": 6
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 0.571,
+        "evaluated_propositions_count": 14,
+        "divergences_count": 3,
+        "favorable_votes": 11,
+        "unfavorable_votes": 3
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 28,
+        "divergences_count": 0,
+        "favorable_votes": 28,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.444,
+        "evaluated_propositions_count": 18,
+        "divergences_count": 5,
+        "favorable_votes": 13,
+        "unfavorable_votes": 5
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 0,
+        "favorable_votes": 9,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 0,
+        "favorable_votes": 9,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -14261,7 +18938,26 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 5
+        "nominal_balance": 5,
+        "profile_score": 0.263
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 0,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 2,
+        "favorable_votes": 2,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -14314,7 +19010,34 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 5
+        "nominal_balance": 5,
+        "profile_score": 0.238
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 0.333,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 1,
+        "favorable_votes": 2,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -14787,7 +19510,18 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 0
+        "nominal_balance": 0,
+        "profile_score": 0
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 0,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 1,
+        "favorable_votes": 1,
+        "unfavorable_votes": 1
       }
     ]
   },
@@ -14945,7 +19679,34 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 9
+        "nominal_balance": 9,
+        "profile_score": 0.333
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 0,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 2,
+        "favorable_votes": 2,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -15817,7 +20578,34 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": -2
+        "nominal_balance": -2,
+        "profile_score": -0.083
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": -0.5,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 3,
+        "favorable_votes": 1,
+        "unfavorable_votes": 3
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -15975,7 +20763,106 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 399
+        "nominal_balance": 399,
+        "profile_score": 0.948
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 0,
+        "favorable_votes": 9,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 0,
+        "favorable_votes": 11,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "meio_ambiente_clima",
+        "score": 1,
+        "evaluated_propositions_count": 70,
+        "divergences_count": 0,
+        "favorable_votes": 70,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 10,
+        "divergences_count": 0,
+        "favorable_votes": 10,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 1,
+        "evaluated_propositions_count": 14,
+        "divergences_count": 0,
+        "favorable_votes": 14,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 15,
+        "divergences_count": 0,
+        "favorable_votes": 15,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 5,
+        "divergences_count": 0,
+        "favorable_votes": 5,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -16994,7 +21881,114 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 564
+        "nominal_balance": 564,
+        "profile_score": 0.983
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 19,
+        "divergences_count": 0,
+        "favorable_votes": 19,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "meio_ambiente_clima",
+        "score": 1,
+        "evaluated_propositions_count": 96,
+        "divergences_count": 0,
+        "favorable_votes": 96,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 10,
+        "divergences_count": 0,
+        "favorable_votes": 10,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 1,
+        "evaluated_propositions_count": 17,
+        "divergences_count": 0,
+        "favorable_votes": 17,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 19,
+        "divergences_count": 0,
+        "favorable_votes": 19,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 10,
+        "divergences_count": 0,
+        "favorable_votes": 10,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 7,
+        "divergences_count": 0,
+        "favorable_votes": 7,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -17068,7 +22062,34 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 2
+        "nominal_balance": 2,
+        "profile_score": 0.083
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": -0.5,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 3,
+        "favorable_votes": 1,
+        "unfavorable_votes": 3
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -17688,7 +22709,34 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 8
+        "nominal_balance": 8,
+        "profile_score": 0.5
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -18266,7 +23314,114 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 936
+        "nominal_balance": 936,
+        "profile_score": 0.817
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.918,
+        "evaluated_propositions_count": 146,
+        "divergences_count": 6,
+        "favorable_votes": 140,
+        "unfavorable_votes": 6
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 31,
+        "divergences_count": 0,
+        "favorable_votes": 31,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 17,
+        "divergences_count": 0,
+        "favorable_votes": 17,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 17,
+        "divergences_count": 0,
+        "favorable_votes": 17,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.905,
+        "evaluated_propositions_count": 21,
+        "divergences_count": 1,
+        "favorable_votes": 20,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 13,
+        "divergences_count": 0,
+        "favorable_votes": 13,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 0,
+        "favorable_votes": 9,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -18487,7 +23642,122 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1299
+        "nominal_balance": 1299,
+        "profile_score": 0.949
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 1,
+        "evaluated_propositions_count": 188,
+        "divergences_count": 0,
+        "favorable_votes": 188,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.949,
+        "evaluated_propositions_count": 39,
+        "divergences_count": 1,
+        "favorable_votes": 38,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 20,
+        "divergences_count": 0,
+        "favorable_votes": 20,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 34,
+        "divergences_count": 0,
+        "favorable_votes": 34,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.923,
+        "evaluated_propositions_count": 26,
+        "divergences_count": 1,
+        "favorable_votes": 25,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 15,
+        "divergences_count": 0,
+        "favorable_votes": 15,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 12,
+        "divergences_count": 0,
+        "favorable_votes": 12,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -18939,7 +24209,34 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 3
+        "nominal_balance": 3,
+        "profile_score": 0.143
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 0,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 2,
+        "favorable_votes": 2,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -19454,7 +24751,34 @@
         "votos_abstencao": 1,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 0
+        "nominal_balance": 0,
+        "profile_score": 0
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 0.5,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 1,
+        "favorable_votes": 3,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
       }
     ]
   },
@@ -19696,7 +25020,122 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 911
+        "nominal_balance": 911,
+        "profile_score": 0.654
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.746,
+        "evaluated_propositions_count": 189,
+        "divergences_count": 24,
+        "favorable_votes": 165,
+        "unfavorable_votes": 24
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.632,
+        "evaluated_propositions_count": 38,
+        "divergences_count": 7,
+        "favorable_votes": 31,
+        "unfavorable_votes": 7
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 29,
+        "divergences_count": 0,
+        "favorable_votes": 29,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 0.684,
+        "evaluated_propositions_count": 19,
+        "divergences_count": 3,
+        "favorable_votes": 16,
+        "unfavorable_votes": 3
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.44,
+        "evaluated_propositions_count": 25,
+        "divergences_count": 7,
+        "favorable_votes": 18,
+        "unfavorable_votes": 7
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 16,
+        "divergences_count": 0,
+        "favorable_votes": 16,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 12,
+        "divergences_count": 0,
+        "favorable_votes": 12,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 0.333,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 1,
+        "favorable_votes": 2,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -19980,7 +25419,26 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 3
+        "nominal_balance": 3,
+        "profile_score": 0.176
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 0.5,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 1,
+        "favorable_votes": 3,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -20033,7 +25491,34 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1
+        "nominal_balance": 1,
+        "profile_score": 0.048
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
       }
     ]
   },
@@ -20485,7 +25970,106 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 344
+        "nominal_balance": 344,
+        "profile_score": 0.639
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 8,
+        "divergences_count": 0,
+        "favorable_votes": 8,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 19,
+        "divergences_count": 0,
+        "favorable_votes": 19,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.76,
+        "evaluated_propositions_count": 100,
+        "divergences_count": 12,
+        "favorable_votes": 88,
+        "unfavorable_votes": 12
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 0.333,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 3,
+        "favorable_votes": 6,
+        "unfavorable_votes": 3
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.455,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 3,
+        "favorable_votes": 8,
+        "unfavorable_votes": 3
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.294,
+        "evaluated_propositions_count": 17,
+        "divergences_count": 6,
+        "favorable_votes": 11,
+        "unfavorable_votes": 6
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 7,
+        "divergences_count": 0,
+        "favorable_votes": 7,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -20538,7 +26122,106 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 814
+        "nominal_balance": 814,
+        "profile_score": 0.927
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.945,
+        "evaluated_propositions_count": 146,
+        "divergences_count": 4,
+        "favorable_votes": 142,
+        "unfavorable_votes": 4
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.938,
+        "evaluated_propositions_count": 32,
+        "divergences_count": 1,
+        "favorable_votes": 31,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 14,
+        "divergences_count": 0,
+        "favorable_votes": 14,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 17,
+        "divergences_count": 0,
+        "favorable_votes": 17,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.905,
+        "evaluated_propositions_count": 21,
+        "divergences_count": 1,
+        "favorable_votes": 20,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 14,
+        "divergences_count": 0,
+        "favorable_votes": 14,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 0,
+        "favorable_votes": 9,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 0.333,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 1,
+        "favorable_votes": 2,
+        "unfavorable_votes": 1
       }
     ]
   },
@@ -20801,7 +26484,34 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 8
+        "nominal_balance": 8,
+        "profile_score": 0.5
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -20959,7 +26669,66 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 66
+        "nominal_balance": 66,
+        "profile_score": 0.917
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.714,
+        "evaluated_propositions_count": 7,
+        "divergences_count": 1,
+        "favorable_votes": 6,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 5,
+        "divergences_count": 0,
+        "favorable_votes": 5,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -21516,7 +27285,114 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1073
+        "nominal_balance": 1073,
+        "profile_score": 0.954
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 0,
+        "favorable_votes": 11,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "meio_ambiente_clima",
+        "score": 1,
+        "evaluated_propositions_count": 134,
+        "divergences_count": 0,
+        "favorable_votes": 134,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 29,
+        "divergences_count": 0,
+        "favorable_votes": 29,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 15,
+        "divergences_count": 0,
+        "favorable_votes": 15,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 0.9,
+        "evaluated_propositions_count": 20,
+        "divergences_count": 1,
+        "favorable_votes": 19,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 24,
+        "divergences_count": 0,
+        "favorable_votes": 24,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 13,
+        "divergences_count": 0,
+        "favorable_votes": 13,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -21632,7 +27508,114 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 469
+        "nominal_balance": 469,
+        "profile_score": 0.951
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "meio_ambiente_clima",
+        "score": 0.977,
+        "evaluated_propositions_count": 88,
+        "divergences_count": 1,
+        "favorable_votes": 87,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 0.926,
+        "evaluated_propositions_count": 27,
+        "divergences_count": 1,
+        "favorable_votes": 26,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 7,
+        "divergences_count": 0,
+        "favorable_votes": 7,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 14,
+        "divergences_count": 0,
+        "favorable_votes": 14,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 10,
+        "divergences_count": 0,
+        "favorable_votes": 10,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 1,
+        "evaluated_propositions_count": 11,
+        "divergences_count": 0,
+        "favorable_votes": 11,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 0,
+        "favorable_votes": 4,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas_comunidades_tradicionais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
@@ -21664,7 +27647,122 @@
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 557
+        "nominal_balance": 557,
+        "profile_score": 0.962
+      }
+    ],
+    "category_scores": [
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 10,
+        "divergences_count": 0,
+        "favorable_votes": 10,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 10,
+        "divergences_count": 0,
+        "favorable_votes": 10,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "meio_ambiente_clima",
+        "score": 1,
+        "evaluated_propositions_count": 102,
+        "divergences_count": 0,
+        "favorable_votes": 102,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "saude_usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 9,
+        "divergences_count": 0,
+        "favorable_votes": 9,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "educacao_estudantes",
+        "score": 1,
+        "evaluated_propositions_count": 17,
+        "divergences_count": 0,
+        "favorable_votes": 17,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 21,
+        "divergences_count": 0,
+        "favorable_votes": 21,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 8,
+        "divergences_count": 0,
+        "favorable_votes": 8,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "micro_pequenos_empreendedores",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "idosos",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultura_familiar_sem_terra",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "agricultores_familiares",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "lgbtqia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
       }
     ]
   },
