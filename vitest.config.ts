@@ -11,8 +11,7 @@ export default defineConfig({
       '**/dist/**',
       '**/.orchestrator/runtime/**',
     ],
-    maxWorkers: 2,
-    fileParallelism: true,
+    fileParallelism: false,
   },
   resolve: {
     alias: {
