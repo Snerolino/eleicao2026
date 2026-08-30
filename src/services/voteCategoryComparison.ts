@@ -134,13 +134,14 @@ export function getLocalVoteCategoryScoreFacts(candidateIds: string[]): VoteCate
     const votes = getCandidateNominalVotes(tseId);
     for (const v of votes) {
       if (!v.assessment_group) continue;
+      const defVote = v.impact_direction === "negative" ? "nao" : "sim";
       facts.push({
         candidate_id: cand.id,
         house: v.house,
         group_slug: v.assessment_group,
         value: (v.vote_value as VoteCategoryScoreFact["value"]) || "sim",
         impact_direction: (v.impact_direction as any) || "positive",
-        defending_vote: "sim",
+        defending_vote: defVote,
         severity: 3,
         structural_type: "structural",
         confidence: 0.95,
@@ -215,7 +216,11 @@ export async function fetchVoteCategoryComparisons(
       (matrixRows ?? []) as Row[],
       dbToPublicId
     );
-    const combinedFacts = dbFacts.length > 0 ? dbFacts : localFacts;
+    const candidatesWithDbComparisons = new Set(dbFacts.map((f) => f.candidate_id));
+    const missingLocalComparisons = localFacts.filter(
+      (f) => !candidatesWithDbComparisons.has(f.candidate_id)
+    );
+    const combinedFacts = [...dbFacts, ...missingLocalComparisons];
     return buildVoteCategoryComparisons(combinedFacts, candidateIds);
   } catch (error) {
     console.warn(
@@ -298,7 +303,11 @@ export async function fetchVoteCategoryScores(
         }
       }
     }
-    const combinedFacts = dbFacts.length > 0 ? dbFacts : localFacts;
+    const candidatesWithDbFacts = new Set(dbFacts.map((f) => f.candidate_id));
+    const missingLocalFacts = localFacts.filter(
+      (f) => !candidatesWithDbFacts.has(f.candidate_id)
+    );
+    const combinedFacts = [...dbFacts, ...missingLocalFacts];
     return buildVoteCategoryScores(combinedFacts);
   } catch (error) {
     console.warn(
