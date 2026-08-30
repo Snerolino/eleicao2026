@@ -1,3 +1,14 @@
+## Tick contínuo — Aprovação Formal de Artefatos, Publicação e Estudo Contextual de Emendas — 2026-08-30T11:41-03:00
+
+- **Artefatos Aprovados Formalmente pelo Usuário**:
+  - `prompt_draft.md` (Auditoria e Análise Editorial Contextual).
+  - `relatorio_auditoria_universal_candidatos_inconsistencias.md` (Auditoria de Inconsistências de Candidatos).
+  - `relatorio_resolucao_assembleia_federal_camara.md` (Resolução das Casas Legislativas e Gabarito Canônico).
+- **Estudo Profundo Concluído**: `docs/editorial/estudo-profundo-materias-emendas-e-ativos-2026-08-30.md` mapeou 49 perfis patrimoniais (R$ 23,98M), fila substantiva ALRS (462 matérias) e formalizou a metodologia de desdobramento de emendas para manobras de *"ceder o mínimo para evitar o justo"*.
+- **Supabase Remoto**: Migration `20260830110000_evolve_impact_taxonomy_v1_1_and_event_attribution.sql` aplicada com sucesso (21 grupos canônicos e atribuição por evento).
+- **Cloudflare Pages & Produção**: Release atualizado em `https://rs.votopraquem.org` e `https://portal-transparencia-rs.pages.dev` (100% dos smoke tests verdes, 0 erros de console, 1.002 cards e PWA ativo).
+- **Suíte de Testes**: 115 arquivos / 485 testes no Vitest (100% verde) e validação de schema estrita.
+
 ## Tick contínuo — Correção Editorial e Arquitetural Profunda (Metodologia v1.1 e Quarentena de Regressão) — 2026-08-30T10:30-03:00
 
 - Executada a correção profunda do gabarito canônico, schema de impacto e pipeline de reconciliação com base nos artefatos de auditoria de 2026-08-30.
