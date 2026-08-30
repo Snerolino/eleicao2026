@@ -4880,3 +4880,12 @@ Sem autorização humana explícita própria, não fazer:
 - `git push origin main` RC 128 por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`); HEAD local `4f33ddf` está 7 commits à frente de `origin/main`; nenhum workflow novo foi acionado.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-23-2130.md`. Doctor RC 1 por Node 22 no shell/OpenCode ausente; nenhuma escrita remota ocorreu.
 - Próximo passo: retentar transporte Git; se aceito, validar backup `334951434`, `headSha` e produção. Manter os quatro votos fail-closed até fonte oficial reproduzida com URL, hash, bytes e match exato.
+
+
+## Tick contínuo — reconciliação oficial Câmara e saúde do portal — 2026-08-30
+
+- Lock exclusivo adquirido/liberado; worktree limpa em `main`, `HEAD=4d7750d5e785afd76b975436c7816ca8184cf410`, alinhada com `origin/main` (`0/0`).
+- Descoberta Câmara oficial read-only: janela 2026-01-01..2026-12-31 dividida em 4 trimestres, `4/4` OK, `300` vote_ids, `blocked=null`; nenhuma escrita remota.
+- Monitor local registrou `pending_editorial_items=1261` e `factual_votes=4000`; fingerprint local `271e0e77...`; a mudança externa observada não alterou essas contagens e não justificou promoção de dados.
+- `data:check` verde (`1003` candidaturas, `988` fotos, `1` fonte TSE); portal `published_verified`, raiz e `/release.json` HTTP 200.
+- QA: `docs/qa/lote-continuous-ops-recon-2026-08-30.md`. Commit local (hash final registrado após o amend); push retentado 3 vezes e bloqueado por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), sem deploy novo. Próximo chunk: nova recon bounded fail-closed, somente com gates de fonte/identidade/FK/dry-run/idempotência.
