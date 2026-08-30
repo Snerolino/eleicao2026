@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { loadAllCamaraVotes, buildDeputyToTseMapping, buildProfilesByTse } from './enrich-candidate-voting-profiles.mjs';
 
-function classifyText(title, desc) {
+export function classifyText(title, desc) {
   const text = `${title || ''} ${desc || ''}`.toLowerCase();
 
   // 1. Mulheres
@@ -21,7 +21,9 @@ function classifyText(title, desc) {
     text.includes('parto') ||
     text.includes('puerpério') ||
     text.includes('dignidade menstrual') ||
-    text.includes('absorvente')
+    text.includes('absorvente') ||
+    text.includes('plp 41/2024') ||
+    text.includes('plp 41')
   ) {
     return {
       group: 'mulheres',
@@ -31,7 +33,7 @@ function classifyText(title, desc) {
       type: 'structural',
       confidence: 0.95,
       rationale:
-        'Legislação voltada à ampliação da proteção, amparo e direitos das mulheres no Estado do RS.',
+        'Legislação voltada à ampliação da proteção, amparo e direitos das mulheres.',
     };
   }
 
@@ -65,6 +67,8 @@ function classifyText(title, desc) {
     text.includes('quilombola') ||
     text.includes('antirracista') ||
     text.includes('racismo') ||
+    text.includes('injúria racial') ||
+    text.includes('pl 4566') ||
     text.includes('comunidade carente') ||
     text.includes('habitação popular') ||
     text.includes('moradia') ||
@@ -82,18 +86,20 @@ function classifyText(title, desc) {
     };
   }
 
-  // 4. Povos Indígenas e Comunidades Tradicionais
+  // 4. Povos Indígenas
   if (
     text.includes('indígena') ||
     text.includes('aldeia') ||
     text.includes('guarani') ||
     text.includes('kaingang') ||
-    text.includes('tradicionais') ||
+    text.includes('marco temporal') ||
+    text.includes('pl 490') ||
+    text.includes('terra indígena') ||
     text.includes('povo originário') ||
     text.includes('demarcação')
   ) {
     return {
-      group: 'povos_indigenas_comunidades_tradicionais',
+      group: 'povos_indigenas',
       direction: 'positive',
       defending_vote: 'sim',
       severity: 3,
@@ -118,6 +124,9 @@ function classifyText(title, desc) {
     text.includes('jovem') ||
     text.includes('juventude') ||
     text.includes('amparo à vítima') ||
+    text.includes('pl 2630') ||
+    text.includes('fust') ||
+    text.includes('plp 230') ||
     text.includes('vulnerabilidade social') ||
     text.includes('proteção social')
   ) {
@@ -133,7 +142,7 @@ function classifyText(title, desc) {
     };
   }
 
-  // 6. Idosos
+  // 6. Pessoas Idosas Dependentes
   if (
     text.includes('idoso') ||
     text.includes('terceira idade') ||
@@ -145,7 +154,7 @@ function classifyText(title, desc) {
     text.includes('centro-dia')
   ) {
     return {
-      group: 'idosos',
+      group: 'pessoas_idosas_dependentes',
       direction: 'positive',
       defending_vote: 'sim',
       severity: 3,
@@ -156,7 +165,7 @@ function classifyText(title, desc) {
     };
   }
 
-  // 7. Pessoas com Deficiência e Condições Crônicas
+  // 7. Pessoas com Deficiência
   if (
     text.includes('deficiência') ||
     text.includes('pcd') ||
@@ -184,7 +193,7 @@ function classifyText(title, desc) {
     };
   }
 
-  // 8. Educação e Estudantes
+  // 8. Estudantes
   if (
     text.includes('educação') ||
     text.includes('escola') ||
@@ -196,15 +205,18 @@ function classifyText(title, desc) {
     text.includes('pré-universitário') ||
     text.includes('universidade') ||
     text.includes('uergs') ||
+    text.includes('fundeb') ||
     text.includes('pedagógico') ||
     text.includes('alfabetização') ||
     text.includes('livro') ||
     text.includes('biblioteca') ||
     text.includes('passe livre estudantil') ||
-    text.includes('bolsa de estudo')
+    text.includes('bolsa de estudo') ||
+    text.includes('prouni') ||
+    text.includes('fies')
   ) {
     return {
-      group: 'educacao_estudantes',
+      group: 'estudantes',
       direction: 'positive',
       defending_vote: 'sim',
       severity: 3,
@@ -215,7 +227,7 @@ function classifyText(title, desc) {
     };
   }
 
-  // 9. Saúde e Usuários do SUS
+  // 9. Usuários do SUS
   if (
     text.includes('saúde') ||
     text.includes('hospital') ||
@@ -234,12 +246,13 @@ function classifyText(title, desc) {
     text.includes('mental') ||
     text.includes('caps') ||
     text.includes('atendimento médico') ||
+    text.includes('pl 2110') ||
     text.includes('ipergs') ||
     text.includes('ipe saúde') ||
     text.includes('plano de saúde')
   ) {
     return {
-      group: 'saude_usuarios_sus',
+      group: 'usuarios_sus',
       direction: 'positive',
       defending_vote: 'sim',
       severity: 3,
@@ -250,42 +263,7 @@ function classifyText(title, desc) {
     };
   }
 
-  // 10. Meio Ambiente, Clima e Proteção Animal
-  if (
-    text.includes('meio ambiente') ||
-    text.includes('clima') ||
-    text.includes('enchente') ||
-    text.includes('calamidade') ||
-    text.includes('recursos hídricos') ||
-    text.includes('bacia hidrográfica') ||
-    text.includes('florestal') ||
-    text.includes('resíduos sólidos') ||
-    text.includes('saneamento') ||
-    text.includes('proteção animal') ||
-    text.includes('animais') ||
-    text.includes('animal') ||
-    text.includes('bem-estar') ||
-    text.includes('fauna') ||
-    text.includes('flora') ||
-    text.includes('rio') ||
-    text.includes('água') ||
-    text.includes('desastre') ||
-    text.includes('reciclagem') ||
-    text.includes('preservação')
-  ) {
-    return {
-      group: 'meio_ambiente_clima',
-      direction: 'positive',
-      defending_vote: 'sim',
-      severity: 4,
-      type: 'structural',
-      confidence: 0.9,
-      rationale:
-        'Medidas de conservação ambiental, resiliência climática, prevenção a cheias e proteção e bem-estar animal.',
-    };
-  }
-
-  // 11. Agricultores Familiares e Meio Rural
+  // 10. Agricultura Familiar
   if (
     text.includes('agricultura familiar') ||
     text.includes('pequeno produtor') ||
@@ -294,6 +272,7 @@ function classifyText(title, desc) {
     text.includes('irrigação') ||
     text.includes('assentamento') ||
     text.includes('crédito rural') ||
+    text.includes('pronaf') ||
     text.includes('sementes') ||
     text.includes('agropecuária') ||
     text.includes('pesca') ||
@@ -304,47 +283,18 @@ function classifyText(title, desc) {
     text.includes('porteira para dentro')
   ) {
     return {
-      group: 'agricultores_familiares',
+      group: 'agricultura_familiar_sem_terra',
       direction: 'positive',
       defending_vote: 'sim',
       severity: 3,
       type: 'structural',
       confidence: 0.88,
       rationale:
-        'Fomento à produção rural familiar, combate ao abigeato, assistência técnica e enfrentamento de perdas no campo.',
+        'Fomento à produção rural familiar, assistência técnica e enfrentamento de perdas no campo.',
     };
   }
 
-  // 12. Micro e Pequenos Empreendedores
-  if (
-    text.includes('microempresa') ||
-    text.includes('pequeno porte') ||
-    text.includes('mei') ||
-    text.includes('empreendedorismo') ||
-    text.includes('desburocratização') ||
-    text.includes('simples gaúcho') ||
-    text.includes('microcrédito') ||
-    text.includes('comércio') ||
-    text.includes('inovação') ||
-    text.includes('startup') ||
-    text.includes('cooperativa') ||
-    text.includes('polo industrial') ||
-    text.includes('artesanato regional') ||
-    text.includes('icms pertencente aos municípios')
-  ) {
-    return {
-      group: 'micro_pequenos_empreendedores',
-      direction: 'positive',
-      defending_vote: 'sim',
-      severity: 2,
-      type: 'structural',
-      confidence: 0.88,
-      rationale:
-        'Incentivo e facilitação tributária, fomento a pequenos negócios e fortalecimento do desenvolvimento econômico local.',
-    };
-  }
-
-  // 13. Trabalhadores Informais e Autônomos
+  // 11. Trabalhadores Informais
   if (
     text.includes('trabalhador informal') ||
     text.includes('autônomo') ||
@@ -355,7 +305,12 @@ function classifyText(title, desc) {
     text.includes('entregador') ||
     text.includes('artesão') ||
     text.includes('feirante') ||
-    text.includes('economia solidária')
+    text.includes('economia solidária') ||
+    text.includes('auxílio gás') ||
+    text.includes('mpv 1313') ||
+    text.includes('mpv 1323') ||
+    text.includes('microempreendedor') ||
+    text.includes('mei')
   ) {
     return {
       group: 'trabalhadores_informais',
@@ -369,7 +324,31 @@ function classifyText(title, desc) {
     };
   }
 
-  // 14. Servidores Públicos e Finanças do Estado
+  // 12. Trabalhadores Formais
+  if (
+    text.includes('clt') ||
+    text.includes('salário mínimo') ||
+    text.includes('fgts') ||
+    text.includes('jornada de trabalho') ||
+    text.includes('carteira de trabalho') ||
+    text.includes('seguro-desemprego') ||
+    text.includes('direitos trabalhistas') ||
+    text.includes('terceirização') ||
+    text.includes('adicional noturno')
+  ) {
+    return {
+      group: 'trabalhadores_formais',
+      direction: 'positive',
+      defending_vote: 'sim',
+      severity: 3,
+      type: 'structural',
+      confidence: 0.9,
+      rationale:
+        'Defesa das garantias trabalhistas, valorização do salário mínimo e proteção do emprego formal.',
+    };
+  }
+
+  // 13. Servidores Públicos
   if (
     text.includes('magistério') ||
     text.includes('servidor') ||
@@ -380,6 +359,9 @@ function classifyText(title, desc) {
     text.includes('data-base') ||
     text.includes('quadro de pessoal') ||
     text.includes('concurso público') ||
+    text.includes('reforma da previdência') ||
+    text.includes('pec 6/2019') ||
+    text.includes('pec 6') ||
     text.includes('polícia civil') ||
     text.includes('brigada militar') ||
     text.includes('bombeiro') ||
@@ -402,7 +384,27 @@ function classifyText(title, desc) {
       type: 'budgetary',
       confidence: 0.92,
       rationale:
-        'Norma regulamentadora de finanças estaduais, diretrizes orçamentárias e estruturação das carreiras públicas.',
+        'Norma regulamentadora de finanças públicas, diretrizes orçamentárias e estruturação das carreiras públicas.',
+    };
+  }
+
+  // 14. Pessoas com Ludopatia
+  if (
+    text.includes('apostas') ||
+    text.includes('bets') ||
+    text.includes('ludopatia') ||
+    text.includes('pl 3626') ||
+    text.includes('jogos de azar')
+  ) {
+    return {
+      group: 'pessoas_com_ludopatia',
+      direction: 'positive',
+      defending_vote: 'sim',
+      severity: 3,
+      type: 'structural',
+      confidence: 0.9,
+      rationale:
+        'Regulação de apostas, prevenção ao superendividamento e amparo à saúde mental contra o vício em apostas.',
     };
   }
 
@@ -416,6 +418,7 @@ export async function runFullReconciliation() {
   const gabaritoPath = path.resolve(root, 'data/impact-matrices/gabarito-materias-aprovadas.json');
   const publicCandPath = path.resolve(root, 'data/public-candidates.json');
   const nominalVotesPath = path.resolve(root, 'data/candidate-nominal-votes.json');
+  const camaraMetaPath = path.resolve(root, 'data/legislative-import/camara/camara-voting-events-metadata.json');
 
   const recon = JSON.parse(fs.readFileSync(reconPath, 'utf8'));
   const subQueue = JSON.parse(fs.readFileSync(subQueuePath, 'utf8'));
@@ -423,6 +426,7 @@ export async function runFullReconciliation() {
   const publicCandidates = JSON.parse(fs.readFileSync(publicCandPath, 'utf8'));
   const camaraVotes = loadAllCamaraVotes(root);
   const deputyToTse = buildDeputyToTseMapping(root);
+  const camaraMeta = fs.existsSync(camaraMetaPath) ? JSON.parse(fs.readFileSync(camaraMetaPath, 'utf8')) : {};
 
   // 1. Process substantive ALRS queue into canonical gabarito
   const subMap = new Map();
@@ -542,6 +546,10 @@ export async function runFullReconciliation() {
     if (eventId && seenCamaraVotes.has(dedupKey)) continue;
     if (eventId) seenCamaraVotes.add(dedupKey);
 
+    const m = camaraMeta[rawNum] || camaraMeta[cleanEventId];
+    const mPropNum = m?.propNum || '';
+    const mDesc = m?.desc || '';
+
     const gab = gabarito.propositions.find(
       (p) =>
         p.official_source_label?.includes(rawNum) ||
@@ -551,7 +559,9 @@ export async function runFullReconciliation() {
         (p.proposition_id.includes('mpv-1323') && cleanEventId.includes('2581700'))
     );
 
-    let propTitle = gab?.title || v.proposition_title;
+    const dynamicClassification = classifyText(mPropNum, mDesc);
+
+    let propTitle = gab?.title || v.proposition_title || mDesc;
     if (!propTitle) {
       if (cleanEventId.includes('2606313-36'))
         propTitle = 'Política Nacional de Prevenção e Enfrentamento da Violência contra Mulheres (PLP 41/2024)';
@@ -559,30 +569,23 @@ export async function runFullReconciliation() {
         propTitle = 'Apoio e Fomento a Trabalhadores Autônomos e Informais (MPV 1313/2025)';
       else if (cleanEventId.includes('2581700'))
         propTitle = 'Crédito Produtivo e Amparo a Trabalhadores Informais (MPV 1323/2025)';
-      else if (cleanEventId.includes('2503998-70')) propTitle = 'Requerimento de Retirada de Pauta do PLP 109';
-      else if (cleanEventId.includes('2503998-75')) propTitle = 'Emenda Fiscal ao PLP 109';
-      else if (cleanEventId.includes('2562289-8')) propTitle = 'Requerimento de Urgência para o PLP 104';
-      else if (cleanEventId.includes('2610579-7')) propTitle = 'Requerimento de Urgência para o PL 2898';
-      else if (cleanEventId.includes('2638483-34')) propTitle = 'Emenda ao PL 3085';
-      else if (cleanEventId.includes('2562173')) propTitle = 'Votação do PL 2630 (Regulação de Plataformas)';
-      else if (cleanEventId.includes('2618177')) propTitle = 'Votação do PLP 114';
       else propTitle = `Votação Nominal na Câmara dos Deputados (${cleanEventId.replace('camara-votacao-', '')})`;
     }
 
+    const propNumber = gab?.number
+      ? `${gab.type?.toUpperCase()} ${gab.number}/${gab.year}`
+      : mPropNum || (cleanEventId.startsWith('camara-votacao-') ? cleanEventId.replace('camara-votacao-', 'Votação ') : cleanEventId || 'Votação Câmara');
+
     addCandidateVote(tseId, {
       house: 'camara',
-      proposition_id: gab?.number
-        ? `${gab.type?.toUpperCase()} ${gab.number}/${gab.year}`
-        : cleanEventId.startsWith('camara-votacao-')
-        ? cleanEventId.replace('camara-votacao-', 'Votação ')
-        : cleanEventId || 'Votação Câmara',
+      proposition_id: propNumber,
       title: propTitle,
       vote_value: v.value,
-      date: v.recorded_at ? v.recorded_at.split('T')[0] : v.date || '2025/2026',
+      date: v.recorded_at ? v.recorded_at.split('T')[0] : (m?.data ? m.data.split('T')[0] : '2025/2026'),
       source_url: gab?.official_source_url || `https://dadosabertos.camara.leg.br/api/v2/votacoes/${rawNum}`,
       source_label: gab?.official_source_label || 'Câmara dos Deputados — Dados Abertos',
-      assessment_group: gab?.assessments?.[0]?.group ?? null,
-      impact_direction: gab?.assessments?.[0]?.impact_direction ?? null,
+      assessment_group: gab?.assessments?.[0]?.group || dynamicClassification?.group || null,
+      impact_direction: gab?.assessments?.[0]?.impact_direction || dynamicClassification?.direction || null,
     });
   }
 
@@ -590,9 +593,10 @@ export async function runFullReconciliation() {
   fs.writeFileSync(nominalVotesPath, JSON.stringify(compactPayload) + '\n');
   console.log(`✅ Base de votos nominais detalhados ultra-compacta atualizada: ${Object.keys(candVotesMap).length} candidatos, ${propsList.length} proposições (${(JSON.stringify(compactPayload).length / 1024).toFixed(1)} KB).`);
 
-  // 3. Update public-candidates.json voting profiles using unified buildProfilesByTse
+  // 3. Update public-candidates.json voting profiles and category_scores
   const { alrsProfiles, camaraProfiles } = buildProfilesByTse(root);
   let updatedCandidatesCount = 0;
+  let updatedScoresCount = 0;
 
   for (const cand of publicCandidates) {
     const profiles = [];
@@ -609,10 +613,67 @@ export async function runFullReconciliation() {
       cand.voting_profiles = profiles;
       updatedCandidatesCount++;
     }
+
+    // Dynamic derivation of category_scores from candVotesMap
+    const candVotes = candVotesMap[tseId] || [];
+    const byGroup = new Map();
+
+    for (const item of candVotes) {
+      const prop = propsList[item[0]];
+      if (!prop || !prop.g || !prop.d) continue;
+      const group = prop.g;
+      const voteVal = (item[1] || '').toLowerCase();
+      const impactDir = (prop.d || '').toLowerCase();
+
+      let defending = null;
+      if (impactDir === 'positive') defending = 'sim';
+      else if (impactDir === 'negative') defending = 'nao';
+
+      let alignment = 0;
+      if (defending) {
+        if (voteVal === defending) alignment = 1;
+        else if (voteVal === 'ausente') alignment = -0.5;
+        else if (voteVal === 'abstencao' || voteVal === 'obstrucao') alignment = 0;
+        else alignment = -1;
+      }
+
+      const bucket = byGroup.get(group) || [];
+      bucket.push({ propId: prop.p, voteVal, impactDir, alignment });
+      byGroup.set(group, bucket);
+    }
+
+    const computedScores = [];
+    for (const [group, items] of byGroup.entries()) {
+      const uniqueProps = [...new Map(items.map((it) => [it.propId, it])).values()];
+      const count = uniqueProps.length;
+      if (count === 0) continue;
+
+      const favorable = uniqueProps.filter((it) => it.alignment > 0).length;
+      const unfavorable = uniqueProps.filter((it) => it.alignment < 0).length;
+      const totalAlign = uniqueProps.reduce((acc, it) => acc + it.alignment, 0);
+      const scoreVal = Number((totalAlign / count).toFixed(2));
+
+      computedScores.push({
+        group,
+        score: scoreVal,
+        evaluated_propositions_count: count,
+        divergences_count: unfavorable,
+        favorable_votes: favorable,
+        unfavorable_votes: unfavorable,
+      });
+    }
+
+    if (computedScores.length > 0) {
+      cand.category_scores = computedScores;
+      updatedScoresCount++;
+    }
   }
 
   fs.writeFileSync(publicCandPath, JSON.stringify(publicCandidates, null, 2) + '\n');
   console.log(`✅ Perfil de votações atualizado no snapshot público para ${updatedCandidatesCount} candidatos.`);
+  console.log(`✅ Category scores atualizados no snapshot público para ${updatedScoresCount} candidatos com votos avaliados.`);
 }
 
-runFullReconciliation();
+if (process.argv[1]?.endsWith('reconcile-all-alrs-and-federal-candidate-profiles.mjs')) {
+  runFullReconciliation();
+}
