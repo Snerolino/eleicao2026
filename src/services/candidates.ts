@@ -472,12 +472,13 @@ export async function fetchCandidateById(
     const candidate = await fetchCandidateFromSupabase(id);
     if (candidate) {
       const snapshotCandidate = findInMock(id);
-      return {
+      return applyPublicCandidateWithClaimsOverrides({
         ...candidate,
         photo_url: candidate.photo_url || snapshotCandidate?.photo_url || null,
         photo_source_url: candidate.photo_source_url || snapshotCandidate?.photo_source_url || null,
         voting_profiles: selectRicherVotingProfiles(snapshotCandidate?.voting_profiles, candidate.voting_profiles),
-      };
+        category_scores: snapshotCandidate?.category_scores ?? candidate.category_scores ?? [],
+      });
     }
   } catch {
     // Supabase unavailable — fall through to mock
