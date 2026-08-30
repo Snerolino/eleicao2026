@@ -51,7 +51,7 @@ describe("DivergentScoreBar component", () => {
     expect(screen.getByText(/6 itens/i)).toBeInTheDocument();
   });
 
-  it("renderiza saldo negativo (-0.18) preenchendo da metade para a esquerda em ocre", () => {
+  it("renderiza saldo negativo (-0.18) preenchendo da metade para a esquerda em vermelho", () => {
     render(
       <DivergentScoreBar
         score={-0.18}
@@ -67,7 +67,7 @@ describe("DivergentScoreBar component", () => {
 
     const val = screen.getByTestId("score-value");
     expect(val).toHaveTextContent("-0,18");
-    expect(val).toHaveClass("text-[var(--color-factcheck)]");
+    expect(val).toHaveClass("text-[var(--color-negative-vote)]");
     expect(screen.getByText(/4 itens/i)).toBeInTheDocument();
   });
 

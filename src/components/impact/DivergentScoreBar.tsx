@@ -57,7 +57,7 @@ export function DivergentScoreBar({
                 width: `${widthPercent}%`,
                 backgroundColor: isPositive
                   ? "var(--color-institutional)"
-                  : "var(--color-factcheck)",
+                  : "var(--color-negative-vote)",
               }}
             />
           )}
@@ -84,7 +84,7 @@ export function DivergentScoreBar({
                 isPositive
                   ? "text-[var(--color-institutional)]"
                   : isNegative
-                  ? "text-[var(--color-factcheck)]"
+                  ? "text-[var(--color-negative-vote)]"
                   : "text-[var(--color-ink)]"
               }`}
             >
