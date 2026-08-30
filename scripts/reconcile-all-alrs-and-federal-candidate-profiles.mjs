@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { loadAllCamaraVotes, buildDeputyToTseMapping } from './enrich-candidate-voting-profiles.mjs';
+import { loadAllCamaraVotes, buildDeputyToTseMapping, buildProfilesByTse } from './enrich-candidate-voting-profiles.mjs';
 
 function classifyText(title, desc) {
   const text = `${title || ''} ${desc || ''}`.toLowerCase();
@@ -527,15 +527,20 @@ export async function runFullReconciliation() {
   }
 
   // Camara votes (all)
+  const seenCamaraVotes = new Set();
   for (const v of camaraVotes) {
     const depId = String(v.deputy_id || v.legislator_id || v.legislator_external_id || '');
     const cleanId = depId.replace('camara-deputado-', '').replace('camara:', '');
-    const tseId = deputyToTse.get(depId) || deputyToTse.get(cleanId);
+    const tseId = v.candidate_tse_id || deputyToTse.get(depId) || deputyToTse.get(cleanId);
     if (!tseId) continue;
 
-    const eventId = String(v.voting_event_external_id || v.voting_event_id || v.event_id || '');
+    const eventId = String(v.event_external_id || v.voting_event_external_id || v.voting_event_id || v.event_id || '');
     const cleanEventId = eventId.replace('voting_events:camara:', '');
     const rawNum = cleanEventId.replace('camara-votacao-', '');
+
+    const dedupKey = `${tseId}|${cleanEventId}|${v.value}`;
+    if (eventId && seenCamaraVotes.has(dedupKey)) continue;
+    if (eventId) seenCamaraVotes.add(dedupKey);
 
     const gab = gabarito.propositions.find(
       (p) =>
@@ -585,51 +590,19 @@ export async function runFullReconciliation() {
   fs.writeFileSync(nominalVotesPath, JSON.stringify(compactPayload) + '\n');
   console.log(`✅ Base de votos nominais detalhados ultra-compacta atualizada: ${Object.keys(candVotesMap).length} candidatos, ${propsList.length} proposições (${(JSON.stringify(compactPayload).length / 1024).toFixed(1)} KB).`);
 
-  // 3. Update public-candidates.json voting profiles
+  // 3. Update public-candidates.json voting profiles using unified buildProfilesByTse
+  const { alrsProfiles, camaraProfiles } = buildProfilesByTse(root);
   let updatedCandidatesCount = 0;
+
   for (const cand of publicCandidates) {
-    const rawAlrsList = alrsVotesByCand.get(cand.tse_candidate_id) || [];
-    const camaraList = camaraVotes.filter((v) => {
-      const depId = String(v.deputy_id || v.legislator_id || v.legislator_external_id || '');
-      const cleanId = depId.replace('camara-deputado-', '').replace('camara:', '');
-      return deputyToTse.get(depId) === cand.tse_candidate_id || deputyToTse.get(cleanId) === cand.tse_candidate_id;
-    });
-
     const profiles = [];
-    if (rawAlrsList.length > 0) {
-      const sim = rawAlrsList.filter((v) => v.value.toLowerCase() === 'sim').length;
-      const nao = rawAlrsList.filter((v) => v.value.toLowerCase() === 'nao').length;
-      const abst = rawAlrsList.filter((v) => v.value.toLowerCase() === 'abstencao').length;
-      const aus = rawAlrsList.filter((v) => v.value.toLowerCase() === 'ausente').length;
-      const obs = rawAlrsList.filter((v) => v.value.toLowerCase() === 'obstrucao').length;
-      profiles.push({
-        house: 'alrs',
-        total_votes: rawAlrsList.length,
-        votos_sim: sim,
-        votos_nao: nao,
-        votos_abstencao: abst,
-        votos_ausente: aus,
-        votos_obstrucao: obs,
-        nominal_balance: sim - nao,
-      });
-    }
+    const tseId = cand.tse_candidate_id;
 
-    if (camaraList.length > 0) {
-      const sim = camaraList.filter((v) => v.value.toLowerCase() === 'sim').length;
-      const nao = camaraList.filter((v) => v.value.toLowerCase() === 'nao').length;
-      const abst = camaraList.filter((v) => v.value.toLowerCase() === 'abstencao').length;
-      const aus = camaraList.filter((v) => v.value.toLowerCase() === 'ausente').length;
-      const obs = camaraList.filter((v) => v.value.toLowerCase() === 'obstrucao').length;
-      profiles.push({
-        house: 'camara',
-        total_votes: camaraList.length,
-        votos_sim: sim,
-        votos_nao: nao,
-        votos_abstencao: abst,
-        votos_ausente: aus,
-        votos_obstrucao: obs,
-        nominal_balance: sim - nao,
-      });
+    if (tseId && alrsProfiles.has(tseId)) {
+      profiles.push(alrsProfiles.get(tseId));
+    }
+    if (tseId && camaraProfiles.has(tseId)) {
+      profiles.push(camaraProfiles.get(tseId));
     }
 
     if (profiles.length > 0) {
