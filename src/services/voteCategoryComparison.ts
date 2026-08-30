@@ -83,7 +83,7 @@ async function resolveDbCandidateMapping(
     }
   }
 
-  const queryIds = Array.from(new Set(candidateIds));
+  const queryIds = Array.from(new Set([...candidateIds, ...dbToPublicId.keys()]));
   return { queryIds, dbToPublicId };
 }
 
@@ -133,14 +133,15 @@ export function getLocalVoteCategoryScoreFacts(candidateIds: string[]): VoteCate
     if (!tseId) continue;
     const votes = getCandidateNominalVotes(tseId);
     for (const v of votes) {
-      if (!v.assessment_group) continue;
-      const defVote = v.impact_direction === "negative" ? "nao" : "sim";
+      if (!v.assessment_group || !v.impact_direction) continue;
+      const defVote = v.impact_direction === "negative" ? "nao" : null;
+      if (defVote === null && v.impact_direction !== "mixed" && v.impact_direction !== "unclear") continue;
       facts.push({
         candidate_id: cand.id,
         house: v.house,
         group_slug: v.assessment_group,
-        value: (v.vote_value as VoteCategoryScoreFact["value"]) || "sim",
-        impact_direction: (v.impact_direction as any) || "positive",
+        value: v.vote_value as VoteCategoryScoreFact["value"],
+        impact_direction: v.impact_direction,
         defending_vote: defVote,
         severity: 3,
         structural_type: "structural",
