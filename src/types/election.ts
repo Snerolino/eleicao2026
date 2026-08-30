@@ -98,11 +98,21 @@ export interface CandidateDeclaredAssets {
   evolucao_percentual?: number | null;
 }
 
+export interface CandidateCategoryScoreSnapshot {
+  group: string;
+  score: number;
+  evaluated_propositions_count: number;
+  divergences_count?: number;
+  favorable_votes?: number;
+  unfavorable_votes?: number;
+}
+
 export interface CandidateWithClaims extends Candidate {
   claims: Claim[];
   voting_profiles?: VotingProfile[];
   nominal_votes?: CandidateNominalVote[];
   declared_assets?: CandidateDeclaredAssets | null;
+  category_scores?: CandidateCategoryScoreSnapshot[];
 }
 
 export interface VotingProfile {

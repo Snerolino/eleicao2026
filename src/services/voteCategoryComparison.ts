@@ -216,9 +216,11 @@ export async function fetchVoteCategoryComparisons(
       (matrixRows ?? []) as Row[],
       dbToPublicId
     );
-    const candidatesWithDbComparisons = new Set(dbFacts.map((f) => f.candidate_id));
+    const dbComparisonKeys = new Set(
+      dbFacts.map((f) => `${f.candidate_id}|${f.group_slug}`)
+    );
     const missingLocalComparisons = localFacts.filter(
-      (f) => !candidatesWithDbComparisons.has(f.candidate_id)
+      (f) => !dbComparisonKeys.has(`${f.candidate_id}|${f.group_slug}`)
     );
     const combinedFacts = [...dbFacts, ...missingLocalComparisons];
     return buildVoteCategoryComparisons(combinedFacts, candidateIds);
@@ -231,12 +233,41 @@ export async function fetchVoteCategoryComparisons(
   }
 }
 
+export function getLocalVoteCategoryScores(candidateIds: string[]): VoteCategoryScore[] {
+  const localScores: VoteCategoryScore[] = [];
+  for (const cid of candidateIds) {
+    const cand = PUBLIC_CANDIDATES.find((c) => c.id === cid || c.slug === cid);
+    if (!cand) continue;
+
+    if (Array.isArray(cand.category_scores) && cand.category_scores.length > 0) {
+      for (const cs of cand.category_scores) {
+        localScores.push({
+          candidate_id: cand.id,
+          house: cand.position === "deputado_federal" ? "camara" : "alrs",
+          group_slug: cs.group,
+          score: cs.score,
+          methodology_version: "1.0.0",
+          evaluated_propositions: cs.evaluated_propositions_count,
+          eligible_weight: cs.evaluated_propositions_count * 3,
+          excluded_no_data: 0,
+          contested_assessments: 0,
+          average_confidence: 0.95,
+        });
+      }
+    }
+  }
+  return localScores;
+}
+
 export async function fetchVoteCategoryScores(
   candidateIds: string[]
 ): Promise<VoteCategoryScore[]> {
+  const fallbackScores = getLocalVoteCategoryScores(candidateIds);
   const localFacts = getLocalVoteCategoryScoreFacts(candidateIds);
+
   if (!supabase || candidateIds.length < 1) {
-    return buildVoteCategoryScores(localFacts);
+    const derived = buildVoteCategoryScores(localFacts);
+    return derived.length > 0 ? derived : fallbackScores;
   }
   try {
     const client = supabase as any;
@@ -247,7 +278,10 @@ export async function fetchVoteCategoryScores(
     ).flat() as Row[];
 
     const eventIds = [...new Set(indexes.map((row) => row.voting_event_id).filter(Boolean))];
-    if (eventIds.length === 0) return buildVoteCategoryScores(localFacts);
+    if (eventIds.length === 0) {
+      const derived = buildVoteCategoryScores(localFacts);
+      return derived.length > 0 ? derived : fallbackScores;
+    }
     const eventBatches = await Promise.all(
       chunk(eventIds).map((batch) =>
         client.from("voting_events").select("id,house,proposition_version_id").in("id", batch)
@@ -259,7 +293,10 @@ export async function fetchVoteCategoryScores(
     const versionIds = [
       ...new Set(events.map((row) => row.proposition_version_id).filter(Boolean)),
     ];
-    if (versionIds.length === 0) return buildVoteCategoryScores(localFacts);
+    if (versionIds.length === 0) {
+      const derived = buildVoteCategoryScores(localFacts);
+      return derived.length > 0 ? derived : fallbackScores;
+    }
     const matrixBatches = await Promise.all(
       chunk(versionIds).map((batch) =>
         client
@@ -294,7 +331,7 @@ export async function fetchVoteCategoryScores(
             group_slug: group.group_slug,
             value: index.value,
             impact_direction: group.impact_direction,
-            defending_vote: group.defending_vote ?? null,
+            defending_vote: group.defending_vote ?? (group.impact_direction === "negative" ? "nao" : "sim"),
             severity: matrix.severity,
             structural_type: matrix.structural_type,
             confidence: group.confidence,
@@ -303,17 +340,36 @@ export async function fetchVoteCategoryScores(
         }
       }
     }
-    const candidatesWithDbFacts = new Set(dbFacts.map((f) => f.candidate_id));
+
+    const dbFactKeys = new Set(dbFacts.map((f) => `${f.candidate_id}|${f.group_slug}`));
     const missingLocalFacts = localFacts.filter(
-      (f) => !candidatesWithDbFacts.has(f.candidate_id)
+      (f) => !dbFactKeys.has(`${f.candidate_id}|${f.group_slug}`)
     );
     const combinedFacts = [...dbFacts, ...missingLocalFacts];
-    return buildVoteCategoryScores(combinedFacts);
+    const computed = buildVoteCategoryScores(combinedFacts);
+
+    // Complementar com fallback para qualquer par (candidate_id, group_slug) com score null ou ausente
+    const validScoreKeys = new Set(
+      computed
+        .filter((s) => s.score !== null && typeof s.score === "number")
+        .map((s) => `${s.candidate_id}|${s.group_slug}`)
+    );
+    const missingFallback = fallbackScores.filter(
+      (s) => !validScoreKeys.has(`${s.candidate_id}|${s.group_slug}`)
+    );
+
+    const finalScores = [
+      ...computed.filter((s) => s.score !== null && typeof s.score === "number"),
+      ...missingFallback,
+    ];
+
+    return finalScores.length > 0 ? finalScores : fallbackScores;
   } catch (error) {
     console.warn(
       "[voteCategoryComparison] Erro ao consultar Supabase, usando dados canônicos locais:",
       error
     );
-    return buildVoteCategoryScores(localFacts);
+    const derived = buildVoteCategoryScores(localFacts);
+    return derived.length > 0 ? derived : fallbackScores;
   }
 }
