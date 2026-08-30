@@ -1,5 +1,16 @@
 # Changelog do contexto exportado
 
+## 2026-08-30
+
+- Evolução da Matriz de Impacto Populacional para a **Metodologia v1.1**:
+  - Taxonomia populacional expandida e fechada em **21 grupos canônicos** (`estudantes`, `trabalhadores_formais`, `servidores_publicos`, `usuarios_sus`, `pessoas_com_ludopatia`, `candidatos_concursos_publicos`, `pescadores_artesanais_comunidades_pesqueiras`).
+  - Atribuição em nível de evento implementada com `textual_defending_vote`, `event_defending_vote`, `score_eligible`, `vote_attribution_status` e `score_withholding_reason`.
+  - Regra Fail-Closed: votações compostas não separáveis, procedimentais ou de destaques sem binding de dispositivo recebem `score_eligible: false` e não geram score distorcido (`alignment = 'nao_avaliavel'`).
+  - Quarentena de 234 matérias inconsistentes isoladas em `data/impact-matrices/quarentena-regressao-gabarito-2026-08-30.json`.
+  - Reconstruído o gabarito universal com 69 matérias ativas e auditadas em `data/impact-matrices/gabarito-materias-aprovadas.json`.
+  - Migration versionada `20260830110000_evolve_impact_taxonomy_v1_1_and_event_attribution.sql`.
+  - Manual de metodologia e guia de uso documentados em `docs/METODOLOGIA-IMPACTO-V1.1.md`.
+
 ## 2026-08-27
 
 - Discovery ALRS ampliado para 2019–2026: `43.762` linhas nominais com identidade exata, `36.589` já presentes após importação histórica, `1` conflito isolado e `7.172` proposition_versions ainda sem resolução oficial.

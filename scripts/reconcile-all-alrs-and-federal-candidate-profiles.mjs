@@ -421,54 +421,20 @@ export async function runFullReconciliation() {
   const camaraMetaPath = path.resolve(root, 'data/legislative-import/camara/camara-voting-events-metadata.json');
 
   const recon = JSON.parse(fs.readFileSync(reconPath, 'utf8'));
-  const subQueue = JSON.parse(fs.readFileSync(subQueuePath, 'utf8'));
+  const subQueue = fs.existsSync(subQueuePath) ? JSON.parse(fs.readFileSync(subQueuePath, 'utf8')) : { items: [] };
   const gabarito = JSON.parse(fs.readFileSync(gabaritoPath, 'utf8'));
   const publicCandidates = JSON.parse(fs.readFileSync(publicCandPath, 'utf8'));
   const camaraVotes = loadAllCamaraVotes(root);
   const deputyToTse = buildDeputyToTseMapping(root);
   const camaraMeta = fs.existsSync(camaraMetaPath) ? JSON.parse(fs.readFileSync(camaraMetaPath, 'utf8')) : {};
 
-  // 1. Process substantive ALRS queue into canonical gabarito
+  console.log(`📖 Matriz Canônica Universal carregada: ${gabarito.propositions.length} proposições ativas aprovadas.`);
+
+  // 1. Build subMap for title lookups
   const subMap = new Map();
   for (const item of subQueue.items || []) {
     subMap.set(item.proposition_version_id, item);
-    const classification = classifyText(item.title, item.official_event_description);
-    if (classification) {
-      const propId = `alrs:${(item.official_event_description || item.title || '').slice(0, 30).toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
-      const existing = gabarito.propositions.find(
-        (p) => p.proposition_id === propId || (p.title && item.title && p.title.slice(0, 30) === item.title.slice(0, 30))
-      );
-      if (!existing) {
-        gabarito.propositions.push({
-          proposition_id: propId,
-          house: 'alrs',
-          type: 'pl',
-          number: String(item.items_count || 1),
-          year: 2026,
-          title: item.title,
-          official_source_url: item.source_urls?.[0] || 'https://transparencia.al.rs.gov.br/parlamentares/votos-plenario',
-          official_source_label: item.official_event_description || 'ALRS Sistema Legis',
-          severity: classification.severity,
-          structural_type: classification.type,
-          review_status: 'approved',
-          assessments: [
-            {
-              group: classification.group,
-              impact_direction: classification.direction,
-              defending_vote: classification.defending_vote,
-              confidence: classification.confidence,
-              rationale: classification.rationale,
-              sources: item.source_urls?.length ? item.source_urls.slice(0, 3) : ['https://transparencia.al.rs.gov.br/parlamentares/votos-plenario'],
-            },
-          ],
-        });
-      }
-    }
   }
-
-  gabarito.updated_at = new Date().toISOString();
-  fs.writeFileSync(gabaritoPath, JSON.stringify(gabarito, null, 2) + '\n');
-  console.log(`✅ Matriz Canônica Universal atualizada: ${gabarito.propositions.length} proposições ativas.`);
 
   // 2. Build candidate nominal votes in Ultra-Compact integer-indexed normalized schema
   const propsList = [];
@@ -489,6 +455,11 @@ export async function runFullReconciliation() {
         l: vote.source_label,
         g: vote.assessment_group ?? null,
         d: vote.impact_direction ?? null,
+        score_eligible: vote.score_eligible ?? (vote.assessment_group && vote.impact_direction && vote.defending_vote ? true : false),
+        defending_vote: vote.defending_vote ?? null,
+        event_defending_vote: vote.event_defending_vote ?? null,
+        textual_defending_vote: vote.textual_defending_vote ?? null,
+        vote_attribution_status: vote.vote_attribution_status ?? null,
       });
     }
     return idx;
@@ -514,18 +485,36 @@ export async function runFullReconciliation() {
     for (const r of rows) {
       const subItem = subMap.get(r.proposition_version_id);
       const title = subItem?.title || `${r.proposition_type?.toUpperCase() || 'Votação'} ${r.proposition_number || ''}/${r.proposition_year || ''}`;
-      const classification = subItem ? classifyText(subItem.title, subItem.official_event_description) : classifyText(title, '');
+      const propNumberNormalized = `${r.proposition_type?.toLowerCase() || 'pl'}-${r.proposition_number || ''}-${r.proposition_year || ''}`;
+      
+      const gab = gabarito.propositions.find(
+        (p) =>
+          p.house === 'alrs' &&
+          (p.proposition_id === `alrs:${propNumberNormalized}` ||
+           (p.type === r.proposition_type?.toLowerCase() && String(p.number) === String(r.proposition_number) && String(p.year) === String(r.proposition_year)))
+      );
+
+      const assessment = gab?.assessments?.[0];
+      const isScoreEligible = gab && assessment && assessment.score_eligible !== false && assessment.event_defending_vote !== null && (assessment.event_defending_vote || assessment.defending_vote);
 
       addCandidateVote(tseId, {
         house: 'alrs',
         proposition_id: `${r.proposition_type?.toUpperCase() || 'PROP'} ${r.proposition_number || ''}/${r.proposition_year || ''}`,
-        title: title,
+        title: gab?.title || title,
         vote_value: r.value,
         date: r.occurred_at ? r.occurred_at.split(' ')[0] : '2026',
-        source_url: r.source_url || 'https://transparencia.al.rs.gov.br/parlamentares/votos-plenario',
-        source_label: 'ALRS Portal da Transparência',
-        assessment_group: classification?.group ?? null,
-        impact_direction: classification?.direction ?? null,
+        source_url: gab?.official_source_url || r.source_url || 'https://transparencia.al.rs.gov.br/parlamentares/votos-plenario',
+        source_label: gab?.official_source_label || 'ALRS Portal da Transparência',
+        assessment_group: assessment?.group ?? null,
+        impact_direction: assessment?.impact_direction ?? null,
+        defending_vote: assessment?.defending_vote ?? null,
+        event_defending_vote: assessment?.event_defending_vote ?? null,
+        textual_defending_vote: assessment?.textual_defending_vote ?? null,
+        score_eligible: isScoreEligible ? true : false,
+        vote_attribution_status: assessment?.vote_attribution_status ?? (gab ? 'isolated' : null),
+        severity: gab?.severity || 3,
+        structural_type: gab?.structural_type || 'structural',
+        confidence: assessment?.confidence || 0.95,
       });
     }
   }
@@ -552,29 +541,33 @@ export async function runFullReconciliation() {
 
     const gab = gabarito.propositions.find(
       (p) =>
-        p.official_source_label?.includes(rawNum) ||
-        p.official_source_url?.includes(rawNum) ||
-        (p.proposition_id.includes('plp-41') && cleanEventId.includes('2606313-36')) ||
-        (p.proposition_id.includes('mpv-1313') && cleanEventId.includes('2557414')) ||
-        (p.proposition_id.includes('mpv-1323') && cleanEventId.includes('2581700'))
+        p.house === 'camara' &&
+        (p.official_source_label?.includes(rawNum) ||
+         p.official_source_url?.includes(rawNum) ||
+         (p.proposition_id.includes('plp-41') && cleanEventId.includes('2606313-36')) ||
+         (p.proposition_id.includes('plp-230') && cleanEventId.includes('2580259-24')) ||
+         (p.proposition_id.includes('pec-6') && cleanEventId.includes('9002')) ||
+         (p.proposition_id.includes('pl-490') && cleanEventId.includes('490')) ||
+         (p.proposition_id.includes('pl-3626') && cleanEventId.includes('3626')) ||
+         (p.proposition_id.includes('mpv-1323') && cleanEventId.includes('2581700')) ||
+         (p.proposition_id.includes('pl-4566') && cleanEventId.includes('4566')))
     );
-
-    const dynamicClassification = classifyText(mPropNum, mDesc);
 
     let propTitle = gab?.title || v.proposition_title || mDesc;
     if (!propTitle) {
       if (cleanEventId.includes('2606313-36'))
         propTitle = 'Política Nacional de Prevenção e Enfrentamento da Violência contra Mulheres (PLP 41/2024)';
-      else if (cleanEventId.includes('2557414'))
-        propTitle = 'Apoio e Fomento a Trabalhadores Autônomos e Informais (MPV 1313/2025)';
-      else if (cleanEventId.includes('2581700'))
-        propTitle = 'Crédito Produtivo e Amparo a Trabalhadores Informais (MPV 1323/2025)';
+      else if (cleanEventId.includes('2580259-24'))
+        propTitle = 'Conectividade de escolas públicas e regime do FUST (PLP 230/2025)';
       else propTitle = `Votação Nominal na Câmara dos Deputados (${cleanEventId.replace('camara-votacao-', '')})`;
     }
 
     const propNumber = gab?.number
       ? `${gab.type?.toUpperCase()} ${gab.number}/${gab.year}`
       : mPropNum || (cleanEventId.startsWith('camara-votacao-') ? cleanEventId.replace('camara-votacao-', 'Votação ') : cleanEventId || 'Votação Câmara');
+
+    const assessment = gab?.assessments?.[0];
+    const isScoreEligible = gab && assessment && assessment.score_eligible !== false && assessment.event_defending_vote !== null && (assessment.event_defending_vote || assessment.defending_vote);
 
     addCandidateVote(tseId, {
       house: 'camara',
@@ -584,8 +577,16 @@ export async function runFullReconciliation() {
       date: v.recorded_at ? v.recorded_at.split('T')[0] : (m?.data ? m.data.split('T')[0] : '2025/2026'),
       source_url: gab?.official_source_url || `https://dadosabertos.camara.leg.br/api/v2/votacoes/${rawNum}`,
       source_label: gab?.official_source_label || 'Câmara dos Deputados — Dados Abertos',
-      assessment_group: gab?.assessments?.[0]?.group || dynamicClassification?.group || null,
-      impact_direction: gab?.assessments?.[0]?.impact_direction || dynamicClassification?.direction || null,
+      assessment_group: assessment?.group ?? null,
+      impact_direction: assessment?.impact_direction ?? null,
+      defending_vote: assessment?.defending_vote ?? null,
+      event_defending_vote: assessment?.event_defending_vote ?? null,
+      textual_defending_vote: assessment?.textual_defending_vote ?? null,
+      score_eligible: isScoreEligible ? true : false,
+      vote_attribution_status: assessment?.vote_attribution_status ?? (gab ? 'isolated' : null),
+      severity: gab?.severity || 3,
+      structural_type: gab?.structural_type || 'structural',
+      confidence: assessment?.confidence || 0.95,
     });
   }
 
@@ -614,28 +615,27 @@ export async function runFullReconciliation() {
       updatedCandidatesCount++;
     }
 
-    // Dynamic derivation of category_scores from candVotesMap
+    // Dynamic derivation of category_scores from candVotesMap (STRICT score_eligible check)
     const candVotes = candVotesMap[tseId] || [];
     const byGroup = new Map();
 
     for (const item of candVotes) {
       const prop = propsList[item[0]];
       if (!prop || !prop.g || !prop.d) continue;
+      if (prop.score_eligible === false) continue; // Enforce fail-closed score rule
+
       const group = prop.g;
       const voteVal = (item[1] || '').toLowerCase();
       const impactDir = (prop.d || '').toLowerCase();
 
-      let defending = null;
-      if (impactDir === 'positive') defending = 'sim';
-      else if (impactDir === 'negative') defending = 'nao';
+      const defending = prop.event_defending_vote || prop.defending_vote;
+      if (!defending) continue; // No score without defending vote
 
       let alignment = 0;
-      if (defending) {
-        if (voteVal === defending) alignment = 1;
-        else if (voteVal === 'ausente') alignment = -0.5;
-        else if (voteVal === 'abstencao' || voteVal === 'obstrucao') alignment = 0;
-        else alignment = -1;
-      }
+      if (voteVal === defending) alignment = 1;
+      else if (voteVal === 'ausente') alignment = -0.5;
+      else if (voteVal === 'abstencao' || voteVal === 'obstrucao') alignment = 0;
+      else alignment = -1;
 
       const bucket = byGroup.get(group) || [];
       bucket.push({ propId: prop.p, voteVal, impactDir, alignment });
@@ -663,8 +663,8 @@ export async function runFullReconciliation() {
       });
     }
 
+    cand.category_scores = computedScores;
     if (computedScores.length > 0) {
-      cand.category_scores = computedScores;
       updatedScoresCount++;
     }
   }

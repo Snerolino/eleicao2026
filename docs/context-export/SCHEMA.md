@@ -99,13 +99,13 @@ Novas tabelas da Matriz de Impacto Populacional v1 (todas com RLS habilitado):
 - A RPC de resolução aceita tipos normalizados do schema (`pec`, `pl`, `plp`, `pld`, `lei`, `outro`); siglas ALRS sem coluna própria preservam a sigla no `external_id`.
 - RPC `materialize_legislator_vote_profiles()` não foi criada: a materialização usa `scripts/build-vote-profile-fast.mjs` com cliente Supabase JS e escrita RLS restrita a editor/admin.
 - RPC `record_impact_assessment_draft(...)` registra assessment com fonte vinculada e matriz `pending_review`; não aprova nem publica a matriz.
-- `beneficiary_groups` — catalogo versionado (14 slugs v1). Slugs nunca renomeados; evolucao via `deprecated_at` + `replacement_slug`. `geral` nao e grupo pontuavel.
-- `beneficiary_group_aliases` — variantes de grafia.
-- `impact_matrices` — matriz por `proposition_version_id` + `methodology_version` (unico); `severity` 1..5; `structural_type` (`structural|budgetary|symbolic`); `review_status` (`rascunho|pending_review|approved|contested`). A disposição editorial ocorre antes da matriz: `assess`, `no_direct_population_group`, `taxonomy_gap` ou `excluded`; somente `assess` pode gerar matriz.
-- `impact_assessments` — por grupo: `defending_vote` (`sim|nao`), `impact_direction` (`positive|negative|mixed|unclear`), `rationale` (>= 20 chars), `confidence` (0..1]; unico por matriz+grupo. Trigger garante: positive/negative → defending_vote obrigatorio; unclear → null.
-- `impact_assessment_sources` — ligacao N:N assessment ↔ `source_references`.
-- `impact_reviews` — revisao propria da matriz (`curadoria_interna|painel_externo`; `approved|rejected|needs_changes`).
-- `impact_contestations` — contestacao publica (`open|under_review|resolved|rejected`); justificativa original nunca apagada.
+- `beneficiary_groups` — catálogo versionado (21 grupos canônicos na metodologia v1.1). Slugs nunca renomeados; evolução via `deprecated_at` + `replacement_slug` + `beneficiary_group_aliases`. `geral` não é grupo pontuável.
+- `beneficiary_group_aliases` — variantes de grafia e mapeamentos históricos (ex.: `educacao_estudantes` -> `estudantes`, `saude_usuarios_sus` -> `usuarios_sus`).
+- `impact_matrices` — matriz por `proposition_version_id` + `methodology_version` (único); `severity` 1..5; `structural_type` (`structural|budgetary|symbolic`); `review_status` (`rascunho|pending_review|approved|contested`). A disposição editorial ocorre antes da matriz: `assess`, `no_direct_population_group`, `taxonomy_gap` ou `excluded`; somente `assess` pode gerar matriz.
+- `impact_assessments` — por grupo: `defending_vote` (`sim|nao|null`), `textual_defending_vote` (`sim|nao|null`), `event_defending_vote` (`sim|nao|null`), `score_eligible` (boolean), `vote_attribution_status` (`isolated|compound_separable|compound_non_separable|procedural|event_binding_missing`), `score_withholding_reason` (text/null), `impact_direction` (`positive|negative|mixed|unclear`), `rationale` (>= 20 chars), `confidence` (0..1]; único por matriz+grupo. Trigger garante: se score_eligible for true e não for composto não separável, positive/negative exige defending_vote; unclear exige null; quando score_eligible for false ou composto não separável, defending_vote é null e o voto não gera score populacional.
+- `impact_assessment_sources` — ligação N:N assessment ↔ `source_references`.
+- `impact_reviews` — revisão própria da matriz (`curadoria_interna|painel_externo`; `approved|rejected|needs_changes`).
+- `impact_contestations` — contestação pública (`open|under_review|resolved|rejected`); justificativa original nunca apagada.
 - `impact_editorial_dispositions` — fila de triagem humana anterior à matriz, única por `proposition_version_id` + `methodology_version`; `disposition` (`assess|no_direct_population_group|taxonomy_gap|excluded`), justificativa mínima de 20 caracteres, revisor autenticado e status editorial.
 
 RPC `approve_impact_matrix(uuid)` — aprovação transacional que exige caller com `editor_roles` e:

@@ -42,6 +42,16 @@ export interface ImpactAssessment {
   group: string;
   impact_direction: string;
   defending_vote?: 'sim' | 'nao' | null;
+  textual_defending_vote?: 'sim' | 'nao' | null;
+  event_defending_vote?: 'sim' | 'nao' | null;
+  score_eligible?: boolean;
+  vote_attribution_status?:
+    | 'isolated'
+    | 'compound_separable'
+    | 'compound_non_separable'
+    | 'procedural'
+    | 'event_binding_missing';
+  score_withholding_reason?: string | null;
   confidence: number;
   rationale: string;
   sources: string[];
@@ -117,12 +127,21 @@ function validateAssessment(a: unknown, errors: string[], path: string): void {
   }
 
   const defending = a.defending_vote as 'sim' | 'nao' | null | undefined;
+  const scoreEligible = a.score_eligible as boolean | undefined;
+  const voteAttributionStatus = a.vote_attribution_status as string | undefined;
+  const eventDefending = a.event_defending_vote as 'sim' | 'nao' | null | undefined;
+
+  const isNonScoredCompound =
+    scoreEligible === false ||
+    voteAttributionStatus === 'compound_non_separable' ||
+    eventDefending === null;
+
   if (direction === 'positive' || direction === 'negative') {
-    if (defending !== 'sim' && defending !== 'nao') {
+    if (!isNonScoredCompound && defending !== 'sim' && defending !== 'nao') {
       errors.push(`${path}.defending_vote obrigatório (sim|nao) para ${direction}`);
     }
   } else if (direction === 'unclear') {
-    if (defending !== null) {
+    if (defending !== null && defending !== undefined) {
       errors.push(`${path}.defending_vote deve ser null para unclear`);
     }
   }

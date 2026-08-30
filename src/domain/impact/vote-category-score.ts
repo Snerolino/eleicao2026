@@ -10,6 +10,16 @@ export interface VoteCategoryScoreFact {
   absence_type?: 'estrategica' | 'obstrucao_coordenada' | 'justificada' | null;
   impact_direction: 'positive' | 'negative' | 'mixed' | 'unclear';
   defending_vote: 'sim' | 'nao' | null;
+  textual_defending_vote?: 'sim' | 'nao' | null;
+  event_defending_vote?: 'sim' | 'nao' | null;
+  score_eligible?: boolean;
+  vote_attribution_status?:
+    | 'isolated'
+    | 'compound_separable'
+    | 'compound_non_separable'
+    | 'procedural'
+    | 'event_binding_missing';
+  score_withholding_reason?: string | null;
   severity: number;
   structural_type: 'structural' | 'budgetary' | 'symbolic';
   confidence: number;
@@ -38,7 +48,17 @@ export function buildVoteCategoryScores(
   return [...grouped.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([key, bucket]) => {
     const [candidate_id, house, group_slug] = key.split('|');
     const inputs: ScoreInput[] = bucket.map((fact) => ({
-      alignment: deriveAlignment({ value: fact.value, absence_type: fact.absence_type }, { impact_direction: fact.impact_direction, defending_vote: fact.defending_vote }) as Alignment,
+      alignment: deriveAlignment(
+        { value: fact.value, absence_type: fact.absence_type },
+        {
+          impact_direction: fact.impact_direction,
+          defending_vote: fact.defending_vote,
+          textual_defending_vote: fact.textual_defending_vote,
+          event_defending_vote: fact.event_defending_vote,
+          score_eligible: fact.score_eligible,
+          vote_attribution_status: fact.vote_attribution_status,
+        },
+      ) as Alignment,
       structural_type: fact.structural_type,
       severity: fact.severity,
       confidence: fact.confidence,

@@ -30,7 +30,7 @@ for (const dec of classifierData.decisions ?? []) {
       issues.push('Matéria com disposition=assess deve conter pelo menos 1 assessment');
     } else {
       for (const ass of dec.assessments) {
-        if (!canonicalGroupSet.has(ass.group_slug)) issues.push(`Grupo ${ass.group_slug} não pertence aos 14 canônicos`);
+        if (!canonicalGroupSet.has(ass.group_slug)) issues.push(`Grupo ${ass.group_slug} não pertence aos 21 canônicos da taxonomia v1.1`);
         if (!['positive', 'negative', 'mixed', 'unclear'].includes(ass.impact_direction)) issues.push('Direção de impacto inválida');
         if (ass.defending_vote !== null && !['sim', 'nao'].includes(ass.defending_vote)) issues.push('Voto defensor inválido (deve ser sim, nao ou null)');
       }

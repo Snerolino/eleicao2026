@@ -109,6 +109,28 @@
         "defending_vote": {
           "$ref": "#/$defs/defendingVote"
         },
+        "textual_defending_vote": {
+          "$ref": "#/$defs/defendingVote"
+        },
+        "event_defending_vote": {
+          "$ref": "#/$defs/defendingVote"
+        },
+        "score_eligible": {
+          "type": "boolean"
+        },
+        "vote_attribution_status": {
+          "type": "string",
+          "enum": [
+            "isolated",
+            "compound_separable",
+            "compound_non_separable",
+            "procedural",
+            "event_binding_missing"
+          ]
+        },
+        "score_withholding_reason": {
+          "type": ["string", "null"]
+        },
         "confidence": {
           "type": "number",
           "exclusiveMinimum": 0,
@@ -154,24 +176,6 @@
         }
       },
       "allOf": [
-        {
-          "if": {
-            "required": ["impact_direction"],
-            "properties": {
-              "impact_direction": {
-                "enum": ["positive", "negative"]
-              }
-            }
-          },
-          "then": {
-            "required": ["defending_vote"],
-            "properties": {
-              "defending_vote": {
-                "enum": ["sim", "nao"]
-              }
-            }
-          }
-        },
         {
           "if": {
             "required": ["impact_direction"],

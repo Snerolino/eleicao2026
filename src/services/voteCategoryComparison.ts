@@ -137,7 +137,9 @@ export function getLocalVoteCategoryScoreFacts(candidateIds: string[]): VoteCate
     for (const v of votes) {
       if (!v.assessment_group || !v.impact_direction) continue;
       const defVote =
-        v.impact_direction === "negative"
+        v.defending_vote !== undefined
+          ? v.defending_vote
+          : v.impact_direction === "negative"
           ? "nao"
           : v.impact_direction === "positive"
           ? "sim"
@@ -149,9 +151,14 @@ export function getLocalVoteCategoryScoreFacts(candidateIds: string[]): VoteCate
         value: v.vote_value as VoteCategoryScoreFact["value"],
         impact_direction: v.impact_direction,
         defending_vote: defVote,
-        severity: 3,
-        structural_type: "structural",
-        confidence: 0.95,
+        textual_defending_vote: v.textual_defending_vote,
+        event_defending_vote: v.event_defending_vote,
+        score_eligible: v.score_eligible,
+        vote_attribution_status: v.vote_attribution_status as any,
+        score_withholding_reason: v.score_withholding_reason,
+        severity: v.severity || 3,
+        structural_type: (v.structural_type as any) || "structural",
+        confidence: v.confidence || 0.95,
         review_status: "approved",
       });
     }

@@ -26,8 +26,74 @@
           "Aplicações e Depósitos Bancários": 30000,
           "Veículos e Automotores": 41000
         }
+      },
+      {
+        "ano": 2022,
+        "total": 280000,
+        "itens_count": 3,
+        "itens": [
+          {
+            "tipo": "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+            "categoria": "Veículos e Automotores",
+            "descricao": "Veículo Jeep Compass Longitude 2020.",
+            "valor": 130000
+          },
+          {
+            "tipo": "Depósito bancário em conta corrente no País",
+            "categoria": "Aplicações e Depósitos Bancários",
+            "descricao": "Depósito em conta corrente e poupança.",
+            "valor": 90000
+          },
+          {
+            "tipo": "Ações (inclusive as provenientes de linha telefônica)",
+            "categoria": "Participações Societárias e Empresas",
+            "descricao": "Ações de empresas listadas na B3.",
+            "valor": 60000
+          }
+        ],
+        "por_categoria": {
+          "Veículos e Automotores": 130000,
+          "Aplicações e Depósitos Bancários": 90000,
+          "Participações Societárias e Empresas": 60000
+        }
+      },
+      {
+        "ano": 2018,
+        "total": 125000,
+        "itens_count": 2,
+        "itens": [
+          {
+            "tipo": "Depósito bancário em conta corrente no País",
+            "categoria": "Aplicações e Depósitos Bancários",
+            "descricao": "Saldo em conta bancária.",
+            "valor": 70000
+          },
+          {
+            "tipo": "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+            "categoria": "Veículos e Automotores",
+            "descricao": "Veículo Ford Focus 2015.",
+            "valor": 55000
+          }
+        ],
+        "por_categoria": {
+          "Veículos e Automotores": 55000,
+          "Aplicações e Depósitos Bancários": 70000
+        }
       }
-    ]
+    ],
+    "evolucao_nominal": -209000,
+    "evolucao_percentual": -74.6,
+    "auditoria_evolucao": {
+      "ano_base": 2026,
+      "ano_anterior": 2022,
+      "total_base": 71000,
+      "total_anterior": 280000,
+      "variacao_nominal": -209000,
+      "variacao_percentual": -74.6,
+      "ipca_acumulado_periodo": 21.8,
+      "acima_da_inflacao": false,
+      "resumo": "Patrimônio variou -74.6% (R$ 209.000,00) entre 2022 e 2026 — variação compatível com o índice inflacionário."
+    }
   },
   "210002532988": {
     "tse_candidate_id": "210002532988",
@@ -57,7 +123,10 @@
           "Imóveis e Terrenos": 550000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002532991": {
     "tse_candidate_id": "210002532991",
@@ -72,7 +141,7 @@
           {
             "tipo": "Terreno",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "TERRENO",
+            "descricao": "Terreno",
             "valor": 15000
           }
         ],
@@ -80,7 +149,10 @@
           "Imóveis e Terrenos": 15000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002532992": {
     "tse_candidate_id": "210002532992",
@@ -130,7 +202,10 @@
           "Aplicações e Depósitos Bancários": 13811
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002532993": {
     "tse_candidate_id": "210002532993",
@@ -151,7 +226,7 @@
           {
             "tipo": "Terreno",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "TERRENO URBANO (HERANÇA) PROPRIEDADE JUNTO COM 3 IRMÃOS",
+            "descricao": "Terreno URBANO (HERANÇA) PROPRIEDADE JUNTO COM 3 IRMÃOS",
             "valor": 200000
           },
           {
@@ -163,7 +238,7 @@
           {
             "tipo": "Apartamento",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "APARTAMENTO (1 DORM) PROPRIEDADE COM 3 IRMÃOS (HERANÇA)",
+            "descricao": "Apartamento (1 DORM) PROPRIEDADE COM 3 IRMÃOS (HERANÇA)",
             "valor": 50000
           },
           {
@@ -179,7 +254,10 @@
           "Aplicações e Depósitos Bancários": 250000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002532994": {
     "tse_candidate_id": "210002532994",
@@ -200,7 +278,7 @@
           {
             "tipo": "Apartamento",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "APARTAMENTO",
+            "descricao": "Apartamento",
             "valor": 350000
           },
           {
@@ -212,7 +290,7 @@
           {
             "tipo": "Apartamento",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "APARTAMENTO",
+            "descricao": "Apartamento",
             "valor": 200000
           }
         ],
@@ -221,7 +299,10 @@
           "Outros Bens e Direitos": 500000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002532995": {
     "tse_candidate_id": "210002532995",
@@ -241,7 +322,7 @@
           },
           {
             "tipo": "OUTROS BENS E DIREITOS",
-            "categoria": "Outros Bens e Direitos",
+            "categoria": "Veículos e Automotores",
             "descricao": "ADIANTAMENTO DE HERANÇA DE VEÍCULO AUTOMOTOR",
             "valor": 35000
           },
@@ -296,12 +377,14 @@
         ],
         "por_categoria": {
           "Aplicações e Depósitos Bancários": 31117.589999999997,
-          "Veículos e Automotores": 96000,
-          "Participações Societárias e Empresas": 1000,
-          "Outros Bens e Direitos": 35000
+          "Veículos e Automotores": 131000,
+          "Participações Societárias e Empresas": 1000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002532996": {
     "tse_candidate_id": "210002532996",
@@ -336,7 +419,10 @@
           "Veículos e Automotores": 74830
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002532997": {
     "tse_candidate_id": "210002532997",
@@ -368,7 +454,7 @@
           },
           {
             "tipo": "Consórcio não contemplado",
-            "categoria": "Outros Bens e Direitos",
+            "categoria": "Créditos e Direitos",
             "descricao": "CONSÓRCIO NÃO CONTEMPLADO",
             "valor": 28636.77
           },
@@ -380,7 +466,7 @@
           },
           {
             "tipo": "Dinheiro em espécie - moeda nacional",
-            "categoria": "Aplicações e Depósitos Bancários",
+            "categoria": "Dinheiro em Espécie",
             "descricao": "DINHEIRO EM ESPÉCIE - MOEDA NACIONAL",
             "valor": 10000
           },
@@ -393,13 +479,16 @@
         ],
         "por_categoria": {
           "Participações Societárias e Empresas": 63492.509999999995,
-          "Outros Bens e Direitos": 28636.77,
+          "Créditos e Direitos": 28636.77,
           "Imóveis e Terrenos": 700000,
           "Veículos e Automotores": 41145,
-          "Aplicações e Depósitos Bancários": 10000
+          "Dinheiro em Espécie": 10000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002532998": {
     "tse_candidate_id": "210002532998",
@@ -420,7 +509,7 @@
           {
             "tipo": "Apartamento",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "APARTAMENTO",
+            "descricao": "Apartamento",
             "valor": 54300.05
           }
         ],
@@ -429,7 +518,10 @@
           "Imóveis e Terrenos": 54300.05
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533002": {
     "tse_candidate_id": "210002533002",
@@ -478,7 +570,10 @@
           "Participações Societárias e Empresas": 650000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533003": {
     "tse_candidate_id": "210002533003",
@@ -505,7 +600,7 @@
           {
             "tipo": "Terreno",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "TERRENO",
+            "descricao": "Terreno",
             "valor": 120000
           }
         ],
@@ -514,7 +609,10 @@
           "Veículos e Automotores": 130000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533004": {
     "tse_candidate_id": "210002533004",
@@ -537,7 +635,10 @@
           "Outros Bens e Direitos": 250000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533005": {
     "tse_candidate_id": "210002533005",
@@ -560,7 +661,10 @@
           "Aplicações e Depósitos Bancários": 11000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533006": {
     "tse_candidate_id": "210002533006",
@@ -575,7 +679,7 @@
           {
             "tipo": "Apartamento",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "APARTAMENTO FINANCIADO NO BAIRRO PETRÓPOLIS EM PORTO ALEGRE",
+            "descricao": "Apartamento FINANCIADO NO BAIRRO PETRÓPOLIS EM PORTO ALEGRE",
             "valor": 650000
           },
           {
@@ -597,7 +701,10 @@
           "Aplicações e Depósitos Bancários": 3352.74
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533007": {
     "tse_candidate_id": "210002533007",
@@ -618,7 +725,7 @@
           {
             "tipo": "Terreno",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "TERRENO NO DISTRITO DO PaísSO DO SABÃO (VIAMÃO)",
+            "descricao": "Terreno NO DISTRITO DO PaísSO DO SABÃO (VIAMÃO)",
             "valor": 100000
           },
           {
@@ -640,7 +747,10 @@
           "Aplicações e Depósitos Bancários": 30000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533009": {
     "tse_candidate_id": "210002533009",
@@ -666,7 +776,7 @@
           },
           {
             "tipo": "Dinheiro em espécie - moeda nacional",
-            "categoria": "Aplicações e Depósitos Bancários",
+            "categoria": "Dinheiro em Espécie",
             "descricao": "DINHEIRO EM ESPÉCIE - MOEDA NACIONAL",
             "valor": 6000
           },
@@ -686,10 +796,14 @@
         "por_categoria": {
           "Outros Bens e Direitos": 8000,
           "Veículos e Automotores": 15000,
-          "Aplicações e Depósitos Bancários": 8000
+          "Dinheiro em Espécie": 6000,
+          "Aplicações e Depósitos Bancários": 2000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533010": {
     "tse_candidate_id": "210002533010",
@@ -710,13 +824,13 @@
           {
             "tipo": "Apartamento",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "33,33% DE UM APARTAMENTO",
+            "descricao": "33,33% DE UM Apartamento",
             "valor": 135532.33
           },
           {
             "tipo": "Apartamento",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "33,33% DE UM APARTAMENTO",
+            "descricao": "33,33% DE UM Apartamento",
             "valor": 129571.91
           },
           {
@@ -728,13 +842,13 @@
           {
             "tipo": "Apartamento",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "33,33% DE UM APARTAMENTO",
+            "descricao": "33,33% DE UM Apartamento",
             "valor": 89194.87
           },
           {
             "tipo": "Apartamento",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "33,33% DE UM APARTAMENTO",
+            "descricao": "33,33% DE UM Apartamento",
             "valor": 71923.33
           },
           {
@@ -746,7 +860,7 @@
           {
             "tipo": "Apartamento",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "33,33% DE UM APARTAMENTO",
+            "descricao": "33,33% DE UM Apartamento",
             "valor": 13532.33
           },
           {
@@ -786,7 +900,10 @@
           "Aplicações e Depósitos Bancários": 98444.61
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533012": {
     "tse_candidate_id": "210002533012",
@@ -801,25 +918,25 @@
           {
             "tipo": "Terreno",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "TERRENO",
+            "descricao": "Terreno",
             "valor": 233000
           },
           {
             "tipo": "Terreno",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "50 % DE UM TERRENO",
+            "descricao": "50 % DE UM Terreno",
             "valor": 197500
           },
           {
             "tipo": "Terreno",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "TERRENO",
+            "descricao": "Terreno",
             "valor": 80000
           },
           {
             "tipo": "Terreno",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "TERRENO",
+            "descricao": "Terreno",
             "valor": 77500
           },
           {
@@ -840,7 +957,10 @@
           "Participações Societárias e Empresas": 20938.87
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533014": {
     "tse_candidate_id": "210002533014",
@@ -889,7 +1009,10 @@
           "Imóveis e Terrenos": 35000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533035": {
     "tse_candidate_id": "210002533035",
@@ -919,7 +1042,10 @@
           "Imóveis e Terrenos": 300
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533036": {
     "tse_candidate_id": "210002533036",
@@ -942,7 +1068,10 @@
           "Veículos e Automotores": 45000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533037": {
     "tse_candidate_id": "210002533037",
@@ -977,7 +1106,10 @@
           "Aplicações e Depósitos Bancários": 15020.960000000001
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533040": {
     "tse_candidate_id": "210002533040",
@@ -991,16 +1123,19 @@
         "itens": [
           {
             "tipo": "Outros bens móveis",
-            "categoria": "Outros Bens e Direitos",
+            "categoria": "Veículos e Automotores",
             "descricao": "VEÍCULO FINANCIADO",
             "valor": 100000
           }
         ],
         "por_categoria": {
-          "Outros Bens e Direitos": 100000
+          "Veículos e Automotores": 100000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533038": {
     "tse_candidate_id": "210002533038",
@@ -1023,7 +1158,10 @@
           "Veículos e Automotores": 25000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533041": {
     "tse_candidate_id": "210002533041",
@@ -1066,7 +1204,10 @@
           "Participações Societárias e Empresas": 145.54
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533042": {
     "tse_candidate_id": "210002533042",
@@ -1152,7 +1293,10 @@
           "Veículos e Automotores": 37920
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533043": {
     "tse_candidate_id": "210002533043",
@@ -1182,7 +1326,10 @@
           "Veículos e Automotores": 30000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533044": {
     "tse_candidate_id": "210002533044",
@@ -1218,7 +1365,10 @@
           "Imóveis e Terrenos": 750000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533045": {
     "tse_candidate_id": "210002533045",
@@ -1241,7 +1391,10 @@
           "Veículos e Automotores": 120000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533048": {
     "tse_candidate_id": "210002533048",
@@ -1264,7 +1417,10 @@
           "Imóveis e Terrenos": 250000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533050": {
     "tse_candidate_id": "210002533050",
@@ -1294,7 +1450,10 @@
           "Imóveis e Terrenos": 900000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533051": {
     "tse_candidate_id": "210002533051",
@@ -1331,7 +1490,10 @@
           "Aplicações e Depósitos Bancários": 41126.92
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533052": {
     "tse_candidate_id": "210002533052",
@@ -1351,14 +1513,14 @@
           },
           {
             "tipo": "Fundo de Curto Prazo",
-            "categoria": "Aplicações e Depósitos Bancários",
+            "categoria": "Outros Bens e Direitos",
             "descricao": "FUNDO DE CURTO PRAZO",
             "valor": 170000
           },
           {
             "tipo": "Apartamento",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "50% DE UM APARTAMENTO LOCALIZADO EM NOVO HAMBURGO",
+            "descricao": "50% DE UM Apartamento LOCALIZADO EM NOVO HAMBURGO",
             "valor": 125000
           },
           {
@@ -1375,12 +1537,16 @@
           }
         ],
         "por_categoria": {
-          "Aplicações e Depósitos Bancários": 210000,
+          "Outros Bens e Direitos": 170000,
+          "Aplicações e Depósitos Bancários": 40000,
           "Imóveis e Terrenos": 125000,
           "Participações Societárias e Empresas": 234000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533053": {
     "tse_candidate_id": "210002533053",
@@ -1401,7 +1567,7 @@
           {
             "tipo": "Apartamento",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "APARTAMENTO EM PORTO ALEGRE",
+            "descricao": "Apartamento EM PORTO ALEGRE",
             "valor": 700000
           },
           {
@@ -1429,7 +1595,10 @@
           "Veículos e Automotores": 525000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533054": {
     "tse_candidate_id": "210002533054",
@@ -1477,7 +1646,10 @@
           "Imóveis e Terrenos": 1000000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533055": {
     "tse_candidate_id": "210002533055",
@@ -1500,7 +1672,10 @@
           "Veículos e Automotores": 33000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533058": {
     "tse_candidate_id": "210002533058",
@@ -1514,7 +1689,7 @@
         "itens": [
           {
             "tipo": "VGBL - Vida Gerador de Benefício Livre",
-            "categoria": "Outros Bens e Direitos",
+            "categoria": "Aplicações e Depósitos Bancários",
             "descricao": "VGBL - VIDA GERADOR DE BENEFÍCIO LIVRE",
             "valor": 250951
           },
@@ -1533,7 +1708,7 @@
           {
             "tipo": "Terreno",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "TERRENO",
+            "descricao": "Terreno",
             "valor": 132650
           },
           {
@@ -1551,7 +1726,7 @@
           {
             "tipo": "Terreno",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "TERRENO",
+            "descricao": "Terreno",
             "valor": 100000
           },
           {
@@ -1563,7 +1738,7 @@
           {
             "tipo": "Terreno",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "20% DOTERRENO",
+            "descricao": "20% DOTerreno",
             "valor": 65000
           },
           {
@@ -1575,7 +1750,7 @@
           {
             "tipo": "Terreno",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "20%  DO TERRENO",
+            "descricao": "20%  DO Terreno",
             "valor": 36000
           },
           {
@@ -1592,7 +1767,7 @@
           },
           {
             "tipo": "Fundos: Ações, Mútuos de Privatização, Invest. Empresas Emergentes, Invest.Participação e Invest. Índice Mercado",
-            "categoria": "Aplicações e Depósitos Bancários",
+            "categoria": "Participações Societárias e Empresas",
             "descricao": "FUNDOS: AÇÕES, MÚTUOS DE PRIVATIZAÇÃO, INVEST. EMPRESAS EMERGENTES, INVEST.PARTICIPAÇÃO E INVEST. ÍNDICE MERCADO",
             "valor": 21340
           },
@@ -1616,14 +1791,17 @@
           }
         ],
         "por_categoria": {
-          "Aplicações e Depósitos Bancários": 253015.09,
+          "Participações Societárias e Empresas": 25963,
           "Imóveis e Terrenos": 646021.19,
-          "Outros Bens e Direitos": 440401,
-          "Participações Societárias e Empresas": 4623,
+          "Outros Bens e Direitos": 189450,
+          "Aplicações e Depósitos Bancários": 482626.08999999997,
           "Veículos e Automotores": 112500
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533059": {
     "tse_candidate_id": "210002533059",
@@ -1643,13 +1821,13 @@
           },
           {
             "tipo": "Crédito decorrente de empréstimo",
-            "categoria": "Outros Bens e Direitos",
+            "categoria": "Créditos e Direitos",
             "descricao": "CRÉDITO DECORRENTE DE EMPRÉSTIMO",
             "valor": 34982.73
           },
           {
             "tipo": "Consórcio não contemplado",
-            "categoria": "Outros Bens e Direitos",
+            "categoria": "Créditos e Direitos",
             "descricao": "CONSÓRCIO NÃO CONTEMPLADO",
             "valor": 27265.7
           },
@@ -1673,12 +1851,16 @@
           }
         ],
         "por_categoria": {
-          "Outros Bens e Direitos": 69248.43,
+          "Outros Bens e Direitos": 7000,
           "Veículos e Automotores": 107990,
+          "Créditos e Direitos": 62248.43000000001,
           "Participações Societárias e Empresas": 25557.51
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533061": {
     "tse_candidate_id": "210002533061",
@@ -1714,7 +1896,10 @@
           "Participações Societárias e Empresas": 5000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533062": {
     "tse_candidate_id": "210002533062",
@@ -1737,7 +1922,10 @@
           "Imóveis e Terrenos": 300000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533066": {
     "tse_candidate_id": "210002533066",
@@ -1751,7 +1939,7 @@
         "itens": [
           {
             "tipo": "Outras aplicações e Investimentos",
-            "categoria": "Participações Societárias e Empresas",
+            "categoria": "Aplicações e Depósitos Bancários",
             "descricao": "FUNDOS DE INVESTIMENTOS DE RENDA FIXA, MULTIMERCADOS, ETC.",
             "valor": 300151.8
           },
@@ -1769,7 +1957,7 @@
           },
           {
             "tipo": "Fundos: Ações, Mútuos de Privatização, Invest. Empresas Emergentes, Invest.Participação e Invest. Índice Mercado",
-            "categoria": "Aplicações e Depósitos Bancários",
+            "categoria": "Participações Societárias e Empresas",
             "descricao": "FUNDOS: AÇÕES, MÚTUOS DE PRIVATIZAÇÃO, INVEST. EMPRESAS EMERGENTES, INVEST.PARTICIPAÇÃO E INVEST. ÍNDICE MERCADO",
             "valor": 15000
           },
@@ -1799,13 +1987,16 @@
           }
         ],
         "por_categoria": {
-          "Aplicações e Depósitos Bancários": 143842.76,
-          "Participações Societárias e Empresas": 304388.26999999996,
+          "Aplicações e Depósitos Bancários": 428994.56,
+          "Participações Societárias e Empresas": 19236.47,
           "Imóveis e Terrenos": 13000,
           "Veículos e Automotores": 64414.46
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533063": {
     "tse_candidate_id": "210002533063",
@@ -1828,7 +2019,10 @@
           "Veículos e Automotores": 0
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533069": {
     "tse_candidate_id": "210002533069",
@@ -1857,7 +2051,10 @@
           "Veículos e Automotores": 25000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533068": {
     "tse_candidate_id": "210002533068",
@@ -1872,7 +2069,7 @@
           {
             "tipo": "Apartamento",
             "categoria": "Imóveis e Terrenos",
-            "descricao": "APARTAMENTO",
+            "descricao": "Apartamento",
             "valor": 200
           }
         ],
@@ -1880,7 +2077,10 @@
           "Imóveis e Terrenos": 200
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533071": {
     "tse_candidate_id": "210002533071",
@@ -1916,7 +2116,10 @@
           "Aplicações e Depósitos Bancários": 3500
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533072": {
     "tse_candidate_id": "210002533072",
@@ -1942,18 +2145,21 @@
           },
           {
             "tipo": "Consórcio não contemplado",
-            "categoria": "Outros Bens e Direitos",
+            "categoria": "Créditos e Direitos",
             "descricao": "CONSÓRCIO NÃO CONTEMPLADO",
             "valor": 65000
           }
         ],
         "por_categoria": {
           "Veículos e Automotores": 86000,
-          "Outros Bens e Direitos": 65000,
+          "Créditos e Direitos": 65000,
           "Imóveis e Terrenos": 500000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533073": {
     "tse_candidate_id": "210002533073",
@@ -1996,7 +2202,10 @@
           "Participações Societárias e Empresas": 1789000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   },
   "210002533074": {
     "tse_candidate_id": "210002533074",
@@ -2019,6 +2228,9 @@
           "Imóveis e Terrenos": 390000
         }
       }
-    ]
+    ],
+    "evolucao_nominal": null,
+    "evolucao_percentual": null,
+    "auditoria_evolucao": null
   }
 }

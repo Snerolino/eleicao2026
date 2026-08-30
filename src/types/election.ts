@@ -73,6 +73,15 @@ export interface CandidateNominalVote {
   source_label: string;
   assessment_group?: string | null;
   impact_direction?: 'positive' | 'negative' | 'mixed' | 'unclear' | null;
+  defending_vote?: 'sim' | 'nao' | null;
+  textual_defending_vote?: 'sim' | 'nao' | null;
+  event_defending_vote?: 'sim' | 'nao' | null;
+  score_eligible?: boolean;
+  vote_attribution_status?: string | null;
+  score_withholding_reason?: string | null;
+  severity?: number;
+  structural_type?: 'structural' | 'budgetary' | 'symbolic';
+  confidence?: number;
 }
 
 export interface DeclaredAssetItem {
@@ -90,12 +99,26 @@ export interface AssetYearDeclaration {
   por_categoria: Record<string, number>;
 }
 
+export interface AssetEvolutionAudit {
+  ano_base: number;
+  ano_anterior: number;
+  total_base: number;
+  total_anterior: number;
+  variacao_nominal: number;
+  variacao_percentual: number;
+  ipca_acumulado_periodo?: number;
+  acima_da_inflacao?: boolean;
+  resumo: string;
+}
+
 export interface CandidateDeclaredAssets {
   tse_candidate_id: string;
   ano_recente: number;
   total_declarado: number;
   declaracoes_por_ano: AssetYearDeclaration[];
   evolucao_percentual?: number | null;
+  evolucao_nominal?: number | null;
+  auditoria_evolucao?: AssetEvolutionAudit | null;
 }
 
 export interface CandidateCategoryScoreSnapshot {

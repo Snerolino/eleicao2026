@@ -1,3 +1,15 @@
+## Tick contínuo — Correção Editorial e Arquitetural Profunda (Metodologia v1.1 e Quarentena de Regressão) — 2026-08-30T10:30-03:00
+
+- Executada a correção profunda do gabarito canônico, schema de impacto e pipeline de reconciliação com base nos artefatos de auditoria de 2026-08-30.
+- **Taxonomia Canônica v1.1**: expandida de 14 para 21 grupos populacionais canônicos fechados; tópicos temáticos e atores econômicos desvinculados de pontuação populacional.
+- **Atribuição em Nível de Evento**: suporte pleno a `textual_defending_vote`, `event_defending_vote`, `score_eligible`, `vote_attribution_status` e `score_withholding_reason`. Regra Fail-Closed estrita implementada no domínio puro (`alignment.ts`, `vote-category-score.ts`, `contract.ts`).
+- **Quarentena Aplicada**: 234 matérias isoladas em `data/impact-matrices/quarentena-regressao-gabarito-2026-08-30.json` (231 placeholders ALRS e 3 federais desvinculadas).
+- **Gabarito Canônico Reconstruído**: 69 matérias aprovadas e purificadas em `data/impact-matrices/gabarito-materias-aprovadas.json` (62 ALRS e 7 federais).
+- **Migration SQL**: criada `supabase/migrations/20260830110000_evolve_impact_taxonomy_v1_1_and_event_attribution.sql`.
+- **Pipeline Reconciliado**: `scripts/reconcile-all-alrs-and-federal-candidate-profiles.mjs` atualizado para blindar o gabarito e calcular scores apenas de eventos com `score_eligible: true`.
+- **Testes & Gates**: 115 arquivos / 485 testes no Vitest (100% verde), `data:check` válido (1003 candidatos, 988 fotos), `validate-impact-schema` OK, TypeScript limpo, build Vite + PWA OK, `smoke:local` 100% OK.
+- QA: `docs/qa/correcao-editorial-profunda-2026-08-30.md`.
+
 ## Supervisor durável revalidado — 2026-08-30T07:36-03:00
 
 - Supervisor único confirmado: `eleicao2026-continuous-progress`, job Hermes `c4278be3a8a5`.

@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "batch_id": "camara-editorial-batch-001-e8af1750b252",
+  "batch_id": "camara-editorial-batch-001-a1489a9b41f7",
   "house": "camara",
-  "reviewed_at": "2026-08-30T10:44:45.502Z",
+  "reviewed_at": "2026-08-30T13:28:36.304Z",
   "total_reviewed": 30,
   "summary": {
     "approved": 30,
@@ -19,7 +19,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.303Z",
       "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
       "matrix": null,
       "assessments": [],
@@ -34,7 +34,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Texto normativo federal correlacionado diretamente com mulheres, criancas_adolescentes_vulnerabilidade. Direção: ampliadora. Voto defensor: SIM.",
       "matrix": {
         "methodology_version": "1.0",
@@ -92,7 +92,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria ou votação estritamente procedimental/regimental (Urgência Art. 155 RICD ou retirada de pauta). Sem mérito normativo.",
       "matrix": null,
       "assessments": [],
@@ -107,7 +107,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria ou votação estritamente procedimental/regimental (Urgência Art. 155 RICD ou retirada de pauta). Sem mérito normativo.",
       "matrix": null,
       "assessments": [],
@@ -117,39 +117,15 @@
       "proposition_version_id": "proposition_versions:camara:camara-proposicao-2557414-mpv:event-2557414-41",
       "canonical_editorial_key": "camara:OUTRO:1313:2025:event-2557414-41:4547be409874",
       "title": "MPV 1313",
-      "disposition": "assess",
+      "disposition": "no_direct_population_group",
       "decision": "approved",
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
-      "rationale": "Texto normativo federal correlacionado diretamente com trabalhadores_informais. Direção: ampliadora. Voto defensor: SIM.",
-      "matrix": {
-        "methodology_version": "1.0",
-        "severity": 2,
-        "structural_type": "structural"
-      },
-      "assessments": [
-        {
-          "group_slug": "trabalhadores_informais",
-          "impact_direction": "positive",
-          "defending_vote": "sim",
-          "confidence": 0.85,
-          "rationale": "Texto normativo federal (Câmara dos Deputados) com efeito documentado sobre trabalhadores_informais (ampliação/garantia). Voto defensor: SIM.",
-          "source_refs": [
-            {
-              "kind": "official_substantive_source",
-              "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2557414",
-              "content_hash": "4547be409874"
-            },
-            {
-              "kind": "official_substantive_source",
-              "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2557414-41",
-              "content_hash": "4547be409874"
-            }
-          ]
-        }
-      ],
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
+      "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "matrix": null,
+      "assessments": [],
       "issues": []
     },
     {
@@ -161,7 +137,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
       "matrix": null,
       "assessments": [],
@@ -171,39 +147,15 @@
       "proposition_version_id": "proposition_versions:camara:camara-proposicao-2581700-mpv:event-2581700-31",
       "canonical_editorial_key": "camara:OUTRO:1323:2025:event-2581700-31:0a7191068340",
       "title": "MPV 1323",
-      "disposition": "assess",
+      "disposition": "no_direct_population_group",
       "decision": "approved",
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
-      "rationale": "Texto normativo federal correlacionado diretamente com trabalhadores_informais. Direção: ampliadora. Voto defensor: SIM.",
-      "matrix": {
-        "methodology_version": "1.0",
-        "severity": 3,
-        "structural_type": "structural"
-      },
-      "assessments": [
-        {
-          "group_slug": "trabalhadores_informais",
-          "impact_direction": "positive",
-          "defending_vote": "sim",
-          "confidence": 0.85,
-          "rationale": "Texto normativo federal (Câmara dos Deputados) com efeito documentado sobre trabalhadores_informais (ampliação/garantia). Voto defensor: SIM.",
-          "source_refs": [
-            {
-              "kind": "official_substantive_source",
-              "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2581700",
-              "content_hash": "0a7191068340"
-            },
-            {
-              "kind": "official_substantive_source",
-              "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2581700-31",
-              "content_hash": "0a7191068340"
-            }
-          ]
-        }
-      ],
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
+      "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "matrix": null,
+      "assessments": [],
       "issues": []
     },
     {
@@ -215,7 +167,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Público profissional ou setorial específico sem correspondência direta nos 14 grupos canônicos v1.",
       "matrix": null,
       "assessments": [],
@@ -230,7 +182,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
       "matrix": null,
       "assessments": [],
@@ -245,7 +197,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria ou votação estritamente procedimental/regimental (Urgência Art. 155 RICD ou retirada de pauta). Sem mérito normativo.",
       "matrix": null,
       "assessments": [],
@@ -255,39 +207,15 @@
       "proposition_version_id": "proposition_versions:camara:camara-proposicao-2557414-mpv:event-2557414-32",
       "canonical_editorial_key": "camara:OUTRO:1313:2025:event-2557414-32:4547be409874",
       "title": "MPV 1313",
-      "disposition": "assess",
+      "disposition": "no_direct_population_group",
       "decision": "approved",
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
-      "rationale": "Texto normativo federal correlacionado diretamente com trabalhadores_informais. Direção: ampliadora. Voto defensor: SIM.",
-      "matrix": {
-        "methodology_version": "1.0",
-        "severity": 2,
-        "structural_type": "structural"
-      },
-      "assessments": [
-        {
-          "group_slug": "trabalhadores_informais",
-          "impact_direction": "positive",
-          "defending_vote": "sim",
-          "confidence": 0.85,
-          "rationale": "Texto normativo federal (Câmara dos Deputados) com efeito documentado sobre trabalhadores_informais (ampliação/garantia). Voto defensor: SIM.",
-          "source_refs": [
-            {
-              "kind": "official_substantive_source",
-              "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2557414",
-              "content_hash": "4547be409874"
-            },
-            {
-              "kind": "official_substantive_source",
-              "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2557414-32",
-              "content_hash": "4547be409874"
-            }
-          ]
-        }
-      ],
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
+      "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "matrix": null,
+      "assessments": [],
       "issues": []
     },
     {
@@ -299,7 +227,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria ou votação estritamente procedimental/regimental (Urgência Art. 155 RICD ou retirada de pauta). Sem mérito normativo.",
       "matrix": null,
       "assessments": [],
@@ -314,7 +242,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria ou votação estritamente procedimental/regimental (Urgência Art. 155 RICD ou retirada de pauta). Sem mérito normativo.",
       "matrix": null,
       "assessments": [],
@@ -329,7 +257,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
       "matrix": null,
       "assessments": [],
@@ -344,7 +272,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
       "matrix": null,
       "assessments": [],
@@ -359,7 +287,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
       "matrix": null,
       "assessments": [],
@@ -374,7 +302,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria ou votação estritamente procedimental/regimental (Urgência Art. 155 RICD ou retirada de pauta). Sem mérito normativo.",
       "matrix": null,
       "assessments": [],
@@ -389,7 +317,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
       "matrix": null,
       "assessments": [],
@@ -404,7 +332,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
       "matrix": null,
       "assessments": [],
@@ -419,7 +347,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
       "matrix": null,
       "assessments": [],
@@ -434,7 +362,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria ou votação estritamente procedimental/regimental (Urgência Art. 155 RICD ou retirada de pauta). Sem mérito normativo.",
       "matrix": null,
       "assessments": [],
@@ -449,7 +377,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria ou votação estritamente procedimental/regimental (Urgência Art. 155 RICD ou retirada de pauta). Sem mérito normativo.",
       "matrix": null,
       "assessments": [],
@@ -459,39 +387,15 @@
       "proposition_version_id": "proposition_versions:camara:camara-proposicao-2557414-mpv:event-2557414-24",
       "canonical_editorial_key": "camara:OUTRO:1313:2025:event-2557414-24:4547be409874",
       "title": "MPV 1313",
-      "disposition": "assess",
+      "disposition": "no_direct_population_group",
       "decision": "approved",
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
-      "rationale": "Texto normativo federal correlacionado diretamente com trabalhadores_informais. Direção: ampliadora. Voto defensor: SIM.",
-      "matrix": {
-        "methodology_version": "1.0",
-        "severity": 2,
-        "structural_type": "structural"
-      },
-      "assessments": [
-        {
-          "group_slug": "trabalhadores_informais",
-          "impact_direction": "positive",
-          "defending_vote": "sim",
-          "confidence": 0.85,
-          "rationale": "Texto normativo federal (Câmara dos Deputados) com efeito documentado sobre trabalhadores_informais (ampliação/garantia). Voto defensor: SIM.",
-          "source_refs": [
-            {
-              "kind": "official_substantive_source",
-              "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2557414",
-              "content_hash": "4547be409874"
-            },
-            {
-              "kind": "official_substantive_source",
-              "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2557414-24",
-              "content_hash": "4547be409874"
-            }
-          ]
-        }
-      ],
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
+      "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "matrix": null,
+      "assessments": [],
       "issues": []
     },
     {
@@ -503,7 +407,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
       "matrix": null,
       "assessments": [],
@@ -518,7 +422,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria ou votação estritamente procedimental/regimental (Urgência Art. 155 RICD ou retirada de pauta). Sem mérito normativo.",
       "matrix": null,
       "assessments": [],
@@ -533,7 +437,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
       "matrix": null,
       "assessments": [],
@@ -548,7 +452,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
       "matrix": null,
       "assessments": [],
@@ -563,7 +467,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
       "matrix": null,
       "assessments": [],
@@ -578,7 +482,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
       "matrix": null,
       "assessments": [],
@@ -593,7 +497,7 @@
       "auto_approved": true,
       "requires_external_review": false,
       "reviewer_type": "hermes-federal-autonomous-reviewer-v1",
-      "reviewed_at": "2026-08-30T10:44:45.502Z",
+      "reviewed_at": "2026-08-30T13:28:36.304Z",
       "rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
       "matrix": null,
       "assessments": [],

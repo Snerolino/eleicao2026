@@ -25,12 +25,22 @@ export interface AlignmentVote {
 export interface AlignmentAssessment {
   impact_direction: 'positive' | 'negative' | 'mixed' | 'unclear';
   defending_vote?: 'sim' | 'nao' | null;
+  textual_defending_vote?: 'sim' | 'nao' | null;
+  event_defending_vote?: 'sim' | 'nao' | null;
+  score_eligible?: boolean;
+  vote_attribution_status?:
+    | 'isolated'
+    | 'compound_separable'
+    | 'compound_non_separable'
+    | 'procedural'
+    | 'event_binding_missing';
 }
 
 /**
  * Deriva o alinhamento de um voto factual contra a avaliação metodológica.
- * Regras v1:
- * - defending_vote null (unclear/mixed sem saldo) → nao_avaliavel;
+ * Regras v1.1:
+ * - score_eligible === false → nao_avaliavel (sem score no evento);
+ * - defending_vote / event_defending_vote null → nao_avaliavel;
  * - ausência justificada → sem_dado (voto não utilizável);
  * - ausência estratégica → omissao_estrategica;
  * - ausência com obstrução coordenada → omissao_coordenada;
@@ -43,7 +53,15 @@ export function deriveAlignment(
 ): Alignment {
   if (!vote) return 'sem_dado';
 
-  const defending = assessment.defending_vote;
+  if (assessment.score_eligible === false) {
+    return 'nao_avaliavel';
+  }
+
+  const defending =
+    assessment.event_defending_vote !== undefined
+      ? assessment.event_defending_vote
+      : assessment.defending_vote;
+
   if (defending === null || defending === undefined) {
     return 'nao_avaliavel';
   }

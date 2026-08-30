@@ -19,6 +19,13 @@ export const CANONICAL_GROUPS = [
   'agricultura_familiar_sem_terra',
   'povos_de_terreiro',
   'imigrantes_refugiados',
+  'estudantes',
+  'trabalhadores_formais',
+  'servidores_publicos',
+  'usuarios_sus',
+  'pessoas_com_ludopatia',
+  'candidatos_concursos_publicos',
+  'pescadores_artesanais_comunidades_pesqueiras',
 ];
 
 const GROUP_KEYWORDS = {
@@ -53,7 +60,7 @@ const GROUP_KEYWORDS = {
     /idoso|pessoa idosa|estatuto do idoso|instituição de longa permanência|ilpi|envelhecimento saudável|dependência de idosos/i,
   ],
   trabalhadores_informais: [
-    /trabalhador informal|ambulante|camelô|autônomo de baixa renda|auxílio gás|pescador profissional|pescador artesanal|seguro defeso|aplicativo|entregador/i,
+    /trabalhador informal|ambulante|camelô|autônomo de baixa renda|aplicativo|entregador|motorista de app/i,
   ],
   agricultura_familiar_sem_terra: [
     /agricultura familiar|pequeno produtor|pequenos produtores rurais|produtor de subsistência|reforma agrária|crédito fundiário|pronaf/i,
@@ -63,6 +70,27 @@ const GROUP_KEYWORDS = {
   ],
   imigrantes_refugiados: [
     /imigrante|refugiado|migrante|asilo humanitário|acolhida humanitária|estrangeiro refugiado|repatriado/i,
+  ],
+  estudantes: [
+    /estudante|escola pública|educação básica|ensino médio|bolsa de estudo|conectividade escolar|fust nas escolas|passe livre estudantil|merenda escolar/i,
+  ],
+  trabalhadores_formais: [
+    /trabalhadores formais|clt|carteira assinada|piso salarial|jornada de trabalho|descanso intrajornada|salário mínimo|segurança do trabalho/i,
+  ],
+  servidores_publicos: [
+    /servidor público|servidores públicos|magistério público|carreira pública|reajuste salarial de servidores|estatuto dos servidores|polícia civil|brigada militar/i,
+  ],
+  usuarios_sus: [
+    /usuários do sus|usuário do sus|sistema único de saúde|medicamentos pelo sus|fila do sus|atendimento médico público|leitos sus|hospital público/i,
+  ],
+  pessoas_com_ludopatia: [
+    /ludopatia|jogos de apostas|transtorno do jogo|apostas de quota fixa|bets|jogo compulsivo|superendividamento por apostas/i,
+  ],
+  candidatos_concursos_publicos: [
+    /concurso público|concursos públicos|candidatos aprovados|cadastro de reserva|prazo de validade de concurso|isenção de taxa de concurso/i,
+  ],
+  pescadores_artesanais_comunidades_pesqueiras: [
+    /pescador artesanal|pescadores artesanais|comunidades pesqueiras|seguro defeso|pesca artesanal|colônia de pescadores/i,
   ],
 };
 

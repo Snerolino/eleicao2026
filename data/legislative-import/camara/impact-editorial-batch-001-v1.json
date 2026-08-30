@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "batch_id": "camara-editorial-batch-001-e8af1750b252",
+  "batch_id": "camara-editorial-batch-001-a1489a9b41f7",
   "house": "camara",
-  "created_at": "2026-08-30T10:44:45.044Z",
+  "created_at": "2026-08-30T13:23:30.560Z",
   "total_candidates": 30,
   "items": [
     {
@@ -303,16 +303,14 @@
         "camara-deputado-73486"
       ],
       "unique_candidates": 28,
-      "recommended_disposition": "assess",
-      "recommended_rationale": "Texto normativo federal correlacionado diretamente com trabalhadores_informais. Direção: ampliadora. Voto defensor: SIM.",
-      "recommendation_confidence": 0.85,
-      "matched_groups": [
-        "trabalhadores_informais"
-      ],
-      "suggested_defending_vote": "sim",
-      "suggested_structural_type": "structural",
-      "suggested_severity": 2,
-      "precedent_match": "Altera a Lei nº 15.760, de 15 de dezembro de 2021, que institui o Programa Todo Jovem na Escola e dispõe sobre o pagamento de Bolsa Auxílio de Permanência Estudantil. (SEI 16656-0100/23-9)",
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "recommendation_confidence": 0.8,
+      "matched_groups": [],
+      "suggested_defending_vote": null,
+      "suggested_structural_type": null,
+      "suggested_severity": null,
+      "precedent_match": "ALRS Regulação Institucional e Tributária Difusa",
       "review_status": "pending_review",
       "remote_apply": false
     },
@@ -425,16 +423,14 @@
         "camara-deputado-156190"
       ],
       "unique_candidates": 28,
-      "recommended_disposition": "assess",
-      "recommended_rationale": "Texto normativo federal correlacionado diretamente com trabalhadores_informais. Direção: ampliadora. Voto defensor: SIM.",
-      "recommendation_confidence": 0.85,
-      "matched_groups": [
-        "trabalhadores_informais"
-      ],
-      "suggested_defending_vote": "sim",
-      "suggested_structural_type": "structural",
-      "suggested_severity": 3,
-      "precedent_match": "Altera a Lei nº 14.352, de 18 de novembro de 2013, que dispõe sobre a Política Estadual de Atendimento Integrado às Mulheres Vítimas de Violência.(SEI 5122-0100/21-1)",
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "recommendation_confidence": 0.8,
+      "matched_groups": [],
+      "suggested_defending_vote": null,
+      "suggested_structural_type": null,
+      "suggested_severity": null,
+      "precedent_match": "ALRS Regulação Institucional e Tributária Difusa",
       "review_status": "pending_review",
       "remote_apply": false
     },
@@ -665,16 +661,14 @@
         "camara-deputado-74400"
       ],
       "unique_candidates": 27,
-      "recommended_disposition": "assess",
-      "recommended_rationale": "Texto normativo federal correlacionado diretamente com trabalhadores_informais. Direção: ampliadora. Voto defensor: SIM.",
-      "recommendation_confidence": 0.85,
-      "matched_groups": [
-        "trabalhadores_informais"
-      ],
-      "suggested_defending_vote": "sim",
-      "suggested_structural_type": "structural",
-      "suggested_severity": 2,
-      "precedent_match": "Auxílio Gás dos Brasileiros e Amparo Social a Famílias de Baixa Renda e Informais",
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "recommendation_confidence": 0.8,
+      "matched_groups": [],
+      "suggested_defending_vote": null,
+      "suggested_structural_type": null,
+      "suggested_severity": null,
+      "precedent_match": "ALRS Regulação Institucional e Tributária Difusa",
       "review_status": "pending_review",
       "remote_apply": false
     },
@@ -1375,16 +1369,14 @@
         "camara-deputado-73486"
       ],
       "unique_candidates": 24,
-      "recommended_disposition": "assess",
-      "recommended_rationale": "Texto normativo federal correlacionado diretamente com trabalhadores_informais. Direção: ampliadora. Voto defensor: SIM.",
-      "recommendation_confidence": 0.85,
-      "matched_groups": [
-        "trabalhadores_informais"
-      ],
-      "suggested_defending_vote": "sim",
-      "suggested_structural_type": "structural",
-      "suggested_severity": 2,
-      "precedent_match": "Altera a Lei nº 15.760, de 15 de dezembro de 2021, que institui o Programa Todo Jovem na Escola e dispõe sobre o pagamento de Bolsa Auxílio de Permanência Estudantil. (SEI 16656-0100/23-9)",
+      "recommended_disposition": "no_direct_population_group",
+      "recommended_rationale": "Matéria de regulação macroeconômica, institucional, tributária geral ou procedimental difusa.",
+      "recommendation_confidence": 0.8,
+      "matched_groups": [],
+      "suggested_defending_vote": null,
+      "suggested_structural_type": null,
+      "suggested_severity": null,
+      "precedent_match": "ALRS Regulação Institucional e Tributária Difusa",
       "review_status": "pending_review",
       "remote_apply": false
     },

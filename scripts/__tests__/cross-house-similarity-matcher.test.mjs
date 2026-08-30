@@ -7,12 +7,15 @@ import {
 } from '../cross-house-similarity-matcher.mjs';
 
 describe('cross-house-similarity-matcher', () => {
-  it('possui os 14 grupos canônicos', () => {
-    expect(CANONICAL_GROUPS.length).toBe(14);
+  it('possui os 21 grupos canônicos da taxonomia v1.1', () => {
+    expect(CANONICAL_GROUPS.length).toBe(21);
     expect(CANONICAL_GROUPS).toContain('mulheres');
     expect(CANONICAL_GROUPS).toContain('povos_indigenas');
     expect(CANONICAL_GROUPS).toContain('agricultura_familiar_sem_terra');
     expect(CANONICAL_GROUPS).toContain('trabalhadores_informais');
+    expect(CANONICAL_GROUPS).toContain('estudantes');
+    expect(CANONICAL_GROUPS).toContain('trabalhadores_formais');
+    expect(CANONICAL_GROUPS).toContain('servidores_publicos');
   });
 
   it('identifica proposição protetiva de mulheres (PLP 41/2026)', () => {
