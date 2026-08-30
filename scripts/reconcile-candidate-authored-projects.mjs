@@ -63,7 +63,13 @@ const orderedCandidates = [...byCandidate.keys()].sort();
 const batches = []; for (let i = 0; i < orderedCandidates.length; i += BATCH_SIZE) batches.push(orderedCandidates.slice(i, i + BATCH_SIZE));
 const report = { schema_version: '1.0.0', packet_type: 'candidate_authored_projects_reconciliation', mode: process.argv.includes('--apply') ? 'apply' : 'dry-run', remote_apply: false, candidates_input: orderedCandidates.length, projects_validated: seen.size, batch_size: BATCH_SIZE, batches: batches.length, sanitized_texts: true, rejected: 0 };
 if (process.argv.includes('--apply')) {
-  const merged = candidates.map((candidate) => ({ ...candidate, ...(byCandidate.has(String(candidate.tse_candidate_id)) ? { authored_projects: byCandidate.get(String(candidate.tse_candidate_id)) } : {}) }));
+  const merged = candidates.map((candidate) => {
+    const candidateTse = String(candidate.tse_candidate_id ?? '');
+    if (!byCandidate.has(candidateTse)) return candidate;
+    const projectsById = new Map((candidate.authored_projects ?? []).map((project) => [project.id, project]));
+    for (const project of byCandidate.get(candidateTse) ?? []) projectsById.set(project.id, project);
+    return { ...candidate, authored_projects: [...projectsById.values()] };
+  });
   const temp = `${SNAPSHOT}.tmp`;
   fs.writeFileSync(temp, `${JSON.stringify(merged, null, 2)}\n`); fs.renameSync(temp, SNAPSHOT); report.remote_apply = false; report.snapshot_updated = true;
 }

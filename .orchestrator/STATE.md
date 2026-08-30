@@ -4944,3 +4944,15 @@ Sem autorização humana explícita própria, não fazer:
 - Gates locais verdes: `485/485` testes, TypeScript, `data:check` (`1003/988`), build Vite/PWA/sitemap (`1003 + 2`) e `git diff --check`.
 - QA: `docs/qa/lote-coleta-votos-factuais-camara-alrs-2026-08-30.md`.
 - Próximo chunk contínuo: catalogar os `331` conflitos por identidade/fonte, recuperar apenas evidência oficial para os 2 legados e continuar coleta incremental sem fuzzy matching; não publicar correções conflitantes automaticamente.
+
+## Tick contínuo — dossiê de projetos de autoria: contrato, UI e pipeline — 2026-08-30
+
+- Contrato adicionado em `src/types/election.ts`: `CandidateAuthoredProject` e `authored_projects?` no candidato público.
+- Componente acessível criado em `src/components/candidates/CandidateAuthoredProjectsList.tsx`: acordeão WAI-ARIA, total, status, tema, busca, grupos e link oficial sanitizado.
+- Integração concluída em `src/pages/CandidateDossierPage.tsx`.
+- Testes adicionados: `src/components/candidates/__tests__/CandidateAuthoredProjectsList.test.tsx`.
+- Pipeline criado: `scripts/reconcile-candidate-authored-projects.mjs`, dry-run por padrão, lotes de 20, candidato exato, URLs oficiais, grupos canônicos e sanitização de CPF/e-mail/telefone; comando `data:authored-projects` adicionado ao `package.json`.
+- Fixture temporário validado: `1` candidato, `1` projeto, `1` lote, `0` rejeições, sem alteração do snapshot.
+- Mirror `../dataset2026` não contém catálogo oficial de projetos de autoria; `data/public-candidates.json` não foi preenchido com dados inventados. Próximo input deve ser manifesto oficial em `--input`.
+- Gates: `data:check` verde; TypeScript verde; `117` arquivos/`491` testes verdes; build Vite/PWA/sitemap verde; smoke local verde (`1002` cards, `0` falhas HTTP, `0` erros online).
+- Próximo chunk: obter/coletar manifesto oficial ALRS/Câmara por candidato com identidade exata, executar primeiro lote de 20 em dry-run e somente então aplicar incrementalmente.
