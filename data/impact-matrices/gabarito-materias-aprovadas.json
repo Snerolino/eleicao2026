@@ -3,7 +3,7 @@
   "methodology_version": "1.1.0",
   "title": "Matriz Gabarito de Proposições Legislativas — Taxonomia Integrada 1.1",
   "description": "Versão derivada da correção editorial de 2026-08-29 com integração controlada das novas categorias populacionais verificadas e separação explícita entre populações, temas e atores econômicos.",
-  "updated_at": "2026-08-30T09:28:06.181Z",
+  "updated_at": "2026-08-30T10:43:44.977Z",
   "rules": {
     "immutability": "Proposições com status approved possuem gabarito imutável de direção e defending_vote.",
     "reusability": "O gabarito de uma matéria é aplicado automaticamente a todas as votações nominais registradas para qualquer candidato que votou nela.",
@@ -1748,21 +1748,23 @@
       "type": "plp",
       "number": "230",
       "year": 2025,
-      "title": "Vedação de limitação de empenho de despesas do FUST",
+      "title": "Conectividade de escolas públicas e vedação de limitação de empenho do FUST (SBT 1 CFT / PLP 230/2025)",
       "official_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3170169",
       "official_source_label": "Câmara dos Deputados — PLP 230/2025",
-      "severity": 2,
+      "severity": 3,
       "structural_type": "budgetary",
       "review_status": "approved",
       "assessments": [
         {
-          "group": "pessoas_com_deficiencia",
-          "impact_direction": "unclear",
+          "group": "estudantes",
+          "impact_direction": "positive",
           "defending_vote": null,
-          "confidence": 0.55,
-          "rationale": "O texto votado protege a execução de despesas do FUST, mas não segmenta explicitamente pessoas com deficiência. A relação com acessibilidade e inclusão digital é plausível, porém insuficiente para definir direção; por isso o impacto permanece unclear e sem voto defensor.",
+          "confidence": 0.97,
+          "rationale": "O substitutivo tem efeito populacional positivo e direto sobre estudantes de escolas públicas quanto à conectividade com internet de qualidade. Contudo, como a mesma votação nominal incidiu conjuntamente sobre blindagem orçamentária do FUST, regra de alocação não reembolsável (mínimo 50%) e benefício a prestadoras de telecomunicações sem destaque isolador, a atribuição de score para o voto global é não separável (defending_vote = null).",
           "sources": [
-            "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3170169"
+            "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2580259",
+            "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3170169",
+            "https://escriba.camara.leg.br/escriba-servicosweb/html/82876"
           ]
         }
       ]

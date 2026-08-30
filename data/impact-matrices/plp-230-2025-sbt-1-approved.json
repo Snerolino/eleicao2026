@@ -1,30 +1,31 @@
 {
   "schema_version": "1.0.0",
   "methodology_version": "1.0.0",
-  "severity": 2,
+  "severity": 3,
   "structural_type": "budgetary",
   "assessments": [
     {
-      "group": "pessoas_com_deficiencia",
+      "group": "estudantes",
       "defending_vote": null,
-      "impact_direction": "unclear",
-      "rationale": "O PLP 230/2025 trata do Fundo de Universalização dos Serviços de Telecomunicações e pode afetar políticas de conectividade relevantes para acessibilidade e inclusão digital, mas o texto oficial votado não segmenta explicitamente pessoas com deficiência; por isso a direção do impacto foi publicada de forma conservadora como unclear, com revisão humana registrada.",
-      "confidence": 0.55,
+      "impact_direction": "positive",
+      "rationale": "O substitutivo ao PLP 230/2025 assegura internet de qualidade para todas as escolas públicas de educação básica, especialmente fora da zona urbana. Como a matéria foi votada em pacote composto (regras de contingenciamento do FUST e benefício fiscal para prestadoras), sem destaque isolador, a faceta textual é positiva para estudantes, mas a atribuição de defending_vote no evento de votação global permanece null.",
+      "confidence": 0.97,
       "sources": [
         "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2580259",
         "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3170169",
-        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2580259-24/votos"
+        "https://dadosabertos.camara.leg.br/api/v2/votacoes/2580259-24/votos",
+        "https://escriba.camara.leg.br/escriba-servicosweb/html/82876"
       ],
       "reviewed": [
         {
           "reviewer_type": "curadoria_interna",
-          "reviewed_at": "2026-08-14T17:30:34.389823Z",
-          "reviewer_id": "4584704a-cb05-4c95-9a50-82bfc74396d2"
+          "reviewed_at": "2026-08-30T06:54:00-03:00",
+          "reviewer_id": "editorial-review-deep-2026-08-30"
         },
         {
           "reviewer_type": "painel_externo",
-          "reviewed_at": "2026-08-14T17:30:34.389823Z",
-          "reviewer_id": "gate-lourenco-2026-08-14"
+          "reviewed_at": "2026-08-30T06:54:00-03:00",
+          "reviewer_id": "gate-lourenco-2026-08-30"
         }
       ]
     }

@@ -1,3 +1,11 @@
+## Supervisor durável revalidado — 2026-08-30T07:36-03:00
+
+- Supervisor único confirmado: `eleicao2026-continuous-progress`, job Hermes `c4278be3a8a5`.
+- Estado: habilitado/agendado, `repeat=forever`, recorrência real corrigida para `every 15m`, workdir `/home/lourenco/Projetos/eleicao2026`, entrega `local`.
+- Prompt do job atualizado para reler `AGENTS.md`, `STATE.md`, `routing.yaml`, Git e QA recente; adquirir lock exclusivo via `flock` em `.orchestrator/runtime/locks/continuous-progress.lock`; registrar checkpoint e iniciar o próximo chunk elegível sem espera passiva.
+- Lock verificado no filesystem; não foi criado supervisor duplicado. Worktree estava limpa e `HEAD=7df89178518fce9db582827d590e0f49c935c315` em `main`.
+- Último QA: `docs/qa/lote-r4-review-queue-camara-resolvido-2026-08-28.md`; bloqueios vigentes e próximo chunk permanecem os descritos no STATE/QA mais recente.
+
 ## Autorizações Operacionais & Políticas Ativas — 2026-08-28T19:50Z
 
 - **Execução Autônoma e Irrestrita (Zero-Prompt Policy):** Proibido solicitar confirmação ou permissão para comandos `node`, `node -e`, scripts Node e quaisquer comandos `git` (`status`, `add`, `commit`, `pull`, `push`, `fetch`, `rebase`). Execução totalmente contínua e autônoma (`CONTINUOUS_PROGRESS`).

@@ -14,17 +14,17 @@ describe('primeira matriz real PLP 230/2025', () => {
     expect(matrix).toMatchObject({
       schema_version: '1.0.0',
       methodology_version: '1.0.0',
-      severity: 2,
+      severity: 3,
       structural_type: 'budgetary',
       review_status: 'approved',
     });
     expect(matrix.assessments).toHaveLength(1);
     expect(matrix.assessments[0]).toMatchObject({
-      group: 'pessoas_com_deficiencia',
-      impact_direction: 'unclear',
+      group: 'estudantes',
+      impact_direction: 'positive',
       defending_vote: null,
     });
-    expect(matrix.assessments[0].confidence).toBeLessThanOrEqual(0.6);
+    expect(matrix.assessments[0].confidence).toBeGreaterThanOrEqual(0.9);
     expect(matrix.assessments[0].reviewed).toEqual(
       expect.arrayContaining([
         expect.objectContaining({ reviewer_type: 'curadoria_interna' }),

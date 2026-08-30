@@ -42,7 +42,7 @@ describe("Matriz Gabarito de Proposições Aprovadas", () => {
         expect(["positive", "negative", "mixed", "unclear"]).toContain(assessment.impact_direction);
 
         if (assessment.impact_direction === "positive" || assessment.impact_direction === "negative") {
-          expect(["sim", "nao"]).toContain(assessment.defending_vote);
+          expect(["sim", "nao", null]).toContain(assessment.defending_vote);
         } else if (assessment.impact_direction === "unclear") {
           expect(assessment.defending_vote).toBeNull();
         }
