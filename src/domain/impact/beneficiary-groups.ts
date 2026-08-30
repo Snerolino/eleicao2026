@@ -17,6 +17,13 @@ export const BENEFICIARY_GROUP_LABELS: Record<BeneficiaryGroupSlug | string, str
   agricultura_familiar_sem_terra: "Agricultura familiar, assentados e sem-terra",
   povos_de_terreiro: "Povos de terreiro / religiões de matriz africana",
   imigrantes_refugiados: "Imigrantes e refugiados",
+  estudantes: "Estudantes",
+  trabalhadores_formais: "Trabalhadores formais",
+  servidores_publicos: "Servidores públicos",
+  usuarios_sus: "Usuários do SUS",
+  pessoas_com_ludopatia: "Pessoas com ludopatia",
+  candidatos_concursos_publicos: "Candidatos a concursos públicos",
+  pescadores_artesanais_comunidades_pesqueiras: "Pescadores artesanais e comunidades pesqueiras",
 };
 
 export const BENEFICIARY_GROUPS_CANONICAL_ORDER: readonly BeneficiaryGroupSlug[] = [
@@ -34,6 +41,13 @@ export const BENEFICIARY_GROUPS_CANONICAL_ORDER: readonly BeneficiaryGroupSlug[]
   "agricultura_familiar_sem_terra",
   "povos_de_terreiro",
   "imigrantes_refugiados",
+  "estudantes",
+  "trabalhadores_formais",
+  "servidores_publicos",
+  "usuarios_sus",
+  "pessoas_com_ludopatia",
+  "candidatos_concursos_publicos",
+  "pescadores_artesanais_comunidades_pesqueiras",
 ];
 
 export function getBeneficiaryGroupLabel(slug: string): string {

@@ -1,0 +1,24 @@
+{
+  "pending_external_review": [
+    {
+      "proposition_id": "alrs:pl-38-2026",
+      "category": "servidores_publicos",
+      "reason": "Categoria agora é válida, mas severity 4 exige gate externo antes de approved."
+    },
+    {
+      "proposition_id": "alrs:pec-305-2026",
+      "category": "servidores_publicos",
+      "reason": "Categoria agora é válida, mas severity 5 exige gate externo antes de approved."
+    }
+  ],
+  "reclassified_without_population_score": [
+    {
+      "proposition_id": "alrs:pl-140-2022",
+      "topics": [
+        "educacao",
+        "servico_publico_estado"
+      ],
+      "reason": "CACS-Fundeb é mecanismo de governança/controle social; a nova categoria estudantes não deve ser usada automaticamente se o efeito populacional direto não estiver isolado."
+    }
+  ]
+}

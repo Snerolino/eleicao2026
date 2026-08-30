@@ -7,8 +7,8 @@ import {
 } from "../beneficiary-groups";
 
 describe("beneficiary-groups domain", () => {
-  it("contém rótulos para todos os 14 grupos canônicos da metodologia v1", () => {
-    expect(BENEFICIARY_GROUPS).toHaveLength(14);
+  it("contém rótulos para todos os 21 grupos canônicos da metodologia", () => {
+    expect(BENEFICIARY_GROUPS).toHaveLength(21);
     for (const group of BENEFICIARY_GROUPS) {
       expect(BENEFICIARY_GROUP_LABELS[group]).toBeDefined();
       expect(typeof BENEFICIARY_GROUP_LABELS[group]).toBe("string");
@@ -16,10 +16,10 @@ describe("beneficiary-groups domain", () => {
     }
   });
 
-  it("ordem canônica contém exatamente os 14 grupos sem duplicações", () => {
-    expect(BENEFICIARY_GROUPS_CANONICAL_ORDER).toHaveLength(14);
+  it("ordem canônica contém exatamente os 21 grupos sem duplicações", () => {
+    expect(BENEFICIARY_GROUPS_CANONICAL_ORDER).toHaveLength(21);
     const unique = new Set(BENEFICIARY_GROUPS_CANONICAL_ORDER);
-    expect(unique.size).toBe(14);
+    expect(unique.size).toBe(21);
     for (const group of BENEFICIARY_GROUPS) {
       expect(unique.has(group)).toBe(true);
     }

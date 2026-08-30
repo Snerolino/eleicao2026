@@ -1,0 +1,270 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "impact_taxonomy_integration",
+  "created_at": "2026-08-29T21:50:00-03:00",
+  "decision": "integrate_new_verified_categories",
+  "architecture": {
+    "name": "Matriz de Impacto Legislativo",
+    "principle": "Separar população (quem), tema (sobre o quê) e economia (quem recebe benefício/custo econômico).",
+    "population_methodology_version_previous": "1.0.0",
+    "population_methodology_version": "1.1.0",
+    "topic_taxonomy_version": "1.0.0",
+    "economic_methodology_version": "1.0.0",
+    "ui_contract_version": "2.0.0"
+  },
+  "population": {
+    "v1_preserved": [
+      "agricultura_familiar_sem_terra",
+      "comunidades_quilombolas",
+      "criancas_adolescentes_vulnerabilidade",
+      "imigrantes_refugiados",
+      "lgbtqia",
+      "mulheres",
+      "pessoas_com_deficiencia",
+      "pessoas_idosas_dependentes",
+      "populacao_carceraria",
+      "populacao_negra_periferica",
+      "populacao_rua",
+      "povos_de_terreiro",
+      "povos_indigenas",
+      "trabalhadores_informais"
+    ],
+    "new_groups_v1_1": {
+      "estudantes": {
+        "label_pt": "Estudantes",
+        "scope": "Pessoas diretamente afetadas por acesso, permanência, transporte, bolsas, infraestrutura ou regras educacionais, sem presumir vulnerabilidade socioeconômica.",
+        "exclusions": [
+          "Não usar apenas porque a matéria ocorre em escola ou universidade.",
+          "Não substituir criancas_adolescentes_vulnerabilidade quando vulnerabilidade for o recorte substantivo principal."
+        ]
+      },
+      "trabalhadores_formais": {
+        "label_pt": "Trabalhadores formais",
+        "scope": "Empregados e categorias profissionais com vínculo formal diretamente afetados em jornada, remuneração, proteção laboral, qualificação ou condições de trabalho.",
+        "exclusions": [
+          "Não usar para trabalhadores informais/autônomos.",
+          "Servidores públicos podem usar categoria própria quando o vínculo estatal for parte substantiva da matéria."
+        ]
+      },
+      "servidores_publicos": {
+        "label_pt": "Servidores públicos",
+        "scope": "Servidores civis e militares, magistério público e carreiras estatais diretamente afetados em remuneração, carreira, direitos, deveres ou condições funcionais.",
+        "exclusions": [
+          "Lei orçamentária, tributária ou administrativa genérica não vira assessment de servidores sem efeito funcional direto."
+        ]
+      },
+      "usuarios_sus": {
+        "label_pt": "Usuários do SUS",
+        "scope": "Pessoas diretamente afetadas por acesso, cobertura, atendimento, medicamentos, exames ou serviços do Sistema Único de Saúde ou rede pública de saúde.",
+        "exclusions": [
+          "Matéria apenas temática de saúde não basta.",
+          "Doença ou condição específica deve usar grupo populacional mais preciso quando existir."
+        ]
+      },
+      "pessoas_com_ludopatia": {
+        "label_pt": "Pessoas com ludopatia",
+        "scope": "Pessoas com transtorno do jogo, jogo problemático ou dependência de apostas diretamente destinatárias de prevenção, tratamento, proteção ou apoio.",
+        "exclusions": [
+          "Não usar para toda matéria sobre apostas; é necessário efeito direto sobre prevenção, tratamento ou proteção contra jogo compulsivo."
+        ]
+      },
+      "candidatos_concursos_publicos": {
+        "label_pt": "Candidatos a concursos públicos",
+        "scope": "Pessoas inscritas, aprovadas, classificadas ou em cadastro reserva de concursos públicos quando a regra legislativa altera diretamente sua posição, direitos ou expectativa administrativa.",
+        "exclusions": [
+          "Não confundir com servidores já investidos no cargo."
+        ]
+      },
+      "pescadores_artesanais_comunidades_pesqueiras": {
+        "label_pt": "Pescadores artesanais e comunidades pesqueiras",
+        "scope": "Pescadores artesanais e comunidades cuja subsistência e atividade econômica dependem diretamente da pesca artesanal.",
+        "exclusions": [
+          "Pesca industrial ou agronegócio pesqueiro deve ser tratado no eixo econômico/setorial quando aplicável."
+        ]
+      }
+    },
+    "groups_v1_1": [
+      "agricultura_familiar_sem_terra",
+      "comunidades_quilombolas",
+      "criancas_adolescentes_vulnerabilidade",
+      "imigrantes_refugiados",
+      "lgbtqia",
+      "mulheres",
+      "pessoas_com_deficiencia",
+      "pessoas_idosas_dependentes",
+      "populacao_carceraria",
+      "populacao_negra_periferica",
+      "populacao_rua",
+      "povos_de_terreiro",
+      "povos_indigenas",
+      "trabalhadores_informais",
+      "estudantes",
+      "trabalhadores_formais",
+      "servidores_publicos",
+      "usuarios_sus",
+      "pessoas_com_ludopatia",
+      "candidatos_concursos_publicos",
+      "pescadores_artesanais_comunidades_pesqueiras"
+    ],
+    "rules": [
+      "Não criar populacao_geral.",
+      "Grupo populacional exige destinatário direto identificável.",
+      "Tema não vira população automaticamente.",
+      "SIM/NÃO não possuem valor intrínseco; defending_vote depende do efeito avaliado.",
+      "Ausência de dado permanece null, nunca zero."
+    ]
+  },
+  "topics": {
+    "groups": [
+      "trabalho_renda",
+      "educacao",
+      "saude",
+      "previdencia",
+      "seguranca_justica",
+      "direitos_civis",
+      "meio_ambiente_clima",
+      "habitacao_cidades",
+      "agro_terra",
+      "economia_tributacao",
+      "credito_sistema_financeiro",
+      "servico_publico_estado",
+      "infraestrutura_desenvolvimento",
+      "energia_recursos_naturais",
+      "transparencia_democracia",
+      "cultura"
+    ],
+    "rules": [
+      "Uma matéria pode ter vários temas.",
+      "Tema não possui impact_direction.",
+      "Tema não possui defending_vote.",
+      "Tema não gera score; serve para filtro, agregação e explicação."
+    ]
+  },
+  "economic": {
+    "actor_groups": [
+      "trabalhadores_assalariados",
+      "trabalhadores_autonomos",
+      "microempreendedores_individuais",
+      "microempresas",
+      "pequenas_empresas",
+      "medias_empresas",
+      "grandes_empresas",
+      "cooperativas",
+      "agricultura_familiar",
+      "agronegocio_patronal",
+      "setor_financeiro",
+      "investidores_mercado_capitais",
+      "consumidores",
+      "entes_publicos",
+      "capital_estrangeiro"
+    ],
+    "rules": [
+      "A direção econômica descreve benefício/custo para o ator, não julgamento moral.",
+      "Não converter pequena_empresa em bom nem grande_empresa em ruim.",
+      "Score econômico, quando existir, é por ator e nunca global."
+    ]
+  },
+  "legacy_category_mappings": {
+    "educacao_estudantes": {
+      "population_candidates": [
+        "estudantes"
+      ],
+      "topic_candidates": [
+        "educacao"
+      ],
+      "economic_actor_candidates": [],
+      "automatic_approval": false,
+      "rule": "Só gerar assessment populacional quando estudantes forem destinatários diretos; educação como tema não pontua."
+    },
+    "saude_usuarios_sus": {
+      "population_candidates": [
+        "usuarios_sus"
+      ],
+      "topic_candidates": [
+        "saude"
+      ],
+      "economic_actor_candidates": [],
+      "automatic_approval": false,
+      "rule": "Só usar usuarios_sus quando acesso/serviço público de saúde for efeito direto; saúde como tema não pontua."
+    },
+    "servidores_publicos": {
+      "population_candidates": [
+        "servidores_publicos"
+      ],
+      "topic_candidates": [
+        "servico_publico_estado"
+      ],
+      "economic_actor_candidates": [
+        "trabalhadores_assalariados"
+      ],
+      "automatic_approval": false,
+      "rule": "Orçamento, tributos e administração genéricos não geram assessment de servidores. Remuneração, carreira e condições funcionais podem gerar."
+    },
+    "meio_ambiente_clima": {
+      "population_candidates": [],
+      "topic_candidates": [
+        "meio_ambiente_clima"
+      ],
+      "economic_actor_candidates": [],
+      "automatic_approval": false,
+      "rule": "É tema, não população. Não possui positive/negative nem score próprio no eixo temático."
+    },
+    "micro_pequenos_empreendedores": {
+      "population_candidates": [],
+      "topic_candidates": [
+        "economia_tributacao",
+        "credito_sistema_financeiro"
+      ],
+      "economic_actor_candidates": [
+        "microempreendedores_individuais",
+        "microempresas",
+        "pequenas_empresas"
+      ],
+      "automatic_approval": false,
+      "rule": "Selecionar o ator econômico exato conforme a fonte; não tratar empresa como população vulnerável e não atribuir valor moral ao benefício/custo."
+    },
+    "agricultores_familiares": {
+      "population_candidates": [
+        "agricultura_familiar_sem_terra"
+      ],
+      "topic_candidates": [
+        "agro_terra"
+      ],
+      "economic_actor_candidates": [
+        "agricultura_familiar"
+      ],
+      "automatic_approval": false,
+      "rule": "O slug populacional existente permanece canônico; agricultores_familiares é alias legado, não novo grupo concorrente."
+    }
+  },
+  "new_gap_resolution_aliases": {
+    "profissionais_enfermagem": {
+      "population": [
+        "trabalhadores_formais"
+      ],
+      "topics": [
+        "trabalho_renda",
+        "saude"
+      ],
+      "economic_actor_if_material": [
+        "trabalhadores_assalariados"
+      ]
+    },
+    "profissionais_educacao": {
+      "population_rule": "servidores_publicos se vínculo estatal for substantivo; trabalhadores_formais caso geral.",
+      "topics": [
+        "educacao",
+        "trabalho_renda"
+      ]
+    },
+    "pescadores_artesanais": {
+      "population": [
+        "pescadores_artesanais_comunidades_pesqueiras"
+      ],
+      "topics": [
+        "agro_terra",
+        "trabalho_renda"
+      ]
+    }
+  }
+}

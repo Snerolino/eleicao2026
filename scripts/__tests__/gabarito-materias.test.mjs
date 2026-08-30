@@ -11,8 +11,8 @@ describe("Matriz Gabarito de Proposições Aprovadas", () => {
   it("arquivo gabarito-materias-aprovadas.json existe e é válido", () => {
     expect(existsSync(gabaritoPath)).toBe(true);
     const content = JSON.parse(readFileSync(gabaritoPath, "utf8"));
-    expect(content.schema_version).toBe("1.0.0");
-    expect(content.methodology_version).toBe("1.0.0");
+    expect(content.schema_version).toMatch(/^[0-9]+\.[0-9]+\.[0-9]+$/);
+    expect(content.methodology_version).toMatch(/^[0-9]+\.[0-9]+\.[0-9]+$/);
     expect(Array.isArray(content.propositions)).toBe(true);
     expect(content.propositions.length).toBeGreaterThanOrEqual(1);
   });

@@ -19,6 +19,13 @@ export const BENEFICIARY_GROUPS = [
   'agricultura_familiar_sem_terra',
   'povos_de_terreiro',
   'imigrantes_refugiados',
+  'estudantes',
+  'trabalhadores_formais',
+  'servidores_publicos',
+  'usuarios_sus',
+  'pessoas_com_ludopatia',
+  'candidatos_concursos_publicos',
+  'pescadores_artesanais_comunidades_pesqueiras',
 ] as const;
 
 export const IMPACT_DIRECTIONS = ['positive', 'negative', 'mixed', 'unclear'] as const;
