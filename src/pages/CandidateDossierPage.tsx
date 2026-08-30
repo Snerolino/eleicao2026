@@ -257,23 +257,33 @@ export function CandidateDossierPage() {
                         const houseScores = allScores.filter(
                           (score) => score.house === profile.house
                         );
-                        if (houseScores.length > 0) return houseScores;
 
-                        if (Array.isArray(candidate.category_scores) && candidate.category_scores.length > 0) {
-                          return candidate.category_scores.map((cs) => ({
-                            candidate_id: candidate.id,
-                            house: profile.house,
-                            group_slug: cs.group,
-                            score: cs.score,
-                            methodology_version: '1.0.0',
-                            evaluated_propositions: cs.evaluated_propositions_count,
-                            eligible_weight: cs.evaluated_propositions_count * 3,
-                            excluded_no_data: 0,
-                            contested_assessments: 0,
-                            average_confidence: 0.95,
-                          }));
+                        const snapshotScores =
+                          Array.isArray(candidate.category_scores) && candidate.category_scores.length > 0
+                            ? candidate.category_scores.map((cs) => ({
+                                candidate_id: candidate.id,
+                                house: profile.house,
+                                group_slug: cs.group,
+                                score: cs.score,
+                                methodology_version: '1.0.0',
+                                evaluated_propositions: cs.evaluated_propositions_count,
+                                eligible_weight: cs.evaluated_propositions_count * 3,
+                                excluded_no_data: 0,
+                                contested_assessments: 0,
+                                average_confidence: 0.95,
+                              }))
+                            : [];
+
+                        const houseEvaluated = houseScores.reduce((acc, s) => acc + (s.evaluated_propositions || 0), 0);
+                        const snapshotEvaluated = snapshotScores.reduce((acc, s) => acc + (s.evaluated_propositions || 0), 0);
+
+                        if (houseScores.length > 0 && houseEvaluated >= snapshotEvaluated) {
+                          return houseScores;
                         }
-                        return allScores;
+                        if (snapshotScores.length > 0) {
+                          return snapshotScores;
+                        }
+                        return houseScores.length > 0 ? houseScores : allScores;
                       })()}
                       house={house.label}
                       candidateName={candidate.full_name}

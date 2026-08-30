@@ -362,35 +362,38 @@ export async function fetchVoteCategoryScores(
       }
     }
 
-    const dbFactKeys = new Set(dbFacts.map((f) => `${f.candidate_id}|${f.group_slug}`));
-    const missingLocalFacts = localFacts.filter(
-      (f) => !dbFactKeys.has(`${f.candidate_id}|${f.group_slug}`)
-    );
-    const combinedFacts = [...dbFacts, ...missingLocalFacts];
+    const combinedFacts = [...dbFacts, ...localFacts];
     const computed = buildVoteCategoryScores(combinedFacts);
+    const validScores = computed.filter((s) => s.score !== null && typeof s.score === "number");
 
     // Complementar com fallback para qualquer par (candidate_id, group_slug) com score null ou ausente
     const validScoreKeys = new Set(
-      computed
-        .filter((s) => s.score !== null && typeof s.score === "number")
-        .map((s) => `${s.candidate_id}|${s.group_slug}`)
+      validScores.map((s) => `${s.candidate_id}|${s.group_slug}`)
     );
     const missingFallback = fallbackScores.filter(
       (s) => !validScoreKeys.has(`${s.candidate_id}|${s.group_slug}`)
     );
 
-    const finalScores = [
-      ...computed.filter((s) => s.score !== null && typeof s.score === "number"),
-      ...missingFallback,
-    ];
+    const mergedScores = [...validScores, ...missingFallback];
 
-    return finalScores.length > 0 ? finalScores : fallbackScores;
+    const mergedEvaluated = mergedScores.reduce((acc, s) => acc + (s.evaluated_propositions || 0), 0);
+    const fallbackEvaluated = fallbackScores.reduce((acc, s) => acc + (s.evaluated_propositions || 0), 0);
+
+    if (mergedScores.length > 0 && mergedEvaluated >= fallbackEvaluated) {
+      return mergedScores;
+    }
+    return fallbackScores.length > 0 ? fallbackScores : mergedScores;
   } catch (error) {
     console.warn(
       "[voteCategoryComparison] Erro ao consultar Supabase, usando dados canônicos locais:",
       error
     );
     const derived = buildVoteCategoryScores(localFacts);
-    return derived.length > 0 ? derived : fallbackScores;
+    const derivedEvaluated = derived.reduce((acc, s) => acc + (s.evaluated_propositions || 0), 0);
+    const fallbackEvaluated = fallbackScores.reduce((acc, s) => acc + (s.evaluated_propositions || 0), 0);
+    if (derived.length > 0 && derivedEvaluated >= fallbackEvaluated) {
+      return derived;
+    }
+    return fallbackScores.length > 0 ? fallbackScores : derived;
   }
 }
