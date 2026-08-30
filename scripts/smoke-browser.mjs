@@ -288,11 +288,11 @@ async function main() {
 
     await gotoApp(page, new URL('/comparar', baseUrl).toString());
     await page.waitForFunction(
-      () => document.querySelectorAll('button[aria-pressed]').length >= 2,
+      () => document.querySelectorAll('section[aria-label="Lista de candidatos"] button[data-experience-type]').length >= 2,
       null,
       { timeout: 15_000 },
     );
-    const compareButtons = page.locator('button[aria-pressed]');
+    const compareButtons = page.locator('section[aria-label="Lista de candidatos"] button[data-experience-type]');
     if ((await compareButtons.count()) < 2) fail('Comparação abriu com menos de 2 candidatos.');
     await compareButtons.nth(0).click();
     await compareButtons.nth(1).click();
