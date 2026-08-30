@@ -281,13 +281,77 @@
         "votos_obstrucao": 0,
         "nominal_balance": 7,
         "profile_score": 0.304,
-        "substantive_votes": 1,
-        "procedural_votes": 22
+        "substantive_votes": 14,
+        "procedural_votes": 9
       }
     ],
     "category_scores": [
       {
+        "group": "trabalhadores_informais",
+        "score": 0.6,
+        "evaluated_propositions_count": 5,
+        "divergences_count": 1,
+        "favorable_votes": 4,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
         "group": "mulheres",
+        "score": 0,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 1,
+        "favorable_votes": 1,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
@@ -1139,13 +1203,85 @@
         "votos_obstrucao": 0,
         "nominal_balance": 3,
         "profile_score": 0.143,
-        "substantive_votes": 1,
-        "procedural_votes": 20
+        "substantive_votes": 14,
+        "procedural_votes": 7
       }
     ],
     "category_scores": [
       {
+        "group": "trabalhadores_informais",
+        "score": 0.5,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 1,
+        "favorable_votes": 3,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "pessoas_com_ludopatia",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
         "group": "mulheres",
+        "score": 0,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 1,
+        "favorable_votes": 1,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
@@ -1705,13 +1841,77 @@
         "votos_obstrucao": 0,
         "nominal_balance": 6,
         "profile_score": 0.3,
-        "substantive_votes": 1,
-        "procedural_votes": 19
+        "substantive_votes": 11,
+        "procedural_votes": 9
       }
     ],
     "category_scores": [
       {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
         "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "pessoas_com_deficiencia",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
@@ -2258,11 +2458,60 @@
         "votos_obstrucao": 0,
         "nominal_balance": 5,
         "profile_score": 0.385,
-        "substantive_votes": 0,
-        "procedural_votes": 13
+        "substantive_votes": 8,
+        "procedural_votes": 5
       }
     ],
-    "category_scores": []
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "servidores_publicos",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      }
+    ]
   },
   {
     "id": "4bdb0a73-0780-5f48-ba1d-d9a66de78377",
@@ -4825,13 +5074,77 @@
         "votos_obstrucao": 0,
         "nominal_balance": 7,
         "profile_score": 0.304,
-        "substantive_votes": 1,
-        "procedural_votes": 22
+        "substantive_votes": 14,
+        "procedural_votes": 9
       }
     ],
     "category_scores": [
       {
+        "group": "trabalhadores_informais",
+        "score": 0.6,
+        "evaluated_propositions_count": 5,
+        "divergences_count": 1,
+        "favorable_votes": 4,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
         "group": "mulheres",
+        "score": 0,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 1,
+        "favorable_votes": 1,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
@@ -7679,13 +7992,69 @@
         "votos_obstrucao": 0,
         "nominal_balance": 4,
         "profile_score": 0.182,
-        "substantive_votes": 1,
-        "procedural_votes": 21
+        "substantive_votes": 12,
+        "procedural_votes": 10
       }
     ],
     "category_scores": [
       {
+        "group": "trabalhadores_informais",
+        "score": 0.5,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 1,
+        "favorable_votes": 3,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "servidores_publicos",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
         "group": "mulheres",
+        "score": 0,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 1,
+        "favorable_votes": 1,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
@@ -7724,13 +8093,69 @@
         "votos_obstrucao": 0,
         "nominal_balance": -1,
         "profile_score": -0.048,
-        "substantive_votes": 1,
-        "procedural_votes": 20
+        "substantive_votes": 13,
+        "procedural_votes": 8
       }
     ],
     "category_scores": [
       {
+        "group": "trabalhadores_informais",
+        "score": -1,
+        "evaluated_propositions_count": 5,
+        "divergences_count": 5,
+        "favorable_votes": 0,
+        "unfavorable_votes": 5
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
         "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "pessoas_com_deficiencia",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
@@ -7790,13 +8215,69 @@
         "votos_obstrucao": 0,
         "nominal_balance": 3,
         "profile_score": 0.158,
-        "substantive_votes": 1,
-        "procedural_votes": 18
+        "substantive_votes": 11,
+        "procedural_votes": 8
       }
     ],
     "category_scores": [
       {
+        "group": "trabalhadores_informais",
+        "score": -0.333,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 2,
+        "favorable_votes": 1,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
         "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "pessoas_com_deficiencia",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
@@ -8003,11 +8484,20 @@
         "votos_obstrucao": 0,
         "nominal_balance": 1,
         "profile_score": 0.333,
-        "substantive_votes": 0,
-        "procedural_votes": 3
+        "substantive_votes": 3,
+        "procedural_votes": 0
       }
     ],
-    "category_scores": []
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 0.333,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 1,
+        "favorable_votes": 2,
+        "unfavorable_votes": 1
+      }
+    ]
   },
   {
     "id": "4fb01bf7-ab1a-593f-8e39-032e4106b60e",
@@ -8345,18 +8835,82 @@
         "votos_obstrucao": 0,
         "nominal_balance": 4,
         "profile_score": 0.2,
-        "substantive_votes": 1,
-        "procedural_votes": 19
+        "substantive_votes": 14,
+        "procedural_votes": 6
       }
     ],
     "category_scores": [
       {
-        "group": "mulheres",
+        "group": "trabalhadores_informais",
+        "score": -0.2,
+        "evaluated_propositions_count": 5,
+        "divergences_count": 3,
+        "favorable_votes": 2,
+        "unfavorable_votes": 3
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
         "favorable_votes": 1,
         "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
       }
     ]
   },
@@ -8390,11 +8944,51 @@
         "votos_obstrucao": 0,
         "nominal_balance": 3,
         "profile_score": 0.143,
-        "substantive_votes": 1,
-        "procedural_votes": 20
+        "substantive_votes": 11,
+        "procedural_votes": 10
       }
     ],
     "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": 0.2,
+        "evaluated_propositions_count": 5,
+        "divergences_count": 2,
+        "favorable_votes": 3,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
       {
         "group": "mulheres",
         "score": 1,
@@ -8402,6 +8996,14 @@
         "divergences_count": 0,
         "favorable_votes": 1,
         "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
       }
     ]
   },
@@ -9112,13 +9714,77 @@
         "votos_obstrucao": 0,
         "nominal_balance": 4,
         "profile_score": 0.167,
-        "substantive_votes": 1,
-        "procedural_votes": 23
+        "substantive_votes": 14,
+        "procedural_votes": 10
       }
     ],
     "category_scores": [
       {
+        "group": "trabalhadores_informais",
+        "score": -0.2,
+        "evaluated_propositions_count": 5,
+        "divergences_count": 3,
+        "favorable_votes": 2,
+        "unfavorable_votes": 3
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
         "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
@@ -11105,13 +11771,77 @@
         "votos_obstrucao": 0,
         "nominal_balance": 8,
         "profile_score": 0.364,
-        "substantive_votes": 1,
-        "procedural_votes": 21
+        "substantive_votes": 14,
+        "procedural_votes": 8
       }
     ],
     "category_scores": [
       {
+        "group": "trabalhadores_informais",
+        "score": 0.6,
+        "evaluated_propositions_count": 5,
+        "divergences_count": 1,
+        "favorable_votes": 4,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
         "group": "mulheres",
+        "score": 0,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 1,
+        "favorable_votes": 1,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
@@ -12880,18 +13610,74 @@
         "votos_obstrucao": 0,
         "nominal_balance": 3,
         "profile_score": 0.13,
-        "substantive_votes": 1,
-        "procedural_votes": 22
+        "substantive_votes": 13,
+        "procedural_votes": 10
       }
     ],
     "category_scores": [
       {
-        "group": "mulheres",
+        "group": "trabalhadores_informais",
+        "score": -0.6,
+        "evaluated_propositions_count": 5,
+        "divergences_count": 4,
+        "favorable_votes": 1,
+        "unfavorable_votes": 4
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
         "favorable_votes": 1,
         "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
       }
     ]
   },
@@ -14675,13 +15461,45 @@
         "votos_obstrucao": 0,
         "nominal_balance": 6,
         "profile_score": 0.375,
-        "substantive_votes": 1,
-        "procedural_votes": 15
+        "substantive_votes": 8,
+        "procedural_votes": 8
       }
     ],
     "category_scores": [
       {
+        "group": "trabalhadores_informais",
+        "score": 0.333,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 1,
+        "favorable_votes": 2,
+        "unfavorable_votes": 1
+      },
+      {
         "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "pessoas_com_deficiencia",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
@@ -17263,13 +18081,69 @@
         "votos_obstrucao": 0,
         "nominal_balance": 6,
         "profile_score": 0.273,
-        "substantive_votes": 1,
-        "procedural_votes": 21
+        "substantive_votes": 13,
+        "procedural_votes": 9
       }
     ],
     "category_scores": [
       {
+        "group": "trabalhadores_informais",
+        "score": 0.6,
+        "evaluated_propositions_count": 5,
+        "divergences_count": 1,
+        "favorable_votes": 4,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "servidores_publicos",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
         "group": "mulheres",
+        "score": 0,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 1,
+        "favorable_votes": 1,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
@@ -17488,13 +18362,61 @@
         "votos_obstrucao": 0,
         "nominal_balance": 5,
         "profile_score": 0.263,
-        "substantive_votes": 1,
-        "procedural_votes": 18
+        "substantive_votes": 11,
+        "procedural_votes": 8
       }
     ],
     "category_scores": [
       {
+        "group": "trabalhadores_informais",
+        "score": -0.2,
+        "evaluated_propositions_count": 5,
+        "divergences_count": 3,
+        "favorable_votes": 2,
+        "unfavorable_votes": 3
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
         "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
@@ -17554,13 +18476,61 @@
         "votos_obstrucao": 0,
         "nominal_balance": 5,
         "profile_score": 0.238,
-        "substantive_votes": 1,
-        "procedural_votes": 20
+        "substantive_votes": 11,
+        "procedural_votes": 10
       }
     ],
     "category_scores": [
       {
+        "group": "trabalhadores_informais",
+        "score": 0,
+        "evaluated_propositions_count": 4,
+        "divergences_count": 2,
+        "favorable_votes": 2,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
         "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "pessoas_com_deficiencia",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
@@ -18040,11 +19010,52 @@
         "votos_obstrucao": 0,
         "nominal_balance": 0,
         "profile_score": 0,
-        "substantive_votes": 0,
-        "procedural_votes": 10
+        "substantive_votes": 7,
+        "procedural_votes": 3
       }
     ],
-    "category_scores": []
+    "category_scores": [
+      {
+        "group": "trabalhadores_informais",
+        "score": -0.333,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 2,
+        "favorable_votes": 1,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      }
+    ]
   },
   {
     "id": "6b240c29-45e1-525f-b08c-8995bbc43d5d",
@@ -18202,13 +19213,85 @@
         "votos_obstrucao": 0,
         "nominal_balance": 9,
         "profile_score": 0.333,
-        "substantive_votes": 1,
-        "procedural_votes": 26
+        "substantive_votes": 15,
+        "procedural_votes": 12
       }
     ],
     "category_scores": [
       {
+        "group": "trabalhadores_informais",
+        "score": 0.2,
+        "evaluated_propositions_count": 5,
+        "divergences_count": 2,
+        "favorable_votes": 3,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "usuarios_sus",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_ludopatia",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
         "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
@@ -19087,18 +20170,82 @@
         "votos_obstrucao": 0,
         "nominal_balance": -2,
         "profile_score": -0.083,
-        "substantive_votes": 1,
-        "procedural_votes": 23
+        "substantive_votes": 14,
+        "procedural_votes": 10
       }
     ],
     "category_scores": [
       {
-        "group": "mulheres",
+        "group": "trabalhadores_informais",
+        "score": -0.6,
+        "evaluated_propositions_count": 5,
+        "divergences_count": 4,
+        "favorable_votes": 1,
+        "unfavorable_votes": 4
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
         "favorable_votes": 1,
         "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "usuarios_sus",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
       }
     ]
   },
@@ -20505,13 +21652,77 @@
         "votos_obstrucao": 0,
         "nominal_balance": 2,
         "profile_score": 0.083,
-        "substantive_votes": 1,
-        "procedural_votes": 23
+        "substantive_votes": 14,
+        "procedural_votes": 10
       }
     ],
     "category_scores": [
       {
+        "group": "trabalhadores_informais",
+        "score": -0.6,
+        "evaluated_propositions_count": 5,
+        "divergences_count": 4,
+        "favorable_votes": 1,
+        "unfavorable_votes": 4
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
         "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "pessoas_com_deficiencia",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
@@ -21138,13 +22349,53 @@
         "votos_obstrucao": 0,
         "nominal_balance": 8,
         "profile_score": 0.5,
-        "substantive_votes": 1,
-        "procedural_votes": 15
+        "substantive_votes": 9,
+        "procedural_votes": 7
       }
     ],
     "category_scores": [
       {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 3,
+        "divergences_count": 0,
+        "favorable_votes": 3,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
         "group": "mulheres",
+        "score": 0,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 1,
+        "favorable_votes": 1,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
@@ -22564,13 +23815,69 @@
         "votos_obstrucao": 0,
         "nominal_balance": 3,
         "profile_score": 0.143,
-        "substantive_votes": 1,
-        "procedural_votes": 20
+        "substantive_votes": 12,
+        "procedural_votes": 9
       }
     ],
     "category_scores": [
       {
+        "group": "trabalhadores_informais",
+        "score": 0.2,
+        "evaluated_propositions_count": 5,
+        "divergences_count": 2,
+        "favorable_votes": 3,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "usuarios_sus",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
         "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "pessoas_com_deficiencia",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
@@ -23092,18 +24399,82 @@
         "votos_obstrucao": 0,
         "nominal_balance": 0,
         "profile_score": 0,
-        "substantive_votes": 1,
-        "procedural_votes": 22
+        "substantive_votes": 14,
+        "procedural_votes": 9
       }
     ],
     "category_scores": [
       {
-        "group": "mulheres",
+        "group": "trabalhadores_informais",
+        "score": 0.2,
+        "evaluated_propositions_count": 5,
+        "divergences_count": 2,
+        "favorable_votes": 3,
+        "unfavorable_votes": 2
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "usuarios_sus",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
         "favorable_votes": 1,
         "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "mulheres",
+        "score": 0,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 1,
+        "favorable_votes": 1,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "pessoas_com_deficiencia",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
       }
     ]
   },
@@ -23708,13 +25079,53 @@
         "votos_obstrucao": 0,
         "nominal_balance": 3,
         "profile_score": 0.176,
-        "substantive_votes": 1,
-        "procedural_votes": 16
+        "substantive_votes": 11,
+        "procedural_votes": 6
       }
     ],
     "category_scores": [
       {
+        "group": "trabalhadores_informais",
+        "score": 0.6,
+        "evaluated_propositions_count": 5,
+        "divergences_count": 1,
+        "favorable_votes": 4,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "servidores_publicos",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
         "group": "mulheres",
+        "score": 0,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 1,
+        "favorable_votes": 1,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "populacao_negra_periferica",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
@@ -23774,13 +25185,77 @@
         "votos_obstrucao": 0,
         "nominal_balance": 1,
         "profile_score": 0.048,
-        "substantive_votes": 1,
-        "procedural_votes": 20
+        "substantive_votes": 11,
+        "procedural_votes": 10
       }
     ],
     "category_scores": [
       {
+        "group": "criancas_adolescentes_vulnerabilidade",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "trabalhadores_formais",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "usuarios_sus",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "trabalhadores_informais",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "pessoas_com_ludopatia",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
+      },
+      {
         "group": "mulheres",
+        "score": 0,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 1,
+        "favorable_votes": 1,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "povos_indigenas",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "populacao_negra_periferica",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
@@ -24717,18 +26192,50 @@
         "votos_obstrucao": 0,
         "nominal_balance": 8,
         "profile_score": 0.5,
-        "substantive_votes": 1,
-        "procedural_votes": 15
+        "substantive_votes": 7,
+        "procedural_votes": 9
       }
     ],
     "category_scores": [
       {
-        "group": "mulheres",
+        "group": "trabalhadores_informais",
+        "score": 0,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 1,
+        "favorable_votes": 1,
+        "unfavorable_votes": 1
+      },
+      {
+        "group": "usuarios_sus",
         "score": 1,
         "evaluated_propositions_count": 1,
         "divergences_count": 0,
         "favorable_votes": 1,
         "unfavorable_votes": 0
+      },
+      {
+        "group": "servidores_publicos",
+        "score": 1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 0,
+        "favorable_votes": 1,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "mulheres",
+        "score": 1,
+        "evaluated_propositions_count": 2,
+        "divergences_count": 0,
+        "favorable_votes": 2,
+        "unfavorable_votes": 0
+      },
+      {
+        "group": "povos_indigenas",
+        "score": -1,
+        "evaluated_propositions_count": 1,
+        "divergences_count": 1,
+        "favorable_votes": 0,
+        "unfavorable_votes": 1
       }
     ]
   },

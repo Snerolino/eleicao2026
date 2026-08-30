@@ -1766,6 +1766,200 @@
           ]
         }
       ]
+    },
+    {
+      "proposition_id": "camara:mpv-1313-2025",
+      "house": "camara",
+      "type": "mpv",
+      "number": "1313",
+      "year": 2025,
+      "title": "Auxílio Gás dos Brasileiros e Amparo Social a Famílias de Baixa Renda e Informais",
+      "severity": 3,
+      "structural_type": "budgetary",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "trabalhadores_informais",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.9,
+          "rationale": "Medida Provisória nº 1313/2025 institui e expande o Auxílio Gás dos Brasileiros com subsídio direto para famílias de baixa renda e trabalhadores informais. Voto defensor: SIM.",
+          "sources": [
+            "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2557414"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "camara:pl-2630-2020",
+      "house": "camara",
+      "type": "pl",
+      "number": "2630",
+      "year": 2020,
+      "title": "Lei Brasileira de Liberdade, Responsabilidade e Transparência na Internet (Proteção Infantojuvenil nas Redes)",
+      "severity": 3,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "criancas_adolescentes_vulnerabilidade",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.9,
+          "rationale": "PL 2630/2020 estabelece salvaguardas de proteção a crianças e adolescentes em plataformas digitais e combate à desinformação sistemática. Voto defensor: SIM.",
+          "sources": [
+            "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2256735"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "camara:pec-6-2019",
+      "house": "camara",
+      "type": "pec",
+      "number": "6",
+      "year": 2019,
+      "title": "Proposta de Emenda à Constituição nº 6/2019 (Reforma da Previdência)",
+      "severity": 4,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "trabalhadores_formais",
+          "impact_direction": "negative",
+          "defending_vote": "nao",
+          "confidence": 0.95,
+          "rationale": "PEC 6/2019 eleva idades mínimas e tempo de contribuição para concessão de aposentadorias de trabalhadores urbanos e rurais. Voto defensor: NÃO.",
+          "sources": [
+            "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2192459"
+          ]
+        },
+        {
+          "group": "servidores_publicos",
+          "impact_direction": "negative",
+          "defending_vote": "nao",
+          "confidence": 0.95,
+          "rationale": "Elevação de alíquotas previdenciárias e endurecimento de regras de transição para servidores públicos. Voto defensor: NÃO.",
+          "sources": [
+            "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2192459"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "camara:pl-2110-2023",
+      "house": "camara",
+      "type": "pl",
+      "number": "2110",
+      "year": 2023,
+      "title": "Acesso Universal a Medicamentos Inovadores para Diabetes e Doenças Crônicas no SUS",
+      "severity": 3,
+      "structural_type": "budgetary",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "usuarios_sus",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.95,
+          "rationale": "Garante a incorporação célere e a distribuição gratuita de análogos de insulina e medicamentos crônicos pelo SUS. Voto defensor: SIM.",
+          "sources": [
+            "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2361223"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "camara:mpv-1323-2025",
+      "house": "camara",
+      "type": "mpv",
+      "number": "1323",
+      "year": 2025,
+      "title": "Crédito Orientado e Amparo Produtivo a Microempreendedores e Trabalhadores Autônomos",
+      "severity": 3,
+      "structural_type": "budgetary",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "trabalhadores_informais",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.9,
+          "rationale": "Linhas de financiamento com juros subsidiados e garantia estatal para trabalhadores autônomos e informais. Voto defensor: SIM.",
+          "sources": [
+            "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2581700"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "camara:pl-3626-2023",
+      "house": "camara",
+      "type": "pl",
+      "number": "3626",
+      "year": 2023,
+      "title": "Marco Legal das Apostas Esportivas e Medidas de Prevenção à Ludopatia",
+      "severity": 3,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "pessoas_com_ludopatia",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.9,
+          "rationale": "Estabelece diretrizes protetivas obrigatórias contra dependência e transtornos de apostas digitais. Voto defensor: SIM.",
+          "sources": [
+            "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2375850"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "camara:pl-490-2007",
+      "house": "camara",
+      "type": "pl",
+      "number": "490",
+      "year": 2007,
+      "title": "Marco Temporal e Restrições a Terras Indígenas",
+      "severity": 4,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "povos_indigenas",
+          "impact_direction": "negative",
+          "defending_vote": "nao",
+          "confidence": 0.95,
+          "rationale": "Projeto restringe a demarcação de terras indígenas e flexibiliza salvaguardas constitucionais originárias. Voto defensor: NÃO.",
+          "sources": [
+            "https://dadosabertos.camara.leg.br/api/v2/proposicoes/345311"
+          ]
+        }
+      ]
+    },
+    {
+      "proposition_id": "camara:pl-4566-2021",
+      "house": "camara",
+      "type": "pl",
+      "number": "4566",
+      "year": 2021,
+      "title": "Equiparação da Injúria Racial ao Crime de Racismo",
+      "severity": 3,
+      "structural_type": "structural",
+      "review_status": "approved",
+      "assessments": [
+        {
+          "group": "populacao_negra_periferica",
+          "impact_direction": "positive",
+          "defending_vote": "sim",
+          "confidence": 0.95,
+          "rationale": "Equipara a injúria racial ao crime de racismo, tornando-a imprescritível e inafiançável. Voto defensor: SIM.",
+          "sources": [
+            "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2311234"
+          ]
+        }
+      ]
     }
   ],
   "total_propositions": 63,
