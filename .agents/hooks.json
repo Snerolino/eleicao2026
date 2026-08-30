@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash .agents/hooks/deny-async-subagents.sh",
+            "command": "bash /home/lourenco/Projetos/eleicao2026/.agents/hooks/deny-async-subagents.sh",
             "timeout": 5
           }
         ]
