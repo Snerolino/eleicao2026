@@ -23,6 +23,9 @@ function cleanEncoding(str) {
     .replace(/Apartamento/gi, 'Apartamento')
     .replace(/Terreno/gi, 'Terreno')
     .replace(/Edificao/gi, 'Edificação')
+    .replace(/\b\d{3}\.?\d{3}\.?\d{3}-?\d{2}\b/g, '[DOC]')
+    .replace(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi, '[EMAIL]')
+    .replace(/\b(\d{2})\/(\d{2})\/(\d{4})\b/g, '$1-$2-$3')
     .trim();
 }
 
@@ -149,177 +152,6 @@ function categorizeAsset(tipo, desc) {
   return 'Outros Bens e Direitos';
 }
 
-// Histórico oficial de referência de mandatos e eleições anteriores para candidatos do RS
-const HISTORICAL_DECLARATIONS_REFERENCE = {
-  // Giuseppe Riesgo (Deputado Estadual 2018, candidato 2022 e 2026)
-  '210002532989': [
-    {
-      ano: 2022,
-      total: 280000,
-      itens_count: 3,
-      itens: [
-        {
-          tipo: 'Veículo automotor terrestre: caminhão, automóvel, moto, etc.',
-          categoria: 'Veículos e Automotores',
-          descricao: 'Veículo Jeep Compass Longitude 2020.',
-          valor: 130000,
-        },
-        {
-          tipo: 'Depósito bancário em conta corrente no País',
-          categoria: 'Aplicações e Depósitos Bancários',
-          descricao: 'Depósito em conta corrente e poupança.',
-          valor: 90000,
-        },
-        {
-          tipo: 'Ações (inclusive as provenientes de linha telefônica)',
-          categoria: 'Participações Societárias e Empresas',
-          descricao: 'Ações de empresas listadas na B3.',
-          valor: 60000,
-        },
-      ],
-      por_categoria: {
-        'Veículos e Automotores': 130000,
-        'Aplicações e Depósitos Bancários': 90000,
-        'Participações Societárias e Empresas': 60000,
-      },
-    },
-    {
-      ano: 2018,
-      total: 125000,
-      itens_count: 2,
-      itens: [
-        {
-          tipo: 'Veículo automotor terrestre: caminhão, automóvel, moto, etc.',
-          categoria: 'Veículos e Automotores',
-          descricao: 'Veículo Ford Focus 2015.',
-          valor: 55000,
-        },
-        {
-          tipo: 'Depósito bancário em conta corrente no País',
-          categoria: 'Aplicações e Depósitos Bancários',
-          descricao: 'Saldo em conta bancária.',
-          valor: 70000,
-        },
-      ],
-      por_categoria: {
-        'Veículos e Automotores': 55000,
-        'Aplicações e Depósitos Bancários': 70000,
-      },
-    },
-  ],
-
-  // Everton de Souza Dias (Candidato a Deputado Estadual)
-  '210002533927': [
-    {
-      ano: 2022,
-      total: 2150000,
-      itens_count: 4,
-      itens: [
-        {
-          tipo: 'Casa',
-          categoria: 'Imóveis e Terrenos',
-          descricao: 'Imóvel residencial em Porto Alegre/RS.',
-          valor: 1400000,
-        },
-        {
-          tipo: 'Veículo automotor terrestre',
-          categoria: 'Veículos e Automotores',
-          descricao: 'Veículo Toyota Hilux 2021.',
-          valor: 250000,
-        },
-        {
-          tipo: 'Quotas ou quinhões de capital',
-          categoria: 'Participações Societárias e Empresas',
-          descricao: 'Quotas de sociedade empresária de serviços.',
-          valor: 350000,
-        },
-        {
-          tipo: 'Aplicação de renda fixa (CDB, RDB e outros)',
-          categoria: 'Aplicações e Depósitos Bancários',
-          descricao: 'Investimentos de renda fixa.',
-          valor: 150000,
-        },
-      ],
-      por_categoria: {
-        'Imóveis e Terrenos': 1400000,
-        'Participações Societárias e Empresas': 350000,
-        'Veículos e Automotores': 250000,
-        'Aplicações e Depósitos Bancários': 150000,
-      },
-    },
-  ],
-
-  // Lara Prade (Candidata a Deputada Federal)
-  '210002534658': [
-    {
-      ano: 2022,
-      total: 520000,
-      itens_count: 8,
-      itens: [
-        {
-          tipo: 'Apartamento',
-          categoria: 'Imóveis e Terrenos',
-          descricao: 'Apartamento residencial 2 dormitórios.',
-          valor: 380000,
-        },
-        {
-          tipo: 'Veículo automotor terrestre',
-          categoria: 'Veículos e Automotores',
-          descricao: 'Veículo Honda HR-V 2019.',
-          valor: 90000,
-        },
-        {
-          tipo: 'Depósito bancário em conta corrente no País',
-          categoria: 'Aplicações e Depósitos Bancários',
-          descricao: 'Depósitos e fundos de investimento.',
-          valor: 50000,
-        },
-      ],
-      por_categoria: {
-        'Imóveis e Terrenos': 380000,
-        'Veículos e Automotores': 90000,
-        'Aplicações e Depósitos Bancários': 50000,
-      },
-    },
-  ],
-
-  // Carla Rodrigues Daitx (Candidata a Deputada Federal)
-  '210002533930': [
-    {
-      ano: 2022,
-      total: 485000,
-      itens_count: 5,
-      itens: [
-        {
-          tipo: 'Casa',
-          categoria: 'Imóveis e Terrenos',
-          descricao: 'Residência unifamiliar.',
-          valor: 350000,
-        },
-        {
-          tipo: 'Veículo automotor terrestre',
-          categoria: 'Veículos e Automotores',
-          descricao: 'Veículo Chevrolet Tracker 2020.',
-          valor: 85000,
-        },
-        {
-          tipo: 'Aplicações de renda fixa',
-          categoria: 'Aplicações e Depósitos Bancários',
-          descricao: 'Aplicações financeiras e poupança.',
-          valor: 50000,
-        },
-      ],
-      por_categoria: {
-        'Imóveis e Terrenos': 350000,
-        'Veículos e Automotores': 85000,
-        'Aplicações e Depósitos Bancários': 50000,
-      },
-    },
-  ],
-};
-
-const IPCA_2022_2026_PERCENT = 21.8; // Inflação oficial acumulada de referência 2022-2026
-
 export async function parseBens() {
   const root = process.cwd();
   const filePath = path.resolve(root, '../dataset2026/candidatos/bem_candidato_2026_RS.csv');
@@ -384,19 +216,9 @@ export async function parseBens() {
     bensByCand.set(sqCand, candData);
   }
 
-  // Anexa histórico de eleições anteriores e calcula auditoria de evolução patrimonial
   const outObj = {};
   for (const [sqCand, candData] of bensByCand.entries()) {
-    const historical = HISTORICAL_DECLARATIONS_REFERENCE[sqCand];
-    if (historical && historical.length > 0) {
-      for (const h of historical) {
-        if (!candData.declaracoes_por_ano.some((y) => y.ano === h.ano)) {
-          candData.declaracoes_por_ano.push(h);
-        }
-      }
-    }
-
-    // Ordena anos decrescente (2026, 2022, 2018...)
+    // Ordena anos decrescente (2026, 2022, 2018...).
     candData.declaracoes_por_ano.sort((a, b) => b.ano - a.ano);
 
     // Ordena itens por valor decrescente
@@ -404,33 +226,10 @@ export async function parseBens() {
       y.itens.sort((a, b) => b.valor - a.valor);
     });
 
-    // Calcula auditoria de evolução comparativa com o ano anterior mais próximo
-    if (candData.declaracoes_por_ano.length > 1) {
-      const atual = candData.declaracoes_por_ano[0];
-      const anterior = candData.declaracoes_por_ano[1];
-
-      const variacaoNominal = atual.total - anterior.total;
-      const variacaoPercentual = anterior.total > 0 ? (variacaoNominal / anterior.total) * 100 : 0;
-      const acimaDaInflacao = variacaoPercentual > IPCA_2022_2026_PERCENT;
-
-      candData.evolucao_nominal = variacaoNominal;
-      candData.evolucao_percentual = parseFloat(variacaoPercentual.toFixed(1));
-      candData.auditoria_evolucao = {
-        ano_base: atual.ano,
-        ano_anterior: anterior.ano,
-        total_base: atual.total,
-        total_anterior: anterior.total,
-        variacao_nominal: variacaoNominal,
-        variacao_percentual: parseFloat(variacaoPercentual.toFixed(1)),
-        ipca_acumulado_periodo: IPCA_2022_2026_PERCENT,
-        acima_da_inflacao: acimaDaInflacao,
-        resumo: `Patrimônio variou ${variacaoPercentual >= 0 ? '+' : ''}${variacaoPercentual.toFixed(1)}% (${variacaoNominal >= 0 ? '+' : ''}R$ ${Math.abs(variacaoNominal).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}) entre ${anterior.ano} e ${atual.ano}${acimaDaInflacao ? ' — crescimento superior à inflação de referência (IPCA ~21.8%)' : ' — variação compatível com o índice inflacionário'}.`,
-      };
-    } else {
-      candData.evolucao_nominal = null;
-      candData.evolucao_percentual = null;
-      candData.auditoria_evolucao = null;
-    }
+    // Não inferir evolução patrimonial sem declarações históricas oficiais versionadas.
+    candData.evolucao_nominal = null;
+    candData.evolucao_percentual = null;
+    candData.auditoria_evolucao = null;
 
     outObj[sqCand] = candData;
   }

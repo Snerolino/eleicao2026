@@ -1,7 +1,7 @@
 import type { CandidateDeclaredAssets } from '@/types/election';
 import rawAssets from '../../data/candidate-declared-assets.json';
 
-const candidateAssetsMap = rawAssets as Record<string, CandidateDeclaredAssets>;
+const candidateAssetsMap = rawAssets as unknown as Record<string, CandidateDeclaredAssets>;
 
 export function getCandidateDeclaredAssets(
   tseCandidateId?: string | null

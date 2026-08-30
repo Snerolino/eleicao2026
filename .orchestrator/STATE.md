@@ -1,3 +1,12 @@
+## Tick contínuo — bens declarados TSE sincronizados com gate fail-closed — 2026-08-30T13:08-03:00
+
+- CSV oficial `../dataset2026/candidatos/bem_candidato_2026_RS.csv`: 257288 bytes, SHA-256 `80eb6ee969a94058d5c839271b9ceb925875d32f85b087a81d67c61b57ab4b68`.
+- Catálogo local atualizado para 238 candidaturas; `data:check` confirmou snapshot 1003 candidaturas, 988 fotos, 1 fonte TSE.
+- Histórico patrimonial manual/IPCA sem fonte oficial versionada foi removido do gerador; evolução permanece nula até manifesto verificável. Nenhuma escrita remota.
+- Gates verdes: 485/485 testes em 115 arquivos, TypeScript, schema, build, `git diff --check` e smoke (`1002` cards, 0 HTTP failures, 0 erros online, SW pronto), com Node 24.19.0.
+- QA: `docs/qa/lote-patrimonio-tse-2026-08-30.md`.
+- Worktree ainda contém alterações não relacionadas nos três artefatos editoriais Câmara e `.hermes/`, preservadas fora deste checkpoint. Próximo chunk: commit/push seletivo e validação de publicação; push pode permanecer bloqueado pelo 403 histórico.
+
 ## Tick contínuo — Aprovação Formal de Artefatos, Publicação e Estudo Contextual de Emendas — 2026-08-30T11:41-03:00
 
 - **Artefatos Aprovados Formalmente pelo Usuário**:
