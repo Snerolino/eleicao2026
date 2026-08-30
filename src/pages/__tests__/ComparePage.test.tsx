@@ -227,4 +227,45 @@ describe('ComparePage H5.3', () => {
     expect(within(selectorRegion).getByText('Ada Cristina Munaretto')).toBeInTheDocument();
     expect(within(selectorRegion).queryByText('Candidata com Mandato')).not.toBeInTheDocument();
   });
+
+  it('permite buscar candidatos por nome, número de urna ou partido e limpar a busca', () => {
+    renderCompare();
+
+    const searchInput = screen.getByRole('searchbox', { name: /buscar candidatos/i });
+    expect(searchInput).toBeInTheDocument();
+
+    const selectorRegion = screen.getByRole('region', { name: /lista de candidatos/i });
+
+    // Busca por nome parcial
+    fireEvent.change(searchInput, { target: { value: 'Ada' } });
+    expect(within(selectorRegion).getByText('Ada Cristina Munaretto')).toBeInTheDocument();
+    expect(within(selectorRegion).queryByText('João Batista Garcia Dias')).not.toBeInTheDocument();
+    expect(within(selectorRegion).queryByText('Ademar Silva')).not.toBeInTheDocument();
+
+    // Busca por número de urna
+    fireEvent.change(searchInput, { target: { value: '5678' } });
+    expect(within(selectorRegion).getByText('João Batista Garcia Dias')).toBeInTheDocument();
+    expect(within(selectorRegion).queryByText('Ada Cristina Munaretto')).not.toBeInTheDocument();
+
+    // Busca por partido
+    fireEvent.change(searchInput, { target: { value: 'MDB' } });
+    expect(within(selectorRegion).getByText('Ademar Silva')).toBeInTheDocument();
+    expect(within(selectorRegion).queryByText('Ada Cristina Munaretto')).not.toBeInTheDocument();
+
+    // Limpar campo de busca via botão de limpar
+    const clearBtn = screen.getByRole('button', { name: /limpar campo de pesquisa/i });
+    fireEvent.click(clearBtn);
+    expect(searchInput).toHaveValue('');
+    expect(within(selectorRegion).getByText('Ada Cristina Munaretto')).toBeInTheDocument();
+    expect(within(selectorRegion).getByText('João Batista Garcia Dias')).toBeInTheDocument();
+    expect(within(selectorRegion).getByText('Ademar Silva')).toBeInTheDocument();
+
+    // Busca sem correspondência exibe estado vazio
+    fireEvent.change(searchInput, { target: { value: 'Nome Inexistente XYZ' } });
+    expect(screen.getByText(/nenhum candidato encontrado/i)).toBeInTheDocument();
+    const resetBtn = screen.getByRole('button', { name: /limpar busca e filtros/i });
+    fireEvent.click(resetBtn);
+    expect(searchInput).toHaveValue('');
+    expect(within(selectorRegion).getByText('Ada Cristina Munaretto')).toBeInTheDocument();
+  });
 });

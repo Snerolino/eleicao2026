@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useDeferredValue, useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router';
 import { useQuery } from '@tanstack/react-query';
 import { fetchAllCandidates } from '@/services/candidates';
@@ -30,6 +30,10 @@ import {
 } from '@/utils/candidateExperience';
 import { SavedCandidateButton } from '@/components/candidates/SavedCandidateButton';
 import { useSavedCandidates } from '@/hooks/useSavedCandidates';
+
+function normalize(text: string) {
+  return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+}
 
 function claimsForSection(
   claims: Claim[],
@@ -218,6 +222,8 @@ export function ComparePage() {
 
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState('');
+  const deferredSearchQuery = useDeferredValue(searchQuery);
   const [partyFilter, setPartyFilter] = useState('');
   const [womenOnly, setWomenOnly] = useState(false);
   const [favoritesOnly, setFavoritesOnly] = useState(false);
@@ -259,16 +265,52 @@ export function ComparePage() {
     };
   }, [candidates]);
 
-  const filteredCandidates = useMemo(() => candidates.filter((candidate) => {
-    if (partyFilter && candidate.party !== partyFilter) return false;
-    if (womenOnly && candidate.gender !== 'FEMININO') return false;
-    if (favoritesOnly && !savedSet.has(candidate.tse_candidate_id ?? candidate.id)) return false;
-    if (raceFilter && candidateRaceFilterValue(candidate) !== raceFilter) return false;
-    if (positionFilter && candidate.position !== positionFilter) return false;
-    if (experienceFilter === 'mandato_anterior' && !hasPreviousMandate(candidate)) return false;
-    if (experienceFilter === 'estreante' && hasPreviousMandate(candidate)) return false;
-    return true;
-  }), [candidates, partyFilter, womenOnly, favoritesOnly, savedSet, raceFilter, positionFilter, experienceFilter]);
+  const filteredCandidates = useMemo(() => {
+    const normalizedQuery = normalize(deferredSearchQuery.trim());
+    return candidates.filter((candidate) => {
+      if (partyFilter && candidate.party !== partyFilter) return false;
+      if (womenOnly && candidate.gender !== 'FEMININO') return false;
+      if (favoritesOnly && !savedSet.has(candidate.tse_candidate_id ?? candidate.id)) return false;
+      if (raceFilter && candidateRaceFilterValue(candidate) !== raceFilter) return false;
+      if (positionFilter && candidate.position !== positionFilter) return false;
+      if (experienceFilter === 'mandato_anterior' && !hasPreviousMandate(candidate)) return false;
+      if (experienceFilter === 'estreante' && hasPreviousMandate(candidate)) return false;
+
+      if (normalizedQuery) {
+        const nameMatches = normalize(candidate.full_name).includes(normalizedQuery);
+        const ballotNameMatches = candidate.ballot_name
+          ? normalize(candidate.ballot_name).includes(normalizedQuery)
+          : false;
+        const numberMatches =
+          candidate.ballot_number != null &&
+          String(candidate.ballot_number).includes(normalizedQuery);
+        const partyMatches = normalize(candidate.party).includes(normalizedQuery);
+        const positionMatches = normalize(candidate.position_label).includes(normalizedQuery);
+
+        if (
+          !nameMatches &&
+          !ballotNameMatches &&
+          !numberMatches &&
+          !partyMatches &&
+          !positionMatches
+        ) {
+          return false;
+        }
+      }
+
+      return true;
+    });
+  }, [
+    candidates,
+    deferredSearchQuery,
+    partyFilter,
+    womenOnly,
+    favoritesOnly,
+    savedSet,
+    raceFilter,
+    positionFilter,
+    experienceFilter,
+  ]);
 
   const sharedIds = useMemo(
     () => parseSharedCandidateIds(searchParams.get('candidatos'), validCandidateIds),
@@ -541,86 +583,152 @@ export function ComparePage() {
 
       {/* Candidate selector — always visible */}
       <section className="mt-8" aria-label="Lista de candidatos">
-        <div className="mb-4 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-          <div>
-            <h2 className="text-xl">Adicionar à comparação</h2>
-            <p aria-live="polite" className="mt-1 font-mono text-xs text-[var(--color-muted-ink)]">
-              {filteredCandidates.length} de {candidates.length} candidatos disponíveis
-              {partyFilter && ` do ${partyFilter}`}
-              {womenOnly && ' · mulheres'}
-              {raceFilter && ` · cor/raça ${raceFilter.toLowerCase()}`}
-              {positionFilter && ` · cargo ${positionLabel(positionFilter)}`}
-              {experienceFilter === 'mandato_anterior' && ' · com mandato anterior'}
-              {experienceFilter === 'estreante' && ' · 1ª candidatura / estreantes'}
-            </p>
+        <div className="mb-4 flex flex-col gap-3">
+          <div className="flex flex-col gap-1 md:flex-row md:items-end md:justify-between">
+            <div>
+              <h2 className="text-xl">Adicionar à comparação</h2>
+              <p aria-live="polite" className="mt-1 font-mono text-xs text-[var(--color-muted-ink)]">
+                {filteredCandidates.length} de {candidates.length} candidatos disponíveis
+                {searchQuery.trim() && ` para "${searchQuery.trim()}"`}
+                {partyFilter && ` do ${partyFilter}`}
+                {womenOnly && ' · mulheres'}
+                {raceFilter && ` · cor/raça ${raceFilter.toLowerCase()}`}
+                {positionFilter && ` · cargo ${positionLabel(positionFilter)}`}
+                {experienceFilter === 'mandato_anterior' && ' · com mandato anterior'}
+                {experienceFilter === 'estreante' && ' · 1ª candidatura / estreantes'}
+              </p>
+            </div>
           </div>
-          <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
-            <select
-              value={partyFilter}
-              onChange={(event) => setPartyFilter(event.target.value)}
-              className="cursor-pointer rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
-              aria-label="Filtrar por partido"
-            >
-              <option value="">Todos os partidos</option>
-              {parties.map((party) => (
-                <option key={party} value={party}>{party}</option>
-              ))}
-            </select>
-            <label className="inline-flex cursor-pointer items-center gap-2 rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)] focus-within:border-[var(--color-institutional)]">
+
+          <div className="flex flex-col gap-3 md:flex-row md:items-center">
+            {/* Campo de pesquisa de candidatos */}
+            <div className="relative w-full max-w-md">
+              <label htmlFor="compare-search-input" className="sr-only">
+                Buscar candidatos para comparar
+              </label>
               <input
-                type="checkbox"
-                checked={womenOnly}
-                onChange={(event) => setWomenOnly(event.target.checked)}
-                className="accent-[var(--color-institutional)]"
+                id="compare-search-input"
+                type="search"
+                value={searchQuery}
+                onChange={(event) => setSearchQuery(event.target.value)}
+                placeholder="Buscar por nome, número ou partido..."
+                className="w-full rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] py-2 pl-9 pr-9 text-sm text-[var(--color-ink)] placeholder:text-[var(--color-muted-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
+                autoComplete="off"
+                aria-label="Buscar candidatos por nome, número ou partido"
               />
-              Mostrar somente mulheres
-            </label>
-            <label className="inline-flex cursor-pointer items-center gap-2 rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)] focus-within:border-[var(--color-institutional)]">
-              <input
-                type="checkbox"
-                checked={favoritesOnly}
-                onChange={(event) => setFavoritesOnly(event.target.checked)}
-                className="accent-[var(--color-institutional)]"
-              />
-              Apenas favoritos ({savedSet.size})
-            </label>
-            <select
-              value={raceFilter}
-              onChange={(event) => setRaceFilter(event.target.value)}
-              className="cursor-pointer rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
-              aria-label="Filtrar por cor/raça"
-              title="Filtro baseado em autodeclaração oficial TSE/IBGE. Etnia indígena será detalhada quando houver cadastro específico."
-            >
-              <option value="">Todas as cores/raças</option>
-              {races.map((race) => (
-                <option key={race} value={race}>{raceFilterLabel(race)}</option>
-              ))}
-            </select>
-            <select
-              value={positionFilter}
-              onChange={(event) => setPositionFilter(event.target.value)}
-              className="cursor-pointer rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
-              aria-label="Filtrar por cargo"
-            >
-              <option value="">Todos os cargos</option>
-              {OFFICIAL_POSITIONS.map((position) => (
-                <option key={position} value={position}>{positionLabel(position)}</option>
-              ))}
-            </select>
-            <select
-              value={experienceFilter}
-              onChange={(event) => setExperienceFilter(event.target.value as CandidateExperienceFilter)}
-              className="cursor-pointer rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
-              aria-label="Filtrar por histórico de mandato"
-              title="Filtra entre candidatos já eleitos anteriormente e candidatos concorrendo pela primeira vez."
-            >
-              <option value="">Todos os históricos</option>
-              <option value="mandato_anterior">Já eleito(a) anteriormente ({experienceCounts.withMandate})</option>
-              <option value="estreante">1ª candidatura / Estreante ({experienceCounts.firstTime})</option>
-            </select>
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 20 20"
+                fill="none"
+                className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--color-muted-ink)]"
+              >
+                <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" strokeWidth="1.5" />
+                <path d="m12.5 12.5 4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              </svg>
+              {searchQuery && (
+                <button
+                  type="button"
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full p-1 text-xs text-[var(--color-muted-ink)] hover:text-[var(--color-ink)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-institutional)]"
+                  aria-label="Limpar campo de pesquisa"
+                >
+                  ✕
+                </button>
+              )}
+            </div>
+
+            <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+              <select
+                value={partyFilter}
+                onChange={(event) => setPartyFilter(event.target.value)}
+                className="cursor-pointer rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
+                aria-label="Filtrar por partido"
+              >
+                <option value="">Todos os partidos</option>
+                {parties.map((party) => (
+                  <option key={party} value={party}>{party}</option>
+                ))}
+              </select>
+              <label className="inline-flex cursor-pointer items-center gap-2 rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)] focus-within:border-[var(--color-institutional)]">
+                <input
+                  type="checkbox"
+                  checked={womenOnly}
+                  onChange={(event) => setWomenOnly(event.target.checked)}
+                  className="accent-[var(--color-institutional)]"
+                />
+                Mostrar somente mulheres
+              </label>
+              <label className="inline-flex cursor-pointer items-center gap-2 rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)] focus-within:border-[var(--color-institutional)]">
+                <input
+                  type="checkbox"
+                  checked={favoritesOnly}
+                  onChange={(event) => setFavoritesOnly(event.target.checked)}
+                  className="accent-[var(--color-institutional)]"
+                />
+                Apenas favoritos ({savedSet.size})
+              </label>
+              <select
+                value={raceFilter}
+                onChange={(event) => setRaceFilter(event.target.value)}
+                className="cursor-pointer rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
+                aria-label="Filtrar por cor/raça"
+                title="Filtro baseado em autodeclaração oficial TSE/IBGE. Etnia indígena será detalhada quando houver cadastro específico."
+              >
+                <option value="">Todas as cores/raças</option>
+                {races.map((race) => (
+                  <option key={race} value={race}>{raceFilterLabel(race)}</option>
+                ))}
+              </select>
+              <select
+                value={positionFilter}
+                onChange={(event) => setPositionFilter(event.target.value)}
+                className="cursor-pointer rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
+                aria-label="Filtrar por cargo"
+              >
+                <option value="">Todos os cargos</option>
+                {OFFICIAL_POSITIONS.map((position) => (
+                  <option key={position} value={position}>{positionLabel(position)}</option>
+                ))}
+              </select>
+              <select
+                value={experienceFilter}
+                onChange={(event) => setExperienceFilter(event.target.value as CandidateExperienceFilter)}
+                className="cursor-pointer rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)] focus:border-[var(--color-institutional)] focus:outline-none"
+                aria-label="Filtrar por histórico de mandato"
+                title="Filtra entre candidatos já eleitos anteriormente e candidatos concorrendo pela primeira vez."
+              >
+                <option value="">Todos os históricos</option>
+                <option value="mandato_anterior">Já eleito(a) anteriormente ({experienceCounts.withMandate})</option>
+                <option value="estreante">1ª candidatura / Estreante ({experienceCounts.firstTime})</option>
+              </select>
+            </div>
           </div>
         </div>
-        <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+        {filteredCandidates.length === 0 ? (
+          <div className="rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-8 text-center">
+            <p className="font-medium text-[var(--color-ink)]">Nenhum candidato encontrado</p>
+            <p className="mt-1 text-xs text-[var(--color-muted-ink)]">
+              Tente alterar os termos da busca ou limpar os filtros aplicados.
+            </p>
+            <button
+              type="button"
+              onClick={() => {
+                setSearchQuery('');
+                setPartyFilter('');
+                setWomenOnly(false);
+                setFavoritesOnly(false);
+                setRaceFilter('');
+                setPositionFilter('');
+                setExperienceFilter('');
+              }}
+              className="mt-4 cursor-pointer rounded-sm border border-[var(--color-institutional)] bg-transparent px-3 py-1.5 font-mono text-xs uppercase tracking-wider text-[var(--color-institutional)] hover:bg-[color-mix(in_srgb,var(--color-institutional)_10%,transparent)]"
+            >
+              Limpar busca e filtros
+            </button>
+          </div>
+        ) : (
+          <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {filteredCandidates.map((c) => {
             const isSelected = selectedIds.has(c.id);
             const isMaxed = !isSelected && selectedIds.size >= 4;
@@ -697,6 +805,7 @@ export function ComparePage() {
             );
           })}
         </ul>
+        )}
       </section>
       {showDocsHint && (
         <p className="mt-6 text-center text-xs text-[var(--color-muted-ink)]">
