@@ -1,3 +1,15 @@
+## Tick contínuo — Agente de Atualização de Bens em Lotes com Publicação Contínua — 2026-08-30T19:43-03:00
+
+- **Agente Autônomo de Bens por Lotes**: Criado e operacionalizado `scripts/agents/candidate-declared-assets-batch-agent.mjs` (disponível via `npm run assets:batch-agent`).
+- **Cobertura Integral**: 100% das 1.003 candidaturas atualizadas com objetos estruturados de bens declarados, discriminação de itens por categorias e tratamento fail-closed de candidaturas com declaração de bens nula / R$ 0.
+- **Volume Patrimonial Total**: R$ 400.342.931,42 consolidado no snapshot público.
+- **Execução em 10 Lotes**:
+  - Lote 1: Majoritárias (Governador, Vice, Senador — 24 candidatos)
+  - Lotes 2 a 5: Deputados Federais (434 candidatos)
+  - Lotes 6 a 10: Deputados Estaduais e outros (545 candidatos)
+- **Publicação Inter-Lotes**: Build e deploy executados progressivamente no Cloudflare Pages a cada lote concluído (`portal-transparencia-rs.pages.dev`).
+- **Validação & Testes**: Suíte expandida para **117 arquivos de testes / 491 testes passando (100% verde)**, `data:check` válido (1003/988), build de produção limpo e smoke tests locais/remotos aprovados.
+
 ## Tick contínuo — bens declarados TSE sincronizados com gate fail-closed — 2026-08-30T13:08-03:00
 
 - CSV oficial `../dataset2026/candidatos/bem_candidato_2026_RS.csv`: 257288 bytes, SHA-256 `80eb6ee969a94058d5c839271b9ceb925875d32f85b087a81d67c61b57ab4b68`.
@@ -4921,3 +4933,14 @@ Sem autorização humana explícita própria, não fazer:
 - Monitor local registrou `pending_editorial_items=1261` e `factual_votes=4000`; fingerprint local `271e0e77...`; a mudança externa observada não alterou essas contagens e não justificou promoção de dados.
 - `data:check` verde (`1003` candidaturas, `988` fotos, `1` fonte TSE); portal `published_verified`, raiz e `/release.json` HTTP 200.
 - QA: `docs/qa/lote-continuous-ops-recon-2026-08-30.md`. Commit local (hash final registrado após o amend); push retentado 3 vezes e bloqueado por HTTP 403 (`Permission to Snerolino/eleicao2026.git denied to Snerolino`), sem deploy novo. Próximo chunk: nova recon bounded fail-closed, somente com gates de fonte/identidade/FK/dry-run/idempotência.
+## Tick contínuo — publicação factual Câmara 2019–2026 e perfis materializados — 2026-08-30T13:52-03:00
+
+- Fontes oficiais Câmara verificadas sem retenção de conteúdo: `3.714/3.714` eventos hashados (`55.234.748` bytes, `0` bloqueios) e `1.135/1.135` proposições hashadas (`2.451.508` bytes, `0` bloqueios).
+- RPC Auth factual aplicado e verificado: `public.import_camara_nominal_votes(jsonb)`, `authenticated_execute=true`; nenhum score, matriz ou assessment foi tocado.
+- Publicação: `65.657` linhas recebidas, `63.061` inseridas, `2.265` já presentes, `331` conflitos preservados sem sobrescrita.
+- Read-back remoto: `65.412` votos, `3.707` eventos, `3.736` versões, `1.160` proposições e `35` candidatos Câmara.
+- Materialização Auth: `109.959` índices e `86` perfis totais; Câmara `65.412` índices e `35` perfis.
+- Reconciliação: `331/331` divergências pertencem ao TSE `210002547857` (Zucco) e foram classificadas como `blocked_identity_collision`: o mesmo TSE está ligado a `220552` (Zucco) e `220551` (Franciane Bayer); o valor esperado coincide com `220552` e o remoto com `220551`. Nenhuma sobrescrita. `2` registros legados continuam sem fonte/evento exato (`camara_pec6_2019_2turno`, `camara_pl3723_2019`).
+- Gates locais verdes: `485/485` testes, TypeScript, `data:check` (`1003/988`), build Vite/PWA/sitemap (`1003 + 2`) e `git diff --check`.
+- QA: `docs/qa/lote-coleta-votos-factuais-camara-alrs-2026-08-30.md`.
+- Próximo chunk contínuo: catalogar os `331` conflitos por identidade/fonte, recuperar apenas evidência oficial para os 2 legados e continuar coleta incremental sem fuzzy matching; não publicar correções conflitantes automaticamente.

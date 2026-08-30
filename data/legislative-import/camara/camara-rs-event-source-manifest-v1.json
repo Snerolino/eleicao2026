@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "camara_rs_event_source_manifest",
+  "mode": "read-only",
+  "remote_apply": false,
+  "source_domain": "dadosabertos.camara.leg.br",
+  "coverage": {
+    "events": 3714,
+    "hashed_events": 3714,
+    "blocked_events": 0,
+    "bytes": 55234748,
+    "proposition_resolved_events": 3699,
+    "proposition_unresolved_events": 15
+  },
+  "source_artifact": {
+    "path": "/tmp/camara-event-sources-hashed.json",
+    "sha256": "52d84a1a705de736578a7929ae085378b77ceb83a41ac548313799f90422fab9"
+  },
+  "policy": "Somente associação pessoa-voto-evento-matéria; conteúdo, anexos, vistas e emendas não foram analisados.",
+  "next_gate": "Gerar envelope factual com source_reference por URL/hash e executar somente writer Auth/RPC autenticado, após validar FKs e idempotência."
+}

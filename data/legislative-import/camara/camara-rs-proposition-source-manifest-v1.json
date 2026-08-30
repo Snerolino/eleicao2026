@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "camara_rs_proposition_source_manifest",
+  "mode": "source_manifest_only",
+  "remote_apply": false,
+  "source_domain": "dadosabertos.camara.leg.br",
+  "coverage": {
+    "official_proposition_urls": 1135,
+    "hashed": 1135,
+    "blocked": 0,
+    "bytes": 2451508
+  },
+  "artifact_sha256": "sha256:808c66c79967c55ae43e23ece222ca1a45074f52edda04805d8e8ce9d5ff1004",
+  "note": "Somente metadados de proveniência; conteúdo de matérias/anexos não foi retido."
+}

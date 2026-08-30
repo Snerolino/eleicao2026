@@ -24,6 +24,7 @@ import { CandidateNominalVotesList } from '@/components/candidates/CandidateNomi
 import { getCandidateNominalVotes } from '@/services/candidateVotes';
 import { CandidateDeclaredAssetsCard } from '@/components/candidates/CandidateDeclaredAssetsCard';
 import { getCandidateDeclaredAssets } from '@/services/candidateAssets';
+import { CandidateAuthoredProjectsList } from '@/components/candidates/CandidateAuthoredProjectsList';
 
 import { DivergentScoreBar } from '@/components/impact/DivergentScoreBar';
 import { getBeneficiaryGroupLabel } from '@/domain/impact/beneficiary-groups';
@@ -215,6 +216,8 @@ export function CandidateDossierPage() {
               </span>
             </div>
           </header>
+
+          <CandidateAuthoredProjectsList projects={candidate.authored_projects ?? []} />
 
           {(candidate.voting_profiles ?? []).filter((profile) => profile.total_votes > 0).map((profile) => {
             const house = votingHouseMetadata(profile.house);

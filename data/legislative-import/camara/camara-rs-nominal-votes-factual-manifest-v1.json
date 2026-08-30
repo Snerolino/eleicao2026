@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "camara_rs_nominal_votes_factual_manifest",
+  "mode": "factual_only",
+  "remote_apply": false,
+  "content_read": false,
+  "generated_at": "2026-08-30T16:14:18Z",
+  "source": "https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/json/votacoesVotos-{year}.json",
+  "coverage": {
+    "years": [2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026],
+    "archive_rows": 1270822,
+    "explicit_nominal_votes": 65790,
+    "unique_events": 3714,
+    "resolved_proposition_events": 3699,
+    "unresolved_proposition_events": 15,
+    "resolved_matter_votes": 65716,
+    "deduplicated_matter_votes": 65657,
+    "duplicate_vote_keys_removed": 59,
+    "unresolved_matter_votes": 74,
+    "unique_candidates": 35,
+    "candidate_ids_mapped": 41,
+    "unknown_vote_values_discarded": 104
+  },
+  "artifacts": {
+    "factual_index": "/tmp/camara-matters-factual-index.json",
+    "enriched_matter_index": "/tmp/camara-enriched-matters-factual.json",
+    "enriched_matter_index_sha256": "eab875591de53d5755efc97dbba7162bbea3d5ccbdc08ed450038ee4f7e4e641"
+  },
+  "blocked_for_publication": [
+    "15 eventos sem proposição oficial retornada pela API",
+    "writer legado usa service_role e possui efeitos remotos em dry-run",
+    "35 candidatos cobertos; o mapeamento oficial ainda não cobre todos os candidatos eleitorais"
+  ],
+  "next_gate": "criar/usar writer factual autenticado por Auth/RPC, resolver as 15 matérias pendentes e ampliar o catálogo candidato-parlamentar sem fuzzy matching"
+}

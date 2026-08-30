@@ -61,6 +61,7 @@ export interface Candidate {
   gender?: string | null;
   race?: string | null;
   indigenous_ethnicity?: string | null;
+  authored_projects?: CandidateAuthoredProject[];
 }
 
 export interface CandidateNominalVote {
@@ -82,6 +83,31 @@ export interface CandidateNominalVote {
   severity?: number;
   structural_type?: 'structural' | 'budgetary' | 'symbolic';
   confidence?: number;
+}
+
+export type CandidateAuthoredProjectRole = 'autor_principal' | 'coautor' | 'relator';
+
+export type CandidateAuthoredProjectStatus =
+  | 'tramitando'
+  | 'aprovado'
+  | 'arquivado'
+  | 'vetado'
+  | 'transformado_em_lei';
+
+export interface CandidateAuthoredProject {
+  id: string;
+  house: 'alrs' | 'camara' | 'senado';
+  type: string;
+  number: string;
+  year: number;
+  title: string;
+  role: CandidateAuthoredProjectRole;
+  status: CandidateAuthoredProjectStatus;
+  summary_short: string;
+  summary_expanded: string;
+  main_topic: string;
+  target_groups: string[];
+  official_url: string;
 }
 
 export interface DeclaredAssetItem {
