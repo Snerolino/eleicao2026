@@ -35,14 +35,26 @@ export const CandidateCard = memo(function CandidateCard({
     'reputacao',
     'votacao_scrutiny',
   ];
-  const summary =
-    published.find((claim) => claim.category.toLowerCase() === 'summary') ??
-    [...published].sort(
-      (a, b) =>
-        SUMMARY_PRIORITY.indexOf(a.category.toLowerCase()) -
-        SUMMARY_PRIORITY.indexOf(b.category.toLowerCase())
-    )[0] ??
-    null;
+
+  // ⚡ Bolt: Replace O(N log N) declarative chain (.find + .sort) with a single-pass O(N) loop
+  // to avoid array allocations and overhead during list rendering.
+  let summary = published.length > 0 ? published[0] : null;
+  let bestIndex = Infinity;
+  for (let i = 0; i < published.length; i++) {
+    const claim = published[i];
+    const cat = claim.category.toLowerCase();
+
+    if (cat === 'summary') {
+      summary = claim;
+      break;
+    }
+
+    const idx = SUMMARY_PRIORITY.indexOf(cat);
+    if (idx !== -1 && idx < bestIndex) {
+      bestIndex = idx;
+      summary = claim;
+    }
+  }
 
   const sourceDoc = summary?.source_document ?? null;
   const hasSource = Boolean(sourceDoc);

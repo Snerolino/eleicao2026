@@ -7,3 +7,6 @@
 ## 2025-01-20 - [Regex Caching in O(N) Filters]
 **Learning:** Using an O(N) filtering mechanism with expensive Regex evaluations (e.g. `hasPreviousMandate` evaluating `MANDATE_KEYWORDS_REGEX` against multiple claims) severely blocks the UI during typing or filtering large sets. Repeated calls across component boundaries compound this cost unnecessarily.
 **Action:** Always memoize derived checks on immutable reference objects (like candidate data) that do expensive calculations (like Regex) using a `WeakMap`. This pattern upgrades the time complexity of the check from O(N * complexity) to O(1) for all subsequent reads and UI updates.
+## 2023-10-28 - [Array prioritization in React renders]
+**Learning:** Chaining array methods like `find` and `sort` on array copies (`[...arr].sort()`) for UI derivations during component rendering (e.g. `CandidateCard` claims processing) is expensive, as it requires allocating an array and causes O(N log N) overhead per component in list views.
+**Action:** When determining a primary/prioritized element from a small array inside a rendered component, always replace the declarative O(N log N) chain with a single-pass O(N) `for` loop to avoid overhead and memory allocations.
