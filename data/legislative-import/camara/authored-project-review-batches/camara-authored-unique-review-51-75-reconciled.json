@@ -1,0 +1,1332 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:req-202-2023-2348978",
+      "decision": "withheld",
+      "reason": "withheld: não há evento oficial de votação vinculante para esta proposição; registro de frente, CPI, coautoria ou texto proposto não prova aprovação de mérito nem posição populacional.",
+      "mechanism": "Frente parlamentar: registro institucional e agenda de advocacy em saúde preventiva da mulher",
+      "direct_recipient": "instituição da Câmara / frente parlamentar",
+      "effects": [
+        "Registro formaliza espaço associativo para acompanhar e defender políticas; não cria direito, benefício ou obrigação imediata."
+      ],
+      "target_groups": [
+        "mulheres"
+      ],
+      "main_topic": "saude",
+      "summary_short": "REQ 202/2023 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "Registro formaliza espaço associativo para acompanhar e defender políticas; não cria direito, benefício ou obrigação imediata.",
+      "version_event_binding": {
+        "proposition_id": "2348978",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": "mulheres",
+        "alternative_direction": "positive",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2348978",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2236015",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 498631,
+          "sha256": "sha256:ec3eb038d44443cd01e27fb9f6d4942b9d126ec1dc844bba9b32f9fee9b0be32"
+        }
+      ],
+      "proposition_type": "REQ",
+      "official_status": "arquivado",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:req-2085-2023-2371213",
+      "decision": "withheld",
+      "reason": "withheld: não há evento oficial de votação vinculante para esta proposição; registro de frente, CPI, coautoria ou texto proposto não prova aprovação de mérito nem posição populacional.",
+      "mechanism": "Frente parlamentar: cooperativas, laticínios de pequeno e médio porte e pecuária leiteira",
+      "direct_recipient": "frente parlamentar e cadeia produtiva leiteira",
+      "effects": [
+        "O requerimento registra uma frente para articulação e debate em favor da cadeia leiteira; não altera preços, subsídios, regulação ou direitos."
+      ],
+      "target_groups": [
+        "agricultura_familiar_sem_terra"
+      ],
+      "main_topic": "agricultura",
+      "summary_short": "REQ 2085/2023 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "O requerimento registra uma frente para articulação e debate em favor da cadeia leiteira; não altera preços, subsídios, regulação ou direitos.",
+      "version_event_binding": {
+        "proposition_id": "2371213",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": "agricultura_familiar_sem_terra",
+        "alternative_direction": "positive",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2371213",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2292703",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 122582,
+          "sha256": "sha256:aa0d9c39c5565fd2829de7d3dad81c2e07e848f668c5b08806adb7a7c83018d3"
+        }
+      ],
+      "proposition_type": "REQ",
+      "official_status": "arquivado",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:req-2201-2024-2440587",
+      "decision": "withheld",
+      "reason": "withheld: não há evento oficial de votação vinculante para esta proposição; registro de frente, CPI, coautoria ou texto proposto não prova aprovação de mérito nem posição populacional.",
+      "mechanism": "Regulação e fiscalização do sistema financeiro",
+      "direct_recipient": "frente parlamentar / agenda regulatória",
+      "effects": [
+        "O estatuto cria apenas uma entidade associativa de debate e influência legislativa; os efeitos sobre investidores e economia são objetivos alegados, não efeitos jurídicos do requerimento."
+      ],
+      "target_groups": [],
+      "main_topic": "economia_tributacao",
+      "summary_short": "REQ 2201/2024 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "O estatuto cria apenas uma entidade associativa de debate e influência legislativa; os efeitos sobre investidores e economia são objetivos alegados, não efeitos jurídicos do requerimento.",
+      "version_event_binding": {
+        "proposition_id": "2440587",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2440587",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2436833",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 171379,
+          "sha256": "sha256:9fa6263696846abc010aac5fb21edcc1c586da06754d0e25292f17a1791f22dc"
+        }
+      ],
+      "proposition_type": "REQ",
+      "official_status": "tramitando",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:req-3602-2023-2397754",
+      "decision": "withheld",
+      "reason": "withheld: não há evento oficial de votação vinculante para esta proposição; registro de frente, CPI, coautoria ou texto proposto não prova aprovação de mérito nem posição populacional.",
+      "mechanism": "Neurodiversidade e inclusão",
+      "direct_recipient": "frente parlamentar",
+      "effects": [
+        "O registro organiza advocacy e debate sobre neurodiversidade; o texto não cria atendimento, benefício, dever estatal ou proteção juridicamente exigível."
+      ],
+      "target_groups": [
+        "pessoas_com_deficiencia"
+      ],
+      "main_topic": "saude",
+      "summary_short": "REQ 3602/2023 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "O registro organiza advocacy e debate sobre neurodiversidade; o texto não cria atendimento, benefício, dever estatal ou proteção juridicamente exigível.",
+      "version_event_binding": {
+        "proposition_id": "2397754",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": "pessoas_com_deficiencia",
+        "alternative_direction": "positive",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2397754",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2347291",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 139535,
+          "sha256": "sha256:9e8d84cb059de0cd7644b18e9ebabb8cc7cf54a0f6c0900381e805ce6706f64f"
+        }
+      ],
+      "proposition_type": "REQ",
+      "official_status": "arquivado",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:req-3672-2023-2399226",
+      "decision": "withheld",
+      "reason": "withheld: não há evento oficial de votação vinculante para esta proposição; registro de frente, CPI, coautoria ou texto proposto não prova aprovação de mérito nem posição populacional.",
+      "mechanism": "Educação superior comunitária",
+      "direct_recipient": "frente parlamentar / universidades comunitárias",
+      "effects": [
+        "O registro cria espaço associativo para debate e defesa institucional; não modifica financiamento, acesso, mensalidades ou direitos estudantis."
+      ],
+      "target_groups": [
+        "estudantes"
+      ],
+      "main_topic": "educacao",
+      "summary_short": "REQ 3672/2023 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "O registro cria espaço associativo para debate e defesa institucional; não modifica financiamento, acesso, mensalidades ou direitos estudantis.",
+      "version_event_binding": {
+        "proposition_id": "2399226",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": "estudantes",
+        "alternative_direction": "positive",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2399226",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2350284",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 364119,
+          "sha256": "sha256:92f097ebaacf4f2cf2c1b4bda500eb03bbdd7711206f4e9e9cee4be12f03efcc"
+        }
+      ],
+      "proposition_type": "REQ",
+      "official_status": "tramitando",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:req-3892-2023-2402880",
+      "decision": "withheld",
+      "reason": "withheld: não há evento oficial de votação vinculante para esta proposição; registro de frente, CPI, coautoria ou texto proposto não prova aprovação de mérito nem posição populacional.",
+      "mechanism": "Direito de propriedade e segurança fundiária",
+      "direct_recipient": "frente parlamentar",
+      "effects": [
+        "O texto limita-se ao registro da frente; o título não produz, por si, despejos, proteção possessória, sanção ou alteração fundiária."
+      ],
+      "target_groups": [],
+      "main_topic": "seguranca_justica",
+      "summary_short": "REQ 3892/2023 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "O texto limita-se ao registro da frente; o título não produz, por si, despejos, proteção possessória, sanção ou alteração fundiária.",
+      "version_event_binding": {
+        "proposition_id": "2402880",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2402880",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2357479",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 273463,
+          "sha256": "sha256:f8d958255e4f2e5e3d35b29275acb25e28ec8bfdf04d3dfa1e1bfd25632fd749"
+        }
+      ],
+      "proposition_type": "REQ",
+      "official_status": "tramitando",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:req-757-2023-2351941",
+      "decision": "withheld",
+      "reason": "withheld: não há evento oficial de votação vinculante para esta proposição; registro de frente, CPI, coautoria ou texto proposto não prova aprovação de mérito nem posição populacional.",
+      "mechanism": "Empreendedorismo feminino e inclusão econômica",
+      "direct_recipient": "frente parlamentar",
+      "effects": [
+        "A frente pode articular políticas e coalizões, mas o requerimento não concede crédito, renda, prioridade ou outro direito às mulheres."
+      ],
+      "target_groups": [
+        "mulheres"
+      ],
+      "main_topic": "trabalho_renda",
+      "summary_short": "REQ 757/2023 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "A frente pode articular políticas e coalizões, mas o requerimento não concede crédito, renda, prioridade ou outro direito às mulheres.",
+      "version_event_binding": {
+        "proposition_id": "2351941",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": "mulheres",
+        "alternative_direction": "positive",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351941",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2245937",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 185660,
+          "sha256": "sha256:879264afdfd48a9375e52460da4f539b9741ce16226e2aa83009ed4084043915"
+        }
+      ],
+      "proposition_type": "REQ",
+      "official_status": "arquivado",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:req-846-2023-2352473",
+      "decision": "withheld",
+      "reason": "withheld: não há evento oficial de votação vinculante para esta proposição; registro de frente, CPI, coautoria ou texto proposto não prova aprovação de mérito nem posição populacional.",
+      "mechanism": "Relações Brasil–Singapura",
+      "direct_recipient": "frente parlamentar",
+      "effects": [
+        "O ato formaliza uma frente de intercâmbio e diálogo; não cria tratado, comércio, benefício ou obrigação para a população."
+      ],
+      "target_groups": [],
+      "main_topic": "relacoes_exteriores",
+      "summary_short": "REQ 846/2023 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "O ato formaliza uma frente de intercâmbio e diálogo; não cria tratado, comércio, benefício ou obrigação para a população.",
+      "version_event_binding": {
+        "proposition_id": "2352473",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2352473",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2247250",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 206009,
+          "sha256": "sha256:f8dba6f7aa49816d2f78a37d8289fc954a8446d38d9609ad4c6957fcc3d74c6d"
+        }
+      ],
+      "proposition_type": "REQ",
+      "official_status": "arquivado",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:req-964-2023-2353968",
+      "decision": "withheld",
+      "reason": "withheld: não há evento oficial de votação vinculante para esta proposição; registro de frente, CPI, coautoria ou texto proposto não prova aprovação de mérito nem posição populacional.",
+      "mechanism": "Trabalhadores da educação",
+      "direct_recipient": "frente parlamentar",
+      "effects": [
+        "O registro permite articulação temática, sem alterar carreira, remuneração, jornada, proteção ou relação de trabalho."
+      ],
+      "target_groups": [
+        "trabalhadores_formais"
+      ],
+      "main_topic": "educacao",
+      "summary_short": "REQ 964/2023 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "O registro permite articulação temática, sem alterar carreira, remuneração, jornada, proteção ou relação de trabalho.",
+      "version_event_binding": {
+        "proposition_id": "2353968",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": "trabalhadores_formais",
+        "alternative_direction": "positive",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2353968",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2251456",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 222131,
+          "sha256": "sha256:3bb52d23edb4d93e817ae0933bd55466871ffc0ffbad1f3af6fe28d5ccf06489"
+        }
+      ],
+      "proposition_type": "REQ",
+      "official_status": "tramitando",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:emc-6-0-2289944",
+      "decision": "withheld",
+      "reason": "withheld: o texto integral permite mapear efeitos potenciais, mas não há evento oficial vinculando uma versão efetivamente votada; não é possível pontuar autoria ou voto.",
+      "mechanism": "Carreiras típicas de Estado e organização administrativa",
+      "direct_recipient": "emenda à PEC 32/2020",
+      "effects": [
+        "A emenda propõe considerar típicos de Estado os cargos já previstos na Constituição e os definidos em lei complementar federal, preservando regime diferenciado; é texto proposto, sem prova de incorporação ou votação."
+      ],
+      "target_groups": [
+        "servidores_publicos"
+      ],
+      "main_topic": "administracao_publica",
+      "summary_short": "EMC 6/0 — texto material identificado, sem versão/evento vinculante.",
+      "summary_expanded": "A emenda propõe considerar típicos de Estado os cargos já previstos na Constituição e os definidos em lei complementar federal, preservando regime diferenciado; é texto proposto, sem prova de incorporação ou votação.",
+      "version_event_binding": {
+        "proposition_id": "2289944",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.95,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": "servidores_publicos",
+        "alternative_direction": "positive",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2289944",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2040557",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 177240,
+          "sha256": "sha256:f5145470240534e5ebd827b5ef5bca62321f190978e7219ddfc07164a0e1534a"
+        }
+      ],
+      "proposition_type": "EMC",
+      "official_status": "tramitando",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:pl-1563-2024-2431025",
+      "decision": "withheld",
+      "reason": "withheld: o texto integral permite mapear efeitos potenciais, mas não há evento oficial vinculando uma versão efetivamente votada; não é possível pontuar autoria ou voto.",
+      "mechanism": "Doações, renúncia fiscal e reconstrução do Rio Grande do Sul",
+      "direct_recipient": "pessoas físicas e jurídicas doadoras; instituições sem fins lucrativos cadastradas",
+      "effects": [
+        "O texto permite deduzir do IR doações voluntárias a instituições cadastradas (até 15% do IR devido para pessoa física e 4% para pessoa jurídica), exige conta apartada e transparência, prevê glosa/multa e vigência temporária. O grupo humano beneficiário da assistência é definido por residência/atingimento pelas enchentes, não por grupo canônico fechado; não se atribui grupo por aproximação."
+      ],
+      "target_groups": [],
+      "main_topic": "economia_tributacao",
+      "summary_short": "PL 1563/2024 — texto material identificado, sem versão/evento vinculante.",
+      "summary_expanded": "O texto permite deduzir do IR doações voluntárias a instituições cadastradas (até 15% do IR devido para pessoa física e 4% para pessoa jurídica), exige conta apartada e transparência, prevê glosa/multa e vigência temporária. O grupo humano beneficiário da assistência é definido por residência/atingimento pelas enchentes, não por grupo canônico fechado; não se atribui grupo por aproximação.",
+      "version_event_binding": {
+        "proposition_id": "2431025",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.95,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2431025",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2416718",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 137671,
+          "sha256": "sha256:7108a791a7a78ac5f03c07b83bc3e62c08f8b5007c50889c734c20fb1fe7b32f"
+        }
+      ],
+      "proposition_type": "PL",
+      "official_status": "tramitando",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:pl-5062-2023-2397768",
+      "decision": "withheld",
+      "reason": "withheld: o texto integral permite mapear efeitos potenciais, mas não há evento oficial vinculando uma versão efetivamente votada; não é possível pontuar autoria ou voto.",
+      "mechanism": "FGTS, calamidade pública e recuperação de empregadores",
+      "direct_recipient": "empregadores situados em municípios em calamidade reconhecida",
+      "effects": [
+        "O texto autoriza suspender a exigibilidade de até seis competências de FGTS, prorrogáveis por mais seis, com pagamento posterior em até 24 parcelas. Dá liquidez temporária ao empregador; o crédito do trabalhador é adiado, não eliminado. A aplicação depende de ato do Ministério do Trabalho."
+      ],
+      "target_groups": [
+        "trabalhadores_formais"
+      ],
+      "main_topic": "trabalho_renda",
+      "summary_short": "PL 5062/2023 — texto material identificado, sem versão/evento vinculante.",
+      "summary_expanded": "O texto autoriza suspender a exigibilidade de até seis competências de FGTS, prorrogáveis por mais seis, com pagamento posterior em até 24 parcelas. Dá liquidez temporária ao empregador; o crédito do trabalhador é adiado, não eliminado. A aplicação depende de ato do Ministério do Trabalho.",
+      "version_event_binding": {
+        "proposition_id": "2397768",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.95,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": "trabalhadores_formais",
+        "alternative_direction": "positive",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2397768",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2347312",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 110432,
+          "sha256": "sha256:7729ea0f4c7204df094ab5f38b54c903cd4bfd3370d19b710ff3eed5d8edfd7d"
+        }
+      ],
+      "proposition_type": "PL",
+      "official_status": "tramitando",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:rcp-2-2025-2503122",
+      "decision": "withheld",
+      "reason": "withheld: não há evento oficial de votação vinculante para esta proposição; registro de frente, CPI, coautoria ou texto proposto não prova aprovação de mérito nem posição populacional.",
+      "mechanism": "Investigação parlamentar de descontos sindicais fraudulentos no INSS",
+      "direct_recipient": "CPI e órgãos/entidades investigados",
+      "effects": [
+        "O requerimento pede CPI por até 120 dias para investigar descontos não autorizados e quantificar atingidos; investigar não restitui valores nem cria benefício. A referência a aposentados/pensionistas é objeto da investigação, não efeito jurídico direto."
+      ],
+      "target_groups": [
+        "pessoas_idosas_dependentes"
+      ],
+      "main_topic": "seguranca_justica",
+      "summary_short": "RCP 2/2025 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "O requerimento pede CPI por até 120 dias para investigar descontos não autorizados e quantificar atingidos; investigar não restitui valores nem cria benefício. A referência a aposentados/pensionistas é objeto da investigação, não efeito jurídico direto.",
+      "version_event_binding": {
+        "proposition_id": "2503122",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": "pessoas_idosas_dependentes",
+        "alternative_direction": "positive",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2503122",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2896318",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 183281,
+          "sha256": "sha256:63e88468f3876011e8c309742671b846f34de795de85b4cf58fb884df7d7cf5d"
+        }
+      ],
+      "proposition_type": "RCP",
+      "official_status": "tramitando",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:rcp-8-2023-2408255",
+      "decision": "withheld",
+      "reason": "withheld: não há evento oficial de votação vinculante para esta proposição; registro de frente, CPI, coautoria ou texto proposto não prova aprovação de mérito nem posição populacional.",
+      "mechanism": "Investigação parlamentar de atos e alegadas violações de garantias por TSE/STF",
+      "direct_recipient": "CPI e autoridades investigadas",
+      "effects": [
+        "O requerimento propõe CPI para apurar fatos determinados; não anula decisões, não altera censura, bloqueios ou garantias e não produz benefício populacional imediato."
+      ],
+      "target_groups": [],
+      "main_topic": "seguranca_justica",
+      "summary_short": "RCP 8/2023 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "O requerimento propõe CPI para apurar fatos determinados; não anula decisões, não altera censura, bloqueios ou garantias e não produz benefício populacional imediato.",
+      "version_event_binding": {
+        "proposition_id": "2408255",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2408255",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2367113",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 282786,
+          "sha256": "sha256:1cf831a63fa49d761a6fd37084497b91a7d402b6f652904afcd8658d7328ebf5"
+        }
+      ],
+      "proposition_type": "RCP",
+      "official_status": "tramitando",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:req-1002-2023-2354392",
+      "decision": "withheld",
+      "reason": "withheld: não há evento oficial de votação vinculante para esta proposição; registro de frente, CPI, coautoria ou texto proposto não prova aprovação de mérito nem posição populacional.",
+      "mechanism": "Juros e política econômica",
+      "direct_recipient": "frente parlamentar",
+      "effects": [
+        "O registro cria plataforma de debate e advocacy contra juros considerados abusivos; não fixa taxa, crédito, dívida ou proteção jurídica."
+      ],
+      "target_groups": [],
+      "main_topic": "economia_tributacao",
+      "summary_short": "REQ 1002/2023 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "O registro cria plataforma de debate e advocacy contra juros considerados abusivos; não fixa taxa, crédito, dívida ou proteção jurídica.",
+      "version_event_binding": {
+        "proposition_id": "2354392",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2354392",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2252958",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 883770,
+          "sha256": "sha256:df5758989839da2671ee58d7fbefdb288a448450d12cf8ee2e85a073e06ec89f"
+        }
+      ],
+      "proposition_type": "REQ",
+      "official_status": "arquivado",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:req-1044-2023-2354885",
+      "decision": "withheld",
+      "reason": "withheld: não há evento oficial de votação vinculante para esta proposição; registro de frente, CPI, coautoria ou texto proposto não prova aprovação de mérito nem posição populacional.",
+      "mechanism": "Conselhos profissionais e regulação de profissões",
+      "direct_recipient": "frente parlamentar / conselhos profissionais",
+      "effects": [
+        "O ato registra uma frente de apoio; não altera fiscalização, anuidades, atribuições ou condições de trabalho."
+      ],
+      "target_groups": [
+        "trabalhadores_formais"
+      ],
+      "main_topic": "trabalho_renda",
+      "summary_short": "REQ 1044/2023 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "O ato registra uma frente de apoio; não altera fiscalização, anuidades, atribuições ou condições de trabalho.",
+      "version_event_binding": {
+        "proposition_id": "2354885",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": "trabalhadores_formais",
+        "alternative_direction": "positive",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2354885",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2254962",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 282973,
+          "sha256": "sha256:4b164a7e8f66a978f9319854cc7cfa4814fd9e2514b81aac4fc4b4b9b9175f78"
+        }
+      ],
+      "proposition_type": "REQ",
+      "official_status": "arquivado",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:req-1197-2022-2332155",
+      "decision": "withheld",
+      "reason": "withheld: não há evento oficial de votação vinculante para esta proposição; registro de frente, CPI, coautoria ou texto proposto não prova aprovação de mérito nem posição populacional.",
+      "mechanism": "Técnicos agrícolas e regulação profissional",
+      "direct_recipient": "frente parlamentar",
+      "effects": [
+        "O registro organiza representação temática, mas não cria habilitação, remuneração, reserva de mercado ou obrigação administrativa."
+      ],
+      "target_groups": [
+        "trabalhadores_formais"
+      ],
+      "main_topic": "trabalho_renda",
+      "summary_short": "REQ 1197/2022 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "O registro organiza representação temática, mas não cria habilitação, remuneração, reserva de mercado ou obrigação administrativa.",
+      "version_event_binding": {
+        "proposition_id": "2332155",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": "trabalhadores_formais",
+        "alternative_direction": "positive",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2332155",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2197073",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 349758,
+          "sha256": "sha256:7cc5f991b20dcf10d0d56ba324465145d4e31ed58af7bacf564a68025f77676f"
+        }
+      ],
+      "proposition_type": "REQ",
+      "official_status": "arquivado",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:req-1247-2023-2357475",
+      "decision": "withheld",
+      "reason": "withheld: não há evento oficial de votação vinculante para esta proposição; registro de frente, CPI, coautoria ou texto proposto não prova aprovação de mérito nem posição populacional.",
+      "mechanism": "Escola pública e redes públicas de ensino",
+      "direct_recipient": "frente parlamentar",
+      "effects": [
+        "O requerimento formaliza uma frente para estimular debates e ações; não altera matrícula, financiamento, oferta ou direitos educacionais."
+      ],
+      "target_groups": [
+        "estudantes"
+      ],
+      "main_topic": "educacao",
+      "summary_short": "REQ 1247/2023 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "O requerimento formaliza uma frente para estimular debates e ações; não altera matrícula, financiamento, oferta ou direitos educacionais.",
+      "version_event_binding": {
+        "proposition_id": "2357475",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": "estudantes",
+        "alternative_direction": "positive",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2357475",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2264939",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 216285,
+          "sha256": "sha256:835ee3322895f33ac6ae7d6d7c262e27661737498a8bbcd20b2646b68f0267f5"
+        }
+      ],
+      "proposition_type": "REQ",
+      "official_status": "arquivado",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:req-1526-2023-2362190",
+      "decision": "withheld",
+      "reason": "withheld: há evento oficial, mas ele é exclusivamente procedural (urgência); o texto causal do PL 490/2007 não foi objeto desta votação.",
+      "mechanism": "Urgência para apreciação do PL 490/2007 sobre demarcação de terras indígenas",
+      "direct_recipient": "Plenário / pauta legislativa",
+      "effects": [
+        "O texto do REQ pede apenas regime de urgência. A votação registrada aprova a aceleração da tramitação, não o conteúdo do PL 490/2007; não é válido herdar o impacto da demarcação para o evento de urgência."
+      ],
+      "target_groups": [
+        "povos_indigenas",
+        "agricultura_familiar_sem_terra"
+      ],
+      "main_topic": "povos_indigenas",
+      "summary_short": "REQ 1526/2023 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "O texto do REQ pede apenas regime de urgência. A votação registrada aprova a aceleração da tramitação, não o conteúdo do PL 490/2007; não é válido herdar o impacto da demarcação para o evento de urgência.",
+      "version_event_binding": {
+        "proposition_id": "2362190",
+        "effective_version_bound": false,
+        "event": {
+          "id": "2362190-9",
+          "date": "2023-05-24",
+          "event_type": "urgency",
+          "object": "Aprovação do Requerimento de Urgência (Art. 155 do RICD) para apreciação do PL 490/2007",
+          "result": "Aprovado; sim 324, não 131, abstenção 1, total 456",
+          "nominal": true
+        },
+        "vote_attribution_status": "procedural"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": "povos_indigenas",
+        "alternative_direction": "positive",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2362190",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2272567",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 159908,
+          "sha256": "sha256:f5c6090988aafdbf51bbf75ddce4e0846e9d39915287c9c9b6fb6b3cf071047e"
+        }
+      ],
+      "proposition_type": "REQ",
+      "official_status": "tramitando",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:req-1588-2024-2433355",
+      "decision": "withheld",
+      "reason": "withheld: não há evento oficial de votação vinculante para esta proposição; registro de frente, CPI, coautoria ou texto proposto não prova aprovação de mérito nem posição populacional.",
+      "mechanism": "Coautoria em projeto de doações e dedução de IR para o RS",
+      "direct_recipient": "Mesa da Câmara / registro de autoria",
+      "effects": [
+        "O requerimento só inclui assinaturas como coautoria do PL 1563/2024; não altera o texto material nem cria efeitos tributários."
+      ],
+      "target_groups": [],
+      "main_topic": "economia_tributacao",
+      "summary_short": "REQ 1588/2024 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "O requerimento só inclui assinaturas como coautoria do PL 1563/2024; não altera o texto material nem cria efeitos tributários.",
+      "version_event_binding": {
+        "proposition_id": "2433355",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2433355",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2423112",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 116679,
+          "sha256": "sha256:aa6f482720746fb9bc77ca481d269fe149b35a7a2e498ad954e4c82963a2b8c7"
+        }
+      ],
+      "proposition_type": "REQ",
+      "official_status": "tramitando",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:req-1596-2023-2362989",
+      "decision": "withheld",
+      "reason": "withheld: não há evento oficial de votação vinculante para esta proposição; registro de frente, CPI, coautoria ou texto proposto não prova aprovação de mérito nem posição populacional.",
+      "mechanism": "Nefrologia, diálise e financiamento do SUS",
+      "direct_recipient": "frente parlamentar",
+      "effects": [
+        "A justificativa descreve risco de continuidade da diálise e defasagem de remuneração, mas o dispositivo apenas convida/organiza uma frente; não reajusta o SUS nem garante tratamento."
+      ],
+      "target_groups": [
+        "usuarios_sus"
+      ],
+      "main_topic": "saude",
+      "summary_short": "REQ 1596/2023 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "A justificativa descreve risco de continuidade da diálise e defasagem de remuneração, mas o dispositivo apenas convida/organiza uma frente; não reajusta o SUS nem garante tratamento.",
+      "version_event_binding": {
+        "proposition_id": "2362989",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": "usuarios_sus",
+        "alternative_direction": "positive",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2362989",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2274247",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 206776,
+          "sha256": "sha256:5d5e9f3676567335e0197f3d45e736248aae3a0095aa93375888e0232d8571ef"
+        }
+      ],
+      "proposition_type": "REQ",
+      "official_status": "arquivado",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:req-1752-2023-2365244",
+      "decision": "withheld",
+      "reason": "withheld: não há evento oficial de votação vinculante para esta proposição; registro de frente, CPI, coautoria ou texto proposto não prova aprovação de mérito nem posição populacional.",
+      "mechanism": "Radiodifusão comunitária e comunicação social",
+      "direct_recipient": "frente parlamentar / rádios comunitárias",
+      "effects": [
+        "O registro cria espaço de debate sobre revisão regulatória; não simplifica licenças, amplia potência, publicidade ou cobertura."
+      ],
+      "target_groups": [],
+      "main_topic": "comunicacao",
+      "summary_short": "REQ 1752/2023 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "O registro cria espaço de debate sobre revisão regulatória; não simplifica licenças, amplia potência, publicidade ou cobertura.",
+      "version_event_binding": {
+        "proposition_id": "2365244",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365244",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2278693",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 186643,
+          "sha256": "sha256:f8ea33232f4e000374dd3734867cbd4b928f46e1c4667aa712e4843011db46b5"
+        }
+      ],
+      "proposition_type": "REQ",
+      "official_status": "tramitando",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:req-1775-2023-2365700",
+      "decision": "withheld",
+      "reason": "withheld: não há evento oficial de votação vinculante para esta proposição; registro de frente, CPI, coautoria ou texto proposto não prova aprovação de mérito nem posição populacional.",
+      "mechanism": "Radiodifusão comunitária e universalização da comunicação",
+      "direct_recipient": "frente parlamentar / rádios comunitárias",
+      "effects": [
+        "O texto registra frente e agenda de discussão para simplificar processos; não muda o regime de radiodifusão."
+      ],
+      "target_groups": [],
+      "main_topic": "comunicacao",
+      "summary_short": "REQ 1775/2023 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "O texto registra frente e agenda de discussão para simplificar processos; não muda o regime de radiodifusão.",
+      "version_event_binding": {
+        "proposition_id": "2365700",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365700",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2279469",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 162814,
+          "sha256": "sha256:35bb3c0539586484dfe921dc207a9475612a44c66b76f04a975c71fc5c9dfa0b"
+        }
+      ],
+      "proposition_type": "REQ",
+      "official_status": "arquivado",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:req-181-2023-2348860",
+      "decision": "withheld",
+      "reason": "withheld: não há evento oficial de votação vinculante para esta proposição; registro de frente, CPI, coautoria ou texto proposto não prova aprovação de mérito nem posição populacional.",
+      "mechanism": "Primeira infância e políticas públicas",
+      "direct_recipient": "frente parlamentar",
+      "effects": [
+        "O registro dá continuidade a uma frente associativa; não cria prestação, orçamento, prioridade ou direito diretamente exigível."
+      ],
+      "target_groups": [
+        "criancas_adolescentes_vulnerabilidade"
+      ],
+      "main_topic": "educacao",
+      "summary_short": "REQ 181/2023 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "O registro dá continuidade a uma frente associativa; não cria prestação, orçamento, prioridade ou direito diretamente exigível.",
+      "version_event_binding": {
+        "proposition_id": "2348860",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": "criancas_adolescentes_vulnerabilidade",
+        "alternative_direction": "positive",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2348860",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2235544",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 161909,
+          "sha256": "sha256:a19c945d1fb4822d2dbfe109fdc20317a41d0b749dcb131798cd37a47cf39253"
+        }
+      ],
+      "proposition_type": "REQ",
+      "official_status": "arquivado",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    },
+    {
+      "id": "camara:req-1849-2023-2366909",
+      "decision": "withheld",
+      "reason": "withheld: não há evento oficial de votação vinculante para esta proposição; registro de frente, CPI, coautoria ou texto proposto não prova aprovação de mérito nem posição populacional.",
+      "mechanism": "Transparência pública e acesso à informação",
+      "direct_recipient": "frente parlamentar",
+      "effects": [
+        "O estatuto promove debates e advocacy sobre transparência; o requerimento não cria dever novo de divulgação nem muda a Lei de Acesso à Informação."
+      ],
+      "target_groups": [
+        "populacao_negra_periferica"
+      ],
+      "main_topic": "transparencia_controle",
+      "summary_short": "REQ 1849/2023 — efeito procedural/associativo, sem impacto populacional pontuável.",
+      "summary_expanded": "O estatuto promove debates e advocacy sobre transparência; o requerimento não cria dever novo de divulgação nem muda a Lei de Acesso à Informação.",
+      "version_event_binding": {
+        "proposition_id": "2366909",
+        "effective_version_bound": false,
+        "event": null,
+        "vote_attribution_status": "event_binding_missing"
+      },
+      "score_eligible": false,
+      "confidence": 0.99,
+      "self_critique": {
+        "strongest_counterargument": "A justificativa descreve benefícios ou riscos concretos e a autoria pode ser factual; isso não supera a ausência de ato normativo aprovado/evento vinculante.",
+        "evidence_against_decision": "O requerimento pode ter sido aprovado administrativamente, e o texto pode orientar futura política; não há prova de efeito jurídico direto nesta peça.",
+        "alternative_group": "populacao_negra_periferica",
+        "alternative_direction": "positive",
+        "verdict": "manter withheld; reavaliar somente com versão efetivamente votada e evento oficial correspondente."
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2366909",
+          "kind": "official_proposition_api"
+        },
+        {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2282932",
+          "kind": "official_full_text",
+          "http_status": 200,
+          "bytes": 364901,
+          "sha256": "sha256:6ca728a4865da367129beb147eddab07bff214e43b7289cf77c6d2c93e56b133"
+        }
+      ],
+      "proposition_type": "REQ",
+      "official_status": "arquivado",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "red-team record unavailable",
+        "missing_sources": []
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Nenhum item aprovado: autoria não equivale a voto; eventos ausentes ou apenas procedurais; score retido."
+    }
+  ]
+}
