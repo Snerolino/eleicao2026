@@ -1,0 +1,492 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:emc-57-2019-2205024",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-57-2019-2219270",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-59-0-2290383",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-67-2019-2205343",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-70-2019-2205352",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-71-2019-2205353",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-88-2019-2205594",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emp-3-0-2433600",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:inc-895-2019-2207686",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-13-2026-2631190",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-15-2026-2633488",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-18-2022-2332037",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-21-2024-2436224",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-21-2025-2504516",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-29-2024-2448752",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-38-2025-2576168",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-57-2023-2402861",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-6-2023-2351620",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-8-2025-2485341",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-9-2025-2485767",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pl-719-2024-2420536",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:plp-141-2023-2372482",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rcp-1-2025-2499926",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rcp-2-2023-2351335",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rcp-4-2023-2354756",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria e texto integral foram confirmados, porém não há evento de votação vinculante nem objeto/versionamento efetivamente votado; autoria não é voto e não autoriza score.",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação nominal/simbólica vinculante",
+        "objeto efetivamente votado (texto-base/substitutivo/emenda/destaque)",
+        "cadeia proposition_version → voting_event → objeto votado",
+        "prova de que a autoria/coautoria foi submetida a votação (autoria não equivale a voto)"
+      ],
+      "counterargument": "As APIs oficiais confirmam a proposição, a lista de autores e o texto integral/hash; isso sustenta o fato de coautoria, mas não prova que houve votação, qual evento ocorreu ou qual versão foi submetida ao plenário. A ausência de evidência de evento pode refletir tramitação sem votação, não inexistência da matéria.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    }
+  ]
+}
