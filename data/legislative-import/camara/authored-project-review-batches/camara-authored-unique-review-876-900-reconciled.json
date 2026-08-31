@@ -1,0 +1,469 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:rec-22-2025-2571484",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero recurso formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rec-24-2023-2387938",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero recurso formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rec-24-2025-2575757",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero recurso formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rec-6-2026-2610645",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero recurso formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-11-2019-2194402",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final",
+        "ponte oficial exata candidato_tse_id → deputado_id para o candidato-alvo"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero requerimento formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1179-2023-2356102",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero requerimento formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1197-2023-2356493",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero requerimento formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1225-2023-2356863",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero requerimento formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1260-2023-2357652",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero requerimento formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1273-2023-2357843",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero requerimento formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1274-2023-2357844",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero requerimento formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1399-2023-2359975",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero requerimento formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1747-2023-2365199",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero requerimento formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2090-2023-2371332",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero requerimento formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2135-2025-2518656",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero requerimento formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2400-2023-2375961",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero requerimento formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-255-2023-2349301",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero requerimento formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2612-2023-2380302",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero requerimento formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2773-2025-2536664",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero requerimento formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-296-2026-2601407",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero requerimento formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-323-2023-2349632",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero requerimento formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-325-2023-2349644",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero requerimento formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-3682-2023-2399380",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final",
+        "ponte oficial exata candidato_tse_id → deputado_id para o candidato-alvo"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero requerimento formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-3843-2023-2401881",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero requerimento formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-4259-2024-2462876",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "registro oficial do evento de votação (event_id, data, objeto, resultado e nominalidade)",
+        "pauta/ata/espelho ou tramitação oficial que vincule este documento a um evento",
+        "versão efetivamente votada e eventuais emendas/substitutivo/redação final"
+      ],
+      "counterargument": "A melhor leitura contrária é tratar o documento como mero requerimento formal, sem impacto populacional direto; ainda assim, isso não prova a existência, data ou objeto de uma votação vinculada nem autoriza pontuação.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    }
+  ]
+}
