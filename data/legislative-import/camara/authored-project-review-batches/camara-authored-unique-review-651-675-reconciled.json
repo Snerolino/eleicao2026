@@ -1,0 +1,1323 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:emc-180-2019-2205864",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Supressão da progressividade das contribuições previdenciárias por faixa remuneratória.",
+      "destinatario": "servidores_publicos",
+      "efeitos": "Reduziria a incidência marginal nas faixas superiores, se incorporada.",
+      "grupos_canonicos": [
+        "servidores_publicos"
+      ],
+      "tema": "previdencia/tributacao",
+      "resumo": "Suprima-se os incisos V, VI, VII e VIII do §1º; os §2º e §3º; dê-se nova redação ao §4º com a supressão da expressão \"com a redução ou a majoração a que se refere o § 1º\", todos do artigo 14 da Proposta de Emenda à Constituição nº 06, de 2019, com as alterações de sequência dos demais parágrafos:",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2205864",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757872",
+        "text_sha256": "sha256:96faac42a9c823700fc49cb61dd22569fdcc7d92edeef97f6c064f790e955933",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-181-2019-2224383",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Incidência do IBS sobre serviços bancários, excluído o spread, com crédito fiscal integral.",
+      "destinatario": "instituicoes_bancarias e contribuintes",
+      "efeitos": "Altera base e compensação tributária; eventual repasse é incerto.",
+      "grupos_canonicos": [],
+      "tema": "economia_tributacao",
+      "resumo": "Inclua-se o inciso VII, ao § 1º, do art. 152-A, a ser acrescentado à CF conforme o art. 1º da PEC, nos termos seguintes:",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2224383",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1818176",
+        "text_sha256": "sha256:85626ee3e6eb60db05f46467e14d601d2010b31450fdbc19e3f40f33c313cd00",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-187-2019-2205882",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Supressão das alterações no BPC e preservação/redução de requisitos da aposentadoria rural.",
+      "destinatario": "trabalhadores rurais e elegíveis ao BPC",
+      "efeitos": "Evitaria restrições a benefícios e à aposentadoria rural; reúne duas facetas.",
+      "grupos_canonicos": [
+        "agricultura_familiar_sem_terra"
+      ],
+      "tema": "previdencia/protecao_social",
+      "resumo": "Suprime modificações promovidas no Benefício de Prestação Continuada - BPC e as alterações relacionadas aos Trabalhadores Rurais, alterando arts. 22, 24 e 203 da Constituição.",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2205882",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757943",
+        "text_sha256": "sha256:f1b6d5c8f2fb73ad7c6b71186a0e3466643f90d747c9e4548a6559af1aab6953",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-190-2019-2224613",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Inclusão de veículos terrestres, aéreos e aquáticos na propriedade tributável.",
+      "destinatario": "proprietários de veículos e entes federativos",
+      "efeitos": "Amplia potencialmente a base tributária; incidência depende de lei.",
+      "grupos_canonicos": [],
+      "tema": "economia_tributacao",
+      "resumo": "Acrescenta o inciso III do art. 155 da Constituição Federal para determinar que seja o imposto incidente sobre veículos automotores terrestres, aéreos e aquáticos.",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2224613",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1818814",
+        "text_sha256": "sha256:aa831511cfd1aaa354a6196e975074ecc5b304906c64517ee126608306067b8b",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-192-2019-2205893",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Preservação de requisitos diferenciados de aposentadoria para professores e retirada de transições incompatíveis.",
+      "destinatario": "professores da educação básica",
+      "efeitos": "Reduz idade/tempo em relação à PEC 6, se incorporada.",
+      "grupos_canonicos": [
+        "trabalhadores_formais"
+      ],
+      "tema": "previdencia/educacao",
+      "resumo": "Altera dispositivos da PEC 6/2019 relacionados com a aposentadoria dos professores de educação infantil, ensino fundamental e médio.",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2205893",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757960",
+        "text_sha256": "sha256:a1bc93cecfd0ef01185c21211ada2ee20903f074ac9288805e8f5e10735a95f1",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-192-2019-2224673",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Reorganização ampla do Sistema Tributário Nacional, competências e Comitê Gestor.",
+      "destinatario": "contribuintes, empresas e entes federativos",
+      "efeitos": "Efeitos heterogêneos e sem grupo humano direto único.",
+      "grupos_canonicos": [],
+      "tema": "economia_tributacao/governanca",
+      "resumo": "Altera o Sistema Tributário Nacional e dá outras providências.",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2224673",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1818998",
+        "text_sha256": "sha256:52f332b0a192f030e05707bab7bd0082ed31b360c167b1a96f5217922e79116a",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-2-0-2288479",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Altera a iniciativa da lei complementar do Estatuto da Magistratura para iniciativa concorrente.",
+      "destinatario": "STF, Congresso e magistratura",
+      "efeitos": "Redistribui competência legislativa; efeito material depende de lei futura.",
+      "grupos_canonicos": [],
+      "tema": "administracao_publica/justica",
+      "resumo": "Dispõe sobre a inclusão do Estatuto da Magistratura na reforma administrativa",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2288479",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2035037",
+        "text_sha256": "sha256:6ff629d34c2021a4cea378d9ff1598d1c506009d113736b8de5e34a0868814ef",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "year is 0 placeholder in packet and API; identity year unresolved",
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-20-2019-2218561",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Substitutivo de imposto único sobre movimentação/transmissão financeira, revogando diversos dispositivos tributários.",
+      "destinatario": "contribuintes e entes federativos",
+      "efeitos": "Reestruturação ampla, composta e de efeitos heterogêneos.",
+      "grupos_canonicos": [],
+      "tema": "economia_tributacao",
+      "resumo": "COMISSÃO ESPECIAL DESTINADA A PROFERIR PARECER À PROPOSTA DE EMENDA À CONSTITUIÇÃO Nº 45-A, DE 2019, DO SR. BALEIA ROSSI E OUTROS, QUE \"ALTERA O SISTEMA TRIBUTÁRIO NACIONAL E DÁ OUTRAS PROVIDÊNCIAS\"",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2218561",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1801967",
+        "text_sha256": "sha256:6e25b374251600b47ae04363f778b394930c5010b1f8cae9cd44c99350f230ac",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-200-2019-2224878",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Cria fundo para transporte coletivo urbano e vincula recursos para reduzir tarifas, condicionado a lei complementar.",
+      "destinatario": "usuários de transporte coletivo e entes gestores",
+      "efeitos": "Pode reduzir tarifas, mas depende de regulamentação e recursos.",
+      "grupos_canonicos": [],
+      "tema": "transporte/economia_tributacao",
+      "resumo": "Introduz o artigo 159-H e altera o inciso IV do artigo 167 na PEC 45/2019 visando a instituição de fundo para o transporte público coletivo urbano e de caráter urbano visando reduzir as tarifas pagas pela população brasileira.",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2224878",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1819449",
+        "text_sha256": "sha256:e3b809da9d0d004e0652773ef078a436bd184e381755d917d42268baca8cb0fa",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-211-2019-2225870",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Veda dedução no lucro real e na CSLL de empresas de petróleo e gás.",
+      "destinatario": "empresas de petróleo e gás",
+      "efeitos": "Eleva base tributável; efeitos sobre preços/emprego são indiretos.",
+      "grupos_canonicos": [],
+      "tema": "economia_tributacao/meio_ambiente_clima",
+      "resumo": "Introduz vedação constitucional à dedução contábil para determinação do lucro real e da base de cálculo da Contribuição Social sobre o Lucro Líquido de empresas que atuam na exploração de petróleo e gás natural.",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2225870",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1822553",
+        "text_sha256": "sha256:73107e79cf82c9db1dedddc6747d9e0b998500607f792bdffa3c253fe254c2dd",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-212-2019-2225871",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Cria IVA estadual e contribuição federal sobre valor adicionado.",
+      "destinatario": "contribuintes e entes federativos",
+      "efeitos": "Reorganiza tributos; efeitos dependem de regulamentação.",
+      "grupos_canonicos": [],
+      "tema": "economia_tributacao",
+      "resumo": "Cria o Imposto sobre Valor Adicionado Estadual e a Contribuição sobre Valor Adicionado Federal.",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2225871",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1822555",
+        "text_sha256": "sha256:7325b3105002f5a35ecd556a760b150722e0ff560fea97ff35f099f362626807",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-214-2019-2205931",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Altera regras permanentes, de transição e disposições transitórias da PEC 6.",
+      "destinatario": "segurados e servidores",
+      "efeitos": "Efeitos potenciais múltiplos; versão/evento não vinculados.",
+      "grupos_canonicos": [],
+      "tema": "previdencia",
+      "resumo": "Modifica o sistema de previdência social, estabelece regras de transição e disposições transitórias, e dá outras providências",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2205931",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1758038",
+        "text_sha256": "sha256:aabcb607fc63a22a56d3b2b35cd2d13d9ae27db255f7a99b8bf205bfadab40dc",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-215-2019-2225879",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Preserva e prevê aumento real do salário mínimo, nos termos da lei.",
+      "destinatario": "trabalhadores remunerados pelo mínimo",
+      "efeitos": "Pode ampliar renda nominal/real, condicionado à lei.",
+      "grupos_canonicos": [
+        "trabalhadores_formais"
+      ],
+      "tema": "trabalho_renda/protecao_social",
+      "resumo": "Inclui dispositivo, no Ato das Disposições Constitucionais Transitórias, que prevê preservação e aumento real do salário mínimo nos termos da lei até que este seja capaz de atender as necessidades vitais do trabalhador e as de sua família, conforme definido no inciso VI do art. 7° da CF/1988.",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2225879",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1822577",
+        "text_sha256": "sha256:62bb50f7394168fb63eabb6b124438f593abd8267c274f8bb62ed5a6325e9134",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-216-2019-2205933",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Altera cálculo e acumulação de pensão por morte, com exceções e regras de reversibilidade.",
+      "destinatario": "dependentes e pensionistas",
+      "efeitos": "Proteção pode aumentar em certas hipóteses e diminuir em outras.",
+      "grupos_canonicos": [
+        "mulheres"
+      ],
+      "tema": "previdencia/protecao_social",
+      "resumo": "Modifica a redação da Proposta de Emenda à Constituição nº 6/2019 para tornar mais justas as regras de cálculo e de acumulação da pensão por morte, e dá outras providências.",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2205933",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1758041",
+        "text_sha256": "sha256:bf8f23afb26748272f8198bf4930ec07f5d2ba51b8e0d6f2faa4588b3db700e5",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-218-2019-2225882",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Destina alíquotas singulares do IBS à educação e saúde e prevê FUNDEB.",
+      "destinatario": "estudantes e usuários do SUS",
+      "efeitos": "Pode ampliar financiamento, condicionado a lei e execução.",
+      "grupos_canonicos": [
+        "estudantes"
+      ],
+      "tema": "educacao/saude/economia_tributacao",
+      "resumo": "Cria a alíquota singular destinada a manutenção e desenvolvimento da Educação Básica, Superior e Tecnológica. Constitucionaliza a destinação do percentual definido em lei dos recursos provenientes de participação no resultado ou de compensação financeira pela exploração de petróleo e gás natural e quaisquer derivados. Determina prazo para constituição do novo FUNDEB.",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2225882",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1822587",
+        "text_sha256": "sha256:2da8327de00dab2f7b3bbabeee214cbe3f66d9cc54bba61e895ff8f05c362493",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-225-2019-2205943",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Suprime dispositivos de contribuição, idade, cálculo e transição da aposentadoria rural.",
+      "destinatario": "trabalhadores rurais",
+      "efeitos": "Evitaria endurecimento das condições rurais.",
+      "grupos_canonicos": [
+        "agricultura_familiar_sem_terra"
+      ],
+      "tema": "previdencia/agricultura",
+      "resumo": "Modifica o sistema de previdência social, estabelece regras de transição e disposições transitórias, e dá outras providências.",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2205943",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1758053",
+        "text_sha256": "sha256:568cb3a02d65a122bb9cecbed9792c70be70a396f8bc4c4e4760f7732c8b0844",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-230-2019-2205948",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Suprime autorização para regime de capitalização individual de novos ingressantes.",
+      "destinatario": "segurados e servidores ingressantes",
+      "efeitos": "Preservaria o modelo vigente até reforma posterior.",
+      "grupos_canonicos": [
+        "trabalhadores_formais"
+      ],
+      "tema": "previdencia",
+      "resumo": "Suprime do artigo 1º da Proposta de Emenda à Constituição nº 6/2019 a redação dada ao § 6º do artigo 40 e ao artigo 201-A da Constituição Federal e, por consequência, o artigo 115 do Ato das Disposições Constitucionais Transitórias, com redação dada pelo artigo 2º da proposta, relativamente à instituição de novo regime de previdência social, organizado com base em sistema de capitalização individual.",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2205948",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1758104",
+        "text_sha256": "sha256:a857db30057a7689993dab23fe2de2cac5f3a15f364c7d6fc4d55a9a6f5c2de7",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-235-2019-2205953",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Condiciona vigência da reforma a referendo popular e atribui organização ao TSE.",
+      "destinatario": "eleitorado e TSE",
+      "efeitos": "Cria condição procedimental, sem efeito previdenciário direto imediato.",
+      "grupos_canonicos": [],
+      "tema": "democracia/processo_legislativo",
+      "resumo": "Condiciona o início da vigência da Emenda Constitucional à sua aprovação em referendo popular.",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2205953",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1758113",
+        "text_sha256": "sha256:e96c666c43fb52c58fbe369402607af59ebb3482318d6f5edbde3423d42ddde9",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-24-2019-2204443",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Suprime alterações de idade, tempo e transição da aposentadoria de professores.",
+      "destinatario": "professores da educação básica",
+      "efeitos": "Preservaria regime previdenciário diferenciado.",
+      "grupos_canonicos": [
+        "trabalhadores_formais"
+      ],
+      "tema": "previdencia/educacao",
+      "resumo": "Suprima-se do texto da Proposta de Emenda à Constituição nº 6, de 2019, os dispositivos ou expressões que alteram os requisitos de tempo de contribuição e/ou de idade mínima, as regras de transição e disposições transitórias, para a aposentadoria dos professores.",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2204443",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1751357",
+        "text_sha256": "sha256:7ba9fd8f0cf0d758de676d8e996846d43a2e8c705dc279d6f6ad5d8ee31c7bf1",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-240-2019-2205958",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Inclui policiais e guardas municipais em regras previdenciárias diferenciadas.",
+      "destinatario": "policiais e guardas municipais",
+      "efeitos": "Diferencia requisitos de aposentadoria, com transições próprias.",
+      "grupos_canonicos": [
+        "servidores_publicos"
+      ],
+      "tema": "previdencia/seguranca_justica",
+      "resumo": "Modifica o sistema de previdência social, estabelece regras de transição e disposições transitórias, e dá outras providências.",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2205958",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1758128",
+        "text_sha256": "sha256:907f71ede4eb19525649cb0d06aa03b471547cf0b8a648629948428538ceb5b0",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-241-2019-2205959",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Assegura tratamento previdenciário isonômico às guardas municipais e reorganização de subcategorias.",
+      "destinatario": "guardas municipais",
+      "efeitos": "Amplia enquadramento favorecido e impõe adequação municipal em 180 dias.",
+      "grupos_canonicos": [
+        "servidores_publicos"
+      ],
+      "tema": "previdencia/seguranca_justica",
+      "resumo": "Modifica o sistema de previdência social, estabelece regras de transição e disposições transitórias, e dá outras providências",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2205959",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1758129",
+        "text_sha256": "sha256:dd91f055de9c6045d09ad90db81be841932cc3af51d1f32bf50dc84608e1f991",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-256-2019-2205975",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Suprime restrições da PEC 6 ao abono salarial.",
+      "destinatario": "trabalhadores formais de baixa renda",
+      "efeitos": "Evitaria perda do abono na faixa abrangida.",
+      "grupos_canonicos": [
+        "trabalhadores_formais"
+      ],
+      "tema": "trabalho_renda/protecao_social",
+      "resumo": "Modifica o sistema de previdência social, estabelece regras de transição e disposições transitórias, e dá outras providências.",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2205975",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1758153",
+        "text_sha256": "sha256:f836a9c6958fecc3e224e49031b90e59299b72351cacb6d8b4cdd7b751ede942",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-265-2019-2205984",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Cria adicional de 5% por filho, até cinco, e para cuidadoras de baixa renda; não retroativo e regulamentado.",
+      "destinatario": "mães e cuidadoras",
+      "efeitos": "Criaria adicional focalizado e condicionado para aposentadorias futuras.",
+      "grupos_canonicos": [
+        "mulheres"
+      ],
+      "tema": "previdencia/cuidado",
+      "resumo": "Garante valor adicional a aposentadorias de mulheres com filhos, e valor adicional a mulheres que recebam até um salário mínimo na posição de cuidadoras.",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2205984",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1758168",
+        "text_sha256": "sha256:2993aa508c37daaa26b458b3cc1bab9b6b6b5abbd682d2934fa8a5f136e69251",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-27-2019-2204504",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Suprime alterações de idade, tempo, contribuição, cálculo e transição da aposentadoria rural.",
+      "destinatario": "trabalhadores rurais",
+      "efeitos": "Preservaria condições rurais vigentes.",
+      "grupos_canonicos": [
+        "agricultura_familiar_sem_terra"
+      ],
+      "tema": "previdencia/agricultura",
+      "resumo": "Suprime do texto da Proposta de Emenda à Constituição nº 6, de 2019, dispositivos e expressões relacionados aos trabalhadores rurais.",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2204504",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1751681",
+        "text_sha256": "sha256:1919c6c81a053b39596672d86b48fcc66a0859ed1af077342ce94662e8344480",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-28-2019-2204506",
+      "decision": "withheld",
+      "reason": "Texto integral oficial verificado, mas não há evento de votação vinculante para esta EMC: o endpoint oficial /votacoes retornou lista vazia e a tramitação localizada é apenas apresentação/conferência de assinaturas.",
+      "mecanismo": "Redesenha transição de servidores e regras específicas para professores, inclusive cálculo e reajuste.",
+      "destinatario": "servidores e professores",
+      "efeitos": "Efeitos materiais concorrentes e condicionais, sem direção unívoca.",
+      "grupos_canonicos": [
+        "servidores_publicos"
+      ],
+      "tema": "previdencia/educacao",
+      "resumo": "Modifica o sistema de previdência social, estabelece regras de transição e disposições transitórias, e dá outras providências.",
+      "vinculo_versao_evento": {
+        "version_type": "proposed_amendment",
+        "official_proposition_id": "2204506",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1751750",
+        "text_sha256": "sha256:06288647ea4c14130975da190245cd7125d2c58a47ab038de303fa6f5d750452",
+        "http_status": 200,
+        "event_ids": [],
+        "event_binding": "missing",
+        "procedural_record": "Apresentação de Proposição + Relatório de Conferência de Assinaturas"
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "strongest_counterargument": "A EMC pode ter sido incorporada ou rejeitada na votação da proposição-mãe sem registro no endpoint da própria emenda.",
+        "evidence_against_decision": [
+          "Não foi identificado evento nominal ou de mérito que vincule este texto a objeto efetivamente votado."
+        ],
+        "alternative_interpretation": "A causalidade descrita é hipótese sobre o texto proposto, não sobre texto aprovado.",
+        "vote_attribution_risk": "alto",
+        "remaining_uncertainties": [
+          "incorporação/rejeição pela proposição principal",
+          "objeto de eventual destaque"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "packet is authorship-oriented and contains no voting_event binding; authorship does not establish that this text was voted",
+          "full text was not saved locally; only live HTTP 200 plus manifest bytes/SHA-256 was rechecked"
+        ],
+        "missing_sources": [
+          "exact_voting_event_id/date/object/result/nominal_record",
+          "version_binding_to_event_and_amendment_disposition",
+          "candidate_tse_to_deputado_identity_catalog"
+        ],
+        "counterargument": "Official Câmara proposition/authors endpoints corroborate proposition identity and listed deputado IDs; the full-text URL re-fetch matches manifest bytes and SHA-256. This still cannot prove a specific voting event, effective voted version, or TSE↔deputado identity binding."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    }
+  ]
+}
