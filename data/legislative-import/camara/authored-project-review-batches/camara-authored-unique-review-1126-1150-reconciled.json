@@ -1,0 +1,1164 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:pdl-400-2020-2262907",
+      "decision": "withheld",
+      "reason": "Nenhum evento de votação vinculante localizado para esta proposição; autoria e texto inicial não equivalem a decisão legislativa.",
+      "mecanismo": "A proposta susta ato de nomeação presidencial; o mecanismo é retirar eficácia do decreto, não criar benefício material. O texto autoral não prova qual decisão foi efetivamente votada.",
+      "destinatario": [
+        "comunidade universitária e servidores da UFRGS"
+      ],
+      "efeitos": "Suspensão do decreto presidencial de nomeação do reitor, restabelecendo a necessidade de nova solução institucional para a direção da UFRGS.",
+      "grupos_canonicos": [
+        "servidores_publicos",
+        "estudantes"
+      ],
+      "tema": "governança de universidade federal",
+      "resumo": "Susta, nos termos do Artigo 49, V, da Constituição Federal, o Decreto sem número de 15 de Setembro de 2020, publicado no Diário Oficial da União em 16 de Setembro de 2020, Edição 178, Seção 2, Página 1, que nomeou Carlos André Bulhões Mendes para o cargo de Reitor da Universidade Federal do Rio Grande do Sul, com mandato de quatro anos.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2262907",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1930423",
+        "full_text_sha256": "sha256:958904b2154336d0f932deff2f2c876fae9ac6fcfe1608cd8ea8553951e55fbf",
+        "events": [],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": {
+        "texto_base_limitacao": "Suspensão do decreto presidencial de nomeação do reitor, restabelecendo a necessidade de nova solução institucional para a direção da UFRGS.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a colisão entre o TSE informado e o autor oficial/posição eleitoral."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pec-26-2023-2362646",
+      "decision": "withheld",
+      "reason": "Nenhum evento de votação vinculante localizado para esta proposição; autoria e texto inicial não equivalem a decisão legislativa.",
+      "mecanismo": "O mecanismo é constitucionalizar canais de transferência e reduzir intermediação federal; a incidência sobre um grupo populacional específico não é demonstrável.",
+      "destinatario": [
+        "entes subnacionais e destinatários de políticas públicas locais"
+      ],
+      "efeitos": "Permissão constitucional para transferências especiais ou com finalidade definida de emendas individuais e de bancada a estados, DF e municípios.",
+      "grupos_canonicos": [],
+      "tema": "transferências intergovernamentais e emendas parlamentares",
+      "resumo": "Dá nova redação ao Art. 166-A  da Constituição Federal, para autorizar a Transferência Especial de recursos federais a Estados, ao Distrito Federal e a Municípios mediante emendas individuais e bancadas ao projeto de lei orçamentária anual.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2362646",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2273619",
+        "full_text_sha256": "sha256:9ee1b7b21857968ddcfce2412a2fea9898ff728a34650a0806d11e5aca701cc1",
+        "events": [],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": {
+        "texto_base_limitacao": "Permissão constitucional para transferências especiais ou com finalidade definida de emendas individuais e de bancada a estados, DF e municípios.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a ausência de versão efetivamente votada e de evento de votação."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pec-44-2024-2471383",
+      "decision": "withheld",
+      "reason": "Há evento oficial, mas o objeto/versão efetivamente votado não está resolvido no pacote; o texto integral recuperado é a peça autoral/inicial, não prova o texto aprovado. Fail-closed.",
+      "mecanismo": "O mecanismo é vinculação orçamentária de emendas; o texto não identifica população canônica específica beneficiada.",
+      "destinatario": [
+        "programas e organizações esportivas; beneficiários locais não especificados"
+      ],
+      "efeitos": "Reserva de 3% das emendas individuais para programas e ações esportivas, além da parcela constitucional da saúde.",
+      "grupos_canonicos": [],
+      "tema": "financiamento público do esporte",
+      "resumo": "Altera o §9º do artigo 166 da Constituição Federal para destinar parte dos recursos oriundos das emendas individuais a programas e ações relacionados ao Esporte.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2471383",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2825963",
+        "full_text_sha256": "sha256:c09448e26f4d0f647547523a20f7bc19f079d60824153c032081aea13322f0d8",
+        "events": [
+          {
+            "id": "2471383-36",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2471383-36",
+            "descricao": "Aprovado o Parecer.",
+            "data": "2025-09-02",
+            "orgao": "CCJC"
+          },
+          {
+            "id": "2471383-23",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2471383-23",
+            "descricao": "Rejeitado o Requerimento de Retirada de Pauta. Resultado:  11 votos \"Sim\", 23 votos \"Não\". Quórum de votação: 34 votos.",
+            "data": "2025-05-27",
+            "orgao": "CCJC"
+          }
+        ],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.55,
+      "autocritica": {
+        "texto_base_limitacao": "Reserva de 3% das emendas individuais para programas e ações esportivas, além da parcela constitucional da saúde.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a colisão entre o TSE informado e o autor oficial/posição eleitoral."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-1006-2026-2607439",
+      "decision": "withheld",
+      "reason": "Nenhum evento de votação vinculante localizado para esta proposição; autoria e texto inicial não equivalem a decisão legislativa.",
+      "mecanismo": "A tipificação e as medidas digitais operam por sanção, remoção e prevenção, protegendo diretamente mulheres; salvaguardas para atividade jornalística aparecem no texto.",
+      "destinatario": [
+        "mulheres expostas a violência e discriminação misógina",
+        "provedores e organizadores de conteúdo"
+      ],
+      "efeitos": "Criminalização de promoção/incitação de misoginia e deveres de remoção de conteúdos e prevenção pública.",
+      "grupos_canonicos": [
+        "mulheres"
+      ],
+      "tema": "violência de gênero e ambiente digital",
+      "resumo": "Tipifica a promoção de misoginia e a incitação à violência ou discriminação contra mulheres, inclusive pela organização e propagação de ideologias ou teorias misóginas, inclusive as associadas a comunidades conhecidas como “red pill”, “incel”, “MGTOW” ou denominações equivalentes.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2607439",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3093983",
+        "full_text_sha256": "sha256:3d3e0b39cec27af12337c20d1ec4e62cf4d332b602f7a1a655189dd67e5b9809",
+        "events": [],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": {
+        "texto_base_limitacao": "Criminalização de promoção/incitação de misoginia e deveres de remoção de conteúdos e prevenção pública.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a ausência de versão efetivamente votada e de evento de votação."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-1107-2026-2608238",
+      "decision": "withheld",
+      "reason": "Nenhum evento de votação vinculante localizado para esta proposição; autoria e texto inicial não equivalem a decisão legislativa.",
+      "mecanismo": "O benefício nasce do reconhecimento da deficiência e da violência; revisão trienal, gestão administrativa e ação regressiva condicionam seus efeitos.",
+      "destinatario": [
+        "pessoas com deficiência permanente decorrente de violência doméstica",
+        "vítimas de violência doméstica"
+      ],
+      "efeitos": "Pensão especial mensal e intransferível, dispensa de carência previdenciária e avaliação médica judicial para deficiência permanente causada por violência doméstica.",
+      "grupos_canonicos": [
+        "pessoas_com_deficiencia"
+      ],
+      "tema": "previdência e proteção contra violência doméstica",
+      "resumo": "Institui pensão especial para pessoas com deficiência decorrente de violência doméstica e familiar; altera a Lei nº 8.213, de 24 de julho de 1991, para dispensar do cumprimento de carência o requerente de auxílio por incapacidade temporária e aposentadoria por incapacidade permanente decorrente de violência doméstica e familiar; e altera a Lei nº 11.340, de 7 de agosto de 2006, a fim de dispor sobre determinação judicial de avaliação médica, para fins de instrução do pedido de pensão especial, em caso de violência doméstica e familiar que resulte em aquisição de deficiência permanente pela ofendida ou pelo ofendido.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2608238",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3095683",
+        "full_text_sha256": "sha256:bfd8a2b3cc09a3c3a3491f0b1e930f96a7a3d4285e99d699686012108feb1943",
+        "events": [],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": {
+        "texto_base_limitacao": "Pensão especial mensal e intransferível, dispensa de carência previdenciária e avaliação médica judicial para deficiência permanente causada por violência doméstica.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a ausência de versão efetivamente votada e de evento de votação."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-1754-2026-2615287",
+      "decision": "withheld",
+      "reason": "Nenhum evento de votação vinculante localizado para esta proposição; autoria e texto inicial não equivalem a decisão legislativa.",
+      "mecanismo": "O mecanismo altera outorga, partilha, dados geológicos e deveres de fechamento/reparação; distribuição populacional específica depende de regulamentação e contratos.",
+      "destinatario": [
+        "União e empresas brasileiras titulares de direitos minerários",
+        "trabalhadores e comunidades afetados pela mineração, sem desenho específico"
+      ],
+      "efeitos": "Regime de partilha para minerais críticos/estratégicos, participação da União e transformação da CPRM em TerraBras.",
+      "grupos_canonicos": [],
+      "tema": "mineração estratégica e soberania econômica",
+      "resumo": "Institui a TerraBras, empresa pública destinada à defesa da soberania nacional e ao aproveitamento dos minerais críticos ou estratégicos; estabelece o regime de partilha da produção mineral; altera o Decreto-Lei nº 227, de 28 de fevereiro de 1967, a Lei nº 8.970, de 28 de dezembro de 1994, e a Lei nº 13.575, de 26 de dezembro de 2017; e dá outras providências.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2615287",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3111800",
+        "full_text_sha256": "sha256:d054432a51e956bf0b848da12e2f1913732d49a0ba992b2f1e9e51b511d9118f",
+        "events": [],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": {
+        "texto_base_limitacao": "Regime de partilha para minerais críticos/estratégicos, participação da União e transformação da CPRM em TerraBras.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a ausência de versão efetivamente votada e de evento de votação."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-1808-2026-2615935",
+      "decision": "withheld",
+      "reason": "Eventos localizados são procedurais (requerimento/retirada/regime), sem impacto substantivo atribuível; não herdar o impacto do projeto.",
+      "mecanismo": "O texto reduz oferta e acesso por proibição, bloqueio, remoção e bloqueio financeiro; há custos regulatórios e econômicos para o ecossistema de apostas.",
+      "destinatario": [
+        "pessoas com problemas relacionados ao jogo",
+        "operadores, intermediários, plataformas e instituições de pagamento"
+      ],
+      "efeitos": "Proibição nacional de exploração, publicidade e facilitação de apostas de quota fixa, com bloqueio de sites e interrupção de pagamentos.",
+      "grupos_canonicos": [
+        "pessoas_com_ludopatia"
+      ],
+      "tema": "jogos de aposta, saúde e regulação digital",
+      "resumo": "Proíbe a exploração, a oferta, a promoção e a facilitação de apostas de quota fixa em todo o território nacional, revoga dispositivos das Leis nº 13.756, de 12 de dezembro de 2018, e nº 14.790, de 29 de dezembro de 2023, estabelece medidas de bloqueio de acesso, remoção de aplicações, interrupção de fluxos financeiros, responsabilização de intermediários e proteção de conteúdos de interesse público, e dá outras providências.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2615935",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3112975",
+        "full_text_sha256": "sha256:c3d3ca6604869ff0b2a6465d5cd1b44e12b3af7a1596a96ffe143e549cb02a66",
+        "events": [
+          {
+            "id": "2618349-2",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2618349-2",
+            "descricao": "Aprovado o Requerimento.",
+            "data": "2026-04-29",
+            "orgao": "CPASF"
+          },
+          {
+            "id": "2618600-5",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2618600-5",
+            "descricao": "Aprovado o Requerimento.",
+            "data": "2026-04-29",
+            "orgao": "CDE"
+          }
+        ],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.55,
+      "autocritica": {
+        "texto_base_limitacao": "Proibição nacional de exploração, publicidade e facilitação de apostas de quota fixa, com bloqueio de sites e interrupção de pagamentos.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a ausência de versão efetivamente votada e de evento de votação."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-19-2022-2313797",
+      "decision": "withheld",
+      "reason": "Há evento oficial, mas o objeto/versão efetivamente votado não está resolvido no pacote; o texto integral recuperado é a peça autoral/inicial, não prova o texto aprovado. Fail-closed.",
+      "mecanismo": "O mecanismo é alívio de crédito e novas condições de financiamento, condicionado aos critérios legais e à operação do CMN.",
+      "destinatario": [
+        "agricultores familiares afetados por eventos climáticos",
+        "instituições financeiras e União"
+      ],
+      "efeitos": "Prorrogação e repactuação de dívidas, suspensão de cobranças e linha emergencial do Pronaf para agricultores familiares atingidos por seca e enchentes.",
+      "grupos_canonicos": [
+        "agricultura_familiar_sem_terra"
+      ],
+      "tema": "crédito rural e calamidades climáticas",
+      "resumo": "Dispõe sobre medidas emergenciais de amparo aos agricultores familiares para mitigar os impactos socioeconômicos da seca e das enchentes que incidem sobre o país desde o ano de 2021, e dá outras providências.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2313797",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2130914",
+        "full_text_sha256": "sha256:00824d400e4254152e728e6f91c8c462b1dfeee31570ed18f66518f1b85878fd",
+        "events": [
+          {
+            "id": "2366492-2",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2366492-2",
+            "descricao": "Aprovado.",
+            "data": "2023-06-14",
+            "orgao": "CSAUDE"
+          }
+        ],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.55,
+      "autocritica": {
+        "texto_base_limitacao": "Prorrogação e repactuação de dívidas, suspensão de cobranças e linha emergencial do Pronaf para agricultores familiares atingidos por seca e enchentes.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a colisão entre o TSE informado e o autor oficial/posição eleitoral."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-2054-2026-2619274",
+      "decision": "withheld",
+      "reason": "Nenhum evento de votação vinculante localizado para esta proposição; autoria e texto inicial não equivalem a decisão legislativa.",
+      "mecanismo": "A política cria coordenação e proteção normativa; alcance financeiro, sanções e implementação dependem dos dispositivos e regulamentação.",
+      "destinatario": [
+        "pessoas LGBTQIA+",
+        "órgãos públicos responsáveis pela execução"
+      ],
+      "efeitos": "Instituição de política nacional de direitos LGBTQIA+, com diretrizes e deveres estatais previstos no texto integral.",
+      "grupos_canonicos": [
+        "lgbtqia"
+      ],
+      "tema": "direitos e políticas públicas LGBTQIA+",
+      "resumo": "Institui a Política Nacional dos Direitos das Pessoas LGBTQIA+ e dá outras providências.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2619274",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3119699",
+        "full_text_sha256": "sha256:2729b5bb863516ccfd6263449187a3d9d9cef49360ee36a32c07fe5ba0ce12e7",
+        "events": [],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": {
+        "texto_base_limitacao": "Instituição de política nacional de direitos LGBTQIA+, com diretrizes e deveres estatais previstos no texto integral.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a ausência de versão efetivamente votada e de evento de votação."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-2265-2025-2508216",
+      "decision": "withheld",
+      "reason": "Nenhum evento de votação vinculante localizado para esta proposição; autoria e texto inicial não equivalem a decisão legislativa.",
+      "mecanismo": "O mecanismo é descriminalização/redução do âmbito penal; não há grupo populacional canônico diretamente identificado.",
+      "destinatario": [
+        "pessoas submetidas à persecução penal pelos tipos revogados",
+        "sistema de justiça"
+      ],
+      "efeitos": "Revogação dos arts. 359-L e 359-M do Código Penal, retirando tipos penais relativos à abolição violenta do Estado Democrático e golpe de Estado.",
+      "grupos_canonicos": [],
+      "tema": "direito penal e crimes contra o Estado democrático",
+      "resumo": "Revoga os arts. 359-L e 359-M do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 – Código Penal Brasileiro.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2508216",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2904997",
+        "full_text_sha256": "sha256:2de58e0daf788bc02759cbe454710fc1ea005ecae94a1819e2c48f3b629dbf84",
+        "events": [],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": {
+        "texto_base_limitacao": "Revogação dos arts. 359-L e 359-M do Código Penal, retirando tipos penais relativos à abolição violenta do Estado Democrático e golpe de Estado.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a colisão entre o TSE informado e o autor oficial/posição eleitoral."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-2508-2020-2252034",
+      "decision": "withheld",
+      "reason": "Há evento oficial, mas o objeto/versão efetivamente votado não está resolvido no pacote; o texto integral recuperado é a peça autoral/inicial, não prova o texto aprovado. Fail-closed.",
+      "mecanismo": "O mecanismo altera a regra de habilitação/pagamento do auxílio, deslocando a titularidade preferencial para a mulher provedora.",
+      "destinatario": [
+        "mulheres provedoras de famílias",
+        "famílias elegíveis ao benefício"
+      ],
+      "efeitos": "Prioridade à mulher provedora na concessão da renda básica emergencial, salvo hipótese de guarda unilateral do homem provedor.",
+      "grupos_canonicos": [
+        "mulheres"
+      ],
+      "tema": "renda emergencial e proteção de provedoras",
+      "resumo": "Acrescenta alínea I ao parágrafo 3º do Art. 2º da Lei nº 13.982, de 2 de abril de 2020, que dispõe sobre a operacionalização do pagamento da Renda Básica Emergencial, para assegurar à mulher provedora a concessão do benefício, salvo se comprovada a guarda unilateral do homem provedor; e dá outras providências.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2252034",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1891827",
+        "full_text_sha256": "sha256:60f423375cbc548d422959809d0c1e23aa7172a37edc55a0a7b1426a309cf033",
+        "events": [
+          {
+            "id": "2252034-57",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2252034-57",
+            "descricao": "Aprovada a Redação Final assinada pela Relatora, Dep. Professora Dorinha Seabra Rezende (DEM-TO).",
+            "data": "2020-06-02",
+            "orgao": "PLEN"
+          },
+          {
+            "id": "2252034-54",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2252034-54",
+            "descricao": "Aprovada a Subemenda Substitutiva Global de Plenário ao Projeto de Lei nº 2.508, de 2020, adotada pela Relatora da Comissão de Defesa dos Direitos da Mulher, ressalvados os destaques.",
+            "data": "2020-06-02",
+            "orgao": "PLEN"
+          },
+          {
+            "id": "2252034-28",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2252034-28",
+            "descricao": "Alteração do Regime de Tramitação desta proposição em virtude da alteração do regime do PL 2835/2020, por ter sido aprovado o REQ 1239/2020 que está apensado ao primeiro.",
+            "data": "2020-06-02",
+            "orgao": "PLEN"
+          }
+        ],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.55,
+      "autocritica": {
+        "texto_base_limitacao": "Prioridade à mulher provedora na concessão da renda básica emergencial, salvo hipótese de guarda unilateral do homem provedor.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a colisão entre o TSE informado e o autor oficial/posição eleitoral."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-2604-2020-2252541",
+      "decision": "withheld",
+      "reason": "Há evento oficial, mas o objeto/versão efetivamente votado não está resolvido no pacote; o texto integral recuperado é a peça autoral/inicial, não prova o texto aprovado. Fail-closed.",
+      "mecanismo": "O texto usa medidas de acesso e circulação de livros; o evento conhecido é aprovação de parecer, mas a versão votada não foi resolvida.",
+      "destinatario": [
+        "estudantes e usuários de políticas educacionais",
+        "editoras, livrarias e bibliotecas"
+      ],
+      "efeitos": "Medidas temporárias para assegurar acesso a livros durante calamidade pública, com efeitos sobre política do livro e aquisição/distribuição.",
+      "grupos_canonicos": [
+        "estudantes"
+      ],
+      "tema": "livro, educação e calamidade pública",
+      "resumo": "Altera a Lei nº 10.753, de 30 de outubro de 2003, que institui a Poli´tica Nacional do Livro, para estabelecer medidas a vigorar em peri´odo de calamidade pu´blica.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2252541",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1893320",
+        "full_text_sha256": "sha256:2af4fa3d6fee23b37e355323bb9d963c58490e32e66ad6f5e1f169e04e407bba",
+        "events": [
+          {
+            "id": "2252541-21",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2252541-21",
+            "descricao": "Aprovado o Parecer.",
+            "data": "2021-06-08",
+            "orgao": "CCULT"
+          }
+        ],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.55,
+      "autocritica": {
+        "texto_base_limitacao": "Medidas temporárias para assegurar acesso a livros durante calamidade pública, com efeitos sobre política do livro e aquisição/distribuição.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a colisão entre o TSE informado e o autor oficial/posição eleitoral."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-2854-2020-2253608",
+      "decision": "withheld",
+      "reason": "Nenhum evento de votação vinculante localizado para esta proposição; autoria e texto inicial não equivalem a decisão legislativa.",
+      "mecanismo": "O mecanismo combina desmonetização, moderação e responsabilização intermediária; há tensão com liberdade de expressão e necessidade de delimitação normativa.",
+      "destinatario": [
+        "usuários do SUS e pessoas expostas a desinformação sanitária",
+        "plataformas, anunciantes e provedores"
+      ],
+      "efeitos": "Restrições à disseminação/monetização de conteúdo de ódio, preconceito e tratamentos de saúde sem validação científica, com deveres a plataformas e anunciantes.",
+      "grupos_canonicos": [
+        "usuarios_sus"
+      ],
+      "tema": "desinformação, discurso de ódio e saúde",
+      "resumo": "Institui medidas contra a disseminação de conteúdo de ódio e preconceito pela internet, bem como a disseminação de informações a respeito de tratamentos de saúde que não sejam cientificamente validados e aceitos pelo Sistema Único de Saúde ou pela Organização Mundial de Saúde e dá outras providências.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2253608",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1899386",
+        "full_text_sha256": "sha256:22beafbca6fdfce732ecbd28b25d0ea6bd5a1927e0354d8cf5fa0a0af508e4a9",
+        "events": [],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": {
+        "texto_base_limitacao": "Restrições à disseminação/monetização de conteúdo de ódio, preconceito e tratamentos de saúde sem validação científica, com deveres a plataformas e anunciantes.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a colisão entre o TSE informado e o autor oficial/posição eleitoral."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-3065-2021-2297441",
+      "decision": "withheld",
+      "reason": "Nenhum evento de votação vinculante localizado para esta proposição; autoria e texto inicial não equivalem a decisão legislativa.",
+      "mecanismo": "O mecanismo é tributação progressiva sobre renda elevada; a destinação e efeitos distributivos não permitem mapear grupo canônico específico.",
+      "destinatario": [
+        "pessoas físicas de alta renda",
+        "administração tributária"
+      ],
+      "efeitos": "Contribuição social de 10% sobre rendimentos anuais superiores a R$720 mil, com retenção e fiscalização pela Receita.",
+      "grupos_canonicos": [],
+      "tema": "tributação de altas rendas",
+      "resumo": "Institui a contribuição social sobre ",
+      "vinculo_versao_evento": {
+        "proposition_id": "2297441",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2068435",
+        "full_text_sha256": "sha256:dd7517a2328781149ad68dbbef7efff24209f4f65a1de1fbfb8e858897f6e57c",
+        "events": [],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": {
+        "texto_base_limitacao": "Contribuição social de 10% sobre rendimentos anuais superiores a R$720 mil, com retenção e fiscalização pela Receita.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a colisão entre o TSE informado e o autor oficial/posição eleitoral."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-3066-2021-2297443",
+      "decision": "withheld",
+      "reason": "Nenhum evento de votação vinculante localizado para esta proposição; autoria e texto inicial não equivalem a decisão legislativa.",
+      "mecanismo": "O mecanismo arrecada de pessoas jurídicas e vincula recursos a políticas públicas; não permite atribuir benefício direto a grupo canônico sem desenho de execução.",
+      "destinatario": [
+        "empresas dos setores alcançados",
+        "destinatários de ações públicas de saúde, educação e assistência"
+      ],
+      "efeitos": "Elevação/estruturação de alíquotas da CSLL para setores especificados e destinação de arrecadação a ações de proteção social e vítimas da COVID-19.",
+      "grupos_canonicos": [],
+      "tema": "tributação setorial e financiamento social",
+      "resumo": "Estabelece as alíquotas para a incidência",
+      "vinculo_versao_evento": {
+        "proposition_id": "2297443",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2068441",
+        "full_text_sha256": "sha256:beb6a2f5b50b91aad6d5d87657c31389ab7146c540539dc5091210d597bdaa2f",
+        "events": [],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": {
+        "texto_base_limitacao": "Elevação/estruturação de alíquotas da CSLL para setores especificados e destinação de arrecadação a ações de proteção social e vítimas da COVID-19.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a colisão entre o TSE informado e o autor oficial/posição eleitoral."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-3067-2021-2297445",
+      "decision": "withheld",
+      "reason": "Nenhum evento de votação vinculante localizado para esta proposição; autoria e texto inicial não equivalem a decisão legislativa.",
+      "mecanismo": "O mecanismo muda base, alíquotas e retenção; efeitos distributivos são econômicos, mas não ligados com segurança a grupo canônico fechado.",
+      "destinatario": [
+        "sócios, acionistas e pessoas físicas sujeitas ao IR",
+        "empresas pagadoras"
+      ],
+      "efeitos": "Tributação de lucros/dividendos, alterações em alíquotas e faixas do IRPF/IRPJ e regras de retenção.",
+      "grupos_canonicos": [],
+      "tema": "imposto de renda e distribuição de lucros",
+      "resumo": "Altera a legislação do Imposto",
+      "vinculo_versao_evento": {
+        "proposition_id": "2297445",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2068445",
+        "full_text_sha256": "sha256:5969443d47ac622d7f44cc2977caab4c03a42e8433ef76c3475ec9cb9d6657ea",
+        "events": [],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": {
+        "texto_base_limitacao": "Tributação de lucros/dividendos, alterações em alíquotas e faixas do IRPF/IRPJ e regras de retenção.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a colisão entre o TSE informado e o autor oficial/posição eleitoral."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-3068-2021-2297446",
+      "decision": "withheld",
+      "reason": "Nenhum evento de votação vinculante localizado para esta proposição; autoria e texto inicial não equivalem a decisão legislativa.",
+      "mecanismo": "O mecanismo encarece produtos segundo toxicidade e financia ações públicas; o texto não individualiza grupo populacional canônico afetado.",
+      "destinatario": [
+        "produtores/importadores de agrotóxicos",
+        "população exposta a riscos ambientais e sanitários"
+      ],
+      "efeitos": "CIDE sobre importação e saída de agrotóxicos, com alíquotas por toxicidade e destinação parcial da arrecadação a ações sociais e de saúde.",
+      "grupos_canonicos": [],
+      "tema": "agrotóxicos, tributação e saúde pública",
+      "resumo": "Institui a Contribuição de Intervenção no ",
+      "vinculo_versao_evento": {
+        "proposition_id": "2297446",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2068447",
+        "full_text_sha256": "sha256:59339711c76ad20392293b9240b9b12450bf1e3b3e0df0bb8ec9429614938f0a",
+        "events": [],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": {
+        "texto_base_limitacao": "CIDE sobre importação e saída de agrotóxicos, com alíquotas por toxicidade e destinação parcial da arrecadação a ações sociais e de saúde.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a colisão entre o TSE informado e o autor oficial/posição eleitoral."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-3197-2025-2531337",
+      "decision": "withheld",
+      "reason": "Nenhum evento de votação vinculante localizado para esta proposição; autoria e texto inicial não equivalem a decisão legislativa.",
+      "mecanismo": "O mecanismo altera limites legais de tempo de trabalho e remuneração/compensação, com espaço para negociação coletiva nos dispositivos.",
+      "destinatario": [
+        "trabalhadores formais regidos pela CLT",
+        "empregadores"
+      ],
+      "efeitos": "Redução/definição da jornada de segunda a sexta, regras de horas extras, compensação, plantão e intervalo na CLT.",
+      "grupos_canonicos": [
+        "trabalhadores_formais"
+      ],
+      "tema": "jornada de trabalho e relações trabalhistas",
+      "resumo": "Altera a Consolidação das Leis do Trabalho (CLT), aprovada pelo Decreto-Lei nº 5.452, de 1º de maio de 1943, para definir a duração normal de trabalho semanal, suas repercussões nas horas suplementares e no trabalho em regime de compensação ou de plantão.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2531337",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2948011",
+        "full_text_sha256": "sha256:6a663eec7417fcc906ce158f948b4aea7089746e9ec152e131b4eeb6eedf2a79",
+        "events": [],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": {
+        "texto_base_limitacao": "Redução/definição da jornada de segunda a sexta, regras de horas extras, compensação, plantão e intervalo na CLT.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a ausência de versão efetivamente votada e de evento de votação."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-3401-2025-2536213",
+      "decision": "withheld",
+      "reason": "Nenhum evento de votação vinculante localizado para esta proposição; autoria e texto inicial não equivalem a decisão legislativa.",
+      "mecanismo": "O mecanismo inclui verbas e remunerações acumuladas no cálculo do teto, com redução proporcional por jornada e transparência de dados.",
+      "destinatario": [
+        "servidores públicos e agentes políticos",
+        "entes e órgãos públicos"
+      ],
+      "efeitos": "Aplicação nacional do teto remuneratório a agentes públicos e políticos, agregação de remunerações e portal nacional de remunerações.",
+      "grupos_canonicos": [
+        "servidores_publicos"
+      ],
+      "tema": "teto remuneratório no setor público",
+      "resumo": "Disciplina, em âmbito nacional, a aplicação do limite máximo remuneratório mensal de agentes políticos e públicos de que tratam o inciso XI do caput e os § 9º e § 11 do art. 37 da Constituição.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2536213",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2956726",
+        "full_text_sha256": "sha256:8db0b003296d88056ee2ee19e2ba881d427dbd2e9e24cb728a949a16a7727358",
+        "events": [],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": {
+        "texto_base_limitacao": "Aplicação nacional do teto remuneratório a agentes públicos e políticos, agregação de remunerações e portal nacional de remunerações.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a ausência de versão efetivamente votada e de evento de votação."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-3479-2026-2637237",
+      "decision": "withheld",
+      "reason": "Nenhum evento de votação vinculante localizado para esta proposição; autoria e texto inicial não equivalem a decisão legislativa.",
+      "mecanismo": "O mecanismo cria deveres cadastrais e cruzamento de dados; os efeitos populacionais diretos não cabem nos grupos canônicos sem inferência.",
+      "destinatario": [
+        "pessoas jurídicas e seus beneficiários finais",
+        "autoridades de controle e fiscalização"
+      ],
+      "efeitos": "Registro nacional de beneficiários finais, declaração/atualização obrigatória, verificação, acesso por níveis e sanções administrativas.",
+      "grupos_canonicos": [],
+      "tema": "transparência societária e prevenção à lavagem de dinheiro",
+      "resumo": "Estabelece o marco legal do Registro Nacional de Beneficiários Finais, dispõe sobre a integração, atualização, verificação, interoperabilidade e acesso às informações relativas aos beneficiários finais de pessoas jurídicas e estruturas legais, e fortalece os mecanismos de prevenção à lavagem de dinheiro, corrupção, evasão fiscal, ocultação patrimonial e infiltração da criminaliza organizada na economia formal.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2637237",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3157278",
+        "full_text_sha256": "sha256:1cd26bfe8a26be6dfe811c291e756b8ef5350e3525fcf58e6a1b6ae626c8f1fb",
+        "events": [],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": {
+        "texto_base_limitacao": "Registro nacional de beneficiários finais, declaração/atualização obrigatória, verificação, acesso por níveis e sanções administrativas.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a ausência de versão efetivamente votada e de evento de votação."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-420-2026-2601818",
+      "decision": "withheld",
+      "reason": "Nenhum evento de votação vinculante localizado para esta proposição; autoria e texto inicial não equivalem a decisão legislativa.",
+      "mecanismo": "O mecanismo é vinculação de receita de apostas a segurança e prevenção; não proíbe apostas nem atribui automaticamente resultado de proteção.",
+      "destinatario": [
+        "mulheres em risco de violência letal",
+        "Fundo Nacional de Segurança Pública e políticas de prevenção"
+      ],
+      "efeitos": "Destinação de 30% da arrecadação de apostas ao FNSP e ampliação de recursos para prevenção do feminicídio e enfrentamento da violência contra a mulher.",
+      "grupos_canonicos": [
+        "mulheres"
+      ],
+      "tema": "destinação de apostas e prevenção do feminicídio",
+      "resumo": "Altera a Lei nº 13.756, de 12 de dezembro de 2018, para dispor sobre a destinação de recursos da arrecadação de apostas de quota fixa para o Fundo Nacional de Segurança Pública e ampliar o percentual de aplicação em ações de prevenção do feminicídio",
+      "vinculo_versao_evento": {
+        "proposition_id": "2601818",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3080630",
+        "full_text_sha256": "sha256:20be1fced942c7ed21349c62e5655a6de6a1388a5c804b9dbdda3a4f0f7783ba",
+        "events": [],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": {
+        "texto_base_limitacao": "Destinação de 30% da arrecadação de apostas ao FNSP e ampliação de recursos para prevenção do feminicídio e enfrentamento da violência contra a mulher.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a ausência de versão efetivamente votada e de evento de votação."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-4253-2021-2310027",
+      "decision": "withheld",
+      "reason": "Há evento oficial, mas o objeto/versão efetivamente votado não está resolvido no pacote; o texto integral recuperado é a peça autoral/inicial, não prova o texto aprovado. Fail-closed.",
+      "mecanismo": "O mecanismo suspende atos de desocupação e liminares por prazo definido, preservando tentativa de acordo; a versão votada precisa ser identificada.",
+      "destinatario": [
+        "famílias ameaçadas de despejo e ocupantes rurais",
+        "locatários e locadores"
+      ],
+      "efeitos": "Suspensão temporária de desocupações/remissões coletivas urbanas e rurais, liminares de despejo e estímulo a acordos locatícios.",
+      "grupos_canonicos": [
+        "agricultura_familiar_sem_terra"
+      ],
+      "tema": "despejos, locação e emergência sanitária",
+      "resumo": "Altera a Lei nº 14.216, de 7 de outubro de 2021, para prorrogar seus efeitos e incluir a suspensão de despejos em áreas rurais",
+      "vinculo_versao_evento": {
+        "proposition_id": "2310027",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2116348",
+        "full_text_sha256": "sha256:69dbbd46a97cbe9e3c02cb6d740e54e9e5d69db85969e36d658ae808197b364e",
+        "events": [
+          {
+            "id": "2310027-38",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2310027-38",
+            "descricao": "Aprovado o Parecer.",
+            "data": "2024-11-19",
+            "orgao": "CAPADR"
+          }
+        ],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.55,
+      "autocritica": {
+        "texto_base_limitacao": "Suspensão temporária de desocupações/remissões coletivas urbanas e rurais, liminares de despejo e estímulo a acordos locatícios.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a colisão entre o TSE informado e o autor oficial/posição eleitoral."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-5042-2026-2643283",
+      "decision": "withheld",
+      "reason": "Nenhum evento de votação vinculante localizado para esta proposição; autoria e texto inicial não equivalem a decisão legislativa.",
+      "mecanismo": "O mecanismo amplia espaço de execução para despesas qualificadas e receitas próprias; efeitos sobre grupos populacionais são indiretos.",
+      "destinatario": [
+        "autarquias e instituições federais de ensino, ciência e tecnologia",
+        "gestores orçamentários"
+      ],
+      "efeitos": "Exclusão de despesas de capital e receitas próprias de autarquias/instituições científicas de limites de contingenciamento e do arcabouço fiscal.",
+      "grupos_canonicos": [],
+      "tema": "regra fiscal, investimento e universidades",
+      "resumo": "Determina que as despesas de capital e parcela das despesas custeadas com receitas próprias de autarquias federais não sejam alcançadas pelo mecanismo de limitação de empenho e movimentação financeira previsto na LRF, e não sejam incluídas na base de cálculo e nos limites estabelecidos no Novo Arcabouço Fiscal para as despesas primárias do Governo Federal.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2643283",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3171433",
+        "full_text_sha256": "sha256:d954f2357a8211bf1913feec5b90058522cd8240ec452219e46851151b88b05e",
+        "events": [],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": {
+        "texto_base_limitacao": "Exclusão de despesas de capital e receitas próprias de autarquias/instituições científicas de limites de contingenciamento e do arcabouço fiscal.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a ausência de versão efetivamente votada e de evento de votação."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-5076-2025-2570520",
+      "decision": "withheld",
+      "reason": "Eventos localizados são procedurais (requerimento/retirada/regime), sem impacto substantivo atribuível; não herdar o impacto do projeto.",
+      "mecanismo": "O mecanismo é alocação orçamentária da receita; não permite atribuir impacto direto a grupo canônico específico.",
+      "destinatario": [
+        "fundos e políticas públicas financiados pela arrecadação",
+        "operadores e apostadores"
+      ],
+      "efeitos": "Redistribuição das receitas de apostas e loterias entre seguridade, esporte, segurança e demais destinações legais.",
+      "grupos_canonicos": [],
+      "tema": "apostas, fundos públicos e segurança",
+      "resumo": "Altera a Lei nº 13.756, de 12 de dezembro de 2018, que Dispõe sobre o Fundo Nacional de Segurança Pública (FNSP), sobre a destinação do produto da arrecadação das loterias e sobre a promoção comercial e a modalidade lotérica denominada apostas de quota fixa; altera as Leis n º 8.212, de 24 de julho de 1991, 9.615, de 24 março de 1998, 10.891, de 9 de julho de 2004, 11.473, de 10 de maio de 2007, e 13.675, de 11 de junho de 2018; e revoga dispositivos das Leis n º 6.168, de 9 de dezembro de 1974, 6.717, de 12 de novembro de 1979, 8.313, de 23 de dezembro de 1991, 9.649, de 27 de maio de 1998, 10.260, de 12 de julho de 2001, 11.345, de 14 de setembro de 2006, e 13.155, de 4 de agosto de 2015, da Lei Complementar nº 79, de 7 de janeiro de 1994, e dos Decretos-Leis n º 204, de 27 de fevereiro de 1967, e 594, de 27 de maio de 1969, as Leis n º 6.905, de 11 de maio de 1981, 9.092, de 12 de setembro de 1995, 9.999, de 30 de agosto de 2000, 10.201, de 14 de fevereiro de 2001, e 10.746, de 10 de outubro de 2003, e os Decretos-Leis n º 1.405, de 20 de junho de 1975, e 1.923, de 20 de janeiro de 1982.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2570520",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3019259",
+        "full_text_sha256": "sha256:a59a9e5429368b4adfdfd37328d38d2e2aefe40e45852ab20d3000540cce99cd",
+        "events": [
+          {
+            "id": "2573899-4",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2573899-4",
+            "descricao": "Aprovado o Requerimento.",
+            "data": "2025-10-22",
+            "orgao": "CFT"
+          }
+        ],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.55,
+      "autocritica": {
+        "texto_base_limitacao": "Redistribuição das receitas de apostas e loterias entre seguridade, esporte, segurança e demais destinações legais.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a ausência de versão efetivamente votada e de evento de votação."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-5384-2020-2266069",
+      "decision": "withheld",
+      "reason": "Há evento oficial, mas o objeto/versão efetivamente votado não está resolvido no pacote; o texto integral recuperado é a peça autoral/inicial, não prova o texto aprovado. Fail-closed.",
+      "mecanismo": "O mecanismo combina reserva de vagas permanente e assistência para permanência; o evento oficial registra substitutivo/emendas/redação final, não o texto autoral fornecido.",
+      "destinatario": [
+        "estudantes beneficiários de ações afirmativas",
+        "estudantes negros e de escolas públicas, conforme critérios legais"
+      ],
+      "efeitos": "Torna permanente a reserva de vagas em instituições federais e garante assistência estudantil a estudantes que necessitem para concluir o curso.",
+      "grupos_canonicos": [
+        "estudantes",
+        "populacao_negra_periferica"
+      ],
+      "tema": "ações afirmativas e assistência estudantil",
+      "resumo": "Altera a Lei nº 12.711, de 29 de agosto de 2012, para tornar permanente a reserva de vagas nas universidades federais e nas instituições federais de ensino técnico de nível médio.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2266069",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1946595",
+        "full_text_sha256": "sha256:9982860a9d47da1c0c177639f0b2167079ae33d023bcd3c5fe6f8fb6c644b83a",
+        "events": [
+          {
+            "id": "2266069-114",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2266069-114",
+            "descricao": "Aprovada a Redação Final assinada pela Relatora, Dep. Dandara (PT-MG).",
+            "data": "2023-08-09",
+            "orgao": "PLEN"
+          },
+          {
+            "id": "2266069-112",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2266069-112",
+            "descricao": "Rejeitadas as Emendas de Plenário ao Substitutivo com parecer pela rejeição.",
+            "data": "2023-08-09",
+            "orgao": "PLEN"
+          },
+          {
+            "id": "2266069-109",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2266069-109",
+            "descricao": "Aprovado o Substitutivo ao Projeto de Lei nº 5.384, de 2020, adotado pela Relatora da Comissão de Direitos Humanos, Minorias e Igualdade Racial, ressalvados os destaques.",
+            "data": "2023-08-09",
+            "orgao": "PLEN"
+          },
+          {
+            "id": "2367482-2",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2367482-2",
+            "descricao": "Aprovado.",
+            "data": "2023-06-14",
+            "orgao": "CE"
+          },
+          {
+            "id": "2266069-24",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2266069-24",
+            "descricao": "Aprovado o Parecer.",
+            "data": "2021-05-11",
+            "orgao": "CPD"
+          }
+        ],
+        "resolved": false
+      },
+      "score_eligible": false,
+      "confianca": 0.55,
+      "autocritica": {
+        "texto_base_limitacao": "Torna permanente a reserva de vagas em instituições federais e garante assistência estudantil a estudantes que necessitem para concluir o curso.",
+        "riscos": [
+          "texto autoral pode ter sido substituído ou emendado",
+          "ementa/autoria não demonstram resultado legislativo",
+          "grupo canônico pode refletir efeito textual, mas não habilita score sem evento/versionamento"
+        ],
+        "counterfactual": "Se o evento vinculante e a versão votada forem confirmados como idênticos ao texto analisado, reavaliar direção, severidade e defending_vote; até lá manter withheld."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [],
+        "counterargument": "A fonte oficial de autores comprova que os IDs de deputados listados assinam/propõem a proposição e a fonte de inteiro teor é acessível; isso não supera a colisão entre o TSE informado e o autor oficial/posição eleitoral."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    }
+  ]
+}
