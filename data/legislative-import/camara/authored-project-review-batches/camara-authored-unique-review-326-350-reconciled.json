@@ -1,0 +1,1032 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:req-1144-2023-2355760",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534897",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 187,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002534897",
+            "camara_deputado_id": "160673",
+            "issue": "tse_camara_identity_pending"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1147-2023-2355796",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534897,210002547819",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 201,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002534897",
+            "camara_deputado_id": "160673",
+            "issue": "tse_camara_identity_pending"
+          },
+          {
+            "tse_candidate_id": "210002547819",
+            "camara_deputado_id": "156190",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1193-2023-2356433",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534897,210002547816",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 229,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002534897",
+            "camara_deputado_id": "160673",
+            "issue": "tse_camara_identity_pending"
+          },
+          {
+            "tse_candidate_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1234-2023-2357036",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534897,210002538543",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 214,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002534897",
+            "camara_deputado_id": "160673",
+            "issue": "tse_camara_identity_pending"
+          },
+          {
+            "tse_candidate_id": "210002538543",
+            "camara_deputado_id": "103758",
+            "issue": "tse_camara_identity_pending"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1308-2024-2428895",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534589,210002536921,210002547816,210002547857",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 195,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002547857",
+            "camara_deputado_id": "220552",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "tse_candidate_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "tse_candidate_id": "210002534589",
+            "camara_deputado_id": "221378",
+            "issue": "tse_camara_identity_pending"
+          },
+          {
+            "tse_candidate_id": "210002536921",
+            "camara_deputado_id": "163321",
+            "issue": "tse_camara_identity_pending"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1319-2023-2358602",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534897,210002547816,210002547819",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 200,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002534897",
+            "camara_deputado_id": "160673",
+            "issue": "tse_camara_identity_pending"
+          },
+          {
+            "tse_candidate_id": "210002547819",
+            "camara_deputado_id": "156190",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "tse_candidate_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1335-2023-2358671",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534897,210002538543,210002547816",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 202,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002534897",
+            "camara_deputado_id": "160673",
+            "issue": "tse_camara_identity_pending"
+          },
+          {
+            "tse_candidate_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "tse_candidate_id": "210002538543",
+            "camara_deputado_id": "103758",
+            "issue": "tse_camara_identity_pending"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-138-2022-2314821",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534272,210002534897,210002547816,210002547819",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 198,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002534272",
+            "camara_deputado_id": "75431",
+            "issue": "tse_camara_identity_pending"
+          },
+          {
+            "tse_candidate_id": "210002534897",
+            "camara_deputado_id": "160673",
+            "issue": "tse_camara_identity_pending"
+          },
+          {
+            "tse_candidate_id": "210002547819",
+            "camara_deputado_id": "156190",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "tse_candidate_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1812-2023-2366330",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534589",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 196,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002534589",
+            "camara_deputado_id": "221378",
+            "issue": "tse_camara_identity_pending"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1813-2023-2366335",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534589",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 189,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002534589",
+            "camara_deputado_id": "221378",
+            "issue": "tse_camara_identity_pending"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-182-2023-2348861",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534897,210002547816",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 198,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002534897",
+            "camara_deputado_id": "160673",
+            "issue": "tse_camara_identity_pending"
+          },
+          {
+            "tse_candidate_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1832-2023-2366655",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534897",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 197,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002534897",
+            "camara_deputado_id": "160673",
+            "issue": "tse_camara_identity_pending"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2060-2023-2370973",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534897,210002538543,210002547816",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 182,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002534897",
+            "camara_deputado_id": "160673",
+            "issue": "tse_camara_identity_pending"
+          },
+          {
+            "tse_candidate_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "tse_candidate_id": "210002538543",
+            "camara_deputado_id": "103758",
+            "issue": "tse_camara_identity_pending"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2066-2023-2371042",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534897,210002538543",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 203,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002534897",
+            "camara_deputado_id": "160673",
+            "issue": "tse_camara_identity_pending"
+          },
+          {
+            "tse_candidate_id": "210002538543",
+            "camara_deputado_id": "103758",
+            "issue": "tse_camara_identity_pending"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2104-2023-2371565",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002538543,210002547816,210002547819",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 203,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002547819",
+            "camara_deputado_id": "156190",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "tse_candidate_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "tse_candidate_id": "210002538543",
+            "camara_deputado_id": "103758",
+            "issue": "tse_camara_identity_pending"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2208-2024-2440742",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534589",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 201,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002534589",
+            "camara_deputado_id": "221378",
+            "issue": "tse_camara_identity_pending"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2239-2023-2373387",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534897,210002547816",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 211,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002534897",
+            "camara_deputado_id": "160673",
+            "issue": "tse_camara_identity_pending"
+          },
+          {
+            "tse_candidate_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2247-2023-2373820",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534589",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 196,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002534589",
+            "camara_deputado_id": "221378",
+            "issue": "tse_camara_identity_pending"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2269-2023-2374181",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002547816",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 203,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2333-2023-2374917",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534897,210002547816,210002547819,210002547857",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 205,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002547857",
+            "camara_deputado_id": "220552",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "tse_candidate_id": "210002534897",
+            "camara_deputado_id": "160673",
+            "issue": "tse_camara_identity_pending"
+          },
+          {
+            "tse_candidate_id": "210002547819",
+            "camara_deputado_id": "156190",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "tse_candidate_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2805-2023-2383212",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534589",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 188,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002534589",
+            "camara_deputado_id": "221378",
+            "issue": "tse_camara_identity_pending"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-284-2023-2349381",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534897,210002547816",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 198,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002534897",
+            "camara_deputado_id": "160673",
+            "issue": "tse_camara_identity_pending"
+          },
+          {
+            "tse_candidate_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-3031-2025-2538982",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002536921,210002547816,210002547819,210002547857",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 199,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002547857",
+            "camara_deputado_id": "220552",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "tse_candidate_id": "210002547819",
+            "camara_deputado_id": "156190",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "tse_candidate_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "tse_candidate_id": "210002536921",
+            "camara_deputado_id": "163321",
+            "issue": "tse_camara_identity_pending"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-3259-2023-2389672",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534589",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 184,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002534589",
+            "camara_deputado_id": "221378",
+            "issue": "tse_camara_identity_pending"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-333-2023-2349731",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002534897,210002547819",
+        "voting_event binding (official /votacoes returned empty list)",
+        "version effectively voted / version-to-event binding"
+      ],
+      "counterargument": "Autoria e bytes/hash do documento integral foram reproduzidos em fontes oficiais; o REQ pode ser um registro administrativo sem votação de mérito. Isso sustenta o fato de autoria, mas não resolve o vínculo exato TSE↔deputado nem cria evento/versão votada.",
+      "identity": null,
+      "authorship": {
+        "packet_role_rows": 11,
+        "official_authors_total": 224,
+        "selected_ids_present": true,
+        "identity_blockers": [
+          {
+            "tse_candidate_id": "210002534897",
+            "camara_deputado_id": "160673",
+            "issue": "tse_camara_identity_pending"
+          },
+          {
+            "tse_candidate_id": "210002547819",
+            "camara_deputado_id": "156190",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": null,
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    }
+  ]
+}
