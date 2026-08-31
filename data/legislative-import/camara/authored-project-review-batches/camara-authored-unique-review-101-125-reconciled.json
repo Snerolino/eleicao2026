@@ -1,0 +1,1219 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:pec-51-2024-2479738",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "normativo potencial, ainda dependente de regulamentação e do evento/versão vinculante.",
+      "destinatario": "Motoristas profissionais empregados no transporte rodoviário de cargas e passageiros; empregadores e usuários do transporte seriam afetados indiretamente pela regulamentação futura.",
+      "efeitos": "A PEC acrescenta ao art. 7º da Constituição autorização/mandato para lei estabelecer condições especiais sobre jornada, tempo à disposição, espera em carga/descarga e intervalos. O texto também cria regra transitória até a lei regulamentadora; não fixa ainda a jornada concreta.",
+      "grupos_canonicos": [
+        "trabalhadores_formais"
+      ],
+      "tema": "trabalho e condições especiais de motoristas",
+      "resumo": "A PEC acrescenta ao art. 7º da Constituição autorização/mandato para lei estabelecer condições especiais sobre jornada, tempo à disposição, espera em carga/descarga e intervalos. O texto também cria regra transitória até a lei regulamentadora; não fixa ainda a jornada concreta.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2479738",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2841251",
+        "text_bytes": 132285,
+        "text_sha256": "sha256:d2327e076241e4649ceb549a785c679c0a90c0001d2019e0ff4da3dcdb873c06",
+        "event_count_api": 1,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.93,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "voto nominal individual e objeto vinculante precisam ser auditados; o endpoint lista eventos, mas não prova que o texto integral fornecido foi o objeto"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto. Há ainda divergência de situação: o pacote marca tramitando, enquanto a API oficial indica \"Aguardando Encaminhamento\"."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-1564-2024-2431026",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "normativo potencial, ainda dependente de regulamentação e do evento/versão vinculante.",
+      "destinatario": "Consumidores de serviços, reservas e eventos; prestadores turísticos, sociedades empresárias e artistas/profissionais contratados também são diretamente regulados.",
+      "efeitos": "O PL disciplina cancelamentos/adiamentos causados por desastres naturais: substitui reembolso imediato por remarcação ou crédito sem custo adicional, fixa prazos e preserva penalidades em caso de má-fé. O mecanismo redistribui risco de caixa entre consumidores e fornecedores e alcança artistas e eventos culturais.",
+      "grupos_canonicos": [],
+      "tema": "turismo, cultura e proteção contratual do consumidor",
+      "resumo": "O PL disciplina cancelamentos/adiamentos causados por desastres naturais: substitui reembolso imediato por remarcação ou crédito sem custo adicional, fixa prazos e preserva penalidades em caso de má-fé. O mecanismo redistribui risco de caixa entre consumidores e fornecedores e alcança artistas e eventos culturais.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2431026",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2416719",
+        "text_bytes": 110825,
+        "text_sha256": "sha256:9dd5c1fbada12ed33d229eb0643190ccae472134dc7cddad41c0226488b284fd",
+        "event_count_api": 9,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.93,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "voto nominal individual e objeto vinculante precisam ser auditados; o endpoint lista eventos, mas não prova que o texto integral fornecido foi o objeto"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto. Há ainda divergência de situação: o pacote marca tramitando, enquanto a API oficial indica \"Transformado em Norma Jurídica\"."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rcp-1-2022-2336167",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Câmara dos Deputados, membros e órgãos de apoio da CPI; eleitores e institutos de pesquisa são objetos investigativos, não destinatários de comando material.",
+      "efeitos": "A resolução proposta institui CPI por 120 dias, prorrogável até metade, com 23 titulares/suplentes, recursos administrativos e assessoramento. É mecanismo de investigação parlamentar, sem alterar regras eleitorais ou pesquisas.",
+      "grupos_canonicos": [],
+      "tema": "fiscalização eleitoral e instituições de pesquisa",
+      "resumo": "A resolução proposta institui CPI por 120 dias, prorrogável até metade, com 23 titulares/suplentes, recursos administrativos e assessoramento. É mecanismo de investigação parlamentar, sem alterar regras eleitorais ou pesquisas.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2336167",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2211248",
+        "text_bytes": 605900,
+        "text_sha256": "sha256:559a5f1bad90de1dba499ff182b50b78e050b6eacd1abad11c8a3506f0eee247",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.93,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rcp-3-2023-2351529",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Câmara, membros e órgãos de apoio da CPI; proprietários, movimentos e financiadores seriam objeto de investigação, não destinatários de obrigação criada.",
+      "efeitos": "O requerimento pede CPI de 27 titulares/suplentes e prazo de até 120 dias para investigar atuação, propósito e financiadores do MST. A justificativa discute propriedade e função social, mas o dispositivo é investigativo.",
+      "grupos_canonicos": [],
+      "tema": "reforma agrária, propriedade e investigação parlamentar",
+      "resumo": "O requerimento pede CPI de 27 titulares/suplentes e prazo de até 120 dias para investigar atuação, propósito e financiadores do MST. A justificativa discute propriedade e função social, mas o dispositivo é investigativo.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2351529",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2244324",
+        "text_bytes": 286040,
+        "text_sha256": "sha256:e2e1a0d45e239a4a841652b9f4494ede21af5b2ef69a30286a2f5c38ccff6c51",
+        "event_count_api": 87,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.93,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "voto nominal individual e objeto vinculante precisam ser auditados; o endpoint lista eventos, mas não prova que o texto integral fornecido foi o objeto"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto. Há ainda divergência de situação: o pacote marca tramitando, enquanto a API oficial indica \"<Não Definido>\"."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1132-2026-2604857",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Parlamentares e órgãos legislativos; os setores econômicos aparecem como objetos de acompanhamento, não como destinatários normativos diretos.",
+      "efeitos": "O requerimento cria/instala uma frente parlamentar para acompanhar e articular o acordo UE–Mercosul. O texto descreve possíveis efeitos tarifários, comerciais, regulatórios, sociais e ambientais, mas não altera tarifas nem cria direitos ou obrigações.",
+      "grupos_canonicos": [],
+      "tema": "integração econômica e comércio exterior",
+      "resumo": "O requerimento cria/instala uma frente parlamentar para acompanhar e articular o acordo UE–Mercosul. O texto descreve possíveis efeitos tarifários, comerciais, regulatórios, sociais e ambientais, mas não altera tarifas nem cria direitos ou obrigações.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2604857",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3088331",
+        "text_bytes": 139184,
+        "text_sha256": "sha256:ea21f4c59035b9641e8775ed6297430283eb4435337a97d44a64b2039a123ffc",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto. Há ainda divergência de situação: o pacote marca tramitando, enquanto a API oficial indica \"Aguardando Despacho do Presidente da Câmara dos Deputados\"."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1190-2025-2490648",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Parlamentares e órgãos legislativos; crianças e adolescentes são tema declarado, não destinatários de obrigação criada pelo requerimento.",
+      "efeitos": "O requerimento pede registro de frente parlamentar e anexa ata/estatuto de apoio à adoção, acolhimento, apadrinhamento e proteção. O efeito jurídico imediato é apenas organizacional.",
+      "grupos_canonicos": [],
+      "tema": "adoção e proteção de crianças e adolescentes",
+      "resumo": "O requerimento pede registro de frente parlamentar e anexa ata/estatuto de apoio à adoção, acolhimento, apadrinhamento e proteção. O efeito jurídico imediato é apenas organizacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2490648",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2874369",
+        "text_bytes": 139495,
+        "text_sha256": "sha256:5359c82c176ba0ab89439855034ac42151ee19b23649671dc664fc1063648fee",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto. Há ainda divergência de situação: o pacote marca tramitando, enquanto a API oficial indica \"Aguardando Despacho do Presidente da Câmara dos Deputados\"."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1387-2023-2359769",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Parlamentares, sindicatos e entidades que a frente pretende articular; segurados e trabalhadores são objeto político, sem direito novo no requerimento.",
+      "efeitos": "O texto registra uma frente para defender direitos previdenciários e acompanhar proposições. A finalidade programática não implementa reforma, benefício ou financiamento.",
+      "grupos_canonicos": [],
+      "tema": "previdência social e trabalho",
+      "resumo": "O texto registra uma frente para defender direitos previdenciários e acompanhar proposições. A finalidade programática não implementa reforma, benefício ou financiamento.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2359769",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2267692",
+        "text_bytes": 302416,
+        "text_sha256": "sha256:3a747a3de88803f70d053992d2b7654f7e6b56e8b58b157e64ec87dca420be05",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1391-2024-2430357",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Parlamentares e órgãos legislativos; a categoria QESA é objeto temático, sem efeito normativo direto no registro.",
+      "efeitos": "O inteiro teor formaliza criação/registro de frente parlamentar e remete a ata, estatuto e assinaturas. Não há comando legislativo que altere carreira, remuneração ou direitos.",
+      "grupos_canonicos": [],
+      "tema": "direitos sociais e carreira militar",
+      "resumo": "O inteiro teor formaliza criação/registro de frente parlamentar e remete a ata, estatuto e assinaturas. Não há comando legislativo que altere carreira, remuneração ou direitos.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2430357",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2415018",
+        "text_bytes": 144004,
+        "text_sha256": "sha256:b53b78783b5ac5a67b63f9f8e6a71d1e6ae863a8c00bd3e1630ec52c5b140b01",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1542-2023-2362318",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Parlamentares e setor produtivo do bambu como interlocutor; não há destinatário populacional direto.",
+      "efeitos": "O requerimento registra frente de apoio ao bambu, com atuação de articulação e debate. O estatuto/anexos não convertem a iniciativa em política vinculante.",
+      "grupos_canonicos": [],
+      "tema": "agricultura e desenvolvimento setorial",
+      "resumo": "O requerimento registra frente de apoio ao bambu, com atuação de articulação e debate. O estatuto/anexos não convertem a iniciativa em política vinculante.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2362318",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2273017",
+        "text_bytes": 112489,
+        "text_sha256": "sha256:52dc79788fad8df9546f0c17b5c8d9c4a89d8f6012e36e6241efeb02b78e0712",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1586-2024-2433341",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Parlamentares e Mesa Diretora; nenhum grupo populacional recebe efeito direto.",
+      "efeitos": "O texto pede inclusão de coautoria no PL 1564/2024. É ato de autoria/tramitação, não aprovação do PL nem implementação de suas medidas.",
+      "grupos_canonicos": [],
+      "tema": "tramitação legislativa e autoria",
+      "resumo": "O texto pede inclusão de coautoria no PL 1564/2024. É ato de autoria/tramitação, não aprovação do PL nem implementação de suas medidas.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2433341",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2423092",
+        "text_bytes": 113232,
+        "text_sha256": "sha256:9db2d0ecf30767b809ecf9a0d20cf9a2257fd4f7cf6788691c264555f0ea606f",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto. Há ainda divergência de situação: o pacote marca arquivado/tramitando conforme o registro de autoria, enquanto a API oficial indica \"Tramitação Finalizada\"."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1620-2023-2363320",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Parlamentares, setor da construção e órgãos públicos como interlocutores; não há destinatário populacional direto.",
+      "efeitos": "O requerimento registra frente parlamentar sobre BIM. A finalidade de estimular debate e políticas futuras não produz obrigação ou benefício imediato.",
+      "grupos_canonicos": [],
+      "tema": "tecnologia da construção e administração pública",
+      "resumo": "O requerimento registra frente parlamentar sobre BIM. A finalidade de estimular debate e políticas futuras não produz obrigação ou benefício imediato.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2363320",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2274877",
+        "text_bytes": 176834,
+        "text_sha256": "sha256:aad4f14c2bbe90ad38fa79353d61b7bbb5ca00abe877a1325d40f6085a60495d",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1647-2024-2434113",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Parlamentares e atores institucionais; o requerimento não cria direito novo nem restringe conduta.",
+      "efeitos": "O texto pede instalação de frente parlamentar e invoca liberdade de expressão. O efeito imediato é institucional/procedimental.",
+      "grupos_canonicos": [],
+      "tema": "liberdade de expressão e comunicação",
+      "resumo": "O texto pede instalação de frente parlamentar e invoca liberdade de expressão. O efeito imediato é institucional/procedimental.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2434113",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2424274",
+        "text_bytes": 167678,
+        "text_sha256": "sha256:db06eb586568df130c442a02b6ece9fddcc56fc35a620601940d00596d055bc0",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1655-2023-2364002",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Parlamentares e cooperativas como interlocutores; não há efeito normativo direto para cooperados.",
+      "efeitos": "O requerimento registra a Frencoop e seu debate de pautas. Registro e estatuto organizam a atuação parlamentar, sem alterar regime jurídico.",
+      "grupos_canonicos": [],
+      "tema": "cooperativismo e economia associativa",
+      "resumo": "O requerimento registra a Frencoop e seu debate de pautas. Registro e estatuto organizam a atuação parlamentar, sem alterar regime jurídico.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2364002",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2276116",
+        "text_bytes": 124263,
+        "text_sha256": "sha256:e20ff55c6a56a2e6bc910c6b5ed24202e7f356ec704098426e5d9018f92ab56a",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-178-2023-2348845",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Parlamentares e empreendedores como interlocutores; não há destinatário populacional direto.",
+      "efeitos": "O requerimento registra frente parlamentar do empreendedorismo. A articulação política futura não constitui incentivo, obrigação ou benefício legal.",
+      "grupos_canonicos": [],
+      "tema": "empreendedorismo e atividade econômica",
+      "resumo": "O requerimento registra frente parlamentar do empreendedorismo. A articulação política futura não constitui incentivo, obrigação ou benefício legal.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2348845",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2235510",
+        "text_bytes": 170278,
+        "text_sha256": "sha256:fa18fc1cdee94b6e1abe034d8d824fa33462a735d674d2472f036bc648e5a844",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1824-2023-2366550",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Parlamentares e guardas municipais como interlocutores; não há alteração direta de carreira, dever ou remuneração.",
+      "efeitos": "O pedido de registro da frente em defesa das guardas municipais tem efeito organizacional e de agenda, não normativo.",
+      "grupos_canonicos": [],
+      "tema": "segurança pública e guardas municipais",
+      "resumo": "O pedido de registro da frente em defesa das guardas municipais tem efeito organizacional e de agenda, não normativo.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2366550",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2282076",
+        "text_bytes": 167028,
+        "text_sha256": "sha256:f3c4f65adf03804a8b14263e593f4d593742011a30bb13d7985527af3ac6b781",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1842-2023-2366769",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Parlamentares e entidades da sociedade civil como interlocutores; pessoas LGBTQIA não recebem direito ou proteção diretamente criada pelo registro.",
+      "efeitos": "O texto formaliza uma frente parlamentar temática. O conteúdo programático pode orientar debates, mas não cria regra aplicável à população.",
+      "grupos_canonicos": [],
+      "tema": "direitos LGBTI+",
+      "resumo": "O texto formaliza uma frente parlamentar temática. O conteúdo programático pode orientar debates, mas não cria regra aplicável à população.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2366769",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2282554",
+        "text_bytes": 131753,
+        "text_sha256": "sha256:3c45dc0abc2b63e84d14d6b3d88ce5d61f58a73f46ac099d57244cba67e89196",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1935-2023-2369023",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Parlamentares, entidades e cidadãos como possíveis interlocutores; não há destinatário populacional direto.",
+      "efeitos": "O requerimento registra a Frente Parlamentar Prosul e prevê articulação cultural, social e comercial. São finalidades institucionais sem comando vinculante.",
+      "grupos_canonicos": [],
+      "tema": "integração sul-americana e cooperação internacional",
+      "resumo": "O requerimento registra a Frente Parlamentar Prosul e prevê articulação cultural, social e comercial. São finalidades institucionais sem comando vinculante.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2369023",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2288037",
+        "text_bytes": 473263,
+        "text_sha256": "sha256:ff0df1286631f2c03c9207a6cedde2096a032773de1acc9800fc573c9e4cc614",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2081-2023-2371176",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Parlamentares, comunidade escolar e entidades rurais como interlocutores; estudantes não recebem direito novo pelo registro.",
+      "efeitos": "O requerimento reinstala frente parlamentar pela educação do campo e anexa estatuto/adesões. O efeito é de coordenação e debate parlamentar.",
+      "grupos_canonicos": [],
+      "tema": "educação do campo",
+      "resumo": "O requerimento reinstala frente parlamentar pela educação do campo e anexa estatuto/adesões. O efeito é de coordenação e debate parlamentar.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2371176",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2292626",
+        "text_bytes": 138814,
+        "text_sha256": "sha256:79ddb01f259665b80bad5f2812192cb8d38c8decd4db92260646876a78004bfa",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-214-2023-2349014",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Parlamentares e entidades de defesa do consumidor; consumidores são tema da frente, não destinatários de regra criada.",
+      "efeitos": "O pedido apenas registra/reinstala frente parlamentar de defesa do consumidor, sem alterar relações de consumo ou impor deveres a fornecedores.",
+      "grupos_canonicos": [],
+      "tema": "defesa do consumidor",
+      "resumo": "O pedido apenas registra/reinstala frente parlamentar de defesa do consumidor, sem alterar relações de consumo ou impor deveres a fornecedores.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2349014",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2236169",
+        "text_bytes": 166740,
+        "text_sha256": "sha256:644b4c52e7027136a4c5b839b3163534940a403528594cfabb0d39dd033af0f4",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2167-2023-2372444",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Parlamentares, academia, sociedade e setores produtivos como interlocutores; bens culturais são objeto, não destinatário populacional direto.",
+      "efeitos": "O requerimento cria/registro de frente para discutir preservação e acompanhar políticas. A proteção concreta dependeria de leis ou atos posteriores.",
+      "grupos_canonicos": [],
+      "tema": "patrimônio histórico e cultural",
+      "resumo": "O requerimento cria/registro de frente para discutir preservação e acompanhar políticas. A proteção concreta dependeria de leis ou atos posteriores.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2372444",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2296278",
+        "text_bytes": 674377,
+        "text_sha256": "sha256:2f180f37e3f6e366be9996742e04c576e7e47f343de69ee00996d7bc808bfa30",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto. Há ainda divergência de situação: o pacote marca tramitando, enquanto a API oficial indica \"Aguardando Despacho do Presidente da Câmara dos Deputados\"."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2196-2023-2372859",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Parlamentares, comunidade escolar e sociedade; estudantes não são diretamente regulados pelo registro.",
+      "efeitos": "O inteiro teor registra frente parlamentar e justifica ensino sem doutrinação, diversidade e evidências. Não há norma educacional operacional no requerimento.",
+      "grupos_canonicos": [],
+      "tema": "educação e política curricular",
+      "resumo": "O inteiro teor registra frente parlamentar e justifica ensino sem doutrinação, diversidade e evidências. Não há norma educacional operacional no requerimento.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2372859",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2297326",
+        "text_bytes": 115601,
+        "text_sha256": "sha256:72fd83c07bedac76264cc76444d13d63f5bc75031c47a0c7999c8a746fda111d",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2199-2023-2372880",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Parlamentares, entidades e setores econômicos como interlocutores; não há destinatário populacional direto.",
+      "efeitos": "O requerimento registra a Frente Parlamentar do Mercosul. O ato organiza debate e representação, sem alterar comércio ou relações internacionais.",
+      "grupos_canonicos": [],
+      "tema": "integração regional e Mercosul",
+      "resumo": "O requerimento registra a Frente Parlamentar do Mercosul. O ato organiza debate e representação, sem alterar comércio ou relações internacionais.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2372880",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2297414",
+        "text_bytes": 176044,
+        "text_sha256": "sha256:56de25b3b88bab83bd4e9a645acb0ff6a4e87443a92b1d4276595f796b4b09d4",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2468-2023-2377692",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Parlamentares e indústria nacional como interlocutores; trabalhadores e consumidores não recebem efeito direto pelo registro.",
+      "efeitos": "O requerimento recria/atualiza frente parlamentar da indústria de máquinas, voltada a competitividade, reindustrialização e inovação. São objetivos de advocacy, não comandos normativos.",
+      "grupos_canonicos": [],
+      "tema": "indústria, inovação e máquinas e equipamentos",
+      "resumo": "O requerimento recria/atualiza frente parlamentar da indústria de máquinas, voltada a competitividade, reindustrialização e inovação. São objetivos de advocacy, não comandos normativos.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2377692",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2309994",
+        "text_bytes": 212394,
+        "text_sha256": "sha256:c7d8542de7cec451b225155533aa5893700989c35da8f84ccbb165fbf97a5e62",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-252-2023-2349290",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Parlamentares, entidades e moradores de favelas/assentamentos como público político da agenda; o registro não concede moradia, saneamento ou regularização.",
+      "efeitos": "O texto contém ata e estatuto de frente voltada a habitação social, regularização, urbanização e saneamento. A frente pode articular políticas, mas o requerimento não as implementa.",
+      "grupos_canonicos": [],
+      "tema": "habitação, regularização fundiária, urbanização e saneamento",
+      "resumo": "O texto contém ata e estatuto de frente voltada a habitação social, regularização, urbanização e saneamento. A frente pode articular políticas, mas o requerimento não as implementa.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2349290",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2241778",
+        "text_bytes": 495549,
+        "text_sha256": "sha256:f8bdeda7d2ddbedebec58cc64e6f52f6e78e5cabcb20f946b659f71ffdd272a8",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-256-2023-2349306",
+      "decision": "withheld",
+      "reason": "withheld: a autoria/coautoria e o texto integral comprovam a proposição, mas não comprovam que o texto hashado foi o objeto exato do evento nem permitem atribuir o voto individual; score retido fail-closed.",
+      "mecanismo": "procedimental/institucional; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "destinatario": "Parlamentares, entidades e comunidades afetadas como interlocutores; não há direito urbanístico ou fundiário diretamente criado.",
+      "efeitos": "O texto integral inclui instalação, ata e estatuto da frente FPDUS. Seus objetivos são debate e assessoramento parlamentar; efeitos materiais dependem de atos legislativos posteriores.",
+      "grupos_canonicos": [],
+      "tema": "regularização fundiária e desenvolvimento urbano",
+      "resumo": "O texto integral inclui instalação, ata e estatuto da frente FPDUS. Seus objetivos são debate e assessoramento parlamentar; efeitos materiais dependem de atos legislativos posteriores.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2349306",
+        "version_type": "texto_integral_oficial_fornecido",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2237319",
+        "text_bytes": 332127,
+        "text_sha256": "sha256:6bf4130c9e584f8fe282a30d6e5d36594f944ee2791165be88570117cc0bfd1c",
+        "event_count_api": 0,
+        "event_id": null,
+        "object_voted": null,
+        "binding_status": "missing_exact_version_event_binding",
+        "event_source_url": null
+      },
+      "score_eligible": false,
+      "confianca": 0.96,
+      "autocritica": {
+        "contra_argumento_mais_forte": "O texto integral pode sustentar uma classificação material ou de agenda, e no PL 1564 a matéria chegou a norma jurídica; isso não prova que o evento/versão analisado seja o texto hashado nem o voto nominal do candidato.",
+        "evidencia_contraria": [
+          "há texto integral oficial hashado e a API lista eventos em alguns casos",
+          "justificativas/estatutos descrevem efeitos ou agendas materiais"
+        ],
+        "risco_atribuicao_voto": "alto: autoria não equivale a voto; sem objeto exato e vínculo evento-versão, SIM/NÃO não é pontuável.",
+        "alternativa": "aguardar registro oficial do evento, versão efetivamente votada e voto nominal individual; então reavaliar mérito e grupos.",
+        "veredicto": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "médio-alto",
+        "missing_sources": [
+          "crosswalk exato candidate_tse_id ↔ deputado_id (nome/partido/UF e fonte por candidato)",
+          "versão efetivamente submetida ao evento (substitutivos/emendas/redação final, com version_id e hash)",
+          "registro do objeto exato de cada evento e sua ligação à versão",
+          "não há votação registrada para a proposição no endpoint /votacoes; falta evidência de evento nominal/substantivo"
+        ],
+        "counterargument": "A melhor leitura contrária é tratar o manifesto de autoria e o texto oficial hashado como suficientes para publicar apenas um registro factual de autoria, sem score. Ela não supera o bloqueio editorial: o pacote pede validar versão/evento, e autoria/coautoria não prova aprovação, mérito ou posição de voto."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    }
+  ]
+}
