@@ -1,0 +1,470 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:emc-1-0-2624861",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "alto",
+      "risk": "alto",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão",
+        "ano legislativo utilizável da emenda (API e pacote retornam ano=0)"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-10-0-2566578",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "alto",
+      "risk": "alto",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão",
+        "ano legislativo utilizável da emenda (API e pacote retornam ano=0)"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-2-0-2624863",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "alto",
+      "risk": "alto",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão",
+        "ano legislativo utilizável da emenda (API e pacote retornam ano=0)"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2684-2023-2381040",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "médio",
+      "risk": "médio",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2799-2023-2382838",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "médio",
+      "risk": "médio",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2839-2023-2384511",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "médio",
+      "risk": "médio",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-3235-2023-2389501",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "médio",
+      "risk": "médio",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-3292-2023-2390356",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "médio",
+      "risk": "médio",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-3304-2023-2390618",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "médio",
+      "risk": "médio",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-3317-2023-2391419",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "médio",
+      "risk": "médio",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-3440-2023-2394259",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "médio",
+      "risk": "médio",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-362-2023-2349813",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "médio",
+      "risk": "médio",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-3842-2025-2562337",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "médio",
+      "risk": "médio",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-4006-2023-2405601",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "médio",
+      "risk": "médio",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-4119-2025-2567230",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "médio",
+      "risk": "médio",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-417-2023-2350099",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "médio",
+      "risk": "médio",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-4202-2023-2409873",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "médio",
+      "risk": "médio",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-4248-2023-2411961",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "alto",
+      "risk": "alto",
+      "missing_sources": [
+        "voto nominal individual do candidato no evento",
+        "objeto/votação substantiva exata (o evento localizado é requerimento de urgência)",
+        "versão efetivamente votada e leitura semântica do inteiro teor"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-4711-2025-2582496",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "médio",
+      "risk": "médio",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-476-2023-2350365",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "médio",
+      "risk": "médio",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-688-2023-2351395",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "médio",
+      "risk": "médio",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-726-2023-2351704",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "médio",
+      "risk": "médio",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-729-2023-2351750",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "médio",
+      "risk": "médio",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-855-2023-2352545",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "médio",
+      "risk": "médio",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-975-2023-2354023",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "médio",
+      "risk": "médio",
+      "missing_sources": [
+        "evento oficial de votação associado (ID/data/objeto)",
+        "versão efetivamente votada e leitura semântica do inteiro teor",
+        "conteúdo integral persistido/localmente legível para revisão"
+      ],
+      "counterargument": "Identidade, inclusão do autor e texto oficial/hash têm confirmação externa, mas não provam versão votada, objeto do voto nem posição individual; autoria, isoladamente, sustenta apenas fato não pontuado.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    }
+  ]
+}
