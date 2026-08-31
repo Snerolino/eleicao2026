@@ -1,0 +1,992 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:emc-55-0-2290328",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2290328,
+        "type": "EMC",
+        "number": 55,
+        "year": 0,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2290328"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 151798,
+        "sha256": "sha256:19c96849f8302aeef2c7e9f50bbbc61b06fbb315760a50144a80205864cc470c",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2042375"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-11-2025-2487390",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2487390,
+        "type": "PEC",
+        "number": 11,
+        "year": 2025,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2487390"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 162209,
+        "sha256": "sha256:f7eda37c370fe7780b5a39d20cce2b634b56c66c6348872f9bd4c9d17123835b",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2868694"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-23-2024-2436619",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2436619,
+        "type": "PEC",
+        "number": 23,
+        "year": 2024,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2436619"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 131772,
+        "sha256": "sha256:9ba32f4c747ae9d6b3288f1dae8a32febe3081ad7cce9df2e45bacc7db44eda6",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2429603"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-28-2024-2448732",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2448732,
+        "type": "PEC",
+        "number": 28,
+        "year": 2024,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2448732"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 478174,
+        "sha256": "sha256:a202dc56d853fba1509373ff5283f9493e4e62007579563836f6619c13186991",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2453821"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-3-2026-2604173",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2604173,
+        "type": "PEC",
+        "number": 3,
+        "year": 2026,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2604173"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 143434,
+        "sha256": "sha256:af8587ffad75ec1a3103c04cf587703bcc642516489d4ed80fdaf6788565e48f",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3087006"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-31-2024-2455515",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2455515,
+        "type": "PEC",
+        "number": 31,
+        "year": 2024,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2455515"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 157849,
+        "sha256": "sha256:24e2f5fc9967a61688ca5b0713afe235c387cbec15647e76a083e4c85193d57e",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2470429"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-49-2025-2596372",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2596372,
+        "type": "PEC",
+        "number": 49,
+        "year": 2025,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2596372"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 159222,
+        "sha256": "sha256:6c26cd0ec147b794d18797fe47b9ffdc31bf0ab49d1d98182012461b65799baa",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3066948"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-5-2023-2351506",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2351506,
+        "type": "PEC",
+        "number": 5,
+        "year": 2023,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351506"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 151767,
+        "sha256": "sha256:bb0c16bf97e6d1cec4e096e21b477442c35c00d4d9efea886fc01dc7b84f8786",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2244245"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-50-2025-2598301",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2598301,
+        "type": "PEC",
+        "number": 50,
+        "year": 2025,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2598301"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 232456,
+        "sha256": "sha256:aa4a66c212a83b40a0418b337a86e3e4408e7a942f595ab7a0a3ef419745f014",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3070154"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pl-1565-2024-2431027",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2431027,
+        "type": "PL",
+        "number": 1565,
+        "year": 2024,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2431027"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 115338,
+        "sha256": "sha256:cc733b702cbf1a9275acd7d8224e72ad881fc7636cc0a63df2b63e634dd10af4",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2416720"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rcp-1-2024-2419487",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2419487,
+        "type": "RCP",
+        "number": 1,
+        "year": 2024,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2419487"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 359252,
+        "sha256": "sha256:57bc5c2ce75d85ada105be9097111c85751a7d35a8c6d7547729e933a969baf8",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2391886"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rcp-10-2023-2415114",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2415114,
+        "type": "RCP",
+        "number": 10,
+        "year": 2023,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2415114"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 892094,
+        "sha256": "sha256:1306e4e969c767b0d86d3cbc3951336c247b0a07839e2d92d62f037a74354c3b",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2379266"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rcp-2-2022-2339659",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2339659,
+        "type": "RCP",
+        "number": 2,
+        "year": 2022,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2339659"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 224697,
+        "sha256": "sha256:ae839ef07682c395df5e1faa6807ce6fa2d7d21838dd76d7ebb7eaf696741e5f",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2218154"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1001-2024-2424978",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2424978,
+        "type": "REQ",
+        "number": 1001,
+        "year": 2024,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2424978"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 469383,
+        "sha256": "sha256:4dc6b72b0c7f7a1d2fade0da53fdc5962d92137612b19e265ef3bf884078e645",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2403957"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1087-2023-2355263",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2355263,
+        "type": "REQ",
+        "number": 1087,
+        "year": 2023,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2355263"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 153866,
+        "sha256": "sha256:21f056761a59f857401b7339d5ae624476302d26b11a2d151e54d3ef0c6cef0f",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2256420"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1094-2023-2355344",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2355344,
+        "type": "REQ",
+        "number": 1094,
+        "year": 2023,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2355344"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 109897,
+        "sha256": "sha256:3043657f97f04a9a78f51860e25cd44f6947d3ea23b526f89e0afc213c70bc07",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2256698"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1146-2023-2355789",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2355789,
+        "type": "REQ",
+        "number": 1146,
+        "year": 2023,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2355789"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 132937,
+        "sha256": "sha256:6940d454d276fa3206472f93f086678671c669aa54976800c433fa5e4f78e284",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2257667"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1158-2023-2355845",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2355845,
+        "type": "REQ",
+        "number": 1158,
+        "year": 2023,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2355845"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 453715,
+        "sha256": "sha256:0d031e1ee87369dbaff9444f453a78703fe37deb52ac4cba8035dc9ea836ba33",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2257803"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1198-2023-2356494",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2356494,
+        "type": "REQ",
+        "number": 1198,
+        "year": 2023,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2356494"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 139685,
+        "sha256": "sha256:7f4b2089939c24dd70d3e41e0aa739defb1a3c65306f26c75a7e2e25a537821f",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2259089"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1264-2023-2357715",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2357715,
+        "type": "REQ",
+        "number": 1264,
+        "year": 2023,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2357715"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 335517,
+        "sha256": "sha256:f74b6cdf691227043cd941e10ee3a7e9e8e67b3ed8f3c331779129002fd20f3e",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2261521"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1340-2023-2358726",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2358726,
+        "type": "REQ",
+        "number": 1340,
+        "year": 2023,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2358726"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 194249,
+        "sha256": "sha256:30a99fb41fe3575e520a11421a1fb8016b6f202e1217a789ac9a7c4d2cce0787",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2264821"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1585-2024-2433340",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2433340,
+        "type": "REQ",
+        "number": 1585,
+        "year": 2024,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2433340"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 112367,
+        "sha256": "sha256:86a0b0c4edae61300bda2c38ad27e97e0a34f86c1191dcd95a0ab905db5b72aa",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2423089"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1733-2023-2365111",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2365111,
+        "type": "REQ",
+        "number": 1733,
+        "year": 2023,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365111"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 107050,
+        "sha256": "sha256:830b46dc4135650a0a1e434832dd84dc0fc342f9bc601e86f7c7a16328be570d",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2278181"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1806-2023-2366287",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2366287,
+        "type": "REQ",
+        "number": 1806,
+        "year": 2023,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2366287"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 196283,
+        "sha256": "sha256:0871de4cb0b42425feafcf8e06797020b1f8dfd1678b34486e737c2724e6b84d",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2280966"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1841-2023-2366762",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+        "objeto exato votado e vínculo candidato↔evento",
+        "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+        "ponte verificável entre candidate_tse_id e deputado ID da Câmara"
+      ],
+      "counterargument": null,
+      "identity": {
+        "status": "confirmed",
+        "official_api_id": 2366762,
+        "type": "REQ",
+        "number": 1841,
+        "year": 2023,
+        "checks_passed": true
+      },
+      "authorship": {
+        "status": "proposition_authors_confirmed_candidate_crosswalk_unresolved",
+        "roles_checked": 13,
+        "all_packet_official_ids_in_camara_authors": true,
+        "source": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2366762"
+      },
+      "full_text": {
+        "status": "retrieved_and_hash_match",
+        "http_status": 200,
+        "bytes": 153247,
+        "sha256": "sha256:38177afc0b182e5cceaf2566f6ccc3a6757b85b651e498d0c7df1ed89dc14c97",
+        "manifest_match": true,
+        "api_url_match": true,
+        "source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2282544"
+      },
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    }
+  ]
+}
