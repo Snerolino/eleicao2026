@@ -1,0 +1,445 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:emc-76-2019-2205543",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "registro oficial de votação do projeto (endpoint /votacoes vazio)"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-76-2019-2219813",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "registro oficial de votação do projeto (endpoint /votacoes vazio)"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-77-2019-2205545",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "registro oficial de votação do projeto (endpoint /votacoes vazio)"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-8-2019-2203457",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "registro oficial de votação do projeto (endpoint /votacoes vazio)"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-82-2019-2219869",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "registro oficial de votação do projeto (endpoint /votacoes vazio)"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-83-2019-2219871",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "registro oficial de votação do projeto (endpoint /votacoes vazio)"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-84-2019-2219873",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "registro oficial de votação do projeto (endpoint /votacoes vazio)"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-86-2019-2219902",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "registro oficial de votação do projeto (endpoint /votacoes vazio)"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-9-0-2289996",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "registro oficial de votação do projeto (endpoint /votacoes vazio)",
+        "ano legislativo confiável no identificador (API oficial retorna ano 0)"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-90-2019-2219910",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "registro oficial de votação do projeto (endpoint /votacoes vazio)"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-95-2019-2205611",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "registro oficial de votação do projeto (endpoint /votacoes vazio)"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-98-2019-2205621",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "registro oficial de votação do projeto (endpoint /votacoes vazio)"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-99-2019-2205622",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "registro oficial de votação do projeto (endpoint /votacoes vazio)"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emp-1-0-2595727",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "registro oficial de votação do projeto (endpoint /votacoes vazio)",
+        "ano legislativo confiável no identificador (API oficial retorna ano 0)"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emp-2-0-2595729",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "registro oficial de votação do projeto (endpoint /votacoes vazio)",
+        "ano legislativo confiável no identificador (API oficial retorna ano 0)"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:inc-1231-2023-2385236",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "registro oficial de votação do projeto (endpoint /votacoes vazio)"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pdl-3-2023-2345680",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "objeto/versão textual exata submetida em cada votação"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pdl-800-2025-2567768",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "registro oficial de votação do projeto (endpoint /votacoes vazio)"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-24-2024-2442880",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "objeto/versão textual exata submetida em cada votação"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-34-2025-2557024",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "objeto/versão textual exata submetida em cada votação"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-37-2021-2304959",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "objeto/versão textual exata submetida em cada votação"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-42-2024-2467670",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "objeto/versão textual exata submetida em cada votação"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-62-2023-2404706",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "registro oficial de votação do projeto (endpoint /votacoes vazio)"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-9-2023-2352476",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "objeto/versão textual exata submetida em cada votação"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pl-1571-2024-2431054",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "vínculo oficial candidato↔evento/voto nominal",
+        "objeto/versão textual exata submetida em cada votação"
+      ],
+      "counterargument": "A autoria/coautoria está documentada e o texto integral oficial foi recuperado; isso pode indicar participação legislativa relevante. Porém autoria não prova voto, nem que eventual votação corresponda a esta versão textual, e não permite atribuição individual de score.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    }
+  ]
+}
