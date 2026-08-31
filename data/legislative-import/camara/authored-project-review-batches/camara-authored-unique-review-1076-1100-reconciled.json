@@ -1,0 +1,444 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:emc-148-2019-2221922",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-149-2019-2205766",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-15-0-2566764",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "year_nonzero_and_exact",
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-15-2019-2217612",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-16-2019-2217839",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-161-2019-2222075",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-167-2019-2222169",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-169-2019-2222283",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-17-2019-2204224",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-17-2019-2218058",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-177-2019-2205858",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-178-2019-2205861",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-187-2019-2224482",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-188-2019-2224483",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-195-2019-2224805",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-197-2019-2224840",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-2-0-2302057",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "year_nonzero_and_exact",
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-204-2019-2225010",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-21-2019-2218562",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-22-2019-2204287",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-239-2019-2205957",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-26-2019-2218682",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-267-2019-2205986",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-29-2019-2204507",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-33-2019-2204617",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "version_effectively_voted",
+        "voting_event_object_and_date"
+      ],
+      "counterargument": "Mesmo que a API confirme a proposição e a lista de autores confirme coautoria, isso não prova qual versão foi efetivamente votada, nem identifica evento/objeto/data de votação; a ementa e a autoria podem divergir do texto votado. O texto integral fornecido pode ser uma versão protocolada e não a versão votada.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    }
+  ]
+}
