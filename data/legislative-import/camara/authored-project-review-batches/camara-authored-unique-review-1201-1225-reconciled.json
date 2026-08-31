@@ -1,0 +1,1787 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:req-1731-2020-2256594",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2256594",
+        "type": "REQ",
+        "number": "1731",
+        "year": 2020,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002533583",
+            "official_author_id": "73482",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "official_author_id": "74398",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534601",
+            "official_author_id": "160538",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534598",
+            "official_author_id": "160535",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002533902",
+            "official_author_id": "204407",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-192-2025-2565401",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial de evento/votação que tenha este REQ como objeto",
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2565401",
+        "type": "REQ",
+        "number": "192",
+        "year": 2025,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002537712",
+            "official_author_id": "136811",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002541514",
+            "official_author_id": "160559",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002538556",
+            "official_author_id": "178964",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534671",
+            "official_author_id": "133810",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002537717",
+            "official_author_id": "204406",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1939-2025-2508016",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial de evento/votação que tenha este REQ como objeto",
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2508016",
+        "type": "REQ",
+        "number": "1939",
+        "year": 2025,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002534583",
+            "official_author_id": "220553",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534597",
+            "official_author_id": "220554",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "official_author_id": "74398",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534601",
+            "official_author_id": "160538",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534598",
+            "official_author_id": "160535",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2002-2025-2510658",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial de evento/votação que tenha este REQ como objeto",
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2510658",
+        "type": "REQ",
+        "number": "2002",
+        "year": 2025,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002534583",
+            "official_author_id": "220553",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534588",
+            "official_author_id": "220555",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "official_author_id": "74398",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534598",
+            "official_author_id": "160535",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002533902",
+            "official_author_id": "204407",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2073-2025-2515940",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial de evento/votação que tenha este REQ como objeto",
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2515940",
+        "type": "REQ",
+        "number": "2073",
+        "year": 2025,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002534583",
+            "official_author_id": "220553",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "official_author_id": "74398",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534601",
+            "official_author_id": "160538",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534598",
+            "official_author_id": "160535",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002533902",
+            "official_author_id": "204407",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-211-2023-2349006",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial de evento/votação que tenha este REQ como objeto",
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2349006",
+        "type": "REQ",
+        "number": "211",
+        "year": 2023,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002537712",
+            "official_author_id": "136811",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002541514",
+            "official_author_id": "160559",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002537718",
+            "official_author_id": "178963",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002537717",
+            "official_author_id": "204406",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "official_author_id": "204416",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2150-2023-2372099",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2372099",
+        "type": "REQ",
+        "number": "2150",
+        "year": 2023,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002534583",
+            "official_author_id": "220553",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534597",
+            "official_author_id": "220554",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534601",
+            "official_author_id": "160538",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534598",
+            "official_author_id": "160535",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534589",
+            "official_author_id": "221378",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2255-2020-2260999",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial de evento/votação que tenha este REQ como objeto",
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2260999",
+        "type": "REQ",
+        "number": "2255",
+        "year": 2020,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002534598",
+            "official_author_id": "160535",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002536917",
+            "official_author_id": "178962",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002538556",
+            "official_author_id": "178964",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002538541",
+            "official_author_id": "204404",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "official_author_id": "204416",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2298-2025-2525678",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial de evento/votação que tenha este REQ como objeto",
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2525678",
+        "type": "REQ",
+        "number": "2298",
+        "year": 2025,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002534583",
+            "official_author_id": "220553",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534597",
+            "official_author_id": "220554",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "official_author_id": "74398",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534601",
+            "official_author_id": "160538",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534598",
+            "official_author_id": "160535",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2345-2023-2375376",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2375376",
+        "type": "REQ",
+        "number": "2345",
+        "year": 2023,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002534668",
+            "official_author_id": "73692",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002541514",
+            "official_author_id": "160559",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002537718",
+            "official_author_id": "178963",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002537717",
+            "official_author_id": "204406",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "official_author_id": "204416",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2365-2020-2262846",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial de evento/votação que tenha este REQ como objeto",
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2262846",
+        "type": "REQ",
+        "number": "2365",
+        "year": 2020,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002533583",
+            "official_author_id": "73482",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "official_author_id": "74398",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534601",
+            "official_author_id": "160538",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534598",
+            "official_author_id": "160535",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002533902",
+            "official_author_id": "204407",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2369-2020-2262856",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial de evento/votação que tenha este REQ como objeto",
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2262856",
+        "type": "REQ",
+        "number": "2369",
+        "year": 2020,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002535918",
+            "official_author_id": "73478",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002533583",
+            "official_author_id": "73482",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "official_author_id": "74398",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534601",
+            "official_author_id": "160538",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534598",
+            "official_author_id": "160535",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2396-2020-2263020",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial de evento/votação que tenha este REQ como objeto",
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2263020",
+        "type": "REQ",
+        "number": "2396",
+        "year": 2020,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002533583",
+            "official_author_id": "73482",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "official_author_id": "74398",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534601",
+            "official_author_id": "160538",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534598",
+            "official_author_id": "160535",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002533902",
+            "official_author_id": "204407",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2438-2025-2529229",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial de evento/votação que tenha este REQ como objeto",
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2529229",
+        "type": "REQ",
+        "number": "2438",
+        "year": 2025,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002534583",
+            "official_author_id": "220553",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534597",
+            "official_author_id": "220554",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "official_author_id": "74398",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534601",
+            "official_author_id": "160538",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534598",
+            "official_author_id": "160535",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-246-2023-2349199",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial de evento/votação que tenha este REQ como objeto",
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2349199",
+        "type": "REQ",
+        "number": "246",
+        "year": 2023,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002534583",
+            "official_author_id": "220553",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "official_author_id": "74398",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534601",
+            "official_author_id": "160538",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534598",
+            "official_author_id": "160535",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002533902",
+            "official_author_id": "204407",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2579-2024-2448912",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2448912",
+        "type": "REQ",
+        "number": "2579",
+        "year": 2024,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002534601",
+            "official_author_id": "160538",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534598",
+            "official_author_id": "160535",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534671",
+            "official_author_id": "133810",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "official_author_id": "204416",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534656",
+            "official_author_id": "204388",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2581-2024-2448947",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2448947",
+        "type": "REQ",
+        "number": "2581",
+        "year": 2024,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002547857",
+            "official_author_id": "220552",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534897",
+            "official_author_id": "160673",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534671",
+            "official_author_id": "133810",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534656",
+            "official_author_id": "204388",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002536921",
+            "official_author_id": "163321",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-270-2023-2349351",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial de evento/votação que tenha este REQ como objeto",
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2349351",
+        "type": "REQ",
+        "number": "270",
+        "year": 2023,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002534654",
+            "official_author_id": "220550",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534671",
+            "official_author_id": "133810",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002547819",
+            "official_author_id": "156190",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "official_author_id": "204416",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534656",
+            "official_author_id": "204388",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-278-2023-2349367",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial de evento/votação que tenha este REQ como objeto",
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2349367",
+        "type": "REQ",
+        "number": "278",
+        "year": 2023,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002537712",
+            "official_author_id": "136811",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002541514",
+            "official_author_id": "160559",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002538541",
+            "official_author_id": "204404",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002537717",
+            "official_author_id": "204406",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534656",
+            "official_author_id": "204388",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-28-2023-2346834",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial de evento/votação que tenha este REQ como objeto",
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2346834",
+        "type": "REQ",
+        "number": "28",
+        "year": 2023,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002534654",
+            "official_author_id": "220550",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534671",
+            "official_author_id": "133810",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002547819",
+            "official_author_id": "156190",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "official_author_id": "204416",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534656",
+            "official_author_id": "204388",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-283-2023-2349375",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial de evento/votação que tenha este REQ como objeto",
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2349375",
+        "type": "REQ",
+        "number": "283",
+        "year": 2023,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002537712",
+            "official_author_id": "136811",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002541514",
+            "official_author_id": "160559",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002538541",
+            "official_author_id": "204404",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002537717",
+            "official_author_id": "204406",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534656",
+            "official_author_id": "204388",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2895-2020-2266514",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial de evento/votação que tenha este REQ como objeto",
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2266514",
+        "type": "REQ",
+        "number": "2895",
+        "year": 2020,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002533583",
+            "official_author_id": "73482",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "official_author_id": "74398",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534601",
+            "official_author_id": "160538",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534598",
+            "official_author_id": "160535",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002533902",
+            "official_author_id": "204407",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-301-2023-2349472",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial de evento/votação que tenha este REQ como objeto",
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2349472",
+        "type": "REQ",
+        "number": "301",
+        "year": 2023,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002534583",
+            "official_author_id": "220553",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534588",
+            "official_author_id": "220555",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534598",
+            "official_author_id": "160535",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002536917",
+            "official_author_id": "178962",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534656",
+            "official_author_id": "204388",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-3033-2026-2626487",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial de evento/votação que tenha este REQ como objeto",
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2626487",
+        "type": "REQ",
+        "number": "3033",
+        "year": 2026,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002534588",
+            "official_author_id": "220555",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "official_author_id": "74398",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534601",
+            "official_author_id": "160538",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534598",
+            "official_author_id": "160535",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002533902",
+            "official_author_id": "204407",
+            "packet_role": "autor_principal",
+            "official_present": true,
+            "official_proponente": 1,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-308-2023-2349534",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "critical",
+      "missing_sources": [
+        "registro oficial de evento/votação que tenha este REQ como objeto",
+        "ponte oficial verificável TSE candidate_id → deputado_id (o pacote só traz os IDs em campos separados)",
+        "artefato de conteúdo integral normalizado/salvo; o manifesto só preserva URL, bytes e hash"
+      ],
+      "counterargument": "Embora requerimentos possam produzir efeitos procedimentais (urgência, quebra de interstício ou sessão), isso não prova impacto populacional pontuável nem que o evento localizado seja o objeto correto; eventual efeito material depende da proposição subjacente e de documentação do evento.",
+      "identity": {
+        "proposition_id": "2349534",
+        "type": "REQ",
+        "number": "308",
+        "year": 2023,
+        "api_identity_match": true
+      },
+      "authorship": {
+        "official_authors_endpoint_status": 200,
+        "selected_roles_checked": 5,
+        "role_mismatches": [],
+        "role_checks": [
+          {
+            "candidate_tse_id": "210002537712",
+            "official_author_id": "136811",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002537717",
+            "official_author_id": "204406",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002547819",
+            "official_author_id": "156190",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "official_author_id": "204416",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          },
+          {
+            "candidate_tse_id": "210002534656",
+            "official_author_id": "204388",
+            "packet_role": "coautor",
+            "official_present": true,
+            "official_proponente": 0,
+            "role_consistent": true
+          }
+        ],
+        "assessment": "IDs oficiais de autores presentes; rótulos autor_principal/coautor conferem com proponente quando verificável."
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    }
+  ]
+}
