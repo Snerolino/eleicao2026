@@ -1,0 +1,497 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:emc-209-2019-2205923",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "alto: não há evento de votação vinculante; a emenda pode ter sido apenas apresentada e o voto não é atribuível.",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-211-2019-2205926",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "alto: não há evento de votação vinculante; a emenda pode ter sido apenas apresentada e o voto não é atribuível.",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-212-2019-2205929",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "alto: não há evento de votação vinculante; a emenda pode ter sido apenas apresentada e o voto não é atribuível.",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-215-2019-2205932",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "alto: não há evento de votação vinculante; a emenda pode ter sido apenas apresentada e o voto não é atribuível.",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-23-2019-2218575",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "alto: não há evento de votação vinculante; a emenda pode ter sido apenas apresentada e o voto não é atribuível.",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-257-2019-2205976",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "alto: não há evento de votação vinculante; a emenda pode ter sido apenas apresentada e o voto não é atribuível.",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-26-2019-2204496",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "alto: não há evento de votação vinculante; a emenda pode ter sido apenas apresentada e o voto não é atribuível.",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-260-2019-2205979",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "alto: não há evento de votação vinculante; a emenda pode ter sido apenas apresentada e o voto não é atribuível.",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-261-2019-2205980",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "alto: não há evento de votação vinculante; a emenda pode ter sido apenas apresentada e o voto não é atribuível.",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-262-2019-2205981",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "alto: não há evento de votação vinculante; a emenda pode ter sido apenas apresentada e o voto não é atribuível.",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-263-2019-2205982",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "alto: não há evento de votação vinculante; a emenda pode ter sido apenas apresentada e o voto não é atribuível.",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-268-2019-2205987",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "alto: não há evento de votação vinculante; a emenda pode ter sido apenas apresentada e o voto não é atribuível.",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-270-2019-2205989",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "alto: não há evento de votação vinculante; a emenda pode ter sido apenas apresentada e o voto não é atribuível.",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-3-0-2288606",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "crítico: identidade temporal não resolvida (ano 0 no pacote e na API); além disso não há evento vinculante.",
+      "missing_sources": [
+        "ano oficial válido da proposição (pacote informa 0/ano placeholder)",
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-3-2019-2199779",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "alto: não há evento de votação vinculante; a emenda pode ter sido apenas apresentada e o voto não é atribuível.",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-3-2019-2214938",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "alto: não há evento de votação vinculante; a emenda pode ter sido apenas apresentada e o voto não é atribuível.",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-30-0-2290051",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "crítico: identidade temporal não resolvida (ano 0 no pacote e na API); além disso não há evento vinculante.",
+      "missing_sources": [
+        "ano oficial válido da proposição (pacote informa 0/ano placeholder)",
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-30-2019-2218907",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "alto: não há evento de votação vinculante; a emenda pode ter sido apenas apresentada e o voto não é atribuível.",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-34-2019-2218994",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "alto: não há evento de votação vinculante; a emenda pode ter sido apenas apresentada e o voto não é atribuível.",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-4-0-2525382",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "crítico: identidade temporal não resolvida (ano 0 no pacote e na API); além disso não há evento vinculante.",
+      "missing_sources": [
+        "ano oficial válido da proposição (pacote informa 0/ano placeholder)",
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-4-2019-2206983",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "alto: não há evento de votação vinculante; a emenda pode ter sido apenas apresentada e o voto não é atribuível.",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-4-2019-2215687",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "alto: não há evento de votação vinculante; a emenda pode ter sido apenas apresentada e o voto não é atribuível.",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-40-2019-2204662",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "alto: não há evento de votação vinculante; a emenda pode ter sido apenas apresentada e o voto não é atribuível.",
+      "missing_sources": [
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-42-0-2290225",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "crítico: identidade temporal não resolvida (ano 0 no pacote e na API); além disso não há evento vinculante.",
+      "missing_sources": [
+        "ano oficial válido da proposição (pacote informa 0/ano placeholder)",
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-45-0-2290242",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "crítico: identidade temporal não resolvida (ano 0 no pacote e na API); além disso não há evento vinculante.",
+      "missing_sources": [
+        "ano oficial válido da proposição (pacote informa 0/ano placeholder)",
+        "registro oficial do evento de votação (ID/data/objeto/resultado)",
+        "vinculação entre evento e versão efetivamente votada",
+        "resultado nominal/orientação/ata ou espelho da sessão",
+        "prova de emendas, destaques ou substitutivo incorporados/rejeitados"
+      ],
+      "counterargument": "A API oficial confirma o tipo, número, ID e autoria listada; o PDF integral oficial foi recuperado com HTTP 200 e hash SHA-256 idêntico ao manifesto. Isso sustenta existência/autoria e permite análise textual, mas não prova que houve votação nem qual versão foi submetida ao voto.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    }
+  ]
+}
