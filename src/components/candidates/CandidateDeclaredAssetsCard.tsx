@@ -115,7 +115,7 @@ export function CandidateDeclaredAssetsCard({
           <button
             type="button"
             onClick={() => setIsExpanded(!isExpanded)}
-            className="flex items-center justify-between w-full font-mono text-xs font-semibold text-[var(--color-institutional)] hover:underline focus:outline-none"
+            className="flex w-full items-center justify-between rounded-sm font-mono text-xs font-semibold text-[var(--color-institutional)] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-institutional)]"
           >
             <span>
               {isExpanded
