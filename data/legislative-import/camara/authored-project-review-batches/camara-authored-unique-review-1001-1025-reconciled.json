@@ -1,0 +1,1209 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:pdl-392-2023-2401109",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534654",
+        "house": "camara",
+        "type": "PDL",
+        "number": "392",
+        "year": 2023,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "autor_principal",
+        "declared_official_ids": [
+          "220550",
+          "220552",
+          "133810",
+          "204406",
+          "204416",
+          "204388"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-14-2022-2325720",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534272",
+        "house": "camara",
+        "type": "PEC",
+        "number": "14",
+        "year": 2022,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "coautor",
+        "declared_official_ids": [
+          "75431",
+          "136811",
+          "160559",
+          "178963",
+          "133810",
+          "204406"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-26-2022-2336481",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "status do pacote pode estar desatualizado ou não identifica a versão final",
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534897",
+        "house": "camara",
+        "type": "PEC",
+        "number": "26",
+        "year": 2022,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "coautor",
+        "declared_official_ids": [
+          "160673",
+          "178963",
+          "133810",
+          "204406",
+          "204416",
+          "204388"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-34-2024-2458742",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002537714",
+        "house": "camara",
+        "type": "PEC",
+        "number": "34",
+        "year": 2024,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "coautor",
+        "declared_official_ids": [
+          "220549",
+          "220555",
+          "74398",
+          "204407",
+          "204388",
+          "221378"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-63-2023-2405983",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534668",
+        "house": "camara",
+        "type": "PEC",
+        "number": "63",
+        "year": 2023,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "coautor",
+        "declared_official_ids": [
+          "73692",
+          "160673",
+          "178963",
+          "204404",
+          "204416",
+          "204388"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pl-1042-2026-2607582",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534583",
+        "house": "camara",
+        "type": "PL",
+        "number": "1042",
+        "year": 2026,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "autor_principal",
+        "declared_official_ids": [
+          "220553",
+          "220555",
+          "74398",
+          "160535",
+          "178964",
+          "204407"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pl-1138-2026-2608574",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534583",
+        "house": "camara",
+        "type": "PL",
+        "number": "1138",
+        "year": 2026,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "autor_principal",
+        "declared_official_ids": [
+          "220553",
+          "220554",
+          "220555",
+          "74398",
+          "160538",
+          "160535"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pl-1838-2024-2433989",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "status do pacote pode estar desatualizado ou não identifica a versão final",
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534583",
+        "house": "camara",
+        "type": "PL",
+        "number": "1838",
+        "year": 2024,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "autor_principal",
+        "declared_official_ids": [
+          "220553",
+          "73486",
+          "74398",
+          "160535",
+          "178964",
+          "221378"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pl-2501-2023-2361794",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534654",
+        "house": "camara",
+        "type": "PL",
+        "number": "2501",
+        "year": 2023,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "autor_principal",
+        "declared_official_ids": [
+          "220550",
+          "160673",
+          "133810",
+          "156190",
+          "204416",
+          "204388"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pl-3798-2025-2541173",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534654",
+        "house": "camara",
+        "type": "PL",
+        "number": "3798",
+        "year": 2025,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "autor_principal",
+        "declared_official_ids": [
+          "220550",
+          "220552",
+          "160673",
+          "133810",
+          "204416",
+          "204388"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pl-5618-2023-2405321",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534583",
+        "house": "camara",
+        "type": "PL",
+        "number": "5618",
+        "year": 2023,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "autor_principal",
+        "declared_official_ids": [
+          "220553",
+          "220554",
+          "74398",
+          "160538",
+          "160535",
+          "204407"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pl-5736-2025-2582519",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534583",
+        "house": "camara",
+        "type": "PL",
+        "number": "5736",
+        "year": 2025,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "autor_principal",
+        "declared_official_ids": [
+          "220553",
+          "220555",
+          "74398",
+          "160538",
+          "160535",
+          "204407"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rcp-3-2024-2459627",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "ato requerimental/procedimental: autoria não demonstra mérito populacional",
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002537714",
+        "house": "camara",
+        "type": "RCP",
+        "number": "3",
+        "year": 2024,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "coautor",
+        "declared_official_ids": [
+          "220549",
+          "220553",
+          "220555",
+          "74398",
+          "204407",
+          "204388"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rec-1-2026-2600339",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "ato requerimental/procedimental: autoria não demonstra mérito populacional",
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534654",
+        "house": "camara",
+        "type": "REC",
+        "number": "1",
+        "year": 2026,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "coautor",
+        "declared_official_ids": [
+          "220550",
+          "73692",
+          "160673",
+          "133810",
+          "204406",
+          "204388"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rec-11-2025-2557361",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "ato requerimental/procedimental: autoria não demonstra mérito populacional",
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002537714",
+        "house": "camara",
+        "type": "REC",
+        "number": "11",
+        "year": 2025,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "coautor",
+        "declared_official_ids": [
+          "220549",
+          "220550",
+          "220552",
+          "133810",
+          "156190",
+          "204416"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rec-13-2023-2368801",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "ato requerimental/procedimental: autoria não demonstra mérito populacional",
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534583",
+        "house": "camara",
+        "type": "REC",
+        "number": "13",
+        "year": 2023,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "autor_principal",
+        "declared_official_ids": [
+          "220553",
+          "220554",
+          "74398",
+          "160538",
+          "160535",
+          "221378"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rec-14-2022-2330840",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "ato requerimental/procedimental: autoria não demonstra mérito populacional",
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534601",
+        "house": "camara",
+        "type": "REC",
+        "number": "14",
+        "year": 2022,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "coautor",
+        "declared_official_ids": [
+          "160538",
+          "160535",
+          "160559",
+          "156190",
+          "204407",
+          "204416"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rec-14-2024-2447127",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "ato requerimental/procedimental: autoria não demonstra mérito populacional",
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534583",
+        "house": "camara",
+        "type": "REC",
+        "number": "14",
+        "year": 2024,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "autor_principal",
+        "declared_official_ids": [
+          "220553",
+          "220554",
+          "74398",
+          "160538",
+          "160535",
+          "221378"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rec-15-2024-2447129",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "ato requerimental/procedimental: autoria não demonstra mérito populacional",
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534583",
+        "house": "camara",
+        "type": "REC",
+        "number": "15",
+        "year": 2024,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "autor_principal",
+        "declared_official_ids": [
+          "220553",
+          "220554",
+          "74398",
+          "160538",
+          "160535",
+          "221378"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rec-15-2025-2566741",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "ato requerimental/procedimental: autoria não demonstra mérito populacional",
+        "status do pacote pode estar desatualizado ou não identifica a versão final",
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534654",
+        "house": "camara",
+        "type": "REC",
+        "number": "15",
+        "year": 2025,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "coautor",
+        "declared_official_ids": [
+          "220550",
+          "220552",
+          "73692",
+          "204404",
+          "204416",
+          "204388"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rec-16-2024-2447251",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "ato requerimental/procedimental: autoria não demonstra mérito populacional",
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534654",
+        "house": "camara",
+        "type": "REC",
+        "number": "16",
+        "year": 2024,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "autor_principal",
+        "declared_official_ids": [
+          "220550",
+          "220552",
+          "160673",
+          "133810",
+          "156190",
+          "204388"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rec-17-2025-2566803",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "ato requerimental/procedimental: autoria não demonstra mérito populacional",
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534654",
+        "house": "camara",
+        "type": "REC",
+        "number": "17",
+        "year": 2025,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "autor_principal",
+        "declared_official_ids": [
+          "220550",
+          "220552",
+          "133810",
+          "204406",
+          "156190",
+          "204416"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rec-20-2024-2454739",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "ato requerimental/procedimental: autoria não demonstra mérito populacional",
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534583",
+        "house": "camara",
+        "type": "REC",
+        "number": "20",
+        "year": 2024,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "coautor",
+        "declared_official_ids": [
+          "220553",
+          "220554",
+          "220555",
+          "160535",
+          "204407",
+          "221378"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rec-22-2021-2284875",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "ato requerimental/procedimental: autoria não demonstra mérito populacional",
+        "status do pacote pode estar desatualizado ou não identifica a versão final",
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002533583",
+        "house": "camara",
+        "type": "REC",
+        "number": "22",
+        "year": 2021,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "coautor",
+        "declared_official_ids": [
+          "73482",
+          "73486",
+          "74398",
+          "160538",
+          "160535",
+          "204407"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rec-29-2021-2287772",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "ato requerimental/procedimental: autoria não demonstra mérito populacional",
+        "fonte de texto é inteiro teor associado à proposição, não prova isolada da versão votada",
+        "sem evento não é possível atribuir significado a SIM/NÃO nem score"
+      ],
+      "missing_sources": [
+        "proposition_version explicitamente vinculada ao texto efetivamente votado",
+        "voting_event oficial (id/data/objeto/resultado) e registro nominal"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534292",
+        "house": "camara",
+        "type": "REC",
+        "number": "29",
+        "year": 2021,
+        "checks": {
+          "identity_exact": true,
+          "ementa_exact": true,
+          "candidate_ids_in_snapshot": true,
+          "authorship_ids_officially_listed": true,
+          "authorship_source_http_200": true,
+          "full_text_manifest_reproduced": true,
+          "full_text_nonempty_official": true
+        }
+      },
+      "authorship": {
+        "declared_role": "coautor",
+        "declared_official_ids": [
+          "205863",
+          "73692",
+          "178962",
+          "133810",
+          "204416",
+          "204388"
+        ],
+        "officially_listed_count": 6,
+        "declared_count": 6
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    }
+  ]
+}
