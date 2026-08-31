@@ -1,0 +1,1139 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:emc-144-2019-2221913",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "altera anterioridade tributária para excluir/incluir tributos específicos, preservando ao IOF possibilidade de alteração mais imediata e ajustando referências ao IPI/IBS.",
+      "destinatario": "afeta contribuintes e capacidade regulatória fiscal, mas não identifica grupo populacional canônico direto; efeito é institucional e dependente do sistema substitutivo.",
+      "efeitos": "afeta contribuintes e capacidade regulatória fiscal, mas não identifica grupo populacional canônico direto; efeito é institucional e dependente do sistema substitutivo.",
+      "grupos_canonicos": [],
+      "tema": [
+        "economia_tributacao"
+      ],
+      "resumo": "altera anterioridade tributária para excluir/incluir tributos específicos, preservando ao IOF possibilidade de alteração mais imediata e ajustando referências ao IPI/IBS.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2221913",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1812293",
+        "text_sha256": "sha256:6f23653c49ea42f762a59fbaba23f333e052044051e33553eff0cdf4c0444e90",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-145-2019-2221915",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "estende contribuição previdenciária a valores de participação nos lucros/resultados e reconhece participação na gestão, criando direito trabalhista e base contributiva.",
+      "destinatario": "empregados podem ganhar participação na gestão/remuneração, mas PLR passa a sofrer contribuição; empresas e seguridade têm custos/receitas opostos, logo efeito líquido é misto.",
+      "efeitos": "empregados podem ganhar participação na gestão/remuneração, mas PLR passa a sofrer contribuição; empresas e seguridade têm custos/receitas opostos, logo efeito líquido é misto.",
+      "grupos_canonicos": [
+        "trabalhadores_formais"
+      ],
+      "tema": [
+        "trabalho_renda",
+        "previdencia"
+      ],
+      "resumo": "estende contribuição previdenciária a valores de participação nos lucros/resultados e reconhece participação na gestão, criando direito trabalhista e base contributiva.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2221915",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1812295",
+        "text_sha256": "sha256:72916132b12884b6fa52c4c220703d15b1efe6625cd40d0acd1a94dfc2d63754",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-146-2019-2221917",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "isenta do IBS a venda de bens do ativo fixo, afastando incidência sobre alienação de ativos empresariais.",
+      "destinatario": "benefício direto é para contribuintes empresariais, não grupo populacional canônico; eventual repasse a trabalhadores/consumidores é indireto.",
+      "efeitos": "benefício direto é para contribuintes empresariais, não grupo populacional canônico; eventual repasse a trabalhadores/consumidores é indireto.",
+      "grupos_canonicos": [],
+      "tema": [
+        "economia_tributacao"
+      ],
+      "resumo": "isenta do IBS a venda de bens do ativo fixo, afastando incidência sobre alienação de ativos empresariais.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2221917",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1812298",
+        "text_sha256": "sha256:abb92d37a5eacaad32bcc0c2d5ce3255386bb19fbd63ab1dbc4ee79a33e9117e",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-147-2019-2221921",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "veda incluir outro tributo na base de cálculo do imposto de renda, reduzindo a base econômica sobre a qual incidiriam tributos embutidos.",
+      "destinatario": "protege contribuintes contra base ampliada, mas a distribuição entre pessoas físicas/jurídicas e o efeito fiscal não permite grupo humano direto seguro.",
+      "efeitos": "protege contribuintes contra base ampliada, mas a distribuição entre pessoas físicas/jurídicas e o efeito fiscal não permite grupo humano direto seguro.",
+      "grupos_canonicos": [],
+      "tema": [
+        "economia_tributacao"
+      ],
+      "resumo": "veda incluir outro tributo na base de cálculo do imposto de renda, reduzindo a base econômica sobre a qual incidiriam tributos embutidos.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2221921",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1812305",
+        "text_sha256": "sha256:2f257516e7b7dc5b90eb40d609a97ad0cd8b9fdd9e524553540efa45b3033320",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-149-2019-2221925",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "assegura que exportações não incidam no IBS e mantém créditos e demais incentivos ligados à exportação, reduzindo risco de encerramento de regimes como REINTEGRA.",
+      "destinatario": "exportadores e cadeias exportadoras são destinatários econômicos; emprego/renda são efeitos indiretos e não pontuáveis como grupo direto.",
+      "efeitos": "exportadores e cadeias exportadoras são destinatários econômicos; emprego/renda são efeitos indiretos e não pontuáveis como grupo direto.",
+      "grupos_canonicos": [],
+      "tema": [
+        "economia_tributacao",
+        "comercio_exterior"
+      ],
+      "resumo": "assegura que exportações não incidam no IBS e mantém créditos e demais incentivos ligados à exportação, reduzindo risco de encerramento de regimes como REINTEGRA.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2221925",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1812310",
+        "text_sha256": "sha256:8ddb5a0816a02acf62fe0ffbcdbc979fbdec406ba987b7952762fea4580202fc",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-15-2019-2203690",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "militares estaduais e do DF: remete a lei estadual as regras de inatividade e pensão, exige simetria com proteção dos militares federais e suprime a incidência transitória nacional; transfere definição normativa e encargos aos Tesouros estaduais.",
+      "destinatario": "militares estaduais e do DF ganham autonomia normativa e potencial proteção previdenciária simétrica; Estados/DF preservam competência e assumem o financiamento; alcance e custo líquido dependem da lei estadual e da comparação com a PEC 6.",
+      "efeitos": "militares estaduais e do DF ganham autonomia normativa e potencial proteção previdenciária simétrica; Estados/DF preservam competência e assumem o financiamento; alcance e custo líquido dependem da lei estadual e da comparação com a PEC 6.",
+      "grupos_canonicos": [
+        "servidores_publicos"
+      ],
+      "tema": [
+        "previdencia",
+        "seguranca_publica"
+      ],
+      "resumo": "militares estaduais e do DF: remete a lei estadual as regras de inatividade e pensão, exige simetria com proteção dos militares federais e suprime a incidência transitória nacional; transfere definição normativa e encargos aos Tesouros estaduais.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2203690",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1748525",
+        "text_sha256": "sha256:dc0d26445251b56175a261cfd1dbed44a4ac103d47321fdc2690b78de6a2012b",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-150-2019-2221940",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "combina tratamento favorecido a transporte coletivo, saneamento, educação e saúde, crédito integral de ativo imobilizado/exportação e restituição de saldo credor em até 60 dias.",
+      "destinatario": "prestadores e exportadores recebem mecanismos de crédito/restituição; usuários podem se beneficiar por preços/acesso, mas são efeitos de repasse e o pacote é materialmente composto.",
+      "efeitos": "prestadores e exportadores recebem mecanismos de crédito/restituição; usuários podem se beneficiar por preços/acesso, mas são efeitos de repasse e o pacote é materialmente composto.",
+      "grupos_canonicos": [],
+      "tema": [
+        "economia_tributacao",
+        "educacao",
+        "saude",
+        "comercio_exterior"
+      ],
+      "resumo": "combina tratamento favorecido a transporte coletivo, saneamento, educação e saúde, crédito integral de ativo imobilizado/exportação e restituição de saldo credor em até 60 dias.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2221940",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1812335",
+        "text_sha256": "sha256:9cbec23237414b75da55d7ce30554456c9ce2d1b4392c465275c847fe9dd479f",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-156-2019-2222019",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "permite flexibilizar uniformidade de alíquotas e vedação de benefícios do IBS para igualdade, desenvolvimento regional/nacional e acesso a bens/serviços essenciais, sob lei complementar.",
+      "destinatario": "pode preservar regimes regionais e reduzir preços de essenciais, mas também permite diferenciação e renúncia fiscal; destinatários e efeito líquido dependem de regulamentação.",
+      "efeitos": "pode preservar regimes regionais e reduzir preços de essenciais, mas também permite diferenciação e renúncia fiscal; destinatários e efeito líquido dependem de regulamentação.",
+      "grupos_canonicos": [],
+      "tema": [
+        "economia_tributacao",
+        "federalismo_fiscal"
+      ],
+      "resumo": "permite flexibilizar uniformidade de alíquotas e vedação de benefícios do IBS para igualdade, desenvolvimento regional/nacional e acesso a bens/serviços essenciais, sob lei complementar.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2222019",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1812515",
+        "text_sha256": "sha256:fc17eac7dceea09edc046a2dba4dcb33362f4f915b3c69a0f6830ff00b9b1884",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-157-2019-2222020",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "altera regras interestaduais do ICMS no art. 155, inclusive diferencial de alíquota e responsabilidade por recolhimento, em texto que dialoga com a substituição tributária.",
+      "destinatario": "redistribui arrecadação e obrigações entre remetentes, destinatários e Estados; não há grupo humano direto seguro e a redação é parcialmente sobreposta/ambígua.",
+      "efeitos": "redistribui arrecadação e obrigações entre remetentes, destinatários e Estados; não há grupo humano direto seguro e a redação é parcialmente sobreposta/ambígua.",
+      "grupos_canonicos": [],
+      "tema": [
+        "economia_tributacao",
+        "federalismo_fiscal"
+      ],
+      "resumo": "altera regras interestaduais do ICMS no art. 155, inclusive diferencial de alíquota e responsabilidade por recolhimento, em texto que dialoga com a substituição tributária.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2222020",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1812518",
+        "text_sha256": "sha256:6663a5567d14c663488e08b8d645436e2f18173bbce8a8f3329e17121463079c",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-163-2019-2222109",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "reescreve amplamente a PEC 45: Simples, responsabilidade tributária, IBS/CBS, alíquotas uniformes, fundos regionais, transição, créditos e extinção de tributos.",
+      "destinatario": "pacote constitucional tributário de múltiplas facetas, com contribuintes, empresas, entes e fundos como destinatários; sem grupo humano direto unívoco.",
+      "efeitos": "pacote constitucional tributário de múltiplas facetas, com contribuintes, empresas, entes e fundos como destinatários; sem grupo humano direto unívoco.",
+      "grupos_canonicos": [],
+      "tema": [
+        "economia_tributacao",
+        "federalismo_fiscal",
+        "trabalho_renda"
+      ],
+      "resumo": "reescreve amplamente a PEC 45: Simples, responsabilidade tributária, IBS/CBS, alíquotas uniformes, fundos regionais, transição, créditos e extinção de tributos.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2222109",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1812752",
+        "text_sha256": "sha256:bd96624ca4635d8add58ef1debd8442f24971a42ac8a44f18b1b564ce859e04e",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-166-2019-2222159",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "estabelece prazo para aumento de alíquota do IBS, transforma saldo credor não compensado em crédito financeiro remunerado, isenta entrada de ativo imobilizado, regula recolhimento e congela novas exigências na transição.",
+      "destinatario": "contribuintes empresariais ganham previsibilidade, crédito e transição menos onerosa; impacto populacional é indireto e depende de lei complementar.",
+      "efeitos": "contribuintes empresariais ganham previsibilidade, crédito e transição menos onerosa; impacto populacional é indireto e depende de lei complementar.",
+      "grupos_canonicos": [],
+      "tema": [
+        "economia_tributacao"
+      ],
+      "resumo": "estabelece prazo para aumento de alíquota do IBS, transforma saldo credor não compensado em crédito financeiro remunerado, isenta entrada de ativo imobilizado, regula recolhimento e congela novas exigências na transição.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2222159",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1812848",
+        "text_sha256": "sha256:f23df7afe8a571f1a3f483ed2fa31d3323662d8e0ea9c615164e0198876e3331",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-173-2019-2222314",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "exclui do IBS operações de fomento com capital próprio destinadas ao crescimento de micro e pequenas empresas.",
+      "destinatario": "micro e pequenas empresas/financiadores são beneficiários econômicos diretos; possível emprego e preços são efeitos indiretos, sem grupo populacional canônico seguro.",
+      "efeitos": "micro e pequenas empresas/financiadores são beneficiários econômicos diretos; possível emprego e preços são efeitos indiretos, sem grupo populacional canônico seguro.",
+      "grupos_canonicos": [],
+      "tema": [
+        "economia_tributacao"
+      ],
+      "resumo": "exclui do IBS operações de fomento com capital próprio destinadas ao crescimento de micro e pequenas empresas.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2222314",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1813159",
+        "text_sha256": "sha256:ba9e3bef9d0da0e8289e3ec71dff2d5f72567c127a575cfc131b2ac28b5f38b1",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-175-2019-2222741",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "permite ao optante do Simples recolher IBS fora do regime unificado e, se recolher conjuntamente, apropriar e transferir créditos.",
+      "destinatario": "micro e pequenas empresas optantes ganham neutralidade concorrencial potencial; consumidores e trabalhadores só seriam afetados por repasses indiretos.",
+      "efeitos": "micro e pequenas empresas optantes ganham neutralidade concorrencial potencial; consumidores e trabalhadores só seriam afetados por repasses indiretos.",
+      "grupos_canonicos": [],
+      "tema": [
+        "economia_tributacao"
+      ],
+      "resumo": "permite ao optante do Simples recolher IBS fora do regime unificado e, se recolher conjuntamente, apropriar e transferir créditos.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2222741",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1814318",
+        "text_sha256": "sha256:a4549768073678f532a0c035f331f475b6eba13d571029b7734aec7ee8bc946d",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-179-2019-2223880",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "faz o IBS pertencer ao Estado/DF e Município de origem, em vez do destino, preservando receita de regiões produtoras e a base industrial regional.",
+      "destinatario": "entes produtores e cadeias industriais são beneficiários econômicos; emprego e renda regionais são efeitos condicionais, enquanto regiões consumidoras podem perder receita; grupo trabalhador não é efeito direto unívoco.",
+      "efeitos": "entes produtores e cadeias industriais são beneficiários econômicos; emprego e renda regionais são efeitos condicionais, enquanto regiões consumidoras podem perder receita; grupo trabalhador não é efeito direto unívoco.",
+      "grupos_canonicos": [
+        "trabalhadores_formais"
+      ],
+      "tema": [
+        "economia_tributacao",
+        "federalismo_fiscal",
+        "trabalho_renda"
+      ],
+      "resumo": "faz o IBS pertencer ao Estado/DF e Município de origem, em vez do destino, preservando receita de regiões produtoras e a base industrial regional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2223880",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1816080",
+        "text_sha256": "sha256:773e7055f7cf6a5cc1a349d4f23f17f1955ec62f97049cd0240b35195282558c",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-185-2019-2224478",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "cria base constitucional para securitização/novação da dívida pública e prioriza novação de créditos FCVS, preservando acesso de credores a REFIS.",
+      "destinatario": "instituições financeiras, credores FCVS e União são destinatários; há efeitos sobre risco, liquidez e passivo público, sem grupo populacional direto seguro.",
+      "efeitos": "instituições financeiras, credores FCVS e União são destinatários; há efeitos sobre risco, liquidez e passivo público, sem grupo populacional direto seguro.",
+      "grupos_canonicos": [],
+      "tema": [
+        "financas_publicas",
+        "economia_tributacao"
+      ],
+      "resumo": "cria base constitucional para securitização/novação da dívida pública e prioriza novação de créditos FCVS, preservando acesso de credores a REFIS.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2224478",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1818483",
+        "text_sha256": "sha256:4d37cea7629d8f7310bf9dd51e322aeba1d84c1c6ddeb2b858dbb3c7d1f4462b",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-186-2019-2224479",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "constitucionaliza estações aduaneiras/portos secos e permite regime tributário especial; prorroga até regulamentação o prazo de concessões e permissões, inclusive anteriores a maio de 2003.",
+      "destinatario": "operadores de portos secos e comércio exterior ganham previsibilidade/concessão; desigualdade regional e emprego são efeitos indiretos, sem grupo humano direto.",
+      "efeitos": "operadores de portos secos e comércio exterior ganham previsibilidade/concessão; desigualdade regional e emprego são efeitos indiretos, sem grupo humano direto.",
+      "grupos_canonicos": [],
+      "tema": [
+        "comercio_exterior",
+        "federalismo_fiscal"
+      ],
+      "resumo": "constitucionaliza estações aduaneiras/portos secos e permite regime tributário especial; prorroga até regulamentação o prazo de concessões e permissões, inclusive anteriores a maio de 2003.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2224479",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1818484",
+        "text_sha256": "sha256:60990478c4772e1946d8cc68c2033424663ec32b7a814218f1efc9fb853ad76f",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-19-2019-2204261",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "cria exceção previdenciária para vigilantes: lei complementar poderá fixar idade/tempo distintos e, transitoriamente, aposentadoria aos 55/52 anos, 30/25 anos de contribuição e 20 de atividade especial, com cálculo próprio.",
+      "destinatario": "vigilantes segurados são destinatários diretos; empregadores e RGPS suportariam custo atuarial potencial; benefício é condicionado à regulamentação (exceto regra transitória proposta).",
+      "efeitos": "vigilantes segurados são destinatários diretos; empregadores e RGPS suportariam custo atuarial potencial; benefício é condicionado à regulamentação (exceto regra transitória proposta).",
+      "grupos_canonicos": [
+        "trabalhadores_formais"
+      ],
+      "tema": [
+        "previdencia",
+        "seguranca_publica"
+      ],
+      "resumo": "cria exceção previdenciária para vigilantes: lei complementar poderá fixar idade/tempo distintos e, transitoriamente, aposentadoria aos 55/52 anos, 30/25 anos de contribuição e 20 de atividade especial, com cálculo próprio.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2204261",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1750820",
+        "text_sha256": "sha256:429d16af40a5719295bfa74ea2501275f0e60beab96d52ee6e804a66dec3c161",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-191-2019-2224648",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "inclui serviços financeiros no IBS, exclui spread/juros/deságio, assegura crédito integral de serviços contratados e pretende evitar aumento do custo do crédito e da terceirização.",
+      "destinatario": "instituições financeiras e prestadores contratados têm incidência e créditos em sentidos opostos; tomadores e trabalhadores podem sofrer repasses/emprego, mas são efeitos indiretos.",
+      "efeitos": "instituições financeiras e prestadores contratados têm incidência e créditos em sentidos opostos; tomadores e trabalhadores podem sofrer repasses/emprego, mas são efeitos indiretos.",
+      "grupos_canonicos": [],
+      "tema": [
+        "economia_tributacao",
+        "sistema_financeiro",
+        "trabalho_renda"
+      ],
+      "resumo": "inclui serviços financeiros no IBS, exclui spread/juros/deságio, assegura crédito integral de serviços contratados e pretende evitar aumento do custo do crédito e da terceirização.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2224648",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1818869",
+        "text_sha256": "sha256:3699eb5aaef36b7ea1399b7c180e87c3d609274a07a248723b24092830bf7c8f",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-2-2019-2212300",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "substitui integralmente a PEC 45 por imposto federal sobre movimentação/transmissão financeira, com alíquotas e isenções a definir em lei complementar, fundos distributivos e extinção/revogação de tributos e contribuições.",
+      "destinatario": "efeitos distributivos são amplos e incertos: movimentações financeiras, contribuintes, entes federados e fundos; texto composto e dependente de regulamentação impede grupo humano direto canônico seguro.",
+      "efeitos": "efeitos distributivos são amplos e incertos: movimentações financeiras, contribuintes, entes federados e fundos; texto composto e dependente de regulamentação impede grupo humano direto canônico seguro.",
+      "grupos_canonicos": [],
+      "tema": [
+        "economia_tributacao",
+        "sistema_financeiro",
+        "educacao",
+        "federalismo_fiscal"
+      ],
+      "resumo": "substitui integralmente a PEC 45 por imposto federal sobre movimentação/transmissão financeira, com alíquotas e isenções a definir em lei complementar, fundos distributivos e extinção/revogação de tributos e contribuições.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2212300",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1779508",
+        "text_sha256": "sha256:489a18e4a5f4cb61254990898667b1c7bc2a489684f5ecaab9fc8edc6ab09915",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-208-2019-2205922",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "fixa para novos filiados do RGPS idade de 53/58 (mulher/homem), reduzida para rurais, e 20 anos de contribuição; mantém distinção rural na transição proposta.",
+      "destinatario": "segurados rurais e demais novos filiados recebem requisitos mais específicos/possivelmente inferiores aos da PEC-base; o valor e a cobertura dependem de regras do RGPS e lei complementar.",
+      "efeitos": "segurados rurais e demais novos filiados recebem requisitos mais específicos/possivelmente inferiores aos da PEC-base; o valor e a cobertura dependem de regras do RGPS e lei complementar.",
+      "grupos_canonicos": [
+        "agricultura_familiar_sem_terra",
+        "trabalhadores_formais"
+      ],
+      "tema": [
+        "previdencia",
+        "trabalho_renda"
+      ],
+      "resumo": "fixa para novos filiados do RGPS idade de 53/58 (mulher/homem), reduzida para rurais, e 20 anos de contribuição; mantém distinção rural na transição proposta.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2205922",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1758027",
+        "text_sha256": "sha256:4fb0f0082a3a304e3951158e346ca70d376698c265ed34cd62df0f9643c9db53",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-21-2019-2204284",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "enquadra policiais, guardas, peritos, agentes penitenciários, socioeducativos e de trânsito em regime próprio de aposentadoria/pensão, com paridade, pensão vitalícia e regras especiais de transição.",
+      "destinatario": "servidores de segurança pública ganham requisitos e proteção previdenciária diferenciados; entes previdenciários assumem maior obrigação potencial; diversos efeitos dependem de lei complementar.",
+      "efeitos": "servidores de segurança pública ganham requisitos e proteção previdenciária diferenciados; entes previdenciários assumem maior obrigação potencial; diversos efeitos dependem de lei complementar.",
+      "grupos_canonicos": [
+        "servidores_publicos"
+      ],
+      "tema": [
+        "previdencia",
+        "seguranca_publica"
+      ],
+      "resumo": "enquadra policiais, guardas, peritos, agentes penitenciários, socioeducativos e de trânsito em regime próprio de aposentadoria/pensão, com paridade, pensão vitalícia e regras especiais de transição.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2204284",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1750878",
+        "text_sha256": "sha256:3e3ca6d669f5d7a36071af7633353926e244bb42206ce50907fca7bf1d84ed28",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-210-2019-2205924",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "cria aposentadoria especial transitória para motoristas de grande porte, cobradores e agentes de bordo após 25 anos, com 100% da média e adicional por contribuição excedente.",
+      "destinatario": "profissionais nominados são destinatários diretos; RGPS absorve benefício potencialmente mais generoso; exige prova de trabalho permanente e futura lei complementar.",
+      "efeitos": "profissionais nominados são destinatários diretos; RGPS absorve benefício potencialmente mais generoso; exige prova de trabalho permanente e futura lei complementar.",
+      "grupos_canonicos": [
+        "trabalhadores_formais"
+      ],
+      "tema": [
+        "previdencia",
+        "trabalho_renda"
+      ],
+      "resumo": "cria aposentadoria especial transitória para motoristas de grande porte, cobradores e agentes de bordo após 25 anos, com 100% da média e adicional por contribuição excedente.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2205924",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1758030",
+        "text_sha256": "sha256:2e795fb85e7666c738421f5cb6ec185a68a46f9540928bf97dd051e62b1a3feb",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-22-2019-2218570",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "exclui serviços da proibição de benefícios/isenções do IBS, abrindo espaço constitucional para tributação favorecida; a justificação aponta serviços essenciais como saúde e educação.",
+      "destinatario": "pode reduzir custo tributário de prestadores e repasse a usuários, mas isso é efeito indireto e condicionado à lei complementar; não há grupo populacional direto seguro.",
+      "efeitos": "pode reduzir custo tributário de prestadores e repasse a usuários, mas isso é efeito indireto e condicionado à lei complementar; não há grupo populacional direto seguro.",
+      "grupos_canonicos": [],
+      "tema": [
+        "economia_tributacao",
+        "educacao",
+        "saude"
+      ],
+      "resumo": "exclui serviços da proibição de benefícios/isenções do IBS, abrindo espaço constitucional para tributação favorecida; a justificação aponta serviços essenciais como saúde e educação.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2218570",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1801990",
+        "text_sha256": "sha256:9201185c9db0f22bee496adc1e1ae50f6422e204041dfc9bdc73a3548bf76ccf",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-238-2019-2205956",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "reformula contribuição e aposentadoria rural: inclui agricultor familiar, extrativista, pescador artesanal e demais rurais; propõe idade 60/55, 15 anos, benefício de um salário mínimo para segurados abrangidos e supressões de dispositivos da PEC 6.",
+      "destinatario": "rurais, agricultores familiares, extrativistas e pescadores têm regras e piso explicitados; financiamento e elegibilidade dependem de lei complementar e comprovação; efeitos sobre demais segurados não são unívocos.",
+      "efeitos": "rurais, agricultores familiares, extrativistas e pescadores têm regras e piso explicitados; financiamento e elegibilidade dependem de lei complementar e comprovação; efeitos sobre demais segurados não são unívocos.",
+      "grupos_canonicos": [
+        "agricultura_familiar_sem_terra",
+        "pescadores_artesanais_comunidades_pesqueiras"
+      ],
+      "tema": [
+        "previdencia",
+        "trabalho_renda"
+      ],
+      "resumo": "reformula contribuição e aposentadoria rural: inclui agricultor familiar, extrativista, pescador artesanal e demais rurais; propõe idade 60/55, 15 anos, benefício de um salário mínimo para segurados abrangidos e supressões de dispositivos da PEC 6.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2205956",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1758120",
+        "text_sha256": "sha256:c727fcc6504feb8ef568360c91d4925e310a2bae0c3da87e98997f3543bb3919",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-24-2019-2218621",
+      "decision": "withheld",
+      "reason": "Sem evento oficial vinculante de votação da emenda/proposição: API oficial /proposicoes/{id}/votacoes retornou dados=[]; tramitação registra apenas apresentação e conferência de assinaturas. A análise textual é descritiva, não atribui voto nem score.",
+      "mecanismo": "inclui pequeno produtor rural e agricultura familiar no comando constitucional de tratamento diferenciado e favorecido, junto a micro e pequenas empresas, inclusive regimes do IBS.",
+      "destinatario": "agricultura familiar e pequeno produtor são destinatários textuais; concretização, benefício e custo dependem da lei complementar e da configuração do IBS.",
+      "efeitos": "agricultura familiar e pequeno produtor são destinatários textuais; concretização, benefício e custo dependem da lei complementar e da configuração do IBS.",
+      "grupos_canonicos": [
+        "agricultura_familiar_sem_terra"
+      ],
+      "tema": [
+        "economia_tributacao",
+        "agricultura"
+      ],
+      "resumo": "inclui pequeno produtor rural e agricultura familiar no comando constitucional de tratamento diferenciado e favorecido, junto a micro e pequenas empresas, inclusive regimes do IBS.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2218621",
+        "version_type": "proposed_amendment",
+        "text_source": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1802122",
+        "text_sha256": "sha256:c96beae11b4146387e73fbe83d0a15121a51de2d13aa7284c3bced1e7c6eabf0",
+        "event_id": null,
+        "event_type": null,
+        "binding_status": "event_binding_missing",
+        "official_voting_events": 0
+      },
+      "score_eligible": false,
+      "confianca": 0.88,
+      "autocritica": {
+        "strongest_counterargument": "A emenda pode ter sido incorporada ou votada dentro da PEC principal, e a API da proposição isolada não captura necessariamente evento da matéria-mãe.",
+        "evidence_against_decision": "Não localizada no endpoint oficial de votações da proposição; tramitações só apresentam proposição/conferência de assinaturas.",
+        "risco_atribuicao": "alto: autoria/coautoria não equivale a voto; eventual votação da PEC principal não vincula o texto desta emenda sem registro do objeto.",
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official voting event/result binding this EMC to a voted object",
+          "binding record for incorporated/rejected amendment or final/redaction version",
+          "nominal vote record, if a vote existed"
+        ],
+        "counterargument": "A Câmara API confirms the proposition identity and coauthorship, and the official integral-text URL/hash is reproducible; this supports a factual authorship record, but cannot establish that this amendment was voted or that its text was the effective object of a vote."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    }
+  ]
+}
