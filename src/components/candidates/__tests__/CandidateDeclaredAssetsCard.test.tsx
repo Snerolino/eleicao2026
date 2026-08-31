@@ -1,6 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
-import { CandidateDeclaredAssetsCard } from '../CandidateDeclaredAssetsCard';
+import {
+  CandidateDeclaredAssetsCard,
+  DECLARED_ASSETS_LEGAL_NOTICE,
+} from '../CandidateDeclaredAssetsCard';
 import type { CandidateDeclaredAssets } from '@/types/election';
 
 const mockAssets: CandidateDeclaredAssets = {
@@ -64,25 +67,39 @@ const mockAssets: CandidateDeclaredAssets = {
 };
 
 describe('CandidateDeclaredAssetsCard', () => {
-  it('renderiza patrimônio total e composição por categorias', () => {
+  it('exibe o aviso legal/institucional e mantém valores ocultos por padrão', () => {
     render(<CandidateDeclaredAssetsCard assets={mockAssets} candidateName="Candidato Teste" />);
 
     expect(screen.getByText(/Patrimônio e Bens Declarados/i)).toBeInTheDocument();
+    expect(screen.getByText(new RegExp(DECLARED_ASSETS_LEGAL_NOTICE.slice(0, 50), 'i'))).toBeInTheDocument();
+
+    // Valores estão inicialmente ocultos
+    expect(screen.queryByText(/R\$\s*71\.000,00/i)).not.toBeInTheDocument();
+    expect(screen.queryByText('Veículos e Automotores')).not.toBeInTheDocument();
+  });
+
+  it('revela os valores e composição por categorias ao clicar no botão de exibição', () => {
+    render(<CandidateDeclaredAssetsCard assets={mockAssets} candidateName="Candidato Teste" />);
+
+    const revealButton = screen.getByRole('button', {
+      name: /Exibir valores e composição do patrimônio declarado/i,
+    });
+    fireEvent.click(revealButton);
+
     expect(screen.getAllByText(/R\$\s*71\.000,00/i).length).toBeGreaterThan(0);
     expect(screen.getByText('Veículos e Automotores')).toBeInTheDocument();
     expect(screen.getByText('Aplicações e Depósitos Bancários')).toBeInTheDocument();
-  });
-
-  it('exibe badge e painel de auditoria de evolução patrimonial histórica', () => {
-    render(<CandidateDeclaredAssetsCard assets={mockAssets} candidateName="Candidato Teste" />);
-
-    expect(screen.getByText(/Evolução Patrimonial entre Eleições/i)).toBeInTheDocument();
-    expect(screen.getByText(/42\.0% vs 2022/i)).toBeInTheDocument();
     expect(screen.getByText(/Patrimônio variou \+42\.0% entre 2022 e 2026/i)).toBeInTheDocument();
   });
 
-  it('permite alternar entre anos no histórico de declarações', () => {
+  it('permite alternar entre anos após revelação dos dados', () => {
     render(<CandidateDeclaredAssetsCard assets={mockAssets} candidateName="Candidato Teste" />);
+
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: /Exibir valores e composição do patrimônio declarado/i,
+      })
+    );
 
     const button2022 = screen.getByRole('button', { name: /2022/i });
     fireEvent.click(button2022);
@@ -94,7 +111,15 @@ describe('CandidateDeclaredAssetsCard', () => {
   it('expande e oculta a relação detalhada de bens com filtro', () => {
     render(<CandidateDeclaredAssetsCard assets={mockAssets} candidateName="Candidato Teste" />);
 
-    const toggleButton = screen.getByRole('button', { name: /Ver relação detalhada dos 2 bens declarados/i });
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: /Exibir valores e composição do patrimônio declarado/i,
+      })
+    );
+
+    const toggleButton = screen.getByRole('button', {
+      name: /Ver relação detalhada dos 2 bens declarados/i,
+    });
     expect(screen.queryByText(/50% DE UM VEÍCULO DODGE/i)).not.toBeInTheDocument();
 
     fireEvent.click(toggleButton);
@@ -111,9 +136,20 @@ describe('CandidateDeclaredAssetsCard', () => {
     expect(screen.queryByText(/50% DE UM VEÍCULO DODGE/i)).not.toBeInTheDocument();
   });
 
-  it('exibe estado vazio quando candidato não possui bens cadastrados', () => {
+  it('exibe aviso e esclarecimento quando candidato não possui bens cadastrados', () => {
     render(<CandidateDeclaredAssetsCard assets={null} candidateName="Candidato Sem Bens" />);
 
-    expect(screen.getByText(/Nenhum bem patrimonial individual foi registrado para Candidato Sem Bens/i)).toBeInTheDocument();
+    expect(screen.getByText(/Patrimônio e Bens Declarados/i)).toBeInTheDocument();
+    expect(screen.getByText(new RegExp(DECLARED_ASSETS_LEGAL_NOTICE.slice(0, 50), 'i'))).toBeInTheDocument();
+
+    const checkButton = screen.getByRole('button', {
+      name: /Ver confirmação da declaração sem bens/i,
+    });
+    fireEvent.click(checkButton);
+
+    expect(
+      screen.getByText(/Nenhum bem patrimonial individual foi registrado para/i)
+    ).toBeInTheDocument();
+    expect(screen.getByText(/Candidato Sem Bens/i)).toBeInTheDocument();
   });
 });

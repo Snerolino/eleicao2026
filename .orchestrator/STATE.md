@@ -1,3 +1,9 @@
+## Tick contínuo — Apresentação com Velo e Aviso Jurídico de Bens Declarados — 2026-08-31T06:05-03:00
+
+- **Apresentação com Velo e Esclarecimento Legal**: Implementado no componente `CandidateDeclaredAssetsCard.tsx` o aviso legal e institucional estrito sobre a declaração de bens (art. 11, § 1º, IV, da Lei nº 9.504/1997) para candidaturas com e sem patrimônio listado.
+- **Valores Ocultos por Padrão**: Detalhes, valores, barras de evolução patrimonial e itens permanecem velados por padrão, sendo revelados sob demanda pelo usuário através do botão explicativo institucional.
+- **Publicação & Validação**: Suíte com **117 arquivos / 491 testes 100% verdes**, TypeScript limpo, build de produção gerado e deploy atualizado em produção no Cloudflare Pages (`portal-transparencia-rs.pages.dev`).
+
 ## Tick contínuo — Enriquecimento Universal de Bens Declarados e Publicação em Produção — 2026-08-30T21:34-03:00
 
 - **Auditoria Universal e Enriquecimento Concluídos**: Identificados e preenchidos os dados públicos de patrimônio e histórico eleitoral (TSE / DivulgaCandContas) para todas as candidaturas majoritárias e proporcionais de destaque, incluindo Marcel van Hattem (R$ 1,32M / +599,8%), Gabriel Souza (R$ 935k), Luciano Zucco (R$ 709k), Edegar Pretto (R$ 670k), Juliana Brizola (R$ 376k), Ubiratan Sanderson (R$ 145k), Germano Rigotto (R$ 4,84M), Frederico Antunes (R$ 1,77M), Pompeo de Mattos (R$ 3,5M), Afonso Hamm (R$ 1,8M), Any Ortiz (R$ 1,63M), Danrlei de Deus (R$ 1,22M), Pedro Westphalen (R$ 3,41M), Alceu Moreira (R$ 2,34M), Lucas Redecker (R$ 1,89M), Heitor Schuch (R$ 1,62M), Carlos Gomes (R$ 1,15M), Franciane Bayer (R$ 680k), Ramiro Rosário (R$ 720k) e Rodrigo Zucco (R$ 480k).
