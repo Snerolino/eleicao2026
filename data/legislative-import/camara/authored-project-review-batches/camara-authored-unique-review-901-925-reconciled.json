@@ -1,0 +1,420 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:req-4351-2025-2574000",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-454-2023-2350242",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-4651-2025-2580967",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-535-2025-2484154",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-632-2025-2485176",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-681-2023-2351373",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-896-2024-2424069",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-97-2025-2519666",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rpd-1-0-2438020",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:doc-28-2023-2345614",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "urlInteiroTeor/full_text_url and HTTP/SHA evidence",
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "urlInteiroTeor=null prevents text validation; ementa/API metadata cannot substitute for the integral text. Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-1-2019-2199624",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-1-2019-2211898",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-10-2019-2216649",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-100-2019-2205625",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-111-2019-2219948",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-113-2019-2219970",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "official ementa reconciliation",
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "API ementa differs from packet and needs reconciliation. Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-115-2019-2205653",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-115-2019-2220478",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-127-2019-2221476",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-128-2019-2205727",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-13-0-2566670",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-130-2019-2221541",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "official ementa reconciliation",
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "API ementa differs from packet and needs reconciliation. Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-14-2019-2217423",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-142-2019-2221909",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-143-2019-2221911",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "medium",
+      "missing_sources": [
+        "exact voting_event proof: event_id, object/version, date, official event URL/hash, nominal record"
+      ],
+      "counterargument": "Even with proposition/authorship/text confirmed, authorship does not prove a voted event or a vote meaning; score must remain withheld.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    }
+  ]
+}
