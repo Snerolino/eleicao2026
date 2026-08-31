@@ -1,0 +1,484 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:emc-64-2019-2205251",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "no_voting_event_id_or_object_voted_in_packet",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-7-0-2566202",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "year_zero_requires_official_resolution",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_voting_event_id_or_object_voted_in_packet",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-7-2019-2216643",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "no_voting_event_id_or_object_voted_in_packet",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-79-2019-2205560",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "metadata_identity_or_ementa_mismatch",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_voting_event_id_or_object_voted_in_packet",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-8-0-2289985",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "year_zero_requires_official_resolution",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_voting_event_id_or_object_voted_in_packet",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-8-2019-2216644",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "no_voting_event_id_or_object_voted_in_packet",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-80-2019-2219857",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "no_voting_event_id_or_object_voted_in_packet",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-85-2019-2219876",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "metadata_identity_or_ementa_mismatch",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_voting_event_id_or_object_voted_in_packet",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-88-2019-2219907",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "no_voting_event_id_or_object_voted_in_packet",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-92-2019-2205605",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "no_voting_event_id_or_object_voted_in_packet",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-93-2019-2205608",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "no_voting_event_id_or_object_voted_in_packet",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-96-2019-2205612",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "no_voting_event_id_or_object_voted_in_packet",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emp-17-0-2273467",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "year_zero_requires_official_resolution",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_voting_event_id_or_object_voted_in_packet",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emp-18-0-2273468",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "year_zero_requires_official_resolution",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_voting_event_id_or_object_voted_in_packet",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emp-19-0-2273470",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "year_zero_requires_official_resolution",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_voting_event_id_or_object_voted_in_packet",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emp-20-0-2273471",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "year_zero_requires_official_resolution",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_voting_event_id_or_object_voted_in_packet",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emp-21-0-2273472",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "year_zero_requires_official_resolution",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_voting_event_id_or_object_voted_in_packet",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emp-21-0-2511187",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "metadata_identity_or_ementa_mismatch",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "year_zero_requires_official_resolution",
+        "no_voting_event_id_or_object_voted_in_packet",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emp-22-0-2273473",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "year_zero_requires_official_resolution",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_voting_event_id_or_object_voted_in_packet",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emp-22-0-2511201",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "year_zero_requires_official_resolution",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_voting_event_id_or_object_voted_in_packet",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emp-24-0-2273478",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "year_zero_requires_official_resolution",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_voting_event_id_or_object_voted_in_packet",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emp-24-0-2511251",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "year_zero_requires_official_resolution",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_voting_event_id_or_object_voted_in_packet",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emp-25-0-2273479",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "year_zero_requires_official_resolution",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_voting_event_id_or_object_voted_in_packet",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emp-4-0-2258777",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "year_zero_requires_official_resolution",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_voting_event_id_or_object_voted_in_packet",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pdl-209-2023-2375447",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": [
+        "no_voting_event_id_or_object_voted_in_packet",
+        "authorship_role_not_explicitly_proven_by_manifest",
+        "no_effective_voted_version_linkage"
+      ],
+      "missing_sources": [],
+      "counterargument": null,
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    }
+  ]
+}
