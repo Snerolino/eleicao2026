@@ -1,0 +1,744 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:req-1330-2024-2429023",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition identity and official document are corroborated, but the Câmara API returns zero voting records; authorship/registration or an urgency request is not a binding merit vote.",
+      "missing_sources": [
+        "official voting event/object (none found in /votacoes)",
+        "effective-version binding if later text exists",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The registration/requirement can be a real legislative act and the full official PDF is hash-identical to the supplied manifest; however that supports only factual authorship, not a population impact or a vote position.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2429023",
+        "type": "REQ",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2429023",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2412455",
+        "text_sha256": "sha256:f4b62b6cdd85e89457c920f20b7e4800d7d4c80373f83627c944423e5386ba3f",
+        "official_status": "arquivado"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:req-1404-2023-2360100",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition identity and official document are corroborated, but the Câmara API returns zero voting records; authorship/registration or an urgency request is not a binding merit vote.",
+      "missing_sources": [
+        "official voting event/object (none found in /votacoes)",
+        "effective-version binding if later text exists",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The registration/requirement can be a real legislative act and the full official PDF is hash-identical to the supplied manifest; however that supports only factual authorship, not a population impact or a vote position.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2360100",
+        "type": "REQ",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2360100",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2268430",
+        "text_sha256": "sha256:9d735c397f03e2028c08fad6feeca9a0e3c894ab8e52fae7bbcae416363f824f",
+        "official_status": "arquivado"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:req-3728-2023-2400128",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition identity and official document are corroborated, but the Câmara API returns zero voting records; authorship/registration or an urgency request is not a binding merit vote.",
+      "missing_sources": [
+        "official voting event/object (none found in /votacoes)",
+        "effective-version binding if later text exists",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The registration/requirement can be a real legislative act and the full official PDF is hash-identical to the supplied manifest; however that supports only factual authorship, not a population impact or a vote position.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2400128",
+        "type": "REQ",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2400128",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2353102",
+        "text_sha256": "sha256:854e52ec17660ab0383e7e836803faaf465395d608b6397518de7f86c5001bf6",
+        "official_status": "tramitando"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:req-529-2023-2350745",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition identity and official document are corroborated, but the Câmara API returns zero voting records; authorship/registration or an urgency request is not a binding merit vote.",
+      "missing_sources": [
+        "official voting event/object (none found in /votacoes)",
+        "effective-version binding if later text exists",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The registration/requirement can be a real legislative act and the full official PDF is hash-identical to the supplied manifest; however that supports only factual authorship, not a population impact or a vote position.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2350745",
+        "type": "REQ",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350745",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2241088",
+        "text_sha256": "sha256:5a2a1afd3d0cf0db8c749f3a6d0ff47a5f0a4c396a540ca27450960ba5000268",
+        "official_status": "arquivado"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:req-559-2023-2350887",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition identity and official document are corroborated, but the Câmara API returns zero voting records; authorship/registration or an urgency request is not a binding merit vote.",
+      "missing_sources": [
+        "official voting event/object (none found in /votacoes)",
+        "effective-version binding if later text exists",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The registration/requirement can be a real legislative act and the full official PDF is hash-identical to the supplied manifest; however that supports only factual authorship, not a population impact or a vote position.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2350887",
+        "type": "REQ",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350887",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2241449",
+        "text_sha256": "sha256:ba72aa56d9da3d2cc11429f4958813a3e858a0b03b51d44cce3e4a18b000b96d",
+        "official_status": "arquivado"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:req-674-2023-2351334",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition identity and official document are corroborated, but the Câmara API returns zero voting records; authorship/registration or an urgency request is not a binding merit vote.",
+      "missing_sources": [
+        "official voting event/object (none found in /votacoes)",
+        "effective-version binding if later text exists",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The registration/requirement can be a real legislative act and the full official PDF is hash-identical to the supplied manifest; however that supports only factual authorship, not a population impact or a vote position.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2351334",
+        "type": "REQ",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351334",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2243389",
+        "text_sha256": "sha256:c2b9ad214430dd5f35bb7e123effb3fe831b039c75136d9c250fdcc2b7e3d49b",
+        "official_status": "arquivado"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:req-951-2023-2353879",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition identity and official document are corroborated, but the Câmara API returns zero voting records; authorship/registration or an urgency request is not a binding merit vote.",
+      "missing_sources": [
+        "official voting event/object (none found in /votacoes)",
+        "effective-version binding if later text exists",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The registration/requirement can be a real legislative act and the full official PDF is hash-identical to the supplied manifest; however that supports only factual authorship, not a population impact or a vote position.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2353879",
+        "type": "REQ",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2353879",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2251004",
+        "text_sha256": "sha256:e35eda74260f3f1f5fc68f7490f25c809b64bd7b22710785f378a88890011a11",
+        "official_status": "arquivado"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:pec-16-2026-2644800",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition and source PDF are confirmed, but no voting record is returned for this proposition (or, for EMC, no event binding); the supplied document is not proof of an effective voted version.",
+      "missing_sources": [
+        "official voting event/object and version binding",
+        "final/substitute/amendment text applicable to any event",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The PDF may faithfully reproduce the submitted full text and authorship may be exact; that still cannot establish a voted object, vote meaning, or score eligibility.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2644800",
+        "type": "PEC",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2644800",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3175526",
+        "text_sha256": "sha256:84dca8f031ca196b3c5b1e954d5f63fe336b448cb0d11b97aaa15d5a05ebc984",
+        "official_status": "tramitando"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:pec-48-2024-2478427",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition and source PDF are confirmed, but no voting record is returned for this proposition (or, for EMC, no event binding); the supplied document is not proof of an effective voted version.",
+      "missing_sources": [
+        "official voting event/object and version binding",
+        "final/substitute/amendment text applicable to any event",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The PDF may faithfully reproduce the submitted full text and authorship may be exact; that still cannot establish a voted object, vote meaning, or score eligibility.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2478427",
+        "type": "PEC",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2478427",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2838887",
+        "text_sha256": "sha256:34da92b8374e001ab6e91231e3a6eb1279677ac1e73d9ff02a13d4cbc7736d39",
+        "official_status": "tramitando"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:req-1097-2023-2355389",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition identity and official document are corroborated, but the Câmara API returns zero voting records; authorship/registration or an urgency request is not a binding merit vote.",
+      "missing_sources": [
+        "official voting event/object (none found in /votacoes)",
+        "effective-version binding if later text exists",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The registration/requirement can be a real legislative act and the full official PDF is hash-identical to the supplied manifest; however that supports only factual authorship, not a population impact or a vote position.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2355389",
+        "type": "REQ",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2355389",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2256771",
+        "text_sha256": "sha256:9734b1f8f89588144823de3550d830777b1d6d542c4c358a47c5b2f49168a2d8",
+        "official_status": "arquivado"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:req-1797-2024-2436628",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition identity and official document are corroborated, but the Câmara API returns zero voting records; authorship/registration or an urgency request is not a binding merit vote.",
+      "missing_sources": [
+        "official voting event/object (none found in /votacoes)",
+        "effective-version binding if later text exists",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The registration/requirement can be a real legislative act and the full official PDF is hash-identical to the supplied manifest; however that supports only factual authorship, not a population impact or a vote position.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2436628",
+        "type": "REQ",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2436628",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2429617",
+        "text_sha256": "sha256:07d6e47152c707a62c7749a5f48e55f0d7ca3f8063ecca44f407437543f124ab",
+        "official_status": "tramitando"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:req-3295-2023-2390454",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition identity and official document are corroborated, but the Câmara API returns zero voting records; authorship/registration or an urgency request is not a binding merit vote.",
+      "missing_sources": [
+        "official voting event/object (none found in /votacoes)",
+        "effective-version binding if later text exists",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The registration/requirement can be a real legislative act and the full official PDF is hash-identical to the supplied manifest; however that supports only factual authorship, not a population impact or a vote position.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2390454",
+        "type": "REQ",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2390454",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2333714",
+        "text_sha256": "sha256:a3383bb3875078121907f38116d18c66256f114640a6a01bb7010e7c38103ea4",
+        "official_status": "arquivado"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:req-3343-2023-2391979",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition identity and official document are corroborated, but the Câmara API returns zero voting records; authorship/registration or an urgency request is not a binding merit vote.",
+      "missing_sources": [
+        "official voting event/object (none found in /votacoes)",
+        "effective-version binding if later text exists",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The registration/requirement can be a real legislative act and the full official PDF is hash-identical to the supplied manifest; however that supports only factual authorship, not a population impact or a vote position.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2391979",
+        "type": "REQ",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2391979",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2337569",
+        "text_sha256": "sha256:3115380f4c2cc15a48bed5683312b4fa48f76967762ea5b8abd2693a938969b6",
+        "official_status": "tramitando"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:req-687-2023-2351391",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition identity and official document are corroborated, but the Câmara API returns zero voting records; authorship/registration or an urgency request is not a binding merit vote.",
+      "missing_sources": [
+        "official voting event/object (none found in /votacoes)",
+        "effective-version binding if later text exists",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The registration/requirement can be a real legislative act and the full official PDF is hash-identical to the supplied manifest; however that supports only factual authorship, not a population impact or a vote position.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2351391",
+        "type": "REQ",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351391",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2243619",
+        "text_sha256": "sha256:31da75b45d4b1807128721e1c9165933cfed9d025b202f44f77dcb5e481cf60a",
+        "official_status": "arquivado"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:emc-23-2019-2204310",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition and source PDF are confirmed, but no voting record is returned for this proposition (or, for EMC, no event binding); the supplied document is not proof of an effective voted version.",
+      "missing_sources": [
+        "official voting event/object and version binding",
+        "final/substitute/amendment text applicable to any event",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The PDF may faithfully reproduce the submitted full text and authorship may be exact; that still cannot establish a voted object, vote meaning, or score eligibility.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2204310",
+        "type": "EMC",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2204310",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1750979",
+        "text_sha256": "sha256:f4dfb5790ca02d0aa385a7b77e4e596ea9d94a56b34844be7cff057266aaeb3f",
+        "official_status": "tramitando"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:pec-44-2023-2388029",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "critical: 17 voting records exist, including first/second-turn substitute, final text and amendment votes, but the packet text hash is the initial text and does not bind the effective voted version/object.",
+      "missing_sources": [
+        "full text and SHA-256 of the effective substitute/final text (status URL codteor=2455361)",
+        "text/hash of incorporated Emenda de Redação nº 1",
+        "event-to-version binding for each of the 17 voting records",
+        "nominal vote records for the specific event, if any candidate score is proposed",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The proposition identity, official PDF and authorship may all be genuine, and the API confirms substantive votes; nevertheless a genuine authorship record does not establish that the author supported the substitute/final object or any particular event.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 17
+      },
+      "basis": {
+        "proposition_id": "2388029",
+        "type": "PEC",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2388029",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2328792",
+        "text_sha256": "sha256:8ffdd4ce8a497b2dac09875124955c0258f05981e52d6ff25329adffb4f6b38c",
+        "official_status": "tramitando"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:rcp-2-2024-2438602",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition identity and official document are corroborated, but the Câmara API returns zero voting records; authorship/registration or an urgency request is not a binding merit vote.",
+      "missing_sources": [
+        "official voting event/object (none found in /votacoes)",
+        "effective-version binding if later text exists",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The registration/requirement can be a real legislative act and the full official PDF is hash-identical to the supplied manifest; however that supports only factual authorship, not a population impact or a vote position.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2438602",
+        "type": "RCP",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2438602",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2433393",
+        "text_sha256": "sha256:38b536f3128cda3b25f5b1df7e8d2095af8da2c7f364236bfce03e56f7003fae",
+        "official_status": "tramitando"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:req-1028-2023-2354692",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition identity and official document are corroborated, but the Câmara API returns zero voting records; authorship/registration or an urgency request is not a binding merit vote.",
+      "missing_sources": [
+        "official voting event/object (none found in /votacoes)",
+        "effective-version binding if later text exists",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The registration/requirement can be a real legislative act and the full official PDF is hash-identical to the supplied manifest; however that supports only factual authorship, not a population impact or a vote position.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2354692",
+        "type": "REQ",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2354692",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2254157",
+        "text_sha256": "sha256:4cc869b2414dbbc70629c1ea527ffd85c67aae9d4948107bb67fa92c45579aee",
+        "official_status": "tramitando"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:req-1210-2023-2356591",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition identity and official document are corroborated, but the Câmara API returns zero voting records; authorship/registration or an urgency request is not a binding merit vote.",
+      "missing_sources": [
+        "official voting event/object (none found in /votacoes)",
+        "effective-version binding if later text exists",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The registration/requirement can be a real legislative act and the full official PDF is hash-identical to the supplied manifest; however that supports only factual authorship, not a population impact or a vote position.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2356591",
+        "type": "REQ",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2356591",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2259315",
+        "text_sha256": "sha256:0037cf3519143a6d501a476301f51ec1a5fc08f6967dffabef6d5afecd862754",
+        "official_status": "arquivado"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:req-1355-2026-2607733",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition identity and official document are corroborated, but the Câmara API returns zero voting records; authorship/registration or an urgency request is not a binding merit vote.",
+      "missing_sources": [
+        "official voting event/object (none found in /votacoes)",
+        "effective-version binding if later text exists",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The registration/requirement can be a real legislative act and the full official PDF is hash-identical to the supplied manifest; however that supports only factual authorship, not a population impact or a vote position.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2607733",
+        "type": "REQ",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2607733",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3094657",
+        "text_sha256": "sha256:95f510f94f2c60671281aa3b35e7b5488b2a90f81d521d0214a42e9b610ebaea",
+        "official_status": "tramitando"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:req-1410-2025-2497499",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition identity and official document are corroborated, but the Câmara API returns zero voting records; authorship/registration or an urgency request is not a binding merit vote.",
+      "missing_sources": [
+        "official voting event/object (none found in /votacoes)",
+        "effective-version binding if later text exists",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The registration/requirement can be a real legislative act and the full official PDF is hash-identical to the supplied manifest; however that supports only factual authorship, not a population impact or a vote position.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2497499",
+        "type": "REQ",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2497499",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2886237",
+        "text_sha256": "sha256:eb14d88f5134eb1f4626139b5e399e44fe14945e415a59786eafc3397e85a589",
+        "official_status": "tramitando"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:req-1414-2023-2360388",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition identity and official document are corroborated, but the Câmara API returns zero voting records; authorship/registration or an urgency request is not a binding merit vote.",
+      "missing_sources": [
+        "official voting event/object (none found in /votacoes)",
+        "effective-version binding if later text exists",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The registration/requirement can be a real legislative act and the full official PDF is hash-identical to the supplied manifest; however that supports only factual authorship, not a population impact or a vote position.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2360388",
+        "type": "REQ",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2360388",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2268871",
+        "text_sha256": "sha256:0bce2681f4f37584f4fe7278ed255e048d75c04308df01d7ba04e4efe1bb1ae5",
+        "official_status": "arquivado"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:req-1732-2023-2365068",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition identity and official document are corroborated, but the Câmara API returns zero voting records; authorship/registration or an urgency request is not a binding merit vote.",
+      "missing_sources": [
+        "official voting event/object (none found in /votacoes)",
+        "effective-version binding if later text exists",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The registration/requirement can be a real legislative act and the full official PDF is hash-identical to the supplied manifest; however that supports only factual authorship, not a population impact or a vote position.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2365068",
+        "type": "REQ",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365068",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2278104",
+        "text_sha256": "sha256:e9551f3031789455929c94c42ac9ee4e6b75139903741f4b51bc0d91f2f9cc75",
+        "official_status": "arquivado"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:req-1901-2023-2367833",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition identity and official document are corroborated, but the Câmara API returns zero voting records; authorship/registration or an urgency request is not a binding merit vote.",
+      "missing_sources": [
+        "official voting event/object (none found in /votacoes)",
+        "effective-version binding if later text exists",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The registration/requirement can be a real legislative act and the full official PDF is hash-identical to the supplied manifest; however that supports only factual authorship, not a population impact or a vote position.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2367833",
+        "type": "REQ",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2367833",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2284915",
+        "text_sha256": "sha256:425a05d0de1d0ac3c0c437f2d7f1bddaa2830a98f78122576c01229696adca36",
+        "official_status": "arquivado"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    },
+    {
+      "id": "camara:req-2007-2025-2510795",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "high: proposition identity and official document are corroborated, but the Câmara API returns zero voting records; authorship/registration or an urgency request is not a binding merit vote.",
+      "missing_sources": [
+        "official voting event/object (none found in /votacoes)",
+        "effective-version binding if later text exists",
+        "independent bijection candidate_tse_id ↔ Câmara deputado_id"
+      ],
+      "counterargument": "The registration/requirement can be a real legislative act and the full official PDF is hash-identical to the supplied manifest; however that supports only factual authorship, not a population impact or a vote position.",
+      "checks": {
+        "proposition_api_exact": true,
+        "official_full_text_http": true,
+        "full_text_bytes_match": true,
+        "official_pdf": true,
+        "candidate_author_ids_subset_not_proof": true,
+        "voting_records_count": 0
+      },
+      "basis": {
+        "proposition_id": "2510795",
+        "type": "REQ",
+        "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2510795",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2910611",
+        "text_sha256": "sha256:a3fbbe784ca78ac3c1a00781dcfedddce48664853a1e73d12fdccdac42bcec2d",
+        "official_status": "tramitando"
+      },
+      "reconciliation": "red-team confirmou retenção; nenhum projeto possui cadeia completa para publicação pública."
+    }
+  ]
+}
