@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_editorial_review_queue",
+  "mode": "pending_review",
+  "remote_apply": false,
+  "batch_size": 20,
+  "batches": [
+    {
+      "batch_id": "camara-authored-001",
+      "candidates": 20,
+      "projects": 20830,
+      "file": "/home/lourenco/Projetos/eleicao2026/data/legislative-import/camara/authored-project-review-batches/camara-authored-001.json"
+    },
+    {
+      "batch_id": "camara-authored-002",
+      "candidates": 16,
+      "projects": 17528,
+      "file": "/home/lourenco/Projetos/eleicao2026/data/legislative-import/camara/authored-project-review-batches/camara-authored-002.json"
+    }
+  ]
+}
