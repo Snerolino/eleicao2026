@@ -1,0 +1,845 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:req-315-2025-2483423",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "220553",
+          "74398",
+          "160538",
+          "160535",
+          "204407"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483423",
+        "role_claimed": "coautor",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-4151-2023-2408667",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "220549",
+          "73692",
+          "204406",
+          "156190",
+          "204388"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2408667",
+        "role_claimed": "coautor",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-416-2021-2273487",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "205863",
+          "136811",
+          "160673",
+          "204406",
+          "204388"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2273487",
+        "role_claimed": "coautor",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-444-2023-2350214",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "220553",
+          "74398",
+          "160538",
+          "160535",
+          "221378"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350214",
+        "role_claimed": "autor_principal",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-447-2023-2350231",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "220553",
+          "220554",
+          "160538",
+          "160535",
+          "178835"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350231",
+        "role_claimed": "coautor",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-4602-2025-2579092",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "220549",
+          "220550",
+          "220552",
+          "133810",
+          "204388"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2579092",
+        "role_claimed": "autor_principal",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-463-2023-2350276",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "220553",
+          "220554",
+          "74398",
+          "160538",
+          "221378"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350276",
+        "role_claimed": "autor_principal",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-5-2019-2212184",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "73486",
+          "136811",
+          "160559",
+          "133810",
+          "204416"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2212184",
+        "role_claimed": "coautor",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-515-2023-2350578",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "220553",
+          "74398",
+          "160538",
+          "160535",
+          "204406"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350578",
+        "role_claimed": "autor_principal",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-527-2023-2350733",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "220553",
+          "74398",
+          "160538",
+          "160535",
+          "221378"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350733",
+        "role_claimed": "coautor",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-531-2023-2350831",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "73692",
+          "136811",
+          "160673",
+          "204406",
+          "204388"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350831",
+        "role_claimed": "coautor",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-710-2023-2351616",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "73692",
+          "160559",
+          "178962",
+          "204404",
+          "204406"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351616",
+        "role_claimed": "coautor",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-740-2023-2351861",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "220553",
+          "220554",
+          "160538",
+          "160535",
+          "178835"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351861",
+        "role_claimed": "coautor",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-869-2023-2352583",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "220553",
+          "220554",
+          "74398",
+          "160538",
+          "221378"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2352583",
+        "role_claimed": "coautor",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-879-2025-2487281",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "220550",
+          "220552",
+          "73692",
+          "156190",
+          "204388"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2487281",
+        "role_claimed": "coautor",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:ric-691-2025-2485955",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "220550",
+          "220552",
+          "160673",
+          "133810",
+          "204416"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2485955",
+        "role_claimed": "autor_principal",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rpd-1-0-2461396",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)",
+        "calendar year for the RPD; API returns year=0, so title/version chronology needs explicit reconciliation"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "220550",
+          "220552",
+          "178963",
+          "204404",
+          "156190"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2461396",
+        "role_claimed": "coautor",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rpd-1-0-2616287",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)",
+        "calendar year for the RPD; API returns year=0, so title/version chronology needs explicit reconciliation"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "220552",
+          "136811",
+          "160559",
+          "133810",
+          "204406"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2616287",
+        "role_claimed": "coautor",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rpd-1-0-2616319",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)",
+        "calendar year for the RPD; API returns year=0, so title/version chronology needs explicit reconciliation"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "220552",
+          "136811",
+          "160559",
+          "133810",
+          "204406"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2616319",
+        "role_claimed": "coautor",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rpd-14-0-2468420",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)",
+        "calendar year for the RPD; API returns year=0, so title/version chronology needs explicit reconciliation"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "220550",
+          "220552",
+          "178963",
+          "133810",
+          "156190"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2468420",
+        "role_claimed": "coautor",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rpd-2-0-2468421",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)",
+        "calendar year for the RPD; API returns year=0, so title/version chronology needs explicit reconciliation"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "220550",
+          "220552",
+          "178963",
+          "133810",
+          "156190"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2468421",
+        "role_claimed": "coautor",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rpd-3-0-2468422",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)",
+        "calendar year for the RPD; API returns year=0, so title/version chronology needs explicit reconciliation"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "220550",
+          "220552",
+          "178963",
+          "133810",
+          "156190"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2468422",
+        "role_claimed": "coautor",
+        "roles_checked": 5
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:doc-2-2022-2313782",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "73482",
+          "74398",
+          "160538",
+          "160535"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2313782",
+        "role_claimed": "autor_principal",
+        "roles_checked": 4
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:doc-23-2021-2268598",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "73482",
+          "74398",
+          "160538",
+          "160535"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2268598",
+        "role_claimed": "autor_principal",
+        "roles_checked": 4
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:doc-63-2021-2271012",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "crosswalk oficial independente TSE↔deputado_id para cada vínculo de candidato do lote (a presença no endpoint /autores prova autoria, não a ponte TSE)",
+        "official voting-event record (event_id, date, object voted, result/nominal record)",
+        "explicit proposition-version → event linkage (including substitute/amendments/redaction)",
+        "persisted/readable full-text artifact in the review packet (only URL/hash manifest is supplied)"
+      ],
+      "counterargument": "A autoria é confirmada por IDs oficiais da Câmara e os cinco autores selecionados constam no endpoint /autores; a URL do texto integral respondeu 200 e o SHA-256 bateu com o manifesto. Isso sustenta um registro factual de autoria, mas não supre a ausência de evento votado nem a leitura persistida do texto para atribuição de score.",
+      "identity": {
+        "api_status": 200,
+        "claimed_deputado_ids": [
+          "73482",
+          "74398",
+          "160538",
+          "160535"
+        ],
+        "all_claimed_ids_present_in_official_authors": true
+      },
+      "authorship": {
+        "source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2271012",
+        "role_claimed": "autor_principal",
+        "roles_checked": 4
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    }
+  ]
+}
