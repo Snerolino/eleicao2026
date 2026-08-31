@@ -1,0 +1,1381 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:req-1883-2023-2367547",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "medium",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura/autoria oficial confirma participação formal, mas não prova voto nem efeito substantivo; o requerimento registra uma frente parlamentar e é ato procedural, não texto normativo.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "REQ",
+          "number": "1883",
+          "year": 2023,
+          "proposition_id": "2367547"
+        },
+        "official_api": {
+          "id": 2367547,
+          "type": "REQ",
+          "number": 1883,
+          "year": 2023,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002537714",
+        "role_packet": "coautor",
+        "official_author_id": "220549",
+        "official_author_match": true,
+        "official_author_name": "Any Ortiz",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2284284",
+        "status": 200,
+        "bytes_manifest": 152063,
+        "sha256_manifest": "sha256:4b5b96b1c006223464b462946cd6a8e852e5ece4066e3a551f73393fafad69f2",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:req-1949-2023-2369265",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "medium",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura/autoria oficial confirma participação formal, mas não prova voto nem efeito substantivo; o requerimento registra uma frente parlamentar e é ato procedural, não texto normativo.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "REQ",
+          "number": "1949",
+          "year": 2023,
+          "proposition_id": "2369265"
+        },
+        "official_api": {
+          "id": 2369265,
+          "type": "REQ",
+          "number": 1949,
+          "year": 2023,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002534583",
+        "role_packet": "coautor",
+        "official_author_id": "220553",
+        "official_author_match": true,
+        "official_author_name": "Denise Pessôa",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2288446",
+        "status": 200,
+        "bytes_manifest": 154019,
+        "sha256_manifest": "sha256:0acd53ef83dbdeb514ca6a88d7a172f06afe6522ee63a85d0398adea5b5d8977",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:req-2257-2023-2374035",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "medium",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura/autoria oficial confirma participação formal, mas não prova voto nem efeito substantivo; o requerimento registra uma frente parlamentar e é ato procedural, não texto normativo.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "REQ",
+          "number": "2257",
+          "year": 2023,
+          "proposition_id": "2374035"
+        },
+        "official_api": {
+          "id": 2374035,
+          "type": "REQ",
+          "number": 2257,
+          "year": 2023,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002537714",
+        "role_packet": "coautor",
+        "official_author_id": "220549",
+        "official_author_match": true,
+        "official_author_name": "Any Ortiz",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2301071",
+        "status": 200,
+        "bytes_manifest": 365467,
+        "sha256_manifest": "sha256:834013d742a85338e93b6f411a8e1ad939c1b18baab54de6095f0d1bc30bcbfd",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:req-2412-2021-2307616",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "medium",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura/autoria oficial confirma participação formal, mas não prova voto nem efeito substantivo; o requerimento registra uma frente parlamentar e é ato procedural, não texto normativo.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "REQ",
+          "number": "2412",
+          "year": 2021,
+          "proposition_id": "2307616"
+        },
+        "official_api": {
+          "id": 2307616,
+          "type": "REQ",
+          "number": 2412,
+          "year": 2021,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002537066",
+        "role_packet": "autor_principal",
+        "official_author_id": "73486",
+        "official_author_match": true,
+        "official_author_name": "Pompeo de Mattos",
+        "official_proponent": 1
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2107366",
+        "status": 200,
+        "bytes_manifest": 123609,
+        "sha256_manifest": "sha256:a6b3726c272e53cd1d300f34bcffbd33a81f680a06937087e07c95aea9afb7b6",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:req-2611-2023-2380299",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "medium",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura/autoria oficial confirma participação formal, mas não prova voto nem efeito substantivo; o requerimento registra uma frente parlamentar e é ato procedural, não texto normativo.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "REQ",
+          "number": "2611",
+          "year": 2023,
+          "proposition_id": "2380299"
+        },
+        "official_api": {
+          "id": 2380299,
+          "type": "REQ",
+          "number": 2611,
+          "year": 2023,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002547857",
+        "role_packet": "autor_principal",
+        "official_author_id": "220552",
+        "official_author_match": true,
+        "official_author_name": "Zucco",
+        "official_proponent": 1
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2313974",
+        "status": 200,
+        "bytes_manifest": 174991,
+        "sha256_manifest": "sha256:851dc1db438a48a5169ca87ee786278ceb09b85756d08ad4b24a616359327b4f",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:req-3255-2023-2389644",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "medium",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura/autoria oficial confirma participação formal, mas não prova voto nem efeito substantivo; o requerimento registra uma frente parlamentar e é ato procedural, não texto normativo.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "REQ",
+          "number": "3255",
+          "year": 2023,
+          "proposition_id": "2389644"
+        },
+        "official_api": {
+          "id": 2389644,
+          "type": "REQ",
+          "number": 3255,
+          "year": 2023,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002537714",
+        "role_packet": "coautor",
+        "official_author_id": "220549",
+        "official_author_match": true,
+        "official_author_name": "Any Ortiz",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2331686",
+        "status": 200,
+        "bytes_manifest": 102142,
+        "sha256_manifest": "sha256:3bf872f1435f2784dff496c6587f09fe8fd919af5efc2c40a83b8d6bf1a964a1",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:req-3256-2023-2389646",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "medium",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura/autoria oficial confirma participação formal, mas não prova voto nem efeito substantivo; o requerimento registra uma frente parlamentar e é ato procedural, não texto normativo.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "REQ",
+          "number": "3256",
+          "year": 2023,
+          "proposition_id": "2389646"
+        },
+        "official_api": {
+          "id": 2389646,
+          "type": "REQ",
+          "number": 3256,
+          "year": 2023,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002537714",
+        "role_packet": "coautor",
+        "official_author_id": "220549",
+        "official_author_match": true,
+        "official_author_name": "Any Ortiz",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2331690",
+        "status": 200,
+        "bytes_manifest": 154640,
+        "sha256_manifest": "sha256:188813fcbf4e96fbc6baded8f8c0244167d435ea92b5e81ffc865b90ab245c4a",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:req-3272-2023-2390018",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "medium",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura/autoria oficial confirma participação formal, mas não prova voto nem efeito substantivo; o requerimento registra uma frente parlamentar e é ato procedural, não texto normativo.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "REQ",
+          "number": "3272",
+          "year": 2023,
+          "proposition_id": "2390018"
+        },
+        "official_api": {
+          "id": 2390018,
+          "type": "REQ",
+          "number": 3272,
+          "year": 2023,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002537714",
+        "role_packet": "coautor",
+        "official_author_id": "220549",
+        "official_author_match": true,
+        "official_author_name": "Any Ortiz",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2332876",
+        "status": 200,
+        "bytes_manifest": 307764,
+        "sha256_manifest": "sha256:34ebcb921a376a00379f8a32db8e13e04b2393ae294f7a90256d0f616d5aa94c",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:req-375-2023-2349853",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "medium",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura/autoria oficial confirma participação formal, mas não prova voto nem efeito substantivo; o requerimento registra uma frente parlamentar e é ato procedural, não texto normativo.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "REQ",
+          "number": "375",
+          "year": 2023,
+          "proposition_id": "2349853"
+        },
+        "official_api": {
+          "id": 2349853,
+          "type": "REQ",
+          "number": 375,
+          "year": 2023,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002537714",
+        "role_packet": "coautor",
+        "official_author_id": "220549",
+        "official_author_match": true,
+        "official_author_name": "Any Ortiz",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2239127",
+        "status": 200,
+        "bytes_manifest": 321460,
+        "sha256_manifest": "sha256:ea4242587e40d2256dec46acff8aaefb7b0451a13f335a0a75272af3d1749128",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:req-4117-2023-2407559",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "medium",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura/autoria oficial confirma participação formal, mas não prova voto nem efeito substantivo; o requerimento registra uma frente parlamentar e é ato procedural, não texto normativo.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "REQ",
+          "number": "4117",
+          "year": 2023,
+          "proposition_id": "2407559"
+        },
+        "official_api": {
+          "id": 2407559,
+          "type": "REQ",
+          "number": 4117,
+          "year": 2023,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002537714",
+        "role_packet": "autor_principal",
+        "official_author_id": "220549",
+        "official_author_match": true,
+        "official_author_name": "Any Ortiz",
+        "official_proponent": 1
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2365994",
+        "status": 200,
+        "bytes_manifest": 202256,
+        "sha256_manifest": "sha256:d72a47093f6fe2b7874b0e2a6a4efd85daa813694a8aa95e95961088358d26be",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:req-414-2023-2350093",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "medium",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura/autoria oficial confirma participação formal, mas não prova voto nem efeito substantivo; o requerimento registra uma frente parlamentar e é ato procedural, não texto normativo.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "REQ",
+          "number": "414",
+          "year": 2023,
+          "proposition_id": "2350093"
+        },
+        "official_api": {
+          "id": 2350093,
+          "type": "REQ",
+          "number": 414,
+          "year": 2023,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002534583",
+        "role_packet": "coautor",
+        "official_author_id": "220553",
+        "official_author_match": true,
+        "official_author_name": "Denise Pessôa",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2239568",
+        "status": 200,
+        "bytes_manifest": 222769,
+        "sha256_manifest": "sha256:895f5f71c258d28f7a361adb999f35c273a65eeeb351f0f2e302045cedc6ebca",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:req-430-2023-2350124",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "medium",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura/autoria oficial confirma participação formal, mas não prova voto nem efeito substantivo; o requerimento registra uma frente parlamentar e é ato procedural, não texto normativo.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "REQ",
+          "number": "430",
+          "year": 2023,
+          "proposition_id": "2350124"
+        },
+        "official_api": {
+          "id": 2350124,
+          "type": "REQ",
+          "number": 430,
+          "year": 2023,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002534597",
+        "role_packet": "coautor",
+        "official_author_id": "220554",
+        "official_author_match": true,
+        "official_author_name": "Alexandre Lindenmeyer",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2239666",
+        "status": 200,
+        "bytes_manifest": 430218,
+        "sha256_manifest": "sha256:22d1406e0549c436639ded3bdea2612a180998ba804c054b19351bcd977ab43d",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:req-469-2023-2350297",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "medium",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura/autoria oficial confirma participação formal, mas não prova voto nem efeito substantivo; o requerimento registra uma frente parlamentar e é ato procedural, não texto normativo.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "REQ",
+          "number": "469",
+          "year": 2023,
+          "proposition_id": "2350297"
+        },
+        "official_api": {
+          "id": 2350297,
+          "type": "REQ",
+          "number": 469,
+          "year": 2023,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002534583",
+        "role_packet": "coautor",
+        "official_author_id": "220553",
+        "official_author_match": true,
+        "official_author_name": "Denise Pessôa",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2240181",
+        "status": 200,
+        "bytes_manifest": 765828,
+        "sha256_manifest": "sha256:49fcd2d39cd2721b65abf38d7ab9c4cd668f4c78bb48a260c87303b30ed86d42",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:req-500-2023-2350489",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "medium",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura/autoria oficial confirma participação formal, mas não prova voto nem efeito substantivo; o requerimento registra uma frente parlamentar e é ato procedural, não texto normativo.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "REQ",
+          "number": "500",
+          "year": 2023,
+          "proposition_id": "2350489"
+        },
+        "official_api": {
+          "id": 2350489,
+          "type": "REQ",
+          "number": 500,
+          "year": 2023,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002537714",
+        "role_packet": "coautor",
+        "official_author_id": "220549",
+        "official_author_match": true,
+        "official_author_name": "Any Ortiz",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2240597",
+        "status": 200,
+        "bytes_manifest": 239368,
+        "sha256_manifest": "sha256:9ad849de612ee7df069cee65433007f587451fec31db2605bae20307cae08b73",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:req-561-2023-2350889",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "medium",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura/autoria oficial confirma participação formal, mas não prova voto nem efeito substantivo; o requerimento registra uma frente parlamentar e é ato procedural, não texto normativo.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "REQ",
+          "number": "561",
+          "year": 2023,
+          "proposition_id": "2350889"
+        },
+        "official_api": {
+          "id": 2350889,
+          "type": "REQ",
+          "number": 561,
+          "year": 2023,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002537714",
+        "role_packet": "coautor",
+        "official_author_id": "220549",
+        "official_author_match": true,
+        "official_author_name": "Any Ortiz",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2241456",
+        "status": 200,
+        "bytes_manifest": 203369,
+        "sha256_manifest": "sha256:17ef9159cb90c28f87fa27cfc00575fc90668af2b5ab5556afc4990f92d44626",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:req-623-2023-2351175",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "medium",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura/autoria oficial confirma participação formal, mas não prova voto nem efeito substantivo; o requerimento registra uma frente parlamentar e é ato procedural, não texto normativo.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "REQ",
+          "number": "623",
+          "year": 2023,
+          "proposition_id": "2351175"
+        },
+        "official_api": {
+          "id": 2351175,
+          "type": "REQ",
+          "number": 623,
+          "year": 2023,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002537714",
+        "role_packet": "coautor",
+        "official_author_id": "220549",
+        "official_author_match": true,
+        "official_author_name": "Any Ortiz",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2242538",
+        "status": 200,
+        "bytes_manifest": 138998,
+        "sha256_manifest": "sha256:208cde3a86bddd989acfb70c1d04e21e549aa3ec2a779fb43150890ec4ebac3a",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:req-899-2023-2353390",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "medium",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura/autoria oficial confirma participação formal, mas não prova voto nem efeito substantivo; o requerimento registra uma frente parlamentar e é ato procedural, não texto normativo.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "REQ",
+          "number": "899",
+          "year": 2023,
+          "proposition_id": "2353390"
+        },
+        "official_api": {
+          "id": 2353390,
+          "type": "REQ",
+          "number": 899,
+          "year": 2023,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002537714",
+        "role_packet": "coautor",
+        "official_author_id": "220549",
+        "official_author_match": true,
+        "official_author_name": "Any Ortiz",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2249188",
+        "status": 200,
+        "bytes_manifest": 268004,
+        "sha256_manifest": "sha256:bcbfe331faa17355093f2372936c50e6e79142957f4fe7d79127c35e7f5b7621",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:req-933-2023-2353726",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "medium",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura/autoria oficial confirma participação formal, mas não prova voto nem efeito substantivo; o requerimento registra uma frente parlamentar e é ato procedural, não texto normativo.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "REQ",
+          "number": "933",
+          "year": 2023,
+          "proposition_id": "2353726"
+        },
+        "official_api": {
+          "id": 2353726,
+          "type": "REQ",
+          "number": 933,
+          "year": 2023,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002537714",
+        "role_packet": "coautor",
+        "official_author_id": "220549",
+        "official_author_match": true,
+        "official_author_name": "Any Ortiz",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2250553",
+        "status": 200,
+        "bytes_manifest": 462295,
+        "sha256_manifest": "sha256:0c94067d1ec7fd07f997809f3e5e09b09b603abbbd2206a4a172bf8b84d2eabb",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:req-950-2023-2353873",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "medium",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura/autoria oficial confirma participação formal, mas não prova voto nem efeito substantivo; o requerimento registra uma frente parlamentar e é ato procedural, não texto normativo.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "REQ",
+          "number": "950",
+          "year": 2023,
+          "proposition_id": "2353873"
+        },
+        "official_api": {
+          "id": 2353873,
+          "type": "REQ",
+          "number": 950,
+          "year": 2023,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002534583",
+        "role_packet": "coautor",
+        "official_author_id": "220553",
+        "official_author_match": true,
+        "official_author_name": "Denise Pessôa",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2250982",
+        "status": 200,
+        "bytes_manifest": 182835,
+        "sha256_manifest": "sha256:cb505d1747129b700582fc481b8884c6a3105880a99385451f6c2a5238891d75",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:req-967-2023-2353976",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "medium",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura/autoria oficial confirma participação formal, mas não prova voto nem efeito substantivo; o requerimento registra uma frente parlamentar e é ato procedural, não texto normativo.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "REQ",
+          "number": "967",
+          "year": 2023,
+          "proposition_id": "2353976"
+        },
+        "official_api": {
+          "id": 2353976,
+          "type": "REQ",
+          "number": 967,
+          "year": 2023,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002537714",
+        "role_packet": "coautor",
+        "official_author_id": "220549",
+        "official_author_match": true,
+        "official_author_name": "Any Ortiz",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2251520",
+        "status": 200,
+        "bytes_manifest": 605544,
+        "sha256_manifest": "sha256:afa2b0010a2466c445adf52229b8f168790a086c254d25eac1adf7e9050d07be",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:emc-5-0-2289943",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "high",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura oficial de uma emenda/PEC não prova que essa redação foi votada; sem evento, texto resultante e objeto exato, qualquer score seria inferência.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "EMC",
+          "number": "5",
+          "year": 0,
+          "proposition_id": "2289943"
+        },
+        "official_api": {
+          "id": 2289943,
+          "type": "EMC",
+          "number": 5,
+          "year": 0,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002533583",
+        "role_packet": "coautor",
+        "official_author_id": "73482",
+        "official_author_match": true,
+        "official_author_name": "Henrique Fontana",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2040551",
+        "status": 200,
+        "bytes_manifest": 181734,
+        "sha256_manifest": "sha256:e18a902527f801f71743e33999f2c4f93ed6f01d226e402b0332116c58975a42",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:pec-31-2025-2544926",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "high",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura oficial de uma emenda/PEC não prova que essa redação foi votada; sem evento, texto resultante e objeto exato, qualquer score seria inferência.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "PEC",
+          "number": "31",
+          "year": 2025,
+          "proposition_id": "2544926"
+        },
+        "official_api": {
+          "id": 2544926,
+          "type": "PEC",
+          "number": 31,
+          "year": 2025,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002534654",
+        "role_packet": "coautor",
+        "official_author_id": "220550",
+        "official_author_match": true,
+        "official_author_name": "Mauricio Marcon",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2973673",
+        "status": 200,
+        "bytes_manifest": 140975,
+        "sha256_manifest": "sha256:daaf8da92eec6c5d3b100cc056b7abe2c95ee12280fa294c831a48b2f2d5bc59",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:pec-35-2025-2563273",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "high",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura oficial de uma emenda/PEC não prova que essa redação foi votada; sem evento, texto resultante e objeto exato, qualquer score seria inferência.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "PEC",
+          "number": "35",
+          "year": 2025,
+          "proposition_id": "2563273"
+        },
+        "official_api": {
+          "id": 2563273,
+          "type": "PEC",
+          "number": 35,
+          "year": 2025,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002537714",
+        "role_packet": "coautor",
+        "official_author_id": "220549",
+        "official_author_match": true,
+        "official_author_name": "Any Ortiz",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3004808",
+        "status": 200,
+        "bytes_manifest": 169759,
+        "sha256_manifest": "sha256:09e7bcc0e4987a97420533ebe824dad615ddcc84d5ddf1b9e94ee8e41347c344",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:pec-40-2025-2578996",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "high",
+      "missing_sources": [
+        "official_voting_event_for_authored_project",
+        "voted_version_or_final_text_linkage",
+        "event_object_and_amendment_history"
+      ],
+      "counterargument": "A assinatura oficial de uma emenda/PEC não prova que essa redação foi votada; sem evento, texto resultante e objeto exato, qualquer score seria inferência.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "PEC",
+          "number": "40",
+          "year": 2025,
+          "proposition_id": "2578996"
+        },
+        "official_api": {
+          "id": 2578996,
+          "type": "PEC",
+          "number": 40,
+          "year": 2025,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002537714",
+        "role_packet": "coautor",
+        "official_author_id": "220549",
+        "official_author_match": true,
+        "official_author_name": "Any Ortiz",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3034396",
+        "status": 200,
+        "bytes_manifest": 104511,
+        "sha256_manifest": "sha256:c621f4bdb0c37dd803f40c94d981f17313d42b88f0c690d0a6d6415315f04579",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 0,
+        "event_detail": [],
+        "version_confirmed": false,
+        "event_confirmed": false,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    },
+    {
+      "id": "camara:pec-50-2023-2391567",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "FAIL CLOSED: autoria e integridade do PDF foram confirmadas, mas a versão efetivamente votada e o objeto/evento necessário para pontuação não estão demonstrados.",
+      "risk": "high",
+      "missing_sources": [
+        "candidate_nominal_vote_linkage",
+        "voted_version_or_final_text_linkage",
+        "event_object_is_parecer_de_admissibilidade_not_the_PEC_text"
+      ],
+      "counterargument": "A autoria oficial confirma assinatura, mas não permite atribuir posição no evento; a única votação localizada para a PEC 50/2023 aprovou parecer de admissibilidade na CCJC, não o texto da PEC, e não há vínculo nominal do candidato no pacote.",
+      "identity": {
+        "packet": {
+          "house": "camara",
+          "type": "PEC",
+          "number": "50",
+          "year": 2023,
+          "proposition_id": "2391567"
+        },
+        "official_api": {
+          "id": 2391567,
+          "type": "PEC",
+          "number": 50,
+          "year": 2023,
+          "identity_match": true
+        }
+      },
+      "authorship": {
+        "candidate_tse_id": "210002534654",
+        "role_packet": "coautor",
+        "official_author_id": "220550",
+        "official_author_match": true,
+        "official_author_name": "Mauricio Marcon",
+        "official_proponent": 0
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2335532",
+        "status": 200,
+        "bytes_manifest": 794554,
+        "sha256_manifest": "sha256:8f240dd7f7dbbd2730cdc47a357b5155f4df351c8384cc2b29c9d2e3a0524337",
+        "manifest_complete": true,
+        "content_saved": false,
+        "independently_redownloaded_match": true
+      },
+      "event_version": {
+        "voting_events_found": 1,
+        "event_detail": [
+          {
+            "id": "2391567-50",
+            "uri": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2391567-50",
+            "data": "2024-10-09",
+            "dataHoraRegistro": "2024-10-22T14:06:19",
+            "siglaOrgao": "CCJC",
+            "uriOrgao": "https://dadosabertos.camara.leg.br/api/v2/orgaos/2003",
+            "uriEvento": "https://dadosabertos.camara.leg.br/api/v2/eventos/74412",
+            "proposicaoObjeto": null,
+            "uriProposicaoObjeto": null,
+            "descricao": "Aprovado o Parecer, com o seguinte resultado:  38 votos \"Sim\", 12 votos \"Não\". Quórum de votação: 50 votos.",
+            "aprovacao": 1
+          }
+        ],
+        "version_confirmed": false,
+        "event_confirmed": true,
+        "event_scope_confirmed": false
+      },
+      "reconciliation": "Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score."
+    }
+  ]
+}

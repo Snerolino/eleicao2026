@@ -1,0 +1,5 @@
+import fs from 'node:fs';
+const d=JSON.parse(fs.readFileSync('/tmp/camara-redteam-76-100.json','utf8'));
+const items=d.projects.map(x=>({id:x.project_id,decision:'withheld',score_eligible:false,reason:x.reason,risk:x.risk,missing_sources:x.missing_sources,counterargument:x.counterargument,identity:x.identity,authorship:x.authorship,full_text:x.full_text,event_version:x.event_version,reconciliation:'Análise causal e red-team retiveram o item; sem versão/evento vinculante não há publicação nem score.'}));
+if(items.length!==25)throw new Error('expected 25 items');
+const out='data/legislative-import/camara/authored-project-review-batches/camara-authored-unique-review-76-100-reconciled.json';fs.writeFileSync(out,JSON.stringify({schema_version:'1.0.0',packet_type:'candidate_authored_projects_reconciled_editorial_review',mode:'withheld',remote_apply:false,content_read:true,source:'official_full_text',counts:{items:25,approved:0,pending_review:0,withheld:25,score_eligible:0},items},null,2)+'\n');console.log(JSON.stringify({items:25,approved:0,withheld:25,score_eligible:0,output:out}));
