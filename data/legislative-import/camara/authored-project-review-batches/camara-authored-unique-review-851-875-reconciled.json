@@ -1,0 +1,749 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:emc-9-2019-2216647",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "Teto constitucional para a alíquota reduz a margem de tributação de bens não excepcionados; as exceções mantêm espaço maior para tributar tabaco e álcool.",
+      "destinatario": "Contribuintes e consumidores de bens sujeitos ao Imposto Seletivo; União/entes arrecadadores como destinatários institucionais.",
+      "efeitos": "Pode reduzir carga/preço repassado em produtos não excepcionados; preserva possível tributação agravada de álcool e fumo; efeitos dependem da lei complementar e da alíquota de referência.",
+      "grupos_canonicos": [],
+      "tema": "tributário",
+      "resumo": "Limita a alíquota do Imposto Seletivo à alíquota de referência, exceto bebidas alcoólicas, cigarros e outros produtos do fumo.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "emenda: sem prova de incorporação/rejeição e sem evento/objeto votado"
+        ],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-91-2019-2219912",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "Atribui a servidores de carreiras tributárias participação na administração do IBS, alterando governança e distribuição de poder administrativo.",
+      "destinatario": "Servidores das administrações tributárias e entes federativos; contribuintes são afetados indiretamente pela governança.",
+      "efeitos": "Muda representação, coordenação e potencial controle do IBS; não cria transferência direta identificável a grupo populacional canônico.",
+      "grupos_canonicos": [],
+      "tema": "governança tributária",
+      "resumo": "Redefine a composição do comitê gestor nacional do IBS para integrá-lo por servidores das carreiras das Administrações Tributárias da União, Estados, DF e Municípios, com regras de representação/autonomia.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "emenda: sem prova de incorporação/rejeição e sem evento/objeto votado"
+        ],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emp-57-0-2566041",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "Amplia a base tributável por desconsideração de negócios entre partes ligadas em condições favorecidas e combina isso com redução para faixas de renda previstas.",
+      "destinatario": "Pessoas físicas de alta renda e pessoas ligadas; Receita Federal e Tesouro como implementadores.",
+      "efeitos": "Pode elevar imposto efetivo de altas rendas e reduzir imposto de faixas beneficiadas, com efeitos distributivos mistos; depende de regulamentação e cálculo individual.",
+      "grupos_canonicos": [],
+      "tema": "tributário / imposto de renda",
+      "resumo": "Altera regras de tributação mínima de altas rendas e inclui operações favorecidas com pessoas ligadas na base de cálculo; prevê redução do imposto nas bases mensal/anual.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "placeholder de ano=0; identidade temporal inválida",
+          "emenda: sem prova de incorporação/rejeição e sem evento/objeto votado"
+        ],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emp-9-0-2511106",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "Criação legal de cargos/carreiras e reserva de competências funcionais produz vínculo estatutário e despesa de pessoal.",
+      "destinatario": "Servidores ocupantes das carreiras e órgãos federais correspondentes.",
+      "efeitos": "Amplia estrutura e possíveis direitos/remuneração de servidores; gera custo fiscal e pode reorganizar fiscalização pública.",
+      "grupos_canonicos": [
+        "servidores_publicos"
+      ],
+      "tema": "administração pública / serviço público",
+      "resumo": "Cria carreiras de desenvolvimento socioeconômico, políticas de Justiça e Defesa e fiscalização da CVM, atribuindo prerrogativas e estrutura remuneratória a cargos públicos.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "placeholder de ano=0; identidade temporal inválida",
+          "emenda: sem prova de incorporação/rejeição e sem evento/objeto votado"
+        ],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emp-91-0-2566502",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "A correção monetária impede erosão inflacionária nominal da faixa de isenção, alterando o limiar de incidência.",
+      "destinatario": "Pessoas físicas contribuintes do IRPF, especialmente rendas próximas ao limite de isenção.",
+      "efeitos": "Preserva poder de compra do limite e pode reduzir imposto de contribuintes elegíveis; implica menor arrecadação relativa, condicionada à vigência.",
+      "grupos_canonicos": [
+        "trabalhadores_formais"
+      ],
+      "tema": "tributário / renda",
+      "resumo": "Indexa anualmente a faixa de isenção do IRPF ao IPCA a partir do ano-calendário de 2027, com divulgação automática pela Receita.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "placeholder de ano=0; identidade temporal inválida",
+          "emenda: sem prova de incorporação/rejeição e sem evento/objeto votado"
+        ],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pdl-189-2023-2374340",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "Controle congressual por sustação remove ou restringe a eficácia do regulamento executivo, reabrindo o regime legal anterior nos pontos alcançados.",
+      "destinatario": "Proprietários, atiradores, colecionadores, caçadores e comerciantes de armas; órgãos de controle e segurança pública.",
+      "efeitos": "Pode flexibilizar requisitos e ampliar acesso/atividade regulada, mas também reduzir controles administrativos; efeitos dependem do alcance jurídico da sustação.",
+      "grupos_canonicos": [],
+      "tema": "armas / segurança pública",
+      "resumo": "Susta o Decreto 11.615/2023, retirando efeitos regulamentares sobre aquisição, registro, posse, porte, comércio, caça, tiro desportivo e colecionamento de armas e munições.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pec-12-2025-2487818",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "Amplia competência constitucional de convocação e responsabilização informacional do Legislativo sobre a autoridade monetária.",
+      "destinatario": "Congresso Nacional e Presidente do Banco Central; cidadãos/mercados apenas indiretamente.",
+      "efeitos": "Aumenta transparência e controle parlamentar, sem benefício material direto; pode afetar accountability da política monetária.",
+      "grupos_canonicos": [],
+      "tema": "controle e fiscalização do Executivo",
+      "resumo": "Inclui o Presidente do Banco Central entre as autoridades que Câmara, Senado e comissões podem convocar para prestar informações sobre assunto determinado.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pec-14-2021-2284555",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "Constitucionaliza financiamento, vínculo, carreira/proteção social e requisito temporal de aposentadoria para agentes comunitários e de endemias.",
+      "destinatario": "Agentes comunitários de saúde e agentes de combate às endemias; União, estados e municípios como financiadores/gestores.",
+      "efeitos": "Eleva proteção previdenciária, estabilidade/regularidade do vínculo e suporte financeiro; cria obrigações fiscais e administrativas para entes do SUS.",
+      "grupos_canonicos": [
+        "servidores_publicos",
+        "usuarios_sus"
+      ],
+      "tema": "saúde pública / agentes comunitários",
+      "resumo": "Institui sistema de proteção social e valorização de ACS e ACE, assistência financeira complementar da União, regras de vínculo e aposentadoria especial após 25 anos, com certificação de processos seletivos.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pec-15-2021-2285501",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "Alongamento e redução do passivo diminuem desembolso corrente municipal e transferem/espalham risco financeiro para credores e regimes previdenciários.",
+      "destinatario": "Municípios devedores e seus regimes previdenciários; indiretamente usuários de serviços municipais e contribuintes.",
+      "efeitos": "Alivia caixa municipal no curto prazo, mas posterga recebimento e pode afetar sustentabilidade previdenciária; requer adesão e comprovação.",
+      "grupos_canonicos": [],
+      "tema": "finanças públicas municipais",
+      "resumo": "Autoriza municípios a parcelar débitos previdenciários em até 240 parcelas, com descontos de multas/juros, limite mensal sobre receita corrente líquida e certidão negativa condicionada.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pec-17-2025-2499794",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "Piso constitucional vinculante eleva remuneração mínima e exige mecanismo de financiamento/coordenação federativa.",
+      "destinatario": "Policiais civis e militares e bombeiros militares.",
+      "efeitos": "Pode elevar renda e despesa de pessoal dos entes; implementação depende de lei e fundo, portanto magnitude atual é incerta.",
+      "grupos_canonicos": [
+        "servidores_publicos"
+      ],
+      "tema": "segurança pública / remuneração",
+      "resumo": "Institui piso salarial nacional para policiais civis, militares e bombeiros militares, prevê fundo contábil e lei federal para o DF, com projeto regulamentador em 180 dias.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pec-2-2023-2350490",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "Reconhecimento constitucional orienta deveres estatais e interpretação de políticas públicas, sem prestação ou fonte de financiamento específica no texto.",
+      "destinatario": "Usuários de políticas culturais e Estado; grupo canônico diretamente delimitado não é identificável.",
+      "efeitos": "Reforça base normativa para políticas culturais, mas efeito material depende de legislação, orçamento e implementação.",
+      "grupos_canonicos": [],
+      "tema": "cultura / direitos sociais",
+      "resumo": "Inclui cultura no rol de direitos sociais do art. 6º da Constituição.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pec-27-2022-2336964",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "Vincula fonte federal e regras fiscais ao custeio de pisos salariais, redistribuindo obrigação financeira entre entes.",
+      "destinatario": "Profissionais da saúde; União, estados, DF, municípios e entidades filantrópicas gestoras.",
+      "efeitos": "Pode proteger remuneração e viabilizar pagamento, com custo orçamentário federal e impactos nos demais usos dos recursos.",
+      "grupos_canonicos": [
+        "servidores_publicos",
+        "usuarios_sus"
+      ],
+      "tema": "saúde pública / piso profissional",
+      "resumo": "Determina assistência financeira complementar da União para pisos de profissionais da saúde, exclui repasse de limites de despesa e direciona recursos de emendas/EC 109 ao pagamento.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "arquivado; autoria não prova aprovação, vigência ou efeito"
+        ],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pec-27-2024-2447265",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "Institui fundo e governança para transferir recursos a políticas de reparação e promoção da igualdade racial; detalhamento fica para lei.",
+      "destinatario": "População negra, especialmente grupos afetados por desigualdade racial; União e instituição financeira administradora.",
+      "efeitos": "Pode criar financiamento e políticas reparatórias, com efeitos distributivos positivos potenciais e custo público; destinatários concretos dependem da lei.",
+      "grupos_canonicos": [
+        "populacao_negra_periferica",
+        "comunidades_quilombolas"
+      ],
+      "tema": "igualdade racial / reparação",
+      "resumo": "Cria capítulo constitucional e Fundo Nacional de Reparação Econômica e Promoção da Igualdade Racial, com administração financeira, fontes, conselho e aportes fora de limites fiscais previstos.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pec-3-2023-2350568",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "Submete operações de crédito de instituições financeiras públicas a autorização legislativa, elevando controle ex ante.",
+      "destinatario": "Entes públicos e instituições financeiras controladas; tomadores de crédito são afetados indiretamente.",
+      "efeitos": "Pode reduzir risco e ampliar escrutínio, mas também tornar crédito público mais lento/restrito; não há grupo populacional direto.",
+      "grupos_canonicos": [],
+      "tema": "finanças públicas / controle de crédito",
+      "resumo": "Atribui ao Congresso competência para autorizar operações de crédito por instituições financeiras controladas pela União, estados, DF e municípios.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pec-34-2023-2377463",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "Eleva o combate às drogas a parâmetro constitucional e orienta deveres estatais de repressão/proteção, sem medidas operacionais detalhadas.",
+      "destinatario": "População exposta a drogas e usuários; forças de segurança e sistema de saúde/justiça como implementadores.",
+      "efeitos": "Pode reforçar políticas de repressão e proteção, com efeitos possíveis sobre usuários e encarceramento; direção distributiva não é unívoca.",
+      "grupos_canonicos": [
+        "populacao_carceraria"
+      ],
+      "tema": "política de drogas / segurança",
+      "resumo": "Torna combate ao tráfico, produção, posse, porte e consumo de drogas princípio fundamental e assegura proteção contra efeitos prejudiciais das drogas ilícitas.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pec-48-2025-2595818",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "Remove restrição constitucional de acumulação para categorias educacionais adicionais, sujeito à compatibilidade de horários.",
+      "destinatario": "Profissionais da educação servidores públicos.",
+      "efeitos": "Amplia opções de vínculo/renda e uso da força de trabalho; pode elevar disponibilidade de profissionais, com efeitos administrativos condicionados.",
+      "grupos_canonicos": [
+        "servidores_publicos",
+        "estudantes"
+      ],
+      "tema": "educação / serviço público",
+      "resumo": "Permite acumulação de cargos públicos por outros profissionais da área da educação, ampliando a exceção do art. 37, XVI.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-1853-2026-2616663",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "Atuação empresarial estatal em logística, armazenagem, distribuição e comercialização busca continuidade, presença regional e modicidade de preços, mediante avaliações e governança.",
+      "destinatario": "Consumidores de combustíveis/GLP, regiões remotas e cadeia pública de abastecimento; União como operadora.",
+      "efeitos": "Pode ampliar oferta e coordenação pública e reduzir vulnerabilidades regionais, mas envolve risco fiscal/concorrencial e depende de decisão e capitalização.",
+      "grupos_canonicos": [],
+      "tema": "energia / abastecimento",
+      "resumo": "Autoriza a União a instituir empresa estatal ou subsidiária para distribuição de combustíveis, biocombustíveis e GLP, recompor presença pública e adquirir ativos estratégicos.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-3317-2023-2372030",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "Extingue ou neutraliza efeitos de sanções eleitorais pretéritas para o universo elegível, restaurando elegibilidade e afastando consequências cíveis.",
+      "destinatario": "Pessoas condenadas/inelegíveis por ilícitos eleitorais alcançados; eleitores e instituições eleitorais como afetados sistêmicos.",
+      "efeitos": "Beneficia diretamente elegíveis ao reverter sanções; reduz efeito dissuasório e altera competição eleitoral, com exclusões textuais.",
+      "grupos_canonicos": [],
+      "tema": "direito eleitoral / anistia",
+      "resumo": "Concede anistia a condenados por ilícitos cíveis eleitorais ou declarados inelegíveis entre 2/10/2016 e a vigência, com exceções para corrupção e outros ilícitos graves.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "arquivado; autoria não prova aprovação, vigência ou efeito"
+        ],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:pl-341-2025-2483301",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "Converte dívidas elegíveis em títulos garantidos pelo Tesouro, alonga condições e cria garantias/benefícios de adimplência, socializando parte do risco.",
+      "destinatario": "Produtores rurais atingidos por eventos climáticos; União/Tesouro, BNDES, bancos e CMN como operadores.",
+      "efeitos": "Alivia passivo e risco de crédito dos produtores elegíveis, transfere risco potencial ao Tesouro e impõe custos/obrigações a instituições financeiras.",
+      "grupos_canonicos": [
+        "agricultura_familiar_sem_terra"
+      ],
+      "tema": "agricultura / crédito rural",
+      "resumo": "Autoriza securitização de dívidas rurais afetadas por eventos climáticos desde 2021, com títulos lastreados pelo Tesouro, fundo garantidor, renegociação e emissão de até R$60 bilhões.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "arquivado; autoria não prova aprovação, vigência ou efeito"
+        ],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rcp-1-2023-2350836",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "A CPI cria poder investigativo, convocação e coleta de informações; não determina reparação ou mudança normativa material.",
+      "destinatario": "Investidores, credores, consumidores e administradores relacionados ao caso; Câmara como investigadora.",
+      "efeitos": "Efeitos dependem de instalação e relatório; pode gerar responsabilização/transparência, mas é procedural e não pontuável sem evento específico.",
+      "grupos_canonicos": [],
+      "tema": "fiscalização parlamentar / mercado de capitais",
+      "resumo": "Requer CPI para investigar inconsistências contábeis de cerca de R$20 bilhões da Americanas S.A.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "requerimento/recurso procedural; autoria não demonstra efeito populacional"
+        ],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rcp-11-2023-2416463",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "CPI pode apurar legalidade, custos e decisões contratuais por investigação parlamentar.",
+      "destinatario": "Consumidores de energia, empresas contratadas e agentes públicos; Câmara como investigadora.",
+      "efeitos": "Potencial de transparência e responsabilização, sem efeito distributivo direto no requerimento; depende de instalação/relatório.",
+      "grupos_canonicos": [],
+      "tema": "energia / controle parlamentar",
+      "resumo": "Requer CPI para investigar renovação de contratos de fornecimento de energia da Âmbar Energia e Karpowership no Brasil.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "requerimento/recurso procedural; autoria não demonstra efeito populacional"
+        ],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rcp-3-2025-2506756",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "Institui mecanismo parlamentar de investigação para coletar provas, ouvir autoridades e propor medidas.",
+      "destinatario": "Vítimas de crimes digitais em situação de vulnerabilidade e plataformas/autoridades investigadas.",
+      "efeitos": "Pode produzir diagnóstico e recomendações futuras; o requerimento não cria proteção ou obrigação material imediata.",
+      "grupos_canonicos": [
+        "criancas_adolescentes_vulnerabilidade",
+        "pessoas_idosas_dependentes"
+      ],
+      "tema": "segurança digital / proteção de vulneráveis",
+      "resumo": "Requer CPI para investigar crimes digitais contra pessoas em situação de vulnerabilidade.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "requerimento/recurso procedural; autoria não demonstra efeito populacional"
+        ],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-14-2025-2563306",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "O recurso desloca a matéria do rito conclusivo para apreciação plenária, alterando o processo decisório, não o conteúdo regulatório.",
+      "destinatario": "Parlamentares e processo legislativo; usuários/plataformas apenas indiretamente.",
+      "efeitos": "Efeito imediato é regimental/procedural; não se pode atribuir ao recurso o impacto substantivo do PL subjacente.",
+      "grupos_canonicos": [],
+      "tema": "internet / regulação de plataformas",
+      "resumo": "Recorre contra tramitação conclusiva do PL 1329/2024, sobre publicidade e fundamentação de decisões de remoção/indisponibilização de conteúdo na internet.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "requerimento/recurso procedural; autoria não demonstra efeito populacional"
+        ],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-18-2025-2570142",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "Altera o rito de deliberação para permitir debate/plenário; não cria o cadastro por si só.",
+      "destinatario": "Processo legislativo; potenciais proprietários, ocupantes e órgãos públicos só seriam afetados pelo projeto subjacente.",
+      "efeitos": "Procedural, sem efeito populacional material próprio; não herda impacto do PL 4432/2023.",
+      "grupos_canonicos": [],
+      "tema": "segurança pública / dados",
+      "resumo": "Recorre contra apreciação conclusiva do PL 4432/2023, que cria Cadastro de Invasores de propriedades.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "requerimento/recurso procedural; autoria não demonstra efeito populacional"
+        ],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-2-2026-2601794",
+      "decision": "withheld",
+      "reason": "Texto integral oficial foi recuperado e hash conferido, mas o pacote não fornece vínculo exato entre esta proposição/autoria e uma proposition_version + voting_event com objeto votado. As tramitações encontradas não substituem esse vínculo; fail-closed.",
+      "mecanismo": "Reabre ou leva a decisão a instância deliberativa competente; o recurso não contém o mérito normativo da emenda.",
+      "destinatario": "Advogados e entidades da OAB apenas potencialmente, conforme o mérito da emenda subjacente; destinatário imediato é o processo legislativo.",
+      "efeitos": "Efeito é exclusivamente regimental no recurso; sem versão/evento vinculante e sem texto da emenda votada, não há base para score.",
+      "grupos_canonicos": [],
+      "tema": "processo legislativo / advocacia",
+      "resumo": "Recorre contra parecer terminativo da Emenda 3 ao PL 1743/2024, buscando impedir o encerramento regimental da tramitação.",
+      "vinculo_versao_evento": null,
+      "score_eligible": false,
+      "confianca": 0.45,
+      "autocritica": "A análise causal usa o texto integral da proposição apresentada, não a ementa isolada. Limitação decisiva: não foi identificado no envelope um texto efetivamente votado, emenda/substitutivo incorporado, objeto nominal e evento vinculante; portanto não inferi defending_vote nem direção pontuável. Grupos são apenas hipótese textual e não devem ser publicados como matriz sem revisão/evento.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": [
+          "requerimento/recurso procedural; autoria não demonstra efeito populacional",
+          "arquivado; autoria não prova aprovação, vigência ou efeito"
+        ],
+        "missing_sources": [
+          "versão efetivamente votada (texto/dispositivo + hash)",
+          "evento oficial e objeto votado",
+          "resultado/registro nominal do evento"
+        ],
+        "counterargument": "Mesmo com API, autoria e hash do documento confirmados, autoria não prova versão efetivamente votada, aprovação/incorporação da emenda, evento/objeto ou efeito populacional."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    }
+  ]
+}
