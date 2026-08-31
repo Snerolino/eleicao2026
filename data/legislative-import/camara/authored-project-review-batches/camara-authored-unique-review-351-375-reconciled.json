@@ -1,0 +1,2149 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:req-3582-2023-2396512",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Polícia penal e organização parlamentar",
+      "effects": "Parlamentares e órgãos legislativos; a polícia penal é tema de advocacy, não destinatária de direito criado.",
+      "target_groups": [],
+      "main_topic": "seguranca_publica",
+      "summary_short": "Registro de frente parlamentar para debates e articulação sobre polícia penal; não cria carreira, despesa, direito ou obrigação.",
+      "summary_expanded": "Registro de frente parlamentar para debates e articulação sobre polícia penal; não cria carreira, despesa, direito ou obrigação.",
+      "version_event_binding": {
+        "proposition_id": "2396512",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2345731",
+        "text_sha256": "sha256:21ec96231ea009e18c6a4d2a600bc57d57e2ea90f5455e1d10d49aa317213f93",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2396512/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2396512",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2345731",
+          "status": 200,
+          "bytes": 164707,
+          "sha256": "sha256:21ec96231ea009e18c6a4d2a600bc57d57e2ea90f5455e1d10d49aa317213f93"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2396512/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-3727-2023-2400122",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Participação social e organização parlamentar",
+      "effects": "Parlamentares, movimentos sociais e órgãos legislativos; nenhum grupo populacional recebe direito diretamente.",
+      "target_groups": [],
+      "main_topic": "participacao_social",
+      "summary_short": "Registro de frente parlamentar para debate e articulação sobre participação social; a justificativa política não altera a lei.",
+      "summary_expanded": "Registro de frente parlamentar para debate e articulação sobre participação social; a justificativa política não altera a lei.",
+      "version_event_binding": {
+        "proposition_id": "2400122",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2353092",
+        "text_sha256": "sha256:16955b8749b359caa0a881a5e16378c8c0c70083c5cf65ce49ba4462227920c1",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2400122/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2400122",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2353092",
+          "status": 200,
+          "bytes": 171342,
+          "sha256": "sha256:16955b8749b359caa0a881a5e16378c8c0c70083c5cf65ce49ba4462227920c1"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2400122/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-3784-2023-2400871",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Mídia regional e organização parlamentar",
+      "effects": "Parlamentares, entidades de mídia regional e órgãos legislativos.",
+      "target_groups": [],
+      "main_topic": "comunicacao",
+      "summary_short": "Registro de frente para debate e articulação de políticas de comunicação; não institui financiamento, obrigação ou direito.",
+      "summary_expanded": "Registro de frente para debate e articulação de políticas de comunicação; não institui financiamento, obrigação ou direito.",
+      "version_event_binding": {
+        "proposition_id": "2400871",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2354297",
+        "text_sha256": "sha256:53c43807cc8a72f84f04d16dc0712234a88679b28bea538a1aa1b08b573038fd",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2400871/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2400871",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2354297",
+          "status": 200,
+          "bytes": 177612,
+          "sha256": "sha256:53c43807cc8a72f84f04d16dc0712234a88679b28bea538a1aa1b08b573038fd"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2400871/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-4222-2025-2570607",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Integração sul-americana e organização parlamentar",
+      "effects": "Parlamentares e entes públicos interessados em integração; não há destinatário populacional direto.",
+      "target_groups": [],
+      "main_topic": "relacoes_internacionais",
+      "summary_short": "Registro de frente parlamentar mista para articulação de iniciativas futuras; não implementa integração nem aloca recursos.",
+      "summary_expanded": "Registro de frente parlamentar mista para articulação de iniciativas futuras; não implementa integração nem aloca recursos.",
+      "version_event_binding": {
+        "proposition_id": "2570607",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3019731",
+        "text_sha256": "sha256:bf0d670744d18ba8a463bec634148b4c1d27bfe7863b9a76fde4a9026af93b8b",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2570607/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2570607",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3019731",
+          "status": 200,
+          "bytes": 176356,
+          "sha256": "sha256:bf0d670744d18ba8a463bec634148b4c1d27bfe7863b9a76fde4a9026af93b8b"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2570607/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-428-2024-2418636",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Universidades públicas e organização parlamentar",
+      "effects": "Parlamentares, universidades públicas e órgãos legislativos; eventual benefício depende de atos posteriores.",
+      "target_groups": [],
+      "main_topic": "educacao",
+      "summary_short": "Registro de frente para acompanhar e debater universidades públicas; não libera recursos nem altera autonomia ou política educacional.",
+      "summary_expanded": "Registro de frente para acompanhar e debater universidades públicas; não libera recursos nem altera autonomia ou política educacional.",
+      "version_event_binding": {
+        "proposition_id": "2418636",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2389520",
+        "text_sha256": "sha256:6b5fff269e2f88e38acc6be260039f2129a3dee45e85b6edffccc502f0018053",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2418636/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2418636",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2389520",
+          "status": 200,
+          "bytes": 525597,
+          "sha256": "sha256:6b5fff269e2f88e38acc6be260039f2129a3dee45e85b6edffccc502f0018053"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2418636/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-4291-2023-2413433",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "BPC e proteção social",
+      "effects": "Parlamentares e órgãos legislativos; pessoas vulneráveis são apenas objeto temático, sem direito novo.",
+      "target_groups": [],
+      "main_topic": "assistencia_social",
+      "summary_short": "Registro de frente para discutir e propor aperfeiçoamentos do BPC; não modifica requisitos, valor ou cobertura do benefício.",
+      "summary_expanded": "Registro de frente para discutir e propor aperfeiçoamentos do BPC; não modifica requisitos, valor ou cobertura do benefício.",
+      "version_event_binding": {
+        "proposition_id": "2413433",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2376285",
+        "text_sha256": "sha256:4fe8511aa0e62c8d7b5621fb0ba447e7fa7a82191cf71bac28cacb46045dfcea",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2413433/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2413433",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2376285",
+          "status": 200,
+          "bytes": 321896,
+          "sha256": "sha256:4fe8511aa0e62c8d7b5621fb0ba447e7fa7a82191cf71bac28cacb46045dfcea"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2413433/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-4692-2025-2582044",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Cannabis medicinal, cânhamo e organização parlamentar",
+      "effects": "Parlamentares, pacientes, setor produtivo e órgãos legislativos como interessados temáticos; nenhum direito é criado.",
+      "target_groups": [],
+      "main_topic": "saude",
+      "summary_short": "Registro de frente para debate e articulação sobre cannabis medicinal e cânhamo; não autoriza uso, produção ou financiamento.",
+      "summary_expanded": "Registro de frente para debate e articulação sobre cannabis medicinal e cânhamo; não autoriza uso, produção ou financiamento.",
+      "version_event_binding": {
+        "proposition_id": "2582044",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3040244",
+        "text_sha256": "sha256:03161bf96929c19350286bbf6726ca4be0f802d200a32444647df627c360e3bc",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2582044/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2582044",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3040244",
+          "status": 200,
+          "bytes": 252795,
+          "sha256": "sha256:03161bf96929c19350286bbf6726ca4be0f802d200a32444647df627c360e3bc"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2582044/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-4896-2025-2584880",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Crédito de carbono e organização parlamentar",
+      "effects": "Parlamentares, agentes econômicos e órgãos legislativos; não há obrigação ou benefício jurídico direto.",
+      "target_groups": [],
+      "main_topic": "meio_ambiente",
+      "summary_short": "Registro de frente já instalada para articulação sobre crédito de carbono; não cria mercado, incentivo ou regra ambiental.",
+      "summary_expanded": "Registro de frente já instalada para articulação sobre crédito de carbono; não cria mercado, incentivo ou regra ambiental.",
+      "version_event_binding": {
+        "proposition_id": "2584880",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3046283",
+        "text_sha256": "sha256:a64fe1bdb04aeedccf77ae621f266c513c85c21a40779049d1a5288bf99812fa",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2584880/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2584880",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3046283",
+          "status": 200,
+          "bytes": 151415,
+          "sha256": "sha256:a64fe1bdb04aeedccf77ae621f266c513c85c21a40779049d1a5288bf99812fa"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2584880/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-507-2023-2350531",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Sessão solene e memória histórica",
+      "effects": "Mesa e plenário da Câmara, convidados e participantes institucionais.",
+      "target_groups": [],
+      "main_topic": "cultura",
+      "summary_short": "Requer realização de sessão solene; efeito é cerimonial/simbólico e não altera políticas públicas ou direitos.",
+      "summary_expanded": "Requer realização de sessão solene; efeito é cerimonial/simbólico e não altera políticas públicas ou direitos.",
+      "version_event_binding": {
+        "proposition_id": "2350531",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2240707",
+        "text_sha256": "sha256:fe597ae9b843858c01db7d3f80e714977d8888f6a9ef8ba11e85a8c876cc843b",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350531/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350531",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2240707",
+          "status": 200,
+          "bytes": 578725,
+          "sha256": "sha256:fe597ae9b843858c01db7d3f80e714977d8888f6a9ef8ba11e85a8c876cc843b"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350531/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-551-2023-2350877",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Frente religiosa e organização parlamentar",
+      "effects": "Parlamentares e associação parlamentar; nenhuma população recebe efeito jurídico direto.",
+      "target_groups": [],
+      "main_topic": "religiao",
+      "summary_short": "Registro de frente parlamentar de orientação religiosa; não cria norma ou benefício material.",
+      "summary_expanded": "Registro de frente parlamentar de orientação religiosa; não cria norma ou benefício material.",
+      "version_event_binding": {
+        "proposition_id": "2350877",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2241429",
+        "text_sha256": "sha256:b612c8231c742f708d74ad087fb34ea9cb3500c9efaaae6f4c667f9a2f2bf6dc",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350877/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350877",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2241429",
+          "status": 200,
+          "bytes": 123519,
+          "sha256": "sha256:b612c8231c742f708d74ad087fb34ea9cb3500c9efaaae6f4c667f9a2f2bf6dc"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350877/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal",
+          "versão textual mais recente indicada na tramitação não coincide com codteor do texto fornecido"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-584-2023-2350920",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Aborto, vida e organização parlamentar",
+      "effects": "Parlamentares e órgãos legislativos; o tema não produz alteração jurídica no requerimento.",
+      "target_groups": [],
+      "main_topic": "direitos_reprodutivos",
+      "summary_short": "Registro de frente para debate e atuação parlamentar; não altera regras sobre aborto nem cria proteção ou restrição.",
+      "summary_expanded": "Registro de frente para debate e atuação parlamentar; não altera regras sobre aborto nem cria proteção ou restrição.",
+      "version_event_binding": {
+        "proposition_id": "2350920",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2241537",
+        "text_sha256": "sha256:c7a42d81ddbeea1dcfd91467676c141fd15329cffd327a3efe2e5eec1eaec338",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350920/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350920",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2241537",
+          "status": 200,
+          "bytes": 198335,
+          "sha256": "sha256:c7a42d81ddbeea1dcfd91467676c141fd15329cffd327a3efe2e5eec1eaec338"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350920/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal",
+          "versão textual mais recente indicada na tramitação não coincide com codteor do texto fornecido"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-588-2023-2350929",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Defensorias públicas e organização parlamentar",
+      "effects": "Parlamentares, defensorias e órgãos legislativos; não há destinatário populacional direto.",
+      "target_groups": [],
+      "main_topic": "justica",
+      "summary_short": "Registro de frente para apoio e fortalecimento institucional; não cria orçamento, serviço ou direito de acesso à Justiça.",
+      "summary_expanded": "Registro de frente para apoio e fortalecimento institucional; não cria orçamento, serviço ou direito de acesso à Justiça.",
+      "version_event_binding": {
+        "proposition_id": "2350929",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2241584",
+        "text_sha256": "sha256:391899f318863b5524a6b0c1d6165894142a08bc23cb3f5f555f61d185025931",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350929/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350929",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2241584",
+          "status": 200,
+          "bytes": 140278,
+          "sha256": "sha256:391899f318863b5524a6b0c1d6165894142a08bc23cb3f5f555f61d185025931"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350929/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-609-2023-2351043",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Reciclagem e organização parlamentar",
+      "effects": "Parlamentares, recicladores e setor de reciclagem como interlocutores; não há direito setorial criado.",
+      "target_groups": [],
+      "main_topic": "trabalho",
+      "summary_short": "Registro de frente para integração e debate de políticas de reciclagem; não subsidia, regula ou financia recicladores.",
+      "summary_expanded": "Registro de frente para integração e debate de políticas de reciclagem; não subsidia, regula ou financia recicladores.",
+      "version_event_binding": {
+        "proposition_id": "2351043",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2242054",
+        "text_sha256": "sha256:9e7262f13c1053d8848694d10a672dd67964dabcf97c837e08d94b424b616267",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351043/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351043",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2242054",
+          "status": 200,
+          "bytes": 333863,
+          "sha256": "sha256:9e7262f13c1053d8848694d10a672dd67964dabcf97c837e08d94b424b616267"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351043/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-671-2023-2351331",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Relações Brasil–EUA e organização parlamentar",
+      "effects": "Parlamentares e órgãos públicos; não há destinatário populacional direto.",
+      "target_groups": [],
+      "main_topic": "relacoes_internacionais",
+      "summary_short": "Registro de frente bilateral para articulação parlamentar; não cria tratado, programa ou recurso.",
+      "summary_expanded": "Registro de frente bilateral para articulação parlamentar; não cria tratado, programa ou recurso.",
+      "version_event_binding": {
+        "proposition_id": "2351331",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2243379",
+        "text_sha256": "sha256:6f97b65a9bb4269affdac461d3d91842cc104da297991e3511d947e64ec946df",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351331/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351331",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2243379",
+          "status": 200,
+          "bytes": 209353,
+          "sha256": "sha256:6f97b65a9bb4269affdac461d3d91842cc104da297991e3511d947e64ec946df"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351331/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal",
+          "versão textual mais recente indicada na tramitação não coincide com codteor do texto fornecido"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-698-2023-2351489",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Desenvolvimento regional do Nordeste",
+      "effects": "Parlamentares, entes regionais e órgãos legislativos; moradores do Nordeste não recebem direito direto.",
+      "target_groups": [],
+      "main_topic": "desenvolvimento_regional",
+      "summary_short": "Registro de frente em defesa do Nordeste; não destina recursos nem altera política regional.",
+      "summary_expanded": "Registro de frente em defesa do Nordeste; não destina recursos nem altera política regional.",
+      "version_event_binding": {
+        "proposition_id": "2351489",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2244192",
+        "text_sha256": "sha256:74e0b406ae84075ee128804441c6d75d3549cfb848eda24fe6869eeaee681de2",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351489/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351489",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2244192",
+          "status": 200,
+          "bytes": 127330,
+          "sha256": "sha256:74e0b406ae84075ee128804441c6d75d3549cfb848eda24fe6869eeaee681de2"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351489/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-727-2022-2322502",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Reciclagem e organização parlamentar",
+      "effects": "Parlamentares, recicladores e setor de reciclagem como interlocutores; não há direito setorial criado.",
+      "target_groups": [],
+      "main_topic": "trabalho",
+      "summary_short": "Requerimento de criação de frente na legislatura anterior; efeito institucional, sem norma material.",
+      "summary_expanded": "Requerimento de criação de frente na legislatura anterior; efeito institucional, sem norma material.",
+      "version_event_binding": {
+        "proposition_id": "2322502",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2167269",
+        "text_sha256": "sha256:b8fea2eca3c3ed6814f761d1b26a6ccd97b0cb9e8fa9061492aba588f8dd59ac",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2322502/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2322502",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2167269",
+          "status": 200,
+          "bytes": 186319,
+          "sha256": "sha256:b8fea2eca3c3ed6814f761d1b26a6ccd97b0cb9e8fa9061492aba588f8dd59ac"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2322502/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-777-2023-2352062",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Comunidades terapêuticas e organização parlamentar",
+      "effects": "Parlamentares, comunidades terapêuticas e órgãos legislativos; usuários não recebem efeito direto.",
+      "target_groups": [],
+      "main_topic": "saude",
+      "summary_short": "Registro de frente para debate das comunidades terapêuticas; não cria financiamento, autorização ou obrigação.",
+      "summary_expanded": "Registro de frente para debate das comunidades terapêuticas; não cria financiamento, autorização ou obrigação.",
+      "version_event_binding": {
+        "proposition_id": "2352062",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2246236",
+        "text_sha256": "sha256:fd77af3132c348e71cfa91cc2d11dd55a85743a7c89db0b89485809358bce5cc",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2352062/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2352062",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2246236",
+          "status": 200,
+          "bytes": 126623,
+          "sha256": "sha256:fd77af3132c348e71cfa91cc2d11dd55a85743a7c89db0b89485809358bce5cc"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2352062/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal",
+          "versão textual mais recente indicada na tramitação não coincide com codteor do texto fornecido"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-807-2023-2352293",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Mulheres na construção civil e organização parlamentar",
+      "effects": "Parlamentares, setor da construção e entidades sociais; mulheres trabalhadoras são tema, não destinatárias de direito criado.",
+      "target_groups": [],
+      "main_topic": "trabalho",
+      "summary_short": "Registro de frente para fomentar qualificação e inclusão; não cria curso, vaga, quota, renda ou obrigação trabalhista.",
+      "summary_expanded": "Registro de frente para fomentar qualificação e inclusão; não cria curso, vaga, quota, renda ou obrigação trabalhista.",
+      "version_event_binding": {
+        "proposition_id": "2352293",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2246678",
+        "text_sha256": "sha256:7ff8fa53905e10d0428c09fbf7dd00f95c3d4446a0d82352b2621f70cd1e60bd",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2352293/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2352293",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2246678",
+          "status": 200,
+          "bytes": 620823,
+          "sha256": "sha256:7ff8fa53905e10d0428c09fbf7dd00f95c3d4446a0d82352b2621f70cd1e60bd"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2352293/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-865-2023-2352559",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Empreendedorismo da juventude e organização parlamentar",
+      "effects": "Parlamentares, jovens empreendedores e órgãos legislativos; não há incentivo ou direito direto.",
+      "target_groups": [],
+      "main_topic": "trabalho",
+      "summary_short": "Registro de frente de debate e articulação; não cria crédito, capacitação ou benefício para jovens.",
+      "summary_expanded": "Registro de frente de debate e articulação; não cria crédito, capacitação ou benefício para jovens.",
+      "version_event_binding": {
+        "proposition_id": "2352559",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2247590",
+        "text_sha256": "sha256:3d8276e6f24435bf893fbbf2f7538285c132e7b7ae6f08c2a75bab6e5e9e883a",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2352559/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2352559",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2247590",
+          "status": 200,
+          "bytes": 618072,
+          "sha256": "sha256:3d8276e6f24435bf893fbbf2f7538285c132e7b7ae6f08c2a75bab6e5e9e883a"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2352559/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-907-2023-2353485",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Rodeio, vaquejada e provas equestres",
+      "effects": "Parlamentares, praticantes e setor cultural/esportivo; não há regra material criada.",
+      "target_groups": [],
+      "main_topic": "cultura",
+      "summary_short": "Registro de frente parlamentar mista; não regulamenta eventos nem institui apoio financeiro.",
+      "summary_expanded": "Registro de frente parlamentar mista; não regulamenta eventos nem institui apoio financeiro.",
+      "version_event_binding": {
+        "proposition_id": "2353485",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2249773",
+        "text_sha256": "sha256:89be0c8d85a9f6792718dc2ebb2e70f2b83cd1a56d250f0a4af4cffd71b31443",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2353485/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2353485",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2249773",
+          "status": 200,
+          "bytes": 263038,
+          "sha256": "sha256:89be0c8d85a9f6792718dc2ebb2e70f2b83cd1a56d250f0a4af4cffd71b31443"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2353485/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-920-2023-2353614",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Economia e cidadania digital",
+      "effects": "Parlamentares, empresas e órgãos legislativos; cidadãos digitais não recebem direito novo.",
+      "target_groups": [],
+      "main_topic": "tecnologia",
+      "summary_short": "Registro de frente para articulação sobre economia e cidadania digital; não regula plataformas nem cria política pública.",
+      "summary_expanded": "Registro de frente para articulação sobre economia e cidadania digital; não regula plataformas nem cria política pública.",
+      "version_event_binding": {
+        "proposition_id": "2353614",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2250210",
+        "text_sha256": "sha256:a514586a46937bfccdc3c88b871b07ae9e302bcdf3e7f9b3168f50afaf5a9a3b",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2353614/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2353614",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2250210",
+          "status": 200,
+          "bytes": 381094,
+          "sha256": "sha256:a514586a46937bfccdc3c88b871b07ae9e302bcdf3e7f9b3168f50afaf5a9a3b"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2353614/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-941-2023-2353858",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Ambientalismo e organização parlamentar",
+      "effects": "Parlamentares, sociedade civil e órgãos ambientais como interlocutores; não há comando ambiental vinculante.",
+      "target_groups": [],
+      "main_topic": "meio_ambiente",
+      "summary_short": "Registro de frente com grupos temáticos ambientais; apoiar iniciativas futuras não equivale a implementá-las.",
+      "summary_expanded": "Registro de frente com grupos temáticos ambientais; apoiar iniciativas futuras não equivale a implementá-las.",
+      "version_event_binding": {
+        "proposition_id": "2353858",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2250928",
+        "text_sha256": "sha256:7c99c8cbc5ef8e33337f0c02d846637f281e8779b57765eb90c2eaa42bf81e15",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2353858/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2353858",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2250928",
+          "status": 200,
+          "bytes": 131597,
+          "sha256": "sha256:7c99c8cbc5ef8e33337f0c02d846637f281e8779b57765eb90c2eaa42bf81e15"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2353858/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-988-2023-2354222",
+      "decision": "withheld",
+      "reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+      "mechanism": "Ato regimental de registro, instalação ou realização de atividade parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Duplicação da BR-423 e organização parlamentar",
+      "effects": "Parlamentares, entes públicos e usuários da rodovia como interessados; não há obra ou dotação criada.",
+      "target_groups": [],
+      "main_topic": "infraestrutura_transportes",
+      "summary_short": "Registro de frente de defesa de obra rodoviária; não autoriza, financia ou executa a duplicação.",
+      "summary_expanded": "Registro de frente de defesa de obra rodoviária; não autoriza, financia ou executa a duplicação.",
+      "version_event_binding": {
+        "proposition_id": "2354222",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2252548",
+        "text_sha256": "sha256:b9a7af5f091fff4ece41d7dafcebf3321d132ecdd6a12db0afc05f8d5efe9ce5",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2354222/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "procedural_no_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.96,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.96,
+        "confidence_after": 0.96,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2354222",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2252548",
+          "status": 200,
+          "bytes": 177840,
+          "sha256": "sha256:b9a7af5f091fff4ece41d7dafcebf3321d132ecdd6a12db0afc05f8d5efe9ce5"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2354222/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/ato procedimental: o inteiro teor não implementa política pública; endpoint oficial de votações retornou zero eventos vinculados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-1-0-2520097",
+      "decision": "withheld",
+      "reason": "Texto integral contém mecanismo material potencial, mas não há evento oficial vinculante que identifique o objeto e a versão efetivamente votados; score retido.",
+      "mechanism": "Alteração constitucional proposta em matéria fiscal/orçamentária; mecanismo descrito no texto integral, não atribuído a voto.",
+      "direct_recipient": "Precatórios e refinanciamento de dívidas municipais",
+      "effects": "Municípios e União; efeitos sobre contribuintes, credores e serviços municipais seriam indiretos e dependentes de adesão/execução.",
+      "target_groups": [],
+      "main_topic": "financas_publicas",
+      "summary_short": "Emenda à PEC 66/2023 propõe reduzir juros condicionados a amortização, permitir quitação com ativos/créditos e refinanciar dívidas municipais em até 360 parcelas; altera distribuição de riscos fiscais, mas o texto não foi vinculado a evento de votação no pacote.",
+      "summary_expanded": "Emenda à PEC 66/2023 propõe reduzir juros condicionados a amortização, permitir quitação com ativos/créditos e refinanciar dívidas municipais em até 360 parcelas; altera distribuição de riscos fiscais, mas o texto não foi vinculado a evento de votação no pacote.",
+      "version_event_binding": {
+        "proposition_id": "2520097",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2925624",
+        "text_sha256": "sha256:e0de63adebe3607633199fbeba8b0af5c36fda352b5bd08df4d39315f02add78",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2520097/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "event_binding_missing",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.87,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.87,
+        "confidence_after": 0.87,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2520097",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2925624",
+          "status": 200,
+          "bytes": 179952,
+          "sha256": "sha256:e0de63adebe3607633199fbeba8b0af5c36fda352b5bd08df4d39315f02add78"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2520097/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "budgetary",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "event_binding_missing",
+        "score_withholding_reason": "Texto integral contém mecanismo material potencial, mas não há evento oficial vinculante que identifique o objeto e a versão efetivamente votados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "identidade EMC com ano=0 (placeholder/ano inválido)",
+          "registro oficial de evento de votação/objeto votado e resultado nominal",
+          "versão textual mais recente indicada na tramitação não coincide com codteor do texto fornecido"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-1-2019-2222885",
+      "decision": "withheld",
+      "reason": "Texto integral contém mecanismo material potencial, mas não há evento oficial vinculante que identifique o objeto e a versão efetivamente votados; score retido.",
+      "mechanism": "Alteração constitucional proposta em matéria fiscal/orçamentária; mecanismo descrito no texto integral, não atribuído a voto.",
+      "direct_recipient": "Transferências voluntárias e emendas parlamentares",
+      "effects": "União, Estados, DF e Municípios; beneficiários materiais finais dependeriam da destinação de cada emenda e da execução orçamentária.",
+      "target_groups": [],
+      "main_topic": "orcamento_publico",
+      "summary_short": "Emenda à PEC 48/2019 cria doações direcionadas de emendas, com transferência direta, conta específica, destinação vinculada e fiscalização predominantemente subnacional; é materialmente distributiva, porém sem evento vinculante identificado.",
+      "summary_expanded": "Emenda à PEC 48/2019 cria doações direcionadas de emendas, com transferência direta, conta específica, destinação vinculada e fiscalização predominantemente subnacional; é materialmente distributiva, porém sem evento vinculante identificado.",
+      "version_event_binding": {
+        "proposition_id": "2222885",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1814636",
+        "text_sha256": "sha256:c6b6add85f3e3559a2536d3a2e9fc04a0ee24594722bfab21310d2e168f4f0ba",
+        "event_id": null,
+        "event_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2222885/votacoes",
+        "event_http_status": 200,
+        "linked_event_count": 0,
+        "binding_status": "event_binding_missing",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.87,
+      "self_critique": {
+        "strongest_counterargument": "O texto integral, especialmente nas emendas constitucionais, descreve efeitos fiscais e distributivos que poderiam justificar análise substantiva; nas frentes, a agenda pode influenciar políticas futuras.",
+        "evidence_against_decision": [
+          "Há conteúdo integral oficial e justificativas/dispositivos com relevância temática; a ausência de evento no endpoint da própria proposição não prova que a matéria nunca tenha sido considerada no texto principal."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e localizar o evento da proposição principal, substitutivo ou emenda correspondente antes de qualquer pontuação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não se sabe qual objeto foi submetido ao voto nem se SIM/NÃO expressaria apoio ao mecanismo descrito.",
+        "remaining_uncertainties": [
+          "Pode existir evento no processo da proposição principal ou em documento de comissão não ligado a esta proposição.",
+          "Não atribuir autoria/coautoria a voto ou impacto."
+        ],
+        "confidence_before": 0.87,
+        "confidence_after": 0.87,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2222885",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1814636",
+          "status": 200,
+          "bytes": 169571,
+          "sha256": "sha256:c6b6add85f3e3559a2536d3a2e9fc04a0ee24594722bfab21310d2e168f4f0ba"
+        },
+        {
+          "kind": "official_proposition_votes_endpoint",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2222885/votacoes",
+          "status": 200,
+          "linked_events": 0
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "budgetary",
+        "impact_direction": "unclear",
+        "textual_defending_vote": null,
+        "event_defending_vote": null,
+        "vote_attribution_status": "event_binding_missing",
+        "score_withholding_reason": "Texto integral contém mecanismo material potencial, mas não há evento oficial vinculante que identifique o objeto e a versão efetivamente votados; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada e, nas emendas, a proposição principal/substitutivo correspondente antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial de evento de votação/objeto votado e resultado nominal",
+          "versão textual mais recente indicada na tramitação não coincide com codteor do texto fornecido"
+        ],
+        "counterargument": "A presença do autor no endpoint oficial e o hash reproduzido poderiam sustentar apenas um registro factual de autoria; não demonstram que o texto fornecido seja a versão relevante para um evento votado nem permitem atribuir significado a SIM/NÃO."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    }
+  ]
+}
