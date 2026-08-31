@@ -1,0 +1,1198 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:emc-139-2019-2205744",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "BPC: escolha de 40% do salário mínimo aos 60 ou 100% aos 65, com integralização aos 70; veda acumulação e abono anual.",
+      "destinatário": [
+        "pessoas_idosas_dependentes"
+      ],
+      "efeitos": "BPC: escolha de 40% do salário mínimo aos 60 ou 100% aos 65, com integralização aos 70; veda acumulação e abono anual.",
+      "grupos_canônicos": [
+        "pessoas_idosas_dependentes"
+      ],
+      "tema": "previdência/assistência",
+      "resumo": "BPC: escolha de 40% do salário mínimo aos 60 ou 100% aos 65, com integralização aos 70; veda acumulação e abono anual.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2205744",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205744/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205744/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757634",
+        "status": 200,
+        "bytes": 156656,
+        "sha256": "sha256:63d3b79ba6a7c3361145c7a535a83b77a7a953d3dab3b1425ae2717b835001d5"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 139/2019 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-139-2019-2221888",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "IBS não incide na exportação de serviços educacionais e créditos são mantidos; favorece exportadores, sem efeito doméstico automático.",
+      "destinatário": [
+        "estudantes"
+      ],
+      "efeitos": "IBS não incide na exportação de serviços educacionais e créditos são mantidos; favorece exportadores, sem efeito doméstico automático.",
+      "grupos_canônicos": [
+        "estudantes"
+      ],
+      "tema": "tributação/educação",
+      "resumo": "IBS não incide na exportação de serviços educacionais e créditos são mantidos; favorece exportadores, sem efeito doméstico automático.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2221888",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2221888/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2221888/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1812247",
+        "status": 200,
+        "bytes": 428586,
+        "sha256": "sha256:32317b738c06efc739c7b781663fb544831d50dcf9ad426b631eb1b68bf76dbc"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 139/2019 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-14-0-2290017",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Substitutivo global disciplina concurso, remuneração, estabilidade, participação social e relações civis-militares; efeitos protetivos e restritivos coexistem.",
+      "destinatário": [
+        "servidores_publicos"
+      ],
+      "efeitos": "Substitutivo global disciplina concurso, remuneração, estabilidade, participação social e relações civis-militares; efeitos protetivos e restritivos coexistem.",
+      "grupos_canônicos": [
+        "servidores_publicos"
+      ],
+      "tema": "administração pública",
+      "resumo": "Substitutivo global disciplina concurso, remuneração, estabilidade, participação social e relações civis-militares; efeitos protetivos e restritivos coexistem.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2290017",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2290017/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2290017/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2040987",
+        "status": 200,
+        "bytes": 215905,
+        "sha256": "sha256:c38de07ebcf44cb57afb9600927db10b400d6c67fdf2534addc694b79d21aa89"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto (ano 0 confirmado pela API; requer contexto da PEC/emenda)",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 14/0 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-142-2019-2205751",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Suprime alterações da PEC 6 e prevê reajuste real e adicional de 25% no BPC por dependência funcional; amplia proteção, sujeito ao texto-base.",
+      "destinatário": [
+        "pessoas_idosas_dependentes",
+        "pessoas_com_deficiencia"
+      ],
+      "efeitos": "Suprime alterações da PEC 6 e prevê reajuste real e adicional de 25% no BPC por dependência funcional; amplia proteção, sujeito ao texto-base.",
+      "grupos_canônicos": [
+        "pessoas_idosas_dependentes",
+        "pessoas_com_deficiencia"
+      ],
+      "tema": "previdência/assistência",
+      "resumo": "Suprime alterações da PEC 6 e prevê reajuste real e adicional de 25% no BPC por dependência funcional; amplia proteção, sujeito ao texto-base.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2205751",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205751/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205751/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757646",
+        "status": 200,
+        "bytes": 91706,
+        "sha256": "sha256:a6c67e3ffc16c3e989e193da12c8c1c7560a3f34b54b0df46c6831fb9ac0067a"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 142/2019 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-143-2019-2205752",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Preserva diferença na acumulação de benefícios por até dez anos e restabelecimento do benefício seguinte; reduz perdas potenciais, dependendo do texto-base.",
+      "destinatário": [
+        "trabalhadores_formais",
+        "pessoas_idosas_dependentes"
+      ],
+      "efeitos": "Preserva diferença na acumulação de benefícios por até dez anos e restabelecimento do benefício seguinte; reduz perdas potenciais, dependendo do texto-base.",
+      "grupos_canônicos": [
+        "trabalhadores_formais",
+        "pessoas_idosas_dependentes"
+      ],
+      "tema": "previdência",
+      "resumo": "Preserva diferença na acumulação de benefícios por até dez anos e restabelecimento do benefício seguinte; reduz perdas potenciais, dependendo do texto-base.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2205752",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205752/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205752/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757647",
+        "status": 200,
+        "bytes": 329032,
+        "sha256": "sha256:c867e92cb00696d6f845510c7a93afb7adc2a5c536b4e17794373f1e4b42684e"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 143/2019 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-148-2019-2205765",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Inclui categorias judiciais em aposentadoria especial e reconhece tempos de atividade; benefício condicionado ao regime.",
+      "destinatário": [
+        "servidores_publicos"
+      ],
+      "efeitos": "Inclui categorias judiciais em aposentadoria especial e reconhece tempos de atividade; benefício condicionado ao regime.",
+      "grupos_canônicos": [
+        "servidores_publicos"
+      ],
+      "tema": "previdência pública",
+      "resumo": "Inclui categorias judiciais em aposentadoria especial e reconhece tempos de atividade; benefício condicionado ao regime.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2205765",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205765/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205765/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757676",
+        "status": 200,
+        "bytes": 357228,
+        "sha256": "sha256:e63eef3230b1a7819201e8735f9624504f14d937f1473c40e06062feaddcd1fd"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 148/2019 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-15-0-2290023",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Soma remunerações, proventos e pensões para aplicar teto e veda excessos; restringe rendas de agentes públicos.",
+      "destinatário": [
+        "servidores_publicos"
+      ],
+      "efeitos": "Soma remunerações, proventos e pensões para aplicar teto e veda excessos; restringe rendas de agentes públicos.",
+      "grupos_canônicos": [
+        "servidores_publicos"
+      ],
+      "tema": "administração/remuneração",
+      "resumo": "Soma remunerações, proventos e pensões para aplicar teto e veda excessos; restringe rendas de agentes públicos.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2290023",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2290023/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2290023/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2041007",
+        "status": 200,
+        "bytes": 198882,
+        "sha256": "sha256:76a23f0f36c515b793dbaf113f4105a2367e9b9c46de32462cec81d1f341668c"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto (ano 0 confirmado pela API; requer contexto da PEC/emenda)",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 15/0 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-151-2019-2221994",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Constitucionaliza carreira e competências de autoridade tributária e teto de desembargador subnacional; efeitos fiscais dependem de lei.",
+      "destinatário": [
+        "servidores_publicos"
+      ],
+      "efeitos": "Constitucionaliza carreira e competências de autoridade tributária e teto de desembargador subnacional; efeitos fiscais dependem de lei.",
+      "grupos_canônicos": [
+        "servidores_publicos"
+      ],
+      "tema": "administração tributária",
+      "resumo": "Constitucionaliza carreira e competências de autoridade tributária e teto de desembargador subnacional; efeitos fiscais dependem de lei.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2221994",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2221994/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2221994/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1812434",
+        "status": 200,
+        "bytes": 528139,
+        "sha256": "sha256:6c6fc974cf9167c46aeb3b67d6ff41a079886ccba9e2dcc350c947052efa5f4b"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 151/2019 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-154-2019-2222012",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Autoriza IR sobre lucros/dividendos, com alíquotas e isenções deixadas à lei; desloca potencial carga a recebedores de capital.",
+      "destinatário": [
+        "trabalhadores_formais"
+      ],
+      "efeitos": "Autoriza IR sobre lucros/dividendos, com alíquotas e isenções deixadas à lei; desloca potencial carga a recebedores de capital.",
+      "grupos_canônicos": [
+        "trabalhadores_formais"
+      ],
+      "tema": "tributação/renda",
+      "resumo": "Autoriza IR sobre lucros/dividendos, com alíquotas e isenções deixadas à lei; desloca potencial carga a recebedores de capital.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2222012",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2222012/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2222012/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1812503",
+        "status": 200,
+        "bytes": 118780,
+        "sha256": "sha256:79e3eef901306882156b6d009cd3802abf75622f6f8242963aa765da6fcf8f24"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 154/2019 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-158-2019-2205792",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Mantém regras constitucionais de aposentadoria rural, suprimindo endurecimentos da PEC 6.",
+      "destinatário": [
+        "agricultura_familiar_sem_terra"
+      ],
+      "efeitos": "Mantém regras constitucionais de aposentadoria rural, suprimindo endurecimentos da PEC 6.",
+      "grupos_canônicos": [
+        "agricultura_familiar_sem_terra"
+      ],
+      "tema": "previdência rural",
+      "resumo": "Mantém regras constitucionais de aposentadoria rural, suprimindo endurecimentos da PEC 6.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2205792",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205792/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205792/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757740",
+        "status": 200,
+        "bytes": 424719,
+        "sha256": "sha256:97d1b23de57d8206be6e1dc3c2b6cc0e2b3c23841d138a797ee66caf60718e5a"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 158/2019 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-16-0-2290026",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Separa funções civil/militar, disciplina passagem à reserva e limita acumulações; altera direitos funcionais.",
+      "destinatário": [
+        "servidores_publicos"
+      ],
+      "efeitos": "Separa funções civil/militar, disciplina passagem à reserva e limita acumulações; altera direitos funcionais.",
+      "grupos_canônicos": [
+        "servidores_publicos"
+      ],
+      "tema": "administração/militar",
+      "resumo": "Separa funções civil/militar, disciplina passagem à reserva e limita acumulações; altera direitos funcionais.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2290026",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2290026/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2290026/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2041017",
+        "status": 200,
+        "bytes": 290454,
+        "sha256": "sha256:49d6a611e327072e74e066c5d4f2442e1a5800660cc1eca9595d5424328f8caf"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto (ano 0 confirmado pela API; requer contexto da PEC/emenda)",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 16/0 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-16-0-2566876",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Amplia competências de polícias municipais, controle externo, ouvidorias e ingresso por concurso; depende de criação municipal.",
+      "destinatário": [
+        "servidores_publicos"
+      ],
+      "efeitos": "Amplia competências de polícias municipais, controle externo, ouvidorias e ingresso por concurso; depende de criação municipal.",
+      "grupos_canônicos": [
+        "servidores_publicos"
+      ],
+      "tema": "segurança pública",
+      "resumo": "Amplia competências de polícias municipais, controle externo, ouvidorias e ingresso por concurso; depende de criação municipal.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2566876",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2566876/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2566876/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3011900",
+        "status": 200,
+        "bytes": 254169,
+        "sha256": "sha256:1e1dd9a542e1b6b8bd48c93fbe039179ba821b983f1dc78b5f08cf3c47344188"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto (ano 0 confirmado pela API; requer contexto da PEC/emenda)",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 16/0 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-16-2019-2204003",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Aplica regras federais de inatividade e pensão a PMs e bombeiros, salvo regulamentação própria.",
+      "destinatário": [
+        "servidores_publicos"
+      ],
+      "efeitos": "Aplica regras federais de inatividade e pensão a PMs e bombeiros, salvo regulamentação própria.",
+      "grupos_canônicos": [
+        "servidores_publicos"
+      ],
+      "tema": "previdência militar",
+      "resumo": "Aplica regras federais de inatividade e pensão a PMs e bombeiros, salvo regulamentação própria.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2204003",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2204003/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2204003/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1750200",
+        "status": 200,
+        "bytes": 198199,
+        "sha256": "sha256:b9fdcf65f570ba13bf426a3f87e3ba36b47c06e8bdeea1f495d6015a43e56c6e"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 16/2019 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-160-2019-2222074",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Autoriza contribuição sobre rendimento real de títulos públicos, de 10% a 25%; incide sobre investidores e pode ampliar receita.",
+      "destinatário": [
+        "trabalhadores_formais"
+      ],
+      "efeitos": "Autoriza contribuição sobre rendimento real de títulos públicos, de 10% a 25%; incide sobre investidores e pode ampliar receita.",
+      "grupos_canônicos": [
+        "trabalhadores_formais"
+      ],
+      "tema": "tributação/dívida",
+      "resumo": "Autoriza contribuição sobre rendimento real de títulos públicos, de 10% a 25%; incide sobre investidores e pode ampliar receita.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2222074",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2222074/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2222074/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1812706",
+        "status": 200,
+        "bytes": 386113,
+        "sha256": "sha256:62bab0fcd248a83fafa82562e06b95f722d632a7ccfa6abdbc45bb009ef40f6f"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 160/2019 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-161-2019-2205802",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Permite usar tempo já computado em outro regime mediante renúncia expressa ao benefício anterior; opção condicionada.",
+      "destinatário": [
+        "servidores_publicos"
+      ],
+      "efeitos": "Permite usar tempo já computado em outro regime mediante renúncia expressa ao benefício anterior; opção condicionada.",
+      "grupos_canônicos": [
+        "servidores_publicos"
+      ],
+      "tema": "previdência",
+      "resumo": "Permite usar tempo já computado em outro regime mediante renúncia expressa ao benefício anterior; opção condicionada.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2205802",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205802/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205802/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757766",
+        "status": 200,
+        "bytes": 271809,
+        "sha256": "sha256:117a9f3bbd3ca9218c182c184344aacba664405fc3d0ed4f069f198076ea08c9"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 161/2019 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-162-2019-2205809",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Ajusta aposentadoria de professores e rurais e eleva BPC de idosos vulneráveis; pacote com efeitos diferenciados.",
+      "destinatário": [
+        "agricultura_familiar_sem_terra",
+        "pessoas_idosas_dependentes"
+      ],
+      "efeitos": "Ajusta aposentadoria de professores e rurais e eleva BPC de idosos vulneráveis; pacote com efeitos diferenciados.",
+      "grupos_canônicos": [
+        "agricultura_familiar_sem_terra",
+        "pessoas_idosas_dependentes"
+      ],
+      "tema": "previdência",
+      "resumo": "Ajusta aposentadoria de professores e rurais e eleva BPC de idosos vulneráveis; pacote com efeitos diferenciados.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2205809",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205809/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205809/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757776",
+        "status": 200,
+        "bytes": 135989,
+        "sha256": "sha256:2c4e07bc5ae98f8aa340d7709d22c6fba0e3bc82a534ed698ece7fe8f4bf605a"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 162/2019 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-163-2019-2205812",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Inclui guardas e agentes penitenciários/socioeducativos em regras especiais de aposentadoria.",
+      "destinatário": [
+        "servidores_publicos"
+      ],
+      "efeitos": "Inclui guardas e agentes penitenciários/socioeducativos em regras especiais de aposentadoria.",
+      "grupos_canônicos": [
+        "servidores_publicos"
+      ],
+      "tema": "previdência/segurança",
+      "resumo": "Inclui guardas e agentes penitenciários/socioeducativos em regras especiais de aposentadoria.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2205812",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205812/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205812/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757781",
+        "status": 200,
+        "bytes": 128438,
+        "sha256": "sha256:0f755bb8b9df74eb02ae75f0ae22389acfb913983369bbdd3a2b20f98ea1022d"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 163/2019 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-164-2019-2205814",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Fixa requisitos especiais de aposentadoria para professores e retira tratamento mais gravoso.",
+      "destinatário": [
+        "servidores_publicos"
+      ],
+      "efeitos": "Fixa requisitos especiais de aposentadoria para professores e retira tratamento mais gravoso.",
+      "grupos_canônicos": [
+        "servidores_publicos"
+      ],
+      "tema": "previdência/educação",
+      "resumo": "Fixa requisitos especiais de aposentadoria para professores e retira tratamento mais gravoso.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2205814",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205814/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205814/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757786",
+        "status": 200,
+        "bytes": 120890,
+        "sha256": "sha256:faf55da31882e6c279dbf18673545d9ba2c31a84d8cec65b7332e742bbda43f5"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 164/2019 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-171-2019-2222298",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Vincula parcela crescente do IBS a fundo ambiental com critérios territoriais, saneamento e clima; depende de regulamentação.",
+      "destinatário": [
+        "povos_indigenas"
+      ],
+      "efeitos": "Vincula parcela crescente do IBS a fundo ambiental com critérios territoriais, saneamento e clima; depende de regulamentação.",
+      "grupos_canônicos": [
+        "povos_indigenas"
+      ],
+      "tema": "tributação/meio ambiente",
+      "resumo": "Vincula parcela crescente do IBS a fundo ambiental com critérios territoriais, saneamento e clima; depende de regulamentação.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2222298",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2222298/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2222298/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1813131",
+        "status": 200,
+        "bytes": 77755,
+        "sha256": "sha256:6c7fe7e23552478cd9fd57b62f8f9be6c60256c0b0f19f0a2fb900f1b7d6af29"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 171/2019 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-172-2019-2222299",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Redistribui composição do comitê gestor do IBS entre entes e consumidores; não produz benefício populacional direto mensurável.",
+      "destinatário": [
+        "trabalhadores_formais"
+      ],
+      "efeitos": "Redistribui composição do comitê gestor do IBS entre entes e consumidores; não produz benefício populacional direto mensurável.",
+      "grupos_canônicos": [
+        "trabalhadores_formais"
+      ],
+      "tema": "governança tributária",
+      "resumo": "Redistribui composição do comitê gestor do IBS entre entes e consumidores; não produz benefício populacional direto mensurável.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2222299",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2222299/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2222299/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1813132",
+        "status": 200,
+        "bytes": 68777,
+        "sha256": "sha256:fc1ad66d765c5c984520ea6c7a0024768dd1b38e009080963a7cbd1cbf7ef19c"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 172/2019 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-176-2019-2222742",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Veda contribuição sobre folha em bases indicadas e permite outras bases/fator de emprego; efeitos distributivos mistos.",
+      "destinatário": [
+        "trabalhadores_formais"
+      ],
+      "efeitos": "Veda contribuição sobre folha em bases indicadas e permite outras bases/fator de emprego; efeitos distributivos mistos.",
+      "grupos_canônicos": [
+        "trabalhadores_formais"
+      ],
+      "tema": "tributação/trabalho",
+      "resumo": "Veda contribuição sobre folha em bases indicadas e permite outras bases/fator de emprego; efeitos distributivos mistos.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2222742",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2222742/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2222742/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1814319",
+        "status": 200,
+        "bytes": 233177,
+        "sha256": "sha256:977f6fff55105f50626721be2f50978acf2e6ba9ce93ed8577aa0291e71e08c8"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 176/2019 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-177-2019-2222744",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Limita alíquotas de serviços, cesta básica, transporte e educação e preserva créditos; abrangência depende de regulamentação.",
+      "destinatário": [
+        "trabalhadores_formais",
+        "estudantes"
+      ],
+      "efeitos": "Limita alíquotas de serviços, cesta básica, transporte e educação e preserva créditos; abrangência depende de regulamentação.",
+      "grupos_canônicos": [
+        "trabalhadores_formais",
+        "estudantes"
+      ],
+      "tema": "tributação/serviços",
+      "resumo": "Limita alíquotas de serviços, cesta básica, transporte e educação e preserva créditos; abrangência depende de regulamentação.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2222744",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2222744/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2222744/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1814321",
+        "status": 200,
+        "bytes": 280290,
+        "sha256": "sha256:87c8e8067ac59da0640e836af7d2ae8648a90364b45916d2bf1c9f6acc26c615"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 177/2019 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-18-0-2290029",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Cria regime de cargos típicos de Estado com concurso, estabilidade após estágio e vedação de acumulação.",
+      "destinatário": [
+        "servidores_publicos",
+        "candidatos_concursos_publicos"
+      ],
+      "efeitos": "Cria regime de cargos típicos de Estado com concurso, estabilidade após estágio e vedação de acumulação.",
+      "grupos_canônicos": [
+        "servidores_publicos",
+        "candidatos_concursos_publicos"
+      ],
+      "tema": "administração pública",
+      "resumo": "Cria regime de cargos típicos de Estado com concurso, estabilidade após estágio e vedação de acumulação.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2290029",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2290029/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2290029/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2041028",
+        "status": 200,
+        "bytes": 162250,
+        "sha256": "sha256:7ea51e854b2b1fd0af1dbfbe1f8e4f5e13947ebc78c77c04896ab51fb41451fe"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto (ano 0 confirmado pela API; requer contexto da PEC/emenda)",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 18/0 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-18-0-2566878",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Reconhece polícias municipais, policiamento ostensivo, controle externo, ouvidorias e transformação de guardas.",
+      "destinatário": [
+        "servidores_publicos"
+      ],
+      "efeitos": "Reconhece polícias municipais, policiamento ostensivo, controle externo, ouvidorias e transformação de guardas.",
+      "grupos_canônicos": [
+        "servidores_publicos"
+      ],
+      "tema": "segurança municipal",
+      "resumo": "Reconhece polícias municipais, policiamento ostensivo, controle externo, ouvidorias e transformação de guardas.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2566878",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2566878/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2566878/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3011904",
+        "status": 200,
+        "bytes": 176365,
+        "sha256": "sha256:c7610c3b1044cda51301707995a2002957998e82e777c6441f956d15f4bffe8f"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto (ano 0 confirmado pela API; requer contexto da PEC/emenda)",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 18/0 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:emc-18-2019-2218087",
+      "decision": "withheld",
+      "reason": "Texto integral oficial analisado; sem evento vinculante de votação desta versão. A API registra apresentação/conferência de assinaturas e /votacoes retorna vazio. Fail-closed: sem voto defensor e sem score.",
+      "mecanismo": "Condiciona cobrança do IBS à implementação de devolução a baixa renda; não há grupo canônico específico de baixa renda.",
+      "destinatário": [],
+      "efeitos": "Condiciona cobrança do IBS à implementação de devolução a baixa renda; não há grupo canônico específico de baixa renda.",
+      "grupos_canônicos": [],
+      "tema": "tributação/proteção social",
+      "resumo": "Condiciona cobrança do IBS à implementação de devolução a baixa renda; não há grupo canônico específico de baixa renda.",
+      "vínculo_versão/evento": {
+        "proposition_id": "2218087",
+        "versão": "emenda apresentada",
+        "evento_vinculante": null,
+        "eventos_observados": [
+          "Apresentação de Proposição",
+          "Relatório de Conferência de Assinaturas"
+        ],
+        "fonte_eventos": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2218087/tramitacoes",
+        "fonte_votacoes": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2218087/votacoes"
+      },
+      "score_eligible": false,
+      "confiança": 0.99,
+      "autocrítica": "Efeito descrito é apenas contrafactual (se aprovada); não prova apreciação, destaque, votação ou incorporação ao texto final. Destinatários indiretos foram limitados à taxonomia fechada; baixa renda/consumidores/setores econômicos não foram inventados como grupos.",
+      "fonte_texto": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1800343",
+        "status": 200,
+        "bytes": 172579,
+        "sha256": "sha256:9611856cef2bb726bd4f2820c0af47c314847930c0f858d4a9aaff3ade6adf5d"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "alto",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID/data/resultado nominal ou ata)",
+          "objeto efetivamente votado e sua proposition_version",
+          "prova de substitutivo/emendas/destaques incorporados e redação final do evento"
+        ],
+        "counterargument": "Mesmo que a ementa de EMC 18/2019 descreva uma alteração material, ela não prova que a emenda foi votada, incorporada ou qual redação estava em deliberação; coautoria também não prova intenção, voto ou efeito causal individual."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    }
+  ]
+}
