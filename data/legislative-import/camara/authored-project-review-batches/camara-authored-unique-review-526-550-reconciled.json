@@ -1,0 +1,1432 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:emc-32-2019-2204582",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002533583,210002534897",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMC",
+        "number_packet": "32",
+        "year_packet": 2019,
+        "official_id": "2204582",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": null
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 222,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002533583",
+            "camara_deputado_id": "73482",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "candidate_tse_id": "210002534897",
+            "camara_deputado_id": "160673",
+            "issue": "tse_camara_identity_pending"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1751940",
+        "status": 200,
+        "bytes_manifest": 205849,
+        "bytes_fetched": 205849,
+        "sha256_manifest": "sha256:99236f0f72582b510e2421a5cd1638dd22bccaaf6c7a6258186adbcad30e6cfc",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-37-2019-2204631",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002533583,210002547816",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMC",
+        "number_packet": "37",
+        "year_packet": 2019,
+        "official_id": "2204631",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": null
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 186,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002533583",
+            "camara_deputado_id": "73482",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1752079",
+        "status": 200,
+        "bytes_manifest": 331213,
+        "bytes_fetched": 331213,
+        "sha256_manifest": "sha256:7e3360b9e898ccb51a4760c189d4c31a22f2657db518d86b4e81c6c6addcd0fe",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-44-2019-2204749",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002547816",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMC",
+        "number_packet": "44",
+        "year_packet": 2019,
+        "official_id": "2204749",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": null
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 195,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1752497",
+        "status": 200,
+        "bytes_manifest": 183424,
+        "bytes_fetched": 183424,
+        "sha256_manifest": "sha256:cebd027977f74d235c3c01094321fd2dae95e41caa9ada021f504905f47f0f2a",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-47-0-2290261",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002533583",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMC",
+        "number_packet": "47",
+        "year_packet": 0,
+        "official_id": "2290261",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": "API oficial retorna ano 0; requer confirmação editorial se tratado como placeholder."
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 172,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002533583",
+            "camara_deputado_id": "73482",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2041984",
+        "status": 200,
+        "bytes_manifest": 351648,
+        "bytes_fetched": 351648,
+        "sha256_manifest": "sha256:b2a829685849f558be04598f056ad8e78b769d92f7e003b3b1aff173248cd351",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-49-2019-2204837",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002533583,210002547816",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMC",
+        "number_packet": "49",
+        "year_packet": 2019,
+        "official_id": "2204837",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": null
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 209,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002533583",
+            "camara_deputado_id": "73482",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1752662",
+        "status": 200,
+        "bytes_manifest": 132756,
+        "bytes_fetched": 132756,
+        "sha256_manifest": "sha256:d1d202d6bc716f0e2f7f87cd37c2acb6c77c3f974cb259c9be02173a467cddf5",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-5-2019-2207109",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002533583,210002534897",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMC",
+        "number_packet": "5",
+        "year_packet": 2019,
+        "official_id": "2207109",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": null
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 171,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002533583",
+            "camara_deputado_id": "73482",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "candidate_tse_id": "210002534897",
+            "camara_deputado_id": "160673",
+            "issue": "tse_camara_identity_pending"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1761685",
+        "status": 200,
+        "bytes_manifest": 327544,
+        "bytes_fetched": 327544,
+        "sha256_manifest": "sha256:251c9a4a7e667ae2a69f88f94b40db163610993d7b622d3aeda9adad651c2ceb",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-50-2019-2204838",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002533583,210002547816",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMC",
+        "number_packet": "50",
+        "year_packet": 2019,
+        "official_id": "2204838",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": null
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 207,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002533583",
+            "camara_deputado_id": "73482",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1752663",
+        "status": 200,
+        "bytes_manifest": 104261,
+        "bytes_fetched": 104261,
+        "sha256_manifest": "sha256:02694a799a552865b3e7aad2eb75dceeff89c32257b4b9763dcb896fc4d6e4af",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-51-0-2290276",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002533583,210002547819",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMC",
+        "number_packet": "51",
+        "year_packet": 0,
+        "official_id": "2290276",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": "API oficial retorna ano 0; requer confirmação editorial se tratado como placeholder."
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 174,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002533583",
+            "camara_deputado_id": "73482",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "candidate_tse_id": "210002547819",
+            "camara_deputado_id": "156190",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2042051",
+        "status": 200,
+        "bytes_manifest": 132250,
+        "bytes_fetched": 132250,
+        "sha256_manifest": "sha256:c5a26296b89a5050f5dab18c10f3e8bd5fc6d8823c2c5692cbfbc988dc9d508b",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-51-2019-2204839",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002533583,210002547816",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMC",
+        "number_packet": "51",
+        "year_packet": 2019,
+        "official_id": "2204839",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": null
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 210,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002533583",
+            "camara_deputado_id": "73482",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1752665",
+        "status": 200,
+        "bytes_manifest": 334340,
+        "bytes_fetched": 334340,
+        "sha256_manifest": "sha256:205ba78d0f21f5016502b9febbbd15941c1a0261ca0b363e893ea38f784fa4d9",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-55-2019-2204957",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002533583,210002547816",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMC",
+        "number_packet": "55",
+        "year_packet": 2019,
+        "official_id": "2204957",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": null
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 236,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002533583",
+            "camara_deputado_id": "73482",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1755635",
+        "status": 200,
+        "bytes_manifest": 105889,
+        "bytes_fetched": 105889,
+        "sha256_manifest": "sha256:7cb6722216d83866fe7380559f19d3a39cfdf9cd066a6148357a100a8b4f0e43",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-56-2019-2219223",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002533583,210002534272,210002547816",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMC",
+        "number_packet": "56",
+        "year_packet": 2019,
+        "official_id": "2219223",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": null
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 203,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002533583",
+            "camara_deputado_id": "73482",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "candidate_tse_id": "210002534272",
+            "camara_deputado_id": "75431",
+            "issue": "tse_camara_identity_pending"
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1804253",
+        "status": 200,
+        "bytes_manifest": 574876,
+        "bytes_fetched": 574876,
+        "sha256_manifest": "sha256:79af07303119bb1032ae13dd8c416b50a37b72ae43a2c19b7caa567b212b680a",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-6-2019-2201763",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002533583",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMC",
+        "number_packet": "6",
+        "year_packet": 2019,
+        "official_id": "2201763",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": null
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 176,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002533583",
+            "camara_deputado_id": "73482",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1745007",
+        "status": 200,
+        "bytes_manifest": 161627,
+        "bytes_fetched": 161627,
+        "sha256_manifest": "sha256:e1f3055e48210eb24ef993e89adbd7998615ab14e17767957dd0d42c496624a4",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-62-2019-2205208",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002533583",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMC",
+        "number_packet": "62",
+        "year_packet": 2019,
+        "official_id": "2205208",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": null
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 182,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002533583",
+            "camara_deputado_id": "73482",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1756084",
+        "status": 200,
+        "bytes_manifest": 332045,
+        "bytes_fetched": 332045,
+        "sha256_manifest": "sha256:393cbb01d174906c563a865fd31e931ce08af2fc5726235776a4c84f240fd506",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-63-2019-2205213",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002547816",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMC",
+        "number_packet": "63",
+        "year_packet": 2019,
+        "official_id": "2205213",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": null
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 220,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1756090",
+        "status": 200,
+        "bytes_manifest": 249392,
+        "bytes_fetched": 249392,
+        "sha256_manifest": "sha256:4833bf090ae4e3108e20b634a0b3d6a91b4ee4ce7fcbd2710740a58f0085bde9",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-63-2019-2219481",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002533583,210002547816",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMC",
+        "number_packet": "63",
+        "year_packet": 2019,
+        "official_id": "2219481",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": null
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 178,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002533583",
+            "camara_deputado_id": "73482",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1804936",
+        "status": 200,
+        "bytes_manifest": 381389,
+        "bytes_fetched": 381389,
+        "sha256_manifest": "sha256:6d3aa2fe9bc1cb0eabbf748d0c86fe965cc1f1d16a98d0c78be38d06eaf621c9",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-7-0-2289949",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002533583",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMC",
+        "number_packet": "7",
+        "year_packet": 0,
+        "official_id": "2289949",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": "API oficial retorna ano 0; requer confirmação editorial se tratado como placeholder."
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 195,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002533583",
+            "camara_deputado_id": "73482",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2040577",
+        "status": 200,
+        "bytes_manifest": 234883,
+        "bytes_fetched": 234883,
+        "sha256_manifest": "sha256:86b53e31ac0520d253bc555d1b9f94468e69b98679378ec97b3c4d1cc7503a5f",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-72-2019-2219650",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002533583,210002534897,210002547816",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMC",
+        "number_packet": "72",
+        "year_packet": 2019,
+        "official_id": "2219650",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": null
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 179,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002533583",
+            "camara_deputado_id": "73482",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "candidate_tse_id": "210002534897",
+            "camara_deputado_id": "160673",
+            "issue": "tse_camara_identity_pending"
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1805555",
+        "status": 200,
+        "bytes_manifest": 462391,
+        "bytes_fetched": 462391,
+        "sha256_manifest": "sha256:8764aa0e57b864595d253defbd29f7a62398a3d60d81a5dd963c48a9adc7c7a8",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-78-2019-2205548",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002547816",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMC",
+        "number_packet": "78",
+        "year_packet": 2019,
+        "official_id": "2205548",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": null
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 184,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757120",
+        "status": 200,
+        "bytes_manifest": 158435,
+        "bytes_fetched": 158435,
+        "sha256_manifest": "sha256:b690886e5021ef45c808d1f5f0551b905079e0379088af85536b9aa7b3d90961",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-81-2019-2219867",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002533583,210002547816",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMC",
+        "number_packet": "81",
+        "year_packet": 2019,
+        "official_id": "2219867",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": null
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 178,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002533583",
+            "camara_deputado_id": "73482",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1806014",
+        "status": 200,
+        "bytes_manifest": 119171,
+        "bytes_fetched": 119171,
+        "sha256_manifest": "sha256:d866d593d88912b137cf87503cd642f551255d3f2e59bbce46aed1494f9697e1",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-84-2019-2205590",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002533583,210002547816",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMC",
+        "number_packet": "84",
+        "year_packet": 2019,
+        "official_id": "2205590",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": null
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 184,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002533583",
+            "camara_deputado_id": "73482",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757265",
+        "status": 200,
+        "bytes_manifest": 136549,
+        "bytes_fetched": 136549,
+        "sha256_manifest": "sha256:c7906296c3f49c1ded0db47ba26daafab659cefcc3d5d69aba9c2712d6d2a26b",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-94-2019-2205610",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002533583,210002547816",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMC",
+        "number_packet": "94",
+        "year_packet": 2019,
+        "official_id": "2205610",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": null
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 215,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002533583",
+            "camara_deputado_id": "73482",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757301",
+        "status": 200,
+        "bytes_manifest": 326977,
+        "bytes_fetched": 326977,
+        "sha256_manifest": "sha256:14c190a38b7c51c91daa07ffc0d57a8ec81a04679e3ca1e2eb0c1143d5d4754b",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emp-1-0-2483875",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002547857,210002534897,210002547819,210002547816",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMP",
+        "number_packet": "1",
+        "year_packet": 0,
+        "official_id": "2483875",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": "API oficial retorna ano 0; requer confirmação editorial se tratado como placeholder."
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 103,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002547857",
+            "camara_deputado_id": "220552",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "candidate_tse_id": "210002534897",
+            "camara_deputado_id": "160673",
+            "issue": "tse_camara_identity_pending"
+          },
+          {
+            "candidate_tse_id": "210002547819",
+            "camara_deputado_id": "156190",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2855000",
+        "status": 200,
+        "bytes_manifest": 163234,
+        "bytes_fetched": 163234,
+        "sha256_manifest": "sha256:688671feac9978d79447bb08ffa1809e2c1ee54a6e415fd68233940a593a1b38",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emp-4-0-2433628",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002547857,210002534897,210002547819,210002538543",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMP",
+        "number_packet": "4",
+        "year_packet": 0,
+        "official_id": "2433628",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": "API oficial retorna ano 0; requer confirmação editorial se tratado como placeholder."
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 25,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002547857",
+            "camara_deputado_id": "220552",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "candidate_tse_id": "210002534897",
+            "camara_deputado_id": "160673",
+            "issue": "tse_camara_identity_pending"
+          },
+          {
+            "candidate_tse_id": "210002547819",
+            "camara_deputado_id": "156190",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "candidate_tse_id": "210002538543",
+            "camara_deputado_id": "103758",
+            "issue": "tse_camara_identity_pending"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2423547",
+        "status": 200,
+        "bytes_manifest": 119363,
+        "bytes_fetched": 119363,
+        "sha256_manifest": "sha256:5262cc72613fa40cc32faebdb238a735f7057b5137c795f27dd0a666a6612e87",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emp-6-0-2511072",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002536921",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "EMP",
+        "number_packet": "6",
+        "year_packet": 0,
+        "official_id": "2511072",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": "API oficial retorna ano 0; requer confirmação editorial se tratado como placeholder."
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 113,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002536921",
+            "camara_deputado_id": "163321",
+            "issue": "tse_camara_identity_pending"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2910944",
+        "status": 200,
+        "bytes_manifest": 180158,
+        "bytes_fetched": 180158,
+        "sha256_manifest": "sha256:51413bedd9fc2031e150ab9447d4135f1e88a0563824191182c6d374e8d7bfa6",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pec-10-2025-2487249",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "exact TSE↔Câmara identity crosswalk unresolved for 210002547816,210002536921",
+        "official voting event /votacoes result (API returned empty list)",
+        "exact version effectively voted and version-to-event binding"
+      ],
+      "counterargument": "A API oficial confirma a proposição e a autoria selecionada, e o documento integral foi reproduzido com bytes/SHA-256; isso sustenta o fato de autoria, mas não prova que houve votação, qual objeto foi votado ou qual versão vinculou o evento.",
+      "identity": {
+        "house": "camara",
+        "type_packet": "PEC",
+        "number_packet": "10",
+        "year_packet": 2025,
+        "official_id": "2487249",
+        "official_api_status": 200,
+        "official_type_number_year_match": true,
+        "year_zero_note": null
+      },
+      "authorship": {
+        "packet_role_rows": 9,
+        "official_authors_total": 171,
+        "selected_ids_present_in_official_authors": true,
+        "identity_blockers": [
+          {
+            "candidate_tse_id": "210002547816",
+            "camara_deputado_id": "204416",
+            "issue": "missing_from_versioned_tse_camara_catalog"
+          },
+          {
+            "candidate_tse_id": "210002536921",
+            "camara_deputado_id": "163321",
+            "issue": "tse_camara_identity_pending"
+          }
+        ]
+      },
+      "full_text": {
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2868156",
+        "status": 200,
+        "bytes_manifest": 98919,
+        "bytes_fetched": 98919,
+        "sha256_manifest": "sha256:73a6f11c1dd18e6e96be32ebac4e61772d8059768570df5b0a6d1f7eac67aec9",
+        "sha256_match": true,
+        "content_saved": false
+      },
+      "event_version": {
+        "official_votacoes_status": 200,
+        "official_votacoes_count": 0,
+        "event_id": null,
+        "version_id": null,
+        "binding": "missing"
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    }
+  ]
+}
