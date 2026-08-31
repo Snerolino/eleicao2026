@@ -1,0 +1,1840 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:req-1736-2023-2365126",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "saude"
+      ],
+      "resumo": "O texto integral do REQ 1736/2023 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2365126",
+        "version_id": "2365126:codteor=2278402",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:52d4a08f508dddf2365fb7db99f75db76a70a25020051c92e4f22c15d802228c",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2278402",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365126/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1945-2023-2369215",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "agricultura",
+        "trabalho_renda"
+      ],
+      "resumo": "O texto integral do REQ 1945/2023 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2369215",
+        "version_id": "2369215:codteor=2288358",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:8d8fb8b45d845ae178e9636f0a602aaaa070c8378e6bda51eaebe2d2c95ef529",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2288358",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2369215/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2119-2023-2371700",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "transporte",
+        "economia_tributacao"
+      ],
+      "resumo": "O texto integral do REQ 2119/2023 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2371700",
+        "version_id": "2371700:codteor=2294020",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:699f0806525c77d8a715fbc1daecb5e314586e5ce5a9995e0f95ed8bd30d9078",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2294020",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2371700/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2154-2023-2372232",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "transporte",
+        "trabalho_renda"
+      ],
+      "resumo": "O texto integral do REQ 2154/2023 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2372232",
+        "version_id": "2372232:codteor=2295885",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:3ad43d564d7cc5b951b3ed1650c3519f73493e2c4f6f1589462538967b1ad705",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2295885",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2372232/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2170-2024-2439852",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "industria",
+        "transporte",
+        "economia_tributacao"
+      ],
+      "resumo": "O texto integral do REQ 2170/2024 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2439852",
+        "version_id": "2439852:codteor=2435581",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:b03444328a30311ac6c002baf3e9a634b3cb2d899b290f56abedda80269ab767",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2435581",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2439852/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2203-2025-2520870",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "saude",
+        "trabalho_renda"
+      ],
+      "resumo": "O texto integral do REQ 2203/2025 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2520870",
+        "version_id": "2520870:codteor=2927833",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:983f4ba725f953359270762a10c03ace151d2a5edc20ee2cb079fec39266603d",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2927833",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2520870/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2226-2023-2373202",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "desenvolvimento_sustentavel",
+        "politicas_publicas"
+      ],
+      "resumo": "O texto integral do REQ 2226/2023 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2373202",
+        "version_id": "2373202:codteor=2298428",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:ab3d8de420e34a340e909a7c15a82deaa2910f6afa1e02ea853f1e7157505560",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2298428",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2373202/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2281-2024-2442357",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "relacoes_internacionais"
+      ],
+      "resumo": "O texto integral do REQ 2281/2024 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2442357",
+        "version_id": "2442357:codteor=2440265",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:ed9e26698adf5e3e5502d70960bb5b1cc926404d94629bd7eb4dd8bdd7c1e25c",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2440265",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2442357/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-244-2023-2349191",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "transporte",
+        "infraestrutura",
+        "economia_tributacao"
+      ],
+      "resumo": "O texto integral do REQ 244/2023 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2349191",
+        "version_id": "2349191:codteor=2236919",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:6b2488ef44b5c6175db57bbfceed5c0bb78be2c1f24f7c21e63fea564b87d1c5",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2236919",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349191/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-262-2023-2349324",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "direitos_da_pessoa_idosa"
+      ],
+      "resumo": "O texto integral do REQ 262/2023 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2349324",
+        "version_id": "2349324:codteor=2237379",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:76cc571a25f527e4435ca5f3833e58a93ea37fbbca04814b708b0425aad97044",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2237379",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349324/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2746-2023-2382172",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "cultura",
+        "desenvolvimento_social"
+      ],
+      "resumo": "O texto integral do REQ 2746/2023 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2382172",
+        "version_id": "2382172:codteor=2317148",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:3346c29ea319b9ace8fea6b57637340b399f80732e86889daeca6906a1e5643b",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2317148",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2382172/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2871-2023-2385133",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "federalismo",
+        "meio_ambiente_clima"
+      ],
+      "resumo": "O texto integral do REQ 2871/2023 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2385133",
+        "version_id": "2385133:codteor=2322948",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:382bcf62e6c017c74b115bc719f4b80e8a94ac2e11c67623b83b886bfaf3660e",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2322948",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2385133/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2913-2023-2385398",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "seguranca_justica",
+        "criancas_adolescentes"
+      ],
+      "resumo": "O texto integral do REQ 2913/2023 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2385398",
+        "version_id": "2385398:codteor=2323419",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:f9c8bc3f956df5110b69521e5c66462921895fe45be31b48421264677a75a090",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2323419",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2385398/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2931-2023-2386194",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "soberania_nacional",
+        "relacoes_internacionais"
+      ],
+      "resumo": "O texto integral do REQ 2931/2023 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2386194",
+        "version_id": "2386194:codteor=2324933",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:f15f13084839dfd243db050328e7eabe1c100326b25459a2f9f1376f14ca9378",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2324933",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2386194/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-299-2023-2349427",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "trabalho_renda",
+        "previdencia"
+      ],
+      "resumo": "O texto integral do REQ 299/2023 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2349427",
+        "version_id": "2349427:codteor=2237828",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:a51e50053bb4649924cb61df953c099c5297d769dd2081e0d7ca771779905c8f",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2237828",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349427/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-327-2023-2349658",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "economia_tributacao",
+        "trabalho_renda"
+      ],
+      "resumo": "O texto integral do REQ 327/2023 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2349658",
+        "version_id": "2349658:codteor=2241896",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:6b3537b7b496939ad114f9967d21897c60503a6f290bea66b6807da3843fa4bb",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2241896",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349658/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-3314-2025-2545887",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "trabalho_renda",
+        "transporte",
+        "seguranca"
+      ],
+      "resumo": "O texto integral do REQ 3314/2025 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2545887",
+        "version_id": "2545887:codteor=2975156",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:e842d24b8c37cd2e2a678ef48aa5b9fb87227a2120b8120d3e2797750781f720",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2975156",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2545887/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-3524-2023-2395515",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "energia",
+        "meio_ambiente_clima"
+      ],
+      "resumo": "O texto integral do REQ 3524/2023 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2395515",
+        "version_id": "2395515:codteor=2343792",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:5cc0625ffed72b639359d02cb8d14a69a63da7f0972c580bdb33800dce0a8e55",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2343792",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2395515/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-3538-2023-2395798",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "criancas_adolescentes",
+        "educacao"
+      ],
+      "resumo": "O texto integral do REQ 3538/2023 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2395798",
+        "version_id": "2395798:codteor=2344635",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:bb1a4d88974aabb3058fbb1c1ae487129344a31edc3b69bb056b8a6459141b07",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2344635",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2395798/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-3729-2023-2400131",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "educacao"
+      ],
+      "resumo": "O texto integral do REQ 3729/2023 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2400131",
+        "version_id": "2400131:codteor=2353112",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:25ff8ed73940d48fe5b3f2287adddbf4df44f7d8eb0e3ebcfd69ac1ffcd4a138",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2353112",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2400131/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-3737-2023-2400340",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "economia_tributacao",
+        "trabalho_renda"
+      ],
+      "resumo": "O texto integral do REQ 3737/2023 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2400340",
+        "version_id": "2400340:codteor=2353412",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:9610f1cc3696b3b80d3d6f33a5f5219321a3a9d731c3b7c791b7ac9874701677",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2353412",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2400340/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-3891-2023-2402742",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "saude"
+      ],
+      "resumo": "O texto integral do REQ 3891/2023 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2402742",
+        "version_id": "2402742:codteor=2357194",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:f7d977c83cb7767aecefa92ad60539b7b8846e4c1f8383dad096793d6d8bd0a5",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2357194",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2402742/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-3906-2025-2564507",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "federalismo",
+        "democracia"
+      ],
+      "resumo": "O texto integral do REQ 3906/2025 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2564507",
+        "version_id": "2564507:codteor=3007540",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:f756c105f599c983b21c3e0cb11bbbeda24522e854e3e46454ec4a2f829fd972",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3007540",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2564507/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-3922-2025-2565173",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "federalismo",
+        "democracia"
+      ],
+      "resumo": "O texto integral do REQ 3922/2025 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2565173",
+        "version_id": "2565173:codteor=3008906",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:752c071ef3a2aa5766da6db2db0d02fee3d8a44c01d3489a1d679841c83e65dc",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3008906",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2565173/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-398-2023-2349960",
+      "decision": "withheld",
+      "reason": "Sem evento de votação vinculante identificado: as tramitações oficiais retornadas registram apresentação, conferência/recebimento/publicação e, conforme o caso, arquivamento, mas não votação de mérito, substitutivo, emenda, destaque ou redação final. A regra fail-closed impede pontuar autoria de requerimento como voto sobre impacto populacional.",
+      "mecanismo": "O texto integral oficial é um REQ de criação/registro/reinstalação de frente parlamentar sob o Ato da Mesa nº 69/2005: produz, no máximo, um efeito institucional de reconhecimento/organização interna e potencial de articulação parlamentar; não cria, por si, direito, transferência, obrigação, sanção ou serviço exigível por pessoas ou empresas.",
+      "destinatario": "Mesa/Câmara dos Deputados e a associação parlamentar requerente; os estatutos/atas descrevem a frente e sua coordenação, não um destinatário populacional juridicamente obrigado.",
+      "efeitos": {
+        "diretos": [
+          "tramitação administrativa do pedido e eventual registro da frente",
+          "organização de parlamentares em torno do tema indicado"
+        ],
+        "materiais_para_populacao": [],
+        "custos_obrigacoes_restricoes": [],
+        "condicoes": [
+          "depende de ato/registro da Mesa e dos documentos regimentais; a mera apresentação não comprova registro nem implementação de políticas"
+        ]
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "transporte",
+        "economia_tributacao"
+      ],
+      "resumo": "O texto integral do REQ 398/2023 pede registro/criação de uma frente parlamentar sobre o tema indicado na ementa, com fundamento regimental e documentação de apoio. A análise do corpo e dos anexos disponíveis não identifica comando normativo material dirigido diretamente a grupo populacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2349960",
+        "version_id": "2349960:codteor=2239343",
+        "version_type": "original_apresentada",
+        "text_hash": "sha256:df41fb0200937fdd21702e8254578873a69511767e5da21b868a648508d41b0b",
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2239343",
+        "event_id": null,
+        "event_type": null,
+        "object_voted": null,
+        "binding_status": "event_binding_missing",
+        "official_procedure_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349960/tramitacoes"
+      },
+      "score_eligible": false,
+      "confianca": 0.98,
+      "autocritica": {
+        "strongest_counterargument": "Uma frente registrada pode influenciar agenda, fiscalização ou futuras proposições e, em alguns casos, o estatuto pode expressar objetivos substantivos.",
+        "evidence_against_decision": "O texto integral contém finalidades temáticas e documentos de constituição; isso demonstra intenção/agenda institucional, mas não um efeito jurídico direto nem evento de votação.",
+        "alternative_group": "Nenhum grupo canônico atribuível diretamente nesta unidade; o tema pode mencionar grupos, mas convertê-los em beneficiários seria inferência indireta.",
+        "alternative_direction": "unclear",
+        "alternative_severity": "1 (institucional/simbólica), sem score",
+        "vote_attribution_risk": "máximo: não há evento vinculante e autoria/coautoria não equivale a voto",
+        "missing_sources": [
+          "registro oficial de eventual sessão/votação",
+          "objeto/versionamento de eventual evento vinculante",
+          "ato de registro/resultado, se houver"
+        ],
+        "possible_bias": "Risco de transformar o tema ou a autoria em prova de benefício populacional e de tratar apresentação/arquivamento como aprovação/rejeição de mérito.",
+        "false_induction_checks": [
+          "ementa → mecanismo",
+          "tema → população",
+          "autoria → intenção/efeito",
+          "proposição → evento",
+          "apresentação/arquivamento → voto de mérito"
+        ],
+        "verdict": "withhold"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "critical",
+        "missing_sources": [
+          "registro oficial do evento de votação (ID, data, pauta/resultado nominal/ata)",
+          "objeto exato votado e vínculo candidato↔evento",
+          "prova de que o PDF/hash corresponde à versão efetivamente submetida ao evento (substitutivo, emendas, destaques ou redação final, quando aplicável)",
+          "ponte versionada e verificável entre candidate_tse_id e deputado ID da Câmara"
+        ],
+        "counterargument": "Pode-se argumentar que o requerimento e sua lista de coautores registram apoio político à frente/tema; isso não supera a ausência de evento nominal e de objeto substantivo votado, nem prova que cada candidato assinou a versão textual recuperada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    }
+  ]
+}
