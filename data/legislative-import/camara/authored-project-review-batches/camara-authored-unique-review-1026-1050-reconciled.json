@@ -1,0 +1,567 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:rec-31-2025-2596713",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rec-6-2024-2427843",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rec-7-2024-2428615",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rec-7-2026-2617164",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-118-2022-2314629",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-124-2023-2348339",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1272-2023-2357839",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1301-2023-2358289",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1393-2026-2608549",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1779-2025-2504680",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1815-2024-2436978",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-206-2023-2348989",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-243-2023-2349184",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2536-2021-2309543",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2621-2023-2380468",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2924-2023-2385989",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-320-2023-2349624",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-3347-2023-2392050",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-3391-2024-2456064",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-3853-2025-2563274",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-39-2024-2435501",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-43-2023-2388040",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-4579-2024-2470852",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-4612-2024-2471687",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-5289-2025-2591163",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "procedural_or_authorship_record_not_merit_vote"
+        ],
+        "summary": "Identidade e autoria foram confirmadas, mas o registro é de autoria/requerimento e não traz evento de votação vinculante. Não é seguro converter autoria ou o texto do requerimento em posição substantiva ou score."
+      },
+      "missing_sources": [],
+      "counterargument": "O PDF integral oficial e a API da Câmara confirmam a proposição e os subscritores; isso sustenta a autoria factual. Contudo, essa evidência não prova que houve votação de mérito nem qual versão foi votada, e não permite atribuir sentido a SIM/NÃO.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    }
+  ]
+}
