@@ -1,0 +1,1742 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "redteam_disagreements": 2
+  },
+  "items": [
+    {
+      "id": "camara:req-3273-2023-2390022",
+      "decision": "withheld",
+      "mechanism": "Ato regimental de criação, registro ou organização parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Parlamentares e órgãos legislativos; não há destinatário populacional direto criado pelo dispositivo.",
+      "effects": "Produz efeito institucional/procedimental (debate, investigação ou coordenação parlamentar), sem mecanismo normativo direto que permita atribuir benefício ou custo a grupo populacional.",
+      "target_groups": [],
+      "main_topic": "organizacao_parlamentar",
+      "summary_short": "Requerimento de natureza procedimental: Requer a instalação de Comissão Temporária Externa, sem ônus para esta Casa, para apurar e acompanhar os danos causados pelas enchentes que atingiram mais de 90 municípios no Estado do Rio Grande do Sul em setembro do corrente ano.",
+      "summary_expanded": "O texto integral formaliza um requerimento de registro/instalação de comissão ou frente parlamentar. A justificativa pode defender políticas públicas, mas o dispositivo não as implementa nem altera a legislação.",
+      "version_event_binding": {
+        "proposition_id": "2390022",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2332887",
+        "text_sha256": "sha256:69d61aa75d016053236f9ad7deddce5424b474d93ab222ee0ad8ae164a1a6934",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.94,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed."
+        ],
+        "confidence_before": 0.94,
+        "confidence_after": 0.94,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2390022",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2332887",
+          "status": 200,
+          "bytes": 155633,
+          "sha256": "sha256:69d61aa75d016053236f9ad7deddce5424b474d93ab222ee0ad8ae164a1a6934"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:req-3775-2025-2560115",
+      "decision": "withheld",
+      "mechanism": "Ato regimental de criação, registro ou organização parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Parlamentares e órgãos legislativos; não há destinatário populacional direto criado pelo dispositivo.",
+      "effects": "Produz efeito institucional/procedimental (debate, investigação ou coordenação parlamentar), sem mecanismo normativo direto que permita atribuir benefício ou custo a grupo populacional.",
+      "target_groups": [],
+      "main_topic": "infraestrutura_transportes",
+      "summary_short": "Requerimento de natureza procedimental: Requer o registro da Frente Parlamentar Pela Duplicação da BR-290.",
+      "summary_expanded": "O texto integral formaliza um requerimento de registro/instalação de comissão ou frente parlamentar. A justificativa pode defender políticas públicas, mas o dispositivo não as implementa nem altera a legislação.",
+      "version_event_binding": {
+        "proposition_id": "2560115",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2998311",
+        "text_sha256": "sha256:902243a1ec53481e4aa8a5a874485f159704d88c3b274e9e4bcdb2a90713e565",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.94,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed."
+        ],
+        "confidence_before": 0.94,
+        "confidence_after": 0.94,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2560115",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2998311",
+          "status": 200,
+          "bytes": 296637,
+          "sha256": "sha256:902243a1ec53481e4aa8a5a874485f159704d88c3b274e9e4bcdb2a90713e565"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:pec-27-2023-2363434",
+      "decision": "pending_review",
+      "mechanism": "Municípios receberiam maior/novas transferências e linhas de financiamento; o texto não individualiza grupo populacional canônico nem assegura benefício direto a pessoas.",
+      "direct_recipient": "Municípios e agentes produtivos das regiões Sul e Sudeste; a incidência final depende da regulamentação e da execução dos fundos.",
+      "effects": "Aumento constitucional da base de repartição e criação de destinações vinculadas: 23,5% ao FPM, 1% para financiamento produtivo do Sul, 1% para o Sudeste e 0,5% para segurança pública, com efeitos financeiros no exercício seguinte.",
+      "target_groups": [],
+      "main_topic": "economia_tributacao",
+      "summary_short": "PEC altera art. 159 da Constituição para elevar a parcela distribuída e criar fundos constitucionais de financiamento para Sul e Sudeste, além de reservar recursos para segurança pública.",
+      "summary_expanded": "Aumento constitucional da base de repartição e criação de destinações vinculadas: 23,5% ao FPM, 1% para financiamento produtivo do Sul, 1% para o Sudeste e 0,5% para segurança pública, com efeitos financeiros no exercício seguinte.",
+      "version_event_binding": {
+        "proposition_id": "2363434",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2275174",
+        "text_sha256": "sha256:bab86ef984d02175d4dfd3e212c2545046d9860b476e7b746c9cf79b10388930",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.55,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Texto integral permite análise substantiva, mas o pacote não contém evento oficial vinculante nem versão efetivamente votada; score retido."
+        ],
+        "confidence_before": 0.55,
+        "confidence_after": 0.55,
+        "verdict": "revise"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2363434",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2275174",
+          "status": 200,
+          "bytes": 192205,
+          "sha256": "sha256:bab86ef984d02175d4dfd3e212c2545046d9860b476e7b746c9cf79b10388930"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "budgetary",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "event_binding_missing",
+        "score_withholding_reason": "Texto integral permite análise substantiva, mas o pacote não contém evento oficial vinculante nem versão efetivamente votada; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Análise e red-team divergiram; decisão conservadora withheld."
+    },
+    {
+      "id": "camara:req-1448-2023-2361159",
+      "decision": "withheld",
+      "mechanism": "Ato regimental de criação, registro ou organização parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Parlamentares e órgãos legislativos; não há destinatário populacional direto criado pelo dispositivo.",
+      "effects": "Produz efeito institucional/procedimental (debate, investigação ou coordenação parlamentar), sem mecanismo normativo direto que permita atribuir benefício ou custo a grupo populacional.",
+      "target_groups": [],
+      "main_topic": "organizacao_parlamentar",
+      "summary_short": "Requerimento de natureza procedimental: Requer a criação da Frente Parlamentar Mista da Contabilidade Brasileira (FCB).",
+      "summary_expanded": "O texto integral formaliza um requerimento de registro/instalação de comissão ou frente parlamentar. A justificativa pode defender políticas públicas, mas o dispositivo não as implementa nem altera a legislação.",
+      "version_event_binding": {
+        "proposition_id": "2361159",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2270161",
+        "text_sha256": "sha256:fb7464a56bbc1446d7f1f927f5ddb2226c9be4827a4bb57623ed7e52f4415ddb",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.94,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed."
+        ],
+        "confidence_before": 0.94,
+        "confidence_after": 0.94,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2361159",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2270161",
+          "status": 200,
+          "bytes": 353793,
+          "sha256": "sha256:fb7464a56bbc1446d7f1f927f5ddb2226c9be4827a4bb57623ed7e52f4415ddb"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:req-1988-2023-2370007",
+      "decision": "withheld",
+      "mechanism": "Ato regimental de criação, registro ou organização parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Parlamentares e órgãos legislativos; não há destinatário populacional direto criado pelo dispositivo.",
+      "effects": "Produz efeito institucional/procedimental (debate, investigação ou coordenação parlamentar), sem mecanismo normativo direto que permita atribuir benefício ou custo a grupo populacional.",
+      "target_groups": [],
+      "main_topic": "infraestrutura_transportes",
+      "summary_short": "Requerimento de natureza procedimental: Requer a criação da Frente Parlamentar em defesa da extensão da BR-448, rodovia federal no Estado do Rio Grande do Sul.",
+      "summary_expanded": "O texto integral formaliza um requerimento de registro/instalação de comissão ou frente parlamentar. A justificativa pode defender políticas públicas, mas o dispositivo não as implementa nem altera a legislação.",
+      "version_event_binding": {
+        "proposition_id": "2370007",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2290178",
+        "text_sha256": "sha256:bddf9199ded974bd7a363a09e5dd4f3c1e39ebcf1eca1943360551e8feff4add",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.94,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed."
+        ],
+        "confidence_before": 0.94,
+        "confidence_after": 0.94,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2370007",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2290178",
+          "status": 200,
+          "bytes": 158294,
+          "sha256": "sha256:bddf9199ded974bd7a363a09e5dd4f3c1e39ebcf1eca1943360551e8feff4add"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:req-2575-2024-2448779",
+      "decision": "withheld",
+      "mechanism": "Ato regimental de criação, registro ou organização parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Parlamentares e órgãos legislativos; não há destinatário populacional direto criado pelo dispositivo.",
+      "effects": "Produz efeito institucional/procedimental (debate, investigação ou coordenação parlamentar), sem mecanismo normativo direto que permita atribuir benefício ou custo a grupo populacional.",
+      "target_groups": [],
+      "main_topic": "organizacao_parlamentar",
+      "summary_short": "Requerimento de natureza procedimental: Solicita o registro da “Frente Parlamentar em Defesa das Bacias Hidrográficas Brasileiras”, perante a Mesa Diretora da Câmara dos Deputados.",
+      "summary_expanded": "O texto integral formaliza um requerimento de registro/instalação de comissão ou frente parlamentar. A justificativa pode defender políticas públicas, mas o dispositivo não as implementa nem altera a legislação.",
+      "version_event_binding": {
+        "proposition_id": "2448779",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2453901",
+        "text_sha256": "sha256:f1d932620d5ff7f864dfec768cea1b139101a97ee27e1471e2f42206ee192b36",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.94,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed."
+        ],
+        "confidence_before": 0.94,
+        "confidence_after": 0.94,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2448779",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2453901",
+          "status": 200,
+          "bytes": 150803,
+          "sha256": "sha256:f1d932620d5ff7f864dfec768cea1b139101a97ee27e1471e2f42206ee192b36"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:req-1217-2022-2332427",
+      "decision": "withheld",
+      "mechanism": "Ato regimental de criação, registro ou organização parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Parlamentares e órgãos legislativos; não há destinatário populacional direto criado pelo dispositivo.",
+      "effects": "Produz efeito institucional/procedimental (debate, investigação ou coordenação parlamentar), sem mecanismo normativo direto que permita atribuir benefício ou custo a grupo populacional.",
+      "target_groups": [],
+      "main_topic": "organizacao_parlamentar",
+      "summary_short": "Requerimento de natureza procedimental: Criação da Frente Parlamentar Mista da Contabilidade Brasileira",
+      "summary_expanded": "O texto integral formaliza um requerimento de registro/instalação de comissão ou frente parlamentar. A justificativa pode defender políticas públicas, mas o dispositivo não as implementa nem altera a legislação.",
+      "version_event_binding": {
+        "proposition_id": "2332427",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2197911",
+        "text_sha256": "sha256:3af60882242398100cbbbd86438f007abaf7a321efd856b23f56259f2b38dd1c",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.94,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed."
+        ],
+        "confidence_before": 0.94,
+        "confidence_after": 0.94,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2332427",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2197911",
+          "status": 200,
+          "bytes": 163672,
+          "sha256": "sha256:3af60882242398100cbbbd86438f007abaf7a321efd856b23f56259f2b38dd1c"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:req-1715-2023-2364442",
+      "decision": "withheld",
+      "mechanism": "Ato regimental de criação, registro ou organização parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Parlamentares e órgãos legislativos; não há destinatário populacional direto criado pelo dispositivo.",
+      "effects": "Produz efeito institucional/procedimental (debate, investigação ou coordenação parlamentar), sem mecanismo normativo direto que permita atribuir benefício ou custo a grupo populacional.",
+      "target_groups": [],
+      "main_topic": "organizacao_parlamentar",
+      "summary_short": "Requerimento de natureza procedimental: Requer o registro da Frente Parlamentar Mista em defesa da Tradição e Cultura Gaúcha.",
+      "summary_expanded": "O texto integral formaliza um requerimento de registro/instalação de comissão ou frente parlamentar. A justificativa pode defender políticas públicas, mas o dispositivo não as implementa nem altera a legislação.",
+      "version_event_binding": {
+        "proposition_id": "2364442",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2276956",
+        "text_sha256": "sha256:2ba4c0f316fb8b7c1550540cd9eaa41e1e38f96c26d21c5aecb4ae50db4d50d3",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.94,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed."
+        ],
+        "confidence_before": 0.94,
+        "confidence_after": 0.94,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2364442",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2276956",
+          "status": 200,
+          "bytes": 339748,
+          "sha256": "sha256:2ba4c0f316fb8b7c1550540cd9eaa41e1e38f96c26d21c5aecb4ae50db4d50d3"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:req-1148-2024-2426469",
+      "decision": "withheld",
+      "mechanism": "Ato regimental de criação, registro ou organização parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Parlamentares e órgãos legislativos; não há destinatário populacional direto criado pelo dispositivo.",
+      "effects": "Produz efeito institucional/procedimental (debate, investigação ou coordenação parlamentar), sem mecanismo normativo direto que permita atribuir benefício ou custo a grupo populacional.",
+      "target_groups": [],
+      "main_topic": "organizacao_parlamentar",
+      "summary_short": "Requerimento de natureza procedimental: Requer, nos termos regimentais, a criação da Frente Parlamentar em Defesa da Valorização da Produção Nacional de Uvas, Vinhos, Espumante, Sucos e Derivados.",
+      "summary_expanded": "O texto integral formaliza um requerimento de registro/instalação de comissão ou frente parlamentar. A justificativa pode defender políticas públicas, mas o dispositivo não as implementa nem altera a legislação.",
+      "version_event_binding": {
+        "proposition_id": "2426469",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2406456",
+        "text_sha256": "sha256:12c499ac2b915725aabe5e75815228dfe05b917c84d04aa7768290c759915d29",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.94,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed."
+        ],
+        "confidence_before": 0.94,
+        "confidence_after": 0.94,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2426469",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2406456",
+          "status": 200,
+          "bytes": 172346,
+          "sha256": "sha256:12c499ac2b915725aabe5e75815228dfe05b917c84d04aa7768290c759915d29"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:req-1409-2023-2360314",
+      "decision": "withheld",
+      "mechanism": "Ato regimental de criação, registro ou organização parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Parlamentares e órgãos legislativos; não há destinatário populacional direto criado pelo dispositivo.",
+      "effects": "Produz efeito institucional/procedimental (debate, investigação ou coordenação parlamentar), sem mecanismo normativo direto que permita atribuir benefício ou custo a grupo populacional.",
+      "target_groups": [],
+      "main_topic": "organizacao_parlamentar",
+      "summary_short": "Requerimento de natureza procedimental: Requer o registro de Frente Parlamentar em Defesa da Indústria Naval Brasileira, perante a Mesa da Câmara dos Deputados.",
+      "summary_expanded": "O texto integral formaliza um requerimento de registro/instalação de comissão ou frente parlamentar. A justificativa pode defender políticas públicas, mas o dispositivo não as implementa nem altera a legislação.",
+      "version_event_binding": {
+        "proposition_id": "2360314",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2268714",
+        "text_sha256": "sha256:9942935386ba30f57d94e68bc2234d1a6ece88e3cb2906f3ab46b84e6f7b7128",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.94,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed."
+        ],
+        "confidence_before": 0.94,
+        "confidence_after": 0.94,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2360314",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2268714",
+          "status": 200,
+          "bytes": 295738,
+          "sha256": "sha256:9942935386ba30f57d94e68bc2234d1a6ece88e3cb2906f3ab46b84e6f7b7128"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:req-1716-2023-2364443",
+      "decision": "withheld",
+      "mechanism": "Ato regimental de criação, registro ou organização parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Parlamentares e órgãos legislativos; não há destinatário populacional direto criado pelo dispositivo.",
+      "effects": "Produz efeito institucional/procedimental (debate, investigação ou coordenação parlamentar), sem mecanismo normativo direto que permita atribuir benefício ou custo a grupo populacional.",
+      "target_groups": [],
+      "main_topic": "organizacao_parlamentar",
+      "summary_short": "Requerimento de natureza procedimental: Requer o registro da Frente Parlamentar Mista em defesa do setor coureiro-calçadista.",
+      "summary_expanded": "O texto integral formaliza um requerimento de registro/instalação de comissão ou frente parlamentar. A justificativa pode defender políticas públicas, mas o dispositivo não as implementa nem altera a legislação.",
+      "version_event_binding": {
+        "proposition_id": "2364443",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2276958",
+        "text_sha256": "sha256:06379369650df704bedcd7ad11bed2f98a33c5fe312d3813aa2bca85b54f49e1",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.94,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed."
+        ],
+        "confidence_before": 0.94,
+        "confidence_after": 0.94,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2364443",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2276958",
+          "status": 200,
+          "bytes": 349074,
+          "sha256": "sha256:06379369650df704bedcd7ad11bed2f98a33c5fe312d3813aa2bca85b54f49e1"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:req-1867-2021-2299653",
+      "decision": "withheld",
+      "mechanism": "Ato regimental de criação, registro ou organização parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Parlamentares e órgãos legislativos; não há destinatário populacional direto criado pelo dispositivo.",
+      "effects": "Produz efeito institucional/procedimental (debate, investigação ou coordenação parlamentar), sem mecanismo normativo direto que permita atribuir benefício ou custo a grupo populacional.",
+      "target_groups": [],
+      "main_topic": "organizacao_parlamentar",
+      "summary_short": "Requerimento de natureza procedimental: Requer o registro da Frente Parlamentar em Apoio ao Produtor de Leite perante a Mesa da Câmara dos Deputados.",
+      "summary_expanded": "O texto integral formaliza um requerimento de registro/instalação de comissão ou frente parlamentar. A justificativa pode defender políticas públicas, mas o dispositivo não as implementa nem altera a legislação.",
+      "version_event_binding": {
+        "proposition_id": "2299653",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2077067",
+        "text_sha256": "sha256:8088d3ce0a7c4940076afb8f3d814930273ff5215869af3b4e7f918d7292a0d7",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.94,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed."
+        ],
+        "confidence_before": 0.94,
+        "confidence_after": 0.94,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2299653",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2077067",
+          "status": 200,
+          "bytes": 223237,
+          "sha256": "sha256:8088d3ce0a7c4940076afb8f3d814930273ff5215869af3b4e7f918d7292a0d7"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:doc-45-2021-2271704",
+      "decision": "withheld",
+      "mechanism": "Ato regimental de criação, registro ou organização parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Parlamentares e órgãos legislativos; não há destinatário populacional direto criado pelo dispositivo.",
+      "effects": "Produz efeito institucional/procedimental (debate, investigação ou coordenação parlamentar), sem mecanismo normativo direto que permita atribuir benefício ou custo a grupo populacional.",
+      "target_groups": [],
+      "main_topic": "organizacao_parlamentar",
+      "summary_short": "Requerimento de natureza procedimental: ATA DA REUNIÃO DA BANCADA DO ESTADO DO RIO GRANDE DO SUL – BANCADA GAÚCHA - REALIZADA EM 01 DE MARÇO DE  2021  ELEIÇÃO DA COORDENAÇÃO.",
+      "summary_expanded": "O texto integral formaliza um requerimento de registro/instalação de comissão ou frente parlamentar. A justificativa pode defender políticas públicas, mas o dispositivo não as implementa nem altera a legislação.",
+      "version_event_binding": {
+        "proposition_id": "2271704",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1969309",
+        "text_sha256": "sha256:4d39e638cd18e9f32d0b6614952b4225ba3279c0ac6ef36e8dfc772e30311426",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.94,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed."
+        ],
+        "confidence_before": 0.94,
+        "confidence_after": 0.94,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2271704",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1969309",
+          "status": 200,
+          "bytes": 350159,
+          "sha256": "sha256:4d39e638cd18e9f32d0b6614952b4225ba3279c0ac6ef36e8dfc772e30311426"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:rcp-1-2026-2600034",
+      "decision": "withheld",
+      "mechanism": "Ato regimental de criação, registro ou organização parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Parlamentares e órgãos legislativos; não há destinatário populacional direto criado pelo dispositivo.",
+      "effects": "Produz efeito institucional/procedimental (debate, investigação ou coordenação parlamentar), sem mecanismo normativo direto que permita atribuir benefício ou custo a grupo populacional.",
+      "target_groups": [],
+      "main_topic": "investigacao_publica",
+      "summary_short": "Requerimento de natureza procedimental: Requer a criação de Comissão Parlamentar de Inquérito para investigar as fraudes financeiras ocorridas na relação entre o Banco Master e o Banco Regional de Brasília – BRB.",
+      "summary_expanded": "O texto integral formaliza um requerimento de criação de CPI para investigação, com prazo e composição, sem criar direito, transferência ou obrigação material imediata.",
+      "version_event_binding": {
+        "proposition_id": "2600034",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3075847",
+        "text_sha256": "sha256:25d8cb9b1a72e0f6cdb7fd291125659d3334932facf8ba5bf694820706034524",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.94,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed."
+        ],
+        "confidence_before": 0.94,
+        "confidence_after": 0.94,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2600034",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3075847",
+          "status": 200,
+          "bytes": 211303,
+          "sha256": "sha256:25d8cb9b1a72e0f6cdb7fd291125659d3334932facf8ba5bf694820706034524"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:req-2521-2025-2531393",
+      "decision": "withheld",
+      "mechanism": "Ato regimental de criação, registro ou organização parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Parlamentares e órgãos legislativos; não há destinatário populacional direto criado pelo dispositivo.",
+      "effects": "Produz efeito institucional/procedimental (debate, investigação ou coordenação parlamentar), sem mecanismo normativo direto que permita atribuir benefício ou custo a grupo populacional.",
+      "target_groups": [],
+      "main_topic": "organizacao_parlamentar",
+      "summary_short": "Requerimento de natureza procedimental: Requer o Registro da Frente Parlamentar em Defesa do Futebol Feminino.",
+      "summary_expanded": "O texto integral formaliza um requerimento de registro/instalação de comissão ou frente parlamentar. A justificativa pode defender políticas públicas, mas o dispositivo não as implementa nem altera a legislação.",
+      "version_event_binding": {
+        "proposition_id": "2531393",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2948079",
+        "text_sha256": "sha256:40e40099df2dfcb12db5c1eea1a02b0e73078245e5865bcc6235fba6353dadb6",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.94,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed."
+        ],
+        "confidence_before": 0.94,
+        "confidence_after": 0.94,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2531393",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2948079",
+          "status": 200,
+          "bytes": 141281,
+          "sha256": "sha256:40e40099df2dfcb12db5c1eea1a02b0e73078245e5865bcc6235fba6353dadb6"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:req-456-2023-2350263",
+      "decision": "withheld",
+      "mechanism": "Ato regimental de criação, registro ou organização parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Parlamentares e órgãos legislativos; não há destinatário populacional direto criado pelo dispositivo.",
+      "effects": "Produz efeito institucional/procedimental (debate, investigação ou coordenação parlamentar), sem mecanismo normativo direto que permita atribuir benefício ou custo a grupo populacional.",
+      "target_groups": [],
+      "main_topic": "organizacao_parlamentar",
+      "summary_short": "Requerimento de natureza procedimental: Requer o registro da Frente Parlamentar Mista pela Competitividade da Cadeia Produtiva do Setor Químico, Petroquímico e de Plástico.",
+      "summary_expanded": "O texto integral formaliza um requerimento de registro/instalação de comissão ou frente parlamentar. A justificativa pode defender políticas públicas, mas o dispositivo não as implementa nem altera a legislação.",
+      "version_event_binding": {
+        "proposition_id": "2350263",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2240020",
+        "text_sha256": "sha256:80450c00276fa43a8749f48a9bc5f10944ca3b2949caf394d38e936ee313d121",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.94,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed."
+        ],
+        "confidence_before": 0.94,
+        "confidence_after": 0.94,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350263",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2240020",
+          "status": 200,
+          "bytes": 118406,
+          "sha256": "sha256:80450c00276fa43a8749f48a9bc5f10944ca3b2949caf394d38e936ee313d121"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:req-713-2023-2351632",
+      "decision": "withheld",
+      "mechanism": "Ato regimental de criação, registro ou organização parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Parlamentares e órgãos legislativos; não há destinatário populacional direto criado pelo dispositivo.",
+      "effects": "Produz efeito institucional/procedimental (debate, investigação ou coordenação parlamentar), sem mecanismo normativo direto que permita atribuir benefício ou custo a grupo populacional.",
+      "target_groups": [],
+      "main_topic": "organizacao_parlamentar",
+      "summary_short": "Requerimento de natureza procedimental: Requer o registro da Frente Parlamentar Mista em Defesa da Cadeia da Reciclagem no Brasil.",
+      "summary_expanded": "O texto integral formaliza um requerimento de registro/instalação de comissão ou frente parlamentar. A justificativa pode defender políticas públicas, mas o dispositivo não as implementa nem altera a legislação.",
+      "version_event_binding": {
+        "proposition_id": "2351632",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2244611",
+        "text_sha256": "sha256:713a6d7a20188532a0bc331afc773bd88def0d2689ebca865a1ac8b42aaad318",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.94,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed."
+        ],
+        "confidence_before": 0.94,
+        "confidence_after": 0.94,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351632",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2244611",
+          "status": 200,
+          "bytes": 450014,
+          "sha256": "sha256:713a6d7a20188532a0bc331afc773bd88def0d2689ebca865a1ac8b42aaad318"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:req-894-2023-2353350",
+      "decision": "withheld",
+      "mechanism": "Ato regimental de criação, registro ou organização parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Parlamentares e órgãos legislativos; não há destinatário populacional direto criado pelo dispositivo.",
+      "effects": "Produz efeito institucional/procedimental (debate, investigação ou coordenação parlamentar), sem mecanismo normativo direto que permita atribuir benefício ou custo a grupo populacional.",
+      "target_groups": [],
+      "main_topic": "organizacao_parlamentar",
+      "summary_short": "Requerimento de natureza procedimental: Requer o registro da Frente Parlamentar Mista em Defesa do Ensino Técnico e Profissionalizante- Frente do Ensino Técnico.",
+      "summary_expanded": "O texto integral formaliza um requerimento de registro/instalação de comissão ou frente parlamentar. A justificativa pode defender políticas públicas, mas o dispositivo não as implementa nem altera a legislação.",
+      "version_event_binding": {
+        "proposition_id": "2353350",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2248942",
+        "text_sha256": "sha256:4000a71cd3178e7b39e09ac53c82554865d1e74427ab1af86564f235a6ef4a05",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.94,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed."
+        ],
+        "confidence_before": 0.94,
+        "confidence_after": 0.94,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2353350",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2248942",
+          "status": 200,
+          "bytes": 112131,
+          "sha256": "sha256:4000a71cd3178e7b39e09ac53c82554865d1e74427ab1af86564f235a6ef4a05"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:pec-20-2024-2435133",
+      "decision": "pending_review",
+      "mechanism": "Amplia capacidade financeira e administrativa de resposta pública e pode aliviar famílias afetadas, mas o texto é um regime habilitador, não uma prestação individual automática.",
+      "direct_recipient": "Estado do Rio Grande do Sul, União e famílias afetadas pela calamidade; benefícios concretos dependem de atos de execução e identificação das despesas.",
+      "effects": "Autoriza excepcionalidades fiscais e de contratação, suspende temporariamente restrições e a exigibilidade da dívida estadual com a União, e permite mobilizar crédito e gastos para resposta, reconstrução e apoio às famílias afetadas.",
+      "target_groups": [],
+      "main_topic": "calamidade_publica",
+      "summary_short": "PEC cria regime extraordinário fiscal, financeiro e de contratações para resposta e reconstrução após a calamidade no Rio Grande do Sul.",
+      "summary_expanded": "Autoriza excepcionalidades fiscais e de contratação, suspende temporariamente restrições e a exigibilidade da dívida estadual com a União, e permite mobilizar crédito e gastos para resposta, reconstrução e apoio às famílias afetadas.",
+      "version_event_binding": {
+        "proposition_id": "2435133",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2426567",
+        "text_sha256": "sha256:57e01b239fcb00f896370a0196db306e87fa6e3e9e09f2c730a23d143413de80",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.55,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Texto integral permite análise substantiva, mas o pacote não contém evento oficial vinculante nem versão efetivamente votada; score retido."
+        ],
+        "confidence_before": 0.55,
+        "confidence_after": 0.55,
+        "verdict": "revise"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2435133",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2426567",
+          "status": 200,
+          "bytes": 167639,
+          "sha256": "sha256:57e01b239fcb00f896370a0196db306e87fa6e3e9e09f2c730a23d143413de80"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "budgetary",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "event_binding_missing",
+        "score_withholding_reason": "Texto integral permite análise substantiva, mas o pacote não contém evento oficial vinculante nem versão efetivamente votada; score retido.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Análise e red-team divergiram; decisão conservadora withheld."
+    },
+    {
+      "id": "camara:req-1960-2023-2369535",
+      "decision": "withheld",
+      "mechanism": "Ato regimental de criação, registro ou organização parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Parlamentares e órgãos legislativos; não há destinatário populacional direto criado pelo dispositivo.",
+      "effects": "Produz efeito institucional/procedimental (debate, investigação ou coordenação parlamentar), sem mecanismo normativo direto que permita atribuir benefício ou custo a grupo populacional.",
+      "target_groups": [],
+      "main_topic": "organizacao_parlamentar",
+      "summary_short": "Requerimento de natureza procedimental: Requer o registro da Frente Parlamentar Mista dos Técnicos Agrícolas, nos Termos do Ato da Mesa nº 69, de 10/11/2005.",
+      "summary_expanded": "O texto integral formaliza um requerimento de registro/instalação de comissão ou frente parlamentar. A justificativa pode defender políticas públicas, mas o dispositivo não as implementa nem altera a legislação.",
+      "version_event_binding": {
+        "proposition_id": "2369535",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2289002",
+        "text_sha256": "sha256:59509f88fe6b0bce08fabb95dd63100831df7cdcd5957dfa8f7855acb2f412b8",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.94,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed."
+        ],
+        "confidence_before": 0.94,
+        "confidence_after": 0.94,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2369535",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2289002",
+          "status": 200,
+          "bytes": 323020,
+          "sha256": "sha256:59509f88fe6b0bce08fabb95dd63100831df7cdcd5957dfa8f7855acb2f412b8"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:req-3287-2025-2545770",
+      "decision": "withheld",
+      "mechanism": "Ato regimental de criação, registro ou organização parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Parlamentares e órgãos legislativos; não há destinatário populacional direto criado pelo dispositivo.",
+      "effects": "Produz efeito institucional/procedimental (debate, investigação ou coordenação parlamentar), sem mecanismo normativo direto que permita atribuir benefício ou custo a grupo populacional.",
+      "target_groups": [],
+      "main_topic": "organizacao_parlamentar",
+      "summary_short": "Requerimento de natureza procedimental: Requer o Registro da Frente Parlamentar em Defesa da Educação para o Trânsito e Formação de Condutores de Veículos Automotores",
+      "summary_expanded": "O texto integral formaliza um requerimento de registro/instalação de comissão ou frente parlamentar. A justificativa pode defender políticas públicas, mas o dispositivo não as implementa nem altera a legislação.",
+      "version_event_binding": {
+        "proposition_id": "2545770",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2974964",
+        "text_sha256": "sha256:7bdc00428c079be1a46c18b44c18b6373994d404e62ff4d278f921d3c1a82adf",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.94,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed."
+        ],
+        "confidence_before": 0.94,
+        "confidence_after": 0.94,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2545770",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2974964",
+          "status": 200,
+          "bytes": 184151,
+          "sha256": "sha256:7bdc00428c079be1a46c18b44c18b6373994d404e62ff4d278f921d3c1a82adf"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:req-5002-2024-2481405",
+      "decision": "withheld",
+      "mechanism": "Ato regimental de criação, registro ou organização parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Parlamentares e órgãos legislativos; não há destinatário populacional direto criado pelo dispositivo.",
+      "effects": "Produz efeito institucional/procedimental (debate, investigação ou coordenação parlamentar), sem mecanismo normativo direto que permita atribuir benefício ou custo a grupo populacional.",
+      "target_groups": [],
+      "main_topic": "organizacao_parlamentar",
+      "summary_short": "Requerimento de natureza procedimental: Requer o registro da Frente Parlamentar Mista da Cadeia Produtiva da Cerveja",
+      "summary_expanded": "O texto integral formaliza um requerimento de registro/instalação de comissão ou frente parlamentar. A justificativa pode defender políticas públicas, mas o dispositivo não as implementa nem altera a legislação.",
+      "version_event_binding": {
+        "proposition_id": "2481405",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2845654",
+        "text_sha256": "sha256:aae255f9b207cb82591658670e4ddbd0bf28fdc99e069e17138391a20267670c",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.94,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed."
+        ],
+        "confidence_before": 0.94,
+        "confidence_after": 0.94,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2481405",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2845654",
+          "status": 200,
+          "bytes": 540474,
+          "sha256": "sha256:aae255f9b207cb82591658670e4ddbd0bf28fdc99e069e17138391a20267670c"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:req-5058-2024-2481769",
+      "decision": "withheld",
+      "mechanism": "Ato regimental de criação, registro ou organização parlamentar; eventual efeito substantivo dependeria de atos legislativos posteriores.",
+      "direct_recipient": "Parlamentares e órgãos legislativos; não há destinatário populacional direto criado pelo dispositivo.",
+      "effects": "Produz efeito institucional/procedimental (debate, investigação ou coordenação parlamentar), sem mecanismo normativo direto que permita atribuir benefício ou custo a grupo populacional.",
+      "target_groups": [],
+      "main_topic": "organizacao_parlamentar",
+      "summary_short": "Requerimento de natureza procedimental: Requer o registro da Frente Parlamentar para a Promoção de Políticas Públicas, Prevenção e Enfrentamento aos Desastres Naturais.",
+      "summary_expanded": "O texto integral formaliza um requerimento de registro/instalação de comissão ou frente parlamentar. A justificativa pode defender políticas públicas, mas o dispositivo não as implementa nem altera a legislação.",
+      "version_event_binding": {
+        "proposition_id": "2481769",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2846780",
+        "text_sha256": "sha256:d328444f4ac692ccfa8d40698b8f9f77d1d3c23bc9235bfa45a3f0a9aef59464",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.94,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed."
+        ],
+        "confidence_before": 0.94,
+        "confidence_after": 0.94,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2481769",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2846780",
+          "status": 200,
+          "bytes": 273080,
+          "sha256": "sha256:d328444f4ac692ccfa8d40698b8f9f77d1d3c23bc9235bfa45a3f0a9aef59464"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Requerimento/procedural ou documento sem objeto normativo vinculante; score retido conforme regra fail-closed.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:atacn-18-2021-2291065",
+      "decision": "withheld",
+      "mechanism": "Seleção interna de emendas de bancada para posterior apresentação ao projeto orçamentário.",
+      "direct_recipient": "Programas públicos e obras no Rio Grande do Sul; destinatários individuais não são identificados no documento.",
+      "effects": "Pode orientar alocação orçamentária futura, mas não prova execução, aprovação final ou efeito material realizado.",
+      "target_groups": [],
+      "main_topic": "orcamento_publico",
+      "summary_short": "Ata de escolha de emendas da bancada gaúcha para a LDO 2022.",
+      "summary_expanded": "O documento registra a seleção de metas para mobilidade urbana, adequação rodoviária e construção da Escola de Sargentos das Armas em Santa Maria. Ele documenta uma escolha interna de emendas, não o texto final da LDO nem a aprovação de cada dotação.",
+      "version_event_binding": {
+        "proposition_id": "2291065",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2044659",
+        "text_sha256": "sha256:cc8c4012b5b8f4eafe3db02a08c3620493fb3a67e0c525b05af109c028b303f7",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.88,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Ata/ato preparatório e ausência de evento vinculante do objeto final; retenção obrigatória."
+        ],
+        "confidence_before": 0.88,
+        "confidence_after": 0.88,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2291065",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2044659",
+          "status": 200,
+          "bytes": 485827,
+          "sha256": "sha256:cc8c4012b5b8f4eafe3db02a08c3620493fb3a67e0c525b05af109c028b303f7"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Ata/ato preparatório e ausência de evento vinculante do objeto final; retenção obrigatória.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    },
+    {
+      "id": "camara:doc-12-2021-2271031",
+      "decision": "withheld",
+      "mechanism": "Seleção interna de emendas de bancada para apresentação ao PLOA.",
+      "direct_recipient": "Órgãos e programas públicos no Rio Grande do Sul; beneficiários finais variam conforme cada ação e não são individualizados de modo canônico.",
+      "effects": "Se posteriormente aprovada e executada, direcionaria dotações a múltiplas políticas; neste documento isolado, o efeito é apenas deliberativo/preparatório.",
+      "target_groups": [],
+      "main_topic": "orcamento_publico",
+      "summary_short": "Ata de escolha de emendas da bancada gaúcha ao orçamento de 2021.",
+      "summary_expanded": "A ata lista emendas de apropriação para agropecuária, rodovias, turismo, UERGS, educação profissional, saúde, segurança pública e desenvolvimento sustentável no Rio Grande do Sul, com valores indicados. Registra a seleção pela bancada, mas não substitui a lei orçamentária nem comprova execução.",
+      "version_event_binding": {
+        "proposition_id": "2271031",
+        "version_type": "original_submission_text",
+        "text_source_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1968268",
+        "text_sha256": "sha256:4beac709094212408b5099beb6a286cbd6207f477efbbfc824dc66468ac54488",
+        "event_id": null,
+        "event_source_url": null,
+        "binding_status": "missing_official_voting_event",
+        "object_voted": null
+      },
+      "score_eligible": false,
+      "confidence": 0.9,
+      "self_critique": {
+        "strongest_counterargument": "O texto pode influenciar políticas públicas ou sinalizar uma agenda material, e no caso das PECs contém dispositivos com efeitos distributivos potenciais.",
+        "evidence_against_decision": [
+          "O inteiro teor contém justificativas e/ou dispositivos com possível relevância material."
+        ],
+        "alternative_interpretation": "Tratar a matéria como substantiva e aguardar identificação do evento, versão final e eventual regulamentação.",
+        "alternative_group": null,
+        "alternative_direction": "unclear",
+        "severity_alternative": null,
+        "vote_attribution_risk": "Sem evento vinculante, não é possível saber qual objeto foi submetido ao voto nem atribuir SIM/NÃO a qualquer efeito.",
+        "remaining_uncertainties": [
+          "Documento registra escolha de emendas, não objeto final votado; múltiplas ações não separáveis e sem evento vinculante."
+        ],
+        "confidence_before": 0.9,
+        "confidence_after": 0.9,
+        "verdict": "withhold"
+      },
+      "sources": [
+        {
+          "kind": "official_proposition_api",
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2271031",
+          "status": 200
+        },
+        {
+          "kind": "official_full_text",
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1968268",
+          "status": 200,
+          "bytes": 345521,
+          "sha256": "sha256:4beac709094212408b5099beb6a286cbd6207f477efbbfc824dc66468ac54488"
+        }
+      ],
+      "editorial_notes": {
+        "structural_type": "symbolic",
+        "impact_direction": "unclear",
+        "vote_attribution_status": "procedural",
+        "score_withholding_reason": "Documento registra escolha de emendas, não objeto final votado; múltiplas ações não separáveis e sem evento vinculante.",
+        "implementation_conditions": [
+          "Identificar evento oficial, data, objeto e resultado; confirmar versão efetivamente votada antes de qualquer score."
+        ]
+      },
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Red-team não identificou divergência; item ainda não aprovado sem gate completo."
+    }
+  ]
+}
