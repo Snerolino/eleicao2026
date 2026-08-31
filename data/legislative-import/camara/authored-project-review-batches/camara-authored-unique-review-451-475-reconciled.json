@@ -1,0 +1,493 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:req-2798-2023-2382835",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A autoria oficial e o PDF integral hashado podem sustentar um registro factual de autoria/coautoria, sem score; porém não superam a ausência de evento/objeto votado e não provam posição parlamentar.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-324-2023-2349634",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A autoria oficial e o PDF integral hashado podem sustentar um registro factual de autoria/coautoria, sem score; porém não superam a ausência de evento/objeto votado e não provam posição parlamentar.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-355-2024-2418476",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A autoria oficial e o PDF integral hashado podem sustentar um registro factual de autoria/coautoria, sem score; porém não superam a ausência de evento/objeto votado e não provam posição parlamentar.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-4308-2025-2573002",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A autoria oficial e o PDF integral hashado podem sustentar um registro factual de autoria/coautoria, sem score; porém não superam a ausência de evento/objeto votado e não provam posição parlamentar.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-4369-2024-2465985",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A autoria oficial e o PDF integral hashado podem sustentar um registro factual de autoria/coautoria, sem score; porém não superam a ausência de evento/objeto votado e não provam posição parlamentar.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-4415-2025-2576180",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A autoria oficial e o PDF integral hashado podem sustentar um registro factual de autoria/coautoria, sem score; porém não superam a ausência de evento/objeto votado e não provam posição parlamentar.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-4452-2023-2416464",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A nota de repúdio é texto oficial e autoria é verificável, mas seu conteúdo expressivo não equivale a norma ou voto de mérito; sem evento nominal, score seria especialmente enganoso.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-4489-2024-2469405",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A autoria oficial e o PDF integral hashado podem sustentar um registro factual de autoria/coautoria, sem score; porém não superam a ausência de evento/objeto votado e não provam posição parlamentar.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-463-2025-2483943",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A autoria oficial e o PDF integral hashado podem sustentar um registro factual de autoria/coautoria, sem score; porém não superam a ausência de evento/objeto votado e não provam posição parlamentar.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-4700-2025-2582199",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A autoria oficial e o PDF integral hashado podem sustentar um registro factual de autoria/coautoria, sem score; porém não superam a ausência de evento/objeto votado e não provam posição parlamentar.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-501-2024-2418915",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A autoria oficial e o PDF integral hashado podem sustentar um registro factual de autoria/coautoria, sem score; porém não superam a ausência de evento/objeto votado e não provam posição parlamentar.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-6008-2025-2598197",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A autoria oficial e o PDF integral hashado podem sustentar um registro factual de autoria/coautoria, sem score; porém não superam a ausência de evento/objeto votado e não provam posição parlamentar.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-727-2023-2351708",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A autoria oficial e o PDF integral hashado podem sustentar um registro factual de autoria/coautoria, sem score; porém não superam a ausência de evento/objeto votado e não provam posição parlamentar.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-772-2023-2352046",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A autoria oficial e o PDF integral hashado podem sustentar um registro factual de autoria/coautoria, sem score; porém não superam a ausência de evento/objeto votado e não provam posição parlamentar.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-819-2022-2324036",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A autoria oficial e o PDF integral hashado podem sustentar um registro factual de autoria/coautoria, sem score; porém não superam a ausência de evento/objeto votado e não provam posição parlamentar.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-837-2023-2352410",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A autoria oficial e o PDF integral hashado podem sustentar um registro factual de autoria/coautoria, sem score; porém não superam a ausência de evento/objeto votado e não provam posição parlamentar.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-859-2023-2352549",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A autoria oficial e o PDF integral hashado podem sustentar um registro factual de autoria/coautoria, sem score; porém não superam a ausência de evento/objeto votado e não provam posição parlamentar.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-898-2023-2353377",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A autoria oficial e o PDF integral hashado podem sustentar um registro factual de autoria/coautoria, sem score; porém não superam a ausência de evento/objeto votado e não provam posição parlamentar.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-901-2023-2353405",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A autoria oficial e o PDF integral hashado podem sustentar um registro factual de autoria/coautoria, sem score; porém não superam a ausência de evento/objeto votado e não provam posição parlamentar.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-929-2023-2353708",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A autoria oficial e o PDF integral hashado podem sustentar um registro factual de autoria/coautoria, sem score; porém não superam a ausência de evento/objeto votado e não provam posição parlamentar.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-952-2023-2353894",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A autoria oficial e o PDF integral hashado podem sustentar um registro factual de autoria/coautoria, sem score; porém não superam a ausência de evento/objeto votado e não provam posição parlamentar.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-963-2023-2353946",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "A autoria oficial e o PDF integral hashado podem sustentar um registro factual de autoria/coautoria, sem score; porém não superam a ausência de evento/objeto votado e não provam posição parlamentar.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:doc-9-2021-2268565",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "O documento pode ser publicado como ato factual de autoria, mas é indicação/ato procedimental e não há evento nominal; qualquer inferência de impacto ou voto seria indevida.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-1-0-2286770",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "ano oficial resolvido da EMC e proposição principal (API retorna ano=0; o PDF referencia PEC 32/2020)",
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "O PDF integral descreve uma emenda potencialmente material e a autoria está listada oficialmente; isso pode justificar análise normativa separada, mas não prova que esta versão foi votada nem vincula voto individual.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-10-2019-2203537",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "registro oficial de evento de votação com event_id e objeto votado",
+        "vínculo exato evento→proposition_version/redação final (substitutivo, emendas, destaques), com hash da versão efetivamente votada",
+        "registro nominal do voto individual, se houver, ligado ao mesmo event_id",
+        "crosswalk oficial versionado candidate_tse_id↔deputado_id com nome/partido/UF e fonte por candidato"
+      ],
+      "counterargument": "O PDF integral descreve uma emenda potencialmente material e a autoria está listada oficialmente; isso pode justificar análise normativa separada, mas não prova que esta versão foi votada nem vincula voto individual.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    }
+  ]
+}
