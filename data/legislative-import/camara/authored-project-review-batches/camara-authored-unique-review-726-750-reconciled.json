@@ -1,0 +1,2538 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:pl-1599-2024-2431320",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002534897 não fecha inequivocamente com deputado 160673",
+        "identidade TSE 210002547819 não fecha inequivocamente com deputado 156190",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002537714",
+        "catalog_status": "matched",
+        "catalog_deputado_id": 220549
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002537714",
+            "claimed_deputado_id": "220549",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220549,
+            "official_author_present": true,
+            "official_author_name": "Any Ortiz",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534583",
+            "claimed_deputado_id": "220553",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220553,
+            "official_author_present": true,
+            "official_author_name": "Denise Pessôa",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534597",
+            "claimed_deputado_id": "220554",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220554,
+            "official_author_present": true,
+            "official_author_name": "Alexandre Lindenmeyer",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002537066",
+            "claimed_deputado_id": "73486",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 73486,
+            "official_author_present": true,
+            "official_author_name": "Pompeo de Mattos",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534897",
+            "claimed_deputado_id": "160673",
+            "candidate_identity_status": "identity_pending",
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Giovani Cherini",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002541514",
+            "claimed_deputado_id": "160559",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160559,
+            "official_author_present": true,
+            "official_author_name": "Alceu Moreira",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002538541",
+            "claimed_deputado_id": "204404",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204404,
+            "official_author_present": true,
+            "official_author_name": "Lucas Redecker",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002547819",
+            "claimed_deputado_id": "156190",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Marcel van Hattem",
+            "official_proponente": 1
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pl-220-2025-2482687",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "há evento(s), mas o endpoint não vincula proposição objeto/versão votada; sem evidência nominal no pacote",
+        "identidade TSE 210002536921 não fecha inequivocamente com deputado 163321"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002537714",
+        "catalog_status": "matched",
+        "catalog_deputado_id": 220549
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002537714",
+            "claimed_deputado_id": "220549",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220549,
+            "official_author_present": true,
+            "official_author_name": "Any Ortiz",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002537066",
+            "claimed_deputado_id": "73486",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 73486,
+            "official_author_present": true,
+            "official_author_name": "Pompeo de Mattos",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002537712",
+            "claimed_deputado_id": "136811",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 136811,
+            "official_author_present": true,
+            "official_author_name": "Afonso Hamm",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002541514",
+            "claimed_deputado_id": "160559",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160559,
+            "official_author_present": true,
+            "official_author_name": "Alceu Moreira",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002537718",
+            "claimed_deputado_id": "178963",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 178963,
+            "official_author_present": true,
+            "official_author_name": "Covatti Filho",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002538556",
+            "claimed_deputado_id": "178964",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 178964,
+            "official_author_present": true,
+            "official_author_name": "Heitor Schuch",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002537717",
+            "claimed_deputado_id": "204406",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204406,
+            "official_author_present": true,
+            "official_author_name": "Pedro Westphalen",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002536921",
+            "claimed_deputado_id": "163321",
+            "candidate_identity_status": "identity_pending",
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Ronaldo Nogueira",
+            "official_proponente": 1
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:pl-4488-2023-2387999",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "há evento(s), mas o endpoint não vincula proposição objeto/versão votada; sem evidência nominal no pacote",
+        "identidade TSE 210002534589 não fecha inequivocamente com deputado 221378"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534583",
+        "catalog_status": "matched",
+        "catalog_deputado_id": 220553
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002534583",
+            "claimed_deputado_id": "220553",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220553,
+            "official_author_present": true,
+            "official_author_name": "Denise Pessôa",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534588",
+            "claimed_deputado_id": "220555",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220555,
+            "official_author_present": true,
+            "official_author_name": "Daiana Santos",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002537066",
+            "claimed_deputado_id": "73486",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 73486,
+            "official_author_present": true,
+            "official_author_name": "Pompeo de Mattos",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "claimed_deputado_id": "74398",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 74398,
+            "official_author_present": true,
+            "official_author_name": "Maria do Rosário",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534601",
+            "claimed_deputado_id": "160538",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160538,
+            "official_author_present": true,
+            "official_author_name": "Bohn Gass",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534598",
+            "claimed_deputado_id": "160535",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160535,
+            "official_author_present": true,
+            "official_author_name": "Marcon",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002541514",
+            "claimed_deputado_id": "160559",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160559,
+            "official_author_present": true,
+            "official_author_name": "Alceu Moreira",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534589",
+            "claimed_deputado_id": "221378",
+            "candidate_identity_status": "identity_pending",
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Reginete Bispo",
+            "official_proponente": 1
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:prc-120-2023-2401826",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002534897 não fecha inequivocamente com deputado 160673",
+        "identidade TSE 210002547816 não fecha inequivocamente com deputado 204416",
+        "identidade TSE 210002547819 não fecha inequivocamente com deputado 156190",
+        "identidade TSE 210002547857 não fecha inequivocamente com deputado 220552",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002537714",
+        "catalog_status": "matched",
+        "catalog_deputado_id": 220549
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002537714",
+            "claimed_deputado_id": "220549",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220549,
+            "official_author_present": true,
+            "official_author_name": "Any Ortiz",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534654",
+            "claimed_deputado_id": "220550",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220550,
+            "official_author_present": true,
+            "official_author_name": "Mauricio Marcon",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002547857",
+            "claimed_deputado_id": "220552",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Zucco",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534897",
+            "claimed_deputado_id": "160673",
+            "candidate_identity_status": "identity_pending",
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Giovani Cherini",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534671",
+            "claimed_deputado_id": "133810",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 133810,
+            "official_author_present": true,
+            "official_author_name": "Marcelo Moraes",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002547819",
+            "claimed_deputado_id": "156190",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Marcel van Hattem",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "claimed_deputado_id": "204416",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Sanderson",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534656",
+            "claimed_deputado_id": "204388",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204388,
+            "official_author_present": true,
+            "official_author_name": "Bibo Nunes",
+            "official_proponente": 1
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rcp-5-2023-2383823",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002534589 não fecha inequivocamente com deputado 221378",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534654",
+        "catalog_status": "matched",
+        "catalog_deputado_id": 220550
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002534654",
+            "claimed_deputado_id": "220550",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220550,
+            "official_author_present": true,
+            "official_author_name": "Mauricio Marcon",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534597",
+            "claimed_deputado_id": "220554",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220554,
+            "official_author_present": true,
+            "official_author_name": "Alexandre Lindenmeyer",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537066",
+            "claimed_deputado_id": "73486",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 73486,
+            "official_author_present": true,
+            "official_author_name": "Pompeo de Mattos",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "claimed_deputado_id": "74398",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 74398,
+            "official_author_present": true,
+            "official_author_name": "Maria do Rosário",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002538556",
+            "claimed_deputado_id": "178964",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 178964,
+            "official_author_present": true,
+            "official_author_name": "Heitor Schuch",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002533902",
+            "claimed_deputado_id": "204407",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204407,
+            "official_author_present": true,
+            "official_author_name": "Fernanda Melchionna",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534656",
+            "claimed_deputado_id": "204388",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204388,
+            "official_author_present": true,
+            "official_author_name": "Bibo Nunes",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534589",
+            "claimed_deputado_id": "221378",
+            "candidate_identity_status": "identity_pending",
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Reginete Bispo",
+            "official_proponente": 0
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1082-2023-2355189",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002534897 não fecha inequivocamente com deputado 160673",
+        "identidade TSE 210002547816 não fecha inequivocamente com deputado 204416",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002537066",
+        "catalog_status": "matched",
+        "catalog_deputado_id": 73486
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002537066",
+            "claimed_deputado_id": "73486",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 73486,
+            "official_author_present": true,
+            "official_author_name": "Pompeo de Mattos",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "claimed_deputado_id": "74398",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 74398,
+            "official_author_present": true,
+            "official_author_name": "Maria do Rosário",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537712",
+            "claimed_deputado_id": "136811",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 136811,
+            "official_author_present": true,
+            "official_author_name": "Afonso Hamm",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534897",
+            "claimed_deputado_id": "160673",
+            "candidate_identity_status": "identity_pending",
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Giovani Cherini",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002541514",
+            "claimed_deputado_id": "160559",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160559,
+            "official_author_present": true,
+            "official_author_name": "Alceu Moreira",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537718",
+            "claimed_deputado_id": "178963",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 178963,
+            "official_author_present": true,
+            "official_author_name": "Covatti Filho",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537717",
+            "claimed_deputado_id": "204406",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204406,
+            "official_author_present": true,
+            "official_author_name": "Pedro Westphalen",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "claimed_deputado_id": "204416",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Sanderson",
+            "official_proponente": 0
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1494-2023-2361874",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002534897 não fecha inequivocamente com deputado 160673",
+        "identidade TSE 210002547816 não fecha inequivocamente com deputado 204416",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002537714",
+        "catalog_status": "matched",
+        "catalog_deputado_id": 220549
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002537714",
+            "claimed_deputado_id": "220549",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220549,
+            "official_author_present": true,
+            "official_author_name": "Any Ortiz",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537712",
+            "claimed_deputado_id": "136811",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 136811,
+            "official_author_present": true,
+            "official_author_name": "Afonso Hamm",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534897",
+            "claimed_deputado_id": "160673",
+            "candidate_identity_status": "identity_pending",
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Giovani Cherini",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002541514",
+            "claimed_deputado_id": "160559",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160559,
+            "official_author_present": true,
+            "official_author_name": "Alceu Moreira",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002538541",
+            "claimed_deputado_id": "204404",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204404,
+            "official_author_present": true,
+            "official_author_name": "Lucas Redecker",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537717",
+            "claimed_deputado_id": "204406",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204406,
+            "official_author_present": true,
+            "official_author_name": "Pedro Westphalen",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "claimed_deputado_id": "204416",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Sanderson",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534656",
+            "claimed_deputado_id": "204388",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204388,
+            "official_author_present": true,
+            "official_author_name": "Bibo Nunes",
+            "official_proponente": 0
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1508-2024-2432051",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002536921 não fecha inequivocamente com deputado 163321",
+        "identidade TSE 210002547857 não fecha inequivocamente com deputado 220552",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002547857",
+        "catalog_status": null,
+        "catalog_deputado_id": null
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002547857",
+            "claimed_deputado_id": "220552",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Zucco",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537066",
+            "claimed_deputado_id": "73486",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 73486,
+            "official_author_present": true,
+            "official_author_name": "Pompeo de Mattos",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537712",
+            "claimed_deputado_id": "136811",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 136811,
+            "official_author_present": true,
+            "official_author_name": "Afonso Hamm",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537718",
+            "claimed_deputado_id": "178963",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 178963,
+            "official_author_present": true,
+            "official_author_name": "Covatti Filho",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002538541",
+            "claimed_deputado_id": "204404",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204404,
+            "official_author_present": true,
+            "official_author_name": "Lucas Redecker",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537717",
+            "claimed_deputado_id": "204406",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204406,
+            "official_author_present": true,
+            "official_author_name": "Pedro Westphalen",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534656",
+            "claimed_deputado_id": "204388",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204388,
+            "official_author_present": true,
+            "official_author_name": "Bibo Nunes",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002536921",
+            "claimed_deputado_id": "163321",
+            "candidate_identity_status": "identity_pending",
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Ronaldo Nogueira",
+            "official_proponente": 0
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-153-2023-2348644",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002534897 não fecha inequivocamente com deputado 160673",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534668",
+        "catalog_status": "matched",
+        "catalog_deputado_id": 73692
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002534668",
+            "claimed_deputado_id": "73692",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 73692,
+            "official_author_present": true,
+            "official_author_name": "Osmar Terra",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "claimed_deputado_id": "74398",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 74398,
+            "official_author_present": true,
+            "official_author_name": "Maria do Rosário",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537712",
+            "claimed_deputado_id": "136811",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 136811,
+            "official_author_present": true,
+            "official_author_name": "Afonso Hamm",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534897",
+            "claimed_deputado_id": "160673",
+            "candidate_identity_status": "identity_pending",
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Giovani Cherini",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534601",
+            "claimed_deputado_id": "160538",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160538,
+            "official_author_present": true,
+            "official_author_name": "Bohn Gass",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002541514",
+            "claimed_deputado_id": "160559",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160559,
+            "official_author_present": true,
+            "official_author_name": "Alceu Moreira",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537718",
+            "claimed_deputado_id": "178963",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 178963,
+            "official_author_present": true,
+            "official_author_name": "Covatti Filho",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002538541",
+            "claimed_deputado_id": "204404",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204404,
+            "official_author_present": true,
+            "official_author_name": "Lucas Redecker",
+            "official_proponente": 0
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1536-2024-2432499",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002534897 não fecha inequivocamente com deputado 160673",
+        "identidade TSE 210002547819 não fecha inequivocamente com deputado 156190",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002537714",
+        "catalog_status": "matched",
+        "catalog_deputado_id": 220549
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002537714",
+            "claimed_deputado_id": "220549",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220549,
+            "official_author_present": true,
+            "official_author_name": "Any Ortiz",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534583",
+            "claimed_deputado_id": "220553",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220553,
+            "official_author_present": true,
+            "official_author_name": "Denise Pessôa",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534597",
+            "claimed_deputado_id": "220554",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220554,
+            "official_author_present": true,
+            "official_author_name": "Alexandre Lindenmeyer",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002537066",
+            "claimed_deputado_id": "73486",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 73486,
+            "official_author_present": true,
+            "official_author_name": "Pompeo de Mattos",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534897",
+            "claimed_deputado_id": "160673",
+            "candidate_identity_status": "identity_pending",
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Giovani Cherini",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002541514",
+            "claimed_deputado_id": "160559",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160559,
+            "official_author_present": true,
+            "official_author_name": "Alceu Moreira",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002538541",
+            "claimed_deputado_id": "204404",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204404,
+            "official_author_present": true,
+            "official_author_name": "Lucas Redecker",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002547819",
+            "claimed_deputado_id": "156190",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Marcel van Hattem",
+            "official_proponente": 1
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-169-2024-2417277",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002534897 não fecha inequivocamente com deputado 160673",
+        "identidade TSE 210002547816 não fecha inequivocamente com deputado 204416",
+        "identidade TSE 210002547857 não fecha inequivocamente com deputado 220552",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002547857",
+        "catalog_status": null,
+        "catalog_deputado_id": null
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002547857",
+            "claimed_deputado_id": "220552",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Zucco",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537066",
+            "claimed_deputado_id": "73486",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 73486,
+            "official_author_present": true,
+            "official_author_name": "Pompeo de Mattos",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534668",
+            "claimed_deputado_id": "73692",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 73692,
+            "official_author_present": true,
+            "official_author_name": "Osmar Terra",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "claimed_deputado_id": "74398",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 74398,
+            "official_author_present": true,
+            "official_author_name": "Maria do Rosário",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534897",
+            "claimed_deputado_id": "160673",
+            "candidate_identity_status": "identity_pending",
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Giovani Cherini",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537718",
+            "claimed_deputado_id": "178963",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 178963,
+            "official_author_present": true,
+            "official_author_name": "Covatti Filho",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "claimed_deputado_id": "204416",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Sanderson",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534656",
+            "claimed_deputado_id": "204388",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204388,
+            "official_author_present": true,
+            "official_author_name": "Bibo Nunes",
+            "official_proponente": 0
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1755-2023-2365309",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002547819 não fecha inequivocamente com deputado 156190",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002537714",
+        "catalog_status": "matched",
+        "catalog_deputado_id": 220549
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002537714",
+            "claimed_deputado_id": "220549",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220549,
+            "official_author_present": true,
+            "official_author_name": "Any Ortiz",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534583",
+            "claimed_deputado_id": "220553",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220553,
+            "official_author_present": true,
+            "official_author_name": "Denise Pessôa",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "claimed_deputado_id": "74398",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 74398,
+            "official_author_present": true,
+            "official_author_name": "Maria do Rosário",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537712",
+            "claimed_deputado_id": "136811",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 136811,
+            "official_author_present": true,
+            "official_author_name": "Afonso Hamm",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002541514",
+            "claimed_deputado_id": "160559",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160559,
+            "official_author_present": true,
+            "official_author_name": "Alceu Moreira",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002538556",
+            "claimed_deputado_id": "178964",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 178964,
+            "official_author_present": true,
+            "official_author_name": "Heitor Schuch",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537717",
+            "claimed_deputado_id": "204406",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204406,
+            "official_author_present": true,
+            "official_author_name": "Pedro Westphalen",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002547819",
+            "claimed_deputado_id": "156190",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Marcel van Hattem",
+            "official_proponente": 0
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1785-2023-2366049",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002534897 não fecha inequivocamente com deputado 160673",
+        "identidade TSE 210002547816 não fecha inequivocamente com deputado 204416",
+        "identidade TSE 210002547819 não fecha inequivocamente com deputado 156190",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534654",
+        "catalog_status": "matched",
+        "catalog_deputado_id": 220550
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002534654",
+            "claimed_deputado_id": "220550",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220550,
+            "official_author_present": true,
+            "official_author_name": "Mauricio Marcon",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534668",
+            "claimed_deputado_id": "73692",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 73692,
+            "official_author_present": true,
+            "official_author_name": "Osmar Terra",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534897",
+            "claimed_deputado_id": "160673",
+            "candidate_identity_status": "identity_pending",
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Giovani Cherini",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534671",
+            "claimed_deputado_id": "133810",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 133810,
+            "official_author_present": true,
+            "official_author_name": "Marcelo Moraes",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002537717",
+            "claimed_deputado_id": "204406",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204406,
+            "official_author_present": true,
+            "official_author_name": "Pedro Westphalen",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002547819",
+            "claimed_deputado_id": "156190",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Marcel van Hattem",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "claimed_deputado_id": "204416",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Sanderson",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534656",
+            "claimed_deputado_id": "204388",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204388,
+            "official_author_present": true,
+            "official_author_name": "Bibo Nunes",
+            "official_proponente": 1
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1786-2023-2366111",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002547816 não fecha inequivocamente com deputado 204416",
+        "identidade TSE 210002547819 não fecha inequivocamente com deputado 156190",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002537714",
+        "catalog_status": "matched",
+        "catalog_deputado_id": 220549
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002537714",
+            "claimed_deputado_id": "220549",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220549,
+            "official_author_present": true,
+            "official_author_name": "Any Ortiz",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534654",
+            "claimed_deputado_id": "220550",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220550,
+            "official_author_present": true,
+            "official_author_name": "Mauricio Marcon",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534671",
+            "claimed_deputado_id": "133810",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 133810,
+            "official_author_present": true,
+            "official_author_name": "Marcelo Moraes",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002538541",
+            "claimed_deputado_id": "204404",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204404,
+            "official_author_present": true,
+            "official_author_name": "Lucas Redecker",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002537717",
+            "claimed_deputado_id": "204406",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204406,
+            "official_author_present": true,
+            "official_author_name": "Pedro Westphalen",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002547819",
+            "claimed_deputado_id": "156190",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Marcel van Hattem",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "claimed_deputado_id": "204416",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Sanderson",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534656",
+            "claimed_deputado_id": "204388",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204388,
+            "official_author_present": true,
+            "official_author_name": "Bibo Nunes",
+            "official_proponente": 1
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1799-2024-2436644",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002534897 não fecha inequivocamente com deputado 160673",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534583",
+        "catalog_status": "matched",
+        "catalog_deputado_id": 220553
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002534583",
+            "claimed_deputado_id": "220553",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220553,
+            "official_author_present": true,
+            "official_author_name": "Denise Pessôa",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534597",
+            "claimed_deputado_id": "220554",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220554,
+            "official_author_present": true,
+            "official_author_name": "Alexandre Lindenmeyer",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534588",
+            "claimed_deputado_id": "220555",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220555,
+            "official_author_present": true,
+            "official_author_name": "Daiana Santos",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "claimed_deputado_id": "74398",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 74398,
+            "official_author_present": true,
+            "official_author_name": "Maria do Rosário",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534897",
+            "claimed_deputado_id": "160673",
+            "candidate_identity_status": "identity_pending",
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Giovani Cherini",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537718",
+            "claimed_deputado_id": "178963",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 178963,
+            "official_author_present": true,
+            "official_author_name": "Covatti Filho",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534671",
+            "claimed_deputado_id": "133810",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 133810,
+            "official_author_present": true,
+            "official_author_name": "Marcelo Moraes",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534656",
+            "claimed_deputado_id": "204388",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204388,
+            "official_author_present": true,
+            "official_author_name": "Bibo Nunes",
+            "official_proponente": 0
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-1851-2024-2437549",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002547816 não fecha inequivocamente com deputado 204416",
+        "identidade TSE 210002547819 não fecha inequivocamente com deputado 156190",
+        "identidade TSE 210002547857 não fecha inequivocamente com deputado 220552",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002537714",
+        "catalog_status": "matched",
+        "catalog_deputado_id": 220549
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002537714",
+            "claimed_deputado_id": "220549",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220549,
+            "official_author_present": true,
+            "official_author_name": "Any Ortiz",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002547857",
+            "claimed_deputado_id": "220552",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Zucco",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002537066",
+            "claimed_deputado_id": "73486",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 73486,
+            "official_author_present": true,
+            "official_author_name": "Pompeo de Mattos",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002541514",
+            "claimed_deputado_id": "160559",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160559,
+            "official_author_present": true,
+            "official_author_name": "Alceu Moreira",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002537718",
+            "claimed_deputado_id": "178963",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 178963,
+            "official_author_present": true,
+            "official_author_name": "Covatti Filho",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002547819",
+            "claimed_deputado_id": "156190",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Marcel van Hattem",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "claimed_deputado_id": "204416",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Sanderson",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534656",
+            "claimed_deputado_id": "204388",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204388,
+            "official_author_present": true,
+            "official_author_name": "Bibo Nunes",
+            "official_proponente": 1
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2098-2023-2371498",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002534897 não fecha inequivocamente com deputado 160673",
+        "identidade TSE 210002547816 não fecha inequivocamente com deputado 204416",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534654",
+        "catalog_status": "matched",
+        "catalog_deputado_id": 220550
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002534654",
+            "claimed_deputado_id": "220550",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220550,
+            "official_author_present": true,
+            "official_author_name": "Mauricio Marcon",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537066",
+            "claimed_deputado_id": "73486",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 73486,
+            "official_author_present": true,
+            "official_author_name": "Pompeo de Mattos",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537712",
+            "claimed_deputado_id": "136811",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 136811,
+            "official_author_present": true,
+            "official_author_name": "Afonso Hamm",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534897",
+            "claimed_deputado_id": "160673",
+            "candidate_identity_status": "identity_pending",
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Giovani Cherini",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534598",
+            "claimed_deputado_id": "160535",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160535,
+            "official_author_present": true,
+            "official_author_name": "Marcon",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537717",
+            "claimed_deputado_id": "204406",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204406,
+            "official_author_present": true,
+            "official_author_name": "Pedro Westphalen",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "claimed_deputado_id": "204416",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Sanderson",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534656",
+            "claimed_deputado_id": "204388",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204388,
+            "official_author_present": true,
+            "official_author_name": "Bibo Nunes",
+            "official_proponente": 0
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2274-2021-2305082",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002533583 não fecha inequivocamente com deputado 73482",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002533583",
+        "catalog_status": null,
+        "catalog_deputado_id": null
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002533583",
+            "claimed_deputado_id": "73482",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Henrique Fontana",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537066",
+            "claimed_deputado_id": "73486",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 73486,
+            "official_author_present": true,
+            "official_author_name": "Pompeo de Mattos",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "claimed_deputado_id": "74398",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 74398,
+            "official_author_present": true,
+            "official_author_name": "Maria do Rosário",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534601",
+            "claimed_deputado_id": "160538",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160538,
+            "official_author_present": true,
+            "official_author_name": "Bohn Gass",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534598",
+            "claimed_deputado_id": "160535",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160535,
+            "official_author_present": true,
+            "official_author_name": "Marcon",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002538556",
+            "claimed_deputado_id": "178964",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 178964,
+            "official_author_present": true,
+            "official_author_name": "Heitor Schuch",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534671",
+            "claimed_deputado_id": "133810",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 133810,
+            "official_author_present": true,
+            "official_author_name": "Marcelo Moraes",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002533902",
+            "claimed_deputado_id": "204407",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204407,
+            "official_author_present": true,
+            "official_author_name": "Fernanda Melchionna",
+            "official_proponente": 0
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2316-2020-2261958",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002533583 não fecha inequivocamente com deputado 73482",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002533583",
+        "catalog_status": null,
+        "catalog_deputado_id": null
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002533583",
+            "claimed_deputado_id": "73482",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Henrique Fontana",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537066",
+            "claimed_deputado_id": "73486",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 73486,
+            "official_author_present": true,
+            "official_author_name": "Pompeo de Mattos",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "claimed_deputado_id": "74398",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 74398,
+            "official_author_present": true,
+            "official_author_name": "Maria do Rosário",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534601",
+            "claimed_deputado_id": "160538",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160538,
+            "official_author_present": true,
+            "official_author_name": "Bohn Gass",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534598",
+            "claimed_deputado_id": "160535",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160535,
+            "official_author_present": true,
+            "official_author_name": "Marcon",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537057",
+            "claimed_deputado_id": "178835",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 178835,
+            "official_author_present": true,
+            "official_author_name": "Afonso Motta",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002538556",
+            "claimed_deputado_id": "178964",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 178964,
+            "official_author_present": true,
+            "official_author_name": "Heitor Schuch",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002533902",
+            "claimed_deputado_id": "204407",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204407,
+            "official_author_present": true,
+            "official_author_name": "Fernanda Melchionna",
+            "official_proponente": 0
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2744-2024-2450506",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002534589 não fecha inequivocamente com deputado 221378",
+        "identidade TSE 210002536921 não fecha inequivocamente com deputado 163321",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534654",
+        "catalog_status": "matched",
+        "catalog_deputado_id": 220550
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002534654",
+            "claimed_deputado_id": "220550",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220550,
+            "official_author_present": true,
+            "official_author_name": "Mauricio Marcon",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534597",
+            "claimed_deputado_id": "220554",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220554,
+            "official_author_present": true,
+            "official_author_name": "Alexandre Lindenmeyer",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "claimed_deputado_id": "74398",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 74398,
+            "official_author_present": true,
+            "official_author_name": "Maria do Rosário",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534601",
+            "claimed_deputado_id": "160538",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160538,
+            "official_author_present": true,
+            "official_author_name": "Bohn Gass",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534598",
+            "claimed_deputado_id": "160535",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160535,
+            "official_author_present": true,
+            "official_author_name": "Marcon",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002537718",
+            "claimed_deputado_id": "178963",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 178963,
+            "official_author_present": true,
+            "official_author_name": "Covatti Filho",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534589",
+            "claimed_deputado_id": "221378",
+            "candidate_identity_status": "identity_pending",
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Reginete Bispo",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002536921",
+            "claimed_deputado_id": "163321",
+            "candidate_identity_status": "identity_pending",
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Ronaldo Nogueira",
+            "official_proponente": 1
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-2869-2023-2385118",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002534897 não fecha inequivocamente com deputado 160673",
+        "identidade TSE 210002547819 não fecha inequivocamente com deputado 156190",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534654",
+        "catalog_status": "matched",
+        "catalog_deputado_id": 220550
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002534654",
+            "claimed_deputado_id": "220550",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220550,
+            "official_author_present": true,
+            "official_author_name": "Mauricio Marcon",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534583",
+            "claimed_deputado_id": "220553",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220553,
+            "official_author_present": true,
+            "official_author_name": "Denise Pessôa",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537066",
+            "claimed_deputado_id": "73486",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 73486,
+            "official_author_present": true,
+            "official_author_name": "Pompeo de Mattos",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534668",
+            "claimed_deputado_id": "73692",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 73692,
+            "official_author_present": true,
+            "official_author_name": "Osmar Terra",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537712",
+            "claimed_deputado_id": "136811",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 136811,
+            "official_author_present": true,
+            "official_author_name": "Afonso Hamm",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534897",
+            "claimed_deputado_id": "160673",
+            "candidate_identity_status": "identity_pending",
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Giovani Cherini",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537717",
+            "claimed_deputado_id": "204406",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204406,
+            "official_author_present": true,
+            "official_author_name": "Pedro Westphalen",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002547819",
+            "claimed_deputado_id": "156190",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Marcel van Hattem",
+            "official_proponente": 0
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-3247-2023-2389560",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002534897 não fecha inequivocamente com deputado 160673",
+        "identidade TSE 210002547816 não fecha inequivocamente com deputado 204416",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002537714",
+        "catalog_status": "matched",
+        "catalog_deputado_id": 220549
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002537714",
+            "claimed_deputado_id": "220549",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220549,
+            "official_author_present": true,
+            "official_author_name": "Any Ortiz",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534668",
+            "claimed_deputado_id": "73692",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 73692,
+            "official_author_present": true,
+            "official_author_name": "Osmar Terra",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "claimed_deputado_id": "74398",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 74398,
+            "official_author_present": true,
+            "official_author_name": "Maria do Rosário",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534897",
+            "claimed_deputado_id": "160673",
+            "candidate_identity_status": "identity_pending",
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Giovani Cherini",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002536917",
+            "claimed_deputado_id": "178962",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 178962,
+            "official_author_present": true,
+            "official_author_name": "Carlos Gomes",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537717",
+            "claimed_deputado_id": "204406",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204406,
+            "official_author_present": true,
+            "official_author_name": "Pedro Westphalen",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "claimed_deputado_id": "204416",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Sanderson",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534656",
+            "claimed_deputado_id": "204388",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204388,
+            "official_author_present": true,
+            "official_author_name": "Bibo Nunes",
+            "official_proponente": 0
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-3278-2023-2390154",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002534589 não fecha inequivocamente com deputado 221378",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534583",
+        "catalog_status": "matched",
+        "catalog_deputado_id": 220553
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002534583",
+            "claimed_deputado_id": "220553",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220553,
+            "official_author_present": true,
+            "official_author_name": "Denise Pessôa",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534588",
+            "claimed_deputado_id": "220555",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220555,
+            "official_author_present": true,
+            "official_author_name": "Daiana Santos",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002537066",
+            "claimed_deputado_id": "73486",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 73486,
+            "official_author_present": true,
+            "official_author_name": "Pompeo de Mattos",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "claimed_deputado_id": "74398",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 74398,
+            "official_author_present": true,
+            "official_author_name": "Maria do Rosário",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534601",
+            "claimed_deputado_id": "160538",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160538,
+            "official_author_present": true,
+            "official_author_name": "Bohn Gass",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534598",
+            "claimed_deputado_id": "160535",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160535,
+            "official_author_present": true,
+            "official_author_name": "Marcon",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002541514",
+            "claimed_deputado_id": "160559",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160559,
+            "official_author_present": true,
+            "official_author_name": "Alceu Moreira",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534589",
+            "claimed_deputado_id": "221378",
+            "candidate_identity_status": "identity_pending",
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Reginete Bispo",
+            "official_proponente": 1
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-441-2023-2350210",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002534897 não fecha inequivocamente com deputado 160673",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534588",
+        "catalog_status": "matched",
+        "catalog_deputado_id": 220555
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002534588",
+            "claimed_deputado_id": "220555",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220555,
+            "official_author_present": true,
+            "official_author_name": "Daiana Santos",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537066",
+            "claimed_deputado_id": "73486",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 73486,
+            "official_author_present": true,
+            "official_author_name": "Pompeo de Mattos",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534604",
+            "claimed_deputado_id": "74398",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 74398,
+            "official_author_present": true,
+            "official_author_name": "Maria do Rosário",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534897",
+            "claimed_deputado_id": "160673",
+            "candidate_identity_status": "identity_pending",
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Giovani Cherini",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002541514",
+            "claimed_deputado_id": "160559",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 160559,
+            "official_author_present": true,
+            "official_author_name": "Alceu Moreira",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002537057",
+            "claimed_deputado_id": "178835",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 178835,
+            "official_author_present": true,
+            "official_author_name": "Afonso Motta",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002538556",
+            "claimed_deputado_id": "178964",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 178964,
+            "official_author_present": true,
+            "official_author_name": "Heitor Schuch",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534656",
+            "claimed_deputado_id": "204388",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204388,
+            "official_author_present": true,
+            "official_author_name": "Bibo Nunes",
+            "official_proponente": 0
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-468-2024-2418712",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": "high",
+      "missing_sources": [
+        "hash/bytes do texto integral não reproduzidos",
+        "identidade TSE 210002547816 não fecha inequivocamente com deputado 204416",
+        "identidade TSE 210002547819 não fecha inequivocamente com deputado 156190",
+        "identidade TSE 210002547857 não fecha inequivocamente com deputado 220552",
+        "nenhum evento de votação associado na API oficial"
+      ],
+      "counterargument": null,
+      "identity": {
+        "candidate_tse_id": "210002534654",
+        "catalog_status": "matched",
+        "catalog_deputado_id": 220550
+      },
+      "authorship": {
+        "roles_checked": [
+          {
+            "candidate_tse_id": "210002534654",
+            "claimed_deputado_id": "220550",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 220550,
+            "official_author_present": true,
+            "official_author_name": "Mauricio Marcon",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002547857",
+            "claimed_deputado_id": "220552",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Zucco",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534668",
+            "claimed_deputado_id": "73692",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 73692,
+            "official_author_present": true,
+            "official_author_name": "Osmar Terra",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002534671",
+            "claimed_deputado_id": "133810",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 133810,
+            "official_author_present": true,
+            "official_author_name": "Marcelo Moraes",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002537717",
+            "claimed_deputado_id": "204406",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204406,
+            "official_author_present": true,
+            "official_author_name": "Pedro Westphalen",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002547819",
+            "claimed_deputado_id": "156190",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Marcel van Hattem",
+            "official_proponente": 0
+          },
+          {
+            "candidate_tse_id": "210002547816",
+            "claimed_deputado_id": "204416",
+            "candidate_identity_status": null,
+            "catalog_deputado_id": null,
+            "official_author_present": true,
+            "official_author_name": "Sanderson",
+            "official_proponente": 1
+          },
+          {
+            "candidate_tse_id": "210002534656",
+            "claimed_deputado_id": "204388",
+            "candidate_identity_status": "matched",
+            "catalog_deputado_id": 204388,
+            "official_author_present": true,
+            "official_author_name": "Bibo Nunes",
+            "official_proponente": 1
+          }
+        ],
+        "all_claimed_ids_present_official_authors": true,
+        "role_mismatches": [],
+        "official_author_presence_all_claimed": true
+      },
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    }
+  ]
+}
