@@ -1,0 +1,1134 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:rcp-4-2025-2534757",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "CPI com prazo de 120 dias, prorrogável, para investigar práticas abusivas de operadoras de planos de saúde suplementar por meio de juntas médicas; prevê requisição de servidores e recursos administrativos da Câmara.",
+      "destinatario": "Usuários de planos de saúde suplementar são o grupo contextual diretamente relacionado ao fato investigado; a CPI, contudo, não cria direito, obrigação ou reparação imediata.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "saude"
+      ],
+      "resumo": "CPI com prazo de 120 dias, prorrogável, para investigar práticas abusivas de operadoras de planos de saúde suplementar por meio de juntas médicas; prevê requisição de servidores e recursos administrativos da Câmara.",
+      "vinculo_versao_evento": {
+        "proposition_id": "4-2025",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2953963",
+        "full_text_sha256": "sha256:7fa4a388a2067637e580b9f7a03d431b255e6ada9d60164ce16c006b35019a5f",
+        "source_http_status": 200,
+        "source_bytes": 228932
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rcp-7-2023-2400823",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "CPI para investigar tráfico infantil e exploração sexual de crianças e adolescentes, com poderes investigatórios regimentais e prazo delimitado.",
+      "destinatario": "Crianças e adolescentes em situação de vulnerabilidade são o grupo diretamente referido; a criação da CPI apenas abre mecanismo de investigação, sem efeito protetivo normativo imediato.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [
+        "criancas_adolescentes_vulnerabilidade"
+      ],
+      "tema": [
+        "seguranca_justica"
+      ],
+      "resumo": "CPI para investigar tráfico infantil e exploração sexual de crianças e adolescentes, com poderes investigatórios regimentais e prazo delimitado.",
+      "vinculo_versao_evento": {
+        "proposition_id": "7-2023",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2354229",
+        "full_text_sha256": "sha256:602eb88a4e7a22643707e29a57258e9ee76bf2add6cba2c6e357d8e1ed8e1e72",
+        "source_http_status": 200,
+        "source_bytes": 228728
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rcp-9-2023-2411885",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "CPI, por até 120 dias, para investigar crime organizado e sua relação com homicídios e violência; o texto descreve tráfico, lavagem e violência, mas não cria medidas penais ou de segurança.",
+      "destinatario": "Não há grupo populacional canônico diretamente destinatário de uma obrigação ou benefício no requerimento; a população é objeto contextual da investigação.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "seguranca_justica"
+      ],
+      "resumo": "CPI, por até 120 dias, para investigar crime organizado e sua relação com homicídios e violência; o texto descreve tráfico, lavagem e violência, mas não cria medidas penais ou de segurança.",
+      "vinculo_versao_evento": {
+        "proposition_id": "9-2023",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2373428",
+        "full_text_sha256": "sha256:44f5a847ae75f8cab14817c5dcf9ec326252e777bae8741af7351637f9ea38fe",
+        "source_http_status": 200,
+        "source_bytes": 167502
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-5-2025-2517533",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Recurso ao Plenário contra tramitação conclusiva do PL 471/2019. O texto aponta a controvérsia sobre contratação de aprendizes em empreendimentos da agricultura familiar e a interpretação concorrente dos arts. 429/430 da CLT, mas não altera esses dispositivos.",
+      "destinatario": "A agricultura familiar e aprendizes/trabalhadores são afetados apenas pelo projeto subjacente; este REC só muda o foro/trâmite e não produz o efeito laboral descrito.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "trabalho_renda"
+      ],
+      "resumo": "Recurso ao Plenário contra tramitação conclusiva do PL 471/2019. O texto aponta a controvérsia sobre contratação de aprendizes em empreendimentos da agricultura familiar e a interpretação concorrente dos arts. 429/430 da CLT, mas não altera esses dispositivos.",
+      "vinculo_versao_evento": {
+        "proposition_id": "5-2025",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2919972",
+        "full_text_sha256": "sha256:c08dbdc2f261c9998f544772b0c562ee26c20e71e8d6b922ba5b9fa42c5a86f8",
+        "source_http_status": 200,
+        "source_bytes": 151738
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-9-2023-2364526",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Recurso para levar ao Plenário o PL 5554/2020, que instituiria cadastro nacional de condenados por violência doméstica e feminicídio; a justificativa questiona escopo, isonomia e integração entre órgãos.",
+      "destinatario": "Mulheres vítimas de violência aparecem como população relacionada ao projeto subjacente, não como destinatárias de efeito deste recurso, que apenas contesta a apreciação conclusiva.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [
+        "mulheres"
+      ],
+      "tema": [
+        "seguranca_justica"
+      ],
+      "resumo": "Recurso para levar ao Plenário o PL 5554/2020, que instituiria cadastro nacional de condenados por violência doméstica e feminicídio; a justificativa questiona escopo, isonomia e integração entre órgãos.",
+      "vinculo_versao_evento": {
+        "proposition_id": "9-2023",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2277119",
+        "full_text_sha256": "sha256:931f222d343634e292ad1bccd9717f0be756a0e42cf16caa3a614dd63f46745c",
+        "source_http_status": 200,
+        "source_bytes": 417231
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1238-2023-2357351",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Requer a instalação de comissão especial para emitir parecer sobre o PL 2630/2020; o texto enumera temas de plataformas, moderação, publicidade, direitos e desinformação, sem aprovar nenhuma regra material.",
+      "destinatario": "O requerimento não identifica destinatário direto de uma medida normativa; usuários e plataformas são apenas partes do objeto do PL subjacente.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "transparencia_democracia"
+      ],
+      "resumo": "Requer a instalação de comissão especial para emitir parecer sobre o PL 2630/2020; o texto enumera temas de plataformas, moderação, publicidade, direitos e desinformação, sem aprovar nenhuma regra material.",
+      "vinculo_versao_evento": {
+        "proposition_id": "1238-2023",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2260577",
+        "full_text_sha256": "sha256:20bf38c6397d8aa9c94810120d4f11f1a41f1452899d725a0d6dcc33cec256be",
+        "source_http_status": 200,
+        "source_bytes": 114082
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1296-2023-2358198",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Registro de Frente Parlamentar Mista em Defesa do Trânsito Seguro, com objetivo declarado de propor e acompanhar ações para reduzir mortes e lesões e acompanhar o Pnatrans; anexos trazem ata, estatuto e adesões.",
+      "destinatario": "A frente cria espaço de articulação parlamentar, não direito ou serviço direto; vítimas e usuários do trânsito não são destinatários imediatos do ato de registro.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "seguranca_justica"
+      ],
+      "resumo": "Registro de Frente Parlamentar Mista em Defesa do Trânsito Seguro, com objetivo declarado de propor e acompanhar ações para reduzir mortes e lesões e acompanhar o Pnatrans; anexos trazem ata, estatuto e adesões.",
+      "vinculo_versao_evento": {
+        "proposition_id": "1296-2023",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2263313",
+        "full_text_sha256": "sha256:f0cc10c075a92503ebe7e76a087cb56323824a8ac821dbfd956841a6ccd58448",
+        "source_http_status": 200,
+        "source_bytes": 164727
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1305-2023-2358393",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Registro de frente parlamentar para defesa e proteção de crianças e adolescentes em festas populares e grandes eventos; estatuto/ata organizam sua atuação e a justificativa descreve riscos em aglomerações.",
+      "destinatario": "Crianças e adolescentes vulneráveis são população temática diretamente nomeada, mas o registro só organiza advocacy e não cria proteção executável.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [
+        "criancas_adolescentes_vulnerabilidade"
+      ],
+      "tema": [
+        "seguranca_justica"
+      ],
+      "resumo": "Registro de frente parlamentar para defesa e proteção de crianças e adolescentes em festas populares e grandes eventos; estatuto/ata organizam sua atuação e a justificativa descreve riscos em aglomerações.",
+      "vinculo_versao_evento": {
+        "proposition_id": "1305-2023",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2263949",
+        "full_text_sha256": "sha256:fdcd9f2981d3f23e822d3841685b80388a50f08d699262fbe3af43b7ee1d3640",
+        "source_http_status": 200,
+        "source_bytes": 625309
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1306-2023-2358451",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Registro de Frente Parlamentar da Odontologia, com ata, estatuto e adesões; o texto institui representação temática, sem obrigação assistencial ou regra de atendimento.",
+      "destinatario": "Não há destinatário populacional direto no ato; odontologia é tema/setor, não grupo populacional.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "saude"
+      ],
+      "resumo": "Registro de Frente Parlamentar da Odontologia, com ata, estatuto e adesões; o texto institui representação temática, sem obrigação assistencial ou regra de atendimento.",
+      "vinculo_versao_evento": {
+        "proposition_id": "1306-2023",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2264014",
+        "full_text_sha256": "sha256:c0c4f1609d218b4bf629da97b34dfbb84b424ef445939d645a7fda2fcfa02e2c",
+        "source_http_status": 200,
+        "source_bytes": 121734
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1318-2023-2358597",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Registro de Frente Parlamentar em Defesa das Estradas e Rodovias, com organização, cargos e documentos anexos; não executa obra nem destina recursos.",
+      "destinatario": "Usuários de rodovias e trabalhadores do setor não recebem efeito direto; estradas/rodovias constituem tema de atuação.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "infraestrutura_desenvolvimento"
+      ],
+      "resumo": "Registro de Frente Parlamentar em Defesa das Estradas e Rodovias, com organização, cargos e documentos anexos; não executa obra nem destina recursos.",
+      "vinculo_versao_evento": {
+        "proposition_id": "1318-2023",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2264467",
+        "full_text_sha256": "sha256:f2d4fe7c2a8ab736f7a81e3607eeb0c58b7c707fc6f829394a74f704cfff2698",
+        "source_http_status": 200,
+        "source_bytes": 5120714
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1334-2023-2358658",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Registro de Frente Parlamentar de cuidado das mães de crianças e adolescentes com deficiência, autismo e doenças raras; estatuto e justificativa definem articulação para aprimorar legislação.",
+      "destinatario": "Crianças/adolescentes vulneráveis e pessoas com deficiência são públicos diretamente nomeados na finalidade, mas sem direito, serviço ou obrigação criada pelo registro.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [
+        "pessoas_com_deficiencia",
+        "criancas_adolescentes_vulnerabilidade"
+      ],
+      "tema": [
+        "saude"
+      ],
+      "resumo": "Registro de Frente Parlamentar de cuidado das mães de crianças e adolescentes com deficiência, autismo e doenças raras; estatuto e justificativa definem articulação para aprimorar legislação.",
+      "vinculo_versao_evento": {
+        "proposition_id": "1334-2023",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2264629",
+        "full_text_sha256": "sha256:5332c691d0724923ddc9fc06d6abeefaba36286318dd22ce17ccc9000d75aed8",
+        "source_http_status": 200,
+        "source_bytes": 241012
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1397-2023-2359924",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Registro de Frente Parlamentar da Mineração e Construção Civil, com finalidade de articulação setorial documentada em ata/estatuto; não altera licenciamento, tributos ou contratos.",
+      "destinatario": "Mineração e construção civil são setores econômicos, não grupos populacionais canônicos; nenhum destinatário populacional direto é criado.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "energia_recursos_naturais"
+      ],
+      "resumo": "Registro de Frente Parlamentar da Mineração e Construção Civil, com finalidade de articulação setorial documentada em ata/estatuto; não altera licenciamento, tributos ou contratos.",
+      "vinculo_versao_evento": {
+        "proposition_id": "1397-2023",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2268111",
+        "full_text_sha256": "sha256:7b1e22fbf002f2a856ba9dbfc044378bd4d88154d6d96ffa2ee581f2808bbaf2",
+        "source_http_status": 200,
+        "source_bytes": 170483
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1468-2023-2361473",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Registro de Frente Parlamentar de Enfrentamento à Pedofilia, com documentos de fundação, estatuto e adesões; o ato não cria sanção, serviço ou protocolo.",
+      "destinatario": "Crianças e adolescentes vulneráveis são o público protegido em sentido temático, mas não há efeito jurídico direto do registro.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [
+        "criancas_adolescentes_vulnerabilidade"
+      ],
+      "tema": [
+        "seguranca_justica"
+      ],
+      "resumo": "Registro de Frente Parlamentar de Enfrentamento à Pedofilia, com documentos de fundação, estatuto e adesões; o ato não cria sanção, serviço ou protocolo.",
+      "vinculo_versao_evento": {
+        "proposition_id": "1468-2023",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2270721",
+        "full_text_sha256": "sha256:60329f149033c55095757d3f8e26ccbdb7e2ef0be26c450c6f7ca9a4057a7cd3",
+        "source_http_status": 200,
+        "source_bytes": 218516
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1479-2023-2361652",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Registro da Frente Parlamentar Brasil-Coreia do Sul, instalada para articulação bilateral, com ata, estatuto e composição; não cria política pública ou obrigação internacional.",
+      "destinatario": "Não há grupo populacional canônico diretamente destinatário; trata-se de articulação internacional e parlamentar.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "direitos_civis"
+      ],
+      "resumo": "Registro da Frente Parlamentar Brasil-Coreia do Sul, instalada para articulação bilateral, com ata, estatuto e composição; não cria política pública ou obrigação internacional.",
+      "vinculo_versao_evento": {
+        "proposition_id": "1479-2023",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2271037",
+        "full_text_sha256": "sha256:2b10258cb4d2fcd9e331569c387b81c6264a5ecf36ced899d2c35d783e18fd07",
+        "source_http_status": 200,
+        "source_bytes": 557655
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1488-2023-2361831",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Registro da Frente Parlamentar Brasil-Líbano, com ata de instalação, mandato da presidência, estatuto e assinaturas; não produz regra material.",
+      "destinatario": "Não há destinatário populacional direto; o objeto é diplomático/parlamentar.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "direitos_civis"
+      ],
+      "resumo": "Registro da Frente Parlamentar Brasil-Líbano, com ata de instalação, mandato da presidência, estatuto e assinaturas; não produz regra material.",
+      "vinculo_versao_evento": {
+        "proposition_id": "1488-2023",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2271419",
+        "full_text_sha256": "sha256:0d7a472dbddc9c710e2ce25f88fadf6f00ab20493b07963d3a37da67a28e5e43",
+        "source_http_status": 200,
+        "source_bytes": 188966
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1560-2023-2362505",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Registro de frente parlamentar para prevenção, assistência e direitos humanos de pessoas vivendo com HIV/Aids, hepatites virais e outras IST; estatuto organiza articulação entre Poderes, sociedade e organismos.",
+      "destinatario": "Pessoas vivendo com HIV/Aids e outras IST são público diretamente identificado, mas o requerimento apenas cria fórum de advocacy, sem prestação ou direito novo.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [
+        "lgbtqia"
+      ],
+      "tema": [
+        "saude"
+      ],
+      "resumo": "Registro de frente parlamentar para prevenção, assistência e direitos humanos de pessoas vivendo com HIV/Aids, hepatites virais e outras IST; estatuto organiza articulação entre Poderes, sociedade e organismos.",
+      "vinculo_versao_evento": {
+        "proposition_id": "1560-2023",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2273332",
+        "full_text_sha256": "sha256:529a99585cfb4c36684f74cb0b00734d0ea8ca0c2953bfbe9789c9fab90a73a4",
+        "source_http_status": 200,
+        "source_bytes": 525405
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-165-2023-2348760",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Registro de Frente Parlamentar em Defesa dos Animais, com objetivos de acompanhar políticas, combater maus-tratos e sugerir proposições; ata/estatuto não impõem medidas.",
+      "destinatario": "Animais não constituem grupo populacional humano da taxonomia canônica; não há destinatário populacional pontuável.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "direitos_civis"
+      ],
+      "resumo": "Registro de Frente Parlamentar em Defesa dos Animais, com objetivos de acompanhar políticas, combater maus-tratos e sugerir proposições; ata/estatuto não impõem medidas.",
+      "vinculo_versao_evento": {
+        "proposition_id": "165-2023",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2235278",
+        "full_text_sha256": "sha256:8c3b9e5952825f34b7dae4601e4d37c1de58d22c28bc78f257e9c12a0e31da46",
+        "source_http_status": 200,
+        "source_bytes": 559221
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1668-2025-2502957",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Registro de Frente Parlamentar em Apoio ao Movimento Junino Brasileiro, com ata/estatuto e justificativa cultural; não cria incentivo, verba ou proteção cultural.",
+      "destinatario": "Participantes do movimento junino e agentes culturais são público setorial, não grupo populacional canônico diretamente beneficiado por este registro.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "cultura"
+      ],
+      "resumo": "Registro de Frente Parlamentar em Apoio ao Movimento Junino Brasileiro, com ata/estatuto e justificativa cultural; não cria incentivo, verba ou proteção cultural.",
+      "vinculo_versao_evento": {
+        "proposition_id": "1668-2025",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2895939",
+        "full_text_sha256": "sha256:dcc778b2a5b115b20706252bdc7e6bdf427b63d5dd720d674dc2910573f3d62a",
+        "source_http_status": 200,
+        "source_bytes": 156789
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-175-2023-2348794",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Registro da Frente Parlamentar Mista dos Portos Nacionais, associação suprapartidária formalizada por ata, estatuto e adesões; não modifica regulação portuária.",
+      "destinatario": "Portos e empresas do setor são objeto econômico/setorial; nenhum grupo populacional canônico é destinatário direto.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "infraestrutura_desenvolvimento"
+      ],
+      "resumo": "Registro da Frente Parlamentar Mista dos Portos Nacionais, associação suprapartidária formalizada por ata, estatuto e adesões; não modifica regulação portuária.",
+      "vinculo_versao_evento": {
+        "proposition_id": "175-2023",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2235388",
+        "full_text_sha256": "sha256:9c89f87e6806ee316728a0ebfd38252396d3fd18477fac4aa20fd4041748a68d",
+        "source_http_status": 200,
+        "source_bytes": 216507
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-212-2025-2483065",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Registro da Frente Parlamentar Mista de Dados Abertos e Governo Digital; estatuto/justificação defendem dados reutilizáveis, participação, inovação e digitalização de serviços, sem comando normativo no requerimento.",
+      "destinatario": "Cidadãos, pesquisadores e empreendedores aparecem como potenciais usuários da agenda, não como destinatários de efeito jurídico criado pelo registro.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "transparencia_democracia"
+      ],
+      "resumo": "Registro da Frente Parlamentar Mista de Dados Abertos e Governo Digital; estatuto/justificação defendem dados reutilizáveis, participação, inovação e digitalização de serviços, sem comando normativo no requerimento.",
+      "vinculo_versao_evento": {
+        "proposition_id": "212-2025",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2851605",
+        "full_text_sha256": "sha256:b3a7a72857cec4a52085d69839aae3c30f9dc48654c61e3add199d696a4c8ef3",
+        "source_http_status": 200,
+        "source_bytes": 132611
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2200-2023-2372888",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Registro da Frente Parlamentar Mista em Defesa da Polícia Rodoviária Federal, por estatuto e assinaturas; não altera carreira, orçamento ou competências da PRF.",
+      "destinatario": "Servidores públicos não são destinatários diretos porque o requerimento só registra frente temática; PRF é instituição/setor.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "seguranca_justica"
+      ],
+      "resumo": "Registro da Frente Parlamentar Mista em Defesa da Polícia Rodoviária Federal, por estatuto e assinaturas; não altera carreira, orçamento ou competências da PRF.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2200-2023",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2297427",
+        "full_text_sha256": "sha256:a40e93da7c1665b971c4be8b3b01548f1a3d22af2dea26faf60c3521623f86f6",
+        "source_http_status": 200,
+        "source_bytes": 124223
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2236-2023-2373359",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Registro de frente em defesa da desoneração da folha; a justificativa associa redução tributária a emprego, renda e finanças empresariais, sem alterar tributo ou criar emprego.",
+      "destinatario": "Trabalhadores formais aparecem como beneficiários hipotéticos da agenda, mas o registro não cria efeito laboral direto; empresas são atores econômicos, não grupo populacional.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [
+        "trabalhadores_formais"
+      ],
+      "tema": [
+        "trabalho_renda"
+      ],
+      "resumo": "Registro de frente em defesa da desoneração da folha; a justificativa associa redução tributária a emprego, renda e finanças empresariais, sem alterar tributo ou criar emprego.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2236-2023",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2298966",
+        "full_text_sha256": "sha256:709f3536d6e8561ec31e5645a4cdff1551df81dfc1e7cb67f861a41bd330bce7",
+        "source_http_status": 200,
+        "source_bytes": 519179
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2240-2023-2373388",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Registro de frente em defesa de crianças, adolescentes e conselhos tutelares; texto integral aponta articulação de dados, recursos, modernização e prevenção, sem impor dever administrativo.",
+      "destinatario": "Crianças e adolescentes vulneráveis são público direto da finalidade declarada; o ato, porém, só organiza articulação parlamentar e não entrega proteção ou recursos.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [
+        "criancas_adolescentes_vulnerabilidade"
+      ],
+      "tema": [
+        "direitos_civis"
+      ],
+      "resumo": "Registro de frente em defesa de crianças, adolescentes e conselhos tutelares; texto integral aponta articulação de dados, recursos, modernização e prevenção, sem impor dever administrativo.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2240-2023",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2299035",
+        "full_text_sha256": "sha256:62f9324a371b6469c9d94712931660c5fb8eba851d7720e3e55cbbb55af05b84",
+        "source_http_status": 200,
+        "source_bytes": 523549
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2398-2023-2375941",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Registro da Frente Parlamentar do Etanol para propor, promover, acompanhar e defender políticas do setor; anexos formalizam a frente sem incentivo ou obrigação material.",
+      "destinatario": "Etanol é setor econômico/energético, não grupo populacional canônico; não há destinatário direto.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "energia_recursos_naturais"
+      ],
+      "resumo": "Registro da Frente Parlamentar do Etanol para propor, promover, acompanhar e defender políticas do setor; anexos formalizam a frente sem incentivo ou obrigação material.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2398-2023",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2306784",
+        "full_text_sha256": "sha256:9f3c68805b32bbeec2f1f4abcd68ae35b5048970cd44f722fdab0757a95ddfbc",
+        "source_http_status": 200,
+        "source_bytes": 182035
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2465-2023-2377647",
+      "decision": "withheld",
+      "reason": "Sem evento vinculante de aprovação de conteúdo substantivo; o objeto oficial é requerimento/recurso de natureza procedimental (CPI, comissão, registro de frente ou recurso de tramitação). A análise causal do texto integral não autoriza atribuir efeito normativo ao autor/coautor.",
+      "mecanismo": "Registro da Frente Parlamentar Mista de desenvolvimento tecnológico e cultural Brasil-Coreia do Sul; texto integral prevê eventos, diálogo e aproximação do setor produtivo, sem política vinculante.",
+      "destinatario": "Empresas, produtores e setores tecnológicos/culturais são atores econômicos/setoriais; não há grupo populacional canônico diretamente destinatário.",
+      "efeitos": {
+        "positivos_potenciais": "Articulação, investigação ou tramitação institucional, conforme o tipo; nenhum efeito jurídico/populacional imediato demonstrado.",
+        "custos_riscos": "Uso de recursos/tempo institucional em CPI ou comissão quando aplicável; riscos substantivos permanecem dependentes de atos posteriores e não são atribuíveis a este documento.",
+        "diretos": false,
+        "condicionados": true
+      },
+      "grupos_canonicos": [],
+      "tema": [
+        "infraestrutura_desenvolvimento"
+      ],
+      "resumo": "Registro da Frente Parlamentar Mista de desenvolvimento tecnológico e cultural Brasil-Coreia do Sul; texto integral prevê eventos, diálogo e aproximação do setor produtivo, sem política vinculante.",
+      "vinculo_versao_evento": {
+        "proposition_id": "2465-2023",
+        "proposition_version_id": null,
+        "event_id": null,
+        "object_voted": null,
+        "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2309779",
+        "full_text_sha256": "sha256:32f0ea0ad0ad8d70f0897ddacbba7220ab6753cce50d2a2c98fab5e5d3486658",
+        "source_http_status": 200,
+        "source_bytes": 571688
+      },
+      "score_eligible": false,
+      "confianca": 0.99,
+      "autocritica": "A classificação causal usa o texto integral oficial (não a ementa isolada) e seus anexos descritos no PDF. Ainda assim, não há registro oficial de evento vinculante nem versão efetivamente aprovada; grupos e efeitos são apenas contextuais e não devem gerar score. Não inferi intenção a partir de autoria, partido ou justificativa.",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "official_voting_event_record",
+          "voting_event_id_and_date",
+          "object_voted_and_version_binding",
+          "nominal_vote_or_event_result"
+        ],
+        "counterargument": "A API oficial confirma a proposição e os autores listados; o PDF oficial foi baixado e extraído. Isso sustenta a listagem factual de autoria, mas não supera a ausência de evento/versão votada para score ou inferência editorial."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    }
+  ]
+}
