@@ -18,6 +18,7 @@
     "data:authored-projects": "node scripts/reconcile-candidate-authored-projects.mjs",
     "data:authored-projects:collect": "node scripts/collect-candidate-authored-projects.mjs",
     "data:authored-projects:review-batches": "node scripts/build-candidate-authored-project-review-batches.mjs",
+    "data:authored-projects:top-review": "node scripts/build-candidate-authored-top-review.mjs",
     "env:check": "node scripts/build-env-check.mjs",
     "build": "npm run data:check && tsc -b && vite build && node scripts/generate-sitemap.mjs && node scripts/generate-release-metadata.mjs",
     "build:deploy": "npm run env:check -- --require-supabase && npm run build",
