@@ -1,0 +1,674 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:emc-101-2019-2219929",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-11-0-2566652",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "Invalid year 0 in packet and official API; title is not a valid dated legislative identity.",
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "Invalid year 0 in packet and official API; title is not a valid dated legislative identity.",
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-111-2019-2205640",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-116-2019-2205662",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-118-2019-2205692",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-118-2019-2220514",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-119-2019-2220515",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-121-2019-2220518",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-124-2019-2221354",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-126-2019-2205720",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "Identity/authorship integrity flags: official_authors_endpoint_empty, declared_authorship_id_not_in_official_authors.",
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "Identity/authorship integrity flags: official_authors_endpoint_empty, declared_authorship_id_not_in_official_authors.",
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object",
+        "official authorship response with listed author IDs"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-127-2019-2205723",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "Official proposition endpoint returned HTTP 200 with null proposition data; identity and authorship are unresolved.",
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "Official proposition endpoint returned HTTP 200 with null proposition data; identity and authorship are unresolved.",
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-129-2019-2221478",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-137-2019-2205742",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-138-2019-2221884",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-141-2019-2205747",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-150-2019-2205767",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-153-2019-2222008",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-156-2019-2205786",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-170-2019-2205830",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-170-2019-2222297",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-175-2019-2205850",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-176-2019-2205853",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-178-2019-2223716",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-188-2019-2205885",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-189-2019-2205886",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "risk": [
+        "No event evidence in packet; official /votacoes endpoint returned empty or unavailable, so no vote object can be tied to this project.",
+        "Packet declares content_read=false and source manifest content_saved=false; HTTP 200 plus bytes/hash proves retrievability only, not reading, completeness, or effective voted version.",
+        "Candidate TSE → Câmara deputado identity mapping/UF/name evidence is absent; authorship_source uses proposition endpoint rather than an auditable author record per candidate."
+      ],
+      "missing_sources": [
+        "voting_event_record (event_id, date, object_voted, result/nominal record)",
+        "text content actually read/parsed and version_hash",
+        "version linkage: original/substitute/amendments incorporated/rejected/final object"
+      ],
+      "counterargument": "A decisão poderia ser reaberta somente com resposta oficial de autores que contenha os IDs declarados (e vínculo exato ao candidate_tse_id), texto integral efetivamente lido com hash da versão, reconstrução documental do objeto/versionamento e registro oficial do evento de votação. Para proposições sem votação, preservar apenas autoria factual, sem score; isso não autoriza score_eligible.",
+      "identity": null,
+      "authorship": null,
+      "full_text": null,
+      "event_version": null,
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    }
+  ]
+}
