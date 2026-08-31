@@ -1,0 +1,2320 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:req-599-2025-2484619",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "validated_for_authorship_records",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002534583",
+            "candidate_name": "DENISE DA SILVA PESSÔA",
+            "camara_deputado_id": 220553,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534597",
+            "candidate_name": "ALEXANDRE DUARTE LINDENMEYER",
+            "camara_deputado_id": 220554,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534604",
+            "candidate_name": "MARIA DO ROSARIO NUNES",
+            "camara_deputado_id": 74398,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534601",
+            "candidate_name": "ELVINO JOSE BOHN GASS",
+            "camara_deputado_id": 160538,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534598",
+            "candidate_name": "DIONILSO MATEUS MARCON",
+            "camara_deputado_id": 160535,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534656",
+            "candidate_name": "ALCIBIO MESQUITA BIBO NUNES",
+            "camara_deputado_id": 204388,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          }
+        ],
+        "api_proposition_id": 2484619,
+        "api_type": "REQ",
+        "api_number": 599,
+        "api_year": 2025,
+        "official_author_ids_checked": 95,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 6,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484619/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2857632",
+        "http_status": 200,
+        "bytes": 106860,
+        "manifest_sha256": "sha256:b54f2c975b69dc4bc49e654eca76ea0c36f18955782e8116be9d9313c594df9d",
+        "retrieved_sha256": "sha256:b54f2c975b69dc4bc49e654eca76ea0c36f18955782e8116be9d9313c594df9d",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484619",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-600-2025-2484621",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote",
+          "candidate_identity_unresolved"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. Há ainda candidato(s) sem identidade exata resolvida no catálogo TSE↔Câmara; autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "partially_validated",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002534583",
+            "candidate_name": "DENISE DA SILVA PESSÔA",
+            "camara_deputado_id": 220553,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534597",
+            "candidate_name": "ALEXANDRE DUARTE LINDENMEYER",
+            "camara_deputado_id": 220554,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002537066",
+            "candidate_name": "DARCI POMPEO DE MATTOS",
+            "camara_deputado_id": 73486,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534601",
+            "candidate_name": "ELVINO JOSE BOHN GASS",
+            "camara_deputado_id": 160538,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534598",
+            "candidate_name": "DIONILSO MATEUS MARCON",
+            "camara_deputado_id": 160535,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002536921",
+            "candidate_name": "RONALDO NOGUEIRA DE OLIVEIRA",
+            "camara_deputado_id": null,
+            "catalog_identity_status": "identity_pending",
+            "match_method": "none"
+          }
+        ],
+        "api_proposition_id": 2484621,
+        "api_type": "REQ",
+        "api_number": 600,
+        "api_year": 2025,
+        "official_author_ids_checked": 86,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 6,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484621/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2857635",
+        "http_status": 200,
+        "bytes": 108799,
+        "manifest_sha256": "sha256:4a673948b70b9f73de7f96eb036d281e5b4230c331e9e3d32c4ece9b47453488",
+        "retrieved_sha256": "sha256:4a673948b70b9f73de7f96eb036d281e5b4230c331e9e3d32c4ece9b47453488",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484621",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-642-2025-2485211",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote",
+          "candidate_identity_unresolved"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. Há ainda candidato(s) sem identidade exata resolvida no catálogo TSE↔Câmara; autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "partially_validated",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002537714",
+            "candidate_name": "ANY MACHADO ORTIZ",
+            "camara_deputado_id": 220549,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002537066",
+            "candidate_name": "DARCI POMPEO DE MATTOS",
+            "camara_deputado_id": 73486,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002537712",
+            "candidate_name": "JOSE ALFONSO EBERT HAMM",
+            "camara_deputado_id": 136811,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002541514",
+            "candidate_name": "ALCEU MOREIRA DA SILVA",
+            "camara_deputado_id": 160559,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002547819",
+            "candidate_name": null,
+            "camara_deputado_id": null,
+            "catalog_identity_status": "not_in_catalog",
+            "match_method": null
+          },
+          {
+            "tse_candidate_id": "210002534656",
+            "candidate_name": "ALCIBIO MESQUITA BIBO NUNES",
+            "camara_deputado_id": 204388,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          }
+        ],
+        "api_proposition_id": 2485211,
+        "api_type": "REQ",
+        "api_number": 642,
+        "api_year": 2025,
+        "official_author_ids_checked": 52,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 6,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2485211/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2859907",
+        "http_status": 200,
+        "bytes": 124070,
+        "manifest_sha256": "sha256:d25136ecc823cedd517162046fbd58daf7e7b5379d67889ab6b2c682443a2a7d",
+        "retrieved_sha256": "sha256:d25136ecc823cedd517162046fbd58daf7e7b5379d67889ab6b2c682443a2a7d",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2485211",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-66-2024-2437172",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote",
+          "candidate_identity_unresolved"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. Há ainda candidato(s) sem identidade exata resolvida no catálogo TSE↔Câmara; autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "partially_validated",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002537712",
+            "candidate_name": "JOSE ALFONSO EBERT HAMM",
+            "camara_deputado_id": 136811,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534897",
+            "candidate_name": "GIOVANI CHERINI",
+            "camara_deputado_id": null,
+            "catalog_identity_status": "identity_pending",
+            "match_method": "none"
+          },
+          {
+            "tse_candidate_id": "210002534601",
+            "candidate_name": "ELVINO JOSE BOHN GASS",
+            "camara_deputado_id": 160538,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534598",
+            "candidate_name": "DIONILSO MATEUS MARCON",
+            "camara_deputado_id": 160535,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002538556",
+            "candidate_name": "HEITOR JOSÉ SCHUCH",
+            "camara_deputado_id": 178964,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534671",
+            "candidate_name": "MARCELO PIRES MORAES",
+            "camara_deputado_id": 133810,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          }
+        ],
+        "api_proposition_id": 2437172,
+        "api_type": "REQ",
+        "api_number": 66,
+        "api_year": 2024,
+        "official_author_ids_checked": 6,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 6,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2437172/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2430824",
+        "http_status": 200,
+        "bytes": 119660,
+        "manifest_sha256": "sha256:9d759bc617ced4c753aaa74d9a7f969553b3313377c8669a336b0f91839f69ca",
+        "retrieved_sha256": "sha256:9d759bc617ced4c753aaa74d9a7f969553b3313377c8669a336b0f91839f69ca",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2437172",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-665-2023-2351274",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "validated_for_authorship_records",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002537714",
+            "candidate_name": "ANY MACHADO ORTIZ",
+            "camara_deputado_id": 220549,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534583",
+            "candidate_name": "DENISE DA SILVA PESSÔA",
+            "camara_deputado_id": 220553,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534601",
+            "candidate_name": "ELVINO JOSE BOHN GASS",
+            "camara_deputado_id": 160538,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534598",
+            "candidate_name": "DIONILSO MATEUS MARCON",
+            "camara_deputado_id": 160535,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002537717",
+            "candidate_name": "PEDRO BANDARRA WESTPHALEN",
+            "camara_deputado_id": 204406,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534656",
+            "candidate_name": "ALCIBIO MESQUITA BIBO NUNES",
+            "camara_deputado_id": 204388,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          }
+        ],
+        "api_proposition_id": 2351274,
+        "api_type": "REQ",
+        "api_number": 665,
+        "api_year": 2023,
+        "official_author_ids_checked": 53,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 6,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351274/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2243173",
+        "http_status": 200,
+        "bytes": 175791,
+        "manifest_sha256": "sha256:65d8cb04e687a792f8d48c358aa49eeca401d2d1ed814a245b28187078dc1c96",
+        "retrieved_sha256": "sha256:65d8cb04e687a792f8d48c358aa49eeca401d2d1ed814a245b28187078dc1c96",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351274",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:req-735-2023-2351807",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "validated_for_authorship_records",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002537714",
+            "candidate_name": "ANY MACHADO ORTIZ",
+            "camara_deputado_id": 220549,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534654",
+            "candidate_name": "MAURICIO BEDIN MARCON",
+            "camara_deputado_id": 220550,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534583",
+            "candidate_name": "DENISE DA SILVA PESSÔA",
+            "camara_deputado_id": 220553,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002537066",
+            "candidate_name": "DARCI POMPEO DE MATTOS",
+            "camara_deputado_id": 73486,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002536917",
+            "candidate_name": "ANTONIO CARLOS GOMES DA SILVA",
+            "camara_deputado_id": 178962,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002537718",
+            "candidate_name": "LUIS ANTONIO FRANCISCATTO COVATTI",
+            "camara_deputado_id": 178963,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          }
+        ],
+        "api_proposition_id": 2351807,
+        "api_type": "REQ",
+        "api_number": 735,
+        "api_year": 2023,
+        "official_author_ids_checked": 135,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 6,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351807/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2245639",
+        "http_status": 200,
+        "bytes": 126497,
+        "manifest_sha256": "sha256:98cc857aded020213cebf230519f4975c15e82c25436edd231a19412b210c485",
+        "retrieved_sha256": "sha256:98cc857aded020213cebf230519f4975c15e82c25436edd231a19412b210c485",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351807",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:ric-1400-2024-2435883",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote",
+          "candidate_identity_unresolved"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. Há ainda candidato(s) sem identidade exata resolvida no catálogo TSE↔Câmara; autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "partially_validated",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002537714",
+            "candidate_name": "ANY MACHADO ORTIZ",
+            "camara_deputado_id": 220549,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534654",
+            "candidate_name": "MAURICIO BEDIN MARCON",
+            "camara_deputado_id": 220550,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002547857",
+            "candidate_name": null,
+            "camara_deputado_id": null,
+            "catalog_identity_status": "not_in_catalog",
+            "match_method": null
+          },
+          {
+            "tse_candidate_id": "210002547819",
+            "candidate_name": null,
+            "camara_deputado_id": null,
+            "catalog_identity_status": "not_in_catalog",
+            "match_method": null
+          },
+          {
+            "tse_candidate_id": "210002547816",
+            "candidate_name": null,
+            "camara_deputado_id": null,
+            "catalog_identity_status": "not_in_catalog",
+            "match_method": null
+          },
+          {
+            "tse_candidate_id": "210002534656",
+            "candidate_name": "ALCIBIO MESQUITA BIBO NUNES",
+            "camara_deputado_id": 204388,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          }
+        ],
+        "api_proposition_id": 2435883,
+        "api_type": "RIC",
+        "api_number": 1400,
+        "api_year": 2024,
+        "official_author_ids_checked": 14,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 6,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2435883/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2427837",
+        "http_status": 200,
+        "bytes": 157983,
+        "manifest_sha256": "sha256:21af4b15f62b2e00bd5e3eeda6b5862b2c5b1ed0e7895ca1550839151806e77e",
+        "retrieved_sha256": "sha256:21af4b15f62b2e00bd5e3eeda6b5862b2c5b1ed0e7895ca1550839151806e77e",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2435883",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rpd-1-0-2569184",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote",
+          "candidate_identity_unresolved"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. Há ainda candidato(s) sem identidade exata resolvida no catálogo TSE↔Câmara; autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "partially_validated",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002547857",
+            "candidate_name": null,
+            "camara_deputado_id": null,
+            "catalog_identity_status": "not_in_catalog",
+            "match_method": null
+          },
+          {
+            "tse_candidate_id": "210002537712",
+            "candidate_name": "JOSE ALFONSO EBERT HAMM",
+            "camara_deputado_id": 136811,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002541514",
+            "candidate_name": "ALCEU MOREIRA DA SILVA",
+            "camara_deputado_id": 160559,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534671",
+            "candidate_name": "MARCELO PIRES MORAES",
+            "camara_deputado_id": 133810,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002538541",
+            "candidate_name": "LUCAS BELLO REDECKER",
+            "camara_deputado_id": 204404,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002537717",
+            "candidate_name": "PEDRO BANDARRA WESTPHALEN",
+            "camara_deputado_id": 204406,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          }
+        ],
+        "api_proposition_id": 2569184,
+        "api_type": "RPD",
+        "api_number": 1,
+        "api_year": 0,
+        "official_author_ids_checked": 18,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 6,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2569184/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3016529",
+        "http_status": 200,
+        "bytes": 589069,
+        "manifest_sha256": "sha256:ce7ce85ed88f78c14031a8c24aaecd13d7b0e3e9f3ec9d1002212b76bb4a5cd7",
+        "retrieved_sha256": "sha256:ce7ce85ed88f78c14031a8c24aaecd13d7b0e3e9f3ec9d1002212b76bb4a5cd7",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2569184",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:rpd-2-0-2468418",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote",
+          "candidate_identity_unresolved"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. Há ainda candidato(s) sem identidade exata resolvida no catálogo TSE↔Câmara; autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "partially_validated",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002534654",
+            "candidate_name": "MAURICIO BEDIN MARCON",
+            "camara_deputado_id": 220550,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002547857",
+            "candidate_name": null,
+            "camara_deputado_id": null,
+            "catalog_identity_status": "not_in_catalog",
+            "match_method": null
+          },
+          {
+            "tse_candidate_id": "210002537718",
+            "candidate_name": "LUIS ANTONIO FRANCISCATTO COVATTI",
+            "camara_deputado_id": 178963,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534671",
+            "candidate_name": "MARCELO PIRES MORAES",
+            "camara_deputado_id": 133810,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002538541",
+            "candidate_name": "LUCAS BELLO REDECKER",
+            "camara_deputado_id": 204404,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002547819",
+            "candidate_name": null,
+            "camara_deputado_id": null,
+            "catalog_identity_status": "not_in_catalog",
+            "match_method": null
+          }
+        ],
+        "api_proposition_id": 2468418,
+        "api_type": "RPD",
+        "api_number": 2,
+        "api_year": 0,
+        "official_author_ids_checked": 33,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 6,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2468418/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2819278",
+        "http_status": 200,
+        "bytes": 590697,
+        "manifest_sha256": "sha256:3000c071a164065dff261fc9f90919921d66eb511076bf42d9073d3c84cc8f2f",
+        "retrieved_sha256": "sha256:3000c071a164065dff261fc9f90919921d66eb511076bf42d9073d3c84cc8f2f",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2468418",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:doc-1-2021-2268427",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote",
+          "candidate_identity_unresolved"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. Há ainda candidato(s) sem identidade exata resolvida no catálogo TSE↔Câmara; autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "partially_validated",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002537712",
+            "candidate_name": "JOSE ALFONSO EBERT HAMM",
+            "camara_deputado_id": 136811,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534897",
+            "candidate_name": "GIOVANI CHERINI",
+            "camara_deputado_id": null,
+            "catalog_identity_status": "identity_pending",
+            "match_method": "none"
+          },
+          {
+            "tse_candidate_id": "210002538537",
+            "candidate_name": "DANRLEI DE DEUS HINTERHOLZ",
+            "camara_deputado_id": 160552,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002536917",
+            "candidate_name": "ANTONIO CARLOS GOMES DA SILVA",
+            "camara_deputado_id": 178962,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002537717",
+            "candidate_name": "PEDRO BANDARRA WESTPHALEN",
+            "camara_deputado_id": 204406,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          }
+        ],
+        "api_proposition_id": 2268427,
+        "api_type": "DOC",
+        "api_number": 1,
+        "api_year": 2021,
+        "official_author_ids_checked": 169,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 5,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2268427/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1957577",
+        "http_status": 200,
+        "bytes": 343854,
+        "manifest_sha256": "sha256:89afeeac8ec89d31eede7690b785d2f4a60de09d4c6cf2878c3efa995291b7ea",
+        "retrieved_sha256": "sha256:89afeeac8ec89d31eede7690b785d2f4a60de09d4c6cf2878c3efa995291b7ea",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2268427",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:doc-214-2023-2355887",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote",
+          "candidate_identity_unresolved"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. Há ainda candidato(s) sem identidade exata resolvida no catálogo TSE↔Câmara; autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "partially_validated",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002534654",
+            "candidate_name": "MAURICIO BEDIN MARCON",
+            "camara_deputado_id": 220550,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002538556",
+            "candidate_name": "HEITOR JOSÉ SCHUCH",
+            "camara_deputado_id": 178964,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002538541",
+            "candidate_name": "LUCAS BELLO REDECKER",
+            "camara_deputado_id": 204404,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002537717",
+            "candidate_name": "PEDRO BANDARRA WESTPHALEN",
+            "camara_deputado_id": 204406,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002547819",
+            "candidate_name": null,
+            "camara_deputado_id": null,
+            "catalog_identity_status": "not_in_catalog",
+            "match_method": null
+          }
+        ],
+        "api_proposition_id": 2355887,
+        "api_type": "DOC",
+        "api_number": 214,
+        "api_year": 2023,
+        "official_author_ids_checked": 23,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 5,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2355887/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2257919",
+        "http_status": 200,
+        "bytes": 175100,
+        "manifest_sha256": "sha256:725f65a62d57218d2ef2a1e8c551653edea81a7ccdd5f226c0d2ce37a66e6126",
+        "retrieved_sha256": "sha256:725f65a62d57218d2ef2a1e8c551653edea81a7ccdd5f226c0d2ce37a66e6126",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2355887",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:doc-29-2021-2268630",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "validated_for_authorship_records",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002537712",
+            "candidate_name": "JOSE ALFONSO EBERT HAMM",
+            "camara_deputado_id": 136811,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002538537",
+            "candidate_name": "DANRLEI DE DEUS HINTERHOLZ",
+            "camara_deputado_id": 160552,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002536917",
+            "candidate_name": "ANTONIO CARLOS GOMES DA SILVA",
+            "camara_deputado_id": 178962,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002537718",
+            "candidate_name": "LUIS ANTONIO FRANCISCATTO COVATTI",
+            "camara_deputado_id": 178963,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002537717",
+            "candidate_name": "PEDRO BANDARRA WESTPHALEN",
+            "camara_deputado_id": 204406,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          }
+        ],
+        "api_proposition_id": 2268630,
+        "api_type": "DOC",
+        "api_number": 29,
+        "api_year": 2021,
+        "official_author_ids_checked": 142,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 5,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2268630/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1959121",
+        "http_status": 200,
+        "bytes": 186346,
+        "manifest_sha256": "sha256:9ce1cf230afa1a87d1ac3ea22f4b11168b51683960e83382c46adf05363f9b7d",
+        "retrieved_sha256": "sha256:9ce1cf230afa1a87d1ac3ea22f4b11168b51683960e83382c46adf05363f9b7d",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2268630",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-1-0-2304585",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote",
+          "candidate_identity_unresolved"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. Há ainda candidato(s) sem identidade exata resolvida no catálogo TSE↔Câmara; autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "partially_validated",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002533583",
+            "candidate_name": null,
+            "camara_deputado_id": null,
+            "catalog_identity_status": "not_in_catalog",
+            "match_method": null
+          },
+          {
+            "tse_candidate_id": "210002537066",
+            "candidate_name": "DARCI POMPEO DE MATTOS",
+            "camara_deputado_id": 73486,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534604",
+            "candidate_name": "MARIA DO ROSARIO NUNES",
+            "camara_deputado_id": 74398,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534601",
+            "candidate_name": "ELVINO JOSE BOHN GASS",
+            "camara_deputado_id": 160538,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534598",
+            "candidate_name": "DIONILSO MATEUS MARCON",
+            "camara_deputado_id": 160535,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          }
+        ],
+        "api_proposition_id": 2304585,
+        "api_type": "EMC",
+        "api_number": 1,
+        "api_year": 0,
+        "official_author_ids_checked": 64,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 5,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2304585/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2096049",
+        "http_status": 200,
+        "bytes": 132499,
+        "manifest_sha256": "sha256:e2f4dd914f775b87886ca20bbd4da7f7baf42c3a0cd5f2a2e77db652a1954621",
+        "retrieved_sha256": "sha256:e2f4dd914f775b87886ca20bbd4da7f7baf42c3a0cd5f2a2e77db652a1954621",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2304585",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-103-2019-2219932",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "validated_for_authorship_records",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002537066",
+            "candidate_name": "DARCI POMPEO DE MATTOS",
+            "camara_deputado_id": 73486,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534598",
+            "candidate_name": "DIONILSO MATEUS MARCON",
+            "camara_deputado_id": 160535,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002541514",
+            "candidate_name": "ALCEU MOREIRA DA SILVA",
+            "camara_deputado_id": 160559,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002538541",
+            "candidate_name": "LUCAS BELLO REDECKER",
+            "camara_deputado_id": 204404,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534656",
+            "candidate_name": "ALCIBIO MESQUITA BIBO NUNES",
+            "camara_deputado_id": 204388,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          }
+        ],
+        "api_proposition_id": 2219932,
+        "api_type": "EMC",
+        "api_number": 103,
+        "api_year": 2019,
+        "official_author_ids_checked": 193,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 5,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2219932/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1806103",
+        "http_status": 200,
+        "bytes": 174427,
+        "manifest_sha256": "sha256:641542907e2b485be0ce708d8b1a18e6f3ac5b095179cccc5c1f6e35a8e91376",
+        "retrieved_sha256": "sha256:641542907e2b485be0ce708d8b1a18e6f3ac5b095179cccc5c1f6e35a8e91376",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2219932",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-112-2019-2219950",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "validated_for_authorship_records",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002537066",
+            "candidate_name": "DARCI POMPEO DE MATTOS",
+            "camara_deputado_id": 73486,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534598",
+            "candidate_name": "DIONILSO MATEUS MARCON",
+            "camara_deputado_id": 160535,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002541514",
+            "candidate_name": "ALCEU MOREIRA DA SILVA",
+            "camara_deputado_id": 160559,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002536917",
+            "candidate_name": "ANTONIO CARLOS GOMES DA SILVA",
+            "camara_deputado_id": 178962,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002538556",
+            "candidate_name": "HEITOR JOSÉ SCHUCH",
+            "camara_deputado_id": 178964,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          }
+        ],
+        "api_proposition_id": 2219950,
+        "api_type": "EMC",
+        "api_number": 112,
+        "api_year": 2019,
+        "official_author_ids_checked": 196,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 5,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2219950/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1806123",
+        "http_status": 200,
+        "bytes": 523955,
+        "manifest_sha256": "sha256:cfa5244bcdf5f90ffc97103ba67115adca379dbad10579da6421d0d0836ddaa4",
+        "retrieved_sha256": "sha256:cfa5244bcdf5f90ffc97103ba67115adca379dbad10579da6421d0d0836ddaa4",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2219950",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-119-2019-2205698",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote",
+          "candidate_identity_unresolved"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. Há ainda candidato(s) sem identidade exata resolvida no catálogo TSE↔Câmara; autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "partially_validated",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002537066",
+            "candidate_name": "DARCI POMPEO DE MATTOS",
+            "camara_deputado_id": 73486,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534598",
+            "candidate_name": "DIONILSO MATEUS MARCON",
+            "camara_deputado_id": 160535,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002537057",
+            "candidate_name": "AFONSO ANTUNES DA MOTTA",
+            "camara_deputado_id": 178835,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002538556",
+            "candidate_name": "HEITOR JOSÉ SCHUCH",
+            "camara_deputado_id": 178964,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002547816",
+            "candidate_name": null,
+            "camara_deputado_id": null,
+            "catalog_identity_status": "not_in_catalog",
+            "match_method": null
+          }
+        ],
+        "api_proposition_id": 2205698,
+        "api_type": "EMC",
+        "api_number": 119,
+        "api_year": 2019,
+        "official_author_ids_checked": 180,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 5,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205698/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757540",
+        "http_status": 200,
+        "bytes": 377014,
+        "manifest_sha256": "sha256:06deac158d05b942e02871c26f44f03e43606d4f04876c8eb8d5750ca281b313",
+        "retrieved_sha256": "sha256:06deac158d05b942e02871c26f44f03e43606d4f04876c8eb8d5750ca281b313",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205698",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-12-2019-2203549",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote",
+          "candidate_identity_unresolved"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. Há ainda candidato(s) sem identidade exata resolvida no catálogo TSE↔Câmara; autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "partially_validated",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002537066",
+            "candidate_name": "DARCI POMPEO DE MATTOS",
+            "camara_deputado_id": 73486,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002537057",
+            "candidate_name": "AFONSO ANTUNES DA MOTTA",
+            "camara_deputado_id": 178835,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002538556",
+            "candidate_name": "HEITOR JOSÉ SCHUCH",
+            "camara_deputado_id": 178964,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002547816",
+            "candidate_name": null,
+            "camara_deputado_id": null,
+            "catalog_identity_status": "not_in_catalog",
+            "match_method": null
+          },
+          {
+            "tse_candidate_id": "210002534656",
+            "candidate_name": "ALCIBIO MESQUITA BIBO NUNES",
+            "camara_deputado_id": 204388,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          }
+        ],
+        "api_proposition_id": 2203549,
+        "api_type": "EMC",
+        "api_number": 12,
+        "api_year": 2019,
+        "official_author_ids_checked": 232,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 5,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2203549/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1748174",
+        "http_status": 200,
+        "bytes": 161524,
+        "manifest_sha256": "sha256:9453364cb7e1232d2c21804a08868855b8e70f3f804df83109917f3352120278",
+        "retrieved_sha256": "sha256:9453364cb7e1232d2c21804a08868855b8e70f3f804df83109917f3352120278",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2203549",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-13-2019-2203565",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote",
+          "candidate_identity_unresolved"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. Há ainda candidato(s) sem identidade exata resolvida no catálogo TSE↔Câmara; autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "partially_validated",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002537066",
+            "candidate_name": "DARCI POMPEO DE MATTOS",
+            "camara_deputado_id": 73486,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534601",
+            "candidate_name": "ELVINO JOSE BOHN GASS",
+            "camara_deputado_id": 160538,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002536917",
+            "candidate_name": "ANTONIO CARLOS GOMES DA SILVA",
+            "camara_deputado_id": 178962,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002547816",
+            "candidate_name": null,
+            "camara_deputado_id": null,
+            "catalog_identity_status": "not_in_catalog",
+            "match_method": null
+          },
+          {
+            "tse_candidate_id": "210002534656",
+            "candidate_name": "ALCIBIO MESQUITA BIBO NUNES",
+            "camara_deputado_id": 204388,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          }
+        ],
+        "api_proposition_id": 2203565,
+        "api_type": "EMC",
+        "api_number": 13,
+        "api_year": 2019,
+        "official_author_ids_checked": 188,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 5,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2203565/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1748205",
+        "http_status": 200,
+        "bytes": 630524,
+        "manifest_sha256": "sha256:c5ae61a7f9174c99fdddc3b641d83810d4b4b43d1ea8690dbe4fa6e2212f7503",
+        "retrieved_sha256": "sha256:c5ae61a7f9174c99fdddc3b641d83810d4b4b43d1ea8690dbe4fa6e2212f7503",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2203565",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-131-2019-2221543",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote",
+          "candidate_identity_unresolved"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. Há ainda candidato(s) sem identidade exata resolvida no catálogo TSE↔Câmara; autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "partially_validated",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002537066",
+            "candidate_name": "DARCI POMPEO DE MATTOS",
+            "camara_deputado_id": 73486,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534598",
+            "candidate_name": "DIONILSO MATEUS MARCON",
+            "camara_deputado_id": 160535,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002541514",
+            "candidate_name": "ALCEU MOREIRA DA SILVA",
+            "camara_deputado_id": 160559,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002536917",
+            "candidate_name": "ANTONIO CARLOS GOMES DA SILVA",
+            "camara_deputado_id": 178962,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002547816",
+            "candidate_name": null,
+            "camara_deputado_id": null,
+            "catalog_identity_status": "not_in_catalog",
+            "match_method": null
+          }
+        ],
+        "api_proposition_id": 2221543,
+        "api_type": "EMC",
+        "api_number": 131,
+        "api_year": 2019,
+        "official_author_ids_checked": 172,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 5,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2221543/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1811307",
+        "http_status": 200,
+        "bytes": 134004,
+        "manifest_sha256": "sha256:1db3f11cf1355ae1302e6d2ac5a11f0b825e448c9a77e22d5df72543342ef25b",
+        "retrieved_sha256": "sha256:1db3f11cf1355ae1302e6d2ac5a11f0b825e448c9a77e22d5df72543342ef25b",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2221543",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-133-2019-2221750",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote",
+          "candidate_identity_unresolved"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. Há ainda candidato(s) sem identidade exata resolvida no catálogo TSE↔Câmara; autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "partially_validated",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002534598",
+            "candidate_name": "DIONILSO MATEUS MARCON",
+            "camara_deputado_id": 160535,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002536917",
+            "candidate_name": "ANTONIO CARLOS GOMES DA SILVA",
+            "camara_deputado_id": 178962,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002538556",
+            "candidate_name": "HEITOR JOSÉ SCHUCH",
+            "camara_deputado_id": 178964,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002547816",
+            "candidate_name": null,
+            "camara_deputado_id": null,
+            "catalog_identity_status": "not_in_catalog",
+            "match_method": null
+          },
+          {
+            "tse_candidate_id": "210002534656",
+            "candidate_name": "ALCIBIO MESQUITA BIBO NUNES",
+            "camara_deputado_id": 204388,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          }
+        ],
+        "api_proposition_id": 2221750,
+        "api_type": "EMC",
+        "api_number": 133,
+        "api_year": 2019,
+        "official_author_ids_checked": 172,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 5,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2221750/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1811932",
+        "http_status": 200,
+        "bytes": 130241,
+        "manifest_sha256": "sha256:75c2fd49a09b04c6c276d6c27a6371634d321180f9da03439a3dca6e5acb9f54",
+        "retrieved_sha256": "sha256:75c2fd49a09b04c6c276d6c27a6371634d321180f9da03439a3dca6e5acb9f54",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2221750",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-134-2019-2221757",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "validated_for_authorship_records",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002537066",
+            "candidate_name": "DARCI POMPEO DE MATTOS",
+            "camara_deputado_id": 73486,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534598",
+            "candidate_name": "DIONILSO MATEUS MARCON",
+            "camara_deputado_id": 160535,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002541514",
+            "candidate_name": "ALCEU MOREIRA DA SILVA",
+            "camara_deputado_id": 160559,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002536917",
+            "candidate_name": "ANTONIO CARLOS GOMES DA SILVA",
+            "camara_deputado_id": 178962,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002538556",
+            "candidate_name": "HEITOR JOSÉ SCHUCH",
+            "camara_deputado_id": 178964,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          }
+        ],
+        "api_proposition_id": 2221757,
+        "api_type": "EMC",
+        "api_number": 134,
+        "api_year": 2019,
+        "official_author_ids_checked": 181,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 5,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2221757/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1811953",
+        "http_status": 200,
+        "bytes": 337619,
+        "manifest_sha256": "sha256:84b544141dad31e9cdb08e4bf9bc10e0583409d6005faa2965863108fe22b04b",
+        "retrieved_sha256": "sha256:84b544141dad31e9cdb08e4bf9bc10e0583409d6005faa2965863108fe22b04b",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2221757",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-135-2019-2221760",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "validated_for_authorship_records",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002537066",
+            "candidate_name": "DARCI POMPEO DE MATTOS",
+            "camara_deputado_id": 73486,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534598",
+            "candidate_name": "DIONILSO MATEUS MARCON",
+            "camara_deputado_id": 160535,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002541514",
+            "candidate_name": "ALCEU MOREIRA DA SILVA",
+            "camara_deputado_id": 160559,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002536917",
+            "candidate_name": "ANTONIO CARLOS GOMES DA SILVA",
+            "camara_deputado_id": 178962,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002538556",
+            "candidate_name": "HEITOR JOSÉ SCHUCH",
+            "camara_deputado_id": 178964,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          }
+        ],
+        "api_proposition_id": 2221760,
+        "api_type": "EMC",
+        "api_number": 135,
+        "api_year": 2019,
+        "official_author_ids_checked": 193,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 5,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2221760/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1811956",
+        "http_status": 200,
+        "bytes": 342069,
+        "manifest_sha256": "sha256:0f97966908bc028b1e428b64a050c4c3578d00dadfb5db395ea0536956b2c351",
+        "retrieved_sha256": "sha256:0f97966908bc028b1e428b64a050c4c3578d00dadfb5db395ea0536956b2c351",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2221760",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-136-2019-2205741",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "validated_for_authorship_records",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002537066",
+            "candidate_name": "DARCI POMPEO DE MATTOS",
+            "camara_deputado_id": 73486,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002537057",
+            "candidate_name": "AFONSO ANTUNES DA MOTTA",
+            "camara_deputado_id": 178835,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002536917",
+            "candidate_name": "ANTONIO CARLOS GOMES DA SILVA",
+            "camara_deputado_id": 178962,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002538556",
+            "candidate_name": "HEITOR JOSÉ SCHUCH",
+            "camara_deputado_id": 178964,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002538541",
+            "candidate_name": "LUCAS BELLO REDECKER",
+            "camara_deputado_id": 204404,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          }
+        ],
+        "api_proposition_id": 2205741,
+        "api_type": "EMC",
+        "api_number": 136,
+        "api_year": 2019,
+        "official_author_ids_checked": 186,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 5,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205741/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757625",
+        "http_status": 200,
+        "bytes": 176566,
+        "manifest_sha256": "sha256:d31a6eb09af314508a8d43d25059152aa20f4c75b6557dd0374adf6933296cad",
+        "retrieved_sha256": "sha256:d31a6eb09af314508a8d43d25059152aa20f4c75b6557dd0374adf6933296cad",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205741",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-140-2019-2205745",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote",
+          "candidate_identity_unresolved"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. Há ainda candidato(s) sem identidade exata resolvida no catálogo TSE↔Câmara; autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "partially_validated",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002537712",
+            "candidate_name": "JOSE ALFONSO EBERT HAMM",
+            "camara_deputado_id": 136811,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002538541",
+            "candidate_name": "LUCAS BELLO REDECKER",
+            "camara_deputado_id": 204404,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002533902",
+            "candidate_name": "FERNANDA MELCHIONNA E SILVA",
+            "camara_deputado_id": 204407,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002547816",
+            "candidate_name": null,
+            "camara_deputado_id": null,
+            "catalog_identity_status": "not_in_catalog",
+            "match_method": null
+          },
+          {
+            "tse_candidate_id": "210002534656",
+            "candidate_name": "ALCIBIO MESQUITA BIBO NUNES",
+            "camara_deputado_id": 204388,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          }
+        ],
+        "api_proposition_id": 2205745,
+        "api_type": "EMC",
+        "api_number": 140,
+        "api_year": 2019,
+        "official_author_ids_checked": 174,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 5,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205745/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757637",
+        "http_status": 200,
+        "bytes": 478878,
+        "manifest_sha256": "sha256:04e6884bb6ebede931b1e3b545c60486df5d45574a3b80ee0fe2b7f2b7510e64",
+        "retrieved_sha256": "sha256:04e6884bb6ebede931b1e3b545c60486df5d45574a3b80ee0fe2b7f2b7510e64",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205745",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    },
+    {
+      "id": "camara:emc-146-2019-2205763",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "red-team retenção fail-closed",
+      "risk": {
+        "level": "high",
+        "codes": [
+          "event_binding_missing",
+          "version_voted_unresolved",
+          "authorship_record_not_merit_vote"
+        ],
+        "summary": "API Câmara e texto integral confirmam a proposição e os autores selecionados, mas não há evento oficial vinculante nem versão efetivamente votada. autoria/coautoria não prova voto de mérito nem autoriza score."
+      },
+      "missing_sources": [
+        "official_voting_event",
+        "event_bound_voted_version"
+      ],
+      "counterargument": "As fontes oficiais da Câmara confirmam identidade do registro, ementa, subscritores e texto integral (hash conferido). Isso sustenta apenas a autoria factual; não prova votação de mérito, objeto/evento vinculante ou sentido de voto. Para os IDs sem match exato no catálogo, a reconciliação candidato↔deputado também permanece aberta.",
+      "identity": {
+        "status": "validated_for_authorship_records",
+        "candidate_checks": [
+          {
+            "tse_candidate_id": "210002537066",
+            "candidate_name": "DARCI POMPEO DE MATTOS",
+            "camara_deputado_id": 73486,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002537712",
+            "candidate_name": "JOSE ALFONSO EBERT HAMM",
+            "camara_deputado_id": 136811,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002538556",
+            "candidate_name": "HEITOR JOSÉ SCHUCH",
+            "camara_deputado_id": 178964,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002534671",
+            "candidate_name": "MARCELO PIRES MORAES",
+            "camara_deputado_id": 133810,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          },
+          {
+            "tse_candidate_id": "210002537717",
+            "candidate_name": "PEDRO BANDARRA WESTPHALEN",
+            "camara_deputado_id": 204406,
+            "catalog_identity_status": "matched",
+            "match_method": "official_name_exact"
+          }
+        ],
+        "api_proposition_id": 2205763,
+        "api_type": "EMC",
+        "api_number": 146,
+        "api_year": 2019,
+        "official_author_ids_checked": 192,
+        "packet_role_ids_missing_from_official_authors": []
+      },
+      "authorship": {
+        "status": "confirmed_official_author_membership",
+        "roles_checked": 5,
+        "official_authors_endpoint": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205763/autores",
+        "role_ids_exact_membership": true
+      },
+      "full_text": {
+        "status": "verified_hash",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757672",
+        "http_status": 200,
+        "bytes": 238903,
+        "manifest_sha256": "sha256:83d19e8cc6d4cfe84459591ee2fa913b727323718c4e328a1486c2ac8a73c60d",
+        "retrieved_sha256": "sha256:83d19e8cc6d4cfe84459591ee2fa913b727323718c4e328a1486c2ac8a73c60d",
+        "hash_match": true
+      },
+      "event_version": {
+        "status": "unresolved",
+        "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205763",
+        "full_text_is_versioned_artifact": true,
+        "event_id": null,
+        "voted_version_id": null
+      },
+      "reconciliation": "Red-team independente confirmou retenção; autoria não equivale a voto e não há vínculo completo versão/evento."
+    }
+  ]
+}
