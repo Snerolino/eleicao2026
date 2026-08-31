@@ -33,14 +33,11 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={toggle}
-      aria-label={theme === 'light' ? 'Ativar modo escuro' : 'Ativar modo claro'}
+      aria-label="Alternância de tema"
       className="relative inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border border-[var(--color-border-editorial)] bg-[var(--color-skeleton)] transition-colors hover:border-[var(--color-institutional)] focus-visible:outline-2 focus-visible:outline-[var(--color-institutional)] focus-visible:outline-offset-2"
       role="switch"
       aria-checked={theme === 'dark'}
     >
-      <span className="sr-only">
-        {theme === 'light' ? 'Modo claro' : 'Modo escuro'}
-      </span>
 
       {/* thumb */}
       <span

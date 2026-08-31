@@ -35,14 +35,20 @@ export const CandidateCard = memo(function CandidateCard({
     'reputacao',
     'votacao_scrutiny',
   ];
-  const summary =
-    published.find((claim) => claim.category.toLowerCase() === 'summary') ??
-    [...published].sort(
-      (a, b) =>
-        SUMMARY_PRIORITY.indexOf(a.category.toLowerCase()) -
-        SUMMARY_PRIORITY.indexOf(b.category.toLowerCase())
-    )[0] ??
-    null;
+  let summary = published.length > 0 ? published[0] : null;
+  let bestPriority = Infinity;
+  for (const claim of published) {
+    const category = claim.category.toLowerCase();
+    if (category === 'summary') {
+      summary = claim;
+      break;
+    }
+    const priority = SUMMARY_PRIORITY.indexOf(category);
+    if (priority !== -1 && priority < bestPriority) {
+      bestPriority = priority;
+      summary = claim;
+    }
+  }
 
   const sourceDoc = summary?.source_document ?? null;
   const hasSource = Boolean(sourceDoc);

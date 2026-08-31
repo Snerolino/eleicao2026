@@ -139,7 +139,7 @@ export function CandidateDeclaredAssetsCard({
           <button
             type="button"
             onClick={() => setIsRevealed(!isRevealed)}
-            className="inline-flex cursor-pointer items-center gap-1.5 rounded-xs border border-[var(--color-institutional)] bg-[var(--color-institutional)] px-3.5 py-1.5 font-mono text-xs font-semibold text-white transition-opacity hover:opacity-90 focus:outline-none"
+            className="inline-flex cursor-pointer items-center gap-1.5 rounded-xs border border-[var(--color-institutional)] bg-[var(--color-institutional)] px-3.5 py-1.5 font-mono text-xs font-semibold text-white transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-institutional)]"
           >
             {isRevealed ? (
               <>
@@ -301,7 +301,7 @@ export function CandidateDeclaredAssetsCard({
               <button
                 type="button"
                 onClick={() => setIsExpanded(!isExpanded)}
-                className="flex items-center justify-between w-full font-mono text-xs font-semibold text-[var(--color-institutional)] hover:underline focus:outline-none cursor-pointer"
+                className="flex w-full cursor-pointer items-center justify-between rounded-sm font-mono text-xs font-semibold text-[var(--color-institutional)] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-institutional)]"
               >
                 <span>
                   {isExpanded
