@@ -60,7 +60,7 @@ export const CandidateCompactRow = memo(function CandidateCompactRow({ candidate
         )}
       </span>
       <span className="hidden truncate font-mono text-xs text-[var(--color-muted-ink)] sm:block">{candidate.party}</span>
-      <Link to={candidatePublicPath(candidate)} className="relative z-10 hidden font-mono text-xs uppercase tracking-wider text-[var(--color-institutional)] underline-offset-4 hover:underline sm:block">Ver perfil →</Link>
+      <Link to={candidatePublicPath(candidate)} className="relative z-10 hidden font-mono text-xs uppercase tracking-wider text-[var(--color-institutional)] underline-offset-4 hover:underline sm:block" aria-label={`Ver perfil de ${candidate.full_name}`}>Ver perfil <span aria-hidden="true">→</span></Link>
     </article>
   );
 });
