@@ -4373,7 +4373,7 @@ Status: `FED25_CAMARA_HISTORICAL_REMOTE_IDENTITY_LOOKUP_BLOCKED_ROLE`
 ## Pipeline de Enrichment de Claims via AGY (iniciado 2026-08-15)
 
 - Executor: Antigravity CLI (`agy`) com autenticação resolvida pelo ambiente oficial; nenhum segredo é armazenado no repositório.
-- Modelo: Gemini 3.5 Flash (Low) via `ANTIGRAVITY_AGENT_MODEL`.
+- Modelo: Gemini 3.6 Flash (Low) via autenticação Antigravity do ambiente oficial.
 - Estrutura: blocos de 25 candidatos/pedido, prompts gerados por `scripts/generate-block-prompt.py`, output salvo em `.orchestrator/runtime/blocks/block-NNN-output.txt`.
 - Ingestão: o fluxo legado `scripts/import-agy-block.mjs` permanece desativado; publicação deve usar somente Auth/RPC e fonte verificada.
 - Blocos 0–4 executados e importados: 171 claims `pending_review` injetadas para 125 candidatos.
