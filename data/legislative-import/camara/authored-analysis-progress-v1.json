@@ -13,23 +13,39 @@
       "batch_id": "1276-1300",
       "status": "blocked",
       "updated_at": "2026-09-02T12:13:05.691Z"
+    },
+    {
+      "batch_id": "1301-1325",
+      "status": "blocked",
+      "updated_at": "2026-09-02T12:41:30.730Z"
+    },
+    {
+      "batch_id": "1326-1350",
+      "status": "blocked",
+      "updated_at": "2026-09-02T13:03:34.413Z"
     }
   ],
   "blocked_items": [
     "authored-1276-1300-causal-format",
     "authored-1276-1300-redteam-provider",
-    "authored-1276-1300-redteam-codex"
+    "authored-1276-1300-redteam-codex",
+    "authored-1301-1325-redteam-provider",
+    "authored-1301-1325-redteam-codex",
+    "authored-1301-1325-causal-cardinality",
+    "authored-1326-1350-causal-provider",
+    "authored-1326-1350-redteam-codex",
+    "authored-1326-1350-cardinality-definition"
   ],
   "counts": {
-    "projects_analyzed": 1300,
+    "projects_analyzed": 1350,
     "approved": 0,
     "pending_review": 0,
-    "withheld": 1300
+    "withheld": 1350
   },
-  "last_batch": "1276-1300",
-  "next_batch": "1301-1325",
+  "last_batch": "1326-1350",
+  "next_batch": "1351-1375",
   "heartbeat": {
-    "at": "2026-09-02T12:13:05.700Z",
-    "pid": 1537668
+    "at": "2026-09-02T13:03:34.423Z",
+    "pid": 1603505
   }
 }
