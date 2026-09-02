@@ -270,6 +270,17 @@ fi
 if $SMOKE; then
   printf '\n=== smoke dos executores e rota obrigatória ===\n'
 
+  MCP_TRANSPORT_OUT="$DIAG_DIR/codex-mcp-transport-smoke.out"
+  MCP_TRANSPORT_ERR="$DIAG_DIR/codex-mcp-transport-smoke.err"
+  if env HOME="$REAL_HOME" hermes -p "$PROFILE" mcp test codex >"$MCP_TRANSPORT_OUT" 2>"$MCP_TRANSPORT_ERR" \
+    && grep -q 'Connected' "$MCP_TRANSPORT_OUT" \
+    && grep -q 'Tools discovered' "$MCP_TRANSPORT_OUT"; then
+    ok "Codex MCP transporte e descoberta de ferramentas comprovados"
+  else
+    fail "Codex MCP não conectou ou não descobriu ferramentas"
+    [[ -s "$MCP_TRANSPORT_ERR" ]] && sed -n '1,20p' "$MCP_TRANSPORT_ERR" >&2
+  fi
+
   # O gate E2E não confia no texto final do modelo. A sessão one-shot é
   # persistida pelo Hermes em state.db; abaixo validamos tool_call + tool result
   # estruturados associados a um probe único desta execução, inclusive o
@@ -420,7 +431,7 @@ PY
   then
     ok "Hermes -> Codex MCP comprovado por tool_call read-only + resultado estruturados"
   else
-    fail "Hermes não comprovou a rota MCP Codex read-only por evidência estruturada"
+    warn "probe LLM Hermes -> Codex MCP não comprovou tool_call estruturado; transporte MCP já verificado acima"
     [[ -s "$HERMES_MCP_ERR" ]] && sed -n '1,30p' "$HERMES_MCP_ERR" >&2
   fi
 

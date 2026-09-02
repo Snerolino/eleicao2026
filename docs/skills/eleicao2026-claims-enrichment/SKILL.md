@@ -14,9 +14,9 @@ Estado atual (2026-08-15): **blocos 0–4 completos e importados** (171 claims `
 
 ## Pré-requisitos
 
-- Chave `ANTIGRAVITY_API_KEY` configurada (nova chave: `data/antigravity-key.txt`)
+- Autenticação Antigravity configurada fora do repositório pelo ambiente oficial.
 - Snapshot público sincronizado: `data/public-candidates.json` (1002 candidatos RS 2026)
-- `service_role` key disponível em `/home/lourenco/Projetos/raspador-candidados-2026/.env` (exportar antes de rodar import)
+- Publicação deve usar somente o fluxo Auth/RPC autorizado; `service_role` não entra neste pipeline.
 - `scripts/generate-block-prompt.py` — gera prompt por bloco N
 - `scripts/agy-enrich-block.sh` — wrapper AGY com variáveis de ambiente
 - `scripts/import-agy-block.mjs` — ETL Node.js para ingestão no Supabase
