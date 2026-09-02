@@ -4994,3 +4994,15 @@ Sem autorização humana explícita própria, não fazer:
 
 - Publicação documental verificada: commit `9346b51ec371dfb060cb9a65d0bf6b48f49b29ae`; backup `334951434`, run `33629011829`, `completed/success`, `headSha` idêntico; produção HTTP 200 e `/release.json` confirmaram o SHA e `row_count=1003`.
 - Segundo checkpoint documental publicado: `4c042dce512c2dd695b2e080b7d1a4af4e3e3519`; backup run `33629143146` success/headSha idêntico (run duplicado `33629167864` skipped); produção HTTP 200, release `4c042dc-20260902T121830253Z`, `row_count=1003`.
+
+## Tick contínuo — autoria Câmara 1401–1425 publicada — 2026-09-02T14:31Z
+
+- Microbatch: 25 projetos únicos, 100 ocorrências candidato–projeto e 22 candidatos únicos.
+- Duas lanes read-only verificadas: causal final via Codex MCP Luna (25/25 IDs exatos) e red-team via Antigravity (25/25 IDs exatos). Antigravity causal inicial foi rejeitado por JSON inválido com comentário HTML; fail-closed.
+- Reconciliação: 25 itens, 0 divergências, 0 aprovados, 0 pending_review, 25 withheld, 0 score_eligible. Nenhum authored_projects, voto, score, matriz, claim, Supabase ou Cloudflare factual foi escrito.
+- Checkpoint: projects_analyzed=1425, approved=0, pending_review=0, withheld=1425; próximo 1426–1450.
+- QA: docs/qa/lote-camara-autoria-1401-1425-2026-09-02.md. Artefato reconciliado versionado em data/legislative-import/camara/authored-project-review-batches/camara-authored-unique-review-1401-1425-reconciled.json.
+- Gates: 491 testes em 117 arquivos, TypeScript, schema, data:check (1003 candidaturas/988 fotos), build (244 módulos), diff-check e smoke remoto (1002 cards, 0 falhas HTTP, 0 erros online, service worker pronto).
+- Publicação: commit 235b9d97b0ae2527725a85cf72816403fbd8617f em origin/main; backup workflow 334951434, run 33642324618, completed/success, headSha exato. Produção raiz/release HTTP 200; release.json confirmou SHA exato, versão 0.2.1190 e snapshot 1003.
+- Bloqueios: OpenCode/free pool indisponível; autoria permanece withheld sem cadeia verificável fonte oficial → texto → versão/evento nominal → efeito.
+- Próximo chunk: 1426–1450, mantendo duas lanes read-only e fail-closed.
