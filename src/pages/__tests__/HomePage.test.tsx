@@ -155,9 +155,9 @@ describe('HomePage estados honestos H5.2', () => {
     fireEvent.click(screen.getByRole('button', { name: /limpar seleção/i }));
 
     await waitFor(() => {
-      expect(screen.getByRole('button', { name: /deputado federal/i })).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: /^Deputado Federal .*/i })).toBeInTheDocument();
     });
-    fireEvent.click(screen.getByRole('button', { name: /deputado federal/i }));
+    fireEvent.click(screen.getByRole('button', { name: /^Deputado Federal .*/i }));
     expect(screen.getByText('Candidata Oficial')).toBeInTheDocument();
   });
 
@@ -170,7 +170,7 @@ describe('HomePage estados honestos H5.2', () => {
       /informações editoriais temporariamente indisponíveis/i,
     );
     expect(screen.getByRole('searchbox', { name: /buscar candidatos/i })).toBeInTheDocument();
-    fireEvent.click(screen.getByRole('button', { name: /deputado federal/i }));
+    fireEvent.click(screen.getByRole('button', { name: /^Deputado Federal .*/i }));
     expect(screen.getByRole('link', { name: /candidata oficial/i })).toHaveAttribute(
       'href',
       '/candidatos/candidata_oficial_1',
@@ -183,7 +183,7 @@ describe('HomePage estados honestos H5.2', () => {
     renderHome();
 
     expect(screen.getByText(/fallback oficial validado/i)).toBeInTheDocument();
-    fireEvent.click(screen.getByRole('button', { name: /deputado federal/i }));
+    fireEvent.click(screen.getByRole('button', { name: /^Deputado Federal .*/i }));
     expect(screen.getByText('Candidata Oficial')).toBeInTheDocument();
   });
 
@@ -305,14 +305,14 @@ describe('HomePage estados honestos H5.2', () => {
     queryState.value = { ...queryState.value, data: [officialCandidate, accentCandidate, viceGovernorCandidate] };
     renderHome();
     expect(screen.getByRole('region', { name: /resumo por cargo/i })).toBeInTheDocument();
-    fireEvent.click(screen.getByRole('button', { name: /deputado estadual/i }));
+    fireEvent.click(screen.getByRole('button', { name: /^Deputado Estadual .*/i }));
     expect(screen.getByText('José Ademar')).toBeInTheDocument();
   });
 
   it('troca para compacta e salva somente o ID no navegador', () => {
     queryState.value = { ...queryState.value, data: [officialCandidate] };
     renderHome();
-    fireEvent.click(screen.getByRole('button', { name: /deputado federal/i }));
+    fireEvent.click(screen.getByRole('button', { name: /^Deputado Federal .*/i }));
     fireEvent.click(screen.getByRole('button', { name: /compacta/i }));
     expect(screen.getByRole('button', { name: /compacta/i })).toHaveAttribute('aria-pressed', 'true');
     fireEvent.click(screen.getByRole('button', { name: /salvar candidata oficial neste navegador/i }));
