@@ -40,7 +40,7 @@ Foi validada uma cadeia que incluía:
 - Google via API;
 - Cloudflare AI Gateway;
 - modelos gratuitos OpenCode Zen;
-- `ollama/gpt-oss:20b` local.
+- Ollama removido da cadeia operacional por lentidão.
 
 O wrapper histórico permanece em:
 
@@ -88,7 +88,7 @@ Hermes control plane
 ├── Codex MCP                -> implementação/debug/testes
 │   └── Luna -> Terra -> Sol por evidência
 ├── Codex exec               -> fallback read-only do MCP
-└── Codex OSS + Ollama       -> último fallback local opcional
+└── Fallback local removido  -> usar providers externos validados
 ```
 
 As credenciais de produção Cloudflare/Supabase não são distribuídas para essa

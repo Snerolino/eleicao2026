@@ -17,7 +17,7 @@
  *      (snapshot git archive HEAD)       8) opencode/laguna-s-2.1-free
  *   3) cloudflare-ai-gateway/gpt-4o-mini 9) opencode/ling-3.0-tiny-free
  *                                    10) opencode/mimo-v2.5-free
- *                                    11) ollama/gpt-oss:20b (local)
+
  *
  * NOTA: `agy` (Antigravity CLI v1.1.12) roda read-only sobre git archive HEAD —
  * falhas dele NÃO param a orquestração (Codex/OpenCode/MCP-Supabase no fallback).
@@ -48,7 +48,7 @@ const DEFAULT_CHAIN = [
   'opencode/laguna-s-2.1-free',                  // 6) grátis
   'opencode/ling-3.0-tiny-free',                 // 7) grátis, leve/rápido
   'opencode/mimo-v2.5-free',                     // 8) grátis, multimodal
-  'ollama/gpt-oss:20b',                          // 9) local, sempre disponível
+
 ];
 
 function resolveChain() {

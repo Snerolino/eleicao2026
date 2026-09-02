@@ -17,7 +17,7 @@ const FREE_MODELS = [
   'opencode/deepseek-v4-flash-free',
   'opencode/nemotron-3-ultra-free',
   'opencode/laguna-s-2.1-free',
-  'ollama/gpt-oss:20b',
+
 ];
 
 describe('MOA do perfil eleicao2026 — fallback com pagos + grátis', () => {
@@ -41,7 +41,7 @@ describe('MOA do perfil eleicao2026 — fallback com pagos + grátis', () => {
     expect(script).toContain('opencode/laguna-s-2.1-free');
     expect(script).toContain('opencode/ling-3.0-tiny-free');
     expect(script).toContain('opencode/mimo-v2.5-free');
-    expect(script).toContain('ollama/gpt-oss:20b');
+
   });
 
   it('expõe um free pool orquestrado, read-only e baseado em snapshot sanitizado', () => {

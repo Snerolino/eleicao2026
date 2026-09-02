@@ -254,7 +254,7 @@ Uso: implementação, debugging, testes, refatoração e revisão técnica final
 
 ```text
 Codex exec: gpt-5.6-luna, read-only
-Ollama: gpt-oss:20b, somente se o doctor confirmar disponibilidade
+- Ollama: removido do workflow; não é executor elegível.
 Gemini legacy: somente com configuração enterprise/API explícita
 ```
 

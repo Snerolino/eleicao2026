@@ -134,8 +134,7 @@
     "orch:free": "bash scripts/orchestrator/run-free-pool.sh",
     "orch:google": "bash scripts/orchestrator/run-antigravity.sh",
     "orch:gemini-legacy": "bash scripts/orchestrator/run-gemini.sh",
-    "orch:codex": "bash scripts/orchestrator/run-codex-readonly.sh",
-    "orch:local": "bash scripts/orchestrator/run-local-fallback.sh"
+    "orch:codex": "bash scripts/orchestrator/run-codex-readonly.sh"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",

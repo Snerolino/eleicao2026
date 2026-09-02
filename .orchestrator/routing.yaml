@@ -157,42 +157,34 @@ executors:
     authority: read-only
     enabled_when: codex_mcp_unavailable
 
-  local_fallback:
-    transport: codex_oss_cli
-    wrapper: scripts/orchestrator/run-local-fallback.sh
-    provider: ollama
-    model: gpt-oss:20b
-    authority: read-only
-    enabled_when: doctor_confirms_available
-
 routes:
   public_data_reconnaissance:
     - public_data_scout_pool
     - opencode_free_pool
     - google_antigravity
     - codex_exec_fallback
-    - local_fallback
+
 
   cheap_analysis:
     - opencode_free
     - opencode_free_pool
     - google_antigravity
     - codex_exec_fallback
-    - local_fallback
+
 
   large_context:
     - google_antigravity
     - opencode_free_pool
     - opencode_free
     - codex_exec_fallback
-    - local_fallback
+
 
   simple_public_repo_task:
     - opencode_free
     - opencode_free_pool
     - google_antigravity
     - codex_exec_fallback
-    - local_fallback
+
 
   code_change:
     - codex

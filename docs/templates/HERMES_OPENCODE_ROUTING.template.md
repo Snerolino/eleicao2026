@@ -26,7 +26,7 @@ Use, nesta ordem:
 - Codex MCP stdio é o executor técnico preferido para implementação/debug/testes.
 - Codex escala Luna → Terra → Sol somente por evidência.
 - Fallback de capacidade não transfere autoridade de escrita.
-- Ollama + Codex OSS é o último fallback local opcional.
+- Ollama + Codex OSS não fazem parte da rota operacional.
 - O velho princípio “modelo pago primeiro” foi removido. O novo princípio é
   **executor mais barato adequado à classe da tarefa**.
 

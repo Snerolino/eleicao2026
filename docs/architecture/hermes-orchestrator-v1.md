@@ -172,16 +172,9 @@ printf '%s' "$PROMPT" | bash scripts/orchestrator/run-codex-readonly.sh
 Usa `--output-schema` versionado, sandbox read-only, sessão efêmera e
 autenticação local do Codex.
 
-### Ollama local via Codex OSS
+### Fallback local removido
 
-Último fallback sem quota externa, se `ollama` e `gpt-oss:20b` estiverem
-presentes:
-
-```bash
-bash scripts/orchestrator/run-local-fallback.sh "<tarefa>"
-```
-
-Também opera sobre snapshot e nunca herda autoridade de escrita.
+O fallback local foi removido da cadeia operacional por lentidão. Use os providers externos configurados no Hermes.
 
 ## 4. Roteamento
 

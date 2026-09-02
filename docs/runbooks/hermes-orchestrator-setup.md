@@ -306,26 +306,13 @@ npx wrangler --version
 
 Não rode `wrangler pages deploy` nesta configuração.
 
-## 13. Fallback local Ollama, opcional
+## 13. Fallback local removido
 
-```bash
-if command -v ollama >/dev/null 2>&1; then
-  ollama list
-else
-  echo "Ollama ausente: fallback local ficará desabilitado."
-fi
-```
+Ollama não faz parte do workflow operacional por lentidão de preflight e testes.
+Use o fallback externo Hermes configurado com `hermes fallback list`.
 
 O doctor não baixa modelos nem instala Supabase/Wrangler via `npx`; essas CLIs
-só são sondadas quando já existem globalmente ou em `node_modules/.bin`. Se
-`gpt-oss:20b` já estiver listado:
-
-```bash
-npm run orch:local -- \
-  'Leia AGENTS.md e responda em duas frases qual é a política de fallback.'
-```
-
-Esse caminho usa Codex OSS + Ollama, read-only e snapshot.
+só são sondadas quando já existem globalmente ou em `node_modules/.bin`.
 
 ## 14. Doctor completo
 

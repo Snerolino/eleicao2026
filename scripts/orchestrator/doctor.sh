@@ -66,7 +66,6 @@ fi
 command -v gemini >/dev/null 2>&1 && warn "gemini disponível apenas como rota legacy/API-key; Google AI Pro usa agy" || ok "Gemini CLI legacy ausente (não obrigatório)"
 command -v gh >/dev/null 2>&1 && ok "gh disponível" || warn "gh ausente"
 command -v npx >/dev/null 2>&1 && ok "npx disponível" || fail "npx ausente"
-command -v ollama >/dev/null 2>&1 && ok "ollama disponível (fallback local pode ser elegível)" || warn "ollama ausente; fallback local desabilitado"
 
 [[ -s "$REAL_HOME/.codex/auth.json" ]] && ok "Codex auth presente (conteúdo não lido)" || warn "Codex auth não encontrado em ~/.codex/auth.json"
 [[ -d "$REAL_HOME/.gemini/antigravity-cli" ]] && ok "Antigravity home presente (conteúdo secreto não lido)" || warn "Antigravity ainda não inicializado/autenticado"
@@ -252,20 +251,6 @@ check_local_cli() {
 
 check_local_cli supabase
 check_local_cli wrangler
-
-OLLAMA_MODEL_AVAILABLE=false
-if command -v ollama >/dev/null 2>&1; then
-  OLLAMA_LIST="$(timeout --signal=TERM --kill-after=5s 10s ollama list 2>/dev/null)"
-  OLLAMA_STATUS=$?
-  if [[ $OLLAMA_STATUS -ne 0 ]]; then
-    warn "Ollama não respondeu ao preflight dentro do prazo; fallback local desabilitado"
-  elif printf '%s\n' "$OLLAMA_LIST" | awk 'NR>1 {print $1}' | grep -Fxq 'gpt-oss:20b'; then
-    OLLAMA_MODEL_AVAILABLE=true
-    ok "Ollama gpt-oss:20b disponível"
-  else
-    warn "Ollama presente, mas gpt-oss:20b ausente; fallback local desabilitado"
-  fi
-fi
 
 if $SMOKE; then
   printf '\n=== smoke dos executores e rota obrigatória ===\n'
@@ -484,18 +469,6 @@ PY
     [[ -s "$CX_ERR" ]] && sed -n '1,20p' "$CX_ERR" >&2
   fi
 
-  if $OLLAMA_MODEL_AVAILABLE; then
-    LOCAL_OUT="$DIAG_DIR/local-smoke.txt"
-    LOCAL_ERR="$DIAG_DIR/local-smoke.err"
-    if bash scripts/orchestrator/run-local-fallback.sh \
-      'Leia AGENTS.md e responda apenas: LOCAL_OK' \
-      >"$LOCAL_OUT" 2>"$LOCAL_ERR" && [[ -s "$LOCAL_OUT" ]]; then
-      ok "fallback local Ollama smoke"
-    else
-      warn "fallback local Ollama falhou"
-      [[ -s "$LOCAL_ERR" ]] && sed -n '1,20p' "$LOCAL_ERR" >&2
-    fi
-  fi
 else
   warn "rota Hermes -> Codex MCP não foi exercitada no modo rápido; use --smoke para o gate final"
 fi

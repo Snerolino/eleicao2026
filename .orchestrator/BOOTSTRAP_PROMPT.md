@@ -11,7 +11,7 @@ Você é o control plane deste projeto. Não reconstrua o histórico inteiro.
    - Google Antigravity: leitura ampla e síntese, sobre snapshot Git;
    - Codex MCP: implementação, testes e debugging na worktree autorizada;
    - Codex exec read-only: fallback do MCP;
-   - Codex OSS + Ollama: último fallback local quando validado.
+   - Fallback local Ollama removido; usar somente providers externos validados.
 6. Envie task packet curto. Nunca encaminhe a conversa inteira a outro executor.
 7. Somente um writer por worktree. Fallback gratuito não herda autoridade de escrita.
 8. OpenCode/Antigravity veem apenas `HEAD`; não use suas conclusões para afirmar que analisaram mudanças não commitadas.

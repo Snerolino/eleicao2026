@@ -21,7 +21,7 @@
 - Antigravity: leitura oficial comprovada.
 - Fallback Gemini configurado e sem modelo obsoleto.
 - OpenCode permanece consultivo; smoke opcional não comprovou leitura.
-- Ollama permanece desabilitado até responder ao preflight.
+- Ollama foi removido do workflow operacional.
 
 ## Guardas
 
