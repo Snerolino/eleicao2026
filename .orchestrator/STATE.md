@@ -5059,4 +5059,4 @@ Sem autorização humana explícita própria, não fazer:
 - Codex readonly Luna: exit 0, mas envelope executor sem decisões por item; rejeitado por contrato/cardinality. Free pool red-team: exit 69 sem saída; não repetido no tick.
 - Reconciliação fail-closed: 0 aprovados, 0 pending_review, 25 withheld, 0 score_eligible. Checkpoint `projects_analyzed=1600`, `blocked_items=41`.
 - Artefato: `data/legislative-import/camara/authored-project-review-batches/camara-authored-unique-review-1576-1600-reconciled.json`; QA: `docs/qa/lote-camara-autoria-1576-1600-2026-09-02.md`.
-- Nenhum authored_projects, claim, voto, score, matriz, snapshot público, Supabase ou Cloudflare factual foi escrito. Sem gates verdes completos, não houve commit/push/deploy.
+- Nenhum authored_projects, claim, voto, score, matriz, snapshot público, Supabase ou Cloudflare factual foi escrito. Gates locais verdes; commit `aec5cff471d199c9392eb6fbcaf8eccb6ab23bb3` pushed. Backup Cloudflare run `33662254607` success/headSha exato; produção e release HTTP 200 com SHA confirmado.

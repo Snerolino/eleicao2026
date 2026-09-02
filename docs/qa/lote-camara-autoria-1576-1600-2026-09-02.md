@@ -24,5 +24,10 @@ Processar 25 projetos únicos de autoria oficial da Câmara em duas lanes read-o
 - Free pool: indisponível no tick (`exit=69`, sem saída).
 - Continua ausente a cadeia fonte normativa → texto integral → versão → evento nominal vinculante → efeito, além do red-team independente reconciliável.
 
+## Publicação e verificação
+- Commit: `aec5cff471d199c9392eb6fbcaf8eccb6ab23bb3`, pushed com sucesso para `origin/main`.
+- Backup Cloudflare: workflow `334951434`, run `33662254607`, `completed/success`, `headSha` exato.
+- Produção: `https://rs.votopraquem.org` HTTP 200; `/release.json` HTTP 200 confirmou SHA `aec5cff471d199c9392eb6fbcaf8eccb6ab23bb3`, `row_count=1003`.
+
 ## Próximo passo
 Retomar `1601–1625` com heartbeat, duas lanes read-only e validação estrita de cardinalidade/IDs/fontes. Não aplicar `authored_projects` sem fonte primária, análise causal completa e red-team reconciliado.
