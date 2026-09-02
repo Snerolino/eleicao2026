@@ -29,7 +29,7 @@ const SNAPSHOT_DIR = resolve(ROOT, '.orchestrator', 'runtime', 'snapshots', 'ant
 const CANDIDATES_PATH = resolve(ROOT, 'data', 'public-candidates.json');
 
 const BLOCK_SIZE = 25;
-const MODEL = 'Gemini 3.5 Flash (Low)';
+const MODEL = 'Gemini 3.6 Flash (Low)';
 
 // Criar diretório de blocks se não existir
 if (!existsSync(BLOCKS_DIR)) mkdirSync(BLOCKS_DIR, { recursive: true });

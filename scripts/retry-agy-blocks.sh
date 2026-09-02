@@ -4,10 +4,9 @@
 set -u
 ROOT="/home/lourenco/Projetos/eleicao2026"
 cd "$ROOT"
-export ANTIGRAVITY_API_KEY="4/0ATsMZqDdPu0uvqrx0IjGEbuc-RVA2CUeWsgYuw-Et48ExQkU0-8yA6AfhXa9dxYfjv1L9A"
 export REAL_HOME=/home/lourenco
 export HERMES_REAL_HOME=/home/lourenco
-export ANTIGRAVITY_AGENT_MODEL="Gemini 3.5 Flash (Low)"
+export ANTIGRAVITY_AGENT_MODEL="Gemini 3.6 Flash (Low)"
 export ANTIGRAVITY_AGENT_NAME="eleicao2026-reader"
 export ORCH_EXECUTOR_TIMEOUT=480
 

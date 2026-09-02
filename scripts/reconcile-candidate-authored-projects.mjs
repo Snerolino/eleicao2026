@@ -5,6 +5,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import { assertAuthoredWriterScope } from './lib/assert-authored-writer-scope.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const SNAPSHOT = path.join(ROOT, 'data/public-candidates.json');
@@ -63,6 +64,7 @@ const orderedCandidates = [...byCandidate.keys()].sort();
 const batches = []; for (let i = 0; i < orderedCandidates.length; i += BATCH_SIZE) batches.push(orderedCandidates.slice(i, i + BATCH_SIZE));
 const report = { schema_version: '1.0.0', packet_type: 'candidate_authored_projects_reconciliation', mode: process.argv.includes('--apply') ? 'apply' : 'dry-run', remote_apply: false, candidates_input: orderedCandidates.length, projects_validated: seen.size, batch_size: BATCH_SIZE, batches: batches.length, sanitized_texts: true, rejected: 0 };
 if (process.argv.includes('--apply')) {
+  assertAuthoredWriterScope(ROOT, ['data/public-candidates.json', 'scripts/reconcile-candidate-authored-projects.mjs']);
   const merged = candidates.map((candidate) => {
     const candidateTse = String(candidate.tse_candidate_id ?? '');
     if (!byCandidate.has(candidateTse)) return candidate;

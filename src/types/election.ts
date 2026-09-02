@@ -62,6 +62,7 @@ export interface Candidate {
   race?: string | null;
   indigenous_ethnicity?: string | null;
   authored_projects?: CandidateAuthoredProject[];
+  authored_project_facts?: CandidateAuthoredProjectFact[];
 }
 
 export interface CandidateNominalVote {
@@ -108,6 +109,23 @@ export interface CandidateAuthoredProject {
   main_topic: string;
   target_groups: string[];
   official_url: string;
+}
+
+export interface CandidateAuthoredProjectFact {
+  id: string;
+  candidate_tse_id: string;
+  house: 'alrs' | 'camara' | 'senado';
+  type: string;
+  number: string;
+  year: number;
+  title: string;
+  role: CandidateAuthoredProjectRole;
+  official_status: CandidateAuthoredProjectStatus;
+  official_url: string;
+  authorship_source_url: string;
+  authorship_official_id: string | null;
+  official_ementa?: string;
+  editorial_status: 'pending_review' | 'approved' | 'withheld';
 }
 
 export interface DeclaredAssetItem {

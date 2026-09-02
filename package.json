@@ -24,6 +24,7 @@
     "data:authored-projects:causal-reconcile": "node scripts/reconcile-candidate-authored-review-causal.mjs",
     "data:authored-projects:independent-reconcile": "node scripts/reconcile-candidate-authored-review-independent.mjs",
     "data:authored-projects:pair-reconcile": "node scripts/reconcile-candidate-authored-review-pair.mjs",
+    "data:authored-projects:procedural-triage": "node scripts/classify-candidate-authored-projects.mjs",
     "data:authored-projects:redteam-generic-reconcile": "node scripts/reconcile-candidate-authored-review-redteam-generic.mjs",
     "env:check": "node scripts/build-env-check.mjs",
     "build": "npm run data:check && tsc -b && vite build && node scripts/generate-sitemap.mjs && node scripts/generate-release-metadata.mjs",

@@ -86,8 +86,8 @@ python3 scripts/generate-block-prompt.py N
 ### Executar bloco via AGY
 
 ```bash
-# Bloco 0 (primeiro bloco — use a chave Antigravity em data/antigravity-key.txt)
-cd /home/lourenco/Projetos/eleicao2026 && export ANTIGRAVITY_API_KEY="$(cat data/antigravity-key.txt)" && export REAL_HOME=/home/lourenco && export HERMES_REAL_HOME=/home/lourenco && export ANTIGRAVITY_AGENT_MODEL="Gemini 3.5 Flash (Low)" && export ANTIGRAVITY_AGENT_NAME="eleicao2026-reader" && export ORCH_EXECUTOR_TIMEOUT=480 && timeout 475 bash scripts/orchestrator/run-antigravity.sh "$(cat .orchestrator/runtime/blocks/block-000-prompt.txt)" > .orchestrator/runtime/blocks/block-000-output.txt 2>&1; echo "Bloco 0: exit=$?"
+# Bloco 0 (primeiro bloco — autenticação resolvida pelo ambiente oficial)
+cd /home/lourenco/Projetos/eleicao2026 && export REAL_HOME=/home/lourenco && export HERMES_REAL_HOME=/home/lourenco && export ANTIGRAVITY_AGENT_MODEL="Gemini 3.6 Flash (Low)" && export ANTIGRAVITY_AGENT_NAME="eleicao2026-reader" && export ORCH_EXECUTOR_TIMEOUT=480 && timeout 475 bash scripts/orchestrator/run-antigravity.sh "$(cat .orchestrator/runtime/blocks/block-000-prompt.txt)" > .orchestrator/runtime/blocks/block-000-output.txt 2>&1; echo "Bloco 0: exit=$?"
 
 # Blocos 1–39: mesma estrutura (substituir block-000 por block-001, block-002, etc.)
 # Bloco 40: apenas 2 candidatos restantes

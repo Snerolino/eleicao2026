@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 REAL_HOME="${HERMES_REAL_HOME:-$(getent passwd "$(id -un)" | cut -d: -f6)}"
-MODEL="${ANTIGRAVITY_AGENT_MODEL:-Gemini 3.5 Flash (Low)}"
+MODEL="${ANTIGRAVITY_AGENT_MODEL:-Gemini 3.6 Flash (Low)}"
 AGENT="${ANTIGRAVITY_AGENT_NAME:-eleicao2026-reader}"
 TIMEOUT_SECONDS="${ORCH_EXECUTOR_TIMEOUT:-480}"
 
