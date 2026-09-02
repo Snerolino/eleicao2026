@@ -28,6 +28,11 @@
       "batch_id": "1351-1375",
       "status": "blocked",
       "updated_at": "2026-09-02T13:32:25.828Z"
+    },
+    {
+      "batch_id": "1376-1400",
+      "status": "blocked",
+      "updated_at": "2026-09-02T14:00:19.458Z"
     }
   ],
   "blocked_items": [
@@ -42,18 +47,21 @@
     "authored-1326-1350-cardinality-definition",
     "authored-1351-1375-redteam-provider",
     "authored-1351-1375-causal-verified",
-    "authored-1351-1375-source-event-gap"
+    "authored-1351-1375-source-event-gap",
+    "authored-1376-1400-causal-provider",
+    "authored-1376-1400-source-event-gap",
+    "authored-1376-1400-redteam-codex-auth"
   ],
   "counts": {
-    "projects_analyzed": 1375,
+    "projects_analyzed": 1400,
     "approved": 0,
     "pending_review": 0,
-    "withheld": 1375
+    "withheld": 1400
   },
-  "last_batch": "1351-1375",
-  "next_batch": "1376-1400",
+  "last_batch": "1376-1400",
+  "next_batch": "1401-1425",
   "heartbeat": {
-    "at": "2026-09-02T13:32:25.838Z",
-    "pid": 1642789
+    "at": "2026-09-02T14:00:19.470Z",
+    "pid": 1688850
   }
 }

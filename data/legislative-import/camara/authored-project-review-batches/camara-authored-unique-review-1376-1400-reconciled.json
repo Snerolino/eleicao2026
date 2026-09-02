@@ -1,0 +1,567 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:rec-12-2022-2330558",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Inteiro teor oficial do RECURSO e do PL 1706/2021",
+          "Resultado nominal da votação/apreciação do recurso e efeito conclusivo comprovado"
+        ],
+        "counterargument": "A mera autoria ou coautoria de recurso regimental sem o texto integral do recurso, relatório de votação ou comprovação de efeito sancionado/aprovado não permite inferir impacto político ou legislativo atribuível aos parlamentares."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-13-2022-2330588",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Inteiro teor oficial do RECURSO contra apreciação conclusiva",
+          "Registro formal do desfecho legislativo e efeito concreto comprovado"
+        ],
+        "counterargument": "Identificar a coautoria do recurso sem o teor do parecer da comissão ou o resultado formal de sua deliberação impede qualquer conclusão sobre causalidade ou realização legislativa."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-20-2021-2284818",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Documento oficial da devolução pela Presidência da Câmara e teor do recurso",
+          "Decisão final do Plenário/Mesa e status de eficácia da Portaria nº 457/2021"
+        ],
+        "counterargument": "A autoria de recurso contra ato da Presidência é um ato procedimental que, isoladamente sem o desfecho formal ou manifestação plenária, não comprova alteração normativa ou impacto real."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-22-2024-2467096",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Teor completo do parecer terminativo de comissão e do recurso regimental",
+          "Comprovação de acolhimento do recurso ou votação de mérito"
+        ],
+        "counterargument": "A apresentação de recurso contra parecer terminativo de comissão constitui iniciativa regimental pendente de apreciação; deduzir impacto legislativo sem aprovação oficial viola o critério de comprovação de efeito."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-25-2025-2589166",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Texto oficial da proposição e do parecer terminativo contestado",
+          "Ata de votação ou resultado formal sobre o recurso"
+        ],
+        "counterargument": "A coautoria em recurso regimental em estado 'tramitando' não comprova modificação do Código de Trânsito ou alteração no processo de habilitação."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-27-2022-2341103",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Teor oficial do recurso e do PL 3634/2019",
+          "Resultado de apreciação pelo Plenário ou publicação oficial do ato resultante"
+        ],
+        "counterargument": "A proposição do recurso não atesta alteração no Código Penal Militar sem a devida tramitação, deliberação final e publicação do resultado legislativo."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-29-2023-2396468",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Inteiro teor do recurso e do PL 2411/2022",
+          "Certidão de resultado final da tramitação do recurso"
+        ],
+        "counterargument": "Recurso em tramitação que busca levar matéria ao Plenário não assegura mudança em regras de penhora no comércio eletrônico nem demonstra impacto efetivo sem votação conclusiva."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-3-2026-2608629",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Inteiro teor oficial do recurso e do PL 4890/2024",
+          "Ata de apreciação plenária ou decisão formal da Mesa da Câmara"
+        ],
+        "counterargument": "O registro do recurso indica apenas a existência da petição regimental; sem a documentação da deliberação oficial, qualquer inferência sobre o resultado da proposta é inadmissível."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-32-2022-2343504",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Inteiro teor do recurso e comprovação de decisão conclusiva",
+          "Relatório oficial do estado de tramitação pós-recurso"
+        ],
+        "counterargument": "A autoria de recurso regimental duplicado/correlato sem comprovação de provimento ou votação em Plenário constitui ato formal sem efeito legal comprovado no resumo."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-32-2025-2596918",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Texto completo do recurso e parecer terminativo contestado",
+          "Resultado oficial de deliberação do Plenário"
+        ],
+        "counterargument": "A coautoria de recurso sobre consignação em folha para aluguéis residenciais em status 'tramitando' não comprova a instituição da medida nem alteração no arcabouço normativo."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-33-2021-2289853",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Inteiro teor oficial do recurso e parecer da comissão",
+          "Votação ou desfecho oficial do Plenário"
+        ],
+        "counterargument": "Iniciativa de recurso sobre intimação eletrônica via aplicativo de mensagens sem comprovação de acolhimento pelo Plenário não demonstra alteração legislativa no Código de Processo Civil."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-33-2022-2343505",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Inteiro teor oficial do recurso e do PL 658/2021",
+          "Decisão/Resultado formal da apreciação do recurso"
+        ],
+        "counterargument": "Assinar recurso regimental contra apreciação conclusiva em matéria de bioinsumos não comprova interferência direta no marco legal sem a deliberação soberana do Plenário."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-33-2023-2400068",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Inteiro teor do recurso e do PL 3905/2021",
+          "Comprovação de acolhimento ou deliberação final pelo Plenário"
+        ],
+        "counterargument": "A proposição de recurso sobre o marco regulatório do fomento à cultura em fase de tramitação não garante alteração no regime de fomento nem demonstra impacto concreto sancionado."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-35-2022-2345323",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Texto integral do recurso e do parecer da comissão",
+          "Documento de decisão conclusiva da Mesa ou Plenário"
+        ],
+        "counterargument": "Coautoria em recurso pendente sobre regras de escolha de Conselheiros do CADE não constitui alteração legal aprovada ou impacto normativo comprovado."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-35-2023-2406443",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Texto oficial do recurso regimental e do PL 1468/2022",
+          "Ata oficial com o resultado da votação do recurso"
+        ],
+        "counterargument": "O recurso em tramitação acerca do direito moral de autor em obras políticas representa ato de provocação regimental, não a aprovação de norma jurídica."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-37-2023-2407584",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Inteiro teor do recurso e da proposição original",
+          "Registro oficial do resultado da apreciação"
+        ],
+        "counterargument": "Apuração de coautoria em recurso sobre políticas de habitação e produção de alimentos sem desfecho regimental provado não permite inferir eficácia ou resultado legislativo."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-38-2021-2292048",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Certidão oficial do motivo do arquivamento do recurso",
+          "Inteiro teor da deliberação que resultou no arquivamento"
+        ],
+        "counterargument": "Recurso com status 'arquivado' indica encerramento da tramitação sem acolhimento da postulação, não se podendo inferir sucesso ou impacto positivo a partir da iniciativa."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-38-2023-2408145",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Inteiro teor oficial do recurso regimental",
+          "Resultado formal de votação no Plenário da Câmara"
+        ],
+        "counterargument": "Coautoria em recurso sobre prioridade de tramitação processual penal sem deliberação conclusiva não comprova efeito no rito dos processos de trabalho escravo."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-40-2023-2410447",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Texto completo do recurso e do PL 8168/2017",
+          "Relatório oficial de deliberação plenária"
+        ],
+        "counterargument": "Recurso contra tramitação conclusiva em matéria de cláusulas abusivas em contratos pendente de julgamento não equivale à modificação do Código de Processo Civil ou da Lei do CADE."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-5-2020-2257725",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Parecer de inconstitucionalidade contestado e texto do recurso",
+          "Decisão da Comissão de Constituição e Justiça ou Plenário sobre o recurso"
+        ],
+        "counterargument": "Recurso contra parecer de inconstitucionalidade de emenda não comprova a restauração da emenda ou sua aprovação sem a decisão formal do órgão competente."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-51-2021-2297552",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Inteiro teor oficial do recurso e do PL 5479/2019",
+          "Decisão conclusiva do órgão deliberativo da Câmara"
+        ],
+        "counterargument": "A simples coautoria de recurso pendente de apreciação não demonstra efeito legislativo nem alteração no status jurídico do projeto principal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:rec-58-2021-2313361",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Inteiro teor do parecer da Comissão Especial e do recurso",
+          "Resultado oficial do julgamento do recurso pelo Plenário"
+        ],
+        "counterargument": "Interpor recurso regimental contra parecer da Comissão Especial em matéria do setor elétrico em trâmite não comprova alteração legal no regime de concessões de energia."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-10-2022-2313895",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Decisão oficial da Mesa Directora sobre a constituição da comissão",
+          "Relatório final de atividades e impacto real das ações da Comissão Temporária Externa"
+        ],
+        "counterargument": "Requerimento para criação de comissão temporária arquivado não comprova a efetiva constituição do órgão ou a geração de resultados práticos no acompanhamento da seca."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1030-2022-2327309",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Termo de deferimento do pedido de coautoria",
+          "Texto e resultado final da tramitação do PL 1580/2022"
+        ],
+        "counterargument": "Um requerimento visando inclusão de coautoria em projeto de lei é mero pedido formal administrativo e não comprova sanção, eficácia jurídica ou resultado legislativo da lei principal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1061-2021-2282969",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido por regra de segurança: autoria ou coautoria não equivale a voto nominal e não há comprovação de evento nominal ou efeito causal direto verificado.",
+      "missing_sources": [
+        "votacao_nominal",
+        "evento_normativo_efeito"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "Despacho oficial de deferimento das coautorias",
+          "Resultado de deliberação do PDL 192/2021"
+        ],
+        "counterargument": "Requerimento burocrático de adição de coautorias em Projeto de Decreto Legislativo não configura conquista legislativa nem alteração de mérito comprovada."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    }
+  ]
+}
