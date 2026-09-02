@@ -1,3 +1,15 @@
+
+## Tick contínuo — autoria Câmara 1351–1375 bloqueada e publicada — 2026-09-02T13:37Z
+
+- Microbatch selecionado deterministicamente: 25 projetos únicos, 100 ocorrências candidato–projeto e 17 candidatos únicos.
+- Antigravity causal passou a validação independente: 25/25 IDs exatos, todos `withheld`, `score_eligible=false`, fontes ausentes em domínio oficial Câmara.
+- Free pool red-team bloqueado por `exit=69` (`opencode não disponível; free pool indisponível`). Fallback Codex MCP Luna respondeu 25/25 IDs exatos; todos `withhold`, risco alto e sem cadeia normativa/evento completa. Reconciliação: 0 divergências, 0 aprovados, 25 withheld.
+- Checkpoint: `projects_analyzed=1375`, `approved=0`, `pending_review=0`, `withheld=1375`; próximo `1376-1400`.
+- QA: `docs/qa/lote-camara-autoria-1351-1375-2026-09-02.md`. Nenhum `authored_projects`, claim, voto, score, matriz, Supabase ou Cloudflare factual foi escrito.
+- Gates locais verdes: 491 testes/117 arquivos, TypeScript, schema, `data:check` 1003 candidaturas/988 fotos, build 244 módulos, smoke 1002 cards/0 HTTP/0 erros online e `git diff --check`.
+- Publicação: commit `e6e265b617d3d705448d7706576e81788e150991` em `origin/main`; backup workflow `334951434`, run `33636709372`, `success`, `headSha` exato; domínio oficial HTTP 200, release SHA exato, versão `0.2.1187`, snapshot 1003.
+- Bloqueios: OpenCode ausente; todos os projetos continuam `withheld` por ausência de vínculo exato versão/evento nominal. Artefatos `impact-editorial-*` pré-existentes permaneceram fora do commit.
+- Próximo chunk: `1376–1400`, mantendo duas lanes read-only, validação estrita de cardinalidade/IDs/fontes e fail-closed.
 ## Tick contínuo — Apresentação com Velo e Aviso Jurídico de Bens Declarados — 2026-08-31T06:05-03:00
 
 - **Apresentação com Velo e Esclarecimento Legal**: Implementado no componente `CandidateDeclaredAssetsCard.tsx` o aviso legal e institucional estrito sobre a declaração de bens (art. 11, § 1º, IV, da Lei nº 9.504/1997) para candidaturas com e sem patrimônio listado.
