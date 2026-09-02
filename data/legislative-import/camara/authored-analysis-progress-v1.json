@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_analysis_progress",
+  "project": "eleicao2026",
+  "mode": "durable_checkpoint",
+  "completed_batches": [
+    {
+      "batch_id": "1251-1275",
+      "status": "withheld",
+      "updated_at": "2026-09-02T11:52:18.216Z"
+    }
+  ],
+  "blocked_items": [],
+  "counts": {
+    "projects_analyzed": 1275,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 1275
+  },
+  "last_batch": "1251-1275",
+  "next_batch": "1276-1300",
+  "heartbeat": {
+    "at": "2026-09-02T11:52:18.216Z",
+    "pid": 1511675
+  }
+}
