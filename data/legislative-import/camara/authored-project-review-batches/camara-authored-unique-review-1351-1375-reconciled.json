@@ -1,0 +1,617 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "redteam_disagreements": 0
+  },
+  "items": [
+    {
+      "id": "camara:pl-3677-2021-2303528",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Proposição sem evidência de evento nominal vinculante de votação no endpoint oficial da Câmara (dadosabertos.camara.leg.br/api/v2/proposicoes/2303528/votacoes). Sem a apuração do voto em plenário/comissão com quorum formal, é vedada a conversão de autoria em score de impacto ou posicionamento.",
+      "identity": "PL 3677/2021",
+      "authorship": "autor_principal (TSE ID 210002533583 e coautores)",
+      "full_text": "Cria a transparência e as regras de composição de preços de derivados de petróleo praticados pela Petrobras, alterando a Lei nº 9.478, de 6 de agosto de 1997.",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2303528/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:pl-3752-2020-2257473",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Proposição sem evidência de evento nominal vinculante de votação no endpoint oficial da Câmara (dadosabertos.camara.leg.br/api/v2/proposicoes/2257473/votacoes). Autoria isolada sem evento de votação não gera imputação de score.",
+      "identity": "PL 3752/2020",
+      "authorship": "autor_principal (TSE ID 210002533583 e coautores)",
+      "full_text": "Institui o Sistema Nacional de Informações relativas a Covid-19.",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2257473/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:pl-3866-2020-2257969",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Ausência de registro de votação nominal e versão final apreciada nos dados abertos oficiais da Câmara. A apresentação de projeto de lei sem deliberação nominal em evento oficial resulta na retenção do score.",
+      "identity": "PL 3866/2020",
+      "authorship": "autor_principal (TSE ID 210002533583 e coautores)",
+      "full_text": "Dispõe sobre a manutenção da validade das cláusulas sociais das convenções coletivas e acordos coletivos e individuais de trabalho, dos profissionais dos serviços públicos e privados das atividades essenciais, enquanto durar a pandemia do novo coronavírus reconhecida pela Lei 13.979 de 2020.",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2257969/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:pl-4048-2021-2307490",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Proposição tramitando sem evento normativo de votação nominal vinculante apurado no portal da Câmara dos Deputados. Sem evento vinculante, retém-se a pontuação de impacto.",
+      "identity": "PL 4048/2021",
+      "authorship": "autor_principal (TSE ID 210002533583 e coautores)",
+      "full_text": "Acrescenta artigos à Lei nº 7.716, de 05 de janeiro de 1989, que define os crimes resultantes de discriminação ou preconceito de raça, cor, etnia religião ou procedência nacional, instituindo a responsabilização de pessoas jurídicas cujos funcionários ou terceirizados contratados realizem práticas de racismo.",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2307490/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:pl-4086-2020-2259412",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Inexistência de evento oficial de votação vinculante registrado na API da Câmara (2259412/votacoes). Apenas proposições com deliberação nominal em evento formal são elegíveis para matriz de impacto.",
+      "identity": "PL 4086/2020",
+      "authorship": "autor_principal (TSE ID 210002533583 e coautores)",
+      "full_text": "Altera a Lei n. 10.836, de 9 de janeiro de 2004, que cria o Programa Bolsa Família, e a Lei n. 8.742, de 7 de dezembro de 1993, que dispõe sobre a organização da Assistência Social, e dá outras providências, para ampliar as condições de superação da vulnerabilidade econômica (Mais Bolsa Família).",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2259412/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:pl-4382-2020-2261152",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Sem evento oficial de votação em plenário ou comissão com lista de votantes no repositório público da Câmara. Proposição mantida em retenção de score.",
+      "identity": "PL 4382/2020",
+      "authorship": "autor_principal (TSE ID 210002533583 e coautores)",
+      "full_text": "Altera a Lei 7.998, de 11 de janeiro de 1990 para o Conselho Deliberativo do Fundo de Amparo ao Trabalhador – CODEFAT proceder devolução de recursos indevidamente recolhidos à Conta Especial Emprego e Salário – CEES",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2261152/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:pl-4614-2020-2262966",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Matéria apresentada sem registro de votação nominal vinculante nos dados abertos oficiais da Câmara dos Deputados. Pontuação retida para evitar inferência indevida a partir da ementa.",
+      "identity": "PL 4614/2020",
+      "authorship": "autor_principal (TSE ID 210002533583 e coautores)",
+      "full_text": "Dispõe sobre medidas emergenciais para a regularização da oferta de alimentos da dieta básica da população brasileira e dá outras providências.",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2262966/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:pl-4691-2020-2263223",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Projeto de lei sem vinculo a evento normativo público de votação no endpoint de proposições da Câmara. Retém-se a elegibilidade de score conforme diretriz estrita.",
+      "identity": "PL 4691/2020",
+      "authorship": "autor_principal (TSE ID 210002533583 e coautores)",
+      "full_text": "Reduz a zero as alíquotas da contribuição para o PIS/Pasep e da Cofins incidentes sobre os produtos que compõem a Cesta Básica de Alimentos, até 31 de dezembro de 2021 e dá outras providências.",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2263223/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:pl-4784-2026-2641582",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Proposição recente sem histórico de deliberação por votação nominal nos dados oficiais da Câmara. A simples iniciativa autoral não equivale a posicionamento apurado em votação.",
+      "identity": "PL 4784/2026",
+      "authorship": "autor_principal (TSE ID 210002534583 e coautores)",
+      "full_text": "Dispõe sobre a criação e o funcionamento de Cooperativas Solidárias, visando a promoção social da cidadania, da organização coletiva mutualista e dos direitos fundamentais de vida digna, conforme especifica.",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2641582/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:pl-4943-2020-2264373",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Ausência de evento de votação nominal com identificação de versão final aprovada/rejeitada no repositório da Câmara. Matéria retida em pending/withheld.",
+      "identity": "PL 4943/2020",
+      "authorship": "autor_principal (TSE ID 210002533583 e coautores)",
+      "full_text": "Institui o Programa Trabalho e Renda para Todos.",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2264373/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:pl-4992-2020-2264573",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Proposição arquivada sem registro de evento de votação nominal vinculante no endpoint oficial (2264573/votacoes). Sem apuração de voto formal, retém-se qualquer atribuição de score.",
+      "identity": "PL 4992/2020",
+      "authorship": "autor_principal (TSE ID 210002533583 e coautores)",
+      "full_text": "Acrescenta dispositivo à Lei no 6.259, de 30 de outubro de 1975, que dispõe sobre a organização das ações de Vigilância Epidemiológica, sobre o Programa Nacional de Imunizações, estabelece normas relativas à notificação compulsória de doenças, e dá outras providências, para incluir no Programa Nacional de Imunizações a Vacina contra a COVID-19, de caráter obrigatório.",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2264573/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:pl-5021-2023-2396351",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Proposição sem vinculo a evento formal de votação com quorum e lista de votantes no portal oficial da Câmara dos Deputados. Score não elegível.",
+      "identity": "PL 5021/2023",
+      "authorship": "autor_principal (TSE ID 210002534654 e coautores)",
+      "full_text": "Institui a Lista de Organizações Terroristas, altera a Lei nº 13.260, de 16 de março de 2016, e dá outras providências.",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2396351/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:pl-5076-2026-2643776",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Falta de dados de votação nominal vinculante na API oficial da Câmara dos Deputados para esta proposição. Atribuição de impacto retida.",
+      "identity": "PL 5076/2026",
+      "authorship": "autor_principal (TSE ID 210002534583 e coautores)",
+      "full_text": "Institui a Lei de Proteção da Soberania Econômica Nacional contra a Aplicação Extraterritorial de Medidas Estrangeiras, dispõe sobre a proteção das pessoas submetidas à jurisdição brasileira contra medidas coercitivas unilaterais incompatíveis com o ordenamento jurídico nacional, e dá outras providências.",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2643776/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:pl-5462-2025-2578344",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Não consta registro de deliberação por votação nominal no endpoint oficial de votações da proposição. Inelegível para computação de score populacional.",
+      "identity": "PL 5462/2025",
+      "authorship": "autor_principal (TSE ID 210002534583 e coautores)",
+      "full_text": "Institui a Plataforma Escola Cuidada e dispõe sobre a transparência e o planejamento da adaptação das escolas da educação básica às mudanças climáticas.",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2578344/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:pl-692-2020-2239458",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Proposição sem evento vinculante de votação nominal registrado pela Câmara dos Deputados (2239458/votacoes). Retenção estrita por falta de prova factual de voto.",
+      "identity": "PL 692/2020",
+      "authorship": "autor_principal (TSE ID 210002533583 e coautores)",
+      "full_text": "Altera o Art. 564, da Lei nº 13.105/2015, e dá outras providências.",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2239458/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:pl-823-2021-2273510",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Inexistência de evento de votação nominal na API da proposição autoral (2273510/votacoes). A conversão de autoria em pontuação sem votação formal é vedada.",
+      "identity": "PL 823/2021",
+      "authorship": "autor_principal (TSE ID 210002533583 e coautores)",
+      "full_text": "Dispõe sobre medidas emergenciais de amparo aos agricultores familiares do Brasil para mitigar os impactos socioeconômicos da Covid–19; altera as Leis nºs 13.340, de 28 de setembro de 2016, e 13.606, de 9 de janeiro de 2018; e dá outras providências (Lei Assis Carvalho II).",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2273510/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:pl-894-2021-2273807",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Proposição sem vinculação a evento de votação nominal pública no repositório da Câmara. Score de impacto retido.",
+      "identity": "PL 894/2021",
+      "authorship": "autor_principal (TSE ID 210002533583 e coautores)",
+      "full_text": "Dispõe sobre a validade do registro profissional em todo o território nacional.",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2273807/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:pl-945-2021-2274132",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Ausência de registro oficial de evento de votação nominal para esta proposição nos dados abertos da Câmara dos Deputados. Decisão por retenção.",
+      "identity": "PL 945/2021",
+      "authorship": "autor_principal (TSE ID 210002534604 e coautores)",
+      "full_text": "Altera o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para regulamentar o uso do reconhecimento fotográfico.",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2274132/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:plp-128-2020-2252572",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Projeto de Lei Complementar arquivado sem evento nominal de votação vinculado na API da Câmara. Retenção de score por falta de evidência factual de deliberação.",
+      "identity": "PLP 128/2020",
+      "authorship": "autor_principal (TSE ID 210002533583 e coautores)",
+      "full_text": "Introduz disposição transitóra na Lei Complementar nº 101, de 04 de maio de 2000, para dispor sobre a flexibilização do prazo previsto no parágrafo único do artigo 21 em virtude da pandemia do COVID – 19.",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2252572/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:plp-131-2021-2297444",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Proposição sem evento de votação nominal disponível na API oficial da Câmara (2297444/votacoes). Inelegível para pontuação por ausência de deliberação apurada.",
+      "identity": "PLP 131/2021",
+      "authorship": "autor_principal (TSE ID 210002533583 e coautores)",
+      "full_text": "Altera a Lei Complementar n.",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2297444/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:plp-35-2024-2423486",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Proposição autoral sem vínculo direto com evento nominal de votação na API oficial da Câmara para a matéria autônoma. Impossível imputar score com base estrita de evidência.",
+      "identity": "PLP 35/2024",
+      "authorship": "autor_principal (TSE ID 210002534897 e coautores)",
+      "full_text": "Institui a Cesta Básica Nacional de Alimentos - CeNA criada pelo artigo 8º da Emenda Constitucional nº 132, de 20 de dezembro de 2023.",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2423486/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:prc-31-2021-2277660",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Matéria regimental sem evento normativo de votação nominal em plenário/comissão apurado na API da Câmara. Retenção de score de impacto.",
+      "identity": "PRC 31/2021",
+      "authorship": "autor_principal (TSE ID 210002534604 e coautores)",
+      "full_text": "Altera o Código de Ética da Câmara dos Deputados para dispor sobre a paridade na composição do Conselho de Ética e a violência contra mulheres enquanto circunstância agravante para fins de sanção disciplinar",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2277660/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:prc-76-2021-2306604",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Proposta de Resolução regimental/simbólica sem evento formal de votação nominal vinculante na Câmara. Score não elegível.",
+      "identity": "PRC 76/2021",
+      "authorship": "autor_principal (TSE ID 210002533583 e coautores)",
+      "full_text": "Institui a Comenda Zumbi dos Palmares e dá outras providências.",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2306604/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:rec-10-2026-2620895",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Recurso procedimental de tramitação conclusiva sem evento apurado de votação nominal no endpoint oficial da Câmara (2620895/votacoes). Sem efeito populacional direto e sem votação nominal formal.",
+      "identity": "REC 10/2026",
+      "authorship": "coautor (TSE ID 210002547857 e coautores)",
+      "full_text": "Recurso contra a tramitação conclusiva do Projeto de Lei nº 6018/2025, que “altera a Lei nº 10.406, de 10 de janeiro de 2002 (Código Civil), para dispor sobre o dever do condômino de contribuir para as despesas do condomínio edilício e as consequências em caso de atraso no pagamento de cota de rateio das referidas despesas”.",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620895/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    },
+    {
+      "id": "camara:rec-11-2026-2623462",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Regra fail-closed: Recurso de natureza procedimental regimental sem registro de evento de votação nominal na API da Câmara dos Deputados. Pontuação retida.",
+      "identity": "REC 11/2026",
+      "authorship": "coautor / autor_principal (TSE ID 210002534583 e coautores)",
+      "full_text": "Recurso contra a tramitação conclusiva do Projeto de Lei nº 4.262/2023, que “Altera a Lei nº 5.517, de 23 de outubro de 1968, para instituir o Exame de Habilitação Profissional em Medicina Veterinária.”",
+      "event_version": "missing_official_voting_event",
+      "missing_sources": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2623462/votacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "reason": "Exact normative and event evidence absent; authorship is not a vote.",
+        "missing_sources": [
+          "official normative full text",
+          "official Câmara event or vote record"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Duas lanes independentes convergiram em retenção; autoria não equivale a voto e falta vínculo completo de versão/evento."
+    }
+  ]
+}\n
