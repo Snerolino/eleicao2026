@@ -24,3 +24,10 @@ Nenhum `authored_projects`, claim, voto, score, matriz, Supabase ou Cloudflare f
 
 ## Próximo passo
 Retomar `1351–1375` somente após definir a seleção por projeto e cardinalidade de ocorrências de forma determinística e com duas lanes independentes disponíveis. Manter todos os itens sem cadeia completa fonte → texto → versão/evento como `withheld`; não publicar automaticamente.
+
+## Publicação documental
+- Commit `48833e7d575b9cb619797f5b699da106836d9a75` foi enviado a `origin/main` após os gates verdes; a primeira tentativa HTTPS retornou 403 e o retry com `gh auth setup-git` concluiu `main -> main`.
+- Workflow backup `334951434`, run `33633714428`: `completed/success`, `headSha` exatamente igual ao commit.
+- Deployment individual retornado pelo Wrangler: `https://28373c55.portal-transparencia-rs.pages.dev`; `/release.json` confirmou SHA `48833e7d575b9cb619797f5b699da106836d9a75`, versão `0.2.1184`, HTTP 200.
+- Domínio oficial `https://rs.votopraquem.org`: HTTP 200, porém `/release.json` ainda serve SHA anterior `6ee20da0fe6558f5ba43bf4275a869a2c1db01ec` (versão `0.2.1183`). Isso é discrepância real entre deployment Cloudflare concluído e domínio customizado; não foi declarado como release live do domínio.
+- Os três artefatos editoriais Câmara já modificados antes deste lote (`impact-editorial-*.json`) e o QA de `1301–1325` permaneceram fora deste commit.
