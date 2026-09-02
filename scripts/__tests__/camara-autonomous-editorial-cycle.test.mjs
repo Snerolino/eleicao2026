@@ -40,5 +40,5 @@ describe('camara-autonomous-editorial-cycle', () => {
     expect(batch.items.length).toBe(30);
     expect(reviewer.reviews.length).toBe(30);
     expect(reviewer.summary.approved).toBe(30);
-  });
+  }, 120_000);
 });

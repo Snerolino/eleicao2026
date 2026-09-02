@@ -61,6 +61,7 @@ function resolveChain() {
 
 const args = process.argv.slice(2);
 const ONLY_FIRST = args.includes('--once');
+const MODEL_TIMEOUT_MS = Number(process.env.MOA_MODEL_TIMEOUT_MS || 900_000);
 
 function argValue(name) {
   const withEquals = args.find((arg) => arg.startsWith(`${name}=`));
@@ -102,7 +103,7 @@ function runWithModel(model) {
   try {
     const output = execFileSync(OPENCODE_BIN, buildCommand(model), {
       encoding: 'utf8',
-      timeout: 900_000,
+      timeout: Number.isFinite(MODEL_TIMEOUT_MS) && MODEL_TIMEOUT_MS > 0 ? MODEL_TIMEOUT_MS : 900_000,
       stdio: ['ignore', 'pipe', 'pipe'],
     });
     return { ok: true, model, output };

@@ -4,6 +4,9 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 REAL_HOME="${HERMES_REAL_HOME:-$(getent passwd "$(id -un)" | cut -d: -f6)}"
 TIMEOUT_SECONDS="${ORCH_EXECUTOR_TIMEOUT:-480}"
+# Limite por modelo: um provedor indisponível não pode consumir o tick inteiro.
+# O timeout externo continua protegendo o pool como um todo.
+MODEL_TIMEOUT_MS="${ORCH_MODEL_TIMEOUT_MS:-60000}"
 # Cadeia consultiva GRATUITA. Não inclui modelos pagos por padrão.
 FREE_MODELS="${ORCH_FREE_MODELS:-opencode/deepseek-v4-flash-free,opencode/nemotron-3-ultra-free,opencode/laguna-s-2.1-free,opencode/ling-3.0-tiny-free,opencode/mimo-v2.5-free}"
 
@@ -42,6 +45,7 @@ exec env \
   HOME="$REAL_HOME" \
   OPENCODE_DISABLE_MCP=true \
   MOA_MODELS="$FREE_MODELS" \
+  MOA_MODEL_TIMEOUT_MS="$MODEL_TIMEOUT_MS" \
   timeout --signal=TERM --kill-after=10s "${TIMEOUT_SECONDS}s" \
   node "$SNAPSHOT/scripts/moa-run.mjs" \
     --agent=plan \
