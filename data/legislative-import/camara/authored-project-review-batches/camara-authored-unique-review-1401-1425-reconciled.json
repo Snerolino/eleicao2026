@@ -1,0 +1,617 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:req-1061-2022-2329308",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1072-2023-2355112",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1082-2022-2330014",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1102-2020-2252651",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-112-2023-2348279",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1141-2021-2284518",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1161-2020-2252917",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1163-2020-2252942",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1164-2023-2355870",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1165-2020-2252944",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1186-2020-2253030",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1204-2023-2356514",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1216-2023-2356745",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1231-2024-2427389",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1244-2020-2253580",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1250-2019-2198495",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1251-2023-2357504",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1253-2022-2332937",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-127-2021-2303353",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1270-2020-2253684",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1271-2020-2253685",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1271-2025-2494344",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1277-2020-2253701",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1353-2024-2429665",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-1404-2022-2335357",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Authorship alone is insufficient; exact normative text, version, and event chain are unavailable.",
+      "missing_sources": [
+        "exact_normative_text",
+        "version_identifier",
+        "event_chain"
+      ],
+      "event_version": null,
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_pdf",
+          "roll_call_votes",
+          "sanction_publication"
+        ],
+        "counterargument": "Authorship record exists in metadata, but absence of verified full text body, binding voting logs, and legislative outcome prevents public attribution under fail-closed red-team policy."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    }
+  ]
+}
