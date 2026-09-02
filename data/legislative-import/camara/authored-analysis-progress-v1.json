@@ -63,6 +63,16 @@
       "batch_id": "1526-1550",
       "status": "blocked",
       "updated_at": "2026-09-02T16:47:41.228Z"
+    },
+    {
+      "batch_id": "1551-1575",
+      "status": "blocked",
+      "updated_at": "2026-09-02T17:10:57.932Z"
+    },
+    {
+      "batch_id": "1576-1600",
+      "status": "blocked",
+      "updated_at": "2026-09-02T17:34:38.814Z"
     }
   ],
   "blocked_items": [
@@ -98,18 +108,26 @@
     "authored-1501-1525-source-event-gap",
     "authored-1526-1550-causal-cardinality",
     "authored-1526-1550-redteam-format",
-    "authored-1526-1550-source-event-gap"
+    "authored-1526-1550-source-event-gap",
+    "authored-1551-1575-causal-cardinality",
+    "authored-1551-1575-redteam-format",
+    "authored-1551-1575-source-event-gap",
+    "authored-1576-1600-start",
+    "authored-1576-1600-causal-cardinality",
+    "authored-1576-1600-redteam-codex-format",
+    "authored-1576-1600-redteam-provider",
+    "authored-1576-1600-source-event-gap"
   ],
   "counts": {
-    "projects_analyzed": 1550,
+    "projects_analyzed": 1600,
     "approved": 0,
     "pending_review": 0,
-    "withheld": 1550
+    "withheld": 1600
   },
-  "last_batch": "1526-1550",
-  "next_batch": "1551-1575",
+  "last_batch": "1576-1600",
+  "next_batch": "1601-1625",
   "heartbeat": {
-    "at": "2026-09-02T16:47:41.250Z",
-    "pid": 1910024
+    "at": "2026-09-02T17:31:28.465Z",
+    "pid": 1962538
   }
 }

@@ -1,0 +1,804 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_authorship_index_only",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "lanes": {
+    "causal": {
+      "status": "accepted_withheld",
+      "executor": "antigravity",
+      "items": 25
+    },
+    "redteam": {
+      "status": "blocked",
+      "codex": "invalid_contract",
+      "free_pool": "exit_69_no_output"
+    }
+  },
+  "items": [
+    {
+      "id": "camara:emc-300-2020-2239980",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-301-2019-2223323",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-301-2020-2239981",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-302-2019-2223324",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-303-2019-2223325",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-303-2026-2633811",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-3061-2025-2515219",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-3062-2025-2515221",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-307-2019-2202680",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-308-2019-2202681",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-309-2019-2202682",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-309-2026-2633817",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-31-0-2290052",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-31-2019-2204580",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-31-2019-2218911",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-31-2019-2219740",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-31-2020-2243348",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-31-2020-2244392",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-31-2020-2246585",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-31-2020-2247517",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-31-2020-2254115",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-31-2020-2255323",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-31-2022-2321872",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-310-2019-2202683",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    },
+    {
+      "id": "camara:emc-310-2026-2633818",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram uma decisão independente reconciliável; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada",
+        "red-team independente com contrato por item"
+      ],
+      "risk": "Sem análise causal e red-team independentes reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O índice oficial de autoria é fonte de descoberta, mas não substitui texto integral, versão/evento e análise causal independente.",
+      "causal_lane": {
+        "decision": "withheld",
+        "score_eligible": false,
+        "reason": "Apenas metadados brutos de autoria disponíveis; sem texto integral, versão final, votação nominal vinculante ou nexo causal comprovado.",
+        "missing_sources": [
+          "inteiro_teor",
+          "votacao_nominal",
+          "nexo_causal"
+        ]
+      },
+      "redteam_lane": {
+        "status": "blocked",
+        "reason": "Codex retornou envelope executor sem decisões por item; free pool encerrou com exit 69 sem saída verificável."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Fail-closed: red-team independente não passou o contrato/cardinality; nenhum item aprovado."
+    }
+  ]
+}

@@ -1,3 +1,13 @@
+
+## Tick contínuo — autoria Câmara 1551–1575 bloqueada — 2026-09-02T17:10Z
+
+- Microbatch: 25 projetos únicos (`offset=1550`, `limit=25`); resultado fail-closed, 0 aprovados, 0 `pending_review`, 25 `withheld`, 0 `score_eligible`; próximo `1576–1600`.
+- Antigravity causal terminou exit 0, mas retornou 25 IDs de outro recorte; rejeitado por identidade/cardinalidade. Codex readonly Luna terminou exit 0 com envelope executor sem decisões por item verificáveis; rejeitado por formato/cardinalidade.
+- Checkpoint via `npm run data:authored-projects:checkpoint`: `projects_analyzed=1575`, `withheld=1575`, `next_batch=1576-1600`, `blocked_items=36`.
+- Artefato reconciliado: `data/legislative-import/camara/authored-project-review-batches/camara-authored-unique-review-1551-1575-reconciled.json`; `content_read=false`, `remote_apply=false`. QA: `docs/qa/lote-camara-autoria-1551-1575-2026-09-02.md`.
+- Nenhum `authored_projects`, claim, voto, score, matriz, snapshot público, Supabase ou Cloudflare factual foi escrito.
+- Gates: TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build (244 módulos), `git diff --check` passaram. Suíte completa permanece vermelha por falha preexistente `camara-autonomous-editorial-cycle`: UUID inválido `not-a-uuid` e timeout de 5000 ms (490/491 testes; 116/117 arquivos). Sem commit/push/deploy por gate completo não verde. Produção existente raiz HTTP 200; release atual `0.2.1193`.
+- Próximo chunk: `1576–1600`, mantendo duas lanes read-only, validação estrita e fail-closed.
 ## Tick contínuo — autoria Câmara 1526–1550 bloqueada — 2026-09-02T16:42Z
 
 - Microbatch: 25 projetos únicos (`offset=1525`, `limit=25`), 100 ocorrências candidato–projeto e 23 candidatos únicos; próximo `1551–1575`.
@@ -5041,3 +5051,12 @@ Sem autorização humana explícita própria, não fazer:
 
 - O registro anterior citava o commit intermediário 235b9d9. O estado final publicado inclui também a atualização documental do checkpoint no commit 5777ea08d941a4552ba2d14464534626553038f0.
 - Backup 334951434: run 33642680668, completed/success, headSha exato. Produção release.json HTTP 200 confirmou SHA 5777ea08d941a4552ba2d14464534626553038f0, versão 0.2.1191 e snapshot 1003.
+
+## Tick contínuo — autoria Câmara 1576–1600 bloqueada — 2026-09-02T17:31Z
+
+- Microbatch: 25 projetos únicos, 45 ocorrências candidato–projeto e 16 candidatos únicos (`offset=1575`, `limit=25`); próximo `1601–1625`.
+- Antigravity causal: exit 0, 25/25 IDs exatos, todos withheld; `content_read=false`, sem texto integral.
+- Codex readonly Luna: exit 0, mas envelope executor sem decisões por item; rejeitado por contrato/cardinality. Free pool red-team: exit 69 sem saída; não repetido no tick.
+- Reconciliação fail-closed: 0 aprovados, 0 pending_review, 25 withheld, 0 score_eligible. Checkpoint `projects_analyzed=1600`, `blocked_items=41`.
+- Artefato: `data/legislative-import/camara/authored-project-review-batches/camara-authored-unique-review-1576-1600-reconciled.json`; QA: `docs/qa/lote-camara-autoria-1576-1600-2026-09-02.md`.
+- Nenhum authored_projects, claim, voto, score, matriz, snapshot público, Supabase ou Cloudflare factual foi escrito. Sem gates verdes completos, não houve commit/push/deploy.
