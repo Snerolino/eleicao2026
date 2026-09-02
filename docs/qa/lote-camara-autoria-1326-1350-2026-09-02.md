@@ -31,3 +31,6 @@ Retomar `1351–1375` somente após definir a seleção por projeto e cardinalid
 - Deployment individual retornado pelo Wrangler: `https://28373c55.portal-transparencia-rs.pages.dev`; `/release.json` confirmou SHA `48833e7d575b9cb619797f5b699da106836d9a75`, versão `0.2.1184`, HTTP 200.
 - Domínio oficial `https://rs.votopraquem.org`: HTTP 200, porém `/release.json` ainda serve SHA anterior `6ee20da0fe6558f5ba43bf4275a869a2c1db01ec` (versão `0.2.1183`). Isso é discrepância real entre deployment Cloudflare concluído e domínio customizado; não foi declarado como release live do domínio.
 - Os três artefatos editoriais Câmara já modificados antes deste lote (`impact-editorial-*.json`) e o QA de `1301–1325` permaneceram fora deste commit.
+
+- Após o segundo commit documental `0a1b37f8df63fb6a6a17b8da8048eb2a54002a44`, o run backup `33633917081` concluiu `success` com `headSha` exato; o run manual duplicado `33633984987` terminou `skipped`.
+- Na verificação final, o domínio oficial permaneceu HTTP 200 mas serviu `release.json` do commit anterior `48833e7d575b9cb619797f5b699da106836d9a75` (versão `0.2.1184`). O workflow confirma o build/deployment do novo commit, mas a promoção do domínio customizado ainda não foi observada; bloqueio de release verification, sem alegar que `0a1b37f` está live no domínio.
