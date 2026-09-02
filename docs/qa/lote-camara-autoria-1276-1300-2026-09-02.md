@@ -44,3 +44,5 @@ Retomar `1301-1325` somente com lane editorial cujo resultado seja JSON puro, ca
 - Commit `9346b51ec371dfb060cb9a65d0bf6b48f49b29ae` enviado com sucesso para `origin/main`.
 - Workflow backup Cloudflare `334951434`, run `33629011829`: `completed/success`, `headSha` idêntico ao commit.
 - Produção `https://rs.votopraquem.org`: HTTP `200`; `/release.json` confirmou SHA `9346b51ec371dfb060cb9a65d0bf6b48f49b29ae`, release `9346b51-20260902T121656081Z`, versão `0.2.1181`, snapshot `1003` registros.
+
+- Segundo commit documental `4c042dce512c2dd695b2e080b7d1a4af4e3e3519` também foi publicado. Backup run `33629143146`: `completed/success`, `headSha` idêntico; run duplicado `33629167864` terminou `skipped`. Produção confirmou HTTP 200 e `/release.json` release `4c042dc-20260902T121830253Z`, versão `0.2.1182`, SHA idêntico e snapshot `1003`.

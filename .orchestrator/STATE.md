@@ -4981,3 +4981,4 @@ Sem autorização humana explícita própria, não fazer:
 - QA: `docs/qa/lote-camara-autoria-1276-1300-2026-09-02.md`.
 
 - Publicação documental verificada: commit `9346b51ec371dfb060cb9a65d0bf6b48f49b29ae`; backup `334951434`, run `33629011829`, `completed/success`, `headSha` idêntico; produção HTTP 200 e `/release.json` confirmaram o SHA e `row_count=1003`.
+- Segundo checkpoint documental publicado: `4c042dce512c2dd695b2e080b7d1a4af4e3e3519`; backup run `33629143146` success/headSha idêntico (run duplicado `33629167864` skipped); produção HTTP 200, release `4c042dc-20260902T121830253Z`, `row_count=1003`.
