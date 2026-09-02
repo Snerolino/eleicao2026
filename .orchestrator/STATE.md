@@ -5006,3 +5006,9 @@ Sem autorização humana explícita própria, não fazer:
 - Publicação: commit 235b9d97b0ae2527725a85cf72816403fbd8617f em origin/main; backup workflow 334951434, run 33642324618, completed/success, headSha exato. Produção raiz/release HTTP 200; release.json confirmou SHA exato, versão 0.2.1190 e snapshot 1003.
 - Bloqueios: OpenCode/free pool indisponível; autoria permanece withheld sem cadeia verificável fonte oficial → texto → versão/evento nominal → efeito.
 - Próximo chunk: 1426–1450, mantendo duas lanes read-only e fail-closed.
+
+
+## Correção de publicação do tick 1401–1425 — 2026-09-02T14:33Z
+
+- O registro anterior citava o commit intermediário 235b9d9. O estado final publicado inclui também a atualização documental do checkpoint no commit 5777ea08d941a4552ba2d14464534626553038f0.
+- Backup 334951434: run 33642680668, completed/success, headSha exato. Produção release.json HTTP 200 confirmou SHA 5777ea08d941a4552ba2d14464534626553038f0, versão 0.2.1191 e snapshot 1003.
