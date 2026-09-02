@@ -4969,3 +4969,13 @@ Sem autorização humana explícita própria, não fazer:
 - Mirror `../dataset2026` não contém catálogo oficial de projetos de autoria; `data/public-candidates.json` não foi preenchido com dados inventados. Próximo input deve ser manifesto oficial em `--input`.
 - Gates: `data:check` verde; TypeScript verde; `117` arquivos/`491` testes verdes; build Vite/PWA/sitemap verde; smoke local verde (`1002` cards, `0` falhas HTTP, `0` erros online).
 - Próximo chunk: obter/coletar manifesto oficial ALRS/Câmara por candidato com identidade exata, executar primeiro lote de 20 em dry-run e somente então aplicar incrementalmente.
+
+
+## Tick contínuo — autoria Câmara 1276–1300 bloqueada — 2026-09-02T12:13Z
+
+- Microbatch `1276-1300` selecionado com `25` projetos, `100` ocorrências candidato–projeto e `26` candidatos únicos.
+- Lane causal Antigravity rejeitada na camada `cli/formato` porque retornou JSON cercado por Markdown; lane red-team free pool bloqueada por OpenCode ausente (`exit 69`); fallback Codex bloqueado por falta de créditos (`exit 1`). Nenhuma saída foi aceita.
+- Checkpoint atualizado: `status=blocked`, `projects_analyzed=1300`, `withheld=1300`, `approved=0`, `pending_review=0`, `next_batch=1301-1325`; três blockers persistidos.
+- Próximo pacote `1301-1325` preparado read-only com `25/25` URLs oficiais Câmara e IDs únicos. Nenhuma escrita remota, snapshot, claim, voto, score ou matriz.
+- Gates: testes, TypeScript, schema, `data:check`, build, diff-check e smoke locais verdes; smoke `1002` cards/0 HTTP/console; produção existente HTTP 200.
+- QA: `docs/qa/lote-camara-autoria-1276-1300-2026-09-02.md`.

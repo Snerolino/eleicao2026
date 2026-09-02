@@ -8,19 +8,28 @@
       "batch_id": "1251-1275",
       "status": "withheld",
       "updated_at": "2026-09-02T11:52:18.216Z"
+    },
+    {
+      "batch_id": "1276-1300",
+      "status": "blocked",
+      "updated_at": "2026-09-02T12:13:05.691Z"
     }
   ],
-  "blocked_items": [],
+  "blocked_items": [
+    "authored-1276-1300-causal-format",
+    "authored-1276-1300-redteam-provider",
+    "authored-1276-1300-redteam-codex"
+  ],
   "counts": {
-    "projects_analyzed": 1275,
+    "projects_analyzed": 1300,
     "approved": 0,
     "pending_review": 0,
-    "withheld": 1275
+    "withheld": 1300
   },
-  "last_batch": "1251-1275",
-  "next_batch": "1276-1300",
+  "last_batch": "1276-1300",
+  "next_batch": "1301-1325",
   "heartbeat": {
-    "at": "2026-09-02T11:52:18.216Z",
-    "pid": 1511675
+    "at": "2026-09-02T12:13:05.700Z",
+    "pid": 1537668
   }
 }
