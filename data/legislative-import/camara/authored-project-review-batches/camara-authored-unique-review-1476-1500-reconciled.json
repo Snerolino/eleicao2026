@@ -1,0 +1,467 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_authorship_metadata_only",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:req-2183-2020-2260596",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2260596",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-222-2025-2483177",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483177",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-2225-2020-2260829",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2260829",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-2248-2020-2260968",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2260968",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-227-2023-2349111",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349111",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-2306-2025-2525835",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2525835",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-231-2023-2349128",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349128",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-232-2023-2349130",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349130",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-233-2023-2349135",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349135",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-234-2023-2349138",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349138",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-2340-2020-2262259",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2262259",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-2354-2021-2306440",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2306440",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-2366-2020-2262847",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2262847",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-2383-2020-2262910",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2262910",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-2384-2020-2262911",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2262911",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-2385-2020-2262912",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2262912",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-2396-2021-2307264",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2307264",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-243-2025-2483214",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483214",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-244-2025-2483219",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483219",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-245-2025-2483226",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483226",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-248-2022-2317521",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2317521",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-248-2025-2483229",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483229",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-2484-2021-2308934",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2308934",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-2497-2024-2445965",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2445965",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-251-2023-2349246",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "risk": "high",
+      "counterargument": "A autoria pode indicar intenção legislativa, mas não demonstra voto nem efeito causal.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349246",
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: autoria não equivale a voto; não há cadeia verificável fonte normativa→texto integral→versão→evento nominal vinculante→efeito.",
+      "content_read": false
+    }
+  ]
+}

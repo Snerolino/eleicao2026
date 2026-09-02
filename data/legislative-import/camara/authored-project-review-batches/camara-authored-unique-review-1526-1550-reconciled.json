@@ -1,0 +1,477 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "blocked",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_authorship_metadata_only",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "lane_evidence": {
+    "causal": {
+      "status": "rejected",
+      "reason": "25 itens parseáveis, porém conjunto de IDs não coincide com o lote exato 1526-1550"
+    },
+    "redteam": {
+      "status": "blocked",
+      "reason": "Codex readonly devolveu envelope executor sem os 25 objetos requeridos; cardinalidade não verificável"
+    }
+  },
+  "items": [
+    {
+      "id": "camara:req-345-2023-2349755",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349755",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349755",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-346-2025-2483510",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483510",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483510",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-3499-2023-2395264",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2395264",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2395264",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-3608-2023-2397806",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2397806",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2397806",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-372-2021-2272002",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2272002",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2272002",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-3779-2023-2400737",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2400737",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2400737",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-386-2024-2418559",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2418559",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2418559",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-390-2022-2318567",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2318567",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2318567",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-3950-2023-2404186",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2404186",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2404186",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-3954-2023-2404297",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2404297",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2404297",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-400-2023-2350002",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350002",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350002",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-4193-2023-2409630",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2409630",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2409630",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-425-2023-2350117",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350117",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350117",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-4314-2023-2414224",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2414224",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2414224",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-439-2023-2350206",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350206",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350206",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-453-2023-2350241",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350241",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350241",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-458-2023-2350271",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350271",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350271",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-459-2023-2350272",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350272",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350272",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-460-2023-2350273",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350273",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350273",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-477-2023-2350367",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350367",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350367",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-485-2023-2350400",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350400",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350400",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-489-2022-2319220",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2319220",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2319220",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-494-2023-2350472",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350472",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350472",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-4990-2024-2481282",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2481282",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2481282",
+      "content_read": false
+    },
+    {
+      "id": "camara:req-502-2022-2319361",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: as duas lanes não produziram análise independente reconciliável para este conjunto exato; autoria/metadados não comprovam texto integral, versão, evento nominal vinculante ou efeito causal.",
+      "missing_sources": [
+        "analise_causal_reconciliavel",
+        "redteam_reconciliavel",
+        "inteiro_teor_proposicao",
+        "versao_normativa",
+        "evento_nominal_vinculante"
+      ],
+      "risk": "Publicar autoria como impacto ou score sem cadeia documental completa pode atribuir mecanismo causal inexistente.",
+      "counterargument": "A fonte oficial de autoria confirma o vínculo de autoria, mas não substitui texto integral, versão, evento e efeito.",
+      "official_authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2319361",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2319361",
+      "content_read": false
+    }
+  ]
+}

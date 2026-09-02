@@ -1,3 +1,32 @@
+## Tick contínuo — autoria Câmara 1526–1550 bloqueada — 2026-09-02T16:42Z
+
+- Microbatch: 25 projetos únicos (`offset=1525`, `limit=25`), 100 ocorrências candidato–projeto e 23 candidatos únicos; próximo `1551–1575`.
+- Antigravity causal: `exit=0`, 25 objetos parseáveis, porém conjunto de IDs de outro recorte; rejeitado na camada formato/identidade.
+- Codex readonly Luna: `exit=0`, envelope executor válido, mas sem 25 decisões por item; cardinalidade/IDs não verificáveis. Não aceito.
+- Reconciliação fail-closed: 0 aprovados, 0 pending, 25 withheld; `content_read=false`, `score_eligible=false`, `remote_apply=false`. Artefato e QA registrados.
+- Nenhum authored_projects, claim, voto, score, matriz, snapshot público, Supabase ou Cloudflare factual foi escrito.
+- Checkpoint direto sob lock; comando NPM segue sujeito ao guard do gateway. Próximo chunk: `1551–1575`.
+
+## Tick contínuo — autoria Câmara 1501–1525 bloqueada — 2026-09-02T16:21Z
+
+- Microbatch: 25 projetos únicos (`offset=1500`, `limit=25`), fonte no índice oficial Câmara; próximo `1526–1550`.
+- Antigravity causal: `exit=0`, 25/25 IDs exatos, saída parseável validada, todos `withheld`, `score_eligible=false`, `content_read=false`.
+- Free pool red-team: indisponível neste tick; `deepseek` retornou erro de servidor e não houve saída verificável. Não repetido no mesmo tick.
+- Fallback Codex MCP Luna: 25/25 IDs exatos, JSON válido, todos `withheld`, `score_eligible=false`; reconciliação sem divergências, 0 aprovados, 0 pending, 25 withheld.
+- Artefato: `data/legislative-import/camara/authored-project-review-batches/camara-authored-unique-review-1501-1525-reconciled.json`; `remote_apply=false`, `content_read=false`. QA: `docs/qa/lote-camara-autoria-1501-1525-2026-09-02.md`.
+- Nenhum authored_projects, claim, voto, score, matriz, snapshot público, Supabase ou Cloudflare factual foi escrito. Fonte normativa, texto integral, versão, evento nominal e efeito continuam ausentes; fail-closed.
+- Gates: TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build (244 módulos), smoke (1002 cards, 0 falhas HTTP, 0 erros online) e `git diff --check` passaram. Suíte completa permanece vermelha por falha preexistente `camara-autonomous-editorial-cycle`: UUID inválido `not-a-uuid` e timeout 5000 ms (490/491 testes, 116/117 arquivos).
+- Checkpoint NPM foi bloqueado pelo guard do gateway; equivalente direto sob lock confirmou o estado. Sem commit/push/deploy devido ao gate completo não verde.
+
+## Tick contínuo — autoria Câmara 1476–1500 bloqueada — 2026-09-02T15:47Z
+
+- Microbatch selecionado deterministicamente: 25 projetos únicos, 100 ocorrências candidato–projeto e 19 candidatos únicos (`offset=1475`, `limit=25`).
+- Antigravity causal terminou `exit=0`, JSON parseável com 25 IDs únicos, mas todos de outro recorte; verificação rejeitou por cardinalidade/identidade exata. Codex MCP Luna red-team retornou os 25 IDs esperados, todos `withheld`, risco alto e `score_eligible=false`; reconciliação: 0 aprovados, 0 pending, 25 withheld.
+- Checkpoint: `projects_analyzed=1500`, `approved=0`, `pending_review=0`, `withheld=1500`; próximo `1501-1525`. Artefato: `data/legislative-import/camara/authored-project-review-batches/camara-authored-unique-review-1476-1500-reconciled.json` (`content_read=false`, `remote_apply=false`). QA: `docs/qa/lote-camara-autoria-1476-1500-2026-09-02.md`.
+- Nenhum authored_projects, claim, voto, score, matriz, Supabase ou Cloudflare factual foi escrito. Smoke local passou: 1002 cards, 0 falhas HTTP, 0 erros online, service worker pronto.
+- Gates: TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build (244 módulos) e `git diff --check` passaram. Suíte completa bloqueada por teste preexistente `camara-autonomous-editorial-cycle`: UUID inválido `not-a-uuid` e timeout; teste específico de autoria passou (3/3). Não houve commit/push/deploy por gate completo não verde. Alterações preexistentes em `impact-editorial-*`, `.agents/` e `skills-lock.json` foram preservadas.
+- Próximo chunk: `1501-1525`, mantendo duas lanes read-only, validação estrita de cardinalidade/IDs/fontes e fail-closed.
+
 
 ## Tick contínuo — autoria Câmara 1351–1375 bloqueada e publicada — 2026-09-02T13:37Z
 

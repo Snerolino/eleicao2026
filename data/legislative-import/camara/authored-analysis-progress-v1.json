@@ -38,37 +38,78 @@
       "batch_id": "1401-1425",
       "status": "blocked",
       "updated_at": "2026-09-02T14:26:53.758Z"
+    },
+    {
+      "batch_id": "1426-1450",
+      "status": "blocked",
+      "updated_at": "2026-09-02T14:55:24.965Z"
+    },
+    {
+      "batch_id": "1451-1475",
+      "status": "blocked",
+      "updated_at": "2026-09-02T15:21:59.563Z"
+    },
+    {
+      "batch_id": "1476-1500",
+      "status": "blocked",
+      "updated_at": "2026-09-02T15:47:05.311Z"
+    },
+    {
+      "batch_id": "1501-1525",
+      "status": "blocked",
+      "updated_at": "2026-09-02T16:17:17.586921Z"
+    },
+    {
+      "batch_id": "1526-1550",
+      "status": "blocked",
+      "updated_at": "2026-09-02T16:47:41.228Z"
     }
   ],
   "blocked_items": [
     "authored-1276-1300-causal-format",
-    "authored-1276-1300-redteam-provider",
     "authored-1276-1300-redteam-codex",
-    "authored-1301-1325-redteam-provider",
-    "authored-1301-1325-redteam-codex",
+    "authored-1276-1300-redteam-provider",
     "authored-1301-1325-causal-cardinality",
+    "authored-1301-1325-redteam-codex",
+    "authored-1301-1325-redteam-provider",
+    "authored-1326-1350-cardinality-definition",
     "authored-1326-1350-causal-provider",
     "authored-1326-1350-redteam-codex",
-    "authored-1326-1350-cardinality-definition",
-    "authored-1351-1375-redteam-provider",
     "authored-1351-1375-causal-verified",
+    "authored-1351-1375-redteam-provider",
     "authored-1351-1375-source-event-gap",
     "authored-1376-1400-causal-provider",
-    "authored-1376-1400-source-event-gap",
     "authored-1376-1400-redteam-codex-auth",
+    "authored-1376-1400-source-event-gap",
     "authored-1401-1425-causal-antigravity-format",
-    "authored-1401-1425-source-event-gap"
+    "authored-1401-1425-source-event-gap",
+    "authored-1426-1450-codex-format",
+    "authored-1426-1450-source-event-gap",
+    "authored-1451-1475-causal-cardinality",
+    "authored-1451-1475-redteam-not-reconciled",
+    "authored-1451-1475-source-event-gap",
+    "authored-1451-1475-start",
+    "authored-1476-1500-causal-cardinality",
+    "authored-1476-1500-redteam-withheld",
+    "authored-1476-1500-source-event-gap",
+    "authored-1476-1500-start",
+    "authored-1501-1525-causal-verified",
+    "authored-1501-1525-redteam-provider",
+    "authored-1501-1525-source-event-gap",
+    "authored-1526-1550-causal-cardinality",
+    "authored-1526-1550-redteam-format",
+    "authored-1526-1550-source-event-gap"
   ],
   "counts": {
-    "projects_analyzed": 1425,
+    "projects_analyzed": 1550,
     "approved": 0,
     "pending_review": 0,
-    "withheld": 1425
+    "withheld": 1550
   },
-  "last_batch": "1401-1425",
-  "next_batch": "1426-1450",
+  "last_batch": "1526-1550",
+  "next_batch": "1551-1575",
   "heartbeat": {
-    "at": "2026-09-02T14:26:53.768Z",
-    "pid": 1723574
+    "at": "2026-09-02T16:47:41.250Z",
+    "pid": 1910024
   }
 }
