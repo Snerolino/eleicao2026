@@ -38,3 +38,9 @@ Executar o próximo microbatch de 25 projetos únicos do catálogo factual de au
 ## Próximo passo
 
 Retomar `1301-1325` somente com lane editorial cujo resultado seja JSON puro, cardinalidade exata e evidência oficial verificável. Manter todos os itens sem cadeia completa fonte → texto → versão/evento como `withheld`; não publicar automaticamente.
+
+## Publicação documental verificada
+
+- Commit `9346b51ec371dfb060cb9a65d0bf6b48f49b29ae` enviado com sucesso para `origin/main`.
+- Workflow backup Cloudflare `334951434`, run `33629011829`: `completed/success`, `headSha` idêntico ao commit.
+- Produção `https://rs.votopraquem.org`: HTTP `200`; `/release.json` confirmou SHA `9346b51ec371dfb060cb9a65d0bf6b48f49b29ae`, release `9346b51-20260902T121656081Z`, versão `0.2.1181`, snapshot `1003` registros.

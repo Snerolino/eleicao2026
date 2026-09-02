@@ -4979,3 +4979,5 @@ Sem autorização humana explícita própria, não fazer:
 - Próximo pacote `1301-1325` preparado read-only com `25/25` URLs oficiais Câmara e IDs únicos. Nenhuma escrita remota, snapshot, claim, voto, score ou matriz.
 - Gates: testes, TypeScript, schema, `data:check`, build, diff-check e smoke locais verdes; smoke `1002` cards/0 HTTP/console; produção existente HTTP 200.
 - QA: `docs/qa/lote-camara-autoria-1276-1300-2026-09-02.md`.
+
+- Publicação documental verificada: commit `9346b51ec371dfb060cb9a65d0bf6b48f49b29ae`; backup `334951434`, run `33629011829`, `completed/success`, `headSha` idêntico; produção HTTP 200 e `/release.json` confirmaram o SHA e `row_count=1003`.
