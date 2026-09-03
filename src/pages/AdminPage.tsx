@@ -348,7 +348,8 @@ export function AdminPage() {
       .limit(1);
     if (existingReviewError) {
       setBusyMatrixId(null);
-      setMessage(`Não foi possível verificar a revisão existente: ${existingReviewError.message}`);
+      console.error(existingReviewError);
+      setMessage('Não foi possível verificar a revisão existente.');
       return;
     }
     const { error: reviewError } = existingReview?.length
@@ -362,13 +363,15 @@ export function AdminPage() {
         });
     if (reviewError) {
       setBusyMatrixId(null);
-      setMessage(`Nota/revisão não registrada: ${reviewError.message}`);
+      console.error(reviewError);
+      setMessage('Nota/revisão não registrada.');
       return;
     }
     const { error } = await supabase.rpc('approve_impact_matrix', { p_matrix_id: matrix.id });
     if (error) {
       setBusyMatrixId(null);
-      setMessage(`Matriz não aprovada: ${error.message}`);
+      console.error(error);
+      setMessage('Matriz não aprovada.');
       return;
     }
     setImpactMatrices((current) => current.filter((item) => item.id !== matrix.id));
@@ -394,7 +397,8 @@ export function AdminPage() {
     });
     if (error) {
       setBusyMatrixId(null);
-      setMessage(`Revisão não registrada: ${error.message}`);
+      console.error(error);
+      setMessage('Revisão não registrada.');
       return;
     }
     setImpactMatrices((current) => current.filter((item) => item.id !== matrix.id));
@@ -418,7 +422,8 @@ export function AdminPage() {
       p_rationale: rationale,
     });
     if (error) {
-      setMessage(`Disposição P2 não registrada: ${error.message}`);
+      console.error(error);
+      setMessage('Disposição P2 não registrada.');
       return;
     }
     setP2Completed((current) => new Set(current).add(item.proposition_version_id));
