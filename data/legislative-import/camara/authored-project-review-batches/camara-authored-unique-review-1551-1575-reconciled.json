@@ -1,0 +1,383 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_authorship_index_only",
+  "lanes": {
+    "causal": {
+      "provider": "antigravity",
+      "exit": 0,
+      "accepted": false,
+      "reason": "retornou 25 IDs de outro recorte (cardinality/identity mismatch)",
+      "artifact": "/tmp/camara-1551-1575-causal.raw"
+    },
+    "redteam": {
+      "provider": "codex-readonly-luna",
+      "exit": 0,
+      "accepted": false,
+      "reason": "retornou envelope executor-result sem decisões por item verificáveis",
+      "artifact": "/tmp/camara-1551-1575-redteam.raw"
+    }
+  },
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:req-517-2021-2274250",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-5181-2025-2589498",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-569-2022-2319892",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-580-2023-2350916",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-581-2023-2350917",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-633-2021-2275851",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-635-2023-2351216",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-703-2023-2351554",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-706-2023-2351587",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-716-2025-2485956",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-728-2023-2351709",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-766-2021-2278130",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-806-2023-2352289",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-829-2025-2486771",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-864-2023-2352558",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-875-2021-2279449",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-876-2021-2279455",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-90-2023-2366124",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-901-2024-2424219",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-910-2021-2279877",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-914-2023-2353570",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-933-2022-2325380",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-934-2022-2325381",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:req-936-2023-2353766",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    },
+    {
+      "id": "camara:ric-1183-2020-2262874",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lanes read-only não produziram um contrato por item verificável para este recorte; autoria e ementa não bastam para publicação ou score.",
+      "missing_sources": [
+        "texto integral oficial validado",
+        "versão oficial vinculada",
+        "evento nominal oficial vinculante",
+        "cadeia causal revisada"
+      ],
+      "risk": "Sem análise causal e red-team reconciliáveis, qualquer authored_project publicado ou score seria não auditável.",
+      "counterargument": "O registro de autoria e a ementa são fontes de descoberta, mas não substituem texto integral, versão/evento e análise causal independente."
+    }
+  ]
+}
