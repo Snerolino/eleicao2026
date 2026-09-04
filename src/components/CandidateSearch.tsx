@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import type { CandidateWithClaims, Position } from '@/types/election';
-import { POSITION_LABEL } from '@/types/election';
+import { POSITION_LABEL, POSITION_ORDER } from '@/types/election';
 import { type CandidateExperienceFilter, hasPreviousMandate } from '@/utils/candidateExperience';
 
 interface CandidateSearchProps {
@@ -65,8 +65,10 @@ export function CandidateSearch({
       else firstTime += 1;
     }
 
-    const order: Position[] = ['governador', 'senador', 'deputado_federal', 'deputado_estadual'];
-    const sortedPositions = [...posSet].sort((a, b) => order.indexOf(a) - order.indexOf(b));
+    // ⚡ Bolt Optimization: Replaced O(N log N) sort using indexOf with a single-pass O(N) filter over canonical array to prevent unnecessary allocations.
+    const sortedPositions = POSITION_ORDER.filter((pos) => posSet.has(pos));
+    if (posSet.has('outro')) sortedPositions.push('outro');
+
     const sortedParties = [...partySet].sort();
     const sortedRaces = OFFICIAL_RACE_FILTERS.filter((race) => raceSet.has(race));
 
