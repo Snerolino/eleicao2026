@@ -257,10 +257,8 @@ export function ComparePage() {
     }
     return {
       parties: [...partySet].sort(),
-      races: [...raceSet].sort(
-        (a, b) => OFFICIAL_RACE_FILTERS.indexOf(a as (typeof OFFICIAL_RACE_FILTERS)[number])
-          - OFFICIAL_RACE_FILTERS.indexOf(b as (typeof OFFICIAL_RACE_FILTERS)[number]),
-      ),
+      // ⚡ Bolt Optimization: Replaced O(N log N) sort using indexOf with a single-pass O(N) filter over canonical array to prevent unnecessary allocations.
+      races: OFFICIAL_RACE_FILTERS.filter((race) => raceSet.has(race)),
       experienceCounts: { withMandate, firstTime },
     };
   }, [candidates]);

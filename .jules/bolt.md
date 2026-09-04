@@ -7,3 +7,6 @@
 ## 2025-01-20 - [Regex Caching in O(N) Filters]
 **Learning:** Using an O(N) filtering mechanism with expensive Regex evaluations (e.g. `hasPreviousMandate` evaluating `MANDATE_KEYWORDS_REGEX` against multiple claims) severely blocks the UI during typing or filtering large sets. Repeated calls across component boundaries compound this cost unnecessarily.
 **Action:** Always memoize derived checks on immutable reference objects (like candidate data) that do expensive calculations (like Regex) using a `WeakMap`. This pattern upgrades the time complexity of the check from O(N * complexity) to O(1) for all subsequent reads and UI updates.
+## 2023-11-20 - [Avoid Micro-optimizations on Tiny Arrays]
+**Learning:** Upgrading O(N log N) sorts to O(N) filters is a great algorithmic improvement, but when applied to very small arrays (e.g., < 10 items like positions or races), it yields no measurable performance impact and borders on premature optimization.
+**Action:** Avoid micro-optimizations on tiny arrays. Focus performance optimization efforts on actual bottlenecks involving large datasets, complex React rendering loops, or expensive calculations. Also, always ensure to handle edge cases if an element from the dataset is missing from the canonical array used for filtering.
