@@ -1,0 +1,915 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_revisit_reconciled_review",
+  "mode": "pending_review",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text_and_event_urls",
+  "counts": {
+    "items": 25,
+    "pending_review": 14,
+    "withheld": 11,
+    "approved": 0,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:emc-218-2019-2205935",
+      "title": "EMC 218/2019",
+      "type": "EMC",
+      "year": 2019,
+      "candidate_occurrences": 12,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1758045",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1758226",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205935",
+      "ementa": "Altera a redação da Proposta de Emenda à Constituição nº 6/2019 para suprimir as alterações feitas ao abono salarial.",
+      "status_tramitacao": "Relatório de Conferência de Assinaturas",
+      "status_descricao": null,
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Possui ementa delimitada sobre alteração da PEC 6/2019 referente à supressão de mudanças no abono salarial e URLs oficiais de acompanhamento.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "Proposta de emenda direcionada a ponto específico da reforma da previdência (abono salarial)."
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa identifica claramente a supressão de alterações no abono salarial da PEC 6/2019, mas não informa o texto comparado nem os efeitos concretos da emenda.",
+        "risk": "medium",
+        "missing_sources": [
+          "Texto integral comparado com a PEC 6/2019",
+          "Registro oficial de tramitação e eventual votação"
+        ],
+        "counterargument": "A emenda pode ter efeito limitado ou diferente do sugerido pela ementa após a redação legislativa completa."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
+    },
+    {
+      "id": "camara:emc-219-2019-2205936",
+      "title": "EMC 219/2019",
+      "type": "EMC",
+      "year": 2019,
+      "candidate_occurrences": 12,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1758046",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1758245",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205936",
+      "ementa": "Altera a redação da Proposta de Emenda à Constituição nº 6/2019 para constitucionalizar a aposentadoria do Regime Geral de Previdência Social mantendo a adoção de requisitos, critérios e fórmulas de cálculo diferenciados para concessão de aposentadoria a mulheres, professores e trabalhadores rurais.",
+      "status_tramitacao": "Relatório de Conferência de Assinaturas",
+      "status_descricao": null,
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Apresenta escopo claro de alteração da PEC 6/2019 para constitucionalizar critérios diferenciados no RGPS para mulheres, professores e trabalhadores rurais.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "Emenda temática sobre regras e critérios diferenciados de aposentadoria no RGPS."
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa descreve regras constitucionais de aposentadoria e diferenciações para grupos específicos, mas faltam detalhes normativos e efeitos sobre requisitos e cálculos.",
+        "risk": "medium",
+        "missing_sources": [
+          "Texto integral e quadro comparativo",
+          "Registro oficial de tramitação e eventual votação"
+        ],
+        "counterargument": "A manutenção de critérios diferenciados pode não significar ampliação efetiva de proteção sem análise do texto completo."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
+    },
+    {
+      "id": "camara:emc-52-2019-2219096",
+      "title": "EMC 52/2019",
+      "type": "EMC",
+      "year": 2019,
+      "candidate_occurrences": 12,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1803512",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1803831",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2219096",
+      "ementa": "Institui no Sistema Tributário Nacional a cobrança de imposto de renda sobre dividendos e lucros distribuídos de pessoa jurídica para pessoa física e sobre juros sobre capital próprio.",
+      "status_tramitacao": "Relatório de Conferência de Assinaturas",
+      "status_descricao": null,
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Ementa objetiva propondo instituição de imposto de renda sobre dividendos/lucros distribuídos e JCP.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "Proposição sobre tributação de lucros, dividendos e juros sobre capital próprio."
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa aponta tributação de dividendos, lucros e juros sobre capital próprio, tema de efeito fiscal relevante, mas não informa alíquotas, base de cálculo ou exceções.",
+        "risk": "high",
+        "missing_sources": [
+          "Texto integral com alíquotas, base de cálculo e exceções",
+          "Análise oficial de impacto fiscal",
+          "Registro de tramitação e votação"
+        ],
+        "counterargument": "A descrição pode superestimar a mudança, pois a incidência efetiva depende dos parâmetros ausentes."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
+    },
+    {
+      "id": "camara:pec-64-2023-2406638",
+      "title": "PEC 64/2023",
+      "type": "PEC",
+      "year": 2023,
+      "candidate_occurrences": 12,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2364436",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2366345",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2406638",
+      "ementa": "Altera  disposições  sobre  servidores policiais, para dispor sobre seu Regime Jurídico Policial.",
+      "status_tramitacao": "Relatório de Conferência de Assinaturas",
+      "status_descricao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Projeto autônomo do tipo PEC referente ao Regime Jurídico Policial com metadados e links completos.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "Proposta de emenda à Constituição para alteração no regime de servidores policiais."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "reason": "A ementa é ampla e a situação indicada é apenas conferência de assinaturas aguardando despacho; não há detalhes suficientes sobre o regime jurídico ou seus efeitos.",
+        "risk": "high",
+        "missing_sources": [
+          "Texto integral completo",
+          "Justificação e pareceres",
+          "Despacho de admissibilidade e tramitação posterior"
+        ],
+        "counterargument": "A referência genérica a servidores policiais não permite inferir alcance, beneficiários ou impactos concretos."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: causal/red-team não convergiram para pending_review ou ainda faltam gates editoriais."
+    },
+    {
+      "id": "camara:emc-144-2019-2205759",
+      "title": "EMC 144/2019",
+      "type": "EMC",
+      "year": 2019,
+      "candidate_occurrences": 11,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757663",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1758043",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205759",
+      "ementa": "Modifica o sistema de previdência social, estabelece regras de transição e disposições transitórias, e dá outras providências.",
+      "status_tramitacao": "Relatório de Conferência de Assinaturas",
+      "status_descricao": null,
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Contém ementa descritiva sobre alterações e regras de transição no sistema de previdência social.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "Emenda à previdência social com estabelecimento de regras de transição."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "reason": "A ementa reproduz descrição genérica de reforma previdenciária, sem identificar a alteração específica proposta pela emenda.",
+        "risk": "high",
+        "missing_sources": [
+          "Texto integral comparado",
+          "Justificação e pareceres",
+          "Registro oficial de eventual apreciação"
+        ],
+        "counterargument": "A formulação pode corresponder a mudanças muito distintas, inclusive sem o efeito amplo sugerido."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: causal/red-team não convergiram para pending_review ou ainda faltam gates editoriais."
+    },
+    {
+      "id": "camara:emc-19-2019-2218104",
+      "title": "EMC 19/2019",
+      "type": "EMC",
+      "year": 2019,
+      "candidate_occurrences": 11,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1800535",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1815612",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2218104",
+      "ementa": "Altera o inciso VI e acrescenta inciso VII ao parágrafo 1° do artigo 152-A da CF, conforme artigo 1° da PEC 45/2019",
+      "status_tramitacao": "Relatório de Conferência de Assinaturas",
+      "status_descricao": null,
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Trata-se de emenda específica com alteração direta de dispositivos (art. 152-A da CF) vinculada à PEC 45/2019 (Reforma Tributária).",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "Emenda pontual de texto ao sistema tributário na PEC 45/2019."
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa identifica alteração constitucional vinculada à PEC 45/2019, mas não explica o conteúdo do dispositivo nem seus efeitos tributários.",
+        "risk": "medium",
+        "missing_sources": [
+          "Texto integral e quadro comparativo",
+          "Texto do dispositivo da PEC 45/2019 a ser alterado",
+          "Parecer oficial"
+        ],
+        "counterargument": "Sem o texto do inciso e do parágrafo afetados, não é possível determinar se a alteração é material ou apenas técnica."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
+    },
+    {
+      "id": "camara:emc-234-2019-2205952",
+      "title": "EMC 234/2019",
+      "type": "EMC",
+      "year": 2019,
+      "candidate_occurrences": 11,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1758111",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1758246",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205952",
+      "ementa": "Visa restabelecer os direitos da seguridade ao trabalhador rural, individual e avulso ,e ao segurado especial, bem como garantir, quanto à previdência social, seus atributos redistributivos e de combate à pobreza e à miséria .",
+      "status_tramitacao": "Relatório de Conferência de Assinaturas",
+      "status_descricao": null,
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Ementa delimitada sobre restabelecimento de direitos da seguridade ao trabalhador rural e atributos redistributivos.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "Proposta de preservação/restabelecimento de regras da previdência e seguridade rural."
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa apresenta objetivo definido de proteção previdenciária e redistributiva do trabalhador rural, mas usa linguagem valorativa e não detalha os mecanismos jurídicos.",
+        "risk": "medium",
+        "missing_sources": [
+          "Texto integral comparado",
+          "Justificação e pareceres",
+          "Dados ou análise oficial de impacto previdenciário"
+        ],
+        "counterargument": "O objetivo declarado pode não corresponder ao efeito final, especialmente sem requisitos, fontes de custeio e regras de transição."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
+    },
+    {
+      "id": "camara:emc-47-2019-2204835",
+      "title": "EMC 47/2019",
+      "type": "EMC",
+      "year": 2019,
+      "candidate_occurrences": 11,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1752657",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757665",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2204835",
+      "ementa": "Modifica o sistema de previdência social, estabelece regras de transição e disposições transitórias, e dá outras providências.",
+      "status_tramitacao": "Relatório de Conferência de Assinaturas",
+      "status_descricao": null,
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Apresenta ementa referente a modificações no sistema de previdência e regras de transição.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "Emenda modificativa do sistema previdenciário e disposições transitórias."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "reason": "A ementa é genérica e não revela qual regra do sistema previdenciário ou qual disposição transitória seria alterada.",
+        "risk": "high",
+        "missing_sources": [
+          "Texto integral comparado",
+          "Justificação e pareceres",
+          "Registro oficial de apreciação"
+        ],
+        "counterargument": "Não há base fornecida para distinguir entre ampliação, restrição ou simples ajuste técnico."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: causal/red-team não convergiram para pending_review ou ainda faltam gates editoriais."
+    },
+    {
+      "id": "camara:emc-55-2019-2219219",
+      "title": "EMC 55/2019",
+      "type": "EMC",
+      "year": 2019,
+      "candidate_occurrences": 11,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1804238",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1804514",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2219219",
+      "ementa": "Dê-se a seguinte redação ao art. 146 da Constituição Federal, renumerando-se o atual parágrafo único como parágrafo primeiro:",
+      "status_tramitacao": "Relatório de Conferência de Assinaturas",
+      "status_descricao": null,
+      "missing_sources": [],
+      "causal": {
+        "decision": "withheld",
+        "reason": "Ementa exclusivamente formal/técnica ('Dê-se a seguinte redação ao art. 146 da Constituição Federal...'), sem detalhamento prévio do conteúdo substantivo.",
+        "risk": "medium",
+        "missing_sources": [],
+        "substantive_signal": "Alteração de redação do art. 146 da CF sem especificação do mérito na ementa fornecida."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "reason": "A ementa consiste em fórmula introdutória sem descrever o conteúdo da alteração constitucional.",
+        "risk": "high",
+        "missing_sources": [
+          "Texto integral completo",
+          "Dispositivo constitucional alterado",
+          "Justificação e pareceres"
+        ],
+        "counterargument": "Qualquer inferência sobre efeitos, grupos afetados ou orientação material seria especulativa."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: causal/red-team não convergiram para pending_review ou ainda faltam gates editoriais."
+    },
+    {
+      "id": "camara:emc-58-0-2290382",
+      "title": "EMC 58/0",
+      "type": "EMC",
+      "year": 0,
+      "candidate_occurrences": 11,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2042596",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2042599",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2290382",
+      "ementa": "Altera disposições sobre servidores, empregados públicos e organização administrativa.",
+      "status_tramitacao": "Relatório de Conferência de Assinaturas",
+      "status_descricao": null,
+      "missing_sources": [],
+      "causal": {
+        "decision": "withheld",
+        "reason": "Metadado de ano nulo/inconsistente (ano 0), indicando incorreção ou insuficiência estrutural nos dados fornecidos.",
+        "risk": "high",
+        "missing_sources": [],
+        "substantive_signal": "Altera disposições sobre servidores e organização administrativa, porém apresenta ano zerado."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "reason": "O ano informado é 0 e a ementa é ampla; há inconsistência cadastral e insuficiência para identificar com segurança o conteúdo e o contexto da emenda.",
+        "risk": "high",
+        "missing_sources": [
+          "Ano e proposição principal corrigidos",
+          "Texto integral e identificação oficial",
+          "Histórico oficial de tramitação"
+        ],
+        "counterargument": "A inconsistência temporal pode indicar registro incompleto, duplicado ou associação incorreta."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: causal/red-team não convergiram para pending_review ou ainda faltam gates editoriais."
+    },
+    {
+      "id": "camara:emc-7-0-2286797",
+      "title": "EMC 7/0",
+      "type": "EMC",
+      "year": 0,
+      "candidate_occurrences": 11,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2027586",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2027588",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2286797",
+      "ementa": "Acrescenta dispositivos à Constituição Federal",
+      "status_tramitacao": "Notificações",
+      "status_descricao": null,
+      "missing_sources": [],
+      "causal": {
+        "decision": "withheld",
+        "reason": "Ano inconsistente (ano 0) e ementa extremamente genérica ('Acrescenta dispositivos à Constituição Federal').",
+        "risk": "high",
+        "missing_sources": [],
+        "substantive_signal": "Acréscimo de dispositivos constitucionais sem detalhamento do mérito e com anomalia no ano."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "reason": "O ano informado é 0, a ementa apenas afirma acréscimo de dispositivos à Constituição e o status indicado é notificações, sem conteúdo material identificável.",
+        "risk": "high",
+        "missing_sources": [
+          "Ano e proposição principal corrigidos",
+          "Texto integral completo",
+          "Histórico e status oficial detalhado"
+        ],
+        "counterargument": "Não é possível avaliar efeitos ou relevância editorial a partir de uma descrição sem conteúdo."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: causal/red-team não convergiram para pending_review ou ainda faltam gates editoriais."
+    },
+    {
+      "id": "camara:emc-72-2019-2205398",
+      "title": "EMC 72/2019",
+      "type": "EMC",
+      "year": 2019,
+      "candidate_occurrences": 11,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1756843",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757880",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205398",
+      "ementa": "Modifica o sistema de previdência social, estabelece regras de transição e disposições transitórias, e dá outras providências.",
+      "status_tramitacao": "Relatório de Conferência de Assinaturas",
+      "status_descricao": null,
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Possui ementa clara sobre modificações no sistema previdenciário e regras transitórias.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "Emenda relativa a mudanças no sistema de previdência social."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "reason": "A ementa é genérica e não especifica quais regras previdenciárias, transições ou disposições transitórias seriam modificadas.",
+        "risk": "high",
+        "missing_sources": [
+          "Texto integral comparado",
+          "Justificação e pareceres",
+          "Registro oficial de apreciação"
+        ],
+        "counterargument": "A mesma descrição pode abranger alterações com efeitos opostos sobre segurados."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: causal/red-team não convergiram para pending_review ou ainda faltam gates editoriais."
+    },
+    {
+      "id": "camara:emc-83-2019-2205588",
+      "title": "EMC 83/2019",
+      "type": "EMC",
+      "year": 2019,
+      "candidate_occurrences": 11,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757261",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757326",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205588",
+      "ementa": "Acrescenta ao Capítulo da Seguridade Social a seção II, nomeando-a \"Seguridade Social da Criança\", renumerando-se as demais, e o seguinte art. 195-A, na forma do art. 1° da Proposta de Emenda à Constituição n° 06, de 2019.",
+      "status_tramitacao": "Relatório de Conferência de Assinaturas",
+      "status_descricao": null,
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Proposição com teor bem delimitado propondo a criação da seção 'Seguridade Social da Criança' no texto da PEC 6/2019.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "Criação de seção específica sobre Seguridade Social da Criança na Constituição."
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa identifica criação constitucional de seção sobre seguridade social da criança, mas não informa direitos, obrigações, financiamento ou alcance do novo artigo.",
+        "risk": "medium",
+        "missing_sources": [
+          "Texto integral e quadro comparativo",
+          "Justificação e pareceres",
+          "Análise oficial de impacto orçamentário e social"
+        ],
+        "counterargument": "A criação nominal de uma seção não comprova, por si só, a criação de proteção material efetiva."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
+    },
+    {
+      "id": "camara:emc-85-2019-2205591",
+      "title": "EMC 85/2019",
+      "type": "EMC",
+      "year": 2019,
+      "candidate_occurrences": 11,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757266",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757568",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205591",
+      "ementa": "Altera o art. 195 da Constituição, na forma do art. 1º da Proposta de Emenda à Constituição no6, de 2019, mantendo a qualidade de segurado especial aos contribuintes rurais quando não houver comercialização rural ou quando não for atingido o valor mínimo estipulado anual.",
+      "status_tramitacao": "Relatório de Conferência de Assinaturas",
+      "status_descricao": null,
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Ementa explícita sobre a manutenção da qualidade de segurado especial aos contribuintes rurais na PEC 6/2019.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "Garantia de regras específicas para segurados especiais da previdência rural."
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa descreve manutenção da qualidade de segurado especial para contribuintes rurais em situações determinadas, mas faltam critérios, limites e efeitos previdenciários completos.",
+        "risk": "medium",
+        "missing_sources": [
+          "Texto integral comparado",
+          "Definição dos critérios e valores mínimos",
+          "Parecer ou análise oficial de impacto"
+        ],
+        "counterargument": "As condições não detalhadas podem restringir significativamente a proteção descrita."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
+    },
+    {
+      "id": "camara:emc-86-2019-2205592",
+      "title": "EMC 86/2019",
+      "type": "EMC",
+      "year": 2019,
+      "candidate_occurrences": 11,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757268",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757319",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205592",
+      "ementa": "Altera o art. 24 da Proposta de Emenda à Constituição no 6, de 2019, modificando o tempo mínimo de contribuição e dá outras providências",
+      "status_tramitacao": "Relatório de Conferência de Assinaturas",
+      "status_descricao": null,
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Ementa especifica a alteração do art. 24 da PEC 6/2019 quanto ao tempo mínimo de contribuição.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "Modificação do tempo mínimo de contribuição na previdência."
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa aponta alteração do tempo mínimo de contribuição, com potencial efeito previdenciário direto, mas não informa se o requisito aumenta, diminui ou para quais segurados se aplica.",
+        "risk": "high",
+        "missing_sources": [
+          "Texto integral comparado",
+          "Regras de aplicação e transição",
+          "Parecer oficial"
+        ],
+        "counterargument": "Sem a direção da alteração e seus destinatários, qualquer avaliação de benefício ou prejuízo seria prematura."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
+    },
+    {
+      "id": "camara:emc-87-2019-2205593",
+      "title": "EMC 87/2019",
+      "type": "EMC",
+      "year": 2019,
+      "candidate_occurrences": 11,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757269",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757341",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205593",
+      "ementa": "Altera o art. 37 da Constituição tornando ato de improbidade administrativa a concessão ou a requisição de parcelas materialmente remuneratórias, mas formalmente indenizatórias e dá outras providências",
+      "status_tramitacao": "Relatório de Conferência de Assinaturas",
+      "status_descricao": null,
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Proposição delimitada que tipifica como improbidade administrativa a concessão de parcelas indenizatórias materialmente remuneratórias.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "Enquadramento de parcelas indenizatórias indevidas como ato de improbidade no art. 37 da CF."
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa descreve regra sobre parcelas remuneratórias formalmente indenizatórias e improbidade administrativa, mas não esclarece alcance, definição das parcelas ou consequências jurídicas.",
+        "risk": "high",
+        "missing_sources": [
+          "Texto integral comparado",
+          "Justificação e pareceres",
+          "Interpretação oficial dos efeitos jurídicos"
+        ],
+        "counterargument": "A redação pode atingir situações distintas das sugeridas pela formulação resumida."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
+    },
+    {
+      "id": "camara:emc-89-2019-2205595",
+      "title": "EMC 89/2019",
+      "type": "EMC",
+      "year": 2019,
+      "candidate_occurrences": 11,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757271",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757416",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205595",
+      "ementa": "Suprime o Art. 41 da Proposta de Emenda à Constituição que trata sobre o Benefício de Prestação Continuada dos idosos.",
+      "status_tramitacao": "Relatório de Conferência de Assinaturas",
+      "status_descricao": null,
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Ementa clara dispondo sobre a supressão do Art. 41 da PEC 6/2019 referente ao Benefício de Prestação Continuada (BPC) dos idosos.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "Supressão de alterações propostas ao BPC dos idosos."
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa identifica supressão de dispositivo relacionado ao BPC de idosos, indicando possível efeito material, mas não apresenta o conteúdo do artigo nem a regra substituta.",
+        "risk": "high",
+        "missing_sources": [
+          "Texto integral comparado",
+          "Texto do art. 41 e redação substitutiva",
+          "Análise oficial de impacto social e fiscal"
+        ],
+        "counterargument": "Suprimir um artigo pode eliminar uma restrição, uma garantia ou uma regra transitória; a direção do efeito não está comprovada."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
+    },
+    {
+      "id": "camara:pec-14-2024-2428346",
+      "title": "PEC 14/2024",
+      "type": "PEC",
+      "year": 2024,
+      "candidate_occurrences": 11,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2410715",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2845840",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2428346",
+      "ementa": "Altera o art. 6º da Constituição Federal, para positivar o direito aos cuidados no rol de direitos sociais.",
+      "status_tramitacao": "Apresentação de Requerimento",
+      "status_descricao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "PEC autônoma propondo a inclusão do direito aos cuidados no rol de direitos sociais do art. 6º da CF.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "Positivação do direito aos cuidados como direito social fundamental."
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A proposta tem objetivo constitucional claramente descrito de incluir o direito aos cuidados entre os direitos sociais, mas está em fase inicial e não há detalhes sobre conteúdo e implementação.",
+        "risk": "medium",
+        "missing_sources": [
+          "Texto integral completo",
+          "Justificação e pareceres",
+          "Análise oficial de implementação e impacto"
+        ],
+        "counterargument": "A positivação constitucional pode ser programática e não produzir, sozinha, os efeitos materiais esperados."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
+    },
+    {
+      "id": "camara:pec-2-2025-2483164",
+      "title": "PEC 2/2025",
+      "type": "PEC",
+      "year": 2025,
+      "candidate_occurrences": 11,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2852350",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2852782",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483164",
+      "ementa": "Dá nova redação ao Capítulo II, do Título IV, da Constituição Federal, que dispõe sobre o Poder Executivo e dá outras providências.",
+      "status_tramitacao": "Relatório de Conferência de Assinaturas",
+      "status_descricao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Proposta de Emenda à Constituição alterando a organização do Poder Executivo (Título IV, Cap. II da CF).",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "Reformulação constitucional de dispositivos inerentes ao Poder Executivo."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "reason": "A ementa apenas informa alteração ampla do capítulo constitucional sobre o Poder Executivo, sem indicar dispositivos, medidas ou efeitos específicos.",
+        "risk": "high",
+        "missing_sources": [
+          "Texto integral completo",
+          "Justificação e pareceres",
+          "Despacho e tramitação oficial"
+        ],
+        "counterargument": "O escopo pode variar de ajuste institucional pontual a reforma ampla; não há dados para delimitar a proposta."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: causal/red-team não convergiram para pending_review ou ainda faltam gates editoriais."
+    },
+    {
+      "id": "camara:pec-30-2025-2543145",
+      "title": "PEC 30/2025",
+      "type": "PEC",
+      "year": 2025,
+      "candidate_occurrences": 11,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2971630",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3049725",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2543145",
+      "ementa": "Altera a Constituição Federal e o Ato das Disposições Constitucionais Transitórias para estabelecer regras antiprivilégios para agentes públicos.",
+      "status_tramitacao": "Apresentação de Requerimento",
+      "status_descricao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "PEC com escopo definido estabelecendo regras antiprivilégios para agentes públicos na CF e ADCT.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "Instituição de normas contrárias a privilégios de agentes públicos."
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa identifica regras antiprivilégios para agentes públicos e alteração constitucional, mas o termo antiprivilégios é aberto e não revela quais vantagens ou agentes seriam alcançados.",
+        "risk": "high",
+        "missing_sources": [
+          "Texto integral completo",
+          "Definição dos agentes e vantagens abrangidos",
+          "Justificação e pareceres"
+        ],
+        "counterargument": "A denominação pode ter alcance menor, maior ou diferente do sentido comum de combate a privilégios."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
+    },
+    {
+      "id": "camara:pec-46-2025-2591196",
+      "title": "PEC 46/2025",
+      "type": "PEC",
+      "year": 2025,
+      "candidate_occurrences": 11,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3057377",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3061968",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2591196",
+      "ementa": "Altera a redação do § 4º do art. 212 da Constituição Federal para considerar o programa de alimentação escolar como despesa de manutenção e desenvolvimento de ensino.",
+      "status_tramitacao": "Relatório de Conferência de Assinaturas",
+      "status_descricao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Proposição temática precisa sobre enquadrar a alimentação escolar como despesa de manutenção e desenvolvimento do ensino (§ 4º do art. 212 da CF).",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "Classificação do programa de alimentação escolar em gastos constitutivos de ensino."
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A proposta tem objeto específico sobre contabilização da alimentação escolar como despesa de manutenção e desenvolvimento do ensino, mas faltam regras de aplicação e efeitos fiscais.",
+        "risk": "medium",
+        "missing_sources": [
+          "Texto integral completo",
+          "Análise oficial de impacto orçamentário",
+          "Regras de contabilização e transição"
+        ],
+        "counterargument": "A mudança pode apenas reclassificar despesas, sem aumentar recursos destinados à alimentação ou à educação."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
+    },
+    {
+      "id": "camara:pec-6-2024-2419252",
+      "title": "PEC 6/2024",
+      "type": "PEC",
+      "year": 2024,
+      "candidate_occurrences": 11,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2391443",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3171163",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2419252",
+      "ementa": "Altera o inciso X do § 22 e insere o § 21-A no art. 40 da Constituição, altera o art. 11 da Emenda Constitucional nº 103, de 12 de novembro de 2019 e revoga os §§ 1º-A, 1º-B e 1º-C do art. 149 da Constituição e o § 8º do art. 9º da Emenda Constitucional nº 103, de 2019.",
+      "status_tramitacao": "Apresentação de Requerimento",
+      "status_descricao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "PEC detalhada alterando dispositivos da previdência (art. 40 da CF e EC 103/2019) e revogando alíquotas/contribuições do art. 149.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "Revisão e revogação de regras de contribuição previdenciária instituídas pela reforma da previdência."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "reason": "A ementa lista alterações previdenciárias e revogações constitucionais relevantes, mas não permite determinar o sentido, os destinatários ou os efeitos das mudanças.",
+        "risk": "high",
+        "missing_sources": [
+          "Texto integral e quadro comparativo",
+          "Justificação e pareceres",
+          "Análise oficial de impacto previdenciário e fiscal"
+        ],
+        "counterargument": "As revogações e alterações podem produzir efeitos heterogêneos que não podem ser inferidos da enumeração dos dispositivos."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: causal/red-team não convergiram para pending_review ou ainda faltam gates editoriais."
+    },
+    {
+      "id": "camara:emc-1-0-2520097",
+      "title": "EMC 1/0",
+      "type": "EMC",
+      "year": 0,
+      "candidate_occurrences": 10,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2925624",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2935974",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2520097",
+      "ementa": "Institui limite para o pagamento de precatórios pelos Municípios, abre novo prazo de parcelamento especial de débitos dos Municípios com seus regimes próprios de previdência social e com o Regime Geral de Previdência Social e dá outras providências.",
+      "status_tramitacao": "Relatório de Conferência de Assinaturas",
+      "status_descricao": null,
+      "missing_sources": [],
+      "causal": {
+        "decision": "withheld",
+        "reason": "Ano zero (0) no metadado/ID, configurando defeito de registro/estrutural nos dados.",
+        "risk": "high",
+        "missing_sources": [],
+        "substantive_signal": "Proposta sobre limite de pagamento de precatórios e parcelamento de débitos municipais com RPPS/RGPS, contudo com ano zerado."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "reason": "O ano informado é 0 e, embora a ementa descreva precatórios e parcelamentos previdenciários municipais, faltam o contexto da proposição principal e os parâmetros da alteração.",
+        "risk": "high",
+        "missing_sources": [
+          "Ano e proposição principal corrigidos",
+          "Texto integral comparado",
+          "Análise oficial de impacto municipal e previdenciário"
+        ],
+        "counterargument": "A inconsistência cadastral e a ausência de limites, prazos e condições impedem avaliar o efeito real."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: causal/red-team não convergiram para pending_review ou ainda faltam gates editoriais."
+    },
+    {
+      "id": "camara:emc-1-2019-2222885",
+      "title": "EMC 1/2019",
+      "type": "EMC",
+      "year": 2019,
+      "candidate_occurrences": 10,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1814636",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1815858",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2222885",
+      "ementa": "Cria a modalidade de doação direcionada de recursos da União para os entes da Federação cujos recursos poderão vir de emendas de bancada.",
+      "status_tramitacao": "Relatório de Conferência de Assinaturas",
+      "status_descricao": null,
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Ementa objetiva propondo modalidade de doação direcionada de recursos da União para entes federativos via emendas de bancada.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "Regulamentação de transferência direta de recursos da União a entes federados por emendas."
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa identifica modalidade de doação direcionada de recursos federais e possível uso de emendas de bancada, tema com implicações federativas e orçamentárias, mas sem regras operacionais.",
+        "risk": "high",
+        "missing_sources": [
+          "Texto integral comparado",
+          "Regras de execução, controle e prestação de contas",
+          "Parecer ou análise oficial orçamentária"
+        ],
+        "counterargument": "A possibilidade de uso de emendas não esclarece critérios de distribuição, discricionariedade ou controle dos recursos."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
+    },
+    {
+      "id": "camara:emc-130-2019-2205731",
+      "title": "EMC 130/2019",
+      "type": "EMC",
+      "year": 2019,
+      "candidate_occurrences": 10,
+      "official_status": "tramitando",
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757604",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1757744",
+      "proposition_api_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2205731",
+      "ementa": "Altera a Proposta de Emenda à Constituição nº 6 de 2019 de modo a modificar o sistema tributário e de previdência social.",
+      "status_tramitacao": "Relatório de Conferência de Assinaturas",
+      "status_descricao": null,
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Ementa descritiva indicando alterações no sistema tributário e de previdência social no âmbito da PEC 6/2019.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "Modificação das regras tributárias e previdenciárias vinculadas à PEC 6/2019."
+      },
+      "redteam": {
+        "decision": "withheld",
+        "reason": "A ementa é internamente ampla e combina sistema tributário e previdência social sem indicar quais dispositivos ou mudanças concretas seriam introduzidos.",
+        "risk": "high",
+        "missing_sources": [
+          "Texto integral comparado",
+          "Identificação dos dispositivos tributários e previdenciários",
+          "Justificação e pareceres"
+        ],
+        "counterargument": "A descrição não permite separar os efeitos tributários dos previdenciários nem confirmar a direção de qualquer impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: causal/red-team não convergiram para pending_review ou ainda faltam gates editoriais."
+    }
+  ]
+}
