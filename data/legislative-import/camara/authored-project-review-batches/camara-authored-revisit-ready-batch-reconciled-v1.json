@@ -1,12 +1,16 @@
 {
   "schema_version": "1.0.0",
-  "packet_type": "candidate_authored_revisit_ready_batch",
+  "packet_type": "candidate_authored_revisit_reconciled_review",
   "mode": "pending_review",
   "remote_apply": false,
-  "source_precedence": "official_primary_only",
+  "content_read": true,
+  "source": "official_full_text_and_event_urls",
   "counts": {
-    "selected": 25,
-    "total_revisit_ready": 551
+    "items": 25,
+    "pending_review": 17,
+    "withheld": 8,
+    "approved": 0,
+    "score_eligible": 0
   },
   "items": [
     {
@@ -54,7 +58,24 @@
         "status_descricao": null,
         "status_tramitacao": "Designação de Relator(a)"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Altera distribuição do FPM no art. 159 da CF e cria Fundos Constitucionais do Sul e Sudeste, matéria tributária e federativa de impacto direto.",
+        "risk": "medium",
+        "missing_sources": [],
+        "substantive_signal": "substantive"
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "Ementa descreve alterações constitucionais concretas sobre repartição de recursos e fundos regionais; há contexto mínimo para revisão humana, apesar de a tramitação estar em designação de relator.",
+        "risk": "medium",
+        "missing_sources": [],
+        "counterargument": "A ementa reúne múltiplos mecanismos financeiros e não permite determinar alcance, critérios de distribuição ou efeitos fiscais sem leitura normativa detalhada."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
     },
     {
       "order": 2,
@@ -94,7 +115,24 @@
         "status_descricao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
         "status_tramitacao": "Relatório de Conferência de Assinaturas"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Altera o art. 53 da CF referente à imunidade parlamentar e sanção a Ministros do STF em caso de descumprimento, matéria constitucional de elevado impacto institucional.",
+        "risk": "high",
+        "missing_sources": [],
+        "substantive_signal": "substantive"
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "Objeto constitucional específico e substantivo, envolvendo imunidade parlamentar e sanções aplicáveis a ministro do STF; o texto permite revisão humana inicial.",
+        "risk": "high",
+        "missing_sources": [],
+        "counterargument": "A ementa pode não refletir integralmente as condições, limites e compatibilidade normativa das alterações, e o status ainda é de conferência de assinaturas."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
     },
     {
       "order": 3,
@@ -133,7 +171,27 @@
         "status_descricao": null,
         "status_tramitacao": "Relatório de Conferência de Assinaturas"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Emenda aditiva que inclui categoria de servidores (Perícia Oficial de Natureza Criminal) no texto constitucional/reformador.",
+        "risk": "medium",
+        "missing_sources": [],
+        "substantive_signal": "substantive"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "reason": "A ementa é fragmentária e apenas indica inclusão de servidores da Perícia Oficial de Natureza Criminal, sem identificar a proposição-base nem o conteúdo normativo completo.",
+        "risk": "high",
+        "missing_sources": [
+          "ementa completa e texto normativo da proposição-base",
+          "contexto da alteração pretendida"
+        ],
+        "counterargument": "O texto integral oficial pode conter elementos suficientes, mas eles não estão explicitados nos dados fornecidos e o status é de conferência de assinaturas."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: causal/red-team não convergiram para pending_review ou ainda faltam gates editoriais."
     },
     {
       "order": 4,
@@ -172,7 +230,24 @@
         "status_descricao": "Aguardando Apreciação pelo Senado Federal",
         "status_tramitacao": "Expedição de Documento"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Altera o art. 166 da CF para destinação obrigatória de recursos de emendas e orçamento da União a catástrofes e emergências naturais.",
+        "risk": "medium",
+        "missing_sources": [],
+        "substantive_signal": "substantive"
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa apresenta objeto fiscal e federativo definido, com destinação constitucional de recursos para prevenção e resposta a desastres; há contexto mínimo para revisão.",
+        "risk": "medium",
+        "missing_sources": [],
+        "counterargument": "A existência de duas formulações na ementa e o status de expedição de documento recomendam confirmar qual redação é efetivamente vigente antes de qualquer conclusão."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
     },
     {
       "order": 5,
@@ -210,7 +285,27 @@
         "status_descricao": null,
         "status_tramitacao": "Relatório de Conferência de Assinaturas"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "withheld",
+        "reason": "Emenda à PEC 32/2020 com ementa curta e fragmentada sobre carreiras típicas de Estado sem detalhamento do texto legal.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "ambiguous"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "reason": "A descrição limita-se a carreiras típicas de Estado no contexto da PEC 32/2020, sem indicar quais regras seriam alteradas nem o efeito concreto da emenda.",
+        "risk": "high",
+        "missing_sources": [
+          "texto normativo completo da emenda",
+          "dispositivo específico da PEC 32/2020 afetado"
+        ],
+        "counterargument": "O texto integral oficial pode detalhar a alteração, mas a ementa isolada é insuficiente e o status é exclusivamente de conferência de assinaturas."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: causal/red-team não convergiram para pending_review ou ainda faltam gates editoriais."
     },
     {
       "order": 6,
@@ -247,7 +342,27 @@
         "status_descricao": null,
         "status_tramitacao": "Relatório de Conferência de Assinaturas"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "withheld",
+        "reason": "Emenda modificativa à PEC 32/2020 citando apenas 'adicional de substituição', sem delimitação suficiente na ementa.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "ambiguous"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "reason": "A ementa menciona adicional de substituição, mas não informa beneficiários, condições, cálculo ou dispositivo alterado da PEC 32/2020.",
+        "risk": "high",
+        "missing_sources": [
+          "texto normativo completo da emenda",
+          "dispositivo específico da PEC 32/2020 afetado"
+        ],
+        "counterargument": "A matéria pode ser substantiva para servidores, porém o contexto mínimo necessário não aparece nos dados fornecidos."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: causal/red-team não convergiram para pending_review ou ainda faltam gates editoriais."
     },
     {
       "order": 7,
@@ -284,7 +399,24 @@
         "status_descricao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
         "status_tramitacao": "Apresentação de Proposição"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Altera regras previdenciárias na EC 103/2019 reduzindo idade de aposentadoria para mulheres de segurança pública e socioeducativo.",
+        "risk": "medium",
+        "missing_sources": [],
+        "substantive_signal": "substantive"
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa define alteração constitucional objetiva sobre idade de aposentadoria de mulheres em categorias profissionais determinadas; há contexto suficiente para revisão humana inicial.",
+        "risk": "medium",
+        "missing_sources": [],
+        "counterargument": "Não é possível saber pela ementa o novo requisito etário, a extensão por categoria ou a interação com as demais regras da EC 103/2019."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
     },
     {
       "order": 8,
@@ -321,7 +453,24 @@
         "status_descricao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
         "status_tramitacao": "Relatório de Conferência de Assinaturas"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Altera art. 164 da CF exigindo aprovação do Congresso para criação de CBDC/moeda digital e vedando extinção do papel-moeda.",
+        "risk": "medium",
+        "missing_sources": [],
+        "substantive_signal": "substantive"
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "Objeto constitucional claro sobre CBDC, papel-moeda e exigência de aprovação parlamentar; a matéria é substantiva e revisável com os dados fornecidos.",
+        "risk": "high",
+        "missing_sources": [],
+        "counterargument": "A ementa não esclarece definições, alcance das vedações ou efeitos sobre competências monetárias, e o status continua limitado à conferência de assinaturas."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
     },
     {
       "order": 9,
@@ -358,7 +507,24 @@
         "status_descricao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
         "status_tramitacao": "Apresentação de Requerimento"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Altera art. 7º da CF introduzindo opção por regime flexível de horas trabalhadas em alternativa à CLT.",
+        "risk": "high",
+        "missing_sources": [],
+        "substantive_signal": "substantive"
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa apresenta mudança concreta no regime de jornada de empregados, distinguindo regime da CLT e regime flexível; há contexto mínimo para revisão.",
+        "risk": "medium",
+        "missing_sources": [],
+        "counterargument": "A formulação não informa limites, garantias, forma de escolha ou consequências trabalhistas do regime flexível."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
     },
     {
       "order": 10,
@@ -395,7 +561,24 @@
         "status_descricao": "Aguardando Criação de Comissão Temporária",
         "status_tramitacao": "Apresentação de Requerimento"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Altera art. 49 da CF conferindo ao Congresso competência para sustar decisões do STF transitadas em julgado por maioria qualificada.",
+        "risk": "high",
+        "missing_sources": [],
+        "substantive_signal": "substantive"
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa descreve alteração constitucional institucional específica sobre competência do Congresso para sustar decisão transitada em julgado do STF.",
+        "risk": "high",
+        "missing_sources": [],
+        "counterargument": "A ementa não define o conceito operacional de extrapolação nem todos os requisitos da maioria qualificada; o status indica apenas requerimento e criação de comissão temporária pendente."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
     },
     {
       "order": 11,
@@ -431,7 +614,24 @@
         "status_descricao": null,
         "status_tramitacao": "Apresentação de Requerimento"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Altera art. 7º, XIII da CF propondo redução progressiva da jornada de trabalho para 36 horas semanais.",
+        "risk": "medium",
+        "missing_sources": [],
+        "substantive_signal": "substantive"
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A emenda tem objeto constitucional determinado e substantivo: redução gradual da jornada semanal para 36 horas em dez anos.",
+        "risk": "medium",
+        "missing_sources": [],
+        "counterargument": "A referência ao inciso XIII do art. 7º não esclarece a redação completa, a transição nem a abrangência dos trabalhadores afetados."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
     },
     {
       "order": 12,
@@ -467,7 +667,24 @@
         "status_descricao": null,
         "status_tramitacao": "Relatório de Conferência de Assinaturas"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Altera arts. 21, 22, 23, 24 e 144 da CF para redefinir competências federativas em segurança pública.",
+        "risk": "medium",
+        "missing_sources": [],
+        "substantive_signal": "substantive"
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa identifica dispositivos constitucionais e matéria substantiva de repartição de competências em segurança pública; há base mínima para revisão humana.",
+        "risk": "high",
+        "missing_sources": [],
+        "counterargument": "A descrição é ampla e não revela quais competências seriam atribuídas a cada ente nem como se alteraria o art. 144."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
     },
     {
       "order": 13,
@@ -503,7 +720,27 @@
         "status_descricao": null,
         "status_tramitacao": "Apresentação de Requerimento"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Altera art. 7º da CF prevendo redução da jornada semanal para 36 horas em 10 anos.",
+        "risk": "medium",
+        "missing_sources": [],
+        "substantive_signal": "substantive"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "reason": "Embora mencione redução da jornada para 36 horas, a referência ao inciso XII do art. 7º é ambígua para esse objeto e pode indicar erro ou falta de contexto normativo.",
+        "risk": "high",
+        "missing_sources": [
+          "texto normativo completo e dispositivo constitucional efetivamente alterado",
+          "identificação precisa da proposição-base"
+        ],
+        "counterargument": "O texto integral pode resolver a inconsistência, mas a ementa e o status de apresentação de requerimento não oferecem segurança suficiente para promoção."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: causal/red-team não convergiram para pending_review ou ainda faltam gates editoriais."
     },
     {
       "order": 14,
@@ -539,7 +776,27 @@
         "status_descricao": null,
         "status_tramitacao": "Relatório de Conferência de Assinaturas"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "withheld",
+        "reason": "Ementa genérica sobre servidores e organização administrativa sem especificação das regras ou parâmetros propostos.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "ambiguous"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "reason": "A ementa é excessivamente genérica, sem indicar quais disposições sobre servidores ou organização administrativa seriam alteradas.",
+        "risk": "high",
+        "missing_sources": [
+          "texto normativo completo da emenda",
+          "identificação dos dispositivos afetados e da proposição-base"
+        ],
+        "counterargument": "A matéria pode ser substantiva, mas a descrição não fornece contexto normativo real para uma revisão responsável."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: causal/red-team não convergiram para pending_review ou ainda faltam gates editoriais."
     },
     {
       "order": 15,
@@ -575,7 +832,24 @@
         "status_descricao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
         "status_tramitacao": "Apresentação de Requerimento"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Altera art. 71 da CF sobre controle externo do TCU/Congresso em empresas supranacionais com participação estatal.",
+        "risk": "medium",
+        "missing_sources": [],
+        "substantive_signal": "substantive"
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa delimita alteração constitucional específica no controle externo de contas nacionais de empresas supranacionais com participação da União.",
+        "risk": "medium",
+        "missing_sources": [],
+        "counterargument": "A redação não esclarece o conceito de empresas supranacionais nem o alcance prático da mudança, e o status ainda é de requerimento pendente de despacho."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
     },
     {
       "order": 16,
@@ -611,7 +885,24 @@
         "status_descricao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
         "status_tramitacao": "Relatório de Conferência de Assinaturas"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Altera art. 4º da CF inserindo a integração dos países de língua portuguesa entre os princípios de relações internacionais.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "substantive"
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa apresenta alteração constitucional objetiva no rol de princípios das relações internacionais, com contexto mínimo para revisão humana.",
+        "risk": "low",
+        "missing_sources": [],
+        "counterargument": "O efeito normativo pode ser predominantemente declaratório e a ementa não informa consequências jurídicas da inclusão proposta."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
     },
     {
       "order": 17,
@@ -647,7 +938,24 @@
         "status_descricao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
         "status_tramitacao": "Relatório de Conferência de Assinaturas"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Cria o Conselho Nacional de Mudança Climática, Autoridade Climática e destina recursos do Fundo Constitucional (art. 159).",
+        "risk": "medium",
+        "missing_sources": [],
+        "substantive_signal": "substantive"
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A proposta define estrutura institucional e fundo nacional relacionados à mudança climática, indicando matéria constitucional substantiva e revisável.",
+        "risk": "medium",
+        "missing_sources": [],
+        "counterargument": "A ementa não detalha composição, competências, fontes de recursos ou relação entre o conselho, a autoridade e o fundo."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
     },
     {
       "order": 18,
@@ -683,7 +991,24 @@
         "status_descricao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
         "status_tramitacao": "Relatório de Conferência de Assinaturas"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Altera art. 220 da CF para impor restrições legais à propaganda de modalidades lotéricas.",
+        "risk": "medium",
+        "missing_sources": [],
+        "substantive_signal": "substantive"
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa identifica objeto regulatório concreto sobre restrições legais à propaganda de modalidades lotéricas.",
+        "risk": "medium",
+        "missing_sources": [],
+        "counterargument": "Não estão descritas as modalidades de propaganda, os sujeitos alcançados nem a extensão das restrições; a tramitação está em conferência de assinaturas."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
     },
     {
       "order": 19,
@@ -719,7 +1044,24 @@
         "status_descricao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
         "status_tramitacao": "Relatório de Conferência de Assinaturas"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Altera arts. 103-B e 130-A da CF modificando a composição estrutural do CNJ e do CNMP.",
+        "risk": "medium",
+        "missing_sources": [],
+        "substantive_signal": "substantive"
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa define alteração constitucional institucional específica na composição do CNJ e do CNMP; há contexto mínimo para revisão posterior.",
+        "risk": "high",
+        "missing_sources": [],
+        "counterargument": "A ementa não informa número de integrantes, critérios de escolha ou efeitos sobre a independência e funcionamento dos órgãos."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
     },
     {
       "order": 20,
@@ -755,7 +1097,24 @@
         "status_descricao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Análise)",
         "status_tramitacao": "Notificações"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Projeto de lei que suspende exigência de tributos federais por dois anos para fatos geradores no RS.",
+        "risk": "medium",
+        "missing_sources": [],
+        "substantive_signal": "substantive"
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "O objeto legal é concreto: suspensão por dois anos de exigências de pagamentos de tributos federais para fatos geradores no Rio Grande do Sul.",
+        "risk": "medium",
+        "missing_sources": [],
+        "counterargument": "A ementa não especifica tributos, contribuintes, condições, alcance temporal exato ou mecanismo de suspensão; o status é de notificações e análise pendente."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
     },
     {
       "order": 21,
@@ -790,7 +1149,24 @@
         "status_descricao": null,
         "status_tramitacao": "Relatório de Conferência de Assinaturas"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Garante tratamento tributário favorecido a pequenos produtores rurais isentando IBS na agricultura familiar.",
+        "risk": "medium",
+        "missing_sources": [],
+        "substantive_signal": "substantive"
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa descreve benefício tributário específico para pequenos produtores rurais e operações com produtos da agricultura familiar.",
+        "risk": "medium",
+        "missing_sources": [],
+        "counterargument": "Não estão indicados os dispositivos alterados, o conceito aplicável de pequeno produtor ou a extensão da não incidência do IBS."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
     },
     {
       "order": 22,
@@ -825,7 +1201,28 @@
         "status_descricao": null,
         "status_tramitacao": "Relatório de Conferência de Assinaturas"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "withheld",
+        "reason": "Ementa extremamente sucinta ('Emenda PEC 18 - Emenda do RJP') sem descrição do dispositivo alterado.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "procedural"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "reason": "A ementa apenas nomeia uma emenda da PEC 18 como Regime Jurídico Policial, sem descrever qualquer alteração normativa concreta.",
+        "risk": "high",
+        "missing_sources": [
+          "texto normativo completo da emenda",
+          "dispositivo da PEC 18/2025 afetado",
+          "objeto específico do regime jurídico policial"
+        ],
+        "counterargument": "O título pode corresponder a conteúdo substantivo, mas não há contexto mínimo verificável na descrição fornecida."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: causal/red-team não convergiram para pending_review ou ainda faltam gates editoriais."
     },
     {
       "order": 23,
@@ -860,7 +1257,28 @@
         "status_descricao": null,
         "status_tramitacao": "Relatório de Conferência de Assinaturas"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "withheld",
+        "reason": "Ementa puramente declaratória ('Emenda à PEC 18/2025') sem conteúdo normativo discriminado.",
+        "risk": "low",
+        "missing_sources": [],
+        "substantive_signal": "procedural"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "reason": "A descrição é circular e não informa o conteúdo da emenda, limitando-se a dizer que se trata de emenda à PEC 18/2025.",
+        "risk": "high",
+        "missing_sources": [
+          "texto normativo completo da emenda",
+          "dispositivo da PEC 18/2025 afetado",
+          "ementa descritiva"
+        ],
+        "counterargument": "A existência de texto integral oficial não compensa a ausência de identificação do efeito normativo nos dados resumidos e o status é de conferência de assinaturas."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: causal/red-team não convergiram para pending_review ou ainda faltam gates editoriais."
     },
     {
       "order": 24,
@@ -895,7 +1313,28 @@
         "status_descricao": null,
         "status_tramitacao": "Relatório de Conferência de Assinaturas"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Acresce § 7-A e § 7-B ao art. 144 da CF no âmbito da PEC 18/2025, alterando a estrutura da segurança pública.",
+        "risk": "medium",
+        "missing_sources": [],
+        "substantive_signal": "substantive"
+      },
+      "redteam": {
+        "decision": "withheld",
+        "reason": "A ementa apenas reproduz uma instrução de acréscimo de parágrafos ao art. 144 dentro da PEC 18/2025, sem expor o conteúdo dos parágrafos nem seu efeito.",
+        "risk": "high",
+        "missing_sources": [
+          "redação integral dos §§ 7-A e 7-B",
+          "contexto normativo completo da PEC 18/2025",
+          "efeito da alteração no art. 144"
+        ],
+        "counterargument": "O texto integral pode permitir reconstrução, mas a descrição fornecida não é suficiente para evitar superpromoção de uma emenda ainda em conferência de assinaturas."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: causal/red-team não convergiram para pending_review ou ainda faltam gates editoriais."
     },
     {
       "order": 25,
@@ -930,7 +1369,24 @@
         "status_descricao": null,
         "status_tramitacao": "Relatório de Conferência de Assinaturas"
       },
-      "missing_sources": []
+      "missing_sources": [],
+      "causal": {
+        "decision": "pending_review",
+        "reason": "Altera redação da PEC 6/2019 para reinserir expressamente a proteção à maternidade no texto constitucional.",
+        "risk": "medium",
+        "missing_sources": [],
+        "substantive_signal": "substantive"
+      },
+      "redteam": {
+        "decision": "pending_review",
+        "reason": "A ementa identifica alteração constitucional específica para reinserir menção expressa à proteção à maternidade; há contexto mínimo para revisão humana.",
+        "risk": "low",
+        "missing_sources": [],
+        "counterargument": "A ementa não mostra a redação comparada nem permite avaliar se a mudança tem efeito jurídico além de explicitação textual."
+      },
+      "final_decision": "pending_review",
+      "score_eligible": false,
+      "reconciliation_reason": "Causal e red-team concordaram que o item já merece revisão editorial aprofundada, sem publicação automática."
     }
   ]
 }

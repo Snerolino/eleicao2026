@@ -31,10 +31,10 @@ function classifyProcedural(project, triageById) {
   return triage?.classification === 'procedural_candidate';
 }
 
-function blockedReason({ procedural, fullTextUrl, eventUrl }) {
+function blockedReason({ procedural, fullTextUrl, eventUrl, distinctEventUrl }) {
   if (procedural) return 'procedural_only';
   if (!fullTextUrl) return 'missing_full_text_source';
-  if (!eventUrl) return 'missing_event_source';
+  if (!eventUrl || !distinctEventUrl) return 'missing_event_source';
   return 'revisit_ready';
 }
 
@@ -89,8 +89,9 @@ const items = await runPool(selected, async (project) => {
 
   const fullTextUrl = isOfficialCamaraUrl(dados.urlInteiroTeor) ? dados.urlInteiroTeor : null;
   const eventUrl = isOfficialCamaraUrl(statusUrl) ? statusUrl : firstEventUrl;
+  const distinctEventUrl = Boolean(eventUrl && fullTextUrl && eventUrl !== fullTextUrl);
   const procedural = classifyProcedural(project, triageById);
-  const resolution = blockedReason({ procedural, fullTextUrl, eventUrl });
+  const resolution = blockedReason({ procedural, fullTextUrl, eventUrl, distinctEventUrl });
 
   return {
     id: project.id,
@@ -105,7 +106,7 @@ const items = await runPool(selected, async (project) => {
     revisit_ready: resolution === 'revisit_ready',
     missing_sources: [
       ...(fullTextUrl ? [] : ['texto_integral_oficial']),
-      ...(eventUrl ? [] : ['evento_oficial_vinculante']),
+      ...(distinctEventUrl ? [] : ['evento_oficial_vinculante_independente']),
     ],
     official_sources: {
       proposition_api: {
