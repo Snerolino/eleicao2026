@@ -1,3 +1,9 @@
+## Tick contínuo — autoria Câmara 1–1600 resolvida em fila factual/source-first — 2026-09-04T20:08Z
+
+- Os 1.600 projetos únicos já analisados deixaram de ser um bloco opaco de `withheld`: a recuperação factual oficial da Câmara (`candidate-authored-source-recovery-queue-v1.json`) separou `765` itens `revisit_ready`, `834` `procedural_only` e `1` `missing_event_source`.
+- Artefatos novos: `data/legislative-import/camara/candidate-authored-source-recovery-queue-v1.json`, `data/legislative-import/camara/authored-project-review-batches/camara-authored-revisit-ready-batch-v1.json` e QA `docs/qa/autoria-camara-resolucao-withheld-1600-2026-09-04.md`.
+- O próximo lote causal/red-team já não precisa partir do índice cego: usar primeiro `camara-authored-revisit-ready-batch-v1.json` (25 itens iniciais, começando por `camara:pec-27-2023-2363434`) antes de avançar o `next_batch` sequencial `1601–1625`.
+- Fallback global do perfil foi limpo por segurança (`hermes fallback list` => sem fallback providers configurados); o job horário permanece pinado em `openai-codex/gpt-5.6-luna`.
 
 ## Tick contínuo — autoria Câmara 1551–1575 bloqueada — 2026-09-02T17:10Z
 
