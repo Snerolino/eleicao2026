@@ -109,7 +109,7 @@ export function CandidateSearch({
             className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full px-1 text-[var(--color-muted-ink)] hover:text-[var(--color-ink)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-institutional)]"
             aria-label="Limpar busca"
           >
-            ✕
+            <span aria-hidden="true">✕</span>
           </button>
         )}
       </div>

@@ -21,7 +21,7 @@ export function DataFreshness({
       className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[0.7rem] text-[var(--color-muted-ink)]"
     >
       <span>
-        {isOnline ? '● online' : '○ offline'}
+        <span aria-hidden="true">{isOnline ? '●' : '○'}</span> {isOnline ? 'online' : 'offline'}
       </span>
 
       {hasTimestamp && (

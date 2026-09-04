@@ -17,7 +17,7 @@ describe('DataFreshness', () => {
       />,
     );
 
-    expect(screen.getByText('○ offline')).toBeInTheDocument();
+    expect(screen.getByText(/offline/i)).toBeInTheDocument();
     expect(screen.getByText(/fallback oficial validado/i)).toBeInTheDocument();
     expect(screen.getByText(/consulta_cand\/2026\/RS/i)).toBeInTheDocument();
     expect(screen.getByText(/30\/07\/2026/)).toBeInTheDocument();
