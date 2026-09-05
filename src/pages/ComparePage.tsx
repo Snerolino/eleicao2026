@@ -632,7 +632,7 @@ export function ComparePage() {
                   className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full p-1 text-xs text-[var(--color-muted-ink)] hover:text-[var(--color-ink)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-institutional)]"
                   aria-label="Limpar campo de pesquisa"
                 >
-                  ✕
+                  <span aria-hidden="true">✕</span>
                 </button>
               )}
             </div>
