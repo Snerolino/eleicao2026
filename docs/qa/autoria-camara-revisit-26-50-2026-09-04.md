@@ -46,3 +46,16 @@ Permanece sem fallback global configurado. O job horário continua pinado em `op
 ## Próximo passo
 
 Processar as posições 51–75 da `revisit_queue` com a mesma validação. Manter `remote_apply=false` até revisão editorial e gates de publicação próprios.
+
+## Publicação factual autorizada
+
+Após autorização explícita do usuário, os 31 projetos consolidados nas duas primeiras rodadas foram publicados somente como fatos de autoria em `authored_project_facts` no snapshot público:
+
+- projetos editoriais consolidados: **31**;
+- vínculos candidato–projeto publicados: **397**;
+- candidatos alcançados: **31**;
+- análise causal publicada: **0**;
+- scores publicados: **0**;
+- votos publicados: **0**.
+
+A publicação factual mantém `official_url`, `authorship_source_url`, identidade TSE, papel e status oficial. Não promoveu itens para `authored_projects`, nem fabricou grupos populacionais, efeito causal ou voto defensor.
