@@ -14,7 +14,7 @@ Artefatos:
 - `data/legislative-import/camara/authored-project-review-batches/camara-authored-revisit-ready-batch-51-75-v1.json`
 - `data/legislative-import/camara/authored-project-review-batches/camara-authored-revisit-51-75-reconciled-v1.json`
 
-A publicação factual dos vínculos de autoria foi estendida para incluir este lote. Nenhum fato causal, score ou voto foi promovido.
+A publicação factual dos vínculos de autoria foi estendida para incluir este lote. O acumulado publicado passou a **41 projetos editoriais consolidados**, **489 vínculos candidato–projeto** e **31 candidatos alcançados**. Nenhum fato causal, score ou voto foi promovido.
 
 ## Verificação
 
