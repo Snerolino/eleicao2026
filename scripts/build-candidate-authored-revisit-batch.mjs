@@ -5,12 +5,13 @@ import { resolve } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
 const input = resolve(root, 'data/legislative-import/camara/candidate-authored-source-recovery-queue-v1.json');
+const offset = Number(process.argv.find((arg) => arg.startsWith('--offset='))?.slice(9) ?? 0);
 const limit = Number(process.argv.find((arg) => arg.startsWith('--limit='))?.slice(8) ?? 25);
-const output = resolve(root, 'data/legislative-import/camara/authored-project-review-batches/camara-authored-revisit-ready-batch-v1.json');
+const output = resolve(root, `data/legislative-import/camara/authored-project-review-batches/camara-authored-revisit-ready-batch-${offset + 1}-${offset + limit}-v1.json`);
 
 const data = JSON.parse(await readFile(input, 'utf8'));
-const items = (data.revisit_queue ?? []).slice(0, limit).map((item, index) => ({
-  order: index + 1,
+const items = (data.revisit_queue ?? []).slice(offset, offset + limit).map((item, index) => ({
+  order: offset + index + 1,
   id: item.id,
   title: item.title,
   type: item.type,
@@ -32,6 +33,7 @@ const result = {
   remote_apply: false,
   source_precedence: 'official_primary_only',
   counts: {
+    offset,
     selected: items.length,
     total_revisit_ready: (data.revisit_queue ?? []).length,
   },

@@ -11,6 +11,7 @@ const SOURCE_QUEUE = path.join(ROOT, 'data/legislative-import/camara/candidate-a
 const RECONCILED = [
   path.join(ROOT, 'data/legislative-import/camara/authored-project-review-batches/camara-authored-revisit-ready-batch-reconciled-v1.json'),
   path.join(ROOT, 'data/legislative-import/camara/authored-project-review-batches/camara-authored-revisit-26-50-reconciled-v1.json'),
+  path.join(ROOT, 'data/legislative-import/camara/authored-project-review-batches/camara-authored-revisit-51-75-reconciled-v1.json'),
 ];
 const apply = process.argv.includes('--apply');
 

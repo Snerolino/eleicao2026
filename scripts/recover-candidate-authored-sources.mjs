@@ -75,6 +75,7 @@ const items = await runPool(selected, async (project) => {
   const detail = await fetchJson(project.official_url);
   const dados = detail.json?.dados ?? {};
   const statusUrl = dados?.statusProposicao?.url;
+  const fullTextUrl = isOfficialCamaraUrl(dados.urlInteiroTeor) ? dados.urlInteiroTeor : null;
   const tramitacoesUrl = `${project.official_url}/tramitacoes`;
   let tramitacoes = null;
   let firstEventUrl = null;
@@ -84,10 +85,12 @@ const items = await runPool(selected, async (project) => {
     tramitacoes = await fetchJson(tramitacoesUrl);
     const rows = Array.isArray(tramitacoes.json?.dados) ? tramitacoes.json.dados : [];
     tramitacoesCount = rows.length;
-    firstEventUrl = rows.find((row) => isOfficialCamaraUrl(row?.url))?.url ?? null;
+    const eventUrls = rows
+      .map((row) => row?.url)
+      .filter(isOfficialCamaraUrl);
+    firstEventUrl = eventUrls.find((url) => url !== fullTextUrl) ?? eventUrls[0] ?? null;
   }
 
-  const fullTextUrl = isOfficialCamaraUrl(dados.urlInteiroTeor) ? dados.urlInteiroTeor : null;
   const eventUrl = isOfficialCamaraUrl(statusUrl) ? statusUrl : firstEventUrl;
   const distinctEventUrl = Boolean(eventUrl && fullTextUrl && eventUrl !== fullTextUrl);
   const procedural = classifyProcedural(project, triageById);
