@@ -1,0 +1,617 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": true,
+  "source": "official_full_text",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:req-253-2024-2417961",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2587-2026-2620866",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2598-2021-2309875",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-260-2023-2349322",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-261-2023-2349323",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-265-2023-2349336",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-268-2023-2349349",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-269-2023-2349350",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-271-2025-2483257",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-273-2023-2349354",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-273-2024-2418010",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-274-2023-2349355",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-275-2023-2349361",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2783-2021-2311702",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2795-2020-2265602",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-280-2023-2349372",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-281-2023-2349373",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2818-2021-2312447",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-282-2023-2349374",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2826-2020-2265914",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2827-2020-2265915",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2828-2020-2265916",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2829-2020-2265917",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2830-2020-2265918",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2857-2021-2313069",
+      "decision": "withheld",
+      "reason": "REQ procedural; autoria oficial não prova versão votada, evento nominal vinculante ou efeito causal.",
+      "risk": "procedural_only",
+      "missing_sources": [
+        "full_text_binding_version",
+        "nominal_event",
+        "causal_assessment"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "no_binding_event",
+        "missing_sources": [
+          "independent_event_url",
+          "nominal_votes",
+          "editorial_review"
+        ],
+        "counterargument": "Autoria/coautoria não demonstra voto nem impacto."
+      },
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    }
+  ]
+}
