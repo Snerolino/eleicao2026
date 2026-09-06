@@ -27,7 +27,13 @@ O manifesto não comprova texto integral efetivamente analisado, versão votada,
 - `npm run smoke:local`: RC 0 — **1002** cards, 0 falhas HTTP, 0 erros online, service worker pronto.
 - `git diff --check`: RC 0.
 
-`npm run orch:doctor` permanece RC 1 por Node 22.22.2 no shell (o projeto exige Node 24) e WARNs opcionais de OpenCode/gateway; não bloqueou os gates executados com Node 24. O push/deploy será tentado após commit seletivo, sem incluir alterações preexistentes nos artefatos `impact-editorial-*`.
+`npm run orch:doctor` permanece RC 1 por Node 22.22.2 no shell (o projeto exige Node 24) e WARNs opcionais de OpenCode/gateway; não bloqueou os gates executados com Node 24. Os artefatos `impact-editorial-*` preexistentes não foram incluídos.
 
 ## Próximo passo
 Iniciar o intervalo `1876–1900` com a mesma seleção determinística e validação independente; manter autoria sem publicação factual até existir manifesto oficial com texto, versão/evento e identidade exatos.
+
+## Publicação verificada
+- Commit: `98e790f03539b8e708df44d655667dfd55da2d84`, `main` alinhada com `origin/main`.
+- Backup Cloudflare `334951434`, run `34026139682`: `completed/success`, `headSha` exato.
+- Produção: raiz `https://rs.votopraquem.org` HTTP 200.
+- `release.json`: SHA exato `98e790f03539b8e708df44d655667dfd55da2d84`, release `98e790f-20260906T095930716Z`, versão `0.2.1226`, snapshot `1003`.

@@ -1,3 +1,9 @@
+## Verificação de publicação — autoria Câmara 1851–1875 — 2026-09-06
+
+- Commit `98e790f03539b8e708df44d655667dfd55da2d84` publicado em `origin/main`; worktree limpa e remoto alinhado.
+- Backup Cloudflare `334951434`, run `34026139682`, `completed/success`, `headSha` exato. Produção raiz HTTP 200; `/release.json` confirmou SHA exato, release `98e790f-20260906T095930716Z`, versão `0.2.1226`, snapshot `1003`.
+- QA atualizado: `docs/qa/lote-camara-autoria-1851-1875-2026-09-06.md`. Próximo chunk preparado: `1876–1900`, `25` projetos, `75` ocorrências, `21` candidatos.
+
 ## Tick contínuo — autoria Câmara 1851–1875 retida — 2026-09-06
 
 - Seleção determinística: `25` projetos únicos (`offset=1850`, `limit=25`), `75` ocorrências e `19` candidatos; duas lanes com `25/25` IDs exatos.
