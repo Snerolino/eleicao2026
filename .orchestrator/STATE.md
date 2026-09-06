@@ -5076,3 +5076,13 @@ Sem autorização humana explícita própria, não fazer:
 - Conflito preservado: Vilmar Zanchin / PL 246/2020 / 22-12-2020 (`fonte=nao`, remoto=`sim`); a página contém preferência e mérito no mesmo número/data sem identificador discriminante suficiente. Não sobrescrever até resolver evento exato.
 - Votos ALRS públicos: `43.762`; candidatos estaduais com perfil nominal: `50/521`; pertinentes às categorias: `2.315`; pontuados: `2.166`; pertinentes sem pontuação: `149`.
 - Supervisor Hermes acelerado para `every 5m`; job de relatório continua `every 60m`. QA: `docs/qa/alrs-cobertura-votacoes-acelerada-2026-09-06.md`.
+
+## Tick contínuo — autoria Câmara 1626–1650 bloqueada — 2026-09-06T07:22Z
+
+- Microbatch de `25` projetos únicos processado sob lock; causal Antigravity validada (`25/25` IDs exatos, todos `withheld`), red-team Codex rejeitada (envelope sem decisões por item/cardinalidade).
+- Reconciliação fail-closed: `0 approved`, `0 pending_review`, `25 withheld`, `0 score_eligible`; checkpoint total `1.650` analisados, próximo `1651–1675`, `49` bloqueios.
+- Artefato e QA: `data/legislative-import/camara/authored-project-review-batches/camara-authored-unique-review-1626-1650-reconciled.json` e `docs/qa/lote-camara-authored-1626-1650-2026-09-06.md`; `content_read=false`, `remote_apply=false`.
+- Nenhum authored project, claim, voto, score, matriz, snapshot público ou escrita Supabase factual.
+- Gates verdes: `496` testes/`119` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos, smoke `1002` cards/0 HTTP/0 erros online, diff-check.
+- Publicação verificada no commit final `a0f8191ae502095d24ca6fcecfc3db6a8ee848cb`; Deploy primário `34018830494` success/headSha exato; backup manual `34018842949` skipped; produção HTTP 200, release `0.2.1208`, SHA exato, snapshot `1003`.
+- Próximo chunk: `1651–1675`, repetir duas lanes read-only e manter fail-closed; não publicar withheld.
