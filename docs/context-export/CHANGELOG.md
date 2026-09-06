@@ -1,5 +1,11 @@
 # Changelog do contexto exportado
 
+## 2026-09-06
+
+- Migration `20260906090000_alrs_event_identity.sql` aplicada no Supabase remoto: o RPC factual `import_alrs_nominal_votes(jsonb)` aceita `event_identity` e deriva `voting_events.external_id` por identidade do evento, preservando matérias ALRS distintas com mesma versão/data sem sobrescrever votos.
+- Colisão Vilmar Zanchin / PL 246/2020 reconciliada com fonte oficial ALRS: 1 novo evento e voto `nao` inseridos, o registro remoto `sim` preservado; segunda execução idempotente retornou `already_present=1`, `conflicts=0`.
+
+
 ## 2026-08-30
 
 - Evolução da Matriz de Impacto Populacional para a **Metodologia v1.1**:

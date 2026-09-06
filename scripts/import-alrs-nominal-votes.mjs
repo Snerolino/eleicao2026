@@ -42,7 +42,7 @@ const seen = new Set();
 const valuesByIdentity = new Map();
 const sourceConflicts = [];
 for (const row of sourceRows) {
-  const normalized = { candidate_id: row.candidate_id, proposition_version_id: row.proposition_version_id, value: row.value, occurred_at: isoDate(row.occurred_at), source_url: row.source_url, source_sha256: row.source_sha256 };
+  const normalized = { candidate_id: row.candidate_id, proposition_version_id: row.proposition_version_id, value: row.value, occurred_at: isoDate(row.occurred_at), source_url: row.source_url, source_sha256: row.source_sha256, event_identity: row.event_identity ?? null, source_matter_hash: row.source_matter_hash ?? null };
   const identity = `${normalized.candidate_id}|${normalized.proposition_version_id}|${calendarDate(row.occurred_at)}`;
   const prior = valuesByIdentity.get(identity);
   if (prior && prior !== normalized.value) { sourceConflicts.push({ identity, values: [prior, normalized.value] }); continue; }

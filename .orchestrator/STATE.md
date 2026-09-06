@@ -1,3 +1,12 @@
+## Tick contínuo — identidade de evento ALRS PL 246/2020 resolvida — 2026-09-06
+
+- Lock exclusivo adquirido; migração `20260906090000_alrs_event_identity.sql` confirmada no Supabase remoto.
+- Colisão Vilmar Zanchin resolvida sem overwrite: evento/voto oficial `nao` inserido com `event_identity` distinto; fato remoto `sim` preservado.
+- Read-back exato: `inserted=1`, `already_present=0`, `conflicts=0`; segunda execução `inserted=0`, `already_present=1`, `conflicts=0`.
+- Reconciliação ALRS completa read-only: `source_rows=44054`, `already_present=44054`, `missing=0`, `conflicts=0`, `event_identity_collisions=0`, `ambiguous=0`, `blocked_proposition=0`.
+- QA: `docs/qa/lote-alrs-event-identity-pl246-2026-09-06.md`. Nenhum score, matriz ou assessment foi criado.
+- Próximo chunk: fila editorial independente e autoria Câmara `1951–1975`; manter `pending_review`, `withheld` e `approved` separados.
+
 
 ## Tick contínuo — importação ALRS de 292 faltantes — 2026-09-06
 
