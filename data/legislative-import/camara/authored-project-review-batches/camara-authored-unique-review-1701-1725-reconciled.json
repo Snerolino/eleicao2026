@@ -1,0 +1,567 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_authorship_index_only",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:pl-117-2025-2482427",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-1195-2022-2322578",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-1323-2020-2242515",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-1501-2022-2326080",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-1537-2026-2612861",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-1551-2024-2430967",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-161-2022-2314147",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-1782-2026-2615559",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-1810-2021-2282940",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-1904-2024-2434493",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-1966-2024-2435228",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-1967-2024-2435229",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-2064-2021-2285927",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-2067-2021-2285963",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-2315-2022-2334172",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-2388-2024-2440784",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-243-2025-2482843",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-2590-2021-2291567",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-2590-2022-2335523",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-2723-2022-2336539",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-2761-2020-2253000",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-2853-2020-2253607",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-29-2021-2268650",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-2904-2025-2525665",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-2947-2024-2449804",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: pool gratuito falhou em todos os modelos e Gemini legacy terminou bloqueado sem decisões por item verificáveis.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_provider_all_free_models",
+        "redteam": "blocked_gemini_contract_or_policy"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    }
+  ]
+}

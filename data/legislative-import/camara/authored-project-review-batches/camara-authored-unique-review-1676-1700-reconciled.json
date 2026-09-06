@@ -1,0 +1,567 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_authorship_index_only",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:pdl-207-2020-2252118",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pdl-207-2021-2283283",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pdl-208-2021-2283285",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pdl-21-2021-2270298",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pdl-213-2022-2326354",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pdl-22-2021-2270299",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pdl-227-2021-2285616",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pdl-228-2025-2516046",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pdl-23-2021-2270300",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pdl-24-2024-2419066",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pdl-354-2020-2259409",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pdl-373-2022-2336824",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pdl-413-2020-2263428",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pdl-415-2020-2263453",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pdl-442-2020-2263831",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pdl-48-2025-2482524",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pdl-484-2020-2265488",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pdl-516-2020-2266035",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pdl-563-2020-2267481",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pdl-822-2025-2570918",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pec-36-2022-2340881",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-1003-2022-2320332",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-1054-2021-2275375",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-1087-2021-2275637",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    },
+    {
+      "id": "camara:pl-1116-2024-2424865",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: ambas as lanes read-only não entregaram decisões por item verificáveis com cardinalidade e IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_item_decisions",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "blocked_contract_missing_snapshot_batch",
+        "redteam": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas e cadeia oficial completa não há promoção."
+    }
+  ]
+}
