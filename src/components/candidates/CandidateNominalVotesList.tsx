@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import type { CandidateNominalVote } from "@/types/election";
 import { getBeneficiaryGroupLabel } from "@/domain/impact/beneficiary-groups";
 import { sanitizeUrl } from "@/utils/sanitizeUrl";
+import { filterPopulationRelevantVotes } from "@/domain/impact/vote-coverage";
 
 export interface CandidateNominalVotesListProps {
   votes: CandidateNominalVote[];
@@ -17,9 +18,10 @@ export function CandidateNominalVotesList({
   const [isExpanded, setIsExpanded] = useState<boolean>(defaultExpanded);
   const [filterValue, setFilterValue] = useState<string>("all");
   const [searchTerm, setSearchTerm] = useState<string>("");
+  const relevantVotes = useMemo(() => filterPopulationRelevantVotes(votes), [votes]);
 
   const filteredVotes = useMemo(() => {
-    return votes.filter((v) => {
+    return relevantVotes.filter((v) => {
       const matchFilter =
         filterValue === "all" ||
         (filterValue === "sim" && v.vote_value.toLowerCase() === "sim") ||
@@ -36,9 +38,9 @@ export function CandidateNominalVotesList({
 
       return matchFilter && matchSearch;
     });
-  }, [votes, filterValue, searchTerm]);
+  }, [relevantVotes, filterValue, searchTerm]);
 
-  if (votes.length === 0) {
+  if (relevantVotes.length === 0) {
     return (
       <p className="font-mono text-xs uppercase tracking-wide text-[var(--color-muted-ink)]">
         Nenhuma votação nominal individual detalhada disponível para exibição nesta casa.
@@ -47,9 +49,9 @@ export function CandidateNominalVotesList({
   }
 
   const voteCounts = {
-    total: votes.length,
-    sim: votes.filter((v) => v.vote_value.toLowerCase() === "sim").length,
-    nao: votes.filter((v) => v.vote_value.toLowerCase() === "nao").length,
+    total: relevantVotes.length,
+    sim: relevantVotes.filter((v) => v.vote_value.toLowerCase() === "sim").length,
+    nao: relevantVotes.filter((v) => v.vote_value.toLowerCase() === "nao").length,
   };
 
   return (
@@ -67,11 +69,11 @@ export function CandidateNominalVotesList({
               Registro Detalhado de Votações · {houseLabel}
             </h3>
             <span className="font-mono text-xs text-[var(--color-muted-ink)]">
-              ({votes.length})
+              ({relevantVotes.length})
             </span>
           </div>
           <p className="mt-1 text-xs text-[var(--color-muted-ink)]">
-            {votes.length} matérias catalogadas com fonte oficial (Sim: {voteCounts.sim} · Não: {voteCounts.nao}).
+            {relevantVotes.length} matérias pertinentes catalogadas com fonte oficial (Sim: {voteCounts.sim} · Não: {voteCounts.nao}).
           </p>
         </div>
 
@@ -93,7 +95,7 @@ export function CandidateNominalVotesList({
         <div className="p-5 pt-0 border-t border-[var(--color-border-editorial)]">
           <div className="pt-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-xs text-[var(--color-muted-ink)]">
-              Exibindo {filteredVotes.length} de {votes.length} matérias:
+              Exibindo {filteredVotes.length} de {relevantVotes.length} matérias pertinentes:
             </p>
 
             {/* Filtros de Voto */}
@@ -131,7 +133,7 @@ export function CandidateNominalVotesList({
               >
                 Não ({voteCounts.nao})
               </button>
-              {votes.length - voteCounts.sim - voteCounts.nao > 0 && (
+              {relevantVotes.length - voteCounts.sim - voteCounts.nao > 0 && (
                 <button
                   type="button"
                   onClick={() => setFilterValue("outros")}
@@ -141,7 +143,7 @@ export function CandidateNominalVotesList({
                       : "bg-transparent text-[var(--color-muted-ink)] border-[var(--color-border-editorial)] hover:text-[var(--color-ink)]"
                   }`}
                 >
-                  Outros ({votes.length - voteCounts.sim - voteCounts.nao})
+                  Outros ({relevantVotes.length - voteCounts.sim - voteCounts.nao})
                 </button>
               )}
             </div>

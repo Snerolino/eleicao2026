@@ -63,6 +63,15 @@ export interface Candidate {
   indigenous_ethnicity?: string | null;
   authored_projects?: CandidateAuthoredProject[];
   authored_project_facts?: CandidateAuthoredProjectFact[];
+  mandate_history?: CandidateMandate[];
+}
+
+export interface CandidateMandate {
+  institution: string;
+  role: string;
+  start_date: string | null;
+  end_date: string | null;
+  source_url: string | null;
 }
 
 export interface CandidateNominalVote {

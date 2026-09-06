@@ -30,6 +30,11 @@ import { DivergentScoreBar } from '@/components/impact/DivergentScoreBar';
 import { getBeneficiaryGroupLabel } from '@/domain/impact/beneficiary-groups';
 import { SavedCandidateButton } from '@/components/candidates/SavedCandidateButton';
 import { useSavedCandidates } from '@/hooks/useSavedCandidates';
+import {
+  filterPopulationRelevantVotes,
+  formatCoveragePercentage,
+  summarizeVoteCoverage,
+} from '@/domain/impact/vote-coverage';
 
 function claimsForSection(
   claims: Claim[],
@@ -223,6 +228,9 @@ export function CandidateDossierPage() {
             const house = votingHouseMetadata(profile.house);
             const headingId = `voting-profile-heading-${profile.house}`;
             const safeSourceUrl = sanitizeUrl(house.sourceUrl);
+            const allNominalVotes = getCandidateNominalVotes(candidate.tse_candidate_id, profile.house);
+            const relevantNominalVotes = filterPopulationRelevantVotes(allNominalVotes);
+            const coverage = summarizeVoteCoverage(allNominalVotes);
             return (
             <section
               key={profile.house}
@@ -239,7 +247,7 @@ export function CandidateDossierPage() {
                   </h2>
                   <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[var(--color-muted-ink)]">
                     {profile.total_votes} votos individuais localizados na {house.label}.
-                    Os números abaixo são fatos de votação; a avaliação pública aparece por categoria somente quando existe assessment aprovado e fonte verificável.
+                    A lista abaixo mostra somente votações relacionadas às categorias populacionais canônicas. Os números são fatos de votação; a avaliação pública aparece por categoria somente quando existe assessment aprovado e fonte verificável.
                   </p>
                 </div>
                 <div className="shrink-0 text-left sm:text-right">
@@ -294,6 +302,25 @@ export function CandidateDossierPage() {
                   </div>
                 )}
               </div>
+              <div className="mt-5 border border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-4" aria-label={`Cobertura da análise de votações em ${house.label}`}>
+                <h3 className="font-mono text-xs uppercase tracking-widest text-[var(--color-muted-ink)]">Cobertura e limites da análise</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted-ink)]">
+                  Das {coverage.totalVotes} votações localizadas, {coverage.relevantVotes} são pertinentes às categorias populacionais e {coverage.scoredVotes} foram pontuadas.
+                </p>
+                <dl className="mt-3 grid gap-3 sm:grid-cols-3">
+                  <div><dt className="font-mono text-[0.62rem] uppercase tracking-wider text-[var(--color-muted-ink)]">Pertinentes / localizadas</dt><dd className="mt-1 font-mono text-lg font-semibold text-[var(--color-institutional)]">{formatCoveragePercentage(coverage.relevantPercentage)}</dd></div>
+                  <div><dt className="font-mono text-[0.62rem] uppercase tracking-wider text-[var(--color-muted-ink)]">Pontuadas / pertinentes</dt><dd className="mt-1 font-mono text-lg font-semibold text-[var(--color-institutional)]">{formatCoveragePercentage(coverage.scoredPercentage)}</dd></div>
+                  <div><dt className="font-mono text-[0.62rem] uppercase tracking-wider text-[var(--color-muted-ink)]">Instituição</dt><dd className="mt-1 text-sm font-semibold">{house.label}</dd></div>
+                </dl>
+                {candidate.mandate_history && candidate.mandate_history.length > 0 ? (
+                  <div className="mt-4 border-t border-[var(--color-border-editorial)] pt-3">
+                    <h4 className="font-mono text-[0.62rem] uppercase tracking-wider text-[var(--color-muted-ink)]">Mandatos documentados</h4>
+                    <ul className="mt-2 space-y-2 text-sm">{candidate.mandate_history.map((mandate, index) => <li key={`${mandate.institution}-${mandate.role}-${index}`}><strong>{mandate.role}</strong> · {mandate.institution} · {mandate.start_date ?? 'data inicial não localizada'}–{mandate.end_date ?? 'em exercício ou data final não localizada'}</li>)}</ul>
+                  </div>
+                ) : (
+                  <p className="mt-4 border-t border-[var(--color-border-editorial)] pt-3 text-sm text-[var(--color-muted-ink)]">Datas de mandatos anteriores não foram localizadas na base pública desta candidatura. O período acima é cobertura de votações, não uma inferência de mandato.</p>
+                )}
+              </div>
               <dl className="mt-5 grid grid-cols-2 gap-px border border-[var(--color-border-editorial)] bg-[var(--color-border-editorial)] sm:grid-cols-5">
                 {[
                   ['Sim', profile.votos_sim, 'text-[var(--color-institutional)]'],
@@ -325,9 +352,8 @@ export function CandidateDossierPage() {
 
               {/* Lista Detalhada de Votações Nominais por Matéria */}
               {(() => {
-                const nominalVotes = getCandidateNominalVotes(candidate.tse_candidate_id, profile.house);
-                if (nominalVotes.length === 0) return null;
-                return <CandidateNominalVotesList votes={nominalVotes} houseLabel={house.label} />;
+                if (relevantNominalVotes.length === 0) return null;
+                return <CandidateNominalVotesList votes={relevantNominalVotes} houseLabel={house.label} />;
               })()}
             </section>
             );

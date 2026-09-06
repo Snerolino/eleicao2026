@@ -117,6 +117,7 @@ export function mapCandidate(row: CandidateRow): Candidate {
     indigenous_ethnicity: row.indigenous_ethnicity ?? publicCandidate?.indigenous_ethnicity ?? null,
     authored_projects: publicCandidate?.authored_projects ?? [],
     authored_project_facts: publicCandidate?.authored_project_facts ?? [],
+    mandate_history: publicCandidate?.mandate_history ?? [],
   });
 }
 

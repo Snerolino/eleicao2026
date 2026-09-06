@@ -9,6 +9,11 @@ interface CompactProposition {
   l: string;
   g: string | null;
   d: string | null;
+  score_eligible?: boolean;
+  defending_vote?: 'sim' | 'nao' | null;
+  event_defending_vote?: 'sim' | 'nao' | null;
+  textual_defending_vote?: 'sim' | 'nao' | null;
+  vote_attribution_status?: string | null;
 }
 
 interface CompactVotesPayload {
@@ -47,6 +52,11 @@ export function getCandidateNominalVotes(
       source_label: prop.l,
       assessment_group: prop.g,
       impact_direction: prop.d as any,
+      score_eligible: prop.score_eligible ?? false,
+      defending_vote: prop.defending_vote ?? null,
+      event_defending_vote: prop.event_defending_vote ?? null,
+      textual_defending_vote: prop.textual_defending_vote ?? null,
+      vote_attribution_status: prop.vote_attribution_status ?? null,
     });
   }
 

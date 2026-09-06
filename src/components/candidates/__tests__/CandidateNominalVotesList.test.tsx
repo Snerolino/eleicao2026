@@ -17,11 +17,22 @@ const mockVotes: CandidateNominalVote[] = [
   },
   {
     house: "camara",
-    proposition_id: "PLP 109",
-    title: "Retirada de pauta do PLP 109",
+    proposition_id: "PLP 200",
+    title: "Proteção de estudantes",
     vote_value: "nao",
     date: "2026-04-12",
     source_url: "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-70",
+    source_label: "Câmara dos Deputados",
+    assessment_group: "estudantes",
+    impact_direction: "negative",
+  },
+  {
+    house: "camara",
+    proposition_id: "PLP 109",
+    title: "Retirada de pauta do PLP 109",
+    vote_value: "nao",
+    date: "2026-04-13",
+    source_url: "https://dadosabertos.camara.leg.br/api/v2/votacoes/2503998-71",
     source_label: "Câmara dos Deputados",
     assessment_group: null,
     impact_direction: null,
@@ -44,6 +55,7 @@ describe("CandidateNominalVotesList", () => {
     expect(screen.getByText(/Política Nacional de Prevenção/i)).toBeInTheDocument();
     expect(screen.getByText("Voto: sim")).toBeInTheDocument();
     expect(screen.getByText("Voto: nao")).toBeInTheDocument();
+    expect(screen.queryByText("PLP 109")).not.toBeInTheDocument();
     expect(screen.getByText(/Mulheres · Ampliadora/i)).toBeInTheDocument();
   });
 
@@ -54,13 +66,13 @@ describe("CandidateNominalVotesList", () => {
     fireEvent.click(simButton);
 
     expect(screen.getByText("PLP 41/2024")).toBeInTheDocument();
-    expect(screen.queryByText("PLP 109")).not.toBeInTheDocument();
+    expect(screen.queryByText("PLP 200")).not.toBeInTheDocument();
 
     const naoButton = screen.getByRole("button", { name: /^Não/i });
     fireEvent.click(naoButton);
 
     expect(screen.queryByText("PLP 41/2024")).not.toBeInTheDocument();
-    expect(screen.getByText("PLP 109")).toBeInTheDocument();
+    expect(screen.getByText("PLP 200")).toBeInTheDocument();
   });
 
   it("filtra por termo de busca no input", () => {
