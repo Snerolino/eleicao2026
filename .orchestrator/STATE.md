@@ -1,3 +1,10 @@
+
+## Tick contínuo — importação ALRS de 292 faltantes — 2026-09-06
+
+- Monitor mudou nominal_missing=292 para 0; nominal_ambiguous=0 e nominal_blocked_proposition=0.
+- RPC Auth aplicado: 292 linhas deduplicadas, 292 inseridas, 0 conflitos; artefato data/legislative-import/alrs/alrs-nominal-vote-import-current.json.
+- Reconciliação total: 44.053 already_present_exact e 1 event_identity_collision preservada (Vilmar Zanchin/PL 246/2020); nenhum overwrite.
+- QA: docs/qa/lote-alrs-nominal-292-import-2026-09-06.md. Próximo chunk: resolver a colisão oficial e seguir a revisão editorial fail-closed.
 ## Tick contínuo — autoria Câmara 1926–1950 retida — 2026-09-06
 
 - Seleção: 25 projetos únicos (`offset=1925`, `limit=25`), 75 ocorrências e 23 candidatos.

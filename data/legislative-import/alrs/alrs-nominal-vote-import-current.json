@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "alrs_nominal_vote_import",
+  "mode": "apply",
+  "remote_apply": true,
+  "source_reconciliation": "/home/lourenco/Projetos/eleicao2026/data/legislative-import/alrs/alrs-nominal-vote-reconciliation-v1.json",
+  "source_rows": 292,
+  "deduplicated_rows": 292,
+  "source_conflicts": [],
+  "chunk_size": 500,
+  "chunks": [
+    {
+      "chunk": 1,
+      "rows": 292,
+      "result": {
+        "inserted": 292,
+        "conflicts": 0,
+        "remote_apply": true,
+        "rows_received": 292,
+        "already_present": 0
+      }
+    }
+  ],
+  "user_id": "4584704a-cb05-4c95-9a50-82bfc74396d2",
+  "role": "admin"
+}
