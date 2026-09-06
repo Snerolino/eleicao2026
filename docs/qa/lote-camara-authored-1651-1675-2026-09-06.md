@@ -25,5 +25,11 @@ Processar o microbatch seguinte de 25 projetos únicos da fila factual de autori
 - `data/legislative-import/camara/authored-project-review-batches/camara-authored-unique-review-1651-1675-reconciled.json`
 - SHA-256: `eba4d01225e8c26c45fada994fc819a077f5fa5d1fb4af906da7079b59973637`
 
+## Publicação e verificação
+- Commit: `c923b4b81fc4819acfc609ef13b0991982e78e83`, confirmado em `origin/main`.
+- Produção: raiz `https://rs.votopraquem.org` HTTP `200`; `/release.json` HTTP `200`, `sha` exato do commit e snapshot `1003`.
+- Workflow primário `Deploy`, run `34019997668`: observado `queued` → `in_progress`, `headSha` exato; consulta intermediária teve erro transitório de conexão da API GitHub e não foi possível capturar a conclusão nesta janela.
+- Workflow backup `Deploy to Cloudflare Pages (backup)`, run `34020001523`: `completed/skipped` para o mesmo SHA. O `release.json` já confirma a publicação do SHA exato.
+
 ## Próximo passo
 Retomar `1676–1700` com duas lanes read-only independentes; não publicar `withheld` nem aplicar autoria sem decisão `approved`, source gate verde, análise causal completa e red-team reconciliado.
