@@ -28,3 +28,16 @@ Processar o próximo microbatch de 25 projetos únicos da fila factual de autori
 
 ## Próximo passo
 Retomar `1651–1675` com duas lanes independentes; não publicar withheld nem aplicar autoria sem decisão approved, source gate, análise causal completa e red-team reconciliado.
+
+## Gates e publicação verificados
+- `npm run test -- --passWithNoTests`: exit `0`, `496` testes em `119` arquivos.
+- `npx tsc --noEmit`: exit `0`.
+- `node scripts/validate-impact-schema.mjs`: exit `0`.
+- `npm run data:check`: exit `0`, `1003` candidaturas, `988` fotos oficiais, `1` fonte TSE.
+- `npm run build`: exit `0`, `245` módulos, sitemap `1003 + 2` URLs, `release.json` gerado.
+- `npm run smoke:local`: exit `0`, `1002` cards, `0` falhas HTTP, `0` erros de console online, service worker pronto.
+- `git diff --check`: exit `0`.
+- Commit publicado: `fb2ba6991e7e4e53e3587c7816df25e8be1d8f34`, `main -> main`.
+- Backup Cloudflare `334951434`, run `34018727947`: `completed/success`, `headSha` exato.
+- Produção: raiz HTTP `200`; `/release.json` HTTP `200`, SHA exato, snapshot `row_count=1003`.
+
