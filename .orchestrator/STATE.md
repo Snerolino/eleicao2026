@@ -5,6 +5,8 @@
 - Checkpoint: projects_analyzed=1950, próximo 1951–1975, blocked_items=80; QA `docs/qa/lote-camara-autoria-1926-1950-2026-09-06.md`.
 - Nenhuma escrita factual/remota; próximo chunk: 1951–1975.
 
+- Publicação verificada: commit `b1acdf19fdfb7e89adab6ade6edcb6ec88322a1a`; backup `34027916049` success/headSha exato; produção HTTP 200 e release SHA exato, snapshot 1003.
+
 ## Tick contínuo — autoria Câmara 1901–1925 retida — 2026-09-06
 
 - Seleção determinística: 25 projetos únicos (`offset=1900`, `limit=25`), 75 ocorrências e 18 candidatos.

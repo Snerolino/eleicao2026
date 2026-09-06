@@ -23,5 +23,10 @@ Nenhum projeto, claim, voto, matéria, evento, matriz ou score foi publicado. Au
 - `git diff --check`: RC 0.
 - Churn somente de timestamps nos três artefatos editoriais preexistentes foi restaurado.
 
+## Publicação verificada
+- Commit `b1acdf19fdfb7e89adab6ade6edcb6ec88322a1a` publicado em `origin/main`.
+- Backup Cloudflare workflow `334951434`, run `34027916049`: `completed/success`, `headSha` exato.
+- Produção: raiz HTTP 200; `/release.json` HTTP 200, SHA exato `b1acdf19fdfb7e89adab6ade6edcb6ec88322a1a`, snapshot `1003`.
+
 ## Próximo passo
 Iniciar `1951–1975` mantendo fonte oficial, lanes independentes e fail-closed.
