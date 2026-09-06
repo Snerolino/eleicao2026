@@ -21,5 +21,10 @@ Resolver fail-closed a colisão Vilmar Zanchin / PL 246/2020 de 22/12/2020, em q
 - `scripts/import-alrs-nominal-votes.mjs`
 - `data/legislative-import/alrs/alrs-pl246-event-identity-import-v1.json`
 
+## Publicação verificada
+- Commit publicado: `a38a5b9fb438c0ab400466ad8c9233603550ba5f`.
+- Backup Cloudflare `334951434`, run `34054614245`: `completed/success`, `headSha` exato.
+- Produção: raiz HTTP 200; `/release.json` HTTP 200, SHA exato, release `0.2.1237`, snapshot `1003`.
+
 ## Próximo passo
 Reexecutar a reconciliação ALRS completa para confirmar `event_identity_collisions=0` no snapshot vigente e continuar a fila editorial separada, mantendo `pending_review`, `withheld` e `approved` distintos.

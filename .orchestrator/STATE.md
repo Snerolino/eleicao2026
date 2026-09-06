@@ -6,6 +6,7 @@
 - Reconciliação ALRS completa read-only: `source_rows=44054`, `already_present=44054`, `missing=0`, `conflicts=0`, `event_identity_collisions=0`, `ambiguous=0`, `blocked_proposition=0`.
 - QA: `docs/qa/lote-alrs-event-identity-pl246-2026-09-06.md`. Nenhum score, matriz ou assessment foi criado.
 - Próximo chunk: fila editorial independente e autoria Câmara `1951–1975`; manter `pending_review`, `withheld` e `approved` separados.
+- Publicação verificada: backup `34054614245` success/headSha exato; produção HTTP 200 e release `a38a5b9`/snapshot `1003`.
 
 
 ## Tick contínuo — importação ALRS de 292 faltantes — 2026-09-06
