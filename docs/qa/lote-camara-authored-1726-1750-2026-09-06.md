@@ -38,3 +38,9 @@ Iniciar exatamente `1751–1775`, mantendo circuit-breaker, duas lanes read-only
 - `npm run smoke:local`: PASS — 1.002 cards, 0 falhas HTTP, 0 erros online, service worker pronto.
 - `git diff --check`: PASS.
 - `npm run orch:doctor`: FAIL apenas pelo requisito de Node 24 no shell (Node 22.22.2); 4 WARNs operacionais. Nenhum dado factual foi promovido por causa desse FAIL.
+
+## Publicação documental verificada
+- Commit do lote: `7363fc511e7e10e74c4a08cd487c855289d14850`, `main -> main` aceito pelo GitHub.
+- Backup Cloudflare workflow `334951434`: run `34021884595`, `completed/success`, `headSha` exato do commit.
+- Produção: raiz HTTP 200 e `/release.json` HTTP 200; release `0.2.1217`, SHA exato `7363fc511e7e10e74c4a08cd487c855289d14850`, snapshot 1.003.
+- O primeiro `curl` teve falha DNS transitória (`HTTP 000`), mas a verificação posterior confirmou HTTP 200 e SHA exato.
