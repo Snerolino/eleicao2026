@@ -1,0 +1,483 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "blocked",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_authorship_index_only",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "selection": {
+    "offset": 1750,
+    "limit": 25,
+    "candidate_occurrences": 75,
+    "unique_candidates": 23
+  },
+  "lanes": {
+    "causal": {
+      "status": "blocked",
+      "reason": "no_verified_editorial_executor_output"
+    },
+    "redteam": {
+      "status": "blocked",
+      "reason": "no_verified_editorial_executor_output"
+    }
+  },
+  "items": [
+    {
+      "id": "camara:pl-4165-2025-2551193",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:pl-4172-2020-2259942",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:pl-4253-2024-2467007",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:pl-4366-2020-2261038",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:pl-4510-2020-2262414",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:pl-4774-2020-2263627",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:pl-4789-2023-2392485",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:pl-4894-2023-2394641",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:pl-4968-2019-2219676",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:pl-5286-2025-2573501",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:pl-5539-2023-2404276",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:pl-641-2025-2485220",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:pl-735-2020-2239605",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:pl-915-2021-2273942",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:pl-953-2023-2350421",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:pl-964-2026-2607155",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:pl-965-2026-2607156",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:plp-188-2020-2257936",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:plp-242-2026-2644752",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:plp-90-2025-2497080",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:proc-16-2023-2354490",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:rec-1-2024-2418361",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:rec-18-2024-2447901",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:rec-19-2021-2284548",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    },
+    {
+      "id": "camara:rec-22-2022-2337357",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: não houve duas saídas editoriais independentes verificáveis com cardinalidade e conjunto de IDs exatos.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "reconciliation": "Fail-closed: sem evidência independente exata, autoria não é promovida a análise causal, voto, score ou matriz."
+    }
+  ]
+}

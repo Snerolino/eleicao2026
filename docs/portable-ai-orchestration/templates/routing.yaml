@@ -1,0 +1,45 @@
+version: 1
+
+# Substitua os exemplos pelos executores realmente instalados.
+# Este arquivo descreve capacidade e autoridade, não credenciais.
+
+policy:
+  single_writer_per_worktree: true
+  never_forward_full_conversation: true
+  scouts_read_only: true
+  remote_mutation_requires_explicit_authorization: true
+  max_failures_same_executor: 2
+  checkpoint_file: STATE.md
+  writer_lock: .orchestrator/runtime/locks/writer.lock
+  durable_scheduler: optional_but_required_for_continuity
+
+executors:
+  cheap_reader:
+    authority: read-only
+    data_class: public_or_sanitized
+    capabilities: [inventory, summary, simple_review]
+  broad_reader:
+    authority: read-only
+    data_class: public_or_sanitized
+    capabilities: [large_context, mapping, documentation]
+  technical_writer:
+    authority: workspace-write
+    data_class: project_allowed
+    capabilities: [implementation, debugging, tests]
+  human_or_gated_operator:
+    authority: remote-write
+    data_class: explicitly_authorized
+    capabilities: [publication, database, deploy, secrets]
+
+routes:
+  reconnaissance: [cheap_reader, broad_reader]
+  analysis: [cheap_reader, broad_reader, technical_writer]
+  implementation: [technical_writer]
+  debugging: [technical_writer]
+  publication: [human_or_gated_operator]
+  remote_mutation: [human_or_gated_operator]
+
+fallback:
+  on: [timeout, quota, rate_limit, auth_error, provider_down]
+  action: open_circuit_after_two_failures_and_try_next_eligible
+  authority_inheritance: forbidden

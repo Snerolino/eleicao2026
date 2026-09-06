@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/portable-executor-result-v1.json",
+  "title": "Portable Executor Result v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "task_id": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "status": { "type": "string", "enum": ["ok", "blocked", "error"] },
+    "summary": { "type": "string", "minLength": 1, "maxLength": 2000 },
+    "findings": { "type": "array", "maxItems": 20, "items": { "type": "string", "maxLength": 1200 } },
+    "evidence": { "type": "array", "maxItems": 20, "items": { "type": "string", "maxLength": 1200 } },
+    "files_changed": { "type": "array", "maxItems": 50, "items": { "type": "string", "maxLength": 400 } },
+    "tests": { "type": "array", "maxItems": 30, "items": { "type": "string", "maxLength": 1200 } },
+    "risks": { "type": "array", "maxItems": 20, "items": { "type": "string", "maxLength": 1200 } },
+    "recommended_action": { "type": "string", "maxLength": 2000 },
+    "human_review_required": { "type": "boolean" }
+  },
+  "required": ["task_id", "status", "summary", "findings", "evidence", "files_changed", "tests", "risks", "recommended_action", "human_review_required"]
+}

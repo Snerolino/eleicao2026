@@ -1,5 +1,6 @@
 ## Tick contínuo — autoria Câmara 1–1600 resolvida em fila factual/source-first — 2026-09-04T20:08Z
 
+- Autorização operacional vigente do usuário (2026-09-06): continuar sem interromper para pedir autorização adicional na resolução/publicação de votos, matérias e anexos atuais e futuros, desde que cada escrita passe os gates técnicos de fonte oficial, identidade, schema/FK, segurança, idempotência e revisão editorial. Não autoriza fabricar dado nem burlar Auth/RLS/RPC.
 - Terceira rodada publicada na camada factual: posições 51–75 da `revisit_queue`, `25/25` IDs validados, `16 pending_review`, `9 withheld`, `0 approved`; publicação cumulativa dos fatos de autoria: `41` projetos editoriais consolidados, `489` vínculos candidato–projeto e `31` candidatos alcançados. QA: `docs/qa/autoria-camara-revisit-51-75-2026-09-05.md`.
 - Segunda rodada da `revisit_queue` concluída: posições 26–50, `25/25` IDs válidos nas lanes causal + red-team; reconciliação `14 pending_review`, `11 withheld`, `0 approved`, `0 score_eligible`. Artefato: `data/legislative-import/camara/authored-project-review-batches/camara-authored-revisit-26-50-reconciled-v1.json`; QA: `docs/qa/autoria-camara-revisit-26-50-2026-09-04.md`.
 - Os 1.600 projetos únicos já analisados deixaram de ser um bloco opaco de `withheld`: a recuperação factual oficial da Câmara (`candidate-authored-source-recovery-queue-v1.json`) separou `551` itens `revisit_ready`, `834` `procedural_only`, `212` `missing_event_source` e `3` `missing_full_text_source` após exigir `event_url` independente do `full_text_url`.
@@ -5086,3 +5087,13 @@ Sem autorização humana explícita própria, não fazer:
 - Gates verdes: `496` testes/`119` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos, smoke `1002` cards/0 HTTP/0 erros online, diff-check.
 - Publicação verificada no commit final `a0f8191ae502095d24ca6fcecfc3db6a8ee848cb`; Deploy primário `34018830494` success/headSha exato; backup manual `34018842949` skipped; produção HTTP 200, release `0.2.1208`, SHA exato, snapshot `1003`.
 - Próximo chunk: `1651–1675`, repetir duas lanes read-only e manter fail-closed; não publicar withheld.
+
+
+## Tick contínuo — autoria Câmara 1751–1775 bloqueada — 2026-09-06T08:45Z
+
+- Selecionados `25` projetos únicos (`offset=1750`), `75` ocorrências candidato–projeto e `23` candidatos; lote exato encerrado, próximo `1776–1800`.
+- Causal e red-team não produziram saídas independentes verificáveis neste tick; reconciliação fail-closed: `0 approved`, `0 pending_review`, `25 withheld`, `0 score_eligible`.
+- Artefato `camara-authored-unique-review-1751-1775-reconciled.json`; nenhum voto, claim, score, matriz, projeto público, Supabase ou Cloudflare factual foi escrito.
+- Gates locais verdes: `496` testes/`119` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos e `git diff --check`.
+- Commit local `253e5ee`; push bloqueado por DNS de `github.com`; produção não revalidou raiz (`HTTP 000`), release anterior `80e8e61` foi lida.
+- Próximo chunk: `1776–1800`, mantendo fail-closed e sem publicar withheld.

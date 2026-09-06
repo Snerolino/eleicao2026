@@ -13,6 +13,9 @@ const files = [
   'data/legislative-import/camara/authored-analysis-progress-v1.json',
   'data/legislative-import/camara/authored-project-review-batches/manifest.json',
   'data/legislative-import/camara/authored-project-review-batches/procedural-triage.json',
+  'data/legislative-import/alrs/alrs-nominal-discovery-manifest-v1.json',
+  'data/legislative-import/alrs/alrs-nominal-vote-reconciliation-v1.json',
+  'data/legislative-import/alrs/alrs-score-recovery-queue-v1.json',
 ];
 const digest = createHash('sha256');
 for (const file of files) {
@@ -24,6 +27,9 @@ const factual = json(files[4]);
 const progress = json(files[5]);
 const batches = json(files[6]);
 const triage = json(files[7]);
+const discovery = json(files[8]);
+const reconciliation = json(files[9]);
+const scoreRecovery = json(files[10]);
 console.log(JSON.stringify({
   fingerprint: digest.digest('hex'),
   pending_editorial_items: (alrs.items ?? []).filter((item) => item.editorial_disposition === 'pending_review').length,
@@ -35,4 +41,13 @@ console.log(JSON.stringify({
   authored_next_batch: progress.next_batch ?? null,
   procedural_candidates: Number(triage.counts?.procedural_candidate ?? 0),
   substantive_candidates: Number(triage.counts?.substantive_candidate ?? 0),
+  alrs_discovery_data_items: Number(discovery.totals?.data_items ?? 0),
+  alrs_discovery_exact_candidates: Number(discovery.totals?.exact_candidate_matches ?? 0),
+  alrs_discovery_unmatched_names: Number(discovery.totals?.unmatched_candidate_names ?? 0),
+  alrs_reconciled_rows: Number(reconciliation.counts?.source_rows ?? 0),
+  alrs_reconciliation_missing: Number(reconciliation.counts?.missing ?? 0),
+  alrs_reconciliation_conflicts: Number(reconciliation.counts?.conflicts ?? 0),
+  alrs_score_recovery_total: Number(scoreRecovery.counts?.total ?? 0),
+  alrs_score_event_binding_missing: Number(scoreRecovery.counts?.event_binding_missing ?? 0),
+  alrs_score_compound_non_separable: Number(scoreRecovery.counts?.compound_non_separable ?? 0),
 }));
