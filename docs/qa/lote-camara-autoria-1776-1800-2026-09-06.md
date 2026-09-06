@@ -21,3 +21,8 @@ A autoria possui metadados oficiais, mas este lote não demonstrou cadeia indepe
 
 ## Próximo passo
 Usar `1801–1825` como próximo chunk, mantendo descoberta oficial de texto/eventos, duas lanes independentes, cardinalidade/IDs exatos e fail-closed. Em paralelo, manter lanes ALRS/Câmara/Senado de fontes e votos sem escrita remota enquanto não houver evidência e sessão Auth/RPC válidas.
+
+## Publicação verificada
+- Commit/push: `2126b80f78859fbfd645707978075a91946c5e56` em `origin/main`.
+- Backup Cloudflare workflow `334951434`, run `34023730089`: `success`, `headSha` exato.
+- Produção: `https://rs.votopraquem.org` HTTP 200; `release.json` HTTP 200, SHA exato `2126b80f78859fbfd645707978075a91946c5e56`, versão `0.2.1222`, snapshot 1003.

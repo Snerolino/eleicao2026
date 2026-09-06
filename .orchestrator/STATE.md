@@ -5106,3 +5106,5 @@ Sem autorização humana explícita própria, não fazer:
 - Reconciliação fail-closed: `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`, `content_read=false`, `remote_apply=false`. Artefato e QA: `docs/qa/lote-camara-autoria-1776-1800-2026-09-06.md`.
 - Checkpoint atualizado: `projects_analyzed=1800`, próximo `1801-1825`; nenhum voto, matéria, matriz, score, claim, Supabase ou Cloudflare foi escrito.
 - Bloqueios: Antigravity timeout; doctor exige Node 24 mas shell usa Node 22.22.2; OpenCode ausente. Próximo chunk: `1801–1825`.
+
+- Publicação verificada após o lote: commit `2126b80f78859fbfd645707978075a91946c5e56`, backup run `34023730089` success/headSha exato; produção raiz e `release.json` HTTP 200, release SHA exato, versão `0.2.1222`.
