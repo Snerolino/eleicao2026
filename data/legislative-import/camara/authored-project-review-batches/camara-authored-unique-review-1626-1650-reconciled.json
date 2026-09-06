@@ -1,0 +1,528 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_authorship_index_only",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "lane_validation": {
+    "causal": {
+      "status": "validated",
+      "items": 25,
+      "source": "/tmp/agy-1626-1650.out"
+    },
+    "red_team": {
+      "status": "blocked",
+      "reason": "Codex executor envelope sem decisões por item/cardinalidade verificável"
+    }
+  },
+  "items": [
+    {
+      "id": "camara:emc-35-0-2290098",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emc-38-2021-2274833",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emc-64-2019-2219587",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emc-65-2019-2219588",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emc-8-0-2287014",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emc-8-0-2525584",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emp-1-0-2352521",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emp-1-0-2433503",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emp-1-0-2469297",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emp-1-0-2511045",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emp-10-0-2237173",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emp-11-0-2273418",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emp-2-0-2433539",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emp-26-0-2273481",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emp-26-0-2511412",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emp-27-0-2273482",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emp-28-0-2273483",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emp-3-0-2306574",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emp-3-0-2433435",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emp-40-0-2435168",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emp-437-0-2448145",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emp-53-0-2514069",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emp-56-0-2480552",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emp-57-0-2480554",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    },
+    {
+      "id": "camara:emp-573-0-2448310",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Lote bloqueado: lane causal AGY validada, mas lane red-team Codex não entregou decisões por item com cardinalidade 25.",
+      "risk": "high",
+      "missing_sources": [
+        "red_team_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "validated_withheld",
+        "red_team": "blocked_executor_envelope"
+      },
+      "reconciliation": "Fail-closed: autoria não equivale a voto; sem duas lanes reconciliadas não há promoção."
+    }
+  ]
+}
