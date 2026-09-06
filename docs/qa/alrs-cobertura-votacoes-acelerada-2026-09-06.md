@@ -51,3 +51,14 @@
 ## Próximo passo
 
 Resolver o conflito PL 246/2020 com uma chave de evento/matéria discriminante e iniciar o writer factual somente para linhas que passem identidade, fonte, dry-run e idempotência. Os cinco nomes sem correspondência exata permanecem pendentes de identidade, sem matching heurístico.
+
+## Backfill dos votos sem fonte
+
+O novo dry-run `npm run impact:alrs:missing-sources:backfill` reavaliou os 4 votos sem `source_reference` usando o manifesto oficial atual:
+
+- aplicáveis: **0**;
+- bloqueados: **4**;
+- causa comum: candidato TSE `210002534312` (Enio Carlos Terra) não está no catálogo oficial atual usado para gerar a evidência;
+- escrita remota: **0**.
+
+Nenhum valor foi alterado sem identidade e fonte exatas.
