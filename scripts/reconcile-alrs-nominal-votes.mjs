@@ -55,6 +55,7 @@ for (const row of versions) {
 }
 const existingKeys = new Set(existing.map((row) => `${row.candidate_id}|${row.voting_events?.proposition_version_id}|${normalizeCalendarDate(row.voting_events?.occurred_at)}|${row.value}`));
 const existingIdentityKeys = new Set(existing.map((row) => `${row.candidate_id}|${row.voting_events?.proposition_version_id}|${normalizeCalendarDate(row.voting_events?.occurred_at)}`));
+const existingByIdentity = new Map(existing.map((row) => [`${row.candidate_id}|${row.voting_events?.proposition_version_id}|${normalizeCalendarDate(row.voting_events?.occurred_at)}`, row]));
 const existingVersionIds = new Set(existing.map((row) => row.voting_events?.proposition_version_id).filter(Boolean));
 function chooseVersion(matches) {
   return [...matches].sort((a, b) => Number(existingVersionIds.has(b.proposition_version_id)) - Number(existingVersionIds.has(a.proposition_version_id)) || Number(String(b.version_key).startsWith('sha256:')) - Number(String(a.version_key).startsWith('sha256:')) || String(a.proposition_version_id).localeCompare(String(b.proposition_version_id)))[0];
@@ -116,6 +117,7 @@ for (const row of sourceRows) {
     proposition_year: yr,
     occurred_at: row.dataVotacao,
     value,
+    existing_value: existingByIdentity.get(`${candidate?.id}|${chosenVersion?.proposition_version_id}|${date}`)?.value ?? null,
     source_url: row.source_url,
     source_sha256: row.source_sha256,
   });

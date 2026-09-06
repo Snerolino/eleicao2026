@@ -5069,3 +5069,10 @@ Sem autorização humana explícita própria, não fazer:
 - Reconciliação fail-closed: 0 aprovados, 0 pending_review, 25 withheld, 0 score_eligible. Checkpoint `projects_analyzed=1600`, `blocked_items=41`.
 - Artefato: `data/legislative-import/camara/authored-project-review-batches/camara-authored-unique-review-1576-1600-reconciled.json`; QA: `docs/qa/lote-camara-autoria-1576-1600-2026-09-02.md`.
 - Nenhum authored_projects, claim, voto, score, matriz, snapshot público, Supabase ou Cloudflare factual foi escrito. Gates locais verdes; commit `aec5cff471d199c9392eb6fbcaf8eccb6ab23bb3` pushed. Backup Cloudflare run `33662254607` success/headSha exato; produção e release HTTP 200 com SHA confirmado.
+## Tick contínuo — cobertura ALRS acelerada e reconciliada — 2026-09-06
+
+- Coleta oficial ALRS: `55` parlamentares, `440` páginas anuais, `440` HTTP 200, `324` páginas com `data-item`, `48.020` registros brutos, `50` correspondências exatas e `5` nomes sem correspondência.
+- Reconciliação contra o banco: `43.762` linhas resolvidas, `43.761` já presentes exatamente, `0` faltantes seguros, `0` ambíguas, `0` identidades bloqueadas e `1` conflito de valor.
+- Conflito preservado: Vilmar Zanchin / PL 246/2020 / 22-12-2020 (`fonte=nao`, remoto=`sim`); a página contém preferência e mérito no mesmo número/data sem identificador discriminante suficiente. Não sobrescrever até resolver evento exato.
+- Votos ALRS públicos: `43.762`; candidatos estaduais com perfil nominal: `50/521`; pertinentes às categorias: `2.315`; pontuados: `2.166`; pertinentes sem pontuação: `149`.
+- Supervisor Hermes acelerado para `every 5m`; job de relatório continua `every 60m`. QA: `docs/qa/alrs-cobertura-votacoes-acelerada-2026-09-06.md`.
