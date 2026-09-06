@@ -7,6 +7,8 @@
 - QA: `docs/qa/lote-camara-autoria-1901-1925-2026-09-06.md`; nenhum projeto, claim, voto, matéria, matriz, score ou escrita remota produzido.
 - Próximo chunk: iniciar 1926–1950 mantendo fonte oficial e retenção fail-closed.
 
+- Publicação verificada: commit `01642bec3c0ab09e3b283e7e481fcd46d3a01029`; backup `34027610548` success/headSha exato; produção HTTP 200 e release SHA exato, snapshot 1003.
+
 ## Tick contínuo — autoria Câmara 1876–1900 retida — 2026-09-06
 
 - Seleção determinística: `25` projetos únicos (`offset=1875`, `limit=25`), `75` ocorrências e `21` candidatos; todos `REQ` (`24` tramitando, `1` arquivado).

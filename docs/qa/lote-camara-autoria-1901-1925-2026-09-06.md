@@ -26,5 +26,10 @@ A autoria e a ementa oficial não provam texto integral analisado, versão votad
 - `git diff --check`: RC 0.
 - Churn somente de timestamps em três artefatos editoriais preexistentes foi restaurado; nenhum dado fora do lote foi mantido.
 
+## Publicação verificada
+- Commit `01642bec3c0ab09e3b283e7e481fcd46d3a01029` publicado em `origin/main`.
+- Backup Cloudflare workflow `334951434`, run `34027610548`: `completed/success`, `headSha` exato.
+- Produção: raiz HTTP 200; `/release.json` HTTP 200, SHA exato `01642bec3c0ab09e3b283e7e481fcd46d3a01029`, release `0.2.1230`, snapshot `1003`.
+
 ## Próximo passo
 Iniciar `1926–1950` com a mesma seleção, manifesto oficial, validação causal/red-team e retenção fail-closed; manter em paralelo a reconciliação read-only de ALRS, Câmara e Senado.
