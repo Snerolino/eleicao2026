@@ -94,6 +94,10 @@ export function buildCandidateNominalVotes(root = ROOT) {
           assessment_group: primaryAssessment?.group || null,
           impact_direction: primaryAssessment?.impact_direction || null,
           defending_vote: primaryAssessment?.defending_vote || null,
+          textual_defending_vote: primaryAssessment?.textual_defending_vote || null,
+          event_defending_vote: primaryAssessment?.event_defending_vote || null,
+          score_eligible: primaryAssessment?.score_eligible ?? false,
+          vote_attribution_status: primaryAssessment?.vote_attribution_status || null,
         });
       }
     }
@@ -134,10 +138,48 @@ export function buildCandidateNominalVotes(root = ROOT) {
       assessment_group: primaryAssessment?.group || null,
       impact_direction: primaryAssessment?.impact_direction || null,
       defending_vote: primaryAssessment?.defending_vote || null,
+      textual_defending_vote: primaryAssessment?.textual_defending_vote || null,
+      event_defending_vote: primaryAssessment?.event_defending_vote || null,
+      score_eligible: primaryAssessment?.score_eligible ?? false,
+      vote_attribution_status: primaryAssessment?.vote_attribution_status || null,
     });
   }
 
-  writeFileSync(outputPath, JSON.stringify(resultByTse, null, 2) + "\n");
+  const propositions = [];
+  const propositionIndexes = new Map();
+  const candidates = {};
+  for (const [tseId, votes] of Object.entries(resultByTse)) {
+    candidates[tseId] = [];
+    for (const vote of votes) {
+      const proposition = {
+        h: vote.house,
+        p: vote.proposition_id,
+        t: vote.materia,
+        u: vote.source_url,
+        l: vote.house === "alrs" ? "ALRS Portal da Transparência" : "Câmara dos Deputados",
+        g: vote.assessment_group,
+        d: vote.impact_direction,
+        score_eligible: vote.score_eligible ?? false,
+        defending_vote: vote.defending_vote ?? null,
+        event_defending_vote: vote.event_defending_vote ?? null,
+        textual_defending_vote: vote.textual_defending_vote ?? null,
+        vote_attribution_status: vote.vote_attribution_status ?? null,
+      };
+      // A URL ALRS varia por parlamentar/ano, mas não identifica a matéria.
+      // Não a use na chave: a identidade do registro é house + proposition_id
+      // + título + classificação editorial. A data permanece no voto do candidato.
+      const { u: _sourceUrl, l: _sourceLabel, ...identity } = proposition;
+      const key = JSON.stringify(identity);
+      let index = propositionIndexes.get(key);
+      if (index === undefined) {
+        index = propositions.length;
+        propositionIndexes.set(key, index);
+        propositions.push(proposition);
+      }
+      candidates[tseId].push([index, vote.vote_value, vote.data_votacao]);
+    }
+  }
+  writeFileSync(outputPath, JSON.stringify({ p: propositions, c: candidates }, null, 2) + "\n");
   return resultByTse;
 }
 
