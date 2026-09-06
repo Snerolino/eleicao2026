@@ -28,6 +28,9 @@ Processar o próximo intervalo sequencial de 25 projetos únicos da fila factual
 Iniciar exatamente `1776–1800` no próximo tick, mantendo o bloqueio por item e sem publicar itens `withheld`; lanes oficiais read-only ALRS/Câmara/Senado continuam independentes.
 
 ## Publicação e verificação
-- Commit local: `253e5ee5dc410baac615d7b068c21117edc232ea` (inclui os artefatos/documentos pendentes já presentes na worktree).
+- Commit local inicial: `253e5ee5dc410baac615d7b068c21117edc232ea`; commit final após atualização deste QA será registrado no histórico Git (inclui os artefatos/documentos pendentes já presentes na worktree).
 - `git push origin main`: bloqueado neste tick por falha real de DNS (`Could not resolve host: github.com`); `origin/main` permanece em `80e8e61fafd1e88c3f91c36c88fed857e22a0e3e`.
 - Produção: raiz `HTTP 000` por timeout de resolução DNS; `/release.json` respondeu com a release anterior `80e8e61`, versão `0.2.1218`, snapshot `1003`. Não há deploy deste commit nem `headSha` remoto a validar.
+
+- Após reconfiguração do helper Git com `gh auth setup-git`, `git push origin main` foi aceito (`main -> main`). O commit final desta atualização ainda precisa ser enviado após o amend.
+- O workflow primário estava `in_progress` no commit anterior; consulta/dispatch do backup encontrou indisponibilidade temporária de `api.github.com`.
