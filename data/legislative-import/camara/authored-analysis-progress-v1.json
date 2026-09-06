@@ -83,6 +83,11 @@
       "batch_id": "1626-1650",
       "status": "blocked",
       "updated_at": "2026-09-06T07:14:34.441Z"
+    },
+    {
+      "batch_id": "1651-1675",
+      "status": "blocked",
+      "updated_at": "2026-09-06T07:43:04.336Z"
     }
   ],
   "blocked_items": [
@@ -134,18 +139,21 @@
     "authored-1626-1650-causal-contract",
     "authored-1626-1650-redteam-contract",
     "authored-1626-1650-source-event-gap",
-    "authored-1626-1650-provider"
+    "authored-1626-1650-provider",
+    "authored-1651-1675-causal-contract",
+    "authored-1651-1675-redteam-validated",
+    "authored-1651-1675-source-event-gap"
   ],
   "counts": {
-    "projects_analyzed": 1650,
+    "projects_analyzed": 1675,
     "approved": 0,
     "pending_review": 0,
-    "withheld": 1650
+    "withheld": 1675
   },
-  "last_batch": "1626-1650",
-  "next_batch": "1651-1675",
+  "last_batch": "1651-1675",
+  "next_batch": "1676-1700",
   "heartbeat": {
-    "at": "2026-09-06T07:14:34.452Z",
-    "pid": 2291634
+    "at": "2026-09-06T07:43:07.898Z",
+    "pid": 2329028
   }
 }

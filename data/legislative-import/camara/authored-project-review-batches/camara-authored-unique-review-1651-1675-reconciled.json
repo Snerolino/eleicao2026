@@ -1,0 +1,286 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_authorship_index_only",
+  "selection": {
+    "offset": 1650,
+    "limit": 25,
+    "projects": 25,
+    "candidate_occurrences": 75,
+    "unique_candidates": 18
+  },
+  "lane_verification": {
+    "causal": {
+      "executor": "google_antigravity",
+      "status": "rejected",
+      "reason": "JSON tinha marcador final e IDs fora do lote; cardinalidade/conjunto exatos não passaram."
+    },
+    "redteam": {
+      "executor": "codex_mcp_gpt-5.6-luna",
+      "status": "accepted",
+      "reason": "25/25 IDs exatos; todas withheld; score_eligible=false; content_read=false."
+    }
+  },
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:emp-58-0-2480556",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:emp-59-0-2480559",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:emp-6-0-2441654",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:emp-7-0-2441655",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:emp-8-0-2441656",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:emp-801-0-2448704",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:emp-802-0-2448705",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:emp-83-0-2581475",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:emp-9-0-2441657",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:inc-1022-2020-2262875",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:inc-1101-2024-2450690",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:inc-2356-2025-2563218",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:inc-2899-2025-2593224",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:inc-398-2021-2274669",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:inc-427-2026-2613266",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:inc-683-2020-2256441",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:inc-947-2023-2372036",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:inc-957-2021-2293965",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:inc-980-2020-2261255",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:pdl-11-2022-2313889",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:pdl-12-2022-2313890",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:pdl-179-2021-2280063",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:pdl-198-2023-2374503",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:pdl-20-2021-2270297",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    },
+    {
+      "id": "camara:pdl-204-2023-2374905",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: faltam o texto integral e a evidência do evento de votação vinculante; a causalidade e a elegibilidade não podem ser verificadas.",
+      "causal_lane": "blocked_contract_cardinality",
+      "redteam_lane": "validated_codex_exact_ids",
+      "reconciliation": "Retido fail-closed: pelo menos uma lane independente não passou o contrato; autoria não prova texto, versão, evento nominal ou efeito."
+    }
+  ]
+}
