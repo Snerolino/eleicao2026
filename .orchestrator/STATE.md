@@ -1,3 +1,14 @@
+## Tick contínuo — autoria Câmara 1876–1900 retida — 2026-09-06
+
+- Seleção determinística: `25` projetos únicos (`offset=1875`, `limit=25`), `75` ocorrências e `21` candidatos; todos `REQ` (`24` tramitando, `1` arquivado).
+- Descoberta oficial: `25/25` URLs Câmara HTTP 200; manifesto com bytes/SHA versionado em `data/legislative-import/camara/authored-project-review-batches/camara-authored-1876-1900-source-manifest.json`.
+- Duas lanes com `25/25` IDs exatos; reconciliação fail-closed: `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
+- Checkpoint atômico: `projects_analyzed=1900`, `withheld=1900`, próximo lote `1901–1925`, `blocked_items=78`.
+- QA: `docs/qa/lote-camara-autoria-1876-1900-2026-09-06.md`. Nenhum projeto, claim, voto, matéria, matriz, score ou escrita remota produzido.
+- Gates: testes `496/496`, TypeScript, schema, `data:check` (`1003/988`), build (`245` módulos), smoke (`1002` cards/0 HTTP/0 erros) e diff-check verdes.
+- Publicação: commit `cdcda65fa6ada7a12042b8f29b5edda5a9007b8f`; backup Cloudflare `334951434`, run `34026904557`, `completed/success`, `headSha` exato; produção HTTP 200 e `release.json` SHA exato, snapshot `1003`.
+- Próximo chunk: iniciar `1901–1925` mantendo fonte oficial, duas lanes e retenção fail-closed; continuar recuperação read-only ALRS/Câmara/Senado sem fabricar evento, voto ou score.
+
 ## Verificação de publicação — autoria Câmara 1851–1875 — 2026-09-06
 
 - Commit `98e790f03539b8e708df44d655667dfd55da2d84` publicado em `origin/main`; worktree limpa e remoto alinhado.
