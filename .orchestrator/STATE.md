@@ -1,3 +1,12 @@
+## Tick contínuo — autoria Câmara 1901–1925 retida — 2026-09-06
+
+- Seleção determinística: 25 projetos únicos (`offset=1900`, `limit=25`), 75 ocorrências e 18 candidatos.
+- Descoberta oficial: 25/25 URLs Câmara HTTP 200; manifesto com bytes/SHA versionado em `data/legislative-import/camara/authored-project-review-batches/camara-authored-1901-1925-source-manifest.json`.
+- Duas lanes com IDs exatos: causal 25/25 e red-team 25/25; reconciliação 25 withheld, 0 pending_review, 0 approved, 0 score_eligible; content_read=false, remote_apply=false.
+- Checkpoint atômico: projects_analyzed=1925, withheld=1925, próximo lote 1926–1950, blocked_items=79.
+- QA: `docs/qa/lote-camara-autoria-1901-1925-2026-09-06.md`; nenhum projeto, claim, voto, matéria, matriz, score ou escrita remota produzido.
+- Próximo chunk: iniciar 1926–1950 mantendo fonte oficial e retenção fail-closed.
+
 ## Tick contínuo — autoria Câmara 1876–1900 retida — 2026-09-06
 
 - Seleção determinística: `25` projetos únicos (`offset=1875`, `limit=25`), `75` ocorrências e `21` candidatos; todos `REQ` (`24` tramitando, `1` arquivado).

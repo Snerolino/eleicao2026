@@ -133,6 +133,11 @@
       "batch_id": "1876-1900",
       "status": "withheld",
       "updated_at": "2026-09-06T10:11:27.700Z"
+    },
+    {
+      "batch_id": "1901-1925",
+      "status": "withheld",
+      "updated_at": "2026-09-06T10:27:51.475Z"
     }
   ],
   "blocked_items": [
@@ -213,18 +218,19 @@
     "authored-1801-1825-source-event-gap",
     "req-procedural-no-binding-event",
     "authored:1851-1875",
-    "authored:1876-1900"
+    "authored:1876-1900",
+    "authored:1901-1925"
   ],
   "counts": {
-    "projects_analyzed": 1900,
+    "projects_analyzed": 1925,
     "approved": 0,
     "pending_review": 0,
-    "withheld": 1900
+    "withheld": 1925
   },
-  "last_batch": "1876-1900",
-  "next_batch": "1901-1925",
+  "last_batch": "1901-1925",
+  "next_batch": "1926-1950",
   "heartbeat": {
-    "at": "2026-09-06T08:21:58.418Z",
-    "pid": 2378831
+    "at": "2026-09-06T10:27:51.485Z",
+    "pid": 2544771
   }
 }
