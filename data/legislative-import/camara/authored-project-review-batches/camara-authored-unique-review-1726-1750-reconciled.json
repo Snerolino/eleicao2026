@@ -1,0 +1,608 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "blocked",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_authorship_index_only",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "lanes": {
+    "causal": {
+      "status": "rejected",
+      "items": 25,
+      "ids_exact": false,
+      "reason": "output IDs belonged to another recorte"
+    },
+    "redteam": {
+      "status": "blocked",
+      "reason": "free_pool_timeout_after_provider_error; gemini_timeout_404_policy"
+    },
+    "codex": {
+      "status": "blocked",
+      "reason": "mcp_401_missing_basic_auth"
+    }
+  },
+  "items": [
+    {
+      "id": "camara:pl-3011-2020-2254162",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-3039-2021-2297063",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-3056-2021-2297299",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-3079-2021-2297736",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-3084-2020-2254350",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-3112-2025-2529111",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-3120-2020-2254499",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-3362-2020-2255384",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-3402-2020-2255581",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-3433-2020-2255778",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-3438-2020-2255792",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-3460-2021-2301784",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-3464-2020-2255926",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-3516-2020-2256334",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-3538-2020-2256360",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-3554-2020-2256415",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-3636-2023-2374514",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-3637-2023-2374515",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-3699-2020-2257014",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-3763-2023-2376039",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-3841-2021-2305128",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-385-2025-2483604",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-3857-2021-2305228",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-4090-2021-2307793",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    },
+    {
+      "id": "camara:pl-4113-2020-2259697",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Lote bloqueado: a lane causal retornou 25 itens, mas o conjunto de IDs não correspondeu à seleção exata; as lanes independentes red-team também não produziram saída contratual verificável.",
+      "risk": "high",
+      "missing_sources": [
+        "causal_lane_exact_ids",
+        "redteam_lane_item_decisions",
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": null,
+      "lane_status": {
+        "causal": "rejected_wrong_id_set",
+        "redteam": "blocked_timeout_free_pool_gemini",
+        "codex": "blocked_401_mcp"
+      },
+      "reconciliation": "Fail-closed: cardinalidade/conjunto de IDs divergente impede qualquer promoção; nenhum dado foi inventado."
+    }
+  ]
+}

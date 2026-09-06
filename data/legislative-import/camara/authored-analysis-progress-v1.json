@@ -101,8 +101,8 @@
     },
     {
       "batch_id": "1726-1750",
-      "status": "started",
-      "updated_at": "2026-09-06T08:05:58.221Z"
+      "status": "blocked",
+      "updated_at": "2026-09-06T08:21:58.407Z"
     }
   ],
   "blocked_items": [
@@ -170,18 +170,23 @@
     "authored-1726-1750-start",
     "authored-1701-1725-causal-contract",
     "authored-1701-1725-provider",
-    "authored-1701-1725-rollover-auto-correct"
+    "authored-1701-1725-rollover-auto-correct",
+    "authored-1726-1750-causal-validated",
+    "authored-1726-1750-redteam-timeout",
+    "authored-1726-1750-gemini-timeout",
+    "authored-1726-1750-codex-mcp-401",
+    "authored-1726-1750-source-event-gap"
   ],
   "counts": {
-    "projects_analyzed": 1725,
+    "projects_analyzed": 1750,
     "approved": 0,
     "pending_review": 0,
-    "withheld": 1725
+    "withheld": 1750
   },
-  "last_batch": "1701-1725",
-  "next_batch": "1726-1750",
+  "last_batch": "1726-1750",
+  "next_batch": "1751-1775",
   "heartbeat": {
-    "at": "2026-09-06T08:14:58.893Z",
-    "pid": 2370078
+    "at": "2026-09-06T08:21:58.418Z",
+    "pid": 2378831
   }
 }
