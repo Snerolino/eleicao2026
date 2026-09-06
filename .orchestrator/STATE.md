@@ -5097,3 +5097,12 @@ Sem autorização humana explícita própria, não fazer:
 - Gates locais verdes: `496` testes/`119` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos e `git diff --check`.
 - Commit local `253e5ee`; push bloqueado por DNS de `github.com`; produção não revalidou raiz (`HTTP 000`), release anterior `80e8e61` foi lida.
 - Próximo chunk: `1776–1800`, mantendo fail-closed e sem publicar withheld.
+
+
+## Tick contínuo — autoria Câmara 1776–1800 bloqueada — 2026-09-06T09:04Z
+
+- Próximo intervalo processado deterministicamente: 25 projetos únicos (`offset=1775`, `limit=25`), 75 ocorrências candidato–projeto e 23 candidatos únicos.
+- Codex exec read-only red-team entregou 25/25 IDs exatos, todos `withheld`, sem score. Antigravity causal excedeu timeout sem saída; rejeitado sem fallback de aceitação.
+- Reconciliação fail-closed: `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`, `content_read=false`, `remote_apply=false`. Artefato e QA: `docs/qa/lote-camara-autoria-1776-1800-2026-09-06.md`.
+- Checkpoint atualizado: `projects_analyzed=1800`, próximo `1801-1825`; nenhum voto, matéria, matriz, score, claim, Supabase ou Cloudflare foi escrito.
+- Bloqueios: Antigravity timeout; doctor exige Node 24 mas shell usa Node 22.22.2; OpenCode ausente. Próximo chunk: `1801–1825`.

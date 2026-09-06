@@ -1,0 +1,760 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_authorship_metadata_only",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "selection": {
+    "offset": 1775,
+    "limit": 25,
+    "candidate_occurrences": 75,
+    "unique_candidates": 23
+  },
+  "lanes": {
+    "causal": {
+      "status": "blocked",
+      "executor": "antigravity",
+      "reason": "timeout_no_output"
+    },
+    "redteam": {
+      "status": "verified",
+      "executor": "codex-exec-readonly",
+      "result": "25/25 exact IDs; 25 withheld"
+    }
+  },
+  "items": [
+    {
+      "id": "camara:rec-27-2025-2591088",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for the recurso; no official full text or event-history evidence is present to verify the operative content, procedural effect, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The official Câmara metadata and authorship endpoint are present, but they are insufficient for approval or scoring without full text and event evidence.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REC 27/2025, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:rec-31-2021-2287967",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for the recurso; no official full text or event-history evidence is present to verify the operative content, procedural effect, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The official Câmara metadata and authorship endpoint are present, but they are insufficient for approval or scoring without full text and event evidence.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REC 31/2021, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:rec-55-2021-2311506",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for the recurso; no official full text or event-history evidence is present to verify the operative content, procedural effect, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The official Câmara metadata and authorship endpoint are present, but they are insufficient for approval or scoring without full text and event evidence.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REC 55/2021, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:rec-7-2025-2528596",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for the recurso; no official full text or event-history evidence is present to verify the operative content, procedural effect, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The official Câmara metadata and authorship endpoint are present, but they are insufficient for approval or scoring without full text and event evidence.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REC 7/2025, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:rec-8-2025-2545328",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for the recurso; no official full text or event-history evidence is present to verify the operative content, procedural effect, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The official Câmara metadata and authorship endpoint are present, but they are insufficient for approval or scoring without full text and event evidence.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REC 8/2025, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:req-1-2023-2352472",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for the requerimento; no official full text or event-history evidence is present to verify the request text, procedural outcome, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The ementa identifies the subject of the requerimento, but metadata alone does not establish official text, event chronology, or concrete effect.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REQ 1/2023, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:req-101-2024-2442468",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for the requerimento; no official full text or event-history evidence is present to verify the request text, procedural outcome, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The ementa identifies a ministerial convocation request, but metadata alone does not establish official text, event chronology, or concrete effect.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REQ 101/2024, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:req-1012-2023-2354502",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for the requerimento de urgência; no official full text or event-history evidence is present to verify the request text, procedural outcome, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The ementa identifies an urgency request tied to PL 1292/2023, but metadata alone does not establish full text, event chronology, or impact.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REQ 1012/2023, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:req-1022-2021-2282519",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for the coauthorship request; no official full text or event-history evidence is present to verify the request text, acceptance, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The ementa identifies a coauthorship request, but metadata alone does not prove official acceptance or substantive effect.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REQ 1022/2021, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:req-1035-2023-2354764",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for the sessão solene request; no official full text or event-history evidence is present to verify the request text, approval, occurrence, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The ementa identifies the commemorative subject, but metadata alone does not establish official text, event outcome, or measurable effect.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REQ 1035/2023, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:req-1077-2022-2329844",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for the coauthorship request; no official full text or event-history evidence is present to verify the request text, acceptance, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The ementa references coauthorship for PL 1501/2022, but metadata alone does not prove acceptance or substantive legislative effect.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REQ 1077/2022, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:req-1094-2026-2604505",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for the sessão solene request; no official full text or event-history evidence is present to verify the request text, approval, occurrence, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The ementa identifies the commemorative subject, but metadata alone does not establish official text, event outcome, or measurable effect.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REQ 1094/2026, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:req-1131-2024-2425966",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for the sessão solene request; no official full text or event-history evidence is present to verify the request text, approval, occurrence, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The ementa identifies the commemorative subject, but metadata alone does not establish official text, event outcome, or measurable effect.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REQ 1131/2024, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:req-1134-2025-2490471",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for the sessão solene request; no official full text or event-history evidence is present to verify the request text, approval, occurrence, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The ementa identifies the commemorative subject, but metadata alone does not establish official text, event outcome, or measurable effect.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REQ 1134/2025, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:req-1170-2022-2331622",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for a procedural interstice-waiver request; no official full text or event-history evidence is present to verify the exact procedural scope, outcome, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The ementa indicates a procedural request connected to PEC 11/2022, but metadata alone does not verify the official text, deliberation, or effect.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REQ 1170/2022, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:req-1171-2022-2331626",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for a procedural interstice-waiver request; no official full text or event-history evidence is present to verify the exact procedural scope, outcome, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The ementa indicates a procedural request connected to PEC 11/2022, but metadata alone does not verify the official text, deliberation, or effect.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REQ 1171/2022, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:req-1172-2022-2331627",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for a procedural interstice-waiver request; no official full text or event-history evidence is present to verify the exact procedural scope, outcome, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The ementa indicates a procedural request connected to PEC 15/2022, but metadata alone does not verify the official text, deliberation, or effect.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REQ 1172/2022, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:req-1174-2022-2331629",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for a procedural interstice-waiver request; no official full text or event-history evidence is present to verify the exact procedural scope, outcome, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The ementa indicates a procedural request connected to PEC 15/2022, but metadata alone does not verify the official text, deliberation, or effect.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REQ 1174/2022, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:req-119-2023-2404503",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for a moção de louvor request; no official full text or event-history evidence is present to verify the text, approval, event outcome, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The ementa identifies the subject of the moção, but metadata alone does not establish official wording, approval, or impact.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REQ 119/2023, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:req-1194-2020-2253058",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for the coauthorship request; no official full text or event-history evidence is present to verify the request text, acceptance, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The ementa identifies a coauthorship request, but metadata alone does not prove acceptance or substantive effect.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REQ 1194/2020, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:req-1211-2025-2491203",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for the sessão solene request; no official full text or event-history evidence is present to verify the request text, approval, occurrence, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The ementa identifies the commemorative subject, but metadata alone does not establish official text, event outcome, or measurable effect.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REQ 1211/2025, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:req-124-2021-2269783",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for the coauthorship request; no official full text or event-history evidence is present to verify the request text, acceptance, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The ementa identifies a coauthorship request, but metadata alone does not prove acceptance or substantive effect.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REQ 124/2021, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:req-125-2023-2348343",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for the sessão solene request; no official full text or event-history evidence is present to verify the request text, approval, occurrence, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The ementa identifies the commemorative subject, but metadata alone does not establish official text, event outcome, or measurable effect.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REQ 125/2023, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:req-1256-2020-2253625",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for the ministerial convocation request; no official full text or event-history evidence is present to verify the request text, procedural outcome, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The ementa identifies a ministerial convocation request, but metadata alone does not establish official text, event chronology, or concrete effect.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REQ 1256/2020, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    },
+    {
+      "id": "camara:req-1259-2020-2253634",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Withheld because the input marks content_read=false and provides only metadata/ementa for the ministerial convocation request; no official full text or event-history evidence is present to verify the request text, procedural outcome, or scoring basis.",
+      "risk": "high",
+      "missing_sources": [
+        "effect_evidence",
+        "nominal_event",
+        "official_event_history",
+        "official_full_text",
+        "proposition_version"
+      ],
+      "counterargument": "The ementa identifies a ministerial convocation request, but metadata alone does not establish official text, event chronology, or concrete effect.",
+      "checks": [
+        "preserved_id",
+        "official_metadata_present",
+        "content_read_false",
+        "full_text_absent",
+        "event_evidence_absent",
+        "no_score_assigned"
+      ],
+      "basis": "Review based only on the local input record for REQ 1259/2020, which includes official_url, authorship data, status, ementa, role, and candidate IDs, but no official full text or events.",
+      "lane_status": {
+        "causal": "blocked_antigravity_timeout",
+        "redteam": "completed_codex_readonly_exact_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane timed out; red-team independently withheld all 25. Authorship is not vote, score, matrix, or public factual analysis."
+    }
+  ]
+}
