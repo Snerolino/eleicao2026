@@ -1,3 +1,18 @@
+## Tick contínuo — autoria Câmara 1826–1850 retida com fonte oficial — 2026-09-06
+
+- Seleção determinística de 25 projetos únicos (offset 1825, limit 25), 75 ocorrências e 23 candidatos. Todos os itens são REQ; as 25 URLs oficiais responderam HTTP 200 e o manifesto com bytes e SHA está versionado.
+- Duas lanes com cardinalidade e IDs exatos reconciliadas: 25 withheld, 0 pending_review, 0 approved, 0 score_eligible; content_read=false, remote_apply=false. Nenhum fato, score, matriz, Supabase ou Cloudflare foi escrito.
+- Checkpoint atômico: projects_analyzed=1850, próximo lote 1851–1875; QA: docs/qa/lote-camara-autoria-1826-1850-2026-09-06.md.
+- Bloqueio: requerimento e autoria não provam versão ou evento nominal vinculante; manter fail-closed.
+- Commit local 9b07f5d criado; push origin/main falhou três vezes por HTTP 403 (Permission to Snerolino/eleicao2026.git denied to Snerolino), sem deploy novo.
+
+## Tick contínuo — autoria Câmara 1826–1850 retida com fonte oficial — 2026-09-06
+
+- Seleção determinística de 25 projetos únicos (, ), 75 ocorrências e 23 candidatos. Todos os itens são ; as 25 URLs oficiais responderam HTTP 200 e o manifesto com bytes/SHA está versionado.
+- Duas lanes com cardinalidade/IDs exatos reconciliadas: , , , ; , . Nenhum fato, score, matriz, Supabase ou Cloudflare foi escrito.
+- Checkpoint atômico: , próximo lote ; QA: .
+- Bloqueio: requerimento/autoria não prova versão/evento nominal vinculante; manter fail-closed.
+
 ## Tick contínuo — autoria Câmara 1–1600 resolvida em fila factual/source-first — 2026-09-04T20:08Z
 
 - Autorização operacional vigente do usuário (2026-09-06): continuar sem interromper para pedir autorização adicional na resolução/publicação de votos, matérias e anexos atuais e futuros, desde que cada escrita passe os gates técnicos de fonte oficial, identidade, schema/FK, segurança, idempotência e revisão editorial. Não autoriza fabricar dado nem burlar Auth/RLS/RPC.

@@ -118,6 +118,11 @@
       "batch_id": "1801-1825",
       "status": "blocked",
       "updated_at": "2026-09-06T09:28:43.383Z"
+    },
+    {
+      "batch_id": "1826-1850",
+      "status": "withheld",
+      "updated_at": "2026-09-06T09:43:43.986Z"
     }
   ],
   "blocked_items": [
@@ -195,16 +200,17 @@
     "authored-1776-1800-causal-timeout",
     "authored-1801-1825-causal-timeout",
     "authored-1801-1825-redteam-no-item-ids",
-    "authored-1801-1825-source-event-gap"
+    "authored-1801-1825-source-event-gap",
+    "req-procedural-no-binding-event"
   ],
   "counts": {
-    "projects_analyzed": 1825,
+    "projects_analyzed": 1850,
     "approved": 0,
     "pending_review": 0,
-    "withheld": 1825
+    "withheld": 1850
   },
-  "last_batch": "1801-1825",
-  "next_batch": "1826-1850",
+  "last_batch": "1826-1850",
+  "next_batch": "1851-1875",
   "heartbeat": {
     "at": "2026-09-06T08:21:58.418Z",
     "pid": 2378831
