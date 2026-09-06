@@ -1,0 +1,657 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_authorship_manifest_only",
+  "selection": "unique projects sorted by exact candidate coverage",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0,
+    "candidate_occurrences": 75,
+    "unique_candidates": 19
+  },
+  "lanes": {
+    "causal": {
+      "items": 25,
+      "ids_exact": true,
+      "decision": "withheld"
+    },
+    "red_team": {
+      "items": 25,
+      "ids_exact": true,
+      "decision": "withheld"
+    }
+  },
+  "items": [
+    {
+      "id": "camara:req-2171-2020-2260544",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2260544"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-2171-2020-2260544",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-2217-2021-2304142",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2304142"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-2217-2021-2304142",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-2233-2020-2260870",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2260870"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-2233-2020-2260870",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-2238-2024-2441092",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2441092"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-2238-2024-2441092",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-2249-2024-2441530",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2441530"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-2249-2024-2441530",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-2270-2024-2442152",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2442152"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-2270-2024-2442152",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-2295-2021-2305433",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2305433"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-2295-2021-2305433",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-2310-2025-2525870",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2525870"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-2310-2025-2525870",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-2324-2020-2262058",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2262058"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-2324-2020-2262058",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-2333-2020-2262165",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2262165"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-2333-2020-2262165",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-2334-2020-2262166",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2262166"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-2334-2020-2262166",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-2337-2020-2262178",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2262178"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-2337-2020-2262178",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-2369-2023-2375584",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2375584"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-2369-2023-2375584",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-237-2023-2349177",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349177"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-237-2023-2349177",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-2371-2020-2262859",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2262859"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-2371-2020-2262859",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-24-2021-2274229",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2274229"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-24-2021-2274229",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-2420-2021-2307847",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2307847"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-2420-2021-2307847",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-2433-2020-2263246",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2263246"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-2433-2020-2263246",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-2446-2026-2619054",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2619054"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-2446-2026-2619054",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-2454-2020-2263432",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2263432"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-2454-2020-2263432",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-2467-2020-2263470",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2263470"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-2467-2020-2263470",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-2482-2020-2263514",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2263514"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-2482-2020-2263514",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-2492-2020-2263599",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2263599"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-2492-2020-2263599",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-251-2025-2483232",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483232"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-251-2025-2483232",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    },
+    {
+      "id": "camara:req-253-2023-2349292",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata.",
+      "content_read": false,
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349292"
+      ],
+      "event_version": null,
+      "redteam": {
+        "id": "camara:req-253-2023-2349292",
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "texto integral oficial lido",
+          "versão efetivamente votada",
+          "evento nominal vinculante",
+          "votos nominais"
+        ],
+        "counterargument": "A autoria oficial prova vínculo candidato–projeto, mas não prova objeto votado, voto individual ou efeito causal."
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido fail-closed: autoria/coautoria não equivale a voto; o pacote não contém texto integral lido nem versão/evento nominal vinculante com identidade exata."
+    }
+  ]
+}

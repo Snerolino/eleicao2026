@@ -1,3 +1,11 @@
+## Tick contínuo — autoria Câmara 1851–1875 retida — 2026-09-06
+
+- Seleção determinística: `25` projetos únicos (`offset=1850`, `limit=25`), `75` ocorrências e `19` candidatos; duas lanes com `25/25` IDs exatos.
+- Reconciliação fail-closed: `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`. Nenhum voto, matéria, matriz, score, claim, projeto público ou escrita remota foi produzido.
+- Checkpoint atômico: `projects_analyzed=1875`, `withheld=1875`, próximo `1876–1900`, `blocked_items=77`. QA: `docs/qa/lote-camara-autoria-1851-1875-2026-09-06.md`.
+- Gates reais: `496/496` testes em `119` arquivos, TypeScript, schema, `data:check` (`1003/988`), build (`245` módulos; sitemap `1003+2`), smoke (`1002` cards/0 HTTP/0 erros online/SW pronto) e diff-check verdes. Doctor RC 1 por Node 22 no shell; executar com Node 24.
+- Próximo chunk já preparado read-only em `/tmp/camara-authored-unique-review-1876-1900.json`, com `25` projetos, `75` ocorrências e `21` candidatos.
+
 ## Tick contínuo — autoria Câmara 1826–1850 retida com fonte oficial — 2026-09-06
 
 - Seleção determinística de 25 projetos únicos (offset 1825, limit 25), 75 ocorrências e 23 candidatos. Todos os itens são REQ; as 25 URLs oficiais responderam HTTP 200 e o manifesto com bytes e SHA está versionado.
