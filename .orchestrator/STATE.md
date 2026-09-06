@@ -1,3 +1,10 @@
+## Tick contínuo — autoria Câmara 1926–1950 retida — 2026-09-06
+
+- Seleção: 25 projetos únicos (`offset=1925`, `limit=25`), 75 ocorrências e 23 candidatos.
+- Fonte oficial: 25/25 URLs HTTP 200 com bytes/SHA; duas lanes 25/25 IDs exatos, reconciliação 25 withheld, 0 pending_review, 0 approved, 0 score_eligible.
+- Checkpoint: projects_analyzed=1950, próximo 1951–1975, blocked_items=80; QA `docs/qa/lote-camara-autoria-1926-1950-2026-09-06.md`.
+- Nenhuma escrita factual/remota; próximo chunk: 1951–1975.
+
 ## Tick contínuo — autoria Câmara 1901–1925 retida — 2026-09-06
 
 - Seleção determinística: 25 projetos únicos (`offset=1900`, `limit=25`), 75 ocorrências e 18 candidatos.
@@ -91,7 +98,7 @@
 
 ## Tick contínuo — autoria Câmara 1476–1500 bloqueada — 2026-09-02T15:47Z
 
-- Microbatch selecionado deterministicamente: 25 projetos únicos, 100 ocorrências candidato–projeto e 19 candidatos únicos (`offset=1475`, `limit=25`).
+- Microbatch selecionado deterministicamente: 25 projetos únicos, 100 ocorrências candidato–projeto e 123 candidatos únicos (`offset=1475`, `limit=25`).
 - Antigravity causal terminou `exit=0`, JSON parseável com 25 IDs únicos, mas todos de outro recorte; verificação rejeitou por cardinalidade/identidade exata. Codex MCP Luna red-team retornou os 25 IDs esperados, todos `withheld`, risco alto e `score_eligible=false`; reconciliação: 0 aprovados, 0 pending, 25 withheld.
 - Checkpoint: `projects_analyzed=1500`, `approved=0`, `pending_review=0`, `withheld=1500`; próximo `1501-1525`. Artefato: `data/legislative-import/camara/authored-project-review-batches/camara-authored-unique-review-1476-1500-reconciled.json` (`content_read=false`, `remote_apply=false`). QA: `docs/qa/lote-camara-autoria-1476-1500-2026-09-02.md`.
 - Nenhum authored_projects, claim, voto, score, matriz, Supabase ou Cloudflare factual foi escrito. Smoke local passou: 1002 cards, 0 falhas HTTP, 0 erros online, service worker pronto.
@@ -4471,7 +4478,7 @@ Status: `FED25_CAMARA_HISTORICAL_REMOTE_IDENTITY_LOOKUP_BLOCKED_ROLE`
 ## Fase 3 (iniciada 2026-08-15)
 - Schema: migration `20260815030000_candidate_profiles_and_election_results.sql` aplicada (db push) → tabelas `election_results`, `candidate_profiles` no remote ✅
 - ETL `scripts/import-candidate-profiles.mjs`: 246 claims `pending_review` aplicados (49 bens declarados + 197 redes sociais) via service_role idempotente (dedupeAndInsert). Visible pra editors; anon vê só 281 published ✅
-- Dados originais: bem_candidato (188 rows/49 candidatos), rede_social (197 URLs/69 candidatos), deepseek_json (22 perfis profundos) — do mirror `../dataset2026/`
+- Dados originais: bem_candidato (188 rows/423 candidatos), rede_social (197 URLs/623 candidatos), deepseek_json (22 perfis profundos) — do mirror `../dataset2026/`
 - ⚠️ resultados eleitorais de outubro ainda não existem; a tabela `election_results` permanece preparada. O portal possui 3936 votos nominais legislativos factuais em `legislative_votes`.
 - 📊 cobertura perfil: 49/49 bens, 68/69 redes sociais mapeadas pro snapshot (1 social SQ_CANDIDATO não no snapshot — fora do array)
 - Drift: `claims.content_hash` NOT unique no remote (local tem constraint; ETL usa lookup prévio — não bloqueia)
