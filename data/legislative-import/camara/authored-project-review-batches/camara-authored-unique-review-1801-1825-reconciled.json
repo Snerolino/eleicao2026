@@ -1,0 +1,535 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_authorship_metadata_only",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "selection": {
+    "offset": 1800,
+    "limit": 25,
+    "candidate_occurrences": 75,
+    "unique_candidates": 20
+  },
+  "lanes": {
+    "causal": {
+      "status": "verified",
+      "executor": "antigravity",
+      "result": "25/25 exact IDs; 25 withheld"
+    },
+    "redteam": {
+      "status": "blocked",
+      "executor": "codex-exec-readonly",
+      "reason": "structured response had no per-item IDs; exact cardinality not independently verifiable"
+    }
+  },
+  "items": [
+    {
+      "id": "camara:req-1271-2022-2333171",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-1272-2025-2494347",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-1273-2025-2494360",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-1286-2020-2253751",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-1338-2022-2334291",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-134-2023-2348376",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-1356-2023-2359086",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-137-2022-2314815",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-1402-2021-2288649",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-1415-2025-2497679",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-1422-2022-2335572",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-1435-2023-2360738",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-1450-2020-2254717",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-15-2023-2353517",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-1522-2020-2254962",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-1542-2024-2432668",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-1582-2022-2341111",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-1592-2022-2341658",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-1628-2021-2293543",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-1633-2020-2255918",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-1634-2020-2255919",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-164-2023-2348754",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-1644-2022-2343248",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-1646-2022-2343347",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    },
+    {
+      "id": "camara:req-1649-2021-2293985",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Autoria e ementa oficial não comprovam texto integral versionado, evento nominal vinculante ou efeito.",
+      "risk": "high",
+      "missing_sources": [
+        "official_full_text",
+        "proposition_version",
+        "nominal_event",
+        "effect_evidence"
+      ],
+      "counterargument": "A autoria factual de projeto ou requerimento não estabelece por si só voto, versão da matéria, evento nominal vinculante nem pontuação em matriz de impacto.",
+      "lane_status": {
+        "causal": "completed_antigravity_exact_ids",
+        "redteam": "blocked_codex_no_item_ids"
+      },
+      "reconciliation": "Fail-closed: causal lane entregou 25/25 IDs exatos retidos, mas a segunda lane independente não entregou decisões por item com cardinalidade verificável; item retido. Autoria não é voto, score, matriz ou análise causal pública."
+    }
+  ]
+}

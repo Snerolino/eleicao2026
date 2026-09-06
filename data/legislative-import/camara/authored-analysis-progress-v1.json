@@ -113,6 +113,11 @@
       "batch_id": "1776-1800",
       "status": "blocked",
       "updated_at": "2026-09-06T09:04:11.419Z"
+    },
+    {
+      "batch_id": "1801-1825",
+      "status": "blocked",
+      "updated_at": "2026-09-06T09:28:43.383Z"
     }
   ],
   "blocked_items": [
@@ -187,16 +192,19 @@
     "authored-1726-1750-codex-mcp-401",
     "authored-1726-1750-source-event-gap",
     "camara:1751-1775",
-    "authored-1776-1800-causal-timeout"
+    "authored-1776-1800-causal-timeout",
+    "authored-1801-1825-causal-timeout",
+    "authored-1801-1825-redteam-no-item-ids",
+    "authored-1801-1825-source-event-gap"
   ],
   "counts": {
-    "projects_analyzed": 1800,
+    "projects_analyzed": 1825,
     "approved": 0,
     "pending_review": 0,
-    "withheld": 1800
+    "withheld": 1825
   },
-  "last_batch": "1776-1800",
-  "next_batch": "1801-1825",
+  "last_batch": "1801-1825",
+  "next_batch": "1826-1850",
   "heartbeat": {
     "at": "2026-09-06T08:21:58.418Z",
     "pid": 2378831
