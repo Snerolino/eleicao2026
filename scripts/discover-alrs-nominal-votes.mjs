@@ -29,6 +29,14 @@ function candidatesByName() {
   }
   return map;
 }
+function resolveCandidateMatches(name, byName, rows) {
+  const normalized = normalize(name);
+  const exact = byName.get(normalized) ?? [];
+  if (exact.length > 0) return { matches: exact, method: 'exact' };
+  if (normalized.length < 8) return { matches: [], method: 'unmatched' };
+  const prefix = rows.filter((row) => normalize(row.full_name).startsWith(normalized));
+  return { matches: prefix.length === 1 ? prefix : [], method: prefix.length === 1 ? 'unique_normalized_prefix' : 'unmatched' };
+}
 async function get(url) { const response = await fetch(url, { headers, redirect: 'follow', signal: AbortSignal.timeout(20_000) }); const body = await response.text(); return { url, http_status: response.status, bytes: Buffer.byteLength(body), sha256: createHash('sha256').update(body).digest('hex'), items: response.ok ? dataItems(body) : [] }; }
 function makeTask(parliamentarian, year) {
   const url = `${base}/pesquisa?solicitante=${encodeURIComponent(parliamentarian.solicitante_id)}&ano=${year}`;
@@ -40,7 +48,11 @@ if (main.http_status !== 200) throw new Error(`ALRS principal HTTP ${main.http_s
 const html = await (await fetch(base, { headers, signal: AbortSignal.timeout(20_000) })).text();
 const options = [...html.matchAll(/<option[^>]+value=["']([^"']+)["'][^>]*>([\s\S]*?)<\/option>/gi)].map((match) => ({ solicitante_id: match[1], name: match[2].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim() })).filter((row) => row.solicitante_id && row.name && row.solicitante_id !== '0');
 const byName = candidatesByName();
-const catalog = options.map((row) => ({ ...row, normalized_name: normalize(row.name), exact_candidate_matches: byName.get(normalize(row.name)) ?? [] }));
+const candidateRows = JSON.parse(readFileSync(candidatesFile, 'utf8'));
+const catalog = options.map((row) => {
+  const resolved = resolveCandidateMatches(row.name, byName, candidateRows);
+  return { ...row, normalized_name: normalize(row.name), exact_candidate_matches: resolved.matches, candidate_match_method: resolved.method };
+});
 const tasks = catalog.flatMap((parliamentarian) => years.map((year) => makeTask(parliamentarian, year)));
 const pages = await fetchConcurrent(tasks, { concurrency: 16, retries: 2 });
 const result = { schema_version: '1.0.0', packet_type: 'alrs_nominal_vote_discovery_manifest', remote_apply: false, source: base, years, generated_at: new Date().toISOString(), totals: { parliamentarians: catalog.length, pages: pages.length, http_ok: pages.filter((page) => page.http_status === 200).length, pages_with_data_items: pages.filter((page) => page.data_item_count > 0).length, data_items: pages.reduce((sum, page) => sum + page.data_item_count, 0), exact_candidate_matches: catalog.filter((row) => row.exact_candidate_matches.length === 1).length, ambiguous_candidate_matches: catalog.filter((row) => row.exact_candidate_matches.length > 1).length, unmatched_candidate_names: catalog.filter((row) => row.exact_candidate_matches.length === 0).length }, catalog, pages };
