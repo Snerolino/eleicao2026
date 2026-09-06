@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 import { createClient } from '@supabase/supabase-js';
-import { chmodSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { resolve } from 'node:path';
+import { persistEditorSession } from './lib/editor-session.mjs';
 
 function loadEnv() {
   const out = { ...process.env };
@@ -23,9 +24,6 @@ const { data, error } = await sb.auth.signInWithPassword({ email, password }); p
 if (error || !data.session || !data.user) throw new Error(`Auth falhou: ${error?.message ?? 'sessão ausente'}`);
 const { data: role, error: roleError } = await sb.from('editor_roles').select('role').eq('user_id', data.user.id).maybeSingle();
 if (roleError || !role || !['editor', 'admin'].includes(role.role)) throw new Error('usuário sem papel editor/admin');
-const stateDir = resolve(env.XDG_STATE_HOME || resolve(homedir(), '.local', 'state'), 'eleicao2026');
-const stateFile = resolve(stateDir, 'supabase-editor-session.json');
-mkdirSync(stateDir, { recursive: true, mode: 0o700 });
-writeFileSync(stateFile, `${JSON.stringify({ access_token: data.session.access_token, refresh_token: data.session.refresh_token, expires_at: data.session.expires_at, user_id: data.user.id }, null, 2)}\n`, { mode: 0o600 });
-chmodSync(stateFile, 0o600);
+const stateFile = resolve(env.XDG_STATE_HOME || resolve(homedir(), '.local', 'state'), 'eleicao2026/supabase-editor-session.json');
+persistEditorSession(stateFile, data.session, data.user.id);
 console.log(JSON.stringify({ ok: true, user_id: data.user.id, role: role.role, state_file: stateFile, password_persisted: false }));

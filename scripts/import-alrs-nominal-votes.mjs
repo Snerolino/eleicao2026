@@ -3,6 +3,7 @@ import { createClient } from '@supabase/supabase-js';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { resolve } from 'node:path';
+import { ensureEditorSession } from './lib/editor-session.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const args = process.argv.slice(2);
@@ -64,12 +65,8 @@ if (!apply) {
 }
 if (!url || !anonKey) throw new Error('SUPABASE_URL e SUPABASE_PUBLISHABLE_KEY obrigatórios.');
 if (!existsSync(stateFile)) throw new Error(`sessão Auth ausente: ${stateFile}; execute npm run auth:editor:bootstrap em TTY.`);
-const session = JSON.parse(readFileSync(stateFile, 'utf8'));
 const sb = createClient(url, anonKey, { auth: { persistSession: false, autoRefreshToken: false } });
-const { data: auth, error: authError } = await sb.auth.setSession({ access_token: session.access_token, refresh_token: session.refresh_token });
-if (authError || !auth.user) throw new Error(`sessão Auth inválida: ${authError?.message ?? 'usuário ausente'}`);
-const { data: role, error: roleError } = await sb.from('editor_roles').select('role').eq('user_id', auth.user.id).maybeSingle();
-if (roleError || !role || !['editor', 'admin'].includes(role.role)) throw new Error('sessão sem papel editor/admin');
+const auth = await ensureEditorSession(sb, stateFile);
 for (let offset = 0; offset < rows.length; offset += chunkSize) {
   const chunk = rows.slice(offset, offset + chunkSize);
   const { data, error } = await sb.rpc('import_alrs_nominal_votes', { p_rows: chunk });
@@ -78,6 +75,6 @@ for (let offset = 0; offset < rows.length; offset += chunkSize) {
 }
 report.remote_apply = true;
 report.user_id = auth.user.id;
-report.role = role.role;
+report.role = auth.role;
 writeFileSync(outputFile, `${JSON.stringify(report, null, 2)}\n`);
 console.log(JSON.stringify(report));

@@ -12,6 +12,13 @@ const pageSize = 1000;
 function loadEnv(file) { if (!existsSync(file)) return; for (const line of readFileSync(file, 'utf8').split('\n')) { const value = line.trim(); const index = value.indexOf('='); if (index > 0 && !value.startsWith('#')) process.env[value.slice(0, index).trim()] ??= value.slice(index + 1).trim().replace(/^["']|["']$/g, ''); } }
 function normalizeCalendarDate(value) { const text = String(value ?? ''); const br = text.match(/^(\d{2})\/(\d{2})\/(\d{4})/); return br ? `${br[3]}-${br[2]}-${br[1]}` : text.slice(0, 10); }
 function normalizeTitle(value) { return String(value ?? '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase().replace(/[.;:,]+$/, ''); }
+function titleCompatible(a, b) {
+  const left = normalizeTitle(a);
+  const right = normalizeTitle(b);
+  if (!left || !right) return false;
+  const prefix = Math.min(left.length, right.length, 120);
+  return prefix >= 40 && left.slice(0, prefix) === right.slice(0, prefix);
+}
 loadEnv(resolve(root, '.env.local'));
 const url = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
 const anonKey = process.env.SUPABASE_PUBLISHABLE_KEY || process.env.VITE_SUPABASE_ANON_KEY;
@@ -78,7 +85,8 @@ for (const row of sourceRows) {
   const titleMatches = versionByTitle.get(`${num}:${yr}:${normalizeTitle(row.materia)}`) ?? [];
   const naturalMatches = versionByNatural.get(`${rawType}:${num}:${yr}`) ?? [];
   const nyMatches = versionByNumberYear.get(`${num}:${yr}`) ?? [];
-  const candidateMatches = titleMatches.length > 0 ? titleMatches : (naturalMatches.length > 0 ? naturalMatches : nyMatches);
+  const compatibleMatches = nyMatches.filter((version) => titleCompatible(version.title, row.materia));
+  const candidateMatches = titleMatches.length > 0 ? titleMatches : (compatibleMatches.length > 0 ? compatibleMatches : (naturalMatches.length > 0 ? naturalMatches : nyMatches));
 
   let chosenVersion = null;
   if (candidateMatches.length === 1) {
@@ -98,12 +106,14 @@ for (const row of sourceRows) {
   }
 
   let status = 'missing_safe_to_import';
+  const sourceMatterHash = `sha256:${createHash('sha256').update(normalizeTitle(row.materia)).digest('hex')}`;
+  const eventIdentity = `sha256:${createHash('sha256').update(`${row.candidate.tse_candidate_id}|${rawType}|${num}|${yr}|${date}|${sourceMatterHash}`).digest('hex')}`;
   if (!candidate || !value) status = 'blocked_identity';
   else if (!chosenVersion) status = 'blocked_proposition_version';
   else {
     const identityKey = `${candidate.id}|${chosenVersion.proposition_version_id}|${date}`;
     if (existingKeys.has(`${identityKey}|${value}`)) status = 'already_present_exact';
-    else if (existingIdentityKeys.has(identityKey)) status = 'conflict_existing_value';
+    else if (existingIdentityKeys.has(identityKey)) status = titleCompatible(chosenVersion.title, row.materia) ? 'conflict_existing_value' : 'event_identity_collision';
   }
 
   results.push({
@@ -118,11 +128,14 @@ for (const row of sourceRows) {
     occurred_at: row.dataVotacao,
     value,
     existing_value: existingByIdentity.get(`${candidate?.id}|${chosenVersion?.proposition_version_id}|${date}`)?.value ?? null,
+    source_matter_hash: sourceMatterHash,
+    event_identity: eventIdentity,
+    title_compatible: chosenVersion ? titleCompatible(chosenVersion.title, row.materia) : false,
     source_url: row.source_url,
     source_sha256: row.source_sha256,
   });
 }
-const counts = Object.fromEntries(['source_rows', 'exact_candidate_rows', 'candidate_matches', 'resolved_proposition_versions', 'already_present', 'missing', 'conflicts', 'ambiguous', 'blocked_identity', 'blocked_proposition'].map((key) => [key, 0]));
+const counts = Object.fromEntries(['source_rows', 'exact_candidate_rows', 'candidate_matches', 'resolved_proposition_versions', 'already_present', 'missing', 'conflicts', 'event_identity_collisions', 'ambiguous', 'blocked_identity', 'blocked_proposition'].map((key) => [key, 0]));
 counts.source_rows = sourceRows.length;
 counts.exact_candidate_rows = sourceRows.length;
 counts.candidate_matches = results.filter((row) => row.candidate_id).length;
@@ -130,6 +143,7 @@ counts.resolved_proposition_versions = results.filter((row) => row.proposition_v
 counts.already_present = results.filter((row) => row.status === 'already_present_exact').length;
 counts.missing = results.filter((row) => row.status === 'missing_safe_to_import').length;
 counts.conflicts = results.filter((row) => row.status === 'conflict_existing_value').length;
+counts.event_identity_collisions = results.filter((row) => row.status === 'event_identity_collision').length;
 counts.ambiguous = results.filter((row) => row.status === 'ambiguous').length;
 counts.blocked_identity = results.filter((row) => row.status === 'blocked_identity').length;
 counts.blocked_proposition = results.filter((row) => row.status === 'blocked_proposition_version').length;
