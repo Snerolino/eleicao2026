@@ -257,10 +257,10 @@ export function ComparePage() {
     }
     return {
       parties: [...partySet].sort(),
-      races: [...raceSet].sort(
-        (a, b) => OFFICIAL_RACE_FILTERS.indexOf(a as (typeof OFFICIAL_RACE_FILTERS)[number])
-          - OFFICIAL_RACE_FILTERS.indexOf(b as (typeof OFFICIAL_RACE_FILTERS)[number]),
-      ),
+      races: [
+        ...OFFICIAL_RACE_FILTERS.filter((race) => raceSet.has(race)),
+        ...[...raceSet].filter((race) => !OFFICIAL_RACE_FILTERS.includes(race as any)),
+      ],
       experienceCounts: { withMandate, firstTime },
     };
   }, [candidates]);
