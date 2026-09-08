@@ -66,7 +66,10 @@ export function CandidateSearch({
     }
 
     const order: Position[] = ['governador', 'senador', 'deputado_federal', 'deputado_estadual'];
-    const sortedPositions = [...posSet].sort((a, b) => order.indexOf(a) - order.indexOf(b));
+    const sortedPositions = [
+      ...order.filter((pos) => posSet.has(pos)),
+      ...[...posSet].filter((pos) => !order.includes(pos)).sort(),
+    ];
     const sortedParties = [...partySet].sort();
     const sortedRaces = OFFICIAL_RACE_FILTERS.filter((race) => raceSet.has(race));
 

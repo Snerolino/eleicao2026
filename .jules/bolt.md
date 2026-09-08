@@ -7,3 +7,6 @@
 ## 2025-01-20 - [Regex Caching in O(N) Filters]
 **Learning:** Using an O(N) filtering mechanism with expensive Regex evaluations (e.g. `hasPreviousMandate` evaluating `MANDATE_KEYWORDS_REGEX` against multiple claims) severely blocks the UI during typing or filtering large sets. Repeated calls across component boundaries compound this cost unnecessarily.
 **Action:** Always memoize derived checks on immutable reference objects (like candidate data) that do expensive calculations (like Regex) using a `WeakMap`. This pattern upgrades the time complexity of the check from O(N * complexity) to O(1) for all subsequent reads and UI updates.
+## 2025-02-04 - [Missing fallback in priority array sort]
+**Learning:** When sorting an array based on priorities derived from another array via `indexOf`, elements not present in the priority list evaluate to `-1`. If unhandled, this negative value causes unexpected sorting artifacts, pushing unknown values to the front instead of the back.
+**Action:** Avoid `indexOf` sort comparators entirely when mapping to a canonical subset. Use an O(N) filter over the canonical array first, then filter the target set for unknown elements and sort them, concatenating the results. This avoids the `-1` bug and is algorithmicly faster (O(N) instead of O(N log N) * O(M)).
