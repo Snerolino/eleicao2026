@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import type { CandidateWithClaims, Position } from '@/types/election';
-import { POSITION_LABEL } from '@/types/election';
+import { POSITION_LABEL, POSITION_ORDER } from '@/types/election';
 import { type CandidateExperienceFilter, hasPreviousMandate } from '@/utils/candidateExperience';
 
 interface CandidateSearchProps {
@@ -65,8 +65,10 @@ export function CandidateSearch({
       else firstTime += 1;
     }
 
-    const order: Position[] = ['governador', 'senador', 'deputado_federal', 'deputado_estadual'];
-    const sortedPositions = [...posSet].sort((a, b) => order.indexOf(a) - order.indexOf(b));
+    const sortedPositions = [
+      ...POSITION_ORDER.filter((position) => posSet.has(position)),
+      ...[...posSet].filter((position) => !POSITION_ORDER.includes(position)),
+    ];
     const sortedParties = [...partySet].sort();
     const sortedRaces = OFFICIAL_RACE_FILTERS.filter((race) => raceSet.has(race));
 
