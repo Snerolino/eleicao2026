@@ -27,7 +27,10 @@ import { getCandidateDeclaredAssets } from '@/services/candidateAssets';
 import { CandidateAuthoredProjectsList } from '@/components/candidates/CandidateAuthoredProjectsList';
 
 import { DivergentScoreBar } from '@/components/impact/DivergentScoreBar';
-import { getBeneficiaryGroupLabel } from '@/domain/impact/beneficiary-groups';
+import {
+  BENEFICIARY_GROUPS_CANONICAL_ORDER,
+  getBeneficiaryGroupLabel,
+} from '@/domain/impact/beneficiary-groups';
 import { SavedCandidateButton } from '@/components/candidates/SavedCandidateButton';
 import { useSavedCandidates } from '@/hooks/useSavedCandidates';
 import {
@@ -61,9 +64,22 @@ function CategoryScoreList({
       </p>
     );
   }
+  const scoreByGroup = new Map(scores.map((score) => [score.group_slug, score]));
+  const canonicalScores = BENEFICIARY_GROUPS_CANONICAL_ORDER.map((groupSlug) => scoreByGroup.get(groupSlug) ?? {
+    candidate_id: '',
+    house,
+    group_slug: groupSlug,
+    score: null,
+    methodology_version: '1.0.0',
+    evaluated_propositions: 0,
+    eligible_weight: 0,
+    excluded_no_data: 0,
+    contested_assessments: 0,
+    average_confidence: null,
+  });
   return (
     <div className="grid gap-3 sm:grid-cols-2">
-      {scores.map((score) => {
+      {canonicalScores.map((score) => {
         const label = getBeneficiaryGroupLabel(score.group_slug);
         return (
           <div
