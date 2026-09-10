@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "batch_id": "2401-2425",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_metadata_only",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0,
+    "causal_ids_exact": 25,
+    "redteam_ids_exact": 25
+  },
+  "ids": [
+    "camara:req-1-0-2353805",
+    "camara:req-1-2021-2268679",
+    "camara:req-1013-2020-2252089",
+    "camara:req-1014-2020-2252090",
+    "camara:req-103-2023-2348258",
+    "camara:req-103-2023-2397978",
+    "camara:req-1034-2020-2252200",
+    "camara:req-1044-2022-2328560",
+    "camara:req-1049-2023-2354947",
+    "camara:req-1050-2023-2354948",
+    "camara:req-1052-2023-2354967",
+    "camara:req-106-2023-2348262",
+    "camara:req-1066-2023-2355027",
+    "camara:req-1071-2020-2252525",
+    "camara:req-1087-2022-2330088",
+    "camara:req-109-2023-2357913",
+    "camara:req-1093-2026-2604504",
+    "camara:req-11-2021-2268734",
+    "camara:req-11-2021-2275446",
+    "camara:req-11-2026-2604489",
+    "camara:req-1103-2020-2252666",
+    "camara:req-1103-2025-2489314",
+    "camara:req-1107-2020-2252691",
+    "camara:req-111-2023-2365753",
+    "camara:req-1118-2023-2355538"
+  ],
+  "items": [
+    {
+      "id": "camara:req-1-0-2353805",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1-2021-2268679",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1013-2020-2252089",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1014-2020-2252090",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-103-2023-2348258",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-103-2023-2397978",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1034-2020-2252200",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1044-2022-2328560",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1049-2023-2354947",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1050-2023-2354948",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1052-2023-2354967",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-106-2023-2348262",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1066-2023-2355027",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1071-2020-2252525",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1087-2022-2330088",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-109-2023-2357913",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1093-2026-2604504",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-11-2021-2268734",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-11-2021-2275446",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-11-2026-2604489",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1103-2020-2252666",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1103-2025-2489314",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1107-2020-2252691",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-111-2023-2365753",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1118-2023-2355538",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "reconciliation_reason": "Retido: item classificado como procedural_only; autoria/ementa não prova posição legislativa, efeito causal ou score.",
+      "remote_apply": false
+    }
+  ]
+}

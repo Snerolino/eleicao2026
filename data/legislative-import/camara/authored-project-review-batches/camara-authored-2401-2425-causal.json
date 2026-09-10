@@ -1,0 +1,246 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_review_lane",
+  "batch_id": "2401-2425",
+  "lane": "causal",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_metadata_only",
+  "counts": {
+    "items": 25,
+    "withheld": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "score_eligible": 0
+  },
+  "ids": [
+    "camara:req-1-0-2353805",
+    "camara:req-1-2021-2268679",
+    "camara:req-1013-2020-2252089",
+    "camara:req-1014-2020-2252090",
+    "camara:req-103-2023-2348258",
+    "camara:req-103-2023-2397978",
+    "camara:req-1034-2020-2252200",
+    "camara:req-1044-2022-2328560",
+    "camara:req-1049-2023-2354947",
+    "camara:req-1050-2023-2354948",
+    "camara:req-1052-2023-2354967",
+    "camara:req-106-2023-2348262",
+    "camara:req-1066-2023-2355027",
+    "camara:req-1071-2020-2252525",
+    "camara:req-1087-2022-2330088",
+    "camara:req-109-2023-2357913",
+    "camara:req-1093-2026-2604504",
+    "camara:req-11-2021-2268734",
+    "camara:req-11-2021-2275446",
+    "camara:req-11-2026-2604489",
+    "camara:req-1103-2020-2252666",
+    "camara:req-1103-2025-2489314",
+    "camara:req-1107-2020-2252691",
+    "camara:req-111-2023-2365753",
+    "camara:req-1118-2023-2355538"
+  ],
+  "items": [
+    {
+      "id": "camara:req-1-0-2353805",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-1-2021-2268679",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-1013-2020-2252089",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-1014-2020-2252090",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-103-2023-2348258",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-103-2023-2397978",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-1034-2020-2252200",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-1044-2022-2328560",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-1049-2023-2354947",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-1050-2023-2354948",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-1052-2023-2354967",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-106-2023-2348262",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-1066-2023-2355027",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-1071-2020-2252525",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-1087-2022-2330088",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-109-2023-2357913",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-1093-2026-2604504",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-11-2021-2268734",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-11-2021-2275446",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-11-2026-2604489",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-1103-2020-2252666",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-1103-2025-2489314",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-1107-2020-2252691",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-111-2023-2365753",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    },
+    {
+      "id": "camara:req-1118-2023-2355538",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "procedural_only; autoria não equivale a voto ou mecanismo causal",
+      "missing_sources": [],
+      "content_read": false
+    }
+  ]
+}

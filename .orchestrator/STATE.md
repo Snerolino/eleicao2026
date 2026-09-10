@@ -5413,3 +5413,17 @@ Sem autorização humana explícita própria, não fazer:
 - Backup `334951434`, run `34435957633`, `completed/success`, `headSha` exato.
 - Produção raiz e `/release.json` HTTP 200; `release.json` confirmou `sha` exato `6adde3aa7f1c908f05b144b3ef986643e1bb4529`, versão `0.2.1287`, snapshot `row_count=1003`.
 - Atualização documental final será publicada antes de qualquer lote seguinte; próximo checkpoint continua `2401–2425`.
+
+
+## Tick contínuo — autoria Câmara 2401–2425 retida — 2026-09-10
+
+- Lock exclusivo adquirido com `flock`; único writer local.
+- Seleção determinística: `25` projetos únicos (`offset=2400`, `limit=25`), `50` ocorrências candidato–projeto e `22` candidatos.
+- Revalidação oficial: `25/25` endpoints Câmara HTTP 200, identidade exata `25/25`; `77.782` bytes e SHA-256 preservados no manifesto `data/legislative-import/camara/authored-project-review-batches/camara-authored-2401-2425-source-manifest.json`.
+- Texto integral oficial catalogado `25/25`; eventos independentes distintos `20/25`; classificação factual `25 procedural_only`.
+- Lanes causal/red-team: `25/25` IDs exatos em cada lane; reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
+- Bloqueio real: autoria/procedimento/ementa não provam posição legislativa, efeito causal ou score; nenhum fato, claim, voto, matéria, matriz, score, projeto público ou escrita remota foi promovido.
+- Checkpoint: `projects_analyzed=2425`, `withheld=2425`, `blocked_items=99`, próximo lote `2426–2450`. QA: `docs/qa/lote-camara-autoria-2401-2425-2026-09-10.md`.
+- Gates Node 24.19.0 verdes: `499/499` testes em `120` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos/sitemap `1003+2`, smoke `1002` cards/0 HTTP/0 erros online e `git diff --check`.
+- Nenhuma migration, RLS, Auth, Storage, Edge Function, escrita factual Supabase ou score/matriz foi executada.
+- Próximo passo: commit/push e verificação de produção deste checkpoint; depois iniciar `2426–2450`.
