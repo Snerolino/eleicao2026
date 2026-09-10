@@ -45,5 +45,11 @@ Executados após a geração dos artefatos com Node `v24.18.1`:
 
 Resultados reais: `499/499` testes em `120` arquivos; TypeScript sem erros; schema OK; `data:check` `1003` candidaturas/`988` fotos; build `245` módulos e sitemap `1003 + 2 = 1005` URLs; `git diff --check` OK. O aviso de UUID inválido pertence ao fixture negativo esperado e não falhou o teste.
 
+## Publicação e verificação
+- Commit de artefatos: `814349c7124f8518b24c04611f709da1026a91a4`, publicado em `origin/main`.
+- CI `Deploy` run `34540867290`: `completed/success`, quality, build, deploy e smoke concluídos.
+- Backup `Deploy to Cloudflare Pages (backup)` run `34541272624`: `completed/success`, `headSha` exato do commit de artefatos.
+- Produção: raiz HTTP 200; `/release.json` HTTP 200; `sha` exato `814349c7124f8518b24c04611f709da1026a91a4`; snapshot `row_count=1003`; release `0.2.1294`.
+
 ## Próximo passo
-Gates locais verdes. Publicar somente os artefatos deste lote; não iniciar `2476–2500` antes de concluir CI/backup/produção deste checkpoint.
+Fechar a atualização documental final deste checkpoint e só depois iniciar `2476–2500`; nenhuma aplicação factual remota.

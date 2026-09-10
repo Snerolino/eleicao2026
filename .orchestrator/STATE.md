@@ -9,6 +9,7 @@
 - Checkpoint: `projects_analyzed=2475`, `withheld=2475`, `blocked_items=101`, próximo lote `2476–2500`.
 - QA: `docs/qa/lote-camara-autoria-2451-2475-2026-09-10.md`.
 - Gates Node `v24.18.1` verdes: `499/499` testes em `120` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos/sitemap `1003+2=1005` URLs e `git diff --check`; nenhuma migration, RLS, Auth, Storage ou Edge Function foi alterada.
+- Publicação inicial verificada: commit `814349c7124f8518b24c04611f709da1026a91a4`; CI `34540867290` success; backup `34541272624` success/headSha exato; produção raiz e `/release.json` HTTP 200, release `0.2.1294`, snapshot `row_count=1003`. Atualização documental final ainda será publicada antes de `2476–2500`.
 
 ## Tick contínuo — autoria Câmara 2351–2375 retida — 2026-09-10
 
