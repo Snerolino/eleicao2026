@@ -5289,6 +5289,6 @@ Sem autorização humana explícita própria, não fazer:
 
 ## Verificação de publicação — autoria Câmara 2201–2225
 
-- Commit `6c924f7649d190b9b8fc4aae53b8c6856fdad03a` publicado em `origin/main`; backup `334951434`, run `34430436175`, `completed/success`, `headSha` exato.
+- Commit `01172a6c5ffcdd62ab85acfbde195bbe13e61548` publicado em `origin/main`; backup `334951434`, run `34430436175`, `completed/success`, `headSha` exato.
 - Produção raiz e `/release.json` HTTP 200; SHA exato confirmado, release `0.2.1264`, snapshot `row_count=1003`.
 - Próximo chunk: autoria Câmara `2226–2250`; manter retenção fail-closed e nenhuma aplicação factual sem cadeia completa.
