@@ -1,3 +1,16 @@
+## Tick contínuo — autoria Câmara 2476–2500 retida — 2026-09-10
+
+- Lock exclusivo adquirido com `exec 9>...; flock -x 9`; único writer local.
+- Seleção determinística: `25` projetos únicos (`offset=2475`, `limit=25`), `50` ocorrências candidato–projeto e `16` candidatos.
+- Revalidação oficial: `25/25` endpoints Câmara de proposição e tramitação HTTP 200; identidade `dados.id` exata em `25/25`; `84.558` bytes e SHA-256 individuais preservados no manifesto `data/legislative-import/camara/authored-project-review-batches/camara-authored-2476-2500-source-manifest.json`.
+- URLs de texto integral catalogadas `25/25`; eventos independentes distintos `17/25`; conteúdo não lido/validado.
+- Lanes causal/red-team: `25/25` IDs exatos em cada lane; reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
+- Bloqueio real: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score. Nenhum fato, claim, voto, matéria, matriz, score, projeto público ou escrita remota foi promovido.
+- Checkpoint: `projects_analyzed=2500`, `withheld=2500`, `blocked_items=102`, próximo lote `2501–2525`.
+- QA: `docs/qa/lote-camara-autoria-2476-2500-2026-09-10.md`.
+- Gates Node `v24.19.0` verdes: `499/499` testes em `120` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos/sitemap `1003+2`, `git diff --check`.
+- Nenhuma migration, RLS, Auth, Storage ou Edge Function foi alterada; nenhuma escrita factual Supabase/Cloudflare foi executada.
+
 ## Tick contínuo — autoria Câmara 2451–2475 retida — 2026-09-10
 
 - Lock exclusivo adquirido com `flock` em `.orchestrator/runtime/locks/continuous-progress.lock`; único writer local.

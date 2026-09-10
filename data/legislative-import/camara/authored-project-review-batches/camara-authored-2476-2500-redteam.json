@@ -1,0 +1,471 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_redteam_review",
+  "batch_id": "2476-2500",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_metadata_only",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0,
+    "ids_exact": 25
+  },
+  "ids": [
+    "camara:req-1298-2021-2286980",
+    "camara:req-13-2022-2322169",
+    "camara:req-132-2023-2365776",
+    "camara:req-1320-2023-2358607",
+    "camara:req-133-2023-2365777",
+    "camara:req-1332-2021-2287565",
+    "camara:req-1335-2020-2254050",
+    "camara:req-1338-2023-2358685",
+    "camara:req-1342-2023-2358799",
+    "camara:req-1348-2023-2358872",
+    "camara:req-136-2019-2218249",
+    "camara:req-1374-2021-2288185",
+    "camara:req-1383-2021-2288290",
+    "camara:req-139-2022-2314863",
+    "camara:req-1394-2020-2254383",
+    "camara:req-1395-2020-2254384",
+    "camara:req-14-2023-2351996",
+    "camara:req-140-2023-2390531",
+    "camara:req-1407-2020-2254468",
+    "camara:req-1418-2021-2288951",
+    "camara:req-1429-2021-2289427",
+    "camara:req-144-2021-2307015",
+    "camara:req-1441-2023-2361049",
+    "camara:req-1450-2024-2430937",
+    "camara:req-1476-2024-2431190"
+  ],
+  "items": [
+    {
+      "id": "camara:req-1298-2021-2286980",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2286980",
+        "dados_id": "2286980",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-13-2022-2322169",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2322169",
+        "dados_id": "2322169",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-132-2023-2365776",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2365776",
+        "dados_id": "2365776",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1320-2023-2358607",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2358607",
+        "dados_id": "2358607",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-133-2023-2365777",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2365777",
+        "dados_id": "2365777",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1332-2021-2287565",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2287565",
+        "dados_id": "2287565",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1335-2020-2254050",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2254050",
+        "dados_id": "2254050",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1338-2023-2358685",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2358685",
+        "dados_id": "2358685",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1342-2023-2358799",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2358799",
+        "dados_id": "2358799",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1348-2023-2358872",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2358872",
+        "dados_id": "2358872",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-136-2019-2218249",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2218249",
+        "dados_id": "2218249",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1374-2021-2288185",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2288185",
+        "dados_id": "2288185",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1383-2021-2288290",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2288290",
+        "dados_id": "2288290",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-139-2022-2314863",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2314863",
+        "dados_id": "2314863",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1394-2020-2254383",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2254383",
+        "dados_id": "2254383",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1395-2020-2254384",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2254384",
+        "dados_id": "2254384",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-14-2023-2351996",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2351996",
+        "dados_id": "2351996",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-140-2023-2390531",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2390531",
+        "dados_id": "2390531",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1407-2020-2254468",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2254468",
+        "dados_id": "2254468",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1418-2021-2288951",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2288951",
+        "dados_id": "2288951",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1429-2021-2289427",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2289427",
+        "dados_id": "2289427",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-144-2021-2307015",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2307015",
+        "dados_id": "2307015",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1441-2023-2361049",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2361049",
+        "dados_id": "2361049",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1450-2024-2430937",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2430937",
+        "dados_id": "2430937",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1476-2024-2431190",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Retido: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2431190",
+        "dados_id": "2431190",
+        "exact": true
+      },
+      "remote_apply": false
+    }
+  ]
+}
