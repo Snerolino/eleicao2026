@@ -5255,3 +5255,11 @@ Sem autorização humana explícita própria, não fazer:
 - Checkpoint: projects_analyzed=2200, withheld=2200, blocked_items=90, próximo lote 2201–2225; QA docs/qa/lote-camara-autoria-2176-2200-2026-09-10.md.
 - Gates Node 24 verdes: 499/499 testes em 120 arquivos, TypeScript, schema, data:check (1003/988), build (245 módulos; sitemap 1003+2) e git diff --check.
 - Próximo passo: fechar publicação deste checkpoint; só então iniciar 2201–2225, sem aplicação factual remota.
+
+
+## Verificação de publicação — autoria Câmara 2176–2200
+
+- Commit `07d4abb0e63d74158765a6347cfc0120b31b0161` publicado em `origin/main`; worktree limpa e remoto alinhado.
+- Backup `334951434`, run `34429491957`, `completed/success`, `headSha` exato.
+- Produção raiz HTTP 200; `/release.json` HTTP 200 confirmou SHA exato e `row_count=1003`.
+- Deploy primário run `34429475230` permaneceu `in_progress` na janela; backup e produção foram confirmados.

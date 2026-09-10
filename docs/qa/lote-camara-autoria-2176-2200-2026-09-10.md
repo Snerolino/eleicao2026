@@ -37,8 +37,12 @@ Os endpoints oficiais comprovam identidade e metadados, mas o lote não demonstr
 ## Operação e segurança
 Nenhuma migration, RLS, Auth, Storage, Edge Function, Supabase factual ou Cloudflare factual foi alterada. Nenhuma escrita remota foi executada. Nenhum score, matriz, claim ou voto foi criado.
 
-## Publicação
-Commit/push e verificação de CI/backup/produção serão executados após a revisão final deste lote; não há aplicação factual remota.
+## Publicação e verificação
+- Commit: `07d4abb0e63d74158765a6347cfc0120b31b0161` (`docs: registra autoria camara 2176-2200`) publicado em `origin/main`.
+- Backup Cloudflare workflow `334951434`: run `34429491957`, `completed/success`, `headSha` exato.
+- Produção: raiz HTTP 200; `/release.json` HTTP 200, SHA exato `07d4abb0e63d74158765a6347cfc0120b31b0161`, snapshot `row_count=1003`.
+- Workflow primário `Deploy` run `34429475230` permaneceu `in_progress` durante a janela de verificação; o caminho backup confiável concluiu com sucesso e a produção confirmou o SHA exato.
+- Não houve aplicação factual Supabase/Cloudflare.
 
 ## Próximo passo
 Somente após fechar e publicar este checkpoint iniciar 2201–2225, mantendo fonte oficial, identidade exata, duas lanes, remote_apply=false e retenção fail-closed.
