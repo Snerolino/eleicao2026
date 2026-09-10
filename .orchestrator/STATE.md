@@ -1,8 +1,8 @@
 ## Fechamento de publicação — autoria Câmara 2501–2525
 
-- Commit de artefatos `d096008c27162c51207e43e7d9a2bc098083c80b` publicado em origin/main.
-- Backup Cloudflare `334951434`, run `34543592486`: completed/success, headSha exato.
-- Produção raiz e /release.json HTTP 200; release confirmou SHA exato, versão 0.2.1308; row_count ausente e não inferido.
+- Commit de artefatos `d096008c27162c51207e43e7d9a2bc098083c80b`; fechamento documental final `3376636cd3b6afe1c756b44739d341284e1dedd9`, ambos publicados em origin/main.
+- Backup Cloudflare `334951434`, run `34543752401`: completed/success, headSha exato do fechamento final.
+- Produção raiz e /release.json HTTP 200; release confirmou SHA exato `3376636cd3b6afe1c756b44739d341284e1dedd9`, versão 0.2.1310; row_count ausente e não inferido.
 - Workflow primário `34543573203` falhou no smoke local e teve deploy cancelado por prioridade; backup verde e produção confirmada.
 - Worktree limpa; lote fechado. Não iniciar 2526–2550 nesta execução.
 

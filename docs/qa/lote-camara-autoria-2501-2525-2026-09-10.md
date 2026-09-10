@@ -33,8 +33,8 @@ Prosseguir para autoria Câmara 2526–2550 com as mesmas duas lanes e fontes of
 
 - Node: v24.19.0.
 - Gates locais: `npm run test` RC 0 (499/499 em 120 arquivos); `npx tsc --noEmit` RC 0; `node scripts/validate-impact-schema.mjs` RC 0; `npm run data:check` RC 0 (1003 candidaturas, 988 fotos); `npm run build` RC 0 (245 módulos, sitemap 1005 URLs); `git diff --check` RC 0.
-- Commit de artefatos: `d096008c27162c51207e43e7d9a2bc098083c80b`, publicado em `origin/main`.
-- Backup Cloudflare workflow `334951434`, run `34543592486`: completed/success, headSha exato.
+- Commit de artefatos: `d096008c27162c51207e43e7d9a2bc098083c80b`. Fechamento documental final: `3376636cd3b6afe1c756b44739d341284e1dedd9`, publicado em `origin/main`.
+- Backup Cloudflare workflow `334951434`, run `34543752401`: completed/success, headSha exato do fechamento documental final.
 - Workflow primário `Deploy`, run `34543573203`: quality falhou no smoke local; deploy cancelado por prioridade. O backup foi o caminho efetivo e verde.
-- Produção após o backup: raiz HTTP 200; `/release.json` HTTP 200; SHA exato `d096008c27162c51207e43e7d9a2bc098083c80b`; versão `0.2.1308`; `row_count` ausente e não inferido.
+- Produção após o backup final: raiz HTTP 200; `/release.json` HTTP 200; SHA exato `3376636cd3b6afe1c756b44739d341284e1dedd9`; versão `0.2.1310`; `row_count` ausente e não inferido.
 - Worktree limpa após restauração do churn não relacionado.
