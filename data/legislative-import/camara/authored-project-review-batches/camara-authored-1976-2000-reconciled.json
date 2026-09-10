@@ -1,0 +1,867 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source_manifest": "camara-authored-1976-2000-source-manifest.json",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:req-655-2021-2275999",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-67-2021-2277922",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-670-2023-2351329",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-690-2025-2485781",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-695-2023-2351438",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-70-2023-2374496",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-702-2023-2351530",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-709-2023-2351615",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-719-2021-2277565",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-719-2023-2351665",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-72-2021-2269470",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-743-2025-2486190",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-761-2022-2323274",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-766-2024-2421715",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-801-2025-2486472",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-805-2023-2352288",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-816-2025-2486598",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-837-2025-2486810",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-84-2023-2388296",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-840-2020-2250851",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-857-2023-2352547",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-86-2024-2439295",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-860-2023-2352553",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-874-2023-2352987",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:req-875-2025-2487258",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A autoria pode ser apenas procedimental ou não demonstrar posição em votação.",
+        "checks": {
+          "identity": "official_candidate_mapping_in_manifest",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "official proposition endpoint verified; no independent full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: a fonte oficial da proposição foi verificada, mas não há cadeia completa fonte oficial → texto integral → versão/evento vinculante → voto nominal; nenhuma inferência ou promoção editorial."
+    }
+  ]
+}
