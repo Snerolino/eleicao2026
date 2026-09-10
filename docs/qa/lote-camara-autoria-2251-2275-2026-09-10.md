@@ -36,3 +36,8 @@ Fechar gates locais, publicar/verificar este checkpoint e iniciar `2276–2300`,
 - Commit `2abef3f00a9a84a299909409b9179d03d1b64aa4` publicado em `origin/main`; alterações preexistentes não relacionadas permaneceram fora do commit.
 - Backup Cloudflare workflow `334951434`, run `34431477000`, `completed/success`, `headSha` exato.
 - Produção: raiz HTTP 200; `/release.json` HTTP 200 confirmou SHA exato, release `0.2.1269` e snapshot `row_count=1003`.
+
+## Correção de publicação final
+- A atualização documental deste QA foi publicada no commit final `64a85c3bb5ec834c98980d8bfddb3f4fb8332de9`; o commit de artefatos `2abef3f` permanece seu predecessor.
+- Backup workflow `334951434`, run `34431600352`, `completed/success`, `headSha` exato `64a85c3bb5ec834c98980d8bfddb3f4fb8332de9`; o run duplicado `34431599820` foi `skipped`.
+- Produção raiz HTTP 200 e `/release.json` HTTP 200 confirmaram SHA exato, release `0.2.1270` e snapshot `row_count=1003`.

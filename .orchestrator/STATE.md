@@ -7,6 +7,7 @@
 - Checkpoint: `projects_analyzed=2275`, `withheld=2275`, `blocked_items=93`, próximo lote `2276–2300`; QA `docs/qa/lote-camara-autoria-2251-2275-2026-09-10.md`.
 - Gates locais: 499/499 testes em 120 arquivos, TypeScript, schema, `data:check` 1003/988, build 245 módulos/sitemap 1003+2, smoke local 1002 cards/0 falhas HTTP/0 erros online e `git diff --check`.
 - Publicação: commit `2abef3f00a9a84a299909409b9179d03d1b64aa4`; backup `334951434` run `34431477000` success/headSha exato; produção raiz e release HTTP 200, release `0.2.1269`, snapshot 1003.
+- Correção final documental publicada: commit `64a85c3bb5ec834c98980d8bfddb3f4fb8332de9`; backup run `34431600352` success/headSha exato; produção release `0.2.1270`, HTTP 200, snapshot 1003.
 - Próximo chunk: iniciar `2276–2300`, mantendo fonte oficial, duas lanes e retenção fail-closed; não aplicar fatos editoriais/remotos sem cadeia completa.
 
 - Publicação verificada: commit c09b97b; backup 334951434 run 34429009128 success/headSha exato; produção raiz e release.json HTTP 200 com User-Agent, release c09b97b-20260910T022039823Z e snapshot 1003.\n## Tick contínuo — autoria Câmara 2151–2175 retida — 2026-09-09
