@@ -7,7 +7,7 @@
 - Bloqueio real: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score. Nenhum fato, claim, voto, matéria, matriz, score, projeto público ou escrita remota foi promovido.
 - Gates Node 22.22.2 disponíveis no ambiente: testes, TypeScript, schema, `data:check`, build e `git diff --check` verdes.
 - QA: `docs/qa/lote-camara-autoria-2326-2350-2026-09-10.md`.
-- Publicação: commit `4f2875c31274db93ccfac394b6d19824a08ff7c2`; backup `334951434` run `34434180503` success/headSha exato; produção raiz e `/release.json` HTTP 200, release `0.2.1278`, snapshot `row_count=1003`.
+- Publicação: commit `4f2875c31274db93ccfac394b6d19824a08ff7c2`; backup `334951434` run `34434180503` success/headSha exato; produção raiz e `/release.json` HTTP 200, release `0.2.0` no fechamento documental final, snapshot `row_count=1003`.
 - Checkpoint: `projects_analyzed=2350`, `withheld=2350`, `blocked_items=96`, próximo lote `2351–2375`.
 
 ## Tick contínuo — autoria Câmara 2301–2325 retida — 2026-09-10
