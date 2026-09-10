@@ -1,3 +1,13 @@
+## Tick contínuo — autoria Câmara 2326–2350 retida — 2026-09-10
+
+- Lock exclusivo `flock` adquirido; seleção determinística: `25` projetos únicos (`offset=2325`, `limit=25`), `50` ocorrências candidato–projeto e `18` candidatos.
+- Revalidação oficial: `25/25` endpoints Câmara HTTP 200, identidade exata `25/25`; `46.538` bytes e SHA-256 preservados no manifesto `data/legislative-import/camara/authored-project-review-batches/camara-authored-2326-2350-source-manifest.json`.
+- Lanes causal/red-team: `25/25` IDs exatos em cada lane; reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
+- Bloqueio real: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score. Nenhum fato, claim, voto, matéria, matriz, score, projeto público ou escrita remota foi promovido.
+- ALRS score recovery preservado: `152` itens (`87` sem evento vinculante, `65` compostos), `remote_apply=false`; nenhum score/matriz criado.
+- Checkpoint: `projects_analyzed=2350`, `withheld=2350`, `blocked_items=96`, próximo lote `2351–2375`; QA `docs/qa/lote-camara-autoria-2326-2350-2026-09-10.md`.
+- Próximo passo: gates locais completos; se verdes, commit/push e verificação CI/backup/produção deste lote; depois iniciar `2351–2375`, mantendo retenção fail-closed.
+
 ## Tick contínuo — autoria Câmara 2301–2325 retida — 2026-09-10
 
 - Lock exclusivo `flock` adquirido em `.orchestrator/runtime/locks/continuous-progress.lock`; único writer local.
