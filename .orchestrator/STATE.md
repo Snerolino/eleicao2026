@@ -1,4 +1,4 @@
-## Tick contínuo — autoria Câmara 2151–2175 retida — 2026-09-09
+- Publicação verificada: commit a135cc8; backup 334951434 run 34428902623 success/headSha exato; produção raiz e release.json HTTP 200 com User-Agent, release a135cc8-20260910T021838693Z e snapshot 1003.\n## Tick contínuo — autoria Câmara 2151–2175 retida — 2026-09-09
 
 - Lock exclusivo flock adquirido; seleção determinística: 25 projetos únicos (offset=2150, limit=25), 50 ocorrências e 13 candidatos.
 - Fonte oficial Câmara: 25/25 HTTP 200, identidade exata; 37.988 bytes e SHA-256 preservados no manifesto data/legislative-import/camara/authored-project-review-batches/camara-authored-2151-2175-source-manifest.json.

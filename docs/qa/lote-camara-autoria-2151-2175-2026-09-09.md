@@ -34,5 +34,10 @@ Os endpoints oficiais comprovam identidade e metadados, mas o lote não demonstr
 - git diff --check: RC 0.
 - A alteração preexistente em scripts/orchestrator/doctor.sh permanece fora do escopo; churn de timestamps/artefatos não relacionados foi restaurado.
 
+## Publicação e verificação
+- Commit publicado: a135cc894d230f16c3fcc0f8e9127d0cc388cac5; origin/main alinhado.
+- Backup Cloudflare workflow 334951434: run 34428902623, completed/success, headSha exato.
+- Produção com User-Agent: raiz HTTP 200; release.json HTTP 200, release a135cc8-20260910T021838693Z, SHA exato e snapshot row_count=1003. A requisição sem User-Agent retornou HTTP 403 neste ambiente; a verificação repetida com User-Agent confirmou a publicação.
+
 ## Próximo passo
 Publicar/verificar apenas este checkpoint documental se todos os gates locais estiverem verdes; então iniciar 2176–2200, mantendo fonte oficial, IDs exatos, duas lanes e retenção fail-closed.
