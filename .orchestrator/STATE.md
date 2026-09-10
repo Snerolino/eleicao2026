@@ -1,3 +1,13 @@
+## Tick contínuo — autoria Câmara 2376–2400 retida — 2026-09-10
+
+- Lock exclusivo adquirido com `flock`; único writer local.
+- Seleção determinística: `25` projetos únicos (`offset=2375`, `limit=25`), `50` ocorrências candidato–projeto e `21` candidatos.
+- Revalidação oficial: `25/25` endpoints Câmara HTTP 200, identidade exata `25/25`; `212.064` bytes e SHA-256 preservados no manifesto `data/legislative-import/camara/authored-project-review-batches/camara-authored-2376-2400-source-manifest.json`.
+- Cobertura de URLs: `23` textos integrais, `24` eventos, `18` pares independentes distintos. URLs foram apenas catalogadas; conteúdo integral e voto nominal não foram validados.
+- Lanes causal/red-team: `25/25` IDs exatos em cada lane; reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
+- Bloqueio real: sem cadeia oficial completa texto integral → versão/evento independente vinculante → voto nominal individual; autoria/ementa não prova posição, efeito causal ou score. Nenhum fato, claim, voto, matéria, matriz, score, projeto público ou escrita remota foi promovido.
+- Checkpoint: `projects_analyzed=2400`, `withheld=2400`, `blocked_items=98`, próximo lote `2401–2425`. QA: `docs/qa/lote-camara-autoria-2376-2400-2026-09-10.md`.
+
 ## Tick contínuo — autoria Câmara 2351–2375 retida — 2026-09-10
 
 - Lock exclusivo adquirido com `flock` em `.orchestrator/runtime/locks/continuous-progress.lock`; único writer local.

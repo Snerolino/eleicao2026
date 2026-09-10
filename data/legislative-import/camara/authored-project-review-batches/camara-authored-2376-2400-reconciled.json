@@ -1,0 +1,447 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2376-2400",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_metadata_only",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0,
+    "causal_ids_exact": 25,
+    "redteam_ids_exact": 25
+  },
+  "ids": [
+    "camara:plp-156-2020-2254586",
+    "camara:plp-157-2020-2254587",
+    "camara:plp-163-2026-2630791",
+    "camara:plp-165-2024-2463235",
+    "camara:plp-232-2019-2224225",
+    "camara:plp-41-2026-2606313",
+    "camara:plp-5-2022-2314426",
+    "camara:plp-7-2025-2482436",
+    "camara:plp-9-2025-2482491",
+    "camara:prc-106-2023-2382571",
+    "camara:prc-13-2026-2613007",
+    "camara:prc-64-2025-2550212",
+    "camara:prc-76-2020-2266325",
+    "camara:prc-9-2023-2345666",
+    "camara:proc-187-2025-2557476",
+    "camara:proc-452-2023-2382231",
+    "camara:rec-11-2024-2440599",
+    "camara:rec-19-2022-2332871",
+    "camara:rec-2-2024-2418740",
+    "camara:rec-23-2025-2575150",
+    "camara:rec-26-2023-2394624",
+    "camara:rec-47-2021-2294048",
+    "camara:rec-5-2026-2610178",
+    "camara:rec-8-2021-2277697",
+    "camara:rem-2-2025-2506485"
+  ],
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "items": [
+    {
+      "id": "camara:plp-156-2020-2254586",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2254586",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:plp-157-2020-2254587",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2254587",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:plp-163-2026-2630791",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2630791",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:plp-165-2024-2463235",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2463235",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:plp-232-2019-2224225",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2224225",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:plp-41-2026-2606313",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2606313",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:plp-5-2022-2314426",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2314426",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:plp-7-2025-2482436",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2482436",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:plp-9-2025-2482491",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2482491",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:prc-106-2023-2382571",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2382571",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:prc-13-2026-2613007",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2613007",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:prc-64-2025-2550212",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2550212",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:prc-76-2020-2266325",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2266325",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:prc-9-2023-2345666",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2345666",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:proc-187-2025-2557476",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2557476",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:proc-452-2023-2382231",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2382231",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:rec-11-2024-2440599",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2440599",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:rec-19-2022-2332871",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2332871",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:rec-2-2024-2418740",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2418740",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:rec-23-2025-2575150",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2575150",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:rec-26-2023-2394624",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2394624",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:rec-47-2021-2294048",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2294048",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:rec-5-2026-2610178",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2610178",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:rec-8-2021-2277697",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2277697",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:rem-2-2025-2506485",
+      "final_decision": "withheld",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2506485",
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    }
+  ]
+}
