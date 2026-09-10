@@ -41,3 +41,7 @@ Fechar gates locais, publicar/verificar este checkpoint e iniciar `2276–2300`,
 - A atualização documental deste QA foi publicada no commit final `64a85c3bb5ec834c98980d8bfddb3f4fb8332de9`; o commit de artefatos `2abef3f` permanece seu predecessor.
 - Backup workflow `334951434`, run `34431600352`, `completed/success`, `headSha` exato `64a85c3bb5ec834c98980d8bfddb3f4fb8332de9`; o run duplicado `34431599820` foi `skipped`.
 - Produção raiz HTTP 200 e `/release.json` HTTP 200 confirmaram SHA exato, release `0.2.1270` e snapshot `row_count=1003`.
+
+## Fechamento documental definitivo
+- O commit live final deste checkpoint é `0e6f614c1943601c450e58056614a86dda2c4c92`; backup run `34431733837` concluiu `success` com `headSha` exato.
+- Produção confirmou raiz HTTP 200 e `/release.json` HTTP 200, release `0.2.1271`, SHA exato e snapshot `row_count=1003`.
