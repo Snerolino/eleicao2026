@@ -1,0 +1,446 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2501-2525",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_metadata_only",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0,
+    "ids_exact": 25
+  },
+  "ids": [
+    "camara:req-1477-2020-2254790",
+    "camara:req-1481-2022-2336422",
+    "camara:req-1490-2024-2431744",
+    "camara:req-1492-2020-2254845",
+    "camara:req-15-2022-2322122",
+    "camara:req-15-2022-2324974",
+    "camara:req-15-2023-2351997",
+    "camara:req-1520-2024-2432324",
+    "camara:req-153-2025-2543044",
+    "camara:req-1531-2024-2432424",
+    "camara:req-1539-2020-2255095",
+    "camara:req-154-2023-2376103",
+    "camara:req-1540-2020-2255098",
+    "camara:req-1550-2023-2362385",
+    "camara:req-1569-2023-2362530",
+    "camara:req-1570-2023-2362533",
+    "camara:req-1578-2021-2292194",
+    "camara:req-1585-2026-2611385",
+    "camara:req-16-2024-2439346",
+    "camara:req-1602-2025-2500515",
+    "camara:req-1648-2021-2293978",
+    "camara:req-167-2022-2315355",
+    "camara:req-168-2023-2366034",
+    "camara:req-1684-2020-2256266",
+    "camara:req-1688-2020-2256343"
+  ],
+  "packet_type": "candidate_authored_projects_redteam_review",
+  "items": [
+    {
+      "id": "camara:req-1477-2020-2254790",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2254790",
+        "dados_id": "2254790",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1481-2022-2336422",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2336422",
+        "dados_id": "2336422",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1490-2024-2431744",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2431744",
+        "dados_id": "2431744",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1492-2020-2254845",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2254845",
+        "dados_id": "2254845",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-15-2022-2322122",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2322122",
+        "dados_id": "2322122",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-15-2022-2324974",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2324974",
+        "dados_id": "2324974",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-15-2023-2351997",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2351997",
+        "dados_id": "2351997",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1520-2024-2432324",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2432324",
+        "dados_id": "2432324",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-153-2025-2543044",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2543044",
+        "dados_id": "2543044",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1531-2024-2432424",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2432424",
+        "dados_id": "2432424",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1539-2020-2255095",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2255095",
+        "dados_id": "2255095",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-154-2023-2376103",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2376103",
+        "dados_id": "2376103",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1540-2020-2255098",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2255098",
+        "dados_id": "2255098",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1550-2023-2362385",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2362385",
+        "dados_id": "2362385",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1569-2023-2362530",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2362530",
+        "dados_id": "2362530",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1570-2023-2362533",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2362533",
+        "dados_id": "2362533",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1578-2021-2292194",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2292194",
+        "dados_id": "2292194",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1585-2026-2611385",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2611385",
+        "dados_id": "2611385",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-16-2024-2439346",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2439346",
+        "dados_id": "2439346",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1602-2025-2500515",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2500515",
+        "dados_id": "2500515",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1648-2021-2293978",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2293978",
+        "dados_id": "2293978",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-167-2022-2315355",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2315355",
+        "dados_id": "2315355",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-168-2023-2366034",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2366034",
+        "dados_id": "2366034",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1684-2020-2256266",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2256266",
+        "dados_id": "2256266",
+        "exact": true
+      },
+      "remote_apply": false
+    },
+    {
+      "id": "camara:req-1688-2020-2256343",
+      "decision": "withheld",
+      "risk": "high",
+      "missing_sources": [
+        "validated_full_text",
+        "independent_binding_event",
+        "nominal_vote"
+      ],
+      "identity": {
+        "url_id": "2256343",
+        "dados_id": "2256343",
+        "exact": true
+      },
+      "remote_apply": false
+    }
+  ]
+}\n
