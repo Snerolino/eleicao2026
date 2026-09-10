@@ -197,7 +197,7 @@ hermes cron list
 
 ```text
 wrapper: scripts/orchestrator/run-opencode.sh
-modelo: opencode/deepseek-v4-flash-free
+modelo padrão: openai/gpt-5.6-luna
 autoridade: read-only
 ```
 
