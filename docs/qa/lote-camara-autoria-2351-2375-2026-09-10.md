@@ -46,8 +46,8 @@ Apesar dos metadados e URLs oficiais, não houve validação de texto integral, 
 
 ## Publicação
 Após os gates verdes, o lote foi publicado e verificado:
-- Commit inicial: `4306c356636242fec95aaa46849a2d2c23852235` em `origin/main`.
-- Deploy primário `34434666674`: `completed/success`, `headSha` exato.
-- Backup Cloudflare `334951434`, run `34434677712`: `completed/success`, `headSha` exato.
-- Produção: raiz HTTP 200; `/release.json` HTTP 200, SHA exato `4306c356636242fec95aaa46849a2d2c23852235`, versão `0.2.1281`, snapshot `row_count=1003`.
+- Commit final documental: `8d139bf4096adfb6899e9bbe0ec32a2d11ed18de` em `origin/main`.
+- Deploy primário `34434958472`: `completed/success`, `headSha` exato.
+- Backup Cloudflare `334951434`, run `34434974959`: `completed/success`, `headSha` exato.
+- Produção: raiz HTTP 200; `/release.json` HTTP 200, SHA exato `8d139bf4096adfb6899e9bbe0ec32a2d11ed18de`, versão `0.2.1282`, snapshot `row_count=1003`.
 - Lote fechado; próximo lote permanece `2376–2400`, sem iniciar nesta execução.
