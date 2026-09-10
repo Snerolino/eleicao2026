@@ -31,3 +31,8 @@ Nenhuma migration, RLS, Auth, Storage, Edge Function, score, matriz, claim, voto
 
 ## Próximo passo
 Fechar gates locais, publicar/verificar este checkpoint e iniciar `2276–2300`, mantendo retenção fail-closed. A cadeia autoria → texto integral → versão/evento nominal → efeito continua ausente; não aplicar fatos editoriais/remotos.
+
+## Publicação verificada
+- Commit `2abef3f00a9a84a299909409b9179d03d1b64aa4` publicado em `origin/main`; alterações preexistentes não relacionadas permaneceram fora do commit.
+- Backup Cloudflare workflow `334951434`, run `34431477000`, `completed/success`, `headSha` exato.
+- Produção: raiz HTTP 200; `/release.json` HTTP 200 confirmou SHA exato, release `0.2.1269` e snapshot `row_count=1003`.

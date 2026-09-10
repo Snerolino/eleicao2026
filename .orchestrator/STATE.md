@@ -1,3 +1,14 @@
+## Tick contínuo — autoria Câmara 2251–2275 retida — 2026-09-10
+
+- Seleção determinística: 25 projetos únicos (`offset=2250`, `limit=25`), 58 ocorrências candidato–projeto e 18 candidatos.
+- Fonte oficial Câmara: 25/25 HTTP 200, identidade `dados.id` exata; 33.043 bytes e SHA-256 preservados no manifesto `data/legislative-import/camara/authored-project-review-batches/camara-authored-2251-2275-source-manifest.json`.
+- Lanes causal/red-team: 25/25 IDs exatos em cada lane; reconciliação 25 withheld, 0 pending_review, 0 approved, 0 score_eligible; `content_read=false`, `remote_apply=false`.
+- Bloqueio real: sem texto integral validado, versão/evento independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score. Nenhum fato, claim, voto, matéria, matriz, score ou escrita remota foi promovido.
+- Checkpoint: `projects_analyzed=2275`, `withheld=2275`, `blocked_items=93`, próximo lote `2276–2300`; QA `docs/qa/lote-camara-autoria-2251-2275-2026-09-10.md`.
+- Gates locais: 499/499 testes em 120 arquivos, TypeScript, schema, `data:check` 1003/988, build 245 módulos/sitemap 1003+2, smoke local 1002 cards/0 falhas HTTP/0 erros online e `git diff --check`.
+- Publicação: commit `2abef3f00a9a84a299909409b9179d03d1b64aa4`; backup `334951434` run `34431477000` success/headSha exato; produção raiz e release HTTP 200, release `0.2.1269`, snapshot 1003.
+- Próximo chunk: iniciar `2276–2300`, mantendo fonte oficial, duas lanes e retenção fail-closed; não aplicar fatos editoriais/remotos sem cadeia completa.
+
 - Publicação verificada: commit c09b97b; backup 334951434 run 34429009128 success/headSha exato; produção raiz e release.json HTTP 200 com User-Agent, release c09b97b-20260910T022039823Z e snapshot 1003.\n## Tick contínuo — autoria Câmara 2151–2175 retida — 2026-09-09
 
 - Lock exclusivo flock adquirido; seleção determinística: 25 projetos únicos (offset=2150, limit=25), 50 ocorrências e 13 candidatos.
