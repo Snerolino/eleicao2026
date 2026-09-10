@@ -36,3 +36,11 @@ Nenhuma migration, RLS, Auth, Storage ou Edge Function foi alterada. Não houve 
 - `npm run build`: RC 0 — 245 módulos; sitemap 1003 candidatos + 2 estáticas (1005 URLs); release local `2004a9e-20260910T040629584Z`.
 - Invariantes dos artefatos: PASS — 25 IDs exatos nas duas lanes, 25 retidos, 0 aprovados, 0 pending, 0 elegíveis, `remote_apply=false`.
 - `git diff --check`: RC 0 após restauração do churn de timestamps não relacionado.
+
+## Publicação verificada
+
+- Commit dos artefatos: `6adde3aa7f1c908f05b144b3ef986643e1bb4529`, publicado em `origin/main`; worktree permaneceu sem churn não relacionado.
+- Deploy primário `Deploy` foi observado em `in_progress` no momento do fechamento; caminho backup confiável utilizado.
+- Backup Cloudflare workflow `334951434`, run `34435957633`, `completed/success`, `headSha` exato `6adde3aa7f1c908f05b144b3ef986643e1bb4529`.
+- Produção: raiz HTTP 200; `/release.json` HTTP 200 confirmou `sha=6adde3aa7f1c908f05b144b3ef986643e1bb4529`, versão `0.2.1287` e snapshot `row_count=1003`.
+- Este lote está fechado. O próximo checkpoint é `2401–2425`; não foi iniciado nesta execução.

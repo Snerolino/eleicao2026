@@ -5405,3 +5405,11 @@ Sem autorização humana explícita própria, não fazer:
 - QA: `docs/qa/lote-camara-autoria-2376-2400-2026-09-10.md`.
 - Gates Node 24 verdes: `499/499` testes em `120` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos/sitemap `1003+2`, invariantes de artefato verdes; `git diff --check` RC 0 após restauração de churn não relacionado.
 - Nenhuma migration, RLS, Auth, Storage ou Edge Function foi alterada; nenhuma escrita factual Supabase/Cloudflare foi executada.
+
+
+## Verificação de publicação — autoria Câmara 2376–2400
+
+- Commit dos artefatos `6adde3aa7f1c908f05b144b3ef986643e1bb4529` publicado em `origin/main`.
+- Backup `334951434`, run `34435957633`, `completed/success`, `headSha` exato.
+- Produção raiz e `/release.json` HTTP 200; `release.json` confirmou `sha` exato `6adde3aa7f1c908f05b144b3ef986643e1bb4529`, versão `0.2.1287`, snapshot `row_count=1003`.
+- Atualização documental final será publicada antes de qualquer lote seguinte; próximo checkpoint continua `2401–2425`.
