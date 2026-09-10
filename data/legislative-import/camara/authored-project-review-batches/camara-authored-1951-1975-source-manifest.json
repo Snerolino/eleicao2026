@@ -1,0 +1,239 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_official_source_manifest",
+  "mode": "read-only",
+  "remote_apply": false,
+  "created_at": "2026-09-10T00:43:32.220Z",
+  "counts": {
+    "items": 25,
+    "http_200": 25,
+    "failed": 0
+  },
+  "items": [
+    {
+      "id": "camara:req-505-2023-2350525",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350525",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1287,
+      "sha256": "sha256:04768e305502a77db7da0974e607d1bdf85ae4383a90560afaa8ee8f7c22ae22",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-511-2022-2319469",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2319469",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1552,
+      "sha256": "sha256:9e385a174126824f03afaa27c0177170d7b491e64936ce02a62e3ab8283ec30b",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-519-2023-2350642",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350642",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1331,
+      "sha256": "sha256:82387319d6bbad7c484a3568a47bc298f1f9fe811b648252b18a990dbdbea270",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-53-2021-2275949",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275949",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1396,
+      "sha256": "sha256:96a4286bef1e4c9a822d46657380756d62bd46d9cb8baf761a4aeb3e7ebd9689",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-530-2023-2350830",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350830",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1332,
+      "sha256": "sha256:1400fd84b1994f22608b333b697dd2fb893c90c7c912ee0d0c8cc6f76970f78d",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-5377-2025-2592203",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2592203",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1888,
+      "sha256": "sha256:fa6eb718ad6e1face3814f8ba8b5c1df003a6feb5dda9a96c87a20de159fb036",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-547-2021-2274533",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2274533",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1203,
+      "sha256": "sha256:46a21710bc167814d8a6ba773f7b9e7c0ac6d358bc24e66da9c23b6ec9453b4d",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-55-2023-2347180",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2347180",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1295,
+      "sha256": "sha256:6a0db928fe22e59d1a00cc0e548e45daf6a6df1aeaa0b934b24704bb133936fd",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-550-2023-2350876",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350876",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1340,
+      "sha256": "sha256:6df8c0c917b30bcd8855cccd8b059cc2e82e8ee4901ded6a6d38a9792e07bac0",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-565-2024-2419118",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2419118",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1251,
+      "sha256": "sha256:2f103075d9462349e16a2503e859b5c20eaa00cb12de71e2c4f859e9dfeb7745",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-58-2019-2197490",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2197490",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1309,
+      "sha256": "sha256:77039f0512f042a63f52f42055fd2e5d37b0bd4a6926743ce2b620cce927161a",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-58-2026-2620852",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620852",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1469,
+      "sha256": "sha256:5c35971648ce5cdd224448c24f1b4b425b26a36031e100cfcc381f4d658bd988",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-585-2023-2350923",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350923",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1380,
+      "sha256": "sha256:1fd28282a4a695bf0c2bf0d4495f3a1a4ed2f0714450fceb72f7cc263c43e9ec",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-586-2023-2350926",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350926",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1311,
+      "sha256": "sha256:9d3c397bba6d53e8062654c198f561d530365025b7bd51ad0cee4bf7f06a2f09",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-59-2024-2441293",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2441293",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1119,
+      "sha256": "sha256:9c3111511691c22ba27630436861957989d3230373788fb7be00e5b27132dd8b",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-59-2025-2508485",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2508485",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1219,
+      "sha256": "sha256:405412902ea25ba8d456c4d372eeea48d33dee84d9ce00faf107b21c9c1cbfc9",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-604-2021-2275482",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275482",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1393,
+      "sha256": "sha256:cfede7e9c35c5f659d17dff9bfe5a0ec9125143997ab43317498e825fac52931",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-608-2023-2351042",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351042",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1386,
+      "sha256": "sha256:6557df89c88f26ba246211a6a95b83877b2332f915c532c7b164c3cf718d7b50",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-612-2023-2351066",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351066",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1314,
+      "sha256": "sha256:71dfa5772ec2a317bea281351914de7235d052d998c82c2368762e42ca41be41",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-622-2023-2351166",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351166",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1301,
+      "sha256": "sha256:ab9f2e6bb45b935b180dde951910a0f6972e03a9cbb5bb1a8e2620064a7cc2b8",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-63-2024-2441598",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2441598",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1347,
+      "sha256": "sha256:654d35e48f996409148b21dd7b96712848bd520085805cd4cdb53e8051a1f564",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-632-2023-2351195",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351195",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1317,
+      "sha256": "sha256:54094b681cdecb846d2da60d8bac0169d690ed8c56dc889d1fcbe50fbfe738b2",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-634-2022-2320539",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2320539",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1303,
+      "sha256": "sha256:8b7e6de6b7b81dd5a6ae66f1aa2f11a96400920556b2c012c1dc3ffd71413e0d",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-64-2019-2198370",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2198370",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1231,
+      "sha256": "sha256:54430c247c08c4fafbb273697ecd2c65dcd648d492d40add0ca8a7bb5ae8a61a",
+      "content_type": "application/json"
+    },
+    {
+      "id": "camara:req-645-2023-2351248",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351248",
+      "source": "official_proposition_api",
+      "status": 200,
+      "bytes": 1331,
+      "sha256": "sha256:b0c2293e7dd779ab39a0872ee85693ba7cda4c1b7d74c93b6b6ebd0b6c39086f",
+      "content_type": "application/json"
+    }
+  ]
+}
