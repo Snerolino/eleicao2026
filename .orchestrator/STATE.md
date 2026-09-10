@@ -5435,3 +5435,10 @@ Sem autorização humana explícita própria, não fazer:
 - Backup Cloudflare `334951434`, run `34436413422`, `completed/success`, `headSha` exato.
 - Produção raiz HTTP 200 e `/release.json` HTTP 200 confirmaram SHA exato e versão `0.2.1289`; `row_count` ausente no release e não inferido.
 - Próximo chunk: autoria Câmara `2426–2450`; manter retenção fail-closed e nenhum score/matriz sem assessment completo, fontes e evento vinculante.
+
+
+## Fechamento final de publicação — autoria Câmara 2401–2425
+
+- Correção documental final no commit `0c98d6a363a4ffed5ff85c14ad0201ff67740547`; backup `334951434`, run `34436527021`, `completed/success`, `headSha` exato.
+- Produção final raiz HTTP 200 e `/release.json` HTTP 200 confirmaram SHA exato, versão `0.2.1290` e snapshot `row_count=1003`.
+- Próximo chunk calculado: autoria Câmara `2426–2450`; tick encerrado com bloqueio apenas editorial/procedural, sem escrita factual remota.

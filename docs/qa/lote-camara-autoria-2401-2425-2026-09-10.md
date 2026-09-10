@@ -50,3 +50,8 @@ Iniciar `2426–2450` somente após fechar a publicação deste checkpoint, mant
 - Backup Cloudflare workflow `334951434`, run `34436413422`, `completed/success`, `headSha` exato.
 - Produção: raiz HTTP 200; `/release.json` HTTP 200 confirmou `sha=e89359294d96e6e7692bdeb4287342ccc838348d` e versão `0.2.1289`.
 - `row_count` não foi fornecido no `release.json` desta publicação; não foi inferido.
+
+## Fechamento documental final
+
+- A correção documental final foi publicada no commit `0c98d6a363a4ffed5ff85c14ad0201ff67740547`; backup `334951434`, run `34436527021`, `completed/success`, `headSha` exato.
+- Produção final: raiz HTTP 200; `/release.json` HTTP 200; SHA exato `0c98d6a363a4ffed5ff85c14ad0201ff67740547`, versão `0.2.1290`, snapshot `row_count=1003`.
