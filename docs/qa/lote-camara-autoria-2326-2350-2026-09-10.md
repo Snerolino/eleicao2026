@@ -39,3 +39,9 @@ Lock exclusivo adquirido com flock em .orchestrator/runtime/locks/continuous-pro
 
 ## Próximo passo
 Fechar este lote com commit/push e verificar CI, workflow backup e SHA exato em produção. Não iniciar 2351-2375 antes do fechamento.
+
+## Publicação verificada
+
+- Commit `4f2875c31274db93ccfac394b6d19824a08ff7c2` em `origin/main`; worktree limpa.
+- Backup Cloudflare workflow `334951434`, run `34434180503`, `completed/success`, `headSha` exato.
+- Produção raiz e `/release.json`: HTTP 200. `release.json` confirmou SHA exato e versão `0.2.1278`; snapshot `row_count=1003`.
