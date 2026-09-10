@@ -38,10 +38,10 @@ Os endpoints oficiais comprovam identidade e metadados, mas o lote não demonstr
 Nenhuma migration, RLS, Auth, Storage, Edge Function, Supabase factual ou Cloudflare factual foi alterada. Nenhuma escrita remota foi executada. Nenhum score, matriz, claim ou voto foi criado.
 
 ## Publicação e verificação
-- Commit: `07d4abb0e63d74158765a6347cfc0120b31b0161` (`docs: registra autoria camara 2176-2200`) publicado em `origin/main`.
-- Backup Cloudflare workflow `334951434`: run `34429491957`, `completed/success`, `headSha` exato.
-- Produção: raiz HTTP 200; `/release.json` HTTP 200, SHA exato `07d4abb0e63d74158765a6347cfc0120b31b0161`, snapshot `row_count=1003`.
-- Workflow primário `Deploy` run `34429475230` permaneceu `in_progress` durante a janela de verificação; o caminho backup confiável concluiu com sucesso e a produção confirmou o SHA exato.
+- Commits publicados em `origin/main`: `07d4abb0e63d74158765a6347cfc0120b31b0161` (artefatos) e `78b5632a9846823af158cc3f160f2eba40aa3001` (verificação documental).
+- Backup Cloudflare workflow `334951434`: run `34429763360`, `completed/success`, `headSha` exato do commit final.
+- Produção: raiz HTTP 200; `/release.json` HTTP 200, SHA exato `78b5632a9846823af158cc3f160f2eba40aa3001`, snapshot `row_count=1003`.
+- O workflow primário `Deploy` ficou pendente/in-progress na janela; o caminho backup confiável concluiu com sucesso e a produção confirmou o SHA exato.
 - Não houve aplicação factual Supabase/Cloudflare.
 
 ## Próximo passo

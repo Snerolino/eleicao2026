@@ -5263,3 +5263,10 @@ Sem autorização humana explícita própria, não fazer:
 - Backup `334951434`, run `34429491957`, `completed/success`, `headSha` exato.
 - Produção raiz HTTP 200; `/release.json` HTTP 200 confirmou SHA exato e `row_count=1003`.
 - Deploy primário run `34429475230` permaneceu `in_progress` na janela; backup e produção foram confirmados.
+
+
+## Correção final de publicação — autoria Câmara 2176–2200
+
+- QA corrigido para distinguir o commit de artefatos `07d4abb` do commit documental final `78b5632a9846823af158cc3f160f2eba40aa3001`.
+- Backup `334951434`, run `34429763360`, `completed/success`, `headSha` exato `78b5632a9846823af158cc3f160f2eba40aa3001`.
+- Produção raiz HTTP 200 e `/release.json` HTTP 200 confirmaram o SHA final exato; snapshot `row_count=1003`.
