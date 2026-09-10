@@ -1,0 +1,397 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "batch_id": "2351-2375",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_metadata_only",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0,
+    "causal_ids_exact": 25,
+    "redteam_ids_exact": 25
+  },
+  "ids": [
+    "camara:pl-4463-2024-2470716",
+    "camara:pl-453-2023-2348375",
+    "camara:pl-456-2021-2270279",
+    "camara:pl-4611-2019-2216452",
+    "camara:pl-4633-2020-2263032",
+    "camara:pl-4748-2025-2564260",
+    "camara:pl-4940-2019-2219463",
+    "camara:pl-5096-2020-2265028",
+    "camara:pl-5213-2023-2399527",
+    "camara:pl-5250-2019-2222055",
+    "camara:pl-5434-2025-2577282",
+    "camara:pl-5456-2020-2266592",
+    "camara:pl-5651-2020-2268076",
+    "camara:pl-5756-2019-2227685",
+    "camara:pl-6151-2025-2592120",
+    "camara:pl-6158-2023-2416106",
+    "camara:pl-6210-2019-2230961",
+    "camara:pl-649-2020-2239122",
+    "camara:pl-69-2021-2268713",
+    "camara:pl-714-2020-2239494",
+    "camara:pl-769-2025-2485940",
+    "camara:pl-805-2026-2605145",
+    "camara:pl-877-2025-2486421",
+    "camara:pl-971-2025-2486789",
+    "camara:pl-989-2021-2274504"
+  ],
+  "items": [
+    {
+      "id": "camara:pl-4463-2024-2470716",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-453-2023-2348375",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-456-2021-2270279",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-4611-2019-2216452",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-4633-2020-2263032",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-4748-2025-2564260",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-4940-2019-2219463",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-5096-2020-2265028",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-5213-2023-2399527",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-5250-2019-2222055",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-5434-2025-2577282",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-5456-2020-2266592",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-5651-2020-2268076",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-5756-2019-2227685",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-6151-2025-2592120",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-6158-2023-2416106",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-6210-2019-2230961",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-649-2020-2239122",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-69-2021-2268713",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-714-2020-2239494",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-769-2025-2485940",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-805-2026-2605145",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-877-2025-2486421",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-971-2025-2486789",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    },
+    {
+      "id": "camara:pl-989-2021-2274504",
+      "final_decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: sem cadeia oficial completa fonte→texto integral→versão/evento independente→voto nominal.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "causal_decision": "withheld",
+      "redteam_decision": "withheld"
+    }
+  ]
+}

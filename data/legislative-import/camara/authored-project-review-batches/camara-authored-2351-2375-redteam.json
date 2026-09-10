@@ -1,0 +1,371 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_review_lane",
+  "batch_id": "2351-2375",
+  "lane": "red-team",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_metadata_only",
+  "counts": {
+    "items": 25,
+    "withheld": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "score_eligible": 0
+  },
+  "ids": [
+    "camara:pl-4463-2024-2470716",
+    "camara:pl-453-2023-2348375",
+    "camara:pl-456-2021-2270279",
+    "camara:pl-4611-2019-2216452",
+    "camara:pl-4633-2020-2263032",
+    "camara:pl-4748-2025-2564260",
+    "camara:pl-4940-2019-2219463",
+    "camara:pl-5096-2020-2265028",
+    "camara:pl-5213-2023-2399527",
+    "camara:pl-5250-2019-2222055",
+    "camara:pl-5434-2025-2577282",
+    "camara:pl-5456-2020-2266592",
+    "camara:pl-5651-2020-2268076",
+    "camara:pl-5756-2019-2227685",
+    "camara:pl-6151-2025-2592120",
+    "camara:pl-6158-2023-2416106",
+    "camara:pl-6210-2019-2230961",
+    "camara:pl-649-2020-2239122",
+    "camara:pl-69-2021-2268713",
+    "camara:pl-714-2020-2239494",
+    "camara:pl-769-2025-2485940",
+    "camara:pl-805-2026-2605145",
+    "camara:pl-877-2025-2486421",
+    "camara:pl-971-2025-2486789",
+    "camara:pl-989-2021-2274504"
+  ],
+  "items": [
+    {
+      "id": "camara:pl-4463-2024-2470716",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2470716"
+    },
+    {
+      "id": "camara:pl-453-2023-2348375",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2348375"
+    },
+    {
+      "id": "camara:pl-456-2021-2270279",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2270279"
+    },
+    {
+      "id": "camara:pl-4611-2019-2216452",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2216452"
+    },
+    {
+      "id": "camara:pl-4633-2020-2263032",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2263032"
+    },
+    {
+      "id": "camara:pl-4748-2025-2564260",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2564260"
+    },
+    {
+      "id": "camara:pl-4940-2019-2219463",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2219463"
+    },
+    {
+      "id": "camara:pl-5096-2020-2265028",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2265028"
+    },
+    {
+      "id": "camara:pl-5213-2023-2399527",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2399527"
+    },
+    {
+      "id": "camara:pl-5250-2019-2222055",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2222055"
+    },
+    {
+      "id": "camara:pl-5434-2025-2577282",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2577282"
+    },
+    {
+      "id": "camara:pl-5456-2020-2266592",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2266592"
+    },
+    {
+      "id": "camara:pl-5651-2020-2268076",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2268076"
+    },
+    {
+      "id": "camara:pl-5756-2019-2227685",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2227685"
+    },
+    {
+      "id": "camara:pl-6151-2025-2592120",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2592120"
+    },
+    {
+      "id": "camara:pl-6158-2023-2416106",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2416106"
+    },
+    {
+      "id": "camara:pl-6210-2019-2230961",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2230961"
+    },
+    {
+      "id": "camara:pl-649-2020-2239122",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2239122"
+    },
+    {
+      "id": "camara:pl-69-2021-2268713",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2268713"
+    },
+    {
+      "id": "camara:pl-714-2020-2239494",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2239494"
+    },
+    {
+      "id": "camara:pl-769-2025-2485940",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2485940"
+    },
+    {
+      "id": "camara:pl-805-2026-2605145",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2605145"
+    },
+    {
+      "id": "camara:pl-877-2025-2486421",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2486421"
+    },
+    {
+      "id": "camara:pl-971-2025-2486789",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2486789"
+    },
+    {
+      "id": "camara:pl-989-2021-2274504",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "official_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2274504"
+    }
+  ]
+}
