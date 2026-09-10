@@ -72,7 +72,7 @@
 
 - Seleção determinística de 25 projetos únicos (, ), 75 ocorrências e 23 candidatos. Todos os itens são ; as 25 URLs oficiais responderam HTTP 200 e o manifesto com bytes/SHA está versionado.
 - Duas lanes com cardinalidade/IDs exatos reconciliadas: , , , ; , . Nenhum fato, score, matriz, Supabase ou Cloudflare foi escrito.
-- Checkpoint atômico: , próximo lote ; QA: .
+- Checkpoint atômico: , próximo lote ; QA: docs/qa/lote-camara-autoria-2051-2075-2026-09-10.md.
 - Bloqueio: requerimento/autoria não prova versão/evento nominal vinculante; manter fail-closed.
 
 ## Tick contínuo — autoria Câmara 1–1600 resolvida em fila factual/source-first — 2026-09-04T20:08Z
@@ -5203,11 +5203,11 @@ Sem autorização humana explícita própria, não fazer:
 ## Tick contínuo — autoria Câmara 2051–2075 retida — 2026-09-10T01:27Z
 
 - Lock exclusivo adquirido com flock; lote determinístico de 25 projetos únicos (offset=2050), 45 ocorrências e 15 candidatos.
-- 25/25 endpoints oficiais Câmara HTTP 200; 32.557 bytes e SHA-256 preservados em .
+- 25/25 endpoints oficiais Câmara HTTP 200; 32.557 bytes e SHA-256 preservados no manifesto camara-authored-2051-2075-source-manifest.json.
 - Lanes causal e red-team com cardinalidade/IDs exatos: 25 withheld, 0 pending_review, 0 approved, 0 score_eligible; content_read=false, remote_apply=false.
 - Bloqueio real: sem texto integral validado, evento/versão independente e voto nominal; autoria não foi promovida a fato de voto, score, matriz ou claim.
 - Checkpoint: projects_analyzed=2075, withheld=2075, blocked_items=85, próximo lote 2076–2100. QA: .
 - Gates: 499/499 testes em 120 arquivos, TypeScript, schema, data:check 1003/988, build 245 módulos e diff-check verdes. Smoke local falhou no teste preexistente de redirecionamento UUID→slug para Julia Bueno Zardo; nenhuma alteração de frontend foi feita.
-- Publicação: commit , backup  success/headSha exato; produção raiz e release HTTP 200, release SHA exato, snapshot 1003.
+- Publicação: commit bfaebb25d20e37cc060e6269b28a144517e716de, backup 34425623208 success/headSha exato; produção raiz e release HTTP 200, release SHA exato, snapshot 1003.
 - Worktree preserva alterações não relacionadas em docs/OPERACAO-ATUAL-PARA-REVISORES.md, opencode.jsonc e scripts/orchestrator/run-opencode.sh; não foram incluídas neste lote.
 - Próximo chunk: iniciar 2076–2100, mantendo fonte oficial, duas lanes e retenção fail-closed.
