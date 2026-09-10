@@ -168,6 +168,11 @@
       "batch_id": "2051-2075",
       "status": "withheld",
       "updated_at": "2026-09-10T01:23:27.138Z"
+    },
+    {
+      "batch_id": "2076-2100",
+      "status": "withheld",
+      "updated_at": "2026-09-10T01:40:26.231Z"
     }
   ],
   "blocked_items": [
@@ -255,18 +260,19 @@
     "1976-2000",
     "authored:2001-2025",
     "2026-2050",
-    "authored:2051-2075"
+    "authored:2051-2075",
+    "authored:2076-2100"
   ],
   "counts": {
-    "projects_analyzed": 2075,
+    "projects_analyzed": 2100,
     "approved": 0,
     "pending_review": 0,
-    "withheld": 2075
+    "withheld": 2100
   },
-  "last_batch": "2051-2075",
-  "next_batch": "2076-2100",
+  "last_batch": "2076-2100",
+  "next_batch": "2101-2125",
   "heartbeat": {
-    "at": "2026-09-10T01:23:27.148Z",
-    "pid": 466324
+    "at": "2026-09-10T01:40:26.241Z",
+    "pid": 499995
   }
 }
