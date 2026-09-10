@@ -45,4 +45,9 @@ Apesar dos metadados e URLs oficiais, não houve validação de texto integral, 
 - Nenhuma escrita Supabase/Cloudflare factual foi executada.
 
 ## Publicação
-Após os gates verdes, fechar este lote com commit/push, CI e workflow backup; confirmar produção pelo SHA exato antes de iniciar o lote seguinte.
+Após os gates verdes, o lote foi publicado e verificado:
+- Commit inicial: `4306c356636242fec95aaa46849a2d2c23852235` em `origin/main`.
+- Deploy primário `34434666674`: `completed/success`, `headSha` exato.
+- Backup Cloudflare `334951434`, run `34434677712`: `completed/success`, `headSha` exato.
+- Produção: raiz HTTP 200; `/release.json` HTTP 200, SHA exato `4306c356636242fec95aaa46849a2d2c23852235`, versão `0.2.1281`, snapshot `row_count=1003`.
+- Lote fechado; próximo lote permanece `2376–2400`, sem iniciar nesta execução.
