@@ -50,3 +50,12 @@ A revalidação oficial comprova identidade e metadados, mas não valida texto i
 - O aviso de UUID inválido pertence a fixture negativa esperada e não falhou teste.
 
 Todos os gates locais obrigatórios ficaram verdes.
+
+## Publicação e verificação
+- Commit de artefatos: `5aba3ba22ca94000307cf3736f65930cbd7a4df4`, publicado em `origin/main`.
+- CI Deploy run `34541805834`: `completed/success`, quality, build, deploy e smoke verdes; `headSha` exato.
+- Backup Cloudflare workflow `334951434`, run `34541834087`: `completed/success`; `headSha` exato.
+- Produção: raiz HTTP 200 e `/release.json` HTTP 200.
+- `release.json` confirmou SHA exato `5aba3ba22ca94000307cf3736f65930cbd7a4df4`, versão `0.2.1296` e snapshot `row_count=1003`.
+
+O lote está fechado. Não iniciar `2501–2525` nesta execução documental.
