@@ -5243,3 +5243,15 @@ Sem autorização humana explícita própria, não fazer:
 - Publicação: commit bfaebb25d20e37cc060e6269b28a144517e716de, backup 34425623208 success/headSha exato; produção raiz e release HTTP 200, release SHA exato, snapshot 1003.
 - Worktree preserva alterações não relacionadas em docs/OPERACAO-ATUAL-PARA-REVISORES.md, opencode.jsonc e scripts/orchestrator/run-opencode.sh; não foram incluídas neste lote.
 - Próximo chunk: iniciar 2076–2100, mantendo fonte oficial, duas lanes e retenção fail-closed.
+
+
+## Tick contínuo — autoria Câmara 2176–2200 retida — 2026-09-10
+
+- Lock exclusivo flock adquirido em .orchestrator/runtime/locks/continuous-progress.lock; único writer local.
+- Seleção determinística: 25 projetos únicos (offset=2175, limit=25), 57 ocorrências candidato–projeto e 18 candidatos.
+- Revalidação oficial: 25/25 URLs Câmara HTTP 200, 25/25 identidades dados.id exatas; 33.335 bytes e SHA-256 preservados em data/legislative-import/camara/authored-project-review-batches/camara-authored-2176-2200-source-manifest.json.
+- Lanes causal/red-team: 25/25 IDs exatos em cada lane; reconciliação 25 withheld, 0 pending_review, 0 approved, 0 score_eligible; content_read=false, remote_apply=false.
+- Bloqueio real: sem texto integral validado, versão/evento independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score. Nenhum fato, claim, voto, matéria, matriz, score, Supabase ou Cloudflare factual foi escrito.
+- Checkpoint: projects_analyzed=2200, withheld=2200, blocked_items=90, próximo lote 2201–2225; QA docs/qa/lote-camara-autoria-2176-2200-2026-09-10.md.
+- Gates Node 24 verdes: 499/499 testes em 120 arquivos, TypeScript, schema, data:check (1003/988), build (245 módulos; sitemap 1003+2) e git diff --check.
+- Próximo passo: fechar publicação deste checkpoint; só então iniciar 2201–2225, sem aplicação factual remota.
