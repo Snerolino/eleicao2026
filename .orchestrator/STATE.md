@@ -5270,3 +5270,9 @@ Sem autorização humana explícita própria, não fazer:
 - QA corrigido para distinguir o commit de artefatos `07d4abb` do commit documental final `78b5632a9846823af158cc3f160f2eba40aa3001`.
 - Backup `334951434`, run `34429763360`, `completed/success`, `headSha` exato `78b5632a9846823af158cc3f160f2eba40aa3001`.
 - Produção raiz HTTP 200 e `/release.json` HTTP 200 confirmaram o SHA final exato; snapshot `row_count=1003`.
+
+
+## Fechamento final de publicação — autoria Câmara 2176–2200
+
+- QA reconciliado com o commit live final `196e8012dad014b9d26f68d3dbe7a8fe792ed506`; o lote e seus artefatos não mudaram.
+- Backup `334951434`, run `34429860066`, `completed/success`, `headSha` exato. Produção confirmou o mesmo SHA, HTTP 200 e snapshot `row_count=1003`.
