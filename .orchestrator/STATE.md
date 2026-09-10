@@ -5391,3 +5391,17 @@ Sem autorização humana explícita própria, não fazer:
 - Checkpoint: projects_analyzed=2350, withheld=2350, blocked_items=96, próximo lote 2351–2375; QA docs/qa/lote-camara-autoria-2326-2350-2026-09-10.md.
 - Gates Node 24.19.0 verdes: 499/499 testes em 120 arquivos, TypeScript, schema, data:check 1003/988, build 245 módulos/sitemap 1003+2 e git diff --check.
 - Próximo passo: fechar publicação/verificação deste lote; não iniciar 2351–2375 antes do fechamento.
+
+
+## Tick contínuo — autoria Câmara 2376–2400 retida — 2026-09-10
+
+- Lock exclusivo adquirido corretamente com `exec 9>...; flock -x 9`; único writer local. A tentativa anterior sem descritor aberto foi descartada e repetida integralmente sob lock.
+- Seleção determinística: `25` projetos únicos (`offset=2375`, `limit=25`), `50` ocorrências candidato–projeto e `21` candidatos.
+- Revalidação oficial: `25/25` endpoints Câmara HTTP 200, identidade exata `dados.id` em `25/25`; `212.064` bytes e SHA-256 individuais preservados em `data/legislative-import/camara/authored-project-review-batches/camara-authored-2376-2400-source-manifest.json`.
+- Cobertura catalogada: `23/25` URLs de texto integral oficiais e `18/25` eventos independentes distintos; conteúdo não lido/validado.
+- Lanes causal/red-team: `25/25` IDs exatos em cada lane; reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
+- Bloqueio real: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score. Nenhum fato, claim, voto, matéria, matriz, score, projeto público ou escrita remota foi promovido.
+- Checkpoint: `projects_analyzed=2400`, `withheld=2400`, `blocked_items=98`, próximo lote `2401–2425`.
+- QA: `docs/qa/lote-camara-autoria-2376-2400-2026-09-10.md`.
+- Gates Node 24 verdes: `499/499` testes em `120` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos/sitemap `1003+2`, invariantes de artefato verdes; `git diff --check` RC 0 após restauração de churn não relacionado.
+- Nenhuma migration, RLS, Auth, Storage ou Edge Function foi alterada; nenhuma escrita factual Supabase/Cloudflare foi executada.
