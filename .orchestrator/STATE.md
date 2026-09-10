@@ -5276,3 +5276,13 @@ Sem autorização humana explícita própria, não fazer:
 
 - QA reconciliado com o commit live final `196e8012dad014b9d26f68d3dbe7a8fe792ed506`; o lote e seus artefatos não mudaram.
 - Backup `334951434`, run `34429860066`, `completed/success`, `headSha` exato. Produção confirmou o mesmo SHA, HTTP 200 e snapshot `row_count=1003`.
+
+
+## Tick contínuo — autoria Câmara 2201–2225 retida — 2026-09-09
+
+- Lock exclusivo flock adquirido; lote determinístico de 25 projetos únicos (offset=2200, limit=25).
+- Fonte oficial Câmara: 25/25 HTTP 200, identidade `dados.id` exata em 25/25; 36.263 bytes e SHA-256 preservados em `data/legislative-import/camara/authored-project-review-batches/camara-authored-2201-2225-source-manifest.json`.
+- Lanes causal/red-team: 25/25 IDs exatos em cada lane; reconciliação 25 withheld, 0 pending_review, 0 approved, 0 score_eligible; `content_read=false`, `remote_apply=false`.
+- Bloqueio real: sem texto integral validado, versão/evento independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.
+- Checkpoint: `projects_analyzed=2225`, `withheld=2225`, `blocked_items=91`, próximo lote `2226–2250`; QA `docs/qa/lote-camara-autoria-2201-2225-2026-09-09.md`.
+- Próximo passo: gates locais completos; se verdes, publicar e iniciar 2226–2250, sem aplicação factual remota.
