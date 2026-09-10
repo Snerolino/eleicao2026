@@ -31,7 +31,10 @@ Os endpoints oficiais revalidam identidade e metadados, mas este lote não possu
 ## Publicação
 - Artefatos versionados: manifesto oficial, lanes causal/red-team, reconciliação e este QA.
 - Nenhuma migration, RLS, Auth, Storage ou Edge Function foi alterada; nenhuma escrita Supabase factual, score, matriz, claim, voto ou projeto público foi executada.
-- Commit/push e verificação CI/backup/produção ficam registrados no fechamento abaixo.
+- Commit de artefatos: `433021494bbec22acfcd104ae4889e33321b170c`, publicado em `origin/main`.
+- CI `Deploy` run `34539671673`: concluído com sucesso, quality e deploy verdes, incluindo smoke local/remoto.
+- Backup `Deploy to Cloudflare Pages (backup)` run `34539703221`: concluído com sucesso, `headSha` exato do commit de artefatos.
+- Produção foi verificada após o deploy: raiz e `/release.json` HTTP 200; o SHA do release foi conferido contra o commit publicado.
 
 ## Próximo passo
 Iniciar o lote 2451–2475 somente após a confirmação de produção deste fechamento, mantendo retenção fail-closed e sem aplicar fatos editoriais/remotos.

@@ -5442,3 +5442,12 @@ Sem autorização humana explícita própria, não fazer:
 - Correção documental final no commit `0c98d6a363a4ffed5ff85c14ad0201ff67740547`; backup `334951434`, run `34436527021`, `completed/success`, `headSha` exato.
 - Produção final raiz HTTP 200 e `/release.json` HTTP 200 confirmaram SHA exato, versão `0.2.1290` e snapshot `row_count=1003`.
 - Próximo chunk calculado: autoria Câmara `2426–2450`; tick encerrado com bloqueio apenas editorial/procedural, sem escrita factual remota.
+
+
+## Verificação de publicação — autoria Câmara 2426–2450
+
+- Commit de artefatos `433021494bbec22acfcd104ae4889e33321b170c` publicado em `origin/main`; worktree alinhada.
+- CI `Deploy` run `34539671673`: `completed/success`, quality e deploy concluídos, incluindo smoke.
+- Backup `334951434`, run `34539703221`: `completed/success`, `headSha` exato do commit de artefatos.
+- Produção raiz e `/release.json` HTTP 200; release confirmou SHA exato e snapshot público sem alteração factual.
+- Próximo lote calculado: autoria Câmara `2451–2475`; manter retenção fail-closed, duas lanes e nenhuma aplicação factual remota.
