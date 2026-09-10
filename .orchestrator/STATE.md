@@ -5356,3 +5356,14 @@ Sem autorização humana explícita própria, não fazer:
 - Backup `334951434`, run `34430877513`, `completed/success`, `headSha` exato.
 - Produção raiz HTTP 200 e `/release.json` HTTP 200 confirmaram SHA exato, release `0.2.1267` e snapshot `row_count=1003`.
 - O lote está fechado; próximo chunk calculado: autoria Câmara `2251–2275`, mantendo retenção fail-closed.
+
+## Tick contínuo — autoria Câmara 2326–2350 retida — 2026-09-10
+
+- Lock exclusivo flock adquirido em .orchestrator/runtime/locks/continuous-progress.lock; único writer local.
+- Seleção determinística: 25 projetos únicos (offset=2325, limit=25), 50 ocorrências candidato–projeto e 18 candidatos.
+- Revalidação oficial: 25/25 endpoints Câmara HTTP 200, identidade exata 25/25; 46.538 bytes e SHA-256 no manifesto camara-authored-2326-2350-source-manifest.json.
+- Lanes causal/red-team: 25/25 IDs exatos em cada lane; reconciliação 25 withheld, 0 pending_review, 0 approved, 0 score_eligible; content_read=false, remote_apply=false.
+- Bloqueio real: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score. Nenhum fato, claim, voto, matéria, matriz, score ou escrita remota foi promovido.
+- Checkpoint: projects_analyzed=2350, withheld=2350, blocked_items=96, próximo lote 2351–2375; QA docs/qa/lote-camara-autoria-2326-2350-2026-09-10.md.
+- Gates Node 24.19.0 verdes: 499/499 testes em 120 arquivos, TypeScript, schema, data:check 1003/988, build 245 módulos/sitemap 1003+2 e git diff --check.
+- Próximo passo: fechar publicação/verificação deste lote; não iniciar 2351–2375 antes do fechamento.

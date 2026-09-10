@@ -1,0 +1,545 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_review_lane",
+  "batch_id": "2326-2350",
+  "lane": "red-team",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "counts": {
+    "items": 25,
+    "withheld": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "score_eligible": 0
+  },
+  "ids": [
+    "camara:pl-3165-2020-2254734",
+    "camara:pl-3336-2025-2534350",
+    "camara:pl-3395-2020-2255564",
+    "camara:pl-3503-2020-2256208",
+    "camara:pl-3596-2020-2256634",
+    "camara:pl-3622-2025-2538430",
+    "camara:pl-3645-2025-2539035",
+    "camara:pl-3656-2021-2303340",
+    "camara:pl-3660-2020-2256863",
+    "camara:pl-367-2022-2315091",
+    "camara:pl-3679-2020-2256940",
+    "camara:pl-3681-2025-2539268",
+    "camara:pl-3735-2020-2257354",
+    "camara:pl-3854-2020-2257942",
+    "camara:pl-3880-2024-2462009",
+    "camara:pl-3917-2020-2258561",
+    "camara:pl-4041-2020-2259201",
+    "camara:pl-4074-2021-2307615",
+    "camara:pl-4075-2021-2307619",
+    "camara:pl-4183-2023-2383411",
+    "camara:pl-4184-2025-2551371",
+    "camara:pl-4215-2021-2309581",
+    "camara:pl-4298-2020-2260764",
+    "camara:pl-4360-2024-2468655",
+    "camara:pl-4383-2020-2261160"
+  ],
+  "items": [
+    {
+      "id": "camara:pl-3165-2020-2254734",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-3336-2025-2534350",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-3395-2020-2255564",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-3503-2020-2256208",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-3596-2020-2256634",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-3622-2025-2538430",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-3645-2025-2539035",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-3656-2021-2303340",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-3660-2020-2256863",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-367-2022-2315091",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-3679-2020-2256940",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-3681-2025-2539268",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-3735-2020-2257354",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-3854-2020-2257942",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-3880-2024-2462009",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-3917-2020-2258561",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-4041-2020-2259201",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-4074-2021-2307615",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-4075-2021-2307619",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-4183-2023-2383411",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-4184-2025-2551371",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-4215-2021-2309581",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-4298-2020-2260764",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-4360-2024-2468655",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    },
+    {
+      "id": "camara:pl-4383-2020-2261160",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Autoria e metadados oficiais não demonstram mecanismo causal nem posição legislativa.",
+      "missing_sources": [
+        "full_text_validated",
+        "independent_event_or_version",
+        "nominal_vote"
+      ],
+      "counterargument": "Não promover autoria a voto, impacto ou score sem cadeia oficial completa.",
+      "checks": {
+        "identity_exact": true,
+        "official_source_http_200": true,
+        "full_text_validated": false,
+        "independent_event": false,
+        "nominal_vote": false
+      }
+    }
+  ]
+}
