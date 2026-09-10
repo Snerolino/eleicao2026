@@ -71,3 +71,6 @@ O lote está fechado. Não iniciar `2501–2525` nesta execução documental.
 - A limpeza do estado concorrente foi consolidada no commit `c049323205f6558b5c95cb3602535e6409f5dfb5`, publicado em `origin/main`; checkpoint final continua `2476–2500` → `2501–2525`.
 - Backup `334951434`, run `34542906531`: `completed/success`, `headSha` exato.
 - Produção raiz e `/release.json`: HTTP 200; SHA exato `c049323205f6558b5c95cb3602535e6409f5dfb5`, versão `0.2.1303`, snapshot `row_count=1003`.
+
+## Reversão concorrente final
+- O segundo writer concorrente foi encerrado antes de nova mutação; o commit `4fcfe5ea0d29bceb67f3fd582bfe4dd0f8914264` removeu integralmente `2501–2525`. Checkpoint final: `projects_analyzed=2500`, próximo `2501–2525`; nenhum artefato do lote seguinte permanece.

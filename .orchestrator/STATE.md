@@ -7,7 +7,7 @@
 
 ## Verificação de publicação — autoria Câmara 2476–2500
 
-- Fechamento final corretivo atual: commit `c049323205f6558b5c95cb3602535e6409f5dfb5` (limpeza documental após reversão de qualquer avanço concorrente para `2501–2525`); worktree e origin devem permanecer neste SHA até nova autorização.
+- Fechamento final corretivo atual: commit `4fcfe5ea0d29bceb67f3fd582bfe4dd0f8914264` (limpeza documental após reversão de qualquer avanço concorrente para `2501–2525`); worktree e origin devem permanecer neste SHA até nova autorização.
 
 - Commit `5aba3ba22ca94000307cf3736f65930cbd7a4df4` publicado em `origin/main`; `git ls-remote` confirmou alinhamento.
 - CI Deploy run `34541805834`: `completed/success`, `headSha` exato.
