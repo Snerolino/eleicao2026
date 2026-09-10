@@ -1,3 +1,15 @@
+## Tick contínuo — autoria Câmara 2451–2475 retida — 2026-09-10
+
+- Lock exclusivo adquirido com `flock` em `.orchestrator/runtime/locks/continuous-progress.lock`; único writer local.
+- Seleção determinística: `25` projetos únicos (`offset=2450`, `limit=25`), `50` ocorrências candidato–projeto.
+- Revalidação oficial: `25/25` endpoints Câmara HTTP 200, identidade `dados.id` exata `25/25`; `77.621` bytes somados em proposição/tramitação e `50` SHA-256 preservados no manifesto `data/legislative-import/camara/authored-project-review-batches/camara-authored-2451-2475-source-manifest.json`.
+- Cobertura catalogada: texto integral `25/25` e evento/tramitação independente `25/25`; conteúdo não lido/validado; classificação `25 procedural_only`.
+- Lanes causal/red-team: `25/25` IDs exatos em cada lane; reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
+- Bloqueio real: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa/procedimento não prova posição, efeito causal ou score. Nenhum fato, claim, voto, matéria, matriz, score, projeto público ou escrita remota foi promovido.
+- Checkpoint: `projects_analyzed=2475`, `withheld=2475`, `blocked_items=101`, próximo lote `2476–2500`.
+- QA: `docs/qa/lote-camara-autoria-2451-2475-2026-09-10.md`.
+- Gates Node `v24.18.1` verdes: `499/499` testes em `120` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos/sitemap `1003+2=1005` URLs e `git diff --check`; nenhuma migration, RLS, Auth, Storage ou Edge Function foi alterada.
+
 ## Tick contínuo — autoria Câmara 2351–2375 retida — 2026-09-10
 
 - Lock exclusivo adquirido com `flock` em `.orchestrator/runtime/locks/continuous-progress.lock`; único writer local.

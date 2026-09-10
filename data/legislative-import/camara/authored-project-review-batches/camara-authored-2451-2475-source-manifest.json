@@ -1,0 +1,821 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2451-2475",
+  "mode": "read-only",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_metadata_only",
+  "ids": [
+    "camara:req-120-2023-2365763",
+    "camara:req-1202-2021-2285627",
+    "camara:req-1203-2021-2285630",
+    "camara:req-1207-2020-2253327",
+    "camara:req-1207-2022-2332311",
+    "camara:req-121-2023-2365764",
+    "camara:req-1217-2020-2253373",
+    "camara:req-122-2023-2365765",
+    "camara:req-123-2023-2365766",
+    "camara:req-1232-2020-2253509",
+    "camara:req-1232-2023-2356979",
+    "camara:req-1235-2023-2357038",
+    "camara:req-1239-2023-2357393",
+    "camara:req-124-2023-2365767",
+    "camara:req-1242-2022-2332776",
+    "camara:req-125-2023-2365768",
+    "camara:req-125-2023-2406794",
+    "camara:req-126-2023-2365769",
+    "camara:req-1268-2020-2253679",
+    "camara:req-1269-2020-2253680",
+    "camara:req-127-2023-2365770",
+    "camara:req-128-2023-2365771",
+    "camara:req-1285-2021-2286735",
+    "camara:req-1286-2022-2333466",
+    "camara:req-129-2023-2365772"
+  ],
+  "items": [
+    {
+      "id": "camara:req-120-2023-2365763",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365763",
+      "identity": {
+        "url_id": "2365763",
+        "dados_id": "2365763",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365763",
+        "status": 200,
+        "bytes": 1495,
+        "sha256": "sha256:3b0104bf2720bc448833b94e0110ab0fc2d2dc2f71022ffebcee73b2c99072c4"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2279649",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2279649",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365763/tramitacoes",
+        "status": 200,
+        "bytes": 1396,
+        "sha256": "sha256:9ab7609916b9df9a4f8167676cc20bd0669b920398d951ca3ba46149b849398e",
+        "items": 2
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534588",
+        "210002534598"
+      ]
+    },
+    {
+      "id": "camara:req-1202-2021-2285627",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2285627",
+      "identity": {
+        "url_id": "2285627",
+        "dados_id": "2285627",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2285627",
+        "status": 200,
+        "bytes": 1700,
+        "sha256": "sha256:214dfbeda02230736ac0a14d4aa1f8524f9abb82ec8234edda13013b396ff5ae"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2022314",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2030526",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2285627/tramitacoes",
+        "status": 200,
+        "bytes": 4404,
+        "sha256": "sha256:edf51ac97ce90422c0a6b8e5c7cabad245e2f158af5052bdc1e2994c30aff112",
+        "items": 7
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534292",
+        "210002547816"
+      ]
+    },
+    {
+      "id": "camara:req-1203-2021-2285630",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2285630",
+      "identity": {
+        "url_id": "2285630",
+        "dados_id": "2285630",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2285630",
+        "status": 200,
+        "bytes": 1193,
+        "sha256": "sha256:c8ad9e7bb442c054522c1a1ab4a4080e57e115bab0981a381017abb77b36c378"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2022328",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2035167",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2285630/tramitacoes",
+        "status": 200,
+        "bytes": 1637,
+        "sha256": "sha256:74bf671b50a986b4b2f4c93f3f68c83a4f32101729652bebce38f8423a2f8f25",
+        "items": 3
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534604",
+        "210002533902"
+      ]
+    },
+    {
+      "id": "camara:req-1207-2020-2253327",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2253327",
+      "identity": {
+        "url_id": "2253327",
+        "dados_id": "2253327",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2253327",
+        "status": 200,
+        "bytes": 1181,
+        "sha256": "sha256:7c16a202629b542798aa03dbd1d4ac78841dd4b52b4aaa359f4b26f0202bc4aa"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1896012",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1896014",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2253327/tramitacoes",
+        "status": 200,
+        "bytes": 1632,
+        "sha256": "sha256:200458fb2b056d731219dd9e63a7288ba6a85b4570fd7a081ea1eb25cfbc7e34",
+        "items": 3
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534598",
+        "210002533902"
+      ]
+    },
+    {
+      "id": "camara:req-1207-2022-2332311",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2332311",
+      "identity": {
+        "url_id": "2332311",
+        "dados_id": "2332311",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2332311",
+        "status": 200,
+        "bytes": 1544,
+        "sha256": "sha256:a139d1516c315050d23d5441ccffe22722f23d8b499eea5cdeac369683d0711b"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2197650",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2197651",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2332311/tramitacoes",
+        "status": 200,
+        "bytes": 2446,
+        "sha256": "sha256:687d325a708091b43b74de4eef438e8c53bb81390fab712f620f9fb7e1581796",
+        "items": 4
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534897",
+        "210002534656"
+      ]
+    },
+    {
+      "id": "camara:req-121-2023-2365764",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365764",
+      "identity": {
+        "url_id": "2365764",
+        "dados_id": "2365764",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365764",
+        "status": 200,
+        "bytes": 1404,
+        "sha256": "sha256:5331c21de9622fa9e1b37d24a78a650e12b4e6e1f0a106c4c5f6b58e8845d0d5"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2279650",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2279650",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365764/tramitacoes",
+        "status": 200,
+        "bytes": 1382,
+        "sha256": "sha256:a759a52c39801cdc816410e671623828434967c52615b356b5765dd8fce48bbd",
+        "items": 2
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534588",
+        "210002534598"
+      ]
+    },
+    {
+      "id": "camara:req-1217-2020-2253373",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2253373",
+      "identity": {
+        "url_id": "2253373",
+        "dados_id": "2253373",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2253373",
+        "status": 200,
+        "bytes": 1151,
+        "sha256": "sha256:f50058e109b1ec1d69221b5bb4fde28d51f85964de4e0e64f6402d1a5276ec6b"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1896183",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1896183",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2253373/tramitacoes",
+        "status": 200,
+        "bytes": 1130,
+        "sha256": "sha256:2c9c44a8a9d847d7c77830e9b01679a6914d917e9613d3b3ac66d3cccef6849f",
+        "items": 2
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534604",
+        "210002533902"
+      ]
+    },
+    {
+      "id": "camara:req-122-2023-2365765",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365765",
+      "identity": {
+        "url_id": "2365765",
+        "dados_id": "2365765",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365765",
+        "status": 200,
+        "bytes": 1339,
+        "sha256": "sha256:6430022c62ab0b2e8863980da7a413f79413a2ad9fdaba74a606289bd327d6f0"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2279657",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2279657",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365765/tramitacoes",
+        "status": 200,
+        "bytes": 1316,
+        "sha256": "sha256:bf7fd0d0cc1c5eaf0863777c4db8ce742972f400e7fad33b8e8d214758cf1571",
+        "items": 2
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534588",
+        "210002534598"
+      ]
+    },
+    {
+      "id": "camara:req-123-2023-2365766",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365766",
+      "identity": {
+        "url_id": "2365766",
+        "dados_id": "2365766",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365766",
+        "status": 200,
+        "bytes": 1348,
+        "sha256": "sha256:b174c3689d46497ab5552e3a2c3fb327bff714927215dee6a266f31d7c2b120c"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2279658",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2279658",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365766/tramitacoes",
+        "status": 200,
+        "bytes": 1326,
+        "sha256": "sha256:e601baf334a4c4010d047f0baf07926baf8eb6afa056cd0f2435a3cc90f7cd0b",
+        "items": 2
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534588",
+        "210002534598"
+      ]
+    },
+    {
+      "id": "camara:req-1232-2020-2253509",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2253509",
+      "identity": {
+        "url_id": "2253509",
+        "dados_id": "2253509",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2253509",
+        "status": 200,
+        "bytes": 1209,
+        "sha256": "sha256:759b1ce85163f2586b1cef82f60d1e075d147d65b170df92b88db54f51fa1ea8"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1896706",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1898485",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2253509/tramitacoes",
+        "status": 200,
+        "bytes": 1649,
+        "sha256": "sha256:9b5818240a9d20136a24b8ccf41c18e67492c7e8e7b5ce0dbd2703a166211c9d",
+        "items": 3
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534604",
+        "210002534598"
+      ]
+    },
+    {
+      "id": "camara:req-1232-2023-2356979",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2356979",
+      "identity": {
+        "url_id": "2356979",
+        "dados_id": "2356979",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2356979",
+        "status": 200,
+        "bytes": 1373,
+        "sha256": "sha256:4e82fdf7043cb754151b4a77b591ac7f2f4d71783a664cef947f1b30974af645"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2260014",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2260015",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2356979/tramitacoes",
+        "status": 200,
+        "bytes": 1446,
+        "sha256": "sha256:bbd0a7bc73c260d1232ef09d4f407eb08b2cedb65db9b968d01d30de5eeee20d",
+        "items": 2
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002537718",
+        "210002538541"
+      ]
+    },
+    {
+      "id": "camara:req-1235-2023-2357038",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2357038",
+      "identity": {
+        "url_id": "2357038",
+        "dados_id": "2357038",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2357038",
+        "status": 200,
+        "bytes": 1299,
+        "sha256": "sha256:2f369a612d2b4c8ccc513c9bb63c22c6987ba2266946a4edc74d368485b0ff82"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2260117",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2269299",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2357038/tramitacoes",
+        "status": 200,
+        "bytes": 1654,
+        "sha256": "sha256:72870c0083abc9d8eaaac1ca6c9e7fe3031e54ba76d19eb6176b2d930d71c238",
+        "items": 3
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534654",
+        "210002547819"
+      ]
+    },
+    {
+      "id": "camara:req-1239-2023-2357393",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2357393",
+      "identity": {
+        "url_id": "2357393",
+        "dados_id": "2357393",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2357393",
+        "status": 200,
+        "bytes": 1423,
+        "sha256": "sha256:27706dd98c5b92e2000d4d9ecf210626d79b2fef83aeb7500c25aaa07c306281"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2260662",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2260663",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2357393/tramitacoes",
+        "status": 200,
+        "bytes": 2396,
+        "sha256": "sha256:be9b623d0c9e2f9278a0dce64d2d04ea2e87a8de6934bd0dfee91f2251169444",
+        "items": 4
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534601",
+        "210002538556"
+      ]
+    },
+    {
+      "id": "camara:req-124-2023-2365767",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365767",
+      "identity": {
+        "url_id": "2365767",
+        "dados_id": "2365767",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365767",
+        "status": 200,
+        "bytes": 1352,
+        "sha256": "sha256:3bb1d6c8c73313b94c2321453c684db3c1ae23a50af201b3bbfb1ef3dd73c382"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2279659",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2279659",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365767/tramitacoes",
+        "status": 200,
+        "bytes": 1330,
+        "sha256": "sha256:64681900ff6a4142e96728ad0ef0233670e6be22266f5f6589f95edc57bf5c00",
+        "items": 2
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534588",
+        "210002534598"
+      ]
+    },
+    {
+      "id": "camara:req-1242-2022-2332776",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2332776",
+      "identity": {
+        "url_id": "2332776",
+        "dados_id": "2332776",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2332776",
+        "status": 200,
+        "bytes": 1276,
+        "sha256": "sha256:326e46bc1a4c6e777b88ccfb3a5cbda6b6f424d398c66ff861944e0ade5adf12"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2198853",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2199186",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2332776/tramitacoes",
+        "status": 200,
+        "bytes": 1708,
+        "sha256": "sha256:945e2a6481ffe2c13ea1aa157286a64d766a2bab840701c93029c31f85695849",
+        "items": 3
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534601",
+        "210002534598"
+      ]
+    },
+    {
+      "id": "camara:req-125-2023-2365768",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365768",
+      "identity": {
+        "url_id": "2365768",
+        "dados_id": "2365768",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365768",
+        "status": 200,
+        "bytes": 1330,
+        "sha256": "sha256:b259c3c9d29d3a441d6cf0bb1b19cd09043e46b9f000995ff2d313b8256aacf1"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2279660",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2279660",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365768/tramitacoes",
+        "status": 200,
+        "bytes": 1309,
+        "sha256": "sha256:beafa2825c010bf70e5bea7f7d6d7aa9da1e26600db294ff69bc1e0f57156078",
+        "items": 2
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534588",
+        "210002534598"
+      ]
+    },
+    {
+      "id": "camara:req-125-2023-2406794",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2406794",
+      "identity": {
+        "url_id": "2406794",
+        "dados_id": "2406794",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2406794",
+        "status": 200,
+        "bytes": 1396,
+        "sha256": "sha256:f9f696c263b8d9b99878b384da45966916e9d794da76ee6b525bdda7e631ebee"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2364770",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2364770",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2406794/tramitacoes",
+        "status": 200,
+        "bytes": 1379,
+        "sha256": "sha256:66a8a1bf1515a1d7be901cff9bf46b9e23831576d9af417bb089b49d3ec35e99",
+        "items": 2
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002547857",
+        "210002547819"
+      ]
+    },
+    {
+      "id": "camara:req-126-2023-2365769",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365769",
+      "identity": {
+        "url_id": "2365769",
+        "dados_id": "2365769",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365769",
+        "status": 200,
+        "bytes": 1311,
+        "sha256": "sha256:fe7be2fd549c30b0d4cd922c8b5b47d7b1f7bacb497e20bf1c11ba3bf9d7f19c"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2279661",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2279661",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365769/tramitacoes",
+        "status": 200,
+        "bytes": 1289,
+        "sha256": "sha256:21f888cfadf2320f36387ca974061c80aff80367321f6c5a2c2b35a72581ecce",
+        "items": 2
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534588",
+        "210002534598"
+      ]
+    },
+    {
+      "id": "camara:req-1268-2020-2253679",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2253679",
+      "identity": {
+        "url_id": "2253679",
+        "dados_id": "2253679",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2253679",
+        "status": 200,
+        "bytes": 1387,
+        "sha256": "sha256:835789b764f900f7ef71bf580493675d25915f1efea20f6a4f901158d1dfc3de"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1897488",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1914413",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2253679/tramitacoes",
+        "status": 200,
+        "bytes": 2245,
+        "sha256": "sha256:e4690b8ed77793a38cfa5d29b6186c866aa6fc12b1a3ad86c55d8cfdb3512918",
+        "items": 4
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534601",
+        "210002534598"
+      ]
+    },
+    {
+      "id": "camara:req-1269-2020-2253680",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2253680",
+      "identity": {
+        "url_id": "2253680",
+        "dados_id": "2253680",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2253680",
+        "status": 200,
+        "bytes": 1504,
+        "sha256": "sha256:04eb6ca9388de808acd5d1fde0f32ca7cfe0cc576db4dc7db4f28f990a33e34a"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1897490",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1955797",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2253680/tramitacoes",
+        "status": 200,
+        "bytes": 2246,
+        "sha256": "sha256:30aefded36037b5d115b1b44373fb823bd1778af76741040669fb5e9649826aa",
+        "items": 3
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534601",
+        "210002534598"
+      ]
+    },
+    {
+      "id": "camara:req-127-2023-2365770",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365770",
+      "identity": {
+        "url_id": "2365770",
+        "dados_id": "2365770",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365770",
+        "status": 200,
+        "bytes": 1381,
+        "sha256": "sha256:f76b87e78cfb064220d0a46ab007b979d96bc09a01d236c906f4eadefb29cb81"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2279662",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2279662",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365770/tramitacoes",
+        "status": 200,
+        "bytes": 1359,
+        "sha256": "sha256:72ecf255ed8bb023c8991c9d49ba5b5e9d5bdb2bd2b488a2aa2a1f243fc1fc17",
+        "items": 2
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534588",
+        "210002534598"
+      ]
+    },
+    {
+      "id": "camara:req-128-2023-2365771",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365771",
+      "identity": {
+        "url_id": "2365771",
+        "dados_id": "2365771",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365771",
+        "status": 200,
+        "bytes": 1315,
+        "sha256": "sha256:891b076c9ff7ba7007cd3072cc6ef42904dd7611326d30d91a1b224ac0010243"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2279663",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2279663",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365771/tramitacoes",
+        "status": 200,
+        "bytes": 1293,
+        "sha256": "sha256:936d6d4a11809cc3c6619d17c434fda302df7cde935fcc5185a05a89bf5b87ed",
+        "items": 2
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534588",
+        "210002534598"
+      ]
+    },
+    {
+      "id": "camara:req-1285-2021-2286735",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2286735",
+      "identity": {
+        "url_id": "2286735",
+        "dados_id": "2286735",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2286735",
+        "status": 200,
+        "bytes": 1248,
+        "sha256": "sha256:d50488e38af25f890873cf7c8cbe118033bfc0d35285b76a4fd0c0b73fae22a4"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2027407",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2027409",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2286735/tramitacoes",
+        "status": 200,
+        "bytes": 1682,
+        "sha256": "sha256:b0a6f4e5fc422ce5f45b6151bdceab68b3fcc4bb37816ecaba8185fc4880e29c",
+        "items": 3
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002537717",
+        "210002547819"
+      ]
+    },
+    {
+      "id": "camara:req-1286-2022-2333466",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2333466",
+      "identity": {
+        "url_id": "2333466",
+        "dados_id": "2333466",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2333466",
+        "status": 200,
+        "bytes": 1381,
+        "sha256": "sha256:17c07a72555005bdb1c27bf8e00187dddd29ee284d85c8f59d9bfd6dcd17bd06"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2200977",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2200978",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2333466/tramitacoes",
+        "status": 200,
+        "bytes": 2661,
+        "sha256": "sha256:212d4b94e5151c359c2f1f2fa6990c676c517e421858078bfe032f7f826f93ca",
+        "items": 5
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002537057",
+        "210002538541"
+      ]
+    },
+    {
+      "id": "camara:req-129-2023-2365772",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365772",
+      "identity": {
+        "url_id": "2365772",
+        "dados_id": "2365772",
+        "exact": true
+      },
+      "proposition_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365772",
+        "status": 200,
+        "bytes": 1394,
+        "sha256": "sha256:ba59657bd0c1ab5b99f7497485f11cd658b59dc5cf89d1e9a625673662425aee"
+      },
+      "full_text_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2279664",
+      "event_url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2279664",
+      "tramitacoes_api": {
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2365772/tramitacoes",
+        "status": 200,
+        "bytes": 1372,
+        "sha256": "sha256:e97e816fdb36c92b107f2ea7150514bdea395d9ed8a695593e5cc895dcf290f2",
+        "items": 2
+      },
+      "resolution": "procedural_only",
+      "triage_classification": "procedural_candidate",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534588",
+        "210002534598"
+      ]
+    }
+  ],
+  "counts": {
+    "projects": 25,
+    "candidate_occurrences": 50,
+    "identities_exact": 25,
+    "proposition_http_200": 25,
+    "full_text_urls": 25,
+    "event_urls": 25,
+    "procedural_only": 25
+  }
+}
