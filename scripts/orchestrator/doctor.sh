@@ -63,7 +63,7 @@ if command -v node >/dev/null 2>&1; then
   [[ "$NODE_MAJOR" == "24" ]] && ok "Node do shell compatível: $NODE_VERSION" || fail "projeto exige Node 24; shell usa ${NODE_VERSION:-desconhecido}"
 fi
 
-command -v gemini >/dev/null 2>&1 && warn "gemini disponível apenas como rota legacy/API-key; Google AI Pro usa agy" || ok "Gemini CLI legacy ausente (não obrigatório)"
+command -v gemini >/dev/null 2>&1 && ok "gemini legacy presente como rota opcional; Google AI Pro usa agy" || ok "Gemini CLI legacy ausente (não obrigatório)"
 command -v gh >/dev/null 2>&1 && ok "gh disponível" || warn "gh ausente"
 command -v npx >/dev/null 2>&1 && ok "npx disponível" || fail "npx ausente"
 
@@ -430,9 +430,9 @@ PY
       && [[ -s "$OC_OUT" ]] \
       && [[ -n "$OC_EXPECTED_TITLE" ]] \
       && grep -Fq "$OC_EXPECTED_TITLE" "$OC_OUT"; then
-      ok "OpenCode/DeepSeek comprovou leitura do AGENTS.md pelo título esperado"
+      ok "OpenCode/OpenAI Luna comprovou leitura do AGENTS.md pelo título esperado"
     else
-      warn "OpenCode/DeepSeek não comprovou leitura do AGENTS.md"
+      warn "OpenCode/OpenAI Luna não comprovou leitura do AGENTS.md"
       [[ -s "$OC_ERR" ]] && sed -n '1,20p' "$OC_ERR" >&2
     fi
   else
