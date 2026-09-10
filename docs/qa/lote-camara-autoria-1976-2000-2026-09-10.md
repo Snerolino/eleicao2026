@@ -23,3 +23,8 @@ A API oficial da proposição foi verificada, mas o pacote não contém texto in
 
 ## Próximo lane read-only
 Preparar a seleção determinística `2001–2025` e revalidar fontes oficiais Câmara em diretório temporário, sem promover itens e sem escrita remota; manter separado da fila editorial e do ciclo de votos factuais.
+
+## Publicação verificada
+- Commit `1fe35345c7822895269bc7b140fd36cfb94df5f3` publicado em `origin/main`.
+- Backup Cloudflare workflow `334951434`, run `34423031428`, `completed/success`, `headSha` exato.
+- Produção `https://rs.votopraquem.org` HTTP 200; `/release.json` confirmou SHA exato, release `1fe3534-20260910T005139215Z`, snapshot `1003`.
