@@ -66,3 +66,8 @@ O lote está fechado. Não iniciar `2501–2525` nesta execução documental.
 - Backup workflow `334951434`, run `34542492298`: `completed/success`, `headSha` exato.
 - Produção `/release.json`: HTTP 200, SHA exato `8085266511ddc838e99c15187aef4dcb86ce483e`, versão `0.2.1299`, snapshot `row_count=1003`; raiz HTTP 200.
 - O run primário do commit corretivo teve quality verde; o job deploy foi cancelado pelo workflow por prioridade concorrente, sem impacto porque o backup confiável concluiu com sucesso.
+
+## Fechamento documental final
+- A limpeza do estado concorrente foi consolidada no commit `c049323205f6558b5c95cb3602535e6409f5dfb5`, publicado em `origin/main`; checkpoint final continua `2476–2500` → `2501–2525`.
+- Backup `334951434`, run `34542906531`: `completed/success`, `headSha` exato.
+- Produção raiz e `/release.json`: HTTP 200; SHA exato `c049323205f6558b5c95cb3602535e6409f5dfb5`, versão `0.2.1303`, snapshot `row_count=1003`.
