@@ -1,0 +1,717 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_metadata_only",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:pdl-235-2021-2286825",
+      "candidate_tse_ids": [
+        "210002534601",
+        "210002534598"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2286825",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-24-2021-2270301",
+      "candidate_tse_ids": [
+        "210002534604",
+        "210002534598"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2270301",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-26-2025-2482262",
+      "candidate_tse_ids": [
+        "210002537714",
+        "210002534656"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2482262",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-262-2023-2379900",
+      "candidate_tse_ids": [
+        "210002534654",
+        "210002547819"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2379900",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-3-2025-2482078",
+      "candidate_tse_ids": [
+        "210002537714",
+        "210002534654"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2482078",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-308-2020-2256253",
+      "candidate_tse_ids": [
+        "210002534604",
+        "210002533902"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2256253",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-33-2022-2314563",
+      "candidate_tse_ids": [
+        "210002534604",
+        "210002534598"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2314563",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-333-2024-2452318",
+      "candidate_tse_ids": [
+        "210002547857",
+        "210002534656"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2452318",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-337-2023-2390075",
+      "candidate_tse_ids": [
+        "210002534654",
+        "210002534656"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2390075",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-349-2020-2259053",
+      "candidate_tse_ids": [
+        "210002534604",
+        "210002534598"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2259053",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-370-2020-2260423",
+      "candidate_tse_ids": [
+        "210002534604",
+        "210002534598"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2260423",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-381-2020-2261179",
+      "candidate_tse_ids": [
+        "210002534604",
+        "210002533902"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2261179",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-396-2026-2626867",
+      "candidate_tse_ids": [
+        "210002547819",
+        "210002534656"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2626867",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-409-2020-2263385",
+      "candidate_tse_ids": [
+        "210002534604",
+        "210002533902"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2263385",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-41-2025-2482401",
+      "candidate_tse_ids": [
+        "210002547857",
+        "210002534897"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2482401",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-427-2020-2263684",
+      "candidate_tse_ids": [
+        "210002534604",
+        "210002534598"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2263684",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-43-2023-2348853",
+      "candidate_tse_ids": [
+        "210002534654",
+        "210002547819"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2348853",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-49-2023-2349307",
+      "candidate_tse_ids": [
+        "210002534654",
+        "210002547819"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349307",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-499-2020-2265829",
+      "candidate_tse_ids": [
+        "210002534604",
+        "210002534598"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2265829",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-50-2023-2349316",
+      "candidate_tse_ids": [
+        "210002534654",
+        "210002547819"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349316",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-506-2025-2537338",
+      "candidate_tse_ids": [
+        "210002534654",
+        "210002534656"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2537338",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-508-2020-2265924",
+      "candidate_tse_ids": [
+        "210002533583",
+        "210002534598"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2265924",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-534-2020-2266493",
+      "candidate_tse_ids": [
+        "210002534604",
+        "210002534598"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2266493",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-575-2020-2268007",
+      "candidate_tse_ids": [
+        "210002537057",
+        "210002538541"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2268007",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    },
+    {
+      "id": "camara:pdl-642-2025-2554463",
+      "candidate_tse_ids": [
+        "210002534597",
+        "210002534598"
+      ],
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score.",
+      "official_metadata_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2554463",
+      "identity_exact": true,
+      "full_text_validated": false,
+      "independent_event_validated": false,
+      "nominal_vote_validated": false,
+      "lane": "causal",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+        "missing_sources": [
+          "texto_integral_oficial_validado",
+          "evento_oficial_vinculante_independente",
+          "voto_nominal_individual"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: cadeia fonte→texto integral validado→versão/evento independente vinculante→voto nominal individual não demonstrada; autoria/ementa não equivale a voto, efeito causal ou score."
+    }
+  ]
+}

@@ -1,0 +1,509 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_redteam_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "items": [
+    {
+      "id": "camara:pdl-235-2021-2286825",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-24-2021-2270301",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-26-2025-2482262",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-262-2023-2379900",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-3-2025-2482078",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-308-2020-2256253",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-33-2022-2314563",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-333-2024-2452318",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-337-2023-2390075",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-349-2020-2259053",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-370-2020-2260423",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-381-2020-2261179",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-396-2026-2626867",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-409-2020-2263385",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-41-2025-2482401",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-427-2020-2263684",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-43-2023-2348853",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-49-2023-2349307",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-499-2020-2265829",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-50-2023-2349316",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-506-2025-2537338",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-508-2020-2265924",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-534-2020-2266493",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-575-2020-2268007",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    },
+    {
+      "id": "camara:pdl-642-2025-2554463",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "Red-team confirma ausência de cadeia completa; autoria/ementa não prova voto, efeito causal ou score.",
+      "missing_sources": [
+        "texto_integral_oficial_validado",
+        "evento_oficial_vinculante_independente",
+        "voto_nominal_individual"
+      ],
+      "counterargument": "Não promover autoria a posição legislativa ou impacto sem evidência específica.",
+      "checks": {
+        "identity_exact": true,
+        "full_text_validated": false,
+        "independent_event_validated": false,
+        "nominal_vote_validated": false
+      },
+      "lane": "red-team"
+    }
+  ]
+}

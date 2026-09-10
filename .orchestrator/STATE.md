@@ -5292,3 +5292,15 @@ Sem autorização humana explícita própria, não fazer:
 - Commit `01172a6c5ffcdd62ab85acfbde195bbe13e61548` publicado em `origin/main`; backup `334951434`, run `34430436175`, `completed/success`, `headSha` exato.
 - Produção raiz e `/release.json` HTTP 200; SHA exato confirmado, release `0.2.1264`, snapshot `row_count=1003`.
 - Próximo chunk: autoria Câmara `2226–2250`; manter retenção fail-closed e nenhuma aplicação factual sem cadeia completa.
+
+
+## Tick contínuo — autoria Câmara 2226–2250 retida — 2026-09-10
+
+- Lock exclusivo `flock` adquirido em `.orchestrator/runtime/locks/continuous-progress.lock`; único writer local.
+- Seleção determinística: `25` projetos únicos (`offset=2225`, `limit=25`), `50` ocorrências candidato–projeto e `14` candidatos.
+- Revalidação oficial: `25/25` URLs Câmara HTTP 200, identidade `dados.id` exata em `25/25`; `46.115` bytes e SHA-256 preservados no manifesto `data/legislative-import/camara/authored-project-review-batches/camara-authored-2226-2250-source-manifest.json`.
+- Lanes causal/red-team: `25/25` IDs exatos em cada lane; reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
+- Bloqueio real: sem texto integral validado, versão/evento independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score. Nenhum fato, claim, voto, matéria, matriz, score, Supabase ou Cloudflare factual foi escrito.
+- Checkpoint: `projects_analyzed=2250`, `withheld=2250`, `blocked_items=92`, próximo lote `2251–2275`; QA `docs/qa/lote-camara-autoria-2226-2250-2026-09-10.md`.
+- Gates Node 24.19.0 verdes: `499/499` testes em `120` arquivos, TypeScript, schema, `data:check` (`1003/988`), build (`245` módulos; sitemap `1003+2`) e `git diff --check`.
+- Próximo passo: publicar/verificar este checkpoint; só então iniciar `2251–2275`, sem aplicação factual remota.
