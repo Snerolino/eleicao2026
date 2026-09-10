@@ -39,3 +39,11 @@ Fechar gates locais Node 24; se verdes, publicar os artefatos/documentação des
 - `npm run build`: RC 0 — 245 módulos; sitemap 1003 candidatos + 2 estáticas = 1005 URLs; release local gerado.
 - `git diff --check`: RC 0.
 - Churn não relacionado do build restaurado; somente artefatos do lote, QA e checkpoint permanecem.
+
+## Publicação e verificação
+
+- Commit de artefatos: `fc022675bfe424e16d9947615b6ae3c8b5826dae`, publicado em `origin/main`; `git ls-remote` alinhado.
+- Workflow backup Cloudflare `334951434`, run `34544378411`: `completed/success`, `headSha` exato.
+- Produção: raiz HTTP 200 e `/release.json` HTTP 200.
+- `release.json`: SHA exato `fc022675bfe424e16d9947615b6ae3c8b5826dae`, versão `0.2.1312`, snapshot `row_count=1003`.
+- Nenhuma migration, RLS, Auth, Storage, Edge Function, Supabase factual ou matriz/score foi alterado.

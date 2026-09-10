@@ -1,3 +1,11 @@
+## Fechamento de publicação — autoria Câmara 2526–2550
+
+- Commit de artefatos `fc022675bfe424e16d9947615b6ae3c8b5826dae` publicado em `origin/main`; worktree limpa.
+- Backup Cloudflare `334951434`, run `34544378411`: `completed/success`, `headSha` exato.
+- Produção raiz e `/release.json` HTTP 200; release confirmou SHA exato, versão `0.2.1312`, snapshot `row_count=1003`.
+- O workflow primário `Deploy` ainda estava `in_progress` na primeira verificação; o backup foi o caminho efetivo confiável.
+- Lote fechado. Próximo chunk calculado: autoria Câmara `2551–2575`; manter retenção fail-closed.
+
 ## Tick contínuo — autoria Câmara 2526-2550 retida — 2026-09-10
 
 - Lock exclusivo adquirido com `flock`; único writer local confirmado.
