@@ -1,3 +1,24 @@
+## Tick contínuo — autoria Câmara 2301–2325 retida — 2026-09-10
+
+- Lock exclusivo `flock` adquirido em `.orchestrator/runtime/locks/continuous-progress.lock`; único writer local.
+- Seleção determinística: `25` projetos únicos (`offset=2300`, `limit=25`), `50` ocorrências candidato–projeto e `17` candidatos.
+- Revalidação oficial: `25/25` endpoints Câmara HTTP 200, identidade exata `25/25`; `57.398` bytes e SHA-256 preservados no manifesto `data/legislative-import/camara/authored-project-review-batches/camara-authored-2301-2325-source-manifest.json`.
+- Lanes causal/red-team: `25/25` IDs exatos em cada lane; reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
+- Bloqueio real: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score. Nenhum fato, claim, voto, matéria, matriz, score, projeto público ou escrita remota foi promovido.
+- ALRS score recovery preservado: `152` itens (`87` sem evento vinculante, `65` compostos), `remote_apply=false`; nenhum score/matriz criado.
+- Checkpoint: `projects_analyzed=2325`, `withheld=2325`, `blocked_items=95`, próximo lote `2326–2350`; QA `docs/qa/lote-camara-autoria-2301-2325-2026-09-10.md`.
+- Gates Node 24.19.0 verdes: `499/499` testes em `120` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos/sitemap `1003+2` e `git diff --check`.
+- Próximo passo: commit/push e verificação CI/backup/produção deste lote; não iniciar `2326–2350` antes do fechamento.
+
+## Tick contínuo — fila de recuperação de score ALRS atualizada — 2026-09-10
+
+- Lock exclusivo `flock` adquirido; único writer local.
+- Fila read-only regenerada em `data/legislative-import/alrs/alrs-score-recovery-queue-v1.json`: 152 itens, 87 sem evento vinculante e 65 de votação composta não separável; `remote_apply=false`.
+- Nenhum score, matriz, assessment aprovado ou escrita remota foi criado.
+- Gates: `data:check` verde (1003/988), build verde (sitemap 1003+2; release local `6f29384-20260910T031601099Z`), `git diff --check` verde. Testes/typecheck não concluíram após `UUID inválido ... not-a-uuid`; não publicar como verde.
+- QA: `docs/qa/lote-alrs-score-recovery-2026-09-10.md`.
+- Próximo chunk: Câmara autoria `2301–2325`; manter retenção fail-closed.
+
 ## Tick contínuo — autoria Câmara 2276–2300 retida — 2026-09-10
 
 - Lock exclusivo `flock` adquirido em `.orchestrator/runtime/locks/continuous-progress.lock`; único writer local.
