@@ -1,0 +1,1169 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source_manifest": "camara-authored-2051-2075-source-manifest.json",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0,
+    "causal_lane": 25,
+    "redteam_lane": 25
+  },
+  "items": [
+    {
+      "id": "camara:emc-502-2020-2261835",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-502-2020-2261835",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-502-2025-2558417",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-502-2025-2558417",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-503-2020-2261836",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-503-2020-2261836",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-503-2025-2558418",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-503-2025-2558418",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-504-2020-2261837",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-504-2020-2261837",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-505-2020-2261838",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-505-2020-2261838",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-506-2020-2261839",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-506-2020-2261839",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-507-2020-2261840",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-507-2020-2261840",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-508-2020-2261841",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-508-2020-2261841",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-509-2020-2261842",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-509-2020-2261842",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-51-0-2290276",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-51-0-2290276",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-51-2019-2204839",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-51-2019-2204839",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-51-2019-2219069",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-51-2019-2219069",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-51-2019-2219762",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-51-2019-2219762",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-51-2019-2223497",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-51-2019-2223497",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-51-2020-2249711",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-51-2020-2249711",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-51-2020-2256799",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-51-2020-2256799",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-51-2021-2271218",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-51-2021-2271218",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-51-2021-2272095",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-51-2021-2272095",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-51-2021-2313663",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-51-2021-2313663",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-510-2020-2261843",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-510-2020-2261843",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-511-2020-2261844",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-511-2020-2261844",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-512-2020-2261845",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-512-2020-2261845",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-513-2020-2261846",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-513-2020-2261846",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-514-2020-2261847",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e metadados oficiais não provam texto integral validado, versão/evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "remote_apply": false,
+      "lane": "causal",
+      "redteam": {
+        "id": "camara:emc-514-2020-2261847",
+        "decision": "withheld",
+        "score_eligible": false,
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "Autoria e requerimento não demonstram posição em votação, versão vinculante ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain",
+        "remote_apply": false
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: sem texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    }
+  ]
+}
