@@ -59,3 +59,10 @@ Todos os gates locais obrigatórios ficaram verdes.
 - `release.json` confirmou SHA exato `5aba3ba22ca94000307cf3736f65930cbd7a4df4`, versão `0.2.1296` e snapshot `row_count=1003`.
 
 O lote está fechado. Não iniciar `2501–2525` nesta execução documental.
+
+## Correção de concorrência e fechamento final
+- Um writer concorrente iniciou e publicou indevidamente o lote seguinte `2501–2525` (`0c142b1`) antes do fechamento. O processo foi interrompido; os artefatos e o avanço do checkpoint foram revertidos, sem alterar o lote `2476–2500`.
+- Reversão corretiva: `8085266511ddc838e99c15187aef4dcb86ce483e`, publicada em `origin/main`; checkpoint final permanece `last_batch=2476-2500`, `next_batch=2501-2525`, `projects_analyzed=2500`.
+- Backup workflow `334951434`, run `34542492298`: `completed/success`, `headSha` exato.
+- Produção `/release.json`: HTTP 200, SHA exato `8085266511ddc838e99c15187aef4dcb86ce483e`, versão `0.2.1299`, snapshot `row_count=1003`; raiz HTTP 200.
+- O run primário do commit corretivo teve quality verde; o job deploy foi cancelado pelo workflow por prioridade concorrente, sem impacto porque o backup confiável concluiu com sucesso.

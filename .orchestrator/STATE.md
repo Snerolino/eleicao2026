@@ -1,3 +1,10 @@
+## Fechamento corretivo — autoria Câmara 2476–2500
+
+- O commit concorrente `0c142b1` iniciou indevidamente o lote `2501–2525`; foi revertido em `8085266511ddc838e99c15187aef4dcb86ce483e`.
+- O checkpoint final permanece `projects_analyzed=2500`, `last_batch=2476-2500`, `next_batch=2501-2525`; nenhum artefato do lote seguinte permanece na worktree ou no estado versionado.
+- Backup `334951434`, run `34542492298`, `completed/success`, `headSha` exato; produção raiz e `/release.json` HTTP 200 confirmaram SHA `8085266511ddc838e99c15187aef4dcb86ce483e`, versão `0.2.1299`, snapshot `row_count=1003`.
+- O job deploy primário foi cancelado por prioridade de workflow; backup confiável concluiu e foi validado.
+
 ## Tick contínuo — autoria Câmara 2501–2525 retida — 2026-09-10
 
 - Lock exclusivo adquirido com flock; único writer local neste tick.
