@@ -1,22 +1,9 @@
 ## Fechamento corretivo — autoria Câmara 2476–2500
 
 - O commit concorrente `0c142b1` iniciou indevidamente o lote `2501–2525`; foi revertido em `8085266511ddc838e99c15187aef4dcb86ce483e`.
-- O checkpoint deste fechamento passa a `projects_analyzed=2525`, `last_batch=2501-2525`, `next_batch=2526-2550`; artefatos e QA do lote estão versionados neste commit.
-- Backup anterior `334951434`, run `34542492298`, `completed/success`, `headSha` exato; o lote atual exige nova verificação de produção.
-
-## Tick contínuo — autoria Câmara 2501–2525 retida — 2026-09-10
-
-- Lock exclusivo adquirido com flock; único writer local neste tick.
-- Seleção determinística: 25 projetos únicos (offset=2500, limit=25), 50 ocorrências candidato–projeto e 20 candidatos.
-- Revalidação oficial: 25/25 proposições HTTP 200 e identidade dados.id exata; 25/25 endpoints de tramitação HTTP 200; 79.596 bytes somados e SHA-256 preservados no manifesto.
-- Texto integral catalogado 25/25, mas não lido/validado; conteúdo permanece fora do gate factual.
-- Lanes causal/red-team: 25/25 IDs exatos em cada lane; reconciliação 25 withheld, 0 pending_review, 0 approved, 0 score_eligible; content_read=false, remote_apply=false.
-- Bloqueio real: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score. Nenhum fato, claim, voto, matéria, matriz, score, projeto público ou escrita remota foi promovido.
-- Checkpoint: projects_analyzed=2525, withheld=2525, blocked_items=103, próximo lote 2526–2550.
-- QA: docs/qa/lote-camara-autoria-2501-2525-2026-09-10.md.
-- Gates Node 24.19.0 verdes: 499/499 testes em 120 arquivos, TypeScript, schema, data:check 1003/988, build 245 módulos/sitemap 1003+2 e git diff --check.
-- Nenhuma migration, RLS, Auth, Storage ou Edge Function foi alterada; nenhuma escrita factual Supabase/Cloudflare foi executada.
-
+- O checkpoint final permanece `projects_analyzed=2500`, `last_batch=2476-2500`, `next_batch=2501-2525`; nenhum artefato do lote seguinte permanece na worktree ou no estado versionado.
+- Backup `334951434`, run `34542492298`, `completed/success`, `headSha` exato; produção raiz e `/release.json` HTTP 200 confirmaram SHA `8085266511ddc838e99c15187aef4dcb86ce483e`, versão `0.2.1299`, snapshot `row_count=1003`.
+- O job deploy primário foi cancelado por prioridade de workflow; backup confiável concluiu e foi validado.
 
 ## Verificação de publicação — autoria Câmara 2476–2500
 
