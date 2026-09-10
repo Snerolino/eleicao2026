@@ -5286,3 +5286,9 @@ Sem autorização humana explícita própria, não fazer:
 - Bloqueio real: sem texto integral validado, versão/evento independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score.
 - Checkpoint: `projects_analyzed=2225`, `withheld=2225`, `blocked_items=91`, próximo lote `2226–2250`; QA `docs/qa/lote-camara-autoria-2201-2225-2026-09-09.md`.
 - Próximo passo: gates locais completos; se verdes, publicar e iniciar 2226–2250, sem aplicação factual remota.
+
+## Verificação de publicação — autoria Câmara 2201–2225
+
+- Commit `6c924f7649d190b9b8fc4aae53b8c6856fdad03a` publicado em `origin/main`; backup `334951434`, run `34430436175`, `completed/success`, `headSha` exato.
+- Produção raiz e `/release.json` HTTP 200; SHA exato confirmado, release `0.2.1264`, snapshot `row_count=1003`.
+- Próximo chunk: autoria Câmara `2226–2250`; manter retenção fail-closed e nenhuma aplicação factual sem cadeia completa.

@@ -30,3 +30,8 @@ A API oficial comprova identidade e metadados, mas o lote não demonstra simulta
 
 ## Próximo passo
 Executar os gates locais completos; se verdes, publicar este checkpoint e iniciar 2226–2250 sem aplicar fatos editoriais/remotos.
+
+## Publicação verificada
+- Commit final do lote: `6c924f7649d190b9b8fc4aae53b8c6856fdad03a` em `origin/main`.
+- Backup Cloudflare `334951434`, run `34430436175`, `completed/success`, `headSha` exato.
+- Produção: raiz HTTP 200; `/release.json` HTTP 200, SHA exato `6c924f7649d190b9b8fc4aae53b8c6856fdad03a`, `row_count=1003`, release `0.2.1264`.
