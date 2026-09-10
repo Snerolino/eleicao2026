@@ -5304,3 +5304,10 @@ Sem autorização humana explícita própria, não fazer:
 - Checkpoint: `projects_analyzed=2250`, `withheld=2250`, `blocked_items=92`, próximo lote `2251–2275`; QA `docs/qa/lote-camara-autoria-2226-2250-2026-09-10.md`.
 - Gates Node 24.19.0 verdes: `499/499` testes em `120` arquivos, TypeScript, schema, `data:check` (`1003/988`), build (`245` módulos; sitemap `1003+2`) e `git diff --check`.
 - Próximo passo: publicar/verificar este checkpoint; só então iniciar `2251–2275`, sem aplicação factual remota.
+
+## Verificação de publicação — autoria Câmara 2226–2250
+
+- Commit `2c41e1ca73cb0f72f77cff0cd617f7940cd26095` publicado em `origin/main`; alterações preexistentes não relacionadas permaneceram fora do commit.
+- Backup `334951434`, run `34430877513`, `completed/success`, `headSha` exato.
+- Produção raiz HTTP 200 e `/release.json` HTTP 200 confirmaram SHA exato, release `0.2.1267` e snapshot `row_count=1003`.
+- O lote está fechado; próximo chunk calculado: autoria Câmara `2251–2275`, mantendo retenção fail-closed.

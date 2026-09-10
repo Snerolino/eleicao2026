@@ -56,3 +56,9 @@ foram preservadas e não fazem parte deste lote.
 Publicar este checkpoint após manter a separação das alterações preexistentes;
 no próximo tick, iniciar `2251–2275` mantendo fonte oficial, duas lanes e
 retenção fail-closed. Não aplicar fatos sem cadeia completa e gate próprio.
+
+## Publicação verificada
+- Commit `2c41e1ca73cb0f72f77cff0cd617f7940cd26095` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `34430877513`, `completed/success`, `headSha` exato.
+- Produção: raiz HTTP 200; `/release.json` HTTP 200 confirmou SHA exato `2c41e1ca73cb0f72f77cff0cd617f7940cd26095`, `row_count=1003`, release `0.2.1267`.
+- O run primário `34430861913` ainda estava `in_progress` nesta verificação; o backup foi o caminho confirmado.
