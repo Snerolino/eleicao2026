@@ -43,3 +43,10 @@ Os 25 itens foram classificados como procedurais. Sem uma matéria substantiva, 
 
 ## Próximo passo
 Iniciar `2426–2450` somente após fechar a publicação deste checkpoint, mantendo seleção oficial, duas lanes independentes e retenção fail-closed.
+
+## Publicação verificada
+
+- Commit dos artefatos/documentação: `e89359294d96e6e7692bdeb4287342ccc838348d`, publicado em `origin/main`; worktree limpa no fechamento anterior à correção documental.
+- Backup Cloudflare workflow `334951434`, run `34436413422`, `completed/success`, `headSha` exato.
+- Produção: raiz HTTP 200; `/release.json` HTTP 200 confirmou `sha=e89359294d96e6e7692bdeb4287342ccc838348d` e versão `0.2.1289`.
+- `row_count` não foi fornecido no `release.json` desta publicação; não foi inferido.

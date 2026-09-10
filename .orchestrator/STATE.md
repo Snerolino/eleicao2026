@@ -5427,3 +5427,11 @@ Sem autorização humana explícita própria, não fazer:
 - Gates Node 24.19.0 verdes: `499/499` testes em `120` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos/sitemap `1003+2`, smoke `1002` cards/0 HTTP/0 erros online e `git diff --check`.
 - Nenhuma migration, RLS, Auth, Storage, Edge Function, escrita factual Supabase ou score/matriz foi executada.
 - Próximo passo: commit/push e verificação de produção deste checkpoint; depois iniciar `2426–2450`.
+
+
+## Verificação de publicação — autoria Câmara 2401–2425
+
+- Commit `e89359294d96e6e7692bdeb4287342ccc838348d` publicado em `origin/main`; `git ls-remote` confirmou alinhamento.
+- Backup Cloudflare `334951434`, run `34436413422`, `completed/success`, `headSha` exato.
+- Produção raiz HTTP 200 e `/release.json` HTTP 200 confirmaram SHA exato e versão `0.2.1289`; `row_count` ausente no release e não inferido.
+- Próximo chunk: autoria Câmara `2426–2450`; manter retenção fail-closed e nenhum score/matriz sem assessment completo, fontes e evento vinculante.
