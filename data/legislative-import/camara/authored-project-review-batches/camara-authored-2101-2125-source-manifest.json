@@ -1,0 +1,219 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_source_manifest",
+  "mode": "read-only",
+  "remote_apply": false,
+  "content_read": false,
+  "batch": "2101-2125",
+  "offset": 2100,
+  "limit": 25,
+  "counts": {
+    "projects": 25,
+    "candidates": 15,
+    "http_200": 25,
+    "identity_exact": 25,
+    "bytes": 38548
+  },
+  "sources": [
+    {
+      "id": "camara:emp-1-0-2568062",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2568062",
+      "http_status": 200,
+      "bytes": 1331,
+      "sha256": "sha256:8bed44de7c6c3a3c41d308bc04fa3a383dea29d0e35f3b5eb0b5b01ce5659948",
+      "official_id": "2568062"
+    },
+    {
+      "id": "camara:emp-1-0-2572500",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2572500",
+      "http_status": 200,
+      "bytes": 1347,
+      "sha256": "sha256:0d85ba717f617b0448b85b85701ed1bb87adaeb53fdd05ec292c2b889556cff5",
+      "official_id": "2572500"
+    },
+    {
+      "id": "camara:emp-1-2019-2210217",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2210217",
+      "http_status": 200,
+      "bytes": 1354,
+      "sha256": "sha256:8c4100ca716fa437350c23cab871b39b918629a314dc0bd1117fb9fc371f9370",
+      "official_id": "2210217"
+    },
+    {
+      "id": "camara:emp-10-0-2273414",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2273414",
+      "http_status": 200,
+      "bytes": 1916,
+      "sha256": "sha256:3faa4ce41d41ddc8812377506a1ae1ec29ab8d707cc841c301c1f34b3fc18188",
+      "official_id": "2273414"
+    },
+    {
+      "id": "camara:emp-10-0-2308448",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2308448",
+      "http_status": 200,
+      "bytes": 1371,
+      "sha256": "sha256:bae70ff45c7941d072639fa5d3926c0f060740ff58f36f523fe069cde8153571",
+      "official_id": "2308448"
+    },
+    {
+      "id": "camara:emp-10-0-2428955",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2428955",
+      "http_status": 200,
+      "bytes": 1634,
+      "sha256": "sha256:86096121e1f9ce7d1cccd85b5dfd851efa31783435c20d236c754287563dcb74",
+      "official_id": "2428955"
+    },
+    {
+      "id": "camara:emp-10-0-2442345",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2442345",
+      "http_status": 200,
+      "bytes": 1789,
+      "sha256": "sha256:a91d0d25fba26a3671c5629537d06a7495e82dac8a205a05008d37fbd921ed53",
+      "official_id": "2442345"
+    },
+    {
+      "id": "camara:emp-11-0-2307400",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2307400",
+      "http_status": 200,
+      "bytes": 1455,
+      "sha256": "sha256:5849f993aaade466650efaf9ffac00b6e47415a0913ef807427a800067de15ac",
+      "official_id": "2307400"
+    },
+    {
+      "id": "camara:emp-11-0-2308449",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2308449",
+      "http_status": 200,
+      "bytes": 1371,
+      "sha256": "sha256:e2ab6f6219ccbcf27429f10b7b787430594bb03ef98ebbcca5b0bd35c11ba683",
+      "official_id": "2308449"
+    },
+    {
+      "id": "camara:emp-11-0-2428956",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2428956",
+      "http_status": 200,
+      "bytes": 1634,
+      "sha256": "sha256:9f35db37faad2611382b3500a449797237afa0439bd62aad93d313499a1594b9",
+      "official_id": "2428956"
+    },
+    {
+      "id": "camara:emp-11-0-2442347",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2442347",
+      "http_status": 200,
+      "bytes": 1789,
+      "sha256": "sha256:815e4b23fb4d10735b427c0e50991cd7d94bbdc6a356b8bcd1764b5f260028b2",
+      "official_id": "2442347"
+    },
+    {
+      "id": "camara:emp-113-0-2297954",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2297954",
+      "http_status": 200,
+      "bytes": 1567,
+      "sha256": "sha256:d2d1d0c888c726ab4d9e2a60c74abde48f4ab549636860fcae542b51f2de987d",
+      "official_id": "2297954"
+    },
+    {
+      "id": "camara:emp-114-0-2297955",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2297955",
+      "http_status": 200,
+      "bytes": 1529,
+      "sha256": "sha256:472d09656a2219e2515c4783e73532ddc649474317eba82918e7516e1d71851b",
+      "official_id": "2297955"
+    },
+    {
+      "id": "camara:emp-115-0-2297956",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2297956",
+      "http_status": 200,
+      "bytes": 1548,
+      "sha256": "sha256:16648d8752830eecbe01833b33bf87d5f2d57187e0232c50ba579fdc5b8c0f92",
+      "official_id": "2297956"
+    },
+    {
+      "id": "camara:emp-12-0-2256925",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2256925",
+      "http_status": 200,
+      "bytes": 1622,
+      "sha256": "sha256:ceb46bda8d7280b2aa2431aa540aa80d7de2b72c1747db92e193cf0f29d64068",
+      "official_id": "2256925"
+    },
+    {
+      "id": "camara:emp-12-0-2308450",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2308450",
+      "http_status": 200,
+      "bytes": 1371,
+      "sha256": "sha256:dab46f679dd48ac920603fc0529771b451cdcff0aae4aff7d721aac80531e725",
+      "official_id": "2308450"
+    },
+    {
+      "id": "camara:emp-12-0-2442349",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2442349",
+      "http_status": 200,
+      "bytes": 1789,
+      "sha256": "sha256:0aa4de4e492f725d54a051a08f3f7e8d8430b22aa0dc0c0dea05fdcf13c46409",
+      "official_id": "2442349"
+    },
+    {
+      "id": "camara:emp-12-0-2466741",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2466741",
+      "http_status": 200,
+      "bytes": 1447,
+      "sha256": "sha256:0beb561cdcc94812570791195affcd078b27eaca0fbc57b4334cbe2930d67b42",
+      "official_id": "2466741"
+    },
+    {
+      "id": "camara:emp-123-0-2447659",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2447659",
+      "http_status": 200,
+      "bytes": 1360,
+      "sha256": "sha256:8a4010fd9255b1be38accb1c0698effd711bded0d814ef67867b159f94418411",
+      "official_id": "2447659"
+    },
+    {
+      "id": "camara:emp-13-0-2308452",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2308452",
+      "http_status": 200,
+      "bytes": 1371,
+      "sha256": "sha256:6a118342a826e0d790f375060875aed349128c253932a12c6ff76452666704b7",
+      "official_id": "2308452"
+    },
+    {
+      "id": "camara:emp-13-0-2442350",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2442350",
+      "http_status": 200,
+      "bytes": 1789,
+      "sha256": "sha256:17e82bf5d448c7a643925cafb9b3819a0a765bc1c2919945a6c846307f21db22",
+      "official_id": "2442350"
+    },
+    {
+      "id": "camara:emp-14-0-2273454",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2273454",
+      "http_status": 200,
+      "bytes": 1442,
+      "sha256": "sha256:282e2a82241f9d7d002eada08e860b73d7641793dc66c5808ea323dcfa968643",
+      "official_id": "2273454"
+    },
+    {
+      "id": "camara:emp-14-0-2308453",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2308453",
+      "http_status": 200,
+      "bytes": 1371,
+      "sha256": "sha256:18c203f26c334c5d68383fa567ad1eb8aac89e6121e6e76b877c8ede9f8dda2e",
+      "official_id": "2308453"
+    },
+    {
+      "id": "camara:emp-14-0-2442352",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2442352",
+      "http_status": 200,
+      "bytes": 1789,
+      "sha256": "sha256:f57ed29448f97baeae68b16f9dc4704815c75716a15efb10928d2f87d69b799c",
+      "official_id": "2442352"
+    },
+    {
+      "id": "camara:emp-16-0-2256938",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2256938",
+      "http_status": 200,
+      "bytes": 1562,
+      "sha256": "sha256:2d222f1a9179039049f7d2e36239aa22b5519e6e98fad49d74ffc46c36e09e49",
+      "official_id": "2256938"
+    }
+  ]
+}
