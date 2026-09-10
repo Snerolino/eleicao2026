@@ -1,3 +1,14 @@
+## Tick contínuo — autoria Câmara 2076–2100 retida — 2026-09-10
+
+- Lock exclusivo `flock` adquirido; seleção determinística `offset=2075`, `limit=25`: 25 projetos únicos e 11 candidatos.
+- Fonte oficial Câmara: 25/25 HTTP 200, 25/25 identidades exatas, 32.886 bytes e SHA-256 no manifesto `data/legislative-import/camara/authored-project-review-batches/camara-authored-2076-2100-source-manifest.json`.
+- Lanes causal/red-team: 25/25 IDs exatos em cada lane; reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `remote_apply=false`.
+- Bloqueio real: sem texto integral validado, versão/evento independente e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score. Nenhum dado editorial/factual foi promovido.
+- Checkpoint: `projects_analyzed=2100`, `withheld=2100`, `blocked_items=86`, próximo lote `2101–2125`; QA `docs/qa/lote-camara-autoria-2076-2100-2026-09-10.md`.
+- Gates: testes, TypeScript, schema, data:check (`1003/988`), build (`245` módulos), smoke (`1002` cards/0 HTTP/0 erros online) e diff-check verdes.
+- Publicação: commit `d5c55c2dbdd99b9098940aef32a2f4a724b9dbb7` em `origin/main`; backup `334951434`, run `34426633636`, `completed/success`, `headSha` exato; produção HTTP 200 e `/release.json` SHA exato, snapshot `1003`.
+- Próximo chunk: iniciar `2101–2125` mantendo fonte oficial, duas lanes e retenção fail-closed; autoria continua separada de votos, impacto, score e claims.
+
 ## Tick contínuo — identidade de evento ALRS PL 246/2020 resolvida — 2026-09-06
 
 - Lock exclusivo adquirido; migração `20260906090000_alrs_event_identity.sql` confirmada no Supabase remoto.
