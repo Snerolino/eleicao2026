@@ -1,3 +1,14 @@
+## Tick contínuo — autoria Câmara 2501–2525 retida — 2026-09-10
+
+- Lock exclusivo adquirido com flock; único writer local.
+- Seleção determinística: 25 projetos únicos (offset=2500, limit=25), 50 ocorrências candidato–projeto e 20 candidatos.
+- Revalidação Câmara: 25/25 projetos e 50/50 endpoints oficiais HTTP 200; identidade dados.id exata 25/25; 79.596 bytes e SHA-256 preservados no manifesto data/legislative-import/camara/authored-project-review-batches/camara-authored-2501-2525-source-manifest.json.
+- URL de texto integral catalogada 25/25; evento independente catalogado 19/25; conteúdo não lido/validado.
+- Lanes causal/red-team: 25/25 IDs exatos em cada lane; reconciliação 25 withheld, 0 pending_review, 0 approved, 0 score_eligible; content_read=false, remote_apply=false.
+- Bloqueio real: sem texto integral validado, evento independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score. Nenhum fato, claim, voto, matéria, matriz, score, projeto público ou escrita remota foi promovido.
+- Checkpoint: projects_analyzed=2525, withheld=2525, blocked_items=104, próximo lote 2526–2550.
+- QA: docs/qa/lote-camara-autoria-2501-2525-2026-09-10.md.
+
 ## Fechamento corretivo — autoria Câmara 2476–2500
 
 - O commit concorrente `0c142b1` iniciou indevidamente o lote `2501–2525`; foi revertido em `8085266511ddc838e99c15187aef4dcb86ce483e`.
