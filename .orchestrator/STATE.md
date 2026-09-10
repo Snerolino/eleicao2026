@@ -1,3 +1,13 @@
+## Tick contínuo — autoria Câmara 2151–2175 retida — 2026-09-09
+
+- Lock exclusivo flock adquirido; seleção determinística: 25 projetos únicos (offset=2150, limit=25), 50 ocorrências e 13 candidatos.
+- Fonte oficial Câmara: 25/25 HTTP 200, identidade exata; 37.988 bytes e SHA-256 preservados no manifesto data/legislative-import/camara/authored-project-review-batches/camara-authored-2151-2175-source-manifest.json.
+- Recuperação read-only: 23 itens com cadeia mínima de metadados disponível e 2 sem evento oficial independente; nenhum bruto foi versionado.
+- Lanes causal/red-team: 25/25 IDs exatos em cada lane; reconciliação 25 withheld, 0 pending_review, 0 approved, 0 score_eligible; content_read=false, remote_apply=false.
+- Bloqueio real: sem texto integral validado, versão/evento vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score. Nenhum dado factual/editorial/remoto foi promovido.
+- Checkpoint: projects_analyzed=2175, withheld=2175, blocked_items=89, próximo lote 2176–2200; QA docs/qa/lote-camara-autoria-2151-2175-2026-09-09.md.
+- Próximo passo: fechar gates locais e publicar/verificar este checkpoint; depois iniciar 2176–2200 sem aplicar fatos.
+
 ## Tick contínuo — autoria Câmara 2126–2150 retida — 2026-09-10
 
 - Lock exclusivo `flock` adquirido em `.orchestrator/runtime/locks/continuous-progress.lock`; um único writer local.
