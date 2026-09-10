@@ -5185,3 +5185,16 @@ Sem autorização humana explícita própria, não fazer:
 - Bloqueios: Antigravity timeout; doctor exige Node 24 mas shell usa Node 22.22.2; OpenCode ausente. Próximo chunk: `1801–1825`.
 
 - Publicação verificada após o lote: commit `2126b80f78859fbfd645707978075a91946c5e56`, backup run `34023730089` success/headSha exato; produção raiz e `release.json` HTTP 200, release SHA exato, versão `0.2.1222`.
+
+
+## Tick contínuo — autoria Câmara 2001–2025 retida — 2026-09-10
+
+- Lock exclusivo adquirido com `flock` em `.orchestrator/runtime/locks/continuous-progress.lock`; um único writer local.
+- Seleção determinística: `25` projetos únicos (`offset=2000`, `limit=25`), `89` ocorrências candidato–projeto e `24` candidatos.
+- Revalidação oficial: `25/25` endpoints Câmara HTTP 200, identidade `dados.id` exata; `34.244` bytes e SHA-256 preservados no manifesto `data/legislative-import/camara/authored-project-review-batches/camara-authored-2001-2025-source-manifest.json`.
+- Lanes causal e red-team: `25/25` IDs exatos em cada lane; reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
+- Bloqueio real: sem texto integral validado, evento independente e voto nominal; nenhum fato, claim, voto, matéria, score, matriz, Supabase ou Cloudflare factual foi escrito.
+- Artefato: `data/legislative-import/camara/authored-project-review-batches/camara-authored-2001-2025-reconciled.json`; QA: `docs/qa/lote-camara-autoria-2001-2025-2026-09-10.md`.
+- Checkpoint: `projects_analyzed=2025`, `withheld=2025`, `blocked_items=83`, próximo lote `2026–2050`.
+- Gates Node 24 verdes: `499/499` testes em `120` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos/sitemap `1003+2`, `git diff --check`.
+- Próximo passo: publicar/verificar este checkpoint; só então iniciar `2026–2050`, sem aplicação factual remota.

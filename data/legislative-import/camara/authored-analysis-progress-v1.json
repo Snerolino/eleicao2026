@@ -153,6 +153,11 @@
       "batch_id": "1976-2000",
       "status": "withheld",
       "updated_at": "2026-09-10T00:48:55.113Z"
+    },
+    {
+      "batch_id": "2001-2025",
+      "status": "withheld",
+      "updated_at": "2026-09-10T00:59:26.242Z"
     }
   ],
   "blocked_items": [
@@ -237,18 +242,19 @@
     "camara:1751-1775",
     "req-procedural-no-binding-event",
     "authored:1951-1975",
-    "1976-2000"
+    "1976-2000",
+    "authored:2001-2025"
   ],
   "counts": {
-    "projects_analyzed": 2000,
+    "projects_analyzed": 2025,
     "approved": 0,
     "pending_review": 0,
-    "withheld": 2000
+    "withheld": 2025
   },
-  "last_batch": "1976-2000",
-  "next_batch": "2001-2025",
+  "last_batch": "2001-2025",
+  "next_batch": "2026-2050",
   "heartbeat": {
-    "at": "2026-09-10T00:43:55.330Z",
-    "pid": 400109
+    "at": "2026-09-10T00:59:26.251Z",
+    "pid": 428629
   }
 }

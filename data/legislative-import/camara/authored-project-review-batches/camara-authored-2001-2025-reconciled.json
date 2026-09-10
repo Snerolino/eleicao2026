@@ -1,0 +1,1067 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source_manifest": "camara-authored-2001-2025-source-manifest.json",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:emc-48-2023-2367912",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-48-2025-2568502",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-480-2020-2248810",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-480-2025-2558394",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-481-2020-2248811",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-482-2020-2248812",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-483-2020-2248813",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-489-2025-2499943",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-49-0-2290272",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-49-2019-2204837",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-49-2019-2219064",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-49-2019-2219760",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-49-2019-2223495",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-49-2020-2249709",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-49-2021-2271216",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-49-2021-2313661",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-499-2020-2261832",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-5-0-2285749",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-5-0-2286529",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-5-0-2289943",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-5-0-2525383",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-5-0-2566154",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-5-2019-2200893",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-5-2019-2207109",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    },
+    {
+      "id": "camara:emc-5-2019-2215878",
+      "decision": "withheld",
+      "score_eligible": false,
+      "content_read": false,
+      "risk": "high",
+      "missing_sources": [
+        "full_text_source",
+        "independent_event_source",
+        "nominal_vote"
+      ],
+      "reason": "Autoria e ementa oficial não provam texto integral, versão votada, evento nominal independente, voto individual ou efeito causal; retenção fail-closed.",
+      "lane": "causal",
+      "checks": {
+        "identity": "exact_official_proposition_id",
+        "authorship": "official_authorship_manifest",
+        "full_text": false,
+        "event_version": false,
+        "nominal_vote": false
+      },
+      "basis": "official proposition endpoint revalidated; causal chain incomplete",
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "full_text_source",
+          "independent_event_source",
+          "nominal_vote"
+        ],
+        "counterargument": "A emenda/autoria pode ser procedimental e não demonstrar posição em votação ou efeito causal.",
+        "checks": {
+          "identity": "exact_official_proposition_id",
+          "authorship": "official_authorship_manifest",
+          "full_text": false,
+          "event_version": false,
+          "nominal_vote": false
+        },
+        "basis": "independent red-team check confirms no full-text/event/nominal-vote chain"
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: falta texto integral validado, evento independente e voto nominal; nenhuma inferência ou promoção editorial."
+    }
+  ]
+}
