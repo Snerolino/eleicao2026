@@ -7,3 +7,6 @@
 ## 2025-01-20 - [Regex Caching in O(N) Filters]
 **Learning:** Using an O(N) filtering mechanism with expensive Regex evaluations (e.g. `hasPreviousMandate` evaluating `MANDATE_KEYWORDS_REGEX` against multiple claims) severely blocks the UI during typing or filtering large sets. Repeated calls across component boundaries compound this cost unnecessarily.
 **Action:** Always memoize derived checks on immutable reference objects (like candidate data) that do expensive calculations (like Regex) using a `WeakMap`. This pattern upgrades the time complexity of the check from O(N * complexity) to O(1) for all subsequent reads and UI updates.
+## 2025-02-12 - [Array indexOf in loop overhead]
+**Learning:** Using `Array.indexOf()` inside a loop within a component render function incurs O(N) lookup overhead. More importantly, defining optimization data structures (like an object or a Map) *inside* the render function creates new allocations on every render cycle, which negates performance benefits.
+**Action:** When replacing O(N) array lookups (like `indexOf`) with O(1) structures (like objects or Maps), ensure the data structure is hoisted *outside* the component function to prevent unnecessary memory allocations on every re-render.
