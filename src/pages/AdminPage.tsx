@@ -7,6 +7,7 @@ import { sanitizeUrl } from '@/utils/sanitizeUrl';
 import p2EditorialPack from '../../data/legislative-import/alrs/p2-microbatch-2-editorial-review-pack.json';
 import p2EditorialPack4 from '../../data/legislative-import/alrs/p2-microbatch-4-editorial-review-pack.json';
 import p2EditorialPack5 from '../../data/legislative-import/alrs/p2-microbatch-5-editorial-review-pack.json';
+import p2ExternalEditorialDispositions from '../../data/legislative-import/alrs/p2-external-editorial-dispositions-15-v1.json';
 import editorialBatch001 from '../../data/legislative-import/alrs/impact-editorial-batch-001-v1.json';
 import editorialCarryForward from '../../data/legislative-import/alrs/impact-carry-forward-001-v1.json';
 
@@ -435,7 +436,7 @@ export function AdminPage() {
     if (!file) return;
     try {
       const payload = JSON.parse(await file.text()) as { batch_id?: string; batch_sha256?: string; items?: BatchDecision[]; decisions?: BatchDecision[] };
-      const contexts = [editorialBatch001, editorialCarryForward] as Array<{ batch_id: string; batch_sha256: string; items: Array<{ proposition_version_id: string; review_key: string; title?: string; recommended_disposition?: P2Disposition; rationale?: string; recommended_rationale?: string; disposition?: P2Disposition }> }>;
+      const contexts = [editorialBatch001, editorialCarryForward, p2ExternalEditorialDispositions] as Array<{ batch_id: string; batch_sha256: string; items: Array<{ proposition_version_id: string; review_key: string; title?: string; recommended_disposition?: P2Disposition; rationale?: string; recommended_rationale?: string; disposition?: P2Disposition }> }>;
       const context = contexts.find((candidate) => candidate.batch_id === payload.batch_id && candidate.batch_sha256 === payload.batch_sha256);
       const items = payload.items ?? payload.decisions ?? [];
       const expectedItems = context?.items ?? [];
