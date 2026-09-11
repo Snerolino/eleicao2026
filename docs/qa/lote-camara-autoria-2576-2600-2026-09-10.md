@@ -30,7 +30,7 @@ Processar boundedamente o próximo lote determinístico de autoria Câmara, reva
 ## Gates e publicação
 - Node `v24.19.0`: `npm run test` **499/499** em 120 arquivos; `npx tsc --noEmit` **0**; schema **OK**; `npm run data:check` **1003 candidaturas / 988 fotos**; `npm run build` **245 módulos / sitemap 1003+2**; `git diff --check` **0**.
 - Churn não relacionado gerado pelo build foi restaurado; somente os artefatos do lote, checkpoint e QA permaneceram no commit.
-- Commit de artefatos `882a3caf1c2bdc5d6b7dbc4a2788a57a0f4df6bc` publicado em `origin/main`.
-- Backup Cloudflare `334951434`, run `34545898495`: `completed/success`, `headSha` exato.
-- Produção `https://rs.votopraquem.org`: raiz HTTP 200; `/release.json` HTTP 200 confirmou SHA exato `882a3caf1c2bdc5d6b7dbc4a2788a57a0f4df6bc`, `row_count=1003`.
-- O workflow primário `Deploy` run `34545876952` permaneceu `in_progress` nesta verificação; o backup foi o caminho efetivo confiável. Nenhuma escrita factual Supabase foi executada.
+- Commit de artefatos `882a3caf1c2bdc5d6b7dbc4a2788a57a0f4df6bc` e fechamento documental final `ab59fb16afd93eebecb46ba20526c24d635d77b9` publicados em `origin/main`.
+- Backup Cloudflare `334951434`, run final `34546073097`: `completed/success`, `headSha` exato `ab59fb16afd93eebecb46ba20526c24d635d77b9`.
+- Produção `https://rs.votopraquem.org`: raiz HTTP 200; `/release.json` HTTP 200 confirmou SHA final exato `ab59fb16afd93eebecb46ba20526c24d635d77b9`, `row_count=1003`.
+- O workflow primário `Deploy` run `34545876952` permaneceu `in_progress` na primeira verificação; o backup foi o caminho efetivo confiável. Nenhuma escrita factual Supabase foi executada.

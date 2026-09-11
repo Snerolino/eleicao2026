@@ -1,3 +1,10 @@
+## Fechamento final de publicação — autoria Câmara 2576–2600
+
+- Correção documental final no commit `ab59fb16afd93eebecb46ba20526c24d635d77b9`; `origin/main` alinhado.
+- Backup `334951434`, run `34546073097`, `completed/success`, `headSha` exato.
+- Produção raiz e `/release.json` HTTP 200 confirmaram o SHA final exato `ab59fb16afd93eebecb46ba20526c24d635d77b9`; snapshot `row_count=1003`.
+- O lote está fechado; próximo checkpoint calculado: autoria Câmara `2601–2625`; manter retenção fail-closed e não iniciar o seguinte nesta execução.
+
 ## Verificação de publicação — autoria Câmara 2576–2600
 
 - Commit de artefatos `882a3caf1c2bdc5d6b7dbc4a2788a57a0f4df6bc` publicado em `origin/main`; remoto alinhado.
