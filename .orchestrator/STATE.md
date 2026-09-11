@@ -1,3 +1,14 @@
+## Fechamento final de publicação — autoria Câmara 2601–2625 — 2026-09-11
+
+- Commit `678ae4635ac422debdc5a0f309d429cfb86cefba` publicado em `origin/main`; worktree limpa e remoto alinhado.
+- Artefatos do lote: 25 projetos únicos, 25/25 causal e red-team, reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
+- Fontes revalidadas: manifesto oficial com endpoints Câmara e textos integrais catalogados; nenhuma autoria foi promovida a fato público, claim, voto, assessment, score ou matriz.
+- Gates Node 24.19.0: `499/499` testes em `120` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos/sitemap `1003+2`, `git diff --check`; churn de `impact-editorial-*` restaurado.
+- Backup Cloudflare `334951434`, run `34547526318`, `completed/success`, `headSha` exato. Deploy primário `34547494157` permaneceu `in_progress` na verificação.
+- Produção raiz e `/release.json`: HTTP 200; release confirmou SHA exato `678ae4635ac422debdc5a0f309d429cfb86cefba`, snapshot `row_count=1003`.
+- Nenhuma migration, RLS, Auth, Storage, Edge Function, escrita factual Supabase ou matriz/score foi alterada/escrita.
+- Próximo chunk calculado: autoria Câmara `2626–2650`; não iniciado nesta execução.
+
 ## Fechamento final de publicação — autoria Câmara 2576–2600
 
 - Correção documental final no commit `ab59fb16afd93eebecb46ba20526c24d635d77b9`; `origin/main` alinhado.
