@@ -31,9 +31,9 @@ Processar 25 projetos únicos de autoria da Câmara, preservar evidência oficia
 - Churn timestamp-only de `impact-editorial-*` restaurado antes do commit.
 
 ## Fechamento de publicação
-- Commit `da5f027b55838408620ca75393375ea6c3f4e6bf` publicado; `git ls-remote` alinhado.
-- Backup Cloudflare `334951434`, run `34551791145`: `completed/success`, `headSha` exato.
-- Produção raiz HTTP 200; `/release.json` HTTP 200 confirmou SHA exato `da5f027b55838408620ca75393375ea6c3f4e6bf`, versão `0.2.1337`.
+- Commit `a7484fbab8c98d0fbd67e1e16b2619fb5807064b` publicado; `git ls-remote` alinhado.
+- Backup Cloudflare `334951434`, run `34551880719`: `completed/success`, `headSha` exato.
+- Produção raiz HTTP 200; `/release.json` HTTP 200 confirmou SHA exato `a7484fbab8c98d0fbd67e1e16b2619fb5807064b`, versão `0.2.1338`.
 - Nenhuma migration, RLS, Auth, Storage, Edge Function, escrita factual Supabase ou matriz/score foi alterada/escrita.
 
 ## Próximo passo

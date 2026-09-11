@@ -1,10 +1,10 @@
 ## Fechamento de publicação — autoria Câmara 2751–2775 — 2026-09-11
 
-- Commit `da5f027b55838408620ca75393375ea6c3f4e6bf` publicado em `origin/main`; worktree limpa e remoto alinhado.
-- Artefatos: 25 projetos únicos; 50 ocorrências; 19 candidatos; causal 25/25 e red-team 25/25; reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
+- Commit `a7484fbab8c98d0fbd67e1e16b2619fb5807064b` publicado em `origin/main`; worktree limpa e remoto alinhado.
+- Artefatos: 25 projetos únicos; 47 ocorrências; 18 candidatos; causal 25/25 e red-team 25/25; reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
 - Fontes oficiais: 25/25 endpoints Câmara HTTP 200, identidade `dados.id` exata 25/25, textos integrais 25/25 HTTP 200 e tramitação independente 25/25; bytes/SHA-256 catalogados.
 - Gates Node 24.19.0: `499/499` testes em `120` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos/sitemap `1003+2`, `git diff --check`.
-- Backup Cloudflare `334951434`, run `34551791145`, `completed/success`, `headSha` exato. Produção raiz HTTP 200 e `/release.json` HTTP 200 confirmaram SHA exato `da5f027b55838408620ca75393375ea6c3f4e6bf`, versão `0.2.1337`.
+- Backup Cloudflare `334951434`, run `34551880719`, `completed/success`, `headSha` exato. Produção raiz HTTP 200 e `/release.json` HTTP 200 confirmaram SHA exato `a7484fbab8c98d0fbd67e1e16b2619fb5807064b`, versão `0.2.1338`.
 - Nenhuma migration, RLS, Auth, Storage, Edge Function, escrita factual Supabase ou matriz/score foi alterada/escrita.
 - Próximo chunk calculado: autoria Câmara `2776–2800`; manter retenção fail-closed.
 
@@ -31,7 +31,7 @@
 ## Fechamento de publicação — autoria Câmara 2701–2725 — 2026-09-11
 
 - Commit `73fc47619afec96550dab416f8f3361e8e459b47` publicado em `origin/main`; worktree limpa e remoto alinhado.
-- Artefatos: 25 projetos únicos; 50 ocorrências; 19 candidatos; causal 25/25 e red-team 25/25; reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
+- Artefatos: 25 projetos únicos; 47 ocorrências; 18 candidatos; causal 25/25 e red-team 25/25; reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
 - Fontes oficiais: 50/50 endpoints Câmara HTTP 200, identidade `dados.id` exata 25/25, textos integrais 25/25 HTTP 200, bytes/SHA-256 individuais e tramitação independente catalogados.
 - Gates Node 24.19.0: `499/499` testes em `120` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos/sitemap `1003+2`, `git diff --check`; churn `impact-editorial-*` restaurado.
 - Backup Cloudflare `334951434`, run `34551058897`, `completed/success`, `headSha` exato. Deploy primário `34551045986` permaneceu `in_progress` na verificação; backup foi o caminho efetivo confiável.
