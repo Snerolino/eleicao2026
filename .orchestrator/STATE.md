@@ -1,3 +1,14 @@
+## Tick contínuo — autoria Câmara 2551-2575 retida — 2026-09-10
+
+- Lock exclusivo adquirido com `flock`; worktree estava limpa e único writer confirmado.
+- Seleção determinística: 25 projetos únicos (`offset=2550`, `limit=25`), 50 ocorrências candidato–projeto e 20 candidatos.
+- Revalidação oficial: 25/25 endpoints de proposição e 25/25 endpoints de tramitação Câmara HTTP 200; identidade `dados.id` exata em 25/25; 96.108 bytes e SHA-256 preservados no manifesto `data/legislative-import/camara/authored-project-review-batches/camara-authored-2551-2575-source-manifest.json`.
+- Texto integral catalogado 25/25 e tramitação independente catalogada 25/25; conteúdo não lido/validado e nenhum evento reconhecido como vinculante.
+- Lanes causal/red-team: 25/25 IDs exatos em cada lane; reconciliação 25 withheld, 0 pending_review, 0 approved, 0 score_eligible; `content_read=false`, `remote_apply=false`.
+- Bloqueio real: sem texto integral validado, versão/evento vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score. Nenhum fato, claim, voto, matéria, matriz, score, projeto público ou escrita remota foi promovido.
+- Checkpoint: `projects_analyzed=2575`, `withheld=2575`, `blocked_items=107`, próximo lote `2576-2600`.
+- QA: `docs/qa/lote-camara-autoria-2551-2575-2026-09-10.md`.
+
 ## Fechamento de publicação — autoria Câmara 2526–2550
 
 - Commit de artefatos `fc022675bfe424e16d9947615b6ae3c8b5826dae` publicado em `origin/main`; worktree limpa.
