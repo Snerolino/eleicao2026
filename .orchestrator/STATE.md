@@ -1,3 +1,13 @@
+## Tick contínuo — autoria Câmara 2751–2775 retida — 2026-09-11
+
+- Lock exclusivo `flock`; seleção determinística `offset=2750`, `limit=25`: 25 projetos únicos, 50 ocorrências e 19 candidatos únicos.
+- Revalidação oficial: 25/25 endpoints Câmara HTTP 200, identidade `dados.id` exata 25/25, texto integral 25/25 HTTP 200 e tramitação independente 25/25; bytes/SHA-256 catalogados.
+- Lanes causal/red-team: 25/25 IDs exatos; reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
+- Bloqueio real: sem validação editorial do texto integral, versão/evento vinculante e voto nominal individual; autoria/ementa/tramitação não prova posição, efeito causal ou score.
+- Checkpoint: `projects_analyzed=2775`, `last_batch=2751-2775`, `next_batch=2776-2800`, `withheld=2775`, `blocked_items=115`. QA: `docs/qa/lote-camara-autoria-2751-2775-2026-09-11.md`.
+- Gates locais verdes: 499/499 testes, TypeScript, schema, data:check 1003/988, build 245 módulos/sitemap 1003+2 e git diff --check.
+- Nenhuma migration, RLS, Auth, Storage, Edge Function, escrita factual Supabase ou matriz/score foi alterada/escrita.
+
 ## Fechamento de publicação — autoria Câmara 2726–2750 — 2026-09-11
 
 - Commit `290067fc9c1f394cb4e97f11cee1f7004c0b36dd` publicado em `origin/main`; worktree limpa e remoto alinhado.

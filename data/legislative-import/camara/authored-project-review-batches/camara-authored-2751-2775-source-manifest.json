@@ -1,0 +1,1015 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_source_manifest",
+  "mode": "read-only",
+  "remote_apply": false,
+  "content_read": false,
+  "selection": "unique projects sorted by exact candidate coverage",
+  "counts": {
+    "projects": 25,
+    "candidate_occurrences": 47,
+    "identity_exact": 25,
+    "proposition_http_200": 25,
+    "full_text_http_200": 25,
+    "tramitacoes_http_200": 25
+  },
+  "projects": [
+    {
+      "id": "camara:emp-1-0-2462570",
+      "candidate_occurrences": 1,
+      "candidate_tse_ids": [
+        "210002537057"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2462570",
+        "actual_api_id": 2462570,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2462570",
+          "status": 200,
+          "bytes": 1499,
+          "sha256": "sha256:9532305adc4013b43febe8254c7d6084f16a934b764ac42d2dbf5db39b34df61"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2485396",
+          "status": 200,
+          "bytes": 140986,
+          "sha256": "sha256:e8c93f6e47ddd0923c19d75241756b34d40b982369b989fdbfbdae8cf6471124"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2462570/tramitacoes",
+          "status": 200,
+          "bytes": 1278,
+          "sha256": "sha256:b727bed306c0263fa9bc317161ef76e6643fdd8df7032a0dbd2597d6c8740346",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2462956",
+      "candidate_occurrences": 1,
+      "candidate_tse_ids": [
+        "210002537057"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2462956",
+        "actual_api_id": 2462956,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2462956",
+          "status": 200,
+          "bytes": 1825,
+          "sha256": "sha256:68c2cba4de7a04ba116047cd6b9759dd22607cb37ab595b9b2abbba7188c1d7b"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2486364",
+          "status": 200,
+          "bytes": 116833,
+          "sha256": "sha256:d5fd8de712624b68bc197435bf4bc69e30f75ebccd00e492a7594cb97e99f9dc"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2462956/tramitacoes",
+          "status": 200,
+          "bytes": 2623,
+          "sha256": "sha256:477c31023d9c336f7132d577171e8001b60e221123c237d90ac8e62deeb81ea4",
+          "items": 4
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2464856",
+      "candidate_occurrences": 1,
+      "candidate_tse_ids": [
+        "210002537057"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2464856",
+        "actual_api_id": 2464856,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2464856",
+          "status": 200,
+          "bytes": 1528,
+          "sha256": "sha256:4ebd782939bfd50d7c4f3b5f5b628a8382846e773089f6e52d6afd37551f4841"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2491240",
+          "status": 200,
+          "bytes": 159186,
+          "sha256": "sha256:6c3b7668b308014bea5bd7c245f39ad769ae8549580cd98f659dcc6641839ea3"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2464856/tramitacoes",
+          "status": 200,
+          "bytes": 1278,
+          "sha256": "sha256:f192871fb5877ffffde04eefcb8a74a9e64e755503f3276a4c88467fd529776d",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2468536",
+      "candidate_occurrences": 1,
+      "candidate_tse_ids": [
+        "210002537057"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2468536",
+        "actual_api_id": 2468536,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2468536",
+          "status": 200,
+          "bytes": 1509,
+          "sha256": "sha256:66d4de8963ca201b2bf90c6bcbf340b260e759443e36594e827ba3aac09702cf"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2819499",
+          "status": 200,
+          "bytes": 130395,
+          "sha256": "sha256:b98f1aefb4a736ee4d7e2ac9b80bb692f977ca9aa93e38df4bd8ab55cadab88b"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2468536/tramitacoes",
+          "status": 200,
+          "bytes": 1264,
+          "sha256": "sha256:4a4c2a562f0c6a3dfb2e6c412c05307b263f92aa4e69916f0e5119fb0422a2a4",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2469297",
+      "candidate_occurrences": 3,
+      "candidate_tse_ids": [
+        "210002534654",
+        "210002547819",
+        "210002547857"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2469297",
+        "actual_api_id": 2469297,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2469297",
+          "status": 200,
+          "bytes": 1956,
+          "sha256": "sha256:d92a92ce78eb4da81486e2f41cfd1e7a328b7cd10529ef66651180376f5f390c"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2820873",
+          "status": 200,
+          "bytes": 127625,
+          "sha256": "sha256:aa2bf1628cb6af96b46d97df6b58e793c783a0fbcb6384eb8cff46b20ba08875"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2469297/tramitacoes",
+          "status": 200,
+          "bytes": 1257,
+          "sha256": "sha256:82ece76f0efd009fbb3f3e633aa5d79a0386e330cedca5e7de6d0d79c991901a",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2470668",
+      "candidate_occurrences": 1,
+      "candidate_tse_ids": [
+        "210002537057"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2470668",
+        "actual_api_id": 2470668,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2470668",
+          "status": 200,
+          "bytes": 1415,
+          "sha256": "sha256:f5f3ca7c6952745a381e60b9eff616405bb98094ea63641f40ac09943d637a27"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2823976",
+          "status": 200,
+          "bytes": 152022,
+          "sha256": "sha256:04d7b0dd267bfe41fb708ef98edb0e9afff187057fefddd1e22cc84e6e69badb"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2470668/tramitacoes",
+          "status": 200,
+          "bytes": 1278,
+          "sha256": "sha256:dce609ff99e79a95488982e15e586d171763f74d858fad48e24fa5b26bb6dfdf",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2472012",
+      "candidate_occurrences": 1,
+      "candidate_tse_ids": [
+        "210002537057"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2472012",
+        "actual_api_id": 2472012,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2472012",
+          "status": 200,
+          "bytes": 2102,
+          "sha256": "sha256:5d056419f7df7e710d73574d61b043b7ec16ba0c25f8b3a65e67a8e377feebfb"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2826868",
+          "status": 200,
+          "bytes": 80620,
+          "sha256": "sha256:e7dc9cee601928496b8376aa7483865ad950f3ad2b1a3359e5f52a07ebcd9e4f"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2472012/tramitacoes",
+          "status": 200,
+          "bytes": 1242,
+          "sha256": "sha256:abad25c3801c09dc691cd2da719b2da0f6b9ef150e296e042f7c15e8a59db9ee",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2475096",
+      "candidate_occurrences": 1,
+      "candidate_tse_ids": [
+        "210002537057"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "arquivado",
+      "identity": {
+        "expected_api_id": "2475096",
+        "actual_api_id": 2475096,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2475096",
+          "status": 200,
+          "bytes": 1676,
+          "sha256": "sha256:dd663cbb4bb979289d452598a2d148da73233516866c6472d0cbf6903dfba977"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2832552",
+          "status": 200,
+          "bytes": 89533,
+          "sha256": "sha256:70706559640861f906c721afc8fb7f334e859f3401052660d3bf37196332bd99"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2475096/tramitacoes",
+          "status": 200,
+          "bytes": 2632,
+          "sha256": "sha256:71888a1cf11d5f3cb88bd71306d37775413553818a574f9aa4def187dc46f336",
+          "items": 4
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2477785",
+      "candidate_occurrences": 1,
+      "candidate_tse_ids": [
+        "210002537057"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2477785",
+        "actual_api_id": 2477785,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2477785",
+          "status": 200,
+          "bytes": 1340,
+          "sha256": "sha256:a2f3a2346329651b11a3879e01f2f2a37bd0e9c16a0dc33b3cbb51b61046736d"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2837915",
+          "status": 200,
+          "bytes": 154861,
+          "sha256": "sha256:fb54dc95080ee2ba42ddd0bb5d9a1f95ba0497c455ba3f0555007bf99c7581d7"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2477785/tramitacoes",
+          "status": 200,
+          "bytes": 1289,
+          "sha256": "sha256:0bf631ba282b2c115a8e1aae7ad34a3591c6c5aafdbcfa7b7b4cc79551db05ad",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2477874",
+      "candidate_occurrences": 1,
+      "candidate_tse_ids": [
+        "210002547819"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2477874",
+        "actual_api_id": 2477874,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2477874",
+          "status": 200,
+          "bytes": 1467,
+          "sha256": "sha256:2a446dc18aac888a6ef1b14a977867a8a8a02bd29109754830ddb9410b104751"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2838096",
+          "status": 200,
+          "bytes": 111775,
+          "sha256": "sha256:626a66b22a9dcd9e0ea6247c4bda6feb70ed8d2a460fcb89521db6f25788f966"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2477874/tramitacoes",
+          "status": 200,
+          "bytes": 1272,
+          "sha256": "sha256:943a0e059c857fd082001b42b81d4030d90f359f6f1737d408ea37b840c89164",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2477876",
+      "candidate_occurrences": 1,
+      "candidate_tse_ids": [
+        "210002537057"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2477876",
+        "actual_api_id": 2477876,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2477876",
+          "status": 200,
+          "bytes": 1296,
+          "sha256": "sha256:499c9a08170b20384053e938866762a0af59dbb4646047511ee2b6d18324e288"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2838161",
+          "status": 200,
+          "bytes": 109106,
+          "sha256": "sha256:623babf5f0954cbf2755294982ea98bc7a97ea1aaab5a9b53f524729ec7b6efb"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2477876/tramitacoes",
+          "status": 200,
+          "bytes": 1279,
+          "sha256": "sha256:698120bf925edbf08d23a407618717a7153c40081268b15f50c4233599ac05c9",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2480528",
+      "candidate_occurrences": 1,
+      "candidate_tse_ids": [
+        "210002547819"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2480528",
+        "actual_api_id": 2480528,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2480528",
+          "status": 200,
+          "bytes": 1759,
+          "sha256": "sha256:b31037edc58f2e9eb831bffcf17a975451b99575f8ba006da58f403c0ecdc200"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2843682",
+          "status": 200,
+          "bytes": 135647,
+          "sha256": "sha256:c4aaf40a43618fdb1b9b52429e6d5f655c8e04aa315c8081bbb5161e501bf75a"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2480528/tramitacoes",
+          "status": 200,
+          "bytes": 1273,
+          "sha256": "sha256:15b4ee27a41b664f0b2c5baf890010b7f7425ebfeb3892ef00f6a2b4557cb6f3",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2481064",
+      "candidate_occurrences": 1,
+      "candidate_tse_ids": [
+        "210002537057"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2481064",
+        "actual_api_id": 2481064,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2481064",
+          "status": 200,
+          "bytes": 1350,
+          "sha256": "sha256:571f4745fedb90d831a27a6d67d24f8de7de6415e00dd38b717b97395f852eac"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2844797",
+          "status": 200,
+          "bytes": 363872,
+          "sha256": "sha256:d69fe1b8254ce4ae526304edca35354aad9a8266a8756ba72afc942508324ed8"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2481064/tramitacoes",
+          "status": 200,
+          "bytes": 1260,
+          "sha256": "sha256:1e923ea60dfd3dd62e862947d190b41cf54c0c79259707f90c3c8180f97a4f63",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2483875",
+      "candidate_occurrences": 9,
+      "candidate_tse_ids": [
+        "210002534654",
+        "210002534656",
+        "210002534671",
+        "210002534897",
+        "210002537714",
+        "210002538541",
+        "210002547816",
+        "210002547819",
+        "210002547857"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2483875",
+        "actual_api_id": 2483875,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483875",
+          "status": 200,
+          "bytes": 1394,
+          "sha256": "sha256:d04aa9539a4dee82a20f0ff4aba9caadaaee5bb42960b2671f8945ad9c5a033b"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2855000",
+          "status": 200,
+          "bytes": 163234,
+          "sha256": "sha256:688671feac9978d79447bb08ffa1809e2c1ee54a6e415fd68233940a593a1b38"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483875/tramitacoes",
+          "status": 200,
+          "bytes": 1259,
+          "sha256": "sha256:edfc401f9431a0e9f3289a6748dbb666c521c068cf80d6c3fc8150780a854f21",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2484320",
+      "candidate_occurrences": 1,
+      "candidate_tse_ids": [
+        "210002537066"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2484320",
+        "actual_api_id": 2484320,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484320",
+          "status": 200,
+          "bytes": 1425,
+          "sha256": "sha256:fdbd08e468e2b96f9c06afce5c4b2934be0508635e58b325fbeaaf2825123580"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2856788",
+          "status": 200,
+          "bytes": 121282,
+          "sha256": "sha256:428a44d72e24bbad27c3bd8aebaeb04180a84ca97350e394b27162cf935e1581"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484320/tramitacoes",
+          "status": 200,
+          "bytes": 1254,
+          "sha256": "sha256:5018124f21a3b99e3b83a6128e56883287d914b6a5f4b21266b1ffed50ec03ba",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2484435",
+      "candidate_occurrences": 5,
+      "candidate_tse_ids": [
+        "210002537712",
+        "210002537718",
+        "210002541514",
+        "210002547816",
+        "210002547857"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2484435",
+        "actual_api_id": 2484435,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484435",
+          "status": 200,
+          "bytes": 1805,
+          "sha256": "sha256:a71450744d9f2c1217fa0cd8b2c47b591f2a876e39eaab9d5d458cb0a6733ea8"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2857217",
+          "status": 200,
+          "bytes": 152399,
+          "sha256": "sha256:92b0105feea8b8ec86d9baf5dc59d564a184fbadd900dc8e3e7a757d6aeb077f"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484435/tramitacoes",
+          "status": 200,
+          "bytes": 1246,
+          "sha256": "sha256:b055307497d68b5c1cbc93b51fb758f2d6179953c0803743522431890ef3adb3",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2511045",
+      "candidate_occurrences": 3,
+      "candidate_tse_ids": [
+        "210002534583",
+        "210002534604",
+        "210002537712"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2511045",
+        "actual_api_id": 2511045,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2511045",
+          "status": 200,
+          "bytes": 2143,
+          "sha256": "sha256:91536f22da882427fbef2d655b90528b179c7df7371d1082cc6d9ccaf22a7a72"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2910925",
+          "status": 200,
+          "bytes": 190493,
+          "sha256": "sha256:bec754f2f26001fd432d78447b0667684c8d0b10df2098cf414dee79ee686747"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2511045/tramitacoes",
+          "status": 200,
+          "bytes": 1253,
+          "sha256": "sha256:258333e2d7887db1b8782971e0b383e91c5e960b29064abd82fc5d9237bad438",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2529906",
+      "candidate_occurrences": 1,
+      "candidate_tse_ids": [
+        "210002534654"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2529906",
+        "actual_api_id": 2529906,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2529906",
+          "status": 200,
+          "bytes": 1293,
+          "sha256": "sha256:1b1999d70d891405a02bdeeb467b80f8cc2cfd521b6940d9402994d7d9d44906"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2946231",
+          "status": 200,
+          "bytes": 135520,
+          "sha256": "sha256:1dfed13536c3ee9d39880456727f7821c427a8d3b307e35620b054337f311fec"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2529906/tramitacoes",
+          "status": 200,
+          "bytes": 1259,
+          "sha256": "sha256:e71fc279d90170d35250414bdfc119edd3859744ed7b1053f5228230d7024db1",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2535766",
+      "candidate_occurrences": 5,
+      "candidate_tse_ids": [
+        "210002534654",
+        "210002536921",
+        "210002537712",
+        "210002547816",
+        "210002547857"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2535766",
+        "actual_api_id": 2535766,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2535766",
+          "status": 200,
+          "bytes": 1391,
+          "sha256": "sha256:edaa14e10b512d013f4fdccb6c5983317c12174a2d4b1d774a2a2e7cb46dcb4e"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2956238",
+          "status": 200,
+          "bytes": 147219,
+          "sha256": "sha256:0311cb6b853c1c8030762a398472b92b9d21018133746473d56a373415a01fdb"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2535766/tramitacoes",
+          "status": 200,
+          "bytes": 1244,
+          "sha256": "sha256:f19ede53dae660b92de128041df3ca007c3c7310afd098a50f6240df1747b826",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2535900",
+      "candidate_occurrences": 1,
+      "candidate_tse_ids": [
+        "210002547819"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2535900",
+        "actual_api_id": 2535900,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2535900",
+          "status": 200,
+          "bytes": 1467,
+          "sha256": "sha256:f07e82e6f12f140e347c22e00a7cca6d0df597cef1948d6d07e02ee9eb60a9a2"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2956405",
+          "status": 200,
+          "bytes": 171378,
+          "sha256": "sha256:504c105823d8cac26d57fefa50c4d504ea8606376a108fb4a9156ebc5ba36557"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2535900/tramitacoes",
+          "status": 200,
+          "bytes": 1258,
+          "sha256": "sha256:73711371de3f4e5cd96b94b50d3b38ffb1d891e84783c189a90f01662bf3b7ee",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2549699",
+      "candidate_occurrences": 1,
+      "candidate_tse_ids": [
+        "210002547816"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2549699",
+        "actual_api_id": 2549699,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2549699",
+          "status": 200,
+          "bytes": 1302,
+          "sha256": "sha256:902188bf13d369527df69c672c38fece48b4ed702bbd5a053f9473cd321a71e6"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2980131",
+          "status": 200,
+          "bytes": 128219,
+          "sha256": "sha256:87954c3169fb114793f7542ea535baf56f62008eafbbbad87e214ee17e539536"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2549699/tramitacoes",
+          "status": 200,
+          "bytes": 1248,
+          "sha256": "sha256:e4e89f7b12ddbdd6cd717561c357f214d84c1629bb7431174b437913937ec06f",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2556513",
+      "candidate_occurrences": 1,
+      "candidate_tse_ids": [
+        "210002547819"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2556513",
+        "actual_api_id": 2556513,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2556513",
+          "status": 200,
+          "bytes": 1602,
+          "sha256": "sha256:b162acb1bd925a31925cda15047a442d0a76d37cc16461b7df9a70e484129648"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2991810",
+          "status": 200,
+          "bytes": 167358,
+          "sha256": "sha256:a97e9f2087a08db53162becda7c68003c55bc9bc80051a352cfc18a8ef5bfa29"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2556513/tramitacoes",
+          "status": 200,
+          "bytes": 1258,
+          "sha256": "sha256:e311b9eb83279b26967c34c70d122a64ba0fc8caabdce86716d151022a68bb35",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2568062",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534654",
+        "210002537717"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2568062",
+        "actual_api_id": 2568062,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2568062",
+          "status": 200,
+          "bytes": 1331,
+          "sha256": "sha256:8bed44de7c6c3a3c41d308bc04fa3a383dea29d0e35f3b5eb0b5b01ce5659948"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3014919",
+          "status": 200,
+          "bytes": 135060,
+          "sha256": "sha256:3ca58f830748dededed01f419ea027c59532e49f1fd39d36a026fc1feeac32f4"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2568062/tramitacoes",
+          "status": 200,
+          "bytes": 1253,
+          "sha256": "sha256:a9fe807c6ff57e529c01f337f7968e87fbcccecff864bbeea4874a1afbe769c1",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2568091",
+      "candidate_occurrences": 1,
+      "candidate_tse_ids": [
+        "210002547819"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2568091",
+        "actual_api_id": 2568091,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2568091",
+          "status": 200,
+          "bytes": 1470,
+          "sha256": "sha256:e2e980a74096d273f36570620e6f4be5589638e8901adee37a89e4b3c3472529"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3015237",
+          "status": 200,
+          "bytes": 143997,
+          "sha256": "sha256:b470b444de3959392fb8ae19f16d2b8f0728b6cf0a9c673ba46ae76f6acd427f"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2568091/tramitacoes",
+          "status": 200,
+          "bytes": 1250,
+          "sha256": "sha256:1dc855b51d0b95b8cc6e784b0c2cf9b6712c57de313c8b425a7b3c8c060d7aab",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    },
+    {
+      "id": "camara:emp-1-0-2572500",
+      "candidate_occurrences": 2,
+      "candidate_tse_ids": [
+        "210002534656",
+        "210002547816"
+      ],
+      "type": "EMP",
+      "title": "EMP 1/0",
+      "year": 0,
+      "official_status": "tramitando",
+      "identity": {
+        "expected_api_id": "2572500",
+        "actual_api_id": 2572500,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2572500",
+          "status": 200,
+          "bytes": 1347,
+          "sha256": "sha256:0d85ba717f617b0448b85b85701ed1bb87adaeb53fdd05ec292c2b889556cff5"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3023009",
+          "status": 200,
+          "bytes": 136059,
+          "sha256": "sha256:7aad30c1c32e238ee7b07cc5d82aae2aecafe0cd662c218a0a2e58f3494b444d"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2572500/tramitacoes",
+          "status": 200,
+          "bytes": 1255,
+          "sha256": "sha256:826363ca1f415126d493b785d7e7eea3142c9b92611cfe257508c57fdb50f6fe",
+          "items": 2
+        }
+      },
+      "content_read": false,
+      "remote_apply": false
+    }
+  ]
+}
