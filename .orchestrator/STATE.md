@@ -1,3 +1,12 @@
+## Fechamento de publicação — autoria Câmara 2801–2825 — 2026-09-11
+
+- Quatro artefatos fechados em `data/legislative-import/camara/authored-project-review-batches/`: source manifest, causal, redteam e reconciled. 25 projetos únicos, 50 ocorrências, 25 identidades exatas; fontes Câmara 25/25 API, 25/25 texto integral e 25/25 tramitação HTTP 200; 18/25 eventos independentes, 7 sem binding específico mantidos bloqueados.
+- Invariantes verificadas em causal/red-team/reconciliado: `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`. Nenhum fato, voto, claim, assessment, score, matriz ou escrita remota foi promovido.
+- Checkpoint: `projects_analyzed=2825`, `last_batch=2801-2825`, `next_batch=2826-2850`, `withheld=2825`; QA `docs/qa/lote-camara-autoria-2801-2825-2026-09-11.md`.
+- Gates Node 24.19.0 verdes: `499/499` testes em `120` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos/sitemap `1003+2`, `git diff --check`; churn não relacionado restaurado.
+- Nenhuma migration, RLS, Auth, Storage, Edge Function, escrita factual Supabase ou matriz/score foi alterada/escrita.
+- Próximo chunk calculado: autoria Câmara `2826–2850`; não reabrir lotes anteriores.
+
 ## Fechamento de publicação — autoria Câmara 2776–2800 — 2026-09-11
 
 - Commit funcional `9e20520c5373450e60a2db7085142ef1c3c9f23d` publicado em `origin/main`; worktree limpa e remoto alinhado.
