@@ -5639,3 +5639,11 @@ Sem autorização humana explícita própria, não fazer:
 - Commit final `c5b4f701aea885ae48b1a276d40c233fa26c47dc` publicado; backup `334951434` run `34548978858` success/headSha exato; produção raiz e `/release.json` HTTP 200 confirmaram SHA exato e release `0.2.1324`.
 - Nenhuma migration, RLS, Auth, Storage, Edge Function, Supabase factual ou matriz/score foi alterada/escrita.
 - Lote fechado antes de `2651–2675`.
+
+
+## Verificação de publicação — autoria Câmara 2651–2675
+
+- Commit `d9d197aff7fadc6a212f4afd66c40fc0be2ed59e` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run final `34549674612`, `completed/success`, `headSha` exato.
+- Produção raiz e `/release.json` HTTP 200; release confirmou SHA exato, versão `0.2.1328` e snapshot `row_count=1003`.
+- Próximo chunk calculado: autoria Câmara `2676–2700`; retenção fail-closed continua, sem score/matriz sem assessment completo e evento vinculante.
