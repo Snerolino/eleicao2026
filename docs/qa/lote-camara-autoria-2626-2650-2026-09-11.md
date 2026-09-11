@@ -42,7 +42,7 @@ Processar boundedamente o lote determinístico de autoria Câmara 2626–2650, r
 
 ## Publicação verificada
 - Commit final de artefatos/documentação: `c5b4f701aea885ae48b1a276d40c233fa26c47dc`; `git push origin main` e `git ls-remote` confirmaram alinhamento.
-- Backup Cloudflare `334951434`, run `34548739233`: `completed/success`, `headSha` exato.
+- Backup Cloudflare `334951434`, run `34548978858`: `completed/success`, `headSha` exato.
 - Produção raiz HTTP 200 e `/release.json` HTTP 200; release confirmou SHA exato `c5b4f701aea885ae48b1a276d40c233fa26c47dc`, versão `0.2.1324`.
 
 ## Próximo passo
