@@ -1,3 +1,13 @@
+## Fechamento de publicação — autoria Câmara 2776–2800 — 2026-09-11
+
+- Commit funcional `9e20520c5373450e60a2db7085142ef1c3c9f23d` publicado em `origin/main`; worktree limpa e remoto alinhado.
+- Artefatos: 25 projetos únicos; 50 ocorrências; 25 identidades exatas; causal 25/25 e red-team 25/25; reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
+- Fontes oficiais: 25/25 proposições Câmara HTTP 200, `dados.id` exata 25/25, texto integral 25/25 HTTP 200, tramitação 25/25 HTTP 200; 75/75 URLs revalidadas com bytes/SHA idênticos ao manifesto; 14 itens continuam sem binding específico de evento, fail-closed.
+- Gates Node 24.19.0: `499/499` testes em `120` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos/sitemap `1003+2`, `git diff --check`.
+- Deploy primário `34552722816` e backup `334951434` run `34552738361`: `completed/success`, `headSha` exato. Produção raiz e `/release.json` HTTP 200 confirmaram SHA exato, versão `0.2.1344`, snapshot `row_count=1003`.
+- Alteração ALRS preexistente preservada. Nenhuma migration, RLS, Auth, Storage, Edge Function, escrita factual Supabase ou matriz/score foi alterada/escrita.
+- Próximo chunk calculado: autoria Câmara `2801–2825`; este lote está fechado.
+
 ## Fechamento de publicação — autoria Câmara 2751–2775 — 2026-09-11
 
 - Commit `c85f80a4b21c268df903265fe83ae61b7167f07c` publicado em `origin/main`; worktree limpa e remoto alinhado.

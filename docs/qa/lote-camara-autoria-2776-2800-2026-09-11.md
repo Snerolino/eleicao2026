@@ -35,8 +35,18 @@ Processar boundedamente 25 projetos únicos de autoria da Câmara, preservar evi
 - Checkpoint durável: `data/legislative-import/camara/authored-analysis-progress-v1.json`.
 
 ## Gates
-- Node 24.19.0: executar `npm run test -- --passWithNoTests`, `npx tsc --noEmit`, `node scripts/validate-impact-schema.mjs`, `npm run data:check`, `npm run build` e `git diff --check`; resultados registrados após execução.
-- Churn não relacionado deve permanecer fora do commit; a alteração ALRS existente é intencional e foi preservada.
+- Node `v24.19.0` confirmado.
+- `npm run test -- --passWithNoTests`: `499/499` testes, `120` arquivos, passou.
+- `npx tsc --noEmit`: passou.
+- `node scripts/validate-impact-schema.mjs`: passou; fixtures boas aceitas e ruins rejeitadas.
+- `npm run data:check`: passou; `1003` candidaturas, `988` fotos oficiais.
+- `npm run build`: passou; `245` módulos, sitemap `1003` candidatos + `2` estáticas; release local gerado.
+- `git diff --check`: passou.
+- Churn timestamp-only não relacionado de `impact-editorial-*` foi restaurado; a alteração ALRS existente é intencional e foi preservada.
 
-## Publicação
-- Commit/push, CI, backup Cloudflare e produção só serão declarados após verificação do SHA exato.
+## Publicação verificada
+- Commit funcional: `9e20520c5373450e60a2db7085142ef1c3c9f23d`, push confirmado por `git ls-remote`.
+- Deploy primário `34552722816`: `completed/success`, `headSha` exato.
+- Backup Cloudflare `334951434`, run `34552738361`: `completed/success`, `headSha` exato.
+- Produção raiz HTTP 200; `/release.json` HTTP 200 confirmou SHA exato `9e20520c5373450e60a2db7085142ef1c3c9f23d`, versão `0.2.1344`, snapshot `row_count=1003`.
+- Nenhuma migration, RLS, Auth, Storage, Edge Function, escrita factual Supabase ou matriz/score foi alterada/escrita.
