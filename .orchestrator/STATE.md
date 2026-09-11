@@ -5,11 +5,10 @@
 - Checkpoint: `projects_analyzed=2825`, `last_batch=2801-2825`, `next_batch=2826-2850`, `withheld=2825`; QA `docs/qa/lote-camara-autoria-2801-2825-2026-09-11.md`.
 - Gates Node 24.19.0 verdes: `499/499` testes em `120` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos/sitemap `1003+2`, `git diff --check`; churn não relacionado restaurado.
 - Nenhuma migration, RLS, Auth, Storage, Edge Function, escrita factual Supabase ou matriz/score foi alterada/escrita.
-- Commit `e1887c5a0801c95e5cfe77964576d9c22f9d9de6` publicado; `git ls-remote` alinhado.
-- Backup Cloudflare `334951434`, run `34553751941`: `completed/success`, `headSha` exato. Deploy primário `34553737101` estava `in_progress` e não foi usado como confirmação.
-- Produção raiz e `/release.json`: HTTP 200; release confirmou SHA exato `e1887c5a0801c95e5cfe77964576d9c22f9d9de6`, snapshot `row_count=1003`.
+- Commit funcional `e1887c5a0801c95e5cfe77964576d9c22f9d9de6` publicado; `git ls-remote` alinhado.
+- Backup Cloudflare `334951434`, run `34553751941`: `completed/success`, `headSha` exato; produção raiz e `/release.json` HTTP 200 confirmaram o SHA exato, versão `0.2.1346`, snapshot `row_count=1003`.
+- Deploy primário `34553737101`: `completed/cancelled` após o backup verde; backup foi o caminho efetivo.
 - Próximo chunk calculado: autoria Câmara `2826–2850`; não reabrir lotes anteriores.
-- Commit `e1887c5a0801c95e5cfe77964576d9c22f9d9de6` publicado; backup `334951434` run `34553751941` success/headSha exato; produção raiz e `/release.json` HTTP 200 confirmaram SHA exato, versão `0.2.1346`, snapshot `row_count=1003`. Deploy primário `34553737101` foi cancelado após o backup verde.
 
 ## Fechamento de publicação — autoria Câmara 2776–2800 — 2026-09-11
 
