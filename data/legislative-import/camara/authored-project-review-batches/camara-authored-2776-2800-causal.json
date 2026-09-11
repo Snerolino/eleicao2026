@@ -1,0 +1,406 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_causal_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:req-51-2022-2325287",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [
+        {
+          "id": "camara:req-51-2022-2325287",
+          "api": 200,
+          "tr": 200,
+          "exact": true,
+          "full": 200,
+          "eventUrl": null,
+          "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2178277"
+        }
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-514-2022-2319485",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [
+        {
+          "id": "camara:req-514-2022-2319485",
+          "api": 200,
+          "tr": 200,
+          "exact": true,
+          "full": 200,
+          "eventUrl": null,
+          "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2156473"
+        }
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-514-2023-2350573",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-516-2021-2274248",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [
+        {
+          "id": "camara:req-516-2021-2274248",
+          "api": 200,
+          "tr": 200,
+          "exact": true,
+          "full": 200,
+          "eventUrl": null,
+          "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1976595"
+        }
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-52-2023-2385591",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [
+        {
+          "id": "camara:req-52-2023-2385591",
+          "api": 200,
+          "tr": 200,
+          "exact": true,
+          "full": 200,
+          "eventUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2323675",
+          "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2323675"
+        }
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-52-2025-2490630",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [
+        {
+          "id": "camara:req-52-2025-2490630",
+          "api": 200,
+          "tr": 200,
+          "exact": true,
+          "full": 200,
+          "eventUrl": null,
+          "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2874350"
+        }
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-521-2023-2350671",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [
+        {
+          "id": "camara:req-521-2023-2350671",
+          "api": 200,
+          "tr": 200,
+          "exact": true,
+          "full": 200,
+          "eventUrl": null,
+          "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2241007"
+        }
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-5270-2025-2590570",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-53-2022-2325338",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [
+        {
+          "id": "camara:req-53-2022-2325338",
+          "api": 200,
+          "tr": 200,
+          "exact": true,
+          "full": 200,
+          "eventUrl": null,
+          "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2178426"
+        }
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-53-2023-2388389",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [
+        {
+          "id": "camara:req-53-2023-2388389",
+          "api": 200,
+          "tr": 200,
+          "exact": true,
+          "full": 200,
+          "eventUrl": null,
+          "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2329519"
+        }
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-538-2022-2319594",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-55-2022-2327208",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [
+        {
+          "id": "camara:req-55-2022-2327208",
+          "api": 200,
+          "tr": 200,
+          "exact": true,
+          "full": 200,
+          "eventUrl": null,
+          "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2185096"
+        }
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-563-2025-2484360",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-564-2025-2484361",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-565-2025-2484362",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-575-2024-2419151",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-594-2021-2275386",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-6-2021-2276408",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [
+        {
+          "id": "camara:req-6-2021-2276408",
+          "api": 200,
+          "tr": 200,
+          "exact": true,
+          "full": 200,
+          "eventUrl": null,
+          "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1984677"
+        }
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-6-2022-2321032",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [
+        {
+          "id": "camara:req-6-2022-2321032",
+          "api": 200,
+          "tr": 200,
+          "exact": true,
+          "full": 200,
+          "eventUrl": null,
+          "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2162962"
+        }
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-60-2023-2407543",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [
+        {
+          "id": "camara:req-60-2023-2407543",
+          "api": 200,
+          "tr": 200,
+          "exact": true,
+          "full": 200,
+          "eventUrl": null,
+          "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2365966"
+        }
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-60-2026-2620870",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [
+        {
+          "id": "camara:req-60-2026-2620870",
+          "api": 200,
+          "tr": 200,
+          "exact": true,
+          "full": 200,
+          "eventUrl": null,
+          "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3122852"
+        }
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-619-2023-2351153",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-62-2021-2285740",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [
+        {
+          "id": "camara:req-62-2021-2285740",
+          "api": 200,
+          "tr": 200,
+          "exact": true,
+          "full": 200,
+          "eventUrl": null,
+          "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2022904"
+        }
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-620-2021-2275763",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    },
+    {
+      "id": "camara:req-631-2021-2275849",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria/procedimento não prova posição, efeito causal ou score; conteúdo integral não analisado.",
+      "missing_sources": [],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2776-2800-source-manifest.json"
+    }
+  ]
+}

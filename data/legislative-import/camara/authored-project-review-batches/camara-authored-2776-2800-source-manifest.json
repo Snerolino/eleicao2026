@@ -1,0 +1,1848 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_source_manifest",
+  "mode": "read-only",
+  "remote_apply": false,
+  "content_read": false,
+  "selection": "unique projects sorted by exact candidate coverage",
+  "counts": {
+    "projects": 25,
+    "candidate_occurrences": 50,
+    "identity_exact": 25,
+    "proposition_http_200": 25,
+    "full_text_http_200": 25,
+    "tramitacoes_http_200": 25,
+    "independent_event": 25,
+    "event_binding_pending": 14
+  },
+  "failures": [
+    {
+      "id": "camara:req-51-2022-2325287",
+      "api": 200,
+      "tr": 200,
+      "exact": true,
+      "full": 200,
+      "eventUrl": null,
+      "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2178277"
+    },
+    {
+      "id": "camara:req-514-2022-2319485",
+      "api": 200,
+      "tr": 200,
+      "exact": true,
+      "full": 200,
+      "eventUrl": null,
+      "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2156473"
+    },
+    {
+      "id": "camara:req-516-2021-2274248",
+      "api": 200,
+      "tr": 200,
+      "exact": true,
+      "full": 200,
+      "eventUrl": null,
+      "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1976595"
+    },
+    {
+      "id": "camara:req-52-2023-2385591",
+      "api": 200,
+      "tr": 200,
+      "exact": true,
+      "full": 200,
+      "eventUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2323675",
+      "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2323675"
+    },
+    {
+      "id": "camara:req-52-2025-2490630",
+      "api": 200,
+      "tr": 200,
+      "exact": true,
+      "full": 200,
+      "eventUrl": null,
+      "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2874350"
+    },
+    {
+      "id": "camara:req-521-2023-2350671",
+      "api": 200,
+      "tr": 200,
+      "exact": true,
+      "full": 200,
+      "eventUrl": null,
+      "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2241007"
+    },
+    {
+      "id": "camara:req-53-2022-2325338",
+      "api": 200,
+      "tr": 200,
+      "exact": true,
+      "full": 200,
+      "eventUrl": null,
+      "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2178426"
+    },
+    {
+      "id": "camara:req-53-2023-2388389",
+      "api": 200,
+      "tr": 200,
+      "exact": true,
+      "full": 200,
+      "eventUrl": null,
+      "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2329519"
+    },
+    {
+      "id": "camara:req-55-2022-2327208",
+      "api": 200,
+      "tr": 200,
+      "exact": true,
+      "full": 200,
+      "eventUrl": null,
+      "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2185096"
+    },
+    {
+      "id": "camara:req-6-2021-2276408",
+      "api": 200,
+      "tr": 200,
+      "exact": true,
+      "full": 200,
+      "eventUrl": null,
+      "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1984677"
+    },
+    {
+      "id": "camara:req-6-2022-2321032",
+      "api": 200,
+      "tr": 200,
+      "exact": true,
+      "full": 200,
+      "eventUrl": null,
+      "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2162962"
+    },
+    {
+      "id": "camara:req-60-2023-2407543",
+      "api": 200,
+      "tr": 200,
+      "exact": true,
+      "full": 200,
+      "eventUrl": null,
+      "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2365966"
+    },
+    {
+      "id": "camara:req-60-2026-2620870",
+      "api": 200,
+      "tr": 200,
+      "exact": true,
+      "full": 200,
+      "eventUrl": null,
+      "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3122852"
+    },
+    {
+      "id": "camara:req-62-2021-2285740",
+      "api": 200,
+      "tr": 200,
+      "exact": true,
+      "full": 200,
+      "eventUrl": null,
+      "fullUrl": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2022904"
+    }
+  ],
+  "projects": [
+    {
+      "candidate_tse_id": "210002534601",
+      "id": "camara:req-51-2022-2325287",
+      "house": "camara",
+      "type": "REQ",
+      "number": "51",
+      "year": 2022,
+      "title": "REQ 51/2022",
+      "role": "autor_principal",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2325287",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2325287",
+      "authorship_official_id": "160538",
+      "official_status": "arquivado",
+      "official_ementa": "Requer Audiência Pública com presença do Diretor-geral da Polícia Rodoviária Federal, Inspetor Silvinei Vasques, a fim de prestar esclarecimentos acerca do episódio envolvendo o cidadão Genivaldo de Jesus Santos, que foi amarrado, aprisionado e veio a óbito no interior de uma viatura da Polícia Rodoviária Federal.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002534601",
+        "210002534598"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002534601",
+          "role": "autor_principal",
+          "authorship_official_id": "160538",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2325287"
+        },
+        {
+          "candidate_tse_id": "210002534598",
+          "role": "autor_principal",
+          "authorship_official_id": "160535",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2325287"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2325287",
+        "actual_api_id": 2325287,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2325287",
+          "status": 200,
+          "bytes": 1510,
+          "sha256": "sha256:23619b211500d6c4d45653abb797a1406ad5f1ffe16e6c48389f227c8cbdcfe8"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2178277",
+          "status": 200,
+          "bytes": 168642,
+          "sha256": "sha256:527d97cf25e764462458b02e92bc67f16302c2b29a71a6cfb3ed558b810f11c5"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2325287/tramitacoes",
+          "status": 200,
+          "bytes": 1921,
+          "sha256": "sha256:cb57a3a7e923a2f3ad70e510690a4152387914cb78903da07dce5629f1dda020",
+          "items": 3
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2325287/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002534601",
+      "id": "camara:req-514-2022-2319485",
+      "house": "camara",
+      "type": "REQ",
+      "number": "514",
+      "year": 2022,
+      "title": "REQ 514/2022",
+      "role": "coautor",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2319485",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2319485",
+      "authorship_official_id": "160538",
+      "official_status": "tramitando",
+      "official_ementa": "Requer a dispensa do interstício regimental entre o primeiro e o segundo turno de deliberação da Proposta de Emenda à Constituição nº 13, de 2021.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002534601",
+        "210002534598"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002534601",
+          "role": "coautor",
+          "authorship_official_id": "160538",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2319485"
+        },
+        {
+          "candidate_tse_id": "210002534598",
+          "role": "coautor",
+          "authorship_official_id": "160535",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2319485"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2319485",
+        "actual_api_id": 2319485,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2319485",
+          "status": 200,
+          "bytes": 1442,
+          "sha256": "sha256:a06dc016333c8b93eee859b4830bba485b6c2bce7821ccee70e885b6e8d63bbf"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2156473",
+          "status": 200,
+          "bytes": 81692,
+          "sha256": "sha256:6c9a7901a37d95544d8ba8cf7c0f3f18c2b70c8f38e29bb49be6f67ca50a52e6"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2319485/tramitacoes",
+          "status": 200,
+          "bytes": 4656,
+          "sha256": "sha256:ece49dd332585d82b37e7d4e1e52bf409d821306c8801da3e20ab950431cf033",
+          "items": 9
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2319485/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002534604",
+      "id": "camara:req-514-2023-2350573",
+      "house": "camara",
+      "type": "REQ",
+      "number": "514",
+      "year": 2023,
+      "title": "REQ 514/2023",
+      "role": "coautor",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350573",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350573",
+      "authorship_official_id": "74398",
+      "official_status": "tramitando",
+      "official_ementa": "Requer a realização de sessão solene para homenagear o município de Cachoeira, cidade histórica e monumental nacional via Decreto nº 68.045, de 13 de janeiro 1971, em reconhecimento a data do dia 25 de junho de 1822 que faz referência às lutas que foram iniciadas em prol da independência do Brasil",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002534604",
+        "210002533902"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002534604",
+          "role": "coautor",
+          "authorship_official_id": "74398",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350573"
+        },
+        {
+          "candidate_tse_id": "210002533902",
+          "role": "coautor",
+          "authorship_official_id": "204407",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350573"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2350573",
+        "actual_api_id": 2350573,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350573",
+          "status": 200,
+          "bytes": 1524,
+          "sha256": "sha256:8b94dfebb92d334a94e06adcdfbc4a83e25f00648ddf283410ac5e3fc7582b23"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2240837",
+          "status": 200,
+          "bytes": 669246,
+          "sha256": "sha256:6fd9c928713493a3899ad37287fcb171edfa2e9a03c1051f717529b07b97b38a"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350573/tramitacoes",
+          "status": 200,
+          "bytes": 1601,
+          "sha256": "sha256:8db436856d041c5e4caa4b1c6fbdc5e64f7e4f882524cba28ab9d03c03768b9b",
+          "items": 2
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350573/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002534601",
+      "id": "camara:req-516-2021-2274248",
+      "house": "camara",
+      "type": "REQ",
+      "number": "516",
+      "year": 2021,
+      "title": "REQ 516/2021",
+      "role": "autor_principal",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2274248",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2274248",
+      "authorship_official_id": "160538",
+      "official_status": "arquivado",
+      "official_ementa": "Requer a realização de Sessão Solene, no dia 16 de abril de 2021, em homenagem ao Dia Nacional de Luta pela Reforma Agrária.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002534601",
+        "210002534598"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002534601",
+          "role": "autor_principal",
+          "authorship_official_id": "160538",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2274248"
+        },
+        {
+          "candidate_tse_id": "210002534598",
+          "role": "autor_principal",
+          "authorship_official_id": "160535",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2274248"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2274248",
+        "actual_api_id": 2274248,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2274248",
+          "status": 200,
+          "bytes": 1292,
+          "sha256": "sha256:7e12eb2e38d3cf6abc031d2e7134d8cc096352311bc940f2442f3a3ef8b63514"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1976595",
+          "status": 200,
+          "bytes": 160727,
+          "sha256": "sha256:05bea9edd75d0159b633eee763d7c1485efc40cdb61f8965a3dc550c54446236"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2274248/tramitacoes",
+          "status": 200,
+          "bytes": 1753,
+          "sha256": "sha256:a3b1b1f3992e6129ab0dc6e0617eb8cf2888ebf5e3696ebffdbc0122ff657286",
+          "items": 3
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2274248/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002534588",
+      "id": "camara:req-52-2023-2385591",
+      "house": "camara",
+      "type": "REQ",
+      "number": "52",
+      "year": 2023,
+      "title": "REQ 52/2023",
+      "role": "autor_principal",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2385591",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2385591",
+      "authorship_official_id": "220555",
+      "official_status": "arquivado",
+      "official_ementa": "Requer a inclusão de matéria na ordem do dia para apreciação imediata.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002534588",
+        "210002533902"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002534588",
+          "role": "autor_principal",
+          "authorship_official_id": "220555",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2385591"
+        },
+        {
+          "candidate_tse_id": "210002533902",
+          "role": "autor_principal",
+          "authorship_official_id": "204407",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2385591"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2385591",
+        "actual_api_id": 2385591,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2385591",
+          "status": 200,
+          "bytes": 1479,
+          "sha256": "sha256:d2f18574410b371ece718dd7430d3b94158a05669c4c3ddf71dd079f651cdd09"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2323675",
+          "status": 200,
+          "bytes": 95739,
+          "sha256": "sha256:98d24ea302b53abb303247077ace86665a45bf9ea5eb96e764a467d5ffad1efa"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2385591/tramitacoes",
+          "status": 200,
+          "bytes": 1384,
+          "sha256": "sha256:8122b4bc0c70c4fc1d1f5903bd57307a9bb1ad30f56ddfe97c715e6785fd6a2e",
+          "items": 2
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2385591/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002534668",
+      "id": "camara:req-52-2025-2490630",
+      "house": "camara",
+      "type": "REQ",
+      "number": "52",
+      "year": 2025,
+      "title": "REQ 52/2025",
+      "role": "autor_principal",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2490630",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2490630",
+      "authorship_official_id": "73692",
+      "official_status": "arquivado",
+      "official_ementa": "Requer a criação de Subcomissão Permanente para tratar das Doenças Raras.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002534668",
+        "210002537717"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002534668",
+          "role": "autor_principal",
+          "authorship_official_id": "73692",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2490630"
+        },
+        {
+          "candidate_tse_id": "210002537717",
+          "role": "autor_principal",
+          "authorship_official_id": "204406",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2490630"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2490630",
+        "actual_api_id": 2490630,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2490630",
+          "status": 200,
+          "bytes": 1238,
+          "sha256": "sha256:d92ece52eac6d0ebaafda0f7396795eee65b50342375717da9fcbdd3914d8f6f"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2874350",
+          "status": 200,
+          "bytes": 188849,
+          "sha256": "sha256:d8f85dfedb3e508f9ea531c4c25c080b5a4f437b0665bed50e2980ddf3769434"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2490630/tramitacoes",
+          "status": 200,
+          "bytes": 2575,
+          "sha256": "sha256:3185066bdaf46f17a234330712a35a66b15ee0cd2c51b64092bd2b02e5d7e017",
+          "items": 5
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2490630/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002534668",
+      "id": "camara:req-521-2023-2350671",
+      "house": "camara",
+      "type": "REQ",
+      "number": "521",
+      "year": 2023,
+      "title": "REQ 521/2023",
+      "role": "coautor",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350671",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350671",
+      "authorship_official_id": "73692",
+      "official_status": "tramitando",
+      "official_ementa": "“Requer a realização de Sessão Solene em homenagem aos Bois  do Festival Folclórico de Parintins, Município do Estado do Amazonas.”",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002534668",
+        "210002534656"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002534668",
+          "role": "coautor",
+          "authorship_official_id": "73692",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350671"
+        },
+        {
+          "candidate_tse_id": "210002534656",
+          "role": "coautor",
+          "authorship_official_id": "204388",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350671"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2350671",
+        "actual_api_id": 2350671,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350671",
+          "status": 200,
+          "bytes": 1282,
+          "sha256": "sha256:37e9311ee6b8513e9b11eafb20f9aef42aeac5a26b37c2858e77ff10f32b7bcd"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2241007",
+          "status": 200,
+          "bytes": 277467,
+          "sha256": "sha256:8cf155199c693d3aa7708cdb680dea2d6b5ec128a5ce796abf42d194413da2e0"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350671/tramitacoes",
+          "status": 200,
+          "bytes": 1779,
+          "sha256": "sha256:702ba290a7edb6df753580b681ccd114bb145f867b6011e0234e76a2c26617b8",
+          "items": 3
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2350671/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002537712",
+      "id": "camara:req-5270-2025-2590570",
+      "house": "camara",
+      "type": "REQ",
+      "number": "5270",
+      "year": 2025,
+      "title": "REQ 5270/2025",
+      "role": "coautor",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2590570",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2590570",
+      "authorship_official_id": "136811",
+      "official_status": "tramitando",
+      "official_ementa": "Requer regime de urgência para apreciação do PL nº 3.269, de 2025.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002537712",
+        "210002534656"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002537712",
+          "role": "coautor",
+          "authorship_official_id": "136811",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2590570"
+        },
+        {
+          "candidate_tse_id": "210002534656",
+          "role": "coautor",
+          "authorship_official_id": "204388",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2590570"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2590570",
+        "actual_api_id": 2590570,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2590570",
+          "status": 200,
+          "bytes": 1261,
+          "sha256": "sha256:e8cd59adad2f92c0f025d3f9918aa091fe80cea3fd9d7b38687303c4cd6b581a"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3056575",
+          "status": 200,
+          "bytes": 129993,
+          "sha256": "sha256:9567fe5a91d0e43e62962e7fae2be4800cca1eca5ec09eac8da64c74ad59c37b"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2590570/tramitacoes",
+          "status": 200,
+          "bytes": 1298,
+          "sha256": "sha256:30e678e653c910857b2cf7e3bc6c8ae45ac50e37b3d8403d8dc92eab50f8b852",
+          "items": 2
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2590570/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002537066",
+      "id": "camara:req-53-2022-2325338",
+      "house": "camara",
+      "type": "REQ",
+      "number": "53",
+      "year": 2022,
+      "title": "REQ 53/2022",
+      "role": "autor_principal",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2325338",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2325338",
+      "authorship_official_id": "73486",
+      "official_status": "arquivado",
+      "official_ementa": "Requer inclusão da assinatura no Requerimento nº 26/2022, que Requer a realização de Audiência Pública para discussão da Resolução CNCP nº 53/2022, que trata da retirada de patrocínio em entidades de previdência complementar fechada.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002537066",
+        "210002533902"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002537066",
+          "role": "autor_principal",
+          "authorship_official_id": "73486",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2325338"
+        },
+        {
+          "candidate_tse_id": "210002533902",
+          "role": "autor_principal",
+          "authorship_official_id": "204407",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2325338"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2325338",
+        "actual_api_id": 2325338,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2325338",
+          "status": 200,
+          "bytes": 1385,
+          "sha256": "sha256:44049828f9b07422f4e4a180e61b66cb7a44344dd0b5d541c3ecce6463c6e8b1"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2178426",
+          "status": 200,
+          "bytes": 147222,
+          "sha256": "sha256:f982c6bad769f5951a2c03b1a436c0409ff6f59c6c4a7a47fd15e12ba71cefe3"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2325338/tramitacoes",
+          "status": 200,
+          "bytes": 1342,
+          "sha256": "sha256:1fb27df034f15bfa4b37ad4cec09f9265da003ea7dcd665a1c74d0cf0bd60d88",
+          "items": 2
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2325338/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002534654",
+      "id": "camara:req-53-2023-2388389",
+      "house": "camara",
+      "type": "REQ",
+      "number": "53",
+      "year": 2023,
+      "title": "REQ 53/2023",
+      "role": "autor_principal",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2388389",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2388389",
+      "authorship_official_id": "220550",
+      "official_status": "arquivado",
+      "official_ementa": "Requer a convocação do Ministro da Justiça e Segurança Pública, Flávio Dino, para esclarecer o porquê o Departamento de Recuperação de Ativos e Cooperação Jurídica Internacional omitiu, em documento dirigido ao Supremo Tribunal Federal, a existência do Pedido Ativo de Assistência Mútua em Matéria Penal – FTLJ n. 88/2016, acarretando a declaração indevida da nulidade de provas.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002534654",
+        "210002547857"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002534654",
+          "role": "autor_principal",
+          "authorship_official_id": "220550",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2388389"
+        },
+        {
+          "candidate_tse_id": "210002547857",
+          "role": "autor_principal",
+          "authorship_official_id": "220552",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2388389"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2388389",
+        "actual_api_id": 2388389,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2388389",
+          "status": 200,
+          "bytes": 1561,
+          "sha256": "sha256:96461e236f18d74b99e209be79db24f6eed907f1d2060ccfda38d46f6be716ce"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2329519",
+          "status": 200,
+          "bytes": 201308,
+          "sha256": "sha256:87f47c3589785da3ec997a1aebcea2c015ce2a16af2483030a6ffb394b868c2e"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2388389/tramitacoes",
+          "status": 200,
+          "bytes": 1519,
+          "sha256": "sha256:b8d376cff28319f29a190903edd2ffafe08545a2ad4e4f81bd956495422ffc45",
+          "items": 2
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2388389/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002537717",
+      "id": "camara:req-538-2022-2319594",
+      "house": "camara",
+      "type": "REQ",
+      "number": "538",
+      "year": 2022,
+      "title": "REQ 538/2022",
+      "role": "autor_principal",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2319594",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2319594",
+      "authorship_official_id": "204406",
+      "official_status": "tramitando",
+      "official_ementa": "Requerimento de coautoria do   PL1998/2020.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002537717",
+        "210002547819"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002537717",
+          "role": "autor_principal",
+          "authorship_official_id": "204406",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2319594"
+        },
+        {
+          "candidate_tse_id": "210002547819",
+          "role": "autor_principal",
+          "authorship_official_id": "156190",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2319594"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2319594",
+        "actual_api_id": 2319594,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2319594",
+          "status": 200,
+          "bytes": 1263,
+          "sha256": "sha256:74d11e6a23c595ed50eef01c1c0ce4c1522784a5df0b83b4694264c9f561e76b"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2157155",
+          "status": 200,
+          "bytes": 125911,
+          "sha256": "sha256:0ed7953d0c1c727cf917014a0dfa592b424309d81e0942a09d1d6d9e6f134fd2"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2319594/tramitacoes",
+          "status": 200,
+          "bytes": 1738,
+          "sha256": "sha256:c7b50329c2236b2e8d803e77fed7dd0cca27802483d935cbd8a126dd6312b89b",
+          "items": 3
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2319594/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002534604",
+      "id": "camara:req-55-2022-2327208",
+      "house": "camara",
+      "type": "REQ",
+      "number": "55",
+      "year": 2022,
+      "title": "REQ 55/2022",
+      "role": "autor_principal",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2327208",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2327208",
+      "authorship_official_id": "74398",
+      "official_status": "arquivado",
+      "official_ementa": "Requer a aprovação de recomendação ao excelentíssimo Ministro do Supremo Tribunal Federal Luís Roberto Barroso para que seja prorrogada a suspensão das ordens de despejo e desocupações até 31 de dezembro de 2022.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002534604",
+        "210002534598"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002534604",
+          "role": "autor_principal",
+          "authorship_official_id": "74398",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2327208"
+        },
+        {
+          "candidate_tse_id": "210002534598",
+          "role": "autor_principal",
+          "authorship_official_id": "160535",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2327208"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2327208",
+        "actual_api_id": 2327208,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2327208",
+          "status": 200,
+          "bytes": 1306,
+          "sha256": "sha256:850cc8c416a6e85b11457cf0ed01eb1b97c21234b9d6c96168f6c0be78a79341"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2185096",
+          "status": 200,
+          "bytes": 204820,
+          "sha256": "sha256:5ac0e7d6bbe9df9ff2818b846a2910e8d0b850b79f51f95b050f8de29ae41383"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2327208/tramitacoes",
+          "status": 200,
+          "bytes": 1640,
+          "sha256": "sha256:31dc2e1e2f8488ff30277d9bf25bc4a39e1d57377294a4f8bd0756106feba8fc",
+          "items": 3
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2327208/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002534604",
+      "id": "camara:req-563-2025-2484360",
+      "house": "camara",
+      "type": "REQ",
+      "number": "563",
+      "year": 2025,
+      "title": "REQ 563/2025",
+      "role": "coautor",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484360",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484360",
+      "authorship_official_id": "74398",
+      "official_status": "tramitando",
+      "official_ementa": "Requer a realização de Sessão Solene em Homenagem ao Dia Mundial da Alimentação, dia 16 de outubro.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002534604",
+        "210002533902"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002534604",
+          "role": "coautor",
+          "authorship_official_id": "74398",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484360"
+        },
+        {
+          "candidate_tse_id": "210002533902",
+          "role": "coautor",
+          "authorship_official_id": "204407",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484360"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2484360",
+        "actual_api_id": 2484360,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484360",
+          "status": 200,
+          "bytes": 1321,
+          "sha256": "sha256:fbe0910d033ea5f59adb5276bd4635dc1bdfaed950f5af18b54bc82728efd06f"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2856871",
+          "status": 200,
+          "bytes": 144360,
+          "sha256": "sha256:99080d68e51e3530f24a9d2e13c4667606d83765043cd120b4dd44d71004bf95"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484360/tramitacoes",
+          "status": 200,
+          "bytes": 1426,
+          "sha256": "sha256:28e4c328cdab83cdca257d43c98923c2a4f2f80e355397d997c083c8803ac794",
+          "items": 2
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484360/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002534604",
+      "id": "camara:req-564-2025-2484361",
+      "house": "camara",
+      "type": "REQ",
+      "number": "564",
+      "year": 2025,
+      "title": "REQ 564/2025",
+      "role": "coautor",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484361",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484361",
+      "authorship_official_id": "74398",
+      "official_status": "tramitando",
+      "official_ementa": "Requer a realização de Sessão Solene para comemorar o Dia Nacional de Zumbi e da Consciência Negra, para o dia 26 de novembro.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002534604",
+        "210002533902"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002534604",
+          "role": "coautor",
+          "authorship_official_id": "74398",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484361"
+        },
+        {
+          "candidate_tse_id": "210002533902",
+          "role": "coautor",
+          "authorship_official_id": "204407",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484361"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2484361",
+        "actual_api_id": 2484361,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484361",
+          "status": 200,
+          "bytes": 1421,
+          "sha256": "sha256:0eb227c6f932966081934a7566fc5fcbfd6d3f43e8dd471da81ec1c16ba0ffb0"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2856873",
+          "status": 200,
+          "bytes": 135429,
+          "sha256": "sha256:07c749faf49172ff967439a9a357568544ce21fdeb1bb8bb4b7499a16a990b11"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484361/tramitacoes",
+          "status": 200,
+          "bytes": 1452,
+          "sha256": "sha256:0cfcc32c4215336ac1dfce1c6a5492f23d563b4afe57a666c50540ed0ed5b777",
+          "items": 2
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484361/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002534604",
+      "id": "camara:req-565-2025-2484362",
+      "house": "camara",
+      "type": "REQ",
+      "number": "565",
+      "year": 2025,
+      "title": "REQ 565/2025",
+      "role": "coautor",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484362",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484362",
+      "authorship_official_id": "74398",
+      "official_status": "tramitando",
+      "official_ementa": "Requer a realização de Sessão Solene em Homenagem ao Centenário de Clóvis Moura, para o dia 10 de junho.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002534604",
+        "210002533902"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002534604",
+          "role": "coautor",
+          "authorship_official_id": "74398",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484362"
+        },
+        {
+          "candidate_tse_id": "210002533902",
+          "role": "coautor",
+          "authorship_official_id": "204407",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484362"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2484362",
+        "actual_api_id": 2484362,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484362",
+          "status": 200,
+          "bytes": 1326,
+          "sha256": "sha256:929db14f07990c0e6364db44538cec480aab6ce1eb82c74d0c7271de86946286"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2856875",
+          "status": 200,
+          "bytes": 138364,
+          "sha256": "sha256:88429fee43961dfbaf5ddafcc54e4b49c1f2254470cf50bc57e1040710994aba"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484362/tramitacoes",
+          "status": 200,
+          "bytes": 1431,
+          "sha256": "sha256:becde6e07d05e5398459c0698fd79152b41feb0670533602c4597cbd7fb00fde",
+          "items": 2
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2484362/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002538541",
+      "id": "camara:req-575-2024-2419151",
+      "house": "camara",
+      "type": "REQ",
+      "number": "575",
+      "year": 2024,
+      "title": "REQ 575/2024",
+      "role": "coautor",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2419151",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2419151",
+      "authorship_official_id": "204404",
+      "official_status": "tramitando",
+      "official_ementa": "Requer urgência nos termos do art. 155, do Regimento Interno da Câmara dos Deputados, para apreciação do Projeto de Lei nº 514/2023.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002538541",
+        "210002547816"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002538541",
+          "role": "coautor",
+          "authorship_official_id": "204404",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2419151"
+        },
+        {
+          "candidate_tse_id": "210002547816",
+          "role": "coautor",
+          "authorship_official_id": "204416",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2419151"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2419151",
+        "actual_api_id": 2419151,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2419151",
+          "status": 200,
+          "bytes": 1327,
+          "sha256": "sha256:9bec8b371fb665d17745251c76df0b8c45aa0aefc4f2f1bd4dc64047c0d32234"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2391185",
+          "status": 200,
+          "bytes": 286549,
+          "sha256": "sha256:b9769f552623b83a523f88a5d9bfe89eb2141bba09d441e485bbfc3a130a5056"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2419151/tramitacoes",
+          "status": 200,
+          "bytes": 1371,
+          "sha256": "sha256:5ab149f9319abe0dcdbb0ce1fd76570fe44b0196a1127b4efa44ba13b07a598a",
+          "items": 2
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2419151/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002534272",
+      "id": "camara:req-594-2021-2275386",
+      "house": "camara",
+      "type": "REQ",
+      "number": "594",
+      "year": 2021,
+      "title": "REQ 594/2021",
+      "role": "autor_principal",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275386",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275386",
+      "authorship_official_id": "75431",
+      "official_status": "tramitando",
+      "official_ementa": "Subscrição ao  PL 989/2021 - Acresce o art. 135-B ao Decreto-Lei nº 2.848, de 07 de dezembro de 1940 – Código Penal Brasileiro, para tipificar como crime a conduta de administradores ou dirigentes de unidades de atendimento hospitalar que ocultarem a disponibilidade de leitos das respectivas centrais de regulação e dá outras providências.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002534272",
+        "210002534671"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002534272",
+          "role": "autor_principal",
+          "authorship_official_id": "75431",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275386"
+        },
+        {
+          "candidate_tse_id": "210002534671",
+          "role": "autor_principal",
+          "authorship_official_id": "133810",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275386"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2275386",
+        "actual_api_id": 2275386,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275386",
+          "status": 200,
+          "bytes": 1490,
+          "sha256": "sha256:b8e5869af3d97cf0b1859a10efa6ec29b44368a9bfdd0d2b6983026572142b57"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1980823",
+          "status": 200,
+          "bytes": 164248,
+          "sha256": "sha256:346edd6d12382fea7a055330417bc4d5c8371df5d4e7d1a43dabee99f44e8ae2"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275386/tramitacoes",
+          "status": 200,
+          "bytes": 1927,
+          "sha256": "sha256:ae9acd5b79cec7f7bc5f5188ab0c08e0eb6f3d6f89c0e4f69022f02383a3cbc9",
+          "items": 3
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275386/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002537066",
+      "id": "camara:req-6-2021-2276408",
+      "house": "camara",
+      "type": "REQ",
+      "number": "6",
+      "year": 2021,
+      "title": "REQ 6/2021",
+      "role": "autor_principal",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2276408",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2276408",
+      "authorship_official_id": "73486",
+      "official_status": "arquivado",
+      "official_ementa": "Requer realização de audiência pública para debater o Projeto de Lei nº 591/2021, que dispõe sobre a organização e a manutenção do Sistema Nacional de Serviços Postais.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002537066",
+        "210002534604"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002537066",
+          "role": "autor_principal",
+          "authorship_official_id": "73486",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2276408"
+        },
+        {
+          "candidate_tse_id": "210002534604",
+          "role": "autor_principal",
+          "authorship_official_id": "74398",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2276408"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2276408",
+        "actual_api_id": 2276408,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2276408",
+          "status": 200,
+          "bytes": 1327,
+          "sha256": "sha256:3ef468c980218f4fae2da2963656d3f4ae46a360d22c1e2771e6ba03233508e7"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1984677",
+          "status": 200,
+          "bytes": 139742,
+          "sha256": "sha256:a329641f0d9c80ceb6762f50151ad8aee036758f5e3f73fba9937a858a90d3be"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2276408/tramitacoes",
+          "status": 200,
+          "bytes": 2527,
+          "sha256": "sha256:010bb18ed3ba59b89029157efc537ce086d795966ac5cf9c24f7da02a2351d73",
+          "items": 5
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2276408/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002534601",
+      "id": "camara:req-6-2022-2321032",
+      "house": "camara",
+      "type": "REQ",
+      "number": "6",
+      "year": 2022,
+      "title": "REQ 6/2022",
+      "role": "autor_principal",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2321032",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2321032",
+      "authorship_official_id": "160538",
+      "official_status": "arquivado",
+      "official_ementa": "Requer a realização de audiência pública destinada a debater os impactos da privatização da Eletrobras.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002534601",
+        "210002534598"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002534601",
+          "role": "autor_principal",
+          "authorship_official_id": "160538",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2321032"
+        },
+        {
+          "candidate_tse_id": "210002534598",
+          "role": "autor_principal",
+          "authorship_official_id": "160535",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2321032"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2321032",
+        "actual_api_id": 2321032,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2321032",
+          "status": 200,
+          "bytes": 1239,
+          "sha256": "sha256:b446a221ab5816893a7aa5f3a6fb13c05524c66557dbf73f11c6b379f2af5592"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2162962",
+          "status": 200,
+          "bytes": 173704,
+          "sha256": "sha256:30d97c20362c6caa8447ad20ebae3410dda8fcfc25dd5600a2115ac6f8d89daf"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2321032/tramitacoes",
+          "status": 200,
+          "bytes": 1664,
+          "sha256": "sha256:0aea3fc69860ec38b9405fe35c43f1b753043ca6031ae6e831cbfff6dbb2a3a9",
+          "items": 3
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2321032/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002534583",
+      "id": "camara:req-60-2023-2407543",
+      "house": "camara",
+      "type": "REQ",
+      "number": "60",
+      "year": 2023,
+      "title": "REQ 60/2023",
+      "role": "autor_principal",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2407543",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2407543",
+      "authorship_official_id": "220553",
+      "official_status": "arquivado",
+      "official_ementa": "Requer Moção de Solidariedade à Vilma Nascimento, renomada porta-bandeira da escola de samba Portela, pelo episódio de racismo sofrido no dia 21 de Novembro, no Aeroporto Internacional de Brasília.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002534583",
+        "210002534589"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002534583",
+          "role": "autor_principal",
+          "authorship_official_id": "220553",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2407543"
+        },
+        {
+          "candidate_tse_id": "210002534589",
+          "role": "autor_principal",
+          "authorship_official_id": "221378",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2407543"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2407543",
+        "actual_api_id": 2407543,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2407543",
+          "status": 200,
+          "bytes": 1339,
+          "sha256": "sha256:b3a1a4acbe79d0ccef561d9d38203b9b04b77b383ec4582e1069c83663035b7e"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2365966",
+          "status": 200,
+          "bytes": 274216,
+          "sha256": "sha256:81926f724d812d7fe072e59094f0ba7713d90e3fbee322d05d04e266a083ffde"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2407543/tramitacoes",
+          "status": 200,
+          "bytes": 2132,
+          "sha256": "sha256:815df3461bedec486b445aedb44bfafef8d2ea090375f6f6045b6687c625ec32",
+          "items": 4
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2407543/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002534654",
+      "id": "camara:req-60-2026-2620870",
+      "house": "camara",
+      "type": "REQ",
+      "number": "60",
+      "year": 2026,
+      "title": "REQ 60/2026",
+      "role": "autor_principal",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620870",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620870",
+      "authorship_official_id": "220550",
+      "official_status": "tramitando",
+      "official_ementa": "Sugere ao Poder Executivo, por intermédio do Ministério da Defesa, a adoção de providências para o afastamento do General, Emílio Vanderlei Ribeiro, da Assessoria Parlamentar do Exército, em razão de conduta incompatível com a Constituição Federal.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002534654",
+        "210002534656"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002534654",
+          "role": "autor_principal",
+          "authorship_official_id": "220550",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620870"
+        },
+        {
+          "candidate_tse_id": "210002534656",
+          "role": "autor_principal",
+          "authorship_official_id": "204388",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620870"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2620870",
+        "actual_api_id": 2620870,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620870",
+          "status": 200,
+          "bytes": 1419,
+          "sha256": "sha256:6e08ec453a1a88e369f3829e372046aba3867d91817b1c57bd609dd4f3d5d42f"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3122852",
+          "status": 200,
+          "bytes": 151659,
+          "sha256": "sha256:29898eb275b40d616d4656358c45ee44b3e9a0fecf0a1d6dc4e26d4fe21cc655"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620870/tramitacoes",
+          "status": 200,
+          "bytes": 1398,
+          "sha256": "sha256:e61e22fc6c0c866b99ebe7f25ec5431bcddb0b9f6145c6716a3793634e395bc0",
+          "items": 2
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620870/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002534897",
+      "id": "camara:req-619-2023-2351153",
+      "house": "camara",
+      "type": "REQ",
+      "number": "619",
+      "year": 2023,
+      "title": "REQ 619/2023",
+      "role": "coautor",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351153",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351153",
+      "authorship_official_id": "160673",
+      "official_status": "tramitando",
+      "official_ementa": "Requer a realização de Sessão Solene no Plenário da Câmara dos Deputados em celebração ao 23° aniversário da Lei nº 10.032/2000, que criou a Universidade Federal do Tocantins.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002534897",
+        "210002538556"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002534897",
+          "role": "coautor",
+          "authorship_official_id": "160673",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351153"
+        },
+        {
+          "candidate_tse_id": "210002538556",
+          "role": "coautor",
+          "authorship_official_id": "178964",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351153"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2351153",
+        "actual_api_id": 2351153,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351153",
+          "status": 200,
+          "bytes": 1402,
+          "sha256": "sha256:64ff761af87b91c8de12396e7fae5616c506da12bb416027869e62942ab72ba5"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2242478",
+          "status": 200,
+          "bytes": 317998,
+          "sha256": "sha256:021a36996b680009694b49d172d9653759b95ba2a748bb49da81ea4ab6b26b07"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351153/tramitacoes",
+          "status": 200,
+          "bytes": 1481,
+          "sha256": "sha256:481948a97507af22f73dcd5f19c10b3a1f30d5374a90e84017876d1c1a6376c9",
+          "items": 2
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2351153/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002534601",
+      "id": "camara:req-62-2021-2285740",
+      "house": "camara",
+      "type": "REQ",
+      "number": "62",
+      "year": 2021,
+      "title": "REQ 62/2021",
+      "role": "autor_principal",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2285740",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2285740",
+      "authorship_official_id": "160538",
+      "official_status": "arquivado",
+      "official_ementa": "Requer a realização de audiência pública destinada à apresentação da Agenda Legislativa das Centrais Sindicais no Congresso Nacional: Prioridades Legislativas 2021 - Vida, Emprego e Democracia.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002534601",
+        "210002534598"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002534601",
+          "role": "autor_principal",
+          "authorship_official_id": "160538",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2285740"
+        },
+        {
+          "candidate_tse_id": "210002534598",
+          "role": "autor_principal",
+          "authorship_official_id": "160535",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2285740"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2285740",
+        "actual_api_id": 2285740,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2285740",
+          "status": 200,
+          "bytes": 1416,
+          "sha256": "sha256:04cd9490a0ed833260e0c86fe8a2a39e8462f74e1ed313b8378d7db16680b0fa"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2022904",
+          "status": 200,
+          "bytes": 181363,
+          "sha256": "sha256:4c4f267589235e934f3c539f7e05f32e4a3770c1dbb6f91d6526622c5aec33f7"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2285740/tramitacoes",
+          "status": 200,
+          "bytes": 1740,
+          "sha256": "sha256:e78f29c2c49bfbd2fbc985ad962a35aa461fbf4bcb03c6e1f4c9d0930d207932",
+          "items": 3
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2285740/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002534601",
+      "id": "camara:req-620-2021-2275763",
+      "house": "camara",
+      "type": "REQ",
+      "number": "620",
+      "year": 2021,
+      "title": "REQ 620/2021",
+      "role": "autor_principal",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275763",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275763",
+      "authorship_official_id": "160538",
+      "official_status": "arquivado",
+      "official_ementa": "Autoriza coautoria ao Requerimento 574/2021",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002534601",
+        "210002534598"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002534601",
+          "role": "autor_principal",
+          "authorship_official_id": "160538",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275763"
+        },
+        {
+          "candidate_tse_id": "210002534598",
+          "role": "autor_principal",
+          "authorship_official_id": "160535",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275763"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2275763",
+        "actual_api_id": 2275763,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275763",
+          "status": 200,
+          "bytes": 1273,
+          "sha256": "sha256:8ec807eca7df54cb78ef6fc276fd184ffc462d864fc9263af57bf84ba8a593bd"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1982142",
+          "status": 200,
+          "bytes": 166866,
+          "sha256": "sha256:f9bd1277f4c9898da9898e520739ef50188681348d012fc7893042aec4a3d6b6"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275763/tramitacoes",
+          "status": 200,
+          "bytes": 711,
+          "sha256": "sha256:2644858027e5a29a2b1a0f7825375fbf44f3103a6e430165495da7df1ee52d74",
+          "items": 1
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275763/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    },
+    {
+      "candidate_tse_id": "210002534601",
+      "id": "camara:req-631-2021-2275849",
+      "house": "camara",
+      "type": "REQ",
+      "number": "631",
+      "year": 2021,
+      "title": "REQ 631/2021",
+      "role": "autor_principal",
+      "official_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275849",
+      "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275849",
+      "authorship_official_id": "160538",
+      "official_status": "tramitando",
+      "official_ementa": "Requer, nos termos do artigo 155 do Regimento Interno, tramitação sob o regime de urgência do Projeto de Lei n° 1.069, de 2021.",
+      "content_read": false,
+      "editorial_status": "pending_review",
+      "candidate_tse_ids": [
+        "210002534601",
+        "210002534598"
+      ],
+      "roles": [
+        {
+          "candidate_tse_id": "210002534601",
+          "role": "autor_principal",
+          "authorship_official_id": "160538",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275849"
+        },
+        {
+          "candidate_tse_id": "210002534598",
+          "role": "coautor",
+          "authorship_official_id": "160535",
+          "authorship_source_url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275849"
+        }
+      ],
+      "candidate_occurrences": 2,
+      "identity": {
+        "expected_api_id": "2275849",
+        "actual_api_id": 2275849,
+        "exact": true
+      },
+      "sources": {
+        "proposition_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275849",
+          "status": 200,
+          "bytes": 1321,
+          "sha256": "sha256:8f2e2c90899bbe9dc542c5642928ea52c1d64e3979b1f06c8d8169c242b74e48"
+        },
+        "full_text": {
+          "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1982496",
+          "status": 200,
+          "bytes": 122669,
+          "sha256": "sha256:e5f574bcac72b56f52f0254fc4c9500f833b2979157878c59e1e07ca8529bc71"
+        },
+        "tramitacoes_api": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275849/tramitacoes",
+          "status": 200,
+          "bytes": 1350,
+          "sha256": "sha256:f0bec8b5f9719d9857f61365ad5f1812e42b831bb22a30dc773abb6facc6efb9",
+          "items": 2
+        },
+        "event": {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2275849/tramitacoes",
+          "independent": true,
+          "kind": "official_tramitacoes_endpoint; specific event binding pending"
+        }
+      },
+      "remote_apply": false
+    }
+  ]
+}
