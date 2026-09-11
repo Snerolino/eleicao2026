@@ -1,7 +1,7 @@
 # Arquitetura Hermes Multi-CLI v1 — eleicao2026
 
-Data: 2026-08-10
-Status: implementada na branch de arquitetura; sem mutação de produção
+Data: 2026-09-11
+Status: implementada e publicada; lane ALRS editorial exclusiva adicionada
 
 ## 1. Objetivo
 
@@ -46,11 +46,13 @@ O wrapper:
 - cria `.orchestrator/runtime/snapshots/opencode` com `git archive HEAD`;
 - executa apenas sobre esse snapshot;
 - força `agent plan`;
-- usa `opencode/deepseek-v4-flash-free` por padrão;
+- usa `openai/gpt-5.6-luna` por padrão no wrapper direto;
 - desliga MCP;
 - `opencode.jsonc` nega edição, shell, ferramentas externas e leitura de `.env*`.
 
-O modelo gratuito não vê a worktree viva, arquivos não rastreados, secrets,
+O modelo direto OpenAI/Luna não vê a worktree viva: o wrapper copia o snapshot
+sanitizado para diretório temporário isolado, evitando herdar `STATE.md` dos
+diretórios-pai. O modelo gratuito não vê a worktree viva, arquivos não rastreados, secrets,
 dataset externo ou estado local. Se a tarefa depende de diff não commitado,
 use Codex na worktree viva ou crie checkpoint autorizado.
 

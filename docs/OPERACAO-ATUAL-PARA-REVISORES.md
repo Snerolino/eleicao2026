@@ -4,7 +4,7 @@
 **Repositório:** `Snerolino/eleicao2026`
 **Produção:** <https://rs.votopraquem.org>
 **Control plane:** Hermes
-**Última atualização deste documento:** 2026-08-22
+**Última atualização deste documento:** 2026-09-11
 
 > Este documento descreve o modo operacional vigente para revisão no GitHub.
 > Ele não substitui código, migrations, `AGENTS.md`, schemas ou contratos
@@ -52,9 +52,12 @@ Eles orientam o workflow, mas não podem substituir o estado real da aplicação
 - R1: operacionalmente concluído, com 4 residuais ALRS;
 - R2: Câmara Q1/Q2/Q3 factual aplicada nos lotes elegíveis;
 - R3: perfis nominais materializados por `(candidate_id, house)`;
-- R4: pacote ALRS consolidado com 23 versões, 23/23 fontes substantivas duráveis e disposição editorial pendente;
+- R4: lane ALRS exclusiva publicada em `data/legislative-import/alrs/alrs-exclusive-editorial-lane-v1.json`, com 1199 versões pending não colidentes em 48 microbatches determinísticos;
+- colisões ALRS: 18 `version_key` keys, 65 versões/93 eventos afetados; 8 possíveis eventos distintos com mesmo texto e 10 possíveis mismatches de identidade; todos permanecem bloqueados até texto/hash/evento oficial;
+- prioridade ALRS: 30 P0 + 82 P1 na fila canônica; pacote fonte-first inicial de 25 versões validado, sem aprovação pública e sem apply remoto;
+- score recovery ALRS: 152 itens bloqueados (87 sem binding de evento, 65 compostos não separáveis);
 - R5 Câmara/recortes previamente aprovados: publicados;
-- R5 ALRS do pacote atual: 0 matrizes, 0 assessments e 0 score editorial publicados;
+- R5 ALRS do pacote atual: 0 matrizes, 0 assessments e 0 score editorial publicados até disposição humana e RPC;
 
 ### Regra de apresentação
 
@@ -166,7 +169,7 @@ Job atual:
 
 ```text
 nome: eleicao2026-continuous-progress
-schedule: every 15m
+schedule: every 5m
 status: enabled
 repeat: forever
 deliver: local
@@ -382,10 +385,13 @@ continuar.
 
 ### ALRS
 
-- 3996/4000 votos com fonte;
-- 4 residuais Enio Carlos Terra;
-- ID oficial ALRS ainda não localizado;
-- não criar vínculo por aproximação.
+- 44.054/44.054 linhas nominais reconciliadas sem faltantes ou conflitos;
+- snapshot público materializa 50 perfis ALRS e 43.762 votos nominais; a diferença de 292 para o manifesto reconciliado permanece como reconciliação de camada, não como ausência inventada;
+- fila de impacto: 1.281 versões e 4.000 votos factuais;
+- 152 itens de score recovery bloqueados: 87 sem binding de evento e 65 compostos não separáveis;
+- 18 colisões de `version_key` isoladas em pacote próprio;
+- 20 disposições faltantes no planner (2 erros globais + 18 versões sem disposição) não são preenchidas automaticamente;
+- nenhum score/matriz/fan-out deve ser aplicado sem `/admin`, papel editorial e RPC autenticada.
 
 ### Senado
 
@@ -438,6 +444,22 @@ git commit → git push origin main
 → produção HTTP 200
 → smoke/health
 ```
+
+### Apply editorial ALRS no `/admin`
+
+O uploader aceita o batch externo P2 após validação exata de `batch_id`,
+`batch_sha256`, cardinalidade, `proposition_version_id` e `review_key`.
+
+O apply exige:
+
+1. sessão Supabase Auth válida;
+2. `editor_roles.role` igual a `editor` ou `admin`;
+3. chamada RPC `record_impact_editorial_disposition`/exception;
+4. read-back das linhas aplicadas;
+5. segunda passagem idempotente com zero novas chamadas RPC quando os valores já coincidirem.
+
+O apply de disposição não aprova matriz nem publica score. Assessments e matrizes
+continuam gates separados.
 
 O workflow confiável de Cloudflare é:
 
