@@ -42,9 +42,9 @@ Fechar e publicar o lote bounded de 25 projetos únicos de autoria da Câmara, p
 - `git diff --check`: passou após restaurar churn não relacionado.
 - O lote permanece somente editorial/retido; não altera snapshot público de candidatos nem score/matriz.
 
-## Publicação
-- Commit publicado: `e1887c5a0801c95e5cfe77964576d9c22f9d9de6`; `git ls-remote` confirmou `origin/main` alinhado.
-- CI/Deploy primário: run `34553737101` ainda `in_progress` na verificação; não usado como confirmação.
-- Backup Cloudflare `334951434`, run `34553751941`: `completed/success`, `headSha` exato.
-- Produção raiz HTTP 200 e `/release.json` HTTP 200; release confirmou SHA exato `e1887c5a0801c95e5cfe77964576d9c22f9d9de6`, snapshot `row_count=1003`.
-- Esta atualização documental não altera dados legislativos, snapshot público, matriz/score ou escrita factual remota.
+## Publicação verificada
+- Commit dos artefatos: `e1887c5a0801c95e5cfe77964576d9c22f9d9de6`; commit final documental/deploy: `8673002e6761b42c83e387af594693703a963900`; ambos publicados e alinhados por `git ls-remote`.
+- CI/Deploy primário `34553737101`: `completed/cancelled`; backup foi o caminho efetivo.
+- Backup Cloudflare `334951434`, run final `34554048427`: `completed/success`, `headSha` exato `8673002e6761b42c83e387af594693703a963900`.
+- Produção raiz HTTP 200; `/release.json` HTTP 200 confirmou SHA final exato `8673002e6761b42c83e387af594693703a963900`, versão `0.2.1349`, snapshot `row_count=1003`.
+- Nenhuma migration, RLS, Auth, Storage, Edge Function, escrita factual Supabase ou matriz/score foi alterada/escrita.
