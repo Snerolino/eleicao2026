@@ -41,8 +41,8 @@ Processar boundedamente 25 projetos únicos de autoria da Câmara, com fontes of
 O lote não autoriza autoria factual pública, voto individual, assessment causal, score, matriz ou aplicação Supabase. O próximo gate independente é `2851–2875`, após fechar esta publicação.
 
 ## Publicação verificada
-- Commit funcional `c8c7d67d500df6d262994d0ac6d2bf8333461e90` publicado em `origin/main`; `git ls-remote` alinhado.
-- Backup Cloudflare `334951434`, run `34554505657`: `completed/success`, `headSha` exato.
-- Deploy primário `34554479158` estava `queued` na janela de verificação; o backup foi o caminho efetivo confirmado.
-- Produção raiz HTTP 200 e `/release.json` HTTP 200 confirmaram o SHA exato, versão `0.2.1351`, snapshot `row_count=1003`.
+- Commit funcional/documental final `6c58f6c04c97235cbe7b73357e605251989962e7` publicado em `origin/main`; `git ls-remote` alinhado.
+- Backup Cloudflare `334951434`, run `34554639197`: `completed/success`, `headSha` exato.
+- Deploy primário `34554622725`: `completed/success`, `headSha` exato; backup também confirmado como caminho efetivo.
+- Produção raiz HTTP 200 e `/release.json` HTTP 200 confirmaram o SHA exato, versão `0.2.1352`, snapshot `row_count=1003`.
 - Nenhuma migration, RLS, Auth, Storage, Edge Function, escrita factual Supabase ou matriz/score foi alterada/escrita.
