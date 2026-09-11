@@ -1,3 +1,11 @@
+## Verificação de publicação — autoria Câmara 2576–2600
+
+- Commit de artefatos `882a3caf1c2bdc5d6b7dbc4a2788a57a0f4df6bc` publicado em `origin/main`; remoto alinhado.
+- Backup Cloudflare `334951434`, run `34545898495`: `completed/success`, `headSha` exato.
+- Produção raiz e `/release.json`: HTTP 200; release confirmou SHA exato `882a3caf1c2bdc5d6b7dbc4a2788a57a0f4df6bc`, `row_count=1003`.
+- O workflow primário `Deploy` run `34545876952` permaneceu `in_progress` na verificação; backup foi o caminho confiável.
+- Gates Node 24.19.0 verdes; nenhuma migration, RLS, Auth, Storage, Edge Function, Supabase factual ou matriz/score foi alterada/escrita.
+
 ## Tick contínuo — autoria Câmara 2576–2600 retida — 2026-09-10
 
 - Lock exclusivo adquirido com `flock`; único writer confirmado; Git iniciou limpo em `main` no SHA `1bbbb7c`.

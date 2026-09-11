@@ -28,5 +28,9 @@ Processar boundedamente o próximo lote determinístico de autoria Câmara, reva
 - Nenhuma migration, RLS, Auth, Storage, Edge Function, Supabase factual ou Cloudflare foi alterada/escrita.
 
 ## Gates e publicação
-- Gates Node 24 executados após esta documentação: test, tsc, schema, data:check, build e diff-check.
-- Se todos verdes, commit/push em `main`, CI e workflow backup Cloudflare `334951434`; produção será verificada por HTTP 200 e `release.json` com o SHA exato. Nenhum deploy manual direto nem escrita remota factual.
+- Node `v24.19.0`: `npm run test` **499/499** em 120 arquivos; `npx tsc --noEmit` **0**; schema **OK**; `npm run data:check` **1003 candidaturas / 988 fotos**; `npm run build` **245 módulos / sitemap 1003+2**; `git diff --check` **0**.
+- Churn não relacionado gerado pelo build foi restaurado; somente os artefatos do lote, checkpoint e QA permaneceram no commit.
+- Commit de artefatos `882a3caf1c2bdc5d6b7dbc4a2788a57a0f4df6bc` publicado em `origin/main`.
+- Backup Cloudflare `334951434`, run `34545898495`: `completed/success`, `headSha` exato.
+- Produção `https://rs.votopraquem.org`: raiz HTTP 200; `/release.json` HTTP 200 confirmou SHA exato `882a3caf1c2bdc5d6b7dbc4a2788a57a0f4df6bc`, `row_count=1003`.
+- O workflow primário `Deploy` run `34545876952` permaneceu `in_progress` nesta verificação; o backup foi o caminho efetivo confiável. Nenhuma escrita factual Supabase foi executada.
