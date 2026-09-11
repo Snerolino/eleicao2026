@@ -19,7 +19,7 @@ export function CargoNavigation({ positions, counts, selected, savedCount, onSel
           {POSITION_LABEL[position]} · {counts.get(position) ?? 0}
         </button>
       ))}
-      <button type="button" aria-current={selected === 'saved' ? 'page' : undefined} onClick={() => onSelect('saved')} className={`min-h-11 shrink-0 rounded-sm border px-3 font-mono text-xs uppercase tracking-wider focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-institutional)] ${selected === 'saved' ? 'border-[var(--color-institutional)] bg-[color-mix(in_srgb,var(--color-institutional)_10%,var(--color-paper))] text-[var(--color-institutional)]' : 'border-[var(--color-border-editorial)] text-[var(--color-muted-ink)] hover:border-[var(--color-institutional)] hover:text-[var(--color-ink)]'}`}>★ Salvos · {savedCount}</button>
+      <button type="button" aria-current={selected === 'saved' ? 'page' : undefined} onClick={() => onSelect('saved')} className={`min-h-11 shrink-0 rounded-sm border px-3 font-mono text-xs uppercase tracking-wider focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-institutional)] ${selected === 'saved' ? 'border-[var(--color-institutional)] bg-[color-mix(in_srgb,var(--color-institutional)_10%,var(--color-paper))] text-[var(--color-institutional)]' : 'border-[var(--color-border-editorial)] text-[var(--color-muted-ink)] hover:border-[var(--color-institutional)] hover:text-[var(--color-ink)]'}`}><span aria-hidden="true">★</span> Salvos · {savedCount}</button>
     </nav>
   );
 }
