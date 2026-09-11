@@ -1,3 +1,14 @@
+## Tick contínuo — autoria Câmara 2576–2600 retida — 2026-09-10
+
+- Lock exclusivo adquirido com `flock`; único writer confirmado; Git iniciou limpo em `main` no SHA `1bbbb7c`.
+- Seleção determinística: 25 projetos únicos (`offset=2575`, `limit=25`), 50 ocorrências candidato–projeto e 19 candidatos.
+- Revalidação oficial: 50/50 endpoints Câmara HTTP 200; 79.147 bytes e 50/50 SHA-256 revalidados; identidade `dados.id` exata 25/25.
+- Texto integral oficial catalogado/HTTP 2xx 25/25 e tramitação independente 25/25; conteúdo não lido/validado (`content_read=false`).
+- Lanes causal/red-team: 25/25 IDs exatos em cada lane; reconciliação 25 withheld, 0 pending_review, 0 approved, 0 score_eligible; `remote_apply=false`.
+- Bloqueio real: sem texto integral validado, versão/evento vinculante e voto nominal individual; autoria/ementa/tramitação não prova posição, efeito causal ou score. Nenhum fato, claim, voto, matéria, matriz, score, projeto público ou escrita remota foi promovido.
+- Checkpoint: `projects_analyzed=2600`, `withheld=2600`, `blocked_items=108`, próximo lote `2601–2625`.
+- QA: `docs/qa/lote-camara-autoria-2576-2600-2026-09-10.md`.
+
 ## Tick contínuo — autoria Câmara 2551-2575 retida — 2026-09-10
 
 - Lock exclusivo adquirido com `flock`; worktree estava limpa e único writer confirmado.
