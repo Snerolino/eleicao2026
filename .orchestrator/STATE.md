@@ -5543,3 +5543,24 @@ Sem autorização humana explícita própria, não fazer:
 - Backup `334951434`, run `34539703221`: `completed/success`, `headSha` exato do commit de artefatos.
 - Produção raiz e `/release.json` HTTP 200; release confirmou SHA exato e snapshot público sem alteração factual.
 - Próximo lote calculado: autoria Câmara `2451–2475`; manter retenção fail-closed, duas lanes e nenhuma aplicação factual remota.
+
+
+## Tick contínuo — autoria Câmara 2551–2575 retida — 2026-09-11
+
+- Lock exclusivo adquirido com `flock`; único writer local confirmado.
+- Seleção determinística: 25 projetos únicos (`offset=2550`, `limit=25`), 50 ocorrências candidato–projeto e 20 candidatos.
+- Revalidação oficial: 50/50 endpoints Câmara HTTP 200; bytes e SHA-256 revalidados com 50/50 correspondências; identidade exata 25/25. Texto integral catalogado 25/25 e evento independente catalogado 25/25, mas conteúdo não lido/validado.
+- Lanes causal/red-team: 25/25 IDs exatos em cada lane; reconciliação 25 withheld, 0 pending_review, 0 approved, 0 score_eligible; `content_read=false`, `remote_apply=false`.
+- Bloqueio real: sem texto integral validado, versão/evento vinculante e voto nominal individual; autoria/ementa/tramitação não prova posição, efeito causal ou score.
+- Checkpoint: `projects_analyzed=2575`, `withheld=2575`, `blocked_items` inclui `authored-2551-2575`, próximo lote `2576–2600`.
+- QA: `docs/qa/lote-camara-autoria-2551-2575-2026-09-11.md`.
+
+
+## Verificação de publicação — autoria Câmara 2551–2575
+
+- Commit de artefatos `b67a57670e90d107e5bdc97e9a77b7621776136c` publicado em `origin/main`; worktree sem churn não relacionado.
+- Backup Cloudflare `334951434`, run `34544858129`: `completed/success`, `headSha` exato.
+- Produção raiz HTTP 200 e `/release.json` HTTP 200 confirmaram SHA exato `b67a57670e90d107e5bdc97e9a77b7621776136c`; snapshot `row_count=1003`.
+- Gates Node 24.19.0 verdes: 499/499 testes em 120 arquivos, TypeScript, schema, `data:check` 1003/988, build 245 módulos/sitemap 1003+2 e `git diff --check`.
+- Nenhuma migration, RLS, Auth, Storage, Edge Function, Supabase factual ou matriz/score foi alterada/escrita.
+- Próximo chunk calculado: autoria Câmara `2576–2600`; este lote está fechado.
