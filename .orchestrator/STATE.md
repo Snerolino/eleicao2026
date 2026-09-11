@@ -5623,6 +5623,6 @@ Sem autorização humana explícita própria, não fazer:
 - Bloqueio real: sem validação editorial do texto integral, versão/evento vinculante e voto nominal individual; autoria/ementa/tramitação não prova posição, efeito causal ou score. Nenhum fato, claim, voto, assessment, score, matriz, projeto público ou escrita remota foi promovido.
 - Checkpoint: `projects_analyzed=2650`, `last_batch=2626-2650`, `next_batch=2651-2675`, `withheld=2650`, `blocked_items=110`. QA: `docs/qa/lote-camara-autoria-2626-2650-2026-09-11.md`.
 - Gates Node 24.19.0 verdes: 499/499 testes em 120 arquivos, TypeScript, schema, `data:check` 1003/988, build 245 módulos/sitemap 1003+2 e `git diff --check`; churn não relacionado restaurado.
-- Commit de artefatos `09269ff2d512b451e4ed219c47d5c34b6765b480` publicado; backup `334951434` run `34548603874` success/headSha exato; produção raiz e `/release.json` HTTP 200 confirmaram SHA exato e release `0.2.1322`.
+- Commit final `c5b4f701aea885ae48b1a276d40c233fa26c47dc` publicado; backup `334951434` run `34548739233` success/headSha exato; produção raiz e `/release.json` HTTP 200 confirmaram SHA exato e release `0.2.1324`.
 - Nenhuma migration, RLS, Auth, Storage, Edge Function, Supabase factual ou matriz/score foi alterada/escrita.
 - Lote fechado antes de `2651–2675`.

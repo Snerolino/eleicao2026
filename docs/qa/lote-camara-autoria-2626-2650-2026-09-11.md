@@ -41,9 +41,9 @@ Processar boundedamente o lote determinístico de autoria Câmara 2626–2650, r
 - O build gerou churn não relacionado nos três artefatos `impact-editorial-*`; todos foram restaurados antes do commit.
 
 ## Publicação verificada
-- Commit de artefatos: `09269ff2d512b451e4ed219c47d5c34b6765b480`; `git push origin main` e `git ls-remote` confirmaram alinhamento.
-- Backup Cloudflare `334951434`, run `34548617501`: `completed/success`, `headSha` exato.
-- Produção raiz HTTP 200 e `/release.json` HTTP 200; release confirmou SHA exato `09269ff2d512b451e4ed219c47d5c34b6765b480`, versão `0.2.0`.
+- Commit final de artefatos/documentação: `c5b4f701aea885ae48b1a276d40c233fa26c47dc`; `git push origin main` e `git ls-remote` confirmaram alinhamento.
+- Backup Cloudflare `334951434`, run `34548739233`: `completed/success`, `headSha` exato.
+- Produção raiz HTTP 200 e `/release.json` HTTP 200; release confirmou SHA exato `c5b4f701aea885ae48b1a276d40c233fa26c47dc`, versão `0.2.1324`.
 
 ## Próximo passo
 Lote fechado. Não iniciar 2651–2675 neste ciclo.
