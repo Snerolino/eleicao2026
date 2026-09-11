@@ -278,9 +278,13 @@
       ],
       "event_ids": [
         "alrs_event_f92d78c0b210ce22dd453c9a",
-        "alrs_event_cbc0280eafd2bfd1aea51e20"
+        "alrs-nominal-58762d3f4ef499fd00e4f080b46446cc",
+        "alrs_event_cbc0280eafd2bfd1aea51e20",
+        "alrs-nominal-719cf7f0b06fa3b8042e724157a2c7b4"
       ],
-      "source_urls": [],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026"
+      ],
       "technical_hypothesis": "same_text_multiple_events_possible",
       "resolution_status": "needs_official_text_hash_review",
       "remote_apply": false,
@@ -304,9 +308,14 @@
       ],
       "event_ids": [
         "alrs_event_860025529cfb085177f5e3d1",
-        "alrs_event_7c8dbaa06dc2b4c1e1e2dbd8"
+        "alrs-nominal-6cb7df6072d3354f3331c8e6984f9136",
+        "alrs_event_7c8dbaa06dc2b4c1e1e2dbd8",
+        "alrs-nominal-3d43a075fd6f2ce4009b5ccc69989c0a"
       ],
-      "source_urls": [],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2159&ano=2024",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2146&ano=2024"
+      ],
       "technical_hypothesis": "version_identity_mismatch_possible",
       "resolution_status": "needs_official_text_hash_review",
       "remote_apply": false,
@@ -335,12 +344,19 @@
         "2026-03-10 00:00:00+00"
       ],
       "event_ids": [
+        "alrs-nominal-8186d80f242ad38469c4e16b66b2b983",
         "alrs_event_61f8d7a97e94834da95e0a82",
         "alrs_event_37b49f368a12283746ef9e06",
+        "alrs-nominal-9399ba5bd979ef484e19eb15c15a1842",
+        "alrs-nominal-5de155dd92b64d3073b17c5400ca0dd9",
         "alrs_event_a815bcbbdb5399a06257f9c4",
-        "alrs_event_fde899ed5662145ce9615dd6"
+        "alrs_event_fde899ed5662145ce9615dd6",
+        "alrs-nominal-839fda51d4d2a0330e9027dfbbdc4abb"
       ],
-      "source_urls": [],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2139&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026"
+      ],
       "technical_hypothesis": "same_text_multiple_events_possible",
       "resolution_status": "needs_official_text_hash_review",
       "remote_apply": false,
@@ -365,9 +381,14 @@
       ],
       "event_ids": [
         "alrs_event_bda28d65eaacc9f8fd395f87",
-        "alrs_event_9a5b8fa772d7a3cb4d32f024"
+        "alrs-nominal-cce4bfa8d18a50665a570c1c58d002e5",
+        "alrs_event_9a5b8fa772d7a3cb4d32f024",
+        "alrs-nominal-0b07903ffe6d154d159f22e02ef00cd1"
       ],
-      "source_urls": [],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026"
+      ],
       "technical_hypothesis": "same_text_multiple_events_possible",
       "resolution_status": "needs_official_text_hash_review",
       "remote_apply": false,
@@ -392,9 +413,13 @@
       ],
       "event_ids": [
         "alrs_event_7fc468a0542ab7370ba0f3b1",
-        "alrs_event_031ba82afbe40ca2b412494a"
+        "alrs-nominal-40f8de1da9a3511e462ad2e5f4274749",
+        "alrs_event_031ba82afbe40ca2b412494a",
+        "alrs-nominal-fb63caecd1d64d69dee88087ad239ec2"
       ],
-      "source_urls": [],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2025"
+      ],
       "technical_hypothesis": "same_text_multiple_events_possible",
       "resolution_status": "needs_official_text_hash_review",
       "remote_apply": false,
@@ -419,9 +444,14 @@
       ],
       "event_ids": [
         "alrs_event_47f98a82770b1c5ba39de186",
+        "alrs-nominal-f86bf65922d2a53cf33930b8d358f044",
+        "alrs-nominal-e45d5528a02a0e147066a5bbc0d9a8e2",
         "alrs_event_fa5e909aa7f411aab320c8b7"
       ],
-      "source_urls": [],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2145&ano=2025",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2025"
+      ],
       "technical_hypothesis": "same_text_multiple_events_possible",
       "resolution_status": "needs_official_text_hash_review",
       "remote_apply": false,
@@ -445,10 +475,15 @@
         "2025-10-28 00:00:00+00"
       ],
       "event_ids": [
+        "alrs-nominal-fe86541720ca3b3c10cee3e52aacea2e",
         "alrs_event_3f4738bbab8f5d3756b1f701",
-        "alrs_event_be2caaa7c8321fa714ab9b48"
+        "alrs_event_be2caaa7c8321fa714ab9b48",
+        "alrs-nominal-a8c3aaac5d1cd194dfa53b6c15b79e22"
       ],
-      "source_urls": [],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2145&ano=2024",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2025"
+      ],
       "technical_hypothesis": "same_text_multiple_events_possible",
       "resolution_status": "needs_official_text_hash_review",
       "remote_apply": false,
@@ -472,9 +507,13 @@
       ],
       "event_ids": [
         "alrs_event_c64109628107305dbd536503",
+        "alrs-nominal-1f25d6312b4ce1daf6f276e14c168a38",
+        "alrs-nominal-823185c2c51506f2873a5b1add0d4c0c",
         "alrs_event_a157712207598d9d509fb48c"
       ],
-      "source_urls": [],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2025"
+      ],
       "technical_hypothesis": "version_identity_mismatch_possible",
       "resolution_status": "needs_official_text_hash_review",
       "remote_apply": false,
@@ -498,9 +537,13 @@
       ],
       "event_ids": [
         "alrs_event_c060806b5dd91e92af82565a",
-        "alrs_event_40f72893ff6416c5b16d71f4"
+        "alrs-nominal-57d22b58f3ff9d187455b522d8357d24",
+        "alrs_event_40f72893ff6416c5b16d71f4",
+        "alrs-nominal-d8af1d3782a6f68b5379ee510f7e60ef"
       ],
-      "source_urls": [],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2145&ano=2024"
+      ],
       "technical_hypothesis": "version_identity_mismatch_possible",
       "resolution_status": "needs_official_text_hash_review",
       "remote_apply": false,
@@ -525,9 +568,14 @@
       ],
       "event_ids": [
         "alrs_event_6cf7e82907a01414e7d388f1",
-        "alrs_event_4717403fc05d5b449b6ec35f"
+        "alrs-nominal-5b843d78e1a6ae3368c907dee1656924",
+        "alrs_event_4717403fc05d5b449b6ec35f",
+        "alrs-nominal-6117037ea73d863b9710de723de6aed0"
       ],
-      "source_urls": [],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025"
+      ],
       "technical_hypothesis": "same_text_multiple_events_possible",
       "resolution_status": "needs_official_text_hash_review",
       "remote_apply": false,
@@ -564,13 +612,26 @@
       ],
       "event_ids": [
         "alrs_event_04c20fd7d56659e493ada6a0",
+        "alrs-nominal-2443cce1bf22d4e367e96561e6f24e5a",
         "alrs_event_905d68031675d81ff5aa4130",
+        "alrs-nominal-e708d2d81c267a8d068856904e282d9c",
         "alrs_event_28b272219b274d0ac3fb2ccc",
+        "alrs-nominal-b38734b94ef16a2590643c57cfbddf9c",
+        "alrs-nominal-bcd29067e62e59bb74713a75e09f7fe1",
         "alrs_event_e8adcecf2cc201c0d4b4cf8a",
         "alrs_event_048170ad04f80ed17d107fad",
-        "alrs_event_fce6ee577819b60dcbcab63a"
+        "alrs-nominal-95a739322a87ccceee1e8960c5a69594",
+        "alrs_event_fce6ee577819b60dcbcab63a",
+        "alrs-nominal-66b373f3dae53487a3a5f188802a3d3a"
       ],
-      "source_urls": [],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2023",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2146&ano=2024",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2025",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2139&ano=2021"
+      ],
       "technical_hypothesis": "same_text_multiple_events_possible",
       "resolution_status": "needs_official_text_hash_review",
       "remote_apply": false,

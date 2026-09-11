@@ -5,7 +5,7 @@
   "totals": {
     "collision_keys": 18,
     "affected_versions": 65,
-    "affected_events": 65
+    "affected_events": 93
   },
   "collisions": [
     {
@@ -511,6 +511,19 @@
           "vote_round": "nominal"
         },
         {
+          "event_external_id": "alrs-nominal-58762d3f4ef499fd00e4f080b46446cc",
+          "event_id": "9be0113d-064a-4205-a0bd-e7770f343593",
+          "occurred_at": "2026-06-09 00:00:00+00",
+          "proposition_external_id": "alrs_prop_2191cd41f3e4abad07e42b5f",
+          "proposition_version_id": "245303bd-b927-44a7-9cb3-763e9e9b5511",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026",
+          "text_hash": "sha256:0cdbef70e6ca5a6ef7c81cdba4b73cd78380a780b748d4a99edc8a09825ff6e2",
+          "title": "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 17 a 31 de julho de 2026.",
+          "version_key": "sha256:0cdbef70e6ca5a6ef7c81cdba4b73cd78380a780b748d4a99edc8a09825ff6e2",
+          "version_label": "Registro ALRS",
+          "vote_round": null
+        },
+        {
           "event_external_id": "alrs_event_cbc0280eafd2bfd1aea51e20",
           "event_id": "2d2678e2-ce08-43e7-9518-b57bd5693a1a",
           "occurred_at": "2026-07-14 00:00:00+00",
@@ -522,6 +535,19 @@
           "version_key": "sha256:0cdbef70e6ca5a6ef7c81cdba4b73cd78380a780b748d4a99edc8a09825ff6e2",
           "version_label": "Registro ALRS",
           "vote_round": "nominal"
+        },
+        {
+          "event_external_id": "alrs-nominal-719cf7f0b06fa3b8042e724157a2c7b4",
+          "event_id": "61782b33-ead9-4d45-a120-e1031c272ee8",
+          "occurred_at": "2026-07-14 00:00:00+00",
+          "proposition_external_id": "alrs_prop_775fb8b3a6f3e254c3e230aa",
+          "proposition_version_id": "5dcc1e75-8a21-4244-b138-9f418826abde",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026",
+          "text_hash": "sha256:0cdbef70e6ca5a6ef7c81cdba4b73cd78380a780b748d4a99edc8a09825ff6e2",
+          "title": "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 17 a 31 de julho de 2026.",
+          "version_key": "sha256:0cdbef70e6ca5a6ef7c81cdba4b73cd78380a780b748d4a99edc8a09825ff6e2",
+          "version_label": "Registro ALRS",
+          "vote_round": null
         }
       ],
       "resolution_status": "blocked_until_official_version_identity"
@@ -547,6 +573,19 @@
           "vote_round": "nominal"
         },
         {
+          "event_external_id": "alrs-nominal-6cb7df6072d3354f3331c8e6984f9136",
+          "event_id": "ba74630e-f91c-47ab-828d-93340716643a",
+          "occurred_at": "2024-06-25 00:00:00+00",
+          "proposition_external_id": "alrs_prop_37041a96d00a66750a23d9e4",
+          "proposition_version_id": "6857fd00-8ea9-44ca-9757-801139b9af22",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2159&ano=2024",
+          "text_hash": "sha256:2153b7d26a279490da4ed0de073c26331b8fe24de9abe9549a644d23989abc5c",
+          "title": "Autoriza a transferência de recursos do Fundo de Reaparelhamento da Assembleia Legislativa – FRAL, instituído pela Resolução n.º 2.889, de 9 de setembro de 2003, ao Tesouro do Estado do Rio Grande do Sul.",
+          "version_key": "sha256:2153b7d26a279490da4ed0de073c26331b8fe24de9abe9549a644d23989abc5c",
+          "version_label": "Registro ALRS",
+          "vote_round": null
+        },
+        {
           "event_external_id": "alrs_event_7c8dbaa06dc2b4c1e1e2dbd8",
           "event_id": "ad16c98b-d5a7-4380-9710-cd1bde73e2fe",
           "occurred_at": "2024-06-25 00:00:00+00",
@@ -558,6 +597,19 @@
           "version_key": "sha256:2153b7d26a279490da4ed0de073c26331b8fe24de9abe9549a644d23989abc5c",
           "version_label": "Registro ALRS",
           "vote_round": "nominal"
+        },
+        {
+          "event_external_id": "alrs-nominal-3d43a075fd6f2ce4009b5ccc69989c0a",
+          "event_id": "d0cb3d09-4593-45da-8e1e-55a7ded4f904",
+          "occurred_at": "2024-06-25 00:00:00+00",
+          "proposition_external_id": "alrs_prop_9d546ab56f3fe2aea881ff2a",
+          "proposition_version_id": "b3f8b5fc-c90f-450b-a34e-b7517e1dbd04",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2146&ano=2024",
+          "text_hash": "sha256:2153b7d26a279490da4ed0de073c26331b8fe24de9abe9549a644d23989abc5c",
+          "title": "Autoriza a transferência de recursos do Fundo de Reaparelhamento da Assembleia Legislativa – FRAL, instituído pela Resolução n.º 2.889, de 9 de setembro de 2003, ao Tesouro do Estado do Rio Grande do Sul.",
+          "version_key": "sha256:2153b7d26a279490da4ed0de073c26331b8fe24de9abe9549a644d23989abc5c",
+          "version_label": "Registro ALRS",
+          "vote_round": null
         }
       ],
       "resolution_status": "blocked_until_official_version_identity"
@@ -571,6 +623,19 @@
         "b4a681d1-53c2-4c16-b038-45606adfd2f1"
       ],
       "entries": [
+        {
+          "event_external_id": "alrs-nominal-8186d80f242ad38469c4e16b66b2b983",
+          "event_id": "41f026ce-7661-45ee-ab2d-1276dba10f48",
+          "occurred_at": "2026-04-07 00:00:00+00",
+          "proposition_external_id": "alrs_prop_5d7ce3dddd17ee16bebfbf92",
+          "proposition_version_id": "107c79e5-2dd2-42ca-a906-f2674b103455",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2139&ano=2026",
+          "text_hash": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924",
+          "title": "Altera a Lei n.º 15.988, de 7 de agosto de 2023, que consolida a legislação relativa às mulheres vítimas de violência no âmbito do Estado do Rio Grande do Sul.",
+          "version_key": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924",
+          "version_label": "Registro ALRS",
+          "vote_round": null
+        },
         {
           "event_external_id": "alrs_event_61f8d7a97e94834da95e0a82",
           "event_id": "4adeeda2-d893-4599-a244-d415365eecaf",
@@ -598,6 +663,32 @@
           "vote_round": "nominal"
         },
         {
+          "event_external_id": "alrs-nominal-9399ba5bd979ef484e19eb15c15a1842",
+          "event_id": "4836856a-54e3-4625-9fc4-16c0518ca937",
+          "occurred_at": "2026-06-23 00:00:00+00",
+          "proposition_external_id": "alrs_prop_bd3c9e198a3d6ab75eb40cd7",
+          "proposition_version_id": "706fd8fa-b0b7-42a2-b76a-bc352d4dc889",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026",
+          "text_hash": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924",
+          "title": "Altera a Lei n.º 15.988, de 7 de agosto de 2023, que consolida a legislação relativa às mulheres vítimas de violência no âmbito do Estado do Rio Grande do Sul.",
+          "version_key": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924",
+          "version_label": "Registro ALRS",
+          "vote_round": null
+        },
+        {
+          "event_external_id": "alrs-nominal-5de155dd92b64d3073b17c5400ca0dd9",
+          "event_id": "1257113f-8acd-4165-9e9b-7091cebc15c8",
+          "occurred_at": "2026-03-10 00:00:00+00",
+          "proposition_external_id": "alrs_prop_e6d6bc434bb2495d1f9016e7",
+          "proposition_version_id": "b3b27d88-a651-4680-9f97-7784ecfc51c3",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026",
+          "text_hash": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924",
+          "title": "Altera a Lei n.º 15.988, de 7 de agosto de 2023, que consolida a legislação relativa às mulheres vítimas de violência no âmbito do Estado do Rio Grande do Sul.",
+          "version_key": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924",
+          "version_label": "Registro ALRS",
+          "vote_round": null
+        },
+        {
           "event_external_id": "alrs_event_a815bcbbdb5399a06257f9c4",
           "event_id": "bee47b3a-e5d7-41cf-b8c4-15e6a007da5c",
           "occurred_at": "2026-03-10 00:00:00+00",
@@ -622,6 +713,19 @@
           "version_key": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924",
           "version_label": "Registro ALRS",
           "vote_round": "nominal"
+        },
+        {
+          "event_external_id": "alrs-nominal-839fda51d4d2a0330e9027dfbbdc4abb",
+          "event_id": "4197e76a-99fc-4ee3-afd6-42e0117c2b25",
+          "occurred_at": "2026-04-07 00:00:00+00",
+          "proposition_external_id": "alrs_prop_6c0127039e60a30bb11eca13",
+          "proposition_version_id": "b4a681d1-53c2-4c16-b038-45606adfd2f1",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026",
+          "text_hash": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924",
+          "title": "Altera a Lei n.º 15.988, de 7 de agosto de 2023, que consolida a legislação relativa às mulheres vítimas de violência no âmbito do Estado do Rio Grande do Sul.",
+          "version_key": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924",
+          "version_label": "Registro ALRS",
+          "vote_round": null
         }
       ],
       "resolution_status": "blocked_until_official_version_identity"
@@ -647,6 +751,19 @@
           "vote_round": "nominal"
         },
         {
+          "event_external_id": "alrs-nominal-cce4bfa8d18a50665a570c1c58d002e5",
+          "event_id": "fbcac4ac-beb8-455e-be8a-984d8ab80ac1",
+          "occurred_at": "2025-08-05 00:00:00+00",
+          "proposition_external_id": "alrs_prop_c6e65e16d9d03db5c25c8625",
+          "proposition_version_id": "0638273a-f944-40f8-aab4-c934cff1631f",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
+          "text_hash": "sha256:5f45c68c549e9aa03f35f374c22455f2ff9d3069303e705868f5a2d394f62136",
+          "title": "Altera a Lei nº 14.499, de 3 de abril de 2014, que institui o Plano de Empregos, Funções e Salários e cria os empregos permanentes e os empregos e funções em comissão da Fundação Teatro São Pedro.",
+          "version_key": "sha256:5f45c68c549e9aa03f35f374c22455f2ff9d3069303e705868f5a2d394f62136",
+          "version_label": "Registro ALRS",
+          "vote_round": null
+        },
+        {
           "event_external_id": "alrs_event_9a5b8fa772d7a3cb4d32f024",
           "event_id": "5be5d78f-dd7b-4df6-b588-d0e569807288",
           "occurred_at": "2026-06-23 00:00:00+00",
@@ -658,6 +775,19 @@
           "version_key": "sha256:5f45c68c549e9aa03f35f374c22455f2ff9d3069303e705868f5a2d394f62136",
           "version_label": "Registro ALRS",
           "vote_round": "nominal"
+        },
+        {
+          "event_external_id": "alrs-nominal-0b07903ffe6d154d159f22e02ef00cd1",
+          "event_id": "a119ea82-a95b-4257-884f-4e758e84f642",
+          "occurred_at": "2026-06-23 00:00:00+00",
+          "proposition_external_id": "alrs_prop_3c61cf2b6f3176da722ea3df",
+          "proposition_version_id": "cae9dc8a-c64a-4bb8-a446-1919755116fe",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026",
+          "text_hash": "sha256:5f45c68c549e9aa03f35f374c22455f2ff9d3069303e705868f5a2d394f62136",
+          "title": "Altera a Lei nº 14.499, de 3 de abril de 2014, que institui o Plano de Empregos, Funções e Salários e cria os empregos permanentes e os empregos e funções em comissão da Fundação Teatro São Pedro.",
+          "version_key": "sha256:5f45c68c549e9aa03f35f374c22455f2ff9d3069303e705868f5a2d394f62136",
+          "version_label": "Registro ALRS",
+          "vote_round": null
         }
       ],
       "resolution_status": "blocked_until_official_version_identity"
@@ -683,6 +813,19 @@
           "vote_round": "nominal"
         },
         {
+          "event_external_id": "alrs-nominal-40f8de1da9a3511e462ad2e5f4274749",
+          "event_id": "22a9aec7-dfea-47c4-9a98-de75805053f8",
+          "occurred_at": "2025-11-18 00:00:00+00",
+          "proposition_external_id": "alrs_prop_9298336d402b2cd71fdec76b",
+          "proposition_version_id": "920d992c-ae77-496d-8e59-cb110364a19d",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2025",
+          "text_hash": "sha256:648bb36ab78f53e0f8a2126bbc8915088ab19bcd7ad89a36295777938ed97546",
+          "title": "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 23 de dezembro de 2025 a 31 de janeiro de 2026.",
+          "version_key": "sha256:648bb36ab78f53e0f8a2126bbc8915088ab19bcd7ad89a36295777938ed97546",
+          "version_label": "Registro ALRS",
+          "vote_round": null
+        },
+        {
           "event_external_id": "alrs_event_031ba82afbe40ca2b412494a",
           "event_id": "a5d6674f-916d-462e-99b9-196329d4bac6",
           "occurred_at": "2025-12-16 00:00:00+00",
@@ -694,6 +837,19 @@
           "version_key": "sha256:648bb36ab78f53e0f8a2126bbc8915088ab19bcd7ad89a36295777938ed97546",
           "version_label": "Registro ALRS",
           "vote_round": "nominal"
+        },
+        {
+          "event_external_id": "alrs-nominal-fb63caecd1d64d69dee88087ad239ec2",
+          "event_id": "247e90ed-a920-40cd-865c-60db73f09df5",
+          "occurred_at": "2025-12-16 00:00:00+00",
+          "proposition_external_id": "alrs_prop_ee3ccc41df5ba7600248e61d",
+          "proposition_version_id": "c5a71560-81fe-4d16-9af4-62160eac232d",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2025",
+          "text_hash": "sha256:648bb36ab78f53e0f8a2126bbc8915088ab19bcd7ad89a36295777938ed97546",
+          "title": "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 23 de dezembro de 2025 a 31 de janeiro de 2026.",
+          "version_key": "sha256:648bb36ab78f53e0f8a2126bbc8915088ab19bcd7ad89a36295777938ed97546",
+          "version_label": "Registro ALRS",
+          "vote_round": null
         }
       ],
       "resolution_status": "blocked_until_official_version_identity"
@@ -719,6 +875,32 @@
           "vote_round": "nominal"
         },
         {
+          "event_external_id": "alrs-nominal-f86bf65922d2a53cf33930b8d358f044",
+          "event_id": "c06abaf7-e742-416f-85c6-e66874ca27ce",
+          "occurred_at": "2025-07-15 00:00:00+00",
+          "proposition_external_id": "alrs_prop_0fc17ed2830e502bc52a59f1",
+          "proposition_version_id": "bcf24d3d-809a-48a2-be66-193ed05c7e9b",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2145&ano=2025",
+          "text_hash": "sha256:6851f29702ea6fd276e86f09af257ff8d72716dfc448069bcaff6ebb6aed9907",
+          "title": "Altera a Resolução n.º 2.514, de 30 de novembro de 1993, que institui o Código de Ética Parlamentar.",
+          "version_key": "sha256:6851f29702ea6fd276e86f09af257ff8d72716dfc448069bcaff6ebb6aed9907",
+          "version_label": "Registro ALRS",
+          "vote_round": null
+        },
+        {
+          "event_external_id": "alrs-nominal-e45d5528a02a0e147066a5bbc0d9a8e2",
+          "event_id": "1696ec8d-7d8f-46d8-9136-be6919b8240f",
+          "occurred_at": "2025-08-12 00:00:00+00",
+          "proposition_external_id": "alrs_prop_3e4293b254be99e7de11b6ec",
+          "proposition_version_id": "c1fb9b07-400e-4c2c-aaa3-9435aeda8962",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2025",
+          "text_hash": "sha256:6851f29702ea6fd276e86f09af257ff8d72716dfc448069bcaff6ebb6aed9907",
+          "title": "Altera a Resolução n.º 2.514, de 30 de novembro de 1993, que institui o Código de Ética Parlamentar.",
+          "version_key": "sha256:6851f29702ea6fd276e86f09af257ff8d72716dfc448069bcaff6ebb6aed9907",
+          "version_label": "Registro ALRS",
+          "vote_round": null
+        },
+        {
           "event_external_id": "alrs_event_fa5e909aa7f411aab320c8b7",
           "event_id": "bb2ec959-1b22-45a3-849b-095a4a4e5d24",
           "occurred_at": "2025-08-12 00:00:00+00",
@@ -741,6 +923,19 @@
         "c55181e5-8d2d-4939-bcfa-ac6d91407bd4"
       ],
       "entries": [
+        {
+          "event_external_id": "alrs-nominal-fe86541720ca3b3c10cee3e52aacea2e",
+          "event_id": "89197d41-3fd2-4c47-aba2-5cec00e94336",
+          "occurred_at": "2024-05-14 00:00:00+00",
+          "proposition_external_id": "alrs_prop_f240e457e9d6412fc7428be4",
+          "proposition_version_id": "ab624748-5807-4889-82b4-23af4e9295eb",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2145&ano=2024",
+          "text_hash": "sha256:7a3c1db1ae0e28f59fe04449e1f24a5e1fc40d5d4acacebff8699b4210709620",
+          "title": "Altera a Resolução n.º 2.288, de 18 de janeiro de 1991, que dispõe sobre o Regimento Interno da Assembleia Legislativa do Estado do Rio Grande do Sul.",
+          "version_key": "sha256:7a3c1db1ae0e28f59fe04449e1f24a5e1fc40d5d4acacebff8699b4210709620",
+          "version_label": "Registro ALRS",
+          "vote_round": null
+        },
         {
           "event_external_id": "alrs_event_3f4738bbab8f5d3756b1f701",
           "event_id": "d73e4f89-d632-425e-8286-1461ff83ac78",
@@ -766,6 +961,19 @@
           "version_key": "sha256:7a3c1db1ae0e28f59fe04449e1f24a5e1fc40d5d4acacebff8699b4210709620",
           "version_label": "Registro ALRS",
           "vote_round": "nominal"
+        },
+        {
+          "event_external_id": "alrs-nominal-a8c3aaac5d1cd194dfa53b6c15b79e22",
+          "event_id": "2b606c0a-5cfc-4201-8e3e-19083e359d9c",
+          "occurred_at": "2025-10-28 00:00:00+00",
+          "proposition_external_id": "alrs_prop_e368ca3990c6ac9610ca715b",
+          "proposition_version_id": "c55181e5-8d2d-4939-bcfa-ac6d91407bd4",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2025",
+          "text_hash": "sha256:7a3c1db1ae0e28f59fe04449e1f24a5e1fc40d5d4acacebff8699b4210709620",
+          "title": "Altera a Resolução n.º 2.288, de 18 de janeiro de 1991, que dispõe sobre o Regimento Interno da Assembleia Legislativa do Estado do Rio Grande do Sul.",
+          "version_key": "sha256:7a3c1db1ae0e28f59fe04449e1f24a5e1fc40d5d4acacebff8699b4210709620",
+          "version_label": "Registro ALRS",
+          "vote_round": null
         }
       ],
       "resolution_status": "blocked_until_official_version_identity"
@@ -789,6 +997,32 @@
           "version_key": "sha256:893beb47914572406fa95274c527988b84a01b5e10f4cb7a57ef30269bf9c338",
           "version_label": "Registro ALRS",
           "vote_round": "nominal"
+        },
+        {
+          "event_external_id": "alrs-nominal-1f25d6312b4ce1daf6f276e14c168a38",
+          "event_id": "d7162554-fb5a-4281-9a21-dd2260b6920a",
+          "occurred_at": "2025-06-24 00:00:00+00",
+          "proposition_external_id": "alrs_prop_2f45347751e5d9a26011e3aa",
+          "proposition_version_id": "4663d604-5056-401e-a55c-f6343a414d7b",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2025",
+          "text_hash": "sha256:893beb47914572406fa95274c527988b84a01b5e10f4cb7a57ef30269bf9c338",
+          "title": "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 17 a 31 de julho de 2025.",
+          "version_key": "sha256:893beb47914572406fa95274c527988b84a01b5e10f4cb7a57ef30269bf9c338",
+          "version_label": "Registro ALRS",
+          "vote_round": null
+        },
+        {
+          "event_external_id": "alrs-nominal-823185c2c51506f2873a5b1add0d4c0c",
+          "event_id": "2622d9b8-05c4-4460-8578-9dd66cd2a757",
+          "occurred_at": "2025-06-24 00:00:00+00",
+          "proposition_external_id": "alrs_prop_a4b9f51cc184898a06cb97b4",
+          "proposition_version_id": "7c31b171-e6c7-4605-af2a-6f2690505608",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2025",
+          "text_hash": "sha256:893beb47914572406fa95274c527988b84a01b5e10f4cb7a57ef30269bf9c338",
+          "title": "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 17 a 31 de julho de 2025.",
+          "version_key": "sha256:893beb47914572406fa95274c527988b84a01b5e10f4cb7a57ef30269bf9c338",
+          "version_label": "Registro ALRS",
+          "vote_round": null
         },
         {
           "event_external_id": "alrs_event_a157712207598d9d509fb48c",
@@ -827,6 +1061,19 @@
           "vote_round": "nominal"
         },
         {
+          "event_external_id": "alrs-nominal-57d22b58f3ff9d187455b522d8357d24",
+          "event_id": "42281fa4-3639-45d9-bf2a-ebab7e4c33bd",
+          "occurred_at": "2024-07-16 00:00:00+00",
+          "proposition_external_id": "alrs_prop_db4406f33c3014579aade29d",
+          "proposition_version_id": "356a7ad6-65e5-4f36-ab89-ae46bb56dc39",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2145&ano=2024",
+          "text_hash": "sha256:96616d78191cde5f8ee477abe0e6bcc2adae024db6ae0c86b5929cddcf6a8dfc",
+          "title": "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 17 a 31 de julho de 2024.",
+          "version_key": "sha256:96616d78191cde5f8ee477abe0e6bcc2adae024db6ae0c86b5929cddcf6a8dfc",
+          "version_label": "Registro ALRS",
+          "vote_round": null
+        },
+        {
           "event_external_id": "alrs_event_40f72893ff6416c5b16d71f4",
           "event_id": "9c5340da-0f0a-4791-af59-9f110b975593",
           "occurred_at": "2024-07-16 00:00:00+00",
@@ -838,6 +1085,19 @@
           "version_key": "sha256:96616d78191cde5f8ee477abe0e6bcc2adae024db6ae0c86b5929cddcf6a8dfc",
           "version_label": "Registro ALRS",
           "vote_round": "nominal"
+        },
+        {
+          "event_external_id": "alrs-nominal-d8af1d3782a6f68b5379ee510f7e60ef",
+          "event_id": "fe40d100-f91d-4fde-ba61-847d77acc04b",
+          "occurred_at": "2024-07-16 00:00:00+00",
+          "proposition_external_id": "alrs_prop_1ad89cf901c3764d657f9f56",
+          "proposition_version_id": "573a434b-eb4d-4ffe-ae95-b9e31a0dd932",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2145&ano=2024",
+          "text_hash": "sha256:96616d78191cde5f8ee477abe0e6bcc2adae024db6ae0c86b5929cddcf6a8dfc",
+          "title": "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 17 a 31 de julho de 2024.",
+          "version_key": "sha256:96616d78191cde5f8ee477abe0e6bcc2adae024db6ae0c86b5929cddcf6a8dfc",
+          "version_label": "Registro ALRS",
+          "vote_round": null
         }
       ],
       "resolution_status": "blocked_until_official_version_identity"
@@ -863,6 +1123,19 @@
           "vote_round": "nominal"
         },
         {
+          "event_external_id": "alrs-nominal-5b843d78e1a6ae3368c907dee1656924",
+          "event_id": "2bf86a00-c108-4c37-8ba4-4f20c365b62a",
+          "occurred_at": "2022-05-03 00:00:00+00",
+          "proposition_external_id": "alrs_prop_0a19adb48ba25b3e8b6c2003",
+          "proposition_version_id": "3a3ed8d4-3c61-4fb0-9ba8-f762066c4590",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2022",
+          "text_hash": "sha256:a4714c50e29cacb893e775a86ce306cf103e170fb3f967b819138d07f4a43954",
+          "title": "Autoriza o Poder Executivo a prorrogar parte dos contratos de que trata a Lei nº 11.638, de 6 de junho de 2001, que dispõe sobre a contratação emergencial de servidores para o Instituto-Geral de Perícias visando ao atendimento de necessidade temporária de excepcional interesse público e dá outras providências; a Lei nº 12.879, de 27 de dezembro de 2007, que autoriza o Poder Executivo a prorrogar p",
+          "version_key": "sha256:a4714c50e29cacb893e775a86ce306cf103e170fb3f967b819138d07f4a43954",
+          "version_label": "Registro ALRS",
+          "vote_round": null
+        },
+        {
           "event_external_id": "alrs_event_4717403fc05d5b449b6ec35f",
           "event_id": "0ef1c317-740b-4de9-b279-455cf37eee0f",
           "occurred_at": "2025-04-29 00:00:00+00",
@@ -874,6 +1147,19 @@
           "version_key": "sha256:a4714c50e29cacb893e775a86ce306cf103e170fb3f967b819138d07f4a43954",
           "version_label": "Registro ALRS",
           "vote_round": "nominal"
+        },
+        {
+          "event_external_id": "alrs-nominal-6117037ea73d863b9710de723de6aed0",
+          "event_id": "2ff64028-7c46-4d1e-a18b-7bc6b4ed2c09",
+          "occurred_at": "2025-04-29 00:00:00+00",
+          "proposition_external_id": "alrs_prop_496e4c4c37e9015c811e1a10",
+          "proposition_version_id": "c547b12f-fc38-475b-9475-70a16b564531",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
+          "text_hash": "sha256:a4714c50e29cacb893e775a86ce306cf103e170fb3f967b819138d07f4a43954",
+          "title": "Autoriza o Poder Executivo a prorrogar parte dos contratos de que trata a Lei nº 11.638, de 6 de junho de 2001, que dispõe sobre a contratação emergencial de servidores para o Instituto-Geral de Perícias visando ao atendimento de necessidade temporária de excepcional interesse público e dá outras providências; a Lei nº 12.879, de 27 de dezembro de 2007, que autoriza o Poder Executivo a prorrogar p",
+          "version_key": "sha256:a4714c50e29cacb893e775a86ce306cf103e170fb3f967b819138d07f4a43954",
+          "version_label": "Registro ALRS",
+          "vote_round": null
         }
       ],
       "resolution_status": "blocked_until_official_version_identity"
@@ -903,6 +1189,19 @@
           "vote_round": "nominal"
         },
         {
+          "event_external_id": "alrs-nominal-2443cce1bf22d4e367e96561e6f24e5a",
+          "event_id": "46d57f6d-2da3-4a75-b534-3cd460ce9a1a",
+          "occurred_at": "2022-12-20 00:00:00+00",
+          "proposition_external_id": "alrs_prop_bf820724976fb26dd9c3cbd6",
+          "proposition_version_id": "5d0a2dcb-55d7-4773-992f-a4ddba3e1571",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2022",
+          "text_hash": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c",
+          "title": "Dispõe sobre o reajuste dos pisos salariais no âmbito do Estado do Rio Grande do Sul, para as categorias profissionais que menciona, com fundamento na Lei Complementar Federal nº 103, de 14 de julho de 2000, que autoriza os Estados e o Distrito Federal a instituir o piso salarial a que se refere o inciso V do art. 7º da Constituição Federal, por aplicação do disposto no parágrafo único do seu art.",
+          "version_key": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c",
+          "version_label": "Registro ALRS",
+          "vote_round": null
+        },
+        {
           "event_external_id": "alrs_event_905d68031675d81ff5aa4130",
           "event_id": "bf4e3980-525b-4141-9158-d86838f3c303",
           "occurred_at": "2023-11-14 00:00:00+00",
@@ -916,6 +1215,19 @@
           "vote_round": "nominal"
         },
         {
+          "event_external_id": "alrs-nominal-e708d2d81c267a8d068856904e282d9c",
+          "event_id": "7cc19c52-d20b-425d-9f97-45b49519b727",
+          "occurred_at": "2023-11-14 00:00:00+00",
+          "proposition_external_id": "alrs_prop_e6a906d03b35c3747233a07b",
+          "proposition_version_id": "78c2730c-6515-4386-896d-8f4d84c7c517",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2023",
+          "text_hash": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c",
+          "title": "Dispõe sobre o reajuste dos pisos salariais no âmbito do Estado do Rio Grande do Sul, para as categorias profissionais que menciona, com fundamento na Lei Complementar Federal nº 103, de 14 de julho de 2000, que autoriza os Estados e o Distrito Federal a instituir o piso salarial a que se refere o inciso V do art. 7º da Constituição Federal, por aplicação do disposto no parágrafo único do seu art.",
+          "version_key": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c",
+          "version_label": "Registro ALRS",
+          "vote_round": null
+        },
+        {
           "event_external_id": "alrs_event_28b272219b274d0ac3fb2ccc",
           "event_id": "68071748-c3ac-46de-9528-c02210411f8d",
           "occurred_at": "2024-12-03 00:00:00+00",
@@ -927,6 +1239,32 @@
           "version_key": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c",
           "version_label": "Registro ALRS",
           "vote_round": "nominal"
+        },
+        {
+          "event_external_id": "alrs-nominal-b38734b94ef16a2590643c57cfbddf9c",
+          "event_id": "d928df82-db13-447a-8e5e-03850736fb82",
+          "occurred_at": "2024-12-03 00:00:00+00",
+          "proposition_external_id": "alrs_prop_43a3009cf63d2b7a5ab45e6a",
+          "proposition_version_id": "910ecc25-82fe-4877-8849-1f83ea9f768d",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2146&ano=2024",
+          "text_hash": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c",
+          "title": "Dispõe sobre o reajuste dos pisos salariais no âmbito do Estado do Rio Grande do Sul, para as categorias profissionais que menciona, com fundamento na Lei Complementar Federal nº 103, de 14 de julho de 2000, que autoriza os Estados e o Distrito Federal a instituir o piso salarial a que se refere o inciso V do art. 7º da Constituição Federal, por aplicação do disposto no parágrafo único do seu art.",
+          "version_key": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c",
+          "version_label": "Registro ALRS",
+          "vote_round": null
+        },
+        {
+          "event_external_id": "alrs-nominal-bcd29067e62e59bb74713a75e09f7fe1",
+          "event_id": "01e0df90-d5b2-4614-a355-7cac1fe921ba",
+          "occurred_at": "2025-06-03 00:00:00+00",
+          "proposition_external_id": "alrs_prop_fb411e1f9d50d67f0d5cf459",
+          "proposition_version_id": "ce5d5c4d-832c-44cc-a249-6b4177d597d4",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2025",
+          "text_hash": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c",
+          "title": "Dispõe sobre o reajuste dos pisos salariais no âmbito do Estado do Rio Grande do Sul, para as categorias profissionais que menciona, com fundamento na Lei Complementar Federal nº 103, de 14 de julho de 2000, que autoriza os Estados e o Distrito Federal a instituir o piso salarial a que se refere o inciso V do art. 7º da Constituição Federal, por aplicação do disposto no parágrafo único do seu art.",
+          "version_key": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c",
+          "version_label": "Registro ALRS",
+          "vote_round": null
         },
         {
           "event_external_id": "alrs_event_e8adcecf2cc201c0d4b4cf8a",
@@ -955,6 +1293,19 @@
           "vote_round": "nominal"
         },
         {
+          "event_external_id": "alrs-nominal-95a739322a87ccceee1e8960c5a69594",
+          "event_id": "7cb87658-8a17-4e20-86b9-7e8d5ae63aec",
+          "occurred_at": "2026-05-19 00:00:00+00",
+          "proposition_external_id": "alrs_prop_79f7b28357a9bd43cfe97630",
+          "proposition_version_id": "cffb8ddb-0557-4c3a-9769-422c23e94fa1",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026",
+          "text_hash": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c",
+          "title": "Dispõe sobre o reajuste dos pisos salariais no âmbito do Estado do Rio Grande do Sul, para as categorias profissionais que menciona, com fundamento na Lei Complementar Federal nº 103, de 14 de julho de 2000, que autoriza os Estados e o Distrito Federal a instituir o piso salarial a que se refere o inciso V do art. 7º da Constituição Federal, por aplicação do disposto no parágrafo único do seu art.",
+          "version_key": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c",
+          "version_label": "Registro ALRS",
+          "vote_round": null
+        },
+        {
           "event_external_id": "alrs_event_fce6ee577819b60dcbcab63a",
           "event_id": "17334ce4-d689-4094-bd2c-96e01e10ce06",
           "occurred_at": "2021-12-14 00:00:00+00",
@@ -966,6 +1317,19 @@
           "version_key": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c",
           "version_label": "Registro ALRS",
           "vote_round": "nominal"
+        },
+        {
+          "event_external_id": "alrs-nominal-66b373f3dae53487a3a5f188802a3d3a",
+          "event_id": "92256db5-c8d5-45e2-836c-f8969e29ea7c",
+          "occurred_at": "2021-12-14 00:00:00+00",
+          "proposition_external_id": "alrs_prop_e0d503c19a2e45462cc12b38",
+          "proposition_version_id": "d953e523-ffd0-4767-b308-097a76277050",
+          "source_url": "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2139&ano=2021",
+          "text_hash": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c",
+          "title": "Dispõe sobre o reajuste dos pisos salariais no âmbito do Estado do Rio Grande do Sul, para as categorias profissionais que menciona, com fundamento na Lei Complementar Federal nº 103, de 14 de julho de 2000, que autoriza os Estados e o Distrito Federal a instituir o piso salarial a que se refere o inciso V do art. 7º da Constituição Federal, por aplicação do disposto no parágrafo único do seu art.",
+          "version_key": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c",
+          "version_label": "Registro ALRS",
+          "vote_round": null
         }
       ],
       "resolution_status": "blocked_until_official_version_identity"
