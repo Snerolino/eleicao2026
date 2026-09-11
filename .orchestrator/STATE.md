@@ -1,3 +1,16 @@
+## Tick contínuo — autoria Câmara 2651–2675 retida — 2026-09-10
+
+- Lock exclusivo `flock` adquirido; único writer confirmado; baseline limpo em `main` SHA `60cdff7ee368082eff1f3a2ae23bcf454ef1ad22`.
+- Seleção determinística: 25 projetos únicos (`offset=2650`, `limit=25`), 50 ocorrências candidato–projeto e 17 candidatos únicos.
+- Revalidação oficial: 50/50 endpoints Câmara HTTP 200, 91,201 bytes e SHA-256 individual; identidade `dados.id` exata 25/25. Texto integral oficial 25/25 HTTP 2xx, 5,227,128 bytes e SHA-256 individual; conteúdo não lido/validado.
+- Lanes causal/red-team: 25/25 IDs exatos em cada lane; reconciliação 25 withheld, 0 pending_review, 0 approved, 0 score_eligible; `content_read=false`, `remote_apply=false`.
+- Bloqueio real: sem validação editorial do texto integral, versão/evento vinculante e voto nominal individual; autoria/ementa/tramitação não prova posição, efeito causal ou score. Nenhum fato, claim, voto, assessment, score, matriz, projeto público ou escrita remota foi promovido.
+- Checkpoint: `projects_analyzed=2675`, `last_batch=2651-2675`, `next_batch=2676-2700`, `withheld=2675`, `blocked_items=111`. QA: `docs/qa/lote-camara-autoria-2651-2675-2026-09-10.md`.
+- Nenhuma migration, RLS, Auth, Storage, Edge Function, escrita factual Supabase ou matriz/score foi alterada/executada.
+
+- Gates Node 24.19.0 verdes: 499/499 testes em 120 arquivos, TypeScript, schema, `data:check` 1003/988, build 245 módulos/sitemap 1003+2 e `git diff --check`; churn não relacionado restaurado.
+- Publicação ainda pendente neste checkpoint: commit/push, CI/backup e verificação de produção SHA exato serão executados após a inspeção final.
+
 ## Tick contínuo — autoria Câmara 2601–2625 retida — 2026-09-11
 
 - Lock exclusivo `flock` adquirido; único writer confirmado; baseline limpo em `main` SHA `35cc3fc499c628db507d0fa51698aa386feaddae`.

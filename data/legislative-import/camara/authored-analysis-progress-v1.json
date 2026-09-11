@@ -283,6 +283,11 @@
       "batch_id": "2626-2650",
       "status": "withheld",
       "updated_at": "2026-09-11T00:53:36.082Z"
+    },
+    {
+      "batch_id": "2651-2675",
+      "status": "withheld",
+      "updated_at": "2026-09-11T01:05:47.877Z"
     }
   ],
   "blocked_items": [
@@ -395,16 +400,17 @@
     "authored-2551-2575",
     "authored-2576-2600-source-event-gap",
     "authored-2601-2625-source-event-gap",
-    "authored-2626-2650-source-event-gap"
+    "authored-2626-2650-source-event-gap",
+    "authored-2651-2675-source-event-gap"
   ],
   "counts": {
-    "projects_analyzed": 2650,
+    "projects_analyzed": 2675,
     "approved": 0,
     "pending_review": 0,
-    "withheld": 2650
+    "withheld": 2675
   },
-  "last_batch": "2626-2650",
-  "next_batch": "2651-2675",
+  "last_batch": "2651-2675",
+  "next_batch": "2676-2700",
   "heartbeat": {
     "at": "2026-09-11T00:53:36.092Z",
     "pid": 1180340
