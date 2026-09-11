@@ -9,7 +9,7 @@
 - Nenhuma migration, RLS, Auth, Storage, Edge Function, escrita factual Supabase ou matriz/score foi alterada/executada.
 
 - Gates Node 24.19.0 verdes: 499/499 testes em 120 arquivos, TypeScript, schema, `data:check` 1003/988, build 245 módulos/sitemap 1003+2 e `git diff --check`; churn não relacionado restaurado.
-- Publicação ainda pendente neste checkpoint: commit/push, CI/backup e verificação de produção SHA exato serão executados após a inspeção final.
+- Commit `4bf74501a94df3ffb9f018a2492973e34bb20830` publicado; backup `334951434` run `34549516289` success/headSha exato; produção raiz e `/release.json` HTTP 200 confirmaram SHA exato e `row_count=1003`. Deploy primário `34549500284` permaneceu in_progress na janela; backup foi o caminho confiável.
 
 ## Tick contínuo — autoria Câmara 2601–2625 retida — 2026-09-11
 

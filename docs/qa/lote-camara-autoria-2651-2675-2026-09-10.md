@@ -34,11 +34,16 @@ Processar o próximo lote determinístico de autoria Câmara, validando fontes o
 - Nenhuma autoria factual pública, claim, voto, assessment, score ou matriz foi criada; `remote_apply=false`.
 - Nenhuma migration, RLS, Auth, Storage ou Edge Function foi alterada; nenhuma escrita Supabase factual/editorial ocorreu.
 
-## Gates locais
-- Node `v24.19.0` confirmado para os gates.
-- Artefatos validados programaticamente: 25 projetos, 50 endpoints API, 25 textos, 25 IDs exatos, 25 `withheld`, zero `approved`/`pending_review`/`score_eligible`.
-- Gates verdes em Node 24.19.0: `npm run test` 499/499 em 120 arquivos; `npx tsc --noEmit` RC 0; `node scripts/validate-impact-schema.mjs` RC 0; `npm run data:check` RC 0 (1003 candidaturas, 988 fotos); `npm run build` RC 0 (245 módulos, sitemap 1003+2); `git diff --check` RC 0.
-- O build gerou churn não relacionado nos três artefatos `impact-editorial-*`; todos foram restaurados antes do fechamento.
+## Gates locais — executados
+- Node `v24.19.0` confirmado; `npm run orch:doctor` terminou `FAIL=0`, com WARNs apenas para OpenCode ausente, worktree suja e smoke Codex não exercitado.
+- `npm run test -- --passWithNoTests`: **499/499 testes**, 120 arquivos, exit 0.
+- `npx tsc --noEmit`: exit 0.
+- `node scripts/validate-impact-schema.mjs`: checkpoint OK; fixtures boas aceitas e ruins rejeitadas.
+- `npm run data:check`: exit 0; snapshot bruto `1003` candidaturas e `988` fotos oficiais.
+- `npm run build`: exit 0; `245` módulos, sitemap `1003 + 2` URLs, PWA gerada.
+- `npm run smoke:local`: exit 0; `1002` cards visíveis, 0 falhas HTTP e 0 erros de console online.
+- `git diff --check`: exit 0.
+- Churn de build/release e alterações preexistentes em arquivos `impact-editorial-*` foram preservados fora do escopo deste lote.
 
 ## Próximo passo
 Após os gates verdes, commit/push, CI/backup Cloudflare e validação de produção pelo SHA exato. Encerrar este lote antes de iniciar `2676–2700`.
