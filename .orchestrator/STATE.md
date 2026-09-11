@@ -5647,3 +5647,11 @@ Sem autorização humana explícita própria, não fazer:
 - Backup Cloudflare `334951434`, run final `34549674612`, `completed/success`, `headSha` exato.
 - Produção raiz e `/release.json` HTTP 200; release confirmou SHA exato, versão `0.2.1328` e snapshot `row_count=1003`.
 - Próximo chunk calculado: autoria Câmara `2676–2700`; retenção fail-closed continua, sem score/matriz sem assessment completo e evento vinculante.
+
+
+## Bloqueio de deploy documental — autoria Câmara 2651–2675
+
+- O commit documental `f232143cd6290d7bc928f131e24a5f235184fce6` está em `origin/main`, mas o dispatch backup `334951434` (`34549787190`) terminou `skipped`, sem job executável.
+- Produção permanece verificadamente no último commit funcional `d9d197aff7fadc6a212f4afd66c40fc0be2ed59e`, HTTP 200 e snapshot `row_count=1003`; não há alteração funcional pendente.
+- Bloqueio limitado ao deploy de documentação; não afeta a fila editorial `withheld` nem autoriza qualquer escrita factual.
+- Próximo chunk local continua `2676–2700`, mantendo fail-closed.

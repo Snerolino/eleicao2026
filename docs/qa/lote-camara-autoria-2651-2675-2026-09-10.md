@@ -49,9 +49,10 @@ Processar o próximo lote determinístico de autoria Câmara, validando fontes o
 Após os gates verdes, commit/push, CI/backup Cloudflare e validação de produção pelo SHA exato. Encerrar este lote antes de iniciar `2676–2700`.
 
 ## Publicação e verificação externa
-- Commit publicado: `d9d197aff7fadc6a212f4afd66c40fc0be2ed59e`; `git ls-remote` confirmou `main` alinhada.
-- Workflow backup `334951434`, runs observados `34549663680`/`34549674612`; run final `34549674612` terminou `completed/success` com `headSha` exato.
+- Commit funcional publicado: `d9d197aff7fadc6a212f4afd66c40fc0be2ed59e`; `git ls-remote` confirmou `main` alinhada naquele momento.
+- Workflow backup `334951434`, run `34549674612`, terminou `completed/success` com `headSha` exato do commit funcional.
 - Produção `https://rs.votopraquem.org/`: raiz HTTP 200 e `/release.json` HTTP 200.
 - `release.json` confirmou SHA exato `d9d197aff7fadc6a212f4afd66c40fc0be2ed59e`, versão `0.2.1328` e snapshot `row_count=1003`.
+- A documentação de verificação posterior foi publicada no commit `f232143cd6290d7bc928f131e24a5f235184fce6`; o dispatch manual `34549787190` para esse commit terminou `skipped` (workflow remoto sem job executável para esse evento). A produção permanece no commit funcional anterior `d9d197a`; não foi mascarada como deploy do commit documental.
 - Nenhuma escrita factual Supabase, aprovação editorial, score ou matriz foi executada; o artefato publicado é somente fila/manifesto `withheld` e checkpoint.
 - Próximo lote calculado pelo checkpoint: autoria Câmara `2676–2700`.
