@@ -116,6 +116,7 @@
     "impact:alrs:substantive:sources": "node scripts/acquire-alrs-substantive-sources.mjs",
     "impact:profile:fast": "node scripts/build-vote-profile-fast.mjs",
     "auth:editor:bootstrap": "node scripts/auth-editor-bootstrap.mjs",
+    "apply:alrs:p2:assessments:auth": "node scripts/apply-alrs-p2-assessment-drafts-auth.mjs",
     "impact:batch:classify": "node scripts/classify-editorial-batch.mjs",
     "impact:batch:review": "node scripts/review-editorial-batch.mjs",
     "impact:batch:assessment-drafts": "node scripts/build-alrs-assessment-auto-review-pack.mjs",

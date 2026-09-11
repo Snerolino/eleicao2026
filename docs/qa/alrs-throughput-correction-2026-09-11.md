@@ -46,5 +46,15 @@ Isso confirma que a fonte está verde, mas o gate editorial humano ainda não fo
 4. Regenerar planner; só aceitar `planned_versions>0` após todos os erros zerarem.
 5. Criar matriz em `pending_review`, aprovar via RPC/editor role, aplicar idempotentemente e fazer fan-out.
 
-Nenhuma migration, RLS, Auth, Storage, Edge Function, Supabase factual ou
-Cloudflare factual foi alterada nesta correção.
+Nenhuma migration, RLS, Auth, Storage, Edge Function, Supabase factual ou Cloudflare factual foi alterada nesta correção.
+
+## Apply autorizado posterior
+
+- O batch externo P2 de 15 disposições foi validado com 15/15 IDs e review keys exatos.
+- O hash externo foi preservado em `external_batch_sha256`; o hash canônico interno foi recalculado pelo contrato do repositório.
+- Apply via sessão Supabase Auth e papel `admin`: `15/15` disposições aplicadas via `record_impact_editorial_disposition`.
+- Read-back: `15/15` exato.
+- Segunda execução: `15/15 already_present`, `0` novas chamadas RPC.
+- Duas disposições `assess` (PL-43/2019 e PL-27/2024) já possuem matrizes remotas `approved`, preservadas sem downgrade/duplicação.
+- PL-377/2023 permanece sem assessment completo e não foi convertido em matriz.
+- Nenhum fan-out ou score automático foi executado.
