@@ -43,5 +43,8 @@ Fechar e publicar o lote bounded de 25 projetos únicos de autoria da Câmara, p
 - O lote permanece somente editorial/retido; não altera snapshot público de candidatos nem score/matriz.
 
 ## Publicação
-- Commit, push, CI/backup e verificação de produção serão registrados após o fechamento deste QA.
-- Produção deverá confirmar HTTP 200 e `/release.json` com o SHA exato deste fechamento.
+- Commit publicado: `e1887c5a0801c95e5cfe77964576d9c22f9d9de6`; `git ls-remote` confirmou `origin/main` alinhado.
+- CI/Deploy primário: run `34553737101` ainda `in_progress` na verificação; não usado como confirmação.
+- Backup Cloudflare `334951434`, run `34553751941`: `completed/success`, `headSha` exato.
+- Produção raiz HTTP 200 e `/release.json` HTTP 200; release confirmou SHA exato `e1887c5a0801c95e5cfe77964576d9c22f9d9de6`, snapshot `row_count=1003`.
+- Esta atualização documental não altera dados legislativos, snapshot público, matriz/score ou escrita factual remota.
