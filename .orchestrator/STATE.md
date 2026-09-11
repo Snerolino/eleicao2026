@@ -1,3 +1,15 @@
+## Tick contínuo — autoria Câmara 2701–2725 retida — 2026-09-11
+
+- Lock exclusivo `flock` adquirido; único writer confirmado; baseline limpo em `main`.
+- Seleção determinística: 25 projetos únicos (`offset=2700`, `limit=25`), 50 ocorrências candidato–projeto e 19 candidatos únicos.
+- Revalidação oficial: 50/50 endpoints Câmara HTTP 200, bytes/SHA-256 individuais; identidade `dados.id` exata 25/25. Texto integral oficial 25/25 HTTP 200, bytes/SHA-256 individuais; tramitação independente catalogada 25/25; conteúdo não lido/validado.
+- Lanes causal/red-team: 25/25 IDs exatos em cada lane; reconciliação 25 withheld, 0 pending_review, 0 approved, 0 score_eligible; `content_read=false`, `remote_apply=false`.
+- Bloqueio real: sem validação editorial do texto integral, versão/evento vinculante e voto nominal individual; autoria/ementa/tramitação não prova posição, efeito causal ou score. Nenhum fato, claim, voto, assessment, score, matriz, projeto público ou escrita remota foi promovido.
+- Checkpoint: `projects_analyzed=2725`, `last_batch=2701-2725`, `next_batch=2726-2750`, `withheld=2725`, `blocked_items=113`. QA: `docs/qa/lote-camara-autoria-2701-2725-2026-09-11.md`.
+- Artefatos: manifesto, causal, red-team e reconciliado em `data/legislative-import/camara/authored-project-review-batches/`; hashes registrados no QA.
+- Nenhuma migration, RLS, Auth, Storage, Edge Function, escrita factual Supabase ou matriz/score foi alterada/escrita.
+- Gates e publicação ainda pendentes nesta etapa; não iniciar `2726–2750` antes do fechamento.
+
 ## Fechamento de publicação — autoria Câmara 2676–2700 — 2026-09-11
 
 - Commit `6d83c359414d077bd03832b44f94d3caccd074a5` publicado em `origin/main`; worktree foi restaurada após churn timestamp-only não relacionado.

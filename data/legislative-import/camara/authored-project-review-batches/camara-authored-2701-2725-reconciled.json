@@ -1,0 +1,767 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_metadata_and_source_hashes_only",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:req-3559-2025-2553457",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2553457",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2553457",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2553457/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-3586-2023-2396962",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2396962",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2396962",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2396962/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-363-2023-2349822",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2349822",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349822",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349822/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-363-2025-2483550",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2483550",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483550",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483550/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-364-2023-2349826",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2349826",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349826",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349826/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-364-2025-2483551",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2483551",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483551",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483551/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-3646-2025-2555597",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2555597",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2555597",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2555597/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-365-2025-2483552",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2483552",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483552",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483552/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-366-2025-2483553",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2483553",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483553",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483553/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-367-2025-2483554",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2483554",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483554",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2483554/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-3671-2023-2399134",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2399134",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2399134",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2399134/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-37-2021-2277992",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2277992",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2277992",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2277992/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-3707-2025-2556973",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2556973",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2556973",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2556973/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-378-2023-2349862",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2349862",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349862",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349862/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-3787-2023-2400944",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2400944",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2400944",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2400944/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-3789-2023-2401089",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2401089",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2401089",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2401089/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-38-2025-2499403",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2499403",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2499403",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2499403/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-3804-2023-2401258",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2401258",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2401258",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2401258/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-382-2023-2349887",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2349887",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349887",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349887/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-3958-2023-2404311",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2404311",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2404311",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2404311/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-3990-2023-2404958",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2404958",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2404958",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2404958/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-3990-2025-2565844",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2565844",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2565844",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2565844/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-3997-2023-2405312",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2405312",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2405312",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2405312/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-4-2019-2195333",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2195333",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2195333",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2195333/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    },
+    {
+      "id": "camara:req-4-2022-2313866",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2313866",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2313866",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2313866/tramitacoes"
+      ],
+      "redteam": {
+        "decision": "withheld",
+        "risk": "high",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ]
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Causal e red-team fail-closed; cadeia fonte→texto→versão→evento vinculante→voto nominal não validada. remote_apply=false."
+    }
+  ]
+}
