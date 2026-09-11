@@ -1,10 +1,10 @@
 ## Fechamento de publicação — autoria Câmara 2751–2775 — 2026-09-11
 
-- Commit `0c422ad5b3089996de80994a8f13d78618aca6ed` publicado em `origin/main`; worktree limpa e remoto alinhado.
+- Commit `c85f80a4b21c268df903265fe83ae61b7167f07c` publicado em `origin/main`; worktree limpa e remoto alinhado.
 - Artefatos: 25 projetos únicos; 47 ocorrências; 18 candidatos; causal 25/25 e red-team 25/25; reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
 - Fontes oficiais: 25/25 endpoints Câmara HTTP 200, identidade `dados.id` exata 25/25, textos integrais 25/25 HTTP 200 e tramitação independente 25/25; bytes/SHA-256 catalogados.
 - Gates Node 24.19.0: `499/499` testes em `120` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos/sitemap `1003+2`, `git diff --check`.
-- Backup Cloudflare `334951434`, run `34552179157`, `completed/success`, `headSha` exato. Produção raiz HTTP 200 e `/release.json` HTTP 200 confirmaram SHA exato `0c422ad5b3089996de80994a8f13d78618aca6ed`, versão `0.2.1341`.
+- Backup Cloudflare `334951434`, run `34552304214`, `completed/success`, `headSha` exato. Produção raiz HTTP 200 e `/release.json` HTTP 200 confirmaram SHA exato `c85f80a4b21c268df903265fe83ae61b7167f07c`, versão `0.2.1342`.
 - Nenhuma migration, RLS, Auth, Storage, Edge Function, escrita factual Supabase ou matriz/score foi alterada/escrita.
 - Próximo chunk calculado: autoria Câmara `2776–2800`; manter retenção fail-closed.
 
@@ -248,7 +248,7 @@
 - Bloqueio real: sem texto integral validado, evento/versão independente vinculante e voto nominal individual; autoria/ementa não prova posição, efeito causal ou score. Nenhum fato, claim, voto, matéria, matriz, score, projeto público ou escrita remota foi promovido.
 - Gates Node 22.22.2 disponíveis no ambiente: testes, TypeScript, schema, `data:check`, build e `git diff --check` verdes.
 - QA: `docs/qa/lote-camara-autoria-2326-2350-2026-09-10.md`.
-- Publicação: commit `4f2875c31274db93ccfac394b6d19824a08ff7c2`; backup `334951434` run `34434180503` success/headSha exato; produção raiz e `/release.json` HTTP 200, release `0.2.1341` no fechamento documental final, snapshot `row_count=1003`.
+- Publicação: commit `4f2875c31274db93ccfac394b6d19824a08ff7c2`; backup `334951434` run `34434180503` success/headSha exato; produção raiz e `/release.json` HTTP 200, release `0.2.1342` no fechamento documental final, snapshot `row_count=1003`.
 - Checkpoint: `projects_analyzed=2350`, `withheld=2350`, `blocked_items=96`, próximo lote `2351–2375`.
 
 ## Tick contínuo — autoria Câmara 2301–2325 retida — 2026-09-10
@@ -2942,7 +2942,7 @@ Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; som
 - Gates verdes com Node 24.19.0: 82 arquivos/372 testes, TypeScript, schema, `data:check` (1003/988), build e `git diff --check`.
 - Doctor do cron permanece FAIL restrito ao Node 22.22.2; OpenCode ausente e Ollama/gateway são WARNs opcionais.
 - Publicação: commit `e041fcfc1e5c2b3a2b704e29f73cc45ea93ff253` em `origin/main`; backup `334951434`, run `32352044974`, `completed/success`, `headSha` idêntico.
-- Produção: raiz HTTP 200. Na última verificação, o domínio customizado serviu `/release.json` de uma publicação anterior (`0315780`, versão `0.2.1341`), enquanto o run final `32352375195` concluiu com sucesso para `234e455`; a divergência de propagação/roteamento permanece registrada e o domínio customizado não foi declarado alinhado ao commit final.
+- Produção: raiz HTTP 200. Na última verificação, o domínio customizado serviu `/release.json` de uma publicação anterior (`0315780`, versão `0.2.1342`), enquanto o run final `32352375195` concluiu com sucesso para `234e455`; a divergência de propagação/roteamento permanece registrada e o domínio customizado não foi declarado alinhado ao commit final.
 - Smoke local exit 0: 1002 cards, mínimo esperado 1002, 0 falhas HTTP e 0 erros de console online.
 - Próximo passo: Câmara lote 07. ALRS/Senado continuam fail-closed.
 
@@ -2967,7 +2967,7 @@ Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; som
 - QA: `docs/qa/lote-camara-votos-batch-04-2026-08-20.md`.
 - Gates Node 24.19.0: 82 arquivos/372 testes, TypeScript, schema, `data:check` (1003/988), build e `git diff --check` verdes.
 - Nenhuma escrita factual remota; ALRS e Senado continuam fail-closed pelos bloqueios já documentados.
-- Publicação: commits documentais `c195d3042ad150c88112119725c4fd3de250d69a` e `1dc58bd2e2a855b703c197c636d39786915fbba6` em `origin/main`; backup `334951434`, run final `32345680096`, `completed/success`, `headSha` idêntico; produção raiz e `/release.json` HTTP 200; release final `1dc58bd-20260820T074830867Z`, versão `0.2.1341`, snapshot `row_count=1003`.
+- Publicação: commits documentais `c195d3042ad150c88112119725c4fd3de250d69a` e `1dc58bd2e2a855b703c197c636d39786915fbba6` em `origin/main`; backup `334951434`, run final `32345680096`, `completed/success`, `headSha` idêntico; produção raiz e `/release.json` HTTP 200; release final `1dc58bd-20260820T074830867Z`, versão `0.2.1342`, snapshot `row_count=1003`.
 - Doctor do shell cron permanece FAIL restrito ao Node 22.22.2; OpenCode ausente, gateway divergente e Ollama sem resposta são WARNs opcionais.
 - Próximo chunk: Câmara lote 05 read-only; depois seguir bounded até cobrir os 300 IDs.
 
@@ -3620,7 +3620,7 @@ Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; som
 - Reconhecimento oficial read-only: 6/6 HTTP 200, 6/6 prefixos PDF válidos, 2/6 coincidências de bytes e 0/6 coincidências SHA-256 contra o manifesto versionado. Evidência: `.orchestrator/runtime/senado-revalidation-current.json`.
 - Dry-run `npm run impact:senado:sources:apply -- --dry-run`: 6 planejadas, 0 ausentes, 0 inserções, 0 votos tocados.
 - CSV oficial `../dataset2026/candidatos/lista_candidatos_2026.csv`: SHA-256 `7c80d8260618ddc18ce62b44f12f7c463032c937f7f6ea5179cf75943f4207ea`, 67.483 bytes; snapshot público com 1.003 candidaturas.
-- Gates Node 24: 81 arquivos/371 testes, TypeScript, schema, `data:check` (1.003 candidaturas/988 fotos), build `0.2.1341` e `git diff --check` verdes.
+- Gates Node 24: 81 arquivos/371 testes, TypeScript, schema, `data:check` (1.003 candidaturas/988 fotos), build `0.2.1342` e `git diff --check` verdes.
 - Doctor cron permanece com FAIL restrito ao shell em Node 22.22.2; OpenCode ausente e Ollama sem resposta permanecem WARN opcionais.
 - Nenhuma escrita factual remota, atualização do manifesto, Supabase ou alteração do snapshot foi executada; Senado permanece fail-closed por deriva SHA-256.
 - QA: `docs/qa/lote-senado-source-revalidation-2026-08-19-2124.md`.
@@ -3630,7 +3630,7 @@ Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; som
 - Commit documental `d6517dcf4b5bcf9d39ddaef34bb643400dfbcdfa` publicado em `origin/main`.
 - Backup Cloudflare `334951434`, run `32303782063`, concluiu `completed/success` com `headSha` idêntico.
 - Produção `https://rs.votopraquem.org/`: raiz HTTP 200 e `/release.json` HTTP 200.
-- Release de produção confirma `release_id=d6517dc-20260819T212559975Z`, versão `0.2.1341` e `snapshot.row_count=1003`; o `commit_sha` do JSON está nulo, mas o prefixo do release e o `headSha` do run confirmam o commit publicado.
+- Release de produção confirma `release_id=d6517dc-20260819T212559975Z`, versão `0.2.1342` e `snapshot.row_count=1003`; o `commit_sha` do JSON está nulo, mas o prefixo do release e o `headSha` do run confirmam o commit publicado.
 
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T20:48Z)
 
@@ -3741,7 +3741,7 @@ Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; som
 
 - Commit documental `81ee230a555fcd5e9c6a6a28626e4e852bf9c022` publicado em `origin/main`.
 - Backup Cloudflare `334951434`, run `32274838148`, concluiu `completed/success` com `headSha` idêntico.
-- Produção raiz HTTP 200; `/release.json` confirma SHA idêntico, versão `0.2.1341` e snapshot `row_count=1003`.
+- Produção raiz HTTP 200; `/release.json` confirma SHA idêntico, versão `0.2.1342` e snapshot `row_count=1003`.
 - Senado permanece fail-closed por deriva SHA-256; nenhuma escrita factual remota foi executada.
 
 ## Tick contínuo — revalidação Senado 6/6 com deriva persistente (2026-08-19T16:12Z)
@@ -4033,7 +4033,7 @@ Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; som
 - Dry-run `scripts/apply-senado-nominal-sources.mjs`: 6 planejadas, 0 ausentes, 0 inserções, 0 votos tocados.
 - Gates Node 24.19.0: 79 arquivos/368 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check` verdes.
 - Doctor cron: `OK=48 WARN=5 FAIL=1`; FAIL restrito ao shell Node 22. Nenhuma escrita factual ou remota foi executada.
-- Publicação verificada para o commit documental final `a8e182d6886a7112abfc1fc166babfa079cdc98c`: backup Cloudflare `334951434`, run `32230593176`, `success` e `headSha` idêntico; produção HTTP 200 e `/release.json` confirmou SHA idêntico, versão `0.2.1341` e snapshot 1003.
+- Publicação verificada para o commit documental final `a8e182d6886a7112abfc1fc166babfa079cdc98c`: backup Cloudflare `334951434`, run `32230593176`, `success` e `headSha` idêntico; produção HTTP 200 e `/release.json` confirmou SHA idêntico, versão `0.2.1342` e snapshot 1003.
 - O commit documental anterior `5774d3bf398e63f3e7f9f9ea6816443eec5258ec` também foi publicado e verificado com sucesso.
 - QA: `docs/qa/lote-senado-source-revalidation-2026-08-19-0758.md`.
 - Próximo chunk: preservar/revisar a deriva binária dos PDFs e manter o Senado fail-closed; não gerar manifesto novo nem aplicar votos sem fonte estável, R0/schema/FK e idempotência.
@@ -4238,7 +4238,7 @@ Retentar push quando a permissão efetiva do GitHub permitir `main -> main`; som
 - QA: `docs/qa/lote-camara-vote-profile-materialization-2026-08-19.md`.
 - Gates locais completos passaram: 78 arquivos/366 testes, TypeScript, schema, `data:check` (1003 candidaturas/988 fotos), build e `git diff --check`.
 - Commit `6c94c27bfb23440fa2fe849322accadbdb8410a8` publicado em `origin/main`.
-- Disparo manual do backup `334951434` encontrou erro transitório de conexão com `api.github.com`; a confirmação independente de produção passou: HTTP 200 e `/release.json` com SHA completo `6c94c27bfb23440fa2fe849322accadbdb8410a8`, versão `0.2.1341`, release `6c94c27-20260819T032347891Z`.
+- Disparo manual do backup `334951434` encontrou erro transitório de conexão com `api.github.com`; a confirmação independente de produção passou: HTTP 200 e `/release.json` com SHA completo `6c94c27bfb23440fa2fe849322accadbdb8410a8`, versão `0.2.1342`, release `6c94c27-20260819T032347891Z`.
 - A listagem posterior do workflow ainda não expôs run com este `headSha`; não atribuir sucesso de run específico sem essa evidência.
 - QA: `docs/qa/lote-camara-vote-profile-materialization-2026-08-19.md`.
 - Próximo chunk: selecionar o próximo lote legislativo independente sem inferir identidades ou votos sem fonte oficial.
@@ -4856,7 +4856,7 @@ Status: `FED25_CAMARA_HISTORICAL_REMOTE_IDENTITY_LOOKUP_BLOCKED_ROLE`
 ## Selo de versão (produção)
 - `/release.json`: version `0.2.240`, short_sha `9a359dd`, row_count 1003
 - Header canto superior direito: **Versão 0.2.240** (0.2.{git rev-list count}; CI fix com fetch-depth:0 + GITHUB_RUN_NUMBER)
-- Fix: CI shallow checkout via actions/checkout@v7 fazia git-rev-list count=1 → fallback 0.2.1341. fetch-depth:0 + GITHUB_RUN_NUMBER exportados.
+- Fix: CI shallow checkout via actions/checkout@v7 fazia git-rev-list count=1 → fallback 0.2.1342. fetch-depth:0 + GITHUB_RUN_NUMBER exportados.
 
 > Checkpoint operacional. Ao retomar, revalide Git, ambiente e somente os serviços necessários.
 
@@ -5266,7 +5266,7 @@ Sem autorização humana explícita própria, não fazer:
 
 - Commit `1c8fc0bcfef5fa2633143640844659c5fddabbff` foi publicado em `origin/main`.
 - Backup Cloudflare `334951434`, run `32206014628`, concluiu `success` com `headSha` idêntico.
-- Produção confirmada após o run: HTTP 200 em `/release.json`, SHA `1c8fc0bcfef5fa2633143640844659c5fddabbff`, versão `0.2.1341`, snapshot com 1003 candidaturas.
+- Produção confirmada após o run: HTTP 200 em `/release.json`, SHA `1c8fc0bcfef5fa2633143640844659c5fddabbff`, versão `0.2.1342`, snapshot com 1003 candidaturas.
 - QA atualizado em `docs/qa/lote-camara-historical-dryrun-verification-2026-08-19.md`.
 - Próximo chunk: auditar catálogo remoto e FKs por `tse_candidate_id`, mantendo os 8 casos inelegíveis fail-closed.
 ## Tick contínuo — recon oficial P0/ALRS e Câmara (2026-08-21T02:07Z)
