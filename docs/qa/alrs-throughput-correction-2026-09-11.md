@@ -58,3 +58,20 @@ Nenhuma migration, RLS, Auth, Storage, Edge Function, Supabase factual ou Cloudf
 - Duas disposições `assess` (PL-43/2019 e PL-27/2024) já possuem matrizes remotas `approved`, preservadas sem downgrade/duplicação.
 - PL-377/2023 permanece sem assessment completo e não foi convertido em matriz.
 - Nenhum fan-out ou score automático foi executado.
+
+## PL-377/2023 — proposta editorial pendente
+
+- Disposição: `assess`.
+- Grupo proposto: `servidores_publicos`.
+- `impact_direction=positive`.
+- `textual_defending_vote=sim`.
+- `event_defending_vote=null` até confirmar a versão/emenda da CCJ vinculada ao evento nominal.
+- Severidade proposta: `3`.
+- Tipo estrutural proposto: `structural`.
+- Votos favoráveis reportados: `41`.
+- Artefato: `data/legislative-import/alrs/p2-pl377-editorial-assessment-proposal-v1.json`.
+- `score_eligible=false`, `remote_apply=false`, `public_approval=false`.
+
+A proposta não é uma aprovação. O próximo gate é conferir a versão/emenda oficial
+associada ao evento nominal antes de preencher `event_defending_vote` ou liberar
+matriz/score.

@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "alrs_p2_pl377_editorial_assessment_proposal",
+  "methodology_version": "1.1.0",
+  "official_match_key": "PL-377-2023",
+  "proposition_version_id": "3bfdb0b1-821a-4efe-8239-0d04edc6a40e",
+  "review_key": "sha256:7bc8a76261d170f21f68dd4fd84fe7a2dd039ad2ba46584fdb0fde964149e963#3bfdb0b1-821a-4efe-8239-0d04edc6a40e",
+  "disposition": "assess",
+  "disposition_status": "pending_review",
+  "group_slug": "servidores_publicos",
+  "impact_direction": "positive",
+  "textual_defending_vote": "sim",
+  "event_defending_vote": null,
+  "severity": 3,
+  "structural_type": "structural",
+  "confidence": null,
+  "rationale": "A norma altera concretamente quem suporta inicialmente o prejuízo de viaturas em serviço de urgência/emergência e condiciona a responsabilização do agente à apuração de dolo ou culpa, produzindo consequência financeira e funcional direta para servidores públicos. A votação registrada indica 41 votos favoráveis e houve emenda da CCJ; a versão/emenda efetivamente associada ao evento nominal ainda deve ser conferida antes de preencher event_defending_vote ou liberar score.",
+  "factual_observations": {
+    "reported_favorable_votes": 41,
+    "amendment_reference": "CCJ",
+    "source_gate": "green",
+    "event_binding_gate": "pending_version_amendment_confirmation"
+  },
+  "remote_apply": false,
+  "score_eligible": false,
+  "public_approval": false,
+  "next_gate": "conferir versão/emenda oficial vinculada ao evento nominal; depois revisão editorial final"
+}
