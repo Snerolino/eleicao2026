@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_editorial_redteam_lane",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "items": [
+    {
+      "id": "camara:req-2541-2021-2309627",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 5,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-2566-2026-2620496",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 2,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-2572-2026-2620581",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 1,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-2586-2026-2620864",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 4,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-259-2023-2349319",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 3,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-26-2023-2353737",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 2,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-26-2024-2423926",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 3,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-26-2026-2608792",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 2,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-26-2026-2618500",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 4,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-2600-2020-2264521",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 3,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-2604-2021-2309966",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 6,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-262-2024-2417971",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 1,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-2624-2020-2264646",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 11,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-263-2024-2417975",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 2,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-2632-2020-2264684",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 3,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-2649-2020-2264866",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 3,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-2661-2020-2264922",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 3,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-2677-2020-2265072",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 8,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-2689-2020-2265137",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 5,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-2693-2020-2265169",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 3,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-2699-2020-2265190",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 3,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-27-2021-2277679",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 4,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-2737-2026-2623322",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 4,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-2738-2026-2623325",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 2,
+        "content_read": false
+      }
+    },
+    {
+      "id": "camara:req-276-2023-2349364",
+      "decision": "withheld",
+      "risk": "high",
+      "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "checks": {
+        "identity_exact": true,
+        "event_count": 5,
+        "content_read": false
+      }
+    }
+  ]
+}

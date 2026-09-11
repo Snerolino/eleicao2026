@@ -1,0 +1,942 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "candidate_authored_projects_reconciled_editorial_review",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "source": "official_metadata_only",
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:req-2541-2021-2309627",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2309627",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2309627",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2309627/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-2541-2021-2309627",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 5,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2566-2026-2620496",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2620496",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620496",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620496/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-2566-2026-2620496",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 2,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2572-2026-2620581",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2620581",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620581",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620581/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-2572-2026-2620581",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 1,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2586-2026-2620864",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2620864",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620864",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620864/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-2586-2026-2620864",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 4,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-259-2023-2349319",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2349319",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349319",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349319/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-259-2023-2349319",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 3,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-26-2023-2353737",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2353737",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2353737",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2353737/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-26-2023-2353737",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 2,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-26-2024-2423926",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2423926",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2423926",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2423926/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-26-2024-2423926",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 3,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-26-2026-2608792",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2608792",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2608792",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2608792/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-26-2026-2608792",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 2,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-26-2026-2618500",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2618500",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2618500",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2618500/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-26-2026-2618500",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 4,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2600-2020-2264521",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2264521",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2264521",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2264521/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-2600-2020-2264521",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 3,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2604-2021-2309966",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2309966",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2309966",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2309966/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-2604-2021-2309966",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 6,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-262-2024-2417971",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2417971",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2417971",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2417971/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-262-2024-2417971",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 1,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2624-2020-2264646",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2264646",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2264646",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2264646/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-2624-2020-2264646",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 11,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-263-2024-2417975",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2417975",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2417975",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2417975/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-263-2024-2417975",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 2,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2632-2020-2264684",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2264684",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2264684",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2264684/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-2632-2020-2264684",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 3,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2649-2020-2264866",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2264866",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2264866",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2264866/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-2649-2020-2264866",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 3,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2661-2020-2264922",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2264922",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2264922",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2264922/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-2661-2020-2264922",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 3,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2677-2020-2265072",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2265072",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2265072",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2265072/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-2677-2020-2265072",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 8,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2689-2020-2265137",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2265137",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2265137",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2265137/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-2689-2020-2265137",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 5,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2693-2020-2265169",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2265169",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2265169",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2265169/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-2693-2020-2265169",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 3,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2699-2020-2265190",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2265190",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2265190",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2265190/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-2699-2020-2265190",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 3,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-27-2021-2277679",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2277679",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2277679",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2277679/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-27-2021-2277679",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 4,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2737-2026-2623322",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2623322",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2623322",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2623322/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-2737-2026-2623322",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 4,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-2738-2026-2623325",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2623325",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2623325",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2623325/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-2738-2026-2623325",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 2,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    },
+    {
+      "id": "camara:req-276-2023-2349364",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Texto integral e evento/versão vinculante não foram lidos/validados; voto nominal individual ausente.",
+      "missing_sources": [
+        "validated_full_text",
+        "binding_event_or_version",
+        "nominal_individual_vote"
+      ],
+      "identity": {
+        "official_id": "2349364",
+        "exact": true
+      },
+      "source_urls": [
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349364",
+        "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2349364/tramitacoes"
+      ],
+      "redteam": {
+        "id": "camara:req-276-2023-2349364",
+        "decision": "withheld",
+        "risk": "high",
+        "counterargument": "Autoria não prova posição, efeito causal ou voto.",
+        "missing_sources": [
+          "validated_full_text",
+          "binding_event_or_version",
+          "nominal_individual_vote"
+        ],
+        "checks": {
+          "identity_exact": true,
+          "event_count": 5,
+          "content_read": false
+        }
+      },
+      "final_decision": "withheld",
+      "reconciliation_reason": "Retido: análise/red-team não demonstraram cadeia completa fonte→texto→versão→evento vinculante→efeito."
+    }
+  ]
+}
