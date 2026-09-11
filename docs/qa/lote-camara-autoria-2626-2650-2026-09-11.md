@@ -35,9 +35,15 @@ Processar boundedamente o lote determinístico de autoria Câmara 2626–2650, r
 - Nenhuma migration, RLS, Auth, Storage ou Edge Function foi alterada; nenhuma escrita Supabase factual/editorial ocorreu.
 
 ## Gates locais e publicação
-- Node `v24.19.0` será confirmado nos gates abaixo.
+- Node `v24.19.0` confirmado.
 - Os quatro artefatos foram validados programaticamente: 25 itens/projetos, 50 endpoints API, 25 textos, 25 IDs exatos, 25 withheld e zero approved/pending/score.
-- Churn não relacionado foi restaurado antes dos gates.
+- Gates verdes: `npm run test` 499/499 em 120 arquivos; `npx tsc --noEmit` RC 0; schema RC 0; `npm run data:check` RC 0 (1003 candidaturas, 988 fotos); `npm run build` RC 0 (245 módulos, sitemap 1003+2); `git diff --check` RC 0.
+- O build gerou churn não relacionado nos três artefatos `impact-editorial-*`; todos foram restaurados antes do commit.
+
+## Publicação verificada
+- Commit de artefatos: `09269ff2d512b451e4ed219c47d5c34b6765b480`; `git push origin main` e `git ls-remote` confirmaram alinhamento.
+- Backup Cloudflare `334951434`, run `34548603874`: `completed/success`, `headSha` exato.
+- Produção raiz HTTP 200 e `/release.json` HTTP 200; release confirmou SHA exato `09269ff2d512b451e4ed219c47d5c34b6765b480`, versão `0.2.1322`.
 
 ## Próximo passo
-Fechar gates locais, commitar/publicar este checkpoint e verificar produção pelo SHA exato. Não iniciar 2651–2675 neste ciclo.
+Lote fechado. Não iniciar 2651–2675 neste ciclo.

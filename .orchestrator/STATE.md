@@ -5613,3 +5613,16 @@ Sem autorização humana explícita própria, não fazer:
 - Gates Node 24.19.0 verdes: 499/499 testes em 120 arquivos, TypeScript, schema, `data:check` 1003/988, build 245 módulos/sitemap 1003+2 e `git diff --check`.
 - Nenhuma migration, RLS, Auth, Storage, Edge Function, Supabase factual ou matriz/score foi alterada/escrita.
 - Próximo chunk calculado: autoria Câmara `2576–2600`; este lote está fechado.
+
+
+## Tick contínuo — autoria Câmara 2626–2650 retida — 2026-09-11
+
+- Lock exclusivo `flock` adquirido; único writer confirmado; seleção determinística `offset=2625`, `limit=25`: 25 projetos únicos, 50 ocorrências candidato–projeto e 19 candidatos únicos.
+- Revalidação oficial: 50/50 endpoints Câmara HTTP 200, 92.038 bytes e SHA-256 individual; identidade `dados.id` exata 25/25. Texto integral oficial: 25/25 URLs `www.camara.leg.br`, HTTP válido, 5.160.931 bytes e SHA-256 individual; tramitação mantida independente.
+- Lanes causal/red-team: 25/25 IDs exatos em cada lane; reconciliação 25 withheld, 0 pending_review, 0 approved, 0 score_eligible; `content_read=false`, `remote_apply=false`.
+- Bloqueio real: sem validação editorial do texto integral, versão/evento vinculante e voto nominal individual; autoria/ementa/tramitação não prova posição, efeito causal ou score. Nenhum fato, claim, voto, assessment, score, matriz, projeto público ou escrita remota foi promovido.
+- Checkpoint: `projects_analyzed=2650`, `last_batch=2626-2650`, `next_batch=2651-2675`, `withheld=2650`, `blocked_items=110`. QA: `docs/qa/lote-camara-autoria-2626-2650-2026-09-11.md`.
+- Gates Node 24.19.0 verdes: 499/499 testes em 120 arquivos, TypeScript, schema, `data:check` 1003/988, build 245 módulos/sitemap 1003+2 e `git diff --check`; churn não relacionado restaurado.
+- Commit de artefatos `09269ff2d512b451e4ed219c47d5c34b6765b480` publicado; backup `334951434` run `34548603874` success/headSha exato; produção raiz e `/release.json` HTTP 200 confirmaram SHA exato e release `0.2.1322`.
+- Nenhuma migration, RLS, Auth, Storage, Edge Function, Supabase factual ou matriz/score foi alterada/escrita.
+- Lote fechado antes de `2651–2675`.
