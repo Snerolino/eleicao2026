@@ -45,5 +45,11 @@ Executados após a geração e restauração de churn não relacionado:
 - `git diff --check`: passou.
 - Revalidação externa do manifesto: 75/75 URLs oficiais HTTP 2xx; nenhuma falha.
 
+## Fechamento de publicação
+- Commit `6d83c359414d077bd03832b44f94d3caccd074a5` publicado em `origin/main`; `git ls-remote` alinhado.
+- Backup Cloudflare `334951434`, run `34550417156`: `completed/success`, `headSha` exato.
+- Deploy primário `34550405465` permaneceu `in_progress` na verificação; não foi tratado como gate verde.
+- Produção raiz e `/release.json`: HTTP 200; SHA exato `6d83c359414d077bd03832b44f94d3caccd074a5`, snapshot `row_count=1003`.
+
 ## Próximo passo
-Após os gates verdes, commit/push, CI/backup Cloudflare e validação de produção pelo SHA exato. Encerrar este lote antes de iniciar `2701–2725`.
+Próximo chunk calculado: autoria Câmara `2701–2725`; não iniciado nesta execução. Manter withheld fail-closed até validação editorial do texto integral, evento/versão vinculante e voto nominal individual.

@@ -1,3 +1,14 @@
+## Fechamento de publicação — autoria Câmara 2676–2700 — 2026-09-11
+
+- Commit `6d83c359414d077bd03832b44f94d3caccd074a5` publicado em `origin/main`; worktree foi restaurada após churn timestamp-only não relacionado.
+- Artefatos: 25 projetos únicos; causal 25/25 e red-team 25/25; reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
+- Fonte oficial revalidada: 75/75 URLs do manifesto HTTP 2xx; identidades `dados.id` 25/25 exatas; nenhuma fonte ou fato foi inventado.
+- Gates Node 24.19.0: `499/499` testes em `120` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos/sitemap `1003+2`, `git diff --check` verde.
+- Backup Cloudflare `334951434`, run `34550417156`, `completed/success`, `headSha` exato. Deploy primário `34550405465` permaneceu `in_progress` na verificação; backup foi o caminho efetivo confiável.
+- Produção raiz e `/release.json`: HTTP 200; release confirmou SHA exato `6d83c359414d077bd03832b44f94d3caccd074a5`, snapshot `row_count=1003`.
+- Nenhuma migration, RLS, Auth, Storage, Edge Function, escrita factual Supabase ou matriz/score foi alterada/escrita.
+- Próximo chunk calculado: autoria Câmara `2701–2725`; não iniciado nesta execução.
+
 ## Tick contínuo — autoria Câmara 2676–2700 retida — 2026-09-11
 
 - Lock exclusivo `flock` adquirido; único writer confirmado; baseline limpo em `main` SHA `f232143cd6290d7bc928f131e24a5f235184fce6`.
