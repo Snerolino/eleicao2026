@@ -1,7 +1,17 @@
+## Fechamento de publicação — autoria Câmara 2751–2775 — 2026-09-11
+
+- Commit `da5f027b55838408620ca75393375ea6c3f4e6bf` publicado em `origin/main`; worktree limpa e remoto alinhado.
+- Artefatos: 25 projetos únicos; 50 ocorrências; 19 candidatos; causal 25/25 e red-team 25/25; reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
+- Fontes oficiais: 25/25 endpoints Câmara HTTP 200, identidade `dados.id` exata 25/25, textos integrais 25/25 HTTP 200 e tramitação independente 25/25; bytes/SHA-256 catalogados.
+- Gates Node 24.19.0: `499/499` testes em `120` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos/sitemap `1003+2`, `git diff --check`.
+- Backup Cloudflare `334951434`, run `34551791145`, `completed/success`, `headSha` exato. Produção raiz HTTP 200 e `/release.json` HTTP 200 confirmaram SHA exato `da5f027b55838408620ca75393375ea6c3f4e6bf`, versão `0.2.1337`.
+- Nenhuma migration, RLS, Auth, Storage, Edge Function, escrita factual Supabase ou matriz/score foi alterada/escrita.
+- Próximo chunk calculado: autoria Câmara `2776–2800`; manter retenção fail-closed.
+
 ## Tick contínuo — autoria Câmara 2751–2775 retida — 2026-09-11
 
-- Lock exclusivo `flock`; seleção determinística `offset=2750`, `limit=25`: 25 projetos únicos, 50 ocorrências e 19 candidatos únicos.
-- Revalidação oficial: 25/25 endpoints Câmara HTTP 200, identidade `dados.id` exata 25/25, texto integral 25/25 HTTP 200 e tramitação independente 25/25; bytes/SHA-256 catalogados.
+- Lock exclusivo `flock`; seleção determinística `offset=2750`, `limit=25`: 25 projetos únicos, 47 ocorrências e 18 candidatos únicos.
+- Revalidação oficial: 25/25 endpoints Câmara HTTP 200, identidade `dados.id` exata 25/25, texto integral 25/25 HTTP 200 e tramitação independente 25/25; bytes/SHA-256 catalogados (API 38.692, texto 3.664.679, tramitação 34.262 bytes).
 - Lanes causal/red-team: 25/25 IDs exatos; reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
 - Bloqueio real: sem validação editorial do texto integral, versão/evento vinculante e voto nominal individual; autoria/ementa/tramitação não prova posição, efeito causal ou score.
 - Checkpoint: `projects_analyzed=2775`, `last_batch=2751-2775`, `next_batch=2776-2800`, `withheld=2775`, `blocked_items=115`. QA: `docs/qa/lote-camara-autoria-2751-2775-2026-09-11.md`.

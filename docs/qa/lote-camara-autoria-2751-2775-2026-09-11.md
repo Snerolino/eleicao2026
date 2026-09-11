@@ -4,9 +4,9 @@
 Processar 25 projetos únicos de autoria da Câmara, preservar evidência oficial e manter causal/red-team fail-closed. Nenhuma autoria foi convertida em fato causal, voto, claim, score ou matriz.
 
 ## Seleção e fontes
-- Lock exclusivo `flock`; seleção determinística `offset=2750`, `limit=25`; 25 projetos, 50 ocorrências e 19 candidatos.
+- Lock exclusivo `flock`; seleção determinística `offset=2750`, `limit=25`; 25 projetos, 47 ocorrências e 18 candidatos.
 - Câmara API: 25/25 HTTP 200; identidade `dados.id` exata 25/25.
-- Texto integral oficial: 25/25 HTTP 200. Tramitação independente: 25/25 HTTP 200. Bytes/SHA-256 individuais catalogados; `content_read=false`.
+- Texto integral oficial: 25/25 HTTP 200. Tramitação independente: 25/25 HTTP 200. Bytes/SHA-256 individuais catalogados; totais: API 38.692 bytes, texto integral 3.664.679 bytes, tramitação 34.262 bytes; `content_read=false`.
 - Manifesto: `data/legislative-import/camara/authored-project-review-batches/camara-authored-2751-2775-source-manifest.json`.
 
 ## Revisão e bloqueio
@@ -15,10 +15,10 @@ Processar 25 projetos únicos de autoria da Câmara, preservar evidência oficia
 - Nenhum dado factual/editorial foi aplicado remotamente; `remote_apply=false`.
 
 ## Artefatos e SHA-256
-- `data/legislative-import/camara/authored-project-review-batches/camara-authored-2751-2775-source-manifest.json`: `c3518e49199977b5280590e8b3cd958c195463553263350c4cf640b1163a958e`
-- `data/legislative-import/camara/authored-project-review-batches/camara-authored-2751-2775-causal.json`: `558b299efd140ecdda19d588ecb63cef564ec338ee62b8e6ccb5e7eb5d7855bd`
-- `data/legislative-import/camara/authored-project-review-batches/camara-authored-2751-2775-redteam.json`: `b3df1c2157f91c3d2d8317b4b802274178f85563bff00f8d4b17b9cc16b404b5`
-- `data/legislative-import/camara/authored-project-review-batches/camara-authored-2751-2775-reconciled.json`: `40862c00491248b869f42896d69121d6e2e24ba0f52bfea5589839c4ca5ee121`
+- `data/legislative-import/camara/authored-project-review-batches/camara-authored-2751-2775-source-manifest.json`: `6a4e91e32abc8b5c80325bd5b509e86ff0c7eee40356e41402454bcda48f74a8`
+- `data/legislative-import/camara/authored-project-review-batches/camara-authored-2751-2775-causal.json`: `df94b72a855248e26d1f38030e26ebc560da39fa9f014f7790f8209fdb9a7add`
+- `data/legislative-import/camara/authored-project-review-batches/camara-authored-2751-2775-redteam.json`: `0ce2d51d291edfd898f7e887e98fc958e0467b7f6457fe18338acba42913a204`
+- `data/legislative-import/camara/authored-project-review-batches/camara-authored-2751-2775-reconciled.json`: `a96a896118816b8173db4894e8a7b42a43dea955f995c14fe6c5c2b1b92215d3`
 
 ## Checkpoint
 - `projects_analyzed=2775`, `last_batch=2751-2775`, `next_batch=2776-2800`, `withheld=2775`, `pending_review=0`, `approved=0`, `blocked_items` incrementado por `authored-2751-2775-source-event-gap`.
@@ -31,4 +31,10 @@ Processar 25 projetos únicos de autoria da Câmara, preservar evidência oficia
 - Churn timestamp-only de `impact-editorial-*` restaurado antes do commit.
 
 ## Fechamento de publicação
-- Será registrado após o commit/push e a verificação do backup Cloudflare e da produção.
+- Commit `da5f027b55838408620ca75393375ea6c3f4e6bf` publicado; `git ls-remote` alinhado.
+- Backup Cloudflare `334951434`, run `34551791145`: `completed/success`, `headSha` exato.
+- Produção raiz HTTP 200; `/release.json` HTTP 200 confirmou SHA exato `da5f027b55838408620ca75393375ea6c3f4e6bf`, versão `0.2.1337`.
+- Nenhuma migration, RLS, Auth, Storage, Edge Function, escrita factual Supabase ou matriz/score foi alterada/escrita.
+
+## Próximo passo
+Próximo chunk calculado: autoria Câmara `2776–2800`; manter retenção fail-closed.
