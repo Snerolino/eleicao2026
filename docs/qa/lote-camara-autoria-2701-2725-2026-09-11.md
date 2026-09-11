@@ -45,7 +45,11 @@ Processar boundedamente 25 projetos únicos de autoria da Câmara, revalidar fon
 - O build regenerou apenas artefatos ignorados; migrations/RLS/Auth/Storage/Edge Functions não foram tocadas.
 
 ## Fechamento de publicação
-- Próxima etapa autorizada pelo arco contínuo: commit/push, CI/backup Cloudflare e confirmação de produção com SHA exato.
+- Commit de artefatos `73fc47619afec96550dab416f8f3361e8e459b47` publicado; `git ls-remote` alinhado.
+- Backup Cloudflare `334951434`, run `34551058897`: `completed/success`, `headSha` exato.
+- Deploy primário `34551045986` estava `in_progress` na janela; não foi usado como confirmação.
+- Produção raiz HTTP 200 e `/release.json` HTTP 200 confirmaram SHA exato `73fc47619afec96550dab416f8f3361e8e459b47`, versão `0.2.1333` e snapshot `row_count=1003`.
+- O QA/checkpoint documental final desta execução será publicado em commit separado antes do próximo lote.
 
 ## Próximo passo
 Próximo chunk calculado: autoria Câmara `2726–2750`; iniciar somente após fechar este lote.

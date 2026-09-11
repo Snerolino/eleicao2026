@@ -1,3 +1,14 @@
+## Fechamento de publicação — autoria Câmara 2701–2725 — 2026-09-11
+
+- Commit `73fc47619afec96550dab416f8f3361e8e459b47` publicado em `origin/main`; worktree limpa e remoto alinhado.
+- Artefatos: 25 projetos únicos; 50 ocorrências; 19 candidatos; causal 25/25 e red-team 25/25; reconciliação `25 withheld`, `0 pending_review`, `0 approved`, `0 score_eligible`; `content_read=false`, `remote_apply=false`.
+- Fontes oficiais: 50/50 endpoints Câmara HTTP 200, identidade `dados.id` exata 25/25, textos integrais 25/25 HTTP 200, bytes/SHA-256 individuais e tramitação independente catalogados.
+- Gates Node 24.19.0: `499/499` testes em `120` arquivos, TypeScript, schema, `data:check` `1003/988`, build `245` módulos/sitemap `1003+2`, `git diff --check`; churn `impact-editorial-*` restaurado.
+- Backup Cloudflare `334951434`, run `34551058897`, `completed/success`, `headSha` exato. Deploy primário `34551045986` permaneceu `in_progress` na verificação; backup foi o caminho efetivo confiável.
+- Produção raiz e `/release.json`: HTTP 200; release confirmou SHA exato `73fc47619afec96550dab416f8f3361e8e459b47`, versão `0.2.1333`, snapshot `row_count=1003`.
+- Nenhuma migration, RLS, Auth, Storage, Edge Function, escrita factual Supabase ou matriz/score foi alterada/escrita.
+- Próximo chunk calculado: autoria Câmara `2726–2750`; não iniciar antes de considerar este lote fechado.
+
 ## Tick contínuo — autoria Câmara 2701–2725 retida — 2026-09-11
 
 - Lock exclusivo `flock` adquirido; único writer confirmado; baseline limpo em `main`.
