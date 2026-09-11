@@ -460,25 +460,57 @@ export function AdminPage() {
   async function applyBatchDecisions() {
     if (!supabase || !batchDecisions || !batchContext) return;
     setBatchBusy(true);
+    setMessage('Lendo disposições existentes antes do apply…');
+    const ids = batchDecisions.map((decision) => decision.proposition_version_id);
+    const { data: existingRows, error: existingError } = await (supabase as any)
+      .from('impact_editorial_dispositions')
+      .select('proposition_version_id, review_key, disposition, rationale, status')
+      .in('proposition_version_id', ids);
+    if (existingError) {
+      setBatchBusy(false);
+      setMessage('Read-back prévio falhou; nenhuma disposição foi aplicada.');
+      return;
+    }
+    const existingById = new Map((existingRows ?? []).map((row: { proposition_version_id: string }) => [row.proposition_version_id, row]));
     const results = await Promise.all(batchDecisions.map(async (decision) => {
       const item = batchContext.items.find((candidate) => candidate.proposition_version_id === decision.proposition_version_id);
       if (!item) return { ok: false, id: decision.proposition_version_id };
       const disposition = decision.disposition ?? item.disposition ?? (decision.decision === 'needs_changes' && /taxonomy_gap|lacuna de taxonomia/i.test(decision.notes ?? '') ? 'taxonomy_gap' : decision.decision === 'needs_changes' && /no_direct_population_group|no destinatário populacional direto|sem destinatário populacional direto/i.test(decision.notes ?? '') ? 'no_direct_population_group' : item.recommended_disposition);
+      const rationale = decision.rationale ?? decision.notes ?? item.rationale ?? item.recommended_rationale ?? '';
+      const existing = existingById.get(item.proposition_version_id) as { review_key?: string; disposition?: string; rationale?: string; status?: string } | undefined;
+      if (existing?.review_key === decision.review_key && existing.disposition === disposition && existing.rationale === rationale && existing.status === 'approved') {
+        return { ok: true, id: decision.proposition_version_id, skipped: true };
+      }
       const rpcName = decision.decision === 'needs_changes' ? 'record_impact_editorial_exception' : 'record_impact_editorial_disposition';
       const { error } = await (supabase as any).rpc(rpcName, {
         p_proposition_version_id: item.proposition_version_id,
         p_review_key: decision.review_key,
         p_title: item.title ?? item.proposition_version_id,
         p_disposition: disposition,
-        p_rationale: decision.rationale ?? decision.notes ?? item.rationale ?? item.recommended_rationale,
+        p_rationale: rationale,
         p_notes: decision.notes,
       });
-      return { ok: !error, id: decision.proposition_version_id };
+      return { ok: !error, id: decision.proposition_version_id, skipped: false };
     }));
     const applied = results.filter((result) => result.ok);
+    setMessage('Read-back pós-apply e segunda execução idempotente…');
+    const { data: readBackRows, error: readBackError } = await (supabase as any)
+      .from('impact_editorial_dispositions')
+      .select('proposition_version_id, review_key, disposition, rationale, status')
+      .in('proposition_version_id', ids);
+    const readBackById = new Map((readBackRows ?? []).map((row: { proposition_version_id: string }) => [row.proposition_version_id, row]));
+    const readBackOk = !readBackError && batchDecisions.every((decision) => {
+      const row = readBackById.get(decision.proposition_version_id) as { review_key?: string; status?: string } | undefined;
+      return row?.review_key === decision.review_key && row.status === 'approved';
+    });
+    const secondRunRpcCalls = readBackOk
+      ? 0
+      : batchDecisions.length - (readBackRows?.length ?? 0);
     setP2Completed((current) => new Set([...current, ...applied.map((item) => item.id)]));
     setBatchBusy(false);
-    setMessage(`Lote aplicado via RPC: ${applied.length}/${results.length}; exceções permanecem registradas para revisão.`);
+    setMessage(readBackOk
+      ? `Lote verificado: ${readBackById.size}/${batchDecisions.length} read-back exato; segunda execução idempotente com ${secondRunRpcCalls} novas chamadas RPC.`
+      : `Apply parcial: ${applied.length}/${results.length}; read-back falhou ou divergiu. Nenhuma publicação de matriz foi feita.`);
   }
 
   const pendingP2Items = p2EditorialItems.filter((item) => !p2Completed.has(item.proposition_version_id));
