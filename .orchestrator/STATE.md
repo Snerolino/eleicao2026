@@ -9,6 +9,7 @@
 - Backup Cloudflare `334951434`, run `34553751941`: `completed/success`, `headSha` exato. Deploy primário `34553737101` estava `in_progress` e não foi usado como confirmação.
 - Produção raiz e `/release.json`: HTTP 200; release confirmou SHA exato `e1887c5a0801c95e5cfe77964576d9c22f9d9de6`, snapshot `row_count=1003`.
 - Próximo chunk calculado: autoria Câmara `2826–2850`; não reabrir lotes anteriores.
+- Commit `e1887c5a0801c95e5cfe77964576d9c22f9d9de6` publicado; backup `334951434` run `34553751941` success/headSha exato; produção raiz e `/release.json` HTTP 200 confirmaram SHA exato, versão `0.2.1346`, snapshot `row_count=1003`. Deploy primário `34553737101` foi cancelado após o backup verde.
 
 ## Fechamento de publicação — autoria Câmara 2776–2800 — 2026-09-11
 
