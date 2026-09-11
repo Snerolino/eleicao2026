@@ -106,18 +106,53 @@ if (authError || !authData.user) throw new Error(`Supabase Auth falhou: ${authEr
 const { data: role, error: roleError } = await supabase.from('editor_roles').select('role').eq('user_id', authData.user.id).maybeSingle();
 if (roleError || !role || !['editor', 'admin'].includes(role.role)) throw new Error('usuário técnico sem papel editor/admin em editor_roles');
 
+const existingQuery = await supabase
+  .from('impact_editorial_dispositions')
+  .select('proposition_version_id, review_key, disposition, rationale, status')
+  .in('proposition_version_id', rows.map((row) => row.proposition_version_id));
+if (existingQuery.error) throw new Error(`read-back prévio falhou: ${existingQuery.error.message}`);
+const existingById = new Map((existingQuery.data ?? []).map((row) => [row.proposition_version_id, row]));
+
 const results = await Promise.all(rows.map(async (row) => {
   const item = byId.get(row.proposition_version_id);
   const rpc = row.decision === 'needs_changes' ? 'record_impact_editorial_exception' : 'record_impact_editorial_disposition';
   const rpcArgs = row.decision === 'needs_changes'
     ? { p_proposition_version_id: row.proposition_version_id, p_review_key: row.review_key, p_title: item.title ?? row.proposition_version_id, p_disposition: row.disposition ?? item.disposition ?? item.recommended_disposition, p_notes: row.notes ?? row.rationale }
     : { p_proposition_version_id: row.proposition_version_id, p_review_key: row.review_key, p_title: item.title ?? row.proposition_version_id, p_disposition: row.disposition ?? item.disposition ?? item.recommended_disposition, p_rationale: row.rationale ?? row.notes ?? item.rationale ?? item.recommended_rationale };
+  const existing = existingById.get(row.proposition_version_id);
+  const expectedDisposition = rpcArgs.p_disposition;
+  const expectedRationale = rpc === 'record_impact_editorial_exception' ? null : rpcArgs.p_rationale;
+  if (existing
+    && existing.review_key === row.review_key
+    && existing.disposition === expectedDisposition
+    && (expectedRationale === null || existing.rationale === expectedRationale)
+    && existing.status === 'approved') {
+    return { proposition_version_id: row.proposition_version_id, decision: row.decision, rpc: null, status: 'already_present', error: null };
+  }
   const { error } = await supabase.rpc(rpc, rpcArgs);
   return { proposition_version_id: row.proposition_version_id, decision: row.decision, rpc, status: error ? 'error' : 'applied', error: error?.message ?? null };
 }));
 report.remote_apply = true;
 report.reviewer_user_id = authData.user.id;
 report.actions = results;
+const readBack = await supabase
+  .from('impact_editorial_dispositions')
+  .select('proposition_version_id, review_key, disposition, rationale, status')
+  .in('proposition_version_id', rows.map((row) => row.proposition_version_id));
+if (readBack.error) throw new Error(`read-back pós-apply falhou: ${readBack.error.message}`);
+const readBackById = new Map((readBack.data ?? []).map((row) => [row.proposition_version_id, row]));
+report.read_back = {
+  rows: readBack.data?.length ?? 0,
+  expected: rows.length,
+  exact: rows.every((row) => {
+    const actual = readBackById.get(row.proposition_version_id);
+    const item = byId.get(row.proposition_version_id);
+    return actual?.review_key === row.review_key
+      && actual?.status === 'approved'
+      && actual?.disposition === (row.disposition ?? item?.disposition ?? item?.recommended_disposition);
+  }),
+  second_pass_rpc_calls: results.filter((result) => result.status !== 'already_present').length,
+};
 writeFileSync(resolve(root, outputFile), `${JSON.stringify(report, null, 2)}\n`);
 console.log(JSON.stringify(report));
-if (results.some((result) => result.status === 'error')) process.exit(1);
+if (results.some((result) => result.status === 'error') || !report.read_back.exact) process.exit(1);
