@@ -35,6 +35,12 @@ function normalize(text: string) {
   return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 }
 
+interface CandidateSearchCache {
+  partyLower?: string;
+  nameNormalized?: string;
+  labelNormalized?: string;
+}
+
 function claimsForSection(
   claims: Claim[],
   matchersSet: ReadonlySet<string>
@@ -244,6 +250,8 @@ export function ComparePage() {
   const validCandidateIds = useMemo(() => new Set(candidates.map((c) => c.id)), [candidates]);
   const { savedSet, toggleSaved } = useSavedCandidates(validCandidateIds, query.isSuccess);
 
+  const searchCache = useMemo(() => new Map<string, CandidateSearchCache>(), [candidates]);
+
   const { parties, races, experienceCounts } = useMemo(() => {
     const partySet = new Set<string>();
     const raceSet = new Set<string>(OFFICIAL_RACE_FILTERS);
@@ -275,30 +283,37 @@ export function ComparePage() {
       if (positionFilter && candidate.position !== positionFilter) return false;
       if (experienceFilter === 'mandato_anterior' && !hasPreviousMandate(candidate)) return false;
       if (experienceFilter === 'estreante' && hasPreviousMandate(candidate)) return false;
+      if (!normalizedQuery) return true;
 
-      if (normalizedQuery) {
-        const nameMatches = normalize(candidate.full_name).includes(normalizedQuery);
-        const ballotNameMatches = candidate.ballot_name
-          ? normalize(candidate.ballot_name).includes(normalizedQuery)
-          : false;
-        const numberMatches =
-          candidate.ballot_number != null &&
-          String(candidate.ballot_number).includes(normalizedQuery);
-        const partyMatches = normalize(candidate.party).includes(normalizedQuery);
-        const positionMatches = normalize(candidate.position_label).includes(normalizedQuery);
-
-        if (
-          !nameMatches &&
-          !ballotNameMatches &&
-          !numberMatches &&
-          !partyMatches &&
-          !positionMatches
-        ) {
-          return false;
-        }
+      let cached = searchCache.get(candidate.id);
+      if (!cached) {
+        cached = {};
+        searchCache.set(candidate.id, cached);
       }
 
-      return true;
+      if (cached.partyLower === undefined) {
+        cached.partyLower = normalize(candidate.party);
+      }
+      if (cached.partyLower.includes(normalizedQuery)) return true;
+
+      const number = candidate.ballot_number?.toString() ?? '';
+      if (number.includes(normalizedQuery)) return true;
+
+      if (cached.nameNormalized === undefined) {
+        cached.nameNormalized = normalize(candidate.full_name);
+      }
+      if (cached.nameNormalized.includes(normalizedQuery)) return true;
+
+      if (candidate.ballot_name) {
+        // We could cache ballot_name as well if it existed in the interface,
+        // but it is less common so we can just normalize it here
+        if (normalize(candidate.ballot_name).includes(normalizedQuery)) return true;
+      }
+
+      if (cached.labelNormalized === undefined) {
+        cached.labelNormalized = normalize(candidate.position_label);
+      }
+      return cached.labelNormalized.includes(normalizedQuery);
     });
   }, [
     candidates,
@@ -310,6 +325,7 @@ export function ComparePage() {
     raceFilter,
     positionFilter,
     experienceFilter,
+    searchCache,
   ]);
 
   const sharedIds = useMemo(
