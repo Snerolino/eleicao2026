@@ -36,3 +36,16 @@ Processar boundedamente o lote determinístico de autoria Câmara 2601–2625, r
 
 ## Próximo passo
 Fechar os gates locais e a publicação deste checkpoint. Não iniciar 2626–2650 nesta execução.
+
+## Gates locais e publicação
+- Node `v24.19.0` explícito no PATH.
+- `npm run test`: **499/499** testes em 120 arquivos, RC 0.
+- `npx tsc --noEmit`: RC 0.
+- `node scripts/validate-impact-schema.mjs`: RC 0.
+- `npm run data:check`: RC 0 — 1003 candidaturas, 988 fotos oficiais, 1 fonte TSE.
+- `npm run build`: RC 0 — 245 módulos, sitemap 1003 + 2 URLs, release gerado.
+- `git diff --check`: RC 0.
+- Build gerou churn não relacionado nos três artefatos editoriais; eles foram restaurados antes do commit. Invariantes dos quatro artefatos do lote: 25 itens, 50 endpoints, 25 IDs exatos, 25 withheld, 0 aprovados/pending/score.
+- Commit de artefatos: `678ae4635ac422debdc5a0f309d429cfb86cefba`; push inicial teve 403 e foi recuperado com `gh auth setup-git` sem expor credencial.
+- Backup Cloudflare `334951434`, run `34547526318`: `completed/success`, `headSha` exato do commit de artefatos.
+- Produção antes do fechamento documental: raiz HTTP 200; `/release.json` HTTP 200, SHA exato `678ae4635ac422debdc5a0f309d429cfb86cefba`, snapshot `row_count=1003`.

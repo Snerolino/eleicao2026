@@ -1,3 +1,15 @@
+## Tick contínuo — autoria Câmara 2601–2625 retida — 2026-09-11
+
+- Lock exclusivo `flock` adquirido; único writer confirmado; baseline limpo em `main` SHA `35cc3fc499c628db507d0fa51698aa386feaddae`.
+- Seleção determinística: 25 projetos únicos (`offset=2600`, `limit=25`), 25 ocorrências candidato–projeto e 5 candidatos únicos.
+- Revalidação oficial: 50/50 endpoints Câmara HTTP 200, 84.011 bytes e SHA-256 individual; identidade `dados.id` exata 25/25. Texto integral oficial: 25/25 HTTP válido, 8.873.383 bytes e SHA-256 individual. Segunda leitura revalidou 50 endpoints e 25 textos sem drift.
+- Lanes causal/red-team: 25/25 IDs exatos em cada lane; reconciliação 25 withheld, 0 pending_review, 0 approved, 0 score_eligible; `content_read=false`, `remote_apply=false`.
+- Bloqueio real: sem texto integral validado editorialmente, versão/evento vinculante e voto nominal individual; autoria/ementa/tramitação não prova posição, efeito causal ou score. Nenhum fato, claim, voto, matéria, matriz, score, projeto público ou escrita remota foi promovido.
+- Checkpoint: `projects_analyzed=2625`, `last_batch=2601-2625`, `next_batch=2626-2650`, `withheld=2625`, `blocked_items=109`. QA: `docs/qa/lote-camara-autoria-2601-2625-2026-09-11.md`.
+- Gates Node 24.19.0 verdes: 499/499 testes, TypeScript, schema, `data:check` 1003/988, build 245 módulos/sitemap 1003+2 e `git diff --check`; churn não relacionado restaurado.
+- Commit de artefatos `678ae4635ac422debdc5a0f309d429cfb86cefba` publicado; backup `334951434` run `34547526318` success/headSha exato; produção raiz e `/release.json` HTTP 200 confirmaram SHA exato e `row_count=1003` antes do fechamento documental.
+- Nenhuma migration, RLS, Auth, Storage, Edge Function, Supabase factual ou matriz/score foi alterada/escrita.
+
 ## Fechamento final de publicação — autoria Câmara 2601–2625 — 2026-09-11
 
 - Commit `678ae4635ac422debdc5a0f309d429cfb86cefba` publicado em `origin/main`; worktree limpa e remoto alinhado.
