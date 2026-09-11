@@ -33,8 +33,19 @@ Processar boundedamente 25 projetos únicos de autoria da Câmara, revalidar fon
 - Nenhuma autoria factual pública, claim, voto, assessment, score ou matriz foi criada; `remote_apply=false`.
 - Nenhuma migration, RLS, Auth, Storage ou Edge Function foi alterada; nenhuma escrita Supabase factual/editorial ocorreu.
 
-## Gates locais desta etapa
-- Preparação de fontes e cardinalidade concluída. Gates completos de publicação serão executados após o fechamento do lote.
+## Gates locais
+- Node `v24.19.0`: `npm run test -- --passWithNoTests` passou, `499/499` testes em `120` arquivos.
+- `npx tsc --noEmit`: passou.
+- `node scripts/validate-impact-schema.mjs`: passou.
+- `npm run data:check`: passou, `1003` candidaturas e `988` fotos oficiais.
+- `npm run build`: passou, `245` módulos; sitemap `1003` candidatos + `2` estáticas.
+- `git diff --check`: passou; churn timestamp-only de `impact-editorial-*` restaurado.
+
+## Fechamento de publicação
+- Commit `290067fc9c1f394cb4e97f11cee1f7004c0b36dd` publicado; `git ls-remote` confirmou alinhamento.
+- Backup Cloudflare `334951434`, run `34551460231`: `completed/success`, `headSha` exato.
+- Produção raiz HTTP 200; `/release.json` HTTP 200 confirmou SHA exato `290067fc9c1f394cb4e97f11cee1f7004c0b36dd`, versão `0.2.1335`.
+- Nenhuma migration, RLS, Auth, Storage, Edge Function, escrita factual Supabase ou matriz/score foi alterada/escrita.
 
 ## Próximo passo
-Fechar QA/checkpoint, executar gates locais; se verdes, commit/push, backup Cloudflare e verificar produção. Próximo chunk calculado: autoria Câmara `2751–2775`, somente após o fechamento deste lote.
+Próximo chunk calculado: autoria Câmara `2751–2775`; manter retenção fail-closed e iniciar somente após este fechamento documental.
