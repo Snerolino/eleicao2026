@@ -283,7 +283,7 @@ if $SMOKE; then
   chmod 600 "$HERMES_MCP_NONCE_FILE"
   HERMES_MCP_NONCE_REL="${HERMES_MCP_NONCE_FILE#$ROOT/}"
 
-  HERMES_MCP_PROMPT="Tarefa DOCTOR probe ${HERMES_MCP_PROBE}. Execute obrigatoriamente uma chamada real ao servidor MCP Codex. Se a ferramenta Codex MCP ainda não estiver carregada, use tool_search para localizar codex e tool_describe se necessário. Execute tool_call para mcp__codex__codex. Na chamada Codex, defina explicitamente sandbox=read-only. Pelo MCP Codex, leia SOMENTE o arquivo relativo ${HERMES_MCP_NONCE_REL} e peça que devolva exatamente seu conteúdo. O conteúdo do arquivo NÃO está neste prompt: não tente adivinhar. Não use terminal nem ferramentas de arquivo do próprio Hermes."
+  HERMES_MCP_PROMPT="Tarefa DOCTOR probe ${HERMES_MCP_PROBE}. Execute obrigatoriamente uma chamada real ao servidor MCP Codex. Se a ferramenta Codex MCP ainda não estiver carregada, use tool_search para localizar codex e tool_describe se necessário. Execute tool_call para mcp__codex__codex. Na chamada Codex, defina explicitamente sandbox=read-only e cwd=${ROOT}. Pelo MCP Codex, leia SOMENTE o arquivo absoluto ${HERMES_MCP_NONCE_FILE} e peça que devolva exatamente seu conteúdo. O conteúdo do arquivo NÃO está neste prompt: não tente adivinhar. Não use terminal nem ferramentas de arquivo do próprio Hermes."
 
   env HOME="$REAL_HOME" \
     timeout --signal=TERM --kill-after=10s 120s hermes -p "$PROFILE" chat -q "$HERMES_MCP_PROMPT" \
@@ -380,28 +380,26 @@ for role, content, tool_call_id, tool_calls, tool_name in rows:
                 raw_args = call.get("arguments")
 
             outer_args = parse_object(raw_args)
-            effective_name = outer_name
-            effective_args = outer_args
+            nested_calls = outer_args.get("calls") if outer_name == "tool_call" else None
+            candidates = nested_calls if isinstance(nested_calls, list) else [{"name": outer_name, "arguments": outer_args}]
+            for nested in candidates:
+                if not isinstance(nested, dict):
+                    continue
+                effective_name = nested.get("name") or outer_name
+                effective_args = parse_object(nested.get("arguments"))
+                call_id = nested.get("id") or nested.get("call_id") or call.get("id") or call.get("call_id") or ""
+                sandbox = effective_args.get("sandbox")
+                is_readonly_codex = bool(name_re.search(effective_name)) and sandbox == "read-only"
 
-            if outer_name == "tool_call":
-                wrapped_name = outer_args.get("name")
-                if isinstance(wrapped_name, str):
-                    effective_name = wrapped_name
-                effective_args = parse_object(outer_args.get("arguments"))
+                if call_id:
+                    call_meta[call_id] = {
+                        "name": effective_name,
+                        "sandbox": sandbox,
+                        "readonly_codex": is_readonly_codex,
+                    }
 
-            call_id = call.get("id") or call.get("call_id") or ""
-            sandbox = effective_args.get("sandbox")
-            is_readonly_codex = bool(name_re.search(effective_name)) and sandbox == "read-only"
-
-            if call_id:
-                call_meta[call_id] = {
-                    "name": effective_name,
-                    "sandbox": sandbox,
-                    "readonly_codex": is_readonly_codex,
-                }
-
-            if is_readonly_codex:
-                saw_readonly_codex_call = True
+                if is_readonly_codex:
+                    saw_readonly_codex_call = True
 
     if role == "tool" and tool_call_id:
         meta = call_meta.get(tool_call_id)
