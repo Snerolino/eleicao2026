@@ -1,0 +1,3151 @@
+{
+  "schema_version": "1.0.0",
+  "packet_type": "alrs_reviewer_pending_dispositions",
+  "generated_by": "scripts/build-alrs-reviewer-pending-pack.mjs",
+  "mode": "read-only",
+  "remote_apply": false,
+  "public_approval": false,
+  "reviewer_contract": {
+    "priority_decision_values": [
+      "assess",
+      "no_direct_population_group",
+      "taxonomy_gap",
+      "excluded"
+    ],
+    "collision_decision_values": [
+      "resolve_as_distinct_event",
+      "resolve_identity_mismatch",
+      "excluded"
+    ],
+    "assess_requires": [
+      "group_slug",
+      "impact_direction",
+      "defending_vote",
+      "severity",
+      "structural_type",
+      "confidence",
+      "rationale"
+    ],
+    "minimum_rationale_chars": 20,
+    "no_score_or_fanout_in_this_packet": true
+  },
+  "remote_snapshot": {
+    "authenticated_role": "admin",
+    "dispositions_returned": 72,
+    "resolved_input_ids": 72
+  },
+  "totals": {
+    "pending_items": 105,
+    "priority_pending": 56,
+    "collision_pending": 49,
+    "p0_pending": 26,
+    "p1_pending": 30
+  },
+  "items": [
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "0638273a-f944-40f8-aab4-c934cff1631f",
+      "review_key": null,
+      "version_key": "sha256:5f45c68c549e9aa03f35f374c22455f2ff9d3069303e705868f5a2d394f62136",
+      "proposition_external_ids": [
+        "alrs_prop_c6e65e16d9d03db5c25c8625",
+        "alrs_prop_3c61cf2b6f3176da722ea3df"
+      ],
+      "proposition_version_ids": [
+        "0638273a-f944-40f8-aab4-c934cff1631f",
+        "cae9dc8a-c64a-4bb8-a446-1919755116fe"
+      ],
+      "event_ids": [
+        "alrs_event_bda28d65eaacc9f8fd395f87",
+        "alrs-nominal-cce4bfa8d18a50665a570c1c58d002e5",
+        "alrs_event_9a5b8fa772d7a3cb4d32f024",
+        "alrs-nominal-0b07903ffe6d154d159f22e02ef00cd1"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026"
+      ],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "107c79e5-2dd2-42ca-a906-f2674b103455",
+      "review_key": null,
+      "version_key": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924",
+      "proposition_external_ids": [
+        "alrs_prop_5d7ce3dddd17ee16bebfbf92",
+        "alrs_prop_bd3c9e198a3d6ab75eb40cd7",
+        "alrs_prop_e6d6bc434bb2495d1f9016e7",
+        "alrs_prop_6c0127039e60a30bb11eca13"
+      ],
+      "proposition_version_ids": [
+        "107c79e5-2dd2-42ca-a906-f2674b103455",
+        "706fd8fa-b0b7-42a2-b76a-bc352d4dc889",
+        "b3b27d88-a651-4680-9f97-7784ecfc51c3",
+        "b4a681d1-53c2-4c16-b038-45606adfd2f1"
+      ],
+      "event_ids": [
+        "alrs-nominal-8186d80f242ad38469c4e16b66b2b983",
+        "alrs_event_61f8d7a97e94834da95e0a82",
+        "alrs_event_37b49f368a12283746ef9e06",
+        "alrs-nominal-9399ba5bd979ef484e19eb15c15a1842",
+        "alrs-nominal-5de155dd92b64d3073b17c5400ca0dd9",
+        "alrs_event_a815bcbbdb5399a06257f9c4",
+        "alrs_event_fde899ed5662145ce9615dd6",
+        "alrs-nominal-839fda51d4d2a0330e9027dfbbdc4abb"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2139&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026"
+      ],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "10a2f43c-e6af-4619-b8b5-c91198909516",
+      "review_key": null,
+      "version_key": "alrs-2034",
+      "proposition_external_ids": [
+        "alrs:PL-169/2025",
+        "alrs:PL-10/2022",
+        "alrs:PR-6/2026",
+        "alrs:PL-364/2025",
+        "alrs:PL-321/2025",
+        "alrs:PL-188/2024"
+      ],
+      "proposition_version_ids": [
+        "10a2f43c-e6af-4619-b8b5-c91198909516",
+        "42b0e419-c6b0-4c8b-9c73-b2ea20b84a58",
+        "5800dcb8-cddc-44d4-91a8-647f963185f8",
+        "804f8ead-7051-4aa4-b3f2-3ac4c0960482",
+        "d136f938-eed6-45fb-95c6-fcf18168353b",
+        "e435e864-1741-4561-8bc5-08384ae287e6"
+      ],
+      "event_ids": [
+        "alrs-votacao-2034-PL-169-2025",
+        "alrs-votacao-2034-PL-10-2022",
+        "alrs-votacao-2034-PR-6-2026",
+        "alrs-votacao-2034-PL-364-2025",
+        "alrs-votacao-2034-PL-321-2025",
+        "alrs-votacao-2034-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "1135afac-26a6-41d3-bd12-282a632d1483",
+      "review_key": null,
+      "version_key": "alrs-1505",
+      "proposition_external_ids": [
+        "alrs:PR-6/2026",
+        "alrs:PL-10/2022",
+        "alrs:PL-364/2025",
+        "alrs:PL-169/2025",
+        "alrs:PL-188/2024"
+      ],
+      "proposition_version_ids": [
+        "1135afac-26a6-41d3-bd12-282a632d1483",
+        "11dc4047-7337-4814-8db8-39873aff4da0",
+        "1c94fa20-d734-4725-b0aa-16a92c0121d9",
+        "4205ddcb-cd1d-4ec7-b366-6733633cae1c",
+        "99bf71d7-fa13-4419-8a9e-c0b9e464c3b7"
+      ],
+      "event_ids": [
+        "alrs-votacao-1505-PR-6-2026",
+        "alrs-votacao-1505-PL-10-2022",
+        "alrs-votacao-1505-PL-364-2025",
+        "alrs-votacao-1505-PL-169-2025",
+        "alrs-votacao-1505-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "11dc4047-7337-4814-8db8-39873aff4da0",
+      "review_key": null,
+      "version_key": "alrs-1505",
+      "proposition_external_ids": [
+        "alrs:PR-6/2026",
+        "alrs:PL-10/2022",
+        "alrs:PL-364/2025",
+        "alrs:PL-169/2025",
+        "alrs:PL-188/2024"
+      ],
+      "proposition_version_ids": [
+        "1135afac-26a6-41d3-bd12-282a632d1483",
+        "11dc4047-7337-4814-8db8-39873aff4da0",
+        "1c94fa20-d734-4725-b0aa-16a92c0121d9",
+        "4205ddcb-cd1d-4ec7-b366-6733633cae1c",
+        "99bf71d7-fa13-4419-8a9e-c0b9e464c3b7"
+      ],
+      "event_ids": [
+        "alrs-votacao-1505-PR-6-2026",
+        "alrs-votacao-1505-PL-10-2022",
+        "alrs-votacao-1505-PL-364-2025",
+        "alrs-votacao-1505-PL-169-2025",
+        "alrs-votacao-1505-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "1e6fb183-de4e-4e5a-ad10-e09979e32911",
+      "review_key": null,
+      "version_key": "alrs-2144",
+      "proposition_external_ids": [
+        "alrs:PL-10/2022",
+        "alrs:PL-321/2025",
+        "alrs:PL-364/2025",
+        "alrs:PL-169/2025",
+        "alrs:PR-6/2026",
+        "alrs:PL-188/2024"
+      ],
+      "proposition_version_ids": [
+        "1e6fb183-de4e-4e5a-ad10-e09979e32911",
+        "477a24c1-8431-44b5-b3b2-0d05b2e95ae0",
+        "c31c4aa5-3599-409c-a75d-e1fc93b9d383",
+        "c8e7a10b-332b-49db-8ac9-cacb467d14b6",
+        "d5cbf3ab-e8b7-485e-bf62-c6d7bbf599e4",
+        "f898c431-0344-4d50-999f-9337f7c2824a"
+      ],
+      "event_ids": [
+        "alrs-votacao-2144-PL-10-2022",
+        "alrs-votacao-2144-PL-321-2025",
+        "alrs-votacao-2144-PL-364-2025",
+        "alrs-votacao-2144-PL-169-2025",
+        "alrs-votacao-2144-PR-6-2026",
+        "alrs-votacao-2144-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "245303bd-b927-44a7-9cb3-763e9e9b5511",
+      "review_key": null,
+      "version_key": "sha256:0cdbef70e6ca5a6ef7c81cdba4b73cd78380a780b748d4a99edc8a09825ff6e2",
+      "proposition_external_ids": [
+        "alrs_prop_2191cd41f3e4abad07e42b5f",
+        "alrs_prop_775fb8b3a6f3e254c3e230aa"
+      ],
+      "proposition_version_ids": [
+        "245303bd-b927-44a7-9cb3-763e9e9b5511",
+        "5dcc1e75-8a21-4244-b138-9f418826abde"
+      ],
+      "event_ids": [
+        "alrs_event_f92d78c0b210ce22dd453c9a",
+        "alrs-nominal-58762d3f4ef499fd00e4f080b46446cc",
+        "alrs_event_cbc0280eafd2bfd1aea51e20",
+        "alrs-nominal-719cf7f0b06fa3b8042e724157a2c7b4"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026"
+      ],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "27a6ee4f-cc96-41a0-964d-a93504dc9c99",
+      "review_key": null,
+      "version_key": "alrs-2045",
+      "proposition_external_ids": [
+        "alrs:PL-364/2025",
+        "alrs:PL-169/2025",
+        "alrs:PL-10/2022",
+        "alrs:PL-188/2024"
+      ],
+      "proposition_version_ids": [
+        "1cc8fd95-be6b-47cb-927f-5c3d3b6ad85d",
+        "27a6ee4f-cc96-41a0-964d-a93504dc9c99",
+        "92df7f50-bbaf-4708-85ff-9eb8b09bb687",
+        "b7afb033-49ec-4cc3-ac6f-8fe2b61aa1f9"
+      ],
+      "event_ids": [
+        "alrs-votacao-2045-PL-364-2025",
+        "alrs-votacao-2045-PL-169-2025",
+        "alrs-votacao-2045-PL-10-2022",
+        "alrs-votacao-2045-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "3a09304a-4476-4746-81b2-2915d5f9f0ca",
+      "review_key": null,
+      "version_key": "texto-base",
+      "proposition_external_ids": [
+        "PL 134/2023",
+        "PEC 305/2026",
+        "PL 38/2026",
+        "PL 165/2025",
+        "PL 361/2025",
+        "PL 77/2025"
+      ],
+      "proposition_version_ids": [
+        "3a09304a-4476-4746-81b2-2915d5f9f0ca",
+        "4043661b-fcc9-4aca-b805-ff68e940044f",
+        "747b2eb9-5a2e-4b90-b534-62cb73bda7d9",
+        "91384302-90d0-4740-8e6d-ce09d481be16",
+        "d4cbc2f3-6ee6-4057-a376-e5b3d1fe599a",
+        "da644106-dd52-40d7-a171-b631edec98e5"
+      ],
+      "event_ids": [
+        "alrs_pl134_2023",
+        "alrs_pec305_2026_ccj",
+        "alrs_pl38_2026",
+        "alrs_pl165_2025",
+        "alrs_pl361_2025",
+        "alrs_pl77_2025"
+      ],
+      "source_urls": [],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "3a3ed8d4-3c61-4fb0-9ba8-f762066c4590",
+      "review_key": null,
+      "version_key": "sha256:a4714c50e29cacb893e775a86ce306cf103e170fb3f967b819138d07f4a43954",
+      "proposition_external_ids": [
+        "alrs_prop_0a19adb48ba25b3e8b6c2003",
+        "alrs_prop_496e4c4c37e9015c811e1a10"
+      ],
+      "proposition_version_ids": [
+        "3a3ed8d4-3c61-4fb0-9ba8-f762066c4590",
+        "c547b12f-fc38-475b-9475-70a16b564531"
+      ],
+      "event_ids": [
+        "alrs_event_6cf7e82907a01414e7d388f1",
+        "alrs-nominal-5b843d78e1a6ae3368c907dee1656924",
+        "alrs_event_4717403fc05d5b449b6ec35f",
+        "alrs-nominal-6117037ea73d863b9710de723de6aed0"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025"
+      ],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "4043661b-fcc9-4aca-b805-ff68e940044f",
+      "review_key": null,
+      "version_key": "texto-base",
+      "proposition_external_ids": [
+        "PL 134/2023",
+        "PEC 305/2026",
+        "PL 38/2026",
+        "PL 165/2025",
+        "PL 361/2025",
+        "PL 77/2025"
+      ],
+      "proposition_version_ids": [
+        "3a09304a-4476-4746-81b2-2915d5f9f0ca",
+        "4043661b-fcc9-4aca-b805-ff68e940044f",
+        "747b2eb9-5a2e-4b90-b534-62cb73bda7d9",
+        "91384302-90d0-4740-8e6d-ce09d481be16",
+        "d4cbc2f3-6ee6-4057-a376-e5b3d1fe599a",
+        "da644106-dd52-40d7-a171-b631edec98e5"
+      ],
+      "event_ids": [
+        "alrs_pl134_2023",
+        "alrs_pec305_2026_ccj",
+        "alrs_pl38_2026",
+        "alrs_pl165_2025",
+        "alrs_pl361_2025",
+        "alrs_pl77_2025"
+      ],
+      "source_urls": [],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "4205ddcb-cd1d-4ec7-b366-6733633cae1c",
+      "review_key": null,
+      "version_key": "alrs-1505",
+      "proposition_external_ids": [
+        "alrs:PR-6/2026",
+        "alrs:PL-10/2022",
+        "alrs:PL-364/2025",
+        "alrs:PL-169/2025",
+        "alrs:PL-188/2024"
+      ],
+      "proposition_version_ids": [
+        "1135afac-26a6-41d3-bd12-282a632d1483",
+        "11dc4047-7337-4814-8db8-39873aff4da0",
+        "1c94fa20-d734-4725-b0aa-16a92c0121d9",
+        "4205ddcb-cd1d-4ec7-b366-6733633cae1c",
+        "99bf71d7-fa13-4419-8a9e-c0b9e464c3b7"
+      ],
+      "event_ids": [
+        "alrs-votacao-1505-PR-6-2026",
+        "alrs-votacao-1505-PL-10-2022",
+        "alrs-votacao-1505-PL-364-2025",
+        "alrs-votacao-1505-PL-169-2025",
+        "alrs-votacao-1505-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "42b0e419-c6b0-4c8b-9c73-b2ea20b84a58",
+      "review_key": null,
+      "version_key": "alrs-2034",
+      "proposition_external_ids": [
+        "alrs:PL-169/2025",
+        "alrs:PL-10/2022",
+        "alrs:PR-6/2026",
+        "alrs:PL-364/2025",
+        "alrs:PL-321/2025",
+        "alrs:PL-188/2024"
+      ],
+      "proposition_version_ids": [
+        "10a2f43c-e6af-4619-b8b5-c91198909516",
+        "42b0e419-c6b0-4c8b-9c73-b2ea20b84a58",
+        "5800dcb8-cddc-44d4-91a8-647f963185f8",
+        "804f8ead-7051-4aa4-b3f2-3ac4c0960482",
+        "d136f938-eed6-45fb-95c6-fcf18168353b",
+        "e435e864-1741-4561-8bc5-08384ae287e6"
+      ],
+      "event_ids": [
+        "alrs-votacao-2034-PL-169-2025",
+        "alrs-votacao-2034-PL-10-2022",
+        "alrs-votacao-2034-PR-6-2026",
+        "alrs-votacao-2034-PL-364-2025",
+        "alrs-votacao-2034-PL-321-2025",
+        "alrs-votacao-2034-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "42b1596d-9f23-4ed1-af41-885384fe766f",
+      "review_key": null,
+      "version_key": "alrs-28",
+      "proposition_external_ids": [
+        "alrs:PL-321/2025",
+        "alrs:PL-169/2025",
+        "alrs:PL-188/2024",
+        "alrs:PL-10/2022",
+        "alrs:PR-6/2026"
+      ],
+      "proposition_version_ids": [
+        "212a64d2-7f68-4aa0-b95d-a9041b0fb18f",
+        "42b1596d-9f23-4ed1-af41-885384fe766f",
+        "44355a11-6ef9-40e9-bfad-1c457b892fa2",
+        "4d49f69f-e94d-4ef8-8d85-56473efaf4a2",
+        "d55c520b-5e34-46bf-aa04-0aea85db1edd"
+      ],
+      "event_ids": [
+        "alrs-votacao-28-PL-321-2025",
+        "alrs-votacao-28-PL-169-2025",
+        "alrs-votacao-28-PL-188-2024",
+        "alrs-votacao-28-PL-10-2022",
+        "alrs-votacao-28-PR-6-2026"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "44355a11-6ef9-40e9-bfad-1c457b892fa2",
+      "review_key": null,
+      "version_key": "alrs-28",
+      "proposition_external_ids": [
+        "alrs:PL-321/2025",
+        "alrs:PL-169/2025",
+        "alrs:PL-188/2024",
+        "alrs:PL-10/2022",
+        "alrs:PR-6/2026"
+      ],
+      "proposition_version_ids": [
+        "212a64d2-7f68-4aa0-b95d-a9041b0fb18f",
+        "42b1596d-9f23-4ed1-af41-885384fe766f",
+        "44355a11-6ef9-40e9-bfad-1c457b892fa2",
+        "4d49f69f-e94d-4ef8-8d85-56473efaf4a2",
+        "d55c520b-5e34-46bf-aa04-0aea85db1edd"
+      ],
+      "event_ids": [
+        "alrs-votacao-28-PL-321-2025",
+        "alrs-votacao-28-PL-169-2025",
+        "alrs-votacao-28-PL-188-2024",
+        "alrs-votacao-28-PL-10-2022",
+        "alrs-votacao-28-PR-6-2026"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "4d49f69f-e94d-4ef8-8d85-56473efaf4a2",
+      "review_key": null,
+      "version_key": "alrs-28",
+      "proposition_external_ids": [
+        "alrs:PL-321/2025",
+        "alrs:PL-169/2025",
+        "alrs:PL-188/2024",
+        "alrs:PL-10/2022",
+        "alrs:PR-6/2026"
+      ],
+      "proposition_version_ids": [
+        "212a64d2-7f68-4aa0-b95d-a9041b0fb18f",
+        "42b1596d-9f23-4ed1-af41-885384fe766f",
+        "44355a11-6ef9-40e9-bfad-1c457b892fa2",
+        "4d49f69f-e94d-4ef8-8d85-56473efaf4a2",
+        "d55c520b-5e34-46bf-aa04-0aea85db1edd"
+      ],
+      "event_ids": [
+        "alrs-votacao-28-PL-321-2025",
+        "alrs-votacao-28-PL-169-2025",
+        "alrs-votacao-28-PL-188-2024",
+        "alrs-votacao-28-PL-10-2022",
+        "alrs-votacao-28-PR-6-2026"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "5800dcb8-cddc-44d4-91a8-647f963185f8",
+      "review_key": null,
+      "version_key": "alrs-2034",
+      "proposition_external_ids": [
+        "alrs:PL-169/2025",
+        "alrs:PL-10/2022",
+        "alrs:PR-6/2026",
+        "alrs:PL-364/2025",
+        "alrs:PL-321/2025",
+        "alrs:PL-188/2024"
+      ],
+      "proposition_version_ids": [
+        "10a2f43c-e6af-4619-b8b5-c91198909516",
+        "42b0e419-c6b0-4c8b-9c73-b2ea20b84a58",
+        "5800dcb8-cddc-44d4-91a8-647f963185f8",
+        "804f8ead-7051-4aa4-b3f2-3ac4c0960482",
+        "d136f938-eed6-45fb-95c6-fcf18168353b",
+        "e435e864-1741-4561-8bc5-08384ae287e6"
+      ],
+      "event_ids": [
+        "alrs-votacao-2034-PL-169-2025",
+        "alrs-votacao-2034-PL-10-2022",
+        "alrs-votacao-2034-PR-6-2026",
+        "alrs-votacao-2034-PL-364-2025",
+        "alrs-votacao-2034-PL-321-2025",
+        "alrs-votacao-2034-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "5d0a2dcb-55d7-4773-992f-a4ddba3e1571",
+      "review_key": null,
+      "version_key": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c",
+      "proposition_external_ids": [
+        "alrs_prop_bf820724976fb26dd9c3cbd6",
+        "alrs_prop_e6a906d03b35c3747233a07b",
+        "alrs_prop_43a3009cf63d2b7a5ab45e6a",
+        "alrs_prop_fb411e1f9d50d67f0d5cf459",
+        "alrs_prop_79f7b28357a9bd43cfe97630",
+        "alrs_prop_e0d503c19a2e45462cc12b38"
+      ],
+      "proposition_version_ids": [
+        "5d0a2dcb-55d7-4773-992f-a4ddba3e1571",
+        "78c2730c-6515-4386-896d-8f4d84c7c517",
+        "910ecc25-82fe-4877-8849-1f83ea9f768d",
+        "ce5d5c4d-832c-44cc-a249-6b4177d597d4",
+        "cffb8ddb-0557-4c3a-9769-422c23e94fa1",
+        "d953e523-ffd0-4767-b308-097a76277050"
+      ],
+      "event_ids": [
+        "alrs_event_04c20fd7d56659e493ada6a0",
+        "alrs-nominal-2443cce1bf22d4e367e96561e6f24e5a",
+        "alrs_event_905d68031675d81ff5aa4130",
+        "alrs-nominal-e708d2d81c267a8d068856904e282d9c",
+        "alrs_event_28b272219b274d0ac3fb2ccc",
+        "alrs-nominal-b38734b94ef16a2590643c57cfbddf9c",
+        "alrs-nominal-bcd29067e62e59bb74713a75e09f7fe1",
+        "alrs_event_e8adcecf2cc201c0d4b4cf8a",
+        "alrs_event_048170ad04f80ed17d107fad",
+        "alrs-nominal-95a739322a87ccceee1e8960c5a69594",
+        "alrs_event_fce6ee577819b60dcbcab63a",
+        "alrs-nominal-66b373f3dae53487a3a5f188802a3d3a"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2023",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2146&ano=2024",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2025",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2139&ano=2021"
+      ],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "5dcc1e75-8a21-4244-b138-9f418826abde",
+      "review_key": null,
+      "version_key": "sha256:0cdbef70e6ca5a6ef7c81cdba4b73cd78380a780b748d4a99edc8a09825ff6e2",
+      "proposition_external_ids": [
+        "alrs_prop_2191cd41f3e4abad07e42b5f",
+        "alrs_prop_775fb8b3a6f3e254c3e230aa"
+      ],
+      "proposition_version_ids": [
+        "245303bd-b927-44a7-9cb3-763e9e9b5511",
+        "5dcc1e75-8a21-4244-b138-9f418826abde"
+      ],
+      "event_ids": [
+        "alrs_event_f92d78c0b210ce22dd453c9a",
+        "alrs-nominal-58762d3f4ef499fd00e4f080b46446cc",
+        "alrs_event_cbc0280eafd2bfd1aea51e20",
+        "alrs-nominal-719cf7f0b06fa3b8042e724157a2c7b4"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026"
+      ],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "6857fd00-8ea9-44ca-9757-801139b9af22",
+      "review_key": null,
+      "version_key": "sha256:2153b7d26a279490da4ed0de073c26331b8fe24de9abe9549a644d23989abc5c",
+      "proposition_external_ids": [
+        "alrs_prop_37041a96d00a66750a23d9e4",
+        "alrs_prop_9d546ab56f3fe2aea881ff2a"
+      ],
+      "proposition_version_ids": [
+        "6857fd00-8ea9-44ca-9757-801139b9af22",
+        "b3f8b5fc-c90f-450b-a34e-b7517e1dbd04"
+      ],
+      "event_ids": [
+        "alrs_event_860025529cfb085177f5e3d1",
+        "alrs-nominal-6cb7df6072d3354f3331c8e6984f9136",
+        "alrs_event_7c8dbaa06dc2b4c1e1e2dbd8",
+        "alrs-nominal-3d43a075fd6f2ce4009b5ccc69989c0a"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2159&ano=2024",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2146&ano=2024"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "6f2c5b2e-5e36-43ad-9270-7e10e15d6fa0",
+      "review_key": null,
+      "version_key": "alrs-2103",
+      "proposition_external_ids": [
+        "alrs:PL-10/2022",
+        "alrs:PL-169/2025",
+        "alrs:PL-364/2025",
+        "alrs:PR-6/2026",
+        "alrs:PL-188/2024"
+      ],
+      "proposition_version_ids": [
+        "6f2c5b2e-5e36-43ad-9270-7e10e15d6fa0",
+        "9bf6173c-35c0-4c20-ac2c-8e5bd83c0c6c",
+        "ba2efdf4-c9ac-4a15-8c3c-bc2244dc0595",
+        "bfee5021-0fe3-4e78-a688-acded3d34c9b",
+        "fef6b7b9-6b30-4323-b1a0-bf0cc6d61f5d"
+      ],
+      "event_ids": [
+        "alrs-votacao-2103-PL-10-2022",
+        "alrs-votacao-2103-PL-169-2025",
+        "alrs-votacao-2103-PL-364-2025",
+        "alrs-votacao-2103-PR-6-2026",
+        "alrs-votacao-2103-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "706fd8fa-b0b7-42a2-b76a-bc352d4dc889",
+      "review_key": null,
+      "version_key": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924",
+      "proposition_external_ids": [
+        "alrs_prop_5d7ce3dddd17ee16bebfbf92",
+        "alrs_prop_bd3c9e198a3d6ab75eb40cd7",
+        "alrs_prop_e6d6bc434bb2495d1f9016e7",
+        "alrs_prop_6c0127039e60a30bb11eca13"
+      ],
+      "proposition_version_ids": [
+        "107c79e5-2dd2-42ca-a906-f2674b103455",
+        "706fd8fa-b0b7-42a2-b76a-bc352d4dc889",
+        "b3b27d88-a651-4680-9f97-7784ecfc51c3",
+        "b4a681d1-53c2-4c16-b038-45606adfd2f1"
+      ],
+      "event_ids": [
+        "alrs-nominal-8186d80f242ad38469c4e16b66b2b983",
+        "alrs_event_61f8d7a97e94834da95e0a82",
+        "alrs_event_37b49f368a12283746ef9e06",
+        "alrs-nominal-9399ba5bd979ef484e19eb15c15a1842",
+        "alrs-nominal-5de155dd92b64d3073b17c5400ca0dd9",
+        "alrs_event_a815bcbbdb5399a06257f9c4",
+        "alrs_event_fde899ed5662145ce9615dd6",
+        "alrs-nominal-839fda51d4d2a0330e9027dfbbdc4abb"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2139&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026"
+      ],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "747b2eb9-5a2e-4b90-b534-62cb73bda7d9",
+      "review_key": null,
+      "version_key": "texto-base",
+      "proposition_external_ids": [
+        "PL 134/2023",
+        "PEC 305/2026",
+        "PL 38/2026",
+        "PL 165/2025",
+        "PL 361/2025",
+        "PL 77/2025"
+      ],
+      "proposition_version_ids": [
+        "3a09304a-4476-4746-81b2-2915d5f9f0ca",
+        "4043661b-fcc9-4aca-b805-ff68e940044f",
+        "747b2eb9-5a2e-4b90-b534-62cb73bda7d9",
+        "91384302-90d0-4740-8e6d-ce09d481be16",
+        "d4cbc2f3-6ee6-4057-a376-e5b3d1fe599a",
+        "da644106-dd52-40d7-a171-b631edec98e5"
+      ],
+      "event_ids": [
+        "alrs_pl134_2023",
+        "alrs_pec305_2026_ccj",
+        "alrs_pl38_2026",
+        "alrs_pl165_2025",
+        "alrs_pl361_2025",
+        "alrs_pl77_2025"
+      ],
+      "source_urls": [],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "78c2730c-6515-4386-896d-8f4d84c7c517",
+      "review_key": null,
+      "version_key": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c",
+      "proposition_external_ids": [
+        "alrs_prop_bf820724976fb26dd9c3cbd6",
+        "alrs_prop_e6a906d03b35c3747233a07b",
+        "alrs_prop_43a3009cf63d2b7a5ab45e6a",
+        "alrs_prop_fb411e1f9d50d67f0d5cf459",
+        "alrs_prop_79f7b28357a9bd43cfe97630",
+        "alrs_prop_e0d503c19a2e45462cc12b38"
+      ],
+      "proposition_version_ids": [
+        "5d0a2dcb-55d7-4773-992f-a4ddba3e1571",
+        "78c2730c-6515-4386-896d-8f4d84c7c517",
+        "910ecc25-82fe-4877-8849-1f83ea9f768d",
+        "ce5d5c4d-832c-44cc-a249-6b4177d597d4",
+        "cffb8ddb-0557-4c3a-9769-422c23e94fa1",
+        "d953e523-ffd0-4767-b308-097a76277050"
+      ],
+      "event_ids": [
+        "alrs_event_04c20fd7d56659e493ada6a0",
+        "alrs-nominal-2443cce1bf22d4e367e96561e6f24e5a",
+        "alrs_event_905d68031675d81ff5aa4130",
+        "alrs-nominal-e708d2d81c267a8d068856904e282d9c",
+        "alrs_event_28b272219b274d0ac3fb2ccc",
+        "alrs-nominal-b38734b94ef16a2590643c57cfbddf9c",
+        "alrs-nominal-bcd29067e62e59bb74713a75e09f7fe1",
+        "alrs_event_e8adcecf2cc201c0d4b4cf8a",
+        "alrs_event_048170ad04f80ed17d107fad",
+        "alrs-nominal-95a739322a87ccceee1e8960c5a69594",
+        "alrs_event_fce6ee577819b60dcbcab63a",
+        "alrs-nominal-66b373f3dae53487a3a5f188802a3d3a"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2023",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2146&ano=2024",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2025",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2139&ano=2021"
+      ],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "910ecc25-82fe-4877-8849-1f83ea9f768d",
+      "review_key": null,
+      "version_key": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c",
+      "proposition_external_ids": [
+        "alrs_prop_bf820724976fb26dd9c3cbd6",
+        "alrs_prop_e6a906d03b35c3747233a07b",
+        "alrs_prop_43a3009cf63d2b7a5ab45e6a",
+        "alrs_prop_fb411e1f9d50d67f0d5cf459",
+        "alrs_prop_79f7b28357a9bd43cfe97630",
+        "alrs_prop_e0d503c19a2e45462cc12b38"
+      ],
+      "proposition_version_ids": [
+        "5d0a2dcb-55d7-4773-992f-a4ddba3e1571",
+        "78c2730c-6515-4386-896d-8f4d84c7c517",
+        "910ecc25-82fe-4877-8849-1f83ea9f768d",
+        "ce5d5c4d-832c-44cc-a249-6b4177d597d4",
+        "cffb8ddb-0557-4c3a-9769-422c23e94fa1",
+        "d953e523-ffd0-4767-b308-097a76277050"
+      ],
+      "event_ids": [
+        "alrs_event_04c20fd7d56659e493ada6a0",
+        "alrs-nominal-2443cce1bf22d4e367e96561e6f24e5a",
+        "alrs_event_905d68031675d81ff5aa4130",
+        "alrs-nominal-e708d2d81c267a8d068856904e282d9c",
+        "alrs_event_28b272219b274d0ac3fb2ccc",
+        "alrs-nominal-b38734b94ef16a2590643c57cfbddf9c",
+        "alrs-nominal-bcd29067e62e59bb74713a75e09f7fe1",
+        "alrs_event_e8adcecf2cc201c0d4b4cf8a",
+        "alrs_event_048170ad04f80ed17d107fad",
+        "alrs-nominal-95a739322a87ccceee1e8960c5a69594",
+        "alrs_event_fce6ee577819b60dcbcab63a",
+        "alrs-nominal-66b373f3dae53487a3a5f188802a3d3a"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2023",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2146&ano=2024",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2025",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2139&ano=2021"
+      ],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "91384302-90d0-4740-8e6d-ce09d481be16",
+      "review_key": null,
+      "version_key": "texto-base",
+      "proposition_external_ids": [
+        "PL 134/2023",
+        "PEC 305/2026",
+        "PL 38/2026",
+        "PL 165/2025",
+        "PL 361/2025",
+        "PL 77/2025"
+      ],
+      "proposition_version_ids": [
+        "3a09304a-4476-4746-81b2-2915d5f9f0ca",
+        "4043661b-fcc9-4aca-b805-ff68e940044f",
+        "747b2eb9-5a2e-4b90-b534-62cb73bda7d9",
+        "91384302-90d0-4740-8e6d-ce09d481be16",
+        "d4cbc2f3-6ee6-4057-a376-e5b3d1fe599a",
+        "da644106-dd52-40d7-a171-b631edec98e5"
+      ],
+      "event_ids": [
+        "alrs_pl134_2023",
+        "alrs_pec305_2026_ccj",
+        "alrs_pl38_2026",
+        "alrs_pl165_2025",
+        "alrs_pl361_2025",
+        "alrs_pl77_2025"
+      ],
+      "source_urls": [],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "92df7f50-bbaf-4708-85ff-9eb8b09bb687",
+      "review_key": null,
+      "version_key": "alrs-2045",
+      "proposition_external_ids": [
+        "alrs:PL-364/2025",
+        "alrs:PL-169/2025",
+        "alrs:PL-10/2022",
+        "alrs:PL-188/2024"
+      ],
+      "proposition_version_ids": [
+        "1cc8fd95-be6b-47cb-927f-5c3d3b6ad85d",
+        "27a6ee4f-cc96-41a0-964d-a93504dc9c99",
+        "92df7f50-bbaf-4708-85ff-9eb8b09bb687",
+        "b7afb033-49ec-4cc3-ac6f-8fe2b61aa1f9"
+      ],
+      "event_ids": [
+        "alrs-votacao-2045-PL-364-2025",
+        "alrs-votacao-2045-PL-169-2025",
+        "alrs-votacao-2045-PL-10-2022",
+        "alrs-votacao-2045-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "99bf71d7-fa13-4419-8a9e-c0b9e464c3b7",
+      "review_key": null,
+      "version_key": "alrs-1505",
+      "proposition_external_ids": [
+        "alrs:PR-6/2026",
+        "alrs:PL-10/2022",
+        "alrs:PL-364/2025",
+        "alrs:PL-169/2025",
+        "alrs:PL-188/2024"
+      ],
+      "proposition_version_ids": [
+        "1135afac-26a6-41d3-bd12-282a632d1483",
+        "11dc4047-7337-4814-8db8-39873aff4da0",
+        "1c94fa20-d734-4725-b0aa-16a92c0121d9",
+        "4205ddcb-cd1d-4ec7-b366-6733633cae1c",
+        "99bf71d7-fa13-4419-8a9e-c0b9e464c3b7"
+      ],
+      "event_ids": [
+        "alrs-votacao-1505-PR-6-2026",
+        "alrs-votacao-1505-PL-10-2022",
+        "alrs-votacao-1505-PL-364-2025",
+        "alrs-votacao-1505-PL-169-2025",
+        "alrs-votacao-1505-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "9bf6173c-35c0-4c20-ac2c-8e5bd83c0c6c",
+      "review_key": null,
+      "version_key": "alrs-2103",
+      "proposition_external_ids": [
+        "alrs:PL-10/2022",
+        "alrs:PL-169/2025",
+        "alrs:PL-364/2025",
+        "alrs:PR-6/2026",
+        "alrs:PL-188/2024"
+      ],
+      "proposition_version_ids": [
+        "6f2c5b2e-5e36-43ad-9270-7e10e15d6fa0",
+        "9bf6173c-35c0-4c20-ac2c-8e5bd83c0c6c",
+        "ba2efdf4-c9ac-4a15-8c3c-bc2244dc0595",
+        "bfee5021-0fe3-4e78-a688-acded3d34c9b",
+        "fef6b7b9-6b30-4323-b1a0-bf0cc6d61f5d"
+      ],
+      "event_ids": [
+        "alrs-votacao-2103-PL-10-2022",
+        "alrs-votacao-2103-PL-169-2025",
+        "alrs-votacao-2103-PL-364-2025",
+        "alrs-votacao-2103-PR-6-2026",
+        "alrs-votacao-2103-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "b3b27d88-a651-4680-9f97-7784ecfc51c3",
+      "review_key": null,
+      "version_key": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924",
+      "proposition_external_ids": [
+        "alrs_prop_5d7ce3dddd17ee16bebfbf92",
+        "alrs_prop_bd3c9e198a3d6ab75eb40cd7",
+        "alrs_prop_e6d6bc434bb2495d1f9016e7",
+        "alrs_prop_6c0127039e60a30bb11eca13"
+      ],
+      "proposition_version_ids": [
+        "107c79e5-2dd2-42ca-a906-f2674b103455",
+        "706fd8fa-b0b7-42a2-b76a-bc352d4dc889",
+        "b3b27d88-a651-4680-9f97-7784ecfc51c3",
+        "b4a681d1-53c2-4c16-b038-45606adfd2f1"
+      ],
+      "event_ids": [
+        "alrs-nominal-8186d80f242ad38469c4e16b66b2b983",
+        "alrs_event_61f8d7a97e94834da95e0a82",
+        "alrs_event_37b49f368a12283746ef9e06",
+        "alrs-nominal-9399ba5bd979ef484e19eb15c15a1842",
+        "alrs-nominal-5de155dd92b64d3073b17c5400ca0dd9",
+        "alrs_event_a815bcbbdb5399a06257f9c4",
+        "alrs_event_fde899ed5662145ce9615dd6",
+        "alrs-nominal-839fda51d4d2a0330e9027dfbbdc4abb"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2139&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026"
+      ],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "b3f8b5fc-c90f-450b-a34e-b7517e1dbd04",
+      "review_key": null,
+      "version_key": "sha256:2153b7d26a279490da4ed0de073c26331b8fe24de9abe9549a644d23989abc5c",
+      "proposition_external_ids": [
+        "alrs_prop_37041a96d00a66750a23d9e4",
+        "alrs_prop_9d546ab56f3fe2aea881ff2a"
+      ],
+      "proposition_version_ids": [
+        "6857fd00-8ea9-44ca-9757-801139b9af22",
+        "b3f8b5fc-c90f-450b-a34e-b7517e1dbd04"
+      ],
+      "event_ids": [
+        "alrs_event_860025529cfb085177f5e3d1",
+        "alrs-nominal-6cb7df6072d3354f3331c8e6984f9136",
+        "alrs_event_7c8dbaa06dc2b4c1e1e2dbd8",
+        "alrs-nominal-3d43a075fd6f2ce4009b5ccc69989c0a"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2159&ano=2024",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2146&ano=2024"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "b4a681d1-53c2-4c16-b038-45606adfd2f1",
+      "review_key": null,
+      "version_key": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924",
+      "proposition_external_ids": [
+        "alrs_prop_5d7ce3dddd17ee16bebfbf92",
+        "alrs_prop_bd3c9e198a3d6ab75eb40cd7",
+        "alrs_prop_e6d6bc434bb2495d1f9016e7",
+        "alrs_prop_6c0127039e60a30bb11eca13"
+      ],
+      "proposition_version_ids": [
+        "107c79e5-2dd2-42ca-a906-f2674b103455",
+        "706fd8fa-b0b7-42a2-b76a-bc352d4dc889",
+        "b3b27d88-a651-4680-9f97-7784ecfc51c3",
+        "b4a681d1-53c2-4c16-b038-45606adfd2f1"
+      ],
+      "event_ids": [
+        "alrs-nominal-8186d80f242ad38469c4e16b66b2b983",
+        "alrs_event_61f8d7a97e94834da95e0a82",
+        "alrs_event_37b49f368a12283746ef9e06",
+        "alrs-nominal-9399ba5bd979ef484e19eb15c15a1842",
+        "alrs-nominal-5de155dd92b64d3073b17c5400ca0dd9",
+        "alrs_event_a815bcbbdb5399a06257f9c4",
+        "alrs_event_fde899ed5662145ce9615dd6",
+        "alrs-nominal-839fda51d4d2a0330e9027dfbbdc4abb"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2139&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026"
+      ],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "b7afb033-49ec-4cc3-ac6f-8fe2b61aa1f9",
+      "review_key": null,
+      "version_key": "alrs-2045",
+      "proposition_external_ids": [
+        "alrs:PL-364/2025",
+        "alrs:PL-169/2025",
+        "alrs:PL-10/2022",
+        "alrs:PL-188/2024"
+      ],
+      "proposition_version_ids": [
+        "1cc8fd95-be6b-47cb-927f-5c3d3b6ad85d",
+        "27a6ee4f-cc96-41a0-964d-a93504dc9c99",
+        "92df7f50-bbaf-4708-85ff-9eb8b09bb687",
+        "b7afb033-49ec-4cc3-ac6f-8fe2b61aa1f9"
+      ],
+      "event_ids": [
+        "alrs-votacao-2045-PL-364-2025",
+        "alrs-votacao-2045-PL-169-2025",
+        "alrs-votacao-2045-PL-10-2022",
+        "alrs-votacao-2045-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "bcf24d3d-809a-48a2-be66-193ed05c7e9b",
+      "review_key": null,
+      "version_key": "sha256:6851f29702ea6fd276e86f09af257ff8d72716dfc448069bcaff6ebb6aed9907",
+      "proposition_external_ids": [
+        "alrs_prop_0fc17ed2830e502bc52a59f1",
+        "alrs_prop_3e4293b254be99e7de11b6ec"
+      ],
+      "proposition_version_ids": [
+        "bcf24d3d-809a-48a2-be66-193ed05c7e9b",
+        "c1fb9b07-400e-4c2c-aaa3-9435aeda8962"
+      ],
+      "event_ids": [
+        "alrs_event_47f98a82770b1c5ba39de186",
+        "alrs-nominal-f86bf65922d2a53cf33930b8d358f044",
+        "alrs-nominal-e45d5528a02a0e147066a5bbc0d9a8e2",
+        "alrs_event_fa5e909aa7f411aab320c8b7"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2145&ano=2025",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2025"
+      ],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "bfee5021-0fe3-4e78-a688-acded3d34c9b",
+      "review_key": null,
+      "version_key": "alrs-2103",
+      "proposition_external_ids": [
+        "alrs:PL-10/2022",
+        "alrs:PL-169/2025",
+        "alrs:PL-364/2025",
+        "alrs:PR-6/2026",
+        "alrs:PL-188/2024"
+      ],
+      "proposition_version_ids": [
+        "6f2c5b2e-5e36-43ad-9270-7e10e15d6fa0",
+        "9bf6173c-35c0-4c20-ac2c-8e5bd83c0c6c",
+        "ba2efdf4-c9ac-4a15-8c3c-bc2244dc0595",
+        "bfee5021-0fe3-4e78-a688-acded3d34c9b",
+        "fef6b7b9-6b30-4323-b1a0-bf0cc6d61f5d"
+      ],
+      "event_ids": [
+        "alrs-votacao-2103-PL-10-2022",
+        "alrs-votacao-2103-PL-169-2025",
+        "alrs-votacao-2103-PL-364-2025",
+        "alrs-votacao-2103-PR-6-2026",
+        "alrs-votacao-2103-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "c1fb9b07-400e-4c2c-aaa3-9435aeda8962",
+      "review_key": null,
+      "version_key": "sha256:6851f29702ea6fd276e86f09af257ff8d72716dfc448069bcaff6ebb6aed9907",
+      "proposition_external_ids": [
+        "alrs_prop_0fc17ed2830e502bc52a59f1",
+        "alrs_prop_3e4293b254be99e7de11b6ec"
+      ],
+      "proposition_version_ids": [
+        "bcf24d3d-809a-48a2-be66-193ed05c7e9b",
+        "c1fb9b07-400e-4c2c-aaa3-9435aeda8962"
+      ],
+      "event_ids": [
+        "alrs_event_47f98a82770b1c5ba39de186",
+        "alrs-nominal-f86bf65922d2a53cf33930b8d358f044",
+        "alrs-nominal-e45d5528a02a0e147066a5bbc0d9a8e2",
+        "alrs_event_fa5e909aa7f411aab320c8b7"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2145&ano=2025",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2025"
+      ],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "c547b12f-fc38-475b-9475-70a16b564531",
+      "review_key": null,
+      "version_key": "sha256:a4714c50e29cacb893e775a86ce306cf103e170fb3f967b819138d07f4a43954",
+      "proposition_external_ids": [
+        "alrs_prop_0a19adb48ba25b3e8b6c2003",
+        "alrs_prop_496e4c4c37e9015c811e1a10"
+      ],
+      "proposition_version_ids": [
+        "3a3ed8d4-3c61-4fb0-9ba8-f762066c4590",
+        "c547b12f-fc38-475b-9475-70a16b564531"
+      ],
+      "event_ids": [
+        "alrs_event_6cf7e82907a01414e7d388f1",
+        "alrs-nominal-5b843d78e1a6ae3368c907dee1656924",
+        "alrs_event_4717403fc05d5b449b6ec35f",
+        "alrs-nominal-6117037ea73d863b9710de723de6aed0"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025"
+      ],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "c8e7a10b-332b-49db-8ac9-cacb467d14b6",
+      "review_key": null,
+      "version_key": "alrs-2144",
+      "proposition_external_ids": [
+        "alrs:PL-10/2022",
+        "alrs:PL-321/2025",
+        "alrs:PL-364/2025",
+        "alrs:PL-169/2025",
+        "alrs:PR-6/2026",
+        "alrs:PL-188/2024"
+      ],
+      "proposition_version_ids": [
+        "1e6fb183-de4e-4e5a-ad10-e09979e32911",
+        "477a24c1-8431-44b5-b3b2-0d05b2e95ae0",
+        "c31c4aa5-3599-409c-a75d-e1fc93b9d383",
+        "c8e7a10b-332b-49db-8ac9-cacb467d14b6",
+        "d5cbf3ab-e8b7-485e-bf62-c6d7bbf599e4",
+        "f898c431-0344-4d50-999f-9337f7c2824a"
+      ],
+      "event_ids": [
+        "alrs-votacao-2144-PL-10-2022",
+        "alrs-votacao-2144-PL-321-2025",
+        "alrs-votacao-2144-PL-364-2025",
+        "alrs-votacao-2144-PL-169-2025",
+        "alrs-votacao-2144-PR-6-2026",
+        "alrs-votacao-2144-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "cae9dc8a-c64a-4bb8-a446-1919755116fe",
+      "review_key": null,
+      "version_key": "sha256:5f45c68c549e9aa03f35f374c22455f2ff9d3069303e705868f5a2d394f62136",
+      "proposition_external_ids": [
+        "alrs_prop_c6e65e16d9d03db5c25c8625",
+        "alrs_prop_3c61cf2b6f3176da722ea3df"
+      ],
+      "proposition_version_ids": [
+        "0638273a-f944-40f8-aab4-c934cff1631f",
+        "cae9dc8a-c64a-4bb8-a446-1919755116fe"
+      ],
+      "event_ids": [
+        "alrs_event_bda28d65eaacc9f8fd395f87",
+        "alrs-nominal-cce4bfa8d18a50665a570c1c58d002e5",
+        "alrs_event_9a5b8fa772d7a3cb4d32f024",
+        "alrs-nominal-0b07903ffe6d154d159f22e02ef00cd1"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2025",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026"
+      ],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "ce5d5c4d-832c-44cc-a249-6b4177d597d4",
+      "review_key": null,
+      "version_key": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c",
+      "proposition_external_ids": [
+        "alrs_prop_bf820724976fb26dd9c3cbd6",
+        "alrs_prop_e6a906d03b35c3747233a07b",
+        "alrs_prop_43a3009cf63d2b7a5ab45e6a",
+        "alrs_prop_fb411e1f9d50d67f0d5cf459",
+        "alrs_prop_79f7b28357a9bd43cfe97630",
+        "alrs_prop_e0d503c19a2e45462cc12b38"
+      ],
+      "proposition_version_ids": [
+        "5d0a2dcb-55d7-4773-992f-a4ddba3e1571",
+        "78c2730c-6515-4386-896d-8f4d84c7c517",
+        "910ecc25-82fe-4877-8849-1f83ea9f768d",
+        "ce5d5c4d-832c-44cc-a249-6b4177d597d4",
+        "cffb8ddb-0557-4c3a-9769-422c23e94fa1",
+        "d953e523-ffd0-4767-b308-097a76277050"
+      ],
+      "event_ids": [
+        "alrs_event_04c20fd7d56659e493ada6a0",
+        "alrs-nominal-2443cce1bf22d4e367e96561e6f24e5a",
+        "alrs_event_905d68031675d81ff5aa4130",
+        "alrs-nominal-e708d2d81c267a8d068856904e282d9c",
+        "alrs_event_28b272219b274d0ac3fb2ccc",
+        "alrs-nominal-b38734b94ef16a2590643c57cfbddf9c",
+        "alrs-nominal-bcd29067e62e59bb74713a75e09f7fe1",
+        "alrs_event_e8adcecf2cc201c0d4b4cf8a",
+        "alrs_event_048170ad04f80ed17d107fad",
+        "alrs-nominal-95a739322a87ccceee1e8960c5a69594",
+        "alrs_event_fce6ee577819b60dcbcab63a",
+        "alrs-nominal-66b373f3dae53487a3a5f188802a3d3a"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2023",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2146&ano=2024",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2025",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2139&ano=2021"
+      ],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "cffb8ddb-0557-4c3a-9769-422c23e94fa1",
+      "review_key": null,
+      "version_key": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c",
+      "proposition_external_ids": [
+        "alrs_prop_bf820724976fb26dd9c3cbd6",
+        "alrs_prop_e6a906d03b35c3747233a07b",
+        "alrs_prop_43a3009cf63d2b7a5ab45e6a",
+        "alrs_prop_fb411e1f9d50d67f0d5cf459",
+        "alrs_prop_79f7b28357a9bd43cfe97630",
+        "alrs_prop_e0d503c19a2e45462cc12b38"
+      ],
+      "proposition_version_ids": [
+        "5d0a2dcb-55d7-4773-992f-a4ddba3e1571",
+        "78c2730c-6515-4386-896d-8f4d84c7c517",
+        "910ecc25-82fe-4877-8849-1f83ea9f768d",
+        "ce5d5c4d-832c-44cc-a249-6b4177d597d4",
+        "cffb8ddb-0557-4c3a-9769-422c23e94fa1",
+        "d953e523-ffd0-4767-b308-097a76277050"
+      ],
+      "event_ids": [
+        "alrs_event_04c20fd7d56659e493ada6a0",
+        "alrs-nominal-2443cce1bf22d4e367e96561e6f24e5a",
+        "alrs_event_905d68031675d81ff5aa4130",
+        "alrs-nominal-e708d2d81c267a8d068856904e282d9c",
+        "alrs_event_28b272219b274d0ac3fb2ccc",
+        "alrs-nominal-b38734b94ef16a2590643c57cfbddf9c",
+        "alrs-nominal-bcd29067e62e59bb74713a75e09f7fe1",
+        "alrs_event_e8adcecf2cc201c0d4b4cf8a",
+        "alrs_event_048170ad04f80ed17d107fad",
+        "alrs-nominal-95a739322a87ccceee1e8960c5a69594",
+        "alrs_event_fce6ee577819b60dcbcab63a",
+        "alrs-nominal-66b373f3dae53487a3a5f188802a3d3a"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2023",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2146&ano=2024",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2025",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2139&ano=2021"
+      ],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "d4cbc2f3-6ee6-4057-a376-e5b3d1fe599a",
+      "review_key": null,
+      "version_key": "texto-base",
+      "proposition_external_ids": [
+        "PL 134/2023",
+        "PEC 305/2026",
+        "PL 38/2026",
+        "PL 165/2025",
+        "PL 361/2025",
+        "PL 77/2025"
+      ],
+      "proposition_version_ids": [
+        "3a09304a-4476-4746-81b2-2915d5f9f0ca",
+        "4043661b-fcc9-4aca-b805-ff68e940044f",
+        "747b2eb9-5a2e-4b90-b534-62cb73bda7d9",
+        "91384302-90d0-4740-8e6d-ce09d481be16",
+        "d4cbc2f3-6ee6-4057-a376-e5b3d1fe599a",
+        "da644106-dd52-40d7-a171-b631edec98e5"
+      ],
+      "event_ids": [
+        "alrs_pl134_2023",
+        "alrs_pec305_2026_ccj",
+        "alrs_pl38_2026",
+        "alrs_pl165_2025",
+        "alrs_pl361_2025",
+        "alrs_pl77_2025"
+      ],
+      "source_urls": [],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "d55c520b-5e34-46bf-aa04-0aea85db1edd",
+      "review_key": null,
+      "version_key": "alrs-28",
+      "proposition_external_ids": [
+        "alrs:PL-321/2025",
+        "alrs:PL-169/2025",
+        "alrs:PL-188/2024",
+        "alrs:PL-10/2022",
+        "alrs:PR-6/2026"
+      ],
+      "proposition_version_ids": [
+        "212a64d2-7f68-4aa0-b95d-a9041b0fb18f",
+        "42b1596d-9f23-4ed1-af41-885384fe766f",
+        "44355a11-6ef9-40e9-bfad-1c457b892fa2",
+        "4d49f69f-e94d-4ef8-8d85-56473efaf4a2",
+        "d55c520b-5e34-46bf-aa04-0aea85db1edd"
+      ],
+      "event_ids": [
+        "alrs-votacao-28-PL-321-2025",
+        "alrs-votacao-28-PL-169-2025",
+        "alrs-votacao-28-PL-188-2024",
+        "alrs-votacao-28-PL-10-2022",
+        "alrs-votacao-28-PR-6-2026"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "d5cbf3ab-e8b7-485e-bf62-c6d7bbf599e4",
+      "review_key": null,
+      "version_key": "alrs-2144",
+      "proposition_external_ids": [
+        "alrs:PL-10/2022",
+        "alrs:PL-321/2025",
+        "alrs:PL-364/2025",
+        "alrs:PL-169/2025",
+        "alrs:PR-6/2026",
+        "alrs:PL-188/2024"
+      ],
+      "proposition_version_ids": [
+        "1e6fb183-de4e-4e5a-ad10-e09979e32911",
+        "477a24c1-8431-44b5-b3b2-0d05b2e95ae0",
+        "c31c4aa5-3599-409c-a75d-e1fc93b9d383",
+        "c8e7a10b-332b-49db-8ac9-cacb467d14b6",
+        "d5cbf3ab-e8b7-485e-bf62-c6d7bbf599e4",
+        "f898c431-0344-4d50-999f-9337f7c2824a"
+      ],
+      "event_ids": [
+        "alrs-votacao-2144-PL-10-2022",
+        "alrs-votacao-2144-PL-321-2025",
+        "alrs-votacao-2144-PL-364-2025",
+        "alrs-votacao-2144-PL-169-2025",
+        "alrs-votacao-2144-PR-6-2026",
+        "alrs-votacao-2144-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "d953e523-ffd0-4767-b308-097a76277050",
+      "review_key": null,
+      "version_key": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c",
+      "proposition_external_ids": [
+        "alrs_prop_bf820724976fb26dd9c3cbd6",
+        "alrs_prop_e6a906d03b35c3747233a07b",
+        "alrs_prop_43a3009cf63d2b7a5ab45e6a",
+        "alrs_prop_fb411e1f9d50d67f0d5cf459",
+        "alrs_prop_79f7b28357a9bd43cfe97630",
+        "alrs_prop_e0d503c19a2e45462cc12b38"
+      ],
+      "proposition_version_ids": [
+        "5d0a2dcb-55d7-4773-992f-a4ddba3e1571",
+        "78c2730c-6515-4386-896d-8f4d84c7c517",
+        "910ecc25-82fe-4877-8849-1f83ea9f768d",
+        "ce5d5c4d-832c-44cc-a249-6b4177d597d4",
+        "cffb8ddb-0557-4c3a-9769-422c23e94fa1",
+        "d953e523-ffd0-4767-b308-097a76277050"
+      ],
+      "event_ids": [
+        "alrs_event_04c20fd7d56659e493ada6a0",
+        "alrs-nominal-2443cce1bf22d4e367e96561e6f24e5a",
+        "alrs_event_905d68031675d81ff5aa4130",
+        "alrs-nominal-e708d2d81c267a8d068856904e282d9c",
+        "alrs_event_28b272219b274d0ac3fb2ccc",
+        "alrs-nominal-b38734b94ef16a2590643c57cfbddf9c",
+        "alrs-nominal-bcd29067e62e59bb74713a75e09f7fe1",
+        "alrs_event_e8adcecf2cc201c0d4b4cf8a",
+        "alrs_event_048170ad04f80ed17d107fad",
+        "alrs-nominal-95a739322a87ccceee1e8960c5a69594",
+        "alrs_event_fce6ee577819b60dcbcab63a",
+        "alrs-nominal-66b373f3dae53487a3a5f188802a3d3a"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2022",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2023",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2146&ano=2024",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2025",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=13&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2139&ano=2021"
+      ],
+      "technical_hypothesis": "same_text_multiple_events_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "da644106-dd52-40d7-a171-b631edec98e5",
+      "review_key": null,
+      "version_key": "texto-base",
+      "proposition_external_ids": [
+        "PL 134/2023",
+        "PEC 305/2026",
+        "PL 38/2026",
+        "PL 165/2025",
+        "PL 361/2025",
+        "PL 77/2025"
+      ],
+      "proposition_version_ids": [
+        "3a09304a-4476-4746-81b2-2915d5f9f0ca",
+        "4043661b-fcc9-4aca-b805-ff68e940044f",
+        "747b2eb9-5a2e-4b90-b534-62cb73bda7d9",
+        "91384302-90d0-4740-8e6d-ce09d481be16",
+        "d4cbc2f3-6ee6-4057-a376-e5b3d1fe599a",
+        "da644106-dd52-40d7-a171-b631edec98e5"
+      ],
+      "event_ids": [
+        "alrs_pl134_2023",
+        "alrs_pec305_2026_ccj",
+        "alrs_pl38_2026",
+        "alrs_pl165_2025",
+        "alrs_pl361_2025",
+        "alrs_pl77_2025"
+      ],
+      "source_urls": [],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "e435e864-1741-4561-8bc5-08384ae287e6",
+      "review_key": null,
+      "version_key": "alrs-2034",
+      "proposition_external_ids": [
+        "alrs:PL-169/2025",
+        "alrs:PL-10/2022",
+        "alrs:PR-6/2026",
+        "alrs:PL-364/2025",
+        "alrs:PL-321/2025",
+        "alrs:PL-188/2024"
+      ],
+      "proposition_version_ids": [
+        "10a2f43c-e6af-4619-b8b5-c91198909516",
+        "42b0e419-c6b0-4c8b-9c73-b2ea20b84a58",
+        "5800dcb8-cddc-44d4-91a8-647f963185f8",
+        "804f8ead-7051-4aa4-b3f2-3ac4c0960482",
+        "d136f938-eed6-45fb-95c6-fcf18168353b",
+        "e435e864-1741-4561-8bc5-08384ae287e6"
+      ],
+      "event_ids": [
+        "alrs-votacao-2034-PL-169-2025",
+        "alrs-votacao-2034-PL-10-2022",
+        "alrs-votacao-2034-PR-6-2026",
+        "alrs-votacao-2034-PL-364-2025",
+        "alrs-votacao-2034-PL-321-2025",
+        "alrs-votacao-2034-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "f898c431-0344-4d50-999f-9337f7c2824a",
+      "review_key": null,
+      "version_key": "alrs-2144",
+      "proposition_external_ids": [
+        "alrs:PL-10/2022",
+        "alrs:PL-321/2025",
+        "alrs:PL-364/2025",
+        "alrs:PL-169/2025",
+        "alrs:PR-6/2026",
+        "alrs:PL-188/2024"
+      ],
+      "proposition_version_ids": [
+        "1e6fb183-de4e-4e5a-ad10-e09979e32911",
+        "477a24c1-8431-44b5-b3b2-0d05b2e95ae0",
+        "c31c4aa5-3599-409c-a75d-e1fc93b9d383",
+        "c8e7a10b-332b-49db-8ac9-cacb467d14b6",
+        "d5cbf3ab-e8b7-485e-bf62-c6d7bbf599e4",
+        "f898c431-0344-4d50-999f-9337f7c2824a"
+      ],
+      "event_ids": [
+        "alrs-votacao-2144-PL-10-2022",
+        "alrs-votacao-2144-PL-321-2025",
+        "alrs-votacao-2144-PL-364-2025",
+        "alrs-votacao-2144-PL-169-2025",
+        "alrs-votacao-2144-PR-6-2026",
+        "alrs-votacao-2144-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "collision",
+      "priority": "BLOCKED_IDENTITY",
+      "proposition_version_id": "fef6b7b9-6b30-4323-b1a0-bf0cc6d61f5d",
+      "review_key": null,
+      "version_key": "alrs-2103",
+      "proposition_external_ids": [
+        "alrs:PL-10/2022",
+        "alrs:PL-169/2025",
+        "alrs:PL-364/2025",
+        "alrs:PR-6/2026",
+        "alrs:PL-188/2024"
+      ],
+      "proposition_version_ids": [
+        "6f2c5b2e-5e36-43ad-9270-7e10e15d6fa0",
+        "9bf6173c-35c0-4c20-ac2c-8e5bd83c0c6c",
+        "ba2efdf4-c9ac-4a15-8c3c-bc2244dc0595",
+        "bfee5021-0fe3-4e78-a688-acded3d34c9b",
+        "fef6b7b9-6b30-4323-b1a0-bf0cc6d61f5d"
+      ],
+      "event_ids": [
+        "alrs-votacao-2103-PL-10-2022",
+        "alrs-votacao-2103-PL-169-2025",
+        "alrs-votacao-2103-PL-364-2025",
+        "alrs-votacao-2103-PR-6-2026",
+        "alrs-votacao-2103-PL-188-2024"
+      ],
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026"
+      ],
+      "technical_hypothesis": "version_identity_mismatch_possible",
+      "resolution_status": "needs_official_text_hash_review",
+      "required_decision": "resolve_as_distinct_event | resolve_identity_mismatch | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false,
+      "audit_entry_present": true
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "038dbe4d-39dc-408d-a727-13c501af5440",
+      "review_key": "sha256:f3602ea5bcd6e3ba032e7b6d7f46b33288c3707fbc3eafa98e2f06d95788e03b#038dbe4d-39dc-408d-a727-13c501af5440",
+      "proposition_external_id": "alrs_prop_61ef2f1087b5c317ebfadbbb",
+      "title": "Aprova o Relatório Final da Comissão Especial de Apoio às Maternidades e UTIs Neonatais do RS.",
+      "event_type": "procedural_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "06a62255-2bdd-4450-9375-f5fa6939b2bc",
+      "review_key": "texto-RCE-3-2026#06a62255-2bdd-4450-9375-f5fa6939b2bc",
+      "proposition_external_id": "alrs-RCE-3-2026",
+      "title": "RCE 3/2026",
+      "event_type": "procedural_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "0c930b54-aff4-40fd-8b96-83f4442a0257",
+      "review_key": "sha256:9acf2d55c4d7250d7b58219587e1bcf408d0d6d16fe03780b2ebdbc39be44c61#0c930b54-aff4-40fd-8b96-83f4442a0257",
+      "proposition_external_id": "alrs_prop_647876c73d473b4017cc2310",
+      "title": "Aprova o Relatório Final da Comissão Parlamentar de Inquérito para Investigar as Recorrentes Falhas no Serviço Público Concedido de Distribuição de Energia Elétrica.",
+      "event_type": "procedural_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "1099b1f2-f1bd-40bb-8020-f457ae309ecd",
+      "review_key": "sha256:03dd8c3705d74dcc89505c991545844ab095739b5c909750fd8a5e76e3380d9d#1099b1f2-f1bd-40bb-8020-f457ae309ecd",
+      "proposition_external_id": "alrs_prop_63d32d0a521c3c6dc56d5a1f",
+      "title": "Encaminha indicação de Deputados para comporem a chapa para os cargos da Mesa Diretora para o período de janeiro de 2023 a 31 janeiro de 2025.(SEI 2428-0100/23-7)",
+      "event_type": "procedural_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2023",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2023",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2023",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2023",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2023",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2023",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2023"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "14a786ee-9613-44cd-bb61-df0be5533907",
+      "review_key": "texto-RDI-27-2026#14a786ee-9613-44cd-bb61-df0be5533907",
+      "proposition_external_id": "alrs-RDI-27-2026",
+      "title": "RDI 27/2026",
+      "event_type": "procedural_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "1eb2a5d1-2099-40a4-9bc2-424b5044fd11",
+      "review_key": "sha256:ead2cc37ee0d28b05b850580384eca7d3375de2fac1b34ec9a81e7687f7d5136#1eb2a5d1-2099-40a4-9bc2-424b5044fd11",
+      "proposition_external_id": "alrs_prop_17282d111aa3cc65b4aba80f",
+      "title": "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalho no recesso parlamentar, de 17 a 31 de julho de 2026.",
+      "event_type": "procedural_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "45c8edd3-5818-4ae6-9873-67f96e3d7448",
+      "review_key": "texto-PL-98-2024#45c8edd3-5818-4ae6-9873-67f96e3d7448",
+      "proposition_external_id": "alrs-PL-98-2024",
+      "title": "PL 98/2024",
+      "event_type": "merit_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "500ba572-b166-4b9d-b708-2ba087445e00",
+      "review_key": "sha256:1b9305848f1dc4e44c9ab5e587f2d39616088cbace80767cfde8e2b98b731939#500ba572-b166-4b9d-b708-2ba087445e00",
+      "proposition_external_id": "alrs_prop_79f83a31f100ac9b8559ab58",
+      "title": "Aprova o Relatório Final da Comissão Especial para Tratar da Saúde Mental no Rio Grande do Sul.",
+      "event_type": "procedural_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "5d8533df-0b87-4fef-ab2b-c8a2b3d56e11",
+      "review_key": "texto-PL-125-2021#5d8533df-0b87-4fef-ab2b-c8a2b3d56e11",
+      "proposition_external_id": "alrs-PL-125-2021",
+      "title": "PL 125/2021",
+      "event_type": "merit_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "5dcc1e75-8a21-4244-b138-9f418826abde",
+      "review_key": "sha256:0cdbef70e6ca5a6ef7c81cdba4b73cd78380a780b748d4a99edc8a09825ff6e2#5dcc1e75-8a21-4244-b138-9f418826abde",
+      "proposition_external_id": "alrs_prop_775fb8b3a6f3e254c3e230aa",
+      "title": "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 17 a 31 de julho de 2026.",
+      "event_type": "procedural_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "61d6464b-da6b-40fe-93f6-8d830c8e2c95",
+      "review_key": "texto-PR-3-2026#61d6464b-da6b-40fe-93f6-8d830c8e2c95",
+      "proposition_external_id": "alrs-PR-3-2026",
+      "title": "PR 3/2026",
+      "event_type": "procedural_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "61de6151-541f-4ff7-8917-896809ab0413",
+      "review_key": "texto-RDI-26-2026#61de6151-541f-4ff7-8917-896809ab0413",
+      "proposition_external_id": "alrs-RDI-26-2026",
+      "title": "RDI 26/2026",
+      "event_type": "procedural_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "7c132ddc-b571-43ee-b2bc-e877f053480a",
+      "review_key": "sha256:7cf39a1e311538faa0de87845c8535ad54b09c3760f94837682c5d81a335ad31#7c132ddc-b571-43ee-b2bc-e877f053480a",
+      "proposition_external_id": "alrs_prop_f510d5f5859f870e2c4f27e0",
+      "title": "Altera a Lei Ordinária n.º 15.988 de 07 de agosto de 2023, que consolida a legislação relativa às mulheres vítimas de violência no âmbito do Estado do Rio Grande do Sul.",
+      "event_type": "merit_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "7e99fa53-0129-4c70-aff5-4deeab888e14",
+      "review_key": "sha256:eef43d6c5ae3e81aa2eccfae1ed65010dd8b4d956a60ca129900bedcd29b71b3#7e99fa53-0129-4c70-aff5-4deeab888e14",
+      "proposition_external_id": "alrs_prop_615d5356ceff619b4b8ae4a0",
+      "title": "Aprova o Relatório Final da Comissão Especial para tratar da Malha Ferroviária Inativa do RS.",
+      "event_type": "procedural_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "852ad344-a052-4071-9c5a-f86730e9ae44",
+      "review_key": "texto-PR-1-2026#852ad344-a052-4071-9c5a-f86730e9ae44",
+      "proposition_external_id": "alrs-PR-1-2026",
+      "title": "PR 1/2026",
+      "event_type": "procedural_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "8686392d-e8be-42d2-aa80-620c9f41a5d9",
+      "review_key": "texto-PL-432-2023#8686392d-e8be-42d2-aa80-620c9f41a5d9",
+      "proposition_external_id": "alrs-PL-432-2023",
+      "title": "PL 432/2023",
+      "event_type": "merit_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "993be39a-b5b0-4219-8dd9-97f54462f32c",
+      "review_key": "texto-PR-21-2025#993be39a-b5b0-4219-8dd9-97f54462f32c",
+      "proposition_external_id": "alrs-PR-21-2025",
+      "title": "PR 21/2025",
+      "event_type": "procedural_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "a57b1c83-3749-4c45-85b7-2408db20f5a2",
+      "review_key": "sha256:c1f571e5077d13d1486261d3db0fb706cee52efd00465184fef79a872f0772ee#a57b1c83-3749-4c45-85b7-2408db20f5a2",
+      "proposition_external_id": "alrs_prop_2a4640e188225a0fece6ec70",
+      "title": "Dispõe sobre a criação do Programa de Defesa pessoal para Mulheres “RS POR ELAS” no âmbito do Estado do Rio Grande do Sul e dá outras providências.(SEI 4237-0100/21-8)",
+      "event_type": "merit_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "a799d470-87fb-4634-ae55-1a005f4348fa",
+      "review_key": "sha256:1b8fc5a6c22801242041fbbec3ca409c4c5cf5def37fc878f4096727cf46de63#a799d470-87fb-4634-ae55-1a005f4348fa",
+      "proposition_external_id": "alrs_prop_cc0ce67c12ab48ffe1e3f363",
+      "title": "Requer a votação da composição da Comissão Representativa para o recesso da 4ª Sessão Legislativa da 56ª Legislatura, de 17 de julho a 31 de julho de 2026 e de 23 de dezembro de 2026 a 31 de janeiro de 2027.",
+      "event_type": "procedural_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "b21507c4-4def-4b7a-af7c-c79a3a4bee4f",
+      "review_key": "sha256:5fa5874cf6dc97b1930d9aa9e2afca8dceacb44604c844a32e7a4d50ad9614d8#b21507c4-4def-4b7a-af7c-c79a3a4bee4f",
+      "proposition_external_id": "alrs_prop_c86fd2d32588383f70cc41ea",
+      "title": "Requer, nos termos do art. 79 a 82 do Regimento Interno da Assembleia Legislativa, a criação de uma Comissão Especial intitulada “Diagnóstico dos sistemas de cultura do Rio Grande do Sul: perspectivas e propostas para o pleno exercício dos direitos culturais”.",
+      "event_type": "procedural_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "bc91f3d5-fc61-4635-bf03-7c3fe882b92f",
+      "review_key": "texto-RDI-28-2026#bc91f3d5-fc61-4635-bf03-7c3fe882b92f",
+      "proposition_external_id": "alrs-RDI-28-2026",
+      "title": "RDI 28/2026",
+      "event_type": "procedural_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "c8fdd0b3-44b3-46d4-96e9-7d5e076eb183",
+      "review_key": "texto-PR-2-2026#c8fdd0b3-44b3-46d4-96e9-7d5e076eb183",
+      "proposition_external_id": "alrs-PR-2-2026",
+      "title": "PR 2/2026",
+      "event_type": "procedural_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "cb2dd6b2-ae88-4e8d-9f58-93f68d94f7e9",
+      "review_key": "sha256:45750846424bed8d7df898d45f27c3b7ef1b863c557abac098fee077d25c3d5a#cb2dd6b2-ae88-4e8d-9f58-93f68d94f7e9",
+      "proposition_external_id": "alrs_prop_4c3ab71578dfacd096054b44",
+      "title": "Requer, nos termos do art. 79 a 82 do Regimento Interno da Assembleia Legislativa, a criação de uma Comissão Especial com a finalidade de apurar, acompanhar, analisar e encaminhar medidas referentes à prestação dos serviços públicos de saneamento básico, nas modalidades de abastecimento de água e tratamento de esgotos nos municípios sob concessão da empresa AEGEA/Corsan no Estado do Rio Grande do",
+      "event_type": "procedural_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "cedce3ba-465e-4f29-80c6-3c5716f779a2",
+      "review_key": "texto-RCE-1-2026#cedce3ba-465e-4f29-80c6-3c5716f779a2",
+      "proposition_external_id": "alrs-RCE-1-2026",
+      "title": "RCE 1/2026",
+      "event_type": "procedural_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "e81c715d-ff15-4aa0-a28f-aca9a10ea3b7",
+      "review_key": "texto-PEC-302-2025#e81c715d-ff15-4aa0-a28f-aca9a10ea3b7",
+      "proposition_external_id": "alrs-PEC-302-2025",
+      "title": "PEC 302/2025",
+      "event_type": "merit_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 12,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P0",
+      "proposition_version_id": "f209f023-b385-4975-b59e-02d33a91fcdc",
+      "review_key": "texto-PL-172-2026#f209f023-b385-4975-b59e-02d33a91fcdc",
+      "proposition_external_id": "alrs-PL-172-2026",
+      "title": "PL 172/2026",
+      "event_type": "amendment_confirmed",
+      "candidate_count": 7,
+      "factual_vote_count": 7,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "107c79e5-2dd2-42ca-a906-f2674b103455",
+      "review_key": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924#107c79e5-2dd2-42ca-a906-f2674b103455",
+      "proposition_external_id": "alrs_prop_5d7ce3dddd17ee16bebfbf92",
+      "title": "Altera a Lei n.º 15.988, de 7 de agosto de 2023, que consolida a legislação relativa às mulheres vítimas de violência no âmbito do Estado do Rio Grande do Sul.",
+      "event_type": "merit_candidate",
+      "candidate_count": 5,
+      "factual_vote_count": 5,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "10887f06-837a-47ed-aa52-f05560d17742",
+      "review_key": "sha256:1a61707c7c826f5b75d1b3e2725f6d4c473e3852568f5d3fac7a94540c5cab1a#10887f06-837a-47ed-aa52-f05560d17742",
+      "proposition_external_id": "alrs_prop_967582f2abd1c3a3a041a768",
+      "title": "Dispõe sobre a criação da Patrulha Estadual de Prevenção à Violência Doméstica e Familiar contra Crianças e Adolescentes.",
+      "event_type": "merit_candidate",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "146f5b3a-2bbd-4d2f-b6b9-56658da10139",
+      "review_key": "sha256:10f3fb9d69994b6794881ecfd3d0b783eb5f8e7762a42d940592eb2fc1b3f782#146f5b3a-2bbd-4d2f-b6b9-56658da10139",
+      "proposition_external_id": "alrs_prop_1504b0f877ca3a4cbbc3a4ee",
+      "title": "Dispõe sobre o Programa de Defesa e Amparo à Vítima.(SEI 17608-0100/23-2)",
+      "event_type": "merit_candidate",
+      "candidate_count": 5,
+      "factual_vote_count": 5,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "1eb30d74-271c-4315-b7f6-54849d31c9bc",
+      "review_key": "sha256:0d0b779976354f6bd951ce8d8bff213f63b1b515712734564144254577e6aa51#1eb30d74-271c-4315-b7f6-54849d31c9bc",
+      "proposition_external_id": "alrs_prop_f76d72ac85ddbd12519f1e5d",
+      "title": "Institui a política de prevenção a crimes sexuais contra adolescentes, no Estado do Rio Grande do Sul, denominado “Projeto Libertar”.",
+      "event_type": "merit_candidate",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "245303bd-b927-44a7-9cb3-763e9e9b5511",
+      "review_key": "sha256:0cdbef70e6ca5a6ef7c81cdba4b73cd78380a780b748d4a99edc8a09825ff6e2#245303bd-b927-44a7-9cb3-763e9e9b5511",
+      "proposition_external_id": "alrs_prop_2191cd41f3e4abad07e42b5f",
+      "title": "Requer, nos termos dos artigos 77 e 194, inciso XII, da Resolução nº 2.288/91, Regimento Interno da Assembleia Legislativa, a suspensão de seus trabalhos no recesso parlamentar, de 17 a 31 de julho de 2026.",
+      "event_type": "procedural_confirmed",
+      "candidate_count": 5,
+      "factual_vote_count": 5,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "3a09304a-4476-4746-81b2-2915d5f9f0ca",
+      "review_key": "texto-base#3a09304a-4476-4746-81b2-2915d5f9f0ca",
+      "proposition_external_id": "PL 134/2023",
+      "title": "Selo Tolerância Zero com Assédio no comércio gaúcho",
+      "event_type": "needs_official_classification",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2122&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2136&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2153&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2162&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=93&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "3f2e156e-8430-44be-8564-77578ef9fc81",
+      "review_key": "sha256:3e7be81fb11122aea31318a85d9167eb367bbc16bb7fc3088bf93fd2d934d143#3f2e156e-8430-44be-8564-77578ef9fc81",
+      "proposition_external_id": "alrs_prop_eb6d03ca39766d6c6f4f6041",
+      "title": "Institui a política estadual de combate ao racismo, à LGBTfobia e à violência contra as mulheres nos estádios e nas arenas esportivas do Estado do Rio Grande do Sul - Política Estádio de Respeito. (SEI 5535-0100/23-0)",
+      "event_type": "merit_candidate",
+      "candidate_count": 5,
+      "factual_vote_count": 5,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "49c4201c-f31b-4adc-94b0-9982c7ec58c1",
+      "review_key": "texto-RDI-23-2026#49c4201c-f31b-4adc-94b0-9982c7ec58c1",
+      "proposition_external_id": "alrs-RDI-23-2026",
+      "title": "RDI 23/2026",
+      "event_type": "needs_official_classification",
+      "candidate_count": 5,
+      "factual_vote_count": 5,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "4b72b569-1ad0-4c3e-af07-9062f49f4a76",
+      "review_key": "sha256:96d57b4c1dd856d40c32b886606687bf188d6cbbb26f1eda628d0402fe0f0428#4b72b569-1ad0-4c3e-af07-9062f49f4a76",
+      "proposition_external_id": "alrs_prop_a33fd0b625e0c1fd1b8f9e2b",
+      "title": "Altera a Lei nº 15.606, de 29 de abril de 2021, que institui a Política Estadual de Proteção dos Direitos da Pessoa com Fibromialgia – Lei Daniel Lenz, tornando obrigatória a inclusão do símbolo mundial da Fibromialgia nas placas ou avisos de atendimento prioritário no Estado do Rio Grande do Sul.",
+      "event_type": "merit_candidate",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "56f5396f-5b7f-4b20-bc21-f47dd26c1f1b",
+      "review_key": "texto-RCE-5-2026#56f5396f-5b7f-4b20-bc21-f47dd26c1f1b",
+      "proposition_external_id": "alrs-RCE-5-2026",
+      "title": "RCE 5/2026",
+      "event_type": "needs_official_classification",
+      "candidate_count": 5,
+      "factual_vote_count": 5,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "65a147b4-f5b2-4734-95b4-8905b1a7c460",
+      "review_key": "texto-RDI-12-2026#65a147b4-f5b2-4734-95b4-8905b1a7c460",
+      "proposition_external_id": "alrs-RDI-12-2026",
+      "title": "RDI 12/2026",
+      "event_type": "needs_official_classification",
+      "candidate_count": 5,
+      "factual_vote_count": 5,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "7bae10be-b80b-4b2c-88cf-0c2561edeb6b",
+      "review_key": "sha256:bb8c0d5262e866faa5745a563abedcccb73854825373843994ccfb6969f18f38#7bae10be-b80b-4b2c-88cf-0c2561edeb6b",
+      "proposition_external_id": "alrs_prop_be6aa727b687a333b258ef85",
+      "title": "Institui a Política Estadual de Proteção Social às Crianças e aos Adolescentes em situação de orfandade decorrente da Covid-19 e dá outras providências. (SEI 1338-0100/22-5)",
+      "event_type": "merit_candidate",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "7dd6f932-3e02-4eaa-8f5c-b7363545000c",
+      "review_key": "sha256:6e9b052a90e83cedccb28d63b11f3bbe4b46173f5d4ed899dd8236083f2c33dc#7dd6f932-3e02-4eaa-8f5c-b7363545000c",
+      "proposition_external_id": "alrs_prop_2145a817a5023c7987ebdda5",
+      "title": "Altera a Lei n.º 15.950, de 9 de janeiro de 2023, que consolida a legislação estadual relativa a eventos e datas estaduais, instituindo o Calendário Oficial de Eventos e Datas Comemorativas do Estado do Rio Grande do Sul, para incluir o Março Lilás, o dia de conscientização sobre HPV, o dia da prevenção ao câncer de colo do útero, e dá outras providências.",
+      "event_type": "merit_candidate",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "8409e305-f84c-4d37-80a5-da404955ce03",
+      "review_key": "texto-PL-10-2022#8409e305-f84c-4d37-80a5-da404955ce03",
+      "proposition_external_id": "alrs-PL-10-2022",
+      "title": "PL 10/2022",
+      "event_type": "needs_official_classification",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "8a5d1cd6-1854-456b-b666-ebf904ecdb6a",
+      "review_key": "texto-PR-6-2026#8a5d1cd6-1854-456b-b666-ebf904ecdb6a",
+      "proposition_external_id": "alrs-PR-6-2026",
+      "title": "PR 6/2026",
+      "event_type": "needs_official_classification",
+      "candidate_count": 5,
+      "factual_vote_count": 5,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "91384302-90d0-4740-8e6d-ce09d481be16",
+      "review_key": "texto-base#91384302-90d0-4740-8e6d-ce09d481be16",
+      "proposition_external_id": "PL 165/2025",
+      "title": "Sistema de inteligência preditiva de monitoramento de agressores reincidentes",
+      "event_type": "needs_official_classification",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2122&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2136&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2153&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2162&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=93&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "92f2865a-1414-4077-85ae-7d10711c51b4",
+      "review_key": "sha256:f0832e005dea9c6626b6648ffce12e0c90417b86f10ff26a2fac23fe09b3be05#92f2865a-1414-4077-85ae-7d10711c51b4",
+      "proposition_external_id": "alrs_prop_927e2ef19844c7099d4ca7eb",
+      "title": "Institui o Programa de Inclusão Digital para Idosos (PIDI) no âmbito do Estado do Rio Grande do Sul, e dá outras providências.",
+      "event_type": "merit_candidate",
+      "candidate_count": 5,
+      "factual_vote_count": 5,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "b4a681d1-53c2-4c16-b038-45606adfd2f1",
+      "review_key": "sha256:47d14eb3b441929863973f9ac6c391361292af0af77597207528dafc67a59924#b4a681d1-53c2-4c16-b038-45606adfd2f1",
+      "proposition_external_id": "alrs_prop_6c0127039e60a30bb11eca13",
+      "title": "Altera a Lei n.º 15.988, de 7 de agosto de 2023, que consolida a legislação relativa às mulheres vítimas de violência no âmbito do Estado do Rio Grande do Sul.",
+      "event_type": "merit_candidate",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "b56b8cf3-df5d-4b72-8bac-10d3cb95de8e",
+      "review_key": "texto-PL-188-2024#b56b8cf3-df5d-4b72-8bac-10d3cb95de8e",
+      "proposition_external_id": "alrs-PL-188-2024",
+      "title": "PL 188/2024",
+      "event_type": "needs_official_classification",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "c3261579-d4c1-4df3-8e5a-082243d76d47",
+      "review_key": "texto-PL-169-2025#c3261579-d4c1-4df3-8e5a-082243d76d47",
+      "proposition_external_id": "alrs-PL-169-2025",
+      "title": "PL 169/2025",
+      "event_type": "needs_official_classification",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "c9dfaf1d-f566-4f3f-96be-fc36d96f87df",
+      "review_key": "texto-PLC-385-2024#c9dfaf1d-f566-4f3f-96be-fc36d96f87df",
+      "proposition_external_id": "alrs-PLC-385-2024",
+      "title": "PLC 385/2024",
+      "event_type": "needs_official_classification",
+      "candidate_count": 5,
+      "factual_vote_count": 5,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "cffb8ddb-0557-4c3a-9769-422c23e94fa1",
+      "review_key": "sha256:d8872610386043b3f3cf2cb6aa9380c186df042ad5c2eb589a48295262deef8c#cffb8ddb-0557-4c3a-9769-422c23e94fa1",
+      "proposition_external_id": "alrs_prop_79f7b28357a9bd43cfe97630",
+      "title": "Dispõe sobre o reajuste dos pisos salariais no âmbito do Estado do Rio Grande do Sul, para as categorias profissionais que menciona, com fundamento na Lei Complementar Federal nº 103, de 14 de julho de 2000, que autoriza os Estados e o Distrito Federal a instituir o piso salarial a que se refere o inciso V do art. 7º da Constituição Federal, por aplicação do disposto no parágrafo único do seu art.",
+      "event_type": "merit_candidate",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "d00a7687-5a06-42a4-a998-794bf5f996b1",
+      "review_key": "sha256:893fba22da23f7a5023116d75150a6aad9f444c552b0ab0d20b6b301bf8ce2a6#d00a7687-5a06-42a4-a998-794bf5f996b1",
+      "proposition_external_id": "alrs_prop_67aae3cc58288486127b3750",
+      "title": "Dispõe sobre a instalação da Assembleia Legislativa do Estado do Rio Grande do Sul na Exposição Internacional de Animais, Máquinas, Implementos e Produtos Agropecuários – Expointer 2026.",
+      "event_type": "merit_candidate",
+      "candidate_count": 5,
+      "factual_vote_count": 5,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "d4cbc2f3-6ee6-4057-a376-e5b3d1fe599a",
+      "review_key": "texto-base#d4cbc2f3-6ee6-4057-a376-e5b3d1fe599a",
+      "proposition_external_id": "PL 361/2025",
+      "title": "Reserva de 5% de vagas em contratos terceirizados para mulheres vítimas de violência",
+      "event_type": "merit_candidate",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2122&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2136&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2153&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2162&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=93&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "d75becac-49d6-4bdd-95e8-29270980b4f4",
+      "review_key": "sha256:f6f602bc12539cc5787793134de2a805eef274ad9d36ed06525a3fb4ec55b317#d75becac-49d6-4bdd-95e8-29270980b4f4",
+      "proposition_external_id": "alrs_prop_7bed77c7ca2a760f17b16432",
+      "title": "Altera a Lei Estadual nº 16.328, de 8 de agosto de 2025, que institui a reserva de vagas, em percentual de no mínimo 20% (vinte por cento), nas empresas da área de segurança, vigilância e transportes de valores, para vigilantes do sexo feminino, nas contratações que especifica e dá outras providências, estendendo a reserva de vagas para todos os tipos de contrato e priorizando a contratação de vít",
+      "event_type": "merit_candidate",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "d7c89692-390a-4ae4-9e44-80cfa00700b7",
+      "review_key": "texto-PL-100-2025#d7c89692-390a-4ae4-9e44-80cfa00700b7",
+      "proposition_external_id": "alrs-PL-100-2025",
+      "title": "PL 100/2025",
+      "event_type": "needs_official_classification",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2045&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "da644106-dd52-40d7-a171-b631edec98e5",
+      "review_key": "texto-base#da644106-dd52-40d7-a171-b631edec98e5",
+      "proposition_external_id": "PL 77/2025",
+      "title": "Ampliação de mecanismos de proteção a vítimas com medidas protetivas de urgência",
+      "event_type": "needs_official_classification",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2122&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2136&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2153&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2162&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=93&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "df109b14-250b-40a6-af19-ae7ffec834d6",
+      "review_key": "sha256:737492a11b4269a186feef11b645d0935f9f9631b755f039a9cbcc2ea589ec4d#df109b14-250b-40a6-af19-ae7ffec834d6",
+      "proposition_external_id": "alrs_prop_37edd1d5ab9bedc47d5acd39",
+      "title": "Dispõe sobre restrições à publicidade de plataformas de apostas esportivas no âmbito do Estado do Rio Grande do Sul e dá outras providências.",
+      "event_type": "merit_candidate",
+      "candidate_count": 5,
+      "factual_vote_count": 5,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "e0b7e1b8-9cb6-41eb-8860-186f6bba833c",
+      "review_key": "sha256:9db0bea12af939a744a447393b4a1698a939e760f73c0e07ff6a8a4a8917269a#e0b7e1b8-9cb6-41eb-8860-186f6bba833c",
+      "proposition_external_id": "alrs_prop_0ccb2aaff5dd074d9f61a357",
+      "title": "Cria o Programa Profissional do Futuro, no âmbito do Estado do Rio Grande do Sul",
+      "event_type": "merit_candidate",
+      "candidate_count": 5,
+      "factual_vote_count": 5,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    },
+    {
+      "lane": "priority",
+      "priority": "P1",
+      "proposition_version_id": "fac961e2-5f5b-408f-9a84-73db467f7b2c",
+      "review_key": "texto-PL-160-2026#fac961e2-5f5b-408f-9a84-73db467f7b2c",
+      "proposition_external_id": "alrs-PL-160-2026",
+      "title": "PL 160/2026",
+      "event_type": "needs_official_classification",
+      "candidate_count": 6,
+      "factual_vote_count": 6,
+      "source_urls": [
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=1505&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2034&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2103&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2110&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=2144&ano=2026",
+        "https://transparencia.al.rs.gov.br/parlamentares/votos-plenario/pesquisa?solicitante=28&ano=2026"
+      ],
+      "required_decision": "assess | no_direct_population_group | taxonomy_gap | excluded",
+      "current_remote_status": "missing",
+      "remote_apply": false
+    }
+  ]
+}
