@@ -1,0 +1,391 @@
+{
+  "packet_type": "candidate_authored_projects_causal_review",
+  "schema_version": "1.0.0",
+  "mode": "withheld",
+  "remote_apply": false,
+  "content_read": false,
+  "counts": {
+    "items": 25,
+    "approved": 0,
+    "pending_review": 0,
+    "withheld": 25,
+    "score_eligible": 0
+  },
+  "items": [
+    {
+      "id": "camara:req-88-2023-2364330",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 1
+    },
+    {
+      "id": "camara:req-884-2020-2251186",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 2
+    },
+    {
+      "id": "camara:req-89-2023-2347318",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 3
+    },
+    {
+      "id": "camara:req-89-2023-2364332",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 4
+    },
+    {
+      "id": "camara:req-897-2025-2487419",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 5
+    },
+    {
+      "id": "camara:req-9-2021-2274715",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 6
+    },
+    {
+      "id": "camara:req-90-2024-2439328",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 7
+    },
+    {
+      "id": "camara:req-930-2021-2280237",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 8
+    },
+    {
+      "id": "camara:req-940-2022-2325454",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 9
+    },
+    {
+      "id": "camara:req-940-2023-2353849",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 10
+    },
+    {
+      "id": "camara:req-95-2025-2516636",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 11
+    },
+    {
+      "id": "camara:req-976-2024-2424835",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 12
+    },
+    {
+      "id": "camara:req-98-2021-2305660",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 13
+    },
+    {
+      "id": "camara:ric-1037-2023-2358257",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 14
+    },
+    {
+      "id": "camara:ric-1174-2020-2262807",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 15
+    },
+    {
+      "id": "camara:ric-1275-2021-2303862",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 16
+    },
+    {
+      "id": "camara:ric-1281-2020-2263769",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 17
+    },
+    {
+      "id": "camara:ric-1290-2024-2432179",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 18
+    },
+    {
+      "id": "camara:ric-1302-2020-2264299",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 19
+    },
+    {
+      "id": "camara:ric-134-2023-2348893",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 20
+    },
+    {
+      "id": "camara:ric-1341-2020-2264541",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 21
+    },
+    {
+      "id": "camara:ric-1384-2020-2264820",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 22
+    },
+    {
+      "id": "camara:ric-1402-2020-2264916",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 23
+    },
+    {
+      "id": "camara:ric-1572-2023-2366299",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 24
+    },
+    {
+      "id": "camara:ric-160-2021-2270787",
+      "decision": "withheld",
+      "score_eligible": false,
+      "reason": "Autoria, ementa e tramitação não provam posição legislativa, efeito causal ou score; falta evento/versão vinculante e voto nominal individual.",
+      "missing_sources": [
+        "versao_evento_vinculante",
+        "voto_nominal_individual"
+      ],
+      "content_read": false,
+      "remote_apply": false,
+      "source_manifest": "camara-authored-2851-2875-source-manifest.json",
+      "lane": "causal",
+      "order": 25
+    }
+  ]
+}
