@@ -10,6 +10,7 @@ const stateFile = resolve(stateDir, 'state.json');
 const args = process.argv.slice(2);
 const batch = args.find((arg) => arg.startsWith('--batch='))?.slice(8) ?? null;
 const processNext = args.includes('--process-next');
+const focus = args.find((arg) => arg.startsWith('--focus='))?.slice(8) ?? process.env.NO_STOP_FOCUS ?? 'all';
 const maxRetries = 3;
 const timeoutMs = 8 * 60 * 1000;
 let child = null;
@@ -31,13 +32,15 @@ state.resume_from = Object.entries(state.lanes).find(([, value]) => value.status
 writeState(state);
 
 const lanes = [
-  { name: 'official_reconnaissance', command: 'node', args: ['scripts/process-camara-authored-batch.mjs', ...(batch ? [`--start=${batch.split('-')[0]}`, `--limit=${Number(batch.split('-')[1]) - Number(batch.split('-')[0]) + 1}`] : [])], enabled: Boolean(processNext && batch) },
-  { name: 'candidate_reconciliation', command: 'node', args: ['scripts/continuous-progress-monitor.mjs'], enabled: true },
-  { name: 'editorial_causal', command: 'node', args: ['scripts/continuous-progress-monitor.mjs'], enabled: true },
-  { name: 'editorial_redteam', command: 'node', args: ['scripts/continuous-progress-monitor.mjs'], enabled: true },
-  { name: 'factual_apply', command: 'node', args: ['-e', "console.log(JSON.stringify({status:'gated',remote_apply:false,reason:'aplicação factual exige Auth/RPC e gate próprio'}))"], enabled: true },
-  { name: 'matrix_score', command: 'node', args: ['-e', "console.log(JSON.stringify({status:'gated',score_eligible:false,reason:'sem assessment/evento vinculante não há score'}))"], enabled: true },
-  { name: 'publication_verification', command: 'node', args: ['scripts/continuous-progress-monitor.mjs'], enabled: true },
+  { name: 'alrs_queue_regeneration', command: 'node', args: ['scripts/build-alrs-exclusive-editorial-lane.mjs'], enabled: focus === 'alrs-editorial' },
+  ...Array.from({ length: Number(process.env.NO_STOP_WORKERS ?? 4) }, (_, worker) => ({ name: `alrs_editorial_worker_${worker}`, command: 'node', args: ['scripts/run-alrs-editorial-triage-worker.mjs', `--worker=${worker}`, `--workers=${Number(process.env.NO_STOP_WORKERS ?? 4)}`], enabled: focus === 'alrs-editorial' })),
+  { name: 'official_reconnaissance', command: 'node', args: ['scripts/process-camara-authored-batch.mjs', ...(batch ? [`--start=${batch.split('-')[0]}`, `--limit=${Number(batch.split('-')[1]) - Number(batch.split('-')[0]) + 1}`] : [])], enabled: focus !== 'alrs-editorial' && Boolean(processNext && batch) },
+  { name: 'candidate_reconciliation', command: 'node', args: ['scripts/continuous-progress-monitor.mjs'], enabled: focus !== 'alrs-editorial' },
+  { name: 'editorial_causal', command: 'node', args: ['scripts/continuous-progress-monitor.mjs'], enabled: focus !== 'alrs-editorial' },
+  { name: 'editorial_redteam', command: 'node', args: ['scripts/continuous-progress-monitor.mjs'], enabled: focus !== 'alrs-editorial' },
+  { name: 'factual_apply', command: 'node', args: ['-e', "console.log(JSON.stringify({status:'gated',remote_apply:false,reason:'aplicação factual exige Auth/RPC e gate próprio'}))"], enabled: focus !== 'alrs-editorial' },
+  { name: 'matrix_score', command: 'node', args: ['-e', "console.log(JSON.stringify({status:'gated',score_eligible:false,reason:'sem assessment/evento vinculante não há score'}))"], enabled: focus !== 'alrs-editorial' },
+  { name: 'publication_verification', command: 'node', args: ['scripts/continuous-progress-monitor.mjs'], enabled: focus !== 'alrs-editorial' },
 ];
 
 function onSignal(signal) {
@@ -92,7 +95,18 @@ function runLane(lane) {
 const ordered = lanes.filter((lane) => lane.enabled);
 const resumeIndex = state.resume_from ? Math.max(0, ordered.findIndex((lane) => lane.name === state.resume_from)) : 0;
 let allOk = true;
-for (const lane of ordered.slice(resumeIndex)) {
+const remaining = ordered.slice(resumeIndex);
+for (let index = 0; index < remaining.length;) {
+  const lane = remaining[index];
+  if (lane.name.startsWith('alrs_editorial_worker_')) {
+    const workers = [];
+    while (index < remaining.length && remaining[index].name.startsWith('alrs_editorial_worker_')) workers.push(remaining[index++]);
+    currentLane = 'alrs_editorial_workers';
+    const results = await Promise.all(workers.map((workerLane) => runLane(workerLane)));
+    if (results.some((ok) => !ok)) { allOk = false; break; }
+    continue;
+  }
+  index += 1;
   currentLane = lane.name;
   const ok = await runLane(lane);
   if (!ok) { allOk = false; break; }

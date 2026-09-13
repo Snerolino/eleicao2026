@@ -97,6 +97,7 @@ for f in \
   scripts/orchestrator/no-stop-supervisor.sh \
   scripts/no-stop-supervisor.mjs \
   scripts/process-camara-authored-batch.mjs \
+  scripts/run-alrs-editorial-triage-worker.mjs \
   scripts/orchestrator/configure-antigravity-readonly.sh \
   supabase/migrations/20260810090000_create_legislative_core.sql \
   supabase/migrations/20260810090400_create_impact_rls_and_approval.sql; do
