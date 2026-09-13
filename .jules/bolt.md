@@ -7,3 +7,7 @@
 ## 2025-01-20 - [Regex Caching in O(N) Filters]
 **Learning:** Using an O(N) filtering mechanism with expensive Regex evaluations (e.g. `hasPreviousMandate` evaluating `MANDATE_KEYWORDS_REGEX` against multiple claims) severely blocks the UI during typing or filtering large sets. Repeated calls across component boundaries compound this cost unnecessarily.
 **Action:** Always memoize derived checks on immutable reference objects (like candidate data) that do expensive calculations (like Regex) using a `WeakMap`. This pattern upgrades the time complexity of the check from O(N * complexity) to O(1) for all subsequent reads and UI updates.
+
+## 2024-05-20 - [Hoisting Optimization Maps]
+**Learning:** When replacing an O(N) array `indexOf` lookup with an O(1) object map lookup for performance, ensure the object map is hoisted outside the React component. Defining the map inside the component's render function re-allocates the object on every render, which is slower and creates more garbage-collection overhead than instantiating a small array.
+**Action:** Always declare static lookup maps, regexes, and canonical arrays completely outside the React component definition to guarantee single-time allocation and truly optimize performance.
