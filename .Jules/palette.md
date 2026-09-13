@@ -5,3 +5,8 @@
 ## 2024-09-01 - [A11y ARIA Labels and Broken Tests]
 **Learning:** Adding descriptive `aria-label` attributes to previously plain text buttons (like `Ver candidatos`) can break existing UI tests if those tests relied on generic role/name queries that suddenly match multiple elements or stop matching due to new attributes.
 **Action:** When modifying accessible names (`aria-label`) in UI components, proactively search for and update corresponding assertions in the `src/components/__tests__` and `src/pages/__tests__` directories to prevent test regressions. Use specific Regexes (e.g., `/^Deputado Estadual .*$/i`) to target exact buttons instead of loose strings.
+## 2025-02-28 - Decorative Icons Accessibility
+**Learning:** Screen readers announce text-based visual icons like '✕', '★', and '☆' if they aren't hidden, which leads to confusing or redundant announcements, especially when the buttons already contain descriptive  attributes or text.
+## 2025-02-28 - Decorative Icons Accessibility
+**Learning:** Screen readers announce text-based visual icons like '✕', '★', and '☆' if they aren't hidden, which leads to confusing or redundant announcements, especially when the buttons already contain descriptive `aria-label` attributes or text.
+**Action:** Always wrap decorative text characters acting as icons within `<span aria-hidden="true">` to improve the screen reader experience.
