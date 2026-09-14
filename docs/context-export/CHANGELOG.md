@@ -1,5 +1,10 @@
 # Changelog do contexto exportado
 
+## 2026-09-13
+
+- Preparado o fluxo fail-closed de disposições ALRS em lotes canônicos de 25, com auditoria do universo, quatro workers read-only e manifesto/hash por lote.
+- Adicionado o contrato local de validação e a migration `20260913193000_harden_alrs_editorial_batch_apply.sql`, que ainda aguarda aplicação remota autorizada.
+
 ## 2026-09-06
 
 - Migration `20260906090000_alrs_event_identity.sql` aplicada no Supabase remoto: o RPC factual `import_alrs_nominal_votes(jsonb)` aceita `event_identity` e deriva `voting_events.external_id` por identidade do evento, preservando matérias ALRS distintas com mesma versão/data sem sobrescrever votos.

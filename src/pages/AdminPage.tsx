@@ -4,12 +4,17 @@ import type { User } from '@supabase/supabase-js';
 import { usePageMetadata } from '@/hooks/usePageMetadata';
 import { isSupabaseConfigured, supabase } from '@/lib/supabase';
 import { sanitizeUrl } from '@/utils/sanitizeUrl';
+import { validateEditorialDecisionEnvelope } from '@/domain/impact/editorialBatch';
 import p2EditorialPack from '../../data/legislative-import/alrs/p2-microbatch-2-editorial-review-pack.json';
 import p2EditorialPack4 from '../../data/legislative-import/alrs/p2-microbatch-4-editorial-review-pack.json';
 import p2EditorialPack5 from '../../data/legislative-import/alrs/p2-microbatch-5-editorial-review-pack.json';
 import p2ExternalEditorialDispositions from '../../data/legislative-import/alrs/p2-external-editorial-dispositions-15-v1.json';
-import editorialBatch001 from '../../data/legislative-import/alrs/impact-editorial-batch-001-v1.json';
-import editorialCarryForward from '../../data/legislative-import/alrs/impact-carry-forward-001-v1.json';
+import editorialBatchManifest from '../../data/legislative-import/alrs/editorial-batches/manifest-v1.json';
+
+const editorialBatchFiles = import.meta.glob('../../data/legislative-import/alrs/editorial-batches/alrs-editorial-*.json', {
+  eager: true,
+  import: 'default',
+}) as Record<string, unknown>;
 
 const adminOwner = 'admin@votopraquem.org';
 
@@ -80,7 +85,29 @@ type BatchDecision = {
   notes?: string;
   rationale?: string;
   disposition?: P2Disposition;
+  matrix?: { severity?: number; structural_type?: string };
+  assessments?: Array<{ group_slug?: string; impact_direction?: string; defending_vote?: string | null; confidence?: number; rationale?: string }>;
 };
+
+type BatchContext = {
+  batch_id: string;
+  batch_sha256: string;
+  items: Array<{
+    proposition_version_id: string;
+    review_key: string;
+    title?: string;
+    recommended_disposition?: P2Disposition | null;
+    rationale?: string | null;
+    recommended_rationale?: string | null;
+    disposition?: P2Disposition | null;
+    source_gate?: string;
+    official_event_type?: string;
+  }>;
+};
+
+const editorialBatchContexts = (editorialBatchManifest.batches ?? [])
+  .map((descriptor) => editorialBatchFiles[`../../data/legislative-import/alrs/editorial-batches/${descriptor.file}`])
+  .filter(Boolean) as BatchContext[];
 
 type LoadState = 'idle' | 'loading' | 'ready' | 'error';
 
@@ -108,7 +135,7 @@ export function AdminPage() {
   const [p2Completed, setP2Completed] = useState<Set<string>>(new Set());
   const [batchDecisions, setBatchDecisions] = useState<BatchDecision[] | null>(null);
   const [batchBusy, setBatchBusy] = useState(false);
-  const [batchContext, setBatchContext] = useState<{ batch_id: string; batch_sha256: string; items: Array<{ proposition_version_id: string; review_key: string; title?: string; recommended_disposition?: P2Disposition; rationale?: string; recommended_rationale?: string; disposition?: P2Disposition }> } | null>(null);
+  const [batchContext, setBatchContext] = useState<BatchContext | null>(null);
 
   usePageMetadata(
     'Administração — Portal Transparência Eleitoral RS',
@@ -436,15 +463,16 @@ export function AdminPage() {
     if (!file) return;
     try {
       const payload = JSON.parse(await file.text()) as { batch_id?: string; batch_sha256?: string; items?: BatchDecision[]; decisions?: BatchDecision[] };
-      const contexts = [editorialBatch001, editorialCarryForward, p2ExternalEditorialDispositions] as Array<{ batch_id: string; batch_sha256: string; items: Array<{ proposition_version_id: string; review_key: string; title?: string; recommended_disposition?: P2Disposition; rationale?: string; recommended_rationale?: string; disposition?: P2Disposition }> }>;
+      const contexts = [...editorialBatchContexts, p2ExternalEditorialDispositions] as BatchContext[];
       const context = contexts.find((candidate) => candidate.batch_id === payload.batch_id && candidate.batch_sha256 === payload.batch_sha256);
       const items = payload.items ?? payload.decisions ?? [];
-      const expectedItems = context?.items ?? [];
-      const valid = Boolean(context) && items.length === expectedItems.length && items.every((item) => expectedItems.some((expected) => expected.proposition_version_id === item.proposition_version_id && expected.review_key === item.review_key) && ['approved', 'needs_changes'].includes(item.decision) && (item.decision === 'approved' || (Boolean(item.disposition) && String(item.notes ?? '').trim().length >= 20)));
-      if (!valid || !context) {
+      const validation = context
+        ? await validateEditorialDecisionEnvelope(context, { ...payload, items })
+        : { valid: false, errors: ['batch_context_missing'], rows: items };
+      if (!validation.valid || !context) {
         setBatchDecisions(null);
         setBatchContext(null);
-        setMessage('Lote recusado: batch_id, batch_sha256, IDs ou review_keys não correspondem exatamente a um pacote atual.');
+        setMessage(`Lote recusado: ${validation.errors.join(', ')}.`);
         return;
       }
       setBatchContext(context);
@@ -462,55 +490,68 @@ export function AdminPage() {
     setBatchBusy(true);
     setMessage('Lendo disposições existentes antes do apply…');
     const ids = batchDecisions.map((decision) => decision.proposition_version_id);
-    const { data: existingRows, error: existingError } = await (supabase as any)
-      .from('impact_editorial_dispositions')
-      .select('proposition_version_id, review_key, disposition, rationale, status')
-      .in('proposition_version_id', ids);
-    if (existingError) {
+    const rpcItems = batchDecisions.map((decision) => {
+      const item = batchContext.items.find((candidate) => candidate.proposition_version_id === decision.proposition_version_id);
+      return {
+        proposition_version_id: decision.proposition_version_id,
+        review_key: decision.review_key,
+        title: item?.title ?? decision.proposition_version_id,
+        disposition: decision.disposition,
+        rationale: decision.rationale,
+        notes: decision.notes,
+        decision: decision.decision,
+        status: decision.decision === 'needs_changes' ? 'needs_changes' : 'approved',
+        event_type: item?.official_event_type,
+      };
+    });
+    if (rpcItems.some((item) => !item.disposition || String(item.decision === 'needs_changes' ? item.notes : item.rationale ?? '').trim().length < 20)) {
       setBatchBusy(false);
-      setMessage('Read-back prévio falhou; nenhuma disposição foi aplicada.');
+      setMessage('Lote recusado: cada decisão precisa de disposição explícita e justificativa de pelo menos 20 caracteres.');
       return;
     }
-    const existingById = new Map((existingRows ?? []).map((row: { proposition_version_id: string }) => [row.proposition_version_id, row]));
-    const results = await Promise.all(batchDecisions.map(async (decision) => {
-      const item = batchContext.items.find((candidate) => candidate.proposition_version_id === decision.proposition_version_id);
-      if (!item) return { ok: false, id: decision.proposition_version_id };
-      const disposition = decision.disposition ?? item.disposition ?? (decision.decision === 'needs_changes' && /taxonomy_gap|lacuna de taxonomia/i.test(decision.notes ?? '') ? 'taxonomy_gap' : decision.decision === 'needs_changes' && /no_direct_population_group|no destinatário populacional direto|sem destinatário populacional direto/i.test(decision.notes ?? '') ? 'no_direct_population_group' : item.recommended_disposition);
-      const rationale = decision.rationale ?? decision.notes ?? item.rationale ?? item.recommended_rationale ?? '';
-      const existing = existingById.get(item.proposition_version_id) as { review_key?: string; disposition?: string; rationale?: string; status?: string } | undefined;
-      if (existing?.review_key === decision.review_key && existing.disposition === disposition && existing.rationale === rationale && existing.status === 'approved') {
-        return { ok: true, id: decision.proposition_version_id, skipped: true };
-      }
-      const rpcName = decision.decision === 'needs_changes' ? 'record_impact_editorial_exception' : 'record_impact_editorial_disposition';
-      const { error } = await (supabase as any).rpc(rpcName, {
-        p_proposition_version_id: item.proposition_version_id,
-        p_review_key: decision.review_key,
-        p_title: item.title ?? item.proposition_version_id,
-        p_disposition: disposition,
-        p_rationale: rationale,
-        p_notes: decision.notes,
-      });
-      return { ok: !error, id: decision.proposition_version_id, skipped: false };
-    }));
-    const applied = results.filter((result) => result.ok);
-    setMessage('Read-back pós-apply e segunda execução idempotente…');
+    const { data: firstApply, error: applyError } = await (supabase as any).rpc('record_impact_editorial_batch', {
+      p_batch_id: batchContext.batch_id,
+      p_batch_sha256: batchContext.batch_sha256,
+      p_items: rpcItems,
+    });
+    if (applyError) {
+      setBatchBusy(false);
+      setMessage(`Apply transacional falhou; nenhuma disposição foi confirmada: ${applyError.message}`);
+      return;
+    }
+    setMessage('Read-back pós-apply…');
     const { data: readBackRows, error: readBackError } = await (supabase as any)
       .from('impact_editorial_dispositions')
-      .select('proposition_version_id, review_key, disposition, rationale, status')
+      .select('proposition_version_id, review_key, disposition, rationale, status, batch_id, batch_sha256')
       .in('proposition_version_id', ids);
     const readBackById = new Map((readBackRows ?? []).map((row: { proposition_version_id: string }) => [row.proposition_version_id, row]));
     const readBackOk = !readBackError && batchDecisions.every((decision) => {
-      const row = readBackById.get(decision.proposition_version_id) as { review_key?: string; status?: string } | undefined;
-      return row?.review_key === decision.review_key && row.status === 'approved';
+      const row = readBackById.get(decision.proposition_version_id) as { review_key?: string; disposition?: string; rationale?: string; status?: string; batch_id?: string; batch_sha256?: string } | undefined;
+      return row?.review_key === decision.review_key
+        && row.disposition === decision.disposition
+        && row.rationale === (decision.decision === 'needs_changes' ? decision.notes : decision.rationale)
+        && row.status === (decision.decision === 'needs_changes' ? 'needs_changes' : 'approved')
+        && row.batch_id === batchContext.batch_id
+        && row.batch_sha256 === batchContext.batch_sha256;
     });
-    const secondRunRpcCalls = readBackOk
-      ? 0
-      : batchDecisions.length - (readBackRows?.length ?? 0);
-    setP2Completed((current) => new Set([...current, ...applied.map((item) => item.id)]));
+    if (!readBackOk) {
+      setBatchBusy(false);
+      setMessage(`Apply recusado no read-back: ${readBackById.size}/${batchDecisions.length} linhas exatas. Nenhuma matriz foi publicada.`);
+      return;
+    }
+    const { data: secondApply, error: secondError } = await (supabase as any).rpc('record_impact_editorial_batch', {
+      p_batch_id: batchContext.batch_id,
+      p_batch_sha256: batchContext.batch_sha256,
+      p_items: rpcItems,
+    });
+    if (secondError || (secondApply?.conflicts ?? 0) > 0) {
+      setBatchBusy(false);
+      setMessage('A segunda execução não comprovou idempotência; o lote permanece sob revisão.');
+      return;
+    }
+    setP2Completed((current) => new Set([...current, ...ids]));
     setBatchBusy(false);
-    setMessage(readBackOk
-      ? `Lote verificado: ${readBackById.size}/${batchDecisions.length} read-back exato; segunda execução idempotente com ${secondRunRpcCalls} novas chamadas RPC.`
-      : `Apply parcial: ${applied.length}/${results.length}; read-back falhou ou divergiu. Nenhuma publicação de matriz foi feita.`);
+    setMessage(`Lote verificado: ${readBackById.size}/${batchDecisions.length} read-back exato; primeira execução ${firstApply?.inserted ?? 0} novas e segunda execução ${secondApply?.already_present ?? 0} já presentes.`);
   }
 
   const pendingP2Items = p2EditorialItems.filter((item) => !p2Completed.has(item.proposition_version_id));
@@ -693,7 +734,7 @@ export function AdminPage() {
             <h2 className="text-2xl">Aplicação editorial em lote</h2>
             <p className="mt-2 text-sm text-[var(--color-muted-ink)]">Carregue o JSON revisado externamente. O portal valida batch_id, batch_sha256 e review_key antes de chamar as RPCs autenticadas. Apenas decisões approved são aplicadas; needs_changes permanece como exceção.</p>
             <label className="mt-4 grid gap-2 text-sm">
-              <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">JSON de decisões do lote {editorialBatch001.batch_id}</span>
+              <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">JSON de decisões de um dos {editorialBatchManifest.batches?.length ?? 0} lotes congelados</span>
               <input type="file" accept="application/json,.json" onChange={(event) => void loadBatchDecisions(event)} className="block w-full text-sm" />
             </label>
             {batchDecisions ? <div className="mt-4 flex flex-wrap items-center gap-3"><span className="font-mono text-xs uppercase tracking-wider text-green-800">{batchDecisions.length} decisões validadas</span><button type="button" disabled={batchBusy} onClick={() => void applyBatchDecisions()} className="rounded-sm border border-green-700 px-3 py-2 font-mono text-xs uppercase tracking-wider text-green-800 disabled:opacity-60">{batchBusy ? 'Aplicando…' : 'Aplicar approved do lote via RPC'}</button></div> : null}
