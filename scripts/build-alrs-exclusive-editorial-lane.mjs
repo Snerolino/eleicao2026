@@ -6,10 +6,13 @@ const root = resolve(import.meta.dirname, '..');
 const readJson = async (relative) => JSON.parse(await readFile(resolve(root, relative), 'utf8'));
 const queue = await readJson('data/legislative-import/alrs/impact-review-queue-v1.json');
 const collisionAudit = await readJson('data/legislative-import/alrs/version-key-collision-audit-v1.json');
+const resolvedCatalog = await readJson('data/legislative-import/alrs/impact-resolved-version-catalog-v1.json');
 const collisionKeys = new Set((collisionAudit.collisions ?? []).map((item) => item.version_key));
+const resolvedIds = new Set([...(resolvedCatalog.resolved_version_ids ?? []), ...(resolvedCatalog.existing_matrix_version_ids ?? [])]);
 const pending = (queue.items ?? [])
   .filter((item) => item.editorial_disposition === 'pending_review')
   .filter((item) => !collisionKeys.has(item.version_key))
+  .filter((item) => !resolvedIds.has(item.proposition_version_id))
   .map((item) => ({
     proposition_version_id: item.proposition_version_id,
     review_key: item.review_key,
@@ -57,6 +60,11 @@ const output = {
     collision_keys: collisionKeys.size,
     excluded_items: (queue.items ?? []).filter((item) => collisionKeys.has(item.version_key)).length,
     resolution_pack: 'data/legislative-import/alrs/version-key-collision-resolution-pack-v1.json',
+  },
+  resolved_exclusion: {
+    resolved_ids: resolvedIds.size,
+    excluded_items: (queue.items ?? []).filter((item) => resolvedIds.has(item.proposition_version_id)).length,
+    catalog: 'data/legislative-import/alrs/impact-resolved-version-catalog-v1.json',
   },
   totals: {
     input_versions: (queue.items ?? []).length,

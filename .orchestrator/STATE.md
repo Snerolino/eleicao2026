@@ -5762,3 +5762,12 @@ Sem autorização humana explícita própria, não fazer:
 - Produção permanece verificadamente no último commit funcional `d9d197aff7fadc6a212f4afd66c40fc0be2ed59e`, HTTP 200 e snapshot `row_count=1003`; não há alteração funcional pendente.
 - Bloqueio limitado ao deploy de documentação; não afeta a fila editorial `withheld` nem autoriza qualquer escrita factual.
 - Próximo chunk local continua `2676–2700`, mantendo fail-closed.
+## Preparação fail-closed das disposições ALRS — 2026-09-13
+
+- Auditoria local da fila: `1261` pendentes no catálogo; `141` prontos para disposição; `62` bloqueados por colisão de `version_key`; `1058` já resolvidos por catálogo/matriz; `0` não classificados e `0` IDs duplicados.
+- Lane exclusiva regenerada com `141` itens em `6` lotes canônicos; quatro workers read-only cobrem `50+41+25+25=141` itens sem sobreposição.
+- Manifestos e batches estão em `data/legislative-import/alrs/editorial-batches/`, todos `remote_apply=false`/`public_approval=false`.
+- Contrato local de hash/IDs/disposição/rationale e migration `20260913193000_harden_alrs_editorial_batch_apply.sql` preparados; migration/RPC ainda não aplicados remotamente.
+- `/admin` carrega os lotes canônicos, valida hash/IDs/decisões no browser e aponta para apply transacional autenticado; nenhuma decisão humana foi criada por esta preparação.
+- Próximo gate: autorização explícita para aplicar a migration no Supabase remoto; depois autenticar editor/admin, testar uma wave pequena e validar read-back/idempotência.
+- Revisão P2 recebida em 2026-09-13 incorporada localmente: 15 itens agora `4 assess`, `9 no_direct_population_group`, `2 taxonomy_gap`, `0 excluded`; `PL-350-2011` mudou para `assess/populacao_carceraria/unclear` e `PL-434-2023` para `taxonomy_gap`. Como os 15 aparecem no catálogo local como resolvidos, não reabrir nem sobrescrever remotamente sem um RPC/protocolo explícito de revisão de decisão.

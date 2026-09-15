@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { readFileSync, writeFileSync } from 'node:fs';
-import { createHash } from 'node:crypto';
 import { resolve } from 'node:path';
+import { validateDecisionEnvelope } from './lib/editorial-batch-contract.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const args = process.argv.slice(2);
@@ -16,38 +16,20 @@ if (!decisionsFile) {
 
 const batch = JSON.parse(readFileSync(resolve(root, batchFile), 'utf8'));
 const decisions = JSON.parse(readFileSync(resolve(root, decisionsFile), 'utf8'));
-const allowed = new Set(['approved', 'needs_changes']);
-const batchIds = new Set((batch.items ?? []).map((item) => item.proposition_version_id));
-const rows = decisions.items ?? decisions.decisions ?? [];
-const errors = [];
-const seen = new Set();
-const expectedBatchSha = createHash('sha256').update(JSON.stringify({ batch_id: batch.batch_id, items: batch.items })).digest('hex');
-if (decisions.batch_id !== batch.batch_id) errors.push('batch_id_mismatch');
-if (decisions.batch_sha256 !== expectedBatchSha) errors.push('batch_sha256_mismatch');
-
-for (const row of rows) {
-  const id = row.proposition_version_id;
-  if (!batchIds.has(id)) errors.push(`${id ?? '<missing>'}:unknown_proposition_version`);
-  if (seen.has(id)) errors.push(`${id}:duplicate_decision`);
-  seen.add(id);
-  if (!allowed.has(row.decision)) errors.push(`${id}:invalid_decision`);
-  if (row.decision === 'needs_changes' && (!row.disposition || String(row.notes ?? '').trim().length < 20)) errors.push(`${id}:needs_changes_requires_disposition_and_notes`);
-  const expected = (batch.items ?? []).find((item) => item.proposition_version_id === id);
-  if (!expected || row.review_key !== expected.review_key) errors.push(`${id}:review_key_mismatch`);
-}
-for (const id of batchIds) if (!seen.has(id)) errors.push(`${id}:missing_decision`);
+const validation = validateDecisionEnvelope(batch, decisions);
+const rows = validation.rows;
 
 const result = {
   schema_version: '1.0.0',
   packet_type: 'alrs_editorial_batch_decision_validation',
   batch_packet_type: batch.packet_type,
   batch_id: batch.batch_id,
-  batch_sha256: expectedBatchSha,
+  batch_sha256: validation.expected_hash,
   remote_apply: false,
-  valid: errors.length === 0,
-  totals: { expected: batchIds.size, received: rows.length, approved: rows.filter((row) => row.decision === 'approved').length, needs_changes: rows.filter((row) => row.decision === 'needs_changes').length, errors: errors.length },
-  errors,
+  valid: validation.valid,
+  totals: { expected: (batch.items ?? []).length, received: rows.length, approved: validation.approved, needs_changes: validation.needs_changes, errors: validation.errors.length },
+  errors: validation.errors,
 };
 writeFileSync(resolve(root, outputFile), `${JSON.stringify(result, null, 2)}\n`);
 console.log(JSON.stringify(result));
-if (errors.length) process.exitCode = 1;
+if (validation.errors.length) process.exitCode = 1;

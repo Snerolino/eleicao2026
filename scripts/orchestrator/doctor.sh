@@ -98,9 +98,12 @@ for f in \
   scripts/no-stop-supervisor.mjs \
   scripts/process-camara-authored-batch.mjs \
   scripts/run-alrs-editorial-triage-worker.mjs \
+  scripts/audit-alrs-editorial-universe.mjs \
+  scripts/build-alrs-editorial-batches.mjs \
   scripts/orchestrator/configure-antigravity-readonly.sh \
   supabase/migrations/20260810090000_create_legislative_core.sql \
-  supabase/migrations/20260810090400_create_impact_rls_and_approval.sql; do
+  supabase/migrations/20260810090400_create_impact_rls_and_approval.sql \
+  supabase/migrations/20260913193000_harden_alrs_editorial_batch_apply.sql; do
   [[ -f "$f" ]] && ok "$f presente" || fail "$f ausente"
 done
 
