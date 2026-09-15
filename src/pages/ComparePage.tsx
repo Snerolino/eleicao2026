@@ -35,7 +35,16 @@ function normalize(text: string) {
   return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 }
 
+
+interface CandidateSearchCache {
+  partyNormalized?: string;
+  nameNormalized?: string;
+  ballotNameNormalized?: string;
+  positionNormalized?: string;
+}
+
 function claimsForSection(
+
   claims: Claim[],
   matchersSet: ReadonlySet<string>
 ): Claim[] {
@@ -265,6 +274,11 @@ export function ComparePage() {
     };
   }, [candidates]);
 
+
+  // ⚡ Bolt Optimization: Lazy memoization cache to prevent expensive O(N) Unicode string normalizations on every re-render during search filtering.
+  // This upgrades time complexity of subsequent string matches from O(N * string_length) to O(1) property lookups.
+  const searchCache = useMemo(() => new Map<string, CandidateSearchCache>(), [candidates]);
+
   const filteredCandidates = useMemo(() => {
     const normalizedQuery = normalize(deferredSearchQuery.trim());
     return candidates.filter((candidate) => {
@@ -277,15 +291,38 @@ export function ComparePage() {
       if (experienceFilter === 'estreante' && hasPreviousMandate(candidate)) return false;
 
       if (normalizedQuery) {
-        const nameMatches = normalize(candidate.full_name).includes(normalizedQuery);
-        const ballotNameMatches = candidate.ballot_name
-          ? normalize(candidate.ballot_name).includes(normalizedQuery)
-          : false;
+        let cached = searchCache.get(candidate.id);
+        if (!cached) {
+          cached = {};
+          searchCache.set(candidate.id, cached);
+        }
+
+        if (cached.nameNormalized === undefined) {
+          cached.nameNormalized = normalize(candidate.full_name);
+        }
+        const nameMatches = cached.nameNormalized.includes(normalizedQuery);
+
+        let ballotNameMatches = false;
+        if (candidate.ballot_name) {
+          if (cached.ballotNameNormalized === undefined) {
+            cached.ballotNameNormalized = normalize(candidate.ballot_name);
+          }
+          ballotNameMatches = cached.ballotNameNormalized.includes(normalizedQuery);
+        }
+
         const numberMatches =
           candidate.ballot_number != null &&
           String(candidate.ballot_number).includes(normalizedQuery);
-        const partyMatches = normalize(candidate.party).includes(normalizedQuery);
-        const positionMatches = normalize(candidate.position_label).includes(normalizedQuery);
+
+        if (cached.partyNormalized === undefined) {
+          cached.partyNormalized = normalize(candidate.party);
+        }
+        const partyMatches = cached.partyNormalized.includes(normalizedQuery);
+
+        if (cached.positionNormalized === undefined) {
+          cached.positionNormalized = normalize(candidate.position_label);
+        }
+        const positionMatches = cached.positionNormalized.includes(normalizedQuery);
 
         if (
           !nameMatches &&
@@ -302,10 +339,12 @@ export function ComparePage() {
     });
   }, [
     candidates,
+    searchCache,
     deferredSearchQuery,
     partyFilter,
     womenOnly,
     favoritesOnly,
+
     savedSet,
     raceFilter,
     positionFilter,

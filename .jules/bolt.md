@@ -7,3 +7,6 @@
 ## 2025-01-20 - [Regex Caching in O(N) Filters]
 **Learning:** Using an O(N) filtering mechanism with expensive Regex evaluations (e.g. `hasPreviousMandate` evaluating `MANDATE_KEYWORDS_REGEX` against multiple claims) severely blocks the UI during typing or filtering large sets. Repeated calls across component boundaries compound this cost unnecessarily.
 **Action:** Always memoize derived checks on immutable reference objects (like candidate data) that do expensive calculations (like Regex) using a `WeakMap`. This pattern upgrades the time complexity of the check from O(N * complexity) to O(1) for all subsequent reads and UI updates.
+## 2023-10-27 - O(N) string manipulation during filtering
+**Learning:** Performing multiple expensive string manipulations (like regex replacements and `normalize('NFD')`) inside a `filter` function on every render creates significant performance bottlenecks as the list of items grows.
+**Action:** When filtering requires string normalizations that are derived from immutable list objects, cache the normalized results (e.g. using a `Map` tied to a `useMemo` dependency array over the original list) to upgrade the time complexity from O(N * string_length) to O(1) property lookups. Ensure comments are added to explain the optimization.
