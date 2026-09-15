@@ -78,6 +78,25 @@ function reviewInsertQuery() {
   };
 }
 
+function dispositionQuery() {
+  return {
+    data: [],
+    error: null,
+    select: vi.fn().mockReturnThis(),
+    eq: vi.fn().mockReturnThis(),
+    maybeSingle: vi.fn().mockResolvedValue({
+      data: {
+        proposition_version_id: 'ebc01302-3211-487b-b1bb-6d515936b2e0',
+        review_key: 'sha256:1e42772d23c2ec8019a4eb13504373b1e6d0e02c72db46f7ceda0d635bf3cbc9#ebc01302-3211-487b-b1bb-6d515936b2e0',
+        disposition: 'assess',
+        rationale: 'Justificativa editorial validada para confirmar o envio.',
+        status: 'approved',
+      },
+      error: null,
+    }),
+  };
+}
+
 function renderAdmin() {
   return render(
     <MemoryRouter>
@@ -99,6 +118,7 @@ describe('AdminPage', () => {
       if (table === 'editor_roles') return editorRoleQuery();
       if (table === 'claims') return pendingClaimsQuery();
       if (table === 'editorial_reviews') return reviewInsertQuery();
+      if (table === 'impact_editorial_dispositions') return dispositionQuery();
       throw new Error(`Tabela inesperada: ${table}`);
     });
   });
@@ -166,6 +186,31 @@ describe('AdminPage', () => {
       expect(screen.getByText(/nenhuma claim em/i)).toBeInTheDocument();
       expect(screen.queryByRole('button', { name: /^rejeitar$/i })).not.toBeInTheDocument();
       expect(screen.getByText(/claim arquivada como rejeitada/i)).toBeInTheDocument();
+    });
+  });
+
+  it('confirma disposição ALRS somente depois do read-back exato', async () => {
+    mocks.from.mockImplementation((table: string) => {
+      if (table === 'editor_roles') return editorRoleQuery();
+      if (table === 'claims') return pendingClaimsQuery();
+      if (table === 'impact_editorial_dispositions') return dispositionQuery();
+      if (table === 'editorial_reviews') return reviewInsertQuery();
+      throw new Error(`Tabela inesperada: ${table}`);
+    });
+
+    renderAdmin();
+    fireEvent.change(await screen.findByLabelText(/e-mail/i), { target: { value: 'admin@votopraquem.org' } });
+    fireEvent.change(screen.getByLabelText(/senha/i), { target: { value: 'senha-local' } });
+    fireEvent.click(screen.getByRole('button', { name: /entrar/i }));
+
+    fireEvent.change((await screen.findAllByLabelText(/disposição obrigatória/i))[0], { target: { value: 'assess' } });
+    fireEvent.change(screen.getAllByLabelText(/justificativa.*mínimo 20/i)[0], { target: { value: 'Justificativa editorial validada para confirmar o envio.' } });
+    fireEvent.click(screen.getAllByRole('button', { name: /enviar e confirmar disposição/i })[0]);
+
+    await waitFor(() => {
+      expect(mocks.rpc).toHaveBeenCalledWith('record_impact_editorial_disposition', expect.objectContaining({ p_disposition: 'assess' }));
+      expect(screen.getByText(/disposição enviada com sucesso/i)).toBeInTheDocument();
+      expect(screen.getByText(/confirmado no supabase por read-back exato/i)).toBeInTheDocument();
     });
   });
 

@@ -110,6 +110,7 @@ const editorialBatchContexts = (editorialBatchManifest.batches ?? [])
   .filter(Boolean) as BatchContext[];
 
 type LoadState = 'idle' | 'loading' | 'ready' | 'error';
+type OperationFeedback = { kind: 'success' | 'error'; title: string; detail: string };
 
 function formatCategory(category: string) {
   return category.replace(/_/g, ' ');
@@ -133,9 +134,12 @@ export function AdminPage() {
   const [p2Decisions, setP2Decisions] = useState<Record<string, P2Disposition>>({});
   const [p2Notes, setP2Notes] = useState<Record<string, string>>({});
   const [p2Completed, setP2Completed] = useState<Set<string>>(new Set());
+  const [busyP2Id, setBusyP2Id] = useState<string | null>(null);
+  const [showReviewedP2, setShowReviewedP2] = useState(false);
   const [batchDecisions, setBatchDecisions] = useState<BatchDecision[] | null>(null);
   const [batchBusy, setBatchBusy] = useState(false);
   const [batchContext, setBatchContext] = useState<BatchContext | null>(null);
+  const [operationFeedback, setOperationFeedback] = useState<OperationFeedback | null>(null);
 
   usePageMetadata(
     'Administração — Portal Transparência Eleitoral RS',
@@ -439,9 +443,12 @@ export function AdminPage() {
     const disposition = p2Decisions[item.proposition_version_id];
     const rationale = p2Notes[item.proposition_version_id]?.trim();
     if (!disposition || !rationale || rationale.length < 20) {
-      setMessage('Escolha uma disposição e registre uma justificativa de pelo menos 20 caracteres.');
+      setOperationFeedback({ kind: 'error', title: 'Falta completar a decisão', detail: 'Escolha uma disposição e registre uma justificativa de pelo menos 20 caracteres.' });
       return;
     }
+    setBusyP2Id(item.proposition_version_id);
+    setMessage(null);
+    setOperationFeedback(null);
     const { error } = await (supabase as any).rpc('record_impact_editorial_disposition', {
       p_proposition_version_id: item.proposition_version_id,
       p_review_key: item.review_key,
@@ -451,11 +458,29 @@ export function AdminPage() {
     });
     if (error) {
       console.error(error);
-      setMessage('Disposição P2 não registrada.');
+      setBusyP2Id(null);
+      setOperationFeedback({ kind: 'error', title: 'A disposição não foi registrada', detail: 'A operação foi recusada. O item continua na fila.' });
+      return;
+    }
+    const { data: saved, error: readBackError } = await (supabase as any)
+      .from('impact_editorial_dispositions')
+      .select('proposition_version_id, review_key, disposition, rationale, status')
+      .eq('proposition_version_id', item.proposition_version_id)
+      .maybeSingle();
+    const confirmed = !readBackError
+      && saved?.proposition_version_id === item.proposition_version_id
+      && saved?.review_key === item.review_key
+      && saved?.disposition === disposition
+      && saved?.rationale === rationale
+      && saved?.status === 'approved';
+    if (!confirmed) {
+      setBusyP2Id(null);
+      setOperationFeedback({ kind: 'error', title: 'Enviado, mas não confirmado', detail: 'O read-back remoto divergiu. O item continua pendente para evitar uma falsa confirmação.' });
       return;
     }
     setP2Completed((current) => new Set(current).add(item.proposition_version_id));
-    setMessage(`Disposição registrada para ${item.official_match_key}.`);
+    setBusyP2Id(null);
+    setOperationFeedback({ kind: 'success', title: 'Disposição enviada com sucesso', detail: `${item.official_match_key} confirmado no Supabase por read-back exato.` });
   }
 
   async function loadBatchDecisions(event: FormEvent<HTMLInputElement>) {
@@ -488,6 +513,7 @@ export function AdminPage() {
   async function applyBatchDecisions() {
     if (!supabase || !batchDecisions || !batchContext) return;
     setBatchBusy(true);
+    setOperationFeedback(null);
     setMessage('Lendo disposições existentes antes do apply…');
     const ids = batchDecisions.map((decision) => decision.proposition_version_id);
     const rpcItems = batchDecisions.map((decision) => {
@@ -516,7 +542,7 @@ export function AdminPage() {
     });
     if (applyError) {
       setBatchBusy(false);
-      setMessage(`Apply transacional falhou; nenhuma disposição foi confirmada: ${applyError.message}`);
+      setOperationFeedback({ kind: 'error', title: 'Lote não aplicado', detail: `A transação foi recusada; nenhum item foi confirmado. ${applyError.message}` });
       return;
     }
     setMessage('Read-back pós-apply…');
@@ -536,7 +562,7 @@ export function AdminPage() {
     });
     if (!readBackOk) {
       setBatchBusy(false);
-      setMessage(`Apply recusado no read-back: ${readBackById.size}/${batchDecisions.length} linhas exatas. Nenhuma matriz foi publicada.`);
+      setOperationFeedback({ kind: 'error', title: 'Lote enviado, mas não confirmado', detail: `${readBackById.size}/${batchDecisions.length} linhas tiveram read-back exato. Nenhuma matriz foi publicada.` });
       return;
     }
     const { data: secondApply, error: secondError } = await (supabase as any).rpc('record_impact_editorial_batch', {
@@ -546,17 +572,17 @@ export function AdminPage() {
     });
     if (secondError || (secondApply?.conflicts ?? 0) > 0) {
       setBatchBusy(false);
-      setMessage('A segunda execução não comprovou idempotência; o lote permanece sob revisão.');
+      setOperationFeedback({ kind: 'error', title: 'Idempotência não confirmada', detail: 'O lote permanece sob revisão e não foi marcado como concluído.' });
       return;
     }
     setP2Completed((current) => new Set([...current, ...ids]));
     setBatchBusy(false);
-    setMessage(`Lote verificado: ${readBackById.size}/${batchDecisions.length} read-back exato; primeira execução ${firstApply?.inserted ?? 0} novas e segunda execução ${secondApply?.already_present ?? 0} já presentes.`);
+    setOperationFeedback({ kind: 'success', title: 'Lote enviado e confirmado', detail: `${readBackById.size}/${batchDecisions.length} itens confirmados. Primeira execução: ${firstApply?.inserted ?? 0} novas; segunda execução: ${secondApply?.already_present ?? 0} já presentes.` });
   }
 
   const pendingP2Items = p2EditorialItems.filter((item) => !p2Completed.has(item.proposition_version_id));
   const reviewedP2Items = p2EditorialItems.filter((item) => p2Completed.has(item.proposition_version_id));
-  const sortedP2Items = [...pendingP2Items, ...reviewedP2Items];
+  const sortedP2Items = showReviewedP2 ? [...pendingP2Items, ...reviewedP2Items] : pendingP2Items;
 
   return (
     <main id="main-content" className="mx-auto max-w-6xl px-4 py-8">
@@ -627,6 +653,22 @@ export function AdminPage() {
         </p>
       ) : null}
 
+      {operationFeedback ? (
+        <section
+          className={`mt-6 rounded-md border px-5 py-4 ${operationFeedback.kind === 'success' ? 'border-green-700 bg-green-50 text-green-950' : 'border-red-700 bg-red-50 text-red-950'}`}
+          role={operationFeedback.kind === 'success' ? 'status' : 'alert'}
+          aria-live="polite"
+        >
+          <div className="flex items-start gap-3">
+            <span aria-hidden="true" className="mt-0.5 text-lg font-bold">{operationFeedback.kind === 'success' ? '✓' : '!'}</span>
+            <div>
+              <h2 className="font-semibold">{operationFeedback.title}</h2>
+              <p className="mt-1 text-sm leading-relaxed">{operationFeedback.detail}</p>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       {user && role ? (
         <section className="mt-6 rounded-md border border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
@@ -634,9 +676,9 @@ export function AdminPage() {
               <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-muted-ink)]">
                 Logado como {role}
               </p>
-              <h2 className="mt-2 text-2xl">Claims aguardando revisão</h2>
+              <h2 className="mt-2 text-2xl">Claims pendentes</h2>
               <p className="mt-2 text-sm text-[var(--color-muted-ink)]">
-                Verifique fonte e conteúdo antes de aprovar. Aprovação publica via RPC transacional.
+                Trabalhe na ordem: disposições ALRS, matrizes pendentes e depois claims. Cada ação confirma o resultado no servidor antes de retirar o item da fila.
               </p>
             </div>
             <button
@@ -647,6 +689,15 @@ export function AdminPage() {
               Sair
             </button>
           </div>
+
+          <section className="mt-6 rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper-muted)] p-4" aria-label="Como usar a fila editorial">
+            <h2 className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">Como usar a fila</h2>
+            <ol className="mt-3 grid gap-2 text-sm md:grid-cols-3">
+              <li><strong>1. Disposição</strong><br /><span className="text-[var(--color-muted-ink)]">Escolha o destino da matéria e justifique com a fonte.</span></li>
+              <li><strong>2. Confirmação</strong><br /><span className="text-[var(--color-muted-ink)]">Só considere concluído quando aparecer “enviada e confirmada”.</span></li>
+              <li><strong>3. Assessment</strong><br /><span className="text-[var(--color-muted-ink)]">`assess` não publica score; abre a próxima revisão.</span></li>
+            </ol>
+          </section>
 
           {status === 'loading' ? <p className="mt-4">Carregando fila editorial…</p> : null}
 
@@ -743,8 +794,22 @@ export function AdminPage() {
           <section className="mt-8 border-t border-[var(--color-border-editorial)] pt-6" aria-label="Lote P2 aguardando disposição editorial">
             <h2 className="text-2xl">Lote P2 — disposição editorial</h2>
             <p className="mt-2 text-sm text-[var(--color-muted-ink)]">
-              Quinze versões ALRS têm fonte oficial preservada e aguardam decisão humana. A decisão apenas registra a triagem; nenhum voto ou matriz é publicado por esta fila.
+              Registre uma disposição por versão com base na fonte. Isso encaminha a matéria para assessment ou encerra a triagem; não publica voto, matriz ou score.
             </p>
+            <div className="mt-4 flex flex-wrap items-center gap-3 rounded-sm bg-[var(--color-paper-muted)] px-4 py-3 text-sm">
+              <strong>{pendingP2Items.length} pendentes</strong>
+              <span className="text-[var(--color-muted-ink)]">{reviewedP2Items.length} confirmados nesta sessão</span>
+              {reviewedP2Items.length > 0 ? (
+                <button
+                  type="button"
+                  aria-expanded={showReviewedP2}
+                  onClick={() => setShowReviewedP2((current) => !current)}
+                  className="ml-auto rounded-sm border border-[var(--color-border-editorial)] px-3 py-2 font-mono text-xs uppercase tracking-wider"
+                >
+                  {showReviewedP2 ? 'Ocultar confirmados' : 'Mostrar confirmados'}
+                </button>
+              ) : null}
+            </div>
             <div className="mt-4 grid gap-4">
               {sortedP2Items.map((item, index) => {
                 const completed = p2Completed.has(item.proposition_version_id);
@@ -754,16 +819,18 @@ export function AdminPage() {
                   <Fragment key={item.proposition_version_id}>
                     {showPendingHeading ? <h3 className="border-b-2 border-[var(--color-ink)] pb-2 font-mono text-xs uppercase tracking-widest">Precisam de atenção</h3> : null}
                     {showReviewedHeading ? <h3 className="mt-6 border-b border-[var(--color-border-editorial)] pb-2 font-mono text-xs uppercase tracking-widest text-[var(--color-muted-ink)]">Já revisados</h3> : null}
-                    <article key={item.proposition_version_id} className="rounded-sm border border-[var(--color-border-editorial)] p-4">
-                    <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-                      <div>
-                        <h3 className="text-lg">{item.official_match_key}</h3>
-                        <p className="mt-1 leading-relaxed">{item.title}</p>
+                    <details key={item.proposition_version_id} open={!completed && index === 0} className="rounded-sm border border-[var(--color-border-editorial)] p-4">
+                    <summary className="cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                      <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                        <div>
+                          <h3 className="text-lg">{item.official_match_key}</h3>
+                          <p className="mt-1 leading-relaxed">{item.title}</p>
+                        </div>
+                        <span className="font-mono text-xs uppercase tracking-wider text-amber-800">
+                          {completed ? 'já registrada no portal' : 'pending_review'}
+                        </span>
                       </div>
-                      <span className="font-mono text-xs uppercase tracking-wider text-amber-800">
-                        {completed ? 'já registrada no portal' : 'pending_review'}
-                      </span>
-                    </div>
+                    </summary>
                     <div className="mt-3 flex flex-wrap gap-3 font-mono text-xs uppercase tracking-wider">
                       {(() => {
                         const safeUrl = sanitizeUrl(item.proposition_page);
@@ -776,7 +843,7 @@ export function AdminPage() {
                     </div>
                     <div className="mt-4 grid gap-3 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
                       <label className="grid gap-1 text-sm">
-                        <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">Disposição</span>
+                        <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">1. Disposição obrigatória</span>
                         <select
                           value={p2Decisions[item.proposition_version_id] ?? ''}
                           disabled={completed}
@@ -791,7 +858,7 @@ export function AdminPage() {
                         </select>
                       </label>
                       <label className="grid gap-1 text-sm">
-                        <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">Justificativa (mínimo 20 caracteres)</span>
+                        <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">2. Justificativa <span className="normal-case">(mínimo 20 caracteres)</span></span>
                         <textarea
                           value={p2Notes[item.proposition_version_id] ?? ''}
                           disabled={completed}
@@ -800,17 +867,20 @@ export function AdminPage() {
                           placeholder="Explique a decisão com base na fonte oficial e no escopo da versão."
                           className="rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 leading-relaxed"
                         />
+                        <span className="font-mono text-[0.68rem] text-[var(--color-muted-ink)]">
+                          {(p2Notes[item.proposition_version_id] ?? '').trim().length}/20 caracteres mínimos
+                        </span>
                       </label>
                     </div>
                     <button
                       type="button"
-                      disabled={completed}
+                      disabled={completed || busyP2Id === item.proposition_version_id}
                       onClick={() => void recordP2Disposition(item)}
                       className="mt-3 rounded-sm border border-green-700 px-3 py-2 font-mono text-xs uppercase tracking-wider text-green-800 disabled:cursor-not-allowed disabled:opacity-60"
                     >
-                      {completed ? 'Disposição registrada' : 'Registrar disposição protegida'}
+                      {completed ? 'Disposição confirmada' : busyP2Id === item.proposition_version_id ? 'Enviando e confirmando…' : 'Enviar e confirmar disposição'}
                     </button>
-                  </article>
+                  </details>
                   </Fragment>
                 );
               })}
