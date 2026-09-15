@@ -449,6 +449,7 @@ export function AdminPage() {
     setBusyP2Id(item.proposition_version_id);
     setMessage(null);
     setOperationFeedback(null);
+    try {
     const { error } = await (supabase as any).rpc('record_impact_editorial_disposition', {
       p_proposition_version_id: item.proposition_version_id,
       p_review_key: item.review_key,
@@ -481,6 +482,11 @@ export function AdminPage() {
     setP2Completed((current) => new Set(current).add(item.proposition_version_id));
     setBusyP2Id(null);
     setOperationFeedback({ kind: 'success', title: 'Disposição enviada com sucesso', detail: `${item.official_match_key} confirmado no Supabase por read-back exato.` });
+    } catch (error) {
+      console.error(error);
+      setBusyP2Id(null);
+      setOperationFeedback({ kind: 'error', title: 'Não foi possível concluir a revisão', detail: 'Ocorreu uma falha ao enviar ou confirmar a disposição. O item continua pendente e nada foi marcado como concluído.' });
+    }
   }
 
   async function loadBatchDecisions(event: FormEvent<HTMLInputElement>) {

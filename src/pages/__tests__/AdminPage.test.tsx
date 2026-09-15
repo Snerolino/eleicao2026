@@ -214,6 +214,31 @@ describe('AdminPage', () => {
     });
   });
 
+  it('exibe erro quando o envio da disposição lança exceção', async () => {
+    mocks.from.mockImplementation((table: string) => {
+      if (table === 'editor_roles') return editorRoleQuery();
+      if (table === 'claims') return pendingClaimsQuery();
+      if (table === 'impact_editorial_dispositions') return dispositionQuery();
+      if (table === 'editorial_reviews') return reviewInsertQuery();
+      throw new Error(`Tabela inesperada: ${table}`);
+    });
+    mocks.rpc.mockImplementation((name: string) => {
+      if (name === 'record_impact_editorial_disposition') throw new Error('RPC indisponível');
+      return Promise.resolve({ error: null });
+    });
+
+    renderAdmin();
+    fireEvent.change(await screen.findByLabelText(/e-mail/i), { target: { value: 'admin@votopraquem.org' } });
+    fireEvent.change(screen.getByLabelText(/senha/i), { target: { value: 'senha-local' } });
+    fireEvent.click(screen.getByRole('button', { name: /entrar/i }));
+    fireEvent.change((await screen.findAllByLabelText(/disposição obrigatória/i))[0], { target: { value: 'assess' } });
+    fireEvent.change(screen.getAllByLabelText(/justificativa.*mínimo 20/i)[0], { target: { value: 'Justificativa editorial válida para testar a falha.' } });
+    fireEvent.click(screen.getAllByRole('button', { name: /enviar e confirmar disposição/i })[0]);
+
+    await waitFor(() => expect(screen.getByText(/não foi possível concluir a revisão/i)).toBeInTheDocument());
+    expect(screen.getByText(/continua pendente/i)).toBeInTheDocument();
+  });
+
   it('edita conteúdo de uma claim pendente antes de publicar', async () => {
     const updateQuery = vi.fn(() => ({ eq: vi.fn().mockResolvedValue({ error: null }) }));
     mocks.from.mockImplementation((table: string) => {
