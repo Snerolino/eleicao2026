@@ -460,7 +460,7 @@ export function AdminPage() {
     if (error) {
       console.error(error);
       setBusyP2Id(null);
-      setOperationFeedback({ kind: 'error', title: 'A disposição não foi registrada', detail: 'A operação foi recusada. O item continua na fila.' });
+      setOperationFeedback({ kind: 'error', title: 'A disposição não foi registrada', detail: `A operação foi recusada: ${error.message ?? 'erro retornado pela RPC'}. O item continua na fila.` });
       return;
     }
     const { data: saved, error: readBackError } = await (supabase as any)
@@ -485,7 +485,8 @@ export function AdminPage() {
     } catch (error) {
       console.error(error);
       setBusyP2Id(null);
-      setOperationFeedback({ kind: 'error', title: 'Não foi possível concluir a revisão', detail: 'Ocorreu uma falha ao enviar ou confirmar a disposição. O item continua pendente e nada foi marcado como concluído.' });
+      const detail = error instanceof Error ? error.message : 'erro inesperado no navegador';
+      setOperationFeedback({ kind: 'error', title: 'Não foi possível concluir a revisão', detail: `Falha ao enviar ou confirmar a disposição: ${detail}. O item continua pendente.` });
     }
   }
 
