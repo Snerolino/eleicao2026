@@ -78,11 +78,12 @@ function reviewInsertQuery() {
   };
 }
 
-function dispositionQuery() {
+function dispositionQuery(rows: Array<{ proposition_version_id: string; status: string }> = []) {
   return {
-    data: [],
+    data: rows,
     error: null,
     select: vi.fn().mockReturnThis(),
+    in: vi.fn().mockReturnThis(),
     eq: vi.fn().mockReturnThis(),
     maybeSingle: vi.fn().mockResolvedValue({
       data: {
@@ -237,6 +238,25 @@ describe('AdminPage', () => {
 
     await waitFor(() => expect(screen.getByText(/não foi possível concluir a revisão/i)).toBeInTheDocument());
     expect(screen.getByText(/continua pendente/i)).toBeInTheDocument();
+  });
+
+  it('mantém PL-43-2019 fora da fila quando o registro aprovado está além da primeira página remota', async () => {
+    mocks.from.mockImplementation((table: string) => {
+      if (table === 'editor_roles') return editorRoleQuery();
+      if (table === 'claims') return pendingClaimsQuery();
+      if (table === 'impact_editorial_dispositions') return dispositionQuery([{ proposition_version_id: 'ebc01302-3211-487b-b1bb-6d515936b2e0', status: 'approved' }]);
+      if (table === 'editorial_reviews') return reviewInsertQuery();
+      throw new Error(`Tabela inesperada: ${table}`);
+    });
+
+    renderAdmin();
+    fireEvent.change(await screen.findByLabelText(/e-mail/i), { target: { value: 'admin@votopraquem.org' } });
+    fireEvent.change(screen.getByLabelText(/senha/i), { target: { value: 'senha-local' } });
+    fireEvent.click(screen.getByRole('button', { name: /entrar/i }));
+
+    fireEvent.click(await screen.findByRole('button', { name: /mostrar confirmados/i }));
+    expect(screen.getByText(/PL-43-2019/i)).toBeInTheDocument();
+    expect(screen.getByText(/já registrada no portal/i)).toBeInTheDocument();
   });
 
   it('edita conteúdo de uma claim pendente antes de publicar', async () => {

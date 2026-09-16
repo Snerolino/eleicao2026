@@ -77,6 +77,7 @@ type P2EditorialItem = {
 };
 
 const p2EditorialItems = [...(p2EditorialPack.items ?? []), ...(p2EditorialPack4.items ?? []), ...(p2EditorialPack5.items ?? [])] as P2EditorialItem[];
+const p2EditorialVersionIds = [...new Set(p2EditorialItems.map((item) => item.proposition_version_id))];
 
 type BatchDecision = {
   proposition_version_id: string;
@@ -173,6 +174,7 @@ export function AdminPage() {
       const { data: p2Dispositions } = await (supabase as any)
         .from('impact_editorial_dispositions')
         .select('proposition_version_id, status')
+        .in('proposition_version_id', p2EditorialVersionIds)
         .eq('status', 'approved');
       setP2Completed(new Set((p2Dispositions ?? []).map((row: { proposition_version_id: string }) => row.proposition_version_id)));
     } catch {
