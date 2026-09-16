@@ -7,3 +7,6 @@
 ## 2025-01-20 - [Regex Caching in O(N) Filters]
 **Learning:** Using an O(N) filtering mechanism with expensive Regex evaluations (e.g. `hasPreviousMandate` evaluating `MANDATE_KEYWORDS_REGEX` against multiple claims) severely blocks the UI during typing or filtering large sets. Repeated calls across component boundaries compound this cost unnecessarily.
 **Action:** Always memoize derived checks on immutable reference objects (like candidate data) that do expensive calculations (like Regex) using a `WeakMap`. This pattern upgrades the time complexity of the check from O(N * complexity) to O(1) for all subsequent reads and UI updates.
+## 2025-01-20 - [Pre-computing Maps in useMemo]
+**Learning:** Mutating collections (like `Map` or `Set`) during the component render phase, even inside a `useMemo` block used for filtering, is a React anti-pattern that can lead to bugs in concurrent mode.
+**Action:** Always fully pre-compute and return the populated Map/Set inside a dedicated `useMemo` based on upstream dependencies (like iterating over the source dataset), and only read from it during the render or filtering phases.
