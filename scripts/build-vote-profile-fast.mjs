@@ -24,9 +24,16 @@ const indexRows=relevant.map((v)=>({candidate_id:v.candidate_id,voting_event_id:
 async function upsertChunks(table, rows, onConflict) {
   let written = 0;
   for (let offset = 0; offset < rows.length; offset += 500) {
-    const { error } = await sb.from(table).upsert(rows.slice(offset, offset + 500), { onConflict });
-    if (error) throw new Error(`${table} chunk ${offset}-${Math.min(offset + 500, rows.length)}: ${error.message}`);
-    written += Math.min(500, rows.length - offset);
+    const chunk = rows.slice(offset, offset + 500);
+    let lastError = null;
+    for (let attempt = 1; attempt <= 5; attempt += 1) {
+      const { error } = await sb.from(table).upsert(chunk, { onConflict });
+      if (!error) { lastError = null; break; }
+      lastError = error;
+      if (attempt < 5) await new Promise((resolve) => setTimeout(resolve, attempt * 1500));
+    }
+    if (lastError) throw new Error(`${table} chunk ${offset}-${Math.min(offset + 500, rows.length)}: ${lastError.message}`);
+    written += chunk.length;
   }
   return written;
 }
