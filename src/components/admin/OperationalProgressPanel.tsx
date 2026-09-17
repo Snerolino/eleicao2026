@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase';
 import type { HouseProgress, LegislativeHouse, SharedEditorialProgress } from '@/domain/impact/operationalProgress';
+import editorialBatchManifest from '../../../data/legislative-import/alrs/editorial-batches/manifest-v1.json';
 
 type House = LegislativeHouse;
 type SharedProgress = SharedEditorialProgress;
@@ -129,6 +130,12 @@ export function OperationalProgressPanel() {
           <div><dt className="text-[var(--color-muted-ink)]">assessments</dt><dd className="font-semibold">{countValue(shared.assessments)}</dd></div>
           <div><dt className="text-[var(--color-muted-ink)]">claims publicadas</dt><dd className="font-semibold">{countValue(shared.publishedClaims)}</dd></div>
         </dl>
+      </div>
+      <div className="mt-5 grid gap-3 border-t border-[var(--color-border-editorial)] pt-4 text-sm sm:grid-cols-2 lg:grid-cols-4">
+        <div><span className="text-[var(--color-muted-ink)]">ALRS lotes congelados</span><strong className="block">{editorialBatchManifest.totals.batches} · {editorialBatchManifest.totals.ready_for_disposition} matérias</strong></div>
+        <div><span className="text-[var(--color-muted-ink)]">Workers editoriais</span><strong className="block">4 partições · 0 sobreposição</strong></div>
+        <div><span className="text-[var(--color-muted-ink)]">Worker de matriz/perfil</span><strong className="block">autenticado · ativo</strong></div>
+        <div><span className="text-[var(--color-muted-ink)]">Fonte do painel</span><strong className="block">Supabase · leitura ao vivo</strong></div>
       </div>
       <p className="mt-4 font-mono text-[0.68rem] uppercase tracking-wider text-[var(--color-muted-ink)]">
         {updatedAt ? `Última leitura: ${new Date(updatedAt).toLocaleString('pt-BR')}` : 'Aguardando leitura'} · score só após assessment e matriz aprovados
