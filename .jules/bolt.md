@@ -7,3 +7,6 @@
 ## 2025-01-20 - [Regex Caching in O(N) Filters]
 **Learning:** Using an O(N) filtering mechanism with expensive Regex evaluations (e.g. `hasPreviousMandate` evaluating `MANDATE_KEYWORDS_REGEX` against multiple claims) severely blocks the UI during typing or filtering large sets. Repeated calls across component boundaries compound this cost unnecessarily.
 **Action:** Always memoize derived checks on immutable reference objects (like candidate data) that do expensive calculations (like Regex) using a `WeakMap`. This pattern upgrades the time complexity of the check from O(N * complexity) to O(1) for all subsequent reads and UI updates.
+## 2025-02-13 - [Hoisting Constant Arrays]
+**Learning:** In React components, allocating constant arrays (like `SUMMARY_PRIORITY` in `CandidateCard.tsx`) inside the render function causes the array to be re-created on every render, adding garbage collection overhead, particularly when rendering long lists.
+**Action:** Always hoist static reference types (like constant arrays or configuration objects) outside the render function to the module scope to prevent unnecessary memory reallocation.

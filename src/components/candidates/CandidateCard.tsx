@@ -17,6 +17,14 @@ interface CandidateCardProps {
   onToggleSaved?: (id: string) => void;
 }
 
+const SUMMARY_PRIORITY = [
+  'summary',
+  'plataforma',
+  'historico_politico',
+  'reputacao',
+  'votacao_scrutiny',
+];
+
 export const CandidateCard = memo(function CandidateCard({
   candidate,
   saved: propSaved,
@@ -28,13 +36,6 @@ export const CandidateCard = memo(function CandidateCard({
   const handleToggle = () => (propOnToggleSaved ? propOnToggleSaved(candId) : toggleSaved(candId));
 
   const published = candidate.claims.filter((claim) => claim.status === 'published');
-  const SUMMARY_PRIORITY = [
-    'summary',
-    'plataforma',
-    'historico_politico',
-    'reputacao',
-    'votacao_scrutiny',
-  ];
   let summary = published.length > 0 ? published[0] : null;
   let bestPriority = Infinity;
   for (const claim of published) {
