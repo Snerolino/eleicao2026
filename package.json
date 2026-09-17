@@ -135,6 +135,7 @@
     "orch:no-stop": "bash scripts/orchestrator/no-stop-supervisor.sh",
     "camara:authored:batch": "node scripts/process-camara-authored-batch.mjs",
     "alrs:editorial:worker": "node scripts/run-alrs-editorial-triage-worker.mjs",
+    "alrs:matrix-profile:worker": "node scripts/run-alrs-matrix-profile-worker.mjs",
     "alrs:editorial:audit": "node scripts/audit-alrs-editorial-universe.mjs",
     "alrs:editorial:batches": "node scripts/build-alrs-editorial-batches.mjs",
     "orch:setup": "bash scripts/orchestrator/setup-local.sh",

@@ -5,6 +5,7 @@ import { usePageMetadata } from '@/hooks/usePageMetadata';
 import { isSupabaseConfigured, supabase } from '@/lib/supabase';
 import { sanitizeUrl } from '@/utils/sanitizeUrl';
 import { validateEditorialDecisionEnvelope } from '@/domain/impact/editorialBatch';
+import { OperationalProgressPanel } from '@/components/admin/OperationalProgressPanel';
 import p2EditorialPack from '../../data/legislative-import/alrs/p2-microbatch-2-editorial-review-pack.json';
 import p2EditorialPack4 from '../../data/legislative-import/alrs/p2-microbatch-4-editorial-review-pack.json';
 import p2EditorialPack5 from '../../data/legislative-import/alrs/p2-microbatch-5-editorial-review-pack.json';
@@ -698,6 +699,8 @@ export function AdminPage() {
               Sair
             </button>
           </div>
+
+          <OperationalProgressPanel />
 
           <section className="mt-6 rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper-muted)] p-4" aria-label="Como usar a fila editorial">
             <h2 className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">Como usar a fila</h2>

@@ -35,6 +35,7 @@ const lanes = [
   { name: 'alrs_queue_regeneration', command: 'node', args: ['scripts/build-alrs-exclusive-editorial-lane.mjs'], enabled: focus === 'alrs-editorial' },
   { name: 'alrs_batch_generation', command: 'node', args: ['scripts/build-alrs-editorial-batches.mjs'], enabled: focus === 'alrs-editorial' },
   ...Array.from({ length: Number(process.env.NO_STOP_WORKERS ?? 4) }, (_, worker) => ({ name: `alrs_editorial_worker_${worker}`, command: 'node', args: ['scripts/run-alrs-editorial-triage-worker.mjs', `--worker=${worker}`, `--workers=${Number(process.env.NO_STOP_WORKERS ?? 4)}`], enabled: focus === 'alrs-editorial' })),
+  { name: 'alrs_matrix_profile_materialization', command: 'node', args: ['scripts/run-alrs-matrix-profile-worker.mjs'], enabled: focus === 'alrs-editorial' },
   { name: 'official_reconnaissance', command: 'node', args: ['scripts/process-camara-authored-batch.mjs', ...(batch ? [`--start=${batch.split('-')[0]}`, `--limit=${Number(batch.split('-')[1]) - Number(batch.split('-')[0]) + 1}`] : [])], enabled: focus !== 'alrs-editorial' && Boolean(processNext && batch) },
   { name: 'candidate_reconciliation', command: 'node', args: ['scripts/continuous-progress-monitor.mjs'], enabled: focus !== 'alrs-editorial' },
   { name: 'editorial_causal', command: 'node', args: ['scripts/continuous-progress-monitor.mjs'], enabled: focus !== 'alrs-editorial' },
