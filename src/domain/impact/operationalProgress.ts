@@ -16,6 +16,7 @@ export type SharedEditorialProgress = {
   pendingMatrices: number | null;
   approvedMatrices: number | null;
   assessments: number | null;
+  publishedClaims: number | null;
 };
 
 export type OperationalProgressSnapshot = {

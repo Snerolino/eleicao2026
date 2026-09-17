@@ -19,6 +19,7 @@ describe('operational progress contract', () => {
         pendingMatrices: null,
         approvedMatrices: null,
         assessments: null,
+        publishedClaims: null,
       },
       observed_at: '2026-09-17T12:00:00.000Z',
       source: 'supabase' as const,

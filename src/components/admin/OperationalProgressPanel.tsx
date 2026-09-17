@@ -17,6 +17,7 @@ const EMPTY_SHARED: SharedProgress = {
   pendingMatrices: null,
   approvedMatrices: null,
   assessments: null,
+  publishedClaims: null,
 };
 
 function countValue(count: number | null) {
@@ -58,14 +59,15 @@ export function OperationalProgressPanel() {
       } satisfies HouseProgress;
     }));
 
-    const [pendingDispositions, approvedDispositions, pendingMatrices, approvedMatrices, assessments] = await Promise.all([
+    const [pendingDispositions, approvedDispositions, pendingMatrices, approvedMatrices, assessments, publishedClaims] = await Promise.all([
       safe(() => client.from('impact_editorial_dispositions').select('id', { count: 'exact', head: true }).eq('status', 'pending_review')),
       safe(() => client.from('impact_editorial_dispositions').select('id', { count: 'exact', head: true }).eq('status', 'approved')),
       safe(() => client.from('impact_matrices').select('id', { count: 'exact', head: true }).eq('review_status', 'pending_review')),
       safe(() => client.from('impact_matrices').select('id', { count: 'exact', head: true }).eq('review_status', 'approved')),
       safe(() => client.from('impact_assessments').select('id', { count: 'exact', head: true })),
+      safe(() => client.from('claims').select('id', { count: 'exact', head: true }).eq('status', 'published')),
     ]);
-    const sharedErrors = [pendingDispositions, approvedDispositions, pendingMatrices, approvedMatrices, assessments].filter((result) => result.error);
+    const sharedErrors = [pendingDispositions, approvedDispositions, pendingMatrices, approvedMatrices, assessments, publishedClaims].filter((result) => result.error);
     setHouses(houseResults);
     setShared({
       pendingDispositions: pendingDispositions.count ?? null,
@@ -73,6 +75,7 @@ export function OperationalProgressPanel() {
       pendingMatrices: pendingMatrices.count ?? null,
       approvedMatrices: approvedMatrices.count ?? null,
       assessments: assessments.count ?? null,
+      publishedClaims: publishedClaims.count ?? null,
     });
     setUpdatedAt(new Date().toISOString());
     setError(houseResults.find((item) => item.error)?.error ?? sharedErrors[0]?.error?.message ?? null);
@@ -118,12 +121,13 @@ export function OperationalProgressPanel() {
 
       <div className="mt-5 border-t border-[var(--color-border-editorial)] pt-4">
         <h3 className="font-semibold">Fila editorial compartilhada</h3>
-        <dl className="mt-3 grid grid-cols-2 gap-3 text-sm sm:grid-cols-5">
+        <dl className="mt-3 grid grid-cols-2 gap-3 text-sm sm:grid-cols-3 lg:grid-cols-6">
           <div><dt className="text-[var(--color-muted-ink)]">disposições pendentes</dt><dd className="font-semibold">{countValue(shared.pendingDispositions)}</dd></div>
           <div><dt className="text-[var(--color-muted-ink)]">disposições aprovadas</dt><dd className="font-semibold">{countValue(shared.approvedDispositions)}</dd></div>
           <div><dt className="text-[var(--color-muted-ink)]">matrizes pendentes</dt><dd className="font-semibold">{countValue(shared.pendingMatrices)}</dd></div>
           <div><dt className="text-[var(--color-muted-ink)]">matrizes aprovadas</dt><dd className="font-semibold">{countValue(shared.approvedMatrices)}</dd></div>
           <div><dt className="text-[var(--color-muted-ink)]">assessments</dt><dd className="font-semibold">{countValue(shared.assessments)}</dd></div>
+          <div><dt className="text-[var(--color-muted-ink)]">claims publicadas</dt><dd className="font-semibold">{countValue(shared.publishedClaims)}</dd></div>
         </dl>
       </div>
       <p className="mt-4 font-mono text-[0.68rem] uppercase tracking-wider text-[var(--color-muted-ink)]">
