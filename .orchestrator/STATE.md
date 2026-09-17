@@ -5771,3 +5771,12 @@ Sem autorização humana explícita própria, não fazer:
 - `/admin` carrega os lotes canônicos, valida hash/IDs/decisões no browser e aponta para apply transacional autenticado; nenhuma decisão humana foi criada por esta preparação.
 - Próximo gate: autorização explícita para aplicar a migration no Supabase remoto; depois autenticar editor/admin, testar uma wave pequena e validar read-back/idempotência.
 - Revisão P2 recebida em 2026-09-13 incorporada localmente: 15 itens agora `4 assess`, `9 no_direct_population_group`, `2 taxonomy_gap`, `0 excluded`; `PL-350-2011` mudou para `assess/populacao_carceraria/unclear` e `PL-434-2023` para `taxonomy_gap`. Como os 15 aparecem no catálogo local como resolvidos, não reabrir nem sobrescrever remotamente sem um RPC/protocolo explícito de revisão de decisão.
+## Checkpoint operacional — painel multi-casa e worker matriz/perfil — 2026-09-17
+
+- Worker autenticado `scripts/run-alrs-matrix-profile-worker.mjs` executa a cadeia `assessment → matriz → materialização de perfis`; o apply remoto confirmou `2` assessments/matrizes idempotentes e recalculou `110.252` votos, `110.252` índices e `87` perfis.
+- Supervisor no-stop recebeu a lane `alrs_matrix_profile_materialization` após os quatro workers editoriais; lock exclusivo e cron `c4278be3a8a5` permanecem ativos a cada 5 minutos, `repeat=forever`, `last_status=ok`.
+- `/admin` agora exibe painel ao vivo por ALRS/Câmara/Senado com eventos, votos, perfis, fila editorial, matrizes, assessments, claims publicadas, lotes, workers e horário da leitura; contrato versionado em `src/domain/impact/operationalProgress.ts`.
+- Gates: `515/515` testes, TypeScript, schema, `data:check`, build e smoke local verdes. Build: 253 módulos, sitemap 1003 candidatos + 2 estáticas; warning existente de chunks grandes.
+- Publicação: commit `855a9cc97a02b6ae0dfda0ff4998dc13ffd4d2ca`, `origin/main` alinhado, Deploy GitHub `35283277200` success, release público `0.2.1374` com SHA exato, raiz e `/admin` HTTP 200.
+- Bloqueios preservados: fila editorial ALRS `1.261` pendências monitoradas (`141` prontas, `62` colisões); recuperação de score `152` (`87` sem evento, `65` compostas); nenhum score é criado sem avaliação elegível e revisão autenticada.
+
