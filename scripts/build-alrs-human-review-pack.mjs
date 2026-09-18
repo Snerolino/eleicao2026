@@ -75,4 +75,7 @@ const payload = {
 
 mkdirSync(resolve(root, 'public/editorial'), { recursive: true });
 writeFileSync(output, `${JSON.stringify(payload, null, 2)}\n`);
+for (const batch of JSON.parse(readFileSync(resolve(root, 'data/legislative-import/alrs/editorial-batches/manifest-v1.json'), 'utf8')).batches ?? []) {
+  writeFileSync(resolve(root, 'public/editorial', batch.file), readFileSync(resolve(root, 'data/legislative-import/alrs/editorial-batches', batch.file)));
+}
 console.log(JSON.stringify({ output, items: items.length, bytes: Buffer.byteLength(JSON.stringify(payload, null, 2) + '\n'), remote_apply: false, public_approval: false }));

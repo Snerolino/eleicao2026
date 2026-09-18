@@ -513,12 +513,25 @@ export function AdminPage() {
       const fileHash = globalThis.crypto?.subtle
         ? Array.from(new Uint8Array(await globalThis.crypto.subtle.digest('SHA-256', fileBytes))).map((byte) => byte.toString(16).padStart(2, '0')).join('')
         : null;
-      const payload = JSON.parse(await file.text()) as { batch_id?: string; batch_sha256?: string; items?: BatchDecision[]; decisions?: BatchDecision[] };
+      const payload = JSON.parse(await file.text()) as { packet_type?: string; batch_id?: string; batch_sha256?: string; items?: BatchDecision[]; decisions?: BatchDecision[] };
       const contexts = [...editorialBatchContexts, p2ExternalEditorialDispositions] as BatchContext[];
-      const context = contexts.find((candidate) => candidate.batch_id === payload.batch_id && candidate.batch_sha256 === payload.batch_sha256);
       const items = payload.items ?? payload.decisions ?? [];
+      if (payload.packet_type === 'alrs_human_editorial_review_download' || items.length === 141) {
+        setBatchDecisions(null);
+        setBatchContext(null);
+        setBatchReceipt(null);
+        const detail = 'Este arquivo é o pacote de referência das 141 matérias, não um lote de decisões. Abra um dos seis arquivos alrs-editorial-00X.json, preencha as decisões humanas e envie somente esse lote.';
+        setOperationFeedback({ kind: 'error', title: 'Pacote de referência, não decisões', detail });
+        setMessage(detail);
+        return;
+      }
+      let context = contexts.find((candidate) => candidate.batch_id === payload.batch_id && candidate.batch_sha256 === payload.batch_sha256);
+      if (!context && !payload.batch_id && !payload.batch_sha256) {
+        const matches = contexts.filter((candidate) => candidate.items.length === items.length && candidate.items.every((expected) => items.some((received) => received.proposition_version_id === expected.proposition_version_id && received.review_key === expected.review_key)));
+        if (matches.length === 1) context = matches[0];
+      }
       const validation = context
-        ? await validateEditorialDecisionEnvelope(context, { ...payload, items })
+        ? await validateEditorialDecisionEnvelope(context, { ...payload, batch_id: context.batch_id, batch_sha256: context.batch_sha256, items })
         : { valid: false, errors: ['batch_context_missing'], rows: items };
       if (!validation.valid || !context) {
         setBatchDecisions(null);
@@ -826,6 +839,7 @@ export function AdminPage() {
             <p className="mt-2 text-sm text-[var(--color-muted-ink)]">Carregue o JSON revisado externamente. O portal valida batch_id, batch_sha256 e review_key antes de chamar as RPCs autenticadas. Apenas decisões approved são aplicadas; needs_changes permanece como exceção.</p>
             <p className="mt-3 rounded-sm border border-blue-300 bg-blue-50 px-3 py-3 text-sm text-blue-950">
               Pacote para revisores: <a href="/editorial/alrs-ready-for-human-review-v1.json" download="alrs-ready-for-human-review-v1.json" className="font-semibold underline underline-offset-4">baixar as 141 matérias prontas para disposição</a>. O arquivo é somente para análise: decisões, aplicação remota e aprovação pública permanecem desativadas.
+              <span className="mt-2 block">Para enviar decisões, use um arquivo de um lote: {editorialBatchManifest.batches?.map((batch, index) => <span key={batch.batch_id}>{index > 0 ? ' · ' : ''}<a href={`/editorial/${batch.file}`} download={batch.file} className="underline underline-offset-4">{batch.batch_id}</a></span>)}.</span>
             </p>
             <label className="mt-4 grid gap-2 text-sm">
               <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">JSON de decisões de um dos {editorialBatchManifest.batches?.length ?? 0} lotes congelados</span>
