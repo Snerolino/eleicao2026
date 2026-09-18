@@ -17,16 +17,6 @@ interface CandidateCardProps {
   onToggleSaved?: (id: string) => void;
 }
 
-// ⚡ Bolt Optimization: Hoisted O(1) object map lookup for priority to prevent
-// O(N) re-allocation and repeated array `indexOf` lookups on every component render.
-const SUMMARY_PRIORITY_MAP: Record<string, number> = {
-  summary: 0,
-  plataforma: 1,
-  historico_politico: 2,
-  reputacao: 3,
-  votacao_scrutiny: 4,
-};
-
 export const CandidateCard = memo(function CandidateCard({
   candidate,
   saved: propSaved,
@@ -38,7 +28,13 @@ export const CandidateCard = memo(function CandidateCard({
   const handleToggle = () => (propOnToggleSaved ? propOnToggleSaved(candId) : toggleSaved(candId));
 
   const published = candidate.claims.filter((claim) => claim.status === 'published');
-
+  const SUMMARY_PRIORITY = [
+    'summary',
+    'plataforma',
+    'historico_politico',
+    'reputacao',
+    'votacao_scrutiny',
+  ];
   let summary = published.length > 0 ? published[0] : null;
   let bestPriority = Infinity;
   for (const claim of published) {
@@ -47,7 +43,7 @@ export const CandidateCard = memo(function CandidateCard({
       summary = claim;
       break;
     }
-    const priority = SUMMARY_PRIORITY_MAP[category] ?? -1;
+    const priority = SUMMARY_PRIORITY.indexOf(category);
     if (priority !== -1 && priority < bestPriority) {
       bestPriority = priority;
       summary = claim;
