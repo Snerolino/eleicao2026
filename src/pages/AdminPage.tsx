@@ -796,6 +796,9 @@ export function AdminPage() {
           <section className="mt-8 border-t-2 border-[var(--color-ink)] pt-6" aria-label="Aplicação editorial em lote">
             <h2 className="text-2xl">Aplicação editorial em lote</h2>
             <p className="mt-2 text-sm text-[var(--color-muted-ink)]">Carregue o JSON revisado externamente. O portal valida batch_id, batch_sha256 e review_key antes de chamar as RPCs autenticadas. Apenas decisões approved são aplicadas; needs_changes permanece como exceção.</p>
+            <p className="mt-3 rounded-sm border border-blue-300 bg-blue-50 px-3 py-3 text-sm text-blue-950">
+              Pacote para revisores: <a href="/editorial/alrs-ready-for-human-review-v1.json" download="alrs-ready-for-human-review-v1.json" className="font-semibold underline underline-offset-4">baixar as 141 matérias prontas para disposição</a>. O arquivo é somente para análise: decisões, aplicação remota e aprovação pública permanecem desativadas.
+            </p>
             <label className="mt-4 grid gap-2 text-sm">
               <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">JSON de decisões de um dos {editorialBatchManifest.batches?.length ?? 0} lotes congelados</span>
               <input type="file" accept="application/json,.json" onChange={(event) => void loadBatchDecisions(event)} className="block w-full text-sm" />

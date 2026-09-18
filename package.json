@@ -138,6 +138,7 @@
     "alrs:matrix-profile:worker": "node scripts/run-alrs-matrix-profile-worker.mjs",
     "alrs:editorial:audit": "node scripts/audit-alrs-editorial-universe.mjs",
     "alrs:editorial:batches": "node scripts/build-alrs-editorial-batches.mjs",
+    "alrs:editorial:human-pack": "node scripts/build-alrs-human-review-pack.mjs",
     "orch:setup": "bash scripts/orchestrator/setup-local.sh",
     "orch:doctor": "bash scripts/orchestrator/doctor.sh",
     "orch:install-skill": "bash scripts/orchestrator/install-hermes-skill.sh",
