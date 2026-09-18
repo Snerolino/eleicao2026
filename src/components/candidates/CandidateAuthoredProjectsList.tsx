@@ -41,7 +41,13 @@ export function CandidateAuthoredProjectsList({ projects }: CandidateAuthoredPro
     const term = search.trim().toLowerCase();
     return projects.filter((project) => {
       const matchesStatus = status === 'all' || project.status === status;
+      if (!matchesStatus) return false;
+
       const matchesTopic = topic === 'all' || project.main_topic === topic;
+      if (!matchesTopic) return false;
+
+      if (!term) return true;
+
       const haystack = [
         project.type,
         project.number,
@@ -53,7 +59,7 @@ export function CandidateAuthoredProjectsList({ projects }: CandidateAuthoredPro
         project.role,
         project.status,
       ].join(' ').toLowerCase();
-      return matchesStatus && matchesTopic && (!term || haystack.includes(term));
+      return haystack.includes(term);
     });
   }, [projects, search, status, topic]);
 
