@@ -35,6 +35,13 @@ function normalize(text: string) {
   return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 }
 
+interface CandidateSearchCache {
+  partyLower?: string;
+  nameNormalized?: string;
+  labelNormalized?: string;
+  ballotNameNormalized?: string;
+}
+
 function claimsForSection(
   claims: Claim[],
   matchersSet: ReadonlySet<string>
@@ -244,6 +251,21 @@ export function ComparePage() {
   const validCandidateIds = useMemo(() => new Set(candidates.map((c) => c.id)), [candidates]);
   const { savedSet, toggleSaved } = useSavedCandidates(validCandidateIds, query.isSuccess);
 
+  // ⚡ Bolt Optimization: Pre-calculates and memoizes expensive string normalizations for search caching.
+  // Upgrades O(N * string_length) repeated work during search filtering to an O(1) cache lookup.
+  const searchCache = useMemo(() => {
+    const cache = new Map<string, CandidateSearchCache>();
+    for (const candidate of candidates) {
+      cache.set(candidate.id, {
+        partyLower: normalize(candidate.party),
+        nameNormalized: normalize(candidate.full_name),
+        labelNormalized: normalize(candidate.position_label),
+        ballotNameNormalized: candidate.ballot_name ? normalize(candidate.ballot_name) : undefined,
+      });
+    }
+    return cache;
+  }, [candidates]);
+
   const { parties, races, experienceCounts } = useMemo(() => {
     const partySet = new Set<string>();
     const raceSet = new Set<string>(OFFICIAL_RACE_FILTERS);
@@ -275,33 +297,24 @@ export function ComparePage() {
       if (positionFilter && candidate.position !== positionFilter) return false;
       if (experienceFilter === 'mandato_anterior' && !hasPreviousMandate(candidate)) return false;
       if (experienceFilter === 'estreante' && hasPreviousMandate(candidate)) return false;
+      if (!normalizedQuery) return true;
 
-      if (normalizedQuery) {
-        const nameMatches = normalize(candidate.full_name).includes(normalizedQuery);
-        const ballotNameMatches = candidate.ballot_name
-          ? normalize(candidate.ballot_name).includes(normalizedQuery)
-          : false;
-        const numberMatches =
-          candidate.ballot_number != null &&
-          String(candidate.ballot_number).includes(normalizedQuery);
-        const partyMatches = normalize(candidate.party).includes(normalizedQuery);
-        const positionMatches = normalize(candidate.position_label).includes(normalizedQuery);
+      const cached = searchCache.get(candidate.id);
+      if (!cached) return true; // fallback, should not happen
 
-        if (
-          !nameMatches &&
-          !ballotNameMatches &&
-          !numberMatches &&
-          !partyMatches &&
-          !positionMatches
-        ) {
-          return false;
-        }
-      }
+      if (cached.partyLower && cached.partyLower.includes(normalizedQuery)) return true;
 
-      return true;
+      const number = candidate.ballot_number?.toString() ?? '';
+      if (number.includes(normalizedQuery)) return true;
+
+      if (cached.nameNormalized && cached.nameNormalized.includes(normalizedQuery)) return true;
+      if (cached.ballotNameNormalized && cached.ballotNameNormalized.includes(normalizedQuery)) return true;
+
+      return cached.labelNormalized ? cached.labelNormalized.includes(normalizedQuery) : false;
     });
   }, [
     candidates,
+    searchCache,
     deferredSearchQuery,
     partyFilter,
     womenOnly,
