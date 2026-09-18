@@ -530,22 +530,29 @@ export function AdminPage() {
         const matches = contexts.filter((candidate) => candidate.items.length === items.length && candidate.items.every((expected) => items.some((received) => received.proposition_version_id === expected.proposition_version_id && received.review_key === expected.review_key)));
         if (matches.length === 1) context = matches[0];
       }
+      const normalizedItems = items.map((item) => item.decision === 'needs_changes' && !item.notes && item.rationale
+        ? { ...item, notes: item.rationale }
+        : item);
       const validation = context
-        ? await validateEditorialDecisionEnvelope(context, { ...payload, batch_id: context.batch_id, batch_sha256: context.batch_sha256, items })
+        ? await validateEditorialDecisionEnvelope(context, { ...payload, batch_id: context.batch_id, batch_sha256: context.batch_sha256, items: normalizedItems })
         : { valid: false, errors: ['batch_context_missing'], rows: items };
       if (!validation.valid || !context) {
         setBatchDecisions(null);
         setBatchContext(null);
         setBatchReceipt(null);
-        setOperationFeedback({ kind: 'error', title: 'Arquivo recusado', detail: `O JSON não corresponde a nenhum lote congelado: ${validation.errors.join(', ')}.` });
-        setMessage(`Lote recusado: ${validation.errors.join(', ')}.`);
+        const untouchedTemplate = items.length > 0 && items.every((item) => !item.decision && !item.disposition && !item.rationale && !item.notes);
+        const detail = untouchedTemplate
+          ? `Este é o modelo do ${context?.batch_id ?? payload.batch_id ?? 'lote'}: ${items.length} itens foram recebidos, mas nenhuma decisão, disposição ou justificativa foi preenchida. Preencha o arquivo e envie novamente.`
+          : `O lote foi recusado antes da aplicação. Corrija os campos editoriais obrigatórios e envie novamente. Erros principais: ${validation.errors.slice(0, 6).join(', ')}${validation.errors.length > 6 ? ` (+${validation.errors.length - 6} erros)` : ''}.`;
+        setOperationFeedback({ kind: 'error', title: untouchedTemplate ? 'Modelo recebido, mas ainda não preenchido' : 'Lote recusado', detail });
+        setMessage(detail);
         return;
       }
       setBatchContext(context);
-      setBatchDecisions(items);
-      setBatchReceipt({ fileName: file.name, bytes: file.size, sha256: fileHash, batchId: context.batch_id, batchSha256: context.batch_sha256, itemCount: items.length, receivedAt: new Date().toISOString(), phase: 'received' });
-      setOperationFeedback({ kind: 'success', title: 'Arquivo recebido e validado', detail: `${file.name} foi lido no navegador: ${items.length} decisões, lote ${context.batch_id}, hash do lote conferido. O Supabase ainda não foi alterado; clique em “Enviar lote e confirmar” para iniciar a análise/aplicação autenticada.` });
-      setMessage(`Lote válido carregado: ${items.filter((item) => item.decision === 'approved').length} approved e ${items.filter((item) => item.decision === 'needs_changes').length} exceções.`);
+      setBatchDecisions(normalizedItems);
+      setBatchReceipt({ fileName: file.name, bytes: file.size, sha256: fileHash, batchId: context.batch_id, batchSha256: context.batch_sha256, itemCount: normalizedItems.length, receivedAt: new Date().toISOString(), phase: 'received' });
+      setOperationFeedback({ kind: 'success', title: 'Arquivo recebido e validado', detail: `${file.name} foi lido no navegador: ${normalizedItems.length} decisões, lote ${context.batch_id}, hash do lote conferido. Justificativas de needs_changes foram normalizadas para notes. O Supabase ainda não foi alterado; clique em “Enviar lote e confirmar” para iniciar a análise/aplicação autenticada.` });
+      setMessage(`Lote válido carregado: ${normalizedItems.filter((item) => item.decision === 'approved').length} approved e ${normalizedItems.filter((item) => item.decision === 'needs_changes').length} exceções.`);
     } catch {
       setBatchDecisions(null);
       setBatchContext(null);

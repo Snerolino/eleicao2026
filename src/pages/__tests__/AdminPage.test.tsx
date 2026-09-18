@@ -351,12 +351,12 @@ describe('AdminPage', () => {
 
     const payload = {
       ...editorialBatch001,
-      items: editorialBatch001.items.map((item) => ({
+      items: editorialBatch001.items.map((item, index) => ({
         proposition_version_id: item.proposition_version_id,
         review_key: item.review_key,
-        decision: 'approved' as const,
+        decision: index === 0 ? 'needs_changes' as const : 'approved' as const,
         disposition: 'no_direct_population_group' as const,
-        rationale: 'Decisão editorial de teste baseada na fonte oficial e no escopo da versão.',
+        rationale: index === 0 ? 'Justificativa de ajuste baseada na fonte oficial.' : 'Decisão editorial de teste baseada na fonte oficial e no escopo da versão.',
       })),
     };
     const file = new File([JSON.stringify(payload)], 'lote-001-decisoes.json', { type: 'application/json' });
