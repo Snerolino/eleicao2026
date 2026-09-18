@@ -107,6 +107,17 @@ type BatchContext = {
   }>;
 };
 
+type BatchReceipt = {
+  fileName: string;
+  bytes: number;
+  sha256: string | null;
+  batchId: string;
+  batchSha256: string;
+  itemCount: number;
+  receivedAt: string;
+  phase: 'received' | 'processing' | 'confirmed' | 'failed';
+};
+
 const editorialBatchContexts = (editorialBatchManifest.batches ?? [])
   .map((descriptor) => editorialBatchFiles[`../../data/legislative-import/alrs/editorial-batches/${descriptor.file}`])
   .filter(Boolean) as BatchContext[];
@@ -141,6 +152,7 @@ export function AdminPage() {
   const [batchDecisions, setBatchDecisions] = useState<BatchDecision[] | null>(null);
   const [batchBusy, setBatchBusy] = useState(false);
   const [batchContext, setBatchContext] = useState<BatchContext | null>(null);
+  const [batchReceipt, setBatchReceipt] = useState<BatchReceipt | null>(null);
   const [operationFeedback, setOperationFeedback] = useState<OperationFeedback | null>(null);
 
   usePageMetadata(
@@ -497,6 +509,10 @@ export function AdminPage() {
     const file = event.currentTarget.files?.[0];
     if (!file) return;
     try {
+      const fileBytes = await file.arrayBuffer();
+      const fileHash = globalThis.crypto?.subtle
+        ? Array.from(new Uint8Array(await globalThis.crypto.subtle.digest('SHA-256', fileBytes))).map((byte) => byte.toString(16).padStart(2, '0')).join('')
+        : null;
       const payload = JSON.parse(await file.text()) as { batch_id?: string; batch_sha256?: string; items?: BatchDecision[]; decisions?: BatchDecision[] };
       const contexts = [...editorialBatchContexts, p2ExternalEditorialDispositions] as BatchContext[];
       const context = contexts.find((candidate) => candidate.batch_id === payload.batch_id && candidate.batch_sha256 === payload.batch_sha256);
@@ -507,15 +523,21 @@ export function AdminPage() {
       if (!validation.valid || !context) {
         setBatchDecisions(null);
         setBatchContext(null);
+        setBatchReceipt(null);
+        setOperationFeedback({ kind: 'error', title: 'Arquivo recusado', detail: `O JSON não corresponde a nenhum lote congelado: ${validation.errors.join(', ')}.` });
         setMessage(`Lote recusado: ${validation.errors.join(', ')}.`);
         return;
       }
       setBatchContext(context);
       setBatchDecisions(items);
+      setBatchReceipt({ fileName: file.name, bytes: file.size, sha256: fileHash, batchId: context.batch_id, batchSha256: context.batch_sha256, itemCount: items.length, receivedAt: new Date().toISOString(), phase: 'received' });
+      setOperationFeedback({ kind: 'success', title: 'Arquivo recebido e validado', detail: `${file.name} foi lido no navegador: ${items.length} decisões, lote ${context.batch_id}, hash do lote conferido. O Supabase ainda não foi alterado; clique em “Enviar lote e confirmar” para iniciar a análise/aplicação autenticada.` });
       setMessage(`Lote válido carregado: ${items.filter((item) => item.decision === 'approved').length} approved e ${items.filter((item) => item.decision === 'needs_changes').length} exceções.`);
     } catch {
       setBatchDecisions(null);
       setBatchContext(null);
+      setBatchReceipt(null);
+      setOperationFeedback({ kind: 'error', title: 'Arquivo não recebido', detail: 'Não foi possível ler ou validar o JSON. Nenhuma operação remota foi iniciada.' });
       setMessage('JSON de decisões inválido.');
     }
   }
@@ -524,6 +546,7 @@ export function AdminPage() {
     if (!supabase || !batchDecisions || !batchContext) return;
     setBatchBusy(true);
     setOperationFeedback(null);
+    setBatchReceipt((current) => current ? { ...current, phase: 'processing' } : current);
     setMessage('Lendo disposições existentes antes do apply…');
     const ids = batchDecisions.map((decision) => decision.proposition_version_id);
     const rpcItems = batchDecisions.map((decision) => {
@@ -542,6 +565,7 @@ export function AdminPage() {
     });
     if (rpcItems.some((item) => !item.disposition || String(item.decision === 'needs_changes' ? item.notes : item.rationale ?? '').trim().length < 20)) {
       setBatchBusy(false);
+      setBatchReceipt((current) => current ? { ...current, phase: 'failed' } : current);
       setMessage('Lote recusado: cada decisão precisa de disposição explícita e justificativa de pelo menos 20 caracteres.');
       return;
     }
@@ -552,6 +576,7 @@ export function AdminPage() {
     });
     if (applyError) {
       setBatchBusy(false);
+      setBatchReceipt((current) => current ? { ...current, phase: 'failed' } : current);
       setOperationFeedback({ kind: 'error', title: 'Lote não aplicado', detail: `A transação foi recusada; nenhum item foi confirmado. ${applyError.message}` });
       return;
     }
@@ -572,6 +597,7 @@ export function AdminPage() {
     });
     if (!readBackOk) {
       setBatchBusy(false);
+      setBatchReceipt((current) => current ? { ...current, phase: 'failed' } : current);
       setOperationFeedback({ kind: 'error', title: 'Lote enviado, mas não confirmado', detail: `${readBackById.size}/${batchDecisions.length} linhas tiveram read-back exato. Nenhuma matriz foi publicada.` });
       return;
     }
@@ -582,11 +608,13 @@ export function AdminPage() {
     });
     if (secondError || (secondApply?.conflicts ?? 0) > 0) {
       setBatchBusy(false);
+      setBatchReceipt((current) => current ? { ...current, phase: 'failed' } : current);
       setOperationFeedback({ kind: 'error', title: 'Idempotência não confirmada', detail: 'O lote permanece sob revisão e não foi marcado como concluído.' });
       return;
     }
     setP2Completed((current) => new Set([...current, ...ids]));
     setBatchBusy(false);
+    setBatchReceipt((current) => current ? { ...current, phase: 'confirmed' } : current);
     setOperationFeedback({ kind: 'success', title: 'Lote enviado e confirmado', detail: `${readBackById.size}/${batchDecisions.length} itens confirmados. Primeira execução: ${firstApply?.inserted ?? 0} novas; segunda execução: ${secondApply?.already_present ?? 0} já presentes.` });
   }
 
@@ -803,7 +831,19 @@ export function AdminPage() {
               <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">JSON de decisões de um dos {editorialBatchManifest.batches?.length ?? 0} lotes congelados</span>
               <input type="file" accept="application/json,.json" onChange={(event) => void loadBatchDecisions(event)} className="block w-full text-sm" />
             </label>
-            {batchDecisions ? <div className="mt-4 flex flex-wrap items-center gap-3"><span className="font-mono text-xs uppercase tracking-wider text-green-800">{batchDecisions.length} decisões validadas</span><button type="button" disabled={batchBusy} onClick={() => void applyBatchDecisions()} className="rounded-sm border border-green-700 px-3 py-2 font-mono text-xs uppercase tracking-wider text-green-800 disabled:opacity-60">{batchBusy ? 'Aplicando…' : 'Aplicar approved do lote via RPC'}</button></div> : null}
+            {batchReceipt ? (
+              <section className="mt-4 rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper-muted)] p-4 text-sm" role="status" aria-live="polite">
+                <p className="font-semibold">{batchReceipt.phase === 'received' ? 'Recebido e aguardando envio autenticado' : batchReceipt.phase === 'processing' ? 'Recebido e em análise/aplicação' : batchReceipt.phase === 'confirmed' ? 'Recebido, analisado e confirmado no Supabase' : 'Recebido, mas a aplicação não foi confirmada'}</p>
+                <dl className="mt-2 grid gap-1 text-xs sm:grid-cols-2">
+                  <div><dt className="text-[var(--color-muted-ink)]">arquivo</dt><dd>{batchReceipt.fileName} · {batchReceipt.bytes.toLocaleString('pt-BR')} bytes</dd></div>
+                  <div><dt className="text-[var(--color-muted-ink)]">lote</dt><dd>{batchReceipt.batchId} · {batchReceipt.itemCount} decisões</dd></div>
+                  <div><dt className="text-[var(--color-muted-ink)]">hash do lote</dt><dd className="break-all">{batchReceipt.batchSha256}</dd></div>
+                  <div><dt className="text-[var(--color-muted-ink)]">hash do arquivo</dt><dd className="break-all">{batchReceipt.sha256 ?? 'não disponível neste navegador'}</dd></div>
+                </dl>
+                <p className="mt-2 text-[var(--color-muted-ink)]">Recebido localmente em {new Date(batchReceipt.receivedAt).toLocaleString('pt-BR')}. Somente “confirmado no Supabase” significa read-back remoto e idempotência concluídos.</p>
+              </section>
+            ) : null}
+            {batchDecisions ? <div className="mt-4 flex flex-wrap items-center gap-3"><span className="font-mono text-xs uppercase tracking-wider text-green-800">{batchDecisions.length} decisões validadas</span><button type="button" disabled={batchBusy} onClick={() => void applyBatchDecisions()} className="rounded-sm border border-green-700 px-3 py-2 font-mono text-xs uppercase tracking-wider text-green-800 disabled:opacity-60">{batchBusy ? 'Enviando e confirmando…' : 'Enviar lote e confirmar'}</button></div> : null}
           </section>
 
           <section className="mt-8 border-t border-[var(--color-border-editorial)] pt-6" aria-label="Lote P2 aguardando disposição editorial">

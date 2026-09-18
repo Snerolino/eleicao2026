@@ -2,6 +2,7 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { AdminPage } from '../AdminPage';
+import editorialBatch001 from '../../../data/legislative-import/alrs/editorial-batches/alrs-editorial-001.json';
 
 const mocks = vi.hoisted(() => ({
   getSession: vi.fn(),
@@ -331,5 +332,41 @@ describe('AdminPage', () => {
       }));
       expect(mocks.rpc).toHaveBeenCalledWith('publish_claim', { p_claim_id: 'claim-rejected' });
     });
+  });
+
+  it('confirma o recebimento local do JSON válido antes da aplicação remota', async () => {
+    mocks.from.mockImplementation((table: string) => {
+      if (table === 'editor_roles') return editorRoleQuery();
+      if (table === 'claims') return pendingClaimsQuery();
+      if (table === 'impact_editorial_dispositions') return dispositionQuery();
+      if (table === 'editorial_reviews') return reviewInsertQuery();
+      throw new Error(`Tabela inesperada: ${table}`);
+    });
+
+    renderAdmin();
+    fireEvent.change(await screen.findByLabelText(/e-mail/i), { target: { value: 'admin@votopraquem.org' } });
+    fireEvent.change(screen.getByLabelText(/senha/i), { target: { value: 'senha-local' } });
+    fireEvent.click(screen.getByRole('button', { name: /entrar/i }));
+    expect(await screen.findByRole('heading', { name: /claims pendentes/i })).toBeInTheDocument();
+
+    const payload = {
+      ...editorialBatch001,
+      items: editorialBatch001.items.map((item) => ({
+        proposition_version_id: item.proposition_version_id,
+        review_key: item.review_key,
+        decision: 'approved' as const,
+        disposition: 'no_direct_population_group' as const,
+        rationale: 'Decisão editorial de teste baseada na fonte oficial e no escopo da versão.',
+      })),
+    };
+    const file = new File([JSON.stringify(payload)], 'lote-001-decisoes.json', { type: 'application/json' });
+    fireEvent.change(document.querySelector('input[type="file"]') as HTMLInputElement, { target: { files: [file] } });
+
+    await waitFor(() => {
+      expect(screen.getByText(/arquivo recebido e validado/i)).toBeInTheDocument();
+      expect(screen.getByText(/recebido e aguardando envio autenticado/i)).toBeInTheDocument();
+      expect(screen.getByText(/25 decisões validadas/i)).toBeInTheDocument();
+    });
+    expect(mocks.rpc).not.toHaveBeenCalledWith('record_impact_editorial_batch', expect.anything());
   });
 });
