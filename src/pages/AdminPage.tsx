@@ -121,6 +121,7 @@ type BatchReceipt = {
 const editorialBatchContexts = (editorialBatchManifest.batches ?? [])
   .map((descriptor) => editorialBatchFiles[`../../data/legislative-import/alrs/editorial-batches/${descriptor.file}`])
   .filter(Boolean) as BatchContext[];
+const humanReviewVersionIds = [...new Set(editorialBatchContexts.flatMap((batch) => batch.items.map((item) => item.proposition_version_id)))];
 
 type LoadState = 'idle' | 'loading' | 'ready' | 'error';
 type OperationFeedback = { kind: 'success' | 'error'; title: string; detail: string };
@@ -153,6 +154,7 @@ export function AdminPage() {
   const [batchBusy, setBatchBusy] = useState(false);
   const [batchContext, setBatchContext] = useState<BatchContext | null>(null);
   const [batchReceipt, setBatchReceipt] = useState<BatchReceipt | null>(null);
+  const [humanPackRemainingCount, setHumanPackRemainingCount] = useState<number | null>(null);
   const [operationFeedback, setOperationFeedback] = useState<OperationFeedback | null>(null);
 
   usePageMetadata(
@@ -190,8 +192,15 @@ export function AdminPage() {
         .in('proposition_version_id', p2EditorialVersionIds)
         .eq('status', 'approved');
       setP2Completed(new Set((p2Dispositions ?? []).map((row: { proposition_version_id: string }) => row.proposition_version_id)));
+      const { data: humanDispositions, error: humanDispositionError } = await (supabase as any)
+        .from('impact_editorial_dispositions')
+        .select('proposition_version_id, status')
+        .in('proposition_version_id', humanReviewVersionIds);
+      if (humanDispositionError) setHumanPackRemainingCount(null);
+      else setHumanPackRemainingCount(humanReviewVersionIds.filter((id) => !(humanDispositions ?? []).some((row: { proposition_version_id: string; status: string }) => row.proposition_version_id === id && ['approved', 'needs_changes'].includes(row.status))).length);
     } catch {
       setP2Completed(new Set());
+      setHumanPackRemainingCount(null);
     }
 
     const { data, error } = await supabase
@@ -633,9 +642,12 @@ export function AdminPage() {
       return;
     }
     setP2Completed((current) => new Set([...current, ...ids]));
+    setBatchDecisions(null);
+    setBatchContext(null);
     setBatchBusy(false);
     setBatchReceipt((current) => current ? { ...current, phase: 'confirmed' } : current);
     setOperationFeedback({ kind: 'success', title: 'Lote enviado e confirmado', detail: `${readBackById.size}/${batchDecisions.length} itens confirmados. Primeira execução: ${firstApply?.inserted ?? 0} novas; segunda execução: ${secondApply?.already_present ?? 0} já presentes.` });
+    if (user) await loadEditorialQueue(user);
   }
 
   const pendingP2Items = p2EditorialItems.filter((item) => !p2Completed.has(item.proposition_version_id));
@@ -845,10 +857,15 @@ export function AdminPage() {
             <h2 className="text-2xl">Aplicação editorial em lote</h2>
             <p className="mt-2 text-sm text-[var(--color-muted-ink)]">Carregue o JSON revisado externamente. O portal valida batch_id, batch_sha256 e review_key antes de chamar as RPCs autenticadas. Apenas decisões approved são aplicadas; needs_changes permanece como exceção.</p>
             <p className="mt-3 rounded-sm border border-blue-300 bg-blue-50 px-3 py-3 text-sm text-blue-950">
-              Pacote para revisores: <a href="/editorial/alrs-ready-for-human-review-v1.json" download="alrs-ready-for-human-review-v1.json" className="font-semibold underline underline-offset-4">baixar as 141 matérias prontas para disposição</a>. O arquivo é somente para análise: decisões, aplicação remota e aprovação pública permanecem desativadas.
-              <span className="mt-2 block">Para enviar decisões, use um arquivo de um lote: {editorialBatchManifest.batches?.map((batch, index) => <span key={batch.batch_id}>{index > 0 ? ' · ' : ''}<a href={`/editorial/${batch.file}`} download={batch.file} className="underline underline-offset-4">{batch.batch_id}</a></span>)}.</span>
+              {humanPackRemainingCount === 0 ? (
+                <>Pacote de revisores retirado automaticamente: <strong>141/141 matérias encaminhadas</strong>. Não há lote de disposição pendente para esta onda.</>
+              ) : (
+                <>Pacote para revisores: <a href="/editorial/alrs-ready-for-human-review-v1.json" download="alrs-ready-for-human-review-v1.json" className="font-semibold underline underline-offset-4">baixar as 141 matérias prontas para disposição</a>. {humanPackRemainingCount === null ? 'Aguardando confirmação remota da fila.' : `${humanPackRemainingCount} matérias ainda não foram recebidas.`}
+                  <span className="mt-2 block">Para enviar decisões, use um arquivo de um lote: {editorialBatchManifest.batches?.map((batch, index) => <span key={batch.batch_id}>{index > 0 ? ' · ' : ''}<a href={`/editorial/${batch.file}`} download={batch.file} className="underline underline-offset-4">{batch.batch_id}</a></span>)}.</span>
+                </>
+              )}
             </p>
-            <label className="mt-4 grid gap-2 text-sm">
+            <label className={`mt-4 grid gap-2 text-sm ${humanPackRemainingCount === 0 ? 'hidden' : ''}`}>
               <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">JSON de decisões de um dos {editorialBatchManifest.batches?.length ?? 0} lotes congelados</span>
               <input type="file" accept="application/json,.json" onChange={(event) => void loadBatchDecisions(event)} className="block w-full text-sm" />
             </label>
