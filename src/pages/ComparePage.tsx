@@ -122,6 +122,35 @@ function VoteCategoryTable({
   );
 }
 
+function NominalVoteSummary({ candidates }: { candidates: CandidateWithClaims[] }) {
+  return (
+    <div className="overflow-auto rounded-sm border border-[var(--color-border-editorial)]">
+      <table className="w-full border-collapse text-sm">
+        <thead><tr className="bg-[var(--color-paper)]">
+          <th className="p-3 text-left font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">Candidato / casa</th>
+          <th className="p-3 text-right font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">Total</th>
+          <th className="p-3 text-right font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">Sim</th>
+          <th className="p-3 text-right font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">Não</th>
+          <th className="p-3 text-right font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">Abst.</th>
+          <th className="p-3 text-right font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">Aus.</th>
+          <th className="p-3 text-right font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">Obst.</th>
+        </tr></thead>
+        <tbody>{candidates.flatMap((candidate) => (candidate.voting_profiles ?? []).map((profile) => (
+          <tr key={`${candidate.id}:${profile.house}`} className="border-t border-[var(--color-border-editorial)]">
+            <th className="p-3 text-left font-medium">{candidate.full_name} · {profile.house}</th>
+            <td className="p-3 text-right font-mono">{profile.total_votes}</td>
+            <td className="p-3 text-right font-mono">{profile.votos_sim}</td>
+            <td className="p-3 text-right font-mono">{profile.votos_nao}</td>
+            <td className="p-3 text-right font-mono">{profile.votos_abstencao}</td>
+            <td className="p-3 text-right font-mono">{profile.votos_ausente}</td>
+            <td className="p-3 text-right font-mono">{profile.votos_obstrucao}</td>
+          </tr>
+        )))}</tbody>
+      </table>
+    </div>
+  );
+}
+
 function VoteCategoryScoreTableLegacy({ scores, candidates }: { scores: VoteCategoryScore[]; candidates: CandidateWithClaims[] }) {
   const safeScores = scores.filter((score) => typeof score?.group_slug === 'string' && typeof score?.candidate_id === 'string' && ('score' in score));
   if (candidates.length === 0) return <p className="font-mono text-xs uppercase tracking-wide text-[var(--color-muted-ink)]">Selecione candidatos para visualizar a comparação.</p>;
@@ -542,9 +571,16 @@ export function ComparePage() {
           {selected.length >= 2 && (
             <section className="mt-6 space-y-3" aria-label="Comparação de votos por categoria">
               <div>
-                <h2 className="text-xl">Votos em categorias aprovadas</h2>
+                <h2 className="text-xl">Resumo de votos nominais</h2>
                 <p className="mt-1 font-mono text-xs text-[var(--color-muted-ink)]">
-                  Apenas eventos comuns, fontes e assessments aprovados. Os números são fatos nominais, não recomendação ou score.
+                  Este é o mesmo perfil factual exibido no dossiê de cada candidato, por casa legislativa. O total inclui todos os votos nominais materializados.
+                </p>
+              </div>
+              <NominalVoteSummary candidates={selected} />
+              <div>
+                <h2 className="text-xl">Recorte de votos em categorias aprovadas</h2>
+                <p className="mt-1 font-mono text-xs text-[var(--color-muted-ink)]">
+                  Este recorte é menor de propósito: mostra apenas eventos comuns entre os candidatos, com fonte e assessment aprovados. Não substitui o total nominal acima.
                 </p>
               </div>
               {voteCategoryQuery.isLoading ? <LoadingSkeleton label="Carregando comparação factual" /> : <VoteCategoryTable comparisons={voteCategoryQuery.data ?? []} candidates={selected} />}
