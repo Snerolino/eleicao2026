@@ -2,7 +2,10 @@ import { useState, useMemo } from "react";
 import type { CandidateNominalVote } from "@/types/election";
 import { getBeneficiaryGroupLabel } from "@/domain/impact/beneficiary-groups";
 import { sanitizeUrl } from "@/utils/sanitizeUrl";
-import { filterPopulationRelevantVotes } from "@/domain/impact/vote-coverage";
+import {
+  filterPopulationRelevantVotes,
+  isScoredPopulationVote,
+} from "@/domain/impact/vote-coverage";
 
 export interface CandidateNominalVotesListProps {
   votes: CandidateNominalVote[];
@@ -170,6 +173,7 @@ export function CandidateNominalVotesList({
               filteredVotes.map((v, index) => {
                 const voteVal = v.vote_value.toLowerCase();
                 const safeSourceUrl = sanitizeUrl(v.source_url);
+                const isScoreableEvent = isScoredPopulationVote(v);
 
                 return (
                   <article
@@ -189,11 +193,13 @@ export function CandidateNominalVotesList({
                         {v.assessment_group && (
                           <span className="inline-flex items-center rounded-sm bg-[var(--color-institutional)]/10 px-2 py-0.5 font-mono text-[0.68rem] font-medium text-[var(--color-institutional)] border border-[var(--color-institutional)]/20">
                             {getBeneficiaryGroupLabel(v.assessment_group)}
-                            {v.impact_direction === "positive"
-                              ? " · Ampliadora"
-                              : v.impact_direction === "negative"
-                              ? " · Restritiva"
-                              : ""}
+                            {isScoreableEvent
+                              ? v.impact_direction === "positive"
+                                ? " · efeito ampliador atribuído"
+                                : v.impact_direction === "negative"
+                                ? " · efeito restritivo atribuído"
+                                : " · evento atribuído"
+                              : " · assessment textual; evento não atribuído"}
                           </span>
                         )}
                       </div>
@@ -201,6 +207,12 @@ export function CandidateNominalVotesList({
                       <h4 className="text-base font-medium leading-snug text-[var(--color-ink)]">
                         {v.title}
                       </h4>
+
+                      {v.assessment_group && !isScoreableEvent && (
+                        <p className="max-w-2xl text-xs leading-relaxed text-[var(--color-muted-ink)]">
+                          O texto da matéria possui assessment para esta categoria, mas este evento não entra no score enquanto o objeto votado e o sentido de SIM/NÃO não tiverem atribuição v2 aprovada e fontes próprias.
+                        </p>
+                      )}
 
                       {safeSourceUrl && (
                         <a
@@ -218,13 +230,7 @@ export function CandidateNominalVotesList({
                     {/* Badge do Voto */}
                     <div className="shrink-0 pt-0.5">
                       <span
-                        className={`inline-flex items-center px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider rounded-sm border ${
-                          voteVal === "sim"
-                            ? "bg-emerald-100 text-emerald-900 border-emerald-300 dark:bg-emerald-950 dark:text-emerald-200 dark:border-emerald-800"
-                            : voteVal === "nao"
-                            ? "bg-rose-100 text-rose-900 border-rose-300 dark:bg-rose-950 dark:text-rose-200 dark:border-rose-800"
-                            : "bg-zinc-100 text-zinc-800 border-zinc-300 dark:bg-zinc-800 dark:text-zinc-200 dark:border-zinc-700"
-                        }`}
+                        className="inline-flex items-center rounded-sm border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-[var(--color-ink)]"
                       >
                         Voto: {v.vote_value}
                       </span>
