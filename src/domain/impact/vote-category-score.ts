@@ -6,6 +6,7 @@ export interface VoteCategoryScoreFact {
   candidate_id: string;
   house: string;
   voting_event_id?: string;
+  proposition_version_id?: string;
   group_slug: string;
   value: FactualVoteValue;
   absence_type?: 'estrategica' | 'obstrucao_coordenada' | 'justificada' | null;
@@ -42,7 +43,7 @@ export function buildVoteCategoryScores(
   const seenFacts = new Set<string>();
   for (const fact of facts) {
     if (fact.review_status !== 'approved' && fact.review_status !== 'contested') continue;
-    const factKey = `${fact.candidate_id}|${fact.house}|${fact.group_slug}|${fact.voting_event_id ?? `${fact.value}|${fact.impact_direction}|${fact.defending_vote}`}`;
+    const factKey = `${fact.candidate_id}|${fact.house}|${fact.group_slug}|${fact.proposition_version_id ?? fact.voting_event_id ?? `${fact.value}|${fact.impact_direction}|${fact.defending_vote}`}`;
     if (seenFacts.has(factKey)) continue;
     seenFacts.add(factKey);
     const key = `${fact.candidate_id}|${fact.house}|${fact.group_slug}`;

@@ -47,6 +47,7 @@ export function computeScore(inputs: ScoreInput[], methodologyVersion: string): 
   let numerator = 0;
   let denominator = 0;
   let excluded = 0;
+  let evaluated = 0;
   let contested = 0;
   let confidenceSum = 0;
   let confidenceCount = 0;
@@ -65,6 +66,7 @@ export function computeScore(inputs: ScoreInput[], methodologyVersion: string): 
       continue;
     }
 
+    evaluated += 1;
     numerator += weight * signal;
     denominator += weight;
   }
@@ -74,7 +76,7 @@ export function computeScore(inputs: ScoreInput[], methodologyVersion: string): 
   return {
     score,
     methodology_version: methodologyVersion,
-    evaluated_propositions: inputs.length,
+    evaluated_propositions: evaluated,
     eligible_weight: denominator,
     excluded_no_data: excluded,
     contested_assessments: contested,

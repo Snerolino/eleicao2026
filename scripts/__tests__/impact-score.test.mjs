@@ -97,7 +97,7 @@ describe('impact-score: computeScore', () => {
       ],
       '1.0.0',
     );
-    expect(r.evaluated_propositions).toBe(3);
+    expect(r.evaluated_propositions).toBe(2);
     expect(r.eligible_weight).toBeCloseTo(4.5 + 2, 6);
     expect(r.excluded_no_data).toBe(1);
     expect(r.average_confidence).toBeCloseTo((0.8 + 0.6 + 0.7) / 3, 6);
