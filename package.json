@@ -60,6 +60,7 @@
     "impact:senado:envelope:adapt": "node scripts/adapt-senado-nominal-envelope.mjs",
     "impact:alrs:residual:repair": "node scripts/repair-alrs-fed17-residual.mjs",
     "impact:alrs:score-recovery-queue": "node scripts/build-alrs-score-recovery-queue.mjs",
+    "impact:v2:audit": "node scripts/audit-impact-event-attribution-v2.mjs",
     "impact:alrs:missing-sources:backfill": "node scripts/backfill-alrs-missing-sources-current.mjs",
     "impact:camara:r4:queue": "node scripts/build-camara-r4-review-queue.mjs",
     "impact:alrs:r4:queue": "node scripts/build-alrs-impact-review-queue.mjs",
