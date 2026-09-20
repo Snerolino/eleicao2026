@@ -14,6 +14,7 @@ interface CompactProposition {
   event_defending_vote?: 'sim' | 'nao' | null;
   textual_defending_vote?: 'sim' | 'nao' | null;
   vote_attribution_status?: string | null;
+  score_withholding_reason?: string | null;
   voting_event_id?: string | null;
   attribution_methodology_version?: string | null;
   attribution_review_status?: 'pending_review' | 'approved' | 'contested' | 'rejected' | null;
@@ -61,6 +62,7 @@ export function getCandidateNominalVotes(
       event_defending_vote: prop.event_defending_vote ?? null,
       textual_defending_vote: prop.textual_defending_vote ?? null,
       vote_attribution_status: prop.vote_attribution_status ?? null,
+      score_withholding_reason: prop.score_withholding_reason ?? null,
       attribution_methodology_version: prop.attribution_methodology_version ?? null,
       attribution_review_status: prop.attribution_review_status ?? null,
     });
