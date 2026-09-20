@@ -70,10 +70,13 @@ function CategoryScoreList({
     house,
     group_slug: groupSlug,
     score: null,
-    methodology_version: '1.0.0',
+    methodology_version: '2.0.0',
     evaluated_propositions: 0,
+    evaluated_events: 0,
     eligible_weight: 0,
     excluded_no_data: 0,
+    withheld_events: 0,
+    no_alignment_events: 0,
     contested_assessments: 0,
     average_confidence: null,
   });
@@ -263,17 +266,19 @@ export function CandidateDossierPage() {
                   </h2>
                   <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[var(--color-muted-ink)]">
                     {profile.total_votes} votos individuais localizados na {house.label}.
-                    A lista abaixo mostra somente votações relacionadas às categorias populacionais canônicas. Os números são fatos de votação; a avaliação pública aparece por categoria somente quando existe assessment aprovado e fonte verificável.
+                    A lista abaixo mostra somente votações relacionadas às categorias populacionais canônicas. Os números são fatos de votação; a avaliação por categoria só considera o voto quando o evento concreto, o objeto votado e o sentido de SIM/NÃO possuem atribuição metodológica v2 aprovada e fontes verificáveis.
                   </p>
                 </div>
                 <div className="shrink-0 text-left sm:text-right">
                   <span className="font-mono text-[0.68rem] uppercase tracking-widest text-[var(--color-muted-ink)]">avaliação por categoria</span>
-                  <strong className="mt-1 block font-mono text-sm text-[var(--color-institutional)]">metodologia v1</strong>
+                  <strong className="mt-1 block font-mono text-sm text-[var(--color-institutional)]">metodologia v2</strong>
                 </div>
               </div>
               <div className="mt-5 border border-[var(--color-border-editorial)] p-4">
                 <h3 className="font-mono text-xs uppercase tracking-widest text-[var(--color-muted-ink)]">Impacto populacional por categoria</h3>
-                <p className="mt-2 text-sm text-[var(--color-muted-ink)]">O valor considera somente proposições com assessment aprovado, grupo identificado e voto elegível.</p>
+                <p className="mt-2 text-sm text-[var(--color-muted-ink)]">
+                  O valor considera somente eventos nominais cujo objeto votado foi vinculado ao assessment, com atribuição do sentido de SIM/NÃO aprovada e fontes verificáveis. Eventos compostos não separáveis, procedimentais ou sem vínculo comprovado ficam sem pontuação.
+                </p>
                 {categoryScoresQuery.isLoading ? (
                   <LoadingSkeleton label="Calculando avaliação por categoria" />
                 ) : (
@@ -291,7 +296,7 @@ export function CandidateDossierPage() {
               <div className="mt-5 border border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-4" aria-label={`Cobertura da análise de votações em ${house.label}`}>
                 <h3 className="font-mono text-xs uppercase tracking-widest text-[var(--color-muted-ink)]">Cobertura e limites da análise</h3>
                 <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted-ink)]">
-                  Das {coverage.totalVotes} votações localizadas, {coverage.relevantVotes} são pertinentes às categorias populacionais e {coverage.scoredVotes} foram pontuadas.
+                  Das {coverage.totalVotes} votações localizadas, {coverage.relevantVotes} têm relação com categorias populacionais e {coverage.scoredVotes} possuem atribuição de evento v2 suficiente para entrar no cálculo. As demais não contam como zero: ficam retidas.
                 </p>
                 <dl className="mt-3 grid gap-3 sm:grid-cols-3">
                   <div><dt className="font-mono text-[0.62rem] uppercase tracking-wider text-[var(--color-muted-ink)]">Pertinentes / localizadas</dt><dd className="mt-1 font-mono text-lg font-semibold text-[var(--color-institutional)]">{formatCoveragePercentage(coverage.relevantPercentage)}</dd></div>
