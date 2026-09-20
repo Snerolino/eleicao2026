@@ -44,8 +44,8 @@ O snapshot nominal foi reconstruído a partir do universo factual remoto:
 - 455 duplicatas removidas;
 - 0 votos sem identidade após a reconciliação.
 
-Os `voting_profiles` públicos foram recalculados do mesmo snapshot e totalizam 110.252 votos. Os `category_scores` antigos (476 linhas) foram removidos do snapshot porque não havia vínculo verificável com os eventos reconciliados; scores só devem reaparecer quando derivados de matrizes/eventos aprovados no caminho remoto.
+Os `voting_profiles` públicos foram recalculados do mesmo snapshot e totalizam 110.252 votos. Os 476 `category_scores` derivados foram restaurados do snapshot editorial anterior, que já continha os assessments aprovados; os eventos nominais continuam deduplicados e os novos eventos sem vínculo permanecem sem grupo/score. A associação factual e a avaliação editorial continuam separadas.
 
 ## Gate de publicação
 
-A publicação fica autorizada somente depois de completar os gates locais abaixo e confirmar o deploy com read-back. A ausência de `category_scores` no snapshot é deliberada e fail-closed, não uma perda silenciosa de dados.
+A publicação fica autorizada somente depois de completar os gates locais abaixo e confirmar o deploy com read-back. Eventos sem assessment aprovado continuam deliberadamente como não avaliados.
