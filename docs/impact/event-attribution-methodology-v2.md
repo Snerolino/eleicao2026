@@ -65,6 +65,20 @@ Nova relação de fontes:
 
 `impact_event_attribution_sources`
 
+Revisões independentes:
+
+`impact_event_attribution_reviews`
+
+Uma atribuição não pode ser promovida a `approved` por UPDATE direto. A transição usa
+`approve_impact_event_attribution(uuid)`, que exige:
+
+- pelo menos uma fonte oficial da atribuição;
+- revisão interna aprovada por pessoa diferente de `created_by`;
+- revisão externa quando `confidence < 0.60`, quando o evento é `compound_separable` ou quando a matriz possui `severity >= 4`;
+- papel editorial autenticado.
+
+Atribuições e reviews não podem ser apagadas por editores comuns; correções devem preservar o histórico.
+
 Os campos v1.1 de evento ainda existentes em `impact_assessments` permanecem temporariamente para histórico/migração, mas são **deprecated para score**.
 
 ## Snapshot local
