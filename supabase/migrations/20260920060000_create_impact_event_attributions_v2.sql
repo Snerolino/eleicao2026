@@ -41,7 +41,6 @@ create table if not exists public.impact_event_attributions (
       and event_defending_vote in ('sim','nao')
       and vote_attribution_status in ('isolated','compound_separable')
       and score_withholding_reason is null
-      and review_status in ('approved','contested')
     )
     or
     (
@@ -77,12 +76,37 @@ create table if not exists public.impact_event_attribution_sources (
 comment on table public.impact_event_attribution_sources is
   'Official sources that support the event binding and the meaning of the vote in methodology v2.';
 
+create table if not exists public.impact_event_attribution_reviews (
+  id uuid primary key default gen_random_uuid(),
+  attribution_id uuid not null references public.impact_event_attributions(id) on delete cascade,
+  reviewer_id uuid references auth.users(id),
+  reviewer_type text not null
+    check (reviewer_type in ('curadoria_interna','painel_externo','revisao_automatizada')),
+  decision text not null
+    check (decision in ('approved','rejected','needs_changes')),
+  notes text,
+  reviewed_at timestamptz not null default now()
+);
+
+comment on table public.impact_event_attribution_reviews is
+  'Independent reviews of event-level attribution. Raw reviews are not public.';
+
+create index if not exists idx_impact_event_attribution_reviews_attribution
+  on public.impact_event_attribution_reviews(attribution_id, decision, reviewed_at desc);
+
 create index if not exists idx_impact_event_attributions_event
   on public.impact_event_attributions(voting_event_id);
 create index if not exists idx_impact_event_attributions_assessment
   on public.impact_event_attributions(assessment_id);
 create index if not exists idx_impact_event_attributions_review
   on public.impact_event_attributions(review_status, score_eligible);
+
+-- A textual assessment may be reused in v2, but the legacy event-level defaults
+-- must never make a newly inserted assessment look scoreable by themselves.
+update public.impact_assessments
+set textual_defending_vote = defending_vote
+where textual_defending_vote is null
+  and defending_vote is not null;
 
 -- Legacy fields remain for history but must fail closed for new rows.
 alter table public.impact_assessments
@@ -97,8 +121,101 @@ comment on column public.impact_assessments.vote_attribution_status is
 comment on column public.impact_assessments.score_withholding_reason is
   'LEGACY v1.1. Deprecated for score derivation. Use impact_event_attributions.score_withholding_reason.';
 
+create or replace function public.impact_event_attribution_has_review(
+  p_attribution_id uuid,
+  p_reviewer_type text
+)
+returns boolean
+language sql
+stable
+security definer
+set search_path = public, auth
+as $
+  select exists (
+    select 1
+    from public.impact_event_attribution_reviews r
+    where r.attribution_id = p_attribution_id
+      and r.reviewer_type = p_reviewer_type
+      and r.decision = 'approved'
+      and (
+        p_reviewer_type <> 'curadoria_interna'
+        or (r.reviewer_id is not null and public.has_editor_role(r.reviewer_id))
+      )
+  );
+$;
+
+create or replace function public.approve_impact_event_attribution(p_attribution_id uuid)
+returns public.impact_event_attributions
+language plpgsql
+security definer
+set search_path = public, auth
+as $
+declare
+  v_attr public.impact_event_attributions%rowtype;
+  v_severity smallint;
+begin
+  if auth.uid() is null or not public.has_editor_role(auth.uid()) then
+    raise exception 'editor role required' using errcode = '42501';
+  end if;
+
+  select ea.*, m.severity
+    into v_attr, v_severity
+  from public.impact_event_attributions ea
+  join public.impact_assessments a on a.id = ea.assessment_id
+  join public.impact_matrices m on m.id = a.impact_matrix_id
+  where ea.id = p_attribution_id;
+
+  if not found then
+    raise exception 'impact_event_attribution not found' using errcode = 'P0001';
+  end if;
+
+  if v_attr.review_status <> 'pending_review' then
+    raise exception 'attribution must be pending_review' using errcode = 'P0001';
+  end if;
+
+  if not exists (
+    select 1
+    from public.impact_event_attribution_sources s
+    where s.attribution_id = p_attribution_id
+  ) then
+    raise exception 'event attribution requires at least one official source'
+      using errcode = 'P0001';
+  end if;
+
+  if not public.impact_event_attribution_has_review(
+    p_attribution_id,
+    'curadoria_interna'
+  ) then
+    raise exception 'approved internal review required' using errcode = 'P0001';
+  end if;
+
+  if (
+    v_attr.confidence < 0.60
+    or v_attr.vote_attribution_status = 'compound_separable'
+    or v_severity >= 4
+  ) and not public.impact_event_attribution_has_review(
+    p_attribution_id,
+    'painel_externo'
+  ) then
+    raise exception 'external review required for this attribution'
+      using errcode = 'P0001';
+  end if;
+
+  update public.impact_event_attributions
+  set review_status = 'approved',
+      approved_at = now(),
+      approved_by = auth.uid(),
+      updated_at = now()
+  where id = p_attribution_id
+  returning * into v_attr;
+
+  return v_attr;
+end;
+$;
+
 alter table public.impact_event_attributions enable row level security;
 alter table public.impact_event_attribution_sources enable row level security;
+alter table public.impact_event_attribution_reviews enable row level security;
 
 drop policy if exists "impact_event_attributions_public_read" on public.impact_event_attributions;
 create policy "impact_event_attributions_public_read"
@@ -145,6 +262,23 @@ for delete
 to authenticated
 using ((select public.has_editor_role((select auth.uid()))));
 
+drop policy if exists "impact_event_attribution_reviews_internal_read" on public.impact_event_attribution_reviews;
+create policy "impact_event_attribution_reviews_internal_read"
+on public.impact_event_attribution_reviews
+for select
+to authenticated
+using ((select public.has_editor_role((select auth.uid()))));
+
+drop policy if exists "impact_event_attribution_reviews_editor_insert" on public.impact_event_attribution_reviews;
+create policy "impact_event_attribution_reviews_editor_insert"
+on public.impact_event_attribution_reviews
+for insert
+to authenticated
+with check (
+  (select public.has_editor_role((select auth.uid())))
+  and reviewer_id = (select auth.uid())
+);
+
 drop policy if exists "impact_event_attribution_sources_public_read" on public.impact_event_attribution_sources;
 create policy "impact_event_attribution_sources_public_read"
 on public.impact_event_attribution_sources
@@ -172,5 +306,10 @@ with check ((select public.has_editor_role((select auth.uid()))));
 
 grant select on table public.impact_event_attributions, public.impact_event_attribution_sources
 to anon, authenticated;
+grant select, insert on table public.impact_event_attribution_reviews
+to authenticated;
 grant insert, update, delete on table public.impact_event_attributions, public.impact_event_attribution_sources
 to authenticated;
+
+revoke all on function public.approve_impact_event_attribution(uuid) from public, anon;
+grant execute on function public.approve_impact_event_attribution(uuid) to authenticated;
