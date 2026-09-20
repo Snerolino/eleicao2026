@@ -171,7 +171,6 @@ export function CandidateNominalVotesList({
               </p>
             ) : (
               filteredVotes.map((v, index) => {
-                const voteVal = v.vote_value.toLowerCase();
                 const safeSourceUrl = sanitizeUrl(v.source_url);
                 const isScoreableEvent = isScoredPopulationVote(v);
 
