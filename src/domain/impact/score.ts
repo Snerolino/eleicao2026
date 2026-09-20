@@ -61,16 +61,16 @@ export function computeScore(inputs: ScoreInput[], methodologyVersion: string): 
     const signal = ALIGNMENT_SIGNALS[item.alignment];
     const weight = STRUCTURAL_WEIGHTS[item.structural_type] * item.severity;
 
-    if (typeof item.confidence === 'number') {
-      confidenceSum += item.confidence;
-      confidenceCount += 1;
-    }
-
     if (signal === null) {
       excluded += 1;
       if (item.alignment === 'nao_avaliavel') withheld += 1;
       else noAlignment += 1;
       continue;
+    }
+
+    if (typeof item.confidence === 'number') {
+      confidenceSum += item.confidence;
+      confidenceCount += 1;
     }
 
     evaluated += 1;
