@@ -44,7 +44,13 @@ export function buildVoteCategoryComparisons(
 ): VoteCategoryComparison[] {
   const selected = new Set(candidateIds);
   if (selected.size < 2) return [];
-  const valid = facts.filter((fact) => selected.has(fact.candidate_id) && fact.review_status === 'approved');
+  const validByKey = new Map<string, VoteCategoryFact>();
+  for (const fact of facts) {
+    if (!selected.has(fact.candidate_id) || fact.review_status !== 'approved') continue;
+    const key = `${fact.candidate_id}|${fact.house}|${fact.group_slug}|${fact.voting_event_id}`;
+    if (!validByKey.has(key)) validByKey.set(key, fact);
+  }
+  const valid = [...validByKey.values()];
   const eventCandidates = new Map<string, Set<string>>();
   for (const fact of valid) {
     const key = `${fact.house}|${fact.group_slug}|${fact.voting_event_id}`;

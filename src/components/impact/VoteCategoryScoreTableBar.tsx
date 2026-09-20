@@ -26,10 +26,11 @@ export interface CandidateCategoryScoreResult {
 export function getCandidateCategoryScore(
   scores: VoteCategoryScore[],
   candidateId: string,
-  groupSlug: string
+  groupSlug: string,
+  house?: string
 ): CandidateCategoryScoreResult {
   const matches = scores.filter(
-    (s) => s.candidate_id === candidateId && s.group_slug === groupSlug
+    (s) => s.candidate_id === candidateId && s.group_slug === groupSlug && (!house || s.house === house)
   );
   if (matches.length === 0) {
     return { score: null, evaluatedPropositions: 0, contestedAssessments: 0 };
@@ -42,24 +43,9 @@ export function getCandidateCategoryScore(
       house: matches[0].house,
     };
   }
-  const evaluatedTotal = matches.reduce((acc, m) => acc + m.evaluated_propositions, 0);
-  const contestedTotal = matches.reduce((acc, m) => acc + m.contested_assessments, 0);
-  const validScores = matches.filter((m) => m.score !== null);
-  if (validScores.length === 0) {
-    return { score: null, evaluatedPropositions: 0, contestedAssessments: contestedTotal };
-  }
-  const weightedSum = validScores.reduce(
-    (acc, m) => acc + (m.score ?? 0) * m.evaluated_propositions,
-    0
-  );
-  const combinedScore = evaluatedTotal > 0 ? weightedSum / evaluatedTotal : validScores[0].score;
-  const houses = [...new Set(matches.map((m) => m.house).filter(Boolean))].join(', ');
-  return {
-    score: combinedScore,
-    evaluatedPropositions: evaluatedTotal,
-    contestedAssessments: contestedTotal,
-    house: houses,
-  };
+  // Nunca agrega casas diferentes. A ausência de `house` em uma chamada
+  // ambígua é tratada como não avaliado, não como uma média interestadual.
+  return { score: null, evaluatedPropositions: 0, contestedAssessments: matches.reduce((acc, m) => acc + m.contested_assessments, 0), house: matches.map((m) => m.house).join(', ') };
 }
 
 export function VoteCategoryScoreTableBar({
@@ -85,13 +71,14 @@ export function VoteCategoryScoreTableBar({
     const canonical = [...BENEFICIARY_GROUPS_CANONICAL_ORDER];
     const existing = new Set<string>(canonical);
 
+    const expanded: string[] = [...canonical];
     for (const score of safeScores) {
-      if (score.group_slug && !existing.has(score.group_slug)) {
-        canonical.push(score.group_slug as (typeof BENEFICIARY_GROUPS_CANONICAL_ORDER)[number]);
-        existing.add(score.group_slug);
-      }
+      if (!score.group_slug || existing.has(score.group_slug)) continue;
+      const key = score.group_slug;
+      if (!expanded.includes(key)) expanded.push(key);
+      existing.add(score.group_slug);
     }
-    return canonical;
+    return expanded;
   }, [safeScores]);
 
   if (candidates.length === 0) {
@@ -159,11 +146,12 @@ export function VoteCategoryScoreTableBar({
             </tr>
           </thead>
           <tbody>
-            {visibleKeys.map((groupSlug) => {
+            {visibleKeys.map((rowKey) => {
+              const groupSlug = rowKey;
               const label = getBeneficiaryGroupLabel(groupSlug);
 
               return (
-                <tr key={groupSlug} className="border-b border-[var(--color-border-editorial)] last:border-b-0">
+                <tr key={rowKey} className="border-b border-[var(--color-border-editorial)] last:border-b-0">
                   {/* Rótulo de grupo na primeira coluna */}
                   <th
                     scope="row"
@@ -202,7 +190,7 @@ export function VoteCategoryScoreTableBar({
       {rowKeys.length > initialVisibleCount && (
         <div className="flex flex-wrap items-center justify-between gap-2 pt-1">
           <p className="font-mono text-xs text-[var(--color-muted-ink)]">
-            Mostrando {visibleKeys.length} de {rowKeys.length} grupos populacionais
+            Mostrando {visibleKeys.length} de {rowKeys.length} linhas de categoria/casa
           </p>
           <button
             type="button"

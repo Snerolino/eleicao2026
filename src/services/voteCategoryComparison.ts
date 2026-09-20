@@ -14,6 +14,12 @@ import { getCandidateNominalVotes } from "./candidateVotes";
 
 type Row = Record<string, any>;
 
+function factKey(
+  fact: Pick<VoteCategoryFact, "candidate_id" | "house" | "group_slug" | "voting_event_id">
+): string {
+  return `${fact.candidate_id}|${fact.house}|${fact.group_slug}|${fact.voting_event_id}`;
+}
+
 function chunk<T>(items: T[], size = 100): T[][] {
   const result: T[][] = [];
   for (let index = 0; index < items.length; index += size) {
@@ -94,7 +100,7 @@ export function buildApprovedVoteFacts(
   dbToPublicId?: Map<string, string>
 ): VoteCategoryFact[] {
   const eventById = new Map(eventRows.map((row) => [row.id, row]));
-  const facts: VoteCategoryFact[] = [];
+  const factsByKey = new Map<string, VoteCategoryFact>();
   for (const matrix of matrixRows) {
     if (matrix.review_status !== "approved") continue;
     const groups = Array.isArray(matrix.impact_assessments) ? matrix.impact_assessments : [];
@@ -111,18 +117,19 @@ export function buildApprovedVoteFacts(
         if (!event || !matrixEvents.some((candidateEvent) => candidateEvent.id === event.id))
           continue;
         const publicCandId = dbToPublicId?.get(index.candidate_id) ?? index.candidate_id;
-        facts.push({
+        const fact: VoteCategoryFact = {
           candidate_id: publicCandId,
           house: event.house,
           voting_event_id: event.id,
           group_slug: group.group_slug,
           value: index.value,
           review_status: "approved",
-        });
+        };
+        factsByKey.set(factKey(fact), fact);
       }
     }
   }
-  return facts;
+  return [...factsByKey.values()];
 }
 
 export function getLocalVoteCategoryScoreFacts(candidateIds: string[]): VoteCategoryScoreFact[] {
@@ -177,13 +184,12 @@ export function getLocalVoteCategoryFacts(candidateIds: string[]): VoteCategoryF
     const tseId = cand?.tse_candidate_id;
     if (!tseId) continue;
     const votes = getCandidateNominalVotes(tseId);
-    for (let i = 0; i < votes.length; i++) {
-      const v = votes[i];
+    for (const v of votes) {
       if (!v.assessment_group) continue;
       facts.push({
         candidate_id: cand.id,
         house: v.house,
-        voting_event_id: `${v.house}-${v.proposition_id}-${i}`,
+        voting_event_id: `${v.house}|${v.proposition_id}`,
         group_slug: v.assessment_group,
         value: (v.vote_value as VoteCategoryFact["value"]) || "sim",
         review_status: "approved",
@@ -234,11 +240,9 @@ export async function fetchVoteCategoryComparisons(
       (matrixRows ?? []) as Row[],
       dbToPublicId
     );
-    const dbComparisonKeys = new Set(
-      dbFacts.map((f) => `${f.candidate_id}|${f.group_slug}`)
-    );
+    const dbComparisonKeys = new Set(dbFacts.map((f) => factKey(f)));
     const missingLocalComparisons = localFacts.filter(
-      (f) => !dbComparisonKeys.has(`${f.candidate_id}|${f.group_slug}`)
+      (f) => !dbComparisonKeys.has(factKey(f))
     );
     const combinedFacts = [...dbFacts, ...missingLocalComparisons];
     return buildVoteCategoryComparisons(combinedFacts, candidateIds);

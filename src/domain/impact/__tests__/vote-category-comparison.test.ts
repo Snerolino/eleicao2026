@@ -23,4 +23,15 @@ describe('vote-category-comparison', () => {
   it('não calcula comparação com menos de dois candidatos', () => {
     expect(buildVoteCategoryComparisons(facts, ['a'])).toEqual([]);
   });
+
+  it('deduplica fatos repetidos por candidato, casa, grupo e evento', () => {
+    const duplicate = [
+      ...facts.slice(0, 2),
+      facts[0],
+      facts[1],
+    ];
+    const [comparison] = buildVoteCategoryComparisons(duplicate, ['a', 'b']);
+    expect(comparison.events_compared).toBe(1);
+    expect(comparison.candidates.map((candidate) => candidate.total_votes)).toEqual([1, 1]);
+  });
 });

@@ -701,33 +701,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 2076,
-        "votos_sim": 1140,
-        "votos_nao": 843,
+        "total_votes": 2049,
+        "votos_sim": 1121,
+        "votos_nao": 835,
         "votos_abstencao": 10,
         "votos_ausente": 0,
         "votos_obstrucao": 83,
-        "nominal_balance": 297
+        "nominal_balance": 286
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002533584",
       "ano_recente": 2026,
@@ -1109,88 +1092,7 @@
         "nominal_balance": 431
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 22,
-        "divergences_count": 0,
-        "favorable_votes": 22,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 7,
-        "divergences_count": 0,
-        "favorable_votes": 7,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534012",
       "ano_recente": 2026,
@@ -1354,97 +1256,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1216,
-        "votos_sim": 1005,
-        "votos_nao": 211,
+        "total_votes": 1198,
+        "votos_sim": 1000,
+        "votos_nao": 198,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 794
+        "nominal_balance": 802
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 0.93,
-        "evaluated_propositions_count": 30,
-        "divergences_count": 1,
-        "favorable_votes": 29,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 9,
-        "divergences_count": 0,
-        "favorable_votes": 9,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 6,
-        "divergences_count": 0,
-        "favorable_votes": 6,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534019",
       "ano_recente": 2026,
@@ -1626,97 +1447,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 747,
+        "total_votes": 745,
         "votos_sim": 628,
-        "votos_nao": 119,
+        "votos_nao": 117,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 509
+        "nominal_balance": 511
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 24,
-        "divergences_count": 0,
-        "favorable_votes": 24,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 4,
-        "divergences_count": 0,
-        "favorable_votes": 4,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 8,
-        "divergences_count": 0,
-        "favorable_votes": 8,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534039",
       "ano_recente": 2026,
@@ -2482,33 +2222,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 997,
-        "votos_sim": 569,
-        "votos_nao": 426,
+        "total_votes": 976,
+        "votos_sim": 557,
+        "votos_nao": 417,
         "votos_abstencao": 2,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 143
+        "nominal_balance": 140
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
-        "favorable_votes": 0,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534588",
       "ano_recente": 2026,
@@ -3272,57 +2995,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1149,
-        "votos_sim": 1102,
-        "votos_nao": 47,
+        "total_votes": 1122,
+        "votos_sim": 1077,
+        "votos_nao": 45,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1055
+        "nominal_balance": 1032
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 19,
-        "divergences_count": 0,
-        "favorable_votes": 19,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 0.71,
-        "evaluated_propositions_count": 7,
-        "divergences_count": 1,
-        "favorable_votes": 6,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 6,
-        "divergences_count": 0,
-        "favorable_votes": 6,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002535704",
       "ano_recente": 2026,
@@ -3753,33 +3435,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 2091,
-        "votos_sim": 1145,
-        "votos_nao": 945,
+        "total_votes": 2074,
+        "votos_sim": 1133,
+        "votos_nao": 940,
         "votos_abstencao": 1,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 200
+        "nominal_balance": 193
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
-        "favorable_votes": 0,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002536917",
       "ano_recente": 2026,
@@ -4583,81 +4248,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 939,
-        "votos_sim": 891,
-        "votos_nao": 48,
+        "total_votes": 923,
+        "votos_sim": 876,
+        "votos_nao": 47,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 843
+        "nominal_balance": 829
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 0.83,
-        "evaluated_propositions_count": 23,
-        "divergences_count": 2,
-        "favorable_votes": 21,
-        "unfavorable_votes": 2
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 6,
-        "divergences_count": 0,
-        "favorable_votes": 6,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002537887",
       "ano_recente": 2026,
@@ -4893,25 +4493,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 2066,
-        "votos_sim": 1123,
-        "votos_nao": 852,
+        "total_votes": 2053,
+        "votos_sim": 1111,
+        "votos_nao": 850,
         "votos_abstencao": 16,
         "votos_ausente": 0,
-        "votos_obstrucao": 75,
-        "nominal_balance": 271
+        "votos_obstrucao": 76,
+        "nominal_balance": 261
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
-        "favorable_votes": 0,
-        "unfavorable_votes": 1
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002538556",
       "ano_recente": 2026,
@@ -5381,97 +4972,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 640,
+        "total_votes": 639,
         "votos_sim": 608,
-        "votos_nao": 32,
+        "votos_nao": 31,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 576
+        "nominal_balance": 577
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 18,
-        "divergences_count": 0,
-        "favorable_votes": 18,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 6,
-        "divergences_count": 0,
-        "favorable_votes": 6,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002539057",
       "ano_recente": 2026,
@@ -6666,89 +6176,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 221,
-        "votos_sim": 219,
+        "total_votes": 297,
+        "votos_sim": 295,
         "votos_nao": 2,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 217
+        "nominal_balance": 293
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 9,
-        "divergences_count": 0,
-        "favorable_votes": 9,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002541510",
       "ano_recente": 2026,
@@ -6789,65 +6226,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1125,
-        "votos_sim": 1093,
+        "total_votes": 1104,
+        "votos_sim": 1072,
         "votos_nao": 32,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1061
+        "nominal_balance": 1040
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 16,
-        "divergences_count": 0,
-        "favorable_votes": 16,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 8,
-        "divergences_count": 0,
-        "favorable_votes": 8,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 7,
-        "divergences_count": 0,
-        "favorable_votes": 7,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002541512",
       "ano_recente": 2026,
@@ -6888,97 +6276,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1017,
+        "total_votes": 1016,
         "votos_sim": 975,
-        "votos_nao": 42,
+        "votos_nao": 41,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 933
+        "nominal_balance": 934
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 30,
-        "divergences_count": 0,
-        "favorable_votes": 30,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 9,
-        "divergences_count": 0,
-        "favorable_votes": 9,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 7,
-        "divergences_count": 0,
-        "favorable_votes": 7,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002541519",
       "ano_recente": 2026,
@@ -9249,7 +8556,18 @@
     "gender": "MASCULINO",
     "race": "BRANCA",
     "indigenous_ethnicity": null,
-    "voting_profiles": [],
+    "voting_profiles": [
+      {
+        "house": "alrs",
+        "total_votes": 292,
+        "votos_sim": 247,
+        "votos_nao": 45,
+        "votos_abstencao": 0,
+        "votos_ausente": 0,
+        "votos_obstrucao": 0,
+        "nominal_balance": 202
+      }
+    ],
     "declared_assets": {
       "tse_candidate_id": "210002534020",
       "ano_recente": 2026,
@@ -10543,33 +9861,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 2623,
-        "votos_sim": 1408,
-        "votos_nao": 1062,
+        "total_votes": 2600,
+        "votos_sim": 1388,
+        "votos_nao": 1056,
         "votos_abstencao": 2,
         "votos_ausente": 0,
-        "votos_obstrucao": 151,
-        "nominal_balance": 346
+        "votos_obstrucao": 154,
+        "nominal_balance": 332
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
-        "favorable_votes": 0,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534601",
       "ano_recente": 2026,
@@ -11546,97 +10847,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 651,
+        "total_votes": 650,
         "votos_sim": 641,
-        "votos_nao": 10,
+        "votos_nao": 9,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 631
+        "nominal_balance": 632
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 21,
-        "divergences_count": 0,
-        "favorable_votes": 21,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 0.75,
-        "evaluated_propositions_count": 8,
-        "divergences_count": 1,
-        "favorable_votes": 7,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002535698",
       "ano_recente": 2026,
@@ -12301,97 +11521,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1268,
-        "votos_sim": 1235,
-        "votos_nao": 33,
+        "total_votes": 1565,
+        "votos_sim": 1533,
+        "votos_nao": 32,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1202
+        "nominal_balance": 1501
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 24,
-        "divergences_count": 0,
-        "favorable_votes": 24,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 4,
-        "divergences_count": 0,
-        "favorable_votes": 4,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002537886",
       "ano_recente": 2026,
@@ -12900,49 +12039,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1105,
-        "votos_sim": 1058,
-        "votos_nao": 47,
+        "total_votes": 1083,
+        "votos_sim": 1039,
+        "votos_nao": 44,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1011
+        "nominal_balance": 995
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 14,
-        "divergences_count": 0,
-        "favorable_votes": 14,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002539092",
       "ano_recente": 2026,
@@ -13031,80 +12137,7 @@
         "nominal_balance": 540
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 19,
-        "divergences_count": 0,
-        "favorable_votes": 19,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 4,
-        "divergences_count": 0,
-        "favorable_votes": 4,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002539094",
       "ano_recente": 2026,
@@ -14159,89 +13192,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1389,
-        "votos_sim": 1365,
-        "votos_nao": 24,
+        "total_votes": 1357,
+        "votos_sim": 1334,
+        "votos_nao": 23,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1341
+        "nominal_balance": 1311
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 29,
-        "divergences_count": 0,
-        "favorable_votes": 29,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 9,
-        "divergences_count": 0,
-        "favorable_votes": 9,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 6,
-        "divergences_count": 0,
-        "favorable_votes": 6,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002543865",
       "ano_recente": 2026,
@@ -15559,65 +14519,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 585,
+        "total_votes": 584,
         "votos_sim": 443,
-        "votos_nao": 142,
+        "votos_nao": 141,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 301
+        "nominal_balance": 302
       }
     ],
-    "category_scores": [
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 21,
-        "divergences_count": 0,
-        "favorable_votes": 21,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 8,
-        "divergences_count": 0,
-        "favorable_votes": 8,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 4,
-        "divergences_count": 0,
-        "favorable_votes": 4,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002533934",
       "ano_recente": 2026,
@@ -16362,33 +15273,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 2604,
-        "votos_sim": 1405,
-        "votos_nao": 1039,
+        "total_votes": 2582,
+        "votos_sim": 1387,
+        "votos_nao": 1032,
         "votos_abstencao": 9,
         "votos_ausente": 0,
-        "votos_obstrucao": 151,
-        "nominal_balance": 366
+        "votos_obstrucao": 154,
+        "nominal_balance": 355
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
-        "favorable_votes": 0,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534598",
       "ano_recente": 2026,
@@ -16844,33 +15738,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 1194,
-        "votos_sim": 613,
-        "votos_nao": 578,
+        "total_votes": 1172,
+        "votos_sim": 602,
+        "votos_nao": 567,
         "votos_abstencao": 3,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
         "nominal_balance": 35
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534654",
       "ano_recente": 2026,
@@ -17335,33 +16212,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 2437,
-        "votos_sim": 1244,
-        "votos_nao": 1132,
+        "total_votes": 2420,
+        "votos_sim": 1231,
+        "votos_nao": 1128,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 61,
-        "nominal_balance": 112
+        "nominal_balance": 103
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
-        "favorable_votes": 0,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534671",
       "ano_recente": 2026,
@@ -18033,25 +16893,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 690,
-        "votos_sim": 427,
-        "votos_nao": 263,
+        "total_votes": 686,
+        "votos_sim": 424,
+        "votos_nao": 262,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 164
+        "nominal_balance": 162
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002536921",
       "ano_recente": 2026,
@@ -18557,89 +17408,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1124,
-        "votos_sim": 1074,
-        "votos_nao": 50,
+        "total_votes": 1098,
+        "votos_sim": 1051,
+        "votos_nao": 47,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1024
+        "nominal_balance": 1004
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 20,
-        "divergences_count": 0,
-        "favorable_votes": 20,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 0.75,
-        "evaluated_propositions_count": 8,
-        "divergences_count": 1,
-        "favorable_votes": 7,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 6,
-        "divergences_count": 0,
-        "favorable_votes": 6,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002537650",
       "ano_recente": 2026,
@@ -18680,33 +17458,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 2232,
-        "votos_sim": 1220,
-        "votos_nao": 1012,
+        "total_votes": 2213,
+        "votos_sim": 1207,
+        "votos_nao": 1006,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 208
+        "nominal_balance": 201
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002537712",
       "ano_recente": 2026,
@@ -19306,33 +18067,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 990,
-        "votos_sim": 568,
-        "votos_nao": 422,
+        "total_votes": 968,
+        "votos_sim": 555,
+        "votos_nao": 413,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 146
+        "nominal_balance": 142
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002537714",
       "ano_recente": 2026,
@@ -19958,73 +18702,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1215,
-        "votos_sim": 1191,
-        "votos_nao": 24,
+        "total_votes": 1191,
+        "votos_sim": 1168,
+        "votos_nao": 23,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1167
+        "nominal_balance": 1145
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 26,
-        "divergences_count": 0,
-        "favorable_votes": 26,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 7,
-        "divergences_count": 0,
-        "favorable_votes": 7,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 6,
-        "divergences_count": 0,
-        "favorable_votes": 6,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002539056",
       "ano_recente": 2026,
@@ -20494,65 +19181,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 586,
-        "votos_sim": 575,
-        "votos_nao": 11,
+        "total_votes": 589,
+        "votos_sim": 579,
+        "votos_nao": 10,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 564
+        "nominal_balance": 569
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 22,
-        "divergences_count": 0,
-        "favorable_votes": 22,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 7,
-        "divergences_count": 0,
-        "favorable_votes": 7,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 4,
-        "divergences_count": 0,
-        "favorable_votes": 4,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002540644",
       "ano_recente": 2026,
@@ -20749,25 +19387,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 2558,
-        "votos_sim": 1415,
-        "votos_nao": 1136,
+        "total_votes": 2534,
+        "votos_sim": 1399,
+        "votos_nao": 1128,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 7,
-        "nominal_balance": 279
+        "nominal_balance": 271
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002541514",
       "ano_recente": 2026,
@@ -23450,97 +22079,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 614,
-        "votos_sim": 511,
-        "votos_nao": 103,
+        "total_votes": 973,
+        "votos_sim": 850,
+        "votos_nao": 123,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 408
+        "nominal_balance": 727
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 20,
-        "divergences_count": 0,
-        "favorable_votes": 20,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 8,
-        "divergences_count": 0,
-        "favorable_votes": 8,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534036",
       "ano_recente": 2026,
@@ -24417,89 +22965,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 527,
+        "total_votes": 526,
         "votos_sim": 432,
-        "votos_nao": 95,
+        "votos_nao": 94,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 337
+        "nominal_balance": 338
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 21,
-        "divergences_count": 0,
-        "favorable_votes": 21,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 8,
-        "divergences_count": 0,
-        "favorable_votes": 8,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534594",
       "ano_recente": 2026,
@@ -24878,89 +23353,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1289,
-        "votos_sim": 1255,
-        "votos_nao": 34,
+        "total_votes": 1259,
+        "votos_sim": 1226,
+        "votos_nao": 33,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1221
+        "nominal_balance": 1193
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 30,
-        "divergences_count": 0,
-        "favorable_votes": 30,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 0.75,
-        "evaluated_propositions_count": 8,
-        "divergences_count": 1,
-        "favorable_votes": 7,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 6,
-        "divergences_count": 0,
-        "favorable_votes": 6,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002535706",
       "ano_recente": 2026,
@@ -25157,81 +23559,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 631,
+        "total_votes": 630,
         "votos_sim": 589,
-        "votos_nao": 42,
+        "votos_nao": 41,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 547
+        "nominal_balance": 548
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 0.9,
-        "evaluated_propositions_count": 21,
-        "divergences_count": 1,
-        "favorable_votes": 20,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 0.75,
-        "evaluated_propositions_count": 8,
-        "divergences_count": 1,
-        "favorable_votes": 7,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 0.33,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 1,
-        "favorable_votes": 2,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002536933",
       "ano_recente": 2026,
@@ -25350,33 +23687,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 2747,
-        "votos_sim": 1618,
-        "votos_nao": 1061,
-        "votos_abstencao": 17,
+        "total_votes": 2709,
+        "votos_sim": 1599,
+        "votos_nao": 1057,
+        "votos_abstencao": 1,
         "votos_ausente": 0,
-        "votos_obstrucao": 51,
-        "nominal_balance": 557
+        "votos_obstrucao": 52,
+        "nominal_balance": 542
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
-        "favorable_votes": 0,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002537066",
       "ano_recente": 2026,
@@ -26074,18 +24394,7 @@
     "gender": "MASCULINO",
     "race": "PRETA",
     "indigenous_ethnicity": null,
-    "voting_profiles": [
-      {
-        "house": "camara",
-        "total_votes": 1355,
-        "votos_sim": 707,
-        "votos_nao": 647,
-        "votos_abstencao": 1,
-        "votos_ausente": 0,
-        "votos_obstrucao": 0,
-        "nominal_balance": 60
-      }
-    ],
+    "voting_profiles": [],
     "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002537070",
@@ -26205,81 +24514,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 600,
+        "total_votes": 599,
         "votos_sim": 583,
-        "votos_nao": 17,
+        "votos_nao": 16,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 566
+        "nominal_balance": 567
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 15,
-        "divergences_count": 0,
-        "favorable_votes": 15,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 6,
-        "divergences_count": 0,
-        "favorable_votes": 6,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 4,
-        "divergences_count": 0,
-        "favorable_votes": 4,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002537644",
       "ano_recente": 2026,
@@ -26476,81 +24720,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 613,
-        "votos_sim": 579,
-        "votos_nao": 34,
+        "total_votes": 616,
+        "votos_sim": 583,
+        "votos_nao": 33,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 545
+        "nominal_balance": 550
       }
     ],
-    "category_scores": [
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "mulheres",
-        "score": 0.9,
-        "evaluated_propositions_count": 20,
-        "divergences_count": 1,
-        "favorable_votes": 19,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 4,
-        "divergences_count": 0,
-        "favorable_votes": 4,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 6,
-        "divergences_count": 0,
-        "favorable_votes": 6,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002537883",
       "ano_recente": 2026,
@@ -26903,81 +25082,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 590,
+        "total_votes": 589,
         "votos_sim": 550,
-        "votos_nao": 40,
+        "votos_nao": 39,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 510
+        "nominal_balance": 511
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 0.9,
-        "evaluated_propositions_count": 20,
-        "divergences_count": 1,
-        "favorable_votes": 19,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 6,
-        "divergences_count": 0,
-        "favorable_votes": 6,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002539072",
       "ano_recente": 2026,
@@ -27213,65 +25327,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1222,
-        "votos_sim": 1093,
-        "votos_nao": 129,
+        "total_votes": 1205,
+        "votos_sim": 1088,
+        "votos_nao": 117,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 964
+        "nominal_balance": 971
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 28,
-        "divergences_count": 0,
-        "favorable_votes": 28,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 4,
-        "divergences_count": 0,
-        "favorable_votes": 4,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002539800",
       "ano_recente": 2026,
@@ -27390,65 +25455,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1357,
-        "votos_sim": 1237,
-        "votos_nao": 120,
+        "total_votes": 1683,
+        "votos_sim": 1569,
+        "votos_nao": 114,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1117
+        "nominal_balance": 1455
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 30,
-        "divergences_count": 0,
-        "favorable_votes": 30,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 0.78,
-        "evaluated_propositions_count": 9,
-        "divergences_count": 1,
-        "favorable_votes": 8,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 7,
-        "divergences_count": 0,
-        "favorable_votes": 7,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002539809",
       "ano_recente": 2026,
@@ -28308,81 +26324,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 693,
-        "votos_sim": 674,
-        "votos_nao": 19,
+        "total_votes": 741,
+        "votos_sim": 721,
+        "votos_nao": 20,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 655
+        "nominal_balance": 701
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 14,
-        "divergences_count": 0,
-        "favorable_votes": 14,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002542891",
       "ano_recente": 2026,
@@ -28735,33 +26686,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 2767,
-        "votos_sim": 1419,
-        "votos_nao": 1279,
-        "votos_abstencao": 1,
+        "total_votes": 2739,
+        "votos_sim": 1403,
+        "votos_nao": 1268,
+        "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 68,
-        "nominal_balance": 140
+        "nominal_balance": 135
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002547816",
       "ano_recente": 2026,
@@ -30933,97 +28867,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1328,
-        "votos_sim": 1105,
-        "votos_nao": 223,
+        "total_votes": 1312,
+        "votos_sim": 1102,
+        "votos_nao": 210,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 882
+        "nominal_balance": 892
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 0.93,
-        "evaluated_propositions_count": 29,
-        "divergences_count": 1,
-        "favorable_votes": 28,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 8,
-        "divergences_count": 0,
-        "favorable_votes": 8,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534017",
       "ano_recente": 2026,
@@ -31073,97 +28926,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1391,
+        "total_votes": 1378,
         "votos_sim": 1137,
-        "votos_nao": 254,
+        "votos_nao": 241,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 883
+        "nominal_balance": 896
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 0.93,
-        "evaluated_propositions_count": 30,
-        "divergences_count": 1,
-        "favorable_votes": 29,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 8,
-        "divergences_count": 0,
-        "favorable_votes": 8,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 7,
-        "divergences_count": 0,
-        "favorable_votes": 7,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534038",
       "ano_recente": 2026,
@@ -32178,89 +29950,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 544,
+        "total_votes": 543,
         "votos_sim": 533,
-        "votos_nao": 11,
+        "votos_nao": 10,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 522
+        "nominal_balance": 523
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 15,
-        "divergences_count": 0,
-        "favorable_votes": 15,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 4,
-        "divergences_count": 0,
-        "favorable_votes": 4,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002535664",
       "ano_recente": 2026,
@@ -33003,33 +30702,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 2608,
-        "votos_sim": 1417,
-        "votos_nao": 1190,
+        "total_votes": 2590,
+        "votos_sim": 1405,
+        "votos_nao": 1184,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 1,
-        "nominal_balance": 227
+        "nominal_balance": 221
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002537717",
       "ano_recente": 2026,
@@ -33470,89 +31152,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1097,
-        "votos_sim": 1074,
-        "votos_nao": 23,
+        "total_votes": 1072,
+        "votos_sim": 1050,
+        "votos_nao": 22,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1051
+        "nominal_balance": 1028
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 20,
-        "divergences_count": 0,
-        "favorable_votes": 20,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002537875",
       "ano_recente": 2026,
@@ -34675,81 +32284,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1331,
-        "votos_sim": 1285,
-        "votos_nao": 46,
+        "total_votes": 1304,
+        "votos_sim": 1260,
+        "votos_nao": 44,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1239
+        "nominal_balance": 1216
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 28,
-        "divergences_count": 0,
-        "favorable_votes": 28,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 6,
-        "divergences_count": 0,
-        "favorable_votes": 6,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002540653",
       "ano_recente": 2026,
@@ -34829,97 +32373,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1297,
-        "votos_sim": 1255,
+        "total_votes": 1277,
+        "votos_sim": 1235,
         "votos_nao": 42,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1213
+        "nominal_balance": 1193
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 27,
-        "divergences_count": 0,
-        "favorable_votes": 27,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 7,
-        "divergences_count": 0,
-        "favorable_votes": 7,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 6,
-        "divergences_count": 0,
-        "favorable_votes": 6,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002540665",
       "ano_recente": 2026,
@@ -36194,72 +33657,7 @@
         "nominal_balance": 399
       }
     ],
-    "category_scores": [
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "mulheres",
-        "score": 0.82,
-        "evaluated_propositions_count": 11,
-        "divergences_count": 1,
-        "favorable_votes": 10,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 4,
-        "divergences_count": 0,
-        "favorable_votes": 4,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 0.33,
-        "evaluated_propositions_count": 6,
-        "divergences_count": 2,
-        "favorable_votes": 4,
-        "unfavorable_votes": 2
-      },
-      {
-        "group": "estudantes",
-        "score": 0.33,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 1,
-        "favorable_votes": 2,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002533002",
       "ano_recente": 2026,
@@ -37005,97 +34403,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1425,
-        "votos_sim": 1114,
-        "votos_nao": 311,
+        "total_votes": 1416,
+        "votos_sim": 1118,
+        "votos_nao": 298,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 803
+        "nominal_balance": 820
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 30,
-        "divergences_count": 0,
-        "favorable_votes": 30,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 9,
-        "divergences_count": 0,
-        "favorable_votes": 9,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 7,
-        "divergences_count": 0,
-        "favorable_votes": 7,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002533936",
       "ano_recente": 2026,
@@ -37472,97 +34789,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 603,
+        "total_votes": 602,
         "votos_sim": 511,
-        "votos_nao": 92,
+        "votos_nao": 91,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 419
+        "nominal_balance": 420
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 22,
-        "divergences_count": 0,
-        "favorable_votes": 22,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 8,
-        "divergences_count": 0,
-        "favorable_votes": 8,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534043",
       "ano_recente": 2026,
@@ -37638,25 +34874,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 1775,
-        "votos_sim": 919,
-        "votos_nao": 855,
+        "total_votes": 1774,
+        "votos_sim": 917,
+        "votos_nao": 856,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 1,
-        "nominal_balance": 64
+        "nominal_balance": 61
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
-        "favorable_votes": 0,
-        "unfavorable_votes": 1
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534272",
       "ano_recente": 2026,
@@ -37962,81 +35189,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 121,
-        "votos_sim": 117,
-        "votos_nao": 4,
+        "total_votes": 208,
+        "votos_sim": 203,
+        "votos_nao": 5,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 113
+        "nominal_balance": 198
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 7,
-        "divergences_count": 0,
-        "favorable_votes": 7,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 0.6,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 1,
-        "favorable_votes": 4,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534313",
       "ano_recente": 2026,
@@ -38314,33 +35476,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 1032,
-        "votos_sim": 601,
-        "votos_nao": 427,
+        "total_votes": 1008,
+        "votos_sim": 585,
+        "votos_nao": 419,
         "votos_abstencao": 2,
         "votos_ausente": 0,
         "votos_obstrucao": 2,
-        "nominal_balance": 174
+        "nominal_balance": 166
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
-        "favorable_votes": 0,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534583",
       "ano_recente": 2026,
@@ -38495,97 +35640,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1138,
-        "votos_sim": 930,
-        "votos_nao": 208,
+        "total_votes": 1117,
+        "votos_sim": 924,
+        "votos_nao": 193,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 722
+        "nominal_balance": 731
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 0.92,
-        "evaluated_propositions_count": 26,
-        "divergences_count": 1,
-        "favorable_votes": 25,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 7,
-        "divergences_count": 0,
-        "favorable_votes": 7,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534584",
       "ano_recente": 2026,
@@ -38651,16 +35715,7 @@
         "nominal_balance": 111
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534589",
       "ano_recente": 2026,
@@ -38905,33 +35960,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 2196,
-        "votos_sim": 1171,
-        "votos_nao": 1006,
+        "total_votes": 2173,
+        "votos_sim": 1156,
+        "votos_nao": 998,
         "votos_abstencao": 18,
         "votos_ausente": 0,
         "votos_obstrucao": 1,
-        "nominal_balance": 165
+        "nominal_balance": 158
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534668",
       "ano_recente": 2026,
@@ -39295,33 +36333,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 2796,
-        "votos_sim": 1489,
-        "votos_nao": 1243,
+        "total_votes": 2771,
+        "votos_sim": 1472,
+        "votos_nao": 1235,
         "votos_abstencao": 3,
         "votos_ausente": 0,
         "votos_obstrucao": 61,
-        "nominal_balance": 246
+        "nominal_balance": 237
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534897",
       "ano_recente": 2026,
@@ -40470,25 +37491,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 1854,
-        "votos_sim": 1015,
-        "votos_nao": 837,
+        "total_votes": 1840,
+        "votos_sim": 1006,
+        "votos_nao": 832,
         "votos_abstencao": 1,
         "votos_ausente": 0,
         "votos_obstrucao": 1,
-        "nominal_balance": 178
+        "nominal_balance": 174
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
-        "favorable_votes": 0,
-        "unfavorable_votes": 1
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002537718",
       "ano_recente": 2026,
@@ -40825,33 +37837,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 1020,
-        "votos_sim": 627,
-        "votos_nao": 393,
+        "total_votes": 993,
+        "votos_sim": 610,
+        "votos_nao": 383,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 234
+        "nominal_balance": 227
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
-        "favorable_votes": 0,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002537726",
       "ano_recente": 2026,
@@ -41048,33 +38043,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 3168,
-        "votos_sim": 1679,
-        "votos_nao": 1489,
+        "total_votes": 3142,
+        "votos_sim": 1658,
+        "votos_nao": 1484,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 190
+        "nominal_balance": 174
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002538541",
       "ano_recente": 2026,
@@ -43203,33 +40181,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 3082,
-        "votos_sim": 1375,
-        "votos_nao": 1551,
-        "votos_abstencao": 27,
+        "total_votes": 3027,
+        "votos_sim": 1361,
+        "votos_nao": 1537,
+        "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 129,
         "nominal_balance": -176
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002547819",
       "ano_recente": 2026,
@@ -43834,81 +40795,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 421,
+        "total_votes": 420,
         "votos_sim": 410,
-        "votos_nao": 11,
+        "votos_nao": 10,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 399
+        "nominal_balance": 400
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 11,
-        "divergences_count": 0,
-        "favorable_votes": 11,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 7,
-        "divergences_count": 0,
-        "favorable_votes": 7,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 4,
-        "divergences_count": 0,
-        "favorable_votes": 4,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002548220",
       "ano_recente": 2026,
@@ -44767,13 +41663,13 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 1680,
-        "votos_sim": 861,
+        "total_votes": 1674,
+        "votos_sim": 856,
         "votos_nao": 672,
-        "votos_abstencao": 4,
+        "votos_abstencao": 3,
         "votos_ausente": 0,
         "votos_obstrucao": 143,
-        "nominal_balance": 189
+        "nominal_balance": 184
       }
     ],
     "category_scores": [],
@@ -46620,7 +43516,18 @@
     "gender": "MASCULINO",
     "race": "BRANCA",
     "indigenous_ethnicity": null,
-    "voting_profiles": [],
+    "voting_profiles": [
+      {
+        "house": "alrs",
+        "total_votes": 4,
+        "votos_sim": 2,
+        "votos_nao": 2,
+        "votos_abstencao": 0,
+        "votos_ausente": 0,
+        "votos_obstrucao": 0,
+        "nominal_balance": 0
+      }
+    ],
     "declared_assets": {
       "tse_candidate_id": "210002534312",
       "ano_recente": 2026,
@@ -46780,88 +43687,7 @@
         "nominal_balance": 564
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 18,
-        "divergences_count": 0,
-        "favorable_votes": 18,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 6,
-        "divergences_count": 0,
-        "favorable_votes": 6,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534324",
       "ano_recente": 2026,
@@ -47032,33 +43858,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 2942,
-        "votos_sim": 1514,
-        "votos_nao": 1355,
+        "total_votes": 2917,
+        "votos_sim": 1499,
+        "votos_nao": 1345,
         "votos_abstencao": 4,
         "votos_ausente": 0,
         "votos_obstrucao": 69,
-        "nominal_balance": 159
+        "nominal_balance": 154
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
-        "favorable_votes": 0,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534656",
       "ano_recente": 2026,
@@ -48696,33 +45505,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 2758,
-        "votos_sim": 1607,
-        "votos_nao": 1086,
+        "total_votes": 2744,
+        "votos_sim": 1592,
+        "votos_nao": 1083,
         "votos_abstencao": 3,
         "votos_ausente": 0,
-        "votos_obstrucao": 62,
-        "nominal_balance": 521
+        "votos_obstrucao": 66,
+        "nominal_balance": 509
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
-        "favorable_votes": 0,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002537057",
       "ano_recente": 2026,
@@ -50243,65 +47035,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1146,
-        "votos_sim": 1041,
-        "votos_nao": 105,
+        "total_votes": 1128,
+        "votos_sim": 1035,
+        "votos_nao": 93,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 936
+        "nominal_balance": 942
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 18,
-        "divergences_count": 0,
-        "favorable_votes": 18,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 0.75,
-        "evaluated_propositions_count": 8,
-        "divergences_count": 1,
-        "favorable_votes": 7,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002539810",
       "ano_recente": 2026,
@@ -50693,89 +47436,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1369,
-        "votos_sim": 1334,
-        "votos_nao": 35,
+        "total_votes": 1343,
+        "votos_sim": 1309,
+        "votos_nao": 34,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1299
+        "nominal_balance": 1275
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 32,
-        "divergences_count": 0,
-        "favorable_votes": 32,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 8,
-        "divergences_count": 0,
-        "favorable_votes": 8,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 7,
-        "divergences_count": 0,
-        "favorable_votes": 7,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002540662",
       "ano_recente": 2026,
@@ -51596,33 +48266,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 1276,
-        "votos_sim": 733,
-        "votos_nao": 543,
+        "total_votes": 1248,
+        "votos_sim": 716,
+        "votos_nao": 532,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 190
+        "nominal_balance": 184
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002547857",
       "ano_recente": 2026,
@@ -53050,33 +49703,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 2755,
-        "votos_sim": 1347,
-        "votos_nao": 1205,
-        "votos_abstencao": 26,
+        "total_votes": 2735,
+        "votos_sim": 1333,
+        "votos_nao": 1196,
+        "votos_abstencao": 25,
         "votos_ausente": 0,
-        "votos_obstrucao": 177,
-        "nominal_balance": 142
+        "votos_obstrucao": 181,
+        "nominal_balance": 137
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
-        "favorable_votes": 0,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002533902",
       "ano_recente": 2026,
@@ -54027,65 +50663,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1393,
-        "votos_sim": 1152,
-        "votos_nao": 241,
+        "total_votes": 1372,
+        "votos_sim": 1146,
+        "votos_nao": 226,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 911
+        "nominal_balance": 920
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 0.93,
-        "evaluated_propositions_count": 27,
-        "divergences_count": 1,
-        "favorable_votes": 26,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 8,
-        "divergences_count": 0,
-        "favorable_votes": 8,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 7,
-        "divergences_count": 0,
-        "favorable_votes": 7,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534050",
       "ano_recente": 2026,
@@ -54387,13 +50974,13 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 1383,
-        "votos_sim": 687,
-        "votos_nao": 693,
+        "total_votes": 1384,
+        "votos_sim": 686,
+        "votos_nao": 695,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 3,
-        "nominal_balance": -6
+        "nominal_balance": -9
       }
     ],
     "category_scores": [],
@@ -54922,33 +51509,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 899,
-        "votos_sim": 527,
-        "votos_nao": 369,
+        "total_votes": 882,
+        "votos_sim": 517,
+        "votos_nao": 362,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 3,
-        "nominal_balance": 158
+        "nominal_balance": 155
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
-        "favorable_votes": 0,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534597",
       "ano_recente": 2026,
@@ -55536,33 +52106,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 2347,
-        "votos_sim": 1268,
-        "votos_nao": 952,
-        "votos_abstencao": 23,
+        "total_votes": 2306,
+        "votos_sim": 1254,
+        "votos_nao": 943,
+        "votos_abstencao": 4,
         "votos_ausente": 0,
-        "votos_obstrucao": 104,
-        "nominal_balance": 316
+        "votos_obstrucao": 105,
+        "nominal_balance": 311
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
-        "favorable_votes": 0,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002534604",
       "ano_recente": 2026,
@@ -57001,97 +53554,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 538,
+        "total_votes": 537,
         "votos_sim": 441,
-        "votos_nao": 97,
+        "votos_nao": 96,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 344
+        "nominal_balance": 345
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 18,
-        "divergences_count": 0,
-        "favorable_votes": 18,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 6,
-        "divergences_count": 0,
-        "favorable_votes": 6,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002537537",
       "ano_recente": 2026,
@@ -57171,81 +53643,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 878,
+        "total_votes": 877,
         "votos_sim": 846,
-        "votos_nao": 32,
+        "votos_nao": 31,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 814
+        "nominal_balance": 815
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 17,
-        "divergences_count": 0,
-        "favorable_votes": 17,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002537649",
       "ano_recente": 2026,
@@ -57403,25 +53810,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 253,
-        "votos_sim": 136,
+        "total_votes": 254,
+        "votos_sim": 137,
         "votos_nao": 117,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 19
+        "nominal_balance": 20
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": -1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 1,
-        "favorable_votes": 0,
-        "unfavorable_votes": 1
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002537722",
       "ano_recente": 2026,
@@ -57735,33 +54133,16 @@
     "voting_profiles": [
       {
         "house": "camara",
-        "total_votes": 1321,
-        "votos_sim": 720,
-        "votos_nao": 600,
+        "total_votes": 1308,
+        "votos_sim": 709,
+        "votos_nao": 598,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 1,
-        "nominal_balance": 120
+        "nominal_balance": 111
       }
     ],
-    "category_scores": [
-      {
-        "group": "povos_indigenas",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002538537",
       "ano_recente": 2026,
@@ -58195,57 +54576,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 72,
-        "votos_sim": 69,
-        "votos_nao": 3,
+        "total_votes": 129,
+        "votos_sim": 124,
+        "votos_nao": 5,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 66
+        "nominal_balance": 119
       }
     ],
-    "category_scores": [
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 0.5,
-        "evaluated_propositions_count": 4,
-        "divergences_count": 1,
-        "favorable_votes": 3,
-        "unfavorable_votes": 1
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002539803",
       "ano_recente": 2026,
@@ -59261,89 +55601,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 1125,
-        "votos_sim": 1099,
-        "votos_nao": 26,
+        "total_votes": 1096,
+        "votos_sim": 1071,
+        "votos_nao": 25,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 1073
+        "nominal_balance": 1046
       }
     ],
-    "category_scores": [
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 7,
-        "divergences_count": 0,
-        "favorable_votes": 7,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 22,
-        "divergences_count": 0,
-        "favorable_votes": 22,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 7,
-        "divergences_count": 0,
-        "favorable_votes": 7,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002547858",
       "ano_recente": 2026,
@@ -59571,72 +55838,7 @@
         "nominal_balance": 469
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 13,
-        "divergences_count": 0,
-        "favorable_votes": 13,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 6,
-        "divergences_count": 0,
-        "favorable_votes": 6,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 3,
-        "divergences_count": 0,
-        "favorable_votes": 3,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002548193",
       "ano_recente": 2026,
@@ -59677,97 +55879,16 @@
     "voting_profiles": [
       {
         "house": "alrs",
-        "total_votes": 579,
+        "total_votes": 578,
         "votos_sim": 568,
-        "votos_nao": 11,
+        "votos_nao": 10,
         "votos_abstencao": 0,
         "votos_ausente": 0,
         "votos_obstrucao": 0,
-        "nominal_balance": 557
+        "nominal_balance": 558
       }
     ],
-    "category_scores": [
-      {
-        "group": "mulheres",
-        "score": 1,
-        "evaluated_propositions_count": 10,
-        "divergences_count": 0,
-        "favorable_votes": 10,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "populacao_negra_periferica",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "criancas_adolescentes_vulnerabilidade",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_deficiencia",
-        "score": 1,
-        "evaluated_propositions_count": 5,
-        "divergences_count": 0,
-        "favorable_votes": 5,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "candidatos_concursos_publicos",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "estudantes",
-        "score": 1,
-        "evaluated_propositions_count": 2,
-        "divergences_count": 0,
-        "favorable_votes": 2,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "lgbtqia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "trabalhadores_formais",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_idosas_dependentes",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      },
-      {
-        "group": "pessoas_com_ludopatia",
-        "score": 1,
-        "evaluated_propositions_count": 1,
-        "divergences_count": 0,
-        "favorable_votes": 1,
-        "unfavorable_votes": 0
-      }
-    ],
+    "category_scores": [],
     "declared_assets": {
       "tse_candidate_id": "210002548207",
       "ano_recente": 2026,

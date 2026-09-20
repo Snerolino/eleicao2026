@@ -7,6 +7,7 @@ const ROOT = resolve(import.meta.dirname, "..");
 const gabaritoPath = resolve(ROOT, "data/impact-matrices/gabarito-materias-aprovadas.json");
 const alrsManifestPath = resolve(ROOT, "data/legislative-import/alrs/alrs-nominal-discovery-manifest-v1.json");
 const outputPath = resolve(ROOT, "data/candidate-nominal-votes.json");
+let lastBuildStats = { invalidRowsDropped: 0, duplicateRowsDropped: 0 };
 
 function normalizeTitle(val) {
   return String(val ?? "")
@@ -148,9 +149,22 @@ export function buildCandidateNominalVotes(root = ROOT) {
   const propositions = [];
   const propositionIndexes = new Map();
   const candidates = {};
+  let invalidRowsDropped = 0;
+  let duplicateRowsDropped = 0;
   for (const [tseId, votes] of Object.entries(resultByTse)) {
     candidates[tseId] = [];
+    const seenVoteKeys = new Set();
     for (const vote of votes) {
+      if (vote.house === "camara" && !vote.proposition_id) {
+        invalidRowsDropped += 1;
+        continue;
+      }
+      const voteKey = `${vote.house}|${vote.proposition_id}|${vote.data_votacao}|${vote.vote_value}`;
+      if (seenVoteKeys.has(voteKey)) {
+        duplicateRowsDropped += 1;
+        continue;
+      }
+      seenVoteKeys.add(voteKey);
       const proposition = {
         h: vote.house,
         p: vote.proposition_id,
@@ -179,6 +193,7 @@ export function buildCandidateNominalVotes(root = ROOT) {
       candidates[tseId].push([index, vote.vote_value, vote.data_votacao]);
     }
   }
+  lastBuildStats = { invalidRowsDropped, duplicateRowsDropped };
   writeFileSync(outputPath, JSON.stringify({ p: propositions, c: candidates }, null, 2) + "\n");
   return resultByTse;
 }
@@ -194,4 +209,6 @@ if (process.argv[1] && process.argv[1].endsWith("build-candidate-nominal-votes.m
   console.log(`✅ Fan-out concluído para ${Object.keys(res).length} candidatos.`);
   console.log(`   Total de votos mapeados: ${total}`);
   console.log(`   Total com grupo canônico aprovado: ${withGroup}`);
+  console.log(`   Linhas inválidas descartadas: ${lastBuildStats.invalidRowsDropped}`);
+  console.log(`   Duplicatas exatas descartadas: ${lastBuildStats.duplicateRowsDropped}`);
 }
