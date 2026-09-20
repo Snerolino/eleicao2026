@@ -8,7 +8,18 @@ export function isPopulationRelevantVote(vote: CandidateNominalVote): boolean {
 }
 
 export function isScoredPopulationVote(vote: CandidateNominalVote): boolean {
-  return isPopulationRelevantVote(vote) && vote.score_eligible === true;
+  return (
+    isPopulationRelevantVote(vote) &&
+    vote.attribution_methodology_version === '2.0.0' &&
+    typeof vote.voting_event_id === 'string' &&
+    vote.voting_event_id.length > 0 &&
+    vote.score_eligible === true &&
+    (vote.attribution_review_status === 'approved' ||
+      vote.attribution_review_status === 'contested') &&
+    (vote.vote_attribution_status === 'isolated' ||
+      vote.vote_attribution_status === 'compound_separable') &&
+    (vote.event_defending_vote === 'sim' || vote.event_defending_vote === 'nao')
+  );
 }
 
 export interface VoteCoverageSummary {
