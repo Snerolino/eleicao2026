@@ -56,7 +56,37 @@ describe("CandidateNominalVotesList", () => {
     expect(screen.getByText("Voto: sim")).toBeInTheDocument();
     expect(screen.getByText("Voto: nao")).toBeInTheDocument();
     expect(screen.queryByText("PLP 109")).not.toBeInTheDocument();
-    expect(screen.getByText(/Mulheres · Ampliadora/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Mulheres · assessment textual; evento não atribuído/i),
+    ).toBeInTheDocument();
+    expect(
+      screen.getAllByText(/este evento não entra no score/i).length,
+    ).toBeGreaterThan(0);
+  });
+
+  it("só apresenta direção ligada ao voto quando a atribuição v2 está aprovada", () => {
+    const scoreableVote: CandidateNominalVote = {
+      ...mockVotes[0],
+      voting_event_id: "event-1",
+      score_eligible: true,
+      event_defending_vote: "sim",
+      vote_attribution_status: "isolated",
+      attribution_methodology_version: "2.0.0",
+      attribution_review_status: "approved",
+    };
+
+    render(
+      <CandidateNominalVotesList
+        votes={[scoreableVote]}
+        houseLabel="Câmara dos Deputados"
+        defaultExpanded
+      />,
+    );
+
+    expect(
+      screen.getByText(/Mulheres · efeito ampliador atribuído/i),
+    ).toBeInTheDocument();
+    expect(screen.queryByText(/este evento não entra no score/i)).not.toBeInTheDocument();
   });
 
   it("filtra por voto Sim e Não quando expandido", () => {
