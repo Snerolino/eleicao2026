@@ -346,42 +346,11 @@ export async function fetchVoteCategoryComparisons(
   }
 }
 
-export function getLocalVoteCategoryScores(candidateIds: string[]): VoteCategoryScore[] {
-  const localScores: VoteCategoryScore[] = [];
-  for (const cid of candidateIds) {
-    const cand = PUBLIC_CANDIDATES.find(
-      (c) => c.id === cid || c.slug === cid || c.tse_candidate_id === cid
-    );
-    if (!cand) continue;
-
-    if (Array.isArray(cand.category_scores) && cand.category_scores.length > 0) {
-      const profileHouses = (cand.voting_profiles ?? [])
-        .filter((p) => p.total_votes > 0)
-        .map((p) => p.house);
-      const houses =
-        profileHouses.length > 0
-          ? profileHouses
-          : [cand.position === "deputado_federal" ? "camara" : "alrs"];
-
-      for (const house of houses) {
-        for (const cs of cand.category_scores) {
-          localScores.push({
-            candidate_id: cand.id,
-            house,
-            group_slug: cs.group,
-            score: cs.score,
-            methodology_version: "1.0.0",
-            evaluated_propositions: cs.evaluated_propositions_count,
-            eligible_weight: cs.evaluated_propositions_count * 3,
-            excluded_no_data: 0,
-            contested_assessments: 0,
-            average_confidence: 0.95,
-          });
-        }
-      }
-    }
-  }
-  return localScores;
+export function getLocalVoteCategoryScores(_candidateIds: string[]): VoteCategoryScore[] {
+  // Legacy category_scores were produced before event-scoped attribution v2.
+  // Keep the exported symbol temporarily for API compatibility, but fail closed.
+  // They must never be used as a substitute for a missing/withheld v2 result.
+  return [];
 }
 
 export async function fetchVoteCategoryScores(
