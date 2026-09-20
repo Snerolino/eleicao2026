@@ -147,6 +147,7 @@ export function getLocalVoteCategoryScoreFacts(candidateIds: string[]): VoteCate
       facts.push({
         candidate_id: cand.id,
         house: v.house,
+        voting_event_id: `${v.house}|${v.proposition_id}`,
         group_slug: v.assessment_group,
         value: v.vote_value as VoteCategoryScoreFact["value"],
         impact_direction: v.impact_direction,
@@ -356,6 +357,7 @@ export async function fetchVoteCategoryScores(
           dbFacts.push({
             candidate_id: publicCandId,
             house: event.house,
+            voting_event_id: event.id,
             group_slug: group.group_slug,
             value: index.value,
             impact_direction: group.impact_direction,
@@ -373,7 +375,9 @@ export async function fetchVoteCategoryScores(
       }
     }
 
-    const combinedFacts = [...dbFacts, ...localFacts];
+    const dbCategoryKeys = new Set(dbFacts.map((fact) => `${fact.candidate_id}|${fact.house}|${fact.group_slug}`));
+    const localComplement = localFacts.filter((fact) => !dbCategoryKeys.has(`${fact.candidate_id}|${fact.house}|${fact.group_slug}`));
+    const combinedFacts = [...dbFacts, ...localComplement];
     const computed = buildVoteCategoryScores(combinedFacts);
     const validScores = computed.filter((s) => s.score !== null && typeof s.score === "number");
 

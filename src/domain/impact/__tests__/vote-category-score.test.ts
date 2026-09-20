@@ -22,4 +22,12 @@ describe('vote-category-score', () => {
     expect(result.score).toBeNull();
     expect(formatCategoryScore(result.score)).toBe('não avaliado');
   });
+
+  it('não conta duas vezes o mesmo evento quando fontes convergem', () => {
+    const result = buildVoteCategoryScores([
+      { candidate_id: 'a', house: 'alrs', voting_event_id: 'event-1', group_slug: 'mulheres', value: 'sim', impact_direction: 'positive', defending_vote: 'sim', score_eligible: true, severity: 3, structural_type: 'structural', confidence: 0.9, review_status: 'approved' },
+      { candidate_id: 'a', house: 'alrs', voting_event_id: 'event-1', group_slug: 'mulheres', value: 'sim', impact_direction: 'positive', defending_vote: 'sim', score_eligible: true, severity: 3, structural_type: 'structural', confidence: 0.9, review_status: 'approved' },
+    ]);
+    expect(result[0].evaluated_propositions).toBe(1);
+  });
 });
