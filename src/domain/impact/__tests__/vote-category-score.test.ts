@@ -16,4 +16,10 @@ describe('vote-category-score', () => {
     expect(result.score).toBeNull();
     expect(formatCategoryScore(result.score)).toBe('não avaliado');
   });
+
+  it('retorna não avaliado quando o evento não é elegível a score', () => {
+    const [result] = buildVoteCategoryScores([{ candidate_id: 'a', house: 'alrs', group_slug: 'trabalhadores_formais', value: 'sim', impact_direction: 'negative', defending_vote: 'nao', event_defending_vote: null, score_eligible: false, vote_attribution_status: 'event_binding_missing', severity: 3, structural_type: 'structural', confidence: 0.9, review_status: 'approved' }]);
+    expect(result.score).toBeNull();
+    expect(formatCategoryScore(result.score)).toBe('não avaliado');
+  });
 });

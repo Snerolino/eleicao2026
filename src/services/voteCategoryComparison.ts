@@ -330,7 +330,7 @@ export async function fetchVoteCategoryScores(
         client
           .from("impact_matrices")
           .select(
-            "proposition_version_id,review_status,severity,structural_type,impact_assessments(group_slug,impact_direction,defending_vote,confidence,impact_assessment_sources(source_reference_id))"
+            "proposition_version_id,review_status,severity,structural_type,impact_assessments(group_slug,impact_direction,defending_vote,event_defending_vote,score_eligible,vote_attribution_status,score_withholding_reason,confidence,impact_assessment_sources(source_reference_id))"
           )
           .in("proposition_version_id", batch)
           .in("review_status", ["approved", "contested"])
@@ -359,7 +359,11 @@ export async function fetchVoteCategoryScores(
             group_slug: group.group_slug,
             value: index.value,
             impact_direction: group.impact_direction,
-            defending_vote: group.defending_vote ?? (group.impact_direction === "negative" ? "nao" : "sim"),
+            defending_vote: group.defending_vote ?? null,
+            event_defending_vote: group.event_defending_vote ?? null,
+            score_eligible: group.score_eligible === true,
+            vote_attribution_status: group.vote_attribution_status,
+            score_withholding_reason: group.score_withholding_reason ?? null,
             severity: matrix.severity,
             structural_type: matrix.structural_type,
             confidence: group.confidence,
