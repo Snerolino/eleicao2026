@@ -126,8 +126,8 @@ export function CandidateDossierPage() {
   const isSaved = candidateUniqueId ? savedSet.has(candidateUniqueId) : false;
 
   const categoryScoresQuery = useQuery({
-    queryKey: ['candidate-category-scores', candidate?.id],
-    queryFn: () => fetchVoteCategoryScores(candidate?.id ? [candidate.id] : []),
+    queryKey: ['candidate-category-scores', candidateUniqueId],
+    queryFn: () => fetchVoteCategoryScores(candidateUniqueId ? [candidateUniqueId] : []),
     enabled: Boolean(candidate?.id),
     staleTime: 60_000,
   });
@@ -279,39 +279,9 @@ export function CandidateDossierPage() {
                 ) : (
                   <div className="mt-3">
                     <CategoryScoreList
-                      scores={(() => {
-                        const allScores = categoryScoresQuery.data ?? [];
-                        const houseScores = allScores.filter(
-                          (score) => score.house === profile.house
-                        );
-
-                        const snapshotScores =
-                          Array.isArray(candidate.category_scores) && candidate.category_scores.length > 0
-                            ? candidate.category_scores.map((cs) => ({
-                                candidate_id: candidate.id,
-                                house: profile.house,
-                                group_slug: cs.group,
-                                score: cs.score,
-                                methodology_version: '1.0.0',
-                                evaluated_propositions: cs.evaluated_propositions_count,
-                                eligible_weight: cs.evaluated_propositions_count * 3,
-                                excluded_no_data: 0,
-                                contested_assessments: 0,
-                                average_confidence: 0.95,
-                              }))
-                            : [];
-
-                        const houseEvaluated = houseScores.reduce((acc, s) => acc + (s.evaluated_propositions || 0), 0);
-                        const snapshotEvaluated = snapshotScores.reduce((acc, s) => acc + (s.evaluated_propositions || 0), 0);
-
-                        if (houseScores.length > 0 && houseEvaluated >= snapshotEvaluated) {
-                          return houseScores;
-                        }
-                        if (snapshotScores.length > 0) {
-                          return snapshotScores;
-                        }
-                        return houseScores.length > 0 ? houseScores : allScores;
-                      })()}
+                      scores={(categoryScoresQuery.data ?? []).filter(
+                        (score) => score.house === profile.house
+                      )}
                       house={house.label}
                       candidateName={candidate.full_name}
                     />

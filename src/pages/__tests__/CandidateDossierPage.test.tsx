@@ -170,17 +170,25 @@ describe('CandidateDossierPage', () => {
     expect(screen.getAllByText('+0,20').length).toBeGreaterThan(0);
   });
 
-  it('exibe barras por categoria via fallback de candidate.category_scores quando scoresQuery retorna vazio', () => {
-    scoresQueryState.value = {
-      data: [],
-      isLoading: false,
-      isError: false,
-    };
-
+  it('não substitui resultado vazio do serviço por scores antigos do candidato', () => {
+    scoresQueryState.value = { data: [], isLoading: false, isError: false };
     renderDossier();
+    expect(screen.queryByText('+0,20')).not.toBeInTheDocument();
+  });
 
-    expect(screen.getByText('Trabalhadores informais e de aplicativo')).toBeInTheDocument();
-    expect(screen.getByText('Mulheres')).toBeInTheDocument();
-    expect(screen.getAllByText('+0,20').length).toBeGreaterThan(0);
+  it('preserva não avaliado do serviço mesmo com score negativo no snapshot', () => {
+    candidateQueryState.value = { ...candidateQueryState.value, data: {
+      ...mockCandidate,
+      category_scores: [{ group: 'trabalhadores_formais', score: -1,
+        evaluated_propositions_count: 1, divergences_count: 0,
+        favorable_votes: 0, unfavorable_votes: 1 }],
+    } };
+    scoresQueryState.value = { data: [{ candidate_id: mockCandidate.id,
+      house: 'camara', group_slug: 'trabalhadores_formais', score: null,
+      evaluated_propositions: 0, eligible_weight: 0, excluded_no_data: 1,
+      contested_assessments: 0 }], isLoading: false, isError: false };
+    renderDossier();
+    expect(screen.queryByText('-1,00')).not.toBeInTheDocument();
+    expect(screen.getAllByText('não avaliado').length).toBeGreaterThan(0);
   });
 });

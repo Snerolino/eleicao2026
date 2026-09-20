@@ -296,6 +296,13 @@ export function getLocalVoteCategoryScores(candidateIds: string[]): VoteCategory
 export async function fetchVoteCategoryScores(
   candidateIds: string[]
 ): Promise<VoteCategoryScore[]> {
+  candidateIds = [...new Set(candidateIds.map((id) =>
+    PUBLIC_CANDIDATES.find((candidate) => candidate.id === id || candidate.tse_candidate_id === id || candidate.slug === id)?.id ?? id
+  ))];
+  // A seleção dos demais candidatos não pode mudar o fallback deste candidato.
+  if (candidateIds.length > 1) {
+    return (await Promise.all(candidateIds.map((id) => fetchVoteCategoryScores([id])))).flat();
+  }
   const fallbackScores = getLocalVoteCategoryScores(candidateIds);
   const localFacts = getLocalVoteCategoryScoreFacts(candidateIds);
 
