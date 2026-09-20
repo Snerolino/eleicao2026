@@ -81,6 +81,7 @@ create table if not exists public.impact_event_attribution_reviews (
   reviewer_id uuid references auth.users(id),
   reviewer_type text not null
     check (reviewer_type in ('curadoria_interna','painel_externo','revisao_automatizada')),
+  panel_id text,
   decision text not null
     check (decision in ('approved','rejected','needs_changes')),
   notes text,
@@ -143,6 +144,15 @@ as $
           r.reviewer_id is not null
           and public.has_editor_role(r.reviewer_id)
           and (ea.created_by is null or r.reviewer_id <> ea.created_by)
+        )
+      )
+      and (
+        p_reviewer_type <> 'painel_externo'
+        or (
+          r.panel_id is not null
+          and char_length(trim(r.panel_id)) >= 3
+          and r.notes is not null
+          and char_length(trim(r.notes)) >= 20
         )
       )
   );
@@ -334,6 +344,8 @@ grant update (
 grant insert, update on table public.impact_event_attribution_sources to authenticated;
 revoke delete on table public.impact_event_attribution_sources from authenticated;
 
+revoke execute on function public.impact_event_attribution_has_review(uuid, text)
+from public, anon, authenticated;
 revoke all on function public.approve_impact_event_attribution(uuid) from public, anon;
 grant execute on function public.approve_impact_event_attribution(uuid) to authenticated;
 ),
