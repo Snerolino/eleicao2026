@@ -28,6 +28,52 @@ function chunk<T>(items: T[], size = 100): T[][] {
   return result;
 }
 
+async function fetchApprovedEventAttributions(
+  client: any,
+  eventIds: string[],
+  assessmentIds: string[]
+): Promise<Row[]> {
+  if (eventIds.length === 0 || assessmentIds.length === 0) return [];
+  const eventChunks = chunk(eventIds);
+  const assessmentChunks = chunk(assessmentIds);
+  const rows: Row[] = [];
+
+  for (const eventBatch of eventChunks) {
+    for (const assessmentBatch of assessmentChunks) {
+      const { data, error } = await client
+        .from("impact_event_attributions")
+        .select(
+          "id,voting_event_id,assessment_id,event_defending_vote,score_eligible,vote_attribution_status,score_withholding_reason,confidence,review_status,methodology_version,impact_event_attribution_sources(source_reference_id,source_kind)"
+        )
+        .in("voting_event_id", eventBatch)
+        .in("assessment_id", assessmentBatch)
+        .eq("methodology_version", "2.0.0")
+        .in("review_status", ["approved", "contested"]);
+      if (error) throw error;
+      rows.push(...(data ?? []));
+    }
+  }
+
+  return rows;
+}
+
+function attributionKey(votingEventId: string, assessmentId: string): string {
+  return `${votingEventId}|${assessmentId}`;
+}
+
+function isApprovedScoreableAttribution(row: Row | undefined): boolean {
+  return Boolean(
+    row &&
+      row.score_eligible === true &&
+      (row.review_status === "approved" || row.review_status === "contested") &&
+      (row.vote_attribution_status === "isolated" ||
+        row.vote_attribution_status === "compound_separable") &&
+      (row.event_defending_vote === "sim" || row.event_defending_vote === "nao") &&
+      Array.isArray(row.impact_event_attribution_sources) &&
+      row.impact_event_attribution_sources.length > 0
+  );
+}
+
 async function fetchCandidateIndex(client: any, candidateId: string): Promise<Row[]> {
   const first = await client
     .from("legislator_vote_index")
@@ -97,9 +143,16 @@ export function buildApprovedVoteFacts(
   indexRows: readonly Row[],
   eventRows: readonly Row[],
   matrixRows: readonly Row[],
+  attributionRows: readonly Row[] = [],
   dbToPublicId?: Map<string, string>
 ): VoteCategoryFact[] {
   const eventById = new Map(eventRows.map((row) => [row.id, row]));
+  const attributionByEventAssessment = new Map(
+    attributionRows.map((row) => [
+      attributionKey(row.voting_event_id, row.assessment_id),
+      row,
+    ])
+  );
   const factsByKey = new Map<string, VoteCategoryFact>();
   for (const matrix of matrixRows) {
     if (matrix.review_status !== "approved") continue;
@@ -111,11 +164,19 @@ export function buildApprovedVoteFacts(
       const sources = Array.isArray(group.impact_assessment_sources)
         ? group.impact_assessment_sources
         : [];
-      if (typeof group.group_slug !== "string" || sources.length === 0) continue;
+      if (
+        typeof group.id !== "string" ||
+        typeof group.group_slug !== "string" ||
+        sources.length === 0
+      ) continue;
       for (const index of indexRows) {
         const event = eventById.get(index.voting_event_id);
         if (!event || !matrixEvents.some((candidateEvent) => candidateEvent.id === event.id))
           continue;
+        const attribution = attributionByEventAssessment.get(
+          attributionKey(event.id, group.id)
+        );
+        if (!isApprovedScoreableAttribution(attribution)) continue;
         const publicCandId = dbToPublicId?.get(index.candidate_id) ?? index.candidate_id;
         const fact: VoteCategoryFact = {
           candidate_id: publicCandId,
@@ -142,7 +203,12 @@ export function getLocalVoteCategoryScoreFacts(candidateIds: string[]): VoteCate
     if (!tseId) continue;
     const votes = getCandidateNominalVotes(tseId);
     for (const v of votes) {
-      if (!v.assessment_group || !v.impact_direction) continue;
+      if (
+        !v.assessment_group ||
+        !v.impact_direction ||
+        v.attribution_methodology_version !== "2.0.0" ||
+        !v.voting_event_id
+      ) continue;
       const defVote =
         v.defending_vote !== undefined
           ? v.defending_vote
@@ -154,7 +220,7 @@ export function getLocalVoteCategoryScoreFacts(candidateIds: string[]): VoteCate
       facts.push({
         candidate_id: cand.id,
         house: v.house,
-        voting_event_id: `${v.house}|${v.proposition_id}`,
+        voting_event_id: v.voting_event_id,
         proposition_version_id: v.proposition_id,
         group_slug: v.assessment_group,
         value: v.vote_value as VoteCategoryScoreFact["value"],
@@ -165,6 +231,8 @@ export function getLocalVoteCategoryScoreFacts(candidateIds: string[]): VoteCate
         score_eligible: v.score_eligible,
         vote_attribution_status: v.vote_attribution_status as any,
         score_withholding_reason: v.score_withholding_reason,
+        attribution_review_status: v.attribution_review_status as any,
+        attribution_methodology_version: v.attribution_methodology_version,
         severity: v.severity || 3,
         structural_type: (v.structural_type as any) || "structural",
         confidence: v.confidence || 0.95,
@@ -185,11 +253,18 @@ export function getLocalVoteCategoryFacts(candidateIds: string[]): VoteCategoryF
     if (!tseId) continue;
     const votes = getCandidateNominalVotes(tseId);
     for (const v of votes) {
-      if (!v.assessment_group) continue;
+      if (
+        !v.assessment_group ||
+        v.attribution_methodology_version !== "2.0.0" ||
+        !v.voting_event_id ||
+        v.score_eligible !== true ||
+        !["isolated", "compound_separable"].includes(v.vote_attribution_status ?? "") ||
+        !["sim", "nao"].includes(v.event_defending_vote ?? "")
+      ) continue;
       facts.push({
         candidate_id: cand.id,
         house: v.house,
-        voting_event_id: `${v.house}|${v.proposition_id}`,
+        voting_event_id: v.voting_event_id,
         group_slug: v.assessment_group,
         value: (v.vote_value as VoteCategoryFact["value"]) || "sim",
         review_status: "approved",
@@ -229,15 +304,31 @@ export async function fetchVoteCategoryComparisons(
     const { data: matrixRows, error: matrixError } = await client
       .from("impact_matrices")
       .select(
-        "proposition_version_id,review_status,impact_assessments(group_slug,impact_assessment_sources(source_reference_id))"
+        "proposition_version_id,review_status,impact_assessments(id,group_slug,impact_assessment_sources(source_reference_id))"
       )
       .eq("review_status", "approved")
       .in("proposition_version_id", versionIds);
     if (matrixError) throw matrixError;
+    const matrices = (matrixRows ?? []) as Row[];
+    const assessmentIds = [
+      ...new Set(
+        matrices.flatMap((matrix) =>
+          Array.isArray(matrix.impact_assessments)
+            ? matrix.impact_assessments.map((group: Row) => group.id).filter(Boolean)
+            : []
+        )
+      ),
+    ] as string[];
+    const attributions = await fetchApprovedEventAttributions(
+      client,
+      eventIds,
+      assessmentIds
+    );
     const dbFacts = buildApprovedVoteFacts(
       indexes,
       events,
-      (matrixRows ?? []) as Row[],
+      matrices,
+      attributions,
       dbToPublicId
     );
     const dbComparisonKeys = new Set(dbFacts.map((f) => factKey(f)));
@@ -303,12 +394,11 @@ export async function fetchVoteCategoryScores(
   if (candidateIds.length > 1) {
     return (await Promise.all(candidateIds.map((id) => fetchVoteCategoryScores([id])))).flat();
   }
-  const fallbackScores = getLocalVoteCategoryScores(candidateIds);
   const localFacts = getLocalVoteCategoryScoreFacts(candidateIds);
 
   if (!supabase || candidateIds.length < 1) {
-    const derived = buildVoteCategoryScores(localFacts);
-    return derived.length > 0 ? derived : fallbackScores;
+    // Methodology v2 is fail-closed: never resurrect legacy category_scores.
+    return buildVoteCategoryScores(localFacts);
   }
   try {
     const client = supabase as any;
@@ -320,8 +410,7 @@ export async function fetchVoteCategoryScores(
 
     const eventIds = [...new Set(indexes.map((row) => row.voting_event_id).filter(Boolean))];
     if (eventIds.length === 0) {
-      const derived = buildVoteCategoryScores(localFacts);
-      return derived.length > 0 ? derived : fallbackScores;
+      return buildVoteCategoryScores(localFacts);
     }
     const eventBatches = await Promise.all(
       chunk(eventIds).map((batch) =>
@@ -335,15 +424,14 @@ export async function fetchVoteCategoryScores(
       ...new Set(events.map((row) => row.proposition_version_id).filter(Boolean)),
     ];
     if (versionIds.length === 0) {
-      const derived = buildVoteCategoryScores(localFacts);
-      return derived.length > 0 ? derived : fallbackScores;
+      return buildVoteCategoryScores(localFacts);
     }
     const matrixBatches = await Promise.all(
       chunk(versionIds).map((batch) =>
         client
           .from("impact_matrices")
           .select(
-            "proposition_version_id,review_status,severity,structural_type,impact_assessments(group_slug,impact_direction,defending_vote,event_defending_vote,score_eligible,vote_attribution_status,score_withholding_reason,confidence,impact_assessment_sources(source_reference_id))"
+            "proposition_version_id,review_status,severity,structural_type,impact_assessments(id,group_slug,impact_direction,defending_vote,textual_defending_vote,confidence,impact_assessment_sources(source_reference_id))"
           )
           .in("proposition_version_id", batch)
           .in("review_status", ["approved", "contested"])
@@ -351,12 +439,34 @@ export async function fetchVoteCategoryScores(
     );
     const matrixError = matrixBatches.find((result) => result.error)?.error;
     if (matrixError) throw matrixError;
+    const matrices = matrixBatches.flatMap((result) => result.data ?? []) as Row[];
+    const assessmentIds = [
+      ...new Set(
+        matrices.flatMap((matrix) =>
+          Array.isArray(matrix.impact_assessments)
+            ? matrix.impact_assessments.map((group: Row) => group.id).filter(Boolean)
+            : []
+        )
+      ),
+    ] as string[];
+    const attributions = await fetchApprovedEventAttributions(
+      client,
+      eventIds,
+      assessmentIds
+    );
+    const attributionByEventAssessment = new Map(
+      attributions.map((row) => [
+        attributionKey(row.voting_event_id, row.assessment_id),
+        row,
+      ])
+    );
     const eventById = new Map(events.map((row) => [row.id, row]));
     const dbFacts: VoteCategoryScoreFact[] = [];
-    for (const matrix of matrixBatches.flatMap((result) => result.data ?? []) as Row[]) {
+    for (const matrix of matrices) {
       const groups = Array.isArray(matrix.impact_assessments) ? matrix.impact_assessments : [];
       for (const group of groups) {
         if (
+          typeof group.id !== "string" ||
           typeof group.group_slug !== "string" ||
           !Array.isArray(group.impact_assessment_sources) ||
           group.impact_assessment_sources.length === 0
@@ -366,19 +476,44 @@ export async function fetchVoteCategoryScores(
           const event = eventById.get(index.voting_event_id);
           if (!event || event.proposition_version_id !== matrix.proposition_version_id) continue;
           const publicCandId = dbToPublicId.get(index.candidate_id) ?? index.candidate_id;
+          const attribution = attributionByEventAssessment.get(
+            attributionKey(event.id, group.id)
+          );
+          const hasAttributionSources =
+            Array.isArray(attribution?.impact_event_attribution_sources) &&
+            attribution.impact_event_attribution_sources.length > 0;
           dbFacts.push({
             candidate_id: publicCandId,
             house: event.house,
             voting_event_id: event.id,
             proposition_version_id: event.proposition_version_id,
+            assessment_id: group.id,
             group_slug: group.group_slug,
             value: index.value,
             impact_direction: group.impact_direction,
             defending_vote: group.defending_vote ?? null,
-            event_defending_vote: group.event_defending_vote ?? null,
-            score_eligible: group.score_eligible === true,
-            vote_attribution_status: group.vote_attribution_status,
-            score_withholding_reason: group.score_withholding_reason ?? null,
+            textual_defending_vote:
+              group.textual_defending_vote ?? group.defending_vote ?? null,
+            event_defending_vote:
+              hasAttributionSources ? attribution?.event_defending_vote ?? null : null,
+            score_eligible:
+              hasAttributionSources && attribution?.score_eligible === true,
+            vote_attribution_status:
+              hasAttributionSources
+                ? attribution?.vote_attribution_status
+                : "event_binding_missing",
+            score_withholding_reason:
+              hasAttributionSources
+                ? attribution?.score_withholding_reason ?? null
+                : "Atribuição v2 aprovada e fontes do evento não localizadas.",
+            attribution_review_status:
+              hasAttributionSources
+                ? attribution?.review_status
+                : "pending_review",
+            attribution_methodology_version:
+              hasAttributionSources
+                ? attribution?.methodology_version
+                : "2.0.0",
             severity: matrix.severity,
             structural_type: matrix.structural_type,
             confidence: group.confidence,
@@ -388,40 +523,26 @@ export async function fetchVoteCategoryScores(
       }
     }
 
-    const dbCategoryKeys = new Set(dbFacts.map((fact) => `${fact.candidate_id}|${fact.house}|${fact.group_slug}`));
-    const localComplement = localFacts.filter((fact) => !dbCategoryKeys.has(`${fact.candidate_id}|${fact.house}|${fact.group_slug}`));
-    const combinedFacts = [...dbFacts, ...localComplement];
-    const computed = buildVoteCategoryScores(combinedFacts);
-    const validScores = computed.filter((s) => s.score !== null && typeof s.score === "number");
-
-    // Complementar com fallback para qualquer par (candidate_id, group_slug) com score null ou ausente
-    const validScoreKeys = new Set(
-      validScores.map((s) => `${s.candidate_id}|${s.group_slug}`)
+    const dbCategoryKeys = new Set(
+      dbFacts.map(
+        (fact) => `${fact.candidate_id}|${fact.house}|${fact.group_slug}`
+      )
     );
-    const missingFallback = fallbackScores.filter(
-      (s) => !validScoreKeys.has(`${s.candidate_id}|${s.group_slug}`)
+    const localComplement = localFacts.filter(
+      (fact) =>
+        !dbCategoryKeys.has(
+          `${fact.candidate_id}|${fact.house}|${fact.group_slug}`
+        )
     );
 
-    const mergedScores = [...validScores, ...missingFallback];
-
-    const mergedEvaluated = mergedScores.reduce((acc, s) => acc + (s.evaluated_propositions || 0), 0);
-    const fallbackEvaluated = fallbackScores.reduce((acc, s) => acc + (s.evaluated_propositions || 0), 0);
-
-    if (mergedScores.length > 0 && mergedEvaluated >= fallbackEvaluated) {
-      return mergedScores;
-    }
-    return fallbackScores.length > 0 ? fallbackScores : mergedScores;
+    // Keep null/withheld results. A null remote v2 result is authoritative and
+    // must never be replaced by a legacy snapshot with a numeric score.
+    return buildVoteCategoryScores([...dbFacts, ...localComplement]);
   } catch (error) {
     console.warn(
-      "[voteCategoryComparison] Erro ao consultar Supabase, usando dados canônicos locais:",
+      "[voteCategoryComparison] Erro ao consultar Supabase; metodologia v2 falha fechada:",
       error
     );
-    const derived = buildVoteCategoryScores(localFacts);
-    const derivedEvaluated = derived.reduce((acc, s) => acc + (s.evaluated_propositions || 0), 0);
-    const fallbackEvaluated = fallbackScores.reduce((acc, s) => acc + (s.evaluated_propositions || 0), 0);
-    if (derived.length > 0 && derivedEvaluated >= fallbackEvaluated) {
-      return derived;
-    }
-    return fallbackScores.length > 0 ? fallbackScores : derived;
+    return buildVoteCategoryScores(localFacts);
   }
 }
