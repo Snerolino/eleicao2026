@@ -42,6 +42,8 @@ Esse é o bloqueio estrutural que impede o avanço dos scores: a metodologia v2 
 
 A automação agora diferencia “tick executado sem mudança” de “fila preparada e bloqueada por gate externo”, evitando o falso diagnóstico de parada.
 
+A lane `alrs_matrix_profile_materialization` havia sido configurada para chamar `--apply` automaticamente. Isso foi corrigido: o supervisor agora executa `dry-run` por padrão; mutação remota só ocorre quando o script é chamado explicitamente com `--apply` e após o gate remoto separado. A execução dry-run verificada retornou `remote_apply=false`, `110.252` votos canônicos e `87` perfis candidatos.
+
 ## Próximos gates
 
 1. autorização explícita para aplicar a migration v2 remota;

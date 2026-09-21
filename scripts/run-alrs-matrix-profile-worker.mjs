@@ -5,6 +5,7 @@ import { resolve } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
 const steps = [];
+const apply = process.argv.includes('--apply');
 
 function run(label, script, args) {
   try {
@@ -21,12 +22,13 @@ function run(label, script, args) {
   }
 }
 
-const assessments = run('authenticated_assessments', 'scripts/apply-alrs-p2-assessment-drafts-auth.mjs', ['--apply']);
-const profiles = assessments && run('profile_recalculation', 'scripts/build-vote-profile-fast.mjs', ['--apply']);
+const assessments = run('assessments', 'scripts/apply-alrs-p2-assessment-drafts-auth.mjs', apply ? ['--apply'] : []);
+const profiles = assessments && run('profile_recalculation', 'scripts/build-vote-profile-fast.mjs', apply ? ['--apply'] : []);
 const result = {
   schema_version: '1.0.0',
   worker: 'alrs-matrix-profile',
-  remote_apply: assessments,
+  mode: apply ? 'apply' : 'dry-run',
+  remote_apply: apply && assessments,
   profile_recalculation: profiles,
   status: assessments && profiles ? 'completed' : 'blocked',
   steps,
