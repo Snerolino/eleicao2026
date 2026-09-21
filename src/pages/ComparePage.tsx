@@ -106,8 +106,12 @@ function VoteCategoryTable({
   if (safeComparisons.length === 0) {
     return <p className="font-mono text-xs uppercase tracking-wide text-[var(--color-muted-ink)]">Ainda não há cobertura aprovada de impacto em eventos comuns para comparar por categoria.</p>;
   }
+  const maxVotes = Math.max(1, ...safeComparisons.flatMap((comparison) => comparison.candidates.map((summary) => summary.total_votes)));
   return (
     <div className="overflow-auto rounded-sm border border-[var(--color-border-editorial)]">
+      <p className="border-b border-[var(--color-border-editorial)] bg-[var(--color-paper)] p-3 font-mono text-[0.68rem] text-[var(--color-muted-ink)]">
+        Barras mostram o volume relativo de votos no recorte de eventos comuns aprovados. Verde = sim, vermelho = não, cinza = abstenção/ausência/obstrução. Não é score nem ranking.
+      </p>
       <table className="w-full border-collapse text-sm">
         <thead><tr className="bg-[var(--color-paper)]">
           <th className="p-3 text-left font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">Categoria / casa</th>
@@ -115,7 +119,20 @@ function VoteCategoryTable({
         </tr></thead>
         <tbody>{safeComparisons.map((comparison) => <tr key={`${comparison.house}:${comparison.group_slug}`} className="border-t border-[var(--color-border-editorial)]">
           <th className="p-3 text-left align-top font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">{comparison.group_slug.replaceAll('_', ' ')} · {comparison.house} · {comparison.events_compared} evento(s) comum(ns)</th>
-          {comparison.candidates.map((summary) => <td key={summary.candidate_id} className="border-l border-[var(--color-border-editorial)] p-3 align-top"><span className="font-mono text-xs">Sim {summary.sim} · Não {summary.nao}</span><br /><span className="font-mono text-[0.65rem] text-[var(--color-muted-ink)]">Abst. {summary.abstencao} · Aus. {summary.ausente} · Obst. {summary.obstrucao}</span></td>)}
+          {comparison.candidates.map((summary) => {
+            const total = summary.total_votes;
+            const other = summary.abstencao + summary.ausente + summary.obstrucao;
+            return <td key={summary.candidate_id} className="border-l border-[var(--color-border-editorial)] p-3 align-top">
+              <div className="space-y-2" aria-label={`${summary.candidate_id}: ${total} votos no recorte aprovado`}>
+                <div className="flex h-3 w-full overflow-hidden rounded-sm bg-[var(--color-skeleton)]" aria-hidden="true">
+                  {summary.sim > 0 && <span className="bg-[var(--color-institutional)]" style={{ width: `${(summary.sim / maxVotes) * 100}%` }} />}
+                  {summary.nao > 0 && <span className="bg-[var(--color-factcheck)]" style={{ width: `${(summary.nao / maxVotes) * 100}%` }} />}
+                  {other > 0 && <span className="bg-[var(--color-muted-ink)]" style={{ width: `${(other / maxVotes) * 100}%` }} />}
+                </div>
+                <span className="font-mono text-xs">{total} voto(s) · Sim {summary.sim} · Não {summary.nao}</span><br /><span className="font-mono text-[0.65rem] text-[var(--color-muted-ink)]">Abst. {summary.abstencao} · Aus. {summary.ausente} · Obst. {summary.obstrucao}</span>
+              </div>
+            </td>;
+          })}
         </tr>)}</tbody>
       </table>
     </div>
