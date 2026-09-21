@@ -96,9 +96,14 @@ export function buildCandidateNominalVotes(root = ROOT) {
           impact_direction: primaryAssessment?.impact_direction || null,
           defending_vote: primaryAssessment?.defending_vote || null,
           textual_defending_vote: primaryAssessment?.textual_defending_vote || null,
-          event_defending_vote: primaryAssessment?.event_defending_vote || null,
-          score_eligible: primaryAssessment?.score_eligible ?? false,
-          vote_attribution_status: primaryAssessment?.vote_attribution_status || null,
+          // Methodology v2: gabarito is textual only. Event meaning must be
+          // reconstructed independently and may not be inherited from a proposition.
+          event_defending_vote: null,
+          score_eligible: false,
+          vote_attribution_status: "event_binding_missing",
+          score_withholding_reason: "Snapshot local sem atribuição de evento v2 aprovada.",
+          attribution_methodology_version: null,
+          attribution_review_status: null,
         });
       }
     }
@@ -140,9 +145,13 @@ export function buildCandidateNominalVotes(root = ROOT) {
       impact_direction: primaryAssessment?.impact_direction || null,
       defending_vote: primaryAssessment?.defending_vote || null,
       textual_defending_vote: primaryAssessment?.textual_defending_vote || null,
-      event_defending_vote: primaryAssessment?.event_defending_vote || null,
-      score_eligible: primaryAssessment?.score_eligible ?? false,
-      vote_attribution_status: primaryAssessment?.vote_attribution_status || null,
+      // Methodology v2: never inherit event attribution from the textual gabarito.
+      event_defending_vote: null,
+      score_eligible: false,
+      vote_attribution_status: "event_binding_missing",
+      score_withholding_reason: "Snapshot local sem atribuição de evento v2 aprovada.",
+      attribution_methodology_version: null,
+      attribution_review_status: null,
     });
   }
 
@@ -178,6 +187,9 @@ export function buildCandidateNominalVotes(root = ROOT) {
         event_defending_vote: vote.event_defending_vote ?? null,
         textual_defending_vote: vote.textual_defending_vote ?? null,
         vote_attribution_status: vote.vote_attribution_status ?? null,
+        score_withholding_reason: vote.score_withholding_reason ?? null,
+        attribution_methodology_version: vote.attribution_methodology_version ?? null,
+        attribution_review_status: vote.attribution_review_status ?? null,
       };
       // A URL ALRS varia por parlamentar/ano, mas não identifica a matéria.
       // Não a use na chave: a identidade do registro é house + proposition_id

@@ -77,6 +77,8 @@ export interface CandidateMandate {
 export interface CandidateNominalVote {
   house: 'alrs' | 'camara' | 'senado' | string;
   proposition_id: string;
+  /** Concrete voting event identity. Required for methodology v2 scoring. */
+  voting_event_id?: string | null;
   title: string;
   vote_value: 'sim' | 'nao' | 'abstencao' | 'ausente' | 'obstrucao' | string;
   date: string;
@@ -90,6 +92,8 @@ export interface CandidateNominalVote {
   score_eligible?: boolean;
   vote_attribution_status?: string | null;
   score_withholding_reason?: string | null;
+  attribution_methodology_version?: string | null;
+  attribution_review_status?: 'pending_review' | 'approved' | 'contested' | 'rejected' | null;
   severity?: number;
   structural_type?: 'structural' | 'budgetary' | 'symbolic';
   confidence?: number;

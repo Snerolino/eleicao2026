@@ -19,7 +19,19 @@ const vote = (overrides: Partial<CandidateNominalVote> = {}): CandidateNominalVo
   ...overrides,
 });
 
-describe('vote-coverage', () => {
+const scoreableV2 = (overrides: Partial<CandidateNominalVote> = {}): CandidateNominalVote =>
+  vote({
+    assessment_group: 'mulheres',
+    voting_event_id: 'event-1',
+    score_eligible: true,
+    event_defending_vote: 'sim',
+    vote_attribution_status: 'isolated',
+    attribution_methodology_version: '2.0.0',
+    attribution_review_status: 'approved',
+    ...overrides,
+  });
+
+describe('vote-coverage v2', () => {
   it('mantém somente votações ligadas a grupos populacionais canônicos', () => {
     const result = filterPopulationRelevantVotes([
       vote(),
@@ -30,20 +42,25 @@ describe('vote-coverage', () => {
     expect(result[0].assessment_group).toBe('mulheres');
   });
 
-  it('calcula cobertura total, pertinente e pontuada separadamente', () => {
+  it('só conta como pontuado evento com atribuição v2 completa', () => {
     const result = summarizeVoteCoverage([
       vote(),
-      vote({ assessment_group: 'mulheres', score_eligible: true }),
-      vote({ assessment_group: 'estudantes', score_eligible: false }),
+      scoreableV2(),
+      vote({ assessment_group: 'estudantes', score_eligible: true }),
+      scoreableV2({
+        assessment_group: 'estudantes',
+        voting_event_id: 'event-2',
+        attribution_review_status: 'pending_review',
+      }),
       vote({ assessment_group: 'grupo_inventado', score_eligible: true }),
     ]);
     expect(result).toMatchObject({
-      totalVotes: 4,
-      relevantVotes: 2,
+      totalVotes: 5,
+      relevantVotes: 3,
       scoredVotes: 1,
-      relevantPercentage: 50,
-      scoredPercentage: 50,
+      relevantPercentage: 60,
     });
+    expect(result.scoredPercentage).toBeCloseTo(100 / 3, 6);
   });
 
   it('não transforma ausência de cobertura em zero', () => {

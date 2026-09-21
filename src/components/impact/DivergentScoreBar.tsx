@@ -28,12 +28,12 @@ export function DivergentScoreBar({
   const formattedScore = isEvaluated ? formatCategoryScore(clampedScore) : "não avaliado";
 
   const accessibleLabel = isEvaluated
-    ? `${groupLabel} para ${candidateName}: saldo ${formattedScore}, avaliado em ${evaluatedPropositions} item(s)${
+    ? `${groupLabel} para ${candidateName}: saldo ${formattedScore}, calculado a partir de ${evaluatedPropositions} evento(s) elegível(is)${
         contestedAssessments > 0
           ? `, com ${contestedAssessments} avaliação(ões) contestada(s) em revisão`
           : ""
       }`
-    : `${groupLabel} para ${candidateName}: não avaliado (ainda não há proposição elegível avaliada)`;
+    : `${groupLabel} para ${candidateName}: não avaliado (ainda não há evento nominal com atribuição v2 elegível)`;
 
   return (
     <div
@@ -90,7 +90,7 @@ export function DivergentScoreBar({
             >
               {formattedScore}
             </span>
-            <span className="text-[var(--color-muted-ink)]">· {evaluatedPropositions} {evaluatedPropositions === 1 ? "item" : "itens"}</span>
+            <span className="text-[var(--color-muted-ink)]">· {evaluatedPropositions} {evaluatedPropositions === 1 ? "evento elegível" : "eventos elegíveis"}</span>
             {contestedAssessments > 0 && (
               <span
                 data-testid="contested-marker"

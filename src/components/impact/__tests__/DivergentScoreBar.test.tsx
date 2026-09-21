@@ -27,7 +27,7 @@ describe("DivergentScoreBar component", () => {
     const group = screen.getByRole("group");
     expect(group).toHaveAttribute(
       "aria-label",
-      "Mulheres para Maria da Silva: não avaliado (ainda não há proposição elegível avaliada)"
+      "Mulheres para Maria da Silva: não avaliado (ainda não há evento nominal com atribuição v2 elegível)"
     );
   });
 
@@ -48,7 +48,7 @@ describe("DivergentScoreBar component", () => {
     const val = screen.getByTestId("score-value");
     expect(val).toHaveTextContent("+0,62");
     expect(val).toHaveClass("text-[var(--color-institutional)]");
-    expect(screen.getByText(/6 itens/i)).toBeInTheDocument();
+    expect(screen.getByText(/6 eventos elegíveis/i)).toBeInTheDocument();
   });
 
   it("renderiza saldo negativo (-0.18) preenchendo da metade para a esquerda em vermelho", () => {
@@ -68,7 +68,7 @@ describe("DivergentScoreBar component", () => {
     const val = screen.getByTestId("score-value");
     expect(val).toHaveTextContent("-0,18");
     expect(val).toHaveClass("text-[var(--color-negative-vote)]");
-    expect(screen.getByText(/4 itens/i)).toBeInTheDocument();
+    expect(screen.getByText(/4 eventos elegíveis/i)).toBeInTheDocument();
   });
 
   it("exibe marcador de contestação visível com tooltip quando houver assessments contestados", () => {
