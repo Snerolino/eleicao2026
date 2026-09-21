@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { createHash } from 'node:crypto';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
@@ -16,6 +16,8 @@ const files = [
   'data/legislative-import/alrs/alrs-nominal-discovery-manifest-v1.json',
   'data/legislative-import/alrs/alrs-nominal-vote-reconciliation-v1.json',
   'data/legislative-import/alrs/alrs-score-recovery-queue-v1.json',
+  'data/legislative-import/alrs/alrs-exclusive-editorial-lane-v1.json',
+  'data/legislative-import/alrs/editorial-batches/manifest-v1.json',
 ];
 const digest = createHash('sha256');
 for (const file of files) {
@@ -30,6 +32,19 @@ const triage = json(files[7]);
 const discovery = json(files[8]);
 const reconciliation = json(files[9]);
 const scoreRecovery = json(files[10]);
+const exclusiveLane = json(files[11]);
+const batchManifest = json(files[12]);
+let workerFiles = [];
+try {
+  workerFiles = readdirSync(resolve(root, '.orchestrator/runtime/no-stop/alrs-editorial-workers'))
+    .filter((file) => /^worker-\d+-of-\d+\.json$/.test(file))
+    .map((file) => json(`.orchestrator/runtime/no-stop/alrs-editorial-workers/${file}`));
+} catch { /* runtime directory may not exist on clean checkouts */ }
+const workerSummary = workerFiles.reduce((summary, worker) => ({
+  selected: summary.selected + Number(worker.counts?.selected ?? worker.selected ?? 0),
+  disposition: summary.disposition + Number(worker.counts?.disposition ?? worker.disposition ?? 0),
+  awaiting_external_editorial_decision: summary.awaiting_external_editorial_decision + Number(worker.counts?.awaiting_external_editorial_decision ?? worker.awaiting_external_editorial_decision ?? 0),
+}), { selected: 0, disposition: 0, awaiting_external_editorial_decision: 0 });
 console.log(JSON.stringify({
   fingerprint: digest.digest('hex'),
   pending_editorial_items: (alrs.items ?? []).filter((item) => item.editorial_disposition === 'pending_review').length,
@@ -50,4 +65,10 @@ console.log(JSON.stringify({
   alrs_score_recovery_total: Number(scoreRecovery.counts?.total ?? 0),
   alrs_score_event_binding_missing: Number(scoreRecovery.counts?.event_binding_missing ?? 0),
   alrs_score_compound_non_separable: Number(scoreRecovery.counts?.compound_non_separable ?? 0),
+  alrs_exclusive_input_versions: Number(exclusiveLane.totals?.input_versions ?? 0),
+  alrs_exclusive_pending_versions: Number(exclusiveLane.totals?.pending_versions ?? 0),
+  alrs_disposition_batches: Number(batchManifest.totals?.batches ?? batchManifest.batches?.length ?? 0),
+  alrs_worker_selected: workerSummary.selected,
+  alrs_worker_disposition: workerSummary.disposition,
+  alrs_worker_awaiting_external_editorial_decision: workerSummary.awaiting_external_editorial_decision,
 }));
