@@ -10,3 +10,6 @@
 ## 2025-01-20 - [Pre-computing Maps in useMemo]
 **Learning:** Mutating collections (like `Map` or `Set`) during the component render phase, even inside a `useMemo` block used for filtering, is a React anti-pattern that can lead to bugs in concurrent mode.
 **Action:** Always fully pre-compute and return the populated Map/Set inside a dedicated `useMemo` based on upstream dependencies (like iterating over the source dataset), and only read from it during the render or filtering phases.
+## 2025-01-20 - [Single-Pass Iteration for Sub-Counts]
+**Learning:** Using multiple `.filter().length` statements to calculate subset counts (like tallying "sim" and "nao" votes) inside a React render path allocates redundant temporary arrays and forces multiple O(N) traversals, compounding overhead during typing interactions.
+**Action:** When computing aggregate counts for distinct subsets of an array, replace multiple `.filter(condition).length` calls with a single-pass iterative `for` loop wrapped in `useMemo`. This eliminates redundant intermediate array allocations and reduces time complexity overhead during frequent re-renders.
