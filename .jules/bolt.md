@@ -10,3 +10,6 @@
 ## 2025-01-20 - [Pre-computing Maps in useMemo]
 **Learning:** Mutating collections (like `Map` or `Set`) during the component render phase, even inside a `useMemo` block used for filtering, is a React anti-pattern that can lead to bugs in concurrent mode.
 **Action:** Always fully pre-compute and return the populated Map/Set inside a dedicated `useMemo` based on upstream dependencies (like iterating over the source dataset), and only read from it during the render or filtering phases.
+## 2025-01-20 - [Avoid Unmeasurable Micro-optimizations]
+**Learning:** Replacing declarative multiple `.filter(condition).length` calls with an imperative single-pass `for` loop on small arrays (e.g., legislative votes bounded by ~500 items) is a micro-optimization that degrades code readability without providing a measurable performance impact. The arrays involved are too small to justify the verbosity and potential bugs of an imperative loop.
+**Action:** When finding a performance optimization, always evaluate the scale of the dataset being operated on. For small, bounded arrays (like legislative votes for a single candidate), native methods perform fast enough. Do not optimize for minor computational improvements at the expense of readability unless addressing a known, profiled bottleneck on a large dataset.
