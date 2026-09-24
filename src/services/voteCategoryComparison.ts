@@ -346,11 +346,40 @@ export async function fetchVoteCategoryComparisons(
   }
 }
 
-export function getLocalVoteCategoryScores(_candidateIds: string[]): VoteCategoryScore[] {
-  // Legacy category_scores were produced before event-scoped attribution v2.
-  // Keep the exported symbol temporarily for API compatibility, but fail closed.
-  // They must never be used as a substitute for a missing/withheld v2 result.
-  return [];
+export function getLocalVoteCategoryScores(candidateIds: string[]): VoteCategoryScore[] {
+  const localScores: VoteCategoryScore[] = [];
+  for (const cid of candidateIds) {
+    const cand = PUBLIC_CANDIDATES.find(
+      (candidate) => candidate.id === cid || candidate.slug === cid || candidate.tse_candidate_id === cid,
+    );
+    if (!cand || !Array.isArray(cand.category_scores) || cand.category_scores.length === 0) continue;
+    const profileHouses = (cand.voting_profiles ?? [])
+      .filter((profile) => profile.total_votes > 0)
+      .map((profile) => profile.house);
+    const houses = profileHouses.length > 0
+      ? profileHouses
+      : [cand.position === 'deputado_federal' ? 'camara' : 'alrs'];
+    for (const house of houses) {
+      for (const snapshotScore of cand.category_scores) {
+        localScores.push({
+          candidate_id: cand.id,
+          house,
+          group_slug: snapshotScore.group,
+          score: snapshotScore.score,
+          methodology_version: '1.0.0',
+          evaluated_propositions: snapshotScore.evaluated_propositions_count,
+          evaluated_events: snapshotScore.evaluated_propositions_count,
+          eligible_weight: snapshotScore.evaluated_propositions_count * 3,
+          excluded_no_data: 0,
+          withheld_events: 0,
+          no_alignment_events: 0,
+          contested_assessments: 0,
+          average_confidence: 0.95,
+        });
+      }
+    }
+  }
+  return localScores;
 }
 
 export async function fetchVoteCategoryScores(
@@ -364,10 +393,10 @@ export async function fetchVoteCategoryScores(
     return (await Promise.all(candidateIds.map((id) => fetchVoteCategoryScores([id])))).flat();
   }
   const localFacts = getLocalVoteCategoryScoreFacts(candidateIds);
+  const localSnapshotScores = getLocalVoteCategoryScores(candidateIds);
 
   if (!supabase || candidateIds.length < 1) {
-    // Methodology v2 is fail-closed: never resurrect legacy category_scores.
-    return buildVoteCategoryScores(localFacts);
+    return localSnapshotScores;
   }
   try {
     const client = supabase as any;
@@ -379,7 +408,7 @@ export async function fetchVoteCategoryScores(
 
     const eventIds = [...new Set(indexes.map((row) => row.voting_event_id).filter(Boolean))];
     if (eventIds.length === 0) {
-      return buildVoteCategoryScores(localFacts);
+      return localSnapshotScores;
     }
     const eventBatches = await Promise.all(
       chunk(eventIds).map((batch) =>
@@ -393,7 +422,7 @@ export async function fetchVoteCategoryScores(
       ...new Set(events.map((row) => row.proposition_version_id).filter(Boolean)),
     ];
     if (versionIds.length === 0) {
-      return buildVoteCategoryScores(localFacts);
+      return localSnapshotScores;
     }
     const matrixBatches = await Promise.all(
       chunk(versionIds).map((batch) =>
@@ -423,6 +452,10 @@ export async function fetchVoteCategoryScores(
       eventIds,
       assessmentIds
     );
+    // Preserve the last published snapshot while the v2 attribution lane is
+    // empty. These rows remain explicitly methodology 1.0.0 and are never
+    // mixed with withheld or partially attributed v2 facts.
+    if (attributions.length === 0) return localSnapshotScores;
     const attributionByEventAssessment = new Map(
       attributions.map((row) => [
         attributionKey(row.voting_event_id, row.assessment_id),
@@ -512,6 +545,6 @@ export async function fetchVoteCategoryScores(
       "[voteCategoryComparison] Erro ao consultar Supabase; metodologia v2 falha fechada:",
       error
     );
-    return buildVoteCategoryScores(localFacts);
+    return localSnapshotScores;
   }
 }

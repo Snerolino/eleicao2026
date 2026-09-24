@@ -118,7 +118,9 @@ type BatchReceipt = {
   phase: 'received' | 'processing' | 'confirmed' | 'failed';
 };
 
-const editorialBatchContexts = (editorialBatchManifest.batches ?? [])
+type EditorialBatchDescriptor = { batch_id: string; file: string };
+const typedEditorialBatchManifest = editorialBatchManifest as { batches?: EditorialBatchDescriptor[] };
+const editorialBatchContexts = (typedEditorialBatchManifest.batches ?? [])
   .map((descriptor) => editorialBatchFiles[`../../data/legislative-import/alrs/editorial-batches/${descriptor.file}`])
   .filter(Boolean) as BatchContext[];
 const humanReviewVersionIds = [...new Set(editorialBatchContexts.flatMap((batch) => batch.items.map((item) => item.proposition_version_id)))];
@@ -861,12 +863,12 @@ export function AdminPage() {
                 <>Pacote de revisores retirado automaticamente: <strong>141/141 matérias encaminhadas</strong>. Não há lote de disposição pendente para esta onda.</>
               ) : (
                 <>Pacote para revisores: <a href="/editorial/alrs-ready-for-human-review-v1.json" download="alrs-ready-for-human-review-v1.json" className="font-semibold underline underline-offset-4">baixar as 141 matérias prontas para disposição</a>. {humanPackRemainingCount === null ? 'Aguardando confirmação remota da fila.' : `${humanPackRemainingCount} matérias ainda não foram recebidas.`}
-                  <span className="mt-2 block">Para enviar decisões, use um arquivo de um lote: {editorialBatchManifest.batches?.map((batch, index) => <span key={batch.batch_id}>{index > 0 ? ' · ' : ''}<a href={`/editorial/${batch.file}`} download={batch.file} className="underline underline-offset-4">{batch.batch_id}</a></span>)}.</span>
+                  <span className="mt-2 block">Para enviar decisões, use um arquivo de um lote: {typedEditorialBatchManifest.batches?.map((batch, index) => <span key={batch.batch_id}>{index > 0 ? ' · ' : ''}<a href={`/editorial/${batch.file}`} download={batch.file} className="underline underline-offset-4">{batch.batch_id}</a></span>)}.</span>
                 </>
               )}
             </p>
             <label className={`mt-4 grid gap-2 text-sm ${humanPackRemainingCount === 0 ? 'hidden' : ''}`}>
-              <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">JSON de decisões de um dos {editorialBatchManifest.batches?.length ?? 0} lotes congelados</span>
+              <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">JSON de decisões de um dos {typedEditorialBatchManifest.batches?.length ?? 0} lotes congelados</span>
               <input type="file" accept="application/json,.json" onChange={(event) => void loadBatchDecisions(event)} className="block w-full text-sm" />
             </label>
             {batchReceipt ? (

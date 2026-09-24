@@ -64,6 +64,10 @@ function CategoryScoreList({
       </p>
     );
   }
+  const isLegacySnapshot = scores.some((score) => score.methodology_version !== '2.0.0');
+  const scoreNotice = isLegacySnapshot
+    ? 'Exibindo o último snapshot editorial publicado (metodologia 1.0.0). Ele não representa novas atribuições v2; eventos ainda aguardam revisão por evento.'
+    : null;
   const scoreByGroup = new Map(scores.map((score) => [score.group_slug, score]));
   const canonicalScores = BENEFICIARY_GROUPS_CANONICAL_ORDER.map((groupSlug) => scoreByGroup.get(groupSlug) ?? {
     candidate_id: '',
@@ -81,7 +85,13 @@ function CategoryScoreList({
     average_confidence: null,
   });
   return (
-    <div className="grid gap-3 sm:grid-cols-2">
+    <div>
+      {scoreNotice ? (
+        <p className="mb-3 border-l-2 border-[var(--color-press)] pl-3 text-xs leading-relaxed text-[var(--color-muted-ink)]">
+          {scoreNotice}
+        </p>
+      ) : null}
+      <div className="grid gap-3 sm:grid-cols-2">
       {canonicalScores.map((score) => {
         const label = getBeneficiaryGroupLabel(score.group_slug);
         return (
@@ -107,6 +117,7 @@ function CategoryScoreList({
           </div>
         );
       })}
+      </div>
     </div>
   );
 }
@@ -271,13 +282,17 @@ export function CandidateDossierPage() {
                 </div>
                 <div className="shrink-0 text-left sm:text-right">
                   <span className="font-mono text-[0.68rem] uppercase tracking-widest text-[var(--color-muted-ink)]">avaliação por categoria</span>
-                  <strong className="mt-1 block font-mono text-sm text-[var(--color-institutional)]">metodologia v2</strong>
+                  <strong className="mt-1 block font-mono text-sm text-[var(--color-institutional)]">
+                    {categoryScoresQuery.data?.some((score) => score.methodology_version !== '2.0.0')
+                      ? 'snapshot editorial 1.0.0'
+                      : 'metodologia v2'}
+                  </strong>
                 </div>
               </div>
               <div className="mt-5 border border-[var(--color-border-editorial)] p-4">
                 <h3 className="font-mono text-xs uppercase tracking-widest text-[var(--color-muted-ink)]">Impacto populacional por categoria</h3>
                 <p className="mt-2 text-sm text-[var(--color-muted-ink)]">
-                  O valor considera somente eventos nominais cujo objeto votado foi vinculado ao assessment, com atribuição do sentido de SIM/NÃO aprovada e fontes verificáveis. Eventos compostos não separáveis, procedimentais ou sem vínculo comprovado ficam sem pontuação.
+                  A avaliação v2 considera somente eventos nominais cujo objeto votado foi vinculado ao assessment, com atribuição do sentido de SIM/NÃO aprovada e fontes verificáveis. Enquanto a atribuição v2 de um candidato ainda não estiver disponível, o último snapshot editorial publicado é preservado e identificado separadamente; eventos compostos não separáveis, procedimentais ou sem vínculo comprovado ficam sem nova pontuação.
                 </p>
                 {categoryScoresQuery.isLoading ? (
                   <LoadingSkeleton label="Calculando avaliação por categoria" />

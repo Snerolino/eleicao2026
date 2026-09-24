@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { buildApprovedVoteFacts } from '../voteCategoryComparison';
+import { buildApprovedVoteFacts, getLocalVoteCategoryScores } from '../voteCategoryComparison';
 
 const matrix = (review_status = 'approved') => ({
   proposition_version_id: 'v1',
@@ -26,6 +26,19 @@ const attribution = {
 };
 
 describe('voteCategoryComparison service mapping v2', () => {
+  it('preserva scores publicados no snapshot enquanto não há atribuições v2', () => {
+    const candidateIds = [
+      '210002533934',
+      '210002539056',
+      '210002534036',
+      '210002533936',
+    ];
+    const scores = getLocalVoteCategoryScores(candidateIds);
+    expect(new Set(scores.map((score) => score.candidate_id)).size).toBe(4);
+    expect(scores.length).toBeGreaterThanOrEqual(30);
+    expect(scores.every((score) => score.methodology_version === '1.0.0')).toBe(true);
+  });
+
   it('exige matrix, assessment, fonte e atribuição de evento aprovada', () => {
     const rows = [{ candidate_id: 'a', voting_event_id: 'e1', value: 'sim' }];
     const events = [{ id: 'e1', house: 'camara', proposition_version_id: 'v1' }];
