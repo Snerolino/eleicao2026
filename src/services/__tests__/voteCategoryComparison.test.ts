@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { PUBLIC_CANDIDATES } from '@/services/publicCandidates';
 import { buildApprovedVoteFacts, getLocalVoteCategoryScores } from '../voteCategoryComparison';
 
 const matrix = (review_status = 'approved') => ({
@@ -36,6 +37,16 @@ describe('voteCategoryComparison service mapping v2', () => {
     const scores = getLocalVoteCategoryScores(candidateIds);
     expect(new Set(scores.map((score) => score.candidate_id)).size).toBe(4);
     expect(scores.length).toBeGreaterThanOrEqual(30);
+    expect(scores.every((score) => score.methodology_version === '1.0.0')).toBe(true);
+  });
+
+  it('preserva scores publicados no snapshot para todos os candidatos com cobertura', () => {
+    const candidatesWithSnapshot = PUBLIC_CANDIDATES.filter(
+      (candidate) => Array.isArray(candidate.category_scores) && candidate.category_scores.length > 0,
+    );
+    const scores = getLocalVoteCategoryScores(candidatesWithSnapshot.map((candidate) => candidate.id));
+    expect(new Set(scores.map((score) => score.candidate_id)).size).toBe(candidatesWithSnapshot.length);
+    expect(scores.length).toBe(candidatesWithSnapshot.reduce((total, candidate) => total + (candidate.category_scores?.length ?? 0), 0));
     expect(scores.every((score) => score.methodology_version === '1.0.0')).toBe(true);
   });
 
