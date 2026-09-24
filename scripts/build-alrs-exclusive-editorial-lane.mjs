@@ -10,7 +10,9 @@ const collisionAudit = await readJson('data/legislative-import/alrs/version-key-
 const resolvedCatalog = await readJson('data/legislative-import/alrs/impact-resolved-version-catalog-v1.json');
 const collisionKeys = new Set((collisionAudit.collisions ?? []).map((item) => item.version_key));
 const resolvedIds = new Set([...(resolvedCatalog.resolved_version_ids ?? []), ...(resolvedCatalog.existing_matrix_version_ids ?? [])]);
+const outputPath = resolve(root, 'data/legislative-import/alrs/alrs-exclusive-editorial-lane-v1.json');
 let remoteDispositionRead = { ok: false, rows: 0, approved: 0, needs_changes: 0 };
+let remoteReadFailed = false;
 try {
   const raw = execFileSync('supabase', [
     'db', 'query', '--linked', '--output-format', 'json',
@@ -26,7 +28,39 @@ try {
     needs_changes: rows.filter((row) => row.status === 'needs_changes').length,
   };
 } catch {
-  // Keep the local fail-closed catalog if the read-only remote probe is unavailable.
+  remoteReadFailed = true;
+  // Never convert an unavailable remote read into a new active queue. Preserve
+  // the last confirmed snapshot so a transient CLI/network failure cannot
+  // reopen terminal items or dispatch duplicate editorial work.
+}
+if (remoteReadFailed) {
+  try {
+    const previous = JSON.parse(await readFile(outputPath, 'utf8'));
+    if (previous.remote_disposition_read?.ok === true) {
+      console.log(JSON.stringify({
+        output: outputPath,
+        totals: previous.totals,
+        remote_apply: false,
+        preserved_last_confirmed_snapshot: true,
+      }));
+      process.exit(0);
+    }
+  } catch {
+    // No confirmed snapshot exists; the blocked artifact below is safe.
+  }
+  const blockedOutput = {
+    schema_version: '1.0.0',
+    packet_type: 'alrs_exclusive_editorial_lane',
+    mode: 'blocked-remote-state-unknown',
+    remote_apply: false,
+    public_approval: false,
+    remote_disposition_read: remoteDispositionRead,
+    totals: { input_versions: (queue.items ?? []).length, pending_versions: 0, p0_versions: 0, p1_versions: 0, p2_versions: 0, p3_versions: 0, batches: 0 },
+    batches: [],
+  };
+  await writeFile(outputPath, `${JSON.stringify(blockedOutput, null, 2)}\n`);
+  console.error('REMOTE_DISPOSITION_READ_FAILED: active queue blocked; no items reopened');
+  process.exit(2);
 }
 const pending = (queue.items ?? [])
   .filter((item) => item.editorial_disposition === 'pending_review')
@@ -98,6 +132,5 @@ const output = {
   batches,
 };
 
-const outputPath = resolve(root, 'data/legislative-import/alrs/alrs-exclusive-editorial-lane-v1.json');
 await writeFile(outputPath, `${JSON.stringify(output, null, 2)}\n`);
 console.log(JSON.stringify({ output: outputPath, totals: output.totals, remote_apply: false }));
