@@ -57,6 +57,18 @@ export function buildEditorialBatches(lane) {
 }
 
 function main() {
+  if (lane.totals?.pending_versions === 0 && existsSync(manifestFile)) {
+    const previous = JSON.parse(readFileSync(manifestFile, 'utf8'));
+    if (Array.isArray(previous.batches) && previous.batches.length > 0) {
+      console.log(JSON.stringify({
+        output: manifestFile,
+        totals: previous.totals,
+        remote_apply: false,
+        preserved_historical_batches: true,
+      }));
+      return;
+    }
+  }
   const manifest = buildEditorialBatches(lane);
   mkdirSync(outputDir, { recursive: true });
   for (const descriptor of manifest.batches) {

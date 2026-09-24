@@ -4,6 +4,7 @@ export interface DivergentScoreBarProps {
   score: number | null;
   evaluatedPropositions: number;
   contestedAssessments?: number;
+  methodologyVersion?: string;
   candidateName: string;
   groupLabel: string;
 }
@@ -12,6 +13,7 @@ export function DivergentScoreBar({
   score,
   evaluatedPropositions,
   contestedAssessments = 0,
+  methodologyVersion = "2.0.0",
   candidateName,
   groupLabel,
 }: DivergentScoreBarProps) {
@@ -26,9 +28,12 @@ export function DivergentScoreBar({
     : "50";
 
   const formattedScore = isEvaluated ? formatCategoryScore(clampedScore) : "não avaliado";
+  const itemLabel = methodologyVersion === "2.0.0"
+    ? evaluatedPropositions === 1 ? "evento elegível" : "eventos elegíveis"
+    : evaluatedPropositions === 1 ? "item do snapshot" : "itens do snapshot";
 
   const accessibleLabel = isEvaluated
-    ? `${groupLabel} para ${candidateName}: saldo ${formattedScore}, calculado a partir de ${evaluatedPropositions} evento(s) elegível(is)${
+    ? `${groupLabel} para ${candidateName}: saldo ${formattedScore}, calculado a partir de ${evaluatedPropositions} ${itemLabel}${
         contestedAssessments > 0
           ? `, com ${contestedAssessments} avaliação(ões) contestada(s) em revisão`
           : ""
@@ -90,7 +95,7 @@ export function DivergentScoreBar({
             >
               {formattedScore}
             </span>
-            <span className="text-[var(--color-muted-ink)]">· {evaluatedPropositions} {evaluatedPropositions === 1 ? "evento elegível" : "eventos elegíveis"}</span>
+            <span className="text-[var(--color-muted-ink)]">· {evaluatedPropositions} {itemLabel}</span>
             {contestedAssessments > 0 && (
               <span
                 data-testid="contested-marker"

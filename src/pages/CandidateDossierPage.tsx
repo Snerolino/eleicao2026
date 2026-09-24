@@ -110,6 +110,7 @@ function CategoryScoreList({
                 score={score.score}
                 evaluatedPropositions={score.evaluated_propositions}
                 contestedAssessments={score.contested_assessments}
+                methodologyVersion={score.methodology_version}
                 candidateName={candidateName}
                 groupLabel={label}
               />
