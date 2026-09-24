@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import { readFile, writeFile } from 'node:fs/promises';
+import { execFileSync } from 'node:child_process';
 import { resolve } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
@@ -9,6 +10,24 @@ const collisionAudit = await readJson('data/legislative-import/alrs/version-key-
 const resolvedCatalog = await readJson('data/legislative-import/alrs/impact-resolved-version-catalog-v1.json');
 const collisionKeys = new Set((collisionAudit.collisions ?? []).map((item) => item.version_key));
 const resolvedIds = new Set([...(resolvedCatalog.resolved_version_ids ?? []), ...(resolvedCatalog.existing_matrix_version_ids ?? [])]);
+let remoteDispositionRead = { ok: false, rows: 0, approved: 0, needs_changes: 0 };
+try {
+  const raw = execFileSync('supabase', [
+    'db', 'query', '--linked', '--output-format', 'json',
+    "select proposition_version_id, status from public.impact_editorial_dispositions where status in ('approved','needs_changes')",
+  ], { cwd: root, encoding: 'utf8', maxBuffer: 16 * 1024 * 1024 });
+  const payload = JSON.parse(raw.slice(raw.indexOf('{')));
+  const rows = payload.rows ?? [];
+  for (const row of rows) if (row.proposition_version_id) resolvedIds.add(row.proposition_version_id);
+  remoteDispositionRead = {
+    ok: true,
+    rows: rows.length,
+    approved: rows.filter((row) => row.status === 'approved').length,
+    needs_changes: rows.filter((row) => row.status === 'needs_changes').length,
+  };
+} catch {
+  // Keep the local fail-closed catalog if the read-only remote probe is unavailable.
+}
 const pending = (queue.items ?? [])
   .filter((item) => item.editorial_disposition === 'pending_review')
   .filter((item) => !collisionKeys.has(item.version_key))
@@ -66,6 +85,7 @@ const output = {
     excluded_items: (queue.items ?? []).filter((item) => resolvedIds.has(item.proposition_version_id)).length,
     catalog: 'data/legislative-import/alrs/impact-resolved-version-catalog-v1.json',
   },
+  remote_disposition_read: remoteDispositionRead,
   totals: {
     input_versions: (queue.items ?? []).length,
     pending_versions: pending.length,

@@ -45,9 +45,13 @@ const workerSummary = workerFiles.reduce((summary, worker) => ({
   disposition: summary.disposition + Number(worker.counts?.disposition ?? worker.disposition ?? 0),
   awaiting_external_editorial_decision: summary.awaiting_external_editorial_decision + Number(worker.counts?.awaiting_external_editorial_decision ?? worker.awaiting_external_editorial_decision ?? 0),
 }), { selected: 0, disposition: 0, awaiting_external_editorial_decision: 0 });
+const activeWorkerSummary = Number(exclusiveLane.totals?.pending_versions ?? 0) > 0
+  ? workerSummary
+  : { selected: 0, disposition: 0, awaiting_external_editorial_decision: 0 };
 console.log(JSON.stringify({
   fingerprint: digest.digest('hex'),
-  pending_editorial_items: (alrs.items ?? []).filter((item) => item.editorial_disposition === 'pending_review').length,
+  alrs_queue_input_items: (alrs.items ?? []).filter((item) => item.editorial_disposition === 'pending_review').length,
+  pending_editorial_items: Number(exclusiveLane.totals?.pending_versions ?? 0),
   factual_votes: (alrs.items ?? []).reduce((sum, item) => sum + Number(item.factual_vote_count ?? 0), 0),
   authored_projects: Number(factual.totals?.unique_projects ?? 0),
   authored_project_roles: Number(factual.totals?.project_role_rows ?? 0),
@@ -68,7 +72,7 @@ console.log(JSON.stringify({
   alrs_exclusive_input_versions: Number(exclusiveLane.totals?.input_versions ?? 0),
   alrs_exclusive_pending_versions: Number(exclusiveLane.totals?.pending_versions ?? 0),
   alrs_disposition_batches: Number(batchManifest.totals?.batches ?? batchManifest.batches?.length ?? 0),
-  alrs_worker_selected: workerSummary.selected,
-  alrs_worker_disposition: workerSummary.disposition,
-  alrs_worker_awaiting_external_editorial_decision: workerSummary.awaiting_external_editorial_decision,
+  alrs_worker_selected: activeWorkerSummary.selected,
+  alrs_worker_disposition: activeWorkerSummary.disposition,
+  alrs_worker_awaiting_external_editorial_decision: activeWorkerSummary.awaiting_external_editorial_decision,
 }));
