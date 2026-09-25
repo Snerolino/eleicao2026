@@ -98,12 +98,7 @@ function readJsonOptional(relative) {
   }
 }
 
-function queryLinked() {
-  const raw = execFileSync('supabase', ['db', 'query', '--linked', '--output-format', 'json', sql], {
-    cwd: root,
-    encoding: 'utf8',
-    maxBuffer: 16 * 1024 * 1024,
-  });
+export function parseQueryPayload(raw) {
   const start = raw.indexOf('{');
   if (start < 0) throw new Error('Supabase CLI returned no JSON payload');
   const payload = JSON.parse(raw.slice(start));
@@ -111,12 +106,17 @@ function queryLinked() {
   return payload.rows[0];
 }
 
-function localState() {
-  const recovery = readJson('data/legislative-import/alrs/alrs-score-recovery-queue-v1.json');
-  const collisions = readJson('data/legislative-import/alrs/version-key-collision-audit-v1.json');
-  const lane = readJson('data/legislative-import/alrs/alrs-exclusive-editorial-lane-v1.json');
-  const inventory = readJsonOptional('artifacts/reprocess-impact-v2/release-inventory.json');
-  const pilot = readJsonOptional('data/legislative-import/alrs/alrs-attribution-pilot-v1.json');
+function queryLinked() {
+  const raw = execFileSync('supabase', ['db', 'query', '--linked', '--output-format', 'json', sql], {
+    cwd: root,
+    encoding: 'utf8',
+    maxBuffer: 16 * 1024 * 1024,
+  });
+  return parseQueryPayload(raw);
+}
+
+export function summarizeLocalState({ recovery, collisions, lane, inventory, pilot, sourceAcquisition }) {
+  const sourceResults = Array.isArray(sourceAcquisition.results) ? sourceAcquisition.results : [];
   return {
     score_recovery_total: Number(recovery.counts?.total ?? recovery.items?.length ?? 0),
     score_recovery_event_binding_missing: Number(recovery.counts?.event_binding_missing ?? 0),
@@ -134,7 +134,23 @@ function localState() {
     attribution_pilot_error: pilot.__state_error ?? null,
     attribution_pilot_mode: pilot.__state_unknown ? 'unknown' : pilot.mode ?? 'unknown',
     attribution_pilot_selected_count: pilot.__state_unknown ? null : Number(pilot.selected_count ?? 0),
+    source_acquisition_state: sourceAcquisition.__state_unknown ? 'unknown' : 'known',
+    source_acquisition_error: sourceAcquisition.__state_error ?? null,
+    source_acquisition_unique_urls: sourceAcquisition.__state_unknown ? null : Number(sourceAcquisition.unique_urls ?? sourceResults.length),
+    source_acquisition_ok: sourceAcquisition.__state_unknown ? null : sourceResults.filter((item) => item.ok === true).length,
+    source_acquisition_blocked: sourceAcquisition.__state_unknown ? null : sourceResults.filter((item) => item.ok !== true).length,
+    source_acquisition_data_items: sourceAcquisition.__state_unknown ? null : sourceResults.reduce((total, item) => total + Number(item.data_items ?? 0), 0),
   };
+}
+
+function localState() {
+  const recovery = readJson('data/legislative-import/alrs/alrs-score-recovery-queue-v1.json');
+  const collisions = readJson('data/legislative-import/alrs/version-key-collision-audit-v1.json');
+  const lane = readJson('data/legislative-import/alrs/alrs-exclusive-editorial-lane-v1.json');
+  const inventory = readJsonOptional('artifacts/reprocess-impact-v2/release-inventory.json');
+  const pilot = readJsonOptional('data/legislative-import/alrs/alrs-attribution-pilot-v1.json');
+  const sourceAcquisition = readJsonOptional('data/legislative-import/alrs/alrs-source-acquisition-manifest-v1.json');
+  return summarizeLocalState({ recovery, collisions, lane, inventory, pilot, sourceAcquisition });
 }
 
 function buildMarkdown(state) {
@@ -146,7 +162,7 @@ function buildMarkdown(state) {
   if (state.remote.events_without_source > 0) blockers.push(`${state.remote.events_without_source} eventos ALRS não possuem source_reference_id.`);
   if (state.local.collision_keys > 0) blockers.push(`${state.local.collision_keys} chaves de colisão afetam ${state.local.collision_affected_versions} versões e ${state.local.collision_affected_events} eventos.`);
   if (state.local.score_recovery_total > 0) blockers.push(`A fila de recuperação contém ${state.local.score_recovery_total} itens, dos quais ${state.local.score_recovery_event_binding_missing} sem vínculo de evento e ${state.local.score_recovery_compound_non_separable} compostos não separáveis.`);
-  return `# Relatório de estado ALRS — 2022 até o presente\n\nGerado em ${state.generated_at}. Auditoria somente leitura; nenhuma mutação remota foi executada.\n\n## Estado factual remoto\n\n- eventos ALRS: **${state.remote.events}**;\n- votos nominais indexados: **${state.remote.votes}**;\n- candidatos com votos: **${state.remote.candidates}**;\n- perfis ALRS: **${state.remote.profiles}**;\n- eventos sem fonte: **${state.remote.events_without_source}**;\n- assessments: **${state.remote.assessments}**;\n- matrizes aprovadas/contestadas: **${state.remote.approved_matrices}**.\n\n| Ano | Eventos | Sem fonte |\n|---:|---:|---:|\n${rows}\n\n## Estado editorial e v2\n\n- disposições aprovadas: **${state.remote.approved_dispositions}**;\n- disposições needs_changes: **${state.remote.needs_changes_dispositions}**;\n- disposições rejected: **${state.remote.rejected_dispositions ?? 'desconhecido'}**;\n- disposições não terminais: **${state.remote.non_terminal_dispositions}**;\n- atribuições evento–assessment v2: **${state.remote.event_attributions_v2}**;\n- atribuições v2 elegíveis para score: **${state.remote.scoreable_attributions_v2}**;\n- pendências da lane editorial ativa: **${state.local.exclusive_pending_versions}**.\n\n## Inventário de liberação\n\n- itens evento × assessment: **${state.local.release_inventory_count}**;\n- factual_ready: **${state.local.release_inventory_counts?.factual_ready ?? 'desconhecido'}**;\n- impact_ready_for_review: **${state.local.release_inventory_counts?.impact_ready_for_review ?? 'desconhecido'}**;\n- impact_release_ready: **${state.local.release_inventory_counts?.impact_release_ready ?? 'desconhecido'}**;\n- withheld_source: **${state.local.release_inventory_counts.withheld_source ?? 0}**;\n- withheld_attribution: **${state.local.release_inventory_counts.withheld_attribution ?? 0}**;\n- piloto: **${state.local.attribution_pilot_mode}**, selecionados: **${state.local.attribution_pilot_selected_count}**.\n\n## Gargalo principal\n\n${blockers.map((item) => '- ' + item).join('\n')}\n\nO gargalo semântico principal é a ausência de atribuições v2 por evento. A fila de disposição editorial não é o bloqueio atual: a leitura remota está confirmada e não há pendências ativas.\n\n## Melhorias implementadas\n\n1. Este comando consolida contagens remotas e artefatos locais em uma única leitura reproduzível, evitando decisões baseadas em snapshots antigos.\n2. O monitor deve distinguir fila editorial ativa, corpus factual, fontes, colisões e atribuições v2; nenhuma dessas camadas é usada como substituta de outra.\n3. A fila v2 permanece dry-run/fail-closed: nenhum score é promovido sem fonte do evento, voto defensor explícito, separação de evento e revisão.\n4. Colisões e compostos permanecem em filas próprias, sem matching por título ou inferência de voto.\n\n## Próximo plano eficiente\n\n- priorizar um piloto de 5–10 eventos simples com fonte oficial e zero colisões;\n- gerar envelopes de atribuição 'pending_review', sem apply remoto;\n- revisar e aprovar atribuições pela RPC protegida;\n- executar read-back e segunda passagem idempotente;\n- só então recalcular scores e perfis;\n- continuar em paralelo a recuperação de fontes dos ${state.remote.events_without_source} eventos restantes.\n\n## Colisões locais\n\n- chaves: **${state.local.collision_keys}**;\n- versões afetadas: **${state.local.collision_affected_versions}**;\n- eventos afetados: **${state.local.collision_affected_events}**.\n`;
+  return `# Relatório de estado ALRS — 2022 até o presente\n\nGerado em ${state.generated_at}. Auditoria somente leitura; nenhuma mutação remota foi executada.\n\n## Estado factual remoto\n\n- eventos ALRS: **${state.remote.events}**;\n- votos nominais indexados: **${state.remote.votes}**;\n- candidatos com votos: **${state.remote.candidates}**;\n- perfis ALRS: **${state.remote.profiles}**;\n- eventos sem fonte: **${state.remote.events_without_source}**;\n- assessments: **${state.remote.assessments}**;\n- matrizes aprovadas/contestadas: **${state.remote.approved_matrices}**.\n\n| Ano | Eventos | Sem fonte |\n|---:|---:|---:|\n${rows}\n\n## Estado editorial e v2\n\n- disposições aprovadas: **${state.remote.approved_dispositions}**;\n- disposições needs_changes: **${state.remote.needs_changes_dispositions}**;\n- disposições rejected: **${state.remote.rejected_dispositions ?? 'desconhecido'}**;\n- disposições não terminais: **${state.remote.non_terminal_dispositions}**;\n- atribuições evento–assessment v2: **${state.remote.event_attributions_v2}**;\n- atribuições v2 elegíveis para score: **${state.remote.scoreable_attributions_v2}**;\n- pendências da lane editorial ativa: **${state.local.exclusive_pending_versions}**.\n\n## Inventário de liberação\n\n- itens evento × assessment: **${state.local.release_inventory_count}**;\n- factual_ready: **${state.local.release_inventory_counts?.factual_ready ?? 'desconhecido'}**;\n- impact_ready_for_review: **${state.local.release_inventory_counts?.impact_ready_for_review ?? 'desconhecido'}**;\n- impact_release_ready: **${state.local.release_inventory_counts?.impact_release_ready ?? 'desconhecido'}**;\n- withheld_source: **${state.local.release_inventory_counts.withheld_source ?? 0}**;\n- withheld_attribution: **${state.local.release_inventory_counts.withheld_attribution ?? 0}**;\n- piloto: **${state.local.attribution_pilot_mode}**, selecionados: **${state.local.attribution_pilot_selected_count}**.\n\n## Aquisição de fontes oficiais\n\n- estado: **${state.local.source_acquisition_state}**;\n- URLs únicas verificadas: **${state.local.source_acquisition_unique_urls ?? 'desconhecido'}**;\n- URLs HTTP válidas: **${state.local.source_acquisition_ok ?? 'desconhecido'}**;\n- URLs bloqueadas: **${state.local.source_acquisition_blocked ?? 'desconhecido'}**;\n- data-item encontrados: **${state.local.source_acquisition_data_items ?? 'desconhecido'}**.\n\n## Gargalo principal\n\n${blockers.map((item) => '- ' + item).join('\n')}\n\nO gargalo semântico principal é a ausência de atribuições v2 por evento. A fila de disposição editorial não é o bloqueio atual: a leitura remota está confirmada e não há pendências ativas.\n\n## Melhorias implementadas\n\n1. Este comando consolida contagens remotas e artefatos locais em uma única leitura reproduzível, evitando decisões baseadas em snapshots antigos.\n2. O supervisor regenera automaticamente o inventário evento × assessment e o piloto em sequência, sempre em modo read-only, antes da auditoria de saúde.\n2b. O monitor deve distinguir fila editorial ativa, corpus factual, fontes, colisões e atribuições v2; nenhuma dessas camadas é usada como substituta de outra.\n3. A fila v2 permanece dry-run/fail-closed: nenhum score é promovido sem fonte do evento, voto defensor explícito, separação de evento e revisão.\n4. Colisões e compostos permanecem em filas próprias, sem matching por título ou inferência de voto.\n\n## Próximo plano eficiente\n\n- priorizar um piloto de 5–10 eventos simples com fonte oficial e zero colisões;\n- gerar envelopes de atribuição 'pending_review', sem apply remoto;\n- revisar e aprovar atribuições pela RPC protegida;\n- executar read-back e segunda passagem idempotente;\n- só então recalcular scores e perfis;\n- continuar em paralelo a recuperação de fontes dos ${state.remote.events_without_source} eventos restantes.\n\n## Colisões locais\n\n- chaves: **${state.local.collision_keys}**;\n- versões afetadas: **${state.local.collision_affected_versions}**;\n- eventos afetados: **${state.local.collision_affected_events}**.\n`;
 }
 
 async function main() {
@@ -164,4 +180,4 @@ async function main() {
   console.log(JSON.stringify({ state_file: 'data/legislative-import/alrs/alrs-live-state-v1.json', report: 'docs/qa/2026-09-24-alrs-live-state.md', remote_apply: false, ...remote, ...state.local }));
 }
 
-await main();
+if (process.argv[1]?.endsWith('audit-alrs-live-state.mjs')) await main();

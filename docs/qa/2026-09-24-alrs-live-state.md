@@ -1,6 +1,6 @@
 # Relatório de estado ALRS — 2022 até o presente
 
-Gerado em 2026-09-25T02:04:29.280Z. Auditoria somente leitura; nenhuma mutação remota foi executada.
+Gerado em 2026-09-25T20:40:28.293Z. Auditoria somente leitura; nenhuma mutação remota foi executada.
 
 ## Estado factual remoto
 
@@ -40,6 +40,14 @@ Gerado em 2026-09-25T02:04:29.280Z. Auditoria somente leitura; nenhuma mutação
 - withheld_attribution: **0**;
 - piloto: **blocked_no_eligible_items**, selecionados: **0**.
 
+## Aquisição de fontes oficiais
+
+- estado: **known**;
+- URLs únicas verificadas: **24**;
+- URLs HTTP válidas: **16**;
+- URLs bloqueadas: **8**;
+- data-item encontrados: **2617**.
+
 ## Gargalo principal
 
 - Não existem atribuições evento–assessment v2; por isso não há score v2 elegível.
@@ -52,7 +60,8 @@ O gargalo semântico principal é a ausência de atribuições v2 por evento. A 
 ## Melhorias implementadas
 
 1. Este comando consolida contagens remotas e artefatos locais em uma única leitura reproduzível, evitando decisões baseadas em snapshots antigos.
-2. O monitor deve distinguir fila editorial ativa, corpus factual, fontes, colisões e atribuições v2; nenhuma dessas camadas é usada como substituta de outra.
+2. O supervisor regenera automaticamente o inventário evento × assessment e o piloto em sequência, sempre em modo read-only, antes da auditoria de saúde.
+2b. O monitor deve distinguir fila editorial ativa, corpus factual, fontes, colisões e atribuições v2; nenhuma dessas camadas é usada como substituta de outra.
 3. A fila v2 permanece dry-run/fail-closed: nenhum score é promovido sem fonte do evento, voto defensor explícito, separação de evento e revisão.
 4. Colisões e compostos permanecem em filas próprias, sem matching por título ou inferência de voto.
 

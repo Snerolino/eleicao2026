@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-09-25T02:04:29.280Z",
+  "generated_at": "2026-09-25T20:40:28.293Z",
   "remote": {
     "approved_dispositions": 1179,
     "approved_matrices": 64,
@@ -69,6 +69,12 @@
     "attribution_pilot_state": "known",
     "attribution_pilot_error": null,
     "attribution_pilot_mode": "blocked_no_eligible_items",
-    "attribution_pilot_selected_count": 0
+    "attribution_pilot_selected_count": 0,
+    "source_acquisition_state": "known",
+    "source_acquisition_error": null,
+    "source_acquisition_unique_urls": 24,
+    "source_acquisition_ok": 16,
+    "source_acquisition_blocked": 8,
+    "source_acquisition_data_items": 2617
   }
 }

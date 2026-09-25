@@ -41,7 +41,27 @@ jobs:
         run: npm run build:deploy
 
       - name: Deploy to Cloudflare Pages (backup)
+        id: deploy
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           command: pages deploy dist --project-name=portal-transparencia-rs --branch=main
+
+      - name: Configure smoke browser
+        run: |
+          BROWSER_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          if [ -z "$BROWSER_PATH" ]; then
+            echo "Nenhum navegador compatível encontrado" >&2
+            exit 1
+          fi
+          echo "BROWSER_PATH=$BROWSER_PATH" >> "$GITHUB_ENV"
+
+      - name: Deployment browser smoke
+        env:
+          SMOKE_URL: ${{ steps.deploy.outputs.deployment-url }}
+        run: npm run smoke:preview
+
+      - name: Deployment health check
+        env:
+          HEALTH_URL: ${{ steps.deploy.outputs.deployment-url }}
+        run: npm run health:preview
