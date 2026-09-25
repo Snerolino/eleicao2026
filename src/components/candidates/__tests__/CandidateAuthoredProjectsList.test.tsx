@@ -42,6 +42,6 @@ describe('CandidateAuthoredProjectsList', () => {
 
   it('mostra estado vazio sem projetos', () => {
     render(<CandidateAuthoredProjectsList projects={[]} />);
-    expect(screen.getByText(/nenhum projeto de autoria registrado/i)).toBeInTheDocument();
+    expect(screen.getByText(/estamos ainda analisando as propostas e projetos do candidato/i)).toBeInTheDocument();
   });
 });

@@ -68,7 +68,7 @@ export function CandidateAuthoredProjectsList({ projects }: CandidateAuthoredPro
       <section aria-labelledby="authored-projects-heading" className="border-y border-[var(--color-border-editorial)] py-6">
         <h2 id="authored-projects-heading" className="text-2xl">Projetos de autoria (0)</h2>
         <p className="mt-2 font-mono text-xs uppercase tracking-wide text-[var(--color-muted-ink)]">
-          Nenhum projeto de autoria registrado com fonte oficial.
+          Estamos ainda analisando as propostas e projetos do candidato.
         </p>
       </section>
     );
