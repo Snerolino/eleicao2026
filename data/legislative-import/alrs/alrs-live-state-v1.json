@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-09-25T01:21:43.098Z",
+  "generated_at": "2026-09-25T01:49:27.853Z",
   "remote": {
     "approved_dispositions": 1179,
     "approved_matrices": 66,
@@ -50,6 +50,20 @@
     "collision_affected_versions": 65,
     "collision_affected_events": 93,
     "exclusive_pending_versions": 0,
-    "exclusive_remote_read_ok": true
+    "exclusive_remote_read_ok": true,
+    "release_inventory_count": 114,
+    "release_inventory_counts": {
+      "factual_ready": 0,
+      "impact_ready_for_review": 0,
+      "impact_release_ready": 0,
+      "withheld_source": 114,
+      "withheld_identity": 0,
+      "withheld_compound": 0,
+      "withheld_procedural": 0,
+      "withheld_attribution": 0,
+      "remote_unknown": 0
+    },
+    "attribution_pilot_mode": "blocked_no_eligible_items",
+    "attribution_pilot_selected_count": 0
   }
 }

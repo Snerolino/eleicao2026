@@ -74,6 +74,8 @@
     "impact:alrs:r4:collisions": "node scripts/audit-alrs-version-key-collisions.mjs",
     "impact:alrs:exclusive-lane": "node scripts/build-alrs-exclusive-editorial-lane.mjs",
     "impact:alrs:live-state": "node scripts/audit-alrs-live-state.mjs",
+    "impact:alrs:attribution-queue": "node scripts/build-alrs-attribution-release-queue.mjs --dry-run",
+    "impact:alrs:attribution-pilot": "node scripts/select-alrs-attribution-pilot.mjs --dry-run",
     "impact:alrs:r4:collision:pack": "node scripts/build-alrs-version-collision-resolution-pack.mjs",
     "impact:alrs:r4:titles": "node scripts/build-alrs-title-recovery-pack.mjs",
     "impact:alrs:r4:validate": "node scripts/validate-alrs-merit-pack.mjs",

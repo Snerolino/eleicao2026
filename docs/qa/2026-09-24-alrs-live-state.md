@@ -1,6 +1,6 @@
 # Relatório de estado ALRS — 2022 até o presente
 
-Gerado em 2026-09-25T01:21:43.098Z. Auditoria somente leitura; nenhuma mutação remota foi executada.
+Gerado em 2026-09-25T01:49:27.853Z. Auditoria somente leitura; nenhuma mutação remota foi executada.
 
 ## Estado factual remoto
 
@@ -28,6 +28,16 @@ Gerado em 2026-09-25T01:21:43.098Z. Auditoria somente leitura; nenhuma mutação
 - atribuições evento–assessment v2: **0**;
 - atribuições v2 elegíveis para score: **0**;
 - pendências da lane editorial ativa: **0**.
+
+## Inventário de liberação
+
+- itens evento × assessment: **114**;
+- factual_ready: **0**;
+- impact_ready_for_review: **0**;
+- impact_release_ready: **0**;
+- withheld_source: **114**;
+- withheld_attribution: **0**;
+- piloto: **blocked_no_eligible_items**, selecionados: **0**.
 
 ## Gargalo principal
 
