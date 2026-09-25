@@ -1,6 +1,6 @@
 # Relatório de estado ALRS — 2022 até o presente
 
-Gerado em 2026-09-25T01:49:27.853Z. Auditoria somente leitura; nenhuma mutação remota foi executada.
+Gerado em 2026-09-25T02:04:29.280Z. Auditoria somente leitura; nenhuma mutação remota foi executada.
 
 ## Estado factual remoto
 
@@ -9,8 +9,8 @@ Gerado em 2026-09-25T01:49:27.853Z. Auditoria somente leitura; nenhuma mutação
 - candidatos com votos: **52**;
 - perfis ALRS: **52**;
 - eventos sem fonte: **1365**;
-- assessments: **68**;
-- matrizes aprovadas/contestadas: **66**.
+- assessments: **66**;
+- matrizes aprovadas/contestadas: **64**.
 
 | Ano | Eventos | Sem fonte |
 |---:|---:|---:|
@@ -24,6 +24,7 @@ Gerado em 2026-09-25T01:49:27.853Z. Auditoria somente leitura; nenhuma mutação
 
 - disposições aprovadas: **1179**;
 - disposições needs_changes: **24**;
+- disposições rejected: **0**;
 - disposições não terminais: **0**;
 - atribuições evento–assessment v2: **0**;
 - atribuições v2 elegíveis para score: **0**;

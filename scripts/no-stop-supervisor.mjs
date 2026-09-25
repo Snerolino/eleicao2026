@@ -37,6 +37,7 @@ const lanes = [
   ...Array.from({ length: Number(process.env.NO_STOP_WORKERS ?? 4) }, (_, worker) => ({ name: `alrs_editorial_worker_${worker}`, command: 'node', args: ['scripts/run-alrs-editorial-triage-worker.mjs', `--worker=${worker}`, `--workers=${Number(process.env.NO_STOP_WORKERS ?? 4)}`], enabled: focus === 'alrs-editorial' })),
   { name: 'alrs_matrix_profile_materialization', command: 'node', args: ['scripts/run-alrs-matrix-profile-worker.mjs'], enabled: focus === 'alrs-editorial' },
   { name: 'official_reconnaissance', command: 'node', args: ['scripts/process-camara-authored-batch.mjs', ...(batch ? [`--start=${batch.split('-')[0]}`, `--limit=${Number(batch.split('-')[1]) - Number(batch.split('-')[0]) + 1}`] : [])], enabled: focus !== 'alrs-editorial' && Boolean(processNext && batch) },
+  { name: 'alrs_live_state_audit', command: 'node', args: ['scripts/audit-alrs-live-state.mjs', '--check-only'], enabled: focus !== 'alrs-editorial', optional: true },
   { name: 'candidate_reconciliation', command: 'node', args: ['scripts/continuous-progress-monitor.mjs'], enabled: focus !== 'alrs-editorial' },
   { name: 'editorial_causal', command: 'node', args: ['scripts/continuous-progress-monitor.mjs'], enabled: focus !== 'alrs-editorial' },
   { name: 'editorial_redteam', command: 'node', args: ['scripts/continuous-progress-monitor.mjs'], enabled: focus !== 'alrs-editorial' },
@@ -111,7 +112,11 @@ for (let index = 0; index < remaining.length;) {
   index += 1;
   currentLane = lane.name;
   const ok = await runLane(lane);
-  if (!ok) { allOk = false; break; }
+  if (!ok && !lane.optional) { allOk = false; break; }
+  if (!ok && lane.optional) {
+    state.optional_warnings = [...new Set([...(state.optional_warnings ?? []), lane.name])];
+    writeState(state);
+  }
 }
 currentLane = null;
 state.status = allOk ? 'completed' : 'blocked';

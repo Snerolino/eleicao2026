@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-09-25T01:49:27.853Z",
+  "generated_at": "2026-09-25T02:04:29.280Z",
   "remote": {
     "approved_dispositions": 1179,
-    "approved_matrices": 66,
-    "assessments": 68,
+    "approved_matrices": 64,
+    "assessments": 66,
     "candidates": 52,
     "event_attributions_v2": 0,
     "events": 2281,
@@ -12,6 +12,7 @@
     "needs_changes_dispositions": 24,
     "non_terminal_dispositions": 0,
     "profiles": 52,
+    "rejected_dispositions": 0,
     "scoreable_attributions_v2": 0,
     "votes": 31722,
     "yearly": [
@@ -51,6 +52,8 @@
     "collision_affected_events": 93,
     "exclusive_pending_versions": 0,
     "exclusive_remote_read_ok": true,
+    "release_inventory_state": "known",
+    "release_inventory_error": null,
     "release_inventory_count": 114,
     "release_inventory_counts": {
       "factual_ready": 0,
@@ -63,6 +66,8 @@
       "withheld_attribution": 0,
       "remote_unknown": 0
     },
+    "attribution_pilot_state": "known",
+    "attribution_pilot_error": null,
     "attribution_pilot_mode": "blocked_no_eligible_items",
     "attribution_pilot_selected_count": 0
   }
