@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-09-25T01:21:43.098Z",
+  "remote": {
+    "approved_dispositions": 1179,
+    "approved_matrices": 66,
+    "assessments": 68,
+    "candidates": 52,
+    "event_attributions_v2": 0,
+    "events": 2281,
+    "events_without_source": 1365,
+    "needs_changes_dispositions": 24,
+    "non_terminal_dispositions": 0,
+    "profiles": 52,
+    "scoreable_attributions_v2": 0,
+    "votes": 31722,
+    "yearly": [
+      {
+        "events": 382,
+        "events_without_source": 191,
+        "year": 2022
+      },
+      {
+        "events": 362,
+        "events_without_source": 176,
+        "year": 2023
+      },
+      {
+        "events": 365,
+        "events_without_source": 182,
+        "year": 2024
+      },
+      {
+        "events": 421,
+        "events_without_source": 208,
+        "year": 2025
+      },
+      {
+        "events": 751,
+        "events_without_source": 608,
+        "year": 2026
+      }
+    ]
+  },
+  "local": {
+    "score_recovery_total": 152,
+    "score_recovery_event_binding_missing": 87,
+    "score_recovery_compound_non_separable": 65,
+    "collision_keys": 18,
+    "collision_affected_versions": 65,
+    "collision_affected_events": 93,
+    "exclusive_pending_versions": 0,
+    "exclusive_remote_read_ok": true
+  }
+}
