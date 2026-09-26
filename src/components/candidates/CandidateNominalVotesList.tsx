@@ -24,6 +24,8 @@ export function CandidateNominalVotesList({
   const relevantVotes = useMemo(() => filterPopulationRelevantVotes(votes), [votes]);
 
   const filteredVotes = useMemo(() => {
+    const term = searchTerm.toLowerCase().trim();
+
     return relevantVotes.filter((v) => {
       const matchFilter =
         filterValue === "all" ||
@@ -32,14 +34,15 @@ export function CandidateNominalVotesList({
         (filterValue === "outros" &&
           !["sim", "nao"].includes(v.vote_value.toLowerCase()));
 
-      const matchSearch =
-        searchTerm.trim() === "" ||
-        v.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        v.proposition_id.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (v.assessment_group &&
-          v.assessment_group.toLowerCase().includes(searchTerm.toLowerCase()));
+      // Bolt: Short-circuit evaluation to skip expensive string checks
+      if (!matchFilter) return false;
+      if (!term) return true;
 
-      return matchFilter && matchSearch;
+      return (
+        v.title.toLowerCase().includes(term) ||
+        v.proposition_id.toLowerCase().includes(term) ||
+        (v.assessment_group && v.assessment_group.toLowerCase().includes(term))
+      );
     });
   }, [relevantVotes, filterValue, searchTerm]);
 
