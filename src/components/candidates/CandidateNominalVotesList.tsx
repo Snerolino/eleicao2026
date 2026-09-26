@@ -24,22 +24,28 @@ export function CandidateNominalVotesList({
   const relevantVotes = useMemo(() => filterPopulationRelevantVotes(votes), [votes]);
 
   const filteredVotes = useMemo(() => {
+    const term = searchTerm.trim().toLowerCase();
+    if (!filterValue && !term) return relevantVotes;
+
     return relevantVotes.filter((v) => {
-      const matchFilter =
-        filterValue === "all" ||
-        (filterValue === "sim" && v.vote_value.toLowerCase() === "sim") ||
-        (filterValue === "nao" && v.vote_value.toLowerCase() === "nao") ||
-        (filterValue === "outros" &&
-          !["sim", "nao"].includes(v.vote_value.toLowerCase()));
+      const voteVal = v.vote_value.toLowerCase();
 
-      const matchSearch =
-        searchTerm.trim() === "" ||
-        v.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        v.proposition_id.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (v.assessment_group &&
-          v.assessment_group.toLowerCase().includes(searchTerm.toLowerCase()));
+      // Short-circuit: evaluate filter first as it's cheaper
+      if (filterValue !== "all") {
+        if (filterValue === "sim" && voteVal !== "sim") return false;
+        if (filterValue === "nao" && voteVal !== "nao") return false;
+        if (filterValue === "outros" && (voteVal === "sim" || voteVal === "nao")) return false;
+      }
 
-      return matchFilter && matchSearch;
+      // Short-circuit: if there is no search term, return true now
+      if (term === "") return true;
+
+      // Check proposition_id first (cheaper) then title then assessment_group
+      if (v.proposition_id.toLowerCase().includes(term)) return true;
+      if (v.title.toLowerCase().includes(term)) return true;
+      if (v.assessment_group && v.assessment_group.toLowerCase().includes(term)) return true;
+
+      return false;
     });
   }, [relevantVotes, filterValue, searchTerm]);
 
@@ -51,11 +57,20 @@ export function CandidateNominalVotesList({
     );
   }
 
-  const voteCounts = {
-    total: relevantVotes.length,
-    sim: relevantVotes.filter((v) => v.vote_value.toLowerCase() === "sim").length,
-    nao: relevantVotes.filter((v) => v.vote_value.toLowerCase() === "nao").length,
-  };
+  const voteCounts = useMemo(() => {
+    let sim = 0;
+    let nao = 0;
+    for (const v of relevantVotes) {
+      const val = v.vote_value.toLowerCase();
+      if (val === 'sim') sim++;
+      else if (val === 'nao') nao++;
+    }
+    return {
+      total: relevantVotes.length,
+      sim,
+      nao,
+    };
+  }, [relevantVotes]);
 
   return (
     <div className="mt-6 border border-[var(--color-border-editorial)] bg-[var(--color-paper)]">
