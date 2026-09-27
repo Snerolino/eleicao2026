@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-09-25T20:40:28.293Z",
+  "generated_at": "2026-09-26T09:20:02.500Z",
   "remote": {
     "approved_dispositions": 1179,
     "approved_matrices": 64,
@@ -75,6 +75,11 @@
     "source_acquisition_unique_urls": 24,
     "source_acquisition_ok": 16,
     "source_acquisition_blocked": 8,
-    "source_acquisition_data_items": 2617
+    "source_acquisition_data_items": 2617,
+    "source_recovery_state": "known",
+    "source_recovery_error": null,
+    "source_recovery_status": "pending_source_recovery",
+    "source_recovery_eligible_event_count": 12,
+    "source_recovery_selected_count": 5
   }
 }

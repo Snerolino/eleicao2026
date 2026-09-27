@@ -9,6 +9,7 @@ const known = {
   inventory: { inventory_count: 4, counts: { withheld_source: 4 } },
   pilot: { mode: 'blocked_no_eligible_items', selected_count: 0 },
   sourceAcquisition: { unique_urls: 2, results: [{ ok: true, data_items: 5 }, { ok: false }] },
+  sourceRecovery: { status: 'pending_source_recovery', eligible_event_count: 12, selected_count: 5 },
 };
 
 describe('audit-alrs-live-state', () => {
@@ -25,6 +26,9 @@ describe('audit-alrs-live-state', () => {
     expect(state.source_acquisition_ok).toBe(1);
     expect(state.source_acquisition_blocked).toBe(1);
     expect(state.source_acquisition_data_items).toBe(5);
+    expect(state.source_recovery_status).toBe('pending_source_recovery');
+    expect(state.source_recovery_eligible_event_count).toBe(12);
+    expect(state.source_recovery_selected_count).toBe(5);
   });
 
   it('não converte inventário ausente em fila vazia', () => {

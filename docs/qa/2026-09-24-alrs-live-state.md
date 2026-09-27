@@ -1,6 +1,6 @@
 # Relatório de estado ALRS — 2022 até o presente
 
-Gerado em 2026-09-25T20:40:28.293Z. Auditoria somente leitura; nenhuma mutação remota foi executada.
+Gerado em 2026-09-26T09:20:02.500Z. Auditoria somente leitura; nenhuma mutação remota foi executada.
 
 ## Estado factual remoto
 
@@ -47,6 +47,13 @@ Gerado em 2026-09-25T20:40:28.293Z. Auditoria somente leitura; nenhuma mutação
 - URLs HTTP válidas: **16**;
 - URLs bloqueadas: **8**;
 - data-item encontrados: **2617**.
+
+## Microbatch de recuperação factual
+
+- estado: **known**;
+- eventos elegíveis após fonte substantiva e identidade: **12**;
+- eventos selecionados: **5**;
+- status: **pending_source_recovery**.
 
 ## Gargalo principal
 

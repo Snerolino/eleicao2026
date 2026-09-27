@@ -317,6 +317,7 @@ export function CandidateDeclaredAssetsCard({
                     <input
                       type="text"
                       placeholder="Buscar bem por descrição ou tipo..."
+                      aria-label="Buscar bens"
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
                       className="rounded-xs border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-1.5 text-xs text-[var(--color-ink)] focus:border-[var(--color-institutional)] focus:outline-none sm:w-64"

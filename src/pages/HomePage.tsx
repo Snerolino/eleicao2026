@@ -63,29 +63,19 @@ function filterCandidates(
     if (experienceFilter === 'estreante' && hasPreviousMandate(c)) return false;
     if (!normalized) return true;
 
-    let cached = cache.get(c.id);
-    if (!cached) {
-      cached = {};
-      cache.set(c.id, cached);
-    }
+    const cached = cache.get(c.id);
+    if (!cached) return false;
 
-    if (cached.partyLower === undefined) {
-      cached.partyLower = c.party.toLowerCase();
-    }
-    if (cached.partyLower.includes(normalized)) return true;
+    if (cached.partyLower && cached.partyLower.includes(normalized)) return true;
 
     const number = c.ballot_number?.toString() ?? '';
     if (number.includes(normalized)) return true;
 
-    if (cached.nameNormalized === undefined) {
-      cached.nameNormalized = normalize(c.full_name);
-    }
-    if (cached.nameNormalized.includes(normalized)) return true;
+    if (cached.nameNormalized && cached.nameNormalized.includes(normalized)) return true;
 
-    if (cached.labelNormalized === undefined) {
-      cached.labelNormalized = normalize(c.position_label);
-    }
-    return cached.labelNormalized.includes(normalized);
+    if (cached.labelNormalized && cached.labelNormalized.includes(normalized)) return true;
+
+    return false;
   });
 }
 
@@ -128,7 +118,17 @@ export function HomePage() {
   const claimsDegraded = query.isSuccess && wasLastClaimsFetchDegraded();
   const usingSnapshotFallback = query.isSuccess && wasLastCandidatesFetchFromSnapshot();
 
-  const searchCache = useMemo(() => new Map<string, CandidateSearchCache>(), [allCandidates]);
+  const searchCache = useMemo(() => {
+    const cache = new Map<string, CandidateSearchCache>();
+    for (const c of allCandidates) {
+      cache.set(c.id, {
+        partyLower: c.party.toLowerCase(),
+        nameNormalized: normalize(c.full_name),
+        labelNormalized: normalize(c.position_label),
+      });
+    }
+    return cache;
+  }, [allCandidates]);
 
   const filtered = useMemo(
     () => filterCandidates(allCandidates, searchCache, deferredSearchQuery, cargoFilter, partyFilter, womenOnly, raceFilter, experienceFilter),

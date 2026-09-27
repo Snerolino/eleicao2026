@@ -24,24 +24,42 @@ export function CandidateNominalVotesList({
   const relevantVotes = useMemo(() => filterPopulationRelevantVotes(votes), [votes]);
 
   const filteredVotes = useMemo(() => {
+    const term = searchTerm.trim().toLowerCase();
+    if (!filterValue && !term) return relevantVotes;
+
     return relevantVotes.filter((v) => {
-      const matchFilter =
-        filterValue === "all" ||
-        (filterValue === "sim" && v.vote_value.toLowerCase() === "sim") ||
-        (filterValue === "nao" && v.vote_value.toLowerCase() === "nao") ||
-        (filterValue === "outros" &&
-          !["sim", "nao"].includes(v.vote_value.toLowerCase()));
+      const voteVal = v.vote_value.toLowerCase();
 
-      const matchSearch =
-        searchTerm.trim() === "" ||
-        v.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        v.proposition_id.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (v.assessment_group &&
-          v.assessment_group.toLowerCase().includes(searchTerm.toLowerCase()));
+      if (filterValue !== "all") {
+        if (filterValue === "sim" && voteVal !== "sim") return false;
+        if (filterValue === "nao" && voteVal !== "nao") return false;
+        if (filterValue === "outros" && (voteVal === "sim" || voteVal === "nao")) return false;
+      }
 
-      return matchFilter && matchSearch;
+      if (term === "") return true;
+
+      if (v.proposition_id.toLowerCase().includes(term)) return true;
+      if (v.title.toLowerCase().includes(term)) return true;
+      if (v.assessment_group && v.assessment_group.toLowerCase().includes(term)) return true;
+
+      return false;
     });
   }, [relevantVotes, filterValue, searchTerm]);
+
+  const voteCounts = useMemo(() => {
+    let sim = 0;
+    let nao = 0;
+    for (const v of relevantVotes) {
+      const val = v.vote_value.toLowerCase();
+      if (val === "sim") sim++;
+      else if (val === "nao") nao++;
+    }
+    return {
+      total: relevantVotes.length,
+      sim,
+      nao,
+    };
+  }, [relevantVotes]);
 
   if (relevantVotes.length === 0) {
     return (
@@ -50,12 +68,6 @@ export function CandidateNominalVotesList({
       </p>
     );
   }
-
-  const voteCounts = {
-    total: relevantVotes.length,
-    sim: relevantVotes.filter((v) => v.vote_value.toLowerCase() === "sim").length,
-    nao: relevantVotes.filter((v) => v.vote_value.toLowerCase() === "nao").length,
-  };
 
   return (
     <div className="mt-6 border border-[var(--color-border-editorial)] bg-[var(--color-paper)]">
@@ -159,6 +171,7 @@ export function CandidateNominalVotesList({
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Buscar por nome da lei, tema ou número da matéria..."
+              aria-label="Buscar votações"
               className="w-full border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)] placeholder-[var(--color-muted-ink)] focus:outline-none focus:ring-1 focus:ring-[var(--color-institutional)]"
             />
           </div>

@@ -21,8 +21,9 @@ function run(script) {
 
 try {
   const inventory = run('scripts/build-alrs-attribution-release-queue.mjs');
+  const sourceRecovery = run('scripts/select-alrs-source-recovery-microbatch.mjs');
   const pilot = run('scripts/select-alrs-attribution-pilot.mjs');
-  console.log(JSON.stringify({ inventory, pilot, remote_apply: false, status: 'completed' }));
+  console.log(JSON.stringify({ inventory, sourceRecovery, pilot, remote_apply: false, status: 'completed' }));
 } catch (error) {
   console.error(`ALRS_PREPARATION_BLOCKED: ${error.message}`);
   process.exit(2);
