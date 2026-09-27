@@ -159,6 +159,7 @@ export function CandidateNominalVotesList({
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Buscar por nome da lei, tema ou número da matéria..."
+              aria-label="Buscar votações"
               className="w-full border border-[var(--color-border-editorial)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-ink)] placeholder-[var(--color-muted-ink)] focus:outline-none focus:ring-1 focus:ring-[var(--color-institutional)]"
             />
           </div>
