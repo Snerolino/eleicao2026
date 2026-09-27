@@ -10,7 +10,7 @@
 - Recuperação factual: `12` elegíveis, `5` selecionados, `pending_source_recovery`, `remote_apply=false`, `public_approval=false`.
 - Planos revisados: o plano ALRS de 2026-09-13 está parcialmente executado; o plano de propagação de 2026-08-30 continua proposta não implementada. Baselines antigas não são estado atual.
 - Segurança: nenhum score v2 novo, nenhuma atribuição remota e nenhuma migration remota aplicada por esta revisão.
-- CI/deploy do commit desta revisão: workflow `36306734208` concluído com sucesso; produção confirmou HTTP 200, smoke/health verdes e SHA do release igual ao commit publicado.
+- CI/deploy do conjunto desta revisão concluídos com sucesso; produção confirmou HTTP 200, smoke/health verdes e SHA do release igual ao commit publicado.
 - Documentação atualizada: `docs/OPERACAO-ATUAL-PARA-REVISORES.md`, `docs/implementation-phases-index.md` e `docs/qa/revisao-documentacao-admin-2026-09-27.md`.
 
 ---
