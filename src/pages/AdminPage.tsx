@@ -316,8 +316,8 @@ export function AdminPage() {
 
     const notesByDecision: Record<EditorialDecision, string> = {
       approved: 'Aprovado pelo painel administrativo. Publicação feita via RPC publish_claim().',
-      needs_changes: 'Arquivado pelo painel administrativo para ajustes; claim removida da fila pendente.',
-      rejected: 'Arquivado pelo painel administrativo como rejeitado; claim removida da fila pendente.',
+      needs_changes: 'Revisão registrada pelo painel administrativo; a claim permanece pendente até novo ajuste e decisão.',
+      rejected: 'Revisão registrada pelo painel administrativo como rejeitada; a claim permanece pendente para resolução editorial.',
     };
     const notes = notesByDecision[decision];
 
@@ -343,6 +343,41 @@ export function AdminPage() {
       }
     }
 
+    const { data: reviewReadBack, error: reviewReadBackError } = await supabase
+      .from('editorial_reviews')
+      .select('claim_id, reviewer_id, decision, notes, reviewed_at')
+      .eq('claim_id', claim.id)
+      .eq('reviewer_id', user.id)
+      .eq('decision', decision)
+      .order('reviewed_at', { ascending: false })
+      .limit(1)
+      .maybeSingle();
+    const reviewConfirmed = !reviewReadBackError
+      && reviewReadBack?.claim_id === claim.id
+      && reviewReadBack.reviewer_id === user.id
+      && reviewReadBack.decision === decision
+      && reviewReadBack.notes === notes;
+    let publicationConfirmed = decision !== 'approved';
+    if (decision === 'approved') {
+      const { data: publishedClaim, error: publishedReadBackError } = await supabase
+        .from('claims')
+        .select('id, status')
+        .eq('id', claim.id)
+        .maybeSingle();
+      publicationConfirmed = !publishedReadBackError
+        && publishedClaim?.id === claim.id
+        && publishedClaim.status === 'published';
+    }
+    if (!reviewConfirmed || !publicationConfirmed) {
+      setBusyClaimId(null);
+      setOperationFeedback({
+        kind: 'error',
+        title: decision === 'approved' ? 'Publicação enviada, mas não confirmada' : 'Revisão enviada, mas não confirmada',
+        detail: 'O read-back remoto não confirmou exatamente a decisão e o estado esperado. O item continua visível até uma nova leitura.',
+      });
+      return;
+    }
+
     setClaims((current) => current.filter((item) => item.id !== claim.id));
     setReviewedClaims((current) => current.filter((item) => item.id !== claim.id));
     if (decision !== 'approved') {
@@ -356,7 +391,14 @@ export function AdminPage() {
     }
     setEditingClaimId(null);
     setBusyClaimId(null);
-    setMessage(decision === 'approved' ? 'Claim aprovada e publicada.' : `Claim arquivada como ${decision === 'rejected' ? 'rejeitada' : 'ajustes necessários'}.`);
+    setOperationFeedback({
+      kind: 'success',
+      title: decision === 'approved' ? 'Claim aprovada e publicada' : 'Revisão registrada',
+      detail: decision === 'approved'
+        ? 'A RPC e o read-back confirmaram status published.'
+        : `A decisão ${decision === 'rejected' ? 'rejeitada' : 'de ajustes necessários'} foi confirmada no servidor; a claim permanece pendente para resolução editorial.`,
+    });
+    setMessage(decision === 'approved' ? 'Claim aprovada e publicada após confirmação remota.' : 'Revisão confirmada remotamente; a claim permanece pendente para resolução.');
   }
 
   function startEditing(claim: PendingClaim) {
@@ -671,7 +713,7 @@ export function AdminPage() {
         </p>
         <h1 className="mt-2 text-3xl">Administração</h1>
         <p className="mt-3 max-w-3xl leading-relaxed text-[var(--color-muted-ink)]">
-          Painel único para autenticação, decisão editorial, instruções de revisão e aprovação humana via RPC. Claims e matrizes devem ser validadas aqui; não use escrita direta no Supabase. Responsável provisório: <strong>{adminOwner}</strong>.
+          Painel único para autenticação, decisão editorial, instruções de revisão e aprovação humana via RPC. Claims e matrizes devem ser validadas aqui; não use SQL direto, service role ou escrita fora das políticas RLS. Responsável provisório: <strong>{adminOwner}</strong>.
         </p>
         <p className="mt-3 rounded-sm border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-900">
           Modo seguro: sem service role no navegador. O frontend usa Supabase Auth, RLS, <code>editor_roles</code>, <code>editorial_reviews</code> e RPC <code>publish_claim()</code>.
@@ -777,7 +819,7 @@ export function AdminPage() {
 
           {status === 'ready' && claims.length === 0 ? (
             <p className="mt-4 rounded-sm border border-[var(--color-border-editorial)] p-4 text-sm text-[var(--color-muted-ink)]">
-              Nenhuma claim em <code>pending_review</code> no momento.
+              Nenhuma claim sem decisão registrada em <code>pending_review</code> no momento.
             </p>
           ) : null}
 
@@ -788,7 +830,7 @@ export function AdminPage() {
             </p>
             {impactMatrices.length === 0 ? (
               <p className="mt-4 rounded-sm border border-[var(--color-border-editorial)] p-4 text-sm text-[var(--color-muted-ink)]">
-                Nenhuma matriz ALRS pendente nesta sessão.
+                Nenhuma matriz pendente nesta sessão.
               </p>
             ) : (
               <div className="mt-4 grid gap-4">
@@ -868,7 +910,7 @@ export function AdminPage() {
               )}
             </p>
             <label className={`mt-4 grid gap-2 text-sm ${humanPackRemainingCount === 0 ? 'hidden' : ''}`}>
-              <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">JSON de decisões de um dos {typedEditorialBatchManifest.batches?.length ?? 0} lotes congelados</span>
+              <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">JSON de decisões de um dos {typedEditorialBatchManifest.batches?.length ?? 0} lotes editoriais históricos</span>
               <input type="file" accept="application/json,.json" onChange={(event) => void loadBatchDecisions(event)} className="block w-full text-sm" />
             </label>
             {batchReceipt ? (
@@ -886,14 +928,14 @@ export function AdminPage() {
             {batchDecisions ? <div className="mt-4 flex flex-wrap items-center gap-3"><span className="font-mono text-xs uppercase tracking-wider text-green-800">{batchDecisions.length} decisões validadas</span><button type="button" disabled={batchBusy} onClick={() => void applyBatchDecisions()} className="rounded-sm border border-green-700 px-3 py-2 font-mono text-xs uppercase tracking-wider text-green-800 disabled:opacity-60">{batchBusy ? 'Enviando e confirmando…' : 'Enviar lote e confirmar'}</button></div> : null}
           </section>
 
-          <section className="mt-8 border-t border-[var(--color-border-editorial)] pt-6" aria-label="Lote P2 aguardando disposição editorial">
-            <h2 className="text-2xl">Lote P2 — disposição editorial</h2>
+          <section className="mt-8 border-t border-[var(--color-border-editorial)] pt-6" aria-label="Histórico do lote P2 de disposição editorial">
+            <h2 className="text-2xl">Lote P2 — histórico da disposição editorial</h2>
             <p className="mt-2 text-sm text-[var(--color-muted-ink)]">
-              Registre uma disposição por versão com base na fonte. Isso encaminha a matéria para assessment ou encerra a triagem; não publica voto, matriz ou score.
+              Este lote editorial histórico registra uma disposição por versão com base na fonte. Só itens pendentes exigem ação; a confirmação não publica voto, matriz ou score.
             </p>
             <div className="mt-4 flex flex-wrap items-center gap-3 rounded-sm bg-[var(--color-paper-muted)] px-4 py-3 text-sm">
               <strong>{pendingP2Items.length} pendentes</strong>
-              <span className="text-[var(--color-muted-ink)]">{reviewedP2Items.length} confirmados nesta sessão</span>
+              <span className="text-[var(--color-muted-ink)]">{reviewedP2Items.length} confirmados remotamente</span>
               {reviewedP2Items.length > 0 ? (
                 <button
                   type="button"
@@ -1073,11 +1115,11 @@ export function AdminPage() {
           {reviewedClaims.length > 0 ? (
             <section
               className="mt-8 rounded-sm border border-dashed border-[var(--color-border-editorial)] p-4"
-              aria-label="Arquivo de claims revisadas"
+              aria-label="Claims com revisão registrada"
             >
-              <h3 className="text-xl">Arquivo de claims revisadas</h3>
+              <h3 className="text-xl">Claims com revisão registrada</h3>
               <p className="mt-1 font-mono text-xs uppercase tracking-wider text-[var(--color-muted-ink)]">
-                {reviewedClaims.length} {reviewedClaims.length === 1 ? 'claim arquivada' : 'claims arquivadas'} fora da fila pendente.
+                {reviewedClaims.length} {reviewedClaims.length === 1 ? 'claim tem decisão registrada' : 'claims têm decisão registrada'} e permanecem fora da fila de claims sem revisão. Elas continuam <code>pending_review</code> até publicação, ajuste ou resolução editorial.
               </p>
               <ul className="mt-3 space-y-3">
                 {reviewedClaims.map((claim) => {
@@ -1113,7 +1155,7 @@ export function AdminPage() {
                             onClick={() => void reviewClaim(claim, 'approved')}
                             className="rounded-sm border border-green-700 px-2 py-1 font-mono text-xs uppercase tracking-wider text-green-800 disabled:cursor-not-allowed disabled:opacity-60"
                           >
-                            Publicar claim arquivada
+                            Aprovar e publicar
                           </button>
                         </div>
                       </div>

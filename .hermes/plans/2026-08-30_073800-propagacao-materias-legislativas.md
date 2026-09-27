@@ -1,4 +1,11 @@
-# Propagação Auditável de Matérias Legislativas — Implementation Plan
+# Propagação Auditável de Matérias Legislativas — proposta não iniciada
+
+> **Revisão de validade — 2026-09-27:** o desenho continua pertinente, mas não
+> existe implementação independente dos módulos de métricas/propagação descritos
+> aqui. Os números da baseline são históricos e não devem aparecer no Admin ou
+> ser usados como estado atual. Retomar somente após atribuições v2 elegíveis,
+> contratos atuais de fonte/assessment/matriz e um novo gate de escopo. Consulte
+> `docs/implementation-phases-index.md` e `docs/OPERACAO-ATUAL-PARA-REVISORES.md`.
 
 > **For Hermes:** Use subagent-driven-development skill to implement this plan task-by-task.
 

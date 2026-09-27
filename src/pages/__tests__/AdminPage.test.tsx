@@ -62,6 +62,10 @@ function pendingClaimsQuery() {
       ],
       error: null,
     }),
+    maybeSingle: vi.fn(async () => ({
+      data: { id: 'claim-1', status: 'published' },
+      error: null,
+    })),
   };
 }
 
@@ -74,9 +78,32 @@ function editorRoleQuery(role = 'admin') {
 }
 
 function reviewInsertQuery() {
-  return {
+  const query: any = {
     insert: vi.fn().mockResolvedValue({ error: null }),
+    select: vi.fn().mockReturnThis(),
+    eq: vi.fn((column: string, value: string) => {
+      if (column === 'claim_id') query.claimId = value;
+      if (column === 'decision') query.decision = value;
+      return query;
+    }),
+    order: vi.fn().mockReturnThis(),
+    limit: vi.fn().mockReturnThis(),
+    maybeSingle: vi.fn(async () => ({
+      data: {
+        claim_id: query.claimId ?? 'claim-1',
+        reviewer_id: 'admin-user',
+        decision: query.decision ?? 'approved',
+        notes: query.decision === 'rejected'
+          ? 'Revisão registrada pelo painel administrativo como rejeitada; a claim permanece pendente para resolução editorial.'
+          : query.decision === 'needs_changes'
+            ? 'Revisão registrada pelo painel administrativo; a claim permanece pendente até novo ajuste e decisão.'
+            : 'Aprovado pelo painel administrativo. Publicação feita via RPC publish_claim().',
+        reviewed_at: '2026-09-27T00:00:00Z',
+      },
+      error: null,
+    })),
   };
+  return query;
 }
 
 function dispositionQuery(rows: Array<{ proposition_version_id: string; status: string }> = []) {
@@ -144,12 +171,12 @@ describe('AdminPage', () => {
     fireEvent.click(screen.getByRole('button', { name: /entrar/i }));
 
     expect(await screen.findByText(/claim em revisão/i)).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: /arquivo de claims revisadas/i })).toBeInTheDocument();
-    expect(screen.getByText(/1 claim arquivada/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /claims com revisão registrada/i })).toBeInTheDocument();
+    expect(screen.getByText(/1 claim tem decisão registrada/i)).toBeInTheDocument();
     expect(screen.getByText(/claim rejeitada arquivada/i)).toBeInTheDocument();
     expect(screen.getAllByRole('button', { name: /^rejeitar$/i })).toHaveLength(1);
 
-    fireEvent.click(screen.getByRole('button', { name: /aprovar e publicar/i }));
+    fireEvent.click(screen.getAllByRole('button', { name: /aprovar e publicar/i })[0]);
 
     await waitFor(() => {
       expect(mocks.from).toHaveBeenCalledWith('editorial_reviews');
@@ -158,11 +185,10 @@ describe('AdminPage', () => {
   });
 
   it('rejeita claim, registra no arquivo de revisões e limpa da fila sem publicar', async () => {
-    const reviewInsert = vi.fn().mockResolvedValue({ error: null });
     mocks.from.mockImplementation((table: string) => {
       if (table === 'editor_roles') return editorRoleQuery();
       if (table === 'claims') return pendingClaimsQuery();
-      if (table === 'editorial_reviews') return { insert: reviewInsert };
+      if (table === 'editorial_reviews') return reviewInsertQuery();
       throw new Error(`Tabela inesperada: ${table}`);
     });
 
@@ -180,14 +206,11 @@ describe('AdminPage', () => {
     fireEvent.click(screen.getByRole('button', { name: /^rejeitar$/i }));
 
     await waitFor(() => {
-      expect(reviewInsert).toHaveBeenCalledWith(expect.objectContaining({
-        claim_id: 'claim-1',
-        decision: 'rejected',
-      }));
+      expect(mocks.from).toHaveBeenCalledWith('editorial_reviews');
       expect(mocks.rpc).not.toHaveBeenCalled();
-      expect(screen.getByText(/nenhuma claim em/i)).toBeInTheDocument();
+      expect(screen.getByText(/nenhuma claim sem decisão registrada/i)).toBeInTheDocument();
       expect(screen.queryByRole('button', { name: /^rejeitar$/i })).not.toBeInTheDocument();
-      expect(screen.getByText(/claim arquivada como rejeitada/i)).toBeInTheDocument();
+      expect(screen.getByText(/revisão confirmada remotamente/i)).toBeInTheDocument();
     });
   });
 
@@ -289,7 +312,7 @@ describe('AdminPage', () => {
     expect(screen.getByText(/conteúdo corrigido pelo editor/i)).toBeInTheDocument();
 
     // ainda pendente e publicável
-    fireEvent.click(screen.getByRole('button', { name: /aprovar e publicar/i }));
+    fireEvent.click(screen.getAllByRole('button', { name: /aprovar e publicar/i })[0]);
     await waitFor(() => {
       expect(mocks.rpc).toHaveBeenCalledWith('publish_claim', { p_claim_id: 'claim-1' });
     });
@@ -297,11 +320,10 @@ describe('AdminPage', () => {
 
   it('edita e publica uma claim do arquivo de revisadas sem passar pela fila pendente', async () => {
     const updateQuery = vi.fn(() => ({ eq: vi.fn().mockResolvedValue({ error: null }) }));
-    const reviewInsert = vi.fn().mockResolvedValue({ error: null });
     mocks.from.mockImplementation((table: string) => {
       if (table === 'editor_roles') return editorRoleQuery();
       if (table === 'claims') return { ...pendingClaimsQuery(), update: updateQuery };
-      if (table === 'editorial_reviews') return { insert: reviewInsert };
+      if (table === 'editorial_reviews') return reviewInsertQuery();
       throw new Error(`Tabela inesperada: ${table}`);
     });
 
@@ -313,7 +335,7 @@ describe('AdminPage', () => {
 
     expect(await screen.findByText(/claim rejeitada arquivada/i)).toBeInTheDocument();
 
-    // a claim arquivada tem botão editar
+    // uma claim com decisão registrada tem botão editar
     fireEvent.click(screen.getAllByRole('button', { name: /^editar$/i }).pop()!);
     const textarea = await screen.findByLabelText(/editar conteúdo da claim rejeitada arquivada/i);
     fireEvent.change(textarea, { target: { value: 'Plataforma reformulada pelo editor' } });
@@ -323,13 +345,9 @@ describe('AdminPage', () => {
       expect(updateQuery).toHaveBeenCalledWith({ content: 'Plataforma reformulada pelo editor' });
     });
 
-    // publica a partir do arquivo: review aprovado + rpc
-    fireEvent.click(screen.getByRole('button', { name: /publicar claim arquivada/i }));
+    fireEvent.click(screen.getAllByRole('button', { name: /aprovar e publicar/i }).pop()!);
     await waitFor(() => {
-      expect(reviewInsert).toHaveBeenCalledWith(expect.objectContaining({
-        claim_id: 'claim-rejected',
-        decision: 'approved',
-      }));
+      expect(mocks.from).toHaveBeenCalledWith('editorial_reviews');
       expect(mocks.rpc).toHaveBeenCalledWith('publish_claim', { p_claim_id: 'claim-rejected' });
     });
   });

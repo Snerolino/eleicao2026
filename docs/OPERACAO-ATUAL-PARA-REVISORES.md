@@ -3,420 +3,163 @@
 **Projeto:** Portal Transparência Eleitoral RS
 **Repositório:** `Snerolino/eleicao2026`
 **Produção:** <https://rs.votopraquem.org>
+**Última revisão:** 2026-09-27
 **Control plane:** Hermes
-**Última atualização deste documento:** 2026-09-11
 
-> Este documento descreve o modo operacional vigente para revisão no GitHub.
-> Ele não substitui código, migrations, `AGENTS.md`, schemas ou contratos
-> executáveis. Quando houver conflito, o código e os contratos atuais vencem.
+> Este é o resumo operacional atual. Código, migrations, schemas e leituras remotas
+> verificadas têm precedência sobre qualquer documento. Números deste arquivo são
+> snapshots datados; revalide antes de uma decisão editorial ou mutação remota.
 
----
+## 1. Estado confirmado
 
-## 1. Ordem de autoridade
+### Portal público
 
-O revisor deve usar esta ordem:
+- versão pública validada: `0.2.1407`;
+- snapshot versionado: `1003` candidaturas;
+- build público: `1005` URLs e `988` fotos oficiais rastreáveis;
+- produção e `/admin`: HTTP 200 na última verificação;
+- o painel administrativo continua protegido por Supabase Auth e papel editorial.
 
-1. código e Git atuais da `main`;
-2. `AGENTS.md`;
-3. migrations e schemas versionados;
-4. `README.md` e documentação aplicável;
-5. `docs/context-export/`;
-6. este documento;
-7. `.orchestrator/STATE.md`, sempre revalidando dados voláteis;
-8. documentos históricos e conversas, somente como contexto.
+### ALRS — inventário remoto somente leitura
 
-Documentos de bootstrap importados de `dataset2026` estão em:
+Fonte: `data/legislative-import/alrs/alrs-live-state-v1.json`, gerado em
+`2026-09-26T09:20:02.500Z`, com auditoria `remote_apply=false`.
 
-```text
-docs/orquestracao/
-```
+| Métrica | Valor |
+|---|---:|
+| eventos | 2.281 |
+| votos nominais | 31.722 |
+| candidatos/perfis ALRS | 52 |
+| eventos sem `source_reference_id` | 1.365 |
+| assessments | 66 |
+| matrizes aprovadas/contestadas | 64 |
+| disposições aprovadas | 1.179 |
+| disposições `needs_changes` | 24 |
+| atribuições evento–assessment v2 | 0 |
+| atribuições v2 elegíveis para score | 0 |
 
-Eles orientam o workflow, mas não podem substituir o estado real da aplicação.
+O número de avaliações/matrizes não deve ser interpretado como score novo. A
+cadeia v2 continua bloqueada sem vínculo do evento, fonte substantiva, assessment,
+matriz e revisão exigidos.
 
----
+### Recuperação de fontes ALRS
 
-## 2. Estado funcional atual
+- inventário evento × assessment: `114` itens;
+- estado do inventário: `114` `withheld_source`, `0` prontos para liberação;
+- aquisição: `24` URLs únicas, `16` HTTP válidas e `8` bloqueadas;
+- microbatch: `12` eventos elegíveis, `5` selecionados;
+- status: `pending_source_recovery`;
+- os cinco itens ainda exigem `version_source_reference_id`, vínculo inequívoco ao
+  objeto votado, classificação do evento e revisão humana;
+- `remote_apply=false` e `public_approval=false` permanecem obrigatórios.
 
-### Portal
+Outros bloqueios locais: `18` chaves de colisão, `65` versões e `93` eventos
+afetados; recuperação de score com `152` itens (`87` sem vínculo de evento e
+`65` compostos não separáveis). Falhas de fonte continuam sendo `unknown`, nunca
+zero ou voto inferido.
 
-- snapshot público: **1003 candidaturas**;
-- cards visíveis: **1002**;
-- fotos oficiais rastreáveis: **988**;
-- produção: HTTP 200;
-- PWA/offline: validado;
-- sitemap e release gerados pelo build.
+## 2. O que a tela `/admin` representa
 
-### Matriz de impacto v1
+### Leituras atuais
 
-- R0: concluído;
-- R1: operacionalmente concluído, com 4 residuais ALRS;
-- R2: Câmara Q1/Q2/Q3 factual aplicada nos lotes elegíveis;
-- R3: perfis nominais materializados por `(candidate_id, house)`;
-- R4: lane ALRS exclusiva publicada em `data/legislative-import/alrs/alrs-exclusive-editorial-lane-v1.json`, com 1199 versões pending não colidentes em 48 microbatches determinísticos;
-- colisões ALRS: 18 `version_key` keys, 65 versões/93 eventos afetados; 8 possíveis eventos distintos com mesmo texto e 10 possíveis mismatches de identidade; todos permanecem bloqueados até texto/hash/evento oficial;
-- prioridade ALRS: 30 P0 + 82 P1 na fila canônica; pacote fonte-first inicial de 25 versões validado, sem aprovação pública e sem apply remoto;
-- score recovery ALRS: 152 itens bloqueados (87 sem binding de evento, 65 compostos não separáveis);
-- R5 Câmara/recortes previamente aprovados: publicados;
-- R5 ALRS do pacote atual: 0 matrizes, 0 assessments e 0 score editorial publicados até disposição humana e RPC;
+O painel de acompanhamento consulta o Supabase em tempo real e separa:
 
-### Regra de apresentação
+- eventos, votos e perfis por casa legislativa;
+- fila editorial compartilhada;
+- snapshot ALRS versionado e somente leitura;
+- histórico de lotes editoriais.
 
-A UI separa:
+As contagens por casa cobrem todos os anos materializados naquela casa. O recorte
+ALRS 2022–presente é mostrado em bloco separado para não misturar uma leitura
+remota geral com um inventário local datado.
 
-1. fatos de votação: `sim`, `não`, `abstenção`, `ausente`, `obstrução`;
-2. impacto populacional: assessment com grupo, direção, fonte e revisão;
-3. score derivado por candidato, casa e grupo.
+### Filas e histórico
 
-`nominal_balance` não é avaliação pública e não deve ser apresentado ao eleitor
-como nota ou posição política.
+A manifestação editorial de lotes é histórica e não equivale a uma fila ativa.
+O manifesto atual informa `1281` versões de entrada em `6` lotes (`5` P0, `12`
+P1, `98` P2 e `26` P3). A auditoria do universo remoto/local informa, em leitura
+separada, `1261` versões pendentes de entrada, `141` prontas para disposição,
+`62` bloqueadas por colisão e `1058` já resolvidas. A diferença entre os dois
+números deve ser reconciliada por auditoria; não deve ser escondida nem tratada
+como nova pendência.
 
-Sem assessment compatível, a UI exibe:
+O painel não deve apresentar workers, partições, sobreposição ou “lotes
+congelados” como se fossem trabalho editorial atual. Esses dados pertencem ao
+runtime/QA e só devem aparecer em relatório técnico quando orientarem uma ação.
 
-```text
-Há votos factuais nesta casa, mas ainda não há avaliações populacionais aprovadas para gerar score por categoria.
-```
+### Claims
 
-Nunca exibir zero artificial para ausência de cobertura.
+- `pending_review` é fila ativa e não deve ser chamada de arquivo ou arquivada;
+- uma claim com decisão registrada continua distinguível de uma claim publicada;
+- publicar exige fonte, revisão editorial e `publish_claim()` autenticada;
+- ausência de claims pendentes não significa que todo o pipeline esteja concluído.
 
----
+### Impacto
 
-## 3. Score por categoria
+- disposição editorial não publica voto, matriz ou score;
+- `assess` abre revisão posterior e não publica score;
+- matriz com severidade alta ou confiança baixa exige revisão externa registrada;
+- somente matriz aprovada pela RPC apropriada pode alimentar score/fan-out;
+- ausência de fonte, objeto votado, `defending_vote` ou revisão mantém o item fora
+  do score.
 
-A metodologia é `1.0.0`.
+## 3. Segurança e autoridade de escrita
 
-```text
-score = Σ(peso × sinal) / Σ(peso elegível)
-```
-
-Pesos:
-
-```text
-structural = severity × 1.5
-budgetary  = severity × 1.0
-symbolic   = severity × 0.5
-```
-
-Sinais:
-
-```text
-a_favor              +1
-contra               -1
-neutro_declarado      0
-omissao_estrategica  -0.5
-omissao_coordenada     0
-sem_dado              excluído
-nao_avaliavel         excluído
-```
-
-`confidence` não pondera o score na v1.
-
-A cadeia obrigatória é:
+O navegador não recebe service role, senha, token, cookie, JWT ou connection
+string. O fluxo autorizado é:
 
 ```text
-voto factual
-→ proposition_version
-→ impact_matrix
-→ assessment aprovado/contestado
-→ fonte
-→ alinhamento
-→ score por grupo
+Supabase Auth → editor_roles → RLS/RPC → read-back remoto → atualização da fila
 ```
 
-A matriz pertence à versão efetivamente votada, não à proposição genérica.
+Não usar SQL direto, service role ou escrita fora das políticas RLS. A migration
+local `20260913193000_harden_alrs_editorial_batch_apply.sql` e a RPC de lote são
+artefatos versionados; sua aplicação remota exige gate explícito e verificação
+independente. Nenhum artefato `remote_apply=false` pode ser descrito como
+publicado.
 
----
+Regra obrigatória de segurança:
 
-## 4. Orquestração Hermes
+> Credenciais, tokens, senhas, chaves, PINs, cookies, JWTs e connection strings
+> não devem aparecer em arquivos versionados, logs ou relatórios; qualquer valor
+> sensível deve ser substituído por `[REDACTED]`.
 
-Hermes é o único control plane. Ele decide:
+## 4. Planejamentos de implementação encontrados
 
-- task packets;
-- executor;
-- autoridade;
-- retries;
-- circuit breaker;
-- gates;
-- handoffs;
-- próximo chunk.
+### Plano ALRS de 2026-09-13
 
-Políticas atuais:
+Arquivo: `.hermes/plans/2026-09-13_192009-resolver-fail-closed-disposicoes-alrs.md`.
 
-```yaml
-single_writer_per_worktree: true
-continuous_progress: true
-idle_between_gates: false
-prompt_wait_policy: never_wait_between_gates
-scouts_are_read_only: true
-remote_mutation_requires_human: true
-publish_after_green_gates: true
-blocker_scope: affected_item_only
-```
+Classificação: **parcialmente executado e ainda útil apenas como histórico/roadmap**.
 
-Lock do writer:
+- implementados no repositório: auditoria do universo, contrato de lote, lotes
+  canônicos, workers read-only, consolidação, integração do `/admin`, migration/RPC
+  transacional local e apply autenticado com read-back/idempotência;
+- ainda não concluídos: fila derivada de assessment, writer autenticado de matriz
+  `pending_review`, aprovação/fan-out v2 completo, rollout remoto em ondas e
+  fechamento de produção;
+- a baseline original do plano (`1261`, `1199`, hashes e estados antigos) não é
+  fonte atual e não deve ser copiada para o painel.
 
-```text
-.orchestrator/runtime/locks/continuous-progress.lock
-```
+O plano permanece versionado para auditoria, mas este documento e os artefatos
+atuais são a referência para o próximo gate.
 
-Scouts podem pesquisar fontes públicas e entregar manifestos/handoffs, mas não
-podem editar, commitar, fazer push, escrever Supabase ou fazer deploy.
+### Plano de propagação de 2026-08-30
 
----
+Arquivo: `.hermes/plans/2026-08-30_073800-propagacao-materias-legislativas.md`.
 
-## 5. Heartbeat
+Classificação: **não iniciado como implementação independente**. Não existem no
+código atual os módulos `propagationMetrics`, `computePropagationMetrics` ou
+`report-propagation-metrics` descritos no plano. A ideia continua pertinente,
+mas deve ser reespecificada depois que a cadeia v2 tiver atribuições elegíveis;
+não criar métricas ou fan-out com a baseline antiga do documento.
 
-Job atual:
+## 5. Gates atuais
 
-```text
-nome: eleicao2026-continuous-progress
-schedule: every 5m
-status: enabled
-repeat: forever
-deliver: local
-lock: .orchestrator/runtime/locks/continuous-progress.lock
-```
-
-O heartbeat deve:
-
-- executar tarefas bounded;
-- preservar um writer único;
-- manter ALRS/Senado em reconhecimento read-only;
-- avançar lanes locais independentes;
-- documentar checkpoints;
-- não aplicar fatos sem gates;
-- não aguardar prompt entre chunks elegíveis.
-
-Comando para conferir:
+Antes de publicar código:
 
 ```bash
-hermes cron list
-```
-
----
-
-## 6. Executores e CLIs
-
-### OpenCode individual
-
-```text
-wrapper: scripts/orchestrator/run-opencode.sh
-modelo padrão: openai/gpt-5.6-luna
-autoridade: read-only
-```
-
-Uso: triagem, inventário, revisão simples e segunda opinião.
-
-### Free pool OpenCode
-
-```text
-wrapper: scripts/orchestrator/run-free-pool.sh
-```
-
-Ordem padrão:
-
-```text
-opencode/deepseek-v4-flash-free
-opencode/nemotron-3-ultra-free
-opencode/laguna-s-2.1-free
-opencode/ling-3.0-tiny-free
-opencode/mimo-v2.5-free
-```
-
-Uso: análise barata, reconhecimento público, resumo e fallback consultivo.
-
-### Google Antigravity / AGY
-
-```text
-wrapper: scripts/orchestrator/run-antigravity.sh
-modelo configurado: google-gemini-1.5-pro via AGY
-modo: read-only sandboxed
-snapshot: git archive HEAD
-```
-
-Uso: contexto amplo, mapeamento de repositório, síntese documental e pesquisa
-consultiva. O AGY não recebe secrets, PII, documentos brutos ou arquivos `.env`.
-
-### Codex MCP
-
-```text
-transport: MCP stdio
-comando: codex mcp-server
-```
-
-Escada de modelos:
-
-```text
-Luna  → gpt-5.6-luna   → primeira implementação/revisão
-Terra → gpt-5.6-terra  → multi-arquivo/incerteza/testes persistentes
-Sol   → gpt-5.6-sol    → arquitetura crítica/regressão difícil
-```
-
-Uso: implementação, debugging, testes, refatoração e revisão técnica final.
-
-### Fallbacks
-
-```text
-Codex exec: gpt-5.6-luna, read-only
-- Ollama: removido do workflow; não é executor elegível.
-Gemini legacy: somente com configuração enterprise/API explícita
-```
-
-Após duas falhas consecutivas do mesmo executor, abrir circuit breaker e trocar
-de rota. Fallback consultivo nunca herda autoridade de escrita.
-
----
-
-## 7. Task packet e handoff
-
-Cada tarefa deve conter:
-
-- `task_id`;
-- objetivo;
-- modo (`read_only` ou `workspace_write` autorizado);
-- autoridade;
-- branch/HEAD;
-- paths;
-- evidências;
-- restrições;
-- aceite;
-- timeout;
-- resultado verificável.
-
-Não combinar no mesmo packet:
-
-- pesquisa factual e publicação;
-- coleta legislativa e dossiê judicial;
-- construção de matriz e aprovação editorial;
-- código e deploy;
-- leitura consultiva e escrita remota.
-
-Templates importados:
-
-```text
-docs/orquestracao/02-CONTRATOS-TASK-PACKET-HANDOFF.md
-.orchestrator/templates/TASK_PACKET.md
-.orchestrator/templates/HANDOFF.json
-.orchestrator/schemas/executor-result.schema.json
-```
-
----
-
-## 8. Três trilhas que o revisor não deve misturar
-
-### Trilha A — identidade/histórico
-
-Resolve candidato, `SQ_CANDIDATO`, mandatos, casas e IDs oficiais.
-
-### Trilha B — fato legislativo
-
-Resolve proposição, versão, evento, voto, ausência e fonte.
-
-`legislative_votes` nunca recebe score, impacto ou recomendação.
-
-### Trilha C — impacto
-
-Classifica a versão votada por grupo populacional, direção, severidade,
-confidence, rationale e `defending_vote`.
-
-Uma matriz é criada uma vez por versão/metodologia e reutilizada entre todos os
-votantes do evento.
-
----
-
-## 9. Precedência de fontes
-
-Regra atual:
-
-```text
-fonte oficial primária
-  > dataset2026 sem comprovação oficial
-  > fonte desconhecida
-```
-
-Conflitos são resolvidos pelo CLI:
-
-```bash
-npm run data:source:precedence -- records.json --key=external_id --output=resolved.json
-```
-
-Exceção: mirror `dataset2026` com `official_url` e hash oficial TSE continua
-sendo tratado como evidência oficial TSE.
-
-A decisão fica auditada em:
-
-```text
-discarded
-conflicting_fields
-reason=official_source_wins
-```
-
----
-
-## 10. Gates de escrita remota
-
-Aplicação factual exige todos os gates:
-
-```text
-R0 identity
-+ schema/FK
-+ fonte oficial
-+ dry-run
-+ idempotência
-```
-
-A aplicação de fatos legislativos é separada da criação/aprovação de impacto.
-
-É proibido contornar:
-
-- identidade ambígua;
-- hash divergente;
-- fonte ausente;
-- FK não confirmada;
-- schema incompatível;
-- `pending_review`;
-- revisão externa obrigatória.
-
-Sem fonte ou identidade, o item fica `fail-closed`; o restante do projeto pode
-continuar.
-
----
-
-## 11. Situação dos bloqueios
-
-### ALRS
-
-- 44.054/44.054 linhas nominais reconciliadas sem faltantes ou conflitos;
-- snapshot público materializa 50 perfis ALRS e 43.762 votos nominais; a diferença de 292 para o manifesto reconciliado permanece como reconciliação de camada, não como ausência inventada;
-- fila de impacto: 1.281 versões e 4.000 votos factuais;
-- 152 itens de score recovery bloqueados: 87 sem binding de evento e 65 compostos não separáveis;
-- 18 colisões de `version_key` isoladas em pacote próprio;
-- 20 disposições faltantes no planner (2 erros globais + 18 versões sem disposição) não são preenchidas automaticamente;
-- nenhum score/matriz/fan-out deve ser aplicado sem `/admin`, papel editorial e RPC autenticada.
-
-### Senado
-
-- endpoints HTTP 200;
-- PDFs válidos;
-- deriva persistente de bytes/SHA contra manifesto;
-- não substituir manifesto automaticamente;
-- votos novos continuam bloqueados.
-
-### Câmara Q1 residual
-
-- identidades pendentes continuam em reconciliação oficial;
-- não aplicar por nome aproximado ou fuzzy matching.
-
-Esses bloqueios são por item/lane e não impedem a UI, R4/R5 já publicados ou
-novos scouts independentes.
-
----
-
-## 12. Gates locais e publicação
-
-Executar com Node `>=24 <25`:
-
-```bash
-npm run test
+npm run test -- --passWithNoTests
 npx tsc --noEmit
 node scripts/validate-impact-schema.mjs
 npm run data:check
@@ -425,108 +168,37 @@ git diff --check
 npm run smoke:local
 ```
 
-Smoke de produção:
+Para o estado ALRS, em modo read-only:
 
 ```bash
-npm run smoke:preview -- --url https://rs.votopraquem.org/
-npm run health:preview -- --url https://rs.votopraquem.org/
-curl -sS -o /dev/null -w 'HTTP %{http_code}\n' https://rs.votopraquem.org
+npm run alrs:editorial:audit
+npm run impact:alrs:live-state
+node scripts/build-alrs-editorial-batches.mjs --verify
 ```
 
-Publicação normal:
+A publicação normal exige `commit → push → CI/deploy → headSha confirmado →
+HTTP 200 → smoke/health`. Migrations Supabase, RLS, Auth, Storage e RPCs remotas
+não são aplicadas sem autorização separada.
 
-```text
-git commit → git push origin main
-→ workflow primário Deploy
-→ backup somente se o primário falhar
-→ verificador/health
-→ headSha == commit live
-→ produção HTTP 200
-→ smoke/health
-```
+## 6. Próximas ações seguras
 
-### Apply editorial ALRS no `/admin`
+1. Recuperar e vincular fontes dos cinco itens do microbatch.
+2. Classificar cada evento e confirmar o objeto efetivamente votado.
+3. Executar revisão humana independente; não criar score v2 antes disso.
+4. Reconciliar a diferença entre manifesto histórico e auditoria atual da fila.
+5. Só depois avaliar a fila de assessment e o fan-out, mantendo a matriz única por
+   `proposition_version`.
+6. Não reabrir lotes encerrados por falhas de leitura remota e não misturar ALRS,
+   Câmara e Senado.
 
-O uploader aceita o batch externo P2 após validação exata de `batch_id`,
-`batch_sha256`, cardinalidade, `proposition_version_id` e `review_key`.
+## 7. Referências atuais
 
-O apply exige:
-
-1. sessão Supabase Auth válida;
-2. `editor_roles.role` igual a `editor` ou `admin`;
-3. chamada RPC `record_impact_editorial_disposition`/exception;
-4. read-back das linhas aplicadas;
-5. segunda passagem idempotente com zero novas chamadas RPC quando os valores já coincidirem.
-
-O apply de disposição não aprova matriz nem publica score. Assessments e matrizes
-continuam gates separados.
-
-O workflow confiável de Cloudflare é:
-
-```text
-Deploy to Cloudflare Pages (backup)
-ID: 334951434
-```
-
----
-
-## 13. Como revisar sem causar desserviço
-
-O revisor deve:
-
-1. conferir o código e o contrato antes de sugerir alteração;
-2. distinguir fato, impacto e score;
-3. citar URL oficial e `source_reference`;
-4. confirmar a casa legislativa;
-5. confirmar a versão efetivamente votada;
-6. identificar se o evento é mérito ou procedimento;
-7. não herdar impacto de mérito para urgência/retirada de pauta;
-8. manter `unclear`/`null` quando a taxonomia não sustentar uma classificação;
-9. não transformar ausência em voto contrário ou score zero;
-10. devolver task packet/handoff com evidência e arquivos;
-11. não editar a worktree quando estiver em modo consultivo;
-12. não afirmar que um executor publicou algo sem verificar SHA, CI e produção.
-
-Checklist mínimo de uma revisão:
-
-```text
-[ ] fonte oficial primária
-[ ] chave natural confirmada
-[ ] casa e legislatura confirmadas
-[ ] proposição/versão/evento distinguidos
-[ ] identidade exata
-[ ] fonte/hash registrados
-[ ] status editorial explícito
-[ ] impacto separado do voto
-[ ] score recalculável
-[ ] ausência de dado não convertida em zero
-[ ] testes/gates executados
-```
-
----
-
-## 14. Comandos de revalidação rápida
-
-```bash
-git status --short --branch
-git rev-parse HEAD
-hermes cron list
-npm run data:check
-curl -sS https://rs.votopraquem.org/release.json
-curl -sS -o /dev/null -w 'HTTP %{http_code}\n' https://rs.votopraquem.org
-```
-
-Para qualquer revisão, a saída deve separar:
-
-```text
-estado_confirmado
-divergencias
-lacunas
-risco
-arquivos alterados
-testes
-próxima ação segura
-```
-
-**Não usar números históricos dos documentos importados como estado atual sem
-revalidar os comandos acima.**
+- `src/pages/AdminPage.tsx`
+- `src/components/admin/OperationalProgressPanel.tsx`
+- `src/domain/impact/operationalProgress.ts`
+- `data/legislative-import/alrs/alrs-live-state-v1.json`
+- `data/legislative-import/alrs/alrs-attribution-source-recovery-microbatch-v1.json`
+- `data/legislative-import/alrs/editorial-batches/manifest-v1.json`
+- `docs/qa/2026-09-24-alrs-live-state.md`
+- `docs/qa/revisao-documentacao-admin-2026-09-27.md`
+- `.orchestrator/STATE.md`

@@ -1,4 +1,13 @@
-# Resolução do Fail-Closed das Disposições ALRS Implementation Plan
+# Resolução do Fail-Closed das Disposições ALRS — plano parcialmente executado
+
+> **Revisão de validade — 2026-09-27:** este plano permanece como registro de
+> implementação e roadmap, mas sua baseline numérica é histórica. Auditoria,
+> contrato, lotes, workers read-only, integração do `/admin`, migration/RPC local
+> e apply autenticado foram incorporados. A fila derivada de assessment, o writer
+> autenticado de matriz `pending_review`, a aprovação/fan-out v2, o rollout
+> remoto em ondas e a verificação de produção continuam pendentes. Consulte
+> `docs/OPERACAO-ATUAL-PARA-REVISORES.md` para o estado atual; não trate este
+> plano como autorização de mutação remota.
 
 > **For Hermes:** Use subagent-driven-development skill to implement this plan task-by-task.
 

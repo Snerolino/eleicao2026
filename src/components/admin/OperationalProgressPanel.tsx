@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase';
 import type { HouseProgress, LegislativeHouse, SharedEditorialProgress } from '@/domain/impact/operationalProgress';
 import editorialBatchManifest from '../../../data/legislative-import/alrs/editorial-batches/manifest-v1.json';
+import alrsLiveState from '../../../data/legislative-import/alrs/alrs-live-state-v1.json';
 
 type House = LegislativeHouse;
 type SharedProgress = SharedEditorialProgress;
@@ -23,6 +24,12 @@ const EMPTY_SHARED: SharedProgress = {
 
 function countValue(count: number | null) {
   return count === null ? '—' : count.toLocaleString('pt-BR');
+}
+
+function sourceRecoveryLabel(status: string) {
+  if (status === 'pending_source_recovery') return 'recuperação de fontes pendente';
+  if (status === 'blocked_below_minimum') return 'bloqueado abaixo do mínimo';
+  return status.replaceAll('_', ' ');
 }
 
 export function OperationalProgressPanel() {
@@ -119,9 +126,12 @@ export function OperationalProgressPanel() {
           );
         })}
       </div>
+      <p className="mt-3 text-xs text-[var(--color-muted-ink)]">
+        Eventos, votos e perfis acima cobrem todos os anos materializados em cada casa. O recorte ALRS 2022–presente aparece separado no snapshot operacional abaixo.
+      </p>
 
       <div className="mt-5 border-t border-[var(--color-border-editorial)] pt-4">
-        <h3 className="font-semibold">Fila editorial compartilhada</h3>
+        <h3 className="font-semibold">Fila editorial compartilhada · todas as casas</h3>
         <dl className="mt-3 grid grid-cols-2 gap-3 text-sm sm:grid-cols-3 lg:grid-cols-6">
           <div><dt className="text-[var(--color-muted-ink)]">disposições pendentes</dt><dd className="font-semibold">{countValue(shared.pendingDispositions)}</dd></div>
           <div><dt className="text-[var(--color-muted-ink)]">disposições aprovadas</dt><dd className="font-semibold">{countValue(shared.approvedDispositions)}</dd></div>
@@ -132,13 +142,23 @@ export function OperationalProgressPanel() {
         </dl>
       </div>
       <div className="mt-5 grid gap-3 border-t border-[var(--color-border-editorial)] pt-4 text-sm sm:grid-cols-2 lg:grid-cols-4">
-        <div><span className="text-[var(--color-muted-ink)]">ALRS lotes congelados</span><strong className="block">{editorialBatchManifest.totals.batches} · {editorialBatchManifest.totals.ready_for_disposition} matérias</strong></div>
-        <div><span className="text-[var(--color-muted-ink)]">Workers editoriais</span><strong className="block">4 partições · 0 sobreposição</strong></div>
-        <div><span className="text-[var(--color-muted-ink)]">Worker de matriz/perfil</span><strong className="block">autenticado · ativo</strong></div>
-        <div><span className="text-[var(--color-muted-ink)]">Fonte do painel</span><strong className="block">Supabase · leitura ao vivo</strong></div>
+        <div><span className="text-[var(--color-muted-ink)]">Histórico editorial ALRS</span><strong className="block">{editorialBatchManifest.totals.batches} lotes · {editorialBatchManifest.totals.ready_for_disposition} pendências ativas</strong></div>
+        <div><span className="text-[var(--color-muted-ink)]">Fonte das contagens</span><strong className="block">Supabase · leitura ao vivo</strong></div>
+        <div><span className="text-[var(--color-muted-ink)]">Snapshot ALRS</span><strong className="block">somente leitura · {new Date(alrsLiveState.generated_at).toLocaleDateString('pt-BR')}</strong></div>
+        <div><span className="text-[var(--color-muted-ink)]">Regra de publicação</span><strong className="block">fonte + assessment + matriz</strong></div>
+      </div>
+      <div className="mt-5 border-t border-[var(--color-border-editorial)] pt-4">
+        <h3 className="font-semibold">Estado ALRS 2022–presente · snapshot operacional</h3>
+        <p className="mt-1 text-xs text-[var(--color-muted-ink)]">Este bloco não substitui a leitura remota; documenta o último inventário versionado e seus bloqueios.</p>
+        <dl className="mt-3 grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-4">
+          <div><dt className="text-[var(--color-muted-ink)]">eventos</dt><dd className="font-semibold">{alrsLiveState.remote.events.toLocaleString('pt-BR')}</dd></div>
+          <div><dt className="text-[var(--color-muted-ink)]">eventos sem fonte</dt><dd className="font-semibold">{alrsLiveState.remote.events_without_source.toLocaleString('pt-BR')}</dd></div>
+          <div><dt className="text-[var(--color-muted-ink)]">atribuições v2 elegíveis</dt><dd className="font-semibold">{alrsLiveState.remote.scoreable_attributions_v2.toLocaleString('pt-BR')}</dd></div>
+          <div><dt className="text-[var(--color-muted-ink)]">microbatch de fontes</dt><dd className="font-semibold">{alrsLiveState.local.source_recovery_selected_count.toLocaleString('pt-BR')} selecionados · {sourceRecoveryLabel(alrsLiveState.local.source_recovery_status)}</dd></div>
+        </dl>
       </div>
       <p className="mt-4 font-mono text-[0.68rem] uppercase tracking-wider text-[var(--color-muted-ink)]">
-        {updatedAt ? `Última leitura: ${new Date(updatedAt).toLocaleString('pt-BR')}` : 'Aguardando leitura'} · score só após assessment e matriz aprovados
+        {updatedAt ? `Leitura remota: ${new Date(updatedAt).toLocaleString('pt-BR')}` : 'Aguardando leitura'} · snapshot ALRS gerado em {new Date(alrsLiveState.generated_at).toLocaleString('pt-BR')} · score só após assessment e matriz aprovados
       </p>
     </section>
   );

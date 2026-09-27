@@ -8,6 +8,8 @@
 | [`portal-transparencia-eleitoral-rs-v2.md`](portal-transparencia-eleitoral-rs-v2.md) | Especificação v2 do portal |
 | [`migracao-lovable-2026-07-24.md`](migracao-lovable-2026-07-24.md) | Migração do ambiente Lovable para standalone |
 | [`proximos-passos.md`](proximos-passos.md) | Roadmap e próximos passos |
+| [`OPERACAO-ATUAL-PARA-REVISORES.md`](OPERACAO-ATUAL-PARA-REVISORES.md) | Estado operacional atual, semântica do `/admin`, bloqueios e gates |
+| [`implementation-phases-index.md`](implementation-phases-index.md) | Índice atualizado de fases, planos válidos e bloqueios |
 
 ## Arquitetura de agentes
 
@@ -190,6 +192,7 @@
 | [`qa/lote-importacao-documentacao-orquestracao-hermes-2026-08-20.md`](qa/lote-importacao-documentacao-orquestracao-hermes-2026-08-20.md) | Importação da documentação Hermes |
 | [`OPERACAO-ATUAL-PARA-REVISORES.md`](OPERACAO-ATUAL-PARA-REVISORES.md) | Modo operacional atual para revisores |
 | [`qa/lote-documento-operacional-revisores-2026-08-20.md`](qa/lote-documento-operacional-revisores-2026-08-20.md) | QA do documento operacional |
+| [`qa/revisao-documentacao-admin-2026-09-27.md`](qa/revisao-documentacao-admin-2026-09-27.md) | Reconciliação da tela Admin, planos e documentação com o estado atual |
 | [`qa/lote-precedencia-fonte-oficial-dataset2026-2026-08-20.md`](qa/lote-precedencia-fonte-oficial-dataset2026-2026-08-20.md) | QA da precedência de fontes |
 | [`qa/fotos-sem-match-2026-08-03.md`](qa/fotos-sem-match-2026-08-03.md) | Distribuição dos candidatos sem foto e caso ambíguo |
 

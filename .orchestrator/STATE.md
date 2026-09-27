@@ -1,3 +1,19 @@
+# Checkpoint atual — revisão Admin e documentação — 2026-09-27
+
+> Esta seção é a fonte operacional vigente deste arquivo. As entradas abaixo são
+> histórico append-only e podem conter números antigos; não reutilizar sem
+> revalidação. O resumo canônico está em `docs/OPERACAO-ATUAL-PARA-REVISORES.md`.
+
+- Worktree em revisão: `src/pages/AdminPage.tsx`, `src/components/admin/OperationalProgressPanel.tsx`, `src/pages/__tests__/AdminPage.test.tsx`, documentação e planos.
+- Estado ALRS validado read-only: `2281` eventos, `31722` votos, `52` perfis, `1365` eventos sem fonte, `66` assessments, `64` matrizes aprovadas/contestadas, `0` atribuições v2 elegíveis.
+- Universo editorial auditado: `1261` pendentes, `141` prontas, `62` colisões, `1058` resolvidas, `0` não classificadas. Manifesto histórico: `1281` versões em `6` lotes; diferença documentada, não reaberta automaticamente.
+- Recuperação factual: `12` elegíveis, `5` selecionados, `pending_source_recovery`, `remote_apply=false`, `public_approval=false`.
+- Planos revisados: o plano ALRS de 2026-09-13 está parcialmente executado; o plano de propagação de 2026-08-30 continua proposta não implementada. Baselines antigas não são estado atual.
+- Segurança: nenhum score v2 novo, nenhuma atribuição remota e nenhuma migration remota aplicada por esta revisão.
+- Documentação atualizada: `docs/OPERACAO-ATUAL-PARA-REVISORES.md`, `docs/implementation-phases-index.md` e `docs/qa/revisao-documentacao-admin-2026-09-27.md`.
+
+---
+
 ## Fechamento de publicação — autoria Câmara 2826–2850 — 2026-09-11
 
 - Quatro artefatos fechados em `data/legislative-import/camara/authored-project-review-batches/`: source manifest, causal, redteam e reconciled. 25 projetos únicos, 50 ocorrências, 16 candidatos únicos; fontes oficiais revalidadas: 25/25 API de proposição, 25/25 texto integral e 25/25 tramitação HTTP 200; 13/25 eventos independentes distintos, 12 sem binding específico mantidos bloqueados.

@@ -1,433 +1,168 @@
-# Índice visual de fases e passos — Matriz de Impacto Populacional
+# Índice atual de fases — Matriz de Impacto Populacional
 
 **Projeto:** Portal Transparência Eleitoral RS
-**Data do checkpoint:** 21 de agosto de 2026
-**Unidade editorial:** uma matriz por versão de proposição legislativa
-**Fonte de verdade:** Git atual, contratos versionados, fontes oficiais e gates locais
+**Última revisão:** 2026-09-27
+**Unidade canônica:** uma matriz por `proposition_version`
+**Fonte de verdade:** código, migrations, contratos, fontes oficiais e gates executados
 
----
+> Este índice substitui os números históricos dos planos anteriores. Um estado
+> `0` significa ausência comprovada na camada atual; `unknown`/`blocked` não deve
+> ser convertido em zero editorial.
 
-## 1. Visão geral do processo
+## 1. Estado resumido
 
-```text
-R0 Contrato e segurança
-   ↓
-R1 Fontes oficiais e identidade
-   ↓
-R2 Fatos legislativos nominais
-   ↓
-R3 Perfis e comparação factual
-   ↓
-R4 Matriz editorial por versão
-   ↓
-R5 Aplicação segura e publicação
-   ↓
-Operação contínua, auditoria e expansão
-```
+| Fase | Estado atual | Evidência |
+|---|---|---|
+| R0 contrato, segurança e taxonomia | concluída | schemas, RLS, Auth e gates versionados |
+| R1 fontes e identidade | operacional com bloqueios | auditoria ALRS e manifestos oficiais |
+| R2 fatos nominais | operacional por casa | votos separados de impacto |
+| R3 perfis e comparação factual | publicada | UI e snapshot público |
+| R4 disposição editorial | infraestrutura pronta; decisão humana separada | auditoria, lotes, contrato e `/admin` |
+| R5 assessment/matriz/score ALRS | bloqueada corretamente | `0` atribuições v2 elegíveis |
+| propagação por matéria | não implementada como módulo atual | plano de 2026-08-30 preservado como proposta |
 
-### Estado resumido
+## 2. Contratos que não mudam
 
-```text
-IMPLEMENTADO                         PENDENTE
-──────────────────────────────────   ──────────────────────────────────
-R0 contrato/schema                   revisão humana das disposições
-R1 identidade/fontes                 aplicação editorial autorizada
-R2 fatos ALRS/Câmara/Senado           recálculo e publicação do score
-R3 perfis/comparação                  validação final de cobertura
-release técnica                      aplicação remota autorizada
-produção HTTP 200                    score editorial público
-```
+1. A matriz pertence à versão efetivamente votada (`proposition_version`), não à
+   proposição genérica.
+2. Fato nominal, fonte, assessment, matriz e score são camadas diferentes.
+3. Os grupos populacionais seguem a coleção canônica fechada; não criar grupo
+   genérico para preencher lacunas.
+4. Impacto positivo/negativo exige `defending_vote` explícito.
+5. Eventos compostos, colisões, fonte ausente e identidade ambígua ficam
+   `blocked`/`unknown`.
+6. Somente revisão humana autenticada e RPC protegida pode aprovar impacto.
+7. Nenhuma ausência de cobertura vira score zero ou ranking negativo.
 
----
+## 3. Estado atual por fase
 
-## 2. Linha do tempo desde o início
+### R0 — contrato e segurança
 
-### Fase 0 — Fundação, contrato e segurança
+**Concluído.** O projeto mantém schema de impacto versionado, Auth/RLS, papéis
+editoriais, separação de voto e impacto, `pending_review`, `remote_apply=false`
+e proteção contra service role no navegador.
 
-**Objetivo:** definir os contratos de dados, separação de responsabilidades e proteção contra escrita indevida.
+### R1 — fontes e identidade
 
-Passos concluídos:
+**Operacional, com bloqueios explícitos.** O inventário ALRS atual tem `2281`
+eventos e `31722` votos, mas `1365` eventos ainda não possuem
+`source_reference_id`. Há `18` chaves de colisão afetando `65` versões e `93`
+eventos. Não usar fuzzy matching, título aproximado ou identidade inferida.
 
-- schema e contratos de impacto versionados;
-- unidade de trabalho definida como `proposition_version`;
-- separação entre fato nominal, fonte factual e impacto editorial;
-- `pending_review`, `human_review_required` e `remote_apply=false` incorporados;
-- writer fail-closed criado;
-- aplicação remota separada em gates;
-- nenhuma credencial ou segredo incluído em artefatos públicos.
+### R2 — fatos legislativos nominais
 
-**Saída:** infraestrutura segura para coletar e revisar sem publicar impacto automaticamente.
+**Operacional por casa.** Votos e eventos são contados separadamente para ALRS,
+Câmara e Senado. A apresentação administrativa não agrega casas diferentes.
 
-**Status:** ✅ concluída.
+### R3 — perfis e comparação factual
 
----
+**Publicado.** Perfis e comparação exibem fatos nominais por casa. `nominal_balance`
+é estatística, não recomendação política. Quando não há avaliação populacional
+aprovada, a UI informa cobertura insuficiente em vez de exibir zero artificial.
 
-### Fase 1 — Fontes oficiais, identidade e reconciliação
+### R4 — disposição editorial
 
-**Objetivo:** provar a identidade de proposições, versões, eventos, candidatos e fontes.
+**Infraestrutura implementada; aplicação humana é outro gate.** O repositório
+contém:
 
-Passos concluídos:
+- auditoria do universo editorial;
+- contrato canônico de lote e decisões;
+- seis lotes ALRS versionados;
+- workers read-only e consolidação sem aprovação;
+- aplicação autenticada por RPC com validação, read-back e idempotência;
+- painel `/admin` com autenticação e estado remoto.
 
-- fontes oficiais ALRS de votação identificadas;
-- URLs, HTTP, bytes e SHA registrados nos envelopes factuais;
-- `source_reference_id` preservado nos votos;
-- identidades P0/P1 vinculadas por tipo, número, ano, matéria e evento;
-- matching P1 fechado: 19 identidades únicas, 1 múltipla, 0 sem correspondência;
-- 6 colisões confirmadas como proposições distintas;
-- 12 grupos de colisão permanecem bloqueados;
-- 110 títulos genéricos/truncados permanecem bloqueados;
-- 4 votos residuais FED-17/Enio permanecem sem ID oficial exato.
-
-**Regra:** sem fuzzy matching, UUID inventado ou vínculo aproximado.
-
-**Status:** 🟡 operacional, com resíduos fail-closed.
-
----
-
-### Fase 2 — Fatos legislativos nominais
-
-**Objetivo:** materializar somente o fato verificável de votação.
-
-Passos concluídos:
-
-- ALRS: aproximadamente 4.000 votos auditados;
-- ALRS: 3.996 votos com fonte oficial no último fechamento;
-- Câmara: lotes Q1/Q2/Q3 coletados e auditados;
-- Senado: envelope histórico preservado, sem nova aplicação quando SHA divergiu;
-- votos individuais separados de placares simbólicos;
-- procedimentos, preferência e emendas não tratados como mérito;
-- fonte factual e fonte substantiva separadas.
-
-**Estado atual do recorte ALRS P0/P1:**
+Estado verificado em 2026-09-27:
 
 ```text
-30 P0 classificados:
-9 mérito
-19 procedimento
-2 emenda
-
-20 P1 classificados:
-18 mérito
-1 procedimento/emenda
-1 múltiplo bloqueado
+universo auditado: 1261 pendentes
+prontas para disposição: 141
+bloqueadas por colisão: 62
+já resolvidas: 1058
+não classificadas: 0
 ```
 
-**Status:** ✅ fatos principais operacionais; resíduos externos continuam bloqueados.
+O manifesto histórico dos lotes contém `1281` versões (`5` P0, `12` P1,
+`98` P2, `26` P3). A diferença para a auditoria corrente permanece uma
+reconciliação documentada, não uma autorização para reabrir ou aplicar lotes.
 
----
+### R5 — assessment, matriz e score ALRS
 
-### Fase 3 — Perfis nominais e comparação factual
+**Bloqueada corretamente.** O estado remoto lido em 2026-09-26 registra `66`
+assessments, `64` matrizes aprovadas/contestadas, `0` atribuições
+evento–assessment v2 e `0` atribuições elegíveis para score. Isso não autoriza
+criar score a partir de direção presumida, autoria parlamentar ou matriz antiga.
 
-**Objetivo:** permitir comparação descritiva sem transformar voto factual em julgamento político.
+O microbatch de recuperação factual selecionou cinco eventos, mas todos ainda
+aguardam fonte da versão, vínculo ao objeto votado, classificação e revisão
+humana. O pacote está em `pending_source_recovery`, com
+`remote_apply=false` e `public_approval=false`.
 
-Passos concluídos:
+### Propagação por matéria
 
-- perfis por candidato e casa legislativa;
-- votos nominais separados por `sim`, `nao`, ausência e demais estados;
-- `nominal_balance` tratado como estatística, não avaliação;
-- comparação categorial sem score político, alinhamento ou recomendação;
-- fallback explícito quando a cobertura de assessments é insuficiente;
-- UI de comparação e metodologia atualizadas;
-- produção validada.
+**Ainda não implementada como camada independente.** O plano
+`.hermes/plans/2026-08-30_073800-propagacao-materias-legislativas.md` descreve uma
+proposta válida, mas seus módulos e métricas não existem no código atual. O plano
+só deve ser retomado depois que existirem atribuições v2 elegíveis e contratos
+atuais de fonte/assessment/matriz.
 
-**Status:** ✅ concluída no escopo implementado.
+## 4. Planos de implementação revisados
 
----
+### Plano ALRS de 2026-09-13
 
-### Fase 4 — Fila substantiva e priorização editorial
+Parcialmente executado. Auditoria, contrato, lotes, workers, consolidação,
+integração do Admin, migration/RPC local e apply autenticado foram incorporados.
+Ainda pendem a fila derivada de assessment, o writer autenticado de matriz
+`pending_review`, aprovação/fan-out v2 completo, rollout remoto em ondas e
+verificação de produção. O baseline do plano é histórico.
 
-**Objetivo:** selecionar o que pode entrar na matriz, sem ainda aprovar impacto.
+### Plano de propagação de 2026-08-30
 
-Passos concluídos:
+Proposta não iniciada como implementação independente. Mantida para futura
+reformulação, sem importar os números históricos `111201`, `86`, `302`, `305` ou
+`39` para o estado atual.
 
-- fila completa: 1.281 versões no snapshot analisado;
-- fila substantiva: 462 versões / 1.398 votos;
-- P0/P1 priorizados por identidade, mérito e cobertura;
-- procedimentos e emendas retirados da trilha de score;
-- pacote de mérito confirmado fechado:
+## 5. Próximos gates
 
-```text
-23 versões
-139 votos
-5 P0
-18 P1
+1. Recuperar fontes e resolver o vínculo do objeto votado dos cinco eventos.
+2. Classificar evento simples/composto e executar revisão humana independente.
+3. Derivar assessment somente de disposição `assess` explicitamente aprovada.
+4. Criar matriz `pending_review` via Auth/RPC, nunca via service role.
+5. Aprovar matriz somente com fontes, reviews e `defending_vote` completos.
+6. Recalcular fan-out/perfis idempotentemente e publicar apenas após read-back.
+7. Só depois especificar a camada de métricas de propagação.
+
+## 6. Gates locais de qualquer release
+
+```bash
+npm run test -- --passWithNoTests
+npx tsc --noEmit
+node scripts/validate-impact-schema.mjs
+npm run data:check
+npm run build
+git diff --check
+npm run smoke:local
 ```
 
-- 8 versões possuem grupos candidatos;
-- 9 drafts de assessment foram gerados;
-- 15 versões não possuem grupo candidato pré-identificado;
-- 23/23 versões exigem `editorial_disposition` humana.
+Reconciliação ALRS read-only:
 
-**Correção importante:** os valores automáticos de propostas foram removidos. O proposal pack agora é somente formulário de revisão humana.
-
-**Status:** ✅ fila consolidada; revisão editorial pendente.
-
----
-
-### Fase 5 — Fontes substantivas
-
-**Objetivo:** provar o conteúdo e o efeito da proposição, além de provar a votação.
-
-#### P0
-
-Concluído para cinco versões:
-
-```text
-5/5 páginas oficiais de proposição HTTP 200
-5/5 PDFs/Documentos NoPaper HTTP 200
-bytes e SHA registrados
-substantive_source_gate=green
+```bash
+npm run alrs:editorial:audit
+npm run impact:alrs:live-state
+node scripts/build-alrs-editorial-batches.mjs --verify
 ```
 
-P0 cobertos:
+Migrations, RPCs, RLS e dados remotos exigem autorização própria e verificação
+por SHA/read-back. Publicação de código segue `commit → push → CI → deploy →
+produção HTTP 200`.
 
-- PEC 302/2025;
-- PL 262/2024;
-- PL 432/2023;
-- PL 125/2021;
-- PL 172/2026.
+## 7. Referências
 
-**Durabilidade:** páginas e documentos P0 estão preservados em corpus content-addressed com bytes/SHA reproduzidos.
-
-#### P1
-
-As 18 versões P1 têm fonte substantiva oficial e preservação content-addressed:
-
-```text
-18/18 páginas oficiais HTTP 200
-18/18 documentos NoPaper HTTP 200
-18/18 bytes/SHA preservados
-18/18 durability_gate=green
-```
-
-O manifesto está em:
-
-```text
-data/legislative-import/alrs/p1-substantive-source-manifest.json
-```
-
-As fontes factuais dos votos já existem e agora são preservadas corretamente via:
-
-```text
-source_urls
-candidate_source_links
-official_vote_source_reference_ids
-```
-
-**Status:** ✅ P0 e P1 com fontes substantivas duráveis; revisão editorial pendente.
-
----
-
-### Fase 6 — Assessments editoriais
-
-**Objetivo:** decidir, por versão e grupo, se há impacto populacional justificável.
-
-Cada assessment precisa conter:
-
-```text
-group_slug
-impact_direction
-defending_vote
-severity
-structural_type
-confidence
-rationale
-fonte substantiva
-revisão humana
-```
-
-Estado atual:
-
-```text
-9 drafts de assessment
-9 propostas-formulário
-valores decisórios automáticos: removidos
-assessments aprovados ALRS: 0
-```
-
-**Regra:** grupo sem aplicabilidade também precisa de decisão explícita e justificada; ausência de grupo não pode ser convertida em score zero.
-
-**Status:** ⏳ aguardando revisão humana.
-
----
-
-### Fase 7 — Apply plan e aplicação remota segura
-
-**Objetivo:** aplicar somente matrizes completas, aprovadas e auditáveis.
-
-O plano atual está ancorado no pacote corrente de 23 versões e registra:
-
-```text
-ok=false
-input_versions=23
-planned_versions=0
-plan_entries=0
-errors=25
-remote_apply=false
-```
-
-Bloqueios atuais:
-
-- gates globais de aprovação;
-- 23 `editorial_disposition` pendentes;
-- nenhuma fonte substantiva pendente no pacote de 23;
-- 0 matrizes planejadas até decisão humana.
-
-**Nenhuma escrita editorial remota foi feita.**
-
-Gates necessários para liberar:
-
-1. fonte substantiva durável;
-2. assessment completo;
-3. revisão humana registrada;
-4. `editorial_status=approved`;
-5. `public_approval=true`;
-6. plano corrente com hash do pacote;
-7. zero erros;
-8. dry-run idempotente;
-9. autorização separada para escrita Supabase;
-10. SELECT/REST pós-escrita comprovando o resultado.
-
-**Status:** 🔴 bloqueada corretamente.
-
----
-
-### Fase 8 — Publicação editorial e score
-
-**Objetivo:** tornar pública somente a matriz aprovada e seus scores derivados.
-
-Ainda não executado para ALRS:
-
-- criação de assessments aprovados;
-- criação de matrizes aprovadas;
-- RPC/publicação editorial;
-- score populacional público ALRS;
-- ranking ou recomendação baseada nessa matriz.
-
-A release técnica do site é independente e está saudável:
-
-```text
-produção: HTTP 200
-snapshot público: 1.003 candidaturas
-últimos gates locais: 98 arquivos / 401 testes
-```
-
-**Status:** ⏳ aguardando Fases 6 e 7.
-
----
-
-## 3. Próximos passos até o final
-
-### Próximo lote imediato — disposição editorial humana
-
-1. Revisar as 23 versões do pacote consolidado, todas com fonte substantiva e durabilidade verdes.
-2. Escolher uma disposição por versão:
-   - `assess`;
-   - `no_direct_population_group`;
-   - `taxonomy_gap`;
-   - `excluded`.
-3. Preencher assessment somente para `assess`.
-4. Registrar justificativa e fonte específica em cada decisão.
-
-### Revisão humana P0/P1
-
-5. Apresentar as cinco P0 e as 18 P1 em formulário nulo.
-6. Corrigir a identidade do P0 para **PL 262/2024**.
-7. Decidir aplicabilidade de grupo inclusive nas 12 versões sem grupo previamente identificado.
-8. Preencher apenas após revisão: direção, voto defensor, severidade, tipo, confiança e rationale.
-9. Manter `pending_review` até a confirmação editorial.
-
-### Reconciliações paralelas
-
-10. Reconciliar as contagens de colisão 64/65.
-11. Resolver os 110 títulos inadequados antes da reentrada na fila.
-12. Repetir FED-17 somente com relógio/JWT estável; não aplicar os quatro residuais sem fonte exata.
-13. Manter Senado bloqueado enquanto 0/6 SHA coincidirem.
-14. Reconciliar IDs Câmara descobertos antes de qualquer FK/voto.
-
-### Apply local
-
-24. Escolher um pacote explícito: P0, P0/P1 ou 23 confirmados.
-25. Gerar hash do pacote e do plano.
-26. Executar validador factual e substantivo.
-27. Executar `impact:dryrun`.
-28. Executar `impact:sql` sem credenciais no artefato.
-29. Verificar que não há `null` em fonte obrigatória.
-30. Exigir `plan=[]` enquanto qualquer gate estiver vermelho.
-
-### Aplicação Supabase autorizada
-
-31. Aplicar primeiro apenas `source_references`, se houver fontes novas e duráveis.
-32. Reconsultar os UUIDs reais retornados pelo Supabase.
-33. Aplicar fatos legislativos em gate separado, se houver dados novos.
-34. Criar matrizes apenas como `pending_review` quando o contrato permitir.
-35. Publicar somente após RPC/gate humano separado.
-36. Reexecutar o writer para provar idempotência: segunda execução com zero inserts/updates.
-37. Validar por SELECT/REST os registros aplicados.
-
-### Publicação final
-
-38. Recalcular perfis e comparação categorial.
-39. Verificar que assessments não aprovados não entram no score.
-40. Verificar fallback de cobertura insuficiente.
-41. Atualizar metodologia e QA.
-42. Rodar testes, TypeScript, data-check, build e smoke.
-43. Commit/push autorizado.
-44. CI/deploy.
-45. Smoke HTTP 200 e `release.json`.
-46. Registrar snapshot, pacote, hash, plano, CI e produção.
-
----
-
-## 4. Critério objetivo de conclusão
-
-A Matriz de Impacto Populacional ALRS estará concluída quando:
-
-```text
-[ ] 23/23 versões com decisão editorial de aplicabilidade
-[ ] 23/23 com título e identidade oficiais completos
-[ ] 23/23 com fonte substantiva durável ou bloqueio explicitamente documentado
-[ ] 0 valores preenchidos por palavra-chave/template
-[ ] 0 colisões aplicáveis sem resolução
-[ ] 0 assessments aprovados sem fonte
-[ ] assessments completos e revisados
-[ ] matrizes aprovadas por versão
-[ ] plano corrente com hash exato
-[ ] apply plan ok=true e errors=0
-[ ] aplicação idempotente verificada
-[ ] perfis recalculados
-[ ] score público somente para cobertura aprovada
-[ ] comparação com fallback correto
-[ ] CI verde
-[ ] deploy verde
-[ ] produção HTTP 200
-[ ] documentação e STATE atualizados
-```
-
-Até todos os itens acima serem verdadeiros, o estado correto é:
-
-```text
-release técnica: publicada e saudável
-matriz editorial ALRS: não publicada
-score ALRS: bloqueado
-remote_apply: false
-public_approval: false
-```
-
----
-
-## 5. Referências operacionais principais
-
-- `data/legislative-import/alrs/confirmed-merit-review-pack-v1.json`
-- `data/legislative-import/alrs/p0-substantive-matrix-review-pack-v1.json`
-- `data/legislative-import/alrs/p0-substantive-source-manifest.json`
-- `data/legislative-import/alrs/substantive-source-request-pack-v1.json`
-- `data/legislative-import/alrs/impact-matrix-apply-plan.json`
-- `scripts/build-confirmed-alrs-merit-review-pack.mjs`
-- `scripts/build-alrs-substantive-source-request-pack.mjs`
-- `scripts/validate-alrs-substantive-sources.mjs`
-- `scripts/plan-alrs-matrix-apply.mjs`
-- `docs/qa/lote-alrs-current-package-regeneration-2026-08-21.md`
-- `docs/qa/lote-alrs-substantive-source-requests-2026-08-21.md`
-- `docs/qa/lote-alrs-p0-substantive-sources-2026-08-21.md`
+- `docs/OPERACAO-ATUAL-PARA-REVISORES.md`
+- `docs/qa/revisao-documentacao-admin-2026-09-27.md`
 - `.orchestrator/STATE.md`
+- `data/legislative-import/alrs/alrs-live-state-v1.json`
+- `data/legislative-import/alrs/alrs-attribution-source-recovery-microbatch-v1.json`
+- `data/legislative-import/alrs/editorial-batches/manifest-v1.json`
+- `.hermes/plans/2026-09-13_192009-resolver-fail-closed-disposicoes-alrs.md`
+- `.hermes/plans/2026-08-30_073800-propagacao-materias-legislativas.md`
