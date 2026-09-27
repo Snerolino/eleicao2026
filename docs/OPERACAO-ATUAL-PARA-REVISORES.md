@@ -14,7 +14,7 @@
 
 ### Portal público
 
-- versão pública validada: `0.2.1407`;
+- versão pública: consulte `https://rs.votopraquem.org/release.json` para o SHA e a versão do deploy vigente;
 - snapshot versionado: `1003` candidaturas;
 - build público: `1005` URLs e `988` fotos oficiais rastreáveis;
 - produção e `/admin`: HTTP 200 na última verificação;
