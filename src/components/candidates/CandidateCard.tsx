@@ -17,13 +17,13 @@ interface CandidateCardProps {
   onToggleSaved?: (id: string) => void;
 }
 
-const SUMMARY_PRIORITY = [
-  'summary',
-  'plataforma',
-  'historico_politico',
-  'reputacao',
-  'votacao_scrutiny',
-];
+const SUMMARY_PRIORITY_MAP: Record<string, number> = {
+  'summary': 0,
+  'plataforma': 1,
+  'historico_politico': 2,
+  'reputacao': 3,
+  'votacao_scrutiny': 4,
+};
 
 export const CandidateCard = memo(function CandidateCard({
   candidate,
@@ -44,7 +44,8 @@ export const CandidateCard = memo(function CandidateCard({
       summary = claim;
       break;
     }
-    const priority = SUMMARY_PRIORITY.indexOf(category);
+      // ⚡ Bolt Optimization: Using O(1) object map lookup instead of O(N) array indexOf
+      const priority = SUMMARY_PRIORITY_MAP[category] ?? -1;
     if (priority !== -1 && priority < bestPriority) {
       bestPriority = priority;
       summary = claim;

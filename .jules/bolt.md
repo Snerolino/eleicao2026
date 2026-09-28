@@ -1,12 +1,3 @@
-## 2023-10-27 - [Short-circuit eval in filter]
-**Learning:** In lists filtering logic where multiple fields are checked (like in `HomePage.tsx`), calling expensive string normalizations upfront on all fields causes a massive slowdown (e.g. 15x slower).
-**Action:** Order checks from cheapest (e.g., party string matching, number string matching) to most expensive (e.g., unicode string normalization), using short-circuit evaluation (returning early) to skip the expensive checks whenever possible. Also memoize derived properties computations across lists when they re-render.
-## 2024-05-19 - [Deferred Search Input]
-**Learning:** Using `useDeferredValue` for a search query that filters a large list (`filterCandidates` on all candidates) improves typing responsiveness. Crucially, any downstream grouping or mapping logic that depends on the filtered results should be wrapped in `useMemo` so it doesn't unnecessarily re-compute on every single keystroke.
-**Action:** When filtering complex lists, wrap the query passed to the filter function with `useDeferredValue` and use `useMemo` for any derived computations based on the filtered output. Ensure UI elements showing counts sync with the deferred query to prevent visual mismatches.
-## 2025-01-20 - [Regex Caching in O(N) Filters]
-**Learning:** Using an O(N) filtering mechanism with expensive Regex evaluations (e.g. `hasPreviousMandate` evaluating `MANDATE_KEYWORDS_REGEX` against multiple claims) severely blocks the UI during typing or filtering large sets. Repeated calls across component boundaries compound this cost unnecessarily.
-**Action:** Always memoize derived checks on immutable reference objects (like candidate data) that do expensive calculations (like Regex) using a `WeakMap`. This pattern upgrades the time complexity of the check from O(N * complexity) to O(1) for all subsequent reads and UI updates.
-## 2025-01-20 - [Pre-computing Maps in useMemo]
-**Learning:** Mutating collections (like `Map` or `Set`) during the component render phase, even inside a `useMemo` block used for filtering, is a React anti-pattern that can lead to bugs in concurrent mode.
-**Action:** Always fully pre-compute and return the populated Map/Set inside a dedicated `useMemo` based on upstream dependencies (like iterating over the source dataset), and only read from it during the render or filtering phases.
+## 2024-05-20 - [O(1) Map Lookup vs O(N) Array indexOf for Small Collections in React Renders]
+**Learning:** Re-allocating a small array on every React render to use `indexOf` can be a performance anti-pattern. While `indexOf` is fast on modern JS engines, doing it inside a component's render loop for every item in a large list (like candidate cards) compounds rendering time overhead.
+**Action:** Replace `indexOf` array lookups with O(1) object map lookups (e.g. `Record<string, number>`), and critically, hoist the map definition *outside* the component body to avoid allocating the reference type object repeatedly on each render.
