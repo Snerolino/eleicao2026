@@ -5,3 +5,7 @@
 ## 2024-09-01 - [A11y ARIA Labels and Broken Tests]
 **Learning:** Adding descriptive `aria-label` attributes to previously plain text buttons (like `Ver candidatos`) can break existing UI tests if those tests relied on generic role/name queries that suddenly match multiple elements or stop matching due to new attributes.
 **Action:** When modifying accessible names (`aria-label`) in UI components, proactively search for and update corresponding assertions in the `src/components/__tests__` and `src/pages/__tests__` directories to prevent test regressions. Use specific Regexes (e.g., `/^Deputado Estadual .*$/i`) to target exact buttons instead of loose strings.
+
+## 2024-05-18 - [Contextual aria-labels for generic links in candidate components]
+**Learning:** Components mapping over or relating to candidates (like `CandidateDeclaredAssetsCard`) often have generic external links (e.g., "Consultar no DivulgaCandContas") which lack context out-of-bounds.
+**Action:** When adding or auditing external links in candidate cards, always apply contextual `aria-label`s such as `aria-label={\`Consultar patrimônio de \${candidateName} no DivulgaCandContas (TSE)\`}`.
