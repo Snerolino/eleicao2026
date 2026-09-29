@@ -160,6 +160,7 @@ export function CandidateDeclaredAssetsCard({
             href="https://divulgacandcontas.tse.jus.br"
             target="_blank"
             rel="noreferrer noopener"
+            aria-label={`Consultar patrimônio de ${candidateName} no DivulgaCandContas (TSE)`}
             className="inline-flex items-center gap-1 font-mono text-xs text-[var(--color-institutional)] underline underline-offset-4 hover:opacity-80"
           >
             <span>Consultar no DivulgaCandContas (TSE)</span>
