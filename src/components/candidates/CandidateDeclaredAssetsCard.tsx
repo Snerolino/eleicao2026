@@ -57,16 +57,24 @@ export function CandidateDeclaredAssetsCard({
   }, [items]);
 
   const filteredItems = useMemo(() => {
+    // ⚡ Bolt: Hoist static string normalization (.toLowerCase().trim())
+    // outside of the .filter() loop to avoid O(N) repeated allocations.
+    // Adds short-circuit evaluation for category mismatch and empty terms.
+    const term = searchTerm.toLowerCase().trim();
+    if (selectedCategory === 'todas' && !term) return items;
+
     return items.filter((item) => {
       const matchesCategory =
         selectedCategory === 'todas' || item.categoria === selectedCategory;
-      const term = searchTerm.toLowerCase().trim();
-      const matchesSearch =
-        !term ||
+      if (!matchesCategory) return false;
+
+      if (!term) return true;
+
+      return (
         item.descricao.toLowerCase().includes(term) ||
         item.tipo.toLowerCase().includes(term) ||
-        item.categoria.toLowerCase().includes(term);
-      return matchesCategory && matchesSearch;
+        item.categoria.toLowerCase().includes(term)
+      );
     });
   }, [items, selectedCategory, searchTerm]);
 
