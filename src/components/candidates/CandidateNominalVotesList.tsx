@@ -24,19 +24,21 @@ export function CandidateNominalVotesList({
   const relevantVotes = useMemo(() => filterPopulationRelevantVotes(votes), [votes]);
 
   const filteredVotes = useMemo(() => {
+    // ⚡ Bolt: Hoists static search term normalization outside the .filter() loop
+    // and fixes the early return condition to skip the full array scan when
+    // no filters are active (e.g. filterValue is "all" and term is empty).
     const term = searchTerm.trim().toLowerCase();
-    if (!filterValue && !term) return relevantVotes;
+    if (filterValue === "all" && !term) return relevantVotes;
 
     return relevantVotes.filter((v) => {
-      const voteVal = v.vote_value.toLowerCase();
-
       if (filterValue !== "all") {
+        const voteVal = v.vote_value.toLowerCase();
         if (filterValue === "sim" && voteVal !== "sim") return false;
         if (filterValue === "nao" && voteVal !== "nao") return false;
         if (filterValue === "outros" && (voteVal === "sim" || voteVal === "nao")) return false;
       }
 
-      if (term === "") return true;
+      if (!term) return true;
 
       if (v.proposition_id.toLowerCase().includes(term)) return true;
       if (v.title.toLowerCase().includes(term)) return true;
