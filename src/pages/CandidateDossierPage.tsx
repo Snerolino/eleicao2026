@@ -347,6 +347,7 @@ export function CandidateDossierPage() {
                   href={safeSourceUrl}
                   target="_blank"
                   rel="noreferrer noopener"
+                  aria-label={`Consultar fonte oficial dos votos na ${house.sourceLabel} para ${candidate.full_name}`}
                   className="mt-4 inline-block font-mono text-xs text-[var(--color-institutional)] underline underline-offset-4"
                 >
                   Fonte: {house.sourceLabel} <span aria-hidden="true">↗</span>

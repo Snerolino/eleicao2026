@@ -231,6 +231,7 @@ export function CandidateNominalVotesList({
                           href={safeSourceUrl}
                           target="_blank"
                           rel="noreferrer noopener"
+                          aria-label={`Consultar fonte oficial do voto na proposição ${v.proposition_id} no ${v.source_label}`}
                           className="inline-flex items-center gap-1 font-mono text-xs text-[var(--color-institutional)] underline underline-offset-4 hover:opacity-80"
                         >
                           <span>Fonte Oficial ({v.source_label})</span>
