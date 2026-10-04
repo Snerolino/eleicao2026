@@ -104,6 +104,7 @@ export function SourceReferenceBadge({
       href={safeUrl}
       target="_blank"
       rel="noreferrer noopener"
+      aria-label={`Consultar fonte: ${document?.source_name ?? 'Fonte original'}`}
       className="block rounded-sm border-l-4 bg-[var(--color-paper)] px-3 py-2 text-xs transition-colors hover:opacity-80"
       style={style}
     >
