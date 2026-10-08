@@ -37,6 +37,9 @@ export function CandidateAuthoredProjectsList({ projects }: CandidateAuthoredPro
     [projects],
   );
 
+  // Cache generated search strings to avoid O(N) allocations on every search input change
+  const searchStrings = useMemo(() => new WeakMap<CandidateAuthoredProject, string>(), []);
+
   const filteredProjects = useMemo(() => {
     const term = search.trim().toLowerCase();
     return projects.filter((project) => {
@@ -48,20 +51,24 @@ export function CandidateAuthoredProjectsList({ projects }: CandidateAuthoredPro
 
       if (!term) return true;
 
-      const haystack = [
-        project.type,
-        project.number,
-        project.year.toString(),
-        project.title,
-        project.summary_short,
-        project.summary_expanded,
-        project.main_topic,
-        project.role,
-        project.status,
-      ].join(' ').toLowerCase();
+      let haystack = searchStrings.get(project);
+      if (haystack === undefined) {
+        haystack = [
+          project.type,
+          project.number,
+          project.year.toString(),
+          project.title,
+          project.summary_short,
+          project.summary_expanded,
+          project.main_topic,
+          project.role,
+          project.status,
+        ].join(' ').toLowerCase();
+        searchStrings.set(project, haystack);
+      }
       return haystack.includes(term);
     });
-  }, [projects, search, status, topic]);
+  }, [projects, search, status, topic, searchStrings]);
 
   if (projects.length === 0) {
     return (
