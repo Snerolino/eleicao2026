@@ -32,6 +32,28 @@ export function CandidateAuthoredProjectsList({ projects }: CandidateAuthoredPro
   const [topic, setTopic] = useState('all');
   const [search, setSearch] = useState('');
 
+  // ⚡ Bolt: Pre-compute and memoize expensive search haystack strings.
+  // This upgrades subsequent searches (keystrokes) to O(1) string lookups per project,
+  // preventing redundant O(N) array allocations and unicode lowercasing during typing.
+  const searchCache = useMemo(() => {
+    const cache = new WeakMap<CandidateAuthoredProject, string>();
+    for (const project of projects) {
+      const haystack = [
+        project.type,
+        project.number,
+        project.year.toString(),
+        project.title,
+        project.summary_short,
+        project.summary_expanded,
+        project.main_topic,
+        project.role,
+        project.status,
+      ].join(' ').toLowerCase();
+      cache.set(project, haystack);
+    }
+    return cache;
+  }, [projects]);
+
   const topics = useMemo(
     () => [...new Set(projects.map((project) => project.main_topic).filter(Boolean))].sort(),
     [projects],
@@ -48,20 +70,10 @@ export function CandidateAuthoredProjectsList({ projects }: CandidateAuthoredPro
 
       if (!term) return true;
 
-      const haystack = [
-        project.type,
-        project.number,
-        project.year.toString(),
-        project.title,
-        project.summary_short,
-        project.summary_expanded,
-        project.main_topic,
-        project.role,
-        project.status,
-      ].join(' ').toLowerCase();
+      const haystack = searchCache.get(project) ?? '';
       return haystack.includes(term);
     });
-  }, [projects, search, status, topic]);
+  }, [projects, search, status, topic, searchCache]);
 
   if (projects.length === 0) {
     return (
