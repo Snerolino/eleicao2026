@@ -10,3 +10,6 @@
 ## 2025-01-20 - [Pre-computing Maps in useMemo]
 **Learning:** Mutating collections (like `Map` or `Set`) during the component render phase, even inside a `useMemo` block used for filtering, is a React anti-pattern that can lead to bugs in concurrent mode.
 **Action:** Always fully pre-compute and return the populated Map/Set inside a dedicated `useMemo` based on upstream dependencies (like iterating over the source dataset), and only read from it during the render or filtering phases.
+## 2025-02-12 - [WeakMap Render Phase Mutation Anti-Pattern]
+**Learning:** Mutating collections (like `WeakMap` cached in a `useRef`) during the component render phase inside a `useMemo` block used for filtering is a React anti-pattern that violates the rule that render functions should be pure and free of side effects, which can lead to bugs in concurrent mode.
+**Action:** Pre-compute and return the populated Map/Set inside a dedicated `useMemo` block based on upstream dependencies (like iterating over the source dataset), and only read from it during the render or filtering phases.
