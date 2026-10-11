@@ -1,4 +1,4 @@
-import { useDeferredValue, useEffect, useMemo, useState } from 'react';
+import { useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router';
 import { useQuery } from '@tanstack/react-query';
 import { fetchAllCandidates } from '@/services/candidates';
@@ -297,20 +297,9 @@ export function ComparePage() {
   const validCandidateIds = useMemo(() => new Set(candidates.map((c) => c.id)), [candidates]);
   const { savedSet, toggleSaved } = useSavedCandidates(validCandidateIds, query.isSuccess);
 
-  // ⚡ Bolt Optimization: Pre-calculates and memoizes expensive string normalizations for search caching.
-  // Upgrades O(N * string_length) repeated work during search filtering to an O(1) cache lookup.
-  const searchCache = useMemo(() => {
-    const cache = new Map<string, CandidateSearchCache>();
-    for (const candidate of candidates) {
-      cache.set(candidate.id, {
-        partyLower: normalize(candidate.party),
-        nameNormalized: normalize(candidate.full_name),
-        labelNormalized: normalize(candidate.position_label),
-        ballotNameNormalized: candidate.ballot_name ? normalize(candidate.ballot_name) : undefined,
-      });
-    }
-    return cache;
-  }, [candidates]);
+
+
+  const searchCache = useRef(new WeakMap<CandidateWithClaims, CandidateSearchCache>());
 
   const { parties, races, experienceCounts } = useMemo(() => {
     const partySet = new Set<string>();
@@ -345,8 +334,16 @@ export function ComparePage() {
       if (experienceFilter === 'estreante' && hasPreviousMandate(candidate)) return false;
       if (!normalizedQuery) return true;
 
-      const cached = searchCache.get(candidate.id);
-      if (!cached) return true; // fallback, should not happen
+      let cached = searchCache.current.get(candidate);
+      if (!cached) {
+        cached = {
+          partyLower: normalize(candidate.party),
+          nameNormalized: normalize(candidate.full_name),
+          labelNormalized: normalize(candidate.position_label),
+          ballotNameNormalized: candidate.ballot_name ? normalize(candidate.ballot_name) : undefined,
+        };
+        searchCache.current.set(candidate, cached);
+      }
 
       if (cached.partyLower && cached.partyLower.includes(normalizedQuery)) return true;
 
@@ -360,7 +357,6 @@ export function ComparePage() {
     });
   }, [
     candidates,
-    searchCache,
     deferredSearchQuery,
     partyFilter,
     womenOnly,
