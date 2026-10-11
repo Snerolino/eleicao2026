@@ -5,3 +5,7 @@
 ## 2024-09-01 - [A11y ARIA Labels and Broken Tests]
 **Learning:** Adding descriptive `aria-label` attributes to previously plain text buttons (like `Ver candidatos`) can break existing UI tests if those tests relied on generic role/name queries that suddenly match multiple elements or stop matching due to new attributes.
 **Action:** When modifying accessible names (`aria-label`) in UI components, proactively search for and update corresponding assertions in the `src/components/__tests__` and `src/pages/__tests__` directories to prevent test regressions. Use specific Regexes (e.g., `/^Deputado Estadual .*$/i`) to target exact buttons instead of loose strings.
+
+## 2024-10-10 - [A11y Tooltips on Icon Buttons]
+**Learning:** Icon-only interactive elements, like theme toggles and saved candidate buttons, often lack visual context on hover for sighted users, even if an `aria-label` is present for screen readers.
+**Action:** Always include a native tooltip using the `title` attribute for icon-only buttons to provide additional context on hover alongside the `aria-label`.
