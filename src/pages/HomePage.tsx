@@ -1,4 +1,4 @@
-import { useDeferredValue, useEffect, useMemo, useState } from 'react';
+import { useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router';
 import { CargoNavigation } from '@/components/candidates/CargoNavigation';
@@ -44,7 +44,7 @@ const EMPTY_CANDIDATES: CandidateWithClaims[] = [];
 
 function filterCandidates(
   candidates: CandidateWithClaims[],
-  cache: Map<string, CandidateSearchCache>,
+  cache: WeakMap<CandidateWithClaims, CandidateSearchCache>,
   query: string,
   cargoFilter: '' | Position,
   partyFilter: string,
@@ -63,8 +63,15 @@ function filterCandidates(
     if (experienceFilter === 'estreante' && hasPreviousMandate(c)) return false;
     if (!normalized) return true;
 
-    const cached = cache.get(c.id);
-    if (!cached) return false;
+    let cached = cache.get(c);
+    if (!cached) {
+      cached = {
+        partyLower: c.party.toLowerCase(),
+        nameNormalized: normalize(c.full_name),
+        labelNormalized: normalize(c.position_label)
+      };
+      cache.set(c, cached);
+    }
 
     if (cached.partyLower && cached.partyLower.includes(normalized)) return true;
 
@@ -118,21 +125,13 @@ export function HomePage() {
   const claimsDegraded = query.isSuccess && wasLastClaimsFetchDegraded();
   const usingSnapshotFallback = query.isSuccess && wasLastCandidatesFetchFromSnapshot();
 
-  const searchCache = useMemo(() => {
-    const cache = new Map<string, CandidateSearchCache>();
-    for (const c of allCandidates) {
-      cache.set(c.id, {
-        partyLower: c.party.toLowerCase(),
-        nameNormalized: normalize(c.full_name),
-        labelNormalized: normalize(c.position_label),
-      });
-    }
-    return cache;
-  }, [allCandidates]);
+
+
+  const searchCache = useRef(new WeakMap<CandidateWithClaims, CandidateSearchCache>());
 
   const filtered = useMemo(
-    () => filterCandidates(allCandidates, searchCache, deferredSearchQuery, cargoFilter, partyFilter, womenOnly, raceFilter, experienceFilter),
-    [allCandidates, searchCache, deferredSearchQuery, cargoFilter, partyFilter, womenOnly, raceFilter, experienceFilter]
+    () => filterCandidates(allCandidates, searchCache.current, deferredSearchQuery, cargoFilter, partyFilter, womenOnly, raceFilter, experienceFilter),
+    [allCandidates, deferredSearchQuery, cargoFilter, partyFilter, womenOnly, raceFilter, experienceFilter]
   );
 
   const cargoCounts = useMemo(() => {
